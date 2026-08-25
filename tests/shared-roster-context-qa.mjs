@@ -91,7 +91,7 @@ const appSource=fs.readFileSync(path.join(root,'books/shared/army-book-app.js'),
 assert.match(appSource,/WHArmyRosterContext\?\.fromRuntime/);
 assert.match(appSource,/rosterContextSettings\.provider/);
 assert.match(appSource,/app=Object\.freeze\(\{navigation,popups,fullEntry,journey,relatedRules,rosterContext,initializeRoot,targetMount:/);
-assert.match(appSource,/WH_ARMY_ROSTER_DECORATOR\?\.decorate\(mountRoot\)/,'mounted target is not decorated from the shared roster projection');
+assert.match(appSource,/WH_ARMY_ROSTER_DECORATOR\?\.decorate\(mountRoot,initializeOptions\)/,'mounted target is not decorated from the shared roster projection with exact instance options');
 for(const [id,file,provider] of [['death-guard','books/death-guard/scripts/roster-filter.js',/providerFactory\s*\(/],['adeptus-mechanicus','books/adeptus-mechanicus/scripts/roster-filter.js',/const provider\s*=\s*\{/]]){
   const adapter=fs.readFileSync(path.join(root,file),'utf8');
   assert.equal((adapter.match(/WHArmyRosterContext\.install\s*\(/g)||[]).length,1,`${id} does not have exactly one shared install owner`);

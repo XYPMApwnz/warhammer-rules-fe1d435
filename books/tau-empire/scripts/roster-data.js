@@ -10781,51 +10781,59 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Advanced Acquisition Cadre",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "auxiliary-cadre",
       "title": "Auxiliary Cadre",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "experimental-prototype-cadre",
       "title": "Experimental Prototype Cadre",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "kauyon",
       "title": "Kauyon",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "kroot-hunting-pack",
       "title": "Kroot Hunting Pack",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "montka",
       "title": "Mont'ka",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "retaliation-cadre",
       "title": "Retaliation Cadre",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     }
   ],
+  "detachmentRules": [],
   "enhancements": [
     {
       "id": "negation-emitters-upgrade",

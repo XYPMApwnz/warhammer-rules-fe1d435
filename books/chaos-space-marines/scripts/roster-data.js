@@ -15128,121 +15128,139 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Cabal of Chaos",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "chaos-cult",
       "title": "Chaos Cult",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "creations-of-bile",
       "title": "Creations of Bile",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "cult-of-the-arkifane",
       "title": "Cult of the Arkifane",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "deceptors",
       "title": "Deceptors",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "devotees-of-destruction",
       "title": "Devotees of Destruction",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "dread-talons",
       "title": "Dread Talons",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "fellhammer-siege-host",
       "title": "Fellhammer Siege-host",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "huron-s-marauders",
       "title": "HURON’S MARAUDERS",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "murdertalon-raiders",
       "title": "Murdertalon Raiders",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "nightmare-hunt",
       "title": "Nightmare Hunt",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "pactbound-zealots",
       "title": "Pactbound Zealots",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "renegade-raiders",
       "title": "Renegade Raiders",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "renegade-warband",
       "title": "Renegade Warband",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "soulforged-warpack",
       "title": "Soulforged Warpack",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "veterans-of-the-long-war",
       "title": "Veterans of the Long War",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "warpstrike-champions",
       "title": "Warpstrike Champions",
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     }
   ],
+  "detachmentRules": [],
   "enhancements": [
     {
       "legacyKey": "enhancement-touched-by-the-warp",

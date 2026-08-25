@@ -7515,72 +7515,83 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Cohort Acquisitus",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-lords-of-the-forge",
       "title": "Lords of the Forge",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-luminen-auto-choir",
       "title": "Luminen Auto-choir",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-cohort-cybernetica",
       "title": "Cohort Cybernetica",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-data-psalm-conclave",
       "title": "Data-psalm Conclave",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-eradication-cohort",
       "title": "Eradication Cohort",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-explorator-maniple",
       "title": "Explorator Maniple",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-haloscreed-battle-clade",
       "title": "Haloscreed Battle Clade",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-rad-zone-corps",
       "title": "Rad-zone Corps",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "detachment-skitarii-hunter-cohort",
       "title": "Skitarii Hunter Cohort",
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     }
   ],
+  "detachmentRules": [],
   "enhancements": [
     {
       "title": "Explorator Dispensation",

@@ -8210,72 +8210,83 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Ambush Predators",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "assimilation-swarm",
       "title": "Assimilation Swarm",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "crusher-stampede",
       "title": "Crusher Stampede",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "invasion-fleet",
       "title": "Invasion Fleet",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "subterranean-assault",
       "title": "Subterranean Assault",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "synaptic-nexus",
       "title": "Synaptic Nexus",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "talons-of-the-norn-queen",
       "title": "Talons of the Norn Queen",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "unending-swarm",
       "title": "Unending Swarm",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "vanguard-onslaught",
       "title": "Vanguard Onslaught",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "warrior-bioform-onslaught",
       "title": "Warrior Bioform Onslaught",
       "sourceBookId": "tyranids",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     }
   ],
+  "detachmentRules": [],
   "enhancements": [
     {
       "id": "encircling-horrors",

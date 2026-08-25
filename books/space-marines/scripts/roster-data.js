@@ -26925,163 +26925,187 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "1st Company Task Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "anvil-siege-force",
       "title": "Anvil Siege Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "armoured-speartip",
       "title": "Armoured Speartip",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "bastion-task-force",
       "title": "Bastion Task Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "blade-of-ultramar",
       "title": "Blade of Ultramar",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "ceramite-sentinels",
       "title": "Ceramite Sentinels",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "emperor-s-shield",
       "title": "EMPEROR’S SHIELD",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "firestorm-assault-force",
       "title": "Firestorm Assault Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "forgefather-s-seekers",
       "title": "FORGEFATHER’S SEEKERS",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "fulguris-task-force",
       "title": "Fulguris Task Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "gladius-task-force",
       "title": "Gladius Task Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "hammer-of-avernii",
       "title": "Hammer of Avernii",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "headhunter-task-force",
       "title": "Headhunter Task Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "ironstorm-spearhead",
       "title": "Ironstorm Spearhead",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "librarius-conclave",
       "title": "Librarius Conclave",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "orbital-assault-force",
       "title": "Orbital Assault Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "reclamation-force",
       "title": "Reclamation Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "spearpoint-task-force",
       "title": "Spearpoint Task Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "stormlance-task-force",
       "title": "Stormlance Task Force",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "shadowmark-talon",
       "title": "Shadowmark Talon",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "subversion-assets",
       "title": "Subversion Assets",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "vanguard-spearhead",
       "title": "Vanguard Spearhead",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "vengeful-hosts",
       "title": "Vengeful Hosts",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     }
   ],
+  "detachmentRules": [],
   "enhancements": [
     {
       "legacyKey": "1st-company-task-force-the-imperiums-sword",

@@ -5468,72 +5468,83 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Carnival of Excess",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "coterie-of-the-conceited",
       "title": "Coterie of the Conceited",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "court-of-the-phoenician",
       "title": "Court of the Phoenician",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "elegant-brutes",
       "title": "Elegant Brutes",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "frenzied-host",
       "title": "Frenzied Host",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "mercurial-host",
       "title": "Mercurial Host",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "peerless-bladesmen",
       "title": "Peerless Bladesmen",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "rapid-evisceration",
       "title": "Rapid Evisceration",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "slaaneshs-chosen",
       "title": "SLAANESH’S CHOSEN",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     },
     {
       "id": "spectacle-of-slaughter",
       "title": "Spectacle of Slaughter",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": []
     }
   ],
+  "detachmentRules": [],
   "enhancements": [
     {
       "id": "enhancement-empyric-suffusion",

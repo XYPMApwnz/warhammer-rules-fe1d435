@@ -9788,63 +9788,173 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Virulent Vectorium",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-worldblight"
+      ]
     },
     {
       "id": "detachment-mortarions-hammer",
       "title": "Mortarion’s Hammer",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-miasmic-bombardment"
+      ]
     },
     {
       "id": "detachment-champions-of-contagion",
       "title": "Champions of Contagion",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-manifold-maladies"
+      ]
     },
     {
       "id": "detachment-tallyband-summoners",
       "title": "Tallyband Summoners",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-reverberant-rancidity"
+      ]
     },
     {
       "id": "detachment-shamblerot-vectorium",
       "title": "Shamblerot Vectorium",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-numberless-horde"
+      ]
     },
     {
       "id": "detachment-death-lords-chosen",
       "title": "Death Lord’s Chosen",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-deadly-vectors"
+      ]
     },
     {
       "id": "detachment-contagion-engines",
       "title": "Contagion Engines",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-warped-and-rusted-animus"
+      ]
     },
     {
       "id": "detachment-flyblown-host",
       "title": "Flyblown Host",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-verminous-haze"
+      ]
     },
     {
       "id": "detachment-paragons-of-putrescence",
       "title": "Paragons of Putrescence",
       "sourceBookId": "death-guard",
       "chapterRestriction": null,
-      "keywordGrants": []
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "detachment-rule-hypervirulent-strains"
+      ]
+    }
+  ],
+  "detachmentRules": [
+    {
+      "id": "detachment-rule-worldblight",
+      "title": "Worldblight",
+      "text": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71).",
+      "sectionId": "rule-worldblight",
+      "detachmentId": "detachment-virulent-vectorium",
+      "detachmentTitle": "Virulent Vectorium",
+      "sourceBookId": "death-guard"
+    },
+    {
+      "id": "detachment-rule-miasmic-bombardment",
+      "title": "Miasmic Bombardment",
+      "text": "At the start of the battle round, select a number of enemy units more than 12\" away from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are Afflicted. The maximum number of units you can select in this way depends on the battle size, as shown below.",
+      "sectionId": "rule-miasmic-bombardment",
+      "detachmentId": "detachment-mortarions-hammer",
+      "detachmentTitle": "Mortarion’s Hammer",
+      "sourceBookId": "death-guard"
+    },
+    {
+      "id": "detachment-rule-manifold-maladies",
+      "title": "Manifold Maladies",
+      "text": "At the start of the battle round, you can select one of the Plagues listed in Nurgle’s Gift. Until the end of the battle, that is your chosen Plague instead of any previously chosen Plague.",
+      "sectionId": "rule-manifold-maladies",
+      "detachmentId": "detachment-champions-of-contagion",
+      "detachmentTitle": "Champions of Contagion",
+      "sourceBookId": "death-guard"
+    },
+    {
+      "id": "detachment-rule-reverberant-rancidity",
+      "title": "Reverberant Rancidity",
+      "text": "While a PLAGUE LEGIONS unit from your army is within 7\" of one or more DEATH GUARD units from your army, it has the Nurgle’s Gift ability. While a DEATH GUARD unit from your army is within 7\" of one or more PLAGUE LEGIONS units from your army, add 3\" to that DEATH GUARD unit’s Contagion Range.",
+      "sectionId": "rule-reverberant-rancidity",
+      "detachmentId": "detachment-tallyband-summoners",
+      "detachmentTitle": "Tallyband Summoners",
+      "sourceBookId": "death-guard"
+    },
+    {
+      "id": "detachment-rule-numberless-horde",
+      "title": "Numberless Horde",
+      "text": "In your Command phase in each of the following battle rounds, depending on your chosen battle size, add a new POXWALKERS unit with a Starting Strength of 10 to your army, in Strategic Reserves.",
+      "sectionId": "rule-numberless-horde",
+      "detachmentId": "detachment-shamblerot-vectorium",
+      "detachmentTitle": "Shamblerot Vectorium",
+      "sourceBookId": "death-guard"
+    },
+    {
+      "id": "detachment-rule-deadly-vectors",
+      "title": "Deadly Vectors",
+      "text": "In your opponent’s Command phase, roll 2D6 for each Afflicted enemy unit, subtracting 1 from the result if that unit is Below Half-strength. If the result is 6 or less, that enemy unit suffers D3 mortal wounds.",
+      "sectionId": "rule-deadly-vectors",
+      "detachmentId": "detachment-death-lords-chosen",
+      "detachmentTitle": "Death Lord’s Chosen",
+      "sourceBookId": "death-guard"
+    },
+    {
+      "id": "detachment-rule-warped-and-rusted-animus",
+      "title": "Warped and Rusted Animus",
+      "text": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. This detachment has the ENGINES tag and cannot be taken with another ENGINES detachment.",
+      "sectionId": "rule-warped-and-rusted-animus",
+      "detachmentId": "detachment-contagion-engines",
+      "detachmentTitle": "Contagion Engines",
+      "sourceBookId": "death-guard"
+    },
+    {
+      "id": "detachment-rule-verminous-haze",
+      "title": "Verminous Haze",
+      "text": "In the Declare Battle Formations step, you can select up to two friendly PLAGUE MARINES units. Those units have Infiltrators. This detachment has the FLYBLOWN tag and cannot be taken with another FLYBLOWN detachment.",
+      "sectionId": "rule-verminous-haze",
+      "detachmentId": "detachment-flyblown-host",
+      "detachmentTitle": "Flyblown Host",
+      "sourceBookId": "death-guard"
+    },
+    {
+      "id": "detachment-rule-hypervirulent-strains",
+      "title": "Hypervirulent Strains",
+      "text": "Friendly DEATH GUARD CHARACTER units have +3\" to their Contagion Range (to a maximum of 12\").",
+      "sectionId": "rule-hypervirulent-strains",
+      "detachmentId": "detachment-paragons-of-putrescence",
+      "detachmentTitle": "Paragons of Putrescence",
+      "sourceBookId": "death-guard"
     }
   ],
   "enhancements": [

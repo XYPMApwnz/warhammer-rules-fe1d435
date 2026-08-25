@@ -3,7 +3,7 @@
   const SCHEMA='wh40k-physical-unit-game-projection/v1';
   const list=value=>Array.isArray(value)?value:[];
   const unique=value=>[...new Set(list(value).filter(Boolean))];
-  const directParts=card=>[...card.children].filter(node=>node.matches?.('.unit-part'));
+  const directParts=card=>[...card.querySelectorAll('.unit-part')].filter(node=>node.closest('.unit-card')===card);
   const cardsIn=node=>[...(node?.matches?.('.unit-card')?[node]:[]),...node?.querySelectorAll?.('.unit-card')||[]];
   const currentRelation=relation=>relation?.certainty==='current'&&relation?.provenance?.kind==='explicit-roster-attachment';
   const exactGameUnit=(card,projection)=>projection?.game?.units?.find(unit=>unit.identity.instanceId===card.dataset.rosterInstance)||null;

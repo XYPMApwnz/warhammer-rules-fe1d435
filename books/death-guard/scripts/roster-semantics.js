@@ -106,7 +106,7 @@
       if (detachments.has('detachment-contagion-engines') && ['unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler'].includes(cardId)) { add('contagion-engine-keyword','keyword','CONTAGION ENGINE','grant',{},detachmentSource('contagion-engines')); weapon('warped-and-rusted-animus','ranged','grant-tag',{tag:'ASSAULT',termId:'core-assault'},detachmentSource('contagion-engines')); }
       if (detachments.has('detachment-paragons-of-putrescence') && (profileByRosterId.get(unit.id)?.keywords||[]).some(item=>normalize(item?.title||item) === 'character')) ability('hypervirulent-strains','Hypervirulent Strains','Contagion Range +3" (to a maximum of 12").',detachmentSource('paragons-of-putrescence'));
       const typhus=leader('unit-typhus');if(typhus&&cardId!=='unit-typhus')canonicalAbility(DG_RULE.destroyer,attachmentSource(DG_RULE.destroyer,typhus));
-      const biologus=leader('unit-biologus-putrifier');if(biologus){weapon('foul-infusion-weapons','all','grant-tag',{tag:'LETHAL HITS',termId:'core-lethal-hits'},attachmentSource(DG_RULE.foul,biologus));if(cardId!=='unit-biologus-putrifier')ability('foul-infusion','Foul Infusion','Critical Hits are scored on unmodified Hit rolls of 5+.',attachmentSource(DG_RULE.foul,biologus));}
+      const biologus=leader('unit-biologus-putrifier');if(biologus){weapon('foul-infusion-weapons','all','grant-tag',{tag:'LETHAL HITS',termId:'core-lethal-hits'},attachmentSource(DG_RULE.foul,biologus));if(cardId!=='unit-biologus-putrifier')canonicalAbility(DG_RULE.foul,attachmentSource(DG_RULE.foul,biologus));}
       const icon=leader('unit-icon-bearer');if(icon)stat('unclean-icon','OC','add',1,attachmentSource(DG_RULE.icon,icon));
       const contagion=leader('unit-lord-of-contagion');if(contagion){weapon('vector-sustained','melee','grant-tag',{tag:'SUSTAINED HITS 1',termId:'core-sustained-hits'},attachmentSource(DG_RULE.vector,contagion));weapon('vector-lance','melee','grant-tag',{tag:'LANCE',termId:'core-lance'},attachmentSource(DG_RULE.vector,contagion));}
       const poxes=leader('unit-lord-of-poxes');if(poxes&&cardId!=='unit-lord-of-poxes')canonicalAbility(DG_RULE.shroud,attachmentSource(DG_RULE.shroud,poxes));
@@ -232,7 +232,7 @@
 
       const unitSlug = cardId.replace(/^unit-/, '');
       addKeywords(KEYWORD_GRANTS.filter((grant) => normalizedDetachments.includes(grant.detachment) && grant.units.includes(unitSlug)));
-      if (terms[DG_RULE.foul] && from('unit-biologus-putrifier')) { weaponRows().forEach((row) => addWeaponTag(row, 'LETHAL HITS', 'core-lethal-hits', 'foul-infusion')); if (cardId !== 'unit-biologus-putrifier') addDerivedAbility('foul-infusion', 'Foul Infusion', 'Critical Hits are scored on unmodified Hit rolls of 5+.', DG_RULE.foul); }
+      if (terms[DG_RULE.foul] && from('unit-biologus-putrifier')) weaponRows().forEach((row) => addWeaponTag(row, 'LETHAL HITS', 'core-lethal-hits', 'foul-infusion'));
       if (terms[DG_RULE.icon] && from('unit-icon-bearer')) modifyModelStat('OC', 1, 'unclean-icon');
       if (terms[DG_RULE.vector] && from('unit-lord-of-contagion')) weaponRows('melee').forEach((row) => { addWeaponTag(row, 'SUSTAINED HITS 1', 'core-sustained-hits', 'vector-of-disease'); addWeaponTag(row, 'LANCE', 'core-lance', 'vector-of-disease'); });
       if (terms[DG_RULE.vitality] && from('unit-noxious-blightbringer')) modifyModelStat('M', 1, 'sickening-vitality');

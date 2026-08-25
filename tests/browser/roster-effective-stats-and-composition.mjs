@@ -13,6 +13,35 @@ const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.jso
 const catalogFor=bookId=>{const scope={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,`books/${bookId}/scripts/roster-data.js`),'utf8'),scope);return scope.window.WH_BOOK_ROSTER_CATALOG;};
 const catalogs=new Map(bookIds.map(bookId=>[bookId,catalogFor(bookId)]));
 
+const extractFunction=(source,marker)=>{
+  const start=source.indexOf(marker);
+  assert.notEqual(start,-1,`missing production helper ${marker}`);
+  const bodyStart=source.indexOf('{',start);
+  let depth=0,end=-1;
+  for(let index=bodyStart;index<source.length;index+=1){
+    if(source[index]==='{')depth+=1;
+    else if(source[index]==='}'&&--depth===0){end=index;break;}
+  }
+  assert.notEqual(end,-1,`unterminated production helper ${marker}`);
+  return source.slice(start,end+1);
+};
+const rosterContextSource=fs.readFileSync(path.join(root,'books/shared/roster-context.js'),'utf8');
+const adjustedExpression=extractFunction(rosterContextSource,'const adjusted=').slice('const adjusted='.length);
+const adjusted=vm.runInNewContext(`(${adjustedExpression})`);
+for(const [base,delta,effective] of [
+  ['5"',1,'6"'],['-1',-1,'-2'],['D3',1,'D3+1'],['D6',1,'D6+1'],['2D6',1,'2D6+1'],['3D3',1,'3D3+1'],['D3+1',1,'D3+2'],['2D6+2',1,'2D6+3']
+])assert.equal(adjusted(base,delta),effective,`${base} ${delta>=0?'+ ':''}${delta}`);
+assert.equal(adjusted('D3 plus one',1),null,'unsupported dice prose must fail closed');
+assert.equal(adjusted('2D6',1),'2D6+1','number of dice must remain unchanged');
+
+const presentationSource=fs.readFileSync(path.join(root,'books/shared/roster-game-presentation.js'),'utf8');
+const effectLabelSource=extractFunction(presentationSource,'function effectLabel(effect)');
+const effectLabel=vm.runInNewContext(`(()=>{const signed=value=>Number(value)>0?'+'+value:String(value);${effectLabelSource};return effectLabel;})()`);
+const failedWeaponEffect={component:'weapon',operation:'add-stat',stat:'D',delta:1,targetId:'family:plague-wind',state:'active',certainty:'current',targets:[]};
+assert.equal(effectLabel(failedWeaponEffect),'','failed deterministic weapon mutation must not be presented as applied');
+assert.match(effectLabel({...failedWeaponEffect,targets:[{base:'D3',effective:'D3+1'}]}),/D \+1/,'successful deterministic weapon mutation presentation');
+assert.match(effectLabel({...failedWeaponEffect,state:'conditional',certainty:'unknown'}),/D \+1/,'conditional weapon rule remains presentable');
+
 for(const [bookId,catalog] of catalogs){
   const missing=catalog.units.filter(unit=>!Object.keys(unit.gameSelections?.stats||{}).length);
   assert.equal(missing.length,0,`${bookId}: canonical stat metadata missing: ${missing.map(unit=>unit.id).join(', ')}`);
@@ -50,8 +79,8 @@ try{
     }finally{await context.close();}
   }
 
-  const dg=catalogs.get('death-guard'),noxious=dg.units.find(unit=>unit.id==='unit-noxious-blightbringer'),poxwalkers=dg.units.find(unit=>unit.id==='unit-poxwalkers'),plagueMarines=dg.units.find(unit=>unit.id==='unit-plague-marines'),lordOfVirulence=dg.units.find(unit=>unit.id==='unit-lord-of-virulence'),blightlords=dg.units.find(unit=>unit.id==='unit-blightlord-terminators'),pipes=dg.enhancements.find(item=>item.id==='enhancement-witherbone-pipes'),vigour=dg.enhancements.find(item=>item.id==='enhancement-vile-vigour'),helm=dg.enhancements.find(item=>item.id==='enhancement-helm-of-the-fly-king'),detachment=dg.detachments.find(item=>item.id===pipes?.detachmentId)||dg.detachments.find(item=>/Shamblerot/i.test(item.title));
-  assert.ok(noxious&&poxwalkers&&plagueMarines&&lordOfVirulence&&blightlords&&pipes&&vigour&&helm&&detachment,'DG pair canonical fixture');
+  const dg=catalogs.get('death-guard'),noxious=dg.units.find(unit=>unit.id==='unit-noxious-blightbringer'),poxwalkers=dg.units.find(unit=>unit.id==='unit-poxwalkers'),plagueMarines=dg.units.find(unit=>unit.id==='unit-plague-marines'),plaguecaster=dg.units.find(unit=>unit.id==='unit-malignant-plaguecaster'),lordOfVirulence=dg.units.find(unit=>unit.id==='unit-lord-of-virulence'),blightlords=dg.units.find(unit=>unit.id==='unit-blightlord-terminators'),pipes=dg.enhancements.find(item=>item.id==='enhancement-witherbone-pipes'),vigour=dg.enhancements.find(item=>item.id==='enhancement-vile-vigour'),helm=dg.enhancements.find(item=>item.id==='enhancement-helm-of-the-fly-king'),sorrowsyphon=dg.enhancements.find(item=>item.id==='enhancement-sorrowsyphon'),detachment=dg.detachments.find(item=>item.id===pipes?.detachmentId)||dg.detachments.find(item=>/Shamblerot/i.test(item.title));
+  assert.ok(noxious&&poxwalkers&&plagueMarines&&plaguecaster&&lordOfVirulence&&blightlords&&pipes&&vigour&&helm&&sorrowsyphon&&detachment,'DG pair canonical fixture');
   for(const fixture of [
     {name:'Poxwalkers',unit:poxwalkers,quantity:10,modelTitle:'Poxwalker',body:'10x Poxwalkers (65 pts):\n10 with Improvised weapons',forbidden:[/10[-\u2013]20 Poxwalkers/i,/Every model is equipped with/i]},
     {name:'Noxious',unit:noxious,quantity:1,modelTitle:'Noxious Blightbringer',body:'1x Noxious Blightbringer (60 pts): Plasma pistol, Cursed plague bell',forbidden:[/This model is equipped with/i]}
@@ -119,6 +148,49 @@ try{
   const helmState=await inspectEnhancementReference({enhancement:helm,record:enhancementRecord('helm-reference',helm)});
   assert.deepEqual({kind:helmState.effectKind,owner:helmState.owner,target:helmState.target,count:helmState.count,text:helmState.text,source:helmState.source},{kind:'enhancement',owner:'lov',target:'blightlords',count:1,text:helm.text,source:'Lord of Virulence'});
   assert.doesNotMatch(helmState.active,/Helm of the Fly King/);
+
+  const plagueWindProfiles=['malignant-plaguecaster-weapon-plague-wind-witchfire','malignant-plaguecaster-weapon-plague-wind-focused-witchfire'];
+  const casterSelection=selectedModel(plaguecaster,'caster',1);
+  casterSelection.models[0].loadouts=[{quantity:1,wargear:'Plague Wind'}];
+  const sorrowsyphonRecord={id:'sorrowsyphon-poxwalkers',roster:{faction:dg.book.title,units:[casterSelection,selectedModel(poxwalkers,'sorrowsyphon-pox',10)],detachments:[{name:dg.detachments.find(item=>item.id===sorrowsyphon.detachmentId)?.title||''}],enhancements:[{id:sorrowsyphon.id,name:sorrowsyphon.title,ownerUnitId:'caster',ownerStatus:'resolved'}],warnings:[]},attachments:{'sorrowsyphon-pox':['caster']}};
+  {
+    const {context,page}=await openRecord({bookId:'death-guard',record:sorrowsyphonRecord,instance:'caster',unitId:plaguecaster.id});
+    try{
+      const state=await page.evaluate(profileIds=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='caster'),effect=unit.effects.find(item=>item.id==='sorrowsyphon'),card=document.querySelector('.unit-card.roster-game-view'),targets=(effect?.targets||[]).map(target=>({id:target.profileId||target.id||target.targetId,base:typeof target.base==='object'?target.base.D:target.base,effective:typeof target.effective==='object'?target.effective.D:target.effective})),visible=Object.fromEntries(profileIds.map(profileId=>{const focused=profileId.includes('-focused-'),row=[...card.querySelectorAll('.weapon-row')].find(node=>/Plague Wind/i.test(node.innerText)&&focused===/focused witchfire/i.test(node.innerText));return[profileId,row?.innerText||''];}));return{source:effect?.source,component:effect?.component,operation:effect?.operation,targetId:effect?.targetId,targets,visible,active:card.querySelector('.roster-game-effects')?.innerText||'',derivedOnBearer:card.querySelectorAll('[data-roster-canonical-reference-id="enhancement-sorrowsyphon"]').length};},plagueWindProfiles);
+      assert.deepEqual({kind:state.source?.kind,id:state.source?.id,owner:state.source?.ownerInstanceId,component:state.component,operation:state.operation,targetId:state.targetId},{kind:'enhancement',id:sorrowsyphon.id,owner:'caster',component:'weapon',operation:'add-stat',targetId:'family:plague-wind'});
+      assert.deepEqual(state.targets.map(target=>target.id).sort(),[...plagueWindProfiles].sort(),'Sorrowsyphon exact Plague Wind family targets');
+      for(const target of state.targets)assert.deepEqual({base:target.base,effective:target.effective},{base:'D3',effective:'D3+1'},`${target.id}: Sorrowsyphon damage`);
+      for(const profileId of plagueWindProfiles)assert.match(state.visible[profileId],/D3\+1/,`${profileId}: visible Sorrowsyphon damage`);
+      assert.match(state.active,/D \+1/,'Sorrowsyphon successful mutation entry');
+      assert.equal(state.derivedOnBearer,0,'Sorrowsyphon derived duplicate on bearer');
+    }finally{await context.close();}
+  }
+  {
+    const {context,page}=await openRecord({bookId:'death-guard',record:sorrowsyphonRecord,instance:'sorrowsyphon-pox',unitId:poxwalkers.id});
+    try{
+      const state=await page.evaluate(({id,text})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='sorrowsyphon-pox'),effect=unit.effects.find(item=>item.canonicalReference?.id===id),article=document.querySelector(`[data-roster-canonical-reference-id="${id}"]`),casualties=unit.effects.filter(item=>/destroy|casualt/i.test(`${item.component||''} ${item.operation||''} ${item.targetId||''}`)).length;return{kind:effect?.canonicalReference?.kind,owner:effect?.source?.ownerInstanceId,target:effect?.targetInstanceId,count:document.querySelectorAll(`[data-roster-canonical-reference-id="${id}"]`).length,text:article?.querySelector('p')?.textContent.trim()||'',canonicalText:text,source:article?.querySelector('.roster-game-ability-source')?.textContent.trim()||'',active:document.querySelector('.roster-game-effects')?.innerText||'',modelCount:unit.selection.modelCount.value,composition:unit.selection.composition.models.reduce((sum,model)=>sum+model.quantity,0),casualties};},{id:sorrowsyphon.id,text:sorrowsyphon.text});
+      assert.deepEqual({kind:state.kind,owner:state.owner,target:state.target,count:state.count,text:state.text,source:state.source},{kind:'enhancement',owner:'caster',target:'sorrowsyphon-pox',count:1,text:sorrowsyphon.text,source:'Malignant Plaguecaster'});
+      assert.doesNotMatch(state.active,/Sorrowsyphon/,'Poxwalkers generic Sorrowsyphon Active-effects duplicate');
+      assert.deepEqual({modelCount:state.modelCount,composition:state.composition,casualties:state.casualties},{modelCount:10,composition:10,casualties:0},'Sorrowsyphon must not execute Bodyguard losses');
+    }finally{await context.close();}
+  }
+  for(const record of [
+    {...sorrowsyphonRecord,id:'sorrowsyphon-no-attachment',attachments:{}},
+    {...sorrowsyphonRecord,id:'sorrowsyphon-no-enhancement',roster:{...sorrowsyphonRecord.roster,enhancements:[]}}
+  ]){
+    const {context,page}=await openRecord({bookId:'death-guard',record,instance:'caster',unitId:plaguecaster.id});
+    try{const leaked=await page.evaluate(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.flatMap(unit=>unit.effects).filter(effect=>effect.id==='sorrowsyphon'||effect.canonicalReference?.id===id).length,sorrowsyphon.id);assert.equal(leaked,0,`${record.id}: Sorrowsyphon leakage`);}finally{await context.close();}
+  }
+  const wrongBodyguardRecord={...sorrowsyphonRecord,id:'sorrowsyphon-wrong-bodyguard',roster:{...sorrowsyphonRecord.roster,units:[casterSelection,selectedModel(plagueMarines,'wrong-bodyguard',7)]},attachments:{'wrong-bodyguard':['caster']}};
+  {
+    const {context,page}=await openRecord({bookId:'death-guard',record:wrongBodyguardRecord,instance:'caster',unitId:plaguecaster.id});
+    try{const leaked=await page.evaluate(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.flatMap(unit=>unit.effects).filter(effect=>effect.id==='sorrowsyphon'||effect.canonicalReference?.id===id).length,sorrowsyphon.id);assert.equal(leaked,0,'Sorrowsyphon wrong-Bodyguard leakage');}finally{await context.close();}
+  }
+  const duplicatePoxRecord={...sorrowsyphonRecord,id:'sorrowsyphon-duplicate-pox',roster:{...sorrowsyphonRecord.roster,units:[casterSelection,selectedModel(poxwalkers,'sorrowsyphon-pox',10),selectedModel(poxwalkers,'other-pox',10)]}};
+  {
+    const {context,page}=await openRecord({bookId:'death-guard',record:duplicatePoxRecord,instance:'other-pox',unitId:poxwalkers.id});
+    try{const leaked=await page.evaluate(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.instanceId==='other-pox').effects.filter(effect=>effect.canonicalReference?.id===id).length,sorrowsyphon.id);assert.equal(leaked,0,'Sorrowsyphon cross-instance leakage');}finally{await context.close();}
+  }
 
   const noAttachment={...pairRecord,id:'noxious-poxwalkers-no-attachment',attachments:{}};
   for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){

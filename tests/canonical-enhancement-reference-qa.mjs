@@ -17,7 +17,7 @@ const catalogFor=book=>{const scope={window:{}};vm.runInNewContext(fs.readFileSy
 for(const [book,ids] of Object.entries(inventory)){const catalog=catalogFor(book);for(const id of ids){const records=(catalog.enhancements||[]).filter(item=>item.id===id);assert.equal(records.length,1,`${book}: exact canonical Enhancement ${id}`);assert.ok(records[0].title&&records[0].text,`${book}: complete canonical Enhancement ${id}`);}}
 
 const dg=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-semantics.js'),'utf8');
-for(const key of ['pipes','vigour','helm'])assert.match(dg,new RegExp(`canonicalEnhancement\\(DG_ENH\\.${key}`),`DG ${key}: canonical Enhancement reference`);
+for(const key of ['pipes','vigour','helm','sorrowsyphon'])assert.match(dg,new RegExp(`canonicalEnhancement\\(DG_ENH\\.${key}`),`DG ${key}: canonical Enhancement reference`);
 for(const text of ['Models in this Attached Unit can re-roll Advance rolls.','Add 1 to Leadership and Battle-shock tests made for this Attached Unit.','Models in this Attached Unit cannot be targeted by ranged attacks unless the attacker is within 18".'])assert.doesNotMatch(dg,new RegExp(text.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),`DG residual summary: ${text}`);
 assert.match(dg,/witherbone-pipes-oc/);assert.match(dg,/vile-vigour-move/);
 

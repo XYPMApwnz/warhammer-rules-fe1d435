@@ -24,6 +24,11 @@ const codex={...codexSource,detachments:codexSource.detachments.map(detachment=>
 const pointsByUnit=new Map(pointsCatalog.units.map(unit=>[unit.title.toLowerCase(),unit]));
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const slugKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const withExactWargearSelections=unit=>({...unit,wargearAbilities:(unit.wargearAbilities||[]).map(ability=>{
+  const requiredSelections=[...(ability.requiredSelections||[])];
+  if(!requiredSelections.some(selection=>titleKey(typeof selection==='string'?selection:selection?.title)===titleKey(ability.title)))requiredSelections.push({title:ability.title,aliases:[ability.title]});
+  return {...ability,requiredSelections};
+})});
 const abilityText=ability=>ability.text||[
   ability.openingText,
   ...(ability.options||[]).map(option=>`${option.title}: ${option.text}`)
@@ -42,9 +47,12 @@ const mergedDatasheets=codexDatasheets.datasheets.map(unit=>{
   const officialWargear=(official.abilities||[]).filter(item=>extractedWargear.has(titleKey(item.title)));
   const abilities=(official.abilities||[]).filter(item=>!extractedWargear.has(titleKey(item.title)));
   if(!abilities.some(item=>item.title==='Doctrina Imperatives'))abilities.unshift({title:'Doctrina Imperatives',text:'This unit has the Doctrina Imperatives Faction ability.'});
-  const wargearAbilities=[...extractedWargear.values()].map(item=>officialWargear.find(candidate=>titleKey(candidate.title)===titleKey(item.title))||item);
+  const wargearAbilities=[...extractedWargear.values()].map(item=>{
+    const canonical=officialWargear.find(candidate=>titleKey(candidate.title)===titleKey(item.title))||item;
+    return {...canonical,requiredSelections:[...(canonical.requiredSelections||[]),{title:canonical.title,aliases:[canonical.title]}]};
+  });
   return {...unit,...official,abilities,wargearAbilities,category:unit.category,profiles:official.profiles||[{name:official.title,stats:official.stats}]};
-}).concat([...factionDatasheets.values()]);
+}).concat([...factionDatasheets.values()]).map(withExactWargearSelections);
 const publishedUnitIds=new Set(mergedDatasheets.map(unit=>unit.id));
 const publishedGlossary=factionRules.glossary.filter(term=>term.id!=='warhammer-legends').map(term=>({...term,unitIds:(term.unitIds||[]).filter(unitId=>publishedUnitIds.has(unitId))}));
 const rules={...factionRules,datasheets:mergedDatasheets,glossary:publishedGlossary,audit:{...factionRules.audit,datasheets:mergedDatasheets.length,legendsDatasheets:0,glossaryTerms:publishedGlossary.length}};

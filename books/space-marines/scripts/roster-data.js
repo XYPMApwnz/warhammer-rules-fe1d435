@@ -26926,7 +26926,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "1st-company-task-force-extremis-level-threat"
+      ]
     },
     {
       "id": "anvil-siege-force",
@@ -26934,7 +26936,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "anvil-siege-force-shield-of-the-imperium"
+      ]
     },
     {
       "id": "armoured-speartip",
@@ -26942,7 +26946,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "armoured-speartip-rapid-deployment"
+      ]
     },
     {
       "id": "bastion-task-force",
@@ -26950,7 +26956,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "bastion-task-force-interlocking-tactics"
+      ]
     },
     {
       "id": "blade-of-ultramar",
@@ -26958,7 +26966,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blade-of-ultramar-mastered-doctrines"
+      ]
     },
     {
       "id": "ceramite-sentinels",
@@ -26966,7 +26976,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "ceramite-sentinels-adaptive-defence"
+      ]
     },
     {
       "id": "emperor-s-shield",
@@ -26974,7 +26986,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperor-s-shield-wrath-of-dorn"
+      ]
     },
     {
       "id": "firestorm-assault-force",
@@ -26982,7 +26996,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "firestorm-assault-force-close-range-eradication"
+      ]
     },
     {
       "id": "forgefather-s-seekers",
@@ -26990,7 +27006,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "forgefather-s-seekers-vulkan-s-quest"
+      ]
     },
     {
       "id": "fulguris-task-force",
@@ -26998,7 +27016,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "fulguris-task-force-skystrike"
+      ]
     },
     {
       "id": "gladius-task-force",
@@ -27006,7 +27026,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "gladius-task-force-combat-doctrines"
+      ]
     },
     {
       "id": "hammer-of-avernii",
@@ -27014,7 +27036,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "hammer-of-avernii-calculated-annihilation"
+      ]
     },
     {
       "id": "headhunter-task-force",
@@ -27022,7 +27046,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "headhunter-task-force-target-sighted"
+      ]
     },
     {
       "id": "ironstorm-spearhead",
@@ -27030,7 +27056,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "ironstorm-spearhead-armoured-wrath"
+      ]
     },
     {
       "id": "librarius-conclave",
@@ -27038,7 +27066,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "librarius-conclave-psychic-disciplines"
+      ]
     },
     {
       "id": "orbital-assault-force",
@@ -27046,7 +27076,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "orbital-assault-force-rapid-drop-deployment"
+      ]
     },
     {
       "id": "reclamation-force",
@@ -27054,7 +27086,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "reclamation-force-oath-of-reclamation"
+      ]
     },
     {
       "id": "spearpoint-task-force",
@@ -27062,7 +27096,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "spearpoint-task-force-storm-swift-onslaught"
+      ]
     },
     {
       "id": "stormlance-task-force",
@@ -27070,7 +27106,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "stormlance-task-force-lightning-assault"
+      ]
     },
     {
       "id": "shadowmark-talon",
@@ -27078,7 +27116,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "shadowmark-talon-masters-of-shadow"
+      ]
     },
     {
       "id": "subversion-assets",
@@ -27086,7 +27126,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "subversion-assets-new-rule"
+      ]
     },
     {
       "id": "vanguard-spearhead",
@@ -27094,7 +27136,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "vanguard-spearhead-shadow-masters"
+      ]
     },
     {
       "id": "vengeful-hosts",
@@ -27102,10 +27146,220 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "vengeful-hosts-imperator-unleashed"
+      ]
     }
   ],
-  "detachmentRules": [],
+  "detachmentRules": [
+    {
+      "id": "1st-company-task-force-extremis-level-threat",
+      "title": "EXTREMIS-LEVEL THREAT",
+      "text": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
+      "sectionId": "1st-company-task-force-extremis-level-threat",
+      "detachmentId": "1st-company-task-force",
+      "detachmentTitle": "1st Company Task Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "anvil-siege-force-shield-of-the-imperium",
+      "title": "SHIELD OF THE IMPERIUM",
+      "text": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.",
+      "sectionId": "anvil-siege-force-shield-of-the-imperium",
+      "detachmentId": "anvil-siege-force",
+      "detachmentTitle": "Anvil Siege Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "armoured-speartip-rapid-deployment",
+      "title": "Rapid Deployment",
+      "text": "Each time an Adeptus Astartes unit from your army disembarks from a Transport (excluding Fly) that made a Normal or Advance move this phase (excluding those that arrived from Strategic Reserves), that disembarked unit can make a Normal move of up to D6\", or a Normal move of up to D3+3\" instead if that Transport is a Heavy Transport (see below). KEYWORDS Adeptus Astartes Transport units from your army (excluding Fly) that have a Wounds characteristic of 14+ have the Heavy Transport keyword.",
+      "sectionId": "armoured-speartip-rapid-deployment",
+      "detachmentId": "armoured-speartip",
+      "detachmentTitle": "Armoured Speartip",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "bastion-task-force-interlocking-tactics",
+      "title": "Interlocking Tactics",
+      "text": "Adeptus Astartes Battleline units from your army: ■ Are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back. ■ Are eligible to start to perform an Action in a turn in which they Advanced or Fell Back. Each time an Adeptus Astartes Battleline unit from your army is selected to attack, after resolving those attacks, select one enemy unit hit by one or more of those attacks. Until the end of the turn, that enemy unit is auspex scanned. Each time an Adeptus Astartes model from your army makes an attack that targets an auspex scanned unit, re‑roll a Hit roll of 1.",
+      "sectionId": "bastion-task-force-interlocking-tactics",
+      "detachmentId": "bastion-task-force",
+      "detachmentTitle": "Bastion Task Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "blade-of-ultramar-mastered-doctrines",
+      "title": "Mastered Doctrines",
+      "text": "At the start of up to three of your Command phases, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all Adeptus Astartes units from your army. You cannot select a Combat Doctrine you have already selected this battle, unless a friendly Marneus Calgar model is on the battlefield. Devastator Doctrine The Codex Astartes details the strategic value of overwhelming firepower. This unit is eligible to shoot in a turn in which it Advanced. Tactical Doctrine The Codex lays out strategies for seizing the initiative. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Assault Doctrine The Codex Astartes leaves no doubt that the killing blow must be delivered with a decisive close‑quarters strike. This unit is eligible to declare a charge in a turn in which it Advanced.",
+      "sectionId": "blade-of-ultramar-mastered-doctrines",
+      "detachmentId": "blade-of-ultramar",
+      "detachmentTitle": "Blade of Ultramar",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "ceramite-sentinels-adaptive-defence",
+      "title": "Adaptive Defence",
+      "text": "Each time an Adeptus Astartes model from your army makes an attack, if that model’s unit is within a terrain feature, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Adeptus Astartes units from your army gain the Entrenched keyword while all of the following are true: ■ That unit is within a terrain feature. ■ That unit was not set up on the battlefield this turn. ■ No model in that unit has moved more than 3” this turn.",
+      "sectionId": "ceramite-sentinels-adaptive-defence",
+      "detachmentId": "ceramite-sentinels",
+      "detachmentTitle": "Ceramite Sentinels",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "emperor-s-shield-wrath-of-dorn",
+      "title": "Wrath of Dorn",
+      "text": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re‑roll a Wound roll of 1. Each time a model in a Darnath Lysander unit from your army makes an attack that targets your Oath of Moment target, you can re‑roll the Wound roll.",
+      "sectionId": "emperor-s-shield-wrath-of-dorn",
+      "detachmentId": "emperor-s-shield",
+      "detachmentTitle": "EMPEROR’S SHIELD",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "firestorm-assault-force-close-range-eradication",
+      "title": "CLOSE-RANGE ERADICATION",
+      "text": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
+      "sectionId": "firestorm-assault-force-close-range-eradication",
+      "detachmentId": "firestorm-assault-force",
+      "detachmentTitle": "Firestorm Assault Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "forgefather-s-seekers-vulkan-s-quest",
+      "title": "Vulkan's Quest",
+      "text": "Ranged weapons equipped by Adeptus Astartes models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack. SEEKER’S COMPANIONS If your army includes Vulkan He’stan , during your turn, each Infernus Squad unit from your army is eligible to do one of the following: ■ Start to perform an Action in a turn in which it Advanced. ■ Shoot in a turn in which it started to perform an Action.",
+      "sectionId": "forgefather-s-seekers-vulkan-s-quest",
+      "detachmentId": "forgefather-s-seekers",
+      "detachmentTitle": "FORGEFATHER’S SEEKERS",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "fulguris-task-force-skystrike",
+      "title": "Skystrike",
+      "text": "▪ Friendly LAND SPEEDER/STORM SPEEDER HAILSTRIKE/STORM SPEEDER HAMMERSTRIKE/STORM SPEEDER THUNDERSTRIKE units have SPEEDER. ▪ In your first Movement phase, friendly SPEEDER units can make an ingress move.",
+      "sectionId": "fulguris-task-force-skystrike",
+      "detachmentId": "fulguris-task-force",
+      "detachmentTitle": "Fulguris Task Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "gladius-task-force-combat-doctrines",
+      "title": "COMBAT DOCTRINES",
+      "text": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Combat Doctrine once per battle.",
+      "sectionId": "gladius-task-force-combat-doctrines",
+      "detachmentId": "gladius-task-force",
+      "detachmentTitle": "Gladius Task Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "hammer-of-avernii-calculated-annihilation",
+      "title": "Calculated Annihilation",
+      "text": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re‑roll a Wound roll of 1. RECALCULATING Caanok Var ensures every bolt shell is directed where it serves the greatest purpose. Once per battle round, after your Oath of Moment target is destroyed, if a Caanok Var model from your army is on the battlefield, select one enemy unit visible to that model. That enemy unit becomes your Oath of Moment target until you select a new one.",
+      "sectionId": "hammer-of-avernii-calculated-annihilation",
+      "detachmentId": "hammer-of-avernii",
+      "detachmentTitle": "Hammer of Avernii",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "headhunter-task-force-target-sighted",
+      "title": "Target Sighted",
+      "text": "Each time a Tank Ace unit from your army (see below) Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a Tank Ace unit from your army shoots in your Shooting phase, if that unit did not Advance this turn, you can re‑roll the Damage roll. KEYWORDS Adeptus Astartes Vehicle units from your army (excluding Fortifications , Drop Pods, Walkers and units that can Fly) have the Tank Ace keyword. In the Muster Armies step, you can select up to three Tank Ace units from your army to gain the Character keyword. Designer’s Note: This means that the selected units can be given Enhancements, and one of them can be selected as your Warlord .",
+      "sectionId": "headhunter-task-force-target-sighted",
+      "detachmentId": "headhunter-task-force",
+      "detachmentTitle": "Headhunter Task Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "ironstorm-spearhead-armoured-wrath",
+      "title": "ARMOURED WRATH",
+      "text": "Once per phase for each ADEPTUS ASTARTES unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
+      "sectionId": "ironstorm-spearhead-armoured-wrath",
+      "detachmentId": "ironstorm-spearhead",
+      "detachmentTitle": "Ironstorm Spearhead",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "librarius-conclave-psychic-disciplines",
+      "title": "Psychic Disciplines",
+      "text": "At the start of the battle round, select one of the following Psychic Disciplines abilities. Friendly ADEPTUS ASTARTES PSYKER units have that ability until the end of the battle round. ▪ Biomancy Discipline: This unit has +2\" M. ▪ Divination Discipline: This unit’s attacks can: ▫ Re-roll hit rolls of 1. ▫ Re-roll wound rolls of 1. ▪ Pyromancy Discipline: This unit’s ranged attacks that target an enemy unit within 12\" of this unit have +1 AP. ▪ Telekinesis Discipline: Ranged attacks that target this unit have -1 S. ▪ Telepathy Discipline: This unit’s attacks can ignore modifiers to BS, WS and hit rolls.",
+      "sectionId": "librarius-conclave-psychic-disciplines",
+      "detachmentId": "librarius-conclave",
+      "detachmentTitle": "Librarius Conclave",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "orbital-assault-force-rapid-drop-deployment",
+      "title": "Rapid-drop Deployment",
+      "text": "At the start of the Declare Battle Formations step, select a number of Adeptus Astartes units (excluding Titanic units) from your army based on the battle size, as shown below. Models in those units have the Deep Strike ability. BATTLE SIZE NUMBER OF UNITS Incursion 2 Strike Force 3 Onslaught 4 Each time an Adeptus Astartes model from your army makes an attack, if it was set up on the battlefield this turn, re‑roll a Wound roll of 1. If it disembarked from a Drop Pod this turn, re‑roll a Hit roll of 1 as well.",
+      "sectionId": "orbital-assault-force-rapid-drop-deployment",
+      "detachmentId": "orbital-assault-force",
+      "detachmentTitle": "Orbital Assault Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "reclamation-force-oath-of-reclamation",
+      "title": "Oath of Reclamation",
+      "text": "■ Each time an Adeptus Astartes model from your army makes a melee attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1. ■ Each time an attack targets an Adeptus Astartes unit from your army, if your unit is within range of an objective marker that you controlled at the start of the phase and if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit or your unit has the Titus keyword, subtract 1 from the Wound roll.",
+      "sectionId": "reclamation-force-oath-of-reclamation",
+      "detachmentId": "reclamation-force",
+      "detachmentTitle": "Reclamation Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "spearpoint-task-force-storm-swift-onslaught",
+      "title": "Storm-Swift Onslaught",
+      "text": "Adeptus Astartes units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back. WRATH OF THE FIRST KHAN As swift and violent as a raging tempest, Suboden Khan drives into and through the heart of the enemy like a thrust lance. At the end of the Fight phase, if a Suboden Khan unit from your army destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\".",
+      "sectionId": "spearpoint-task-force-storm-swift-onslaught",
+      "detachmentId": "spearpoint-task-force",
+      "detachmentTitle": "Spearpoint Task Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "stormlance-task-force-lightning-assault",
+      "title": "LIGHTNING ASSAULT",
+      "text": "ADEPTUS ASTARTES units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+      "sectionId": "stormlance-task-force-lightning-assault",
+      "detachmentId": "stormlance-task-force",
+      "detachmentTitle": "Stormlance Task Force",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "shadowmark-talon-masters-of-shadow",
+      "title": "Masters of Shadow",
+      "text": "Each time a ranged attack targets an Adeptus Astartes unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack. UNPARALLELED TACTICIAN A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle‑brothers to pull the enemy out of formation. Once per battle round, if an Aethon Shaan model from your army is on the battlefield, you can use the Into Darkness Stratagem for 0CP .",
+      "sectionId": "shadowmark-talon-masters-of-shadow",
+      "detachmentId": "shadowmark-talon",
+      "detachmentTitle": "Shadowmark Talon",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "subversion-assets-new-rule",
+      "title": "New Rule",
+      "text": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: ▪ While a unit is detected, that unit has +3\" detection range.",
+      "sectionId": "subversion-assets-new-rule",
+      "detachmentId": "subversion-assets",
+      "detachmentTitle": "Subversion Assets",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "vanguard-spearhead-shadow-masters",
+      "title": "SHADOW MASTERS",
+      "text": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
+      "sectionId": "vanguard-spearhead-shadow-masters",
+      "detachmentId": "vanguard-spearhead",
+      "detachmentTitle": "Vanguard Spearhead",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "vengeful-hosts-imperator-unleashed",
+      "title": "Imperator Unleashed",
+      "text": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.",
+      "sectionId": "vengeful-hosts-imperator-unleashed",
+      "detachmentId": "vengeful-hosts",
+      "detachmentTitle": "Vengeful Hosts",
+      "sourceBookId": "space-marines"
+    }
+  ],
   "enhancements": [
     {
       "legacyKey": "1st-company-task-force-the-imperiums-sword",

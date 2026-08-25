@@ -64,6 +64,7 @@ const gameSelectionsFor=unit=>{
 
 const detachmentRulesFor=detachment=>{
   const candidates=[...values(detachment.detachmentRules),...values(detachment.rules)];
+  if(detachment.rule)candidates.push(detachment.rule);
   for(const section of values(detachment.subsections))if(section?.kind==='detachment-rule'||/detachment rule/i.test(section?.title||''))for(const block of values(section.blocks))candidates.push({...block,sectionId:block.sectionId||block.id||section.id});
   const records=new Map();for(const item of candidates){const id=item?.termId||item?.ruleId||item?.id;if(!id)continue;records.set(id,{id,title:item.title||'',text:item.text||item.full||item.short||'',sectionId:item.sectionId||item.sourceId||item.id||id,detachmentId:detachment.id,detachmentTitle:detachment.title,sourceBookId:detachment.dependencyBook||detachment.sourceBookId||null});}
   return [...records.values()];

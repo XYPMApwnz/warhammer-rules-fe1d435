@@ -28,7 +28,9 @@ assert.match(dg,/core-feel-no-pain/,'Revolting Regeneration must use the shared 
 assert.match(dg,/weapon\('critical-hit-5','selected-melee','grant-tag'/,'Daemon Weapon must use the shared selected-weapon reducer');
 
 const am=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/scripts/roster-enhancements.js'),'utf8');
-for(const id of inventory['adeptus-mechanicus'])assert.match(am,new RegExp(`canonicalEnhancement\\(id,source\\)`),`AM canonical Enhancement helper missing for ${id}`);
+assert.match(am,/referenceSource=origin\('explicit-attachment',id,owner\?\.id,'enhancement-owner'\)/,'AM canonical Enhancement references require exact bearer provenance');
+assert.match(am,/canonicalEnhancement\(id,referenceSource\)/,'AM canonical Enhancement reference helper');
+for(const id of inventory['adeptus-mechanicus'])assert.match(am,new RegExp(id),`AM canonical Enhancement mapping missing for ${id}`);
 for(const text of ['While this BATTLELINE unit is targeted by a melee attack, subtract 1 from the Hit roll.','Hazardous tests for this unit can be re-rolled.'])assert.doesNotMatch(am,new RegExp(text.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),`AM residual summary: ${text}`);
 
 const remaining=fs.readFileSync(path.join(root,'books/extensions/book-roster-enhancement-providers.js'),'utf8');

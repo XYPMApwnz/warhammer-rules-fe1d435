@@ -15137,7 +15137,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "detachment-rule-chaos-cult-desperate-devotion"
+      ]
     },
     {
       "id": "creations-of-bile",
@@ -15241,7 +15243,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "detachment-rule-soulforged-warpack-debt-to-the-soul-forge"
+      ]
     },
     {
       "id": "veterans-of-the-long-war",
@@ -15260,7 +15264,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "detachmentRuleIds": []
     }
   ],
-  "detachmentRules": [],
+  "detachmentRules": [
+    {
+      "id": "detachment-rule-chaos-cult-desperate-devotion",
+      "title": "Desperate Devotion",
+      "text": "Each time a DAMNED unit from your army makes a Dark Pact, if that unit was selected to make a Normal move, Advance or declare a charge, it can make a Desperate Pact. If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit.\n\nDesperate Pacts\n\nEach time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved.\n\nKEYWORDS\n\nTRAITOR GUARDSMEN SQUAD units from your army gain the BATTLELINE keyword.",
+      "sectionId": "detachment-rule-chaos-cult-desperate-devotion",
+      "detachmentId": "chaos-cult",
+      "detachmentTitle": "Chaos Cult",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
+      "title": "Debt to the Soul Forge",
+      "text": "Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army makes a Dark Pact, it can invoke its contract. If it does, subtract 1 from the resulting Leadership test when making that Dark Pact, and until the end of the phase:\n\nEach time a model in that unit makes a ranged attack, add 1 to the Wound roll.\nAdd 2 to the Attacks characteristic of melee weapons equipped by models in that unit.",
+      "sectionId": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
+      "detachmentId": "soulforged-warpack",
+      "detachmentTitle": "Soulforged Warpack",
+      "sourceBookId": "chaos-space-marines"
+    }
+  ],
   "enhancements": [
     {
       "legacyKey": "enhancement-touched-by-the-warp",

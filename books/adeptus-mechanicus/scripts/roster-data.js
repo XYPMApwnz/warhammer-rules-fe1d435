@@ -238,8 +238,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-skitarii-rangers-wargear-ability-enhanced-data-tether"
             ]
           },
@@ -251,8 +250,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-skitarii-rangers-wargear-ability-omnispex-2"
             ]
           }
@@ -399,12 +397,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-skitarii-rangers-wargear-ability-enhanced-data-tether",
             "title": "Enhanced data-tether",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-skitarii-rangers-selection-enhanced-data-tether"
+            ]
           },
           {
             "id": "unit-skitarii-rangers-wargear-ability-omnispex-2",
             "title": "Omnispex",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-skitarii-rangers-selection-omnispex"
+            ]
           }
         ]
       }
@@ -632,8 +634,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-skitarii-vanguard-wargear-ability-enhanced-data-tether"
             ]
           },
@@ -645,8 +646,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-skitarii-vanguard-wargear-ability-omnispex-2"
             ]
           }
@@ -793,12 +793,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-skitarii-vanguard-wargear-ability-enhanced-data-tether",
             "title": "Enhanced data-tether",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-skitarii-vanguard-selection-enhanced-data-tether"
+            ]
           },
           {
             "id": "unit-skitarii-vanguard-wargear-ability-omnispex-2",
             "title": "Omnispex",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-skitarii-vanguard-selection-omnispex"
+            ]
           }
         ]
       }
@@ -5356,8 +5360,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-serberys-raiders-wargear-ability-enhanced-data-tether"
             ]
           }
@@ -5414,7 +5417,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-serberys-raiders-wargear-ability-enhanced-data-tether",
             "title": "Enhanced data-tether",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-serberys-raiders-selection-enhanced-data-tether"
+            ]
           }
         ]
       }
@@ -5742,8 +5747,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-archaeopter-fusilave-wargear-ability-chaff-launcher"
             ]
           },
@@ -5755,8 +5759,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-archaeopter-fusilave-wargear-ability-command-uplink-2"
             ]
           }
@@ -5798,12 +5801,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-archaeopter-fusilave-wargear-ability-chaff-launcher",
             "title": "Chaff Launcher",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-archaeopter-fusilave-selection-chaff-launcher"
+            ]
           },
           {
             "id": "unit-archaeopter-fusilave-wargear-ability-command-uplink-2",
             "title": "Command Uplink",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-archaeopter-fusilave-selection-command-uplink"
+            ]
           }
         ]
       }
@@ -5926,8 +5933,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-archaeopter-stratoraptor-wargear-ability-chaff-launcher"
             ]
           },
@@ -5939,8 +5945,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-archaeopter-stratoraptor-wargear-ability-command-uplink-2"
             ]
           }
@@ -6012,12 +6017,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-archaeopter-stratoraptor-wargear-ability-chaff-launcher",
             "title": "Chaff Launcher",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-archaeopter-stratoraptor-selection-chaff-launcher"
+            ]
           },
           {
             "id": "unit-archaeopter-stratoraptor-wargear-ability-command-uplink-2",
             "title": "Command Uplink",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-archaeopter-stratoraptor-selection-command-uplink"
+            ]
           }
         ]
       }
@@ -6130,8 +6139,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-archaeopter-transvector-wargear-ability-chaff-launcher"
             ]
           },
@@ -6143,8 +6151,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-archaeopter-transvector-wargear-ability-command-uplink-2"
             ]
           }
@@ -6186,12 +6193,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-archaeopter-transvector-wargear-ability-chaff-launcher",
             "title": "Chaff Launcher",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-archaeopter-transvector-selection-chaff-launcher"
+            ]
           },
           {
             "id": "unit-archaeopter-transvector-wargear-ability-command-uplink-2",
             "title": "Command Uplink",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-archaeopter-transvector-selection-command-uplink"
+            ]
           }
         ]
       }
@@ -6834,8 +6845,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether"
             ]
           }
@@ -6982,7 +6992,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether",
             "title": "Broad spectrum data-tether",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-onager-dunecrawler-selection-broad-spectrum-data-tether"
+            ]
           }
         ]
       }
@@ -7516,7 +7528,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "cohort-acquisitus-rule"
+      ]
     },
     {
       "id": "detachment-lords-of-the-forge",
@@ -7524,7 +7538,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "lords-of-the-forge-rule"
+      ]
     },
     {
       "id": "detachment-luminen-auto-choir",
@@ -7532,7 +7548,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "luminen-auto-choir-rule"
+      ]
     },
     {
       "id": "detachment-cohort-cybernetica",
@@ -7540,7 +7558,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "cohort-cybernetica-rule"
+      ]
     },
     {
       "id": "detachment-data-psalm-conclave",
@@ -7548,7 +7568,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "data-psalm-conclave-rule"
+      ]
     },
     {
       "id": "detachment-eradication-cohort",
@@ -7556,7 +7578,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "eradication-cohort-rule"
+      ]
     },
     {
       "id": "detachment-explorator-maniple",
@@ -7564,7 +7588,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "explorator-maniple-rule"
+      ]
     },
     {
       "id": "detachment-haloscreed-battle-clade",
@@ -7572,7 +7598,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "haloscreed-battle-clade-rule"
+      ]
     },
     {
       "id": "detachment-rad-zone-corps",
@@ -7580,7 +7608,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "rad-zone-corps-rule"
+      ]
     },
     {
       "id": "detachment-skitarii-hunter-cohort",
@@ -7588,10 +7618,103 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "adeptus-mechanicus",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "skitarii-hunter-cohort-rule"
+      ]
     }
   ],
-  "detachmentRules": [],
+  "detachmentRules": [
+    {
+      "id": "cohort-acquisitus-rule",
+      "title": "Noospheric Recon",
+      "text": "Friendly PTERAXII, INFILTRATORS, RANGERS, SERBERYS RAIDERS and SERBERYS SULPHURHOUNDS units have RECON AUGURY. Friendly RECON AUGURY units have Enhanced Augurs: in your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is analysed. While a unit is analysed, that unit has +3\" detection range.",
+      "sectionId": "cohort-acquisitus-rule",
+      "detachmentId": "detachment-cohort-acquisitus",
+      "detachmentTitle": "Cohort Acquisitus",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "lords-of-the-forge-rule",
+      "title": "War-form Mantles",
+      "text": "Friendly TECH-PRIEST models have a 4+ invulnerable save and Feel No Pain 5+. They also have Baffling Data Screed: in your Shooting phase, when this unit is selected to shoot and is not Battle-shocked, roll one D6. On a 2+, select one enemy VEHICLE unit within 12\"; it makes a Battle-shock test with -1. A unit cannot be selected more than once per turn. Alternatively, on a 2+, those ranged attacks do not prevent this unit from being hidden.",
+      "sectionId": "lords-of-the-forge-rule",
+      "detachmentId": "detachment-lords-of-the-forge",
+      "detachmentTitle": "Lords of the Forge",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "luminen-auto-choir-rule",
+      "title": "Cyber-static Canticles",
+      "text": "Friendly CORPUSCARII units' ranged attacks have [LETHAL HITS]. When a friendly FULGURITE unit has fought, that unit heals D3 wounds. This Detachment has the DATA-PSALM tag and cannot be taken with another DATA-PSALM Detachment.",
+      "sectionId": "luminen-auto-choir-rule",
+      "detachmentId": "detachment-luminen-auto-choir",
+      "detachmentTitle": "Luminen Auto-choir",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "cohort-cybernetica-rule",
+      "title": "Cyber-psalm Programming",
+      "text": "Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit.",
+      "sectionId": "cohort-cybernetica-rule",
+      "detachmentId": "detachment-cohort-cybernetica",
+      "detachmentTitle": "Cohort Cybernetica",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "data-psalm-conclave-rule",
+      "title": "Benedictions of the Omnissiah",
+      "text": "At the start of the first battle round, select one of the following Benedictions of the Omnissiah to be active for CULT MECHANICUS units from your army until the end of the battle:Panegyric ProcessionEach time a CULT MECHANICUS model from your army makes a ranged attack that targets a unit within half range, improve the Armour Penetration characteristic of that attack by 1.Citation in SavageryEach time a CULT MECHANICUS unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in that unit.",
+      "sectionId": "data-psalm-conclave-rule",
+      "detachmentId": "detachment-data-psalm-conclave",
+      "detachmentTitle": "Data-psalm Conclave",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "eradication-cohort-rule",
+      "title": "Murderous Imperative",
+      "text": "Each time a model in a SKITARII unit from your army makes an attack: if the Protector Imperative is active for that unit, re-roll a Hit roll of 1; if the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.",
+      "sectionId": "eradication-cohort-rule",
+      "detachmentId": "detachment-eradication-cohort",
+      "detachmentTitle": "Eradication Cohort",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "explorator-maniple-rule",
+      "title": "Acquisition At Any Cost",
+      "text": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your Acquisition objective marker. Each time an ADEPTUS MECHANICUS model from your army makes an attack, if that model’s unit is within range of your Acquisition objective marker, or if the target of that attack is within range of your Acquisition objective marker, re-roll a Wound roll of 1.",
+      "sectionId": "explorator-maniple-rule",
+      "detachmentId": "detachment-explorator-maniple",
+      "detachmentTitle": "Explorator Maniple",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "haloscreed-battle-clade-rule",
+      "title": "Noospheric Transference",
+      "text": "In your Command phase, select one or more ADEPTUS MECHANICUS units, including embarked units: 1 at Incursion, 2 at Strike Force, or 3 at Onslaught. Until your next Command phase, they gain HALO OVERRIDE. Select one Override ability: Electromotive Energisation (+2\" Move), Microactuator Bracing (+1 Toughness), Predation Protocols (eligible to charge after Advancing), or Muted Servomotors (Stealth).",
+      "sectionId": "haloscreed-battle-clade-rule",
+      "detachmentId": "detachment-haloscreed-battle-clade",
+      "detachmentTitle": "Haloscreed Battle Clade",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "rad-zone-corps-rule",
+      "title": "Rad-bombardment",
+      "text": "BATTLE ROUND1BOMBARDMENTAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm. You then roll one D6 for each of those enemy units and apply the relevant result below:Unit Standing Firm: On a 3+, that unit suffers D3 mortal wounds.Unit Taking Cover: That unit is battle-shocked. On a 5+, that unit suffers D3 mortal woundsBATTLE ROUND2    ONWARDSFALLOUTAt the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test.",
+      "sectionId": "rad-zone-corps-rule",
+      "detachmentId": "detachment-rad-zone-corps",
+      "detachmentTitle": "Rad-zone Corps",
+      "sourceBookId": "adeptus-mechanicus"
+    },
+    {
+      "id": "skitarii-hunter-cohort-rule",
+      "title": "Stealth Optimisation",
+      "text": "Friendly SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units have Stealth.",
+      "sectionId": "skitarii-hunter-cohort-rule",
+      "detachmentId": "detachment-skitarii-hunter-cohort",
+      "detachmentTitle": "Skitarii Hunter Cohort",
+      "sourceBookId": "adeptus-mechanicus"
+    }
+  ],
   "enhancements": [
     {
       "title": "Explorator Dispensation",

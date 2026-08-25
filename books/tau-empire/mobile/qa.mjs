@@ -9,7 +9,7 @@ for(const file of files){
   const html=await readFile(new URL(file,root),'utf8');
   assert.match(html,/data-canonical-reader="\.\.\/reader\.html"/,`${file}: canonical reader target is absent`);
   assert.match(html,/data-canonical-target="[^"]+"/,`${file}: canonical target is absent`);
-  assert.match(html,/mobile-route-redirect\.js\?v=1/,`${file}: shared redirect runtime is absent`);
+  assert.match(html,/mobile-route-redirect\.js\?v=2/,`${file}: shared redirect runtime is absent`);
   assert.doesNotMatch(html,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${file}: compatibility stub contains duplicated content`);
   assert.doesNotMatch(html,/mobile\.js|mobile\.css|phone-popup-controller|book-roster-enhancements/,`${file}: obsolete Phone runtime is present`);
   assert.ok((await stat(new URL(file,root))).size<2_000,`${file} must stay a content-free compatibility stub`);

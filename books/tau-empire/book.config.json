@@ -43,6 +43,11 @@
   "sharedArmyBookApp": true,
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,
+  "rosterCatalog": {
+    "inferExactWargearAbilitySelections": true,
+    "inferCanonicalDetachmentRuleIds": true,
+    "dedupeLegacyEnhancementsByTitle": true
+  },
   "compatibleRulesMatrix": true,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
@@ -53,7 +58,7 @@
     "ruleFacts": 5,
     "book": 5,
     "mobile": 2,
-    "rosterFilter": 6,
+    "rosterFilter": 7,
     "rosterData": 1
   },
   "expected": {

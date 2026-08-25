@@ -18,10 +18,12 @@ const manifest=json('sources/source-manifest.json');
 const config=json('book.config.json');
 const context=JSON.parse(fs.readFileSync(path.join(repo,'glossary','contexts','tau-empire.json'),'utf8')).terms;
 const glossary=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en.json'),'utf8')).terms;
-const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
+const readerShell=fs.readFileSync(path.join(root,'reader.html'),'utf8'),targetScope={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'scripts','target-data.js'),'utf8'),targetScope);
+const reader=readerShell+targetScope.window.WH_ARMY_BOOK_TARGETS.html;
 const serviceWorker=fs.readFileSync(path.join(repo,'service-worker.js'),'utf8');
 const codexParitySource=manifest.layers.find(layer=>layer.id==='codex-parity');
-assert.equal(config.assetVersions.rosterFilter,4);
+assert.equal(config.assetVersions.rosterFilter,7);
 const rosterFilterUrl=reader.match(/\.\/scripts\/roster-filter\.js\?v=\d+/)?.[0];
 assert.ok(rosterFilterUrl);
 assert.ok(serviceWorker.includes(`./books/tau-empire/${rosterFilterUrl.slice(2)}`));
@@ -55,8 +57,8 @@ assert.deepEqual(unknownWeaponLabels,[]);
 assert.doesNotMatch(reader,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
 assert.doesNotMatch(reader,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
 assert.equal(mobileRouteFiles.length,49);
-for(const output of mobileRoutes){assert.match(output,/data-canonical-reader="\.\.\/reader\.html"/);assert.match(output,/mobile-route-redirect\.js\?v=1/);assert.doesNotMatch(output,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/);}
-assert.match(reader,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(reader,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(reader,/shared\/datasheet-system\.css\?v=\d+/);
+for(const output of mobileRoutes){assert.match(output,/data-canonical-reader="\.\.\/reader\.html"/);assert.match(output,/mobile-route-redirect\.js\?v=2/);assert.doesNotMatch(output,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/);}
+assert.match(reader,/shared\/styles\/content\.css\?v=\d+/);assert.match(reader,/shared\/styles\/popups\.css\?v=\d+/);assert.match(reader,/shared\/datasheet-system\.css\?v=\d+/);
 const sourceWargearAbilities=allUnits.flatMap(unit=>(unit.wargearAbilities||[]).map(ability=>({unit,ability})));
 assert.deepEqual([sourceWargearAbilities.length,new Set(sourceWargearAbilities.map(item=>item.ability.title)).size,new Set(sourceWargearAbilities.map(item=>item.unit.id)).size],[52,14,16]);
 for(const unit of allUnits){

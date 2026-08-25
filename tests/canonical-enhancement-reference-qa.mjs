@@ -33,6 +33,11 @@ assert.match(am,/canonicalEnhancement\(id,referenceSource\)/,'AM canonical Enhan
 for(const id of inventory['adeptus-mechanicus'])assert.match(am,new RegExp(id),`AM canonical Enhancement mapping missing for ${id}`);
 for(const text of ['While this BATTLELINE unit is targeted by a melee attack, subtract 1 from the Hit roll.','Hazardous tests for this unit can be re-rolled.'])assert.doesNotMatch(am,new RegExp(text.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),`AM residual summary: ${text}`);
 
+const tau=fs.readFileSync(path.join(root,'books/tau-empire/scripts/roster-filter.js'),'utf8');
+assert.match(tau,/reference\('enhancement',ENHANCEMENT\.precision/,'T\'au Precision canonical Enhancement reference');
+assert.match(tau,/reference\('detachment-rule'/,'T\'au canonical Detachment Rule references');
+for(const text of ['Derived effect: this unit has -3" detection range.','Apply the current','No permanent Datasheet mutation was applied'])assert.doesNotMatch(tau,new RegExp(text.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),`T'au synthetic gameplay summary: ${text}`);
+
 const remaining=fs.readFileSync(path.join(root,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
 assert.match(remaining,/canonicalReference:\{kind:'enhancement',id:source\.id\}/);
 for(const legacy of ["ability('reroll-wounds'","ability('reroll-damage'","reference('vowed-critical','Critical Hits 5+'","reference('battleshocked-values','Improved values while Battle-shocked'"])assert.doesNotMatch(remaining,new RegExp(legacy.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),`remaining provider residual: ${legacy}`);
@@ -44,4 +49,4 @@ assert.match(presentation,/effect\.canonicalReference\|\|effect\.canonicalAbilit
 assert.match(presentation,/rosterCanonicalReferenceKind/);
 assert.match(presentation,/rosterCanonicalDetachmentRuleId/);
 assert.equal(Object.values(inventory).reduce((sum,ids)=>sum+ids.length,0),21);
-console.log('Canonical reference inventory QA: PASS (21 Enhancement migrations plus Detachment Rule support; one shared presentation family).');
+console.log('Canonical reference inventory QA: PASS (21 Enhancement migrations, T\'au Detachment Rules, one shared presentation family).');

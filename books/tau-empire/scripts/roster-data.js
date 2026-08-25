@@ -185,8 +185,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-breacher-team-wargear-ability-marker-drone"
             ]
           },
@@ -198,8 +197,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-breacher-team-wargear-ability-shield-drone-2"
             ]
           },
@@ -211,8 +209,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-breacher-team-wargear-ability-guardian-drone-3"
             ]
           }
@@ -314,17 +311,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-breacher-team-wargear-ability-marker-drone",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-breacher-team-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-breacher-team-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-breacher-team-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-breacher-team-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-breacher-team-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -518,8 +521,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-strike-team-wargear-ability-marker-drone"
             ]
           },
@@ -531,8 +533,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-strike-team-wargear-ability-shield-drone-2"
             ]
           },
@@ -544,8 +545,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-strike-team-wargear-ability-guardian-drone-3"
             ]
           }
@@ -662,17 +662,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-strike-team-wargear-ability-marker-drone",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-strike-team-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-strike-team-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-strike-team-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-strike-team-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-strike-team-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -828,8 +834,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-cadre-fireblade-wargear-ability-marker-drone"
             ]
           },
@@ -841,8 +846,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-cadre-fireblade-wargear-ability-shield-drone-2"
             ]
           },
@@ -854,8 +858,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-cadre-fireblade-wargear-ability-guardian-drone-3"
             ]
           }
@@ -927,17 +930,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-cadre-fireblade-wargear-ability-marker-drone",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-cadre-fireblade-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-cadre-fireblade-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-cadre-fireblade-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-cadre-fireblade-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-cadre-fireblade-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -1209,8 +1218,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-coldstar-battlesuit-wargear-ability-battlesuit-support-system"
             ]
           },
@@ -1222,8 +1230,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-generator-2"
             ]
           },
@@ -1235,8 +1242,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-coldstar-battlesuit-wargear-ability-weapon-support-system-3"
             ]
           },
@@ -1248,8 +1254,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-coldstar-battlesuit-wargear-ability-marker-drone-4"
             ]
           },
@@ -1261,8 +1266,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-drone-5"
             ]
           },
@@ -1274,8 +1278,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-coldstar-battlesuit-wargear-ability-guardian-drone-6"
             ]
           }
@@ -1482,32 +1485,44 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-battlesuit-support-system",
             "title": "Battlesuit Support System",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-coldstar-battlesuit-selection-battlesuit-support-system"
+            ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-generator-2",
             "title": "Shield Generator",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-coldstar-battlesuit-selection-shield-generator"
+            ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-weapon-support-system-3",
             "title": "Weapon Support System",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-coldstar-battlesuit-selection-weapon-support-system"
+            ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-marker-drone-4",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-coldstar-battlesuit-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-drone-5",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-coldstar-battlesuit-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-guardian-drone-6",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-coldstar-battlesuit-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -1760,8 +1775,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-enforcer-battlesuit-wargear-ability-battlesuit-support-system"
             ]
           },
@@ -1773,8 +1787,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-generator-2"
             ]
           },
@@ -1786,8 +1799,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-enforcer-battlesuit-wargear-ability-weapon-support-system-3"
             ]
           },
@@ -1799,8 +1811,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-enforcer-battlesuit-wargear-ability-marker-drone-4"
             ]
           },
@@ -1812,8 +1823,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-drone-5"
             ]
           },
@@ -1825,8 +1835,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-commander-in-enforcer-battlesuit-wargear-ability-guardian-drone-6"
             ]
           }
@@ -2018,32 +2027,44 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-battlesuit-support-system",
             "title": "Battlesuit Support System",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-enforcer-battlesuit-selection-battlesuit-support-system"
+            ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-generator-2",
             "title": "Shield Generator",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-enforcer-battlesuit-selection-shield-generator"
+            ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-weapon-support-system-3",
             "title": "Weapon Support System",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-enforcer-battlesuit-selection-weapon-support-system"
+            ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-marker-drone-4",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-enforcer-battlesuit-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-drone-5",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-enforcer-battlesuit-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-guardian-drone-6",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-commander-in-enforcer-battlesuit-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -2193,8 +2214,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-ethereal-wargear-ability-hover-drone"
             ]
           },
@@ -2206,8 +2226,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-ethereal-wargear-ability-marker-drone-2"
             ]
           },
@@ -2219,8 +2238,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-ethereal-wargear-ability-shield-drone-3"
             ]
           },
@@ -2232,8 +2250,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-ethereal-wargear-ability-guardian-drone-4"
             ]
           }
@@ -2290,22 +2307,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-ethereal-wargear-ability-hover-drone",
             "title": "Hover Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-ethereal-selection-hover-drone"
+            ]
           },
           {
             "id": "unit-ethereal-wargear-ability-marker-drone-2",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-ethereal-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-ethereal-wargear-ability-shield-drone-3",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-ethereal-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-ethereal-wargear-ability-guardian-drone-4",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-ethereal-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -4399,8 +4424,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-the-twin-lance-wargear-ability-mv15-gun-drone"
             ]
           }
@@ -4562,7 +4586,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-the-twin-lance-wargear-ability-mv15-gun-drone",
             "title": "MV15 Gun Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-the-twin-lance-selection-mv15-gun-drone"
+            ]
           }
         ]
       }
@@ -5424,8 +5450,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-pathfinder-team-wargear-ability-grav-inhibitor-drone"
             ]
           },
@@ -5437,8 +5462,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-pathfinder-team-wargear-ability-pulse-accelerator-drone-2"
             ]
           },
@@ -5450,8 +5474,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-pathfinder-team-wargear-ability-recon-drone-3"
             ]
           },
@@ -5463,8 +5486,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-pathfinder-team-wargear-ability-marker-drone-4"
             ]
           },
@@ -5476,8 +5498,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-pathfinder-team-wargear-ability-shield-drone-5"
             ]
           },
@@ -5489,8 +5510,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-pathfinder-team-wargear-ability-guardian-drone-6"
             ]
           }
@@ -5696,32 +5716,44 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-pathfinder-team-wargear-ability-grav-inhibitor-drone",
             "title": "Grav-inhibitor Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-pathfinder-team-selection-grav-inhibitor-drone"
+            ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-pulse-accelerator-drone-2",
             "title": "Pulse Accelerator Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-pathfinder-team-selection-pulse-accelerator-drone"
+            ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-recon-drone-3",
             "title": "Recon Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-pathfinder-team-selection-recon-drone"
+            ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-marker-drone-4",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-pathfinder-team-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-shield-drone-5",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-pathfinder-team-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-guardian-drone-6",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-pathfinder-team-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -5899,8 +5931,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-stealth-battlesuits-wargear-ability-homing-beacon"
             ]
           },
@@ -5912,8 +5943,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-stealth-battlesuits-wargear-ability-marker-drone-2"
             ]
           },
@@ -5925,8 +5955,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-stealth-battlesuits-wargear-ability-shield-drone-3"
             ]
           },
@@ -5938,8 +5967,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-stealth-battlesuits-wargear-ability-guardian-drone-4"
             ]
           }
@@ -6041,22 +6069,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-stealth-battlesuits-wargear-ability-homing-beacon",
             "title": "Homing Beacon",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-stealth-battlesuits-selection-homing-beacon"
+            ]
           },
           {
             "id": "unit-stealth-battlesuits-wargear-ability-marker-drone-2",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-stealth-battlesuits-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-stealth-battlesuits-wargear-ability-shield-drone-3",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-stealth-battlesuits-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-stealth-battlesuits-wargear-ability-guardian-drone-4",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-stealth-battlesuits-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -6198,8 +6234,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-vespid-stingwings-wargear-ability-oversight-drone"
             ]
           }
@@ -6286,7 +6321,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-vespid-stingwings-wargear-ability-oversight-drone",
             "title": "Oversight Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-vespid-stingwings-selection-oversight-drone"
+            ]
           }
         ]
       }
@@ -6472,8 +6509,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-broadside-battlesuits-wargear-ability-weapon-support-system"
             ]
           },
@@ -6485,8 +6521,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-broadside-battlesuits-wargear-ability-marker-drone-2"
             ]
           },
@@ -6498,8 +6533,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-broadside-battlesuits-wargear-ability-shield-drone-3"
             ]
           },
@@ -6511,8 +6545,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-broadside-battlesuits-wargear-ability-guardian-drone-4"
             ]
           }
@@ -6644,22 +6677,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-broadside-battlesuits-wargear-ability-weapon-support-system",
             "title": "Weapon Support System",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-broadside-battlesuits-selection-weapon-support-system"
+            ]
           },
           {
             "id": "unit-broadside-battlesuits-wargear-ability-marker-drone-2",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-broadside-battlesuits-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-broadside-battlesuits-wargear-ability-shield-drone-3",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-broadside-battlesuits-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-broadside-battlesuits-wargear-ability-guardian-drone-4",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-broadside-battlesuits-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -6833,8 +6874,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-fireknife-battlesuits-wargear-ability-marker-drone"
             ]
           },
@@ -6846,8 +6886,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-fireknife-battlesuits-wargear-ability-shield-drone-2"
             ]
           },
@@ -6859,8 +6898,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-fireknife-battlesuits-wargear-ability-guardian-drone-3"
             ]
           }
@@ -6947,17 +6985,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-crisis-fireknife-battlesuits-wargear-ability-marker-drone",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-fireknife-battlesuits-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-crisis-fireknife-battlesuits-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-fireknife-battlesuits-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-crisis-fireknife-battlesuits-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-fireknife-battlesuits-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -7142,8 +7186,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-starscythe-battlesuits-wargear-ability-marker-drone"
             ]
           },
@@ -7155,8 +7198,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-starscythe-battlesuits-wargear-ability-shield-drone-2"
             ]
           },
@@ -7168,8 +7210,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-starscythe-battlesuits-wargear-ability-guardian-drone-3"
             ]
           }
@@ -7256,17 +7297,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-crisis-starscythe-battlesuits-wargear-ability-marker-drone",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-starscythe-battlesuits-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-crisis-starscythe-battlesuits-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-starscythe-battlesuits-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-crisis-starscythe-battlesuits-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-starscythe-battlesuits-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -7432,8 +7479,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-sunforge-battlesuits-wargear-ability-marker-drone"
             ]
           },
@@ -7445,8 +7491,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-sunforge-battlesuits-wargear-ability-shield-drone-2"
             ]
           },
@@ -7458,8 +7503,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-crisis-sunforge-battlesuits-wargear-ability-guardian-drone-3"
             ]
           }
@@ -7531,17 +7575,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-crisis-sunforge-battlesuits-wargear-ability-marker-drone",
             "title": "Marker Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-sunforge-battlesuits-selection-marker-drone"
+            ]
           },
           {
             "id": "unit-crisis-sunforge-battlesuits-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-sunforge-battlesuits-selection-shield-drone"
+            ]
           },
           {
             "id": "unit-crisis-sunforge-battlesuits-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-crisis-sunforge-battlesuits-selection-guardian-drone"
+            ]
           }
         ]
       }
@@ -7759,8 +7809,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-ghostkeel-battlesuit-wargear-ability-battlesuit-support-system"
             ]
           }
@@ -7892,7 +7941,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-ghostkeel-battlesuit-wargear-ability-battlesuit-support-system",
             "title": "Battlesuit Support System",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-ghostkeel-battlesuit-selection-battlesuit-support-system"
+            ]
           }
         ]
       }
@@ -10757,8 +10808,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-tidewall-shieldline-wargear-ability-tidewall-defence-platform"
             ]
           }
@@ -10769,7 +10819,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-tidewall-shieldline-wargear-ability-tidewall-defence-platform",
             "title": "Tidewall Defence Platform",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-tidewall-shieldline-selection-tidewall-defence-platform"
+            ]
           }
         ]
       }
@@ -10782,7 +10834,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-expert-fieldcraft"
+      ]
     },
     {
       "id": "auxiliary-cadre",
@@ -10790,7 +10844,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-integrated-command-structure"
+      ]
     },
     {
       "id": "experimental-prototype-cadre",
@@ -10798,7 +10854,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-superior-craftsmanship"
+      ]
     },
     {
       "id": "kauyon",
@@ -10806,7 +10864,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-patient-hunter"
+      ]
     },
     {
       "id": "kroot-hunting-pack",
@@ -10814,7 +10874,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters"
+      ]
     },
     {
       "id": "montka",
@@ -10822,7 +10884,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-killing-blow"
+      ]
     },
     {
       "id": "retaliation-cadre",
@@ -10830,10 +10894,76 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-bonded-heroes"
+      ]
     }
   ],
-  "detachmentRules": [],
+  "detachmentRules": [
+    {
+      "id": "tau-empire-detachment-rule-expert-fieldcraft",
+      "title": "Expert Fieldcraft",
+      "text": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
+      "sectionId": "advanced-acquisition-cadre-rule",
+      "detachmentId": "advanced-acquisition-cadre",
+      "detachmentTitle": "Advanced Acquisition Cadre",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-integrated-command-structure",
+      "title": "Integrated Command Structure",
+      "text": "Friendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.",
+      "sectionId": "auxiliary-cadre-rule",
+      "detachmentId": "auxiliary-cadre",
+      "detachmentTitle": "Auxiliary Cadre",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-superior-craftsmanship",
+      "title": "Superior Craftsmanship",
+      "text": "Friendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R. This detachment has the RETALIATION tag and cannot be taken with another RETALIATION detachment.",
+      "sectionId": "experimental-prototype-cadre-rule",
+      "detachmentId": "experimental-prototype-cadre",
+      "detachmentTitle": "Experimental Prototype Cadre",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-patient-hunter",
+      "title": "Patient Hunter",
+      "text": "During the third, fourth and fifth battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack’s Ballistic skill characteristics and/or all modifiers to the Hit roll.",
+      "sectionId": "kauyon-rule",
+      "detachmentId": "kauyon",
+      "detachmentTitle": "Kauyon",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+      "title": "Hunter's Instincts & Skirmish Fighters",
+      "text": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.\n\nKROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
+      "sectionId": "kroot-hunting-pack-rule",
+      "detachmentId": "kroot-hunting-pack",
+      "detachmentTitle": "Kroot Hunting Pack",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-killing-blow",
+      "title": "Killing Blow",
+      "text": "During the first, second and third battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [ASSAULT] ability. During the first, second and third battle rounds, while a unit is a Guided unit (see For the Greater Good), its ranged weapons have the [LETHAL HITS] ability.",
+      "sectionId": "montka-rule",
+      "detachmentId": "montka",
+      "detachmentTitle": "Mont'ka",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-bonded-heroes",
+      "title": "Bonded Heroes",
+      "text": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+      "sectionId": "retaliation-cadre-rule",
+      "detachmentId": "retaliation-cadre",
+      "detachmentTitle": "Retaliation Cadre",
+      "sourceBookId": "tau-empire"
+    }
+  ],
   "enhancements": [
     {
       "id": "negation-emitters-upgrade",
@@ -11230,694 +11360,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "detachmentId": "retaliation-cadre",
       "sourceBookId": "tau-empire",
       "legacyKey": "enhancement-starflare-ignition-system"
-    },
-    {
-      "title": "Negation Emitters Upgrade",
-      "text": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
-      "value": 15,
-      "detachment": "Advanced Acquisition Cadre",
-      "tags": [
-        "UPGRADE"
-      ],
-      "owner": {
-        "subject": "unit",
-        "selector": {
-          "unitIds": [
-            "unit-stealth-battlesuits"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "negation emitters upgrade",
-      "legacyKey": "negation emitters upgrade",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Unmasking Suite Upgrade",
-      "text": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
-      "value": 15,
-      "detachment": "Advanced Acquisition Cadre",
-      "tags": [
-        "UPGRADE"
-      ],
-      "owner": {
-        "subject": "unit",
-        "selector": {
-          "unitIds": [
-            "unit-pathfinder-team",
-            "unit-stealth-battlesuits",
-            "unit-ghostkeel-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "unmasking suite upgrade",
-      "legacyKey": "unmasking suite upgrade",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Student of Kauyon",
-      "text": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
-      "value": 20,
-      "detachment": "Auxiliary Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "student of kauyon",
-      "legacyKey": "student of kauyon",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Admired Leader",
-      "text": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
-      "value": 20,
-      "detachment": "Auxiliary Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "admired leader",
-      "legacyKey": "admired leader",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Thermoneutronic Projector",
-      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have: +2 S; +1 AP and D.",
-      "value": 15,
-      "detachment": "Experimental Prototype Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "thermoneutronic projector",
-      "legacyKey": "thermoneutronic projector",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Plasma Accelerator Rifle",
-      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have: +2 S; +1 A, AP and D.",
-      "value": 20,
-      "detachment": "Experimental Prototype Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "plasma accelerator rifle",
-      "legacyKey": "plasma accelerator rifle",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Supernova Launcher",
-      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have: +3 S; +1 AP and D.",
-      "value": 15,
-      "detachment": "Experimental Prototype Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "supernova launcher",
-      "legacyKey": "supernova launcher",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Exemplar of the Kauyon",
-      "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of from the third.",
-      "value": 20,
-      "detachment": "Kauyon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-lone-spear",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "exemplar of the kauyon",
-      "legacyKey": "exemplar of the kauyon",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Precision of the Patient Hunter",
-      "text": "T’AU EMPIRE model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well.",
-      "value": 15,
-      "detachment": "Kauyon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-lone-spear",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "precision of the patient hunter",
-      "legacyKey": "precision of the patient hunter",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Solid-image Projection Unit",
-      "text": "T’AU EMPIRE model only. After both players have deployed their armies, select up to three T’AU EMPIRE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
-      "value": 20,
-      "detachment": "Kauyon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-lone-spear",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "solid image projection unit",
-      "legacyKey": "solid image projection unit",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Through Unity, Devastation",
-      "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit.",
-      "value": 30,
-      "detachment": "Kauyon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-lone-spear",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "through unity devastation",
-      "legacyKey": "through unity devastation",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Borthrod Gland",
-      "text": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-      "value": 15,
-      "detachment": "Kroot Hunting Pack",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-kroot-flesh-shaper"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "borthrod gland",
-      "legacyKey": "borthrod gland",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Kroothawk Flock",
-      "text": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
-      "value": 10,
-      "detachment": "Kroot Hunting Pack",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-lone-spear",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "kroothawk flock",
-      "legacyKey": "kroothawk flock",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Nomadic Hunter",
-      "text": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
-      "value": 20,
-      "detachment": "Kroot Hunting Pack",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-kroot-trail-shaper"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "nomadic hunter",
-      "legacyKey": "nomadic hunter",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Root-carved Weapons",
-      "text": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
-      "value": 10,
-      "detachment": "Kroot Hunting Pack",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-kroot-war-shaper"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "root carved weapons",
-      "legacyKey": "root carved weapons",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Coordinated Exploitation",
-      "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [SUSTAINED HITS 1] ability while targeting their Spotted unit.",
-      "value": 30,
-      "detachment": "Mont'ka",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-lone-spear",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "coordinated exploitation",
-      "legacyKey": "coordinated exploitation",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Exemplar of the Mont’ka",
-      "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Killing Blow Detachment rule applies to that unit during the fourth battle round as well.",
-      "value": 10,
-      "detachment": "Mont'ka",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-lone-spear",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "exemplar of the mont ka",
-      "legacyKey": "exemplar of the mont ka",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Strategic Conqueror",
-      "text": "T’AU EMPIRE model only. At the start of the first battle round, before the first turn begins, select one objective marker on the battlefield. While a friendly T’AU EMPIRE model is within range of that objective marker and the bearer is on the battlefield, add 1 to that friendly model’s Objective Control characteristic.",
-      "value": 15,
-      "detachment": "Mont'ka",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-lone-spear",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "strategic conqueror",
-      "legacyKey": "strategic conqueror",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Strike Swiftly",
-      "text": "In the Resolve Pre-battle Abilities step, you can select up to two friendly T’AU EMPIRE units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability.",
-      "value": 35,
-      "detachment": "Mont'ka",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-lone-spear",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "strike swiftly",
-      "legacyKey": "strike swiftly",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Internal Grenade Racks",
-      "text": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
-      "value": 20,
-      "detachment": "Retaliation Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "internal grenade racks",
-      "legacyKey": "internal grenade racks",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Prototype Weapon System",
-      "text": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
-      "value": 15,
-      "detachment": "Retaliation Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "prototype weapon system",
-      "legacyKey": "prototype weapon system",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Puretide Engram Neurochip",
-      "text": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
-      "value": 15,
-      "detachment": "Retaliation Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "puretide engram neurochip",
-      "legacyKey": "puretide engram neurochip",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "title": "Starflare Ignition System",
-      "text": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
-      "value": 20,
-      "detachment": "Retaliation Cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "starflare ignition system",
-      "legacyKey": "starflare ignition system",
-      "sourceBookId": "tau-empire"
     }
   ]
 });

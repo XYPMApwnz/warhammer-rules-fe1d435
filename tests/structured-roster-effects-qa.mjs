@@ -9,7 +9,6 @@ import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const books=new Map([
-  ['tau-empire',10],
   ['emperors-children',21],
   ['tyranids',23],
   ['chaos-space-marines',12],
@@ -103,7 +102,7 @@ try{
       await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile#start`);
       await page.evaluate(record=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([record])),record);
       await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile&roster=${rosterId}#${unit.id}`);
-      await page.waitForFunction(id=>document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(id)}"]`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1',instanceId);
+      try{await page.waitForFunction(id=>document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(id)}"]`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1',instanceId);}catch(error){throw new Error(`${bookId}: projection timeout; ${errors.join(' | ')||'no browser error captured'}`,{cause:error});}
       const state=await page.evaluate(({instanceId,title})=>{const projection=window.WH_ARMY_ROSTER_GAME_PROJECTION,gameUnit=projection.units.find(item=>item.identity.instanceId===instanceId),card=document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(instanceId)}"]`);return{effects:gameUnit.effects.map(effect=>({owner:effect.source?.ownerInstanceId,state:effect.state,certainty:effect.certainty,condition:effect.condition||null,targets:effect.targets||[]})),text:card.querySelector('.roster-game-effects')?.innerText||'',cardText:card.innerText,changes:card.querySelectorAll('.roster-game-change,.roster-modified,.roster-game-derived-ability,.roster-game-effects li').length,units:document.querySelectorAll('.document .unit-card').length,overflow:document.documentElement.scrollWidth>innerWidth,title};},{instanceId,title:enhancement.title});
       assert.ok(state.effects.length>0,`${bookId}: structured projection`);
       assert.ok(state.effects.every(effect=>effect.owner===instanceId),`${bookId}: exact source owner`);
@@ -127,4 +126,4 @@ try{
   }finally{await context.close();}
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 
-console.log('Structured roster effect provider/presentation QA: 7/7 PASS.');
+console.log("Structured roster effect provider/presentation QA: 6/6 PASS (T'au uses its book-local semantic provider).");

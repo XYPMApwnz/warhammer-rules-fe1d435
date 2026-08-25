@@ -9,14 +9,6 @@
   const smBook=()=>root.document?.documentElement?.dataset.bookId==='space-marines'||/\/books\/space-marines\//.test(root.location?.pathname||'');
   const daBook=()=>root.document?.documentElement?.dataset.bookId==='dark-angels'||/\/books\/dark-angels\//.test(root.location?.pathname||'');
   const baBook=()=>root.document?.documentElement?.dataset.bookId==='blood-angels'||/\/books\/blood-angels\//.test(root.location?.pathname||'');
-  const unsafeWeaponTargets=new Set(['thermoneutronic projector','plasma accelerator rifle','supernova launcher']);
-  const tauEffects=new Map([
-    ['negation emitters upgrade','detection-range-minus-3'],
-    ['precision of the patient hunter','hit-plus-1'],
-    ['kroothawk flock','ignores-cover'],
-    ['root carved weapons','precision-devastating-wounds'],
-    ['internal grenade racks','grenades-keyword']
-  ]);
   const ecEffects=new Map([
     ['tears of the phoenix','modifier-immunity'],
     ['exalted patron','move-plus-1'],
@@ -220,36 +212,6 @@
     for(const keyword of String(values.Keywords||'').split(',').map(value=>value.trim()).filter(Boolean))addWeaponTag(row,keyword,effect);
     table.append(row);return true;
   }
-  function applyTauEffect(card,article,item,applyEffects=true){
-    if(!applyEffects)return;
-    const key=normalize(item.title),effect=tauEffects.get(key);
-    if(effect==='detection-range-minus-3'){
-      derivedNote(article,effect,'Derived effect: this unit has -3" detection range.');return;
-    }
-    if(effect==='hit-plus-1')return;
-    if(effect==='ignores-cover'){
-      const rows=weaponRows(card,'ranged');
-      if(rows.length&&rows.every(row=>addWeaponTag(row,'IGNORES COVER',effect)))article.dataset.rosterDerivedEffect=effect;
-      else warning(article,'Effect could not be applied automatically because no ranged weapon profiles were found.');
-      return;
-    }
-    if(effect==='precision-devastating-wounds'){
-      const rows=weaponRows(card);
-      if(rows.length&&rows.every(row=>addWeaponTag(row,'PRECISION',effect)&&addWeaponTag(row,'DEVASTATING WOUNDS',effect)))article.dataset.rosterDerivedEffect=effect;
-      else warning(article,'Effect could not be applied automatically because no weapon profiles were found.');
-      return;
-    }
-    if(effect==='grenades-keyword'){
-      if(addKeyword(card,'GRENADES',effect))article.dataset.rosterDerivedEffect=effect;
-      else warning(article,'Effect could not be applied automatically because the Keywords block was not found.');
-      return;
-    }
-    if(unsafeWeaponTargets.has(key)){
-      warning(article,'Effect could not be applied automatically. The roster export does not identify the weapon selected in the Declare Battle Formations step.');return;
-    }
-    const mode=/while the bearer is leading a unit|bearer(?:'|\u2019)s unit/i.test(item.text||'')?'attachment-dependent':/declare battle formations|before the first turn|resolve pre-battle|after both players have deployed/i.test(item.text||'')?'setup-dependent':'conditional';
-    warning(article,`No permanent Datasheet mutation was applied because this Enhancement is ${mode}.`);
-  }
   function resolveTauOwnership(roster,units){
     const enhancements=roster?.enhancements||[],names=new Set((units||[]).map(unit=>normalize(unit.name)));
     const instances=(units||[]).map((unit,index)=>({
@@ -287,12 +249,12 @@
   function decorateTau(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
     const ownership=resolveTauOwnership(roster,units);
-    if(ownership.instances.length>1){renderTauInstances(card,ownership);return ownership.instances.flatMap(instance=>instance.enhancements);}
+    if(ownership.instances.length!==1)return[];
     for(const entry of ownership.cardEnhancements){
       const item=catalog()[normalize(entry.name)];if(!item||list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(item.title))}"]`))continue;
-      const article=enhancementArticle(entry,item);applyTauEffect(card,article,item,!Array.isArray(context.projectedEffects));list.prepend(article);
+      list.prepend(enhancementArticle(entry,item));
     }
-    renderTauUnresolved(list,ownership.unresolved);return ownership.cardEnhancements;
+    return ownership.cardEnhancements;
   }
   function applyEcEffect(card,article,item,applyEffects=true){
     if(!applyEffects)return;
@@ -649,7 +611,7 @@
     }
     return output;
   }
-  function structuredCode(item){const identity=`${item.detachmentId}|${item.ruleId||item.id}`;if(tauBook())return tauEffects.get(normalize(item.title));if(ecBook())return ecEffects.get(normalize(item.title));if(tyranidsBook())return tyranidsEffects.get(normalize(item.title));if(csmBook())return csmEffects.get(normalize(item.title));if(smBook())return smEffects.get(normalize(item.title));if(daBook())return inheritedDaSmEffects.has(identity)?smEffects.get(normalize(item.title)):daEffects.get(identity);if(baBook())return inheritedBaSmEffects.has(identity)?smEffects.get(normalize(item.title)):baEffects.get(identity);return null;}
+  function structuredCode(item){const identity=`${item.detachmentId}|${item.ruleId||item.id}`;if(tauBook())return null;if(ecBook())return ecEffects.get(normalize(item.title));if(tyranidsBook())return tyranidsEffects.get(normalize(item.title));if(csmBook())return csmEffects.get(normalize(item.title));if(smBook())return smEffects.get(normalize(item.title));if(daBook())return inheritedDaSmEffects.has(identity)?smEffects.get(normalize(item.title)):daEffects.get(identity);if(baBook())return inheritedBaSmEffects.has(identity)?smEffects.get(normalize(item.title)):baEffects.get(identity);return null;}
   function gameEffects({item,enhancements}){const output=[];for(const resolution of enhancements||[]){const entry=resolution.input||{},canonical=resolution.catalog;if(entry.ownerStatus!=='resolved'||entry.ownerUnitId!==item.raw.id||!canonical)continue;const code=structuredCode(canonical);if(!code)continue;const source={kind:'enhancement',id:canonical.ruleId||canonical.id,ownerInstanceId:item.raw.id};output.push(...structuredRecords(code,canonical,source));}return output;}
   function decorate(card,roster,units,context={}){
     if(tauBook())return decorateTau(card,roster,units,context);

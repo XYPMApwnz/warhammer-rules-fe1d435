@@ -50,8 +50,8 @@ try{
     }finally{await context.close();}
   }
 
-  const dg=catalogs.get('death-guard'),noxious=dg.units.find(unit=>unit.id==='unit-noxious-blightbringer'),poxwalkers=dg.units.find(unit=>unit.id==='unit-poxwalkers'),plagueMarines=dg.units.find(unit=>unit.id==='unit-plague-marines'),pipes=dg.enhancements.find(item=>item.id==='enhancement-witherbone-pipes'),detachment=dg.detachments.find(item=>item.id===pipes?.detachmentId)||dg.detachments.find(item=>/Shamblerot/i.test(item.title));
-  assert.ok(noxious&&poxwalkers&&plagueMarines&&pipes&&detachment,'DG pair canonical fixture');
+  const dg=catalogs.get('death-guard'),noxious=dg.units.find(unit=>unit.id==='unit-noxious-blightbringer'),poxwalkers=dg.units.find(unit=>unit.id==='unit-poxwalkers'),plagueMarines=dg.units.find(unit=>unit.id==='unit-plague-marines'),lordOfVirulence=dg.units.find(unit=>unit.id==='unit-lord-of-virulence'),blightlords=dg.units.find(unit=>unit.id==='unit-blightlord-terminators'),pipes=dg.enhancements.find(item=>item.id==='enhancement-witherbone-pipes'),vigour=dg.enhancements.find(item=>item.id==='enhancement-vile-vigour'),helm=dg.enhancements.find(item=>item.id==='enhancement-helm-of-the-fly-king'),detachment=dg.detachments.find(item=>item.id===pipes?.detachmentId)||dg.detachments.find(item=>/Shamblerot/i.test(item.title));
+  assert.ok(noxious&&poxwalkers&&plagueMarines&&lordOfVirulence&&blightlords&&pipes&&vigour&&helm&&detachment,'DG pair canonical fixture');
   for(const fixture of [
     {name:'Poxwalkers',unit:poxwalkers,quantity:10,modelTitle:'Poxwalker',body:'10x Poxwalkers (65 pts):\n10 with Improvised weapons',forbidden:[/10[-\u2013]20 Poxwalkers/i,/Every model is equipped with/i]},
     {name:'Noxious',unit:noxious,quantity:1,modelTitle:'Noxious Blightbringer',body:'1x Noxious Blightbringer (60 pts): Plasma pistol, Cursed plague bell',forbidden:[/This model is equipped with/i]}
@@ -87,7 +87,7 @@ try{
   for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){
     const {context,page}=await openRecord({bookId:'death-guard',record:pairRecord,instance,unitId});
     try{
-      const projected=await page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id),stats=unit.effects.filter(effect=>effect.component==='stat'),vitalityId='ability-sickening-vitality-89bb5ff';return{effective:unit.effective.stats,effects:stats.map(effect=>({id:effect.id,targetId:effect.targetId,base:effect.base,effective:effect.effective,owner:effect.source?.ownerInstanceId})),text:document.querySelector('.roster-game-effects')?.innerText||'',vitality:unit.effects.find(effect=>effect.canonicalAbilityId===vitalityId),vitalityText:document.querySelector(`[data-roster-canonical-ability-id="${vitalityId}"]`)?.innerText||''};},instance),dom=await visibleStats(page);
+      const projected=await page.evaluate(({id,pipesId})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id),stats=unit.effects.filter(effect=>effect.component==='stat'),vitalityId='ability-sickening-vitality-89bb5ff',pipesReference=unit.effects.find(effect=>effect.canonicalReference?.id===pipesId),pipesArticle=document.querySelector(`[data-roster-canonical-reference-id="${pipesId}"]`);return{effective:unit.effective.stats,effects:stats.map(effect=>({id:effect.id,targetId:effect.targetId,base:effect.base,effective:effect.effective,owner:effect.source?.ownerInstanceId})),text:document.querySelector('.roster-game-effects')?.innerText||'',vitality:unit.effects.find(effect=>effect.canonicalAbilityId===vitalityId),vitalityText:document.querySelector(`[data-roster-canonical-ability-id="${vitalityId}"]`)?.innerText||'',pipesReference,pipesText:pipesArticle?.querySelector('p')?.textContent.trim()||'',pipesSource:pipesArticle?.querySelector('.roster-game-ability-source')?.textContent.trim()||''};},{id:instance,pipesId:pipes.id}),dom=await visibleStats(page);
       assert.equal(projected.effective.M,'6"',`${instance}: effective M`);
       assert.equal(projected.effective.OC,'2',`${instance}: effective OC`);
       assert.equal(dom.M,'6"',`${instance}: visible M`);
@@ -98,10 +98,27 @@ try{
         assert.equal(projected.vitality?.operation,'reference',`${instance}: Sickening Vitality canonical reference`);
         assert.match(projected.vitalityText,/Sickening Vitality[\s\S]*Noxious Blightbringer[\s\S]*re-roll Advance and Charge/i,`${instance}: canonical Sickening Vitality ability/source`);
         assert.doesNotMatch(projected.text,/Sickening Vitality/i,`${instance}: no Active roster effects reference duplicate`);
-        assert.match(projected.text,/Witherbone Pipes/i,`${instance}: Witherbone Pipes ability/provenance`);
+        assert.equal(projected.pipesReference?.canonicalReference?.kind,'enhancement',`${instance}: Witherbone canonical reference kind`);
+        assert.equal(projected.pipesReference?.source?.ownerInstanceId,'noxious',`${instance}: Witherbone exact source`);
+        assert.equal(projected.pipesText,pipes.text,`${instance}: Witherbone full canonical text`);
+        assert.equal(projected.pipesSource,'Noxious Blightbringer',`${instance}: Witherbone source label`);
+        assert.doesNotMatch(projected.text,/Witherbone Pipes/i,`${instance}: no Active roster effects reference duplicate`);
       }
     }finally{await context.close();}
   }
+
+  const inspectEnhancementReference=async({enhancement,record,instance='blightlords',expectM=null})=>{
+    const {context,page}=await openRecord({bookId:'death-guard',record,instance,unitId:blightlords.id});
+    try{return await page.evaluate(({instance,id,text,expectM})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===instance),card=document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${instance}"]`),effect=unit.effects.find(item=>item.canonicalReference?.id===id),article=card.querySelector(`[data-roster-canonical-reference-id="${id}"]`),visibleM=[...card.querySelectorAll('.stat[data-source-field="stats.M"] span')][0]?.textContent.trim()||null;return{effectKind:effect?.canonicalReference?.kind,owner:effect?.source?.ownerInstanceId,target:effect?.targetInstanceId,text:article?.querySelector('p')?.textContent.trim()||'',source:article?.querySelector('.roster-game-ability-source')?.textContent.trim()||'',count:card.querySelectorAll(`[data-roster-canonical-reference-id="${id}"]`).length,active:card.querySelector('.roster-game-effects')?.innerText||'',visibleM,effectiveM:unit.effective.stats.M,expectM,canonicalText:text};},{instance,id:enhancement.id,text:enhancement.text,expectM});}finally{await context.close();}
+  };
+  const enhancementRecord=(id,enhancement)=>({id,roster:{faction:dg.book.title,units:[selectedModel(lordOfVirulence,'lov',1),selectedModel(blightlords,'blightlords',5)],detachments:[{name:dg.detachments.find(item=>item.id===enhancement.detachmentId)?.title||''}],enhancements:[{id:enhancement.id,name:enhancement.title,ownerUnitId:'lov',ownerStatus:'resolved'}],warnings:[]},attachments:{blightlords:['lov']}});
+  const vigourState=await inspectEnhancementReference({enhancement:vigour,record:enhancementRecord('vile-vigour-reference',vigour),expectM:'6"'});
+  assert.deepEqual({kind:vigourState.effectKind,owner:vigourState.owner,target:vigourState.target,count:vigourState.count,text:vigourState.text,source:vigourState.source,effectiveM:vigourState.effectiveM,visibleM:vigourState.visibleM},{kind:'enhancement',owner:'lov',target:'blightlords',count:1,text:vigour.text,source:'Lord of Virulence',effectiveM:'6"',visibleM:'6"'});
+  assert.match(vigourState.active,/M 5" → 6"/);
+  assert.doesNotMatch(vigourState.active,/Vile Vigour/);
+  const helmState=await inspectEnhancementReference({enhancement:helm,record:enhancementRecord('helm-reference',helm)});
+  assert.deepEqual({kind:helmState.effectKind,owner:helmState.owner,target:helmState.target,count:helmState.count,text:helmState.text,source:helmState.source},{kind:'enhancement',owner:'lov',target:'blightlords',count:1,text:helm.text,source:'Lord of Virulence'});
+  assert.doesNotMatch(helmState.active,/Helm of the Fly King/);
 
   const noAttachment={...pairRecord,id:'noxious-poxwalkers-no-attachment',attachments:{}};
   for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){

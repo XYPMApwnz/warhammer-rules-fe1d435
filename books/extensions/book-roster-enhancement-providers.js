@@ -226,9 +226,7 @@
     if(effect==='detection-range-minus-3'){
       derivedNote(article,effect,'Derived effect: this unit has -3" detection range.');return;
     }
-    if(effect==='hit-plus-1'){
-      derivedNote(article,effect,'Derived effect: add 1 to Hit rolls for the bearer\'s ranged attacks. From battle round 3 onwards, the +1 to Wound roll remains conditional on the current battle round.');return;
-    }
+    if(effect==='hit-plus-1')return;
     if(effect==='ignores-cover'){
       const rows=weaponRows(card,'ranged');
       if(rows.length&&rows.every(row=>addWeaponTag(row,'IGNORES COVER',effect)))article.dataset.rosterDerivedEffect=effect;
@@ -370,7 +368,7 @@
       else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
     }
     if(effect==='melee-reroll-wounds-ap-plus-1'){
-      if(adjustTyranidsRows(weaponRows(card,'melee'),{AP:-1},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: melee Armour Penetration improved by 1. The bearer\'s melee attacks can also re-roll Wound rolls.');}
+      if(adjustTyranidsRows(weaponRows(card,'melee'),{AP:-1},effect))article.dataset.rosterDerivedEffect=effect;
       else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
     }
     if(effect==='melee-hit-plus-1'){derivedNote(article,effect,'Derived rule: add 1 to Hit rolls for this unit\'s melee attacks. Weapon Skill is not rewritten because this is a roll modifier.');return;}
@@ -380,7 +378,7 @@
       else warning(article,'Effect could not be applied automatically because the Keywords block or melee weapon characteristics were not found.');return;
     }
     if(effect==='feel-no-pain'){
-      if(addSharedAbility(card,'Feel No Pain 5+','core-feel-no-pain',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Feel No Pain 5+ applied. Feel No Pain 4+ remains conditional on the bearer having fewer than its starting wounds at the start of a turn.');}
+      if(addSharedAbility(card,'Feel No Pain 5+','core-feel-no-pain',effect))article.dataset.rosterDerivedEffect=effect;
       else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
     }
     if(effect==='oc-plus-3'){
@@ -517,7 +515,7 @@
     const effect=baEffects.get(`${item.detachmentId}|${item.ruleId}`);if(!effect)return;
     if(effect==='psychic-anti-reroll-damage'){
       const rows=weaponRows(card).filter(row=>[...row.querySelectorAll('.weapon-tags > *')].some(tag=>normalize(tag.textContent)==='psychic'));
-      if(rows.length&&rows.every(row=>addWeaponTag(row,'ANTI-NON-MONSTER/VEHICLE 5+',effect)))derivedNote(article,effect,"Derived profiles: Anti-Non-Monster/Vehicle 5+ applied to the bearer's Psychic attacks; those attacks can also re-roll Damage rolls.");else warning(article,'Effect could not be applied automatically because no structured Psychic weapon profiles were found.');return;
+      if(rows.length&&rows.every(row=>addWeaponTag(row,'ANTI-NON-MONSTER/VEHICLE 5+',effect)))article.dataset.rosterDerivedEffect=effect;else warning(article,'Effect could not be applied automatically because no structured Psychic weapon profiles were found.');return;
     }
     if(effect==='detection-range-minus-3'){derivedNote(article,effect,'Derived permanent ability: this unit has -3" detection range.');return;}
     if(effect==='melee-attacks-plus-2'){
@@ -530,7 +528,7 @@
       const save=setSmStat(card,'Sv','2+',effect),weapons=adjustWeapons(card,'',{AP:-1},effect);if(save&&weapons){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived Datasheet: Save 2+ and improved Armour Penetration applied to the bearer's weapons.");}else warning(article,'Effect could not be applied automatically because the Save characteristic or weapon profiles were not found.');return;
     }
     if(effect==='unit-scouts-6'||effect==='unit-scouts-6-battleshock-aura'){
-      if(addSharedAbility(card,'Scouts 6"','core-scouts',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,effect==='unit-scouts-6'?'Derived ability: Scouts 6" applied to the bearer Datasheet only. No Bodyguard Datasheet is mutated without attachment evidence.':'Derived ability: Scouts 6" applied to the bearer Datasheet only. The Battle-shock re-roll aura remains conditional and no Bodyguard Datasheet is mutated without attachment evidence.');}else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');
+      if(addSharedAbility(card,'Scouts 6"','core-scouts',effect))article.dataset.rosterDerivedEffect=effect;else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');
     }
   }
   function decorateBa(card,roster,units,context={}){
@@ -582,21 +580,21 @@
       if(adjustTyranidsRows(rows,{Range:6},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: +6" Range applied only to plasma ranged weapons on this roster instance.');}else warning(article,'Effect could not be applied automatically because no structured plasma ranged weapon profiles were found.');return;
     }
     if(effect==='melee-lethal-hits-vowed-critical'){
-      if(tagWeapons(card,'melee','LETHAL HITS',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Lethal Hits applied to the bearer's melee weapons. Critical Hits on unmodified Hit rolls of 5+ remain conditional on the bearer being within range of the Vowed objective marker.");}else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
+      if(tagWeapons(card,'melee','LETHAL HITS',effect))article.dataset.rosterDerivedEffect=effect;else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
     }
     if(effect==='ranged-ignores-cover'){
       if(tagWeapons(card,'ranged','IGNORES COVER',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Ignores Cover applied to this exact owner's ranged weapons. No Bodyguard Datasheet is mutated without attachment evidence.");}else warning(article,'Effect could not be applied automatically because no ranged weapon profiles were found.');return;
     }
     if(effect==='melee-damage-plus-1'||effect==='melee-attacks-strength-damage-plus-1'||effect==='melee-strength-ap-damage'){
       const changes=effect==='melee-damage-plus-1'?{D:1}:effect==='melee-attacks-strength-damage-plus-1'?{A:1,S:1,D:1}:{S:2,AP:-1,D:1};
-      if(adjustWeapons(card,'melee',changes,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,effect==='melee-damage-plus-1'?"Derived profiles: +1 Damage applied to the bearer's melee weapons.":effect==='melee-strength-ap-damage'?"Derived profiles: +2 Strength, improved Armour Penetration and +1 Damage applied to the bearer's melee weapons.":"Derived profiles: +1 Attacks, Strength and Damage applied to the bearer's melee weapons. The +2 values remain conditional on the bearer being Battle-shocked and are not applied permanently.");}else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
+      if(adjustWeapons(card,'melee',changes,effect)){article.dataset.rosterDerivedEffect=effect;if(effect!=='melee-attacks-strength-damage-plus-1')derivedNote(article,effect,effect==='melee-damage-plus-1'?"Derived profiles: +1 Damage applied to the bearer's melee weapons.":"Derived profiles: +2 Strength, improved Armour Penetration and +1 Damage applied to the bearer's melee weapons.");}else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
     }
   }
   const conditional=kind=>({state:'conditional',certainty:'unknown',condition:{kind,state:'unknown'}});
-  function structuredRecords(code,item,source){const output=[],add=(suffix,component,targetId,operation,detail={},state={})=>output.push({id:`${source.id}:${suffix}`,component,targetId,operation,...detail,...state,source,provenance:{rosterFact:'enhancement-owner'}}),ability=(suffix,title,summary=item.text||'',state={})=>add(suffix,'ability',suffix,'grant',{title,summary},state),weapon=(suffix,targetId,operation,detail,state={})=>add(suffix,'weapon',targetId,operation,detail,state),stat=(suffix,targetId,operation,value,state={})=>add(suffix,'stat',targetId,operation,operation==='set'?{to:value}:{delta:value},state),keyword=(suffix,title,operation='grant',state={})=>add(suffix,'keyword',title,operation,{},state),reference=(suffix,title=item.title,state={})=>ability(suffix,title,item.text||'Curated roster effect reference.',state);
+  function structuredRecords(code,item,source){const output=[],add=(suffix,component,targetId,operation,detail={},state={})=>output.push({id:`${source.id}:${suffix}`,component,targetId,operation,...detail,...state,source,provenance:{rosterFact:'enhancement-owner'}}),ability=(suffix,title,summary=item.text||'',state={})=>add(suffix,'ability',suffix,'grant',{title,summary},state),weapon=(suffix,targetId,operation,detail,state={})=>add(suffix,'weapon',targetId,operation,detail,state),stat=(suffix,targetId,operation,value,state={})=>add(suffix,'stat',targetId,operation,operation==='set'?{to:value}:{delta:value},state),keyword=(suffix,title,operation='grant',state={})=>add(suffix,'keyword',title,operation,{},state),reference=(suffix,state={})=>add(suffix,'ability',source.id,'reference',{canonicalReference:{kind:'enhancement',id:source.id},state:'reference'},state);
     switch(code){
       case'detection-range-minus-3':ability(code,'Detection Range -3"');break;
-      case'hit-plus-1':ability('ranged-hit-plus-1','Ranged Hit rolls +1');reference('conditional-wound-plus-1','Wound rolls +1 from battle round 3',conditional('battle-round'));break;
+      case'hit-plus-1':ability('ranged-hit-plus-1','Ranged Hit rolls +1');reference('conditional-wound-plus-1',conditional('battle-round'));break;
       case'ignores-cover':weapon(code,'ranged','grant-tag',{tag:'IGNORES COVER'});break;
       case'precision-devastating-wounds':weapon('precision','all','grant-tag',{tag:'PRECISION'});weapon('devastating-wounds','all','grant-tag',{tag:'DEVASTATING WOUNDS'});break;
       case'grenades-keyword':keyword(code,'GRENADES');break;
@@ -612,10 +610,10 @@
       case'snap-shooting-protection':ability(code,'Snap-shooting protection');break;
       case'ranged-anti-character-2':weapon(code,'ranged','grant-tag',{tag:'ANTI-CHARACTER 2+'});break;
       case'invulnerable-save-4':ability(code,'Invulnerable Save 4+');break;
-      case'melee-reroll-wounds-ap-plus-1':weapon('ap','melee','add-stat',{stat:'AP',delta:-1});ability('reroll-wounds','Re-roll melee Wound rolls');break;
+      case'melee-reroll-wounds-ap-plus-1':weapon('ap','melee','add-stat',{stat:'AP',delta:-1});reference('reroll-wounds');break;
       case'melee-hit-plus-1':ability(code,'Melee Hit rolls +1');break;
       case'synapse-melee-strength-ws-plus-1':keyword('synapse','SYNAPSE');weapon('strength','melee','add-stat',{stat:'S',delta:1});weapon('weapon-skill','melee','add-stat',{stat:'WS',delta:-1});break;
-      case'feel-no-pain':ability('feel-no-pain-5','Feel No Pain 5+');reference('conditional-feel-no-pain-4','Feel No Pain 4+',conditional('wounds-remaining'));break;
+      case'feel-no-pain':ability('feel-no-pain-5','Feel No Pain 5+');reference('conditional-feel-no-pain-4',conditional('wounds-remaining'));break;
       case'oc-plus-3':stat(code,'OC','add',3);break;
       case'melee-strength-plus-1-conditional-attacks':weapon('strength','melee','add-stat',{stat:'S',delta:1});weapon('conditional-attacks','melee','add-stat',{stat:'A',delta:1},conditional('enemy-unit-destroyed'));break;
       case'stealth':ability(code,'Stealth');break;
@@ -636,18 +634,18 @@
       case'feel-no-pain-4':ability(code,'Feel No Pain 4+');break;
       case'reroll-damage-attacks':ability(code,'Re-roll Damage and Attacks rolls');break;
       case'new-weapon-profile':add(code,'weapon','added-profile','grant-profile',{profile:item.profile||null});break;
-      case'psychic-anti-reroll-damage':weapon('anti','psychic','grant-tag',{tag:'ANTI-NON-MONSTER/VEHICLE 5+'});ability('reroll-damage','Re-roll Psychic Damage rolls');break;
+      case'psychic-anti-reroll-damage':weapon('anti','psychic','grant-tag',{tag:'ANTI-NON-MONSTER/VEHICLE 5+'});reference('reroll-damage');break;
       case'melee-attacks-plus-2':weapon(code,'melee','add-stat',{stat:'A',delta:2});break;
       case'melee-anti-chaos-lance':weapon('anti-chaos','melee','grant-tag',{tag:'ANTI-CHAOS 5+'});weapon('lance','melee','grant-tag',{tag:'LANCE'});break;
       case'save-2-weapons-ap-plus-1':stat('save','Sv','set','2+');weapon('ap','all','add-stat',{stat:'AP',delta:-1});break;
-      case'unit-scouts-6':ability(code,'Scouts 6"');break;case'unit-scouts-6-battleshock-aura':ability('scouts','Scouts 6"');reference('battleshock-aura','Battle-shock re-roll aura',conditional('nearby-unit'));break;
+      case'unit-scouts-6':ability(code,'Scouts 6"');break;case'unit-scouts-6-battleshock-aura':ability('scouts','Scouts 6"');reference('battleshock-aura',conditional('nearby-unit'));break;
       case'unit-scouts-9':ability(code,'Scouts 9"');break;
       case'plasma-range-plus-6':weapon(code,'plasma','add-stat',{stat:'Range',delta:6});break;
-      case'melee-lethal-hits-vowed-critical':weapon('lethal-hits','melee','grant-tag',{tag:'LETHAL HITS'});reference('vowed-critical','Critical Hits 5+',conditional('vowed-objective-range'));break;
+      case'melee-lethal-hits-vowed-critical':weapon('lethal-hits','melee','grant-tag',{tag:'LETHAL HITS'});reference('vowed-critical',conditional('vowed-objective-range'));break;
       case'melee-damage-plus-1':weapon(code,'melee','add-stat',{stat:'D',delta:1});break;
-      case'melee-attacks-strength-damage-plus-1':weapon('attacks','melee','add-stat',{stat:'A',delta:1});weapon('strength','melee','add-stat',{stat:'S',delta:1});weapon('damage','melee','add-stat',{stat:'D',delta:1});reference('battleshocked-values','Improved values while Battle-shocked',conditional('battle-shocked'));break;
+      case'melee-attacks-strength-damage-plus-1':weapon('attacks','melee','add-stat',{stat:'A',delta:1});weapon('strength','melee','add-stat',{stat:'S',delta:1});weapon('damage','melee','add-stat',{stat:'D',delta:1});reference('battleshocked-values',conditional('battle-shocked'));break;
       case'melee-strength-ap-damage':weapon('strength','melee','add-stat',{stat:'S',delta:2});weapon('ap','melee','add-stat',{stat:'AP',delta:-1});weapon('damage','melee','add-stat',{stat:'D',delta:1});break;
-      default:{const unknown=/conditional|once|first-turn|early|strategic-reserves|setup/.test(code),state=unknown?conditional(code):{};reference(code,item.title,state);break;}
+      default:{const unknown=/conditional|once|first-turn|early|strategic-reserves|setup/.test(code),state=unknown?conditional(code):{};ability(code,item.title,item.text||'Curated roster effect reference.',state);break;}
     }
     return output;
   }

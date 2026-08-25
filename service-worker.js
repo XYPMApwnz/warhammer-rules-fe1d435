@@ -148,7 +148,7 @@ const APP_SHELL = [
   "./books/shared/styles/content.css?v=49",
   "./books/shared/styles/popups.css?v=19",
 "./books/shared/controllers/navigation-controller.js?v=30",
-  "./books/death-guard/scripts/roster-semantics.js?v=11",
+  "./books/death-guard/scripts/roster-semantics.js?v=12",
   "./books/death-guard/scripts/roster-data.js?v=10",
   "./books/death-guard/scripts/target-data.js?v=4",
   "./books/death-guard/scripts/roster-filter.js?v=30",
@@ -267,7 +267,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=2",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=4",
-  "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=7",
+  "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=8",
   "./books/adeptus-mechanicus/scripts/roster-data.js?v=10",
   "./books/adeptus-mechanicus/scripts/target-data.js?v=4",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=11",
@@ -304,7 +304,7 @@ const APP_SHELL = [
   ,"./books/tau-empire/scripts/target-data.js?v=4"
   ,"./books/tau-empire/mobile/related-rules.inc?v=2"
   ,"./books/shared/book-roster-enhancements.js?v=3"
-  ,"./books/extensions/book-roster-enhancement-providers.js?v=2"
+  ,"./books/extensions/book-roster-enhancement-providers.js?v=3"
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_ENTRY_FALLBACK
   ,CHAOS_SPACE_MARINES_DESKTOP_FALLBACK
@@ -386,8 +386,8 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/app.js?v=8"
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=18"
-  ,"./books/shared/roster-context.js?v=11"
-  ,"./books/shared/roster-game-presentation.js?v=10"
+  ,"./books/shared/roster-context.js?v=12"
+  ,"./books/shared/roster-game-presentation.js?v=11"
 ,"./books/shared/army-book-app.js?v=19"
   ,"./books/shared/offline-status.js?v=2"
   ,"./books/shared/styles/offline-status.css?v=1"

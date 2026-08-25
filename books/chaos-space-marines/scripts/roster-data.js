@@ -71,7 +71,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "6+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "25mm"
+        },
         "abilities": [
           {
             "id": "unit-cultist-mob-ability-for-the-dark-gods",
@@ -299,7 +308,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": "",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-legionaries-ability-veterans-of-the-long-war",
@@ -1013,7 +1031,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-chaos-lord-ability-chance-for-glory",
@@ -1275,7 +1302,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-chaos-lord-in-terminator-armour-ability-formidably-resilient",
@@ -1513,7 +1549,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-chaos-lord-with-jump-pack-ability-cruel-hunter",
@@ -1787,7 +1832,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-cultist-firebrand-ability-fiery-faith",
@@ -1950,7 +2004,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-dark-apostle-ability-dark-zealotry",
@@ -2121,7 +2180,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "6+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-dark-commune-ability-faithful-flock",
@@ -2398,7 +2463,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "10",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "4+",
+          "Base": "60mm"
+        },
         "abilities": [
           {
             "id": "unit-heretic-astartes-daemon-prince-ability-dark-blessing-aura",
@@ -2578,7 +2652,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "4+",
+          "Base": "60mm"
+        },
         "abilities": [
           {
             "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-flying-horror",
@@ -2756,7 +2839,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "14\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "4",
+          "Invulnerable": "4+",
+          "Base": "120x92mm Oval Base"
+        },
         "abilities": [
           {
             "id": "unit-lord-discordant-on-helstalker-ability-corrupt-machine-spirits",
@@ -3039,7 +3131,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-master-of-executions-ability-warp-sighted-butcher",
@@ -3195,7 +3296,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "5+",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-master-of-possession-ability-daemonkin-psychic",
@@ -3425,7 +3535,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-red-corsairs-reave-captain-ability-brutal-raider",
@@ -3688,7 +3807,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-sorcerer-ability-prescience-psychic",
@@ -3896,7 +4024,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-sorcerer-in-terminator-armour-ability-warptime-psychic",
@@ -4149,7 +4286,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "Sv": "5+",
+          "OC": "1"
+        },
         "abilities": [
           {
             "id": "unit-traitor-enforcer-ability-brutal-example",
@@ -4338,7 +4479,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "2+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "60x35.5mm Oval Base"
+        },
         "abilities": [
           {
             "id": "unit-warpsmith-ability-warpsmith",
@@ -4568,7 +4718,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": "",
+          "Base": "Use model"
+        },
         "abilities": [
           {
             "id": "unit-chaos-rhino-ability-self-repair",
@@ -4760,7 +4919,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "9",
+          "Ld": "5+",
+          "OC": "4",
+          "Invulnerable": "4+",
+          "Base": "60mm"
+        },
         "abilities": [
           {
             "id": "unit-abaddon-the-despoiler-ability-the-warmaster",
@@ -4895,7 +5063,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-cypher-ability-agent-of-discord-aura",
@@ -5082,7 +5259,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-fabius-bile-ability-enhanced-warriors",
@@ -5278,7 +5460,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-haarken-worldclaimer-ability-head-taker",
@@ -5455,7 +5646,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "50mm"
+        },
         "abilities": [
           {
             "id": "unit-huron-blackheart-ability-lord-of-badab-aura",
@@ -5605,7 +5805,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "50mm"
+        },
         "abilities": [
           {
             "id": "unit-kravek-morne-ability-headlong-destruction",
@@ -5814,7 +6023,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-masters-of-the-maelstrom-ability-fleet-command",
@@ -6178,7 +6392,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "10",
+          "Sv": "2+",
+          "W": "14",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "4+",
+          "Base": "80mm"
+        },
         "abilities": [
           {
             "id": "unit-vashtorr-the-arkifane-ability-unholy-mechanisms-aura",
@@ -6397,7 +6620,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "6+",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-accursed-cultists-ability-howling-horde",
@@ -6563,7 +6793,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-chaos-terminator-squad-ability-despoilers",
@@ -6937,7 +7176,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-chosen-ability-chosen-marauders",
@@ -7264,7 +7512,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "5+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-fellgor-beastmen-ability-bestial-raiders",
@@ -7567,7 +7824,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-havocs-ability-stabilisation-talons",
@@ -8183,7 +8449,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "7",
+          "Sv": "2+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": "5+",
+          "Base": "50mm"
+        },
         "abilities": [
           {
             "id": "unit-mutilators-ability-crushing-charge",
@@ -8416,7 +8691,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-nemesis-claw-ability-visions-of-suffering-psychic",
@@ -9082,7 +9366,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "4\"",
+          "T": "7",
+          "Sv": "2+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": "5+",
+          "Base": "50mm"
+        },
         "abilities": [
           {
             "id": "unit-obliterators-ability-warp-rift-firepower",
@@ -9291,7 +9584,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "9\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "5+",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-possessed-ability-unholy-bloodshed",
@@ -9412,7 +9714,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-raptors-ability-fearsome-aura",
@@ -9947,7 +10258,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": "",
+          "Base": "40mm"
+        },
         "abilities": [
           {
             "id": "unit-red-corsairs-raiders-ability-trophy-takers",
@@ -10186,7 +10506,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "5+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": "",
+          "Base": "25mm"
+        },
         "abilities": [
           {
             "id": "unit-traitor-guardsmen-squad-ability-twisted-defence-force",
@@ -10659,7 +10988,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "5+",
+          "Base": "32mm"
+        },
         "abilities": [
           {
             "id": "unit-warp-talons-ability-warp-strike",
@@ -10745,7 +11083,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": "",
+          "Base": "75x42mm Oval Base"
+        },
         "abilities": [
           {
             "id": "unit-chaos-bikers-ability-rapid-assault",
@@ -11236,7 +11583,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "12",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "6+",
+          "OC": "5",
+          "Invulnerable": "",
+          "Base": "Use model"
+        },
         "abilities": [
           {
             "id": "unit-chaos-land-raider-ability-assault-ramp",
@@ -11462,7 +11818,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "11",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "",
+          "Base": "Use model"
+        },
         "abilities": [
           {
             "id": "unit-chaos-predator-annihilator-ability-annihilator",
@@ -11715,7 +12080,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "11",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "",
+          "Base": "Use model"
+        },
         "abilities": [
           {
             "id": "unit-chaos-predator-destructor-ability-destructor",
@@ -11966,7 +12340,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "0",
+          "Invulnerable": "",
+          "Base": "50mm"
+        },
         "abilities": [
           {
             "id": "unit-chaos-spawn-ability-mind-breaking-mutations-aura",
@@ -12053,7 +12436,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "9\"",
+          "T": "11",
+          "Sv": "2+",
+          "W": "11",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "",
+          "Base": "Use model"
+        },
         "abilities": [
           {
             "id": "unit-chaos-vindicator-ability-siege-shield",
@@ -12252,7 +12644,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "11",
+          "Sv": "3+",
+          "W": "18",
+          "Ld": "6+",
+          "OC": "5",
+          "Invulnerable": "5+",
+          "Base": "160mm"
+        },
         "abilities": [
           {
             "id": "unit-defiler-ability-scuttling-walker",
@@ -12701,7 +13102,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "5+",
+          "Base": "120x92mm Oval Base"
+        },
         "abilities": [
           {
             "id": "unit-forgefiend-ability-daemonic-ordnance",
@@ -12872,7 +13282,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "8",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "",
+          "Base": "60mm"
+        },
         "abilities": [
           {
             "id": "unit-helbrute-ability-dark-ascension-aura",
@@ -13316,7 +13735,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "6+",
+          "OC": "-",
+          "Invulnerable": "5+",
+          "Base": "120x92mm Oval Base"
+        },
         "abilities": [
           {
             "id": "unit-heldrake-ability-airborne-predator",
@@ -13468,7 +13896,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "13",
+          "Sv": "3+",
+          "W": "24",
+          "Ld": "6+",
+          "OC": "8",
+          "Invulnerable": "5+",
+          "Base": "Use model"
+        },
         "abilities": [
           {
             "id": "unit-khorne-lord-of-skulls-ability-plough-through-the-enemy",
@@ -13750,7 +14187,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "5+",
+          "Base": "120x92mm Oval Base"
+        },
         "abilities": [
           {
             "id": "unit-maulerfiend-ability-siege-crawler",
@@ -13894,7 +14340,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "-",
+          "T": "11",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "6+",
+          "OC": "0",
+          "Invulnerable": "",
+          "Base": "Use model"
+        },
         "abilities": [
           {
             "id": "unit-noctilith-crown-ability-malevolent-locus-aura",
@@ -13989,7 +14444,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "9",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "5+",
+          "Base": "100mm"
+        },
         "abilities": [
           {
             "id": "unit-venomcrawler-ability-soul-eater",

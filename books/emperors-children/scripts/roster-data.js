@@ -38,7 +38,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "9\"",
+          "T": "3",
+          "Sv": "7+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-daemonettes-ability-horrifying-beauty",
@@ -188,7 +196,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-infractors-ability-excessive-assault",
@@ -484,7 +500,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tormentors-ability-objective-defiled",
@@ -898,7 +922,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-daemon-prince-of-slaanesh-ability-lord-of-excess",
@@ -1078,7 +1110,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "14\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-daemonic-destruction",
@@ -1258,7 +1298,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "14\"",
+          "T": "10",
+          "Sv": "5+",
+          "W": "18",
+          "Ld": "6+",
+          "OC": "5",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-keeper-of-secrets-ability-daemon-lord-of-slaanesh-aura",
@@ -1555,7 +1603,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-lord-exultant-ability-perfectionists",
@@ -1910,7 +1966,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-lord-kakophonist-ability-leader",
@@ -2087,7 +2151,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-sorcerer-ability-leader",
@@ -2295,7 +2367,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-chaos-rhino-ability-assault-vehicle",
@@ -2472,7 +2552,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "16\"",
+          "T": "11",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "5+",
+          "OC": "6",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-fulgrim-ability-daemonic-poisons",
@@ -2700,7 +2788,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-lucius-the-eternal-ability-leader",
@@ -2833,7 +2929,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "14\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "20",
+          "Ld": "6+",
+          "OC": "5",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-shalaxi-helbane-ability-no-prey-can-evade",
@@ -3065,7 +3169,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-chaos-terminators-ability-lethal-obsession",
@@ -3358,7 +3470,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-flawless-blades-ability-daemonic-patrons",
@@ -3489,7 +3609,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-noise-marines-ability-terrifying-crescendo",
@@ -3745,7 +3873,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "12",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "6+",
+          "OC": "5",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-chaos-land-raider-ability-assault-ramp",
@@ -3970,7 +4106,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-chaos-spawn-ability-scuttling-horrors",
@@ -4058,7 +4202,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "11",
+          "Sv": "3+",
+          "W": "18",
+          "Ld": "6+",
+          "OC": "5",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-defiler-ability-scuttling-walker",
@@ -4508,7 +4660,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "5",
+          "Sv": "7+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-fiends-ability-soporific-musk",
@@ -4599,7 +4759,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "7+",
+          "OC": "-",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-heldrake-ability-airborne-predator",
@@ -4745,7 +4913,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "6+",
+          "OC": "3",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-maulerfiend-ability-glutton-for-punishment",
@@ -4887,7 +5063,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "14\"",
+          "T": "4",
+          "Sv": "7+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-seekers-ability-unholy-speed",

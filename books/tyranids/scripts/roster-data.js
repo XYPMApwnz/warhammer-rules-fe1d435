@@ -48,7 +48,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "3",
+          "Sv": "6+",
+          "W": "1",
+          "Ld": "8+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-gargoyles-ability-winged-swarm",
@@ -172,7 +180,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "3",
+          "Sv": "5+",
+          "W": "1",
+          "Ld": "8+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-hormagaunts-ability-bounding-leap",
@@ -265,7 +281,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "5+",
+          "W": "1",
+          "Ld": "8+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-termagants-ability-skulking-horrors",
@@ -522,7 +546,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "6",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-broodlord-ability-vicious-insight",
@@ -636,7 +668,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "10",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "7+",
+          "OC": "3",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-hive-tyrant-ability-onslaught-aura-psychic",
@@ -832,7 +872,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "4+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-hyperadapted-raveners-ability-alpha-invader",
@@ -1028,7 +1074,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "8",
+          "Sv": "4+",
+          "W": "9",
+          "Ld": "7+",
+          "OC": "3",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-neurotyrant-ability-node-lash-psychic",
@@ -1160,7 +1214,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "5",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-parasite-of-mortrex-ability-parasitic-infection",
@@ -1291,7 +1353,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "11",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "7+",
+          "OC": "5",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tervigon-ability-spawn-termagants",
@@ -1534,7 +1604,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "6",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tyranid-prime-with-lash-whip-ability-alpha-warrior",
@@ -1691,7 +1769,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "7+",
+          "OC": "3",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-winged-hive-tyrant-ability-paroxysm-psychic",
@@ -1926,7 +2012,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "6",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-winged-tyranid-prime-ability-alpha-warrior",
@@ -2032,7 +2126,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "8+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tyrannocyte-ability-aerial-seeding",
@@ -2151,7 +2253,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "7",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-deathleaper-ability-fear-of-the-unseen-aura",
@@ -2268,7 +2378,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "9",
+          "Ld": "8+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-old-one-eye-ability-alpha-leader",
@@ -2426,7 +2544,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "8",
+          "Sv": "3+",
+          "W": "9",
+          "Ld": "8+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-the-red-terror-ability-swallow-whole",
@@ -2557,7 +2683,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "10",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "7+",
+          "OC": "3",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-the-swarmlord-ability-hive-commander",
@@ -2689,7 +2823,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "2",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-barbgaunts-ability-disruption-bombardment",
@@ -2797,7 +2939,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-biovores-ability-seed-spore-mines",
@@ -2920,7 +3070,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "4",
+          "Sv": "5+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-genestealers-ability-vanguard-predator",
@@ -3005,7 +3163,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "7",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-hive-guard-ability-defensive-stance",
@@ -3141,7 +3307,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "6",
+          "Sv": "4+",
+          "W": "6",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-lictor-ability-pheromone-trail",
@@ -3253,7 +3427,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "6+",
+          "W": "1",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-neurogaunts-ability-neurocytes",
@@ -3343,7 +3525,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "7",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-neurolictor-ability-feeder-tendrils",
@@ -3449,7 +3639,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-pyrovores-ability-burning-spray",
@@ -3573,7 +3771,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "3",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-raveners-ability-death-from-below",
@@ -3678,7 +3884,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tyranid-warriors-with-melee-bio-weapons-ability-adaptive-instincts-once-per-turn-per-unit",
@@ -3789,7 +4003,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tyranid-warriors-with-ranged-bio-weapons-ability-adaptable-predators",
@@ -4042,7 +4264,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "8",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tyrant-guard-ability-guardian-organism",
@@ -4178,7 +4408,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "3",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-venomthropes-ability-foul-spores-aura",
@@ -4264,7 +4502,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "4+",
+          "W": "3",
+          "Ld": "8+",
+          "OC": "1",
+          "Invulnerable": "6+"
+        },
         "abilities": [
           {
             "id": "unit-von-ryans-leapers-ability-pouncing-leap",
@@ -4370,7 +4616,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "5",
+          "Sv": "5+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-zoanthropes-ability-spirit-leech-aura-psychic",
@@ -4559,7 +4813,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "8",
+          "Ld": "8+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-carnifexes-ability-blistering-assault",
@@ -4887,7 +5149,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "8+",
+          "OC": "4",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-exocrine-ability-symbiotic-targeting",
@@ -5006,7 +5276,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "-",
+          "T": "9",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "8+",
+          "OC": "-",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-harpy-ability-spore-mine-cysts",
@@ -5177,7 +5455,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "11",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "8+",
+          "OC": "4",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-haruspex-ability-grisly-spectacle",
@@ -5323,7 +5609,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "-",
+          "T": "9",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "8+",
+          "OC": "-",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-hive-crone-ability-airborne-predator",
@@ -5522,7 +5816,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "11",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "7+",
+          "OC": "4",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-maleceptor-ability-encephalic-diffusion-aura-psychic",
@@ -5699,7 +6001,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "8+",
+          "OC": "4",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-mawloc-ability-terror-from-the-deep",
@@ -5817,7 +6127,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "11",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "7+",
+          "OC": "5",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-norn-assimilator-ability-harpoon-barbs",
@@ -5959,7 +6277,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "11",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "7+",
+          "OC": "5",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-norn-emissary-ability-singular-purpose",
@@ -6198,7 +6524,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "8+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-psychophage-ability-bio-stimulus",
@@ -6318,7 +6652,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "8+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-screamer-killer-ability-death-scream",
@@ -6430,7 +6772,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "-",
+          "T": "10",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "8+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-sporocyst-ability-seed-mucolids",
@@ -6547,7 +6897,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "11",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "8+",
+          "OC": "4",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-toxicrene-ability-grasping-tendrils",
@@ -6657,7 +7015,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "8+",
+          "OC": "4",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-trygon-ability-subterranean-tunnels",
@@ -6774,7 +7140,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "9\"",
+          "T": "12",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "8+",
+          "OC": "5",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tyrannofex-ability-resilient-organism",
@@ -6972,7 +7346,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "4\"",
+          "T": "4",
+          "Sv": "7+",
+          "W": "3",
+          "Ld": "8+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-mucolid-spores-ability-bio-minefield",
@@ -7033,7 +7415,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "2",
+          "Sv": "6+",
+          "W": "4",
+          "Ld": "8+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-ripper-swarms-ability-chitinous-horrors-aura",
@@ -7146,7 +7536,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "4\"",
+          "T": "1",
+          "Sv": "7+",
+          "W": "1",
+          "Ld": "8+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-spore-mines-ability-bio-minefield",

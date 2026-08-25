@@ -1,0 +1,86 @@
+import assert from 'node:assert/strict';
+import {createServer} from 'node:http';
+import {readFile,stat} from 'node:fs/promises';
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import {fileURLToPath} from 'node:url';
+import {chromium} from 'playwright';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const bookIds=['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
+const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
+const catalogFor=bookId=>{const scope={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,`books/${bookId}/scripts/roster-data.js`),'utf8'),scope);return scope.window.WH_BOOK_ROSTER_CATALOG;};
+const catalogs=new Map(bookIds.map(bookId=>[bookId,catalogFor(bookId)]));
+
+for(const [bookId,catalog] of catalogs){
+  const missing=catalog.units.filter(unit=>!Object.keys(unit.gameSelections?.stats||{}).length);
+  assert.equal(missing.length,0,`${bookId}: canonical stat metadata missing: ${missing.map(unit=>unit.id).join(', ')}`);
+}
+
+const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.statusCode=204;response.end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
+await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true});
+const ready=(page,instance)=>page.waitForFunction(id=>document.querySelector(`.unit-card[data-roster-instance="${CSS.escape(id)}"].roster-game-view`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1',instance);
+const selectedModel=(unit,id,quantity=3)=>{const selection=unit.gameSelections.selections.find(item=>item.kind==='weapon'&&item.profileIds.length);return{id,name:unit.title,points:100,models:[{quantity,name:unit.gameSelections.models[0]?.title||unit.title,loadouts:selection?[{quantity,wargear:selection.title}]:[]}]};};
+const openRecord=async({bookId,record,instance,unitId})=>{const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});await context.addInitScript(value=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([value])),record);const page=await context.newPage();await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile&roster=${record.id}&rosterInstance=${instance}#${unitId}`);await ready(page,instance);return{context,page};};
+const visibleStats=page=>page.evaluate(()=>{const card=document.querySelector('.unit-card.roster-game-view');return Object.fromEntries([...card.querySelectorAll('.stat[data-source-field^="stats."]')].map(node=>[node.dataset.sourceField.slice(6),node.querySelector('span')?.textContent.trim()||'']));});
+
+try{
+  for(const bookId of bookIds){
+    const catalog=catalogs.get(bookId),unit=catalog.units.find(item=>item.gameSelections.selections.some(selection=>selection.kind==='weapon'&&selection.profileIds.length))||catalog.units[0],instance=`${bookId}-composition`,record={id:`${bookId}-composition-record`,roster:{faction:catalog.book.title,units:[selectedModel(unit,instance)],detachments:[],enhancements:[],warnings:[]}};
+    const {context,page}=await openRecord({bookId,record,instance,unitId:unit.id});
+    try{
+      const game=await page.evaluate(()=>{const card=document.querySelector('.unit-card.roster-game-view'),section=[...card.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-composition')),canonical=[...section.querySelectorAll('[data-roster-game-canonical="true"]')];return{generated:section.querySelectorAll('[data-roster-game-generated="composition"]').length,canonicalVisible:canonical.filter(node=>getComputedStyle(node).display!=='none'||node.getClientRects().length||node.getBoundingClientRect().height).length,text:section.innerText};});
+      assert.equal(game.generated,1,`${bookId}: physical composition missing`);
+      assert.equal(game.canonicalVisible,0,`${bookId}: canonical composition remains visible`);
+      assert.match(game.text,/3 models/i,`${bookId}: actual model count missing`);
+      await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile#${unit.id}`);
+      await page.waitForSelector('.unit-card');
+      const normal=await page.evaluate(()=>{const card=document.querySelector('.unit-card'),section=[...card.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-composition'));return{generated:section?.querySelectorAll('[data-roster-game-generated="composition"]').length||0,hidden:section?.querySelectorAll('[data-roster-game-canonical="true"]').length||0};});
+      assert.deepEqual(normal,{generated:0,hidden:0},`${bookId}: normal composition changed`);
+    }finally{await context.close();}
+  }
+
+  const dg=catalogs.get('death-guard'),noxious=dg.units.find(unit=>unit.id==='unit-noxious-blightbringer'),poxwalkers=dg.units.find(unit=>unit.id==='unit-poxwalkers'),plagueMarines=dg.units.find(unit=>unit.id==='unit-plague-marines'),pipes=dg.enhancements.find(item=>item.id==='enhancement-witherbone-pipes'),detachment=dg.detachments.find(item=>item.id===pipes?.detachmentId)||dg.detachments.find(item=>/Shamblerot/i.test(item.title));
+  assert.ok(noxious&&poxwalkers&&plagueMarines&&pipes&&detachment,'DG pair canonical fixture');
+  const pairRecord={id:'noxious-poxwalkers-effective-stats',roster:{faction:dg.book.title,units:[selectedModel(noxious,'noxious',1),selectedModel(poxwalkers,'poxwalkers',10)],detachments:[{name:detachment.title}],enhancements:[{id:pipes.id,name:pipes.title,ownerUnitId:'noxious',ownerStatus:'resolved'}],warnings:[]},attachments:{poxwalkers:['noxious']}};
+  for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){
+    const {context,page}=await openRecord({bookId:'death-guard',record:pairRecord,instance,unitId});
+    try{
+      const projected=await page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id),stats=unit.effects.filter(effect=>effect.component==='stat');return{effective:unit.effective.stats,effects:stats.map(effect=>({id:effect.id,targetId:effect.targetId,base:effect.base,effective:effect.effective,owner:effect.source?.ownerInstanceId})),text:document.querySelector('.roster-game-effects')?.innerText||''};},instance),dom=await visibleStats(page);
+      assert.equal(projected.effective.M,'6"',`${instance}: effective M`);
+      assert.equal(projected.effective.OC,'2',`${instance}: effective OC`);
+      assert.equal(dom.M,'6"',`${instance}: visible M`);
+      assert.equal(dom.OC,'2',`${instance}: visible OC`);
+      assert.equal(projected.effects.filter(effect=>effect.targetId==='M'&&effect.base==='5"'&&effect.effective==='6"'&&effect.owner==='noxious').length,1,`${instance}: Sickening Vitality reduction`);
+      assert.equal(projected.effects.filter(effect=>effect.targetId==='OC'&&effect.base==='1'&&effect.effective==='2'&&effect.owner==='noxious').length,1,`${instance}: Witherbone Pipes reduction`);
+      if(instance==='poxwalkers'){
+        assert.match(projected.text,/Sickening Vitality/i,`${instance}: Sickening Vitality ability/provenance`);
+        assert.match(projected.text,/Witherbone Pipes/i,`${instance}: Witherbone Pipes ability/provenance`);
+      }
+    }finally{await context.close();}
+  }
+
+  const noAttachment={...pairRecord,id:'noxious-poxwalkers-no-attachment',attachments:{}};
+  for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){
+    const {context,page}=await openRecord({bookId:'death-guard',record:noAttachment,instance,unitId});
+    try{const state=await page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id);return unit.effects.filter(effect=>effect.id==='sickening-vitality-move'||effect.id==='witherbone-pipes-oc').length;},instance),dom=await visibleStats(page);assert.equal(state,0,`${instance}: no-attachment effect leakage`);assert.equal(dom.M,'5"');assert.equal(dom.OC,'1');}finally{await context.close();}
+  }
+
+  const leaderRecipeUnitIds=['unit-typhus','unit-biologus-putrifier','unit-icon-bearer','unit-lord-of-contagion','unit-lord-of-poxes','unit-lord-of-virulence','unit-noxious-blightbringer','unit-tallyman'],leaderRecipeUnits=leaderRecipeUnitIds.map(unitId=>dg.units.find(unit=>unit.id===unitId));
+  assert.equal(leaderRecipeUnits.every(Boolean),true,'DG attachment-required Leader fixture coverage');
+  const unattachedLeaders={id:'dg-unattached-leader-recipes',roster:{faction:dg.book.title,units:leaderRecipeUnits.map((unit,index)=>selectedModel(unit,`unattached-leader-${index+1}`,1)),detachments:[],enhancements:[],warnings:[]},attachments:{}};
+  {
+    const {context,page}=await openRecord({bookId:'death-guard',record:unattachedLeaders,instance:'unattached-leader-1',unitId:leaderRecipeUnits[0].id});
+    try{const falseEffects=await page.evaluate(()=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.flatMap(unit=>unit.effects.filter(effect=>effect.source?.kind==='explicit-attachment').map(effect=>`${unit.identity.instanceId}:${effect.id}`)));assert.deepEqual(falseEffects,[],'DG attachment-required Leader recipe self-activation');}finally{await context.close();}
+  }
+
+  const wrongBodyguard={id:'noxious-wrong-bodyguard',roster:{faction:dg.book.title,units:[selectedModel(noxious,'noxious',1),selectedModel(plagueMarines,'plague-marines',5)],detachments:[{name:detachment.title}],enhancements:[{id:pipes.id,name:pipes.title,ownerUnitId:'noxious',ownerStatus:'resolved'}],warnings:[]},attachments:{'plague-marines':['noxious']}};
+  for(const [instance,unitId] of [['noxious',noxious.id],['plague-marines',plagueMarines.id]]){
+    const {context,page}=await openRecord({bookId:'death-guard',record:wrongBodyguard,instance,unitId});
+    try{const state=await page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id);return unit.effects.filter(effect=>effect.id==='witherbone-pipes-oc').length;},instance);assert.equal(state,0,`${instance}: Witherbone Pipes leaked to wrong Bodyguard`);}finally{await context.close();}
+  }
+
+  console.log('Roster effective stats and physical composition QA: PASS (9/9).');
+}finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

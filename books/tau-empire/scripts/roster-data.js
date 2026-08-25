@@ -56,7 +56,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-breacher-team-ability-breach-and-clear",
@@ -360,7 +368,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-strike-team-ability-suppression-volley",
@@ -689,7 +705,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-cadre-fireblade-ability-volley-fire",
@@ -944,7 +968,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "6",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-commander-in-coldstar-battlesuit-ability-coldstar-commander",
@@ -1491,7 +1523,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "6",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-commander-in-enforcer-battlesuit-ability-enforcer-commander",
@@ -1996,7 +2036,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "5+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-ethereal-ability-coordinated-leadership",
@@ -2218,7 +2266,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-firesight-team-ability-precise-targeting",
@@ -2385,7 +2441,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "3",
+          "Sv": "6+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-kroot-flesh-shaper-ability-rites-of-feasting",
@@ -2522,7 +2586,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "5",
+          "Sv": "5+",
+          "W": "6",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-kroot-lone-spear-ability-fire-and-fade",
@@ -2747,7 +2819,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "3",
+          "Sv": "6+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-kroot-trail-shaper-ability-kroot-ambush",
@@ -2895,7 +2975,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "3",
+          "Sv": "6+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-kroot-war-shaper-ability-root-of-honour",
@@ -3081,7 +3169,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "13",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-devilfish-ability-rapid-deployment",
@@ -3305,7 +3401,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "2+",
+          "W": "8",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-commander-farsight-ability-way-of-the-short-blade",
@@ -3485,7 +3589,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-commander-shadowsun-ability-agile-combatant",
@@ -3715,7 +3827,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-darkstrider-ability-structural-analyser",
@@ -3844,7 +3964,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "6",
+          "Sv": "2+",
+          "W": "8",
+          "Ld": "6+",
+          "OC": "2",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-the-twin-lance-ability-neocapacitor-shields",
@@ -4225,7 +4353,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "3",
+          "Sv": "6+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-kroot-carnivores-ability-fieldcraft",
@@ -4460,7 +4596,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "T": "3",
+          "Sv": "6+",
+          "W": "1",
+          "Ld": "7+",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-kroot-farstalkers-ability-harnessed-alien-instincts",
@@ -4760,7 +4902,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-pathfinder-team-ability-target-uploaded",
@@ -5300,7 +5450,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-stealth-battlesuits-ability-forward-observers",
@@ -5609,7 +5767,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "1",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-vespid-stingwings-ability-airborne-agility",
@@ -5826,7 +5992,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "2+",
+          "W": "8",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-broadside-battlesuits-ability-advanced-armour",
@@ -6210,7 +6384,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-crisis-fireknife-battlesuits-ability-fireknife",
@@ -6488,7 +6670,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-crisis-starscythe-battlesuits-ability-starscythe",
@@ -6777,7 +6967,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "5",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-crisis-sunforge-battlesuits-ability-sunforge",
@@ -7009,7 +7207,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "8",
+          "Sv": "2+",
+          "W": "12",
+          "Ld": "7+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-ghostkeel-battlesuit-ability-stealth-drones",
@@ -7326,7 +7532,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "7+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-hammerhead-gunship-ability-armour-hunter",
@@ -7637,7 +7851,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "3",
+          "Sv": "6+",
+          "W": "1",
+          "Ld": "8+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-kroot-hounds-ability-loping-pounce",
@@ -7731,7 +7953,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "6",
+          "Sv": "5+",
+          "W": "5",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-krootox-rampagers-ability-kroot-linebreakers",
@@ -7871,7 +8101,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "6",
+          "Sv": "5+",
+          "W": "5",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-krootox-riders-ability-kroot-packmates",
@@ -8039,7 +8277,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "14\"",
+          "T": "7",
+          "Sv": "4+",
+          "W": "7",
+          "Ld": "7+",
+          "OC": "2",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-piranhas-ability-drone-harassment-tactics",
@@ -8239,7 +8485,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "-",
+          "T": "10",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "7+",
+          "OC": "-",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-razorshark-strike-fighter-ability-ground-strike-fighter",
@@ -8495,7 +8749,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "14",
+          "Ld": "7+",
+          "OC": "4",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-riptide-battlesuit-ability-nova-charge",
@@ -8817,7 +9079,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "7+",
+          "OC": "3",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-sky-ray-gunship-ability-velocity-tracker",
@@ -9021,7 +9291,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "11",
+          "Sv": "2+",
+          "W": "20",
+          "Ld": "7+",
+          "OC": "6",
+          "Invulnerable": "4+"
+        },
         "abilities": [
           {
             "id": "unit-stormsurge-ability-damaged-1-5-wounds-remaining",
@@ -9393,7 +9671,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "-",
+          "T": "9",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "7+",
+          "OC": "-",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-sun-shark-bomber-ability-pulse-bombs",
@@ -9650,7 +9936,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "4\"",
+          "T": "8",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "7+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tidewall-droneport-ability-droneport",
@@ -9747,7 +10041,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "4\"",
+          "T": "8",
+          "Sv": "3+",
+          "W": "14",
+          "Ld": "7+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
         "abilities": [
           {
             "id": "unit-tidewall-gunrig-ability-fortification",
@@ -9840,7 +10142,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "4\"",
+          "T": "8",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "7+",
+          "OC": "0",
+          "Invulnerable": "5+"
+        },
         "abilities": [
           {
             "id": "unit-tidewall-shieldline-ability-fortification",

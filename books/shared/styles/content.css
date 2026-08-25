@@ -323,6 +323,7 @@ html.related-rules-open{overflow:hidden}
 }
 .weapon-row { display: grid; grid-template-columns: minmax(150px,2.5fr) repeat(6,minmax(38px,.62fr)); }
 .unit-card.roster-game-view[data-roster-game-weapons="filtered"] .weapon-row[hidden] { display: none !important; }
+.unit-card.roster-game-view [data-roster-game-canonical="true"][hidden] { display: none !important; }
 .weapon-row > div { min-width: 0; padding: 10px 6px; text-align: center; font: 760 var(--data-size)/1.3 ui-monospace, monospace; border-top: 1px solid var(--soft-line); border-left: 1px solid var(--soft-line); }
 .weapon-row > div:first-child { text-align: left; border-left: 0; font-family: Georgia, serif; }
 .weapon-head { background: var(--panel-2); }

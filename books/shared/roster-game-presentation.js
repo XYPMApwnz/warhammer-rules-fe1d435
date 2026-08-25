@@ -29,7 +29,7 @@
   function effectLabel(effect){
     if(effect.component==='ability')return [effect.ruleTitle,effect.title||'Granted ability'].filter(Boolean).join(' · ');
     if(effect.component==='keyword')return `${effect.targetId} ${effect.operation==='remove'?'removed':'added'}`;
-    if(effect.component==='stat')return effect.base!=null&&effect.effective!=null&&effect.base!==effect.effective?`${effect.targetId} ${effect.base} → ${effect.effective}`:`${effect.targetId} ${effect.operation==='set'?`set to ${effect.to}`:signed(effect.delta)}`;
+    if(effect.component==='stat'){const conditional=effect.state==='conditional'||effect.certainty==='conditional'||Boolean(effect.condition);if(!conditional&&(effect.base==null||effect.effective==null||String(effect.base)===String(effect.effective)))return '';return effect.base!=null&&effect.effective!=null&&effect.base!==effect.effective?`${effect.targetId} ${effect.base} → ${effect.effective}`:`${effect.targetId} ${effect.operation==='set'?`set to ${effect.to}`:signed(effect.delta)}`;}
     if(effect.component==='weapon'&&effect.operation==='grant-tag')return `${effect.tag} · ${effect.targetId==='all'?'all weapons':`${effect.targetId} weapons`}`;
     if(effect.component==='weapon'&&effect.operation==='add-stat')return `${effect.stat} ${signed(effect.delta)} · ${effect.targetId} weapons`;
     if(effect.component==='weapon'&&effect.operation==='grant-profile')return 'Additional weapon profile';

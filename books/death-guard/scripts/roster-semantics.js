@@ -96,7 +96,7 @@
       const ability = (id, title, summary, origin) => add(id,'ability',id,'grant',{title,summary},origin);
       const stat = (id, targetId, operation, value, origin) => add(id,'stat',targetId,operation,operation==='add'?{delta:value}:{to:value},origin);
       const weapon = (id, scope, operation, detail, origin) => add(id,'weapon',scope,operation,detail,origin);
-      const leader = id => group.find(member => member.id !== bodyguard?.id && canonicalUnitId(member) === id);
+      const leader = id => bodyguard ? group.find(member => member.id !== bodyguard.id && canonicalUnitId(member) === id) : null;
       const attachedOwner = id => attachedEnhancementOwner(unit,id);
       const ownEnhancements = enrichedEnhancements.filter(item => item?.ownerStatus === 'resolved' && item.ownerUnitId === unit.id);
       const detachmentSource = id => source('detachment',`detachment-${id}`,null,'selected-detachment');

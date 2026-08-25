@@ -109,7 +109,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "12",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "5+",
+          "OC": "6",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -368,7 +376,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "7",
+          "Sv": "2+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -560,7 +576,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -731,7 +754,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "12",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -934,7 +965,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "11",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -1151,7 +1190,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -1312,7 +1358,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "5+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -1476,7 +1529,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "7",
+          "Sv": "2+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -1657,7 +1718,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "5",
+          "Ld": "6+",
+          "OC": "1",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -1873,7 +1942,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "7",
+          "Sv": "2+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -2034,7 +2111,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -2291,7 +2375,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -2504,7 +2595,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -2662,7 +2760,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -2984,7 +3089,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "2",
+          "Ld": "6+",
+          "OC": "2"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -3551,7 +3663,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "7",
+          "Sv": "2+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "1",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -3877,7 +3997,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "7",
+          "Sv": "2+",
+          "W": "4",
+          "Ld": "6+",
+          "OC": "1",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -4120,7 +4248,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "4",
+          "Sv": "7+",
+          "W": "1",
+          "Ld": "8+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -4225,7 +4360,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "8\"",
+          "T": "7",
+          "Sv": "4+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "1"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -4345,7 +4487,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "12",
+          "Sv": "2+",
+          "W": "16",
+          "Ld": "6+",
+          "OC": "5"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -4597,7 +4746,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "11",
+          "Ld": "6+",
+          "OC": "3"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -4876,7 +5032,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "11",
+          "Ld": "6+",
+          "OC": "3"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -5162,7 +5325,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "11",
+          "Sv": "3+",
+          "W": "18",
+          "Ld": "6+",
+          "OC": "5",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -5629,7 +5800,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -5795,7 +5974,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -5943,7 +6130,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "8",
+          "Ld": "6+",
+          "OC": "3"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -6411,7 +6605,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -6664,7 +6866,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "2+",
+          "W": "12",
+          "Ld": "6+",
+          "OC": "3",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -6922,7 +7132,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "2"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -7115,7 +7332,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "-",
+          "T": "10",
+          "Sv": "3+",
+          "W": "12",
+          "Ld": "6+",
+          "OC": "0"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -7228,7 +7452,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "6\"",
+          "T": "9",
+          "Sv": "6+",
+          "W": "7",
+          "Ld": "7+",
+          "OC": "3",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -7357,7 +7589,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "12",
+          "Sv": "5+",
+          "W": "20",
+          "Ld": "6+",
+          "OC": "5",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -7633,7 +7873,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "3",
+          "Sv": "7+",
+          "W": "4",
+          "Ld": "8+",
+          "OC": "0",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -7752,7 +8000,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "10\"",
+          "T": "8",
+          "Sv": "6+",
+          "W": "5",
+          "Ld": "7+",
+          "OC": "2",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -7923,7 +8179,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "5\"",
+          "T": "5",
+          "Sv": "7+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "2",
+          "Inv": "5+"
+        },
         "abilities": [],
         "models": [],
         "selections": [
@@ -8052,7 +8316,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
-        "stats": {},
+        "stats": {
+          "M": "7\"",
+          "T": "12",
+          "Sv": "5+",
+          "W": "22",
+          "Ld": "6+",
+          "OC": "5",
+          "Inv": "4+"
+        },
         "abilities": [],
         "models": [],
         "selections": [

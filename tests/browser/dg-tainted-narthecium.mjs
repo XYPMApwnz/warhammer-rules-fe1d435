@@ -1,0 +1,90 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import http from 'node:http';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {chromium} from 'playwright';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const taintedId='ability-tainted-narthecium-01ba1bd';
+const taintedSectionId='plague-surgeon-ability-tainted-narthecium';
+const taintedText='While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.';
+const inflamedId='ability-inflamed-infections-ca01e1a';
+const contentTypes={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.png':'image/png','.svg+xml':'image/svg+xml','.svg':'image/svg+xml'};
+const server=http.createServer((request,response)=>{
+  const pathname=decodeURIComponent(new URL(request.url,'http://127.0.0.1').pathname),relative=pathname.replace(/^\/+/, '')||'index.html',file=path.resolve(root,relative);
+  if(file!==root&&!file.startsWith(`${root}${path.sep}`)){response.writeHead(403).end();return;}
+  try{const stat=fs.statSync(file),target=stat.isDirectory()?path.join(file,'index.html'):file;response.writeHead(200,{'content-type':contentTypes[path.extname(target)]||'application/octet-stream'});fs.createReadStream(target).pipe(response);}catch{response.writeHead(404).end();}
+});
+await new Promise((resolve,reject)=>server.listen(0,'127.0.0.1',error=>error?reject(error):resolve()));
+const origin=`http://127.0.0.1:${server.address().port}`;
+const sourceText=`Death Guard
+1x Plague Surgeon (50 pts): Balesword, Plague bolt pistol
+7x Plague Marines (125 pts)
+• 6x Plague Marine
+    4 with Boltgun, Plague knives
+    2 with Plague knives, Plasma gun
+• 1x Plague Champion: Boltgun, Plague knives
+7x Plague Marines (125 pts)
+• 6x Plague Marine
+    4 with Boltgun, Plague knives
+    2 with Plague knives, Plasma gun
+• 1x Plague Champion: Boltgun, Plague knives`;
+const record=id=>({id,sourceText,attachments:id==='tainted-attached'?{'parsed-unit-2':['parsed-unit-1']}: {}});
+
+const browser=await chromium.launch({channel:'chrome',headless:true});
+try{
+  const open=async(saved,instanceId,canonicalId)=>{
+    const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
+    await context.addInitScript(value=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([value])),saved);
+    const page=await context.newPage();
+    await page.goto(`${origin}/books/death-guard/reader.html?view=mobile&roster=${saved.id}&rosterInstance=${instanceId}#${canonicalId}`,{waitUntil:'networkidle'});
+    await page.waitForFunction(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION?.units.some(unit=>unit.identity.instanceId===id)&&document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${id}"]`),instanceId);
+    return{context,page};
+  };
+
+  const attached=await open(record('tainted-attached'),'parsed-unit-2','unit-plague-marines');
+  const attachedResult=await attached.page.evaluate(({taintedId,taintedSectionId,taintedText,inflamedId})=>{
+    const gameUnit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.instanceId==='parsed-unit-2'),card=document.querySelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-2"]'),effect=gameUnit.effects.find(item=>item.canonicalAbilityId===taintedId),articles=[...card.querySelectorAll(`[data-roster-canonical-ability-id="${taintedId}"]`)],composition=[...card.querySelectorAll('.unit-part')].find(part=>part.textContent.includes('Unit Composition'))?.textContent||'',modelCount=gameUnit.selection?.modelCount?.value??gameUnit.modelCount?.value??gameUnit.modelCount;
+    return{effect,articleCount:articles.length,title:articles[0]?.querySelector('h5')?.textContent.trim()||'',source:articles[0]?.querySelector('.roster-game-ability-source')?.textContent.trim()||'',text:articles[0]?.querySelector('p')?.textContent.trim()||'',sectionId:articles[0]?.dataset.rosterCanonicalSectionId||'',activeText:card.querySelector('.roster-game-effects')?.textContent||'',inflamedEffects:gameUnit.effects.filter(item=>item.canonicalAbilityId===inflamedId).length,inflamedArticles:card.querySelectorAll(`[data-roster-canonical-ability-id="${inflamedId}"]`).length,automaticModelMutations:gameUnit.effects.filter(item=>['model','model-count','modelCount','composition'].includes(item.component)).length,modelCount,composition,expected:{taintedSectionId,taintedText}};
+  },{taintedId,taintedSectionId,taintedText,inflamedId});
+  assert.equal(attachedResult.effect?.source?.ownerInstanceId,'parsed-unit-1');
+  assert.equal(attachedResult.effect?.targetInstanceId,'parsed-unit-2');
+  assert.equal(attachedResult.effect?.operation,'reference');
+  assert.equal(attachedResult.effect?.certainty,'current');
+  assert.equal(attachedResult.effect?.provenance?.rosterFact,'explicit-attachment');
+  assert.equal(attachedResult.effect?.canonicalAbility?.id,taintedId);
+  assert.equal(attachedResult.effect?.canonicalAbility?.sectionId,taintedSectionId);
+  assert.equal(attachedResult.articleCount,1);
+  assert.equal(attachedResult.title,'Tainted Narthecium');
+  assert.equal(attachedResult.source,'Plague Surgeon');
+  assert.equal(attachedResult.text,taintedText);
+  assert.equal(attachedResult.sectionId,taintedSectionId);
+  assert.doesNotMatch(attachedResult.activeText,/Tainted Narthecium/);
+  assert.equal(attachedResult.inflamedEffects,0,'Inflamed Infections must not propagate to the attached unit');
+  assert.equal(attachedResult.inflamedArticles,0,'Inflamed Infections must not render as an attached-unit reference');
+  assert.equal(attachedResult.automaticModelMutations,0,'Tainted Narthecium must not mutate roster model state automatically');
+  assert.equal(attachedResult.modelCount,7);
+  assert.match(attachedResult.composition,/7 models/);
+  assert.doesNotMatch(attachedResult.composition,/8 models/);
+  await attached.context.close();
+
+  const other=await open(record('tainted-attached'),'parsed-unit-3','unit-plague-marines');
+  const otherResult=await other.page.evaluate(({taintedId,inflamedId})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-3'),card=document.querySelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-3"]');return{effects:unit.effects.filter(effect=>effect.canonicalAbilityId===taintedId).length,articles:card.querySelectorAll(`[data-roster-canonical-ability-id="${taintedId}"]`).length,inflamed:card.querySelectorAll(`[data-roster-canonical-ability-id="${inflamedId}"]`).length};},{taintedId,inflamedId});
+  assert.deepEqual(otherResult,{effects:0,articles:0,inflamed:0},'Tainted Narthecium must not leak to another physical Plague Marines instance');
+  await other.context.close();
+
+  const source=await open(record('tainted-attached'),'parsed-unit-1','unit-plague-surgeon');
+  const sourceResult=await source.page.evaluate(({taintedId,inflamedId})=>{const card=document.querySelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-1"]'),count=title=>[...card.querySelectorAll('.ability')].filter(article=>article.querySelector('h5')?.textContent.trim()===title).length;return{tainted:count('Tainted Narthecium'),taintedDerived:card.querySelectorAll(`[data-roster-canonical-ability-id="${taintedId}"]`).length,inflamed:count('Inflamed Infections'),inflamedDerived:card.querySelectorAll(`[data-roster-canonical-ability-id="${inflamedId}"]`).length};},{taintedId,inflamedId});
+  assert.deepEqual(sourceResult,{tainted:1,taintedDerived:0,inflamed:1,inflamedDerived:0},'Plague Surgeon must retain one canonical article for each source Ability without derived duplicates');
+  await source.context.close();
+
+  const detached=await open(record('tainted-detached'),'parsed-unit-2','unit-plague-marines');
+  const detachedResult=await detached.page.evaluate(taintedId=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-2'),card=document.querySelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-2"]');return{effects:unit.effects.filter(effect=>effect.canonicalAbilityId===taintedId).length,articles:card.querySelectorAll(`[data-roster-canonical-ability-id="${taintedId}"]`).length,modelCount:unit.selection?.modelCount?.value??unit.modelCount?.value??unit.modelCount};},taintedId);
+  assert.deepEqual(detachedResult,{effects:0,articles:0,modelCount:7},'Potential compatibility or absent attachment must not expose Tainted Narthecium or alter model count');
+  await detached.context.close();
+  console.log('DG Tainted Narthecium attached canonical Ability QA: PASS');
+}finally{
+  await browser.close();
+  await new Promise(resolve=>server.close(resolve));
+}

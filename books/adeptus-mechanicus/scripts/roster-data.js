@@ -2603,7 +2603,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Icon of War"
           }
         ],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-thulia-ghuld-model-archmagos-terminus-thulia-ghuld",
+            "title": "Archmagos Terminus Thulia Ghuld",
+            "aliases": [
+              "Archmagos Terminus Thulia Ghuld",
+              "Archmagos Terminus Thulia Ghuld - Epic Hero"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-thulia-ghuld-selection-jericho-class-conversion-resonator-titanic-impact",
@@ -3127,7 +3136,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Broad-spectrum Targeting Augurs"
           }
         ],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-hastarii-exterminators-model-hastarii-exterminator-alpha-and-4-hastarii-exterminators",
+            "title": "Hastarii Exterminator Alpha and 4 Hastarii Exterminators",
+            "aliases": [
+              "Hastarii Exterminator Alpha and 4 Hastarii Exterminators"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-hastarii-exterminators-selection-hastarii-arc-blaster",
@@ -3390,7 +3407,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Monocular Targeting Helms"
           }
         ],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-hastarii-fusiliers-model-hastarii-fusilier-alpha-and-4-hastarii-fusiliers",
+            "title": "Hastarii Fusilier Alpha and 4 Hastarii Fusiliers",
+            "aliases": [
+              "Hastarii Fusilier Alpha and 4 Hastarii Fusiliers"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-hastarii-fusiliers-selection-neutron-fusil",
@@ -4409,7 +4434,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Network Override"
           }
         ],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-servitor-battleclade-model-servitor-underseer-2-gun-servitors-and-6-combat-servitors",
+            "title": "Servitor Underseer, 2 Gun Servitors and 6 Combat Servitors",
+            "aliases": [
+              "Servitor Underseer, 2 Gun Servitors and 6 Combat Servitors"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-servitor-battleclade-selection-heavy-arc-rifle",

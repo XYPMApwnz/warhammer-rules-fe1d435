@@ -119,7 +119,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-mortarion-model-mortarion",
+            "title": "Mortarion",
+            "aliases": [
+              "Mortarion",
+              "Mortarion – EPIC HERO"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-mortarion-selection-lantern",
@@ -386,7 +395,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-typhus-model-typhus",
+            "title": "Typhus",
+            "aliases": [
+              "Typhus",
+              "Typhus – EPIC HERO"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-typhus-selection-lakrimae-strike",
@@ -585,7 +603,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-biologus-putrifier-model-biologus-putrifier",
+            "title": "Biologus Putrifier",
+            "aliases": [
+              "Biologus Putrifier"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-biologus-putrifier-selection-hyper-blight-grenades",
@@ -764,7 +790,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-daemon-prince-of-nurgle-model-daemon-prince-of-nurgle",
+            "title": "Daemon Prince of Nurgle",
+            "aliases": [
+              "Daemon Prince of Nurgle"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-daemon-prince-of-nurgle-selection-infernal-cannon",
@@ -975,7 +1009,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-daemon-prince-of-nurgle-with-wings-model-daemon-prince-of-nurgle-with-wings",
+            "title": "Daemon Prince of Nurgle with Wings",
+            "aliases": [
+              "Daemon Prince of Nurgle with Wings"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-daemon-prince-of-nurgle-with-wings-selection-infernal-cannon",
@@ -1199,7 +1241,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-foul-blightspawn-model-foul-blightspawn",
+            "title": "Foul Blightspawn",
+            "aliases": [
+              "Foul Blightspawn"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-foul-blightspawn-selection-plague-sprayer",
@@ -1367,7 +1417,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-icon-bearer-model-icon-bearer",
+            "title": "Icon Bearer",
+            "aliases": [
+              "Icon Bearer"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-icon-bearer-selection-boltgun",
@@ -1539,7 +1597,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-lord-of-contagion-model-lord-of-contagion",
+            "title": "Lord of Contagion",
+            "aliases": [
+              "Lord of Contagion"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-lord-of-contagion-selection-manreaper-strike",
@@ -1728,7 +1794,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-lord-of-poxes-model-lord-of-poxes",
+            "title": "Lord of Poxes",
+            "aliases": [
+              "Lord of Poxes"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-lord-of-poxes-selection-plasma-pistol-standard",
@@ -1952,7 +2026,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-lord-of-virulence-model-lord-of-virulence",
+            "title": "Lord of Virulence",
+            "aliases": [
+              "Lord of Virulence"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-lord-of-virulence-selection-twin-plague-spewer",
@@ -2120,7 +2202,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-malignant-plaguecaster-model-malignant-plaguecaster",
+            "title": "Malignant Plaguecaster",
+            "aliases": [
+              "Malignant Plaguecaster"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-malignant-plaguecaster-selection-bolt-pistol",
@@ -2384,7 +2474,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-noxious-blightbringer-model-noxious-blightbringer",
+            "title": "Noxious Blightbringer",
+            "aliases": [
+              "Noxious Blightbringer"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-noxious-blightbringer-selection-plasma-pistol-standard",
@@ -2604,7 +2702,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-plague-surgeon-model-plague-surgeon",
+            "title": "Plague Surgeon",
+            "aliases": [
+              "Plague Surgeon"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-plague-surgeon-selection-bolt-pistol",
@@ -2769,7 +2875,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-tallyman-model-tallyman",
+            "title": "Tallyman",
+            "aliases": [
+              "Tallyman"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-tallyman-selection-plasma-pistol-standard",
@@ -3098,7 +3212,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "2"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-plague-marines-model-plague-champion",
+            "title": "Plague Champion",
+            "aliases": [
+              "Plague Champion"
+            ]
+          },
+          {
+            "id": "unit-plague-marines-model-plague-marine-2",
+            "title": "Plague Marine",
+            "aliases": [
+              "Plague Marine",
+              "Plague Marines"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-plague-marines-selection-blight-launcher",
@@ -3673,7 +3803,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-blightlord-terminators-model-blightlord-champion",
+            "title": "Blightlord Champion",
+            "aliases": [
+              "Blightlord Champion"
+            ]
+          },
+          {
+            "id": "unit-blightlord-terminators-model-blightlord-terminator-2",
+            "title": "Blightlord Terminator",
+            "aliases": [
+              "Blightlord Terminator",
+              "Blightlord Terminators"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-blightlord-terminators-selection-blight-launcher",
@@ -4007,7 +4153,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-deathshroud-terminators-model-deathshroud-champion",
+            "title": "Deathshroud Champion",
+            "aliases": [
+              "Deathshroud Champion"
+            ]
+          },
+          {
+            "id": "unit-deathshroud-terminators-model-deathshroud-terminator-2",
+            "title": "Deathshroud Terminator",
+            "aliases": [
+              "Deathshroud Terminator",
+              "Deathshroud Terminators"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-deathshroud-terminators-selection-plaguespurt-gauntlet",
@@ -4257,7 +4419,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-poxwalkers-model-poxwalker",
+            "title": "Poxwalker",
+            "aliases": [
+              "Poxwalker",
+              "Poxwalkers"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-poxwalkers-selection-improvised-weapon",
@@ -4369,7 +4540,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-chaos-spawn-model-chaos-spawn",
+            "title": "Chaos Spawn",
+            "aliases": [
+              "Chaos Spawn"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-chaos-spawn-selection-hideous-mutations",
@@ -4496,7 +4675,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "5"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-chaos-land-raider-model-chaos-land-raider",
+            "title": "Chaos Land Raider",
+            "aliases": [
+              "Chaos Land Raider"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-chaos-land-raider-selection-combi-bolter",
@@ -4755,7 +4942,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-chaos-predator-annihilator-model-chaos-predator-annihilator",
+            "title": "Chaos Predator Annihilator",
+            "aliases": [
+              "Chaos Predator Annihilator"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-chaos-predator-annihilator-selection-combi-bolter",
@@ -5041,7 +5236,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-chaos-predator-destructor-model-chaos-predator-destructor",
+            "title": "Chaos Predator Destructor",
+            "aliases": [
+              "Chaos Predator Destructor"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-chaos-predator-destructor-selection-combi-bolter",
@@ -5335,7 +5538,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-defiler-model-defiler",
+            "title": "Defiler",
+            "aliases": [
+              "Defiler"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-defiler-selection-ectoplasma-destructor",
@@ -5810,7 +6021,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-foetid-bloat-drone-model-foetid-bloat-drone",
+            "title": "Foetid Bloat-drone",
+            "aliases": [
+              "Foetid Bloat-drone"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-foetid-bloat-drone-selection-plaguespitter",
@@ -5984,7 +6203,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-foetid-bloat-drone-with-heavy-blight-launcher-model-foetid-bloat-drone",
+            "title": "Foetid Bloat-drone",
+            "aliases": [
+              "Foetid Bloat-drone"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-foetid-bloat-drone-with-heavy-blight-launcher-selection-heavy-blight-launcher",
@@ -6139,7 +6366,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-helbrute-model-helbrute",
+            "title": "Helbrute",
+            "aliases": [
+              "Helbrute"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-helbrute-selection-combi-bolter",
@@ -6615,7 +6850,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-myphitic-blight-hauler-model-myphitic-blight-hauler",
+            "title": "Myphitic Blight-hauler",
+            "aliases": [
+              "Myphitic Blight-hauler",
+              "Myphitic Blight-haulers"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-myphitic-blight-hauler-selection-bile-spurt",
@@ -6876,7 +7120,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-plagueburst-crawler-model-plagueburst-crawler",
+            "title": "Plagueburst Crawler",
+            "aliases": [
+              "Plagueburst Crawler"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-plagueburst-crawler-selection-entropy-cannon",
@@ -7141,7 +7393,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "2"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-chaos-rhino-model-chaos-rhino",
+            "title": "Chaos Rhino",
+            "aliases": [
+              "Chaos Rhino"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-chaos-rhino-selection-combi-bolter",
@@ -7341,7 +7601,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "0"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-miasmic-malignifier-model-miasmic-malignifier",
+            "title": "Miasmic Malignifier",
+            "aliases": [
+              "Miasmic Malignifier"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-miasmic-malignifier-selection-miasmic-gouts",
@@ -7462,7 +7730,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-beasts-of-nurgle-model-beasts-of-nurgle",
+            "title": "Beasts of Nurgle",
+            "aliases": [
+              "Beasts of Nurgle"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-beasts-of-nurgle-selection-putrid-appendages",
@@ -7599,7 +7875,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-great-unclean-one-model-great-unclean-one",
+            "title": "Great Unclean One",
+            "aliases": [
+              "Great Unclean One"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-great-unclean-one-selection-plague-flail",
@@ -7883,7 +8167,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-nurglings-model-nurgling-swarm",
+            "title": "Nurgling Swarm",
+            "aliases": [
+              "Nurgling Swarm",
+              "Nurgling Swarms"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-nurglings-selection-diseased-claws-and-teeth",
@@ -8010,7 +8303,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-plague-drones-model-plaguebringer",
+            "title": "Plaguebringer",
+            "aliases": [
+              "Plaguebringer"
+            ]
+          },
+          {
+            "id": "unit-plague-drones-model-plague-drone-2",
+            "title": "Plague Drone",
+            "aliases": [
+              "Plague Drone",
+              "Plague Drones"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-plague-drones-selection-deaths-heads",
@@ -8189,7 +8498,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "5+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-plaguebearers-model-plagueridden",
+            "title": "Plagueridden",
+            "aliases": [
+              "Plagueridden"
+            ]
+          },
+          {
+            "id": "unit-plaguebearers-model-plaguebearer-2",
+            "title": "Plaguebearer",
+            "aliases": [
+              "Plaguebearer",
+              "Plaguebearers"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-plaguebearers-selection-plaguesword",
@@ -8326,7 +8651,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Inv": "4+"
         },
         "abilities": [],
-        "models": [],
+        "models": [
+          {
+            "id": "unit-rotigus-model-rotigus",
+            "title": "Rotigus",
+            "aliases": [
+              "Rotigus",
+              "Rotigus – EPIC HERO"
+            ]
+          }
+        ],
         "selections": [
           {
             "id": "unit-rotigus-selection-streams-of-brackish-filth",

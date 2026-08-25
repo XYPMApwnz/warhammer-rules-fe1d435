@@ -17,6 +17,25 @@ const relationRecord=record=>({unitId:record?.unitId||record?.id||'',...(Number.
 const relationsFor=(relations,id)=>{const source=relations instanceof Map?relations.get(id):relations?.[id];return Object.fromEntries(['canLead','canSupport','canBeLedBy','canBeSupportedBy'].map(key=>[key,values(source?.[key]).map(relationRecord)]));};
 const blockEnhancements=detachment=>[...values(detachment?.enhancements),...values(detachment?.blocks).filter(block=>block?.type==='enhancement'),...values(detachment?.subsections).flatMap(section=>values(section?.blocks).filter(block=>block?.type==='enhancement'))];
 const dependencyRecords=config=>{const source=config?.dependencies;if(Array.isArray(source))return source;if(source&&typeof source==='object')return Object.entries(source).map(([bookId,value])=>({bookId,...(value||{})}));return [];};
+const singularModelTitle=(value,max)=>{const title=String(value||'').replace(/\s+[\u2013\u2014-]\s+EPIC HERO\s*$/i,'').trim();return Number(max)>1&&/s$/i.test(title)&&!/(ss|us)$/i.test(title)?title.slice(0,-1):title;};
+const canonicalCompositionModelsFor=unit=>{
+  const structured=values(unit.composition);
+  if(structured.length)return structured.map(model=>({name:model.name||'',aliases:values(model.aliases)})).filter(model=>model.name);
+  const section=values(unit.subsections).find(item=>normalize(item?.title)==='unit composition');
+  const text=typeof unit.composition==='string'?unit.composition:values(section?.blocks).filter(block=>block?.type==='p').map(block=>block.text||'').join(' ');
+  if(!text.trim())return [];
+  const records=[];
+  for(const clause of text.split(/\s*[.;]\s*/).map(item=>item.trim()).filter(Boolean)){
+    const match=clause.match(/^(\d+)(?:\s*[-\u2013]\s*(\d+))?\s+(.+?)$/);
+    if(!match)break;
+    const sourceTitle=match[3].trim(),max=Number(match[2]||match[1]);
+    if(!sourceTitle||/\b(?:equipped|armed)\b/i.test(sourceTitle))return [];
+    const name=singularModelTitle(sourceTitle,max);
+    if(!name)return [];
+    records.push({name,aliases:[sourceTitle]});
+  }
+  return records;
+};
 const gameSelectionsFor=unit=>{
   if(unit.gameSelections)return unit.gameSelections;
   const canonicalWeapons=values(unit.weapons).length?values(unit.weapons):values(unit.blocks).filter(block=>block?.type==='weapon');
@@ -38,8 +57,8 @@ const gameSelectionsFor=unit=>{
   for(const declared of declaredWargearSelections){const existing=selections.find(selection=>selection.id===declared.id);if(existing)existing.wargearAbilityIds=[...new Set([...values(existing.wargearAbilityIds),...declared.wargearAbilityIds])];else selections.push(declared);}
   for(const ability of wargearAbilities)if(!ability.requiredSelectionIds.length)selections.push({id:`${unit.id}-selection-${slug(ability.title)}`,title:ability.title,aliases:[ability.title],kind:'wargear',profileIds:[],wargearAbilityIds:[],candidateWargearAbilityIds:[ability.id]});
   for(const ability of wargearAbilities)for(const selectionId of ability.requiredSelectionIds){const selection=selections.find(item=>item.id===selectionId);if(selection)selection.wargearAbilityIds=[...new Set([...values(selection.wargearAbilityIds),ability.id])];}
-  const stats=normalizedStatsFor(unit);
-  return {stats:{...stats},abilities:canonicalAbilities.map((ability,index)=>({id:ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`,title:ability.title||''})),models:values(unit.composition).map((model,index)=>({id:model.id||`${unit.id}-model-${slug(model.name)}${index?'-'+(index+1):''}`,title:model.name||'',aliases:[model.name||''].filter(Boolean)})),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
+  const stats=normalizedStatsFor(unit),compositionModels=canonicalCompositionModelsFor(unit);
+  return {stats:{...stats},abilities:canonicalAbilities.map((ability,index)=>({id:ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`,title:ability.title||''})),models:compositionModels.map((model,index)=>({id:model.id||`${unit.id}-model-${slug(model.name)}${index?'-'+(index+1):''}`,title:model.name||'',aliases:[...new Set([model.name,...values(model.aliases)].filter(Boolean))]})),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
 };
 
 export function createRosterCatalog({config,units=[],detachments=[],relationGraphs=new Map(),legacyEnhancements={},keywordGrants=[]}){

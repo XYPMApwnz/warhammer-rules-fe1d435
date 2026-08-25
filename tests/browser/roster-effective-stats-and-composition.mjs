@@ -23,18 +23,26 @@ await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true});
 const ready=(page,instance)=>page.waitForFunction(id=>document.querySelector(`.unit-card[data-roster-instance="${CSS.escape(id)}"].roster-game-view`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1',instance);
 const selectedModel=(unit,id,quantity=3)=>{const selection=unit.gameSelections.selections.find(item=>item.kind==='weapon'&&item.profileIds.length);return{id,name:unit.title,points:100,models:[{quantity,name:unit.gameSelections.models[0]?.title||unit.title,loadouts:selection?[{quantity,wargear:selection.title}]:[]}]};};
+const rawRecord=(catalog,id,body)=>({id,sourceText:`${catalog.book.title}\n${body}`});
 const openRecord=async({bookId,record,instance,unitId})=>{const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});await context.addInitScript(value=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([value])),record);const page=await context.newPage();await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile&roster=${record.id}&rosterInstance=${instance}#${unitId}`);await ready(page,instance);return{context,page};};
 const visibleStats=page=>page.evaluate(()=>{const card=document.querySelector('.unit-card.roster-game-view');return Object.fromEntries([...card.querySelectorAll('.stat[data-source-field^="stats."]')].map(node=>[node.dataset.sourceField.slice(6),node.querySelector('span')?.textContent.trim()||'']));});
 
 try{
   for(const bookId of bookIds){
-    const catalog=catalogs.get(bookId),unit=catalog.units.find(item=>item.gameSelections.selections.some(selection=>selection.kind==='weapon'&&selection.profileIds.length))||catalog.units[0],instance=`${bookId}-composition`,record={id:`${bookId}-composition-record`,roster:{faction:catalog.book.title,units:[selectedModel(unit,instance)],detachments:[],enhancements:[],warnings:[]}};
+    const catalog=catalogs.get(bookId),unit=catalog.units.find(item=>item.gameSelections.models.length===1),instance='parsed-unit-1';
+    assert.ok(unit,`${bookId}: canonical single-model fixture`);
+    const record=rawRecord(catalog,`${bookId}-composition-record`,`1x ${unit.title} (100 pts):`),modelTitle=unit.gameSelections.models[0].title;
     const {context,page}=await openRecord({bookId,record,instance,unitId:unit.id});
     try{
-      const game=await page.evaluate(()=>{const card=document.querySelector('.unit-card.roster-game-view'),section=[...card.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-composition')),canonical=[...section.querySelectorAll('[data-roster-game-canonical="true"]')];return{generated:section.querySelectorAll('[data-roster-game-generated="composition"]').length,canonicalVisible:canonical.filter(node=>getComputedStyle(node).display!=='none'||node.getClientRects().length||node.getBoundingClientRect().height).length,text:section.innerText};});
+      const game=await page.evaluate(sourceText=>{const parsed=window.WHRosterParser.parse(sourceText),unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units[0],card=document.querySelector('.unit-card.roster-game-view'),section=[...card.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-composition')),canonical=[...section.querySelectorAll('[data-roster-game-canonical="true"]')];return{rawQuantity:parsed.units[0].quantity,rawModels:parsed.units[0].models.length,modelCount:unit.selection.modelCount,composition:unit.selection.composition,generated:section.querySelectorAll('[data-roster-game-generated="composition"]').length,canonicalVisible:canonical.filter(node=>getComputedStyle(node).display!=='none'||node.getClientRects().length||node.getBoundingClientRect().height).length,text:section.innerText};},record.sourceText);
+      assert.equal(game.rawQuantity,1,`${bookId}: raw quantity`);
+      assert.equal(game.rawModels,0,`${bookId}: raw fixture unexpectedly supplied models`);
+      assert.deepEqual({value:game.modelCount.value,state:game.modelCount.state},{value:1,state:'resolved'},`${bookId}: projected raw quantity`);
+      assert.equal(game.composition.state,'resolved',`${bookId}: single-model composition resolution`);
       assert.equal(game.generated,1,`${bookId}: physical composition missing`);
       assert.equal(game.canonicalVisible,0,`${bookId}: canonical composition remains visible`);
-      assert.match(game.text,/3 models/i,`${bookId}: actual model count missing`);
+      assert.match(game.text,/1 model\b/i,`${bookId}: actual model count missing`);
+      assert.equal(game.text.includes(`1 × ${modelTitle}`),true,`${bookId}: canonical model identity missing`);
       await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile#${unit.id}`);
       await page.waitForSelector('.unit-card');
       const normal=await page.evaluate(()=>{const card=document.querySelector('.unit-card'),section=[...card.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-composition'));return{generated:section?.querySelectorAll('[data-roster-game-generated="composition"]').length||0,hidden:section?.querySelectorAll('[data-roster-game-canonical="true"]').length||0};});
@@ -44,6 +52,37 @@ try{
 
   const dg=catalogs.get('death-guard'),noxious=dg.units.find(unit=>unit.id==='unit-noxious-blightbringer'),poxwalkers=dg.units.find(unit=>unit.id==='unit-poxwalkers'),plagueMarines=dg.units.find(unit=>unit.id==='unit-plague-marines'),pipes=dg.enhancements.find(item=>item.id==='enhancement-witherbone-pipes'),detachment=dg.detachments.find(item=>item.id===pipes?.detachmentId)||dg.detachments.find(item=>/Shamblerot/i.test(item.title));
   assert.ok(noxious&&poxwalkers&&plagueMarines&&pipes&&detachment,'DG pair canonical fixture');
+  for(const fixture of [
+    {name:'Poxwalkers',unit:poxwalkers,quantity:10,modelTitle:'Poxwalker',body:'10x Poxwalkers (65 pts):\n10 with Improvised weapons',forbidden:[/10[-\u2013]20 Poxwalkers/i,/Every model is equipped with/i]},
+    {name:'Noxious',unit:noxious,quantity:1,modelTitle:'Noxious Blightbringer',body:'1x Noxious Blightbringer (60 pts): Plasma pistol, Cursed plague bell',forbidden:[/This model is equipped with/i]}
+  ]){
+    const record=rawRecord(dg,`raw-${fixture.name.toLowerCase()}-composition`,fixture.body),instance='parsed-unit-1',opened=await openRecord({bookId:'death-guard',record,instance,unitId:fixture.unit.id});
+    try{
+      const state=await opened.page.evaluate(sourceText=>{const parsed=window.WHRosterParser.parse(sourceText),unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units[0],section=document.querySelector('.unit-card.roster-game-view [id$="-composition"]');return{raw:parsed.units[0],modelCount:unit.selection.modelCount,composition:unit.selection.composition,text:section?.innerText||'',generated:section?.querySelectorAll('[data-roster-game-generated="composition"]').length||0};},record.sourceText);
+      assert.equal(state.raw.quantity,fixture.quantity,`${fixture.name}: raw quantity`);
+      assert.equal(state.raw.models.length,0,`${fixture.name}: raw fixture model records`);
+      assert.deepEqual({value:state.modelCount.value,state:state.modelCount.state},{value:fixture.quantity,state:'resolved'},`${fixture.name}: model count`);
+      assert.equal(state.composition.state,'resolved',`${fixture.name}: composition state`);
+      assert.deepEqual(state.composition.models.map(model=>[model.quantity,model.sourceText]),[[fixture.quantity,fixture.modelTitle]],`${fixture.name}: canonical single-model breakdown`);
+      assert.equal(state.generated,1,`${fixture.name}: generated composition`);
+      assert.equal(state.text.includes(`${fixture.quantity} ${fixture.quantity===1?'model':'models'}`),true,`${fixture.name}: visible total`);
+      assert.equal(state.text.includes(`${fixture.quantity} × ${fixture.modelTitle}`),true,`${fixture.name}: visible breakdown`);
+      for(const pattern of fixture.forbidden)assert.doesNotMatch(state.text,pattern,`${fixture.name}: canonical composition leaked`);
+    }finally{await opened.context.close();}
+  }
+
+  const explicitRecord=rawRecord(dg,'raw-plague-marines-composition','7x Plague Marines (125 pts):\n• 6x Plague Marine\n    4 with Boltgun, Plague knives\n    2 with Plague knives, Plasma gun\n• 1x Plague Champion:\n    Boltgun, Plague knives');
+  {
+    const {context,page}=await openRecord({bookId:'death-guard',record:explicitRecord,instance:'parsed-unit-1',unitId:plagueMarines.id});
+    try{const state=await page.evaluate(sourceText=>{const parsed=window.WHRosterParser.parse(sourceText),unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units[0];return{raw:parsed.units[0],modelCount:unit.selection.modelCount,composition:unit.selection.composition,text:document.querySelector('.unit-card.roster-game-view [id$="-composition"]')?.innerText||''};},explicitRecord.sourceText);assert.deepEqual(state.raw.models.map(model=>[model.quantity,model.name]),[[6,'Plague Marine'],[1,'Plague Champion']]);assert.deepEqual({value:state.modelCount.value,state:state.modelCount.state},{value:7,state:'resolved'});assert.equal(state.composition.state,'resolved');assert.deepEqual(state.composition.models.map(model=>[model.quantity,model.sourceText]),[[6,'Plague Marine'],[1,'Plague Champion']]);assert.match(state.text,/6 × Plague Marine/);assert.match(state.text,/1 × Plague Champion/);}finally{await context.close();}
+  }
+
+  const ambiguousRecord=rawRecord(dg,'raw-ambiguous-plague-marines','7x Plague Marines (125 pts): Boltgun, Plague knives');
+  {
+    const {context,page}=await openRecord({bookId:'death-guard',record:ambiguousRecord,instance:'parsed-unit-1',unitId:plagueMarines.id});
+    try{const state=await page.evaluate(sourceText=>{const parsed=window.WHRosterParser.parse(sourceText),unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units[0];return{raw:parsed.units[0],modelCount:unit.selection.modelCount,composition:unit.selection.composition};},ambiguousRecord.sourceText);assert.equal(state.raw.models.length,0);assert.deepEqual({value:state.modelCount.value,state:state.modelCount.state},{value:7,state:'resolved'});assert.equal(state.composition.state,'partial');assert.deepEqual(state.composition.models,[]);assert.equal(state.composition.unresolved[0]?.reason,'ambiguous-canonical-model-identities');}finally{await context.close();}
+  }
+
   const pairRecord={id:'noxious-poxwalkers-effective-stats',roster:{faction:dg.book.title,units:[selectedModel(noxious,'noxious',1),selectedModel(poxwalkers,'poxwalkers',10)],detachments:[{name:detachment.title}],enhancements:[{id:pipes.id,name:pipes.title,ownerUnitId:'noxious',ownerStatus:'resolved'}],warnings:[]},attachments:{poxwalkers:['noxious']}};
   for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){
     const {context,page}=await openRecord({bookId:'death-guard',record:pairRecord,instance,unitId});

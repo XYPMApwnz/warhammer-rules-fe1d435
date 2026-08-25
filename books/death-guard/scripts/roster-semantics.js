@@ -29,7 +29,7 @@
   const DG_RULE = {
     vector:'ability-vector-of-disease-2498580', silent:'ability-silent-bodyguard-03a0a1b', gift:'ability-gift-of-contagion-psychic-4fea300', destroyer:'ability-the-destroyer-hive-70f0cc1',
     foul:'ability-foul-infusion-490467e', icon:'ability-unclean-icon-5dadb9e', shroud:'ability-shroud-of-disease-90475da',
-    virulent:'ability-virulent-aura-c28aa51', vitality:'ability-sickening-vitality-89bb5ff', malicious:'ability-malicious-calculations-8505f03',
+    virulent:'ability-virulent-aura-c28aa51', vitality:'ability-sickening-vitality-89bb5ff', malicious:'ability-malicious-calculations-8505f03', blinding:'ability-blinding-spray-7d189f5',
     froth:'ability-froth-spattered-frenzy-9a139e5', dronesInstrument:'plague-drones-ability-instrument-of-chaos',
     bearersInstrument:'plaguebearers-ability-instrument-of-chaos', strains:'detachment-rule-hypervirulent-strains'
   };
@@ -114,6 +114,7 @@
       const blightbringer=leader('unit-noxious-blightbringer');if(blightbringer){stat('sickening-vitality-move','M','add',1,attachmentSource(DG_RULE.vitality,blightbringer));if(cardId!=='unit-noxious-blightbringer')canonicalAbility(DG_RULE.vitality,attachmentSource(DG_RULE.vitality,blightbringer));}
       const tallyman=leader('unit-tallyman');if(tallyman&&cardId!=='unit-tallyman')canonicalAbility(DG_RULE.malicious,attachmentSource(DG_RULE.malicious,tallyman));
       const plaguecaster=leader('unit-malignant-plaguecaster');if(plaguecaster&&cardId!=='unit-malignant-plaguecaster')canonicalAbility(DG_RULE.gift,attachmentSource(DG_RULE.gift,plaguecaster));
+      const blightspawn=leader('unit-foul-blightspawn');if(blightspawn&&cardId!=='unit-foul-blightspawn')canonicalAbility(DG_RULE.blinding,attachmentSource(DG_RULE.blinding,blightspawn));
       if(cardId!=='unit-deathshroud-terminators'&&canonicalUnitId(bodyguard)==='unit-deathshroud-terminators')add('silent-bodyguard','ability','core-feel-no-pain','grant',{title:'Feel No Pain 4+',summary:'This model has Feel No Pain 4+.',ruleTitle:'Silent Bodyguard'},attachmentSource(DG_RULE.silent,bodyguard));
       if(cardId==='unit-helbrute'&&unitLoadout(unit).flatMap(splitLabels).filter(label=>normalize(label)!=='close combat weapon').length===2)weapon('froth-spattered-frenzy','selected-melee','add-stat',{stat:'A',delta:2,profileIds:gameUnit?.selection?.loadout?.selectedProfileIds||[]},source('datasheet',DG_RULE.froth,unit.id,'selected-wargear'));
       if(['unit-plague-drones','unit-plaguebearers'].includes(cardId)&&hasWargear(unit,'Daemonic Icon'))stat('daemonic-icon','Ld','set','6+',source('selected-wargear','daemonic-icon',unit.id,'selected-wargear'));

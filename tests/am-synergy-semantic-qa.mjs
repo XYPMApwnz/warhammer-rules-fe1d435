@@ -34,12 +34,12 @@ assert.equal(api.projectGameEffects(group,group.units[0],context(group)).some(ef
 
 const robots={units:[{id:'robots',name:'Kastelan Robots'},{id:'datasmith',name:'Cybernetica Datasmith'}],enhancements:[]};
 const robotEffects=api.projectGameEffects(robots,robots.units[0],context(robots,{robots:['datasmith']}));
-const aegis=robotEffects.filter(effect=>effect.id.startsWith('aegis-protocol'));
-assert.equal(aegis.length,2);assert.equal(aegis.every(effect=>effect.state==='conditional'&&effect.certainty==='unknown'),true);assert.equal(aegis.every(effect=>effect.condition?.kind==='battle-protocol'&&effect.condition.state==='unknown'),true);assert.equal(aegis.every(effect=>effect.source.ownerInstanceId==='datasmith'),true);assert.equal(aegis.some(effect=>effect.component==='stat'&&effect.state==='active'),false);
+const aegis=robotEffects.find(effect=>effect.id==='aegis-protocol-toughness'),battleProtocols=robotEffects.find(effect=>effect.canonicalAbilityId==='datasheet-battle-protocols');
+assert.equal(aegis.state,'conditional');assert.equal(aegis.certainty,'unknown');assert.equal(aegis.condition?.kind,'battle-protocol');assert.equal(aegis.condition?.state,'unknown');assert.equal(aegis.source.ownerInstanceId,'datasmith');assert.equal(aegis.component,'stat');assert.equal(battleProtocols.operation,'reference');assert.equal(battleProtocols.state,'reference');assert.equal(battleProtocols.source.ownerInstanceId,'datasmith');
 
 const priests={units:[{id:'priests',name:'Fulgurite Electro Priests'},{id:'character',name:'Tech Priest Manipulus'}],enhancements:[]};
-const electro=api.projectGameEffects(priests,priests.units[0],context(priests,{priests:['character']})).find(effect=>effect.id==='electro-infusion');
-assert.equal(electro.source.ownerInstanceId,'character');assert.equal(electro.targetInstanceId,undefined);
+const electro=api.projectGameEffects(priests,priests.units[0],context(priests,{priests:['character']})).find(effect=>effect.canonicalAbilityId==='datasheet-electro-infusion');
+assert.equal(electro.operation,'reference');assert.equal(electro.source.ownerInstanceId,'character');assert.equal(electro.targetInstanceId,undefined);
 
 const tl={units:[{id:'tl-owner',name:'Tech Priest Manipulus'},{id:'tl-other',name:'Tech Priest Manipulus'}],enhancements:[{name:'TL-4Ø9',ownerStatus:'resolved',ownerUnitId:'tl-owner'}]};
 const tlEffect=api.projectGameEffects(tl,tl.units[0],context(tl)).find(effect=>effect.operation==='grant-profile');

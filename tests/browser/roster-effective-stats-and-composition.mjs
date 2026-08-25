@@ -87,7 +87,7 @@ try{
   for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){
     const {context,page}=await openRecord({bookId:'death-guard',record:pairRecord,instance,unitId});
     try{
-      const projected=await page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id),stats=unit.effects.filter(effect=>effect.component==='stat');return{effective:unit.effective.stats,effects:stats.map(effect=>({id:effect.id,targetId:effect.targetId,base:effect.base,effective:effect.effective,owner:effect.source?.ownerInstanceId})),text:document.querySelector('.roster-game-effects')?.innerText||''};},instance),dom=await visibleStats(page);
+      const projected=await page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id),stats=unit.effects.filter(effect=>effect.component==='stat'),vitalityId='ability-sickening-vitality-89bb5ff';return{effective:unit.effective.stats,effects:stats.map(effect=>({id:effect.id,targetId:effect.targetId,base:effect.base,effective:effect.effective,owner:effect.source?.ownerInstanceId})),text:document.querySelector('.roster-game-effects')?.innerText||'',vitality:unit.effects.find(effect=>effect.canonicalAbilityId===vitalityId),vitalityText:document.querySelector(`[data-roster-canonical-ability-id="${vitalityId}"]`)?.innerText||''};},instance),dom=await visibleStats(page);
       assert.equal(projected.effective.M,'6"',`${instance}: effective M`);
       assert.equal(projected.effective.OC,'2',`${instance}: effective OC`);
       assert.equal(dom.M,'6"',`${instance}: visible M`);
@@ -95,7 +95,9 @@ try{
       assert.equal(projected.effects.filter(effect=>effect.targetId==='M'&&effect.base==='5"'&&effect.effective==='6"'&&effect.owner==='noxious').length,1,`${instance}: Sickening Vitality reduction`);
       assert.equal(projected.effects.filter(effect=>effect.targetId==='OC'&&effect.base==='1'&&effect.effective==='2'&&effect.owner==='noxious').length,1,`${instance}: Witherbone Pipes reduction`);
       if(instance==='poxwalkers'){
-        assert.match(projected.text,/Sickening Vitality/i,`${instance}: Sickening Vitality ability/provenance`);
+        assert.equal(projected.vitality?.operation,'reference',`${instance}: Sickening Vitality canonical reference`);
+        assert.match(projected.vitalityText,/Sickening Vitality[\s\S]*Noxious Blightbringer[\s\S]*re-roll Advance and Charge/i,`${instance}: canonical Sickening Vitality ability/source`);
+        assert.doesNotMatch(projected.text,/Sickening Vitality/i,`${instance}: no Active roster effects reference duplicate`);
         assert.match(projected.text,/Witherbone Pipes/i,`${instance}: Witherbone Pipes ability/provenance`);
       }
     }finally{await context.close();}

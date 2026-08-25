@@ -118,7 +118,43 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "6",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "mortarion-ability-core",
+            "sectionId": "mortarion-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D6, Deep Strike, Feel No Pain 5+",
+            "sourceUnitId": "unit-mortarion"
+          },
+          {
+            "id": "mortarion-ability-faction",
+            "sectionId": "mortarion-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-mortarion"
+          },
+          {
+            "id": "ability-lord-of-the-death-guard-90db1c4",
+            "sectionId": "mortarion-ability-lord-of-the-death-guard",
+            "title": "Lord of the Death Guard",
+            "text": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target).",
+            "sourceUnitId": "unit-mortarion"
+          },
+          {
+            "id": "ability-host-of-plagues-2f9d0aa",
+            "sectionId": "mortarion-ability-host-of-plagues",
+            "title": "Host of Plagues",
+            "text": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model, adding 1 to the result if that enemy unit is Afflicted: on a 3+, that enemy unit suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-mortarion"
+          },
+          {
+            "id": "mortarion-ability-supreme-commander",
+            "sectionId": "mortarion-ability-supreme-commander",
+            "title": "Supreme Commander",
+            "text": "If this model is in your army, it must be your WARLORD.",
+            "sourceUnitId": "unit-mortarion"
+          }
+        ],
         "models": [
           {
             "id": "unit-mortarion-model-mortarion",
@@ -394,7 +430,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "typhus-ability-core",
+            "sectionId": "typhus-ability-core",
+            "title": "CORE",
+            "text": "Deep Strike, Leader",
+            "sourceUnitId": "unit-typhus"
+          },
+          {
+            "id": "typhus-ability-faction",
+            "sectionId": "typhus-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-typhus"
+          },
+          {
+            "id": "ability-the-destroyer-hive-70f0cc1",
+            "sectionId": "typhus-ability-the-destroyer-hive",
+            "title": "The Destroyer Hive",
+            "text": "While this model is leading a unit, each time a melee attack targets that unit, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-typhus"
+          },
+          {
+            "id": "ability-eater-plague-psychic-2c7cc41",
+            "sectionId": "typhus-ability-eater-plague-psychic",
+            "title": "Eater Plague (Psychic)",
+            "text": "In your Shooting phase, you can select one enemy unit within 18\" of and visible to this PSYKER (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this PSYKER) and roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2-5, that enemy unit suffers D6 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+            "sourceUnitId": "unit-typhus"
+          }
+        ],
         "models": [
           {
             "id": "unit-typhus-model-typhus",
@@ -602,7 +667,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "biologus-putrifier-ability-core",
+            "sectionId": "biologus-putrifier-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise 1, Leader",
+            "sourceUnitId": "unit-biologus-putrifier"
+          },
+          {
+            "id": "biologus-putrifier-ability-faction",
+            "sectionId": "biologus-putrifier-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-biologus-putrifier"
+          },
+          {
+            "id": "ability-foul-infusion-490467e",
+            "sectionId": "biologus-putrifier-ability-foul-infusion",
+            "title": "Foul Infusion",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability. In addition, each time a model in that unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6.",
+            "sourceUnitId": "unit-biologus-putrifier"
+          },
+          {
+            "id": "ability-extraction-of-fresh-disease-b14e246",
+            "sectionId": "biologus-putrifier-ability-extraction-of-fresh-disease",
+            "title": "Extraction of Fresh Disease",
+            "text": "The first time this model’s unit destroys an enemy unit as the result of a melee attack, until the end of the battle, add 6 to the Objective Control characteristic of this model.",
+            "sourceUnitId": "unit-biologus-putrifier"
+          }
+        ],
         "models": [
           {
             "id": "unit-biologus-putrifier-model-biologus-putrifier",
@@ -789,7 +883,43 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "daemon-prince-of-nurgle-ability-core",
+            "sectionId": "daemon-prince-of-nurgle-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle"
+          },
+          {
+            "id": "daemon-prince-of-nurgle-ability-faction",
+            "sectionId": "daemon-prince-of-nurgle-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle"
+          },
+          {
+            "id": "ability-death-guard-defenders-c306937",
+            "sectionId": "daemon-prince-of-nurgle-ability-death-guard-defenders",
+            "title": "Death Guard Defenders",
+            "text": "While this model is within 3\" of one or more friendly DEATH GUARD INFANTRY units, this model has the Lone Operative ability.",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle"
+          },
+          {
+            "id": "ability-fevered-strategist-9a8ed87",
+            "sectionId": "daemon-prince-of-nurgle-ability-fevered-strategist",
+            "title": "Fevered Strategist",
+            "text": "Once per battle round, one model from your army with this ability can use it when a friendly DEATH GUARD unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle"
+          },
+          {
+            "id": "ability-miasma-of-pestilence-aura-92fd75f",
+            "sectionId": "daemon-prince-of-nurgle-ability-miasma-of-pestilence-aura",
+            "title": "Miasma of Pestilence (Aura)",
+            "text": "While a friendly DEATH GUARD unit is within 6\" of this model, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle"
+          }
+        ],
         "models": [
           {
             "id": "unit-daemon-prince-of-nurgle-model-daemon-prince-of-nurgle",
@@ -1008,7 +1138,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "daemon-prince-of-nurgle-with-wings-ability-core",
+            "sectionId": "daemon-prince-of-nurgle-with-wings-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3, Deep Strike",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle-with-wings"
+          },
+          {
+            "id": "daemon-prince-of-nurgle-with-wings-ability-faction",
+            "sectionId": "daemon-prince-of-nurgle-with-wings-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle-with-wings"
+          },
+          {
+            "id": "ability-horrifying-visage-bfdb06a",
+            "sectionId": "daemon-prince-of-nurgle-with-wings-ability-horrifying-visage",
+            "title": "Horrifying Visage",
+            "text": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it. That unit must take a Battle-shock test, subtracting 1 from that test.",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle-with-wings"
+          },
+          {
+            "id": "ability-enfeebling-miasma-aura-dba0eef",
+            "sectionId": "daemon-prince-of-nurgle-with-wings-ability-enfeebling-miasma-aura",
+            "title": "Enfeebling Miasma (Aura)",
+            "text": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this model, each time that unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
+            "sourceUnitId": "unit-daemon-prince-of-nurgle-with-wings"
+          }
+        ],
         "models": [
           {
             "id": "unit-daemon-prince-of-nurgle-with-wings-model-daemon-prince-of-nurgle-with-wings",
@@ -1240,7 +1399,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "foul-blightspawn-ability-core",
+            "sectionId": "foul-blightspawn-ability-core",
+            "title": "CORE",
+            "text": "Leader",
+            "sourceUnitId": "unit-foul-blightspawn"
+          },
+          {
+            "id": "foul-blightspawn-ability-faction",
+            "sectionId": "foul-blightspawn-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-foul-blightspawn"
+          },
+          {
+            "id": "ability-blinding-spray-7d189f5",
+            "sectionId": "foul-blightspawn-ability-blinding-spray",
+            "title": "Blinding Spray",
+            "text": "In the Fight phase, you can select one model from your army with this ability to use this ability. If you do, until the end of the phase, that model’s unit has the Fights First ability. Each model can only be selected for this ability once per battle.",
+            "sourceUnitId": "unit-foul-blightspawn"
+          },
+          {
+            "id": "ability-putrefying-stink-4f5145b",
+            "sectionId": "foul-blightspawn-ability-putrefying-stink",
+            "title": "Putrefying Stink",
+            "text": "Enemy models cannot start or end an Advance move within 9\" of this model.",
+            "sourceUnitId": "unit-foul-blightspawn"
+          }
+        ],
         "models": [
           {
             "id": "unit-foul-blightspawn-model-foul-blightspawn",
@@ -1416,7 +1604,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "5+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "icon-bearer-ability-core",
+            "sectionId": "icon-bearer-ability-core",
+            "title": "CORE",
+            "text": "Leader",
+            "sourceUnitId": "unit-icon-bearer"
+          },
+          {
+            "id": "icon-bearer-ability-faction",
+            "sectionId": "icon-bearer-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-icon-bearer"
+          },
+          {
+            "id": "ability-unclean-icon-5dadb9e",
+            "sectionId": "icon-bearer-ability-unclean-icon",
+            "title": "Unclean Icon",
+            "text": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
+            "sourceUnitId": "unit-icon-bearer"
+          },
+          {
+            "id": "ability-blessed-icon-of-disease-e331a6c",
+            "sectionId": "icon-bearer-ability-blessed-icon-of-disease",
+            "title": "Blessed Icon of Disease",
+            "text": "Once per battle, at the start of any phase, you can select one friendly DEATH GUARD unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
+            "sourceUnitId": "unit-icon-bearer"
+          }
+        ],
         "models": [
           {
             "id": "unit-icon-bearer-model-icon-bearer",
@@ -1596,7 +1813,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "lord-of-contagion-ability-core",
+            "sectionId": "lord-of-contagion-ability-core",
+            "title": "CORE",
+            "text": "Deep Strike, Leader",
+            "sourceUnitId": "unit-lord-of-contagion"
+          },
+          {
+            "id": "lord-of-contagion-ability-faction",
+            "sectionId": "lord-of-contagion-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-lord-of-contagion"
+          },
+          {
+            "id": "ability-vector-of-disease-2498580",
+            "sectionId": "lord-of-contagion-ability-vector-of-disease",
+            "title": "Vector of Disease",
+            "text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] and [LANCE] abilities.",
+            "sourceUnitId": "unit-lord-of-contagion"
+          },
+          {
+            "id": "ability-unholy-resilience-745069e",
+            "sectionId": "lord-of-contagion-ability-unholy-resilience",
+            "title": "Unholy Resilience",
+            "text": "The first time a model with this ability is destroyed in a battle round, roll one D6 at the end of the phase. On a 2+, set that model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining. Each model can only be set up in this way once per battle.",
+            "sourceUnitId": "unit-lord-of-contagion"
+          }
+        ],
         "models": [
           {
             "id": "unit-lord-of-contagion-model-lord-of-contagion",
@@ -1793,7 +2039,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "lord-of-poxes-ability-core",
+            "sectionId": "lord-of-poxes-ability-core",
+            "title": "CORE",
+            "text": "Leader",
+            "sourceUnitId": "unit-lord-of-poxes"
+          },
+          {
+            "id": "lord-of-poxes-ability-faction",
+            "sectionId": "lord-of-poxes-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-lord-of-poxes"
+          },
+          {
+            "id": "ability-gift-of-poxes-29d6059",
+            "sectionId": "lord-of-poxes-ability-gift-of-poxes",
+            "title": "Gift of Poxes",
+            "text": "Add 3\" to the range of this model’s Contagion Range.",
+            "sourceUnitId": "unit-lord-of-poxes"
+          },
+          {
+            "id": "ability-shroud-of-disease-90475da",
+            "sectionId": "lord-of-poxes-ability-shroud-of-disease",
+            "title": "Shroud of Disease",
+            "text": "While this model is leading a unit, that unit cannot be targeted by ranged attacks unless the attacking model is within 18\".",
+            "sourceUnitId": "unit-lord-of-poxes"
+          }
+        ],
         "models": [
           {
             "id": "unit-lord-of-poxes-model-lord-of-poxes",
@@ -2025,7 +2300,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "lord-of-virulence-ability-core",
+            "sectionId": "lord-of-virulence-ability-core",
+            "title": "CORE",
+            "text": "Deep Strike, Leader",
+            "sourceUnitId": "unit-lord-of-virulence"
+          },
+          {
+            "id": "lord-of-virulence-ability-faction",
+            "sectionId": "lord-of-virulence-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-lord-of-virulence"
+          },
+          {
+            "id": "ability-virulent-aura-c28aa51",
+            "sectionId": "lord-of-virulence-ability-virulent-aura",
+            "title": "Virulent Aura",
+            "text": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Wound roll.",
+            "sourceUnitId": "unit-lord-of-virulence"
+          },
+          {
+            "id": "ability-blight-bombardment-74bfb5b",
+            "sectionId": "lord-of-virulence-ability-blight-bombardment",
+            "title": "Blight Bombardment",
+            "text": "At the start of your Shooting phase, select one enemy unit within 30\" of and visible to this model. Until the end of the phase, each time a friendly DEATH GUARD model makes a ranged attack that targets that unit, re-roll a Hit roll of 1 (if that attack is made with a Blast weapon, you can re-roll the Hit roll instead).",
+            "sourceUnitId": "unit-lord-of-virulence"
+          }
+        ],
         "models": [
           {
             "id": "unit-lord-of-virulence-model-lord-of-virulence",
@@ -2201,7 +2505,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "malignant-plaguecaster-ability-core",
+            "sectionId": "malignant-plaguecaster-ability-core",
+            "title": "CORE",
+            "text": "Leader",
+            "sourceUnitId": "unit-malignant-plaguecaster"
+          },
+          {
+            "id": "malignant-plaguecaster-ability-faction",
+            "sectionId": "malignant-plaguecaster-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-malignant-plaguecaster"
+          },
+          {
+            "id": "ability-gift-of-contagion-psychic-4fea300",
+            "sectionId": "malignant-plaguecaster-ability-gift-of-contagion-psychic",
+            "title": "Gift of Contagion (Psychic)",
+            "text": "While this model is leading a unit, each time a model in that unit makes an attack that targets a unit that is Afflicted, that attack has the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-malignant-plaguecaster"
+          },
+          {
+            "id": "ability-pestilent-fallout-psychic-399986c",
+            "sectionId": "malignant-plaguecaster-ability-pestilent-fallout-psychic",
+            "title": "Pestilent Fallout (Psychic)",
+            "text": "In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks made with its Plague Wind. Until the end of your opponent’s next turn, that unit is enfeebled. While a unit is enfeebled, subtract 2\" from the Move characteristic of models in that unit.",
+            "sourceUnitId": "unit-malignant-plaguecaster"
+          }
+        ],
         "models": [
           {
             "id": "unit-malignant-plaguecaster-model-malignant-plaguecaster",
@@ -2473,7 +2806,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "noxious-blightbringer-ability-core",
+            "sectionId": "noxious-blightbringer-ability-core",
+            "title": "CORE",
+            "text": "Leader",
+            "sourceUnitId": "unit-noxious-blightbringer"
+          },
+          {
+            "id": "noxious-blightbringer-ability-faction",
+            "sectionId": "noxious-blightbringer-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-noxious-blightbringer"
+          },
+          {
+            "id": "ability-sickening-vitality-89bb5ff",
+            "sectionId": "noxious-blightbringer-ability-sickening-vitality",
+            "title": "Sickening Vitality",
+            "text": "While this model is leading a unit, add 1\" to the Move characteristic of models in that unit and you can re-roll Advance and Charge rolls made for that unit.",
+            "sourceUnitId": "unit-noxious-blightbringer"
+          },
+          {
+            "id": "ability-tocsin-of-misery-aura-7f2edfb",
+            "sectionId": "noxious-blightbringer-ability-tocsin-of-misery-aura",
+            "title": "Tocsin of Misery (Aura)",
+            "text": "In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of this model, that enemy unit must take a Battle-shock test, subtracting 1 from that test if it is a PSYKER unit.",
+            "sourceUnitId": "unit-noxious-blightbringer"
+          }
+        ],
         "models": [
           {
             "id": "unit-noxious-blightbringer-model-noxious-blightbringer",
@@ -2701,7 +3063,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "plague-surgeon-ability-core",
+            "sectionId": "plague-surgeon-ability-core",
+            "title": "CORE",
+            "text": "Leader",
+            "sourceUnitId": "unit-plague-surgeon"
+          },
+          {
+            "id": "plague-surgeon-ability-faction",
+            "sectionId": "plague-surgeon-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-plague-surgeon"
+          },
+          {
+            "id": "ability-tainted-narthecium-01ba1bd",
+            "sectionId": "plague-surgeon-ability-tainted-narthecium",
+            "title": "Tainted Narthecium",
+            "text": "While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
+            "sourceUnitId": "unit-plague-surgeon"
+          },
+          {
+            "id": "ability-inflamed-infections-ca01e1a",
+            "sectionId": "plague-surgeon-ability-inflamed-infections",
+            "title": "Inflamed Infections",
+            "text": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time this model makes an attack that targets that unit, an unmodified Hit roll of 5+ scores a Critical Hit. If that unit is Below Half-strength, an unmodified Hit roll of 4+ scores a Critical Hit instead.",
+            "sourceUnitId": "unit-plague-surgeon"
+          }
+        ],
         "models": [
           {
             "id": "unit-plague-surgeon-model-plague-surgeon",
@@ -2874,7 +3265,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "tallyman-ability-core",
+            "sectionId": "tallyman-ability-core",
+            "title": "CORE",
+            "text": "Leader",
+            "sourceUnitId": "unit-tallyman"
+          },
+          {
+            "id": "tallyman-ability-faction",
+            "sectionId": "tallyman-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-tallyman"
+          },
+          {
+            "id": "ability-malicious-calculations-8505f03",
+            "sectionId": "tallyman-ability-malicious-calculations",
+            "title": "Malicious Calculations",
+            "text": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll.",
+            "sourceUnitId": "unit-tallyman"
+          },
+          {
+            "id": "ability-sevenfold-chant-15ec601",
+            "sectionId": "tallyman-ability-sevenfold-chant",
+            "title": "Sevenfold Chant",
+            "text": "In your Command phase, if this model is on the battlefield, roll 2D6: on a 7+, you gain 1CP.",
+            "sourceUnitId": "unit-tallyman"
+          }
+        ],
         "models": [
           {
             "id": "unit-tallyman-model-tallyman",
@@ -3211,7 +3631,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "2"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "plague-marines-ability-faction",
+            "sectionId": "plague-marines-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-plague-marines"
+          },
+          {
+            "id": "ability-infused-with-the-blessings-of-nurgle-577c42e",
+            "sectionId": "plague-marines-ability-infused-with-the-blessings-of-nurgle",
+            "title": "Infused with the Blessings of Nurgle",
+            "text": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is Afflicted.",
+            "sourceUnitId": "unit-plague-marines"
+          },
+          {
+            "id": "plague-marines-ability-icon-of-despair-aura",
+            "sectionId": "plague-marines-ability-icon-of-despair-aura",
+            "title": "Icon of Despair (Aura)",
+            "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+            "sourceUnitId": "unit-plague-marines"
+          }
+        ],
         "models": [
           {
             "id": "unit-plague-marines-model-plague-champion",
@@ -3802,7 +4244,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "blightlord-terminators-ability-core",
+            "sectionId": "blightlord-terminators-ability-core",
+            "title": "CORE",
+            "text": "Deep Strike",
+            "sourceUnitId": "unit-blightlord-terminators"
+          },
+          {
+            "id": "blightlord-terminators-ability-faction",
+            "sectionId": "blightlord-terminators-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-blightlord-terminators"
+          },
+          {
+            "id": "ability-blistering-fusillade-01dcc5c",
+            "sectionId": "blightlord-terminators-ability-blistering-fusillade",
+            "title": "Blistering Fusillade",
+            "text": "If this unit has a Starting Strength of 5 or more, or if a CHARACTER is leading this unit, then each time a model in this unit makes a ranged attack that targets an Afflicted unit, improve the Strength and Armour Penetration characteristics of that attack by 1.",
+            "sourceUnitId": "unit-blightlord-terminators"
+          }
+        ],
         "models": [
           {
             "id": "unit-blightlord-terminators-model-blightlord-champion",
@@ -4152,7 +4616,43 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "1",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "deathshroud-terminators-ability-core",
+            "sectionId": "deathshroud-terminators-ability-core",
+            "title": "CORE",
+            "text": "Deep Strike",
+            "sourceUnitId": "unit-deathshroud-terminators"
+          },
+          {
+            "id": "deathshroud-terminators-ability-faction",
+            "sectionId": "deathshroud-terminators-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-deathshroud-terminators"
+          },
+          {
+            "id": "ability-silent-bodyguard-03a0a1b",
+            "sectionId": "deathshroud-terminators-ability-silent-bodyguard",
+            "title": "Silent Bodyguard",
+            "text": "While a CHARACTER model is leading this unit, that CHARACTER model has the Feel No Pain 4+ ability.",
+            "sourceUnitId": "unit-deathshroud-terminators"
+          },
+          {
+            "id": "ability-death-approaches-3347016",
+            "sectionId": "deathshroud-terminators-ability-death-approaches",
+            "title": "Death Approaches",
+            "text": "Each time this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from all other enemy units.",
+            "sourceUnitId": "unit-deathshroud-terminators"
+          },
+          {
+            "id": "deathshroud-terminators-ability-icon-of-despair-aura",
+            "sectionId": "deathshroud-terminators-ability-icon-of-despair-aura",
+            "title": "Icon of Despair (Aura)",
+            "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+            "sourceUnitId": "unit-deathshroud-terminators"
+          }
+        ],
         "models": [
           {
             "id": "unit-deathshroud-terminators-model-deathshroud-champion",
@@ -4418,7 +4918,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "8+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "poxwalkers-ability-core",
+            "sectionId": "poxwalkers-ability-core",
+            "title": "CORE",
+            "text": "Infiltrators, Feel No Pain 5+",
+            "sourceUnitId": "unit-poxwalkers"
+          },
+          {
+            "id": "poxwalkers-ability-faction",
+            "sectionId": "poxwalkers-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-poxwalkers"
+          },
+          {
+            "id": "ability-curse-of-the-walking-pox-6a9093e",
+            "sectionId": "poxwalkers-ability-curse-of-the-walking-pox",
+            "title": "Curse of the Walking Pox",
+            "text": "Each time a POXWALKER model in this unit makes an attack that destroys an enemy model (excluding MONSTER and VEHICLE models), after this unit has resolved its attacks, you can return one destroyed POXWALKER model to this unit. While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUS’ Eater Plague ability count as enemy models destroyed by an attack made by a POXWALKER model in this unit for the purposes of this ability.",
+            "sourceUnitId": "unit-poxwalkers"
+          }
+        ],
         "models": [
           {
             "id": "unit-poxwalkers-model-poxwalker",
@@ -4539,7 +5061,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "7+",
           "OC": "1"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "chaos-spawn-ability-core",
+            "sectionId": "chaos-spawn-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise 1, Feel No Pain 5+, Scouts 6\"",
+            "sourceUnitId": "unit-chaos-spawn"
+          },
+          {
+            "id": "chaos-spawn-ability-faction",
+            "sectionId": "chaos-spawn-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-chaos-spawn"
+          },
+          {
+            "id": "ability-lethal-ichor-6824af1",
+            "sectionId": "chaos-spawn-ability-lethal-ichor",
+            "title": "Lethal Ichor",
+            "text": "Each time a melee attack is allocated to a model in this unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound.",
+            "sourceUnitId": "unit-chaos-spawn"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-spawn-model-chaos-spawn",
@@ -4674,7 +5218,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "5"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "chaos-land-raider-ability-core",
+            "sectionId": "chaos-land-raider-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D6",
+            "sourceUnitId": "unit-chaos-land-raider"
+          },
+          {
+            "id": "chaos-land-raider-ability-faction",
+            "sectionId": "chaos-land-raider-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-chaos-land-raider"
+          },
+          {
+            "id": "ability-assault-ramp-e5223e4",
+            "sectionId": "chaos-land-raider-ability-assault-ramp",
+            "title": "Assault Ramp",
+            "text": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "sourceUnitId": "unit-chaos-land-raider"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-land-raider-model-chaos-land-raider",
@@ -4941,7 +5507,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "3"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "chaos-predator-annihilator-ability-core",
+            "sectionId": "chaos-predator-annihilator-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3",
+            "sourceUnitId": "unit-chaos-predator-annihilator"
+          },
+          {
+            "id": "chaos-predator-annihilator-ability-faction",
+            "sectionId": "chaos-predator-annihilator-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-chaos-predator-annihilator"
+          },
+          {
+            "id": "ability-metalophagic-infection-7a47e75",
+            "sectionId": "chaos-predator-annihilator-ability-metalophagic-infection",
+            "title": "Metalophagic Infection",
+            "text": "In your Shooting phase, after this model has shot, select one enemy MONSTER or VEHICLE unit hit by one or more of those attacks. Roll one D6, adding 1 to the result if that unit is Afflicted; on a 5+, that unit suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-chaos-predator-annihilator"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-predator-annihilator-model-chaos-predator-annihilator",
@@ -5235,7 +5823,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "3"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "chaos-predator-destructor-ability-core",
+            "sectionId": "chaos-predator-destructor-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3",
+            "sourceUnitId": "unit-chaos-predator-destructor"
+          },
+          {
+            "id": "chaos-predator-destructor-ability-faction",
+            "sectionId": "chaos-predator-destructor-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-chaos-predator-destructor"
+          },
+          {
+            "id": "ability-hail-of-corrosive-disease-0f6451f",
+            "sectionId": "chaos-predator-destructor-ability-hail-of-corrosive-disease",
+            "title": "Hail of Corrosive Disease",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks. Until the end of the phase, each time a friendly DEATH GUARD unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per phase.",
+            "sourceUnitId": "unit-chaos-predator-destructor"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-predator-destructor-model-chaos-predator-destructor",
@@ -5537,7 +6147,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "5",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "defiler-ability-core",
+            "sectionId": "defiler-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D6",
+            "sourceUnitId": "unit-defiler"
+          },
+          {
+            "id": "defiler-ability-faction",
+            "sectionId": "defiler-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-defiler"
+          },
+          {
+            "id": "ability-scuttling-walker-cb4a0c4",
+            "sectionId": "defiler-ability-scuttling-walker",
+            "title": "Scuttling Walker",
+            "text": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+            "sourceUnitId": "unit-defiler"
+          },
+          {
+            "id": "ability-barrage-of-filth-f33e996",
+            "sectionId": "defiler-ability-barrage-of-filth",
+            "title": "Barrage of Filth",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover.",
+            "sourceUnitId": "unit-defiler"
+          }
+        ],
         "models": [
           {
             "id": "unit-defiler-model-defiler",
@@ -6020,7 +6659,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "foetid-bloat-drone-ability-core",
+            "sectionId": "foetid-bloat-drone-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3",
+            "sourceUnitId": "unit-foetid-bloat-drone"
+          },
+          {
+            "id": "foetid-bloat-drone-ability-faction",
+            "sectionId": "foetid-bloat-drone-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-foetid-bloat-drone"
+          },
+          {
+            "id": "ability-hovering-death-805d057",
+            "sectionId": "foetid-bloat-drone-ability-hovering-death",
+            "title": "Hovering Death",
+            "text": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+            "sourceUnitId": "unit-foetid-bloat-drone"
+          }
+        ],
         "models": [
           {
             "id": "unit-foetid-bloat-drone-model-foetid-bloat-drone",
@@ -6202,7 +6863,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "foetid-bloat-drone-with-heavy-blight-launcher-ability-core",
+            "sectionId": "foetid-bloat-drone-with-heavy-blight-launcher-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3",
+            "sourceUnitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
+          },
+          {
+            "id": "foetid-bloat-drone-with-heavy-blight-launcher-ability-faction",
+            "sectionId": "foetid-bloat-drone-with-heavy-blight-launcher-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
+          },
+          {
+            "id": "ability-explosive-blight-4fe2f2d",
+            "sectionId": "foetid-bloat-drone-with-heavy-blight-launcher-ability-explosive-blight",
+            "title": "Explosive Blight",
+            "text": "In your Shooting phase, each time this model makes an attack that destroys an enemy unit, before removing the last model in that unit from play, roll a D6, adding 1 to the result if that unit is Afflicted: on a 5+, each enemy unit within 6\" of that model is Afflicted until the start of your next turn.",
+            "sourceUnitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
+          }
+        ],
         "models": [
           {
             "id": "unit-foetid-bloat-drone-with-heavy-blight-launcher-model-foetid-bloat-drone",
@@ -6365,7 +7048,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "3"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "helbrute-ability-core",
+            "sectionId": "helbrute-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise 1",
+            "sourceUnitId": "unit-helbrute"
+          },
+          {
+            "id": "helbrute-ability-faction",
+            "sectionId": "helbrute-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-helbrute"
+          },
+          {
+            "id": "ability-diseased-malice-caa33aa",
+            "sectionId": "helbrute-ability-diseased-malice",
+            "title": "Diseased Malice",
+            "text": "Each time this model makes an attack that targets an Afflicted unit, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-helbrute"
+          },
+          {
+            "id": "ability-froth-spattered-frenzy-9a139e5",
+            "sectionId": "helbrute-ability-froth-spattered-frenzy",
+            "title": "Froth-spattered Frenzy",
+            "text": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons.",
+            "sourceUnitId": "unit-helbrute"
+          }
+        ],
         "models": [
           {
             "id": "unit-helbrute-model-helbrute",
@@ -6849,7 +7561,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "myphitic-blight-hauler-ability-core",
+            "sectionId": "myphitic-blight-hauler-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3",
+            "sourceUnitId": "unit-myphitic-blight-hauler"
+          },
+          {
+            "id": "myphitic-blight-hauler-ability-faction",
+            "sectionId": "myphitic-blight-hauler-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-myphitic-blight-hauler"
+          },
+          {
+            "id": "ability-tank-hunters-8831aae",
+            "sectionId": "myphitic-blight-hauler-ability-tank-hunters",
+            "title": "Tank Hunters",
+            "text": "In your Shooting phase, each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+            "sourceUnitId": "unit-myphitic-blight-hauler"
+          }
+        ],
         "models": [
           {
             "id": "unit-myphitic-blight-hauler-model-myphitic-blight-hauler",
@@ -7119,7 +7853,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "plagueburst-crawler-ability-core",
+            "sectionId": "plagueburst-crawler-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3",
+            "sourceUnitId": "unit-plagueburst-crawler"
+          },
+          {
+            "id": "plagueburst-crawler-ability-faction",
+            "sectionId": "plagueburst-crawler-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-plagueburst-crawler"
+          },
+          {
+            "id": "ability-spore-laced-shock-waves-bc0251b",
+            "sectionId": "plagueburst-crawler-ability-spore-laced-shock-waves",
+            "title": "Spore-laced Shock Waves",
+            "text": "In your Shooting phase, each time you select a target for this model’s Plagueburst mortar, roll one D6 for the target unit and every other enemy unit within 3\" of the target unit, adding 1 to that roll if the unit being rolled for is Afflicted. On a 6+, the unit being rolled for is struck by spores; after resolving all of this model’s attacks against the target unit, each unit struck by spores suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-plagueburst-crawler"
+          }
+        ],
         "models": [
           {
             "id": "unit-plagueburst-crawler-model-plagueburst-crawler",
@@ -7392,7 +8148,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "2"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "chaos-rhino-ability-core",
+            "sectionId": "chaos-rhino-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3, Firing Deck 2",
+            "sourceUnitId": "unit-chaos-rhino"
+          },
+          {
+            "id": "chaos-rhino-ability-faction",
+            "sectionId": "chaos-rhino-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-chaos-rhino"
+          },
+          {
+            "id": "ability-fire-support-b0918db",
+            "sectionId": "chaos-rhino-ability-fire-support",
+            "title": "Fire Support",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
+            "sourceUnitId": "unit-chaos-rhino"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-rhino-model-chaos-rhino",
@@ -7600,7 +8378,50 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Ld": "6+",
           "OC": "0"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "miasmic-malignifier-ability-core",
+            "sectionId": "miasmic-malignifier-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D3",
+            "sourceUnitId": "unit-miasmic-malignifier"
+          },
+          {
+            "id": "miasmic-malignifier-ability-faction",
+            "sectionId": "miasmic-malignifier-ability-faction",
+            "title": "FACTION",
+            "text": "Nurgle’s Gift (Aura)",
+            "sourceUnitId": "unit-miasmic-malignifier"
+          },
+          {
+            "id": "ability-putrescent-fog-aura-afeaa21",
+            "sectionId": "miasmic-malignifier-ability-putrescent-fog-aura",
+            "title": "Putrescent Fog (Aura)",
+            "text": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model.",
+            "sourceUnitId": "unit-miasmic-malignifier"
+          },
+          {
+            "id": "ability-diseased-cover-8d71e30",
+            "sectionId": "miasmic-malignifier-ability-diseased-cover",
+            "title": "Diseased Cover",
+            "text": "Each time a ranged attack is allocated to a model, if that model is not fully visible to the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-miasmic-malignifier"
+          },
+          {
+            "id": "ability-fortification-e581151",
+            "sectionId": "miasmic-malignifier-ability-fortification",
+            "title": "Fortification",
+            "text": "While an enemy unit is only within Engagement Range of one or more FORTIFICATIONS from your army:That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+            "sourceUnitId": "unit-miasmic-malignifier"
+          },
+          {
+            "id": "miasmic-malignifier-ability-fortification-setup",
+            "sectionId": "miasmic-malignifier-ability-fortification-setup",
+            "title": "Deployment",
+            "text": "Both parts of this FORTIFICATION must be set up within 1\" of each other. Both parts are then treated as a single model for all rules purposes.",
+            "sourceUnitId": "unit-miasmic-malignifier"
+          }
+        ],
         "models": [
           {
             "id": "unit-miasmic-malignifier-model-miasmic-malignifier",
@@ -7729,7 +8550,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "3",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "beasts-of-nurgle-ability-core",
+            "sectionId": "beasts-of-nurgle-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise 1, Deep Strike, Scouts 6\"",
+            "sourceUnitId": "unit-beasts-of-nurgle"
+          },
+          {
+            "id": "beasts-of-nurgle-ability-faction",
+            "sectionId": "beasts-of-nurgle-ability-faction",
+            "title": "FACTION",
+            "text": "Pact of Decay",
+            "sourceUnitId": "unit-beasts-of-nurgle"
+          },
+          {
+            "id": "ability-grotesque-regeneration-60c7e2a",
+            "sectionId": "beasts-of-nurgle-ability-grotesque-regeneration",
+            "title": "Grotesque Regeneration",
+            "text": "At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.",
+            "sourceUnitId": "unit-beasts-of-nurgle"
+          }
+        ],
         "models": [
           {
             "id": "unit-beasts-of-nurgle-model-beasts-of-nurgle",
@@ -7874,7 +8717,43 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "5",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "great-unclean-one-ability-core",
+            "sectionId": "great-unclean-one-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D6, Deep Strike, Feel No Pain 6+",
+            "sourceUnitId": "unit-great-unclean-one"
+          },
+          {
+            "id": "great-unclean-one-ability-faction",
+            "sectionId": "great-unclean-one-ability-faction",
+            "title": "FACTION",
+            "text": "Pact of Decay",
+            "sourceUnitId": "unit-great-unclean-one"
+          },
+          {
+            "id": "ability-daemon-lord-of-nurgle-aura-d613df7",
+            "sectionId": "great-unclean-one-ability-daemon-lord-of-nurgle-aura",
+            "title": "Daemon Lord of Nurgle (Aura)",
+            "text": "While a friendly PLAGUE LEGIONS unit is within 6\" of this model, add 1 to the Toughness characteristic of models in that unit.",
+            "sourceUnitId": "unit-great-unclean-one"
+          },
+          {
+            "id": "ability-nurgles-rot-psychic-80d4e3f",
+            "sectionId": "great-unclean-one-ability-nurgles-rot-psychic",
+            "title": "Nurgle’s Rot (Psychic)",
+            "text": "At the end of your Movement phase, you can select one enemy unit within 12\" of this model. Until the start of your next Movement phase, that unit is rotted. While a unit is rotted, subtract 1 from the Toughness characteristic of models in that unit.",
+            "sourceUnitId": "unit-great-unclean-one"
+          },
+          {
+            "id": "great-unclean-one-ability-reverberating-summons",
+            "sectionId": "great-unclean-one-ability-reverberating-summons",
+            "title": "Reverberating Summons",
+            "text": "Each time a model is destroyed by this weapon, you can select one friendly PLAGUEBEARERS unit within 12\" of the bearer and return 1 destroyed Plaguebearer model to that unit.",
+            "sourceUnitId": "unit-great-unclean-one"
+          }
+        ],
         "models": [
           {
             "id": "unit-great-unclean-one-model-great-unclean-one",
@@ -8166,7 +9045,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "0",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "nurglings-ability-core",
+            "sectionId": "nurglings-ability-core",
+            "title": "CORE",
+            "text": "Deep Strike, Infiltrators",
+            "sourceUnitId": "unit-nurglings"
+          },
+          {
+            "id": "nurglings-ability-faction",
+            "sectionId": "nurglings-ability-faction",
+            "title": "FACTION",
+            "text": "Pact of Decay",
+            "sourceUnitId": "unit-nurglings"
+          },
+          {
+            "id": "ability-mischief-makers-6a686e9",
+            "sectionId": "nurglings-ability-mischief-makers",
+            "title": "Mischief Makers",
+            "text": "Each time an enemy unit (excluding TITAN units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-nurglings"
+          }
+        ],
         "models": [
           {
             "id": "unit-nurglings-model-nurgling-swarm",
@@ -8302,7 +9203,43 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "2",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "plague-drones-ability-core",
+            "sectionId": "plague-drones-ability-core",
+            "title": "CORE",
+            "text": "Deep Strike",
+            "sourceUnitId": "unit-plague-drones"
+          },
+          {
+            "id": "plague-drones-ability-faction",
+            "sectionId": "plague-drones-ability-faction",
+            "title": "FACTION",
+            "text": "Pact of Decay",
+            "sourceUnitId": "unit-plague-drones"
+          },
+          {
+            "id": "ability-deaths-heads-546f077",
+            "sectionId": "plague-drones-ability-deaths-heads",
+            "title": "Death’s Heads",
+            "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly PLAGUE LEGIONS unit makes an attack that targets that unit, you can re-roll the Wound roll.",
+            "sourceUnitId": "unit-plague-drones"
+          },
+          {
+            "id": "plague-drones-ability-daemonic-icon",
+            "sectionId": "plague-drones-ability-daemonic-icon",
+            "title": "Daemonic Icon",
+            "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
+            "sourceUnitId": "unit-plague-drones"
+          },
+          {
+            "id": "plague-drones-ability-instrument-of-chaos",
+            "sectionId": "plague-drones-ability-instrument-of-chaos",
+            "title": "Instrument of Chaos",
+            "text": "Add 1 to Charge rolls made for the bearer’s unit.",
+            "sourceUnitId": "unit-plague-drones"
+          }
+        ],
         "models": [
           {
             "id": "unit-plague-drones-model-plaguebringer",
@@ -8497,7 +9434,43 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "2",
           "Inv": "5+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "plaguebearers-ability-core",
+            "sectionId": "plaguebearers-ability-core",
+            "title": "CORE",
+            "text": "Deep Strike",
+            "sourceUnitId": "unit-plaguebearers"
+          },
+          {
+            "id": "plaguebearers-ability-faction",
+            "sectionId": "plaguebearers-ability-faction",
+            "title": "FACTION",
+            "text": "Pact of Decay",
+            "sourceUnitId": "unit-plaguebearers"
+          },
+          {
+            "id": "ability-infected-outbreak-faaf2d1",
+            "sectionId": "plaguebearers-ability-infected-outbreak",
+            "title": "Infected Outbreak",
+            "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+            "sourceUnitId": "unit-plaguebearers"
+          },
+          {
+            "id": "plaguebearers-ability-daemonic-icon",
+            "sectionId": "plaguebearers-ability-daemonic-icon",
+            "title": "Daemonic Icon",
+            "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
+            "sourceUnitId": "unit-plaguebearers"
+          },
+          {
+            "id": "plaguebearers-ability-instrument-of-chaos",
+            "sectionId": "plaguebearers-ability-instrument-of-chaos",
+            "title": "Instrument of Chaos",
+            "text": "Add 1 to Charge rolls made for the bearer’s unit.",
+            "sourceUnitId": "unit-plaguebearers"
+          }
+        ],
         "models": [
           {
             "id": "unit-plaguebearers-model-plagueridden",
@@ -8650,7 +9623,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "OC": "5",
           "Inv": "4+"
         },
-        "abilities": [],
+        "abilities": [
+          {
+            "id": "rotigus-ability-core",
+            "sectionId": "rotigus-ability-core",
+            "title": "CORE",
+            "text": "Deadly Demise D6, Deep Strike, Feel No Pain 6+",
+            "sourceUnitId": "unit-rotigus"
+          },
+          {
+            "id": "rotigus-ability-faction",
+            "sectionId": "rotigus-ability-faction",
+            "title": "FACTION",
+            "text": "Pact of Decay",
+            "sourceUnitId": "unit-rotigus"
+          },
+          {
+            "id": "ability-virulent-blessing-psychic-62e7cae",
+            "sectionId": "rotigus-ability-virulent-blessing-psychic",
+            "title": "Virulent Blessing (Psychic)",
+            "text": "At the start of the Fight phase, you can select one enemy unit within 24\" and visible to this model. Until the end of the phase, each time an attack made by a PLAGUE LEGIONS model is allocated to a model in that unit, add 1 to the Damage characteristic of that attack.",
+            "sourceUnitId": "unit-rotigus"
+          },
+          {
+            "id": "ability-deluge-of-nurgle-aura-49f7690",
+            "sectionId": "rotigus-ability-deluge-of-nurgle-aura",
+            "title": "Deluge of Nurgle (Aura)",
+            "text": "While an enemy unit is within 6\" of this model, subtract 2 from the Move characteristic and subtract 1 from the Objective Control characteristic of models in that unit.",
+            "sourceUnitId": "unit-rotigus"
+          }
+        ],
         "models": [
           {
             "id": "unit-rotigus-model-rotigus",

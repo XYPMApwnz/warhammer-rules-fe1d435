@@ -67,16 +67,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-breacher-team-ability-breach-and-clear",
-            "title": "Breach and Clear"
+            "id": "tau-empire-ability-breach-and-clear",
+            "sectionId": "tau-empire-ability-breach-and-clear",
+            "title": "Breach and Clear",
+            "text": "Each time a model in this unit makes a ranged attack that targets an enemy unit within range of an objective marker, you can re-roll the Wound roll.",
+            "sourceUnitId": "unit-breacher-team"
           },
           {
-            "id": "unit-breacher-team-ability-ds8-support-turret-2",
-            "title": "DS8 Support Turret"
+            "id": "tau-empire-ability-ds8-support-turret",
+            "sectionId": "tau-empire-ability-ds8-support-turret",
+            "title": "DS8 Support Turret",
+            "text": "In your Movement phase, if this unit Remains Stationary, until the start of your next turn, its Shas’ui model is equipped with the support turret weapon.\n\nDesigner’s Note: Place a Support Turret token next to this unit to remind you.",
+            "sourceUnitId": "unit-breacher-team"
           },
           {
-            "id": "unit-breacher-team-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-breacher-team"
           }
         ],
         "models": [
@@ -379,16 +388,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-strike-team-ability-suppression-volley",
-            "title": "Suppression Volley"
+            "id": "tau-empire-ability-suppression-volley",
+            "sectionId": "tau-empire-ability-suppression-volley",
+            "title": "Suppression Volley",
+            "text": "In your Shooting phase, after this unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks. Until the start of your next turn, while unit is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-strike-team"
           },
           {
-            "id": "unit-strike-team-ability-ds8-support-turret-2",
-            "title": "DS8 Support Turret"
+            "id": "tau-empire-ability-ds8-support-turret",
+            "sectionId": "tau-empire-ability-ds8-support-turret",
+            "title": "DS8 Support Turret",
+            "text": "In your Movement phase, if this unit Remains Stationary, until the start of your next turn, its Shas’ui model is equipped with the support turret weapon.\n\nDesigner’s Note: Place a Support Turret token next to this unit to remind you.",
+            "sourceUnitId": "unit-strike-team"
           },
           {
-            "id": "unit-strike-team-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-strike-team"
           }
         ],
         "models": [
@@ -716,20 +734,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-cadre-fireblade-ability-volley-fire",
-            "title": "Volley Fire"
+            "id": "tau-empire-ability-volley-fire",
+            "sectionId": "tau-empire-ability-volley-fire",
+            "title": "Volley Fire",
+            "text": "While this model is leading a unit, add 1 to the Attacks characteristic of ranged weapons equipped by models in that unit.",
+            "sourceUnitId": "unit-cadre-fireblade"
           },
           {
-            "id": "unit-cadre-fireblade-ability-crack-shot-2",
-            "title": "Crack Shot"
+            "id": "tau-empire-ability-crack-shot",
+            "sectionId": "tau-empire-ability-crack-shot",
+            "title": "Crack Shot",
+            "text": "Each time this model makes a ranged attack, on a Critical Wound, that attack has an Armour Penetration characteristic of -3.",
+            "sourceUnitId": "unit-cadre-fireblade"
           },
           {
-            "id": "unit-cadre-fireblade-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-cadre-fireblade"
           },
           {
-            "id": "unit-cadre-fireblade-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-cadre-fireblade"
           }
         ],
         "models": [
@@ -979,24 +1009,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-commander-in-coldstar-battlesuit-ability-coldstar-commander",
-            "title": "Coldstar Commander"
+            "id": "tau-empire-ability-coldstar-commander",
+            "sectionId": "tau-empire-ability-coldstar-commander",
+            "title": "Coldstar Commander",
+            "text": "While this model is leading a unit, models in that unit have a Move characteristic of 12\" and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit"
           },
           {
-            "id": "unit-commander-in-coldstar-battlesuit-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit"
           },
           {
-            "id": "unit-commander-in-coldstar-battlesuit-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit"
           },
           {
-            "id": "unit-commander-in-coldstar-battlesuit-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit"
           },
           {
-            "id": "unit-commander-in-coldstar-battlesuit-ability-assault-5",
-            "title": "Assault"
+            "id": "core-assault",
+            "sectionId": "core-assault",
+            "title": "Assault",
+            "text": "Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit"
           }
         ],
         "models": [
@@ -1534,20 +1579,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-commander-in-enforcer-battlesuit-ability-enforcer-commander",
-            "title": "Enforcer Commander"
+            "id": "tau-empire-ability-enforcer-commander",
+            "sectionId": "tau-empire-ability-enforcer-commander",
+            "title": "Enforcer Commander",
+            "text": "While this model is leading a unit, each time a ranged attack targets that unit, worsen the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit"
           },
           {
-            "id": "unit-commander-in-enforcer-battlesuit-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit"
           },
           {
-            "id": "unit-commander-in-enforcer-battlesuit-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit"
           },
           {
-            "id": "unit-commander-in-enforcer-battlesuit-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit"
           }
         ],
         "models": [
@@ -2047,24 +2104,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-ethereal-ability-coordinated-leadership",
-            "title": "Coordinated Leadership"
+            "id": "tau-empire-ability-coordinated-leadership",
+            "sectionId": "tau-empire-ability-coordinated-leadership",
+            "title": "Coordinated Leadership",
+            "text": "In your Command phase, roll one D6: on a 4+, you gain 1CP.",
+            "sourceUnitId": "unit-ethereal"
           },
           {
-            "id": "unit-ethereal-ability-failure-is-not-an-option-2",
-            "title": "Failure Is Not an Option"
+            "id": "tau-empire-ability-failure-is-not-an-option",
+            "sectionId": "tau-empire-ability-failure-is-not-an-option",
+            "title": "Failure Is Not an Option",
+            "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
+            "sourceUnitId": "unit-ethereal"
           },
           {
-            "id": "unit-ethereal-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-ethereal"
           },
           {
-            "id": "unit-ethereal-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-ethereal"
           },
           {
-            "id": "unit-ethereal-ability-feel-no-pain-5",
-            "title": "Feel No Pain"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-ethereal"
           }
         ],
         "models": [
@@ -2277,24 +2349,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-firesight-team-ability-precise-targeting",
-            "title": "Precise Targeting"
+            "id": "tau-empire-ability-precise-targeting",
+            "sectionId": "tau-empire-ability-precise-targeting",
+            "title": "Precise Targeting",
+            "text": "Each time a model in this unit makes an attack that targets a Spotted unit, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-firesight-team"
           },
           {
-            "id": "unit-firesight-team-ability-infiltrators-2",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-firesight-team"
           },
           {
-            "id": "unit-firesight-team-ability-lone-operative-3",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-firesight-team"
           },
           {
-            "id": "unit-firesight-team-ability-stealth-4",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-firesight-team"
           },
           {
-            "id": "unit-firesight-team-ability-for-the-greater-good-5",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-firesight-team"
           }
         ],
         "models": [
@@ -2452,40 +2539,67 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kroot-flesh-shaper-ability-rites-of-feasting",
-            "title": "Rites of Feasting"
+            "id": "tau-empire-ability-rites-of-feasting",
+            "sectionId": "tau-empire-ability-rites-of-feasting",
+            "title": "Rites of Feasting",
+            "text": "While this model is leading a unit, models in that unit have the Feel Not Pain 6+ ability. If that unit destroys one or more enemy units in the Fight phase, until the end of the battle, models in that unit have the Feel No Pain 5+ ability instead.",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           },
           {
-            "id": "unit-kroot-flesh-shaper-ability-ritual-butchery-2",
-            "title": "Ritual Butchery"
+            "id": "tau-empire-ability-ritual-butchery",
+            "sectionId": "tau-empire-ability-ritual-butchery",
+            "title": "Ritual Butchery",
+            "text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           },
           {
-            "id": "unit-kroot-flesh-shaper-ability-harnessed-alien-instincts-3",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           },
           {
-            "id": "unit-kroot-flesh-shaper-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           },
           {
-            "id": "unit-kroot-flesh-shaper-ability-scouts-7-5",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           },
           {
-            "id": "unit-kroot-flesh-shaper-ability-stealth-6",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           },
           {
-            "id": "unit-kroot-flesh-shaper-ability-leader-7",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           },
           {
-            "id": "unit-kroot-flesh-shaper-ability-feel-no-pain-8",
-            "title": "Feel No Pain"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           },
           {
-            "id": "unit-kroot-flesh-shaper-ability-sustained-hits-9",
-            "title": "Sustained Hits"
+            "id": "core-sustained-hits",
+            "sectionId": "core-sustained-hits",
+            "title": "Sustained Hits",
+            "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
+            "sourceUnitId": "unit-kroot-flesh-shaper"
           }
         ],
         "models": [
@@ -2597,28 +2711,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kroot-lone-spear-ability-fire-and-fade",
-            "title": "Fire and Fade"
+            "id": "tau-empire-ability-fire-and-fade",
+            "sectionId": "tau-empire-ability-fire-and-fade",
+            "title": "Fire and Fade",
+            "text": "In your Shooting phase, after this model has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, this model is not eligible to declare a charge.",
+            "sourceUnitId": "unit-kroot-lone-spear"
           },
           {
-            "id": "unit-kroot-lone-spear-ability-advanced-scouting-2",
-            "title": "Advanced Scouting"
+            "id": "tau-empire-ability-advanced-scouting",
+            "sectionId": "tau-empire-ability-advanced-scouting",
+            "title": "Advanced Scouting",
+            "text": "Each time this model makes a ranged attack that hits an enemy unit, until the end of the turn, each time another KROOT model from your army makes an attack that targets that enemy unit, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-kroot-lone-spear"
           },
           {
-            "id": "unit-kroot-lone-spear-ability-harnessed-alien-instincts-3",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-kroot-lone-spear"
           },
           {
-            "id": "unit-kroot-lone-spear-ability-stealth-4",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-kroot-lone-spear"
           },
           {
-            "id": "unit-kroot-lone-spear-ability-lone-operative-5",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-kroot-lone-spear"
           },
           {
-            "id": "unit-kroot-lone-spear-ability-scouts-7-6",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-kroot-lone-spear"
           }
         ],
         "models": [
@@ -2830,32 +2962,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kroot-trail-shaper-ability-kroot-ambush",
-            "title": "Kroot Ambush"
+            "id": "tau-empire-ability-kroot-ambush",
+            "sectionId": "tau-empire-ability-kroot-ambush",
+            "title": "Kroot Ambush",
+            "text": "After both players have deployed their armies, you can redeploy this model’s unit and one other friendly KROOT unit. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "sourceUnitId": "unit-kroot-trail-shaper"
           },
           {
-            "id": "unit-kroot-trail-shaper-ability-trail-finding-2",
-            "title": "Trail Finding"
+            "id": "tau-empire-ability-trail-finding",
+            "sectionId": "tau-empire-ability-trail-finding",
+            "title": "Trail Finding",
+            "text": "In your opponent’s Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\".",
+            "sourceUnitId": "unit-kroot-trail-shaper"
           },
           {
-            "id": "unit-kroot-trail-shaper-ability-harnessed-alien-instincts-3",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-kroot-trail-shaper"
           },
           {
-            "id": "unit-kroot-trail-shaper-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-kroot-trail-shaper"
           },
           {
-            "id": "unit-kroot-trail-shaper-ability-scouts-7-5",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-kroot-trail-shaper"
           },
           {
-            "id": "unit-kroot-trail-shaper-ability-stealth-6",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-kroot-trail-shaper"
           },
           {
-            "id": "unit-kroot-trail-shaper-ability-leader-7",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-kroot-trail-shaper"
           }
         ],
         "models": [
@@ -2986,32 +3139,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kroot-war-shaper-ability-root-of-honour",
-            "title": "Root of Honour"
+            "id": "tau-empire-ability-root-of-honour",
+            "sectionId": "tau-empire-ability-root-of-honour",
+            "title": "Root of Honour",
+            "text": "Once per battle, at the start of any phase, you can select one friendly KROOT unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
+            "sourceUnitId": "unit-kroot-war-shaper"
           },
           {
-            "id": "unit-kroot-war-shaper-ability-war-leader-2",
-            "title": "War Leader"
+            "id": "tau-empire-ability-war-leader",
+            "sectionId": "tau-empire-ability-war-leader",
+            "title": "War Leader",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-kroot-war-shaper"
           },
           {
-            "id": "unit-kroot-war-shaper-ability-harnessed-alien-instincts-3",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-kroot-war-shaper"
           },
           {
-            "id": "unit-kroot-war-shaper-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-kroot-war-shaper"
           },
           {
-            "id": "unit-kroot-war-shaper-ability-scouts-7-5",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-kroot-war-shaper"
           },
           {
-            "id": "unit-kroot-war-shaper-ability-stealth-6",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-kroot-war-shaper"
           },
           {
-            "id": "unit-kroot-war-shaper-ability-leader-7",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-kroot-war-shaper"
           }
         ],
         "models": [
@@ -3180,16 +3354,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-devilfish-ability-rapid-deployment",
-            "title": "Rapid Deployment"
+            "id": "tau-empire-ability-rapid-deployment",
+            "sectionId": "tau-empire-ability-rapid-deployment",
+            "title": "Rapid Deployment",
+            "text": "Units can disembark from this TRANSPORT after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally in the remainder of the turn.",
+            "sourceUnitId": "unit-devilfish"
           },
           {
-            "id": "unit-devilfish-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-devilfish"
           },
           {
-            "id": "unit-devilfish-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-devilfish"
           }
         ],
         "models": [
@@ -3412,24 +3595,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-commander-farsight-ability-way-of-the-short-blade",
-            "title": "Way of the Short Blade"
+            "id": "tau-empire-ability-way-of-the-short-blade",
+            "sectionId": "tau-empire-ability-way-of-the-short-blade",
+            "title": "Way of the Short Blade",
+            "text": "While this model is leading a unit, each time a model in that unit makes an attack that targets an enemy unit within 9\", add 1 to the Wound roll.",
+            "sourceUnitId": "unit-commander-farsight"
           },
           {
-            "id": "unit-commander-farsight-ability-puretides-teachings-2",
-            "title": "Puretide's Teachings"
+            "id": "tau-empire-ability-puretides-teachings",
+            "sectionId": "tau-empire-ability-puretides-teachings",
+            "title": "Puretide's Teachings",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-commander-farsight"
           },
           {
-            "id": "unit-commander-farsight-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-commander-farsight"
           },
           {
-            "id": "unit-commander-farsight-ability-for-the-greater-good-4",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-commander-farsight"
           },
           {
-            "id": "unit-commander-farsight-ability-leader-5",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-commander-farsight"
           }
         ],
         "models": [
@@ -3600,40 +3798,67 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-commander-shadowsun-ability-agile-combatant",
-            "title": "Agile Combatant"
+            "id": "tau-empire-ability-agile-combatant",
+            "sectionId": "tau-empire-ability-agile-combatant",
+            "title": "Agile Combatant",
+            "text": "This model is eligible to shoot in a turn in which it Fell Back.",
+            "sourceUnitId": "unit-commander-shadowsun"
           },
           {
-            "id": "unit-commander-shadowsun-ability-hero-of-the-empire-aura-2",
-            "title": "Hero of the Empire (Aura)"
+            "id": "tau-empire-ability-hero-of-the-empire-aura",
+            "sectionId": "tau-empire-ability-hero-of-the-empire-aura",
+            "title": "Hero of the Empire (Aura)",
+            "text": "While a friendly T’au Empire unit is within 6\" of this model, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1.",
+            "sourceUnitId": "unit-commander-shadowsun"
           },
           {
-            "id": "unit-commander-shadowsun-ability-advanced-guardian-drone-3",
-            "title": "Advanced Guardian Drone"
+            "id": "tau-empire-ability-advanced-guardian-drone",
+            "sectionId": "tau-empire-ability-advanced-guardian-drone",
+            "title": "Advanced Guardian Drone",
+            "text": "Each time a ranged attack targets the bearer, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-commander-shadowsun"
           },
           {
-            "id": "unit-commander-shadowsun-ability-command-link-drone-aura-4",
-            "title": "Command-link Drone (Aura)"
+            "id": "tau-empire-ability-command-link-drone-aura",
+            "sectionId": "tau-empire-ability-command-link-drone-aura",
+            "title": "Command-link Drone (Aura)",
+            "text": "While a friendly T’au Empire unit is within 6\" of the bearer, each time you select that unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-commander-shadowsun"
           },
           {
-            "id": "unit-commander-shadowsun-ability-supreme-commander-5",
-            "title": "Supreme Commander"
+            "id": "tau-empire-ability-supreme-commander",
+            "sectionId": "tau-empire-ability-supreme-commander",
+            "title": "Supreme Commander",
+            "text": "If this model is in your army, it must be your Warlord.",
+            "sourceUnitId": "unit-commander-shadowsun"
           },
           {
-            "id": "unit-commander-shadowsun-ability-infiltrators-6",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-commander-shadowsun"
           },
           {
-            "id": "unit-commander-shadowsun-ability-lone-operative-7",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-commander-shadowsun"
           },
           {
-            "id": "unit-commander-shadowsun-ability-stealth-8",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-commander-shadowsun"
           },
           {
-            "id": "unit-commander-shadowsun-ability-for-the-greater-good-9",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-commander-shadowsun"
           }
         ],
         "models": [
@@ -3838,28 +4063,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-darkstrider-ability-structural-analyser",
-            "title": "Structural Analyser"
+            "id": "tau-empire-ability-structural-analyser",
+            "sectionId": "tau-empire-ability-structural-analyser",
+            "title": "Structural Analyser",
+            "text": "While this model is leading a unit, each time a model in that unit makes a ranged attack, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-darkstrider"
           },
           {
-            "id": "unit-darkstrider-ability-jammer-array-2",
-            "title": "Jammer Array"
+            "id": "tau-empire-ability-jammer-array",
+            "sectionId": "tau-empire-ability-jammer-array",
+            "title": "Jammer Array",
+            "text": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this model.",
+            "sourceUnitId": "unit-darkstrider"
           },
           {
-            "id": "unit-darkstrider-ability-infiltrators-3",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-darkstrider"
           },
           {
-            "id": "unit-darkstrider-ability-scouts-7-4",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-darkstrider"
           },
           {
-            "id": "unit-darkstrider-ability-for-the-greater-good-5",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-darkstrider"
           },
           {
-            "id": "unit-darkstrider-ability-leader-6",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-darkstrider"
           }
         ],
         "models": [
@@ -3975,36 +4218,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-the-twin-lance-ability-neocapacitor-shields",
-            "title": "Neocapacitor Shields"
+            "id": "tau-empire-ability-neocapacitor-shields",
+            "sectionId": "tau-empire-ability-neocapacitor-shields",
+            "title": "Neocapacitor Shields",
+            "text": "At the start of your opponent’s Charge phase, you can select one visible enemy unit (excluding MONSTER and VEHICLE units) within 12\" of this unit. That unit must take a Battle-shock test and, until the end of the turn, subtract 1 from Charge rolls made for that unit.",
+            "sourceUnitId": "unit-the-twin-lance"
           },
           {
-            "id": "unit-the-twin-lance-ability-exemplars-of-montka-2",
-            "title": "Exemplars of Mont’ka"
+            "id": "tau-empire-ability-exemplars-of-montka",
+            "sectionId": "tau-empire-ability-exemplars-of-montka",
+            "title": "Exemplars of Mont’ka",
+            "text": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, that attack has the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
+            "sourceUnitId": "unit-the-twin-lance"
           },
           {
-            "id": "unit-the-twin-lance-ability-retro-thrusters-3",
-            "title": "Retro-thrusters"
+            "id": "tau-empire-ability-retro-thrusters",
+            "sectionId": "tau-empire-ability-retro-thrusters",
+            "title": "Retro-thrusters",
+            "text": "At the end of the Fight phase, if this unit was eligible to fight this phase, this unit can either make a Normal move of up to 6\" or a Fall Back move.",
+            "sourceUnitId": "unit-the-twin-lance"
           },
           {
-            "id": "unit-the-twin-lance-ability-sustained-hits-4",
-            "title": "Sustained Hits"
+            "id": "core-sustained-hits",
+            "sectionId": "core-sustained-hits",
+            "title": "Sustained Hits",
+            "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
+            "sourceUnitId": "unit-the-twin-lance"
           },
           {
-            "id": "unit-the-twin-lance-ability-for-the-greater-good-5",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-the-twin-lance"
           },
           {
-            "id": "unit-the-twin-lance-ability-scouts-8-6",
-            "title": "Scouts 8\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 8\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-the-twin-lance"
           },
           {
-            "id": "unit-the-twin-lance-ability-ignores-cover-7",
-            "title": "Ignores Cover"
+            "id": "core-ignores-cover",
+            "sectionId": "core-ignores-cover",
+            "title": "Ignores Cover",
+            "text": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth ).",
+            "sourceUnitId": "unit-the-twin-lance"
           },
           {
-            "id": "unit-the-twin-lance-ability-deep-strike-8",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-the-twin-lance"
           }
         ],
         "models": [
@@ -4364,24 +4631,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kroot-carnivores-ability-fieldcraft",
-            "title": "Fieldcraft"
+            "id": "tau-empire-ability-fieldcraft",
+            "sectionId": "tau-empire-ability-fieldcraft",
+            "title": "Fieldcraft",
+            "text": "At the end of the your Command phase, if this unit within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+            "sourceUnitId": "unit-kroot-carnivores"
           },
           {
-            "id": "unit-kroot-carnivores-ability-bodyguard-2",
-            "title": "Bodyguard"
+            "id": "core-bodyguard",
+            "sectionId": "core-bodyguard",
+            "title": "Bodyguard",
+            "text": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one, provided those Leaders are not duplicates (e.g. you cannot attach two WAR SHAPERS to this unit). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths.",
+            "sourceUnitId": "unit-kroot-carnivores"
           },
           {
-            "id": "unit-kroot-carnivores-ability-harnessed-alien-instincts-3",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-kroot-carnivores"
           },
           {
-            "id": "unit-kroot-carnivores-ability-scouts-7-4",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-kroot-carnivores"
           },
           {
-            "id": "unit-kroot-carnivores-ability-stealth-5",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-kroot-carnivores"
           }
         ],
         "models": [
@@ -4605,16 +4887,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kroot-farstalkers-ability-harnessed-alien-instincts",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-kroot-farstalkers"
           },
           {
-            "id": "unit-kroot-farstalkers-ability-infiltrators-2",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-kroot-farstalkers"
           },
           {
-            "id": "unit-kroot-farstalkers-ability-stealth-3",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-kroot-farstalkers"
           }
         ],
         "models": [
@@ -4913,24 +5204,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-pathfinder-team-ability-target-uploaded",
-            "title": "Target Uploaded"
+            "id": "tau-empire-ability-target-uploaded",
+            "sectionId": "tau-empire-ability-target-uploaded",
+            "title": "Target Uploaded",
+            "text": "Each time a model in this unit makes an attack that targets their Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-pathfinder-team"
           },
           {
-            "id": "unit-pathfinder-team-ability-scouts-7-2",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-pathfinder-team"
           },
           {
-            "id": "unit-pathfinder-team-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-pathfinder-team"
           },
           {
-            "id": "unit-pathfinder-team-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-pathfinder-team"
           },
           {
-            "id": "unit-pathfinder-team-ability-ignores-cover-5",
-            "title": "Ignores Cover"
+            "id": "core-ignores-cover",
+            "sectionId": "core-ignores-cover",
+            "title": "Ignores Cover",
+            "text": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth ).",
+            "sourceUnitId": "unit-pathfinder-team"
           }
         ],
         "models": [
@@ -5461,24 +5767,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-stealth-battlesuits-ability-forward-observers",
-            "title": "Forward Observers"
+            "id": "tau-empire-ability-forward-observers",
+            "sectionId": "tau-empire-ability-forward-observers",
+            "title": "Forward Observers",
+            "text": "Each time this unit is an Observer unit, until the end of the phase, each time a ranged attack is made by a model in a Guided unit that targets their Spotted unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+            "sourceUnitId": "unit-stealth-battlesuits"
           },
           {
-            "id": "unit-stealth-battlesuits-ability-localised-stealth-projectors-aura-2",
-            "title": "Localised Stealth Projectors (Aura)"
+            "id": "tau-empire-ability-localised-stealth-projectors-aura",
+            "sectionId": "tau-empire-ability-localised-stealth-projectors-aura",
+            "title": "Localised Stealth Projectors (Aura)",
+            "text": "When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden.",
+            "sourceUnitId": "unit-stealth-battlesuits"
           },
           {
-            "id": "unit-stealth-battlesuits-ability-infiltrators-3",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-stealth-battlesuits"
           },
           {
-            "id": "unit-stealth-battlesuits-ability-stealth-4",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-stealth-battlesuits"
           },
           {
-            "id": "unit-stealth-battlesuits-ability-for-the-greater-good-5",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-stealth-battlesuits"
           }
         ],
         "models": [
@@ -5778,12 +6099,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-vespid-stingwings-ability-airborne-agility",
-            "title": "Airborne Agility"
+            "id": "tau-empire-ability-airborne-agility",
+            "sectionId": "tau-empire-ability-airborne-agility",
+            "title": "Airborne Agility",
+            "text": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+            "sourceUnitId": "unit-vespid-stingwings"
           },
           {
-            "id": "unit-vespid-stingwings-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-vespid-stingwings"
           }
         ],
         "models": [
@@ -6003,16 +6330,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-broadside-battlesuits-ability-advanced-armour",
-            "title": "Advanced Armour"
+            "id": "tau-empire-ability-advanced-armour",
+            "sectionId": "tau-empire-ability-advanced-armour",
+            "title": "Advanced Armour",
+            "text": "Models in this unit have the Feel No Pain 4+ ability against mortal wounds.",
+            "sourceUnitId": "unit-broadside-battlesuits"
           },
           {
-            "id": "unit-broadside-battlesuits-ability-for-the-greater-good-2",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-broadside-battlesuits"
           },
           {
-            "id": "unit-broadside-battlesuits-ability-feel-no-pain-3",
-            "title": "Feel No Pain"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-broadside-battlesuits"
           }
         ],
         "models": [
@@ -6395,20 +6731,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-crisis-fireknife-battlesuits-ability-fireknife",
-            "title": "Fireknife"
+            "id": "tau-empire-ability-fireknife",
+            "sectionId": "tau-empire-ability-fireknife",
+            "title": "Fireknife",
+            "text": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1. If that attack targets a unit that is at its Starting Strength, you can re-roll the Hit roll instead.",
+            "sourceUnitId": "unit-crisis-fireknife-battlesuits"
           },
           {
-            "id": "unit-crisis-fireknife-battlesuits-ability-weapon-support-system-2",
-            "title": "Weapon Support System"
+            "id": "tau-empire-ability-weapon-support-system-2",
+            "sectionId": "tau-empire-ability-weapon-support-system-2",
+            "title": "Weapon Support System",
+            "text": "Each time a model in this unit makes a ranged attack, you can ignore any or all modifiers to the Hit roll.",
+            "sourceUnitId": "unit-crisis-fireknife-battlesuits"
           },
           {
-            "id": "unit-crisis-fireknife-battlesuits-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-crisis-fireknife-battlesuits"
           },
           {
-            "id": "unit-crisis-fireknife-battlesuits-ability-for-the-greater-good-4",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-crisis-fireknife-battlesuits"
           }
         ],
         "models": [
@@ -6681,20 +7029,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-crisis-starscythe-battlesuits-ability-starscythe",
-            "title": "Starscythe"
+            "id": "tau-empire-ability-starscythe",
+            "sectionId": "tau-empire-ability-starscythe",
+            "title": "Starscythe",
+            "text": "Each time a model in this unit makes a ranged attack (excluding attacks that target MONSTERS and VEHICLES), improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-crisis-starscythe-battlesuits"
           },
           {
-            "id": "unit-crisis-starscythe-battlesuits-ability-battlesuit-support-system-2",
-            "title": "Battlesuit Support System"
+            "id": "tau-empire-ability-battlesuit-support-system-2",
+            "sectionId": "tau-empire-ability-battlesuit-support-system-2",
+            "title": "Battlesuit Support System",
+            "text": "The unit is eligible to shoot in a turn in which it Fell Back.",
+            "sourceUnitId": "unit-crisis-starscythe-battlesuits"
           },
           {
-            "id": "unit-crisis-starscythe-battlesuits-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-crisis-starscythe-battlesuits"
           },
           {
-            "id": "unit-crisis-starscythe-battlesuits-ability-for-the-greater-good-4",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-crisis-starscythe-battlesuits"
           }
         ],
         "models": [
@@ -6978,16 +7338,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-crisis-sunforge-battlesuits-ability-sunforge",
-            "title": "Sunforge"
+            "id": "tau-empire-ability-sunforge",
+            "sectionId": "tau-empire-ability-sunforge",
+            "title": "Sunforge",
+            "text": "Each time a model in this unit makes a ranged attack that targets a MONSTER or VEHICLE unit, you can re-roll the Wound roll and you can re-roll the Damage roll.",
+            "sourceUnitId": "unit-crisis-sunforge-battlesuits"
           },
           {
-            "id": "unit-crisis-sunforge-battlesuits-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-crisis-sunforge-battlesuits"
           },
           {
-            "id": "unit-crisis-sunforge-battlesuits-ability-for-the-greater-good-3",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-crisis-sunforge-battlesuits"
           }
         ],
         "models": [
@@ -7218,36 +7587,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-ghostkeel-battlesuit-ability-stealth-drones",
-            "title": "Stealth Drones"
+            "id": "tau-empire-ability-stealth-drones",
+            "sectionId": "tau-empire-ability-stealth-drones",
+            "title": "Stealth Drones",
+            "text": "Twice per battle, after an attack has been allocated to this model, you can change the Damage characteristic of that attack to 0.\n\nDesigner’s Note: Place two Stealth Drone tokens next to the unit, removing one each time this ability has been used.",
+            "sourceUnitId": "unit-ghostkeel-battlesuit"
           },
           {
-            "id": "unit-ghostkeel-battlesuit-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "tau-empire-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "tau-empire-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-ghostkeel-battlesuit"
           },
           {
-            "id": "unit-ghostkeel-battlesuit-ability-localised-stealth-projectors-aura-3",
-            "title": "Localised Stealth Projectors (Aura)"
+            "id": "tau-empire-ability-localised-stealth-projectors-aura",
+            "sectionId": "tau-empire-ability-localised-stealth-projectors-aura",
+            "title": "Localised Stealth Projectors (Aura)",
+            "text": "When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden.",
+            "sourceUnitId": "unit-ghostkeel-battlesuit"
           },
           {
-            "id": "unit-ghostkeel-battlesuit-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-ghostkeel-battlesuit"
           },
           {
-            "id": "unit-ghostkeel-battlesuit-ability-infiltrators-5",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-ghostkeel-battlesuit"
           },
           {
-            "id": "unit-ghostkeel-battlesuit-ability-lone-operative-6",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-ghostkeel-battlesuit"
           },
           {
-            "id": "unit-ghostkeel-battlesuit-ability-stealth-7",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-ghostkeel-battlesuit"
           },
           {
-            "id": "unit-ghostkeel-battlesuit-ability-for-the-greater-good-8",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-ghostkeel-battlesuit"
           }
         ],
         "models": [
@@ -7543,24 +7936,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hammerhead-gunship-ability-armour-hunter",
-            "title": "Armour Hunter"
+            "id": "tau-empire-ability-armour-hunter",
+            "sectionId": "tau-empire-ability-armour-hunter",
+            "title": "Armour Hunter",
+            "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-hammerhead-gunship"
           },
           {
-            "id": "unit-hammerhead-gunship-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tau-empire-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tau-empire-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-hammerhead-gunship"
           },
           {
-            "id": "unit-hammerhead-gunship-ability-targeting-array-3",
-            "title": "Targeting Array"
+            "id": "tau-empire-ability-targeting-array",
+            "sectionId": "tau-empire-ability-targeting-array",
+            "title": "Targeting Array",
+            "text": "Each time this model is selected to shoot, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.",
+            "sourceUnitId": "unit-hammerhead-gunship"
           },
           {
-            "id": "unit-hammerhead-gunship-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-hammerhead-gunship"
           },
           {
-            "id": "unit-hammerhead-gunship-ability-for-the-greater-good-5",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-hammerhead-gunship"
           }
         ],
         "models": [
@@ -7862,24 +8270,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kroot-hounds-ability-loping-pounce",
-            "title": "Loping Pounce"
+            "id": "tau-empire-ability-loping-pounce",
+            "sectionId": "tau-empire-ability-loping-pounce",
+            "title": "Loping Pounce",
+            "text": "At the start of your Command phase, if this unit is within 6\" of one or more friendly KROOT INFANTRY units, then until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.",
+            "sourceUnitId": "unit-kroot-hounds"
           },
           {
-            "id": "unit-kroot-hounds-ability-hunting-hounds-2",
-            "title": "Hunting Hounds"
+            "id": "tau-empire-ability-hunting-hounds",
+            "sectionId": "tau-empire-ability-hunting-hounds",
+            "title": "Hunting Hounds",
+            "text": "While this unit is within 12\" of one or more friendly KROOT CHARACTER models, the Objective Control characteristic of models in this unit is 1.",
+            "sourceUnitId": "unit-kroot-hounds"
           },
           {
-            "id": "unit-kroot-hounds-ability-harnessed-alien-instincts-3",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-kroot-hounds"
           },
           {
-            "id": "unit-kroot-hounds-ability-scouts-7-4",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-kroot-hounds"
           },
           {
-            "id": "unit-kroot-hounds-ability-stealth-5",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-kroot-hounds"
           }
         ],
         "models": [
@@ -7964,16 +8387,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-krootox-rampagers-ability-kroot-linebreakers",
-            "title": "Kroot Linebreakers"
+            "id": "tau-empire-ability-kroot-linebreakers",
+            "sectionId": "tau-empire-ability-kroot-linebreakers",
+            "title": "Kroot Linebreakers",
+            "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers D3 mortal wounds. If one or more enemy models are destroyed as a result of these mortal wounds, that enemy unit must take a Battle-shock test.",
+            "sourceUnitId": "unit-krootox-rampagers"
           },
           {
-            "id": "unit-krootox-rampagers-ability-harnessed-alien-instincts-2",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-krootox-rampagers"
           },
           {
-            "id": "unit-krootox-rampagers-ability-scouts-7-3",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-krootox-rampagers"
           }
         ],
         "models": [
@@ -8112,16 +8544,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-krootox-riders-ability-kroot-packmates",
-            "title": "Kroot Packmates"
+            "id": "tau-empire-ability-kroot-packmates",
+            "sectionId": "tau-empire-ability-kroot-packmates",
+            "title": "Kroot Packmates",
+            "text": "Once per turn, in your opponent's Shooting phase, when a friendly KROOT INFANTRY unit within 6\" of this unit is selected as the target of an attack, one unit from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that unit with this ability can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
+            "sourceUnitId": "unit-krootox-riders"
           },
           {
-            "id": "unit-krootox-riders-ability-harnessed-alien-instincts-2",
-            "title": "Harnessed Alien Instincts"
+            "id": "tau-empire-ability-harnessed-alien-instincts",
+            "sectionId": "tau-empire-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts",
+            "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range.",
+            "sourceUnitId": "unit-krootox-riders"
           },
           {
-            "id": "unit-krootox-riders-ability-scouts-7-3",
-            "title": "Scouts 7\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 7\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-krootox-riders"
           }
         ],
         "models": [
@@ -8288,20 +8729,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-piranhas-ability-drone-harassment-tactics",
-            "title": "Drone Harassment Tactics"
+            "id": "tau-empire-ability-drone-harassment-tactics",
+            "sectionId": "tau-empire-ability-drone-harassment-tactics",
+            "title": "Drone Harassment Tactics",
+            "text": "At the end of your Movement phase, select one enemy unit within 12\" of this unit; that enemy unit must take a Battle-shock test.",
+            "sourceUnitId": "unit-piranhas"
           },
           {
-            "id": "unit-piranhas-ability-deadly-demise-1-2",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-piranhas"
           },
           {
-            "id": "unit-piranhas-ability-scouts-9-3",
-            "title": "Scouts 9\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 9\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-piranhas"
           },
           {
-            "id": "unit-piranhas-ability-for-the-greater-good-4",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-piranhas"
           }
         ],
         "models": [
@@ -8496,20 +8949,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-razorshark-strike-fighter-ability-ground-strike-fighter",
-            "title": "Ground Strike Fighter"
+            "id": "tau-empire-ability-ground-strike-fighter",
+            "sectionId": "tau-empire-ability-ground-strike-fighter",
+            "title": "Ground Strike Fighter",
+            "text": "Each time this model makes a ranged attack that targets an enemy unit that cannot FLY, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-razorshark-strike-fighter"
           },
           {
-            "id": "unit-razorshark-strike-fighter-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "tau-empire-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "tau-empire-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-razorshark-strike-fighter"
           },
           {
-            "id": "unit-razorshark-strike-fighter-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-razorshark-strike-fighter"
           },
           {
-            "id": "unit-razorshark-strike-fighter-ability-for-the-greater-good-4",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-razorshark-strike-fighter"
           }
         ],
         "models": [
@@ -8760,32 +9225,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-riptide-battlesuit-ability-nova-charge",
-            "title": "Nova Charge"
+            "id": "tau-empire-ability-nova-charge",
+            "sectionId": "tau-empire-ability-nova-charge",
+            "title": "Nova Charge",
+            "text": "Once per battle, when this unit is selected to shoot in your Shooting phase, select one ranged weapon equipped by this model. Until the end of the phase, that weapon has the [DEVASTATING WOUNDS] ability.",
+            "sourceUnitId": "unit-riptide-battlesuit"
           },
           {
-            "id": "unit-riptide-battlesuit-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "tau-empire-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "tau-empire-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-riptide-battlesuit"
           },
           {
-            "id": "unit-riptide-battlesuit-ability-battlesuit-support-system-3",
-            "title": "Battlesuit Support System"
+            "id": "tau-empire-ability-battlesuit-support-system",
+            "sectionId": "tau-empire-ability-battlesuit-support-system",
+            "title": "Battlesuit Support System",
+            "text": "The bearer’s unit is eligible to shoot in a turn in which it Fell Back, but when doing so only models equipped with this wargear can make ranged attacks.",
+            "sourceUnitId": "unit-riptide-battlesuit"
           },
           {
-            "id": "unit-riptide-battlesuit-ability-weapon-support-system-4",
-            "title": "Weapon Support System"
+            "id": "tau-empire-ability-weapon-support-system",
+            "sectionId": "tau-empire-ability-weapon-support-system",
+            "title": "Weapon Support System",
+            "text": "Each time the bearer makes a ranged attack, you can ignore any or all modifiers to the Hit roll.",
+            "sourceUnitId": "unit-riptide-battlesuit"
           },
           {
-            "id": "unit-riptide-battlesuit-ability-deadly-demise-d6-5",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-riptide-battlesuit"
           },
           {
-            "id": "unit-riptide-battlesuit-ability-for-the-greater-good-6",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-riptide-battlesuit"
           },
           {
-            "id": "unit-riptide-battlesuit-ability-devastating-wounds-7",
-            "title": "Devastating Wounds"
+            "id": "core-devastating-wounds",
+            "sectionId": "core-devastating-wounds",
+            "title": "Devastating Wounds",
+            "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \n Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \n Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*",
+            "sourceUnitId": "unit-riptide-battlesuit"
           }
         ],
         "models": [
@@ -9090,24 +9576,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sky-ray-gunship-ability-velocity-tracker",
-            "title": "Velocity Tracker"
+            "id": "tau-empire-ability-velocity-tracker",
+            "sectionId": "tau-empire-ability-velocity-tracker",
+            "title": "Velocity Tracker",
+            "text": "Each time this model makes an attack with a ranged weapon that targets a unit that can FLY, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-sky-ray-gunship"
           },
           {
-            "id": "unit-sky-ray-gunship-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tau-empire-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tau-empire-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-sky-ray-gunship"
           },
           {
-            "id": "unit-sky-ray-gunship-ability-targeting-array-3",
-            "title": "Targeting Array"
+            "id": "tau-empire-ability-targeting-array",
+            "sectionId": "tau-empire-ability-targeting-array",
+            "title": "Targeting Array",
+            "text": "Each time this model is selected to shoot, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.",
+            "sourceUnitId": "unit-sky-ray-gunship"
           },
           {
-            "id": "unit-sky-ray-gunship-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-sky-ray-gunship"
           },
           {
-            "id": "unit-sky-ray-gunship-ability-for-the-greater-good-5",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-sky-ray-gunship"
           }
         ],
         "models": [
@@ -9302,28 +9803,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-stormsurge-ability-damaged-1-5-wounds-remaining",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tau-empire-ability-damaged-1-5-wounds-remaining-2",
+            "sectionId": "tau-empire-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, subtract 3 from this models Objective Control characteristic, and each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-stormsurge"
           },
           {
-            "id": "unit-stormsurge-ability-heavy-walker-2",
-            "title": "Heavy Walker"
+            "id": "tau-empire-ability-heavy-walker",
+            "sectionId": "tau-empire-ability-heavy-walker",
+            "title": "Heavy Walker",
+            "text": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there.",
+            "sourceUnitId": "unit-stormsurge"
           },
           {
-            "id": "unit-stormsurge-ability-support-system-3",
-            "title": "Support System"
+            "id": "tau-empire-ability-support-system",
+            "sectionId": "tau-empire-ability-support-system",
+            "title": "Support System",
+            "text": "Each time this model makes a ranged attack, you can ignore any or all modifiers to the Hit roll.",
+            "sourceUnitId": "unit-stormsurge"
           },
           {
-            "id": "unit-stormsurge-ability-titan-killer-4",
-            "title": "Titan-killer"
+            "id": "tau-empire-ability-titan-killer",
+            "sectionId": "tau-empire-ability-titan-killer",
+            "title": "Titan-killer",
+            "text": "Each time this model makes a ranged attack that targets a TITANIC or TOWERING unit, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-stormsurge"
           },
           {
-            "id": "unit-stormsurge-ability-deadly-demise-d6-2-5",
-            "title": "Deadly Demise D6+2"
+            "id": "tau-empire-ability-deadly-demise-d6-2",
+            "sectionId": "tau-empire-ability-deadly-demise-d6-2",
+            "title": "Deadly Demise D6+2",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-stormsurge"
           },
           {
-            "id": "unit-stormsurge-ability-for-the-greater-good-6",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-stormsurge"
           }
         ],
         "models": [
@@ -9682,20 +10201,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sun-shark-bomber-ability-pulse-bombs",
-            "title": "Pulse Bombs"
+            "id": "tau-empire-ability-pulse-bombs",
+            "sectionId": "tau-empire-ability-pulse-bombs",
+            "title": "Pulse Bombs",
+            "text": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: For each 4+, that unit suffers 1 mortal wound.",
+            "sourceUnitId": "unit-sun-shark-bomber"
           },
           {
-            "id": "unit-sun-shark-bomber-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "tau-empire-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "tau-empire-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-sun-shark-bomber"
           },
           {
-            "id": "unit-sun-shark-bomber-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-sun-shark-bomber"
           },
           {
-            "id": "unit-sun-shark-bomber-ability-for-the-greater-good-4",
-            "title": "For The Greater Good"
+            "id": "tau-empire-ability-for-the-greater-good",
+            "sectionId": "tau-empire-ability-for-the-greater-good",
+            "title": "For The Greater Good",
+            "text": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-sun-shark-bomber"
           }
         ],
         "models": [
@@ -9947,24 +10478,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tidewall-droneport-ability-droneport",
-            "title": "Droneport"
+            "id": "tau-empire-ability-droneport",
+            "sectionId": "tau-empire-ability-droneport",
+            "title": "Droneport",
+            "text": "Each time this FORTIFICATION is selected to shoot, its drone defenders weapon will target and resolve attacks against every enemy unit that is an eligible target to this FORTIFICATION.",
+            "sourceUnitId": "unit-tidewall-droneport"
           },
           {
-            "id": "unit-tidewall-droneport-ability-fortification-2",
-            "title": "Fortification"
+            "id": "tau-empire-ability-fortification",
+            "sectionId": "tau-empire-ability-fortification",
+            "title": "Fortification",
+            "text": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army:\n- That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.\n- Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+            "sourceUnitId": "unit-tidewall-droneport"
           },
           {
-            "id": "unit-tidewall-droneport-ability-tidewall-cover-3",
-            "title": "Tidewall Cover"
+            "id": "tau-empire-ability-tidewall-cover",
+            "sectionId": "tau-empire-ability-tidewall-cover",
+            "title": "Tidewall Cover",
+            "text": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-tidewall-droneport"
           },
           {
-            "id": "unit-tidewall-droneport-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-tidewall-droneport"
           },
           {
-            "id": "unit-tidewall-droneport-ability-firing-deck-11-5",
-            "title": "Firing Deck 11"
+            "id": "core-firing-deck",
+            "sectionId": "core-firing-deck",
+            "title": "Firing Deck 11",
+            "text": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: \n1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). \n2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). \n3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. \n4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+            "sourceUnitId": "unit-tidewall-droneport"
           }
         ],
         "models": [
@@ -10052,20 +10598,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tidewall-gunrig-ability-fortification",
-            "title": "Fortification"
+            "id": "tau-empire-ability-fortification",
+            "sectionId": "tau-empire-ability-fortification",
+            "title": "Fortification",
+            "text": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army:\n- That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.\n- Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+            "sourceUnitId": "unit-tidewall-gunrig"
           },
           {
-            "id": "unit-tidewall-gunrig-ability-tidewall-cover-2",
-            "title": "Tidewall Cover"
+            "id": "tau-empire-ability-tidewall-cover",
+            "sectionId": "tau-empire-ability-tidewall-cover",
+            "title": "Tidewall Cover",
+            "text": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-tidewall-gunrig"
           },
           {
-            "id": "unit-tidewall-gunrig-ability-firing-deck-11-3",
-            "title": "Firing Deck 11"
+            "id": "core-firing-deck",
+            "sectionId": "core-firing-deck",
+            "title": "Firing Deck 11",
+            "text": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: \n1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). \n2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). \n3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. \n4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+            "sourceUnitId": "unit-tidewall-gunrig"
           },
           {
-            "id": "unit-tidewall-gunrig-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-tidewall-gunrig"
           }
         ],
         "models": [
@@ -10153,20 +10711,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tidewall-shieldline-ability-fortification",
-            "title": "Fortification"
+            "id": "tau-empire-ability-fortification",
+            "sectionId": "tau-empire-ability-fortification",
+            "title": "Fortification",
+            "text": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army:\n- That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.\n- Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+            "sourceUnitId": "unit-tidewall-shieldline"
           },
           {
-            "id": "unit-tidewall-shieldline-ability-tidewall-cover-2",
-            "title": "Tidewall Cover"
+            "id": "tau-empire-ability-tidewall-cover",
+            "sectionId": "tau-empire-ability-tidewall-cover",
+            "title": "Tidewall Cover",
+            "text": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-tidewall-shieldline"
           },
           {
-            "id": "unit-tidewall-shieldline-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-tidewall-shieldline"
           },
           {
-            "id": "unit-tidewall-shieldline-ability-firing-deck-20-4",
-            "title": "Firing Deck 20"
+            "id": "core-firing-deck",
+            "sectionId": "core-firing-deck",
+            "title": "Firing Deck 20",
+            "text": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: \n1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). \n2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). \n3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. \n4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+            "sourceUnitId": "unit-tidewall-shieldline"
           }
         ],
         "models": [

@@ -90,20 +90,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-skitarii-rangers-ability-objective-scouted",
-            "title": "Objective Scouted"
+            "id": "datasheet-objective-scouted",
+            "sectionId": "datasheet-objective-scouted",
+            "title": "Objective Scouted",
+            "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+            "sourceUnitId": "unit-skitarii-rangers"
           },
           {
-            "id": "unit-skitarii-rangers-ability-scouts-6-2",
-            "title": "Scouts 6\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 6\"",
+            "text": "",
+            "sourceUnitId": "unit-skitarii-rangers"
           },
           {
-            "id": "unit-skitarii-rangers-ability-doctrina-imperatives-3",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-skitarii-rangers"
           },
           {
-            "id": "unit-skitarii-rangers-ability-stealth-4",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-skitarii-rangers"
           }
         ],
         "models": [],
@@ -479,16 +491,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-skitarii-vanguard-ability-rad-saturation-aura",
-            "title": "Rad-saturation (Aura)"
+            "id": "datasheet-rad-saturation-aura",
+            "sectionId": "datasheet-rad-saturation-aura",
+            "title": "Rad-saturation (Aura)",
+            "text": "While an enemy unit (excluding Vehicle units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that unit.",
+            "sourceUnitId": "unit-skitarii-vanguard"
           },
           {
-            "id": "unit-skitarii-vanguard-ability-doctrina-imperatives-2",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-skitarii-vanguard"
           },
           {
-            "id": "unit-skitarii-vanguard-ability-stealth-3",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-skitarii-vanguard"
           }
         ],
         "models": [],
@@ -839,24 +860,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-cybernetica-datasmith-ability-support",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "This model must be attached to the following unit:\n■ Kastelan Robots\n\nYou must attach this model to a Kastelan Robots unit, even if one or more other Cybernetica Datasmith models have already been attached to it. In such cases, if that bodyguard unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths. If you cannot attach this model to a Kastelan Robots unit, this model cannot be deployed and counts as having been destroyed during the first battle round. While attached to a Kastelan Robots unit, this model loses the INFANTRY keyword.",
+            "sourceUnitId": "unit-cybernetica-datasmith"
           },
           {
-            "id": "unit-cybernetica-datasmith-ability-battle-protocols-2",
-            "title": "Battle Protocols"
+            "id": "datasheet-battle-protocols",
+            "sectionId": "datasheet-battle-protocols",
+            "title": "Battle Protocols",
+            "text": "At the start of the battle, if this model is leading a Kastelan Robots unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a Kastelan Robots unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one\n- Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by Kastelan Robot models in that unit.\n- Conqueror Protocol: Add 2 to the Attacks characteristic of melee weapons equipped by Kastelan Robot models in that unit.\n- Aegis Protocol: Add 1 to the Toughness characteristic of Kastelan Robot models in that unit.",
+            "sourceUnitId": "unit-cybernetica-datasmith"
           },
           {
-            "id": "unit-cybernetica-datasmith-ability-data-severed-3",
-            "title": "Data-severed"
+            "id": "datasheet-data-severed",
+            "sectionId": "datasheet-data-severed",
+            "title": "Data-severed",
+            "text": "If there are no KASTELAN ROBOT models in this unit: \n- This unit loses VEHICLE. \n- This unit has INFANTRY.",
+            "sourceUnitId": "unit-cybernetica-datasmith"
           },
           {
-            "id": "unit-cybernetica-datasmith-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-cybernetica-datasmith"
           },
           {
-            "id": "unit-cybernetica-datasmith-ability-feel-no-pain-5-5",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "",
+            "sourceUnitId": "unit-cybernetica-datasmith"
           }
         ],
         "models": [],
@@ -994,24 +1030,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-skitarii-marshal-ability-support",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "This model can be attached to the following units:\n■ Hastarii Exterminators\n■ Hastarii Fusiliers\n■ Skitarii Rangers\n■ Skitarii Vanguard",
+            "sourceUnitId": "unit-skitarii-marshal"
           },
           {
-            "id": "unit-skitarii-marshal-ability-control-edict-2",
-            "title": "Control Edict"
+            "id": "datasheet-control-edict",
+            "sectionId": "datasheet-control-edict",
+            "title": "Control Edict",
+            "text": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-skitarii-marshal"
           },
           {
-            "id": "unit-skitarii-marshal-ability-servo-skull-uplink-3",
-            "title": "Servo-skull Uplink"
+            "id": "datasheet-servo-skull-uplink",
+            "sectionId": "datasheet-servo-skull-uplink",
+            "title": "Servo-skull Uplink",
+            "text": "Once per battle, at the start of any phase, you can select one friendly Skitarii unit that is Battle-shocked and within 6\" of this model. That unit is no longer Battle-shocked.",
+            "sourceUnitId": "unit-skitarii-marshal"
           },
           {
-            "id": "unit-skitarii-marshal-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-skitarii-marshal"
           },
           {
-            "id": "unit-skitarii-marshal-ability-stealth-5",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-skitarii-marshal"
           }
         ],
         "models": [],
@@ -1116,28 +1167,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sydonian-skatros-ability-dread-snipers",
-            "title": "Dread Snipers"
+            "id": "datasheet-dread-snipers",
+            "sectionId": "datasheet-dread-snipers",
+            "title": "Dread Snipers",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
+            "sourceUnitId": "unit-sydonian-skatros"
           },
           {
-            "id": "unit-sydonian-skatros-ability-sydonian-sentinel-2",
-            "title": "Sydonian Sentinel"
+            "id": "datasheet-sydonian-sentinel",
+            "sectionId": "datasheet-sydonian-sentinel",
+            "title": "Sydonian Sentinel",
+            "text": "This model cannot be your Warlord.",
+            "sourceUnitId": "unit-sydonian-skatros"
           },
           {
-            "id": "unit-sydonian-skatros-ability-achillan-eye-3",
-            "title": "Achillan Eye"
+            "id": "datasheet-achillan-eye",
+            "sectionId": "datasheet-achillan-eye",
+            "title": "Achillan Eye",
+            "text": "Each time this model makes an attack with a radium jezzail that targets an Infantry unit, you can re-roll the Wound roll. Each time this model makes an attack with a Skatros transuranic arquebus that targets a Monster or Vehicle unit, you can re-roll the Wound roll.",
+            "sourceUnitId": "unit-sydonian-skatros"
           },
           {
-            "id": "unit-sydonian-skatros-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-sydonian-skatros"
           },
           {
-            "id": "unit-sydonian-skatros-ability-stealth-5",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-sydonian-skatros"
           },
           {
-            "id": "unit-sydonian-skatros-ability-lone-operative-6",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "",
+            "sourceUnitId": "unit-sydonian-skatros"
           }
         ],
         "models": [],
@@ -1370,24 +1439,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tech-priest-dominus-ability-leader",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Hastarii Exterminators\n■ Hastarii Fusiliers\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Servitor Battleclade\n■ Skitarii Rangers\n■ Skitarii Vanguard",
+            "sourceUnitId": "unit-tech-priest-dominus"
           },
           {
-            "id": "unit-tech-priest-dominus-ability-lord-of-the-machine-cult-2",
-            "title": "Lord of the Machine Cult"
+            "id": "datasheet-lord-of-the-machine-cult",
+            "sectionId": "datasheet-lord-of-the-machine-cult",
+            "title": "Lord of the Machine Cult",
+            "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability. If that unit has the Electro-Priests keyword, models in that unit have the Feel No Pain 4+ ability instead",
+            "sourceUnitId": "unit-tech-priest-dominus"
           },
           {
-            "id": "unit-tech-priest-dominus-ability-data-spike-3",
-            "title": "Data-spike"
+            "id": "datasheet-data-spike",
+            "sectionId": "datasheet-data-spike",
+            "title": "Data-spike",
+            "text": "At the start of the Fight phase, you can select one enemy Vehicle unit within Engagement Range of this model’s unit and roll one D6: on a 4+, that enemy unit suffers D6 mortal wounds and, until the end of the phase, the Weapon Skill characteristic of melee weapons equipped by that enemy unit is worsened by 1.",
+            "sourceUnitId": "unit-tech-priest-dominus"
           },
           {
-            "id": "unit-tech-priest-dominus-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-tech-priest-dominus"
           },
           {
-            "id": "unit-tech-priest-dominus-ability-feel-no-pain-5-5",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "",
+            "sourceUnitId": "unit-tech-priest-dominus"
           }
         ],
         "models": [],
@@ -1703,28 +1787,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tech-priest-enginseer-ability-enginseer",
-            "title": "Enginseer"
+            "id": "datasheet-enginseer",
+            "sectionId": "datasheet-enginseer",
+            "title": "Enginseer",
+            "text": "While this model is within 3\" of one or more friendly Adeptus Mechanicus Vehicle units, unless it is leading a unit, this model has the Lone Operative ability.",
+            "sourceUnitId": "unit-tech-priest-enginseer"
           },
           {
-            "id": "unit-tech-priest-enginseer-ability-omnissiahs-blessing-2",
-            "title": "Omnissiah's Blessing"
+            "id": "datasheet-omnissiahs-blessing",
+            "sectionId": "datasheet-omnissiahs-blessing",
+            "title": "Omnissiah's Blessing",
+            "text": "In your Command phase, select one friendly Adeptus Mechanicus model within 3\" of this model. That model regains up to D3 lost wounds and, if it is a Vehicle model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase",
+            "sourceUnitId": "unit-tech-priest-enginseer"
           },
           {
-            "id": "unit-tech-priest-enginseer-ability-vengeance-for-the-omnissiah-3",
-            "title": "Vengeance for the Omnissiah"
+            "id": "datasheet-vengeance-for-the-omnissiah",
+            "sectionId": "datasheet-vengeance-for-the-omnissiah",
+            "title": "Vengeance for the Omnissiah",
+            "text": "If a friendly Adeptus Mechanicus Vehicle model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.",
+            "sourceUnitId": "unit-tech-priest-enginseer"
           },
           {
-            "id": "unit-tech-priest-enginseer-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard",
+            "sourceUnitId": "unit-tech-priest-enginseer"
           },
           {
-            "id": "unit-tech-priest-enginseer-ability-doctrina-imperatives-5",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-tech-priest-enginseer"
           },
           {
-            "id": "unit-tech-priest-enginseer-ability-feel-no-pain-5-6",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "",
+            "sourceUnitId": "unit-tech-priest-enginseer"
           }
         ],
         "models": [],
@@ -1930,24 +2032,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tech-priest-manipulus-ability-leader",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Hastarii Exterminators\n■ Hastarii Fusiliers\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Servitor Battleclade\n■ Skitarii Rangers\n■ Skitarii Vanguard",
+            "sourceUnitId": "unit-tech-priest-manipulus"
           },
           {
-            "id": "unit-tech-priest-manipulus-ability-galvanic-field-2",
-            "title": "Galvanic Field"
+            "id": "datasheet-galvanic-field",
+            "sectionId": "datasheet-galvanic-field",
+            "title": "Galvanic Field",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [Lethal Hits] ability.",
+            "sourceUnitId": "unit-tech-priest-manipulus"
           },
           {
-            "id": "unit-tech-priest-manipulus-ability-defend-the-divine-work-3",
-            "title": "Defend the Divine Work"
+            "id": "datasheet-defend-the-divine-work",
+            "sectionId": "datasheet-defend-the-divine-work",
+            "title": "Defend the Divine Work",
+            "text": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, all models in this model’s unit have a 4+ invulnerable save.",
+            "sourceUnitId": "unit-tech-priest-manipulus"
           },
           {
-            "id": "unit-tech-priest-manipulus-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-tech-priest-manipulus"
           },
           {
-            "id": "unit-tech-priest-manipulus-ability-feel-no-pain-5-5",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "",
+            "sourceUnitId": "unit-tech-priest-manipulus"
           }
         ],
         "models": [],
@@ -2153,24 +2270,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-technoarcheologist-ability-seekers-of-divine-arcana",
-            "title": "Seekers of Divine Arcana"
+            "id": "datasheet-seekers-of-divine-arcana",
+            "sectionId": "datasheet-seekers-of-divine-arcana",
+            "title": "Seekers of Divine Arcana",
+            "text": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
+            "sourceUnitId": "unit-technoarcheologist"
           },
           {
-            "id": "unit-technoarcheologist-ability-cogitative-instincts-2",
-            "title": "Cogitative Instincts"
+            "id": "datasheet-cogitative-instincts",
+            "sectionId": "datasheet-cogitative-instincts",
+            "title": "Cogitative Instincts",
+            "text": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of this model.",
+            "sourceUnitId": "unit-technoarcheologist"
           },
           {
-            "id": "unit-technoarcheologist-ability-support-3",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Hastarii Exterminators\n■ Hastarii Fusiliers\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Servitor Battleclade\n■ Skitarii Rangers\n■ Skitarii Vanguard",
+            "sourceUnitId": "unit-technoarcheologist"
           },
           {
-            "id": "unit-technoarcheologist-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-technoarcheologist"
           },
           {
-            "id": "unit-technoarcheologist-ability-feel-no-pain-5-5",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "",
+            "sourceUnitId": "unit-technoarcheologist"
           }
         ],
         "models": [],
@@ -2277,24 +2409,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-skorpius-dunerider-ability-broad-spectrum-data-tether",
-            "title": "Broad spectrum data-tether"
+            "id": "datasheet-broad-spectrum-data-tether",
+            "sectionId": "datasheet-broad-spectrum-data-tether",
+            "title": "Broad spectrum data-tether",
+            "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-skorpius-dunerider"
           },
           {
-            "id": "unit-skorpius-dunerider-ability-fire-support-2",
-            "title": "Fire Support"
+            "id": "datasheet-fire-support",
+            "sectionId": "datasheet-fire-support",
+            "title": "Fire Support",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
+            "sourceUnitId": "unit-skorpius-dunerider"
           },
           {
-            "id": "unit-skorpius-dunerider-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "",
+            "sourceUnitId": "unit-skorpius-dunerider"
           },
           {
-            "id": "unit-skorpius-dunerider-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-skorpius-dunerider"
           },
           {
-            "id": "unit-skorpius-dunerider-ability-firing-deck-2-5",
-            "title": "Firing Deck 2"
+            "id": "core-firing-deck",
+            "sectionId": "core-firing-deck",
+            "title": "Firing Deck 2",
+            "text": "",
+            "sourceUnitId": "unit-skorpius-dunerider"
           }
         ],
         "models": [],
@@ -2401,28 +2548,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-belisarius-cawl-ability-canticles-of-the-omnissiah",
-            "title": "Canticles of the Omnissiah"
+            "id": "datasheet-canticles-of-the-omnissiah",
+            "sectionId": "datasheet-canticles-of-the-omnissiah",
+            "title": "Canticles of the Omnissiah",
+            "text": "",
+            "sourceUnitId": "unit-belisarius-cawl"
           },
           {
-            "id": "unit-belisarius-cawl-ability-mechanicus-bodyguard-2",
-            "title": "Mechanicus Bodyguard"
+            "id": "datasheet-mechanicus-bodyguard",
+            "sectionId": "datasheet-mechanicus-bodyguard",
+            "title": "Mechanicus Bodyguard",
+            "text": "While this model is within 3\" of one or more other friendly Adeptus Mechanicus units, this model has the Lone Operative ability.",
+            "sourceUnitId": "unit-belisarius-cawl"
           },
           {
-            "id": "unit-belisarius-cawl-ability-self-repair-mechanisms-3",
-            "title": "Self-repair Mechanisms"
+            "id": "datasheet-self-repair-mechanisms",
+            "sectionId": "datasheet-self-repair-mechanisms",
+            "title": "Self-repair Mechanisms",
+            "text": "At the start of your Command phase, this model regains up to D3 lost wounds.",
+            "sourceUnitId": "unit-belisarius-cawl"
           },
           {
-            "id": "unit-belisarius-cawl-ability-supreme-commander-4",
-            "title": "Supreme Commander"
+            "id": "datasheet-supreme-commander",
+            "sectionId": "datasheet-supreme-commander",
+            "title": "Supreme Commander",
+            "text": "If this model is in your army, it must be your Warlord.",
+            "sourceUnitId": "unit-belisarius-cawl"
           },
           {
-            "id": "unit-belisarius-cawl-ability-doctrina-imperatives-5",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-belisarius-cawl"
           },
           {
-            "id": "unit-belisarius-cawl-ability-feel-no-pain-5-6",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "",
+            "sourceUnitId": "unit-belisarius-cawl"
           }
         ],
         "models": [],
@@ -2583,24 +2748,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-thulia-ghuld-ability-doctrina-imperatives",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "This unit has the Doctrina Imperatives Faction ability.",
+            "sourceUnitId": "unit-thulia-ghuld"
           },
           {
-            "id": "unit-thulia-ghuld-ability-rod-of-the-war-forge-2",
-            "title": "Rod of the War Forge"
+            "id": "datasheet-rod-of-the-war-forge",
+            "sectionId": "datasheet-rod-of-the-war-forge",
+            "title": "Rod of the War Forge",
+            "text": "In your Command phase, select one Icon of War ability. Until your next Command phase, this model has that ability.",
+            "sourceUnitId": "unit-thulia-ghuld"
           },
           {
-            "id": "unit-thulia-ghuld-ability-mechanicus-bodyguard-3",
-            "title": "Mechanicus Bodyguard"
+            "id": "datasheet-mechanicus-bodyguard",
+            "sectionId": "datasheet-mechanicus-bodyguard",
+            "title": "Mechanicus Bodyguard",
+            "text": "While this model is within 3\" of one or more other friendly ADEPTUS MECHANICUS units, it has Lone Operative.",
+            "sourceUnitId": "unit-thulia-ghuld"
           },
           {
-            "id": "unit-thulia-ghuld-ability-secutor-of-olympus-4",
-            "title": "Secutor of Olympus"
+            "id": "datasheet-secutor-of-olympus",
+            "sectionId": "datasheet-secutor-of-olympus",
+            "title": "Secutor of Olympus",
+            "text": "At the start of your Shooting phase, select one enemy VEHICLE within 12\" and roll one D6; on a 2+, it suffers D3+1 mortal wounds.",
+            "sourceUnitId": "unit-thulia-ghuld"
           },
           {
-            "id": "unit-thulia-ghuld-ability-icon-of-war-5",
-            "title": "Icon of War"
+            "id": "datasheet-icon-of-war",
+            "sectionId": "datasheet-icon-of-war",
+            "title": "Icon of War",
+            "text": "Fanatical Devotion lets a friendly SKITARII or THULIA GHULD unit within 6\" shoot and charge after Advancing. Adaptive Tactics lets it shoot and charge after Falling Back. The Fires of Mars makes both Imperatives active for it.",
+            "sourceUnitId": "unit-thulia-ghuld"
           }
         ],
         "models": [
@@ -2860,16 +3040,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-corpuscarii-electro-priests-ability-electro-shock",
-            "title": "Electro-shock"
+            "id": "datasheet-electro-shock",
+            "sectionId": "datasheet-electro-shock",
+            "title": "Electro-shock",
+            "text": "In your Shooting phase, after this unit has shot, select one enemy unit (excluding Monsters and Vehicles) hit by one or more of those attacks. Until the end of your opponent’s next turn, that enemy unit is shocked. While a unit is shocked, subtract 2\" from its Move characteristic and subtract 2 from Advance and Charge rolls made for it.",
+            "sourceUnitId": "unit-corpuscarii-electro-priests"
           },
           {
-            "id": "unit-corpuscarii-electro-priests-ability-feel-no-pain-5-2",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "",
+            "sourceUnitId": "unit-corpuscarii-electro-priests"
           },
           {
-            "id": "unit-corpuscarii-electro-priests-ability-doctrina-imperatives-3",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-corpuscarii-electro-priests"
           }
         ],
         "models": [],
@@ -2998,16 +3187,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-fulgurite-electro-priests-ability-electro-infusion",
-            "title": "Electro-Infusion"
+            "id": "datasheet-electro-infusion",
+            "sectionId": "datasheet-electro-infusion",
+            "title": "Electro-Infusion",
+            "text": "While a Character model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-fulgurite-electro-priests"
           },
           {
-            "id": "unit-fulgurite-electro-priests-ability-doctrina-imperatives-2",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-fulgurite-electro-priests"
           },
           {
-            "id": "unit-fulgurite-electro-priests-ability-feel-no-pain-5-3",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "",
+            "sourceUnitId": "unit-fulgurite-electro-priests"
           }
         ],
         "models": [],
@@ -3128,12 +3326,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hastarii-exterminators-ability-doctrina-imperatives",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "This unit has the Doctrina Imperatives Faction ability.",
+            "sourceUnitId": "unit-hastarii-exterminators"
           },
           {
-            "id": "unit-hastarii-exterminators-ability-broad-spectrum-targeting-augurs-2",
-            "title": "Broad-spectrum Targeting Augurs"
+            "id": "datasheet-broad-spectrum-targeting-augurs",
+            "sectionId": "datasheet-broad-spectrum-targeting-augurs",
+            "title": "Broad-spectrum Targeting Augurs",
+            "text": "Each time a model in this unit attacks with an eradication caster against a unit excluding MONSTER and VEHICLE units, that attack has Sustained Hits 1.",
+            "sourceUnitId": "unit-hastarii-exterminators"
           }
         ],
         "models": [
@@ -3399,12 +3603,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hastarii-fusiliers-ability-doctrina-imperatives",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "This unit has the Doctrina Imperatives Faction ability.",
+            "sourceUnitId": "unit-hastarii-fusiliers"
           },
           {
-            "id": "unit-hastarii-fusiliers-ability-monocular-targeting-helms-2",
-            "title": "Monocular Targeting Helms"
+            "id": "datasheet-monocular-targeting-helms",
+            "sectionId": "datasheet-monocular-targeting-helms",
+            "title": "Monocular Targeting Helms",
+            "text": "Each time a model in this unit attacks with a neutron fusil against a MONSTER or VEHICLE unit, that attack has Ignores Cover.",
+            "sourceUnitId": "unit-hastarii-fusiliers"
           }
         ],
         "models": [
@@ -3606,12 +3816,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kataphron-breachers-ability-breaching-command",
-            "title": "Breaching Command"
+            "id": "datasheet-breaching-command",
+            "sectionId": "datasheet-breaching-command",
+            "title": "Breaching Command",
+            "text": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. While this unit is within 6” of one or more friendly Adeptus Mechanicus Battleline units, you can re-roll the Hit roll instead.",
+            "sourceUnitId": "unit-kataphron-breachers"
           },
           {
-            "id": "unit-kataphron-breachers-ability-doctrina-imperatives-2",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-kataphron-breachers"
           }
         ],
         "models": [],
@@ -3805,12 +4021,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kataphron-destroyers-ability-sentinel-directive",
-            "title": "Sentinel Directive"
+            "id": "datasheet-sentinel-directive",
+            "sectionId": "datasheet-sentinel-directive",
+            "title": "Sentinel Directive",
+            "text": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem.",
+            "sourceUnitId": "unit-kataphron-destroyers"
           },
           {
-            "id": "unit-kataphron-destroyers-ability-doctrina-imperatives-2",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-kataphron-destroyers"
           }
         ],
         "models": [],
@@ -4054,16 +4276,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-pteraxii-skystalkers-ability-ride-the-thermals",
-            "title": "Ride the Thermals"
+            "id": "datasheet-ride-the-thermals",
+            "sectionId": "datasheet-ride-the-thermals",
+            "title": "Ride the Thermals",
+            "text": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to 6\".\n- Make a Normal move of up to 12\", provided every model in this unit ends that move wholly within 6\" of one or more friendly Adeptus Mechanicus Battleline units.\n\nIn either case, if it does, until the end of the turn, this unit is not eligible to declare a charge.",
+            "sourceUnitId": "unit-pteraxii-skystalkers"
           },
           {
-            "id": "unit-pteraxii-skystalkers-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "",
+            "sourceUnitId": "unit-pteraxii-skystalkers"
           },
           {
-            "id": "unit-pteraxii-skystalkers-ability-doctrina-imperatives-3",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-pteraxii-skystalkers"
           }
         ],
         "models": [],
@@ -4223,16 +4454,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-pteraxii-sterylizors-ability-searing-conflagration",
-            "title": "Searing Conflagration"
+            "id": "datasheet-searing-conflagration",
+            "sectionId": "datasheet-searing-conflagration",
+            "title": "Searing Conflagration",
+            "text": "Each time a model in this unit makes an attack with a phosphor torch that targets an enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this unit is also within 6\" of one or more friendly Adeptus Mechanicus Battleline units, each time such an attack targets such a unit, you can re-roll the Wound roll instead.",
+            "sourceUnitId": "unit-pteraxii-sterylizors"
           },
           {
-            "id": "unit-pteraxii-sterylizors-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "",
+            "sourceUnitId": "unit-pteraxii-sterylizors"
           },
           {
-            "id": "unit-pteraxii-sterylizors-ability-doctrina-imperatives-3",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-pteraxii-sterylizors"
           }
         ],
         "models": [],
@@ -4426,12 +4666,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-servitor-battleclade-ability-doctrina-imperatives",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "This unit has the Doctrina Imperatives Faction ability.",
+            "sourceUnitId": "unit-servitor-battleclade"
           },
           {
-            "id": "unit-servitor-battleclade-ability-network-override-2",
-            "title": "Network Override"
+            "id": "datasheet-network-override",
+            "sectionId": "datasheet-network-override",
+            "title": "Network Override",
+            "text": "While this unit contains one or more TECH-PRIEST models, it can perform an Action after Advancing and is eligible to shoot in a turn in which it started an Action.",
+            "sourceUnitId": "unit-servitor-battleclade"
           }
         ],
         "models": [
@@ -4705,20 +4951,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sicarian-infiltrators-ability-neurostatic-interference-aura",
-            "title": "Neurostatic Interference (Aura)"
+            "id": "datasheet-neurostatic-interference-aura",
+            "sectionId": "datasheet-neurostatic-interference-aura",
+            "title": "Neurostatic Interference (Aura)",
+            "text": "While an enemy unit is within 6\" of this unit, each time a Battle-shock or Leadership test is taken for that unit, subtract 1 from that test. While this unit is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 2 from that test instead.",
+            "sourceUnitId": "unit-sicarian-infiltrators"
           },
           {
-            "id": "unit-sicarian-infiltrators-ability-infiltrators-2",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "",
+            "sourceUnitId": "unit-sicarian-infiltrators"
           },
           {
-            "id": "unit-sicarian-infiltrators-ability-stealth-3",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-sicarian-infiltrators"
           },
           {
-            "id": "unit-sicarian-infiltrators-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-sicarian-infiltrators"
           }
         ],
         "models": [],
@@ -4876,16 +5134,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sicarian-ruststalkers-ability-optimised-gait",
-            "title": "Optimised Gait"
+            "id": "datasheet-optimised-gait",
+            "sectionId": "datasheet-optimised-gait",
+            "title": "Optimised Gait",
+            "text": "Add 1 to Advance and Charge rolls made for this unit. While this unit is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, add 2 to Advance and Charge rolls made for this unit instead.",
+            "sourceUnitId": "unit-sicarian-ruststalkers"
           },
           {
-            "id": "unit-sicarian-ruststalkers-ability-stealth-2",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-sicarian-ruststalkers"
           },
           {
-            "id": "unit-sicarian-ruststalkers-ability-doctrina-imperatives-3",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-sicarian-ruststalkers"
           }
         ],
         "models": [],
@@ -5015,20 +5282,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-serberys-raiders-ability-tactica-obliqua",
-            "title": "Tactica Obliqua"
+            "id": "datasheet-tactica-obliqua",
+            "sectionId": "datasheet-tactica-obliqua",
+            "title": "Tactica Obliqua",
+            "text": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to D6\".\n- Make a Normal move of up to 6\", provided every model in this unit ends that move wholly within 6\" of one or more friendly Adeptus Mechanicus Battleline units.",
+            "sourceUnitId": "unit-serberys-raiders"
           },
           {
-            "id": "unit-serberys-raiders-ability-scouts-9-2",
-            "title": "Scouts 9\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 9\"",
+            "text": "",
+            "sourceUnitId": "unit-serberys-raiders"
           },
           {
-            "id": "unit-serberys-raiders-ability-doctrina-imperatives-3",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-serberys-raiders"
           },
           {
-            "id": "unit-serberys-raiders-ability-stealth-4",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-serberys-raiders"
           }
         ],
         "models": [],
@@ -5177,16 +5456,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-serberys-sulphurhounds-ability-line-breakers",
-            "title": "Line-breakers"
+            "id": "datasheet-line-breakers",
+            "sectionId": "datasheet-line-breakers",
+            "title": "Line-breakers",
+            "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly Adeptus Mechanicus Battleline units. For each 4+, that enemy unit suffers 1 mortal wound.",
+            "sourceUnitId": "unit-serberys-sulphurhounds"
           },
           {
-            "id": "unit-serberys-sulphurhounds-ability-doctrina-imperatives-2",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-serberys-sulphurhounds"
           },
           {
-            "id": "unit-serberys-sulphurhounds-ability-stealth-3",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-serberys-sulphurhounds"
           }
         ],
         "models": [],
@@ -5399,16 +5687,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-archaeopter-fusilave-ability-bomb-rack",
-            "title": "Bomb Rack"
+            "id": "datasheet-bomb-rack",
+            "sectionId": "datasheet-bomb-rack",
+            "title": "Bomb Rack",
+            "text": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound.",
+            "sourceUnitId": "unit-archaeopter-fusilave"
           },
           {
-            "id": "unit-archaeopter-fusilave-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "",
+            "sourceUnitId": "unit-archaeopter-fusilave"
           },
           {
-            "id": "unit-archaeopter-fusilave-ability-doctrina-imperatives-3",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-archaeopter-fusilave"
           }
         ],
         "models": [],
@@ -5550,16 +5847,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-archaeopter-stratoraptor-ability-strafing-run",
-            "title": "Strafing Run"
+            "id": "datasheet-strafing-run",
+            "sectionId": "datasheet-strafing-run",
+            "title": "Strafing Run",
+            "text": "Each time this model makes a ranged attack that targets an enemy unit (excluding units that can Fly), add 1 to the Hit roll.",
+            "sourceUnitId": "unit-archaeopter-stratoraptor"
           },
           {
-            "id": "unit-archaeopter-stratoraptor-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "",
+            "sourceUnitId": "unit-archaeopter-stratoraptor"
           },
           {
-            "id": "unit-archaeopter-stratoraptor-ability-doctrina-imperatives-3",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-archaeopter-stratoraptor"
           }
         ],
         "models": [],
@@ -5755,24 +6061,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-archaeopter-transvector-ability-aerial-deployment",
-            "title": "Aerial Deployment"
+            "id": "datasheet-aerial-deployment",
+            "sectionId": "datasheet-aerial-deployment",
+            "title": "Aerial Deployment",
+            "text": "In your first Movement phase, this unit can make an ingress move.",
+            "sourceUnitId": "unit-archaeopter-transvector"
           },
           {
-            "id": "unit-archaeopter-transvector-ability-hover-2",
-            "title": "Hover"
+            "id": "core-hover",
+            "sectionId": "core-hover",
+            "title": "Hover",
+            "text": "",
+            "sourceUnitId": "unit-archaeopter-transvector"
           },
           {
-            "id": "unit-archaeopter-transvector-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "",
+            "sourceUnitId": "unit-archaeopter-transvector"
           },
           {
-            "id": "unit-archaeopter-transvector-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "",
+            "sourceUnitId": "unit-archaeopter-transvector"
           },
           {
-            "id": "unit-archaeopter-transvector-ability-doctrina-imperatives-5",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-archaeopter-transvector"
           }
         ],
         "models": [],
@@ -5914,24 +6235,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-ironstrider-ballistarii-ability-elevated-strider",
-            "title": "Elevated Strider"
+            "id": "datasheet-elevated-strider",
+            "sectionId": "datasheet-elevated-strider",
+            "title": "Elevated Strider",
+            "text": "This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.",
+            "sourceUnitId": "unit-ironstrider-ballistarii"
           },
           {
-            "id": "unit-ironstrider-ballistarii-ability-broad-spectrum-data-tether-2",
-            "title": "Broad Spectrum Data-tether"
+            "id": "datasheet-broad-spectrum-data-tether",
+            "sectionId": "datasheet-broad-spectrum-data-tether",
+            "title": "Broad Spectrum Data-tether",
+            "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-ironstrider-ballistarii"
           },
           {
-            "id": "unit-ironstrider-ballistarii-ability-deadly-demise-1-3",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "",
+            "sourceUnitId": "unit-ironstrider-ballistarii"
           },
           {
-            "id": "unit-ironstrider-ballistarii-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-ironstrider-ballistarii"
           },
           {
-            "id": "unit-ironstrider-ballistarii-ability-stealth-5",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-ironstrider-ballistarii"
           }
         ],
         "models": [],
@@ -6078,20 +6414,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kastelan-robots-ability-robotic-bodyguard",
-            "title": "Robotic Bodyguard"
+            "id": "datasheet-robotic-bodyguard",
+            "sectionId": "datasheet-robotic-bodyguard",
+            "title": "Robotic Bodyguard",
+            "text": "While a Cybernetica Datasmith model is leading this unit, that model has the Feel No Pain 4+ ability.",
+            "sourceUnitId": "unit-kastelan-robots"
           },
           {
-            "id": "unit-kastelan-robots-ability-repulsor-grid-2",
-            "title": "Repulsor Grid"
+            "id": "datasheet-repulsor-grid",
+            "sectionId": "datasheet-repulsor-grid",
+            "title": "Repulsor Grid",
+            "text": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: \n- On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.",
+            "sourceUnitId": "unit-kastelan-robots"
           },
           {
-            "id": "unit-kastelan-robots-ability-deadly-demise-1-3",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "",
+            "sourceUnitId": "unit-kastelan-robots"
           },
           {
-            "id": "unit-kastelan-robots-ability-doctrina-imperatives-4",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-kastelan-robots"
           }
         ],
         "models": [],
@@ -6331,24 +6679,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-onager-dunecrawler-ability-emanatus-forcefield-aura",
-            "title": "Emanatus Forcefield (Aura)"
+            "id": "datasheet-emanatus-forcefield-aura",
+            "sectionId": "datasheet-emanatus-forcefield-aura",
+            "title": "Emanatus Forcefield (Aura)",
+            "text": "While a friendly Adeptus Mechanicus Battleline model is wholly within 6\" of this model, that Battleline model has a 4+ invulnerable save against ranged attacks.",
+            "sourceUnitId": "unit-onager-dunecrawler"
           },
           {
-            "id": "unit-onager-dunecrawler-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "datasheet-damaged-1-4-wounds-remaining",
+            "sectionId": "datasheet-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-onager-dunecrawler"
           },
           {
-            "id": "unit-onager-dunecrawler-ability-scuttling-walker-3",
-            "title": "Scuttling Walker"
+            "id": "datasheet-scuttling-walker",
+            "sectionId": "datasheet-scuttling-walker",
+            "title": "Scuttling Walker",
+            "text": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly Monster and Vehicle models and sections of terrain features that are 4\" or less in height.",
+            "sourceUnitId": "unit-onager-dunecrawler"
           },
           {
-            "id": "unit-onager-dunecrawler-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "",
+            "sourceUnitId": "unit-onager-dunecrawler"
           },
           {
-            "id": "unit-onager-dunecrawler-ability-doctrina-imperatives-5",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-onager-dunecrawler"
           }
         ],
         "models": [],
@@ -6663,24 +7026,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-skorpius-disintegrator-ability-broad-spectrum-data-tether",
-            "title": "Broad spectrum data-tether"
+            "id": "datasheet-broad-spectrum-data-tether",
+            "sectionId": "datasheet-broad-spectrum-data-tether",
+            "title": "Broad spectrum data-tether",
+            "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-skorpius-disintegrator"
           },
           {
-            "id": "unit-skorpius-disintegrator-ability-blistering-salvoes-2",
-            "title": "Blistering Salvoes"
+            "id": "datasheet-blistering-salvoes",
+            "sectionId": "datasheet-blistering-salvoes",
+            "title": "Blistering Salvoes",
+            "text": "Each time this model makes an attack with a belleros energy cannon that targets an Infantry unit, add 1 to the Hit roll. Each time this model makes an attack with a ferrumite cannon that targets a Monster or Vehicle unit, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-skorpius-disintegrator"
           },
           {
-            "id": "unit-skorpius-disintegrator-ability-damaged-1-4-wounds-remaining-3",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "datasheet-damaged-1-4-wounds-remaining",
+            "sectionId": "datasheet-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-skorpius-disintegrator"
           },
           {
-            "id": "unit-skorpius-disintegrator-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "",
+            "sourceUnitId": "unit-skorpius-disintegrator"
           },
           {
-            "id": "unit-skorpius-disintegrator-ability-doctrina-imperatives-5",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-skorpius-disintegrator"
           }
         ],
         "models": [],
@@ -6867,24 +7245,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-focused-hunters",
-            "title": "Focused Hunters"
+            "id": "datasheet-focused-hunters",
+            "sectionId": "datasheet-focused-hunters",
+            "title": "Focused Hunters",
+            "text": "At the start of the battle, select one unit from your opponent’s army. Until the end of the battle, each time a model in this unit makes an attack that targets that unit, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-sydonian-dragoons-with-radium-jezzails"
           },
           {
-            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-broad-spectrum-data-tether-2",
-            "title": "Broad Spectrum Data-tether"
+            "id": "datasheet-broad-spectrum-data-tether",
+            "sectionId": "datasheet-broad-spectrum-data-tether",
+            "title": "Broad Spectrum Data-tether",
+            "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-sydonian-dragoons-with-radium-jezzails"
           },
           {
-            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-deadly-demise-1-3",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "",
+            "sourceUnitId": "unit-sydonian-dragoons-with-radium-jezzails"
           },
           {
-            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-stealth-4",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-sydonian-dragoons-with-radium-jezzails"
           },
           {
-            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-doctrina-imperatives-5",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-sydonian-dragoons-with-radium-jezzails"
           }
         ],
         "models": [],
@@ -7017,24 +7410,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sydonian-dragoons-with-taser-lances-ability-dynamic-efficiency",
-            "title": "Dynamic Efficiency"
+            "id": "datasheet-dynamic-efficiency",
+            "sectionId": "datasheet-dynamic-efficiency",
+            "title": "Dynamic Efficiency",
+            "text": "This unit is eligible to declare a charge in a turn in which it Advanced or Fell Back, and you can re-roll Desperate Escape tests taken for models in this unit.",
+            "sourceUnitId": "unit-sydonian-dragoons-with-taser-lances"
           },
           {
-            "id": "unit-sydonian-dragoons-with-taser-lances-ability-broad-spectrum-data-tether-2",
-            "title": "Broad Spectrum Data-tether"
+            "id": "datasheet-broad-spectrum-data-tether",
+            "sectionId": "datasheet-broad-spectrum-data-tether",
+            "title": "Broad Spectrum Data-tether",
+            "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-sydonian-dragoons-with-taser-lances"
           },
           {
-            "id": "unit-sydonian-dragoons-with-taser-lances-ability-deadly-demise-1-3",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "",
+            "sourceUnitId": "unit-sydonian-dragoons-with-taser-lances"
           },
           {
-            "id": "unit-sydonian-dragoons-with-taser-lances-ability-stealth-4",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "",
+            "sourceUnitId": "unit-sydonian-dragoons-with-taser-lances"
           },
           {
-            "id": "unit-sydonian-dragoons-with-taser-lances-ability-doctrina-imperatives-5",
-            "title": "Doctrina Imperatives"
+            "id": "doctrina-imperatives",
+            "sectionId": "doctrina-imperatives",
+            "title": "Doctrina Imperatives",
+            "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-sydonian-dragoons-with-taser-lances"
           }
         ],
         "models": [],

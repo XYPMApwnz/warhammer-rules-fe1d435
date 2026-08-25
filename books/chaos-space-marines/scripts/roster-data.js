@@ -83,12 +83,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-cultist-mob-ability-for-the-dark-gods",
-            "title": "For the Dark Gods"
+            "id": "chaos-space-marines-ability-for-the-dark-gods",
+            "sectionId": "chaos-space-marines-ability-for-the-dark-gods",
+            "title": "For the Dark Gods",
+            "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+            "sourceUnitId": "unit-cultist-mob"
           },
           {
-            "id": "unit-cultist-mob-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-cultist-mob"
           }
         ],
         "models": [
@@ -320,12 +326,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-legionaries-ability-veterans-of-the-long-war",
-            "title": "Veterans of the Long War"
+            "id": "chaos-space-marines-ability-veterans-of-the-long-war",
+            "sectionId": "chaos-space-marines-ability-veterans-of-the-long-war",
+            "title": "Veterans of the Long War",
+            "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.",
+            "sourceUnitId": "unit-legionaries"
           },
           {
-            "id": "unit-legionaries-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-legionaries"
           }
         ],
         "models": [
@@ -1043,16 +1055,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-lord-ability-chance-for-glory",
-            "title": "Chance for Glory"
+            "id": "chaos-space-marines-ability-chance-for-glory",
+            "sectionId": "chaos-space-marines-ability-chance-for-glory",
+            "title": "Chance for Glory",
+            "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength, Attacks, Armour\nPenetration and Damage characteristics of melee weapons equipped by this model by 1.",
+            "sourceUnitId": "unit-chaos-lord"
           },
           {
-            "id": "unit-chaos-lord-ability-lord-of-chaos-2",
-            "title": "Lord of Chaos"
+            "id": "chaos-space-marines-ability-lord-of-chaos",
+            "sectionId": "chaos-space-marines-ability-lord-of-chaos",
+            "title": "Lord of Chaos",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-chaos-lord"
           },
           {
-            "id": "unit-chaos-lord-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-lord"
           }
         ],
         "models": [
@@ -1314,20 +1335,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-lord-in-terminator-armour-ability-formidably-resilient",
-            "title": "Formidably Resilient"
+            "id": "chaos-space-marines-ability-formidably-resilient",
+            "sectionId": "chaos-space-marines-ability-formidably-resilient",
+            "title": "Formidably Resilient",
+            "text": "Each time an attack is allocated to this model, halve the Damage characteristic of that attack.",
+            "sourceUnitId": "unit-chaos-lord-in-terminator-armour"
           },
           {
-            "id": "unit-chaos-lord-in-terminator-armour-ability-lord-of-chaos-2",
-            "title": "Lord of Chaos"
+            "id": "chaos-space-marines-ability-lord-of-chaos",
+            "sectionId": "chaos-space-marines-ability-lord-of-chaos",
+            "title": "Lord of Chaos",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-chaos-lord-in-terminator-armour"
           },
           {
-            "id": "unit-chaos-lord-in-terminator-armour-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-lord-in-terminator-armour"
           },
           {
-            "id": "unit-chaos-lord-in-terminator-armour-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-chaos-lord-in-terminator-armour"
           }
         ],
         "models": [
@@ -1561,20 +1594,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-lord-with-jump-pack-ability-cruel-hunter",
-            "title": "Cruel Hunter"
+            "id": "chaos-space-marines-ability-cruel-hunter",
+            "sectionId": "chaos-space-marines-ability-cruel-hunter",
+            "title": "Cruel Hunter",
+            "text": "While this model is leading a unit, each time that unit Piles In or Consolidates, each model in that unit can move up to 6\" instead of up to 3\".",
+            "sourceUnitId": "unit-chaos-lord-with-jump-pack"
           },
           {
-            "id": "unit-chaos-lord-with-jump-pack-ability-lord-of-chaos-2",
-            "title": "Lord of Chaos"
+            "id": "chaos-space-marines-ability-lord-of-chaos",
+            "sectionId": "chaos-space-marines-ability-lord-of-chaos",
+            "title": "Lord of Chaos",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-chaos-lord-with-jump-pack"
           },
           {
-            "id": "unit-chaos-lord-with-jump-pack-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-chaos-lord-with-jump-pack"
           },
           {
-            "id": "unit-chaos-lord-with-jump-pack-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-lord-with-jump-pack"
           }
         ],
         "models": [
@@ -1844,16 +1889,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-cultist-firebrand-ability-fiery-faith",
-            "title": "Fiery Faith"
+            "id": "chaos-space-marines-ability-fiery-faith",
+            "sectionId": "chaos-space-marines-ability-fiery-faith",
+            "title": "Fiery Faith",
+            "text": "While this model is leading a unit, you can re-roll Leadership tests taken for that unit.",
+            "sourceUnitId": "unit-cultist-firebrand"
           },
           {
-            "id": "unit-cultist-firebrand-ability-cursed-flames-2",
-            "title": "Cursed Flames"
+            "id": "chaos-space-marines-ability-cursed-flames",
+            "sectionId": "chaos-space-marines-ability-cursed-flames",
+            "title": "Cursed Flames",
+            "text": "In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks. That unit must make a Battle-shock test.",
+            "sourceUnitId": "unit-cultist-firebrand"
           },
           {
-            "id": "unit-cultist-firebrand-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-cultist-firebrand"
           }
         ],
         "models": [
@@ -2012,20 +2066,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-dark-apostle-ability-dark-zealotry",
-            "title": "Dark Zealotry"
+            "id": "chaos-space-marines-ability-dark-zealotry",
+            "sectionId": "chaos-space-marines-ability-dark-zealotry",
+            "title": "Dark Zealotry",
+            "text": "While this unit is leading a unit and contains a DARK APOSTLE model, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-dark-apostle"
           },
           {
-            "id": "unit-dark-apostle-ability-demagogue-2",
-            "title": "Demagogue"
+            "id": "chaos-space-marines-ability-demagogue",
+            "sectionId": "chaos-space-marines-ability-demagogue",
+            "title": "Demagogue",
+            "text": "Once per battle, at the start of any phase, you can select one friendly HERETIC ASTARTES unit that is Battle-shocked and within 12\" of this unit’s DARK APOSTLE model. That unit is no longer Battle-shocked.",
+            "sourceUnitId": "unit-dark-apostle"
           },
           {
-            "id": "unit-dark-apostle-ability-malign-sacrifice-3",
-            "title": "Malign Sacrifice"
+            "id": "chaos-space-marines-ability-malign-sacrifice",
+            "sectionId": "chaos-space-marines-ability-malign-sacrifice",
+            "title": "Malign Sacrifice",
+            "text": "At the start of the Fight phase, if this unit contains one or more Dark Disciple models, you can select one of those models and one enemy unit within Engagement Range of this unit, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds. That Dark Disciple model is then destroyed.",
+            "sourceUnitId": "unit-dark-apostle"
           },
           {
-            "id": "unit-dark-apostle-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-dark-apostle"
           }
         ],
         "models": [
@@ -2189,16 +2255,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-dark-commune-ability-faithful-flock",
-            "title": "Faithful Flock"
+            "id": "chaos-space-marines-ability-faithful-flock",
+            "sectionId": "chaos-space-marines-ability-faithful-flock",
+            "title": "Faithful Flock",
+            "text": "While this unit is leading a unit and contains a CULT DEMAGOGUE model, models in that unit have a 5+ invulnerable save.",
+            "sourceUnitId": "unit-dark-commune"
           },
           {
-            "id": "unit-dark-commune-ability-dark-ritual-2",
-            "title": "Dark Ritual"
+            "id": "chaos-space-marines-ability-dark-ritual",
+            "sectionId": "chaos-space-marines-ability-dark-ritual",
+            "title": "Dark Ritual",
+            "text": "Once per battle, in your Command phase, if this unit contains a CULT DEMAGOGUE model, it can use this ability. If it does, until the end of the turn, this unit can declare a charge in a turn in which it Advanced and each time a model in this unit makes an attack, add 1 to the Hit roll and add 1 to the Wound roll.",
+            "sourceUnitId": "unit-dark-commune"
           },
           {
-            "id": "unit-dark-commune-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-dark-commune"
           }
         ],
         "models": [
@@ -2475,24 +2550,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-heretic-astartes-daemon-prince-ability-dark-blessing-aura",
-            "title": "Dark Blessing (Aura)"
+            "id": "chaos-space-marines-ability-dark-blessing-aura",
+            "sectionId": "chaos-space-marines-ability-dark-blessing-aura",
+            "title": "Dark Blessing (Aura)",
+            "text": "While a friendly HERETIC ASTARTES INFANTRY unit is within 6\" of this model, each time a ranged attack is allocated to a model in that unit, that model has the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince"
           },
           {
-            "id": "unit-heretic-astartes-daemon-prince-ability-ascended-daemon-2",
-            "title": "Ascended Daemon"
+            "id": "chaos-space-marines-ability-ascended-daemon",
+            "sectionId": "chaos-space-marines-ability-ascended-daemon",
+            "title": "Ascended Daemon",
+            "text": "Each time this model shoot or fights, while resolving those attacks, you can re-roll one Hit roll and you can re-roll one Wound roll.",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince"
           },
           {
-            "id": "unit-heretic-astartes-daemon-prince-ability-lord-of-chaos-3",
-            "title": "Lord of Chaos"
+            "id": "chaos-space-marines-ability-lord-of-chaos-2",
+            "sectionId": "chaos-space-marines-ability-lord-of-chaos-2",
+            "title": "Lord of Chaos",
+            "text": "While this model is within 3\" of a friendly Heretic Astartes Infantry unit, this model has Lone Operative.",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince"
           },
           {
-            "id": "unit-heretic-astartes-daemon-prince-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince"
           },
           {
-            "id": "unit-heretic-astartes-daemon-prince-ability-dark-pacts-5",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince"
           }
         ],
         "models": [
@@ -2664,24 +2754,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-flying-horror",
-            "title": "Flying Horror"
+            "id": "chaos-space-marines-ability-flying-horror",
+            "sectionId": "chaos-space-marines-ability-flying-horror",
+            "title": "Flying Horror",
+            "text": "Each time this model ends a Normal or Advance move, select one enemy unit it moved over during that move. That unit must take a Battle-shock test.",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince-with-wings"
           },
           {
-            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-daemonic-destruction-2",
-            "title": "Daemonic Destruction"
+            "id": "chaos-space-marines-ability-daemonic-destruction",
+            "sectionId": "chaos-space-marines-ability-daemonic-destruction",
+            "title": "Daemonic Destruction",
+            "text": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince-with-wings"
           },
           {
-            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince-with-wings"
           },
           {
-            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince-with-wings"
           },
           {
-            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-dark-pacts-5",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-heretic-astartes-daemon-prince-with-wings"
           }
         ],
         "models": [
@@ -2851,16 +2956,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lord-discordant-on-helstalker-ability-corrupt-machine-spirits",
-            "title": "Corrupt Machine Spirits"
+            "id": "chaos-space-marines-ability-corrupt-machine-spirits",
+            "sectionId": "chaos-space-marines-ability-corrupt-machine-spirits",
+            "title": "Corrupt Machine Spirits",
+            "text": "At the start of your Shooting phase, select one visible enemy Vehicle unit within 12\" of this model and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.’",
+            "sourceUnitId": "unit-lord-discordant-on-helstalker"
           },
           {
-            "id": "unit-lord-discordant-on-helstalker-ability-spirit-thief-2",
-            "title": "Spirit Thief"
+            "id": "chaos-space-marines-ability-spirit-thief",
+            "sectionId": "chaos-space-marines-ability-spirit-thief",
+            "title": "Spirit Thief",
+            "text": "At the start of your Shooting phase, select one visible enemy Vehicle unit. Until the end of the phase, each time a friendly Heretic Astartes model makes an attack that targets that unit, re-roll a Wound roll of 1.",
+            "sourceUnitId": "unit-lord-discordant-on-helstalker"
           },
           {
-            "id": "unit-lord-discordant-on-helstalker-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-lord-discordant-on-helstalker"
           }
         ],
         "models": [
@@ -3143,16 +3257,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-master-of-executions-ability-warp-sighted-butcher",
-            "title": "Warp-sighted Butcher"
+            "id": "chaos-space-marines-ability-warp-sighted-butcher",
+            "sectionId": "chaos-space-marines-ability-warp-sighted-butcher",
+            "title": "Warp-sighted Butcher",
+            "text": "While this model is leading a unit, each time a model in that unit makes a melee attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If that unit is Below Half-strength, you can re-roll the Wound roll as well.",
+            "sourceUnitId": "unit-master-of-executions"
           },
           {
-            "id": "unit-master-of-executions-ability-trophy-taker-2",
-            "title": "Trophy Taker"
+            "id": "chaos-space-marines-ability-trophy-taker",
+            "sectionId": "chaos-space-marines-ability-trophy-taker",
+            "title": "Trophy Taker",
+            "text": "Each time this model destroys an enemy CHARACTER model, you gain 1CP.",
+            "sourceUnitId": "unit-master-of-executions"
           },
           {
-            "id": "unit-master-of-executions-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-master-of-executions"
           }
         ],
         "models": [
@@ -3308,16 +3431,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-master-of-possession-ability-daemonkin-psychic",
-            "title": "Daemonkin (Psychic)"
+            "id": "chaos-space-marines-ability-daemonkin-psychic",
+            "sectionId": "chaos-space-marines-ability-daemonkin-psychic",
+            "title": "Daemonkin (Psychic)",
+            "text": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit.",
+            "sourceUnitId": "unit-master-of-possession"
           },
           {
-            "id": "unit-master-of-possession-ability-sacrificial-dagger-2",
-            "title": "Sacrificial Dagger"
+            "id": "chaos-space-marines-ability-sacrificial-dagger",
+            "sectionId": "chaos-space-marines-ability-sacrificial-dagger",
+            "title": "Sacrificial Dagger",
+            "text": "Once per phase, when this model is selected to shoot or fight, it can use this ability. If it does, this model’s unit suffers 1 mortal wound and, until the end of the phase, each time this model makes a Psychic Attack, add 1 to the Hit roll and add 1 to the Wound roll.",
+            "sourceUnitId": "unit-master-of-possession"
           },
           {
-            "id": "unit-master-of-possession-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-master-of-possession"
           }
         ],
         "models": [
@@ -3547,20 +3679,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-red-corsairs-reave-captain-ability-brutal-raider",
-            "title": "Brutal Raider"
+            "id": "chaos-space-marines-ability-brutal-raider",
+            "sectionId": "chaos-space-marines-ability-brutal-raider",
+            "title": "Brutal Raider",
+            "text": "Each time this model's unit ends a Charge move, until the end of the turn, add 1 to the Strength characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.",
+            "sourceUnitId": "unit-red-corsairs-reave-captain"
           },
           {
-            "id": "unit-red-corsairs-reave-captain-ability-raiders-due-2",
-            "title": "Raider's Due"
+            "id": "chaos-space-marines-ability-raiders-due",
+            "sectionId": "chaos-space-marines-ability-raiders-due",
+            "title": "Raider's Due",
+            "text": "Each time this unit declares a Charge that targets one or more units that are within range of one or more objective markers, you can re-roll the Charge roll.",
+            "sourceUnitId": "unit-red-corsairs-reave-captain"
           },
           {
-            "id": "unit-red-corsairs-reave-captain-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-red-corsairs-reave-captain"
           },
           {
-            "id": "unit-red-corsairs-reave-captain-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-red-corsairs-reave-captain"
           }
         ],
         "models": [
@@ -3819,16 +3963,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sorcerer-ability-prescience-psychic",
-            "title": "Prescience (Psychic)"
+            "id": "chaos-space-marines-ability-prescience-psychic",
+            "sectionId": "chaos-space-marines-ability-prescience-psychic",
+            "title": "Prescience (Psychic)",
+            "text": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-sorcerer"
           },
           {
-            "id": "unit-sorcerer-ability-gift-of-chaos-psychic-2",
-            "title": "Gift of Chaos (Psychic)"
+            "id": "chaos-space-marines-ability-gift-of-chaos-psychic",
+            "sectionId": "chaos-space-marines-ability-gift-of-chaos-psychic",
+            "title": "Gift of Chaos (Psychic)",
+            "text": "Each time this model is selected to shoot or fight, after resolving its attacks, select one enemy unit hit by one or more of those attacks that had the [PSYCHIC] ability. That unit must take a Leadership test: if that test is failed, that unit suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-sorcerer"
           },
           {
-            "id": "unit-sorcerer-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-sorcerer"
           }
         ],
         "models": [
@@ -4036,20 +4189,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sorcerer-in-terminator-armour-ability-warptime-psychic",
-            "title": "Warptime (Psychic)"
+            "id": "chaos-space-marines-ability-warptime-psychic",
+            "sectionId": "chaos-space-marines-ability-warptime-psychic",
+            "title": "Warptime (Psychic)",
+            "text": "While this model is leading a unit, you can re-roll Advance and Charge rolls made for that unit.",
+            "sourceUnitId": "unit-sorcerer-in-terminator-armour"
           },
           {
-            "id": "unit-sorcerer-in-terminator-armour-ability-death-hex-psychic-2",
-            "title": "Death Hex (Psychic)"
+            "id": "chaos-space-marines-ability-death-hex-psychic",
+            "sectionId": "chaos-space-marines-ability-death-hex-psychic",
+            "title": "Death Hex (Psychic)",
+            "text": "At the start of your Shooting phase, one PSYKER with this ability can use it. If it does, select one enemy unit within 12\" of and visible to that PSYKER and roll one D6: on a 1, that PSYKER's unit suffers D3 mortal wounds; on a 2+, until the start of your next Movement phase, each time an attack targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-sorcerer-in-terminator-armour"
           },
           {
-            "id": "unit-sorcerer-in-terminator-armour-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-sorcerer-in-terminator-armour"
           },
           {
-            "id": "unit-sorcerer-in-terminator-armour-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-sorcerer-in-terminator-armour"
           }
         ],
         "models": [
@@ -4293,16 +4458,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-traitor-enforcer-ability-brutal-example",
-            "title": "Brutal Example"
+            "id": "chaos-space-marines-ability-brutal-example",
+            "sectionId": "chaos-space-marines-ability-brutal-example",
+            "title": "Brutal Example",
+            "text": "Once per turn, while this unit is leading a unit and contains a TRAITOR ENFORCER model, you can target that unit with the Fire Overwatch Stratagem for 0CP, and can do so even if you have already targeted a different unit from your army with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed.",
+            "sourceUnitId": "unit-traitor-enforcer"
           },
           {
-            "id": "unit-traitor-enforcer-ability-mutated-bodyguard-2",
-            "title": "Mutated Bodyguard"
+            "id": "chaos-space-marines-ability-mutated-bodyguard",
+            "sectionId": "chaos-space-marines-ability-mutated-bodyguard",
+            "title": "Mutated Bodyguard",
+            "text": "While this unit contains a Traitor Ogryn model, CHARACTER models in this unit have the Feel No Pain 4+ ability.",
+            "sourceUnitId": "unit-traitor-enforcer"
           },
           {
-            "id": "unit-traitor-enforcer-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-traitor-enforcer"
           }
         ],
         "models": [
@@ -4491,20 +4665,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-warpsmith-ability-warpsmith",
-            "title": "Warpsmith"
+            "id": "chaos-space-marines-ability-warpsmith",
+            "sectionId": "chaos-space-marines-ability-warpsmith",
+            "title": "Warpsmith",
+            "text": "While this model is within 3\" of one or more friendly Heretic Astartes Vehicle units, this model has the Lone Operative ability.",
+            "sourceUnitId": "unit-warpsmith"
           },
           {
-            "id": "unit-warpsmith-ability-master-of-mechanisms-2",
-            "title": "Master of Mechanisms"
+            "id": "chaos-space-marines-ability-master-of-mechanisms",
+            "sectionId": "chaos-space-marines-ability-master-of-mechanisms",
+            "title": "Master of Mechanisms",
+            "text": "In your Command phase, select one friendly Heretic Astartes Vehicle model within 3\" of this model. That Vehicle model regains up to D3 lost wounds and, until the start of your next Command phase, each time that Vehicle makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per Command phase.",
+            "sourceUnitId": "unit-warpsmith"
           },
           {
-            "id": "unit-warpsmith-ability-enrage-machine-spirits-3",
-            "title": "Enrage Machine Spirits"
+            "id": "chaos-space-marines-ability-enrage-machine-spirits",
+            "sectionId": "chaos-space-marines-ability-enrage-machine-spirits",
+            "title": "Enrage Machine Spirits",
+            "text": "At the end of your Movement phase, select one enemy Vehicle unit within 12\" of this model. That unit must take a Battle-shock test.",
+            "sourceUnitId": "unit-warpsmith"
           },
           {
-            "id": "unit-warpsmith-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-warpsmith"
           }
         ],
         "models": [
@@ -4730,20 +4916,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-rhino-ability-self-repair",
-            "title": "Self-repair"
+            "id": "chaos-space-marines-ability-self-repair",
+            "sectionId": "chaos-space-marines-ability-self-repair",
+            "title": "Self-repair",
+            "text": "At the start of your Command phase, this model regains 1 lost wound.",
+            "sourceUnitId": "unit-chaos-rhino"
           },
           {
-            "id": "unit-chaos-rhino-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-chaos-rhino"
           },
           {
-            "id": "unit-chaos-rhino-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-rhino"
           },
           {
-            "id": "unit-chaos-rhino-ability-firing-deck-2-4",
-            "title": "Firing Deck 2"
+            "id": "core-firing-deck",
+            "sectionId": "core-firing-deck",
+            "title": "Firing Deck 2",
+            "text": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: \n1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). \n2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). \n3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. \n4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+            "sourceUnitId": "unit-chaos-rhino"
           }
         ],
         "models": [
@@ -4931,20 +5129,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-abaddon-the-despoiler-ability-the-warmaster",
-            "title": "The Warmaster"
+            "id": "chaos-space-marines-ability-the-warmaster",
+            "sectionId": "chaos-space-marines-ability-the-warmaster",
+            "title": "The Warmaster",
+            "text": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability.",
+            "sourceUnitId": "unit-abaddon-the-despoiler"
           },
           {
-            "id": "unit-abaddon-the-despoiler-ability-dark-destiny-2",
-            "title": "Dark Destiny"
+            "id": "chaos-space-marines-ability-dark-destiny",
+            "sectionId": "chaos-space-marines-ability-dark-destiny",
+            "title": "Dark Destiny",
+            "text": "Each time this model makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
+            "sourceUnitId": "unit-abaddon-the-despoiler"
           },
           {
-            "id": "unit-abaddon-the-despoiler-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-abaddon-the-despoiler"
           },
           {
-            "id": "unit-abaddon-the-despoiler-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-abaddon-the-despoiler"
           }
         ],
         "models": [
@@ -5075,20 +5285,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-cypher-ability-agent-of-discord-aura",
-            "title": "Agent of Discord (Aura)"
+            "id": "chaos-space-marines-ability-agent-of-discord-aura",
+            "sectionId": "chaos-space-marines-ability-agent-of-discord-aura",
+            "title": "Agent of Discord (Aura)",
+            "text": "Once per turn, when your opponent targets a unit from their army within 12” of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
+            "sourceUnitId": "unit-cypher"
           },
           {
-            "id": "unit-cypher-ability-guns-blazing-2",
-            "title": "Guns Blazing"
+            "id": "chaos-space-marines-ability-guns-blazing",
+            "sectionId": "chaos-space-marines-ability-guns-blazing",
+            "title": "Guns Blazing",
+            "text": "Once per turn, in your opponent's Shooting phase, when an enemy unit makes a ranged attacks that targets a friendly HERETIC ASTARTES unit within 3\" of this model, after that enemy unit has shot, this model can shoot as if it were your Shooting phase, but it must target only that enemy unit when doing so and can only do so if that enemy unit is an eligible target.",
+            "sourceUnitId": "unit-cypher"
           },
           {
-            "id": "unit-cypher-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-cypher"
           },
           {
-            "id": "unit-cypher-ability-lone-operative-4",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-cypher"
           }
         ],
         "models": [
@@ -5267,24 +5489,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-fabius-bile-ability-enhanced-warriors",
-            "title": "Enhanced Warriors"
+            "id": "chaos-space-marines-ability-enhanced-warriors",
+            "sectionId": "chaos-space-marines-ability-enhanced-warriors",
+            "title": "Enhanced Warriors",
+            "text": "If this unit is attached to a unit at the start of the battle, until the end of the battle, add 1 to the Strength characteristic of melee weapons equipped by Bodyguard models in that unit and add 1 to the Toughness characteristic of Bodyguard models in that unit.",
+            "sourceUnitId": "unit-fabius-bile"
           },
           {
-            "id": "unit-fabius-bile-ability-surgeon-acolyte-2",
-            "title": "Surgeon Acolyte"
+            "id": "chaos-space-marines-ability-surgeon-acolyte",
+            "sectionId": "chaos-space-marines-ability-surgeon-acolyte",
+            "title": "Surgeon Acolyte",
+            "text": "Once per turn, when an attack is allocated to a model in this unit, if this unit contains Fabius Bile, you can change the Damage characteristic of that attack to 0.",
+            "sourceUnitId": "unit-fabius-bile"
           },
           {
-            "id": "unit-fabius-bile-ability-chirurgeon-3",
-            "title": "Chirurgeon"
+            "id": "chaos-space-marines-ability-chirurgeon",
+            "sectionId": "chaos-space-marines-ability-chirurgeon",
+            "title": "Chirurgeon",
+            "text": "The first time this unit’s Fabius Bile model is destroyed, at the end of the phase, roll one D6: on a 2+, set it back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with its full wounds remaining.",
+            "sourceUnitId": "unit-fabius-bile"
           },
           {
-            "id": "unit-fabius-bile-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-fabius-bile"
           },
           {
-            "id": "unit-fabius-bile-ability-feel-no-pain-5-5",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-fabius-bile"
           }
         ],
         "models": [
@@ -5472,20 +5709,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-haarken-worldclaimer-ability-head-taker",
-            "title": "Head Taker"
+            "id": "chaos-space-marines-ability-head-taker",
+            "sectionId": "chaos-space-marines-ability-head-taker",
+            "title": "Head Taker",
+            "text": "While this model is leading a unit, each time this model’s unit ends a Charge move, select one enemy unit within Engagement Range of this model’s unit and roll one D6 for each model in this model’s unit which is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.",
+            "sourceUnitId": "unit-haarken-worldclaimer"
           },
           {
-            "id": "unit-haarken-worldclaimer-ability-herald-of-the-apocalypse-aura-2",
-            "title": "Herald of the Apocalypse (Aura)"
+            "id": "chaos-space-marines-ability-herald-of-the-apocalypse-aura",
+            "sectionId": "chaos-space-marines-ability-herald-of-the-apocalypse-aura",
+            "title": "Herald of the Apocalypse (Aura)",
+            "text": "While an enemy unit is within 6\" of this model, in the Battle-shock step of your opponent’s Command phase, if that enemy unit is below its Starting Strength, it must take a Battle-shock test. This ability cannot cause a unit to take two Battle-shock tests in the same phase.",
+            "sourceUnitId": "unit-haarken-worldclaimer"
           },
           {
-            "id": "unit-haarken-worldclaimer-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-haarken-worldclaimer"
           },
           {
-            "id": "unit-haarken-worldclaimer-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-haarken-worldclaimer"
           }
         ],
         "models": [
@@ -5658,24 +5907,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-huron-blackheart-ability-lord-of-badab-aura",
-            "title": "Lord of Badab (Aura)"
+            "id": "chaos-space-marines-ability-lord-of-badab-aura",
+            "sectionId": "chaos-space-marines-ability-lord-of-badab-aura",
+            "title": "Lord of Badab (Aura)",
+            "text": "While a friendly Heretic Astartes Infantry unit (excluding Battle-shocked units and Damned units) is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit.",
+            "sourceUnitId": "unit-huron-blackheart"
           },
           {
-            "id": "unit-huron-blackheart-ability-hamadryas-knowledge-psychic-2",
-            "title": "Hamadrya’s Knowledge (Psychic)"
+            "id": "chaos-space-marines-ability-hamadryas-knowledge-psychic",
+            "sectionId": "chaos-space-marines-ability-hamadryas-knowledge-psychic",
+            "title": "Hamadrya’s Knowledge (Psychic)",
+            "text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\".",
+            "sourceUnitId": "unit-huron-blackheart"
           },
           {
-            "id": "unit-huron-blackheart-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-huron-blackheart"
           },
           {
-            "id": "unit-huron-blackheart-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-huron-blackheart"
           },
           {
-            "id": "unit-huron-blackheart-ability-feel-no-pain-5-5",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-huron-blackheart"
           }
         ],
         "models": [
@@ -5817,20 +6081,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kravek-morne-ability-headlong-destruction",
-            "title": "Headlong Destruction"
+            "id": "chaos-space-marines-ability-headlong-destruction",
+            "sectionId": "chaos-space-marines-ability-headlong-destruction",
+            "title": "Headlong Destruction",
+            "text": "Each time a model in this unit makes an attack that targets the closest eligible enemy unit, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-kravek-morne"
           },
           {
-            "id": "unit-kravek-morne-ability-architect-of-ruin-2",
-            "title": "Architect of Ruin"
+            "id": "chaos-space-marines-ability-architect-of-ruin",
+            "sectionId": "chaos-space-marines-ability-architect-of-ruin",
+            "title": "Architect of Ruin",
+            "text": "At the start of the battle, select one unit in your opponent’s army to be this model’s hated foe. Each time this model makes an attack that targets its hated foe, you can re-roll the Wound roll. Each time this model’s hated foe is destroyed, you can select a new unit from your opponent’s army to be its hated foe.",
+            "sourceUnitId": "unit-kravek-morne"
           },
           {
-            "id": "unit-kravek-morne-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-kravek-morne"
           },
           {
-            "id": "unit-kravek-morne-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-kravek-morne"
           }
         ],
         "models": [
@@ -6031,20 +6307,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-masters-of-the-maelstrom-ability-fleet-command",
-            "title": "Fleet Command"
+            "id": "chaos-space-marines-ability-fleet-command",
+            "sectionId": "chaos-space-marines-ability-fleet-command",
+            "title": "Fleet Command",
+            "text": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield) select up to three Heretic Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "sourceUnitId": "unit-masters-of-the-maelstrom"
           },
           {
-            "id": "unit-masters-of-the-maelstrom-ability-plunder-2",
-            "title": "Plunder"
+            "id": "chaos-space-marines-ability-plunder",
+            "sectionId": "chaos-space-marines-ability-plunder",
+            "title": "Plunder",
+            "text": "Once per battle, after this unit ends a Normal move, you can select one visible enemy unit within 12\" of it and roll one D6: on a 2+, that enemy unit suffers D3+1 mortal wounds.",
+            "sourceUnitId": "unit-masters-of-the-maelstrom"
           },
           {
-            "id": "unit-masters-of-the-maelstrom-ability-masters-of-the-maelstrom-3",
-            "title": "Masters of the Maelstrom"
+            "id": "chaos-space-marines-ability-masters-of-the-maelstrom",
+            "sectionId": "chaos-space-marines-ability-masters-of-the-maelstrom",
+            "title": "Masters of the Maelstrom",
+            "text": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly.\n- Chosen, Legionaries, Red Corsairs Raiders \n\n\nThis unit cannot join an Attached unit, and only Huron Blackheart can join a unit this unit has joined.",
+            "sourceUnitId": "unit-masters-of-the-maelstrom"
           },
           {
-            "id": "unit-masters-of-the-maelstrom-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-masters-of-the-maelstrom"
           }
         ],
         "models": [
@@ -6404,32 +6692,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-vashtorr-the-arkifane-ability-unholy-mechanisms-aura",
-            "title": "Unholy Mechanisms (Aura)"
+            "id": "chaos-space-marines-ability-unholy-mechanisms-aura",
+            "sectionId": "chaos-space-marines-ability-unholy-mechanisms-aura",
+            "title": "Unholy Mechanisms (Aura)",
+            "text": "While a friendly Daemon Vehicle unit is within 6\" of this model, add 2 to the Strength characteristic of weapons equipped by models in that unit.",
+            "sourceUnitId": "unit-vashtorr-the-arkifane"
           },
           {
-            "id": "unit-vashtorr-the-arkifane-ability-reorder-reality-2",
-            "title": "Reorder Reality"
+            "id": "chaos-space-marines-ability-reorder-reality",
+            "sectionId": "chaos-space-marines-ability-reorder-reality",
+            "title": "Reorder Reality",
+            "text": "Each time an enemy unit within 18\" of this model targets this model, subtract 1 from the Hit roll and, until the end of the phase, that enemy unit’s ranged weapons have the [HAZARDOUS] ability.",
+            "sourceUnitId": "unit-vashtorr-the-arkifane"
           },
           {
-            "id": "unit-vashtorr-the-arkifane-ability-indentured-daemon-engines-3",
-            "title": "Indentured Daemon Engines"
+            "id": "chaos-space-marines-ability-indentured-daemon-engines",
+            "sectionId": "chaos-space-marines-ability-indentured-daemon-engines",
+            "title": "Indentured Daemon Engines",
+            "text": "While this model is within 3\" of one or more friendly Daemon Vehicle units, this model has the Lone Operative ability.",
+            "sourceUnitId": "unit-vashtorr-the-arkifane"
           },
           {
-            "id": "unit-vashtorr-the-arkifane-ability-damaged-1-4-wounds-remaining-4",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-vashtorr-the-arkifane"
           },
           {
-            "id": "unit-vashtorr-the-arkifane-ability-dark-pacts-5",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-vashtorr-the-arkifane"
           },
           {
-            "id": "unit-vashtorr-the-arkifane-ability-deadly-demise-d3-6",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-vashtorr-the-arkifane"
           },
           {
-            "id": "unit-vashtorr-the-arkifane-ability-deep-strike-7",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-vashtorr-the-arkifane"
           }
         ],
         "models": [
@@ -6630,20 +6939,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-accursed-cultists-ability-howling-horde",
-            "title": "Howling Horde"
+            "id": "chaos-space-marines-ability-howling-horde",
+            "sectionId": "chaos-space-marines-ability-howling-horde",
+            "title": "Howling Horde",
+            "text": "In your opponent's Shooting phase, when an enemy unit has shot, if a model from this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6\".",
+            "sourceUnitId": "unit-accursed-cultists"
           },
           {
-            "id": "unit-accursed-cultists-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-accursed-cultists"
           },
           {
-            "id": "unit-accursed-cultists-ability-feel-no-pain-6-3",
-            "title": "Feel No Pain 6+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 6+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-accursed-cultists"
           },
           {
-            "id": "unit-accursed-cultists-ability-scouts-6-4",
-            "title": "Scouts 6\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 6\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-accursed-cultists"
           }
         ],
         "models": [
@@ -6805,16 +7126,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-terminator-squad-ability-despoilers",
-            "title": "Despoilers"
+            "id": "chaos-space-marines-ability-despoilers",
+            "sectionId": "chaos-space-marines-ability-despoilers",
+            "title": "Despoilers",
+            "text": "Each time this unit makes a Dark Pact, until the end of the phase, each time a model in this unit makes an attack, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-chaos-terminator-squad"
           },
           {
-            "id": "unit-chaos-terminator-squad-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-terminator-squad"
           },
           {
-            "id": "unit-chaos-terminator-squad-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-chaos-terminator-squad"
           }
         ],
         "models": [
@@ -7188,12 +7518,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chosen-ability-chosen-marauders",
-            "title": "Chosen Marauders"
+            "id": "chaos-space-marines-ability-chosen-marauders",
+            "sectionId": "chaos-space-marines-ability-chosen-marauders",
+            "title": "Chosen Marauders",
+            "text": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
+            "sourceUnitId": "unit-chosen"
           },
           {
-            "id": "unit-chosen-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chosen"
           }
         ],
         "models": [
@@ -7524,12 +7860,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-fellgor-beastmen-ability-bestial-raiders",
-            "title": "Bestial Raiders"
+            "id": "chaos-space-marines-ability-bestial-raiders",
+            "sectionId": "chaos-space-marines-ability-bestial-raiders",
+            "title": "Bestial Raiders",
+            "text": "If this unit begins the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. If this unit is in Strategic Reserves, for the purposes of setting it up on the battlefield, treat the current battle round number as being one higher than it actually is.",
+            "sourceUnitId": "unit-fellgor-beastmen"
           },
           {
-            "id": "unit-fellgor-beastmen-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-fellgor-beastmen"
           }
         ],
         "models": [
@@ -7836,12 +8178,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-havocs-ability-stabilisation-talons",
-            "title": "Stabilisation Talons"
+            "id": "chaos-space-marines-ability-stabilisation-talons",
+            "sectionId": "chaos-space-marines-ability-stabilisation-talons",
+            "title": "Stabilisation Talons",
+            "text": "Each time a model in this unit makes an attack with a ranged weapon, you can ignore any or all modifiers to the Hit roll and any or all modifiers to the Ballistic Skill characteristic of that weapon.",
+            "sourceUnitId": "unit-havocs"
           },
           {
-            "id": "unit-havocs-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-havocs"
           }
         ],
         "models": [
@@ -8461,16 +8809,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-mutilators-ability-crushing-charge",
-            "title": "Crushing Charge"
+            "id": "chaos-space-marines-ability-crushing-charge",
+            "sectionId": "chaos-space-marines-ability-crushing-charge",
+            "title": "Crushing Charge",
+            "text": "You can re-roll charge rolls made for this unit, and each time this unit makes a Charge move, select one enemy unit and roll one D6 for each model in this unit that is within Engagement Range of that unit: for each 4+, that enemy unit suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-mutilators"
           },
           {
-            "id": "unit-mutilators-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-mutilators"
           },
           {
-            "id": "unit-mutilators-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-mutilators"
           }
         ],
         "models": [
@@ -8703,16 +9060,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-nemesis-claw-ability-visions-of-suffering-psychic",
-            "title": "Visions of Suffering (Psychic)"
+            "id": "chaos-space-marines-ability-visions-of-suffering-psychic",
+            "sectionId": "chaos-space-marines-ability-visions-of-suffering-psychic",
+            "title": "Visions of Suffering (Psychic)",
+            "text": "Each time a model in this unit makes an attack that targets an enemy unit that is below its Starting Strength, add 1 to the Hit roll. If that enemy unit is Below Half-strength, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-nemesis-claw"
           },
           {
-            "id": "unit-nemesis-claw-ability-stealth-2",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-nemesis-claw"
           },
           {
-            "id": "unit-nemesis-claw-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-nemesis-claw"
           }
         ],
         "models": [
@@ -9378,16 +9744,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-obliterators-ability-warp-rift-firepower",
-            "title": "Warp Rift Firepower"
+            "id": "chaos-space-marines-ability-warp-rift-firepower",
+            "sectionId": "chaos-space-marines-ability-warp-rift-firepower",
+            "title": "Warp Rift Firepower",
+            "text": "(Once per battle, per unit): In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit's ranged attacks have [INDIRECT FIRE].",
+            "sourceUnitId": "unit-obliterators"
           },
           {
-            "id": "unit-obliterators-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-obliterators"
           },
           {
-            "id": "unit-obliterators-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-obliterators"
           }
         ],
         "models": [
@@ -9596,12 +9971,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-possessed-ability-unholy-bloodshed",
-            "title": "Unholy Bloodshed"
+            "id": "chaos-space-marines-ability-unholy-bloodshed",
+            "sectionId": "chaos-space-marines-ability-unholy-bloodshed",
+            "title": "Unholy Bloodshed",
+            "text": "Once per battle, when this unit makes a Dark Pact, until the end of the phase, weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability.",
+            "sourceUnitId": "unit-possessed"
           },
           {
-            "id": "unit-possessed-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-possessed"
           }
         ],
         "models": [
@@ -9726,20 +10107,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-raptors-ability-fearsome-aura",
-            "title": "Fearsome (Aura)"
+            "id": "chaos-space-marines-ability-fearsome-aura",
+            "sectionId": "chaos-space-marines-ability-fearsome-aura",
+            "title": "Fearsome (Aura)",
+            "text": "While an enemy unit is within 6\" of this unit, each time that enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result.",
+            "sourceUnitId": "unit-raptors"
           },
           {
-            "id": "unit-raptors-ability-terrifying-assault-2",
-            "title": "Terrifying Assault"
+            "id": "chaos-space-marines-ability-terrifying-assault",
+            "sectionId": "chaos-space-marines-ability-terrifying-assault",
+            "title": "Terrifying Assault",
+            "text": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.",
+            "sourceUnitId": "unit-raptors"
           },
           {
-            "id": "unit-raptors-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-raptors"
           },
           {
-            "id": "unit-raptors-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-raptors"
           }
         ],
         "models": [
@@ -10270,16 +10663,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-red-corsairs-raiders-ability-trophy-takers",
-            "title": "Trophy Takers"
+            "id": "chaos-space-marines-ability-trophy-takers",
+            "sectionId": "chaos-space-marines-ability-trophy-takers",
+            "title": "Trophy Takers",
+            "text": "The first time this unit destroys an enemy unit, until the end of the battle, while this unit is not Battle-shocked, add 1 to the Objective Control characteristic of models in this unit.",
+            "sourceUnitId": "unit-red-corsairs-raiders"
           },
           {
-            "id": "unit-red-corsairs-raiders-ability-infiltrators-2",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-red-corsairs-raiders"
           },
           {
-            "id": "unit-red-corsairs-raiders-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-red-corsairs-raiders"
           }
         ],
         "models": [
@@ -10518,12 +10920,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-traitor-guardsmen-squad-ability-twisted-defence-force",
-            "title": "Twisted Defence Force"
+            "id": "chaos-space-marines-ability-twisted-defence-force",
+            "sectionId": "chaos-space-marines-ability-twisted-defence-force",
+            "title": "Twisted Defence Force",
+            "text": "While this unit is within range of an objective, this unit has +1 Sv against ranged attacks.",
+            "sourceUnitId": "unit-traitor-guardsmen-squad"
           },
           {
-            "id": "unit-traitor-guardsmen-squad-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-traitor-guardsmen-squad"
           }
         ],
         "models": [
@@ -11000,16 +11408,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-warp-talons-ability-warp-strike",
-            "title": "Warp Strike"
+            "id": "chaos-space-marines-ability-warp-strike",
+            "sectionId": "chaos-space-marines-ability-warp-strike",
+            "title": "Warp Strike",
+            "text": "At the end of the Fight phase, if this unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.",
+            "sourceUnitId": "unit-warp-talons"
           },
           {
-            "id": "unit-warp-talons-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-warp-talons"
           },
           {
-            "id": "unit-warp-talons-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-warp-talons"
           }
         ],
         "models": [
@@ -11095,12 +11512,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-bikers-ability-rapid-assault",
-            "title": "Rapid Assault"
+            "id": "chaos-space-marines-ability-rapid-assault",
+            "sectionId": "chaos-space-marines-ability-rapid-assault",
+            "title": "Rapid Assault",
+            "text": "Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength characteristic of that attack by 1.",
+            "sourceUnitId": "unit-chaos-bikers"
           },
           {
-            "id": "unit-chaos-bikers-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-bikers"
           }
         ],
         "models": [
@@ -11595,20 +12018,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-land-raider-ability-assault-ramp",
-            "title": "Assault Ramp"
+            "id": "chaos-space-marines-ability-assault-ramp",
+            "sectionId": "chaos-space-marines-ability-assault-ramp",
+            "title": "Assault Ramp",
+            "text": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "sourceUnitId": "unit-chaos-land-raider"
           },
           {
-            "id": "unit-chaos-land-raider-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 wounds remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-chaos-land-raider"
           },
           {
-            "id": "unit-chaos-land-raider-ability-deadly-demise-d6-3",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-chaos-land-raider"
           },
           {
-            "id": "unit-chaos-land-raider-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-land-raider"
           }
         ],
         "models": [
@@ -11830,20 +12265,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-predator-annihilator-ability-annihilator",
-            "title": "Annihilator"
+            "id": "chaos-space-marines-ability-annihilator",
+            "sectionId": "chaos-space-marines-ability-annihilator",
+            "title": "Annihilator",
+            "text": "Each time a ranged attack made by this model is allocated to a Monster or Vehicle model, you can re-roll the Damage roll.",
+            "sourceUnitId": "unit-chaos-predator-annihilator"
           },
           {
-            "id": "unit-chaos-predator-annihilator-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-chaos-predator-annihilator"
           },
           {
-            "id": "unit-chaos-predator-annihilator-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-chaos-predator-annihilator"
           },
           {
-            "id": "unit-chaos-predator-annihilator-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-predator-annihilator"
           }
         ],
         "models": [
@@ -12092,20 +12539,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-predator-destructor-ability-destructor",
-            "title": "Destructor"
+            "id": "chaos-space-marines-ability-destructor",
+            "sectionId": "chaos-space-marines-ability-destructor",
+            "title": "Destructor",
+            "text": "Each time a ranged attack made by this model targets an enemy INFANTRY unit, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-chaos-predator-destructor"
           },
           {
-            "id": "unit-chaos-predator-destructor-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-chaos-predator-destructor"
           },
           {
-            "id": "unit-chaos-predator-destructor-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-chaos-predator-destructor"
           },
           {
-            "id": "unit-chaos-predator-destructor-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-predator-destructor"
           }
         ],
         "models": [
@@ -12352,16 +12811,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-spawn-ability-mind-breaking-mutations-aura",
-            "title": "Mind-breaking Mutations (Aura)"
+            "id": "chaos-space-marines-ability-mind-breaking-mutations-aura",
+            "sectionId": "chaos-space-marines-ability-mind-breaking-mutations-aura",
+            "title": "Mind-breaking Mutations (Aura)",
+            "text": "While an enemy unit (excluding VEHICLES) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that enemy unit.",
+            "sourceUnitId": "unit-chaos-spawn"
           },
           {
-            "id": "unit-chaos-spawn-ability-feel-no-pain-5-2",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-chaos-spawn"
           },
           {
-            "id": "unit-chaos-spawn-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-spawn"
           }
         ],
         "models": [
@@ -12448,20 +12916,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-vindicator-ability-siege-shield",
-            "title": "Siege Shield"
+            "id": "chaos-space-marines-ability-siege-shield",
+            "sectionId": "chaos-space-marines-ability-siege-shield",
+            "title": "Siege Shield",
+            "text": "When making ranged attacks with its demolisher cannon, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.",
+            "sourceUnitId": "unit-chaos-vindicator"
           },
           {
-            "id": "unit-chaos-vindicator-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-chaos-vindicator"
           },
           {
-            "id": "unit-chaos-vindicator-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-chaos-vindicator"
           },
           {
-            "id": "unit-chaos-vindicator-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-chaos-vindicator"
           }
         ],
         "models": [
@@ -12656,24 +13136,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-defiler-ability-scuttling-walker",
-            "title": "Scuttling Walker"
+            "id": "chaos-space-marines-ability-scuttling-walker",
+            "sectionId": "chaos-space-marines-ability-scuttling-walker",
+            "title": "Scuttling Walker",
+            "text": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding Titanic models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+            "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "unit-defiler-ability-daemonforge-2",
-            "title": "Daemonforge"
+            "id": "chaos-space-marines-ability-daemonforge",
+            "sectionId": "chaos-space-marines-ability-daemonforge",
+            "title": "Daemonforge",
+            "text": "Each time this unit makes a Dark Pact, until the end of the phase, each time this model makes an attack, re-roll a Wound roll of 1.",
+            "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "unit-defiler-ability-damaged-1-6-wounds-remaining-3",
-            "title": "Damaged: 1-6 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-6-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-6-wounds-remaining",
+            "title": "Damaged: 1-6 wounds remaining",
+            "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "unit-defiler-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "unit-defiler-ability-dark-pacts-5",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-defiler"
           }
         ],
         "models": [
@@ -13114,20 +13609,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-forgefiend-ability-daemonic-ordnance",
-            "title": "Daemonic Ordnance"
+            "id": "chaos-space-marines-ability-daemonic-ordnance",
+            "sectionId": "chaos-space-marines-ability-daemonic-ordnance",
+            "title": "Daemonic Ordnance",
+            "text": "Each time this model is selected to shoot, it can use this ability. If it does, until the end of the phase, its ranged weapons have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities.",
+            "sourceUnitId": "unit-forgefiend"
           },
           {
-            "id": "unit-forgefiend-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-forgefiend"
           },
           {
-            "id": "unit-forgefiend-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-forgefiend"
           },
           {
-            "id": "unit-forgefiend-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-forgefiend"
           }
         ],
         "models": [
@@ -13294,20 +13801,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-helbrute-ability-dark-ascension-aura",
-            "title": "Dark Ascension (Aura)"
+            "id": "chaos-space-marines-ability-dark-ascension-aura",
+            "sectionId": "chaos-space-marines-ability-dark-ascension-aura",
+            "title": "Dark Ascension (Aura)",
+            "text": "While a friendly HERETIC ASTARTES unit is within 6\" of this model, each time that unit makes a Dark Pact, until the end of the phase, its weapons gain both abilities conferred by that pact (instead of only one).",
+            "sourceUnitId": "unit-helbrute"
           },
           {
-            "id": "unit-helbrute-ability-devoted-to-destruction-2",
-            "title": "Devoted to Destruction"
+            "id": "chaos-space-marines-ability-devoted-to-destruction",
+            "sectionId": "chaos-space-marines-ability-devoted-to-destruction",
+            "title": "Devoted to Destruction",
+            "text": "If this model is equipped with 2 melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristics of those 2 weapons.",
+            "sourceUnitId": "unit-helbrute"
           },
           {
-            "id": "unit-helbrute-ability-dark-pacts-3",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-helbrute"
           },
           {
-            "id": "unit-helbrute-ability-deadly-demise-1-4",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-helbrute"
           }
         ],
         "models": [
@@ -13747,24 +14266,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-heldrake-ability-airborne-predator",
-            "title": "Airborne Predator"
+            "id": "chaos-space-marines-ability-airborne-predator",
+            "sectionId": "chaos-space-marines-ability-airborne-predator",
+            "title": "Airborne Predator",
+            "text": "Each time this model makes an attack that targets a unit that can FLY, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-heldrake"
           },
           {
-            "id": "unit-heldrake-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-heldrake"
           },
           {
-            "id": "unit-heldrake-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-heldrake"
           },
           {
-            "id": "unit-heldrake-ability-hover-4",
-            "title": "Hover"
+            "id": "core-hover",
+            "sectionId": "core-hover",
+            "title": "Hover",
+            "text": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
+            "sourceUnitId": "unit-heldrake"
           },
           {
-            "id": "unit-heldrake-ability-dark-pacts-5",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-heldrake"
           }
         ],
         "models": [
@@ -13908,20 +14442,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-khorne-lord-of-skulls-ability-plough-through-the-enemy",
-            "title": "Plough Through the Enemy"
+            "id": "chaos-space-marines-ability-plough-through-the-enemy",
+            "sectionId": "chaos-space-marines-ability-plough-through-the-enemy",
+            "title": "Plough Through the Enemy",
+            "text": "In the Fight phase, after this model has finished making its attacks, if this model destroyed one or more enemy units this phase, each enemy unit within 6\" of this model must take a Battle-shock test.",
+            "sourceUnitId": "unit-khorne-lord-of-skulls"
           },
           {
-            "id": "unit-khorne-lord-of-skulls-ability-damaged-1-8-wounds-remaining-2",
-            "title": "Damaged: 1-8 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-8-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-8-wounds-remaining",
+            "title": "Damaged: 1-8 wounds remaining",
+            "text": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-khorne-lord-of-skulls"
           },
           {
-            "id": "unit-khorne-lord-of-skulls-ability-deadly-demise-d6-2-3",
-            "title": "Deadly Demise D6+2"
+            "id": "chaos-space-marines-ability-deadly-demise-d6-2",
+            "sectionId": "chaos-space-marines-ability-deadly-demise-d6-2",
+            "title": "Deadly Demise D6+2",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-khorne-lord-of-skulls"
           },
           {
-            "id": "unit-khorne-lord-of-skulls-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-khorne-lord-of-skulls"
           }
         ],
         "models": [
@@ -14199,20 +14745,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-maulerfiend-ability-siege-crawler",
-            "title": "Siege Crawler"
+            "id": "chaos-space-marines-ability-siege-crawler",
+            "sectionId": "chaos-space-marines-ability-siege-crawler",
+            "title": "Siege Crawler",
+            "text": "You can ignore any or all modifiers to this model's Move characteristic and to Advance and Charge rolls made for it.",
+            "sourceUnitId": "unit-maulerfiend"
           },
           {
-            "id": "unit-maulerfiend-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 wounds remaining"
+            "id": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 wounds remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-maulerfiend"
           },
           {
-            "id": "unit-maulerfiend-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-maulerfiend"
           },
           {
-            "id": "unit-maulerfiend-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-maulerfiend"
           }
         ],
         "models": [
@@ -14352,24 +14910,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-noctilith-crown-ability-malevolent-locus-aura",
-            "title": "Malevolent Locus (Aura)"
+            "id": "chaos-space-marines-ability-malevolent-locus-aura",
+            "sectionId": "chaos-space-marines-ability-malevolent-locus-aura",
+            "title": "Malevolent Locus (Aura)",
+            "text": "While a friendly HERETIC ASTARTES unit is within 9\" of this Fortification, improve that unit's Leadership characteristic by 1.",
+            "sourceUnitId": "unit-noctilith-crown"
           },
           {
-            "id": "unit-noctilith-crown-ability-malign-cover-2",
-            "title": "Malign Cover"
+            "id": "chaos-space-marines-ability-malign-cover",
+            "sectionId": "chaos-space-marines-ability-malign-cover",
+            "title": "Malign Cover",
+            "text": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-noctilith-crown"
           },
           {
-            "id": "unit-noctilith-crown-ability-fortification-3",
-            "title": "Fortification"
+            "id": "chaos-space-marines-ability-fortification",
+            "sectionId": "chaos-space-marines-ability-fortification",
+            "title": "Fortification",
+            "text": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army:\n- That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.\n- Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+            "sourceUnitId": "unit-noctilith-crown"
           },
           {
-            "id": "unit-noctilith-crown-ability-dark-pacts-4",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-noctilith-crown"
           },
           {
-            "id": "unit-noctilith-crown-ability-deadly-demise-d6-5",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-noctilith-crown"
           }
         ],
         "models": [
@@ -14456,16 +15029,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-venomcrawler-ability-soul-eater",
-            "title": "Soul Eater"
+            "id": "chaos-space-marines-ability-soul-eater",
+            "sectionId": "chaos-space-marines-ability-soul-eater",
+            "title": "Soul Eater",
+            "text": "At the end of the Fight phase, if one or more attacks made by this model that phase destroyed one or more enemy units, until the end of the battle, add 1 to the Attacks characteristic of this model’s weapons.",
+            "sourceUnitId": "unit-venomcrawler"
           },
           {
-            "id": "unit-venomcrawler-ability-dark-pacts-2",
-            "title": "Dark Pacts"
+            "id": "chaos-space-marines-ability-dark-pacts",
+            "sectionId": "chaos-space-marines-ability-dark-pacts",
+            "title": "Dark Pacts",
+            "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-venomcrawler"
           },
           {
-            "id": "unit-venomcrawler-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-venomcrawler"
           }
         ],
         "models": [

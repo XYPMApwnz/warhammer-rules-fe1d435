@@ -49,16 +49,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-daemonettes-ability-horrifying-beauty",
-            "title": "Horrifying Beauty"
+            "id": "emperors-children-ability-horrifying-beauty",
+            "sectionId": "emperors-children-ability-horrifying-beauty",
+            "title": "Horrifying Beauty",
+            "text": "At the start of the Fight phase, each enemy unit in Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength.",
+            "sourceUnitId": "unit-daemonettes"
           },
           {
-            "id": "unit-daemonettes-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-daemonettes"
           },
           {
-            "id": "unit-daemonettes-ability-fights-first-3",
-            "title": "Fights First"
+            "id": "core-fights-first",
+            "sectionId": "core-fights-first",
+            "title": "Fights First",
+            "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+            "sourceUnitId": "unit-daemonettes"
           }
         ],
         "models": [
@@ -207,16 +216,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-infractors-ability-excessive-assault",
-            "title": "Excessive Assault"
+            "id": "emperors-children-ability-excessive-assault",
+            "sectionId": "emperors-children-ability-excessive-assault",
+            "title": "Excessive Assault",
+            "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.",
+            "sourceUnitId": "unit-infractors"
           },
           {
-            "id": "unit-infractors-ability-thrill-seekers-2",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-infractors"
           },
           {
-            "id": "unit-infractors-ability-scouts-6-3",
-            "title": "Scouts 6\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 6\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-infractors"
           }
         ],
         "models": [
@@ -511,16 +529,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tormentors-ability-objective-defiled",
-            "title": "Objective Defiled"
+            "id": "emperors-children-ability-objective-defiled",
+            "sectionId": "emperors-children-ability-objective-defiled",
+            "title": "Objective Defiled",
+            "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
+            "sourceUnitId": "unit-tormentors"
           },
           {
-            "id": "unit-tormentors-ability-infiltrators-2",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-tormentors"
           },
           {
-            "id": "unit-tormentors-ability-thrill-seekers-3",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-tormentors"
           }
         ],
         "models": [
@@ -933,24 +960,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-daemon-prince-of-slaanesh-ability-lord-of-excess",
-            "title": "Lord of Excess"
+            "id": "emperors-children-ability-lord-of-excess",
+            "sectionId": "emperors-children-ability-lord-of-excess",
+            "title": "Lord of Excess",
+            "text": "While this model is within 3\" of one or more friendly Slaanesh Infantry, this model has the Lone Operative ability.",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh"
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-ability-excessive-vigour-aura-2",
-            "title": "Excessive Vigour (Aura)"
+            "id": "emperors-children-ability-excessive-vigour-aura",
+            "sectionId": "emperors-children-ability-excessive-vigour-aura",
+            "title": "Excessive Vigour (Aura)",
+            "text": "While a friendly Slaanesh unit is within 6\" of this model, if that unit made a Charge move this turn, improve the Armour Penetration characteristic of melee weapons equipped by that unit by 1.",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh"
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-ability-ecstatic-death-3",
-            "title": "Ecstatic Death"
+            "id": "emperors-children-ability-ecstatic-death",
+            "sectionId": "emperors-children-ability-ecstatic-death",
+            "title": "Ecstatic Death",
+            "text": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh"
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh"
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-ability-thrill-seekers-5",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh"
           }
         ],
         "models": [
@@ -1121,24 +1163,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-daemonic-destruction",
-            "title": "Daemonic Destruction"
+            "id": "emperors-children-ability-daemonic-destruction",
+            "sectionId": "emperors-children-ability-daemonic-destruction",
+            "title": "Daemonic Destruction",
+            "text": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh-with-wings"
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-stimulated-by-pain-2",
-            "title": "Stimulated by Pain"
+            "id": "emperors-children-ability-stimulated-by-pain",
+            "sectionId": "emperors-children-ability-stimulated-by-pain",
+            "title": "Stimulated by Pain",
+            "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh-with-wings"
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh-with-wings"
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-thrill-seekers-4",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh-with-wings"
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-deep-strike-5",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-daemon-prince-of-slaanesh-with-wings"
           }
         ],
         "models": [
@@ -1309,24 +1366,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-keeper-of-secrets-ability-daemon-lord-of-slaanesh-aura",
-            "title": "Daemon Lord of Slaanesh (Aura)"
+            "id": "emperors-children-ability-daemon-lord-of-slaanesh-aura",
+            "sectionId": "emperors-children-ability-daemon-lord-of-slaanesh-aura",
+            "title": "Daemon Lord of Slaanesh (Aura)",
+            "text": "While a friendly Legions of Excess unit is within 6\" of this model, improve the Armour Penetration of melee weapons in that unit by 1.",
+            "sourceUnitId": "unit-keeper-of-secrets"
           },
           {
-            "id": "unit-keeper-of-secrets-ability-mesmerising-form-2",
-            "title": "Mesmerising Form"
+            "id": "emperors-children-ability-mesmerising-form",
+            "sectionId": "emperors-children-ability-mesmerising-form",
+            "title": "Mesmerising Form",
+            "text": "Each time an attack targets this model, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-keeper-of-secrets"
           },
           {
-            "id": "unit-keeper-of-secrets-ability-damaged-1-6-wounds-remaining-3",
-            "title": "Damaged: 1-6 wounds remaining"
+            "id": "emperors-children-ability-damaged-1-6-wounds-remaining",
+            "sectionId": "emperors-children-ability-damaged-1-6-wounds-remaining",
+            "title": "Damaged: 1-6 wounds remaining",
+            "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-keeper-of-secrets"
           },
           {
-            "id": "unit-keeper-of-secrets-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-keeper-of-secrets"
           },
           {
-            "id": "unit-keeper-of-secrets-ability-deep-strike-5",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-keeper-of-secrets"
           }
         ],
         "models": [
@@ -1614,28 +1686,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lord-exultant-ability-perfectionists",
-            "title": "Perfectionists"
+            "id": "emperors-children-ability-perfectionists",
+            "sectionId": "emperors-children-ability-perfectionists",
+            "title": "Perfectionists",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "sourceUnitId": "unit-lord-exultant"
           },
           {
-            "id": "unit-lord-exultant-ability-euphoric-strikes-2",
-            "title": "Euphoric Strikes"
+            "id": "emperors-children-ability-euphoric-strikes",
+            "sectionId": "emperors-children-ability-euphoric-strikes",
+            "title": "Euphoric Strikes",
+            "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.",
+            "sourceUnitId": "unit-lord-exultant"
           },
           {
-            "id": "unit-lord-exultant-ability-lord-of-the-host-3",
-            "title": "Lord of the Host"
+            "id": "emperors-children-ability-lord-of-the-host",
+            "sectionId": "emperors-children-ability-lord-of-the-host",
+            "title": "Lord of the Host",
+            "text": "If this model is attached to an Emperor's Children Battleline unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6\" ability.",
+            "sourceUnitId": "unit-lord-exultant"
           },
           {
-            "id": "unit-lord-exultant-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-lord-exultant"
           },
           {
-            "id": "unit-lord-exultant-ability-leader-5",
-            "title": "Leader"
-          },
-          {
-            "id": "unit-lord-exultant-ability-thrill-seekers-6",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-lord-exultant"
           }
         ],
         "models": [
@@ -1977,24 +2060,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lord-kakophonist-ability-leader",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-lord-kakophonist"
           },
           {
-            "id": "unit-lord-kakophonist-ability-obsessive-annunciation-2",
-            "title": "Obsessive Annunciation"
+            "id": "emperors-children-ability-obsessive-annunciation",
+            "sectionId": "emperors-children-ability-obsessive-annunciation",
+            "title": "Obsessive Annunciation",
+            "text": "While this model is leading a unit, ranged weapons equipped by that unit have the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-lord-kakophonist"
           },
           {
-            "id": "unit-lord-kakophonist-ability-doom-siren-3",
-            "title": "Doom Siren"
+            "id": "emperors-children-ability-doom-siren",
+            "sectionId": "emperors-children-ability-doom-siren",
+            "title": "Doom Siren",
+            "text": "In your Shooting phase, after this model's unit has shot, select one enemy Infantry unit hit by one or more of those attacks and roll three D6: for each 4+, that enemy unit suffers 1 mortal wound. If an enemy suffers one or more mortal wounds as a result of this ability, it must take a Battle-shock test.",
+            "sourceUnitId": "unit-lord-kakophonist"
           },
           {
-            "id": "unit-lord-kakophonist-ability-leader-4",
-            "title": "Leader"
-          },
-          {
-            "id": "unit-lord-kakophonist-ability-thrill-seekers-5",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-lord-kakophonist"
           }
         ],
         "models": [
@@ -2162,24 +2253,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sorcerer-ability-leader",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-sorcerer"
           },
           {
-            "id": "unit-sorcerer-ability-warped-interference-psychic-2",
-            "title": "Warped Interference (Psychic)"
+            "id": "emperors-children-ability-warped-interference-psychic",
+            "sectionId": "emperors-children-ability-warped-interference-psychic",
+            "title": "Warped Interference (Psychic)",
+            "text": "While this model is leading a unit, each time a ranged attack targets that unit, models in it have the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-sorcerer"
           },
           {
-            "id": "unit-sorcerer-ability-wracking-agonies-psychic-3",
-            "title": "Wracking Agonies (Psychic)"
+            "id": "emperors-children-ability-wracking-agonies-psychic",
+            "sectionId": "emperors-children-ability-wracking-agonies-psychic",
+            "title": "Wracking Agonies (Psychic)",
+            "text": "In your Shooting phase, after this model has shot, select one INFANTRY unit hit by one or more of those attacks made with its Agonising Energies. Until the start of your next turn, that unit is wracked with agonies. While a unit is wracked with agonies, subtract 2\" from its Move characteristic and subtract 2 from charge rolls made for it.",
+            "sourceUnitId": "unit-sorcerer"
           },
           {
-            "id": "unit-sorcerer-ability-leader-4",
-            "title": "Leader"
-          },
-          {
-            "id": "unit-sorcerer-ability-thrill-seekers-5",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-sorcerer"
           }
         ],
         "models": [
@@ -2378,20 +2477,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-rhino-ability-assault-vehicle",
-            "title": "Assault Vehicle"
+            "id": "emperors-children-ability-assault-vehicle",
+            "sectionId": "emperors-children-ability-assault-vehicle",
+            "title": "Assault Vehicle",
+            "text": "Units can disembark from this Vehicle after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally.",
+            "sourceUnitId": "unit-chaos-rhino"
           },
           {
-            "id": "unit-chaos-rhino-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-chaos-rhino"
           },
           {
-            "id": "unit-chaos-rhino-ability-thrill-seekers-3",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-chaos-rhino"
           },
           {
-            "id": "unit-chaos-rhino-ability-firing-deck-2-4",
-            "title": "Firing Deck 2"
+            "id": "core-firing-deck",
+            "sectionId": "core-firing-deck",
+            "title": "Firing Deck 2",
+            "text": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: \n1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). \n2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). \n3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. \n4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+            "sourceUnitId": "unit-chaos-rhino"
           }
         ],
         "models": [
@@ -2563,36 +2674,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-fulgrim-ability-daemonic-poisons",
-            "title": "Daemonic Poisons"
+            "id": "emperors-children-ability-daemonic-poisons",
+            "sectionId": "emperors-children-ability-daemonic-poisons",
+            "title": "Daemonic Poisons",
+            "text": "In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player's Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+, that enemy unit suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-fulgrim"
           },
           {
-            "id": "unit-fulgrim-ability-daemon-prince-of-slaanesh-2",
-            "title": "Daemon Prince of Slaanesh"
+            "id": "emperors-children-ability-daemon-prince-of-slaanesh",
+            "sectionId": "emperors-children-ability-daemon-prince-of-slaanesh",
+            "title": "Daemon Prince of Slaanesh",
+            "text": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability.",
+            "sourceUnitId": "unit-fulgrim"
           },
           {
-            "id": "unit-fulgrim-ability-damaged-1-6-wounds-remaining-3",
-            "title": "Damaged: 1-6 Wounds Remaining"
+            "id": "emperors-children-ability-damaged-1-6-wounds-remaining",
+            "sectionId": "emperors-children-ability-damaged-1-6-wounds-remaining",
+            "title": "Damaged: 1-6 Wounds Remaining",
+            "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-fulgrim"
           },
           {
-            "id": "unit-fulgrim-ability-supreme-commander-4",
-            "title": "Supreme Commander"
+            "id": "emperors-children-ability-supreme-commander",
+            "sectionId": "emperors-children-ability-supreme-commander",
+            "title": "Supreme Commander",
+            "text": "If this model is in your army, it must be your Warlord.",
+            "sourceUnitId": "unit-fulgrim"
           },
           {
-            "id": "unit-fulgrim-ability-serpentine-5",
-            "title": "Serpentine"
+            "id": "emperors-children-ability-serpentine",
+            "sectionId": "emperors-children-ability-serpentine",
+            "title": "Serpentine",
+            "text": "Each time this model makes a Normal, Advance or Fall Back move, it can move over sections of terrain features that are 4\" or less in height.",
+            "sourceUnitId": "unit-fulgrim"
           },
           {
-            "id": "unit-fulgrim-ability-thrill-seekers-6",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-fulgrim"
           },
           {
-            "id": "unit-fulgrim-ability-deep-strike-7",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-fulgrim"
           },
           {
-            "id": "unit-fulgrim-ability-deadly-demise-d6-8",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-fulgrim"
           }
         ],
         "models": [
@@ -2799,32 +2934,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lucius-the-eternal-ability-leader",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-lucius-the-eternal"
           },
           {
-            "id": "unit-lucius-the-eternal-ability-duellists-hubris-2",
-            "title": "Duellist’s Hubris"
+            "id": "emperors-children-ability-duellists-hubris",
+            "sectionId": "emperors-children-ability-duellists-hubris",
+            "title": "Duellist’s Hubris",
+            "text": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability.",
+            "sourceUnitId": "unit-lucius-the-eternal"
           },
           {
-            "id": "unit-lucius-the-eternal-ability-a-challenge-worthy-of-skill-3",
-            "title": "A Challenge Worthy of Skill"
+            "id": "emperors-children-ability-a-challenge-worthy-of-skill",
+            "sectionId": "emperors-children-ability-a-challenge-worthy-of-skill",
+            "title": "A Challenge Worthy of Skill",
+            "text": "Each time this model makes an attack that targets a Character, Monster or Walker unit, you can re-roll the Hit roll and re-roll the Wound roll.",
+            "sourceUnitId": "unit-lucius-the-eternal"
           },
           {
-            "id": "unit-lucius-the-eternal-ability-leader-4",
-            "title": "Leader"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-lucius-the-eternal"
           },
           {
-            "id": "unit-lucius-the-eternal-ability-thrill-seekers-5",
-            "title": "Thrill Seekers"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-lucius-the-eternal"
           },
           {
-            "id": "unit-lucius-the-eternal-ability-feel-no-pain-5-6",
-            "title": "Feel No Pain 5+"
-          },
-          {
-            "id": "unit-lucius-the-eternal-ability-lone-operative-7",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-lucius-the-eternal"
           }
         ],
         "models": [
@@ -2940,24 +3089,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-shalaxi-helbane-ability-no-prey-can-evade",
-            "title": "No Prey Can Evade"
+            "id": "emperors-children-ability-no-prey-can-evade",
+            "sectionId": "emperors-children-ability-no-prey-can-evade",
+            "title": "No Prey Can Evade",
+            "text": "You can re-roll Advance and Charge rolls made for this model.",
+            "sourceUnitId": "unit-shalaxi-helbane"
           },
           {
-            "id": "unit-shalaxi-helbane-ability-monarch-of-the-hunt-2",
-            "title": "Monarch of the Hunt"
+            "id": "emperors-children-ability-monarch-of-the-hunt",
+            "sectionId": "emperors-children-ability-monarch-of-the-hunt",
+            "title": "Monarch of the Hunt",
+            "text": "At the start of the first battle round, select one enemy unit to be this model's quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's quarry is destroyed, select one new enemy unit to be this model's quarry.",
+            "sourceUnitId": "unit-shalaxi-helbane"
           },
           {
-            "id": "unit-shalaxi-helbane-ability-damaged-1-7-wounds-remaining-3",
-            "title": "Damaged: 1-7 wounds remaining"
+            "id": "emperors-children-ability-damaged-1-7-wounds-remaining",
+            "sectionId": "emperors-children-ability-damaged-1-7-wounds-remaining",
+            "title": "Damaged: 1-7 wounds remaining",
+            "text": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-shalaxi-helbane"
           },
           {
-            "id": "unit-shalaxi-helbane-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-shalaxi-helbane"
           },
           {
-            "id": "unit-shalaxi-helbane-ability-deep-strike-5",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-shalaxi-helbane"
           }
         ],
         "models": [
@@ -3180,16 +3344,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-terminators-ability-lethal-obsession",
-            "title": "Lethal Obsession"
+            "id": "emperors-children-ability-lethal-obsession",
+            "sectionId": "emperors-children-ability-lethal-obsession",
+            "title": "Lethal Obsession",
+            "text": "In your Shooting phase, after this unit has shot, you can use this ability. If you do, select one enemy unit hit by those ranged attacks. Until the end of the turn, when this unit declares a charge: \n- This unit can re-roll that charge roll. \n- This unit must end that charge move engaged with that enemy unit.",
+            "sourceUnitId": "unit-chaos-terminators"
           },
           {
-            "id": "unit-chaos-terminators-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-chaos-terminators"
           },
           {
-            "id": "unit-chaos-terminators-ability-thrill-seekers-3",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-chaos-terminators"
           }
         ],
         "models": [
@@ -3481,16 +3654,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-flawless-blades-ability-daemonic-patrons",
-            "title": "Daemonic Patrons"
+            "id": "emperors-children-ability-daemonic-patrons",
+            "sectionId": "emperors-children-ability-daemonic-patrons",
+            "title": "Daemonic Patrons",
+            "text": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified Wound roll of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.",
+            "sourceUnitId": "unit-flawless-blades"
           },
           {
-            "id": "unit-flawless-blades-ability-thrill-seekers-2",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-flawless-blades"
           },
           {
-            "id": "unit-flawless-blades-ability-fights-first-3",
-            "title": "Fights First"
+            "id": "core-fights-first",
+            "sectionId": "core-fights-first",
+            "title": "Fights First",
+            "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+            "sourceUnitId": "unit-flawless-blades"
           }
         ],
         "models": [
@@ -3620,12 +3802,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-noise-marines-ability-terrifying-crescendo",
-            "title": "Terrifying Crescendo"
+            "id": "emperors-children-ability-terrifying-crescendo",
+            "sectionId": "emperors-children-ability-terrifying-crescendo",
+            "title": "Terrifying Crescendo",
+            "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 1 from that test.",
+            "sourceUnitId": "unit-noise-marines"
           },
           {
-            "id": "unit-noise-marines-ability-thrill-seekers-2",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-noise-marines"
           }
         ],
         "models": [
@@ -3884,20 +4072,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-land-raider-ability-assault-ramp",
-            "title": "Assault Ramp"
+            "id": "emperors-children-ability-assault-ramp",
+            "sectionId": "emperors-children-ability-assault-ramp",
+            "title": "Assault Ramp",
+            "text": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "sourceUnitId": "unit-chaos-land-raider"
           },
           {
-            "id": "unit-chaos-land-raider-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 wounds remaining"
+            "id": "emperors-children-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "emperors-children-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 wounds remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-chaos-land-raider"
           },
           {
-            "id": "unit-chaos-land-raider-ability-deadly-demise-d6-3",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-chaos-land-raider"
           },
           {
-            "id": "unit-chaos-land-raider-ability-thrill-seekers-4",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-chaos-land-raider"
           }
         ],
         "models": [
@@ -4117,16 +4317,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaos-spawn-ability-scuttling-horrors",
-            "title": "Scuttling Horrors"
+            "id": "emperors-children-ability-scuttling-horrors",
+            "sectionId": "emperors-children-ability-scuttling-horrors",
+            "title": "Scuttling Horrors",
+            "text": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6”.",
+            "sourceUnitId": "unit-chaos-spawn"
           },
           {
-            "id": "unit-chaos-spawn-ability-feel-no-pain-5-2",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-chaos-spawn"
           },
           {
-            "id": "unit-chaos-spawn-ability-thrill-seekers-3",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-chaos-spawn"
           }
         ],
         "models": [
@@ -4213,24 +4422,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-defiler-ability-scuttling-walker",
-            "title": "Scuttling Walker"
+            "id": "emperors-children-ability-scuttling-walker",
+            "sectionId": "emperors-children-ability-scuttling-walker",
+            "title": "Scuttling Walker",
+            "text": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding Titanic models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+            "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "unit-defiler-ability-revel-in-desecration-2",
-            "title": "Revel in Desecration"
+            "id": "emperors-children-ability-revel-in-desecration",
+            "sectionId": "emperors-children-ability-revel-in-desecration",
+            "title": "Revel in Desecration",
+            "text": "Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "unit-defiler-ability-deadly-demise-d6-3",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "unit-defiler-ability-thrill-seekers-4",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "unit-defiler-ability-damaged-1-6-wounds-remaining-5",
-            "title": "Damaged: 1-6 Wounds Remaining"
+            "id": "emperors-children-ability-damaged-1-6-wounds-remaining",
+            "sectionId": "emperors-children-ability-damaged-1-6-wounds-remaining",
+            "title": "Damaged: 1-6 Wounds Remaining",
+            "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-defiler"
           }
         ],
         "models": [
@@ -4671,12 +4895,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-fiends-ability-soporific-musk",
-            "title": "Soporific Musk"
+            "id": "emperors-children-ability-soporific-musk",
+            "sectionId": "emperors-children-ability-soporific-musk",
+            "title": "Soporific Musk",
+            "text": "Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more units from your army with this ability Falls Back, models in that unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
+            "sourceUnitId": "unit-fiends"
           },
           {
-            "id": "unit-fiends-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-fiends"
           }
         ],
         "models": [
@@ -4770,20 +5000,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-heldrake-ability-airborne-predator",
-            "title": "Airborne Predator"
+            "id": "emperors-children-ability-airborne-predator",
+            "sectionId": "emperors-children-ability-airborne-predator",
+            "title": "Airborne Predator",
+            "text": "Each time this model ends a Normal move, you can select one enemy unit that it moved over during that move and roll two D6, adding 1 to each result if that enemy unit can FLY: for each 4+, that enemy unit suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-heldrake"
           },
           {
-            "id": "unit-heldrake-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-heldrake"
           },
           {
-            "id": "unit-heldrake-ability-hover-3",
-            "title": "Hover"
+            "id": "core-hover",
+            "sectionId": "core-hover",
+            "title": "Hover",
+            "text": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
+            "sourceUnitId": "unit-heldrake"
           },
           {
-            "id": "unit-heldrake-ability-thrill-seekers-4",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-heldrake"
           }
         ],
         "models": [
@@ -4924,16 +5166,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-maulerfiend-ability-glutton-for-punishment",
-            "title": "Glutton for Punishment"
+            "id": "emperors-children-ability-glutton-for-punishment",
+            "sectionId": "emperors-children-ability-glutton-for-punishment",
+            "title": "Glutton for Punishment",
+            "text": "Each time this model makes an attack, if it is below its Starting Strength, add 1 to the Hit roll. If this model is also Below Half-Strength, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-maulerfiend"
           },
           {
-            "id": "unit-maulerfiend-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-maulerfiend"
           },
           {
-            "id": "unit-maulerfiend-ability-thrill-seekers-3",
-            "title": "Thrill Seekers"
+            "id": "emperors-children-ability-thrill-seekers",
+            "sectionId": "emperors-children-ability-thrill-seekers",
+            "title": "Thrill Seekers",
+            "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase.",
+            "sourceUnitId": "unit-maulerfiend"
           }
         ],
         "models": [
@@ -5074,16 +5325,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-seekers-ability-unholy-speed",
-            "title": "Unholy Speed"
+            "id": "emperors-children-ability-unholy-speed",
+            "sectionId": "emperors-children-ability-unholy-speed",
+            "title": "Unholy Speed",
+            "text": "You can re-roll Advance and Charge rolls made for this unit.",
+            "sourceUnitId": "unit-seekers"
           },
           {
-            "id": "unit-seekers-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-seekers"
           },
           {
-            "id": "unit-seekers-ability-scouts-9-3",
-            "title": "Scouts 9\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 9\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-seekers"
           }
         ],
         "models": [

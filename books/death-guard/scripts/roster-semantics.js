@@ -27,7 +27,7 @@
   const hasWargear = (unit, label) => unitLoadout(unit).flatMap(splitLabels).some((item) => normalize(item).replace(/^\d+\s*x?\s+/, '') === normalize(label));
 
   const DG_RULE = {
-    vector:'ability-vector-of-disease-2498580', silent:'ability-silent-bodyguard-03a0a1b', destroyer:'ability-the-destroyer-hive-70f0cc1',
+    vector:'ability-vector-of-disease-2498580', silent:'ability-silent-bodyguard-03a0a1b', gift:'ability-gift-of-contagion-psychic-4fea300', destroyer:'ability-the-destroyer-hive-70f0cc1',
     foul:'ability-foul-infusion-490467e', icon:'ability-unclean-icon-5dadb9e', shroud:'ability-shroud-of-disease-90475da',
     virulent:'ability-virulent-aura-c28aa51', vitality:'ability-sickening-vitality-89bb5ff', malicious:'ability-malicious-calculations-8505f03',
     froth:'ability-froth-spattered-frenzy-9a139e5', dronesInstrument:'plague-drones-ability-instrument-of-chaos',
@@ -94,6 +94,7 @@
       const source = (kind, id, ownerInstanceId = null, rosterFact = kind) => ({source:{kind,id,ownerInstanceId},provenance:{rosterFact}});
       const add = (id, component, targetId, operation, detail = {}, origin = {}) => output.push({id,component,targetId,operation,...detail,...origin});
       const ability = (id, title, summary, origin) => add(id,'ability',id,'grant',{title,summary},origin);
+      const canonicalAbility = (id, origin) => add(`canonical-${id}`,'ability',id,'reference',{canonicalAbilityId:id,state:'reference'},origin);
       const stat = (id, targetId, operation, value, origin) => add(id,'stat',targetId,operation,operation==='add'?{delta:value}:{to:value},origin);
       const weapon = (id, scope, operation, detail, origin) => add(id,'weapon',scope,operation,detail,origin);
       const leader = id => bodyguard ? group.find(member => member.id !== bodyguard.id && canonicalUnitId(member) === id) : null;
@@ -112,6 +113,7 @@
       const virulence=leader('unit-lord-of-virulence');if(virulence&&cardId!=='unit-lord-of-virulence')ability('virulent-aura','Virulent Aura','Models in this Attached Unit can re-roll Wound rolls for ranged attacks.',attachmentSource(DG_RULE.virulent,virulence));
       const blightbringer=leader('unit-noxious-blightbringer');if(blightbringer){stat('sickening-vitality-move','M','add',1,attachmentSource(DG_RULE.vitality,blightbringer));if(cardId!=='unit-noxious-blightbringer')ability('sickening-vitality','Sickening Vitality','Models in this Attached Unit can re-roll Advance and Charge rolls.',attachmentSource(DG_RULE.vitality,blightbringer));}
       const tallyman=leader('unit-tallyman');if(tallyman&&cardId!=='unit-tallyman')ability('malicious-calculations','Malicious Calculations','Models in this Attached Unit can ignore modifiers to BS, WS and Hit rolls.',attachmentSource(DG_RULE.malicious,tallyman));
+      const plaguecaster=leader('unit-malignant-plaguecaster');if(plaguecaster&&cardId!=='unit-malignant-plaguecaster')canonicalAbility(DG_RULE.gift,attachmentSource(DG_RULE.gift,plaguecaster));
       if(cardId!=='unit-deathshroud-terminators'&&canonicalUnitId(bodyguard)==='unit-deathshroud-terminators')add('silent-bodyguard','ability','core-feel-no-pain','grant',{title:'Feel No Pain 4+',summary:'This model has Feel No Pain 4+.',ruleTitle:'Silent Bodyguard'},attachmentSource(DG_RULE.silent,bodyguard));
       if(cardId==='unit-helbrute'&&unitLoadout(unit).flatMap(splitLabels).filter(label=>normalize(label)!=='close combat weapon').length===2)weapon('froth-spattered-frenzy','selected-melee','add-stat',{stat:'A',delta:2,profileIds:gameUnit?.selection?.loadout?.selectedProfileIds||[]},source('datasheet',DG_RULE.froth,unit.id,'selected-wargear'));
       if(['unit-plague-drones','unit-plaguebearers'].includes(cardId)&&hasWargear(unit,'Daemonic Icon'))stat('daemonic-icon','Ld','set','6+',source('selected-wargear','daemonic-icon',unit.id,'selected-wargear'));

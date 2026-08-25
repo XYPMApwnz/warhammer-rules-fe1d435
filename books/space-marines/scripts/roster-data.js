@@ -156,12 +156,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-assault-intercessor-squad-ability-shock-assault",
-            "title": "Shock Assault"
+            "id": "space-marines-ability-shock-assault",
+            "sectionId": "space-marines-ability-shock-assault",
+            "title": "Shock Assault",
+            "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.",
+            "sourceUnitId": "unit-assault-intercessor-squad"
           },
           {
-            "id": "unit-assault-intercessor-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-assault-intercessor-squad"
           }
         ],
         "models": [
@@ -510,12 +516,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-heavy-intercessor-squad-ability-unyielding-in-the-face-of-the-foe",
-            "title": "Unyielding in the Face of the Foe"
+            "id": "space-marines-ability-unyielding-in-the-face-of-the-foe",
+            "sectionId": "space-marines-ability-unyielding-in-the-face-of-the-foe",
+            "title": "Unyielding in the Face of the Foe",
+            "text": "While this unit is within range of an objective marker you control, each time an attack with a Damage characteristic of 1 is allocated to a model in \nthis unit, add 1 to any armour saving throw made against that attack.",
+            "sourceUnitId": "unit-heavy-intercessor-squad"
           },
           {
-            "id": "unit-heavy-intercessor-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-heavy-intercessor-squad"
           }
         ],
         "models": [
@@ -791,16 +803,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-intercessor-squad-ability-objective-secured",
-            "title": "Objective Secured"
+            "id": "space-marines-ability-objective-secured",
+            "sectionId": "space-marines-ability-objective-secured",
+            "title": "Objective Secured",
+            "text": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+            "sourceUnitId": "unit-intercessor-squad"
           },
           {
-            "id": "unit-intercessor-squad-ability-hail-of-bolts-2",
-            "title": "Hail of Bolts"
+            "id": "space-marines-ability-hail-of-bolts",
+            "sectionId": "space-marines-ability-hail-of-bolts",
+            "title": "Hail of Bolts",
+            "text": "In your Shooting phase, when this unit is selected to shoot, select up to one visible enemy unit. While making those attacks, this unit’s Bolt Rifle attacks that targeted that enemy unit have +2 A",
+            "sourceUnitId": "unit-intercessor-squad"
           },
           {
-            "id": "unit-intercessor-squad-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-intercessor-squad"
           }
         ],
         "models": [
@@ -1322,12 +1343,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tactical-squad-ability-combat-squads",
-            "title": "Combat Squads"
+            "id": "space-marines-ability-combat-squads",
+            "sectionId": "space-marines-ability-combat-squads",
+            "title": "Combat Squads",
+            "text": "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models",
+            "sourceUnitId": "unit-tactical-squad"
           },
           {
-            "id": "unit-tactical-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-tactical-squad"
           }
         ],
         "models": [
@@ -2260,24 +2287,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-ancient-ability-unbreakable-duty",
-            "title": "Unbreakable Duty"
+            "id": "space-marines-ability-unbreakable-duty",
+            "sectionId": "space-marines-ability-unbreakable-duty",
+            "title": "Unbreakable Duty",
+            "text": "While this model is within range of an objective marker and/or within 6\" of the centre of the battlefield, this model has the Feel No Pain 4+ ability.",
+            "sourceUnitId": "unit-ancient"
           },
           {
-            "id": "unit-ancient-ability-support-2",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-ancient"
           },
           {
-            "id": "unit-ancient-ability-astartes-banner-3",
-            "title": "Astartes Banner"
+            "id": "space-marines-ability-astartes-banner",
+            "sectionId": "space-marines-ability-astartes-banner",
+            "title": "Astartes Banner",
+            "text": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
+            "sourceUnitId": "unit-ancient"
           },
           {
-            "id": "unit-ancient-ability-support-4",
-            "title": "Support"
-          },
-          {
-            "id": "unit-ancient-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-ancient"
           }
         ],
         "models": [
@@ -2454,28 +2489,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-ancient-in-terminator-armor-ability-keep-the-banner-high",
-            "title": "Keep the Banner High"
+            "id": "space-marines-ability-keep-the-banner-high",
+            "sectionId": "space-marines-ability-keep-the-banner-high",
+            "title": "Keep the Banner High",
+            "text": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength",
+            "sourceUnitId": "unit-ancient-in-terminator-armor"
           },
           {
-            "id": "unit-ancient-in-terminator-armor-ability-support-2",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-ancient-in-terminator-armor"
           },
           {
-            "id": "unit-ancient-in-terminator-armor-ability-astartes-banner-3",
-            "title": "Astartes Banner"
+            "id": "space-marines-ability-astartes-banner",
+            "sectionId": "space-marines-ability-astartes-banner",
+            "title": "Astartes Banner",
+            "text": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
+            "sourceUnitId": "unit-ancient-in-terminator-armor"
           },
           {
-            "id": "unit-ancient-in-terminator-armor-ability-support-4",
-            "title": "Support"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-ancient-in-terminator-armor"
           },
           {
-            "id": "unit-ancient-in-terminator-armor-ability-deep-strike-5",
-            "title": "Deep Strike"
-          },
-          {
-            "id": "unit-ancient-in-terminator-armor-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-ancient-in-terminator-armor"
           }
         ],
         "models": [
@@ -2801,24 +2847,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-apothecary-ability-narthecium",
-            "title": "Narthecium"
+            "id": "space-marines-ability-narthecium",
+            "sectionId": "space-marines-ability-narthecium",
+            "title": "Narthecium",
+            "text": "While this model is leading a unit, in your Command phase, you can return 1 destroyed model (excluding Character models) to that unit.",
+            "sourceUnitId": "unit-apothecary"
           },
           {
-            "id": "unit-apothecary-ability-gene-seed-recovery-2",
-            "title": "Gene Seed Recovery"
+            "id": "space-marines-ability-gene-seed-recovery",
+            "sectionId": "space-marines-ability-gene-seed-recovery",
+            "title": "Gene Seed Recovery",
+            "text": "When this model’s Bodyguard unit is destroyed, roll one D6: on a 2+, you gain 1CP.",
+            "sourceUnitId": "unit-apothecary"
           },
           {
-            "id": "unit-apothecary-ability-support-3",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-apothecary"
           },
           {
-            "id": "unit-apothecary-ability-support-4",
-            "title": "Support"
-          },
-          {
-            "id": "unit-apothecary-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-apothecary"
           }
         ],
         "models": [
@@ -2985,24 +3039,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-apothecary-biologis-ability-surgical-precision",
-            "title": "Surgical Precision"
+            "id": "space-marines-ability-surgical-precision",
+            "sectionId": "space-marines-ability-surgical-precision",
+            "title": "Surgical Precision",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "sourceUnitId": "unit-apothecary-biologis"
           },
           {
-            "id": "unit-apothecary-biologis-ability-vivispectrum-2",
-            "title": "Vivispectrum"
+            "id": "space-marines-ability-vivispectrum",
+            "sectionId": "space-marines-ability-vivispectrum",
+            "title": "Vivispectrum",
+            "text": "If this model’s unit destroys an enemy unit as the result of a melee attack, until the end of the battle, this model has an Objective Control characteristic of 9.",
+            "sourceUnitId": "unit-apothecary-biologis"
           },
           {
-            "id": "unit-apothecary-biologis-ability-support-3",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-apothecary-biologis"
           },
           {
-            "id": "unit-apothecary-biologis-ability-support-4",
-            "title": "Support"
-          },
-          {
-            "id": "unit-apothecary-biologis-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-apothecary-biologis"
           }
         ],
         "models": [
@@ -3117,24 +3179,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-bladeguard-ancient-ability-deeds-of-heroism",
-            "title": "Deeds of Heroism"
+            "id": "space-marines-ability-deeds-of-heroism",
+            "sectionId": "space-marines-ability-deeds-of-heroism",
+            "title": "Deeds of Heroism",
+            "text": "Once per battle, when this model is selected to fight, it can use this ability. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in this model’s unit",
+            "sourceUnitId": "unit-bladeguard-ancient"
           },
           {
-            "id": "unit-bladeguard-ancient-ability-support-2",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-bladeguard-ancient"
           },
           {
-            "id": "unit-bladeguard-ancient-ability-astartes-banner-3",
-            "title": "Astartes Banner"
+            "id": "space-marines-ability-astartes-banner",
+            "sectionId": "space-marines-ability-astartes-banner",
+            "title": "Astartes Banner",
+            "text": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
+            "sourceUnitId": "unit-bladeguard-ancient"
           },
           {
-            "id": "unit-bladeguard-ancient-ability-support-4",
-            "title": "Support"
-          },
-          {
-            "id": "unit-bladeguard-ancient-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-bladeguard-ancient"
           }
         ],
         "models": [
@@ -3322,20 +3392,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-captain-ability-finest-hour",
-            "title": "Finest Hour"
+            "id": "space-marines-ability-finest-hour",
+            "sectionId": "space-marines-ability-finest-hour",
+            "title": "Finest Hour",
+            "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.",
+            "sourceUnitId": "unit-captain"
           },
           {
-            "id": "unit-captain-ability-rites-of-battle-2",
-            "title": "Rites of Battle"
+            "id": "space-marines-ability-rites-of-battle",
+            "sectionId": "space-marines-ability-rites-of-battle",
+            "title": "Rites of Battle",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-captain"
           },
           {
-            "id": "unit-captain-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VICTRIX HONOUR GUARD.",
+            "sourceUnitId": "unit-captain"
           },
           {
-            "id": "unit-captain-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-captain"
           }
         ],
         "models": [
@@ -3712,20 +3794,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-captain-in-gravis-armour-ability-refuse-to-yield",
-            "title": "Refuse to Yield"
+            "id": "space-marines-ability-refuse-to-yield",
+            "sectionId": "space-marines-ability-refuse-to-yield",
+            "title": "Refuse to Yield",
+            "text": "Each time an attack is allocated to this model, halve the Damage characteristic of that attack.",
+            "sourceUnitId": "unit-captain-in-gravis-armour"
           },
           {
-            "id": "unit-captain-in-gravis-armour-ability-rites-of-battle-2",
-            "title": "Rites of Battle"
+            "id": "space-marines-ability-rites-of-battle",
+            "sectionId": "space-marines-ability-rites-of-battle",
+            "title": "Rites of Battle",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-captain-in-gravis-armour"
           },
           {
-            "id": "unit-captain-in-gravis-armour-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD, INDOMITOR KILL TEAM.",
+            "sourceUnitId": "unit-captain-in-gravis-armour"
           },
           {
-            "id": "unit-captain-in-gravis-armour-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-captain-in-gravis-armour"
           }
         ],
         "models": [
@@ -4016,28 +4110,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-captain-in-phobos-armour-ability-master-of-deceit",
-            "title": "Master of Deceit"
+            "id": "space-marines-ability-master-of-deceit",
+            "sectionId": "space-marines-ability-master-of-deceit",
+            "title": "Master of Deceit",
+            "text": "After both players have deployed their armies, if your army includes one or more models with this ability, you can select up to three friendly ADEPTUS ASTARTES INFANTRY units and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "sourceUnitId": "unit-captain-in-phobos-armour"
           },
           {
-            "id": "unit-captain-in-phobos-armour-ability-rites-of-battle-2",
-            "title": "Rites of Battle"
+            "id": "space-marines-ability-rites-of-battle",
+            "sectionId": "space-marines-ability-rites-of-battle",
+            "title": "Rites of Battle",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-captain-in-phobos-armour"
           },
           {
-            "id": "unit-captain-in-phobos-armour-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SCOUT SQUAD, SPECTRUS KILL TEAM.",
+            "sourceUnitId": "unit-captain-in-phobos-armour"
           },
           {
-            "id": "unit-captain-in-phobos-armour-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-captain-in-phobos-armour"
           },
           {
-            "id": "unit-captain-in-phobos-armour-ability-stealth-5",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-captain-in-phobos-armour"
           },
           {
-            "id": "unit-captain-in-phobos-armour-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-captain-in-phobos-armour"
           }
         ],
         "models": [
@@ -4195,28 +4307,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-captain-in-terminator-armour-ability-unstoppable-valour",
-            "title": "Unstoppable Valour"
+            "id": "space-marines-ability-unstoppable-valour",
+            "sectionId": "space-marines-ability-unstoppable-valour",
+            "title": "Unstoppable Valour",
+            "text": "You can re-roll Charge rolls made for this model’s unit.",
+            "sourceUnitId": "unit-captain-in-terminator-armour"
           },
           {
-            "id": "unit-captain-in-terminator-armour-ability-rites-of-battle-2",
-            "title": "Rites of Battle"
+            "id": "space-marines-ability-rites-of-battle",
+            "sectionId": "space-marines-ability-rites-of-battle",
+            "title": "Rites of Battle",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-captain-in-terminator-armour"
           },
           {
-            "id": "unit-captain-in-terminator-armour-ability-invulnerable-save-3",
-            "title": "Invulnerable Save"
+            "id": "space-marines-ability-invulnerable-save",
+            "sectionId": "space-marines-ability-invulnerable-save",
+            "title": "Invulnerable Save",
+            "text": "4+",
+            "sourceUnitId": "unit-captain-in-terminator-armour"
           },
           {
-            "id": "unit-captain-in-terminator-armour-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+            "sourceUnitId": "unit-captain-in-terminator-armour"
           },
           {
-            "id": "unit-captain-in-terminator-armour-ability-deep-strike-5",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-captain-in-terminator-armour"
           },
           {
-            "id": "unit-captain-in-terminator-armour-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-captain-in-terminator-armour"
           }
         ],
         "models": [
@@ -4404,24 +4534,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-captain-with-jump-pack-ability-angels-wrath",
-            "title": "Angel's Wrath"
+            "id": "space-marines-ability-angels-wrath",
+            "sectionId": "space-marines-ability-angels-wrath",
+            "title": "Angel's Wrath",
+            "text": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, add 1 to the Strength characteristic of melee weapons equipped by models in that unit.",
+            "sourceUnitId": "unit-captain-with-jump-pack"
           },
           {
-            "id": "unit-captain-with-jump-pack-ability-rites-of-battle-2",
-            "title": "Rites of Battle"
+            "id": "space-marines-ability-rites-of-battle",
+            "sectionId": "space-marines-ability-rites-of-battle",
+            "title": "Rites of Battle",
+            "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-captain-with-jump-pack"
           },
           {
-            "id": "unit-captain-with-jump-pack-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-captain-with-jump-pack"
           },
           {
-            "id": "unit-captain-with-jump-pack-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, SANGUINARY GUARD, TALONSTRIKE KILL TEAM, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+            "sourceUnitId": "unit-captain-with-jump-pack"
           },
           {
-            "id": "unit-captain-with-jump-pack-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-captain-with-jump-pack"
           }
         ],
         "models": [
@@ -4803,20 +4948,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaplain-ability-litany-of-hate",
-            "title": "Litany of Hate"
+            "id": "space-marines-ability-litany-of-hate",
+            "sectionId": "space-marines-ability-litany-of-hate",
+            "title": "Litany of Hate",
+            "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-chaplain"
           },
           {
-            "id": "unit-chaplain-ability-spiritual-leader-2",
-            "title": "Spiritual Leader"
+            "id": "space-marines-ability-spiritual-leader",
+            "sectionId": "space-marines-ability-spiritual-leader",
+            "title": "Spiritual Leader",
+            "text": "Once per battle, at the start of any phase, you can select one friendly Adeptus Astartes unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
+            "sourceUnitId": "unit-chaplain"
           },
           {
-            "id": "unit-chaplain-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATH COMPANY MARINES, DEATH COMPANY MARINES WITH BOLT RIFLES, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+            "sourceUnitId": "unit-chaplain"
           },
           {
-            "id": "unit-chaplain-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-chaplain"
           }
         ],
         "models": [
@@ -4947,24 +5104,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaplain-in-terminator-armour-ability-recitation-of-faith",
-            "title": "Recitation of Faith"
+            "id": "space-marines-ability-recitation-of-faith",
+            "sectionId": "space-marines-ability-recitation-of-faith",
+            "title": "Recitation of Faith",
+            "text": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against mortal wounds.",
+            "sourceUnitId": "unit-chaplain-in-terminator-armour"
           },
           {
-            "id": "unit-chaplain-in-terminator-armour-ability-litany-of-hate-2",
-            "title": "Litany of Hate"
+            "id": "space-marines-ability-litany-of-hate",
+            "sectionId": "space-marines-ability-litany-of-hate",
+            "title": "Litany of Hate",
+            "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-chaplain-in-terminator-armour"
           },
           {
-            "id": "unit-chaplain-in-terminator-armour-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-chaplain-in-terminator-armour"
           },
           {
-            "id": "unit-chaplain-in-terminator-armour-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+            "sourceUnitId": "unit-chaplain-in-terminator-armour"
           },
           {
-            "id": "unit-chaplain-in-terminator-armour-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-chaplain-in-terminator-armour"
           }
         ],
         "models": [
@@ -5106,20 +5278,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaplain-on-bike-ability-catechism-of-fire",
-            "title": "Catechism of Fire"
+            "id": "space-marines-ability-catechism-of-fire",
+            "sectionId": "space-marines-ability-catechism-of-fire",
+            "title": "Catechism of Fire",
+            "text": "Each time this model’s unit is selected to shoot, you can select one enemy unit within 12\" of and visible to this model. Until the end of the phase, ranged\nweapons equipped by models in this model’s unit have the [DEVASTATING WOUNDS] ability when targeting that enemy unit.",
+            "sourceUnitId": "unit-chaplain-on-bike"
           },
           {
-            "id": "unit-chaplain-on-bike-ability-litany-of-hate-2",
-            "title": "Litany of Hate"
+            "id": "space-marines-ability-litany-of-hate",
+            "sectionId": "space-marines-ability-litany-of-hate",
+            "title": "Litany of Hate",
+            "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-chaplain-on-bike"
           },
           {
-            "id": "unit-chaplain-on-bike-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: OUTRIDER SQUAD, RAVENWING BLACK KNIGHTS.",
+            "sourceUnitId": "unit-chaplain-on-bike"
           },
           {
-            "id": "unit-chaplain-on-bike-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-chaplain-on-bike"
           }
         ],
         "models": [
@@ -5278,24 +5462,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chaplain-with-jump-pack-ability-exhortation-of-rage",
-            "title": "Exhortation of Rage"
+            "id": "space-marines-ability-exhortation-of-rage",
+            "sectionId": "space-marines-ability-exhortation-of-rage",
+            "title": "Exhortation of Rage",
+            "text": "Each time this model’s unit is selected to fight, you can select one enemy unit within Engagement Range of this model’s unit and roll one D6: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
+            "sourceUnitId": "unit-chaplain-with-jump-pack"
           },
           {
-            "id": "unit-chaplain-with-jump-pack-ability-litany-of-hate-2",
-            "title": "Litany of Hate"
+            "id": "space-marines-ability-litany-of-hate",
+            "sectionId": "space-marines-ability-litany-of-hate",
+            "title": "Litany of Hate",
+            "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-chaplain-with-jump-pack"
           },
           {
-            "id": "unit-chaplain-with-jump-pack-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-chaplain-with-jump-pack"
           },
           {
-            "id": "unit-chaplain-with-jump-pack-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, DEATH COMPANY MARINES WITH JUMP PACKS, TALONSTRIKE KILL TEAM, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+            "sourceUnitId": "unit-chaplain-with-jump-pack"
           },
           {
-            "id": "unit-chaplain-with-jump-pack-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-chaplain-with-jump-pack"
           }
         ],
         "models": [
@@ -5757,24 +5956,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-judiciar-ability-tempormortis",
-            "title": "Tempormortis"
+            "id": "space-marines-ability-tempormortis",
+            "sectionId": "space-marines-ability-tempormortis",
+            "title": "Tempormortis",
+            "text": "While this model is leading a unit, that unit has the Fights First ability.",
+            "sourceUnitId": "unit-judiciar"
           },
           {
-            "id": "unit-judiciar-ability-silent-fury-2",
-            "title": "Silent Fury"
+            "id": "space-marines-ability-silent-fury",
+            "sectionId": "space-marines-ability-silent-fury",
+            "title": "Silent Fury",
+            "text": "Each time this model destroys an enemy Character model, until the end of the battle, add 1 to the Attacks characteristic of its executioner relic blade.",
+            "sourceUnitId": "unit-judiciar"
           },
           {
-            "id": "unit-judiciar-ability-invulnerable-save-3",
-            "title": "*Invulnerable Save"
+            "id": "space-marines-ability-invulnerable-save-2",
+            "sectionId": "space-marines-ability-invulnerable-save-2",
+            "title": "*Invulnerable Save",
+            "text": "This model has a 4+ invulnerable save against melee attacks.",
+            "sourceUnitId": "unit-judiciar"
           },
           {
-            "id": "unit-judiciar-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+            "sourceUnitId": "unit-judiciar"
           },
           {
-            "id": "unit-judiciar-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-judiciar"
           }
         ],
         "models": [
@@ -5955,20 +6169,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-librarian-ability-mental-fortress-psychic",
-            "title": "Mental Fortress [Psychic]"
+            "id": "space-marines-ability-mental-fortress-psychic",
+            "sectionId": "space-marines-ability-mental-fortress-psychic",
+            "title": "Mental Fortress [Psychic]",
+            "text": "While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
+            "sourceUnitId": "unit-librarian"
           },
           {
-            "id": "unit-librarian-ability-psychic-hood-2",
-            "title": "Psychic Hood"
+            "id": "space-marines-ability-psychic-hood",
+            "sectionId": "space-marines-ability-psychic-hood",
+            "title": "Psychic Hood",
+            "text": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            "sourceUnitId": "unit-librarian"
           },
           {
-            "id": "unit-librarian-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+            "sourceUnitId": "unit-librarian"
           },
           {
-            "id": "unit-librarian-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-librarian"
           }
         ],
         "models": [
@@ -6200,24 +6426,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-librarian-in-phobos-armour-ability-shrouding-psychic",
-            "title": "Shrouding [Psychic]"
+            "id": "space-marines-ability-shrouding-psychic",
+            "sectionId": "space-marines-ability-shrouding-psychic",
+            "title": "Shrouding [Psychic]",
+            "text": "While this model is leading a unit, models in that unit have the Stealth ability and that unit cannot be targeted by ranged attacks unless the attacking\nmodel is within 12\".",
+            "sourceUnitId": "unit-librarian-in-phobos-armour"
           },
           {
-            "id": "unit-librarian-in-phobos-armour-ability-psychic-hood-2",
-            "title": "Psychic Hood"
+            "id": "space-marines-ability-psychic-hood",
+            "sectionId": "space-marines-ability-psychic-hood",
+            "title": "Psychic Hood",
+            "text": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            "sourceUnitId": "unit-librarian-in-phobos-armour"
           },
           {
-            "id": "unit-librarian-in-phobos-armour-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SPECTRUS KILL TEAM.",
+            "sourceUnitId": "unit-librarian-in-phobos-armour"
           },
           {
-            "id": "unit-librarian-in-phobos-armour-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-librarian-in-phobos-armour"
           },
           {
-            "id": "unit-librarian-in-phobos-armour-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-librarian-in-phobos-armour"
           }
         ],
         "models": [
@@ -6432,24 +6673,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-librarian-in-terminator-armour-ability-veil-of-time-psychic",
-            "title": "Veil of Time [Psychic]"
+            "id": "space-marines-ability-veil-of-time-psychic",
+            "sectionId": "space-marines-ability-veil-of-time-psychic",
+            "title": "Veil of Time [Psychic]",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-librarian-in-terminator-armour"
           },
           {
-            "id": "unit-librarian-in-terminator-armour-ability-psychic-hood-2",
-            "title": "Psychic Hood"
+            "id": "space-marines-ability-psychic-hood",
+            "sectionId": "space-marines-ability-psychic-hood",
+            "title": "Psychic Hood",
+            "text": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            "sourceUnitId": "unit-librarian-in-terminator-armour"
           },
           {
-            "id": "unit-librarian-in-terminator-armour-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+            "sourceUnitId": "unit-librarian-in-terminator-armour"
           },
           {
-            "id": "unit-librarian-in-terminator-armour-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-librarian-in-terminator-armour"
           },
           {
-            "id": "unit-librarian-in-terminator-armour-ability-deep-strike-5",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-librarian-in-terminator-armour"
           }
         ],
         "models": [
@@ -6731,24 +6987,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lieutenant-ability-support",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-lieutenant"
           },
           {
-            "id": "unit-lieutenant-ability-target-priority-2",
-            "title": "Target Priority"
+            "id": "space-marines-ability-target-priority",
+            "sectionId": "space-marines-ability-target-priority",
+            "title": "Target Priority",
+            "text": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back",
+            "sourceUnitId": "unit-lieutenant"
           },
           {
-            "id": "unit-lieutenant-ability-tactical-precision-3",
-            "title": "Tactical Precision"
+            "id": "space-marines-ability-tactical-precision",
+            "sectionId": "space-marines-ability-tactical-precision",
+            "title": "Tactical Precision",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "sourceUnitId": "unit-lieutenant"
           },
           {
-            "id": "unit-lieutenant-ability-support-4",
-            "title": "Support"
-          },
-          {
-            "id": "unit-lieutenant-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-lieutenant"
           }
         ],
         "models": [
@@ -7125,36 +7389,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lieutenant-in-phobos-armour-ability-strategic-dispersal",
-            "title": "Strategic Dispersal"
+            "id": "space-marines-ability-strategic-dispersal",
+            "sectionId": "space-marines-ability-strategic-dispersal",
+            "title": "Strategic Dispersal",
+            "text": "In your Shooting phase, after this model’s unit has shot, if it is not within Engagement Range of any enemy models, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge.’",
+            "sourceUnitId": "unit-lieutenant-in-phobos-armour"
           },
           {
-            "id": "unit-lieutenant-in-phobos-armour-ability-support-2",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "This model can be attached to the following units:\n\n■ INCURSOR SQUAD\n■ INFILTRATOR SQUAD\n■ REIVER SQUAD\n■ SPECTRUS KILL TEAM\n\nYou can attach this model to a unit it can lead units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+            "sourceUnitId": "unit-lieutenant-in-phobos-armour"
           },
           {
-            "id": "unit-lieutenant-in-phobos-armour-ability-tactical-precision-3",
-            "title": "Tactical Precision"
+            "id": "space-marines-ability-tactical-precision",
+            "sectionId": "space-marines-ability-tactical-precision",
+            "title": "Tactical Precision",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "sourceUnitId": "unit-lieutenant-in-phobos-armour"
           },
           {
-            "id": "unit-lieutenant-in-phobos-armour-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-lieutenant-in-phobos-armour"
           },
           {
-            "id": "unit-lieutenant-in-phobos-armour-ability-scouts-6-5",
-            "title": "Scouts 6\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 6\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-lieutenant-in-phobos-armour"
           },
           {
-            "id": "unit-lieutenant-in-phobos-armour-ability-deep-strike-6",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-lieutenant-in-phobos-armour"
           },
           {
-            "id": "unit-lieutenant-in-phobos-armour-ability-leader-7",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-lieutenant-in-phobos-armour"
           },
           {
-            "id": "unit-lieutenant-in-phobos-armour-ability-oath-of-moment-8",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-lieutenant-in-phobos-armour"
           }
         ],
         "models": [
@@ -7297,28 +7585,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lieutenant-in-reiver-armour-ability-deadly-terror",
-            "title": "Deadly Terror"
+            "id": "space-marines-ability-deadly-terror",
+            "sectionId": "space-marines-ability-deadly-terror",
+            "title": "Deadly Terror",
+            "text": "While this model is leading a unit, increase the range of that unit’s Terror Troops ability by 3\".",
+            "sourceUnitId": "unit-lieutenant-in-reiver-armour"
           },
           {
-            "id": "unit-lieutenant-in-reiver-armour-ability-support-2",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-lieutenant-in-reiver-armour"
           },
           {
-            "id": "unit-lieutenant-in-reiver-armour-ability-tactical-precision-3",
-            "title": "Tactical Precision"
+            "id": "space-marines-ability-tactical-precision",
+            "sectionId": "space-marines-ability-tactical-precision",
+            "title": "Tactical Precision",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "sourceUnitId": "unit-lieutenant-in-reiver-armour"
           },
           {
-            "id": "unit-lieutenant-in-reiver-armour-ability-scouts-6-4",
-            "title": "Scouts 6\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 6\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-lieutenant-in-reiver-armour"
           },
           {
-            "id": "unit-lieutenant-in-reiver-armour-ability-support-5",
-            "title": "Support"
-          },
-          {
-            "id": "unit-lieutenant-in-reiver-armour-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-lieutenant-in-reiver-armour"
           }
         ],
         "models": [
@@ -7433,36 +7732,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lieutenant-with-combi-weapon-ability-priority-objective-identified",
-            "title": "Priority Objective Identified"
+            "id": "space-marines-ability-priority-objective-identified",
+            "sectionId": "space-marines-ability-priority-objective-identified",
+            "title": "Priority Objective Identified",
+            "text": "At the start of the first battle round, if your army includes one or more models with this ability, you can select one objective marker on the battlefield. Until the end of the battle, while one or more models with this ability are on the battlefield, each time a friendly ADEPTUS ASTARTES model makes an attack that targets an enemy unit that is within range of that objective marker, re-roll a Wound roll of 1.",
+            "sourceUnitId": "unit-lieutenant-with-combi-weapon"
           },
           {
-            "id": "unit-lieutenant-with-combi-weapon-ability-evade-and-survive-2",
-            "title": "Evade and Survive"
+            "id": "space-marines-ability-evade-and-survive",
+            "sectionId": "space-marines-ability-evade-and-survive",
+            "title": "Evade and Survive",
+            "text": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move",
+            "sourceUnitId": "unit-lieutenant-with-combi-weapon"
           },
           {
-            "id": "unit-lieutenant-with-combi-weapon-ability-lone-survivor-3",
-            "title": "Lone Survivor"
+            "id": "space-marines-ability-lone-survivor",
+            "sectionId": "space-marines-ability-lone-survivor",
+            "title": "Lone Survivor",
+            "text": "This model cannot be selected to be your Warlord.",
+            "sourceUnitId": "unit-lieutenant-with-combi-weapon"
           },
           {
-            "id": "unit-lieutenant-with-combi-weapon-ability-feel-no-pain-5-4",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-lieutenant-with-combi-weapon"
           },
           {
-            "id": "unit-lieutenant-with-combi-weapon-ability-infiltrators-5",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-lieutenant-with-combi-weapon"
           },
           {
-            "id": "unit-lieutenant-with-combi-weapon-ability-lone-operative-6",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-lieutenant-with-combi-weapon"
           },
           {
-            "id": "unit-lieutenant-with-combi-weapon-ability-stealth-7",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-lieutenant-with-combi-weapon"
           },
           {
-            "id": "unit-lieutenant-with-combi-weapon-ability-oath-of-moment-8",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-lieutenant-with-combi-weapon"
           }
         ],
         "models": [
@@ -7618,24 +7941,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-techmarine-ability-techmarine",
-            "title": "Techmarine"
+            "id": "space-marines-ability-techmarine",
+            "sectionId": "space-marines-ability-techmarine",
+            "title": "Techmarine",
+            "text": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, this model has the Lone Operative ability",
+            "sourceUnitId": "unit-techmarine"
           },
           {
-            "id": "unit-techmarine-ability-blessing-of-the-omnissiah-2",
-            "title": "Blessing of the Omnissiah"
+            "id": "space-marines-ability-blessing-of-the-omnissiah",
+            "sectionId": "space-marines-ability-blessing-of-the-omnissiah",
+            "title": "Blessing of the Omnissiah",
+            "text": "In your Command phase, you can select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per turn.",
+            "sourceUnitId": "unit-techmarine"
           },
           {
-            "id": "unit-techmarine-ability-vengeance-of-the-omnissiah-3",
-            "title": "Vengeance of the Omnissiah"
+            "id": "space-marines-ability-vengeance-of-the-omnissiah",
+            "sectionId": "space-marines-ability-vengeance-of-the-omnissiah",
+            "title": "Vengeance of the Omnissiah",
+            "text": "If a friendly Adeptus Astartes Vehicle model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian power axe has an\nAttacks characteristic of 7.",
+            "sourceUnitId": "unit-techmarine"
           },
           {
-            "id": "unit-techmarine-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, CRUSADER SQUAD, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, INTERCESSOR SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+            "sourceUnitId": "unit-techmarine"
           },
           {
-            "id": "unit-techmarine-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-techmarine"
           }
         ],
         "models": [
@@ -7802,32 +8140,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-drop-pod-ability-drop-pod-assault",
-            "title": "Drop Pod Assault"
+            "id": "space-marines-ability-drop-pod-assault",
+            "sectionId": "space-marines-ability-drop-pod-assault",
+            "title": "Drop Pod Assault",
+            "text": "This model must start the battle in Reserves and can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 8\" away from all enemy models.",
+            "sourceUnitId": "unit-drop-pod"
           },
           {
-            "id": "unit-drop-pod-ability-transport-2",
-            "title": "Transport"
+            "id": "space-marines-ability-transport",
+            "sectionId": "space-marines-ability-transport",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Gravis, Centurion or Terminator models.",
+            "sourceUnitId": "unit-drop-pod"
           },
           {
-            "id": "unit-drop-pod-ability-combat-disembarkation-3",
-            "title": "Combat Disembarkation"
+            "id": "space-marines-ability-combat-disembarkation",
+            "sectionId": "space-marines-ability-combat-disembarkation",
+            "title": "Combat Disembarkation",
+            "text": "Each time a unit disembarks from this model after it has been set up on the battlefield, that unit is still eligible to declare a charge this turn",
+            "sourceUnitId": "unit-drop-pod"
           },
           {
-            "id": "unit-drop-pod-ability-deployment-complete-4",
-            "title": "Deployment Complete"
+            "id": "space-marines-ability-deployment-complete",
+            "sectionId": "space-marines-ability-deployment-complete",
+            "title": "Deployment Complete",
+            "text": "Once this unit is set up on the battlefield and all units within it have disembarked, until the end of the battle, units cannot embark within this TRANSPORT",
+            "sourceUnitId": "unit-drop-pod"
           },
           {
-            "id": "unit-drop-pod-ability-deadly-demise-1-5",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-drop-pod"
           },
           {
-            "id": "unit-drop-pod-ability-deep-strike-6",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-drop-pod"
           },
           {
-            "id": "unit-drop-pod-ability-oath-of-moment-7",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-drop-pod"
           }
         ],
         "models": [
@@ -7884,28 +8243,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-impulsor-ability-transport",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-2",
+            "sectionId": "space-marines-ability-transport-2",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 7 TACTICUS or PHOBOS INFANTRY models. It cannot transport JUMP PACK models.",
+            "sourceUnitId": "unit-impulsor"
           },
           {
-            "id": "unit-impulsor-ability-assault-vehicle-2",
-            "title": "Assault Vehicle"
+            "id": "space-marines-ability-assault-vehicle",
+            "sectionId": "space-marines-ability-assault-vehicle",
+            "title": "Assault Vehicle",
+            "text": "Units can disembark from this Transport after it has Advanced. Units that do so count as having made a Normal move, and cannot declare a charge that turn.",
+            "sourceUnitId": "unit-impulsor"
           },
           {
-            "id": "unit-impulsor-ability-orbital-comms-array-aura-3",
-            "title": "Orbital Comms Array [Aura]"
+            "id": "space-marines-ability-orbital-comms-array-aura",
+            "sectionId": "space-marines-ability-orbital-comms-array-aura",
+            "title": "Orbital Comms Array [Aura]",
+            "text": "While a friendly Adeptus Astartes unit is within 6\" of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP",
+            "sourceUnitId": "unit-impulsor"
           },
           {
-            "id": "unit-impulsor-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-impulsor"
           },
           {
-            "id": "unit-impulsor-ability-firing-deck-6-5",
-            "title": "Firing Deck 6"
+            "id": "core-firing-deck",
+            "sectionId": "core-firing-deck",
+            "title": "Firing Deck 6",
+            "text": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: \n1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). \n2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). \n3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. \n4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+            "sourceUnitId": "unit-impulsor"
           },
           {
-            "id": "unit-impulsor-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-impulsor"
           }
         ],
         "models": [
@@ -8233,20 +8610,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-razorback-ability-fire-support",
-            "title": "Fire Support"
+            "id": "space-marines-ability-fire-support",
+            "sectionId": "space-marines-ability-fire-support",
+            "title": "Fire Support",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
+            "sourceUnitId": "unit-razorback"
           },
           {
-            "id": "unit-razorback-ability-transport-2",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-3",
+            "sectionId": "space-marines-ability-transport-3",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 6 Adeptus Astartes Infantry models. It cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR or TACTICUS models (excluding TACTICUS CHARACTER models that began the battle attached to a non-TACTICUS unit)",
+            "sourceUnitId": "unit-razorback"
           },
           {
-            "id": "unit-razorback-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-razorback"
           },
           {
-            "id": "unit-razorback-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-razorback"
           }
         ],
         "models": [
@@ -8442,24 +8831,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-rhino-ability-self-repair",
-            "title": "Self Repair"
+            "id": "space-marines-ability-self-repair",
+            "sectionId": "space-marines-ability-self-repair",
+            "title": "Self Repair",
+            "text": "At the end of your Command phase, this model regains 1 lost wound.",
+            "sourceUnitId": "unit-rhino"
           },
           {
-            "id": "unit-rhino-ability-transport-2",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-4",
+            "sectionId": "space-marines-ability-transport-4",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 12 ADEPTUS ASTARTES INFANTRY models. It cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR or TACTICUS models (excluding TACTICUS CHARACTER models that began the battle attached to a non-TACTICUS unit)",
+            "sourceUnitId": "unit-rhino"
           },
           {
-            "id": "unit-rhino-ability-firing-deck-2-3",
-            "title": "Firing Deck 2"
+            "id": "core-firing-deck",
+            "sectionId": "core-firing-deck",
+            "title": "Firing Deck 2",
+            "text": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: \n1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). \n2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). \n3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. \n4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
+            "sourceUnitId": "unit-rhino"
           },
           {
-            "id": "unit-rhino-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-rhino"
           },
           {
-            "id": "unit-rhino-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-rhino"
           }
         ],
         "models": [
@@ -8660,20 +9064,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-adrax-agatone-ability-unto-the-anvil",
-            "title": "Unto the Anvil"
+            "id": "space-marines-ability-unto-the-anvil",
+            "sectionId": "space-marines-ability-unto-the-anvil",
+            "title": "Unto the Anvil",
+            "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll.",
+            "sourceUnitId": "unit-adrax-agatone"
           },
           {
-            "id": "unit-adrax-agatone-ability-lord-of-the-pyroclasts-2",
-            "title": "Lord of the Pyroclasts"
+            "id": "space-marines-ability-lord-of-the-pyroclasts",
+            "sectionId": "space-marines-ability-lord-of-the-pyroclasts",
+            "title": "Lord of the Pyroclasts",
+            "text": "While an enemy unit is within Engagement Range of this model, halve the Objective Control characteristic of models in that enemy unit",
+            "sourceUnitId": "unit-adrax-agatone"
           },
           {
-            "id": "unit-adrax-agatone-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-adrax-agatone"
           },
           {
-            "id": "unit-adrax-agatone-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+            "sourceUnitId": "unit-adrax-agatone"
           }
         ],
         "models": [
@@ -8791,32 +9207,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-aethon-shaan-ability-chapter-master-of-the-raven-guard",
-            "title": "Chapter Master of the Raven Guard"
+            "id": "space-marines-ability-chapter-master-of-the-raven-guard",
+            "sectionId": "space-marines-ability-chapter-master-of-the-raven-guard",
+            "title": "Chapter Master of the Raven Guard",
+            "text": "At the start of the Declare Battle Formations step, if your army includes Aethon Shaan and Kayvaan\nShrike, until the end of the battle, your Kayvaan Shrike unit loses its Lone Operative ability and it\nreplaces its Chapter Master keyword with Captain.",
+            "sourceUnitId": "unit-aethon-shaan"
           },
           {
-            "id": "unit-aethon-shaan-ability-master-of-shadows-2",
-            "title": "Master of Shadows"
+            "id": "space-marines-ability-master-of-shadows",
+            "sectionId": "space-marines-ability-master-of-shadows",
+            "title": "Master of Shadows",
+            "text": "In your Command phase, you can select one unit from your opponent’s army. Until the start of your next Command phase, each time an Adeptus Astartes unit from your army declares a charge while it is within 12\" of that enemy unit, you can re-roll the Charge roll, but it must declare that enemy unit as a target of that charge (if possible).",
+            "sourceUnitId": "unit-aethon-shaan"
           },
           {
-            "id": "unit-aethon-shaan-ability-blackwing-mantle-3",
-            "title": "Blackwing Mantle"
+            "id": "space-marines-ability-blackwing-mantle",
+            "sectionId": "space-marines-ability-blackwing-mantle",
+            "title": "Blackwing Mantle",
+            "text": "You can target this model’s unit with the Rapid Ingress and Heroic Intervention Stratagems for 0CP,\neven if you have already used that Stratagem on a different unit this phase.",
+            "sourceUnitId": "unit-aethon-shaan"
           },
           {
-            "id": "unit-aethon-shaan-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-aethon-shaan"
           },
           {
-            "id": "unit-aethon-shaan-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-aethon-shaan"
           },
           {
-            "id": "unit-aethon-shaan-ability-stealth-6",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-aethon-shaan"
           },
           {
-            "id": "unit-aethon-shaan-ability-lone-operative-7",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-aethon-shaan"
           }
         ],
         "models": [
@@ -8950,28 +9387,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-caanok-var-ability-cold-and-calculating",
-            "title": "Cold and Calculating"
+            "id": "space-marines-ability-cold-and-calculating",
+            "sectionId": "space-marines-ability-cold-and-calculating",
+            "title": "Cold and Calculating",
+            "text": "Each time a model in this model’s unit makes an attack that targets a Monster or Vehicle unit, that\nattack has the [LETHAL HITS] ability. Each time a model in this model’s unit makes an attack that targets any other unit, that attack has the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-caanok-var"
           },
           {
-            "id": "unit-caanok-var-ability-cerebrex-logic-engine-2",
-            "title": "Cerebrex Logic Engine"
+            "id": "space-marines-ability-cerebrex-logic-engine",
+            "sectionId": "space-marines-ability-cerebrex-logic-engine",
+            "title": "Cerebrex Logic Engine",
+            "text": "■ At the start of the Declare Battle Formations step, you can select one Adeptus Astartes Infantry unit from your army. Until the end of the battle, that unit gains the Scouts 6\" ability.\n\n\n■ After both players have deployed their armies, you can select one Adeptus Astartes unit from your army and redeploy it. When doing so, you can set that unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+            "sourceUnitId": "unit-caanok-var"
           },
           {
-            "id": "unit-caanok-var-ability-feel-no-pain-5-3",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-caanok-var"
           },
           {
-            "id": "unit-caanok-var-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-caanok-var"
           },
           {
-            "id": "unit-caanok-var-ability-leader-5",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+            "sourceUnitId": "unit-caanok-var"
           },
           {
-            "id": "unit-caanok-var-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-caanok-var"
           }
         ],
         "models": [
@@ -9144,24 +9599,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-cato-sicarius-ability-knight-champion-of-macragge",
-            "title": "Knight Champion of Macragge"
+            "id": "space-marines-ability-knight-champion-of-macragge",
+            "sectionId": "space-marines-ability-knight-champion-of-macragge",
+            "title": "Knight Champion of Macragge",
+            "text": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
+            "sourceUnitId": "unit-cato-sicarius"
           },
           {
-            "id": "unit-cato-sicarius-ability-honour-or-death-2",
-            "title": "Honour or Death"
+            "id": "space-marines-ability-honour-or-death",
+            "sectionId": "space-marines-ability-honour-or-death",
+            "title": "Honour or Death",
+            "text": "You can target this unit with the Heroic Intervention Stratagem for 0CP, even if you have already used\nthat Stratagem on a different unit this phase.",
+            "sourceUnitId": "unit-cato-sicarius"
           },
           {
-            "id": "unit-cato-sicarius-ability-support-3",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-cato-sicarius"
           },
           {
-            "id": "unit-cato-sicarius-ability-support-4",
-            "title": "Support"
-          },
-          {
-            "id": "unit-cato-sicarius-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-cato-sicarius"
           }
         ],
         "models": [
@@ -9420,20 +9883,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-chief-librarian-tigurius-ability-hood-of-hellfire",
-            "title": "Hood of Hellfire"
+            "id": "space-marines-ability-hood-of-hellfire",
+            "sectionId": "space-marines-ability-hood-of-hellfire",
+            "title": "Hood of Hellfire",
+            "text": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.",
+            "sourceUnitId": "unit-chief-librarian-tigurius"
           },
           {
-            "id": "unit-chief-librarian-tigurius-ability-master-of-prescience-psychic-2",
-            "title": "Master of Prescience (Psychic)"
+            "id": "space-marines-ability-master-of-prescience-psychic",
+            "sectionId": "space-marines-ability-master-of-prescience-psychic",
+            "title": "Master of Prescience (Psychic)",
+            "text": "▪ This unit has Stealth.\n▪ Melee attacks that target this unit have -1 to hit rolls.\n▪ (Once per battle round, per army) When you target this unit with the Counteroffensive/Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.",
+            "sourceUnitId": "unit-chief-librarian-tigurius"
           },
           {
-            "id": "unit-chief-librarian-tigurius-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, DESOLATION SQUAD, DEVASTATOR SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+            "sourceUnitId": "unit-chief-librarian-tigurius"
           },
           {
-            "id": "unit-chief-librarian-tigurius-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-chief-librarian-tigurius"
           }
         ],
         "models": [
@@ -9650,28 +10125,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-darnath-lysander-ability-icon-of-obstinacy",
-            "title": "Icon of Obstinacy"
+            "id": "space-marines-ability-icon-of-obstinacy",
+            "sectionId": "space-marines-ability-icon-of-obstinacy",
+            "title": "Icon of Obstinacy",
+            "text": "Each time an attack targets this model's unit, if the Strength characteristic of that attack is greater than or equal to the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-darnath-lysander"
           },
           {
-            "id": "unit-darnath-lysander-ability-rampart-2",
-            "title": "Rampart"
+            "id": "space-marines-ability-rampart",
+            "sectionId": "space-marines-ability-rampart",
+            "title": "Rampart",
+            "text": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save.",
+            "sourceUnitId": "unit-darnath-lysander"
           },
           {
-            "id": "unit-darnath-lysander-ability-inspiring-commander-3",
-            "title": "Inspiring Commander"
+            "id": "space-marines-ability-inspiring-commander",
+            "sectionId": "space-marines-ability-inspiring-commander",
+            "title": "Inspiring Commander",
+            "text": "‘If you include this model in your army, until the end of the battle, non-Character models in Terminator Assault Squad and Terminator Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+            "sourceUnitId": "unit-darnath-lysander"
           },
           {
-            "id": "unit-darnath-lysander-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+            "sourceUnitId": "unit-darnath-lysander"
           },
           {
-            "id": "unit-darnath-lysander-ability-deep-strike-5",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-darnath-lysander"
           },
           {
-            "id": "unit-darnath-lysander-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-darnath-lysander"
           }
         ],
         "models": [
@@ -9785,28 +10278,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-iron-father-feirros-ability-rites-of-tempering",
-            "title": "Rites of Tempering"
+            "id": "space-marines-ability-rites-of-tempering",
+            "sectionId": "space-marines-ability-rites-of-tempering",
+            "title": "Rites of Tempering",
+            "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability",
+            "sourceUnitId": "unit-iron-father-feirros"
           },
           {
-            "id": "unit-iron-father-feirros-ability-iron-father-2",
-            "title": "Iron Father"
+            "id": "space-marines-ability-iron-father",
+            "sectionId": "space-marines-ability-iron-father",
+            "title": "Iron Father",
+            "text": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, it has the Lone Operative ability.",
+            "sourceUnitId": "unit-iron-father-feirros"
           },
           {
-            "id": "unit-iron-father-feirros-ability-master-of-the-forge-3",
-            "title": "Master of the Forge"
+            "id": "space-marines-ability-master-of-the-forge",
+            "sectionId": "space-marines-ability-master-of-the-forge",
+            "title": "Master of the Forge",
+            "text": "In your Command phase, select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to 3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. You cannot select a unit for this ability that has already been selected for the Blessing of the Omnissiah ability this phase, and vice versa.",
+            "sourceUnitId": "unit-iron-father-feirros"
           },
           {
-            "id": "unit-iron-father-feirros-ability-inspiring-commander-4",
-            "title": "Inspiring Commander"
+            "id": "space-marines-ability-inspiring-commander-2",
+            "sectionId": "space-marines-ability-inspiring-commander-2",
+            "title": "Inspiring Commander",
+            "text": "If you include this model in your army, until the end of the battle, non-Character models in Heavy\nIntercessor Squad units from your army have an Objective Control characteristic of 3 while they are\nnot Battle-shocked.",
+            "sourceUnitId": "unit-iron-father-feirros"
           },
           {
-            "id": "unit-iron-father-feirros-ability-leader-5",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD.",
+            "sourceUnitId": "unit-iron-father-feirros"
           },
           {
-            "id": "unit-iron-father-feirros-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-iron-father-feirros"
           }
         ],
         "models": [
@@ -9996,36 +10507,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-kayvaan-shrike-ability-trifold-path-of-shadow",
-            "title": "Trifold Path of Shadow"
+            "id": "space-marines-ability-trifold-path-of-shadow",
+            "sectionId": "space-marines-ability-trifold-path-of-shadow",
+            "title": "Trifold Path of Shadow",
+            "text": "While this model is leading a unit, models in this unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
+            "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "unit-kayvaan-shrike-ability-echo-of-the-ravenspire-2",
-            "title": "Echo of the Ravenspire"
+            "id": "space-marines-ability-echo-of-the-ravenspire",
+            "sectionId": "space-marines-ability-echo-of-the-ravenspire",
+            "title": "Echo of the Ravenspire",
+            "text": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of any enemy models, you can remove it from the battlefield and place it into Strategic Reserves.",
+            "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "unit-kayvaan-shrike-ability-inspiring-commander-3",
-            "title": "Inspiring Commander"
+            "id": "space-marines-ability-inspiring-commander-3",
+            "sectionId": "space-marines-ability-inspiring-commander-3",
+            "title": "Inspiring Commander",
+            "text": "If you include this model in your army, until the end of the battle, non-Character models in Assault\nIntercessors with Jump Packs units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+            "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "unit-kayvaan-shrike-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+            "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "unit-kayvaan-shrike-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "unit-kayvaan-shrike-ability-lone-operative-6",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "unit-kayvaan-shrike-ability-deep-strike-7",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "unit-kayvaan-shrike-ability-stealth-8",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-kayvaan-shrike"
           }
         ],
         "models": [
@@ -10141,24 +10676,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-korsarro-khan-ability-for-the-khan",
-            "title": "For the Khan!"
+            "id": "space-marines-ability-for-the-khan",
+            "sectionId": "space-marines-ability-for-the-khan",
+            "title": "For the Khan!",
+            "text": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and melee weapons equipped by models in that unit have the [LANCE] ability.",
+            "sourceUnitId": "unit-korsarro-khan"
           },
           {
-            "id": "unit-korsarro-khan-ability-trophy-taker-2",
-            "title": "Trophy Taker"
+            "id": "space-marines-ability-trophy-taker",
+            "sectionId": "space-marines-ability-trophy-taker",
+            "title": "Trophy Taker",
+            "text": "Each time this model destroys an enemy Character model, you gain 1CP",
+            "sourceUnitId": "unit-korsarro-khan"
           },
           {
-            "id": "unit-korsarro-khan-ability-inspiring-commander-3",
-            "title": "Inspiring Commander"
+            "id": "space-marines-ability-inspiring-commander-4",
+            "sectionId": "space-marines-ability-inspiring-commander-4",
+            "title": "Inspiring Commander",
+            "text": "If you include this model in your army, until the end of the battle, non-Character models in Outrider Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
+            "sourceUnitId": "unit-korsarro-khan"
           },
           {
-            "id": "unit-korsarro-khan-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-korsarro-khan"
           },
           {
-            "id": "unit-korsarro-khan-ability-leader-5",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-korsarro-khan"
           }
         ],
         "models": [
@@ -10332,28 +10882,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lieutenant-titus-ability-honour-of-ultramar",
-            "title": "Honour of Ultramar"
+            "id": "space-marines-ability-honour-of-ultramar",
+            "sectionId": "space-marines-ability-honour-of-ultramar",
+            "title": "Honour of Ultramar",
+            "text": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+,\ndo not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
+            "sourceUnitId": "unit-lieutenant-titus"
           },
           {
-            "id": "unit-lieutenant-titus-ability-leader-2",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR.",
+            "sourceUnitId": "unit-lieutenant-titus"
           },
           {
-            "id": "unit-lieutenant-titus-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-lieutenant-titus"
           },
           {
-            "id": "unit-lieutenant-titus-ability-feel-no-pain-5-4",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-lieutenant-titus"
           },
           {
-            "id": "unit-lieutenant-titus-ability-press-the-attack-5",
-            "title": "Press the Attack"
+            "id": "space-marines-ability-press-the-attack",
+            "sectionId": "space-marines-ability-press-the-attack",
+            "title": "Press the Attack",
+            "text": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
+            "sourceUnitId": "unit-lieutenant-titus"
           },
           {
-            "id": "unit-lieutenant-titus-ability-honour-of-the-chapter-6",
-            "title": "Honour of the Chapter"
+            "id": "space-marines-ability-honour-of-the-chapter",
+            "sectionId": "space-marines-ability-honour-of-the-chapter",
+            "title": "Honour of the Chapter",
+            "text": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+            "sourceUnitId": "unit-lieutenant-titus"
           }
         ],
         "models": [
@@ -10575,24 +11143,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-marneus-calgar-in-armour-of-antilochus-ability-inspiring-leader",
-            "title": "Inspiring Leader"
+            "id": "space-marines-ability-inspiring-leader",
+            "sectionId": "space-marines-ability-inspiring-leader",
+            "title": "Inspiring Leader",
+            "text": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
+            "sourceUnitId": "unit-marneus-calgar-in-armour-of-antilochus"
           },
           {
-            "id": "unit-marneus-calgar-in-armour-of-antilochus-ability-master-tactician-2",
-            "title": "Master Tactician"
+            "id": "space-marines-ability-master-tactician",
+            "sectionId": "space-marines-ability-master-tactician",
+            "title": "Master Tactician",
+            "text": "At the start of your Command phase, if this unit’s Marneus Calgar model is your Warlord and is on the battlefield, you gain 1CP.",
+            "sourceUnitId": "unit-marneus-calgar-in-armour-of-antilochus"
           },
           {
-            "id": "unit-marneus-calgar-in-armour-of-antilochus-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-marneus-calgar-in-armour-of-antilochus"
           },
           {
-            "id": "unit-marneus-calgar-in-armour-of-antilochus-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-marneus-calgar-in-armour-of-antilochus"
           },
           {
-            "id": "unit-marneus-calgar-in-armour-of-antilochus-ability-leader-5",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: AGGRESSOR SQUAD, ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD, STERNGUARD VETERAN SQUAD, HEAVY INTERCESSOR SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, TACTICAL SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, VICTRIX HONOUR GUARD.",
+            "sourceUnitId": "unit-marneus-calgar-in-armour-of-antilochus"
           }
         ],
         "models": [
@@ -10731,28 +11314,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-pedro-kantor-ability-oath-of-rynn",
-            "title": "Oath of Rynn"
+            "id": "space-marines-ability-oath-of-rynn",
+            "sectionId": "space-marines-ability-oath-of-rynn",
+            "title": "Oath of Rynn",
+            "text": "Once per battle, at the start of either player’s Command phase, this model can use this ability. When it does, until the end of the turn, add 1 to the Attacks characteristic of weapons equipped by models in this model’s unit.",
+            "sourceUnitId": "unit-pedro-kantor"
           },
           {
-            "id": "unit-pedro-kantor-ability-to-the-last-2",
-            "title": "To the Last"
+            "id": "space-marines-ability-to-the-last",
+            "sectionId": "space-marines-ability-to-the-last",
+            "title": "To the Last",
+            "text": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
+            "sourceUnitId": "unit-pedro-kantor"
           },
           {
-            "id": "unit-pedro-kantor-ability-inspiring-commander-3",
-            "title": "Inspiring Commander"
+            "id": "space-marines-ability-inspiring-commander-5",
+            "sectionId": "space-marines-ability-inspiring-commander-5",
+            "title": "Inspiring Commander",
+            "text": "If you include this model in your army, until the end of the battle, non-Character models in Sternguard\nVeteran Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+            "sourceUnitId": "unit-pedro-kantor"
           },
           {
-            "id": "unit-pedro-kantor-ability-feel-no-pain-6-4",
-            "title": "Feel No Pain 6+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 6+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-pedro-kantor"
           },
           {
-            "id": "unit-pedro-kantor-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-pedro-kantor"
           },
           {
-            "id": "unit-pedro-kantor-ability-leader-6",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: BLADEGUARD VETERAN SQUAD, COMPANY HEROES, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+            "sourceUnitId": "unit-pedro-kantor"
           }
         ],
         "models": [
@@ -10868,24 +11469,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-roboute-guilliman-ability-author-of-the-codex",
-            "title": "Author of the Codex"
+            "id": "space-marines-ability-author-of-the-codex",
+            "sectionId": "space-marines-ability-author-of-the-codex",
+            "title": "Author of the Codex",
+            "text": "At the Start of your Command phase, select two Author of the Codex abilities (see left). Until the start of your next Command phase, this model has those abilities.’\n\nPrimarch of the XIII (Aura): While a friendly Adeptus Astartes unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and you can re-roll Battle-shock and Leadership tests taken for that unit.\n\nMaster of Battle: After you have selected an enemy unit using the Oath of Moment ability, select a second enemy unit. Until the start of your next Command phase, if your Oath of Moment target is destroyed, that second enemy unit becomes your Oath of Moment target until you select a new one.\n\nSupreme Strategist: Once per battle round, you can target one friendly ADEPTUS ASTARTES unit within 12\" of this model with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-roboute-guilliman"
           },
           {
-            "id": "unit-roboute-guilliman-ability-ultramarines-bodyguard-2",
-            "title": "Ultramarines Bodyguard"
+            "id": "space-marines-ability-ultramarines-bodyguard",
+            "sectionId": "space-marines-ability-ultramarines-bodyguard",
+            "title": "Ultramarines Bodyguard",
+            "text": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability",
+            "sourceUnitId": "unit-roboute-guilliman"
           },
           {
-            "id": "unit-roboute-guilliman-ability-armour-of-fate-3",
-            "title": "Armour of Fate"
+            "id": "space-marines-ability-armour-of-fate",
+            "sectionId": "space-marines-ability-armour-of-fate",
+            "title": "Armour of Fate",
+            "text": "The first time this model is destroyed, roll one D6 at the end of the phase: on a 3+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with 6 wounds remaining.",
+            "sourceUnitId": "unit-roboute-guilliman"
           },
           {
-            "id": "unit-roboute-guilliman-ability-supreme-commander-4",
-            "title": "Supreme Commander"
+            "id": "space-marines-ability-supreme-commander",
+            "sectionId": "space-marines-ability-supreme-commander",
+            "title": "Supreme Commander",
+            "text": "If this model is in your army, it must be your Warlord.",
+            "sourceUnitId": "unit-roboute-guilliman"
           },
           {
-            "id": "unit-roboute-guilliman-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-roboute-guilliman"
           }
         ],
         "models": [
@@ -11027,20 +11643,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-suboden-khan-ability-spear-of-chogoris",
-            "title": "Spear of Chogoris"
+            "id": "space-marines-ability-spear-of-chogoris",
+            "sectionId": "space-marines-ability-spear-of-chogoris",
+            "title": "Spear of Chogoris",
+            "text": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back. If that unit is already eligible to shoot and declare a charge in a turn in which it Advanced, add 1 to Advance and Charge rolls made for that unit instead.",
+            "sourceUnitId": "unit-suboden-khan"
           },
           {
-            "id": "unit-suboden-khan-ability-skilled-riders-2",
-            "title": "Skilled Riders"
+            "id": "space-marines-ability-skilled-riders",
+            "sectionId": "space-marines-ability-skilled-riders",
+            "title": "Skilled Riders",
+            "text": "Each time a model in this model’s unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
+            "sourceUnitId": "unit-suboden-khan"
           },
           {
-            "id": "unit-suboden-khan-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-suboden-khan"
           },
           {
-            "id": "unit-suboden-khan-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: OUTRIDER SQUAD.",
+            "sourceUnitId": "unit-suboden-khan"
           }
         ],
         "models": [
@@ -11236,20 +11864,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tor-garadon-ability-signum-array",
-            "title": "Signum Array"
+            "id": "space-marines-ability-signum-array",
+            "sectionId": "space-marines-ability-signum-array",
+            "title": "Signum Array",
+            "text": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-tor-garadon"
           },
           {
-            "id": "unit-tor-garadon-ability-siege-captain-2",
-            "title": "Siege Captain"
+            "id": "space-marines-ability-siege-captain",
+            "sectionId": "space-marines-ability-siege-captain",
+            "title": "Siege Captain",
+            "text": "Each time this model makes an attack that targets a Monster, Vehicle, or Fortification unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2.",
+            "sourceUnitId": "unit-tor-garadon"
           },
           {
-            "id": "unit-tor-garadon-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD.",
+            "sourceUnitId": "unit-tor-garadon"
           },
           {
-            "id": "unit-tor-garadon-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-tor-garadon"
           }
         ],
         "models": [
@@ -11423,20 +12063,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-uriel-ventris-ability-unorthodox-strategist-aura",
-            "title": "Unorthodox Strategist [Aura]"
+            "id": "space-marines-ability-unorthodox-strategist-aura",
+            "sectionId": "space-marines-ability-unorthodox-strategist-aura",
+            "title": "Unorthodox Strategist [Aura]",
+            "text": "Each time your opponent targets a unit from their army with a stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem).",
+            "sourceUnitId": "unit-uriel-ventris"
           },
           {
-            "id": "unit-uriel-ventris-ability-master-of-the-fleet-2",
-            "title": "Master of the Fleet"
+            "id": "space-marines-ability-master-of-the-fleet",
+            "sectionId": "space-marines-ability-master-of-the-fleet",
+            "title": "Master of the Fleet",
+            "text": "During the Declare Battle Formations step, if your army includes this model, select one Phobos, Gravis, or Tacticus Adeptus Astartes Infantry unit from your army. That unit gains the Deep Strike ability.",
+            "sourceUnitId": "unit-uriel-ventris"
           },
           {
-            "id": "unit-uriel-ventris-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VICTRIX HONOUR GUARD.",
+            "sourceUnitId": "unit-uriel-ventris"
           },
           {
-            "id": "unit-uriel-ventris-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-uriel-ventris"
           }
         ],
         "models": [
@@ -11580,28 +12232,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-vulkan-hestan-ability-forgefather",
-            "title": "Forgefather"
+            "id": "space-marines-ability-forgefather",
+            "sectionId": "space-marines-ability-forgefather",
+            "title": "Forgefather",
+            "text": "In your Shooting phase, select one enemy unit within 24\" of and visible to this model. Until the end of the phase, each time a friendly Adeptus Astartes model makes a ranged attack with a Torrent or Melta weapon that targets that enemy unit, you can re-roll the Wound roll",
+            "sourceUnitId": "unit-vulkan-hestan"
           },
           {
-            "id": "unit-vulkan-hestan-ability-seeker-of-the-unfound-2",
-            "title": "Seeker of the Unfound"
+            "id": "space-marines-ability-seeker-of-the-unfound",
+            "sectionId": "space-marines-ability-seeker-of-the-unfound",
+            "title": "Seeker of the Unfound",
+            "text": "The first time this model is set up on the battlefield, select one objective marker on the battlefield. While this model is within range of that objective marker, it has an Objective Control characteristic of 10, a Leadership characteristic of 5+ and the Feel No Pain 4+ ability.",
+            "sourceUnitId": "unit-vulkan-hestan"
           },
           {
-            "id": "unit-vulkan-hestan-ability-inspiring-commander-3",
-            "title": "Inspiring Commander"
+            "id": "space-marines-ability-inspiring-commander-6",
+            "sectionId": "space-marines-ability-inspiring-commander-6",
+            "title": "Inspiring Commander",
+            "text": "If you include this model in your army, until the end of the battle, non-Character models in Infernus Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+            "sourceUnitId": "unit-vulkan-hestan"
           },
           {
-            "id": "unit-vulkan-hestan-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-vulkan-hestan"
           },
           {
-            "id": "unit-vulkan-hestan-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-vulkan-hestan"
           },
           {
-            "id": "unit-vulkan-hestan-ability-feel-no-pain-6-6",
-            "title": "Feel No Pain 6+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 6+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-vulkan-hestan"
           }
         ],
         "models": [
@@ -11750,20 +12420,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-wardens-of-ultramar-ability-second-company-banner",
-            "title": "Second Company Banner"
+            "id": "space-marines-ability-second-company-banner",
+            "sectionId": "space-marines-ability-second-company-banner",
+            "title": "Second Company Banner",
+            "text": "While this unit contains Ancient Gadriel, add 1 to the Objective Control characteristic of models in this unit. While this unit contains Ancient Gadriel and Captain Titus, improve the Leadership characteristic of models in this unit by 1 as well.",
+            "sourceUnitId": "unit-wardens-of-ultramar"
           },
           {
-            "id": "unit-wardens-of-ultramar-ability-strategium-command-2",
-            "title": "Strategium Command"
+            "id": "space-marines-ability-strategium-command",
+            "sectionId": "space-marines-ability-strategium-command",
+            "title": "Strategium Command",
+            "text": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it\nis embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+            "sourceUnitId": "unit-wardens-of-ultramar"
           },
           {
-            "id": "unit-wardens-of-ultramar-ability-heroes-of-ultramar-3",
-            "title": "Heroes of Ultramar"
+            "id": "space-marines-ability-heroes-of-ultramar",
+            "sectionId": "space-marines-ability-heroes-of-ultramar",
+            "title": "Heroes of Ultramar",
+            "text": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This\nunit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is\nincreased accordingly.\n\n\n■ ASSAULT INTERCESSOR SQUAD\n■ BLADEGUARD VETERAN SQUAD\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n\n\nThis unit cannot join an Attached unit, and only Captain Titus can join a unit this unit has joined.",
+            "sourceUnitId": "unit-wardens-of-ultramar"
           },
           {
-            "id": "unit-wardens-of-ultramar-ability-support-4",
-            "title": "Support"
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
+            "sourceUnitId": "unit-wardens-of-ultramar"
           }
         ],
         "models": [
@@ -12109,28 +12791,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hammerfall-bunker-ability-fortification",
-            "title": "Fortification"
+            "id": "space-marines-ability-fortification",
+            "sectionId": "space-marines-ability-fortification",
+            "title": "Fortification",
+            "text": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army:\n■ That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll.\n■ Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+            "sourceUnitId": "unit-hammerfall-bunker"
           },
           {
-            "id": "unit-hammerfall-bunker-ability-ceramite-cover-2",
-            "title": "Ceramite Cover"
+            "id": "space-marines-ability-ceramite-cover",
+            "sectionId": "space-marines-ability-ceramite-cover",
+            "title": "Ceramite Cover",
+            "text": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+            "sourceUnitId": "unit-hammerfall-bunker"
           },
           {
-            "id": "unit-hammerfall-bunker-ability-defensive-array-3",
-            "title": "Defensive Array"
+            "id": "space-marines-ability-defensive-array",
+            "sectionId": "space-marines-ability-defensive-array",
+            "title": "Defensive Array",
+            "text": "You can target this Fortification with the Fire Overwatch Strategem for 0CP, and can do so even if you have already targeted another unit with that Stratagem this turn. This Fortification can only be targeted with that Stratagem once per turn.",
+            "sourceUnitId": "unit-hammerfall-bunker"
           },
           {
-            "id": "unit-hammerfall-bunker-ability-damaged-1-4-wounds-remaining-4",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-hammerfall-bunker"
           },
           {
-            "id": "unit-hammerfall-bunker-ability-deadly-demise-d6-5",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-hammerfall-bunker"
           },
           {
-            "id": "unit-hammerfall-bunker-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-hammerfall-bunker"
           }
         ],
         "models": [
@@ -12369,12 +13069,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-aggressor-squad-ability-close-quarters-firepower",
-            "title": "Close-quarters Firepower"
+            "id": "space-marines-ability-close-quarters-firepower",
+            "sectionId": "space-marines-ability-close-quarters-firepower",
+            "title": "Close-quarters Firepower",
+            "text": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack\nby 1.",
+            "sourceUnitId": "unit-aggressor-squad"
           },
           {
-            "id": "unit-aggressor-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-aggressor-squad"
           }
         ],
         "models": [
@@ -12569,16 +13275,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-assault-intercessors-with-jump-packs-ability-hammer-of-wrath",
-            "title": "Hammer of Wrath"
+            "id": "space-marines-ability-hammer-of-wrath",
+            "sectionId": "space-marines-ability-hammer-of-wrath",
+            "title": "Hammer of Wrath",
+            "text": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.",
+            "sourceUnitId": "unit-assault-intercessors-with-jump-packs"
           },
           {
-            "id": "unit-assault-intercessors-with-jump-packs-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-assault-intercessors-with-jump-packs"
           },
           {
-            "id": "unit-assault-intercessors-with-jump-packs-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-assault-intercessors-with-jump-packs"
           }
         ],
         "models": [
@@ -12939,12 +13654,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-bladeguard-veteran-squad-ability-bladeguard",
-            "title": "Bladeguard"
+            "id": "space-marines-ability-bladeguard",
+            "sectionId": "space-marines-ability-bladeguard",
+            "title": "Bladeguard",
+            "text": "(Once per turn, per unit): In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n\n\n▪ This unit’s melee attacks have +1 to hit rolls.\n▪ Or: Attacks that target this unit have -1 to hit rolls.",
+            "sourceUnitId": "unit-bladeguard-veteran-squad"
           },
           {
-            "id": "unit-bladeguard-veteran-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-bladeguard-veteran-squad"
           }
         ],
         "models": [
@@ -13166,12 +13887,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-centurion-assault-squad-ability-annihilator-protocols",
-            "title": "Annihilator Protocols"
+            "id": "space-marines-ability-annihilator-protocols",
+            "sectionId": "space-marines-ability-annihilator-protocols",
+            "title": "Annihilator Protocols",
+            "text": "Melee weapons equipped by models in this unit have the [SUSTAINED HITS 2] ability when targeting Monster, Vehicle or Fortification units",
+            "sourceUnitId": "unit-centurion-assault-squad"
           },
           {
-            "id": "unit-centurion-assault-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-centurion-assault-squad"
           }
         ],
         "models": [
@@ -13356,12 +14083,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-centurion-devastator-squad-ability-decimator-protocols",
-            "title": "Decimator Protocols"
+            "id": "space-marines-ability-decimator-protocols",
+            "sectionId": "space-marines-ability-decimator-protocols",
+            "title": "Decimator Protocols",
+            "text": "Each time a model in this unit makes a ranged attack, re-roll a Hit roll of 1. If the target of that attack is an enemy unit within range of an objective marker, you can re-roll the Hit roll instead.",
+            "sourceUnitId": "unit-centurion-devastator-squad"
           },
           {
-            "id": "unit-centurion-devastator-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-centurion-devastator-squad"
           }
         ],
         "models": [
@@ -13650,16 +14383,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-company-heroes-ability-ancient-banner",
-            "title": "Ancient Banner"
+            "id": "space-marines-ability-ancient-banner",
+            "sectionId": "space-marines-ability-ancient-banner",
+            "title": "Ancient Banner",
+            "text": "While this unit contains an Ancient, add 1 to the Objective Control characteristic of models in this unit",
+            "sourceUnitId": "unit-company-heroes"
           },
           {
-            "id": "unit-company-heroes-ability-command-squad-2",
-            "title": "Command Squad"
+            "id": "space-marines-ability-command-squad",
+            "sectionId": "space-marines-ability-command-squad",
+            "title": "Command Squad",
+            "text": "While a Character model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-company-heroes"
           },
           {
-            "id": "unit-company-heroes-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-company-heroes"
           }
         ],
         "models": [
@@ -13924,12 +14666,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-desolation-squad-ability-targeter-optics",
-            "title": "Targeter Optics"
+            "id": "space-marines-ability-targeter-optics",
+            "sectionId": "space-marines-ability-targeter-optics",
+            "title": "Targeter Optics",
+            "text": "Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-desolation-squad"
           },
           {
-            "id": "unit-desolation-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-desolation-squad"
           }
         ],
         "models": [
@@ -14193,16 +14941,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-devastator-squad-ability-signum",
-            "title": "Signum"
+            "id": "space-marines-ability-signum",
+            "sectionId": "space-marines-ability-signum",
+            "title": "Signum",
+            "text": "Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [IGNORES COVER] ability.",
+            "sourceUnitId": "unit-devastator-squad"
           },
           {
-            "id": "unit-devastator-squad-ability-armorium-cherub-2",
-            "title": "Armorium Cherub"
+            "id": "space-marines-ability-armorium-cherub",
+            "sectionId": "space-marines-ability-armorium-cherub",
+            "title": "Armorium Cherub",
+            "text": "Once per battle, after making a Hit roll for a model in this unit, you can change that roll to an unmodified 6.",
+            "sourceUnitId": "unit-devastator-squad"
           },
           {
-            "id": "unit-devastator-squad-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-devastator-squad"
           }
         ],
         "models": [
@@ -14884,24 +15641,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-eliminator-squad-ability-reposition-under-covering-fire",
-            "title": "Reposition Under Covering Fire"
+            "id": "space-marines-ability-reposition-under-covering-fire",
+            "sectionId": "space-marines-ability-reposition-under-covering-fire",
+            "title": "Reposition Under Covering Fire",
+            "text": "In your Shooting phase, after this unit has shot, if it contains an Eliminator Sergeant equipped with an instigator bolt carbine, this unit can make a\nNormal move. If it does so, until the end of the turn, this unit is not eligible to declare a charge.",
+            "sourceUnitId": "unit-eliminator-squad"
           },
           {
-            "id": "unit-eliminator-squad-ability-mark-the-target-2",
-            "title": "Mark the Target"
+            "id": "space-marines-ability-mark-the-target",
+            "sectionId": "space-marines-ability-mark-the-target",
+            "title": "Mark the Target",
+            "text": "Each time this unit Remains Stationary, until the start of your next Movement phase, ranged weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability.",
+            "sourceUnitId": "unit-eliminator-squad"
           },
           {
-            "id": "unit-eliminator-squad-ability-infiltrators-3",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-eliminator-squad"
           },
           {
-            "id": "unit-eliminator-squad-ability-stealth-4",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-eliminator-squad"
           },
           {
-            "id": "unit-eliminator-squad-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-eliminator-squad"
           }
         ],
         "models": [
@@ -15139,12 +15911,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-eradicator-squad-ability-total-obliteration",
-            "title": "Total Obliteration"
+            "id": "space-marines-ability-total-obliteration",
+            "sectionId": "space-marines-ability-total-obliteration",
+            "title": "Total Obliteration",
+            "text": "Each time a ranged attack made by a model in this unit targets a Monster or Vehicle model, you can re-roll the Hit roll, you can re-roll the Wound roll and you can re-roll the Damage roll.",
+            "sourceUnitId": "unit-eradicator-squad"
           },
           {
-            "id": "unit-eradicator-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-eradicator-squad"
           }
         ],
         "models": [
@@ -15311,8 +16089,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-eradicator-squad-with-heavy-bolters-ability-overlapping-detonations",
-            "title": "Overlapping Detonations"
+            "id": "space-marines-ability-overlapping-detonations",
+            "sectionId": "space-marines-ability-overlapping-detonations",
+            "title": "Overlapping Detonations",
+            "text": "In your Shooting phase, when this unit is selected to shoot you can select one non- MONSTER/VEHICLE enemy unit visible to it. While making attacks, this unit’s heavy bolters that targeted that selected unit have [BLAST 1].",
+            "sourceUnitId": "unit-eradicator-squad-with-heavy-bolters"
           }
         ],
         "models": [
@@ -15512,12 +16293,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hellblaster-squad-ability-for-the-chapter",
-            "title": "For the Chapter!"
+            "id": "space-marines-ability-for-the-chapter",
+            "sectionId": "space-marines-ability-for-the-chapter",
+            "title": "For the Chapter!",
+            "text": "Each time a model in this unit is destroyed, roll one D6: on a 3+, do not remove it from play. The destroyed model can shoot after the attacking model’s unit has finished making its attacks, and is then removed from play. When resolving these attacks, any Hazardous tests taken for that attack are automatically passed.",
+            "sourceUnitId": "unit-hellblaster-squad"
           },
           {
-            "id": "unit-hellblaster-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-hellblaster-squad"
           }
         ],
         "models": [
@@ -15796,16 +16583,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-inceptor-squad-ability-meteoric-descent",
-            "title": "Meteoric Descent"
+            "id": "space-marines-ability-meteoric-descent",
+            "sectionId": "space-marines-ability-meteoric-descent",
+            "title": "Meteoric Descent",
+            "text": "In your Movement phase, when this unit is set up on the battlefield using the Deep Strike ability, it can perform a meteoric descent. If it does, this unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
+            "sourceUnitId": "unit-inceptor-squad"
           },
           {
-            "id": "unit-inceptor-squad-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-inceptor-squad"
           },
           {
-            "id": "unit-inceptor-squad-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-inceptor-squad"
           }
         ],
         "models": [
@@ -16030,16 +16826,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-incursor-squad-ability-multi-spectrum-array",
-            "title": "Multi-spectrum Array"
+            "id": "space-marines-ability-multi-spectrum-array",
+            "sectionId": "space-marines-ability-multi-spectrum-array",
+            "title": "Multi-spectrum Array",
+            "text": "In your Shooting phase, after this unit has shot, select one enemy unit that was hit by one or more attacks made by this unit this phase. Until the end of the phase, each time a friendly Adeptus Astartes unit makes an attack that targets that enemy unit, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-incursor-squad"
           },
           {
-            "id": "unit-incursor-squad-ability-scouts-6-2",
-            "title": "Scouts 6\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 6\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-incursor-squad"
           },
           {
-            "id": "unit-incursor-squad-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-incursor-squad"
           }
         ],
         "models": [
@@ -16282,12 +17087,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-infernus-squad-ability-purge-the-foe",
-            "title": "Purge the Foe"
+            "id": "space-marines-ability-purge-the-foe",
+            "sectionId": "space-marines-ability-purge-the-foe",
+            "title": "Purge the Foe",
+            "text": "In your Shooting phase, after this unit has shot, you can select one enemy Infantry unit hit by one or more of those attacks made with a pyreblaster. That enemy unit must take a Battle-shock test, subtracting 1 from that test.",
+            "sourceUnitId": "unit-infernus-squad"
           },
           {
-            "id": "unit-infernus-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-infernus-squad"
           }
         ],
         "models": [
@@ -16456,20 +17267,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-infiltrator-squad-ability-omni-scramblers",
-            "title": "Omni-scramblers"
+            "id": "space-marines-ability-omni-scramblers",
+            "sectionId": "space-marines-ability-omni-scramblers",
+            "title": "Omni-scramblers",
+            "text": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this unit.",
+            "sourceUnitId": "unit-infiltrator-squad"
           },
           {
-            "id": "unit-infiltrator-squad-ability-feel-no-pain-2",
-            "title": "Feel No Pain"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-infiltrator-squad"
           },
           {
-            "id": "unit-infiltrator-squad-ability-infiltrators-3",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-infiltrator-squad"
           },
           {
-            "id": "unit-infiltrator-squad-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-infiltrator-squad"
           }
         ],
         "models": [
@@ -16675,24 +17498,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-reiver-squad-ability-fearsome-assault",
-            "title": "Fearsome Assault"
+            "id": "space-marines-ability-fearsome-assault",
+            "sectionId": "space-marines-ability-fearsome-assault",
+            "title": "Fearsome Assault",
+            "text": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test subtracting 1 from that test",
+            "sourceUnitId": "unit-reiver-squad"
           },
           {
-            "id": "unit-reiver-squad-ability-terror-troops-2",
-            "title": "Terror Troops"
+            "id": "space-marines-ability-terror-troops",
+            "sectionId": "space-marines-ability-terror-troops",
+            "title": "Terror Troops",
+            "text": "While an enemy unit (excluding Monsters and Vehicles) is within 3\" of one or more units with this ability, subtract 1 from the Objective Control characteristic of models in that enemy unit.",
+            "sourceUnitId": "unit-reiver-squad"
           },
           {
-            "id": "unit-reiver-squad-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-reiver-squad"
           },
           {
-            "id": "unit-reiver-squad-ability-scouts-6-4",
-            "title": "Scouts 6\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 6\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-reiver-squad"
           },
           {
-            "id": "unit-reiver-squad-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-reiver-squad"
           }
         ],
         "models": [
@@ -16906,20 +17744,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-scout-squad-ability-guerrilla-tactics",
-            "title": "Guerrilla Tactics"
+            "id": "space-marines-ability-guerrilla-tactics",
+            "sectionId": "space-marines-ability-guerrilla-tactics",
+            "title": "Guerrilla Tactics",
+            "text": "At the end of your opponent’s turn, if this unit is more than 6\" away from all enemy models, you can remove this unit from the battlefield and place it into\nStrategic Reserves.",
+            "sourceUnitId": "unit-scout-squad"
           },
           {
-            "id": "unit-scout-squad-ability-scouts-6-2",
-            "title": "Scouts 6\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 6\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-scout-squad"
           },
           {
-            "id": "unit-scout-squad-ability-infiltrators-3",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-scout-squad"
           },
           {
-            "id": "unit-scout-squad-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-scout-squad"
           }
         ],
         "models": [
@@ -17385,12 +18235,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sternguard-veteran-squad-ability-sternguard-focus",
-            "title": "Sternguard Focus"
+            "id": "space-marines-ability-sternguard-focus",
+            "sectionId": "space-marines-ability-sternguard-focus",
+            "title": "Sternguard Focus",
+            "text": "Each time a model in this unit makes an attack that targets your Oath of Moment Target, you can re-roll the wound roll",
+            "sourceUnitId": "unit-sternguard-veteran-squad"
           },
           {
-            "id": "unit-sternguard-veteran-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-sternguard-veteran-squad"
           }
         ],
         "models": [
@@ -17694,16 +18550,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-suppressor-squad-ability-suppression-fire",
-            "title": "Suppression Fire"
+            "id": "space-marines-ability-suppression-fire",
+            "sectionId": "space-marines-ability-suppression-fire",
+            "title": "Suppression Fire",
+            "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks made with an accelerator autocannon. Until the start of your next turn, while this unit is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-suppressor-squad"
           },
           {
-            "id": "unit-suppressor-squad-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-suppressor-squad"
           },
           {
-            "id": "unit-suppressor-squad-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-suppressor-squad"
           }
         ],
         "models": [
@@ -17901,20 +18766,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-terminator-assault-squad-ability-teleport-homer",
-            "title": "Teleport Homer"
+            "id": "space-marines-ability-teleport-homer",
+            "sectionId": "space-marines-ability-teleport-homer",
+            "title": "Teleport Homer",
+            "text": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" horizontally of that token and not within 8\" horizontally of any enemy models. That token is then removed.",
+            "sourceUnitId": "unit-terminator-assault-squad"
           },
           {
-            "id": "unit-terminator-assault-squad-ability-terminatus-assault-2",
-            "title": "Terminatus Assault"
+            "id": "space-marines-ability-terminatus-assault",
+            "sectionId": "space-marines-ability-terminatus-assault",
+            "title": "Terminatus Assault",
+            "text": "At the start of the Fight phase, each enemy unit within Engagement Range of this unit must take a Battle-Shock test.",
+            "sourceUnitId": "unit-terminator-assault-squad"
           },
           {
-            "id": "unit-terminator-assault-squad-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-terminator-assault-squad"
           },
           {
-            "id": "unit-terminator-assault-squad-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-terminator-assault-squad"
           }
         ],
         "models": [
@@ -18095,20 +18972,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-terminator-squad-ability-teleport-homer",
-            "title": "Teleport Homer"
+            "id": "space-marines-ability-teleport-homer",
+            "sectionId": "space-marines-ability-teleport-homer",
+            "title": "Teleport Homer",
+            "text": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" horizontally of that token and not within 8\" horizontally of any enemy models. That token is then removed.",
+            "sourceUnitId": "unit-terminator-squad"
           },
           {
-            "id": "unit-terminator-squad-ability-fury-of-the-first-2",
-            "title": "Fury of the First"
+            "id": "space-marines-ability-fury-of-the-first",
+            "sectionId": "space-marines-ability-fury-of-the-first",
+            "title": "Fury of the First",
+            "text": "Each time a model in this unit makes an attack that targets your Oath of Moment target, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-terminator-squad"
           },
           {
-            "id": "unit-terminator-squad-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-terminator-squad"
           },
           {
-            "id": "unit-terminator-squad-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-terminator-squad"
           }
         ],
         "models": [
@@ -18440,16 +19329,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-vanguard-veteran-squad-with-jump-packs-ability-vanguard-assault",
-            "title": "Vanguard Assault"
+            "id": "space-marines-ability-vanguard-assault",
+            "sectionId": "space-marines-ability-vanguard-assault",
+            "title": "Vanguard Assault",
+            "text": "Each time this unit ends a Charge move, until the end of the turn, melee weapons equipped by models in this unit have the [LETHAL HITS] ability.",
+            "sourceUnitId": "unit-vanguard-veteran-squad-with-jump-packs"
           },
           {
-            "id": "unit-vanguard-veteran-squad-with-jump-packs-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-vanguard-veteran-squad-with-jump-packs"
           },
           {
-            "id": "unit-vanguard-veteran-squad-with-jump-packs-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-vanguard-veteran-squad-with-jump-packs"
           }
         ],
         "models": [
@@ -18825,20 +19723,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-victrix-honour-guard-ability-ultramarines-honour-guard",
-            "title": "Ultramarines Honour Guard"
+            "id": "space-marines-ability-ultramarines-honour-guard",
+            "sectionId": "space-marines-ability-ultramarines-honour-guard",
+            "title": "Ultramarines Honour Guard",
+            "text": "While a Captain or Chapter Master model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll",
+            "sourceUnitId": "unit-victrix-honour-guard"
           },
           {
-            "id": "unit-victrix-honour-guard-ability-glory-of-ultramar-2",
-            "title": "Glory of Ultramar"
+            "id": "space-marines-ability-glory-of-ultramar",
+            "sectionId": "space-marines-ability-glory-of-ultramar",
+            "title": "Glory of Ultramar",
+            "text": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit\nwere destroyed as a result of those attacks, this unit can make a Surge move. To do so, roll one D6: models in this unit move a number of inches up to the result, but this unit must end that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be\nmoved within Engagement Range of that enemy unit. This unit cannot make a Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Surge move per phase.",
+            "sourceUnitId": "unit-victrix-honour-guard"
           },
           {
-            "id": "unit-victrix-honour-guard-ability-attached-unit-3",
-            "title": "Attached Unit"
+            "id": "core-attached-unit",
+            "sectionId": "core-attached-unit",
+            "title": "Attached Unit",
+            "text": "If a Captain or Chapter Master unit from your army can be attached to a Company Heroes unit, it can\nbe attached to this unit instead.",
+            "sourceUnitId": "unit-victrix-honour-guard"
           },
           {
-            "id": "unit-victrix-honour-guard-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-victrix-honour-guard"
           }
         ],
         "models": [
@@ -18997,12 +19907,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-invader-atv-ability-outrider-escort",
-            "title": "Outrider Escort"
+            "id": "space-marines-ability-outrider-escort",
+            "sectionId": "space-marines-ability-outrider-escort",
+            "title": "Outrider Escort",
+            "text": "Once per turn, in your opponent’s Shooting phase, when another friendly ADEPTUS ASTARTES MOUNTED unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
+            "sourceUnitId": "unit-invader-atv"
           },
           {
-            "id": "unit-invader-atv-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-invader-atv"
           }
         ],
         "models": [
@@ -19212,12 +20128,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-outrider-squad-ability-thunderous-impact",
-            "title": "Thunderous Impact"
+            "id": "space-marines-ability-thunderous-impact",
+            "sectionId": "space-marines-ability-thunderous-impact",
+            "title": "Thunderous Impact",
+            "text": "Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength and Damage characteristics of that attack by 1",
+            "sourceUnitId": "unit-outrider-squad"
           },
           {
-            "id": "unit-outrider-squad-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-outrider-squad"
           }
         ],
         "models": [
@@ -19472,20 +20394,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-ballistus-dreadnought-ability-ballistus-strike",
-            "title": "Ballistus Strike"
+            "id": "space-marines-ability-ballistus-strike",
+            "sectionId": "space-marines-ability-ballistus-strike",
+            "title": "Ballistus Strike",
+            "text": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-ballistus-dreadnought"
           },
           {
-            "id": "unit-ballistus-dreadnought-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-ballistus-dreadnought"
           },
           {
-            "id": "unit-ballistus-dreadnought-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-ballistus-dreadnought"
           },
           {
-            "id": "unit-ballistus-dreadnought-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-ballistus-dreadnought"
           }
         ],
         "models": [
@@ -19708,20 +20642,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-brutalis-dreadnought-ability-brutalis-charge",
-            "title": "Brutalis Charge"
+            "id": "space-marines-ability-brutalis-charge",
+            "sectionId": "space-marines-ability-brutalis-charge",
+            "title": "Brutalis Charge",
+            "text": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds",
+            "sourceUnitId": "unit-brutalis-dreadnought"
           },
           {
-            "id": "unit-brutalis-dreadnought-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-brutalis-dreadnought"
           },
           {
-            "id": "unit-brutalis-dreadnought-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-brutalis-dreadnought"
           },
           {
-            "id": "unit-brutalis-dreadnought-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-brutalis-dreadnought"
           }
         ],
         "models": [
@@ -19998,16 +20944,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-dreadnought-ability-wisdom-of-the-ancients-aura",
-            "title": "Wisdom of the Ancients [Aura]"
+            "id": "space-marines-ability-wisdom-of-the-ancients-aura",
+            "sectionId": "space-marines-ability-wisdom-of-the-ancients-aura",
+            "title": "Wisdom of the Ancients [Aura]",
+            "text": "While a friendly Adeptus Astartes Infantry unit is within 6\" of this model, each time a model in that unit makes an attack, re-roll a Hit roll of 1.",
+            "sourceUnitId": "unit-dreadnought"
           },
           {
-            "id": "unit-dreadnought-ability-deadly-demise-1-2",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-dreadnought"
           },
           {
-            "id": "unit-dreadnought-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-dreadnought"
           }
         ],
         "models": [
@@ -20391,12 +21346,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-firestrike-servo-turrets-ability-sentinel-protocols",
-            "title": "Sentinel Protocols"
+            "id": "space-marines-ability-sentinel-protocols",
+            "sectionId": "space-marines-ability-sentinel-protocols",
+            "title": "Sentinel Protocols",
+            "text": "Each time you select this unit for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem.",
+            "sourceUnitId": "unit-firestrike-servo-turrets"
           },
           {
-            "id": "unit-firestrike-servo-turrets-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-firestrike-servo-turrets"
           }
         ],
         "models": [
@@ -20536,20 +21497,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-gladiator-lancer-ability-aqullon-optics",
-            "title": "Aqullon Optics"
+            "id": "space-marines-ability-aqullon-optics",
+            "sectionId": "space-marines-ability-aqullon-optics",
+            "title": "Aqullon Optics",
+            "text": "Each time this model is selected to shoot, you can re-roll one Hit roll, you can re-roll one Wound roll and you can re-roll one Damage roll when resolving its attacks",
+            "sourceUnitId": "unit-gladiator-lancer"
           },
           {
-            "id": "unit-gladiator-lancer-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-gladiator-lancer"
           },
           {
-            "id": "unit-gladiator-lancer-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-gladiator-lancer"
           },
           {
-            "id": "unit-gladiator-lancer-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-gladiator-lancer"
           }
         ],
         "models": [
@@ -20770,20 +21743,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-gladiator-reaper-ability-rotating-death",
-            "title": "Rotating Death"
+            "id": "space-marines-ability-rotating-death",
+            "sectionId": "space-marines-ability-rotating-death",
+            "title": "Rotating Death",
+            "text": "This model’s twin heavy onslaught gatling cannon has the [SUSTAINED HITS 2] ability when targeting Infantry units.",
+            "sourceUnitId": "unit-gladiator-reaper"
           },
           {
-            "id": "unit-gladiator-reaper-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-gladiator-reaper"
           },
           {
-            "id": "unit-gladiator-reaper-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-gladiator-reaper"
           },
           {
-            "id": "unit-gladiator-reaper-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-gladiator-reaper"
           }
         ],
         "models": [
@@ -20977,20 +21962,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-gladiator-valiant-ability-ferocious-assault",
-            "title": "Ferocious Assault"
+            "id": "space-marines-ability-ferocious-assault",
+            "sectionId": "space-marines-ability-ferocious-assault",
+            "title": "Ferocious Assault",
+            "text": "Each time this model makes an attack with its twin las-talon that targets the closest eligible Monster or Vehicle unit, add 1 to the Hit roll",
+            "sourceUnitId": "unit-gladiator-valiant"
           },
           {
-            "id": "unit-gladiator-valiant-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-gladiator-valiant"
           },
           {
-            "id": "unit-gladiator-valiant-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-gladiator-valiant"
           },
           {
-            "id": "unit-gladiator-valiant-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-gladiator-valiant"
           }
         ],
         "models": [
@@ -21184,24 +22181,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-invictor-tactical-warsuit-ability-combat-support",
-            "title": "Combat Support"
+            "id": "space-marines-ability-combat-support",
+            "sectionId": "space-marines-ability-combat-support",
+            "title": "Combat Support",
+            "text": "Once per turn, in your opponent’s Shooting phase, when a friendly Adeptus Astartes Phobos Infantry unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after that enemy model’s unit has finished making its attacks, this model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
+            "sourceUnitId": "unit-invictor-tactical-warsuit"
           },
           {
-            "id": "unit-invictor-tactical-warsuit-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-invictor-tactical-warsuit"
           },
           {
-            "id": "unit-invictor-tactical-warsuit-ability-scouts-8-3",
-            "title": "Scouts 8\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 8\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-invictor-tactical-warsuit"
           },
           {
-            "id": "unit-invictor-tactical-warsuit-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-invictor-tactical-warsuit"
           },
           {
-            "id": "unit-invictor-tactical-warsuit-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-invictor-tactical-warsuit"
           }
         ],
         "models": [
@@ -21423,24 +22435,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-land-raider-ability-assault-ramp",
-            "title": "Assault Ramp"
+            "id": "space-marines-ability-assault-ramp",
+            "sectionId": "space-marines-ability-assault-ramp",
+            "title": "Assault Ramp",
+            "text": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "sourceUnitId": "unit-land-raider"
           },
           {
-            "id": "unit-land-raider-ability-transport-2",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-5",
+            "sectionId": "space-marines-ability-transport-5",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+            "sourceUnitId": "unit-land-raider"
           },
           {
-            "id": "unit-land-raider-ability-damaged-1-5-wounds-remaining-3",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-land-raider"
           },
           {
-            "id": "unit-land-raider-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-land-raider"
           },
           {
-            "id": "unit-land-raider-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-land-raider"
           }
         ],
         "models": [
@@ -21664,24 +22691,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-land-raider-crusader-ability-transport",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-6",
+            "sectionId": "space-marines-ability-transport-6",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 16 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+            "sourceUnitId": "unit-land-raider-crusader"
           },
           {
-            "id": "unit-land-raider-crusader-ability-assault-ramp-2",
-            "title": "Assault Ramp"
+            "id": "space-marines-ability-assault-ramp",
+            "sectionId": "space-marines-ability-assault-ramp",
+            "title": "Assault Ramp",
+            "text": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "sourceUnitId": "unit-land-raider-crusader"
           },
           {
-            "id": "unit-land-raider-crusader-ability-damaged-1-5-wounds-remaining-3",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-land-raider-crusader"
           },
           {
-            "id": "unit-land-raider-crusader-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-land-raider-crusader"
           },
           {
-            "id": "unit-land-raider-crusader-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-land-raider-crusader"
           }
         ],
         "models": [
@@ -21905,24 +22947,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-land-raider-redeemer-ability-transport",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-7",
+            "sectionId": "space-marines-ability-transport-7",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 14 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+            "sourceUnitId": "unit-land-raider-redeemer"
           },
           {
-            "id": "unit-land-raider-redeemer-ability-assault-ramp-2",
-            "title": "Assault Ramp"
+            "id": "space-marines-ability-assault-ramp",
+            "sectionId": "space-marines-ability-assault-ramp",
+            "title": "Assault Ramp",
+            "text": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "sourceUnitId": "unit-land-raider-redeemer"
           },
           {
-            "id": "unit-land-raider-redeemer-ability-damaged-1-5-wounds-remaining-3",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-land-raider-redeemer"
           },
           {
-            "id": "unit-land-raider-redeemer-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-land-raider-redeemer"
           },
           {
-            "id": "unit-land-raider-redeemer-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-land-raider-redeemer"
           }
         ],
         "models": [
@@ -22142,16 +23199,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-land-speeder-ability-purgation-run",
-            "title": "Purgation Run"
+            "id": "space-marines-ability-purgation-run",
+            "sectionId": "space-marines-ability-purgation-run",
+            "title": "Purgation Run",
+            "text": "In your Shooting phase, after this unit has shot, it can make a normal move of up to D6\". If it does,\nuntil the end of the turn, this unit is not eligible to declare a charge.",
+            "sourceUnitId": "unit-land-speeder"
           },
           {
-            "id": "unit-land-speeder-ability-oath-of-moment-2",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-land-speeder"
           },
           {
-            "id": "unit-land-speeder-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-land-speeder"
           }
         ],
         "models": [
@@ -22344,20 +23410,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-predator-annihilator-ability-annihilator",
-            "title": "Annihilator"
+            "id": "space-marines-ability-annihilator",
+            "sectionId": "space-marines-ability-annihilator",
+            "title": "Annihilator",
+            "text": "Each time a ranged attack made by this model is allocated to a Monster or Vehicle model, you can re-roll the Damage roll",
+            "sourceUnitId": "unit-predator-annihilator"
           },
           {
-            "id": "unit-predator-annihilator-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-predator-annihilator"
           },
           {
-            "id": "unit-predator-annihilator-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-predator-annihilator"
           },
           {
-            "id": "unit-predator-annihilator-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-predator-annihilator"
           }
         ],
         "models": [
@@ -22577,20 +23655,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-predator-destructor-ability-destructor",
-            "title": "Destructor"
+            "id": "space-marines-ability-destructor",
+            "sectionId": "space-marines-ability-destructor",
+            "title": "Destructor",
+            "text": "Each time this model makes a ranged attack that targets an Infantry unit, improve the Armour Penetration characteristic of that attack by 1.",
+            "sourceUnitId": "unit-predator-destructor"
           },
           {
-            "id": "unit-predator-destructor-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-predator-destructor"
           },
           {
-            "id": "unit-predator-destructor-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-predator-destructor"
           },
           {
-            "id": "unit-predator-destructor-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-predator-destructor"
           }
         ],
         "models": [
@@ -22811,20 +23901,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-redemptor-dreadnought-ability-duty-eternal",
-            "title": "Duty Eternal"
+            "id": "space-marines-ability-duty-eternal",
+            "sectionId": "space-marines-ability-duty-eternal",
+            "title": "Duty Eternal",
+            "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack",
+            "sourceUnitId": "unit-redemptor-dreadnought"
           },
           {
-            "id": "unit-redemptor-dreadnought-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-redemptor-dreadnought"
           },
           {
-            "id": "unit-redemptor-dreadnought-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-redemptor-dreadnought"
           },
           {
-            "id": "unit-redemptor-dreadnought-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-redemptor-dreadnought"
           }
         ],
         "models": [
@@ -23156,24 +24258,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-repulsor-ability-transport",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-8",
+            "sectionId": "space-marines-ability-transport-8",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 14 ADEPTUS ASTARTES INFANTRY models. Each JUMP PACK, WULFEN, GRAVIS or TERMINATOR model takes up the space of 2 models and each CENTURION model takes up the space of 3 models.",
+            "sourceUnitId": "unit-repulsor"
           },
           {
-            "id": "unit-repulsor-ability-emergency-combat-embarkation-2",
-            "title": "Emergency Combat Embarkation"
+            "id": "space-marines-ability-emergency-combat-embarkation",
+            "sectionId": "space-marines-ability-emergency-combat-embarkation",
+            "title": "Emergency Combat Embarkation",
+            "text": "Once per turn, in your opponent’s Charge phase, after an enemy unit has selected targets for its charge but before it makes a Charge move, you can select one Adeptus Astartes unit from your army that was selected as a target of that charge. Provided that unit is not within Engagement Range of any enemy units and every model in that unit is within 3\" of this Transport, it can embark within this Transport. The charging unit can then select new targets for its charge.",
+            "sourceUnitId": "unit-repulsor"
           },
           {
-            "id": "unit-repulsor-ability-damaged-1-5-wounds-remaining-3",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-repulsor"
           },
           {
-            "id": "unit-repulsor-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-repulsor"
           },
           {
-            "id": "unit-repulsor-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-repulsor"
           }
         ],
         "models": [
@@ -23422,24 +24539,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-repulsor-executioner-ability-transport",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-9",
+            "sectionId": "space-marines-ability-transport-9",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 7 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+            "sourceUnitId": "unit-repulsor-executioner"
           },
           {
-            "id": "unit-repulsor-executioner-ability-executioner-2",
-            "title": "Executioner"
+            "id": "space-marines-ability-executioner",
+            "sectionId": "space-marines-ability-executioner",
+            "title": "Executioner",
+            "text": "Each time this model makes an attack that targets a unit that is Below Half-strength, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-repulsor-executioner"
           },
           {
-            "id": "unit-repulsor-executioner-ability-damaged-1-5-wounds-remaining-3",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-repulsor-executioner"
           },
           {
-            "id": "unit-repulsor-executioner-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-repulsor-executioner"
           },
           {
-            "id": "unit-repulsor-executioner-ability-oath-of-moment-5",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-repulsor-executioner"
           }
         ],
         "models": [
@@ -23797,20 +24929,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-storm-speeder-hailstrike-ability-hailstrike",
-            "title": "Hailstrike"
+            "id": "space-marines-ability-hailstrike",
+            "sectionId": "space-marines-ability-hailstrike",
+            "title": "Hailstrike",
+            "text": "Each time this model has shot, select one enemy unit (excluding MONSTERS or VEHICLES) that was hit by one or more of those attacks. Until the end of the phase, each time a friendly ADEPTUS ASTARTES unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per phase.",
+            "sourceUnitId": "unit-storm-speeder-hailstrike"
           },
           {
-            "id": "unit-storm-speeder-hailstrike-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-storm-speeder-hailstrike"
           },
           {
-            "id": "unit-storm-speeder-hailstrike-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-storm-speeder-hailstrike"
           },
           {
-            "id": "unit-storm-speeder-hailstrike-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-storm-speeder-hailstrike"
           }
         ],
         "models": [
@@ -23977,20 +25121,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-storm-speeder-hammerstrike-ability-hammerstrike",
-            "title": "Hammerstrike"
+            "id": "space-marines-ability-hammerstrike",
+            "sectionId": "space-marines-ability-hammerstrike",
+            "title": "Hammerstrike",
+            "text": "Each time this model has shot, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
+            "sourceUnitId": "unit-storm-speeder-hammerstrike"
           },
           {
-            "id": "unit-storm-speeder-hammerstrike-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-storm-speeder-hammerstrike"
           },
           {
-            "id": "unit-storm-speeder-hammerstrike-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-storm-speeder-hammerstrike"
           },
           {
-            "id": "unit-storm-speeder-hammerstrike-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-storm-speeder-hammerstrike"
           }
         ],
         "models": [
@@ -24157,20 +25313,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-storm-speeder-thunderstrike-ability-thunderstrike",
-            "title": "Thunderstrike"
+            "id": "space-marines-ability-thunderstrike",
+            "sectionId": "space-marines-ability-thunderstrike",
+            "title": "Thunderstrike",
+            "text": "Each time this model has shot, select one enemy MONSTER or VEHICLE unit that was hit by one or more of those attacks. Until the end of the phase, each time a friendly ADEPTUS ASTARTES unit makes a ranged attack that targets that enemy unit, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-storm-speeder-thunderstrike"
           },
           {
-            "id": "unit-storm-speeder-thunderstrike-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-storm-speeder-thunderstrike"
           },
           {
-            "id": "unit-storm-speeder-thunderstrike-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-storm-speeder-thunderstrike"
           },
           {
-            "id": "unit-storm-speeder-thunderstrike-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-storm-speeder-thunderstrike"
           }
         ],
         "models": [
@@ -24338,16 +25506,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-stormhawk-interceptor-ability-interceptor",
-            "title": "Interceptor"
+            "id": "space-marines-ability-interceptor",
+            "sectionId": "space-marines-ability-interceptor",
+            "title": "Interceptor",
+            "text": "Each time this model makes a ranged attack that targets a unit that can Fly, add 1 to the Hit roll",
+            "sourceUnitId": "unit-stormhawk-interceptor"
           },
           {
-            "id": "unit-stormhawk-interceptor-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-stormhawk-interceptor"
           },
           {
-            "id": "unit-stormhawk-interceptor-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-stormhawk-interceptor"
           }
         ],
         "models": [
@@ -24651,28 +25828,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-stormraven-gunship-ability-armoured-resilience",
-            "title": "Armoured Resilience"
+            "id": "space-marines-ability-armoured-resilience",
+            "sectionId": "space-marines-ability-armoured-resilience",
+            "title": "Armoured Resilience",
+            "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
+            "sourceUnitId": "unit-stormraven-gunship"
           },
           {
-            "id": "unit-stormraven-gunship-ability-transport-2",
-            "title": "Transport"
+            "id": "space-marines-ability-transport-10",
+            "sectionId": "space-marines-ability-transport-10",
+            "title": "Transport",
+            "text": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+            "sourceUnitId": "unit-stormraven-gunship"
           },
           {
-            "id": "unit-stormraven-gunship-ability-damaged-1-5-wounds-remaining-3",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-stormraven-gunship"
           },
           {
-            "id": "unit-stormraven-gunship-ability-hover-4",
-            "title": "Hover"
+            "id": "core-hover",
+            "sectionId": "core-hover",
+            "title": "Hover",
+            "text": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
+            "sourceUnitId": "unit-stormraven-gunship"
           },
           {
-            "id": "unit-stormraven-gunship-ability-deadly-demise-d6-5",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-stormraven-gunship"
           },
           {
-            "id": "unit-stormraven-gunship-ability-oath-of-moment-6",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-stormraven-gunship"
           }
         ],
         "models": [
@@ -25085,16 +26280,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-stormtalon-gunship-ability-strafing-run",
-            "title": "Strafing Run"
+            "id": "space-marines-ability-strafing-run",
+            "sectionId": "space-marines-ability-strafing-run",
+            "title": "Strafing Run",
+            "text": "Each time this model makes a ranged attack that targets a unit that cannot Fly, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-stormtalon-gunship"
           },
           {
-            "id": "unit-stormtalon-gunship-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-stormtalon-gunship"
           },
           {
-            "id": "unit-stormtalon-gunship-ability-oath-of-moment-3",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-stormtalon-gunship"
           }
         ],
         "models": [
@@ -25370,20 +26574,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-vindicator-ability-siege-shield",
-            "title": "Siege Shield"
+            "id": "space-marines-ability-siege-shield",
+            "sectionId": "space-marines-ability-siege-shield",
+            "title": "Siege Shield",
+            "text": "When making ranged attacks with its demolisher cannon, this model can target enemy units within Engagement Range of it (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.",
+            "sourceUnitId": "unit-vindicator"
           },
           {
-            "id": "unit-vindicator-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-vindicator"
           },
           {
-            "id": "unit-vindicator-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-vindicator"
           },
           {
-            "id": "unit-vindicator-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-vindicator"
           }
         ],
         "models": [
@@ -25549,20 +26765,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-whirlwind-ability-pinning-bombardment",
-            "title": "Pinning Bombardment"
+            "id": "space-marines-ability-pinning-bombardment",
+            "sectionId": "space-marines-ability-pinning-bombardment",
+            "title": "Pinning Bombardment",
+            "text": "In your Shooting phase, after this model has shot, if one or more of those attacks made with its Whirlwind vengeance launcher scored a hit against an enemy Infantry unit, that unit must take a Battle-shock test.",
+            "sourceUnitId": "unit-whirlwind"
           },
           {
-            "id": "unit-whirlwind-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-whirlwind"
           },
           {
-            "id": "unit-whirlwind-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-whirlwind"
           },
           {
-            "id": "unit-whirlwind-ability-oath-of-moment-4",
-            "title": "Oath of Moment"
+            "id": "space-marines-ability-oath-of-moment",
+            "sectionId": "space-marines-ability-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-whirlwind"
           }
         ],
         "models": [

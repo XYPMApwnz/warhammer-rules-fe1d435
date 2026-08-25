@@ -59,16 +59,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-gargoyles-ability-winged-swarm",
-            "title": "Winged Swarm"
+            "id": "tyranids-ability-winged-swarm",
+            "sectionId": "tyranids-ability-winged-swarm",
+            "title": "Winged Swarm",
+            "text": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge.",
+            "sourceUnitId": "unit-gargoyles"
           },
           {
-            "id": "unit-gargoyles-ability-synapse-2",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-gargoyles"
           },
           {
-            "id": "unit-gargoyles-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-gargoyles"
           }
         ],
         "models": [
@@ -191,12 +200,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hormagaunts-ability-bounding-leap",
-            "title": "Bounding Leap"
+            "id": "tyranids-ability-bounding-leap",
+            "sectionId": "tyranids-ability-bounding-leap",
+            "title": "Bounding Leap",
+            "text": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+            "sourceUnitId": "unit-hormagaunts"
           },
           {
-            "id": "unit-hormagaunts-ability-synapse-2",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-hormagaunts"
           }
         ],
         "models": [
@@ -292,12 +307,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-termagants-ability-skulking-horrors",
-            "title": "Skulking Horrors"
+            "id": "tyranids-ability-skulking-horrors",
+            "sectionId": "tyranids-ability-skulking-horrors",
+            "title": "Skulking Horrors",
+            "text": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\".",
+            "sourceUnitId": "unit-termagants"
           },
           {
-            "id": "unit-termagants-ability-synapse-2",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-termagants"
           }
         ],
         "models": [
@@ -557,32 +578,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-broodlord-ability-vicious-insight",
-            "title": "Vicious Insight"
+            "id": "tyranids-ability-vicious-insight",
+            "sectionId": "tyranids-ability-vicious-insight",
+            "title": "Vicious Insight",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
+            "sourceUnitId": "unit-broodlord"
           },
           {
-            "id": "unit-broodlord-ability-hypnotic-gaze-psychic-2",
-            "title": "Hypnotic Gaze (Psychic)"
+            "id": "tyranids-ability-hypnotic-gaze-psychic",
+            "sectionId": "tyranids-ability-hypnotic-gaze-psychic",
+            "title": "Hypnotic Gaze (Psychic)",
+            "text": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-broodlord"
           },
           {
-            "id": "unit-broodlord-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-broodlord"
           },
           {
-            "id": "unit-broodlord-ability-scouts-8-4",
-            "title": "Scouts 8\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 8\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-broodlord"
           },
           {
-            "id": "unit-broodlord-ability-synapse-5",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-broodlord"
           },
           {
-            "id": "unit-broodlord-ability-shadow-in-the-warp-6",
-            "title": "Shadow in the Warp"
-          },
-          {
-            "id": "unit-broodlord-ability-leader-7",
-            "title": "Leader"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-broodlord"
           }
         ],
         "models": [
@@ -679,32 +714,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hive-tyrant-ability-onslaught-aura-psychic",
-            "title": "Onslaught (Aura, Psychic)"
+            "id": "tyranids-ability-onslaught-aura-psychic",
+            "sectionId": "tyranids-ability-onslaught-aura-psychic",
+            "title": "Onslaught (Aura, Psychic)",
+            "text": "While a friendly TYRANIDS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.",
+            "sourceUnitId": "unit-hive-tyrant"
           },
           {
-            "id": "unit-hive-tyrant-ability-leader-2",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-hive-tyrant"
           },
           {
-            "id": "unit-hive-tyrant-ability-will-of-the-hive-mind-3",
-            "title": "Will of the Hive Mind"
+            "id": "tyranids-ability-will-of-the-hive-mind",
+            "sectionId": "tyranids-ability-will-of-the-hive-mind",
+            "title": "Will of the Hive Mind",
+            "text": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-hive-tyrant"
           },
           {
-            "id": "unit-hive-tyrant-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-hive-tyrant"
           },
           {
-            "id": "unit-hive-tyrant-ability-shadow-in-the-warp-5",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-hive-tyrant"
           },
           {
-            "id": "unit-hive-tyrant-ability-synapse-6",
-            "title": "Synapse"
-          },
-          {
-            "id": "unit-hive-tyrant-ability-leader-7",
-            "title": "Leader"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-hive-tyrant"
           }
         ],
         "models": [
@@ -881,36 +930,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hyperadapted-raveners-ability-alpha-invader",
-            "title": "Alpha Invader"
+            "id": "tyranids-ability-alpha-invader",
+            "sectionId": "tyranids-ability-alpha-invader",
+            "title": "Alpha Invader",
+            "text": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-hyperadapted-raveners"
           },
           {
-            "id": "unit-hyperadapted-raveners-ability-hypersensory-array-2",
-            "title": "Hypersensory Array"
+            "id": "tyranids-ability-hypersensory-array",
+            "sectionId": "tyranids-ability-hypersensory-array",
+            "title": "Hypersensory Array",
+            "text": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.",
+            "sourceUnitId": "unit-hyperadapted-raveners"
           },
           {
-            "id": "unit-hyperadapted-raveners-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-hyperadapted-raveners"
           },
           {
-            "id": "unit-hyperadapted-raveners-ability-shadow-in-the-warp-4",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-hyperadapted-raveners"
           },
           {
-            "id": "unit-hyperadapted-raveners-ability-deep-strike-5",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-hyperadapted-raveners"
           },
           {
-            "id": "unit-hyperadapted-raveners-ability-synapse-6",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-hyperadapted-raveners"
           },
           {
-            "id": "unit-hyperadapted-raveners-ability-sustained-hits-7",
-            "title": "Sustained Hits"
-          },
-          {
-            "id": "unit-hyperadapted-raveners-ability-leader-8",
-            "title": "Leader"
+            "id": "core-sustained-hits",
+            "sectionId": "core-sustained-hits",
+            "title": "Sustained Hits",
+            "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
+            "sourceUnitId": "unit-hyperadapted-raveners"
           }
         ],
         "models": [
@@ -1085,32 +1151,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-neurotyrant-ability-node-lash-psychic",
-            "title": "Node Lash (Psychic)"
+            "id": "tyranids-ability-node-lash-psychic",
+            "sectionId": "tyranids-ability-node-lash-psychic",
+            "title": "Node Lash (Psychic)",
+            "text": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll. If the target is Battle-shocked, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-neurotyrant"
           },
           {
-            "id": "unit-neurotyrant-ability-psychic-terror-psychic-2",
-            "title": "Psychic Terror (Psychic)"
+            "id": "tyranids-ability-psychic-terror-psychic",
+            "sectionId": "tyranids-ability-psychic-terror-psychic",
+            "title": "Psychic Terror (Psychic)",
+            "text": "If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result.",
+            "sourceUnitId": "unit-neurotyrant"
           },
           {
-            "id": "unit-neurotyrant-ability-neuroloids-3",
-            "title": "Neuroloids"
+            "id": "tyranids-ability-neuroloids",
+            "sectionId": "tyranids-ability-neuroloids",
+            "title": "Neuroloids",
+            "text": "In your Command phase, you can select up to two friendly TYRANIDS units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.\n\nDesigner’s Note: Place a Neuroloid token next to each selected unit to remind you.",
+            "sourceUnitId": "unit-neurotyrant"
           },
           {
-            "id": "unit-neurotyrant-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-neurotyrant"
           },
           {
-            "id": "unit-neurotyrant-ability-shadow-in-the-warp-5",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-neurotyrant"
           },
           {
-            "id": "unit-neurotyrant-ability-synapse-6",
-            "title": "Synapse"
-          },
-          {
-            "id": "unit-neurotyrant-ability-leader-7",
-            "title": "Leader"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-neurotyrant"
           }
         ],
         "models": [
@@ -1225,32 +1305,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-parasite-of-mortrex-ability-parasitic-infection",
-            "title": "Parasitic Infection"
+            "id": "tyranids-ability-parasitic-infection",
+            "sectionId": "tyranids-ability-parasitic-infection",
+            "title": "Parasitic Infection",
+            "text": "Each time an Infantry model is destroyed by an attack made with this model’s barbed ovipositor, after this model has finished making its attacks, you can add one new Ripper Swarms unit to your army consisting of D3 models and set it up within 3\" of this model. If you do, that Ripper Swarms unit can be set up within Engagement Range of the destroyed model’s unit (but not within Engagement Range of any other enemy units).",
+            "sourceUnitId": "unit-parasite-of-mortrex"
           },
           {
-            "id": "unit-parasite-of-mortrex-ability-it-itches-2",
-            "title": "It Itches!"
+            "id": "tyranids-ability-it-itches",
+            "sectionId": "tyranids-ability-it-itches",
+            "title": "It Itches!",
+            "text": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. That enemy unit must take a Battle-shock test.",
+            "sourceUnitId": "unit-parasite-of-mortrex"
           },
           {
-            "id": "unit-parasite-of-mortrex-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-parasite-of-mortrex"
           },
           {
-            "id": "unit-parasite-of-mortrex-ability-lone-operative-4",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-parasite-of-mortrex"
           },
           {
-            "id": "unit-parasite-of-mortrex-ability-stealth-5",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-parasite-of-mortrex"
           },
           {
-            "id": "unit-parasite-of-mortrex-ability-synapse-6",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-parasite-of-mortrex"
           },
           {
-            "id": "unit-parasite-of-mortrex-ability-shadow-in-the-warp-7",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-parasite-of-mortrex"
           }
         ],
         "models": [
@@ -1364,28 +1465,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tervigon-ability-spawn-termagants",
-            "title": "Spawn Termagants"
+            "id": "tyranids-ability-spawn-termagants",
+            "sectionId": "tyranids-ability-spawn-termagants",
+            "title": "Spawn Termagants",
+            "text": "In your Command phase, you can select one friendly TERMAGANTS unit within 6\" of this model and return up to D3+3 destroyed models to that unit. A TERMAGANTS unit cannot be selected for this ability more than once per phase.",
+            "sourceUnitId": "unit-tervigon"
           },
           {
-            "id": "unit-tervigon-ability-brood-progenitor-aura-psychic-2",
-            "title": "Brood Progenitor (Aura, Psychic)"
+            "id": "tyranids-ability-brood-progenitor-aura-psychic",
+            "sectionId": "tyranids-ability-brood-progenitor-aura-psychic",
+            "title": "Brood Progenitor (Aura, Psychic)",
+            "text": "While a friendly TERMAGANTS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "sourceUnitId": "unit-tervigon"
           },
           {
-            "id": "unit-tervigon-ability-damaged-1-5-wounds-remaining-3",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-tervigon"
           },
           {
-            "id": "unit-tervigon-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-tervigon"
           },
           {
-            "id": "unit-tervigon-ability-shadow-in-the-warp-5",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-tervigon"
           },
           {
-            "id": "unit-tervigon-ability-synapse-6",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-tervigon"
           }
         ],
         "models": [
@@ -1615,28 +1734,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tyranid-prime-with-lash-whip-ability-alpha-warrior",
-            "title": "Alpha Warrior"
+            "id": "tyranids-ability-alpha-warrior",
+            "sectionId": "tyranids-ability-alpha-warrior",
+            "title": "Alpha Warrior",
+            "text": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-tyranid-prime-with-lash-whip"
           },
           {
-            "id": "unit-tyranid-prime-with-lash-whip-ability-aggressive-leader-beast-2",
-            "title": "Aggressive Leader-beast"
+            "id": "tyranids-ability-aggressive-leader-beast",
+            "sectionId": "tyranids-ability-aggressive-leader-beast",
+            "title": "Aggressive Leader-beast",
+            "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\".",
+            "sourceUnitId": "unit-tyranid-prime-with-lash-whip"
           },
           {
-            "id": "unit-tyranid-prime-with-lash-whip-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-tyranid-prime-with-lash-whip"
           },
           {
-            "id": "unit-tyranid-prime-with-lash-whip-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-tyranid-prime-with-lash-whip"
           },
           {
-            "id": "unit-tyranid-prime-with-lash-whip-ability-shadow-in-the-warp-5",
-            "title": "Shadow in the Warp"
-          },
-          {
-            "id": "unit-tyranid-prime-with-lash-whip-ability-leader-6",
-            "title": "Leader"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-tyranid-prime-with-lash-whip"
           }
         ],
         "models": [
@@ -1780,28 +1910,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-winged-hive-tyrant-ability-paroxysm-psychic",
-            "title": "Paroxysm (Psychic)"
+            "id": "tyranids-ability-paroxysm-psychic",
+            "sectionId": "tyranids-ability-paroxysm-psychic",
+            "title": "Paroxysm (Psychic)",
+            "text": "At the start of the Fight phase, you can select one enemy unit within 12\" of and visible to this model and roll one D6: on a 1, this Psyker suffers D3 mortal wounds; on a 2+, until the end of the phase, subtract 1 from the Attacks characteristic of weapons equipped by models in that unit.",
+            "sourceUnitId": "unit-winged-hive-tyrant"
           },
           {
-            "id": "unit-winged-hive-tyrant-ability-will-of-the-hive-mind-2",
-            "title": "Will of the Hive Mind"
+            "id": "tyranids-ability-will-of-the-hive-mind",
+            "sectionId": "tyranids-ability-will-of-the-hive-mind",
+            "title": "Will of the Hive Mind",
+            "text": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-winged-hive-tyrant"
           },
           {
-            "id": "unit-winged-hive-tyrant-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-winged-hive-tyrant"
           },
           {
-            "id": "unit-winged-hive-tyrant-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-winged-hive-tyrant"
           },
           {
-            "id": "unit-winged-hive-tyrant-ability-shadow-in-the-warp-5",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-winged-hive-tyrant"
           },
           {
-            "id": "unit-winged-hive-tyrant-ability-synapse-6",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-winged-hive-tyrant"
           }
         ],
         "models": [
@@ -2023,32 +2171,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-winged-tyranid-prime-ability-alpha-warrior",
-            "title": "Alpha Warrior"
+            "id": "tyranids-ability-alpha-warrior-2",
+            "sectionId": "tyranids-ability-alpha-warrior-2",
+            "title": "Alpha Warrior",
+            "text": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-winged-tyranid-prime"
           },
           {
-            "id": "unit-winged-tyranid-prime-ability-death-blow-2",
-            "title": "Death Blow"
+            "id": "tyranids-ability-death-blow",
+            "sectionId": "tyranids-ability-death-blow",
+            "title": "Death Blow",
+            "text": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+            "sourceUnitId": "unit-winged-tyranid-prime"
           },
           {
-            "id": "unit-winged-tyranid-prime-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-winged-tyranid-prime"
           },
           {
-            "id": "unit-winged-tyranid-prime-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-winged-tyranid-prime"
           },
           {
-            "id": "unit-winged-tyranid-prime-ability-synapse-5",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-winged-tyranid-prime"
           },
           {
-            "id": "unit-winged-tyranid-prime-ability-shadow-in-the-warp-6",
-            "title": "Shadow in the Warp"
-          },
-          {
-            "id": "unit-winged-tyranid-prime-ability-leader-7",
-            "title": "Leader"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-winged-tyranid-prime"
           }
         ],
         "models": [
@@ -2137,20 +2299,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tyrannocyte-ability-aerial-seeding",
-            "title": "Aerial Seeding"
+            "id": "tyranids-ability-aerial-seeding",
+            "sectionId": "tyranids-ability-aerial-seeding",
+            "title": "Aerial Seeding",
+            "text": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 8\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it.",
+            "sourceUnitId": "unit-tyrannocyte"
           },
           {
-            "id": "unit-tyrannocyte-ability-deadly-demise-d3-2",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-tyrannocyte"
           },
           {
-            "id": "unit-tyrannocyte-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-tyrannocyte"
           },
           {
-            "id": "unit-tyrannocyte-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-tyrannocyte"
           }
         ],
         "models": [
@@ -2264,36 +2438,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-deathleaper-ability-fear-of-the-unseen-aura",
-            "title": "Fear of the Unseen (Aura)"
+            "id": "tyranids-ability-fear-of-the-unseen-aura",
+            "sectionId": "tyranids-ability-fear-of-the-unseen-aura",
+            "title": "Fear of the Unseen (Aura)",
+            "text": "While an enemy unit is within 6\" of this model, worsen the Leadership characteristic of models in that unit by 1. In addition, in the Battle-shock step of your opponent’s Command phase, if such an enemy unit is below its Starting Strength, it must take a Battle-shock test.",
+            "sourceUnitId": "unit-deathleaper"
           },
           {
-            "id": "unit-deathleaper-ability-hunter-organism-2",
-            "title": "Hunter Organism"
+            "id": "tyranids-ability-hunter-organism",
+            "sectionId": "tyranids-ability-hunter-organism",
+            "title": "Hunter Organism",
+            "text": "This model cannot be your Warlord",
+            "sourceUnitId": "unit-deathleaper"
           },
           {
-            "id": "unit-deathleaper-ability-feeder-tendrils-3",
-            "title": "Feeder Tendrils"
+            "id": "tyranids-ability-feeder-tendrils",
+            "sectionId": "tyranids-ability-feeder-tendrils",
+            "title": "Feeder Tendrils",
+            "text": "Each time this model destroys an enemy Character model, you gain 1CP.",
+            "sourceUnitId": "unit-deathleaper"
           },
           {
-            "id": "unit-deathleaper-ability-fights-first-4",
-            "title": "Fights First"
+            "id": "core-fights-first",
+            "sectionId": "core-fights-first",
+            "title": "Fights First",
+            "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+            "sourceUnitId": "unit-deathleaper"
           },
           {
-            "id": "unit-deathleaper-ability-infiltrators-5",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-deathleaper"
           },
           {
-            "id": "unit-deathleaper-ability-lone-operative-6",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-deathleaper"
           },
           {
-            "id": "unit-deathleaper-ability-stealth-7",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-deathleaper"
           },
           {
-            "id": "unit-deathleaper-ability-synapse-8",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-deathleaper"
           }
         ],
         "models": [
@@ -2389,28 +2587,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-old-one-eye-ability-alpha-leader",
-            "title": "Alpha Leader"
+            "id": "tyranids-ability-alpha-leader",
+            "sectionId": "tyranids-ability-alpha-leader",
+            "title": "Alpha Leader",
+            "text": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
+            "sourceUnitId": "unit-old-one-eye"
           },
           {
-            "id": "unit-old-one-eye-ability-unstoppable-monster-2",
-            "title": "Unstoppable Monster"
+            "id": "tyranids-ability-unstoppable-monster",
+            "sectionId": "tyranids-ability-unstoppable-monster",
+            "title": "Unstoppable Monster",
+            "text": "At the start of each player’s Command phase, this model regains up to D3 lost wounds.",
+            "sourceUnitId": "unit-old-one-eye"
           },
           {
-            "id": "unit-old-one-eye-ability-leader-3",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-old-one-eye"
           },
           {
-            "id": "unit-old-one-eye-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-old-one-eye"
           },
           {
-            "id": "unit-old-one-eye-ability-feel-no-pain-5-5",
-            "title": "Feel No Pain 5+"
-          },
-          {
-            "id": "unit-old-one-eye-ability-leader-6",
-            "title": "Leader"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-old-one-eye"
           }
         ],
         "models": [
@@ -2555,20 +2764,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-the-red-terror-ability-swallow-whole",
-            "title": "Swallow Whole"
+            "id": "tyranids-ability-swallow-whole",
+            "sectionId": "tyranids-ability-swallow-whole",
+            "title": "Swallow Whole",
+            "text": "Each time an attack with this model’s gaping maw targets an Infantry, Mounted or Beasts unit, each successful unmodified Wound roll is a Critical Wound. Each time an Infantry, Mounted or Beasts model is destroyed as a result of an attack made by this model’s gaping maw, this model regains up to D3+2 lost wounds.",
+            "sourceUnitId": "unit-the-red-terror"
           },
           {
-            "id": "unit-the-red-terror-ability-subterranean-hunter-2",
-            "title": "Subterranean Hunter"
+            "id": "tyranids-ability-subterranean-hunter",
+            "sectionId": "tyranids-ability-subterranean-hunter",
+            "title": "Subterranean Hunter",
+            "text": "At the end of the Fight phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+            "sourceUnitId": "unit-the-red-terror"
           },
           {
-            "id": "unit-the-red-terror-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-the-red-terror"
           },
           {
-            "id": "unit-the-red-terror-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-the-red-terror"
           }
         ],
         "models": [
@@ -2694,36 +2915,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-the-swarmlord-ability-hive-commander",
-            "title": "Hive Commander"
+            "id": "tyranids-ability-hive-commander",
+            "sectionId": "tyranids-ability-hive-commander",
+            "title": "Hive Commander",
+            "text": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP",
+            "sourceUnitId": "unit-the-swarmlord"
           },
           {
-            "id": "unit-the-swarmlord-ability-malign-presence-aura-2",
-            "title": "Malign Presence (Aura)"
+            "id": "tyranids-ability-malign-presence-aura",
+            "sectionId": "tyranids-ability-malign-presence-aura",
+            "title": "Malign Presence (Aura)",
+            "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a Stratagem, you can use this ability. If you do, increase the CP cost of that use of that Stratagem by 1CP.",
+            "sourceUnitId": "unit-the-swarmlord"
           },
           {
-            "id": "unit-the-swarmlord-ability-domination-of-the-hive-mind-aura-3",
-            "title": "Domination of the Hive Mind (Aura)"
+            "id": "tyranids-ability-domination-of-the-hive-mind-aura",
+            "sectionId": "tyranids-ability-domination-of-the-hive-mind-aura",
+            "title": "Domination of the Hive Mind (Aura)",
+            "text": "While a friendly TYRANIDS unit is within 9\" of this model, that unit is within your army’s Synapse Range.",
+            "sourceUnitId": "unit-the-swarmlord"
           },
           {
-            "id": "unit-the-swarmlord-ability-leader-4",
-            "title": "Leader"
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-the-swarmlord"
           },
           {
-            "id": "unit-the-swarmlord-ability-deadly-demise-d3-5",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-the-swarmlord"
           },
           {
-            "id": "unit-the-swarmlord-ability-shadow-in-the-warp-6",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-the-swarmlord"
           },
           {
-            "id": "unit-the-swarmlord-ability-synapse-7",
-            "title": "Synapse"
-          },
-          {
-            "id": "unit-the-swarmlord-ability-leader-8",
-            "title": "Leader"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-the-swarmlord"
           }
         ],
         "models": [
@@ -2834,12 +3072,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-barbgaunts-ability-disruption-bombardment",
-            "title": "Disruption Bombardment"
+            "id": "tyranids-ability-disruption-bombardment",
+            "sectionId": "tyranids-ability-disruption-bombardment",
+            "title": "Disruption Bombardment",
+            "text": "In your Shooting phase, after this unit has shot, select one enemy INFANTRY unit hit by one or more of those attacks. Until the end of your opponent’s next turn, that enemy unit is disrupted. While a unit is disrupted, subtract 2 from its Move characteristic, and subtract 2 from Advance and Charge rolls made for it.",
+            "sourceUnitId": "unit-barbgaunts"
           },
           {
-            "id": "unit-barbgaunts-ability-synapse-2",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-barbgaunts"
           }
         ],
         "models": [
@@ -2950,16 +3194,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-biovores-ability-seed-spore-mines",
-            "title": "Seed Spore Mines"
+            "id": "tyranids-ability-seed-spore-mines",
+            "sectionId": "tyranids-ability-seed-spore-mines",
+            "title": "Seed Spore Mines",
+            "text": "Once per turn, in your Shooting Phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new SPORE MINES unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units. That SPORE MINES unit contains 1 model for each model in this unit.",
+            "sourceUnitId": "unit-biovores"
           },
           {
-            "id": "unit-biovores-ability-deadly-demise-1-2",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-biovores"
           },
           {
-            "id": "unit-biovores-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-biovores"
           }
         ],
         "models": [
@@ -3081,16 +3334,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-genestealers-ability-vanguard-predator",
-            "title": "Vanguard Predator"
+            "id": "tyranids-ability-vanguard-predator",
+            "sectionId": "tyranids-ability-vanguard-predator",
+            "title": "Vanguard Predator",
+            "text": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll of 1 as well.",
+            "sourceUnitId": "unit-genestealers"
           },
           {
-            "id": "unit-genestealers-ability-scouts-8-2",
-            "title": "Scouts 8\""
+            "id": "core-scouts",
+            "sectionId": "core-scouts",
+            "title": "Scouts 8\"",
+            "text": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: \n- If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. \n- If that unit is wholly within your deployment zone, it can make a scout move. \n- If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
+            "sourceUnitId": "unit-genestealers"
           },
           {
-            "id": "unit-genestealers-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-genestealers"
           }
         ],
         "models": [
@@ -3174,12 +3436,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hive-guard-ability-defensive-stance",
-            "title": "Defensive Stance"
+            "id": "tyranids-ability-defensive-stance",
+            "sectionId": "tyranids-ability-defensive-stance",
+            "title": "Defensive Stance",
+            "text": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+, or unmodified Hit rolls of 4+ instead if this unit is within range of an objective marker.",
+            "sourceUnitId": "unit-hive-guard"
           },
           {
-            "id": "unit-hive-guard-ability-synapse-2",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-hive-guard"
           }
         ],
         "models": [
@@ -3318,32 +3586,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-lictor-ability-pheromone-trail",
-            "title": "Pheromone Trail"
+            "id": "tyranids-ability-pheromone-trail",
+            "sectionId": "tyranids-ability-pheromone-trail",
+            "title": "Pheromone Trail",
+            "text": "Once per battle round, you can target one model with this ability with the Rapid Ingress Stratagem for 0CP.",
+            "sourceUnitId": "unit-lictor"
           },
           {
-            "id": "unit-lictor-ability-feeder-tendrils-2",
-            "title": "Feeder Tendrils"
+            "id": "tyranids-ability-feeder-tendrils",
+            "sectionId": "tyranids-ability-feeder-tendrils",
+            "title": "Feeder Tendrils",
+            "text": "Each time this model destroys an enemy Character model, you gain 1CP.",
+            "sourceUnitId": "unit-lictor"
           },
           {
-            "id": "unit-lictor-ability-fights-first-3",
-            "title": "Fights First"
+            "id": "core-fights-first",
+            "sectionId": "core-fights-first",
+            "title": "Fights First",
+            "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+            "sourceUnitId": "unit-lictor"
           },
           {
-            "id": "unit-lictor-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-lictor"
           },
           {
-            "id": "unit-lictor-ability-lone-operative-5",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-lictor"
           },
           {
-            "id": "unit-lictor-ability-stealth-6",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-lictor"
           },
           {
-            "id": "unit-lictor-ability-synapse-7",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-lictor"
           }
         ],
         "models": [
@@ -3438,12 +3727,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-neurogaunts-ability-neurocytes",
-            "title": "Neurocytes"
+            "id": "tyranids-ability-neurocytes",
+            "sectionId": "tyranids-ability-neurocytes",
+            "title": "Neurocytes",
+            "text": "While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNTS units), it has the SYNAPSE keyword.",
+            "sourceUnitId": "unit-neurogaunts"
           },
           {
-            "id": "unit-neurogaunts-ability-synapse-2",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-neurogaunts"
           }
         ],
         "models": [
@@ -3536,36 +3831,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-neurolictor-ability-feeder-tendrils",
-            "title": "Feeder Tendrils"
+            "id": "tyranids-ability-feeder-tendrils-2",
+            "sectionId": "tyranids-ability-feeder-tendrils-2",
+            "title": "Feeder Tendrils",
+            "text": "Each time this model destroys an enemy CHARACTER model, you gain 1CP",
+            "sourceUnitId": "unit-neurolictor"
           },
           {
-            "id": "unit-neurolictor-ability-neural-disruption-2",
-            "title": "Neural Disruption"
+            "id": "tyranids-ability-neural-disruption",
+            "sectionId": "tyranids-ability-neural-disruption",
+            "title": "Neural Disruption",
+            "text": "In your Command phase, select one enemy unit within 12\" of this model. That unit must take a Battle-shock test",
+            "sourceUnitId": "unit-neurolictor"
           },
           {
-            "id": "unit-neurolictor-ability-psychological-saboteur-aura-3",
-            "title": "Psychological Saboteur (Aura)"
+            "id": "tyranids-ability-psychological-saboteur-aura",
+            "sectionId": "tyranids-ability-psychological-saboteur-aura",
+            "title": "Psychological Saboteur (Aura)",
+            "text": "While an enemy unit is within 12\" of this model, if that unit is Battle-shocked:\n\n- Each time a model in that unit makes an attack, subtract 1 from the Hit roll.\n- Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.",
+            "sourceUnitId": "unit-neurolictor"
           },
           {
-            "id": "unit-neurolictor-ability-shadow-in-the-warp-4",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-neurolictor"
           },
           {
-            "id": "unit-neurolictor-ability-lone-operative-5",
-            "title": "Lone Operative"
+            "id": "core-lone-operative",
+            "sectionId": "core-lone-operative",
+            "title": "Lone Operative",
+            "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+            "sourceUnitId": "unit-neurolictor"
           },
           {
-            "id": "unit-neurolictor-ability-infiltrators-6",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-neurolictor"
           },
           {
-            "id": "unit-neurolictor-ability-stealth-7",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-neurolictor"
           },
           {
-            "id": "unit-neurolictor-ability-synapse-8",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-neurolictor"
           }
         ],
         "models": [
@@ -3650,16 +3969,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-pyrovores-ability-burning-spray",
-            "title": "Burning Spray"
+            "id": "tyranids-ability-burning-spray",
+            "sectionId": "tyranids-ability-burning-spray",
+            "title": "Burning Spray",
+            "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
+            "sourceUnitId": "unit-pyrovores"
           },
           {
-            "id": "unit-pyrovores-ability-deadly-demise-1-2",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-pyrovores"
           },
           {
-            "id": "unit-pyrovores-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-pyrovores"
           }
         ],
         "models": [
@@ -3782,16 +4110,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-raveners-ability-death-from-below",
-            "title": "Death From Below"
+            "id": "tyranids-ability-death-from-below",
+            "sectionId": "tyranids-ability-death-from-below",
+            "title": "Death From Below",
+            "text": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+            "sourceUnitId": "unit-raveners"
           },
           {
-            "id": "unit-raveners-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-raveners"
           },
           {
-            "id": "unit-raveners-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-raveners"
           }
         ],
         "models": [
@@ -3895,16 +4232,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tyranid-warriors-with-melee-bio-weapons-ability-adaptive-instincts-once-per-turn-per-unit",
-            "title": "Adaptive Instincts (Once per turn, per unit)"
+            "id": "tyranids-ability-adaptive-instincts-once-per-turn-per-unit",
+            "sectionId": "tyranids-ability-adaptive-instincts-once-per-turn-per-unit",
+            "title": "Adaptive Instincts (Once per turn, per unit)",
+            "text": "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n▪ This unit’s melee attacks have +1 S.\n▪ Or: This unit has +1 T.",
+            "sourceUnitId": "unit-tyranid-warriors-with-melee-bio-weapons"
           },
           {
-            "id": "unit-tyranid-warriors-with-melee-bio-weapons-ability-shadow-in-the-warp-2",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-tyranid-warriors-with-melee-bio-weapons"
           },
           {
-            "id": "unit-tyranid-warriors-with-melee-bio-weapons-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-tyranid-warriors-with-melee-bio-weapons"
           }
         ],
         "models": [
@@ -4014,16 +4360,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-ability-adaptable-predators",
-            "title": "Adaptable Predators"
+            "id": "tyranids-ability-adaptable-predators",
+            "sectionId": "tyranids-ability-adaptable-predators",
+            "title": "Adaptable Predators",
+            "text": "This unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+            "sourceUnitId": "unit-tyranid-warriors-with-ranged-bio-weapons"
           },
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-ability-shadow-in-the-warp-2",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-tyranid-warriors-with-ranged-bio-weapons"
           },
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-tyranid-warriors-with-ranged-bio-weapons"
           }
         ],
         "models": [
@@ -4275,12 +4630,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tyrant-guard-ability-guardian-organism",
-            "title": "Guardian Organism"
+            "id": "tyranids-ability-guardian-organism",
+            "sectionId": "tyranids-ability-guardian-organism",
+            "title": "Guardian Organism",
+            "text": "While a CHARACTER model is leading this unit, that Character has the Feel No Pain 5+ ability",
+            "sourceUnitId": "unit-tyrant-guard"
           },
           {
-            "id": "unit-tyrant-guard-ability-synapse-2",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-tyrant-guard"
           }
         ],
         "models": [
@@ -4419,16 +4780,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-venomthropes-ability-foul-spores-aura",
-            "title": "Foul Spores (Aura)"
+            "id": "tyranids-ability-foul-spores-aura",
+            "sectionId": "tyranids-ability-foul-spores-aura",
+            "title": "Foul Spores (Aura)",
+            "text": "Friendly TYRANIDS units within 6\" of this unit have Stealth.",
+            "sourceUnitId": "unit-venomthropes"
           },
           {
-            "id": "unit-venomthropes-ability-stealth-2",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-venomthropes"
           },
           {
-            "id": "unit-venomthropes-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-venomthropes"
           }
         ],
         "models": [
@@ -4513,24 +4883,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-von-ryans-leapers-ability-pouncing-leap",
-            "title": "Pouncing Leap"
+            "id": "tyranids-ability-pouncing-leap",
+            "sectionId": "tyranids-ability-pouncing-leap",
+            "title": "Pouncing Leap",
+            "text": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do:\n▪ That use is -1 CP.\n▪ That use does not prevent any uses of that stratagem on other units this phase.",
+            "sourceUnitId": "unit-von-ryans-leapers"
           },
           {
-            "id": "unit-von-ryans-leapers-ability-stealth-2",
-            "title": "Stealth"
+            "id": "core-stealth",
+            "sectionId": "core-stealth",
+            "title": "Stealth",
+            "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+            "sourceUnitId": "unit-von-ryans-leapers"
           },
           {
-            "id": "unit-von-ryans-leapers-ability-fights-first-3",
-            "title": "Fights First"
+            "id": "core-fights-first",
+            "sectionId": "core-fights-first",
+            "title": "Fights First",
+            "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+            "sourceUnitId": "unit-von-ryans-leapers"
           },
           {
-            "id": "unit-von-ryans-leapers-ability-infiltrators-4",
-            "title": "Infiltrators"
+            "id": "core-infiltrators",
+            "sectionId": "core-infiltrators",
+            "title": "Infiltrators",
+            "text": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
+            "sourceUnitId": "unit-von-ryans-leapers"
           },
           {
-            "id": "unit-von-ryans-leapers-ability-synapse-5",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-von-ryans-leapers"
           }
         ],
         "models": [
@@ -4627,20 +5012,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-zoanthropes-ability-spirit-leech-aura-psychic",
-            "title": "Spirit Leech (Aura, Psychic)"
+            "id": "tyranids-ability-spirit-leech-aura-psychic",
+            "sectionId": "tyranids-ability-spirit-leech-aura-psychic",
+            "title": "Spirit Leech (Aura, Psychic)",
+            "text": "While an enemy unit is within 6\" of this unit, if it contains a Neurothrope, each time that enemy unit fails a Battle-shock test, it suffers D3 mortal wounds and one model in this unit regains up to D3 lost wounds.",
+            "sourceUnitId": "unit-zoanthropes"
           },
           {
-            "id": "unit-zoanthropes-ability-warp-field-aura-psychic-2",
-            "title": "Warp Field (Aura, Psychic)"
+            "id": "tyranids-ability-warp-field-aura-psychic",
+            "sectionId": "tyranids-ability-warp-field-aura-psychic",
+            "title": "Warp Field (Aura, Psychic)",
+            "text": "While a friendly TYRANIDS unit is within 6\" of this unit, models in that unit have a 6+ invulnerable save.",
+            "sourceUnitId": "unit-zoanthropes"
           },
           {
-            "id": "unit-zoanthropes-ability-shadow-in-the-warp-3",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-zoanthropes"
           },
           {
-            "id": "unit-zoanthropes-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-zoanthropes"
           }
         ],
         "models": [
@@ -4824,16 +5221,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-carnifexes-ability-blistering-assault",
-            "title": "Blistering Assault"
+            "id": "tyranids-ability-blistering-assault",
+            "sectionId": "tyranids-ability-blistering-assault",
+            "title": "Blistering Assault",
+            "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
+            "sourceUnitId": "unit-carnifexes"
           },
           {
-            "id": "unit-carnifexes-ability-deadly-demise-1-2",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-carnifexes"
           },
           {
-            "id": "unit-carnifexes-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-carnifexes"
           }
         ],
         "models": [
@@ -5160,20 +5566,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-exocrine-ability-symbiotic-targeting",
-            "title": "Symbiotic Targeting"
+            "id": "tyranids-ability-symbiotic-targeting",
+            "sectionId": "tyranids-ability-symbiotic-targeting",
+            "title": "Symbiotic Targeting",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly TYRANIDS model makes an attack that targets that unit, re-roll a Hit roll of 1.",
+            "sourceUnitId": "unit-exocrine"
           },
           {
-            "id": "unit-exocrine-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-exocrine"
           },
           {
-            "id": "unit-exocrine-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-exocrine"
           },
           {
-            "id": "unit-exocrine-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-exocrine"
           }
         ],
         "models": [
@@ -5287,20 +5705,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-harpy-ability-spore-mine-cysts",
-            "title": "Spore Mine Cysts"
+            "id": "tyranids-ability-spore-mine-cysts",
+            "sectionId": "tyranids-ability-spore-mine-cysts",
+            "title": "Spore Mine Cysts",
+            "text": "At the end of your opponent’s Fight phase, you can do one of the following:\n- Select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit and roll six D6 for that unit: for each 3+, that unit suffers 1 mortal wound.\n- Add a new SPORE MINES unit containing D3 models to your army and set it up anywhere on the battlefield that is within 6\" of this model and more than 8\" horizontally away from all enemy units. You cannot select this option for more than one model per turn.",
+            "sourceUnitId": "unit-harpy"
           },
           {
-            "id": "unit-harpy-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-harpy"
           },
           {
-            "id": "unit-harpy-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-harpy"
           },
           {
-            "id": "unit-harpy-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-harpy"
           }
         ],
         "models": [
@@ -5466,20 +5896,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-haruspex-ability-grisly-spectacle",
-            "title": "Grisly Spectacle"
+            "id": "tyranids-ability-grisly-spectacle",
+            "sectionId": "tyranids-ability-grisly-spectacle",
+            "title": "Grisly Spectacle",
+            "text": "Each time this model is selected to fight, after resolving its attacks, if one or more enemy units were destroyed by those attacks, each enemy unit within 6\" of this model must take a Battle-shock test.",
+            "sourceUnitId": "unit-haruspex"
           },
           {
-            "id": "unit-haruspex-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-haruspex"
           },
           {
-            "id": "unit-haruspex-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-haruspex"
           },
           {
-            "id": "unit-haruspex-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-haruspex"
           }
         ],
         "models": [
@@ -5620,20 +6062,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-hive-crone-ability-airborne-predator",
-            "title": "Airborne Predator"
+            "id": "tyranids-ability-airborne-predator",
+            "sectionId": "tyranids-ability-airborne-predator",
+            "title": "Airborne Predator",
+            "text": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-hive-crone"
           },
           {
-            "id": "unit-hive-crone-ability-damaged-1-4-wounds-remaining-2",
-            "title": "Damaged: 1-4 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-4-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-4-wounds-remaining",
+            "title": "Damaged: 1-4 Wounds Remaining",
+            "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-hive-crone"
           },
           {
-            "id": "unit-hive-crone-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-hive-crone"
           },
           {
-            "id": "unit-hive-crone-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-hive-crone"
           }
         ],
         "models": [
@@ -5827,24 +6281,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-maleceptor-ability-encephalic-diffusion-aura-psychic",
-            "title": "Encephalic Diffusion (Aura, Psychic)"
+            "id": "tyranids-ability-encephalic-diffusion-aura-psychic",
+            "sectionId": "tyranids-ability-encephalic-diffusion-aura-psychic",
+            "title": "Encephalic Diffusion (Aura, Psychic)",
+            "text": "While an enemy unit is within 6\" of this model, each time a model in that unit makes an attack, subtract 1 from the Hit roll, and, if that enemy unit is Below Half-strength, subtract 1 from the Wound roll as well.",
+            "sourceUnitId": "unit-maleceptor"
           },
           {
-            "id": "unit-maleceptor-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-maleceptor"
           },
           {
-            "id": "unit-maleceptor-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-maleceptor"
           },
           {
-            "id": "unit-maleceptor-ability-shadow-in-the-warp-4",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-maleceptor"
           },
           {
-            "id": "unit-maleceptor-ability-synapse-5",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-maleceptor"
           }
         ],
         "models": [
@@ -6012,20 +6481,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-mawloc-ability-terror-from-the-deep",
-            "title": "Terror from the Deep"
+            "id": "tyranids-ability-terror-from-the-deep",
+            "sectionId": "tyranids-ability-terror-from-the-deep",
+            "title": "Terror from the Deep",
+            "text": "Each time this model is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must take a Battle-shock test.",
+            "sourceUnitId": "unit-mawloc"
           },
           {
-            "id": "unit-mawloc-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-mawloc"
           },
           {
-            "id": "unit-mawloc-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-mawloc"
           },
           {
-            "id": "unit-mawloc-ability-deep-strike-4",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-mawloc"
           }
         ],
         "models": [
@@ -6138,28 +6619,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-norn-assimilator-ability-harpoon-barbs",
-            "title": "Harpoon Barbs"
+            "id": "tyranids-ability-harpoon-barbs",
+            "sectionId": "tyranids-ability-harpoon-barbs",
+            "title": "Harpoon Barbs",
+            "text": "Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds.",
+            "sourceUnitId": "unit-norn-assimilator"
           },
           {
-            "id": "unit-norn-assimilator-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-norn-assimilator"
           },
           {
-            "id": "unit-norn-assimilator-ability-singular-purpose-3",
-            "title": "Singular Purpose"
+            "id": "tyranids-ability-singular-purpose",
+            "sectionId": "tyranids-ability-singular-purpose",
+            "title": "Singular Purpose",
+            "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+            "sourceUnitId": "unit-norn-assimilator"
           },
           {
-            "id": "unit-norn-assimilator-ability-deadly-demise-d6-4",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-norn-assimilator"
           },
           {
-            "id": "unit-norn-assimilator-ability-shadow-in-the-warp-5",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-norn-assimilator"
           },
           {
-            "id": "unit-norn-assimilator-ability-synapse-6",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-norn-assimilator"
           }
         ],
         "models": [
@@ -6288,28 +6787,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-norn-emissary-ability-singular-purpose",
-            "title": "Singular Purpose"
+            "id": "tyranids-ability-singular-purpose",
+            "sectionId": "tyranids-ability-singular-purpose",
+            "title": "Singular Purpose",
+            "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.",
+            "sourceUnitId": "unit-norn-emissary"
           },
           {
-            "id": "unit-norn-emissary-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-norn-emissary"
           },
           {
-            "id": "unit-norn-emissary-ability-deadly-demise-d6-3",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-norn-emissary"
           },
           {
-            "id": "unit-norn-emissary-ability-shadow-in-the-warp-4",
-            "title": "Shadow in the Warp"
+            "id": "tyranids-ability-shadow-in-the-warp",
+            "sectionId": "tyranids-ability-shadow-in-the-warp",
+            "title": "Shadow in the Warp",
+            "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+            "sourceUnitId": "unit-norn-emissary"
           },
           {
-            "id": "unit-norn-emissary-ability-synapse-5",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-norn-emissary"
           },
           {
-            "id": "unit-norn-emissary-ability-unnatural-resilience-6",
-            "title": "Unnatural Resilience"
+            "id": "tyranids-ability-unnatural-resilience",
+            "sectionId": "tyranids-ability-unnatural-resilience",
+            "title": "Unnatural Resilience",
+            "text": "This model has the Feel No Pain 4+ ability against mortal wounds.",
+            "sourceUnitId": "unit-norn-emissary"
           }
         ],
         "models": [
@@ -6535,24 +7052,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-psychophage-ability-bio-stimulus",
-            "title": "Bio-stimulus"
+            "id": "tyranids-ability-bio-stimulus",
+            "sectionId": "tyranids-ability-bio-stimulus",
+            "title": "Bio-stimulus",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.",
+            "sourceUnitId": "unit-psychophage"
           },
           {
-            "id": "unit-psychophage-ability-feeding-frenzy-2",
-            "title": "Feeding Frenzy"
+            "id": "tyranids-ability-feeding-frenzy",
+            "sectionId": "tyranids-ability-feeding-frenzy",
+            "title": "Feeding Frenzy",
+            "text": "Each time this model makes a melee attack that targets a unit that is below its Starting Strength, add 1 to the Hit roll. If that target is also Below Half strength, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-psychophage"
           },
           {
-            "id": "unit-psychophage-ability-deadly-demise-1-3",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-psychophage"
           },
           {
-            "id": "unit-psychophage-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-psychophage"
           },
           {
-            "id": "unit-psychophage-ability-feel-no-pain-5-5",
-            "title": "Feel No Pain 5+"
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-psychophage"
           }
         ],
         "models": [
@@ -6663,16 +7195,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-screamer-killer-ability-death-scream",
-            "title": "Death Scream"
+            "id": "tyranids-ability-death-scream",
+            "sectionId": "tyranids-ability-death-scream",
+            "title": "Death Scream",
+            "text": "In your Shooting phase, after this model has shot, select one unit hit by one or more of those attacks. That unit must take a Battle-shock test, subtracting 1 from that test.",
+            "sourceUnitId": "unit-screamer-killer"
           },
           {
-            "id": "unit-screamer-killer-ability-deadly-demise-1-2",
-            "title": "Deadly Demise 1"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise 1",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-screamer-killer"
           },
           {
-            "id": "unit-screamer-killer-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-screamer-killer"
           }
         ],
         "models": [
@@ -6783,20 +7324,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-sporocyst-ability-seed-mucolids",
-            "title": "Seed Mucolids"
+            "id": "tyranids-ability-seed-mucolids",
+            "sectionId": "tyranids-ability-seed-mucolids",
+            "title": "Seed Mucolids",
+            "text": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new MUCOLID SPORES unit containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units.",
+            "sourceUnitId": "unit-sporocyst"
           },
           {
-            "id": "unit-sporocyst-ability-hive-defences-2",
-            "title": "Hive Defences"
+            "id": "tyranids-ability-hive-defences",
+            "sectionId": "tyranids-ability-hive-defences",
+            "title": "Hive Defences",
+            "text": "You can target this model with the Fire Overwatch stratagem for 0CP, and can do so even if you have already targeted a different unit with that stratagem this turn. This model can only be targeted with that Stratagem once per turn",
+            "sourceUnitId": "unit-sporocyst"
           },
           {
-            "id": "unit-sporocyst-ability-deadly-demise-d3-3",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-sporocyst"
           },
           {
-            "id": "unit-sporocyst-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-sporocyst"
           }
         ],
         "models": [
@@ -6908,24 +7461,39 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-toxicrene-ability-grasping-tendrils",
-            "title": "Grasping Tendrils"
+            "id": "tyranids-ability-grasping-tendrils",
+            "sectionId": "tyranids-ability-grasping-tendrils",
+            "title": "Grasping Tendrils",
+            "text": "Each time an enemy unit (excluding Titanic units) within Engagement Range of one or more units from your army with this ability is selected to Fall Back, you can roll one D6: on a 3+, that enemy unit must Remain Stationary instead.",
+            "sourceUnitId": "unit-toxicrene"
           },
           {
-            "id": "unit-toxicrene-ability-hypertoxic-miasma-aura-2",
-            "title": "Hypertoxic Miasma (Aura)"
+            "id": "tyranids-ability-hypertoxic-miasma-aura",
+            "sectionId": "tyranids-ability-hypertoxic-miasma-aura",
+            "title": "Hypertoxic Miasma (Aura)",
+            "text": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model: on a 2-3, that unit suffers 1 mortal wound; on a 4-5, that unit suffers D3 mortal wounds; on a 6, that unit suffers D6 mortal wounds.",
+            "sourceUnitId": "unit-toxicrene"
           },
           {
-            "id": "unit-toxicrene-ability-damaged-1-5-wounds-remaining-3",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-toxicrene"
           },
           {
-            "id": "unit-toxicrene-ability-deadly-demise-d3-4",
-            "title": "Deadly Demise D3"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D3",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-toxicrene"
           },
           {
-            "id": "unit-toxicrene-ability-synapse-5",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-toxicrene"
           }
         ],
         "models": [
@@ -7026,20 +7594,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-trygon-ability-subterranean-tunnels",
-            "title": "Subterranean Tunnels"
+            "id": "tyranids-ability-subterranean-tunnels",
+            "sectionId": "tyranids-ability-subterranean-tunnels",
+            "title": "Subterranean Tunnels",
+            "text": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can use a subterranean tunnel. If it does, this model can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
+            "sourceUnitId": "unit-trygon"
           },
           {
-            "id": "unit-trygon-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-trygon"
           },
           {
-            "id": "unit-trygon-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-trygon"
           },
           {
-            "id": "unit-trygon-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-trygon"
           }
         ],
         "models": [
@@ -7151,20 +7731,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-tyrannofex-ability-resilient-organism",
-            "title": "Resilient Organism"
+            "id": "tyranids-ability-resilient-organism",
+            "sectionId": "tyranids-ability-resilient-organism",
+            "title": "Resilient Organism",
+            "text": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.",
+            "sourceUnitId": "unit-tyrannofex"
           },
           {
-            "id": "unit-tyrannofex-ability-damaged-1-5-wounds-remaining-2",
-            "title": "Damaged: 1-5 Wounds Remaining"
+            "id": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining",
+            "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-tyrannofex"
           },
           {
-            "id": "unit-tyrannofex-ability-deadly-demise-d6-3",
-            "title": "Deadly Demise D6"
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
+            "title": "Deadly Demise D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-tyrannofex"
           },
           {
-            "id": "unit-tyrannofex-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-tyrannofex"
           }
         ],
         "models": [
@@ -7357,20 +7949,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-mucolid-spores-ability-bio-minefield",
-            "title": "Bio-minefield"
+            "id": "tyranids-ability-bio-minefield",
+            "sectionId": "tyranids-ability-bio-minefield",
+            "title": "Bio-minefield",
+            "text": "Enemy units cannot start or end an Advance move within 6\" of this unit.",
+            "sourceUnitId": "unit-mucolid-spores"
           },
           {
-            "id": "unit-mucolid-spores-ability-floating-death-2",
-            "title": "Floating Death"
+            "id": "tyranids-ability-floating-death",
+            "sectionId": "tyranids-ability-floating-death",
+            "title": "Floating Death",
+            "text": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D6 mortal wounds.",
+            "sourceUnitId": "unit-mucolid-spores"
           },
           {
-            "id": "unit-mucolid-spores-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-mucolid-spores"
           },
           {
-            "id": "unit-mucolid-spores-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-mucolid-spores"
           }
         ],
         "models": [
@@ -7426,16 +8030,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-ripper-swarms-ability-chitinous-horrors-aura",
-            "title": "Chitinous Horrors (Aura)"
+            "id": "tyranids-ability-chitinous-horrors-aura",
+            "sectionId": "tyranids-ability-chitinous-horrors-aura",
+            "title": "Chitinous Horrors (Aura)",
+            "text": "While an enemy unit is within Engagement Range of this unit, halve the Objective Control characteristic of models in that enemy unit.",
+            "sourceUnitId": "unit-ripper-swarms"
           },
           {
-            "id": "unit-ripper-swarms-ability-deep-strike-2",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-ripper-swarms"
           },
           {
-            "id": "unit-ripper-swarms-ability-synapse-3",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-ripper-swarms"
           }
         ],
         "models": [
@@ -7547,20 +8160,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "unit-spore-mines-ability-bio-minefield",
-            "title": "Bio-minefield"
+            "id": "tyranids-ability-bio-minefield",
+            "sectionId": "tyranids-ability-bio-minefield",
+            "title": "Bio-minefield",
+            "text": "Enemy units cannot start or end an Advance move within 6\" of this unit.",
+            "sourceUnitId": "unit-spore-mines"
           },
           {
-            "id": "unit-spore-mines-ability-floating-death-2",
-            "title": "Floating Death"
+            "id": "tyranids-ability-floating-death-2",
+            "sectionId": "tyranids-ability-floating-death-2",
+            "title": "Floating Death",
+            "text": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers 1 mortal wound; on a 6, that enemy unit suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-spore-mines"
           },
           {
-            "id": "unit-spore-mines-ability-deep-strike-3",
-            "title": "Deep Strike"
+            "id": "core-deep-strike",
+            "sectionId": "core-deep-strike",
+            "title": "Deep Strike",
+            "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+            "sourceUnitId": "unit-spore-mines"
           },
           {
-            "id": "unit-spore-mines-ability-synapse-4",
-            "title": "Synapse"
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-spore-mines"
           }
         ],
         "models": [

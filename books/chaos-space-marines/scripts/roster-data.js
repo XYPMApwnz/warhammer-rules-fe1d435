@@ -635,8 +635,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-legionaries-wargear-ability-chaos-icon"
             ]
           }
@@ -976,7 +975,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-legionaries-wargear-ability-chaos-icon",
             "title": "Chaos icon",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-legionaries-selection-chaos-icon"
+            ]
           }
         ]
       }
@@ -2387,8 +2388,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-dark-commune-wargear-ability-chaos-icon"
             ]
           }
@@ -2505,7 +2505,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-dark-commune-wargear-ability-chaos-icon",
             "title": "Chaos icon",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-dark-commune-selection-chaos-icon"
+            ]
           }
         ]
       }
@@ -4309,8 +4311,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-sorcerer-in-terminator-armour-wargear-ability-chaos-familiar"
             ]
           }
@@ -4412,7 +4413,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-sorcerer-in-terminator-armour-wargear-ability-chaos-familiar",
             "title": "Chaos Familiar",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-sorcerer-in-terminator-armour-selection-chaos-familiar"
+            ]
           }
         ]
       }
@@ -7667,8 +7670,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-chosen-wargear-ability-chaos-icon"
             ]
           }
@@ -7815,7 +7817,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-chosen-wargear-ability-chaos-icon",
             "title": "Chaos icon",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-chosen-selection-chaos-icon"
+            ]
           }
         ]
       }
@@ -9364,8 +9368,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-nemesis-claw-wargear-ability-voice-eater"
             ]
           }
@@ -9690,7 +9693,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-nemesis-claw-wargear-ability-voice-eater",
             "title": "Voice eater",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-nemesis-claw-selection-voice-eater"
+            ]
           }
         ]
       }
@@ -10015,8 +10020,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-possessed-wargear-ability-chaos-icon"
             ]
           }
@@ -10043,7 +10047,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-possessed-wargear-ability-chaos-icon",
             "title": "Chaos icon",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-possessed-selection-chaos-icon"
+            ]
           }
         ]
       }
@@ -11735,8 +11741,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-chaos-bikers-wargear-ability-chaos-icon"
             ]
           }
@@ -11972,7 +11977,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-chaos-bikers-wargear-ability-chaos-icon",
             "title": "Chaos icon",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-chaos-bikers-selection-chaos-icon"
+            ]
           }
         ]
       }
@@ -15129,7 +15136,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-empyric-wellspring"
+      ]
     },
     {
       "id": "chaos-cult",
@@ -15147,7 +15156,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-experimental-augmentations"
+      ]
     },
     {
       "id": "cult-of-the-arkifane",
@@ -15155,7 +15166,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-soul-forge-boons"
+      ]
     },
     {
       "id": "deceptors",
@@ -15163,7 +15176,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-masters-of-misdirection"
+      ]
     },
     {
       "id": "devotees-of-destruction",
@@ -15171,7 +15186,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-rain-of-ruin"
+      ]
     },
     {
       "id": "dread-talons",
@@ -15179,7 +15196,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-terror-descends-aura"
+      ]
     },
     {
       "id": "fellhammer-siege-host",
@@ -15187,7 +15206,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-iron-fortitude"
+      ]
     },
     {
       "id": "huron-s-marauders",
@@ -15195,7 +15216,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-tyrannical-motivation"
+      ]
     },
     {
       "id": "murdertalon-raiders",
@@ -15203,7 +15226,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-prey-on-the-weak"
+      ]
     },
     {
       "id": "nightmare-hunt",
@@ -15211,7 +15236,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-terror-made-manifest"
+      ]
     },
     {
       "id": "pactbound-zealots",
@@ -15219,7 +15246,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-marks-of-chaos"
+      ]
     },
     {
       "id": "renegade-raiders",
@@ -15227,7 +15256,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-raiders-and-reavers"
+      ]
     },
     {
       "id": "renegade-warband",
@@ -15235,7 +15266,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-slaves-to-none"
+      ]
     },
     {
       "id": "soulforged-warpack",
@@ -15253,7 +15286,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-focus-of-hatred"
+      ]
     },
     {
       "id": "warpstrike-champions",
@@ -15261,10 +15296,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "chaos-space-marines-detachment-rule-warp-portals"
+      ]
     }
   ],
   "detachmentRules": [
+    {
+      "id": "chaos-space-marines-detachment-rule-empyric-wellspring",
+      "title": "Empyric Wellspring",
+      "text": "The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
+      "sectionId": "cabal-of-chaos-rule",
+      "detachmentId": "cabal-of-chaos",
+      "detachmentTitle": "Cabal of Chaos",
+      "sourceBookId": "chaos-space-marines"
+    },
     {
       "id": "detachment-rule-chaos-cult-desperate-devotion",
       "title": "Desperate Devotion",
@@ -15275,12 +15321,138 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines"
     },
     {
+      "id": "chaos-space-marines-detachment-rule-experimental-augmentations",
+      "title": "Experimental Augmentations",
+      "text": "Bile’s creations, the Terata, possess a variety of mutations, all of which increase their transhuman lethality – for now. At the start of the battle, select which augmentations are active for Heretic Astartes Infantry models (excluding Damned models) from your army until the end of the battle. To do so, either select one from the list below, or randomly determine two by rolling two D6. If Fabius Bile is your Warlord, when randomly determining your augmentations, you can re‑roll one or both of the dice. Duplicated augmentations have no additional effect. Cholinergic Accelerants: Add 1 to the Attacks characteristic of melee weapons equipped by this model. Hyperadrenal Infusion: Add 2\" to the Move characteristic of this model. Paraneural Reactions: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1. Supracutaneous Chitination: Improve the Toughness characteristic of this model by 1. Macrotensile Sinews: Add 1 to the Strength characteristic of melee weapons equipped by this model. Ophthalmic Enhancement: Improve the Ballistic Skill characteristic of ranged weapons equipped by this model by 1.",
+      "sectionId": "creations-of-bile-rule",
+      "detachmentId": "creations-of-bile",
+      "detachmentTitle": "Creations of Bile",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-soul-forge-boons",
+      "title": "Soul Forge Boons",
+      "text": "The cybersorcerous power of Vashtorr’s boons is much in evidence amongst his worshippers. Nowhere is this more true than in the war engines that his cults take into battle, and which exhibit a nightmarish variety of biomechanoid mutations and daemon‑spawned powers. Whether wreathed in balefire, shimmeringly insubstantial or constantly regrowing battle‑damaged hull plating, these accursed war machines are incredibly hard to destroy. Heretic Astartes Vehicle units from your army gain the Daemon keyword. Heretic Astartes Vehicle, Lord Discordant and Vashtorr the Arkifane units from your army gain the Soul Forge keyword. Soul Forge units from your army have a 5+ invulnerable save.",
+      "sectionId": "cult-of-the-arkifane-rule",
+      "detachmentId": "cult-of-the-arkifane",
+      "detachmentTitle": "Cult of the Arkifane",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-masters-of-misdirection",
+      "title": "Masters of Misdirection",
+      "text": "",
+      "sectionId": "deceptors-rule",
+      "detachmentId": "deceptors",
+      "detachmentTitle": "Deceptors",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-rain-of-ruin",
+      "title": "Rain of Ruin",
+      "text": "It is not enough for these heretical reavers merely to defeat their foes. Instead, they must pound all before them to smouldering oblivion with overwhelming salvoes of fire. Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].",
+      "sectionId": "devotees-of-destruction-rule",
+      "detachmentId": "devotees-of-destruction",
+      "detachmentTitle": "Devotees of Destruction",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-terror-descends-aura",
+      "title": "Terror Descends (Aura)",
+      "text": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test. Each time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
+      "sectionId": "dread-talons-rule",
+      "detachmentId": "dread-talons",
+      "detachmentTitle": "Dread Talons",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-iron-fortitude",
+      "title": "Iron Fortitude",
+      "text": "Each time a ranged attack targets a HERETIC ASTARTES unit from your army (excluding DAMNED units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+      "sectionId": "fellhammer-siege-host-rule",
+      "detachmentId": "fellhammer-siege-host",
+      "detachmentTitle": "Fellhammer Siege-host",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-tyrannical-motivation",
+      "title": "Tyrannical Motivation",
+      "text": "Murderers and renegades all, the Red Corsairs strive to meet their master’s standards, fighting hardest of all when his gaze is upon them. In your Command phase, select one of the following abilities. Until the start of your next Command phase, each Heretic Astartes Infantry unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly Huron Blackheart model, until the end of the phase, it has both of the following abilities. Huron’s Elite Hand‑picked by Huron Blackheart himself, these warriors strive to retain his favour with feats of arms. Each time a model in this unit makes an attack, add 1 to the Hit roll. Mobile Marauders The Red Corsairs utilise a highly mobile form of warfare and, under Huron’s watch, are relentless in their aggression. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Designer’s Note: If a unit is gaining eligibility to shoot and declare a charge in a turn in which it Fell Back as a result of being visible to Huron Blackheart, but after making a Fall Back move it is no longer visible to Huron Blackheart, that unit will not be eligible to shoot in your Shooting phase or to declare a charge in your Charge phase unless it is visible again at the start of the respective phase.",
+      "sectionId": "huron-s-marauders-rule",
+      "detachmentId": "huron-s-marauders",
+      "detachmentTitle": "HURON’S MARAUDERS",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-prey-on-the-weak",
+      "title": "Prey on the Weak",
+      "text": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+      "sectionId": "murdertalon-raiders-rule",
+      "detachmentId": "murdertalon-raiders",
+      "detachmentTitle": "Murdertalon Raiders",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-terror-made-manifest",
+      "title": "Terror Made Manifest",
+      "text": "With vox‑augmented screams or bedecked in grisly trophies, these nightmarish raiders possess a terrifying presence. Even the most stoic of opponents can be shaken by their sadistic cruelty. Once fear has its hooks into them, they become easier prey. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more Heretic Astartes units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase. Each time a Heretic astartes model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll. Each time an attack targets a Heretic astartes unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll. Each time a Heretic astartes model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
+      "sectionId": "nightmare-hunt-rule",
+      "detachmentId": "nightmare-hunt",
+      "detachmentTitle": "Nightmare Hunt",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-marks-of-chaos",
+      "title": "Marks of Chaos",
+      "text": "When mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: KHORNE, TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below. UNITS THAT GAINED [LETHAL HITS]: KHORNE: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. TZEENTCH: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. UNITS THAT GAINED [SUSTAINED HITS 1]: NURGLE: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. SLAANESH: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. You cannot select the KHORNE keyword for a PSYKER unit. A CHARACTER unit can only be attached to a unit if both units share the same keyword from the list above. A unit can only embark within (or start the battle embarked within) a TRANSPORT if both of those units share the same keyword from the list above.",
+      "sectionId": "pactbound-zealots-rule",
+      "detachmentId": "pactbound-zealots",
+      "detachmentTitle": "Pactbound Zealots",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-raiders-and-reavers",
+      "title": "Raiders and Reavers",
+      "text": "Ranged weapons equipped by HERETIC ASTARTES models from your army have the [ASSAULT] ability, and each time a HERETIC ASTARTES model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.",
+      "sectionId": "renegade-raiders-rule",
+      "detachmentId": "renegade-raiders",
+      "detachmentTitle": "Renegade Raiders",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-slaves-to-none",
+      "title": "Slaves to None",
+      "text": "Many Renegades eschew the gifts of Dark Gods, relying only upon their own prowess. Heretic Astartes models from your army lose the Dark Pacts ability. Ranged weapons equipped by Heretic Astartes models from your army have the [ASSAULT] ability. When mustering your army, you cannot use the Cults of the Dark Gods rule. VENDETTA Bitter minds hold on to lasting grudges. At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Vendetta target. Each time a Heretic Astartes model from your army (excluding Damned models) makes an attack that targets your Vendetta target, you can re‑roll the Hit roll. TWISTED DOCTRINE These Renegades ally their knowledge of the Codex Astartes with their own unrestrained savagery to horrific effect. In your Movement phase, each time you set up or select a Heretic Astartes unit (excluding Battle‑shocked units) from your army to move, it can choose to Default to Doctrine. If it does, it must first take a Battle‑shock test. Then, select one of the following: ■ Until the end of the turn, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back. ■ Until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.",
+      "sectionId": "renegade-warband-rule",
+      "detachmentId": "renegade-warband",
+      "detachmentTitle": "Renegade Warband",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
       "id": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
       "title": "Debt to the Soul Forge",
       "text": "Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army makes a Dark Pact, it can invoke its contract. If it does, subtract 1 from the resulting Leadership test when making that Dark Pact, and until the end of the phase:\n\nEach time a model in that unit makes a ranged attack, add 1 to the Wound roll.\nAdd 2 to the Attacks characteristic of melee weapons equipped by models in that unit.",
       "sectionId": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
       "detachmentId": "soulforged-warpack",
       "detachmentTitle": "Soulforged Warpack",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-focus-of-hatred",
+      "title": "Focus of Hatred",
+      "text": "At the start of your Command phase, select one unit from your opponent's army to be your focus of hatred. Until the start of your next Command phase, each time a HERETIC ASTARTES model from your army (excluding DAMNED models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll.",
+      "sectionId": "veterans-of-the-long-war-rule",
+      "detachmentId": "veterans-of-the-long-war",
+      "detachmentTitle": "Veterans of the Long War",
+      "sourceBookId": "chaos-space-marines"
+    },
+    {
+      "id": "chaos-space-marines-detachment-rule-warp-portals",
+      "title": "Warp Portals",
+      "text": "Conjured warp portals flicker across the battlefield, tearing through the fabric of reality according to arcane designs. They are a means, however perilous and unnatural, for the warband’s most elite warriors to traverse the battlefield in a matter of strides and strike again at new locations. At the end of your opponent’s turn, you can select a number of Heretic Astartes Terminator, Obliterators and Mutilators units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE NUMBER OF UNITS Incursion Up to 1 unit Strike Force Up to 2 units Onslaught Up to 3 units Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+      "sectionId": "warpstrike-champions-rule",
+      "detachmentId": "warpstrike-champions",
+      "detachmentTitle": "Warpstrike Champions",
       "sourceBookId": "chaos-space-marines"
     }
   ],

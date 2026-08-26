@@ -16,6 +16,10 @@
   "sharedArmyBookApp": true,
   "compatibleRulesMatrix": true,
   "classifiedAbilityPresentation": true,
+  "rosterCatalog": {
+    "inferCanonicalDetachmentRuleIds": true,
+    "inferExactWargearAbilitySelections": true
+  },
   "customApp": true,
   "legacyRelatedRuleAttributes": false,
   "detachmentQualifiedEnhancementPoints": true,
@@ -26,7 +30,7 @@
     "rosterContext": 15,
     "relatedRules": 18,
     "ruleFacts": 5,
-    "rosterFilter": 4,
+    "rosterFilter": 5,
     "rosterData": 2
   },
   "armyRules": [

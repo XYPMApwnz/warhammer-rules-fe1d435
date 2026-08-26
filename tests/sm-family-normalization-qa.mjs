@@ -25,7 +25,7 @@ assert.equal(excluded('dark-angels').length,19,'DA incompatible SM exclusions');
 assert.equal(excluded('blood-angels').length,19,'BA incompatible SM exclusions');
 assert.deepEqual(excluded('dark-angels'),excluded('blood-angels'),'DA/BA preserve the same dependency filter');
 const edges=(catalog,field)=>new Set(catalog.units.flatMap(unit=>(unit.relations?.[field]||[]).map(target=>`${unit.id}>${target.unitId}`)));
-for(const [book,expectedAdd] of [['dark-angels',49],['blood-angels',27]]){
+for(const [book,expectedAdd] of [['dark-angels',50],['blood-angels',27]]){
   const effectiveIds=new Set(catalogs[book].units.map(unit=>unit.id));
   const baseLead=[...edges(catalogs['space-marines'],'canLead')].filter(edge=>edge.split('>').every(id=>effectiveIds.has(id)));
   const effectiveLead=edges(catalogs[book],'canLead');

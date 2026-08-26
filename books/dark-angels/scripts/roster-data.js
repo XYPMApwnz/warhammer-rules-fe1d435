@@ -2407,7 +2407,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Terminator",
         "Ancient",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -3108,7 +3109,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Bladeguard Ancient",
         "Adeptus Astartes",
         "Tacticus",
-        "Ancient"
+        "Ancient",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -4219,7 +4221,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Captain",
         "Adeptus Astartes",
         "Imperium",
-        "Terminator"
+        "Terminator",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [
@@ -5041,7 +5044,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Terminator",
         "Chaplain",
         "Imperium",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [
@@ -5240,7 +5244,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Grenades",
         "Chaplain",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [
@@ -6651,7 +6656,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Psyker",
         "Terminator",
         "Librarian",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [
@@ -9763,7 +9769,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Tacticus",
         "Bladeguard Veteran Squad",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -14262,7 +14269,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Tacticus",
         "Sternguard Veteran Squad",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -14282,6 +14290,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-chaplain",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-ezekiel",
             "maxCharacters": 2
           },
           {
@@ -14331,6 +14343,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-chaplain",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-ezekiel",
               "maxCharacters": 2
             },
             {
@@ -14818,7 +14834,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Terminator Assault Squad",
         "Terminator",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -15018,7 +15035,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Terminator",
         "Terminator Squad",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -15383,7 +15401,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Vanguard Veteran Squad with Jump Packs",
         "Jump Pack",
         "Fly",
-        "Vanguard Veteran Squad"
+        "Vanguard Veteran Squad",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -15770,7 +15789,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Invader ATV",
         "Adeptus Astartes",
-        "Frame"
+        "Frame",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -15974,7 +15994,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Grenades",
         "Imperium",
         "Outrider Squad",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -16267,7 +16288,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Ballistus Dreadnought",
         "Adeptus Astartes",
-        "Dreadnought"
+        "Dreadnought",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -16515,7 +16537,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Brutalis Dreadnought",
         "Imperium",
         "Adeptus Astartes",
-        "Dreadnought"
+        "Dreadnought",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -16817,7 +16840,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Adeptus Astartes",
         "Walker",
-        "Dreadnought"
+        "Dreadnought",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -18308,7 +18332,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Adeptus Astartes",
         "Land Raider",
         "Transport",
-        "Frame"
+        "Frame",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -18564,7 +18589,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Transport",
         "Grenades",
         "Land Raider",
-        "Frame"
+        "Frame",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -18820,7 +18846,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Adeptus Astartes",
         "Transport",
         "Land Raider",
-        "Frame"
+        "Frame",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -19072,7 +19099,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Fly",
         "Imperium",
         "Land Speeder",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -19774,7 +19802,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Redemptor Dreadnought",
         "Adeptus Astartes",
-        "Dreadnought"
+        "Dreadnought",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -20131,7 +20160,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Repulsor",
         "Adeptus Astartes",
         "Transport",
-        "Frame"
+        "Frame",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -20412,7 +20442,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Transport",
         "Repulsor Executioner",
         "Adeptus Astartes",
-        "Frame"
+        "Frame",
+        "DEATHWING"
       ],
       "relations": {
         "canLead": [],
@@ -20802,7 +20833,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Adeptus Astartes",
         "Storm Speeder Hailstrike",
-        "Frame"
+        "Frame",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -20994,7 +21026,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Vehicle",
         "Storm Speeder Hammerstrike",
         "Adeptus Astartes",
-        "Frame"
+        "Frame",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -21186,7 +21219,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Storm Speeder Thunderstrike",
         "Adeptus Astartes",
-        "Frame"
+        "Frame",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -21379,7 +21413,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Fly",
         "Smoke",
         "Adeptus Astartes",
-        "Stormhawk Interceptor"
+        "Stormhawk Interceptor",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -21701,7 +21736,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Fly",
         "Transport",
         "Stormraven Gunship",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -22153,7 +22189,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Fly",
         "Stormtalon Gunship",
-        "Adeptus Astartes"
+        "Adeptus Astartes",
+        "RAVENWING"
       ],
       "relations": {
         "canLead": [],
@@ -23851,6 +23888,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-tactical-squad",
             "maxCharacters": 1
           }
@@ -23884,6 +23925,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad",
               "maxCharacters": 2
             },
             {
@@ -26858,7 +26903,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-masters-of-manoeuvre"
+      ]
     },
     {
       "id": "dark-age-arsenal",
@@ -26866,7 +26913,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-invocations-of-ancient-fury"
+      ]
     },
     {
       "id": "darkflight-pursuit",
@@ -26874,7 +26923,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-black-winged-vigilance"
+      ]
     },
     {
       "id": "inner-circle-task-force",
@@ -26882,7 +26933,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-vowed-target"
+      ]
     },
     {
       "id": "interrogation-conclave",
@@ -26890,7 +26943,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-dread-catechism"
+      ]
     },
     {
       "id": "lion-s-blade-task-force",
@@ -26898,7 +26953,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-in-the-lions-claws"
+      ]
     },
     {
       "id": "unforgiven-task-force",
@@ -26906,7 +26963,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-grim-resolve"
+      ]
     },
     {
       "id": "wrath-of-the-rock",
@@ -26914,7 +26973,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-dutiful-tenacity"
+      ]
     },
     {
       "id": "vengeful-hosts",
@@ -27079,6 +27140,78 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   ],
   "detachmentRules": [
     {
+      "id": "dark-angels-detachment-rule-masters-of-manoeuvre",
+      "title": "Masters of Manoeuvre",
+      "text": "Friendly ADEPTUS ASTARTES have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot.\nFriendly ADEPTUS ASTARTES MOUNTED have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.\nKeywords: OUTRIDER SQUAD units from your army gain the BATTLELINE keyword.",
+      "sectionId": "dark-angels-detachment-rule-masters-of-manoeuvre",
+      "detachmentId": "company-of-hunters",
+      "detachmentTitle": "Company of Hunters",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-invocations-of-ancient-fury",
+      "title": "Invocations of Ancient Fury",
+      "text": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "dark-age-arsenal-rule",
+      "detachmentId": "dark-age-arsenal",
+      "detachmentTitle": "Dark Age Arsenal",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-black-winged-vigilance",
+      "title": "Black-winged Vigilance",
+      "text": "The anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "darkflight-pursuit-rule",
+      "detachmentId": "darkflight-pursuit",
+      "detachmentTitle": "Darkflight Pursuit",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-vowed-target",
+      "title": "Vowed Target",
+      "text": "At the start of your Movement phase, select one of the following:\n▪ Defensive Footing: Select one objective you control. Until the start of your next Movement phase, that objective is your Vowed objective.\n▪ Aggressive Push: Select one or more objective you do not control. Until the start of your next Movement phase, each of those objectives is one of your Vowed objectives. If a rule refers to a unit or model being within range of your Vowed objective, that rule takes effect if that unit or model is within range of one or more of your Vowed objectives. Each time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objectives, add 1 to the Wound roll.",
+      "sectionId": "dark-angels-detachment-rule-vowed-target",
+      "detachmentId": "inner-circle-task-force",
+      "detachmentTitle": "Inner Circle Task Force",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-dread-catechism",
+      "title": "Dread Catechism",
+      "text": "When the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "interrogation-conclave-rule",
+      "detachmentId": "interrogation-conclave",
+      "detachmentTitle": "Interrogation Conclave",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-in-the-lions-claws",
+      "title": "In the Lion’s Claws",
+      "text": "Those unfortunate enough to be caught between the devastating speed of the Ravenwing and the adamantine might of the Deathwing are pinned in place and torn to shreds by their combined fury. ■ Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more Ravenwing units from your army Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of those tests. ■ Each time a Deathwing unit from your army declares a charge, if one or more targets of that charge are within Engagement Range of one or more Ravenwing units from your army, add 2 to the Charge roll. RESTRICTIONS Your army can include Dark Angels units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
+      "sectionId": "lion-s-blade-task-force-rule",
+      "detachmentId": "lion-s-blade-task-force",
+      "detachmentTitle": "Lion's Blade Task Force",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-grim-resolve",
+      "title": "Grim Resolve",
+      "text": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
+      "sectionId": "dark-angels-detachment-rule-grim-resolve",
+      "detachmentId": "unforgiven-task-force",
+      "detachmentTitle": "Unforgiven Task Force",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-dutiful-tenacity",
+      "title": "Dutiful Tenacity",
+      "text": "Even amongst the Adeptus Astartes, the battle‑brothers of the Dark Angels are renowned for their tenacity and resilience on the battlefield. When ordered to war, they are utterly relentless in pursuing their objectives, wading into fields of withering fire and shrugging off blows that would slay mortal warriors outright. Each time an attack targets an Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+      "sectionId": "wrath-of-the-rock-rule",
+      "detachmentId": "wrath-of-the-rock",
+      "detachmentTitle": "Wrath of the Rock",
+      "sourceBookId": "dark-angels"
+    },
+    {
       "id": "vengeful-hosts-imperator-unleashed",
       "title": "Imperator Unleashed",
       "text": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.",
@@ -27231,8 +27364,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Company of Hunters",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "RAVENWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-master-of-manoeuvre",
       "detachmentId": "company-of-hunters",
       "id": "enhancement-master-of-manoeuvre",
@@ -27252,8 +27399,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Company of Hunters",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "RAVENWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-master-crafted-weapon",
       "detachmentId": "company-of-hunters",
       "id": "enhancement-master-crafted-weapon",
@@ -27273,8 +27434,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "Company of Hunters",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "RAVENWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-mounted-strategist",
       "detachmentId": "company-of-hunters",
       "id": "enhancement-mounted-strategist",
@@ -27294,8 +27469,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Company of Hunters",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "RAVENWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-recon-hunter",
       "detachmentId": "company-of-hunters",
       "id": "enhancement-recon-hunter",
@@ -27314,9 +27503,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
       "value": 15,
       "detachment": "Dark Age Arsenal",
-      "tags": [],
-      "owner": null,
-      "assignment": null,
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "petition-of-stability",
       "detachmentId": "dark-age-arsenal",
       "id": "petition-of-stability",
@@ -27344,9 +27546,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
       "value": 15,
       "detachment": "Dark Age Arsenal",
-      "tags": [],
-      "owner": null,
-      "assignment": null,
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-hellblaster-squad"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "entreaty-of-perpetual-ardour",
       "detachmentId": "dark-age-arsenal",
       "id": "entreaty-of-perpetual-ardour",
@@ -27374,9 +27589,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
       "value": 15,
       "detachment": "Darkflight Pursuit",
-      "tags": [],
-      "owner": null,
-      "assignment": null,
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "RAVENWING",
+            "FLY"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "thundercowl-turbines",
       "detachmentId": "darkflight-pursuit",
       "id": "thundercowl-turbines",
@@ -27404,9 +27633,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
       "value": 15,
       "detachment": "Darkflight Pursuit",
-      "tags": [],
-      "owner": null,
-      "assignment": null,
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-land-speeder-vengeance"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "nightforged-battery",
       "detachmentId": "darkflight-pursuit",
       "id": "nightforged-battery",
@@ -27435,8 +27677,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Inner Circle Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "DEATHWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-champion-of-the-deathwing",
       "detachmentId": "inner-circle-task-force",
       "id": "enhancement-champion-of-the-deathwing",
@@ -27456,8 +27712,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "Inner Circle Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "DEATHWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ],
+          "allAbilities": [
+            "core-deep-strike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-inner-circle-task-force-deathwing-assault",
       "detachmentId": "inner-circle-task-force",
       "id": "enhancement-inner-circle-task-force-deathwing-assault",
@@ -27477,8 +27750,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Inner Circle Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "DEATHWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-eye-of-the-unseen",
       "detachmentId": "inner-circle-task-force",
       "id": "enhancement-eye-of-the-unseen",
@@ -27498,8 +27785,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Inner Circle Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "DEATHWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-singular-will",
       "detachmentId": "inner-circle-task-force",
       "id": "enhancement-singular-will",
@@ -27519,8 +27820,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Interrogation Conclave",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "CHAPLAIN"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "limitless-zeal",
       "detachmentId": "interrogation-conclave",
       "id": "limitless-zeal",
@@ -27549,8 +27864,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Interrogation Conclave",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "CHAPLAIN"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "inescapable-interrogation",
       "detachmentId": "interrogation-conclave",
       "id": "inescapable-interrogation",
@@ -27579,8 +27908,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Lion's Blade Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "calibanite-armaments",
       "detachmentId": "lion-s-blade-task-force",
       "id": "calibanite-armaments",
@@ -27609,8 +27952,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Lion's Blade Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "RAVENWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "lord-of-the-hunt",
       "detachmentId": "lion-s-blade-task-force",
       "id": "lord-of-the-hunt",
@@ -27639,8 +27996,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Lion's Blade Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "anyKeywords": [
+            "CAPTAIN",
+            "CHAPLAIN",
+            "LIEUTENANT"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "stalwart-champion",
       "detachmentId": "lion-s-blade-task-force",
       "id": "stalwart-champion",
@@ -27669,8 +28042,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Lion's Blade Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "DEATHWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "fulgus-magna",
       "detachmentId": "lion-s-blade-task-force",
       "id": "fulgus-magna",
@@ -27699,8 +28086,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Unforgiven Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ANCIENT"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-pennant-of-remembrance",
       "detachmentId": "unforgiven-task-force",
       "id": "enhancement-pennant-of-remembrance",
@@ -27720,8 +28121,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Unforgiven Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-shroud-of-heroes",
       "detachmentId": "unforgiven-task-force",
       "id": "enhancement-shroud-of-heroes",
@@ -27741,8 +28156,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Unforgiven Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-stubborn-tenacity",
       "detachmentId": "unforgiven-task-force",
       "id": "enhancement-stubborn-tenacity",
@@ -27762,8 +28191,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Unforgiven Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-weapons-of-the-first-legion",
       "detachmentId": "unforgiven-task-force",
       "id": "enhancement-weapons-of-the-first-legion",
@@ -27783,8 +28226,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Wrath of the Rock",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "tempered-in-battle-aura",
       "detachmentId": "wrath-of-the-rock",
       "id": "tempered-in-battle-aura",
@@ -27813,8 +28270,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Wrath of the Rock",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "ancient-weapons",
       "detachmentId": "wrath-of-the-rock",
       "id": "ancient-weapons",
@@ -27843,8 +28314,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Wrath of the Rock",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "DEATHWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ],
+          "allAbilities": [
+            "core-deep-strike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "deathwing-assault",
       "detachmentId": "wrath-of-the-rock",
       "id": "deathwing-assault",
@@ -27873,8 +28361,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Wrath of the Rock",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "RAVENWING"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "lord-of-the-ravenwing",
       "detachmentId": "wrath-of-the-rock",
       "id": "lord-of-the-ravenwing",
@@ -30969,8 +31471,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Company of Hunters",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-master-of-manoeuvre",
     "detachmentId": "company-of-hunters"
   },
@@ -30980,8 +31496,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Company of Hunters",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-master-crafted-weapon",
     "detachmentId": "company-of-hunters"
   },
@@ -30991,8 +31521,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "Company of Hunters",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-mounted-strategist",
     "detachmentId": "company-of-hunters"
   },
@@ -31002,8 +31546,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Company of Hunters",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-recon-hunter",
     "detachmentId": "company-of-hunters"
   },
@@ -31012,9 +31570,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "text": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
     "value": 15,
     "detachment": "Dark Age Arsenal",
-    "tags": [],
-    "owner": null,
-    "assignment": null,
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "petition-of-stability",
     "detachmentId": "dark-age-arsenal"
   },
@@ -31023,9 +31594,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "text": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
     "value": 15,
     "detachment": "Dark Age Arsenal",
-    "tags": [],
-    "owner": null,
-    "assignment": null,
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-hellblaster-squad"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "entreaty-of-perpetual-ardour",
     "detachmentId": "dark-age-arsenal"
   },
@@ -31034,9 +31618,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "text": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
     "value": 15,
     "detachment": "Darkflight Pursuit",
-    "tags": [],
-    "owner": null,
-    "assignment": null,
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING",
+          "FLY"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "thundercowl-turbines",
     "detachmentId": "darkflight-pursuit"
   },
@@ -31045,9 +31643,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "text": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
     "value": 15,
     "detachment": "Darkflight Pursuit",
-    "tags": [],
-    "owner": null,
-    "assignment": null,
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-land-speeder-vengeance"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "nightforged-battery",
     "detachmentId": "darkflight-pursuit"
   },
@@ -31057,8 +31668,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Inner Circle Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-champion-of-the-deathwing",
     "detachmentId": "inner-circle-task-force"
   },
@@ -31068,8 +31693,25 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "Inner Circle Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ],
+        "allAbilities": [
+          "core-deep-strike"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-inner-circle-task-force-deathwing-assault",
     "detachmentId": "inner-circle-task-force"
   },
@@ -31079,8 +31721,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Inner Circle Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-eye-of-the-unseen",
     "detachmentId": "inner-circle-task-force"
   },
@@ -31090,8 +31746,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Inner Circle Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-singular-will",
     "detachmentId": "inner-circle-task-force"
   },
@@ -31101,8 +31771,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Interrogation Conclave",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "CHAPLAIN"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "limitless-zeal",
     "detachmentId": "interrogation-conclave"
   },
@@ -31112,8 +31796,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Interrogation Conclave",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "CHAPLAIN"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "inescapable-interrogation",
     "detachmentId": "interrogation-conclave"
   },
@@ -31123,8 +31821,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Lion's Blade Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "calibanite-armaments",
     "detachmentId": "lion-s-blade-task-force"
   },
@@ -31134,8 +31846,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Lion's Blade Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "lord-of-the-hunt",
     "detachmentId": "lion-s-blade-task-force"
   },
@@ -31145,8 +31871,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Lion's Blade Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "anyKeywords": [
+          "CAPTAIN",
+          "CHAPLAIN",
+          "LIEUTENANT"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "stalwart-champion",
     "detachmentId": "lion-s-blade-task-force"
   },
@@ -31156,8 +31898,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Lion's Blade Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "fulgus-magna",
     "detachmentId": "lion-s-blade-task-force"
   },
@@ -31167,8 +31923,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Unforgiven Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ANCIENT"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-pennant-of-remembrance",
     "detachmentId": "unforgiven-task-force"
   },
@@ -31178,8 +31948,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Unforgiven Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-shroud-of-heroes",
     "detachmentId": "unforgiven-task-force"
   },
@@ -31189,8 +31973,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Unforgiven Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-stubborn-tenacity",
     "detachmentId": "unforgiven-task-force"
   },
@@ -31200,8 +31998,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Unforgiven Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-weapons-of-the-first-legion",
     "detachmentId": "unforgiven-task-force"
   },
@@ -31211,8 +32023,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Wrath of the Rock",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "tempered-in-battle-aura",
     "detachmentId": "wrath-of-the-rock"
   },
@@ -31222,8 +32048,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Wrath of the Rock",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "ancient-weapons",
     "detachmentId": "wrath-of-the-rock"
   },
@@ -31233,8 +32073,25 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Wrath of the Rock",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ],
+        "allAbilities": [
+          "core-deep-strike"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "deathwing-assault",
     "detachmentId": "wrath-of-the-rock"
   },
@@ -31244,8 +32101,22 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Wrath of the Rock",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "lord-of-the-ravenwing",
     "detachmentId": "wrath-of-the-rock"
   },

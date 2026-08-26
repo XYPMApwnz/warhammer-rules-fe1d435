@@ -139,52 +139,58 @@
   const smFamilyIdentity=(item,bookId)=>`${item?.detachmentId||''}|${smFamilySourceId(item,bookId)||''}`;
   const smFamilyEffect=item=>{const bookId=smFamilyBookId(),sourceId=smFamilySourceId(item,bookId),identity=smFamilyIdentity(item,bookId);if(!bookId||!sourceId||!item?.owner||!item?.assignment||!smFamilyOverlayEligibility[bookId]?.has(identity))return null;return smFamilyEffects.get(identity)||null;};
   const smLocalEffect=item=>smBook()&&item?.owner&&item?.assignment?smLocalEffects.get(smFamilyIdentity(item,'space-marines'))||null:null;
-  const daEffects=new Map([
-    ['company-of-hunters|enhancement-master-of-manoeuvre','strategic-reserves-setup'],
-    ['company-of-hunters|enhancement-master-crafted-weapon','melee-precision'],
-    ['company-of-hunters|enhancement-mounted-strategist','unit-advance-charge-rerolls'],
-    ['company-of-hunters|enhancement-recon-hunter','unit-scouts-9'],
-    ['dark-age-arsenal|petition-of-stability','plasma-range-plus-6'],
-    ['dark-age-arsenal|entreaty-of-perpetual-ardour','snap-shooting-hit-5'],
-    ['darkflight-pursuit|thundercowl-turbines','first-turn-ingress'],
-    ['darkflight-pursuit|nightforged-battery','reroll-attacks-hazard'],
-    ['inner-circle-task-force|enhancement-champion-of-the-deathwing','melee-lethal-hits-vowed-critical'],
-    ['inner-circle-task-force|enhancement-inner-circle-task-force-deathwing-assault','early-deep-strike'],
-    ['inner-circle-task-force|enhancement-eye-of-the-unseen','conditional-cp-roll'],
-    ['inner-circle-task-force|enhancement-singular-will','unit-pile-in-consolidate-plus-3'],
-    ['interrogation-conclave|limitless-zeal','unit-charge-plus-1'],
-    ['interrogation-conclave|inescapable-interrogation','ranged-ignores-cover'],
-    ['lion-s-blade-task-force|calibanite-armaments','melee-damage-plus-1'],
-    ['lion-s-blade-task-force|lord-of-the-hunt','unit-fall-back-actions'],
-    ['lion-s-blade-task-force|stalwart-champion','conditional-unit-oc-plus-1'],
-    ['lion-s-blade-task-force|fulgus-magna','once-per-battle-reserves'],
-    ['unforgiven-task-force|enhancement-pennant-of-remembrance','attached-unit-feel-no-pain'],
-    ['unforgiven-task-force|enhancement-shroud-of-heroes','once-per-battle-return'],
-    ['unforgiven-task-force|enhancement-stubborn-tenacity','attached-unit-conditional-rolls'],
-    ['unforgiven-task-force|enhancement-weapons-of-the-first-legion','melee-attacks-strength-damage-plus-1'],
-    ['wrath-of-the-rock|tempered-in-battle-aura','leadership-reroll-aura'],
-    ['wrath-of-the-rock|ancient-weapons','melee-strength-ap-damage'],
-    ['wrath-of-the-rock|deathwing-assault','early-deep-strike'],
-    ['wrath-of-the-rock|lord-of-the-ravenwing','unit-advance-charge-rerolls']
+
+  const daLocalConformanceEnhancements=new Map([
+    ['company-of-hunters|enhancement-master-of-manoeuvre',smEnhancement(null,[])],
+    ['company-of-hunters|enhancement-master-crafted-weapon',smEnhancement('owner',[{component:'weapon',targetId:'melee',operation:'grant-tag',tag:'PRECISION'}])],
+    ['company-of-hunters|enhancement-mounted-strategist',smEnhancement(null,[],'unit')],
+    ['company-of-hunters|enhancement-recon-hunter',smEnhancement('unit',[{component:'ability',targetId:'core-scouts',operation:'grant',title:'Scouts 9"',summary:''}],'unit')],
+    ['dark-age-arsenal|petition-of-stability',smEnhancement('unit',[{component:'weapon',targetId:'plasma',operation:'add-stat',stat:'Range',delta:6}],'unit')],
+    ['dark-age-arsenal|entreaty-of-perpetual-ardour',smEnhancement(null,[])],
+    ['darkflight-pursuit|thundercowl-turbines',smEnhancement(null,[])],
+    ['darkflight-pursuit|nightforged-battery',smEnhancement(null,[])],
+    ['inner-circle-task-force|enhancement-champion-of-the-deathwing',smEnhancement('owner',[{component:'weapon',targetId:'melee',operation:'grant-tag',tag:'LETHAL HITS'}])],
+    ['inner-circle-task-force|enhancement-inner-circle-task-force-deathwing-assault',smEnhancement(null,[],'unit')],
+    ['inner-circle-task-force|enhancement-eye-of-the-unseen',smEnhancement(null,[])],
+    ['inner-circle-task-force|enhancement-singular-will',smEnhancement(null,[],'unit')],
+    ['interrogation-conclave|limitless-zeal',smEnhancement(null,[],'unit')],
+    ['interrogation-conclave|inescapable-interrogation',smEnhancement('unit',smOps.rangedIgnores,'unit')],
+    ['lion-s-blade-task-force|calibanite-armaments',smEnhancement('owner',[{component:'weapon',targetId:'melee',operation:'add-stat',stat:'D',delta:1}])],
+    ['lion-s-blade-task-force|lord-of-the-hunt',smEnhancement(null,[],'unit')],
+    ['lion-s-blade-task-force|stalwart-champion',smEnhancement(null,[],'unit')],
+    ['lion-s-blade-task-force|fulgus-magna',smEnhancement(null,[],'unit')],
+    ['unforgiven-task-force|enhancement-pennant-of-remembrance',smEnhancement('leading',smOps.fnp6,'leading')],
+    ['unforgiven-task-force|enhancement-shroud-of-heroes',smEnhancement(null,[])],
+    ['unforgiven-task-force|enhancement-stubborn-tenacity',smEnhancement(null,[],'leading')],
+    ['unforgiven-task-force|enhancement-weapons-of-the-first-legion',smEnhancement('owner',[{component:'weapon',targetId:'melee',operation:'add-stat',stat:'A',delta:1},{component:'weapon',targetId:'melee',operation:'add-stat',stat:'S',delta:1},{component:'weapon',targetId:'melee',operation:'add-stat',stat:'D',delta:1}])],
+    ['wrath-of-the-rock|tempered-in-battle-aura',smEnhancement(null,[])],
+    ['wrath-of-the-rock|ancient-weapons',smEnhancement('owner',[{component:'weapon',targetId:'melee',operation:'add-stat',stat:'S',delta:2},{component:'weapon',targetId:'melee',operation:'add-stat',stat:'AP',delta:-1},{component:'weapon',targetId:'melee',operation:'add-stat',stat:'D',delta:1}])],
+    ['wrath-of-the-rock|deathwing-assault',smEnhancement(null,[],'unit')],
+    ['wrath-of-the-rock|lord-of-the-ravenwing',smEnhancement(null,[],'unit')]
   ]);
-  const daNotes=new Map([
-    ['strategic-reserves-setup','Setup rule: if the bearer\'s unit starts the battle in Strategic Reserves, it does not count towards the army\'s Strategic Reserves points limit and treats the current battle round as one higher when it is set up.'],
-    ['unit-advance-charge-rerolls','Attachment-dependent rule: the bearer\'s unit can re-roll Advance and Charge rolls. No Bodyguard Datasheet is mutated without attachment evidence.'],
-    ['unit-scouts-9','Attachment-dependent setup rule: models in the bearer\'s unit have Scouts 9". No Bodyguard Datasheet is mutated without attachment evidence.'],
-    ['snap-shooting-hit-5','Derived rule: this unit\'s snap shooting attacks hit on unmodified Hit rolls of 5+.'],
-    ['first-turn-ingress','Setup rule: in your first Movement phase, this unit can make an ingress move.'],
-    ['reroll-attacks-hazard','Derived rule: this unit can re-roll rolls to determine a weapon\'s Attacks characteristic and Hazard rolls.'],
-    ['early-deep-strike','Setup rule: the bearer\'s unit can use Deep Strike in the Reinforcements step of your first, second or third Movement phase, regardless of mission rules.'],
-    ['conditional-cp-roll','Conditional rule: when the bearer\'s unit is targeted with a Stratagem, roll one D6, adding 1 while the bearer is within range of the Vowed objective marker; on a 5+ you gain 1CP.'],
-    ['unit-pile-in-consolidate-plus-3','Attachment-dependent rule: when the bearer\'s unit Piles In or Consolidates, models in it can move an additional 3". No Bodyguard Datasheet is mutated without attachment evidence.'],
-    ['unit-charge-plus-1','Attachment-dependent rule: this unit has +1 to Charge rolls. No Bodyguard Datasheet is mutated without attachment evidence.'],
-    ['unit-fall-back-actions','Attachment-dependent rule: the bearer\'s unit can shoot and declare a charge after Falling Back and can re-roll Desperate Escape tests. No Bodyguard Datasheet is mutated without attachment evidence.'],
-    ['conditional-unit-oc-plus-1','Attachment-dependent conditional rule: while the bearer\'s unit is not Battle-shocked, models in it have +1 Objective Control. No permanent profile or Bodyguard Datasheet mutation was applied.'],
-    ['once-per-battle-reserves','Once-per-battle rule: at the end of your opponent\'s turn, if the bearer\'s unit is not within Engagement Range, it can be placed into Strategic Reserves.'],
-    ['attached-unit-feel-no-pain','Attachment-dependent conditional rule: while the bearer is leading a unit, models in it have Feel No Pain 6+, or Feel No Pain 4+ while that unit is Battle-shocked. No Datasheet mutation was applied.'],
-    ['once-per-battle-return','Once-per-battle rule: when this model is destroyed, its source-backed return roll and setup instructions apply at the end of the phase.'],
-    ['attached-unit-conditional-rolls','Attachment-dependent conditional rule: while the bearer is leading a unit, its below-Starting-Strength and Battle-shocked attack-roll modifiers apply. No weapon profile or Bodyguard Datasheet mutation was applied.'],
-    ['leadership-reroll-aura','Derived aura: friendly Adeptus Astartes units within 6" can re-roll Battle-shock and Leadership tests. No other Datasheet card is mutated.']
+  const daAttachedAbilitySemantics=new Map([
+    ['unit-ravenwing-command-squad|dark-angels-ability-narthecium',smAbility('leading')],
+    ['unit-ravenwing-command-squad|dark-angels-ability-astartes-banner',smAbility('leading',smOps.oc1)],
+    ['unit-ravenwing-command-squad|dark-angels-ability-honour-or-death',smAbility('leading')],
+    ['unit-asmodai|dark-angels-ability-exemplar-of-hate',smAbility('leading')],
+    ['unit-azrael|dark-angels-ability-supreme-grand-master',smAbility('leading',smOps.sustained)],
+    ['unit-azrael|dark-angels-ability-the-lion-helm',smAbility('leading',smOps.invulnerable4)],
+    ['unit-belial|dark-angels-ability-grand-master-of-the-deathwing',smAbility('leading')],
+    ['unit-ezekiel|dark-angels-ability-book-of-salvation',smAbility('leading',smOps.meleeA1)],
+    ['unit-ezekiel|dark-angels-ability-psychic-hood',smAbility('leading')],
+    ['unit-lazarus|dark-angels-ability-intractable-will',smAbility('leading')],
+    ['unit-sammael|dark-angels-ability-grand-master-of-the-ravenwing',smAbility('leading',[{component:'weapon',targetId:'ranged',operation:'grant-tag',tag:'ASSAULT'},{component:'keyword',targetId:'MOBILE',operation:'grant'}])],
+    ['unit-sammael|dark-angels-ability-cut-off-their-escape',smAbility('leading')]
+  ]);
+  const daDetachmentSemantics=new Map([
+    ['company-of-hunters',{ruleId:'dark-angels-detachment-rule-masters-of-manoeuvre',operations:gameUnit=>[{component:'weapon',targetId:'ranged',operation:'grant-tag',tag:'ASSAULT'},...(gameUnit.identity.canonicalDatasheetId==='unit-outrider-squad'?smOps.battleline:[])],predicate:()=>true}],
+    ['dark-age-arsenal',{ruleId:'dark-angels-detachment-rule-invocations-of-ancient-fury',operations:()=>[{component:'weapon',targetId:'plasma',operation:'add-stat',stat:'S',delta:1}],predicate:()=>true}],
+    ['darkflight-pursuit',{ruleId:'dark-angels-detachment-rule-black-winged-vigilance',operations:()=>smOps.rangedIgnores,predicate:gameUnit=>smHasKeyword(gameUnit,'RAVENWING')&&smHasKeyword(gameUnit,'FLY')}],
+    ['inner-circle-task-force',{ruleId:'dark-angels-detachment-rule-vowed-target',operations:()=>[],predicate:gameUnit=>smHasKeyword(gameUnit,'DEATHWING')&&smHasKeyword(gameUnit,'INFANTRY')}],
+    ['interrogation-conclave',{ruleId:'dark-angels-detachment-rule-dread-catechism',operations:()=>[],predicate:gameUnit=>smHasKeyword(gameUnit,'CHAPLAIN')}],
+    ['lion-s-blade-task-force',{ruleId:'dark-angels-detachment-rule-in-the-lions-claws',operations:()=>[],predicate:gameUnit=>smHasKeyword(gameUnit,'RAVENWING')||smHasKeyword(gameUnit,'DEATHWING')}],
+    ['unforgiven-task-force',{ruleId:'dark-angels-detachment-rule-grim-resolve',operations:()=>[],predicate:()=>true}],
+    ['wrath-of-the-rock',{ruleId:'dark-angels-detachment-rule-dutiful-tenacity',operations:()=>[],predicate:gameUnit=>smHasKeyword(gameUnit,'INFANTRY')||smHasKeyword(gameUnit,'MOUNTED')}]
   ]);
 
   function enhancementArticle(entry,item){
@@ -520,7 +526,7 @@
   function decorateDa(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`,apply=!Array.isArray(context.projectedEffects);if(smFamilyEffect(resolution.item))applySmEffect(card,article,resolution.item,apply);else if(daEffects.has(identity))applyDaEffect(card,article,resolution.item,apply);}list.prepend(article);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
@@ -553,33 +559,7 @@
     return ownership.cardEnhancements;
   }
   function applySmEffect(){return;}
-  function applyDaEffect(card,article,item,applyEffects=true){
-    if(!applyEffects)return;
-    const effect=daEffects.get(`${item.detachmentId}|${item.ruleId}`),note=daNotes.get(effect);
-    if(effect==='unit-scouts-9'){
-      if(addSharedAbility(card,'Scouts 9"','core-scouts',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Scouts 9" applied to the bearer Datasheet only. No Bodyguard Datasheet is mutated without attachment evidence.');}
-      else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
-    }
-    if(note){derivedNote(article,effect,note);return;}
-    if(effect==='melee-precision'){
-      if(tagWeapons(card,'melee','PRECISION',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Precision applied to the bearer's melee weapons.");}else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
-    }
-    if(effect==='plasma-range-plus-6'){
-      const rows=weaponRows(card,'ranged').filter(row=>normalize(row.dataset.sourceField).includes('plasma'));
-      if(adjustTyranidsRows(rows,{Range:6},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: +6" Range applied only to plasma ranged weapons on this roster instance.');}else warning(article,'Effect could not be applied automatically because no structured plasma ranged weapon profiles were found.');return;
-    }
-    if(effect==='melee-lethal-hits-vowed-critical'){
-      if(tagWeapons(card,'melee','LETHAL HITS',effect))article.dataset.rosterDerivedEffect=effect;else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
-    }
-    if(effect==='ranged-ignores-cover'){
-      if(tagWeapons(card,'ranged','IGNORES COVER',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Ignores Cover applied to this exact owner's ranged weapons. No Bodyguard Datasheet is mutated without attachment evidence.");}else warning(article,'Effect could not be applied automatically because no ranged weapon profiles were found.');return;
-    }
-    if(effect==='melee-damage-plus-1'||effect==='melee-attacks-strength-damage-plus-1'||effect==='melee-strength-ap-damage'){
-      const changes=effect==='melee-damage-plus-1'?{D:1}:effect==='melee-attacks-strength-damage-plus-1'?{A:1,S:1,D:1}:{S:2,AP:-1,D:1};
-      if(adjustWeapons(card,'melee',changes,effect)){article.dataset.rosterDerivedEffect=effect;if(effect!=='melee-attacks-strength-damage-plus-1')derivedNote(article,effect,effect==='melee-damage-plus-1'?"Derived profiles: +1 Damage applied to the bearer's melee weapons.":"Derived profiles: +2 Strength, improved Armour Penetration and +1 Damage applied to the bearer's melee weapons.");}else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
-    }
-  }
-  const conditional=kind=>({state:'conditional',certainty:'unknown',condition:{kind,state:'unknown'}});
+    const conditional=kind=>({state:'conditional',certainty:'unknown',condition:{kind,state:'unknown'}});
   function structuredRecords(code,item,source){const output=[],add=(suffix,component,targetId,operation,detail={},state={})=>output.push({id:`${source.id}:${suffix}`,component,targetId,operation,...detail,...state,source,provenance:{rosterFact:'enhancement-owner'}}),ability=(suffix,title,summary=item.text||'',state={})=>add(suffix,'ability',suffix,'grant',{title,summary},state),weapon=(suffix,targetId,operation,detail,state={})=>add(suffix,'weapon',targetId,operation,detail,state),stat=(suffix,targetId,operation,value,state={})=>add(suffix,'stat',targetId,operation,operation==='set'?{to:value}:{delta:value},state),keyword=(suffix,title,operation='grant',state={})=>add(suffix,'keyword',title,operation,{},state),reference=(suffix,state={})=>add(suffix,'ability',source.id,'reference',{canonicalReference:{kind:'enhancement',id:source.id},state:'reference'},state);
     switch(code){
       case'detection-range-minus-3':ability(code,'Detection Range -3"');break;
@@ -638,23 +618,33 @@
     }
     return output;
   }
-  function structuredCode(item){const identity=`${item.detachmentId}|${item.ruleId||item.id}`,family=smFamilyEffect(item);if(family)return family;if(tauBook())return null;if(ecBook())return ecEffects.get(normalize(item.title));if(tyranidsBook())return tyranidsEffects.get(normalize(item.title));if(csmBook())return csmEffects.get(normalize(item.title));if(smBook())return smLocalEffect(item);if(daBook())return daEffects.get(identity);if(baBook())return baEffects.get(identity);return null;}
+  function structuredCode(item){const identity=`${item.detachmentId}|${item.ruleId||item.id}`,family=smFamilyEffect(item);if(family)return family;if(tauBook())return null;if(ecBook())return ecEffects.get(normalize(item.title));if(tyranidsBook())return tyranidsEffects.get(normalize(item.title));if(csmBook())return csmEffects.get(normalize(item.title));if(smBook())return smLocalEffect(item);if(daBook())return null;if(baBook())return baEffects.get(identity);return null;}
   function smAttachmentGroup(gameUnit,byInstance){let anchor=gameUnit;const leading=gameUnit?.attachments?.leading?.[0];if(!gameUnit?.attachments?.leaders?.length&&leading)anchor=byInstance?.get(leading.instanceId)||gameUnit;const members=anchor?.attachments?.leaders?.length?[anchor,...anchor.attachments.leaders.map(entry=>byInstance?.get(entry.instanceId)).filter(Boolean)]:[gameUnit];return{anchor,members:[...new Map(members.map(member=>[member.identity.instanceId,member])).values()]};}
-  function smHasKeyword(gameUnit,keyword){return(gameUnit?.rosterState?.keywordProfile?.effective||[]).some(value=>normalize(value)===normalize(keyword));}
+  function smKeywordValues(gameUnit){const profile=gameUnit?.rosterState?.keywordProfile||{};if(Array.isArray(profile.effective))return profile.effective;const removed=new Set((profile.removed||[]).map(normalize));return[...new Set([...(profile.intrinsic||[]),...(profile.added||[])].filter(value=>!removed.has(normalize(value))))];}
+  function smHasKeyword(gameUnit,keyword){return smKeywordValues(gameUnit).some(value=>normalize(value)===normalize(keyword));}
   function smScopeApplies(scope,current,owner,group){if(!scope)return false;if(scope==='owner')return current.identity.instanceId===owner.identity.instanceId;if(scope==='unit')return group.members.some(member=>member.identity.instanceId===owner.identity.instanceId);if(scope==='leading')return group.members.length>1&&group.members.some(member=>member.identity.instanceId===owner.identity.instanceId);if(scope==='bodyguard')return group.members.length>1&&current.identity.instanceId===group.anchor.identity.instanceId;if(scope==='owner-if-leading')return group.members.length>1&&current.identity.instanceId===owner.identity.instanceId;if(scope==='owner-or-battleline')return current.identity.instanceId===owner.identity.instanceId||(group.members.length>1&&smHasKeyword(current,'BATTLELINE'));return false;}
   function smOperationRecords(operations,source,prefix,group){const records=[];for(const [index,operation] of (operations||[]).entries()){if(operation.requiresUnitId&&!group.members.some(member=>member.identity.canonicalDatasheetId===operation.requiresUnitId))continue;const record={...operation};delete record.requiresUnitId;records.push({id:`${source.id}:${prefix}-${index+1}`,...record,source,provenance:{rosterFact:prefix}});}return records;}
   const smReferenceRecord=(kind,id,source,prefix)=>({id:`${source.id}:${prefix}`,component:'ability',targetId:id,operation:'reference',canonicalReference:{kind,id},state:'reference',source,provenance:{rosterFact:prefix}});
+  function smEnhancementOwnerEligible(canonical,owner){const selector=canonical?.owner?.selector;if(!selector||!owner)return false;const unitId=owner.identity.canonicalDatasheetId,keywords=new Set(smKeywordValues(owner).map(normalize)),abilities=new Set((owner.item?.catalogUnit?.gameSelections?.abilities||[]).map(ability=>normalize(ability.id)));
+    if((selector.unitIds||[]).length&&!selector.unitIds.includes(unitId))return false;
+    if((selector.allKeywords||[]).some(keyword=>!keywords.has(normalize(keyword))))return false;
+    if((selector.anyKeywords||[]).length&&!(selector.anyKeywords||[]).some(keyword=>keywords.has(normalize(keyword))))return false;
+    if((selector.noneKeywords||[]).some(keyword=>keywords.has(normalize(keyword))))return false;
+    if((selector.allAbilities||[]).some(ability=>!abilities.has(normalize(ability))))return false;
+    return true;
+  }
   function smConformanceEffects({gameUnit,byInstance,gameUnits,enhancements}){const output=[],bookId=smFamilyBookId();if(!bookId||!gameUnit)return output;const group=smAttachmentGroup(gameUnit,byInstance),current=gameUnit,selectedDetachments=[...new Set(current.rosterState?.detachments||[])];
-    for(const resolution of enhancements||[]){const entry=resolution.input||{},canonical=resolution.catalog;if(selectedDetachments.length!==1||canonical?.detachmentId!==selectedDetachments[0]||entry.ownerStatus!=='resolved'||!entry.ownerUnitId||!canonical?.owner||!canonical?.assignment)continue;const owner=group.members.find(member=>member.identity.instanceId===entry.ownerUnitId);if(!owner)continue;const familySource=smFamilySourceId(canonical,bookId),familyIdentity=`${canonical.detachmentId||''}|${familySource||''}`,localIdentity=`${canonical.detachmentId||''}|${canonical.ruleId||canonical.id||''}`,family=familySource?smFamilyConformanceEnhancements.get(familyIdentity):null,local=smBook()?smLocalConformanceEnhancements.get(localIdentity):null,semantic=family||local;if(!semantic)continue;const sourceId=family?familySource:(canonical.ruleId||canonical.id),source={kind:'enhancement',id:sourceId,ownerInstanceId:owner.identity.instanceId};if(smScopeApplies(semantic.mutationScope,current,owner,group))output.push(...smOperationRecords(semantic.operations,source,'enhancement-owner',group));if(current.identity.instanceId!==owner.identity.instanceId&&smScopeApplies(semantic.referenceScope,current,owner,group))output.push(smReferenceRecord('enhancement',sourceId,source,'enhancement-reference'));
+    for(const resolution of enhancements||[]){const entry=resolution.input||{},canonical=resolution.catalog;if(selectedDetachments.length!==1||canonical?.detachmentId!==selectedDetachments[0]||entry.ownerStatus!=='resolved'||!entry.ownerUnitId||!canonical?.owner||!canonical?.assignment)continue;const owner=group.members.find(member=>member.identity.instanceId===entry.ownerUnitId);if(!owner||!smEnhancementOwnerEligible(canonical,owner))continue;const familySource=smFamilySourceId(canonical,bookId),familyIdentity=`${canonical.detachmentId||''}|${familySource||''}`,localIdentity=`${canonical.detachmentId||''}|${canonical.ruleId||canonical.id||''}`,family=familySource?smFamilyConformanceEnhancements.get(familyIdentity):null,local=smBook()?smLocalConformanceEnhancements.get(localIdentity):daBook()?daLocalConformanceEnhancements.get(localIdentity):null,semantic=family||local;if(!semantic)continue;const sourceId=family?familySource:(canonical.ruleId||canonical.id),source={kind:'enhancement',id:sourceId,ownerInstanceId:owner.identity.instanceId};if(smScopeApplies(semantic.mutationScope,current,owner,group))output.push(...smOperationRecords(semantic.operations,source,'enhancement-owner',group));if(current.identity.instanceId!==owner.identity.instanceId&&smScopeApplies(semantic.referenceScope,current,owner,group))output.push(smReferenceRecord('enhancement',sourceId,source,'enhancement-reference'));
     }
-    for(const [identity,semantic] of smAttachedAbilitySemantics){const separator=identity.indexOf('|'),sourceUnitId=identity.slice(0,separator),abilityId=identity.slice(separator+1),owner=group.members.find(member=>member.identity.canonicalDatasheetId===sourceUnitId);if(!owner||!owner.item?.catalogUnit?.gameSelections?.abilities?.some(ability=>ability.id===abilityId))continue;if(semantic.scope==='leading'&&group.members.length<2)continue;const source={kind:'explicit-attachment',id:abilityId,ownerInstanceId:owner.identity.instanceId};output.push(...smOperationRecords(semantic.operations,source,'explicit-attachment',group));if(current.identity.instanceId!==owner.identity.instanceId)output.push(smReferenceRecord('ability',abilityId,source,'ability-reference'));
+    const attachedSemantics=daBook()?[...smAttachedAbilitySemantics,...daAttachedAbilitySemantics]:smAttachedAbilitySemantics;
+    for(const [identity,semantic] of attachedSemantics){const separator=identity.indexOf('|'),sourceUnitId=identity.slice(0,separator),abilityId=identity.slice(separator+1),owner=group.members.find(member=>member.identity.canonicalDatasheetId===sourceUnitId);if(!owner||!owner.item?.catalogUnit?.gameSelections?.abilities?.some(ability=>ability.id===abilityId))continue;if(semantic.scope==='leading'&&group.members.length<2)continue;const source={kind:'explicit-attachment',id:abilityId,ownerInstanceId:owner.identity.instanceId};output.push(...smOperationRecords(semantic.operations,source,'explicit-attachment',group));if(current.identity.instanceId!==owner.identity.instanceId)output.push(smReferenceRecord('ability',abilityId,source,'ability-reference'));
     }
     for(const [identity,semantic] of smBodyguardAbilitySemantics){const separator=identity.indexOf('|'),sourceUnitId=identity.slice(0,separator),abilityId=identity.slice(separator+1);if(group.anchor.identity.canonicalDatasheetId!==sourceUnitId||!group.anchor.item?.catalogUnit?.gameSelections?.abilities?.some(ability=>ability.id===abilityId))continue;const source={kind:'explicit-attachment',id:abilityId,ownerInstanceId:group.anchor.identity.instanceId};output.push(...smOperationRecords(semantic.operations,source,'bodyguard-rule',group));if(current.identity.instanceId!==group.anchor.identity.instanceId)output.push(smReferenceRecord('ability',abilityId,source,'bodyguard-reference'));
     }
     for(const semantic of smRosterAbilityReferences){if(!semantic.targetUnitIds.includes(current.identity.canonicalDatasheetId))continue;const owner=(gameUnits||[]).find(member=>member.identity.canonicalDatasheetId===semantic.sourceUnitId);if(!owner)continue;const source={kind:'datasheet',id:semantic.abilityId,ownerInstanceId:owner.identity.instanceId};output.push(smReferenceRecord('ability',semantic.abilityId,source,'roster-ability-reference'));
     }
     if(smBook()&&current.identity.canonicalDatasheetId==='unit-kayvaan-shrike'){const aethon=(gameUnits||[]).find(member=>member.identity.canonicalDatasheetId==='unit-aethon-shaan');if(aethon){const source={kind:'datasheet',id:'space-marines-ability-chapter-master-of-the-raven-guard',ownerInstanceId:aethon.identity.instanceId};output.push(...smOperationRecords([{component:'ability',targetId:'core-lone-operative',title:'Lone Operative',operation:'remove'},{component:'keyword',targetId:'CHAPTER MASTER',operation:'remove'},{component:'keyword',targetId:'CAPTAIN',operation:'grant'}],source,'roster-unit-pair',group),smReferenceRecord('ability',source.id,source,'roster-unit-pair-reference'));}}
-    if(selectedDetachments.length===1){for(const detachmentId of selectedDetachments){const id=String(detachmentId).replace(/^detachment-/,''),semantic=smDetachmentSemantics.get(id);if(!semantic||!semantic.predicate(current))continue;const source={kind:'detachment',id,ownerInstanceId:null};output.push(...smOperationRecords(semantic.operations,source,'selected-detachment',group),smReferenceRecord('detachment-rule',semantic.ruleId,source,'detachment-rule-reference'));}}
+    if(selectedDetachments.length===1){for(const detachmentId of selectedDetachments){const id=String(detachmentId).replace(/^detachment-/,''),semantic=(daBook()?daDetachmentSemantics.get(id):null)||smDetachmentSemantics.get(id);if(!semantic||!semantic.predicate(current))continue;const source={kind:'detachment',id,ownerInstanceId:null},operations=typeof semantic.operations==='function'?semantic.operations(current):semantic.operations;output.push(...smOperationRecords(operations,source,'selected-detachment',group),smReferenceRecord('detachment-rule',semantic.ruleId,source,'detachment-rule-reference'));}}
     for(const abilityId of current.selection?.loadout?.selectedWargearAbilityIds||[]){const operations=smWargearSemantics.get(abilityId);if(!operations)continue;const source={kind:'selected-wargear',id:abilityId,ownerInstanceId:current.identity.instanceId};output.push(...smOperationRecords(operations,source,'selected-wargear',group));}
     return output;
   }

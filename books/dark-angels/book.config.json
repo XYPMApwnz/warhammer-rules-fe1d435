@@ -12,7 +12,8 @@
   "customApp": true,
   "rosterSupport": true,
   "rosterCatalog": {
-    "inferExactWargearAbilitySelections": true
+    "inferExactWargearAbilitySelections": true,
+    "inferCanonicalDetachmentRuleIds": true
   },
   "assetVersions": {
     "book": 4,
@@ -39,6 +40,47 @@
       "SALAMANDERS",
       "ULTRAMARINES",
       "WHITE SCARS"
+    ],
+    "keywordOverlays": [
+      {
+        "keyword": "DEATHWING",
+        "unitIds": [
+          "unit-captain-in-terminator-armour",
+          "unit-bladeguard-veteran-squad",
+          "unit-vanguard-veteran-squad-with-jump-packs",
+          "unit-sternguard-veteran-squad",
+          "unit-terminator-assault-squad",
+          "unit-terminator-squad",
+          "unit-dreadnought",
+          "unit-redemptor-dreadnought",
+          "unit-ballistus-dreadnought",
+          "unit-brutalis-dreadnought",
+          "unit-land-raider",
+          "unit-land-raider-crusader",
+          "unit-land-raider-redeemer",
+          "unit-repulsor",
+          "unit-repulsor-executioner",
+          "unit-librarian-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-bladeguard-ancient",
+          "unit-ancient-in-terminator-armor"
+        ]
+      },
+      {
+        "keyword": "RAVENWING",
+        "unitIds": [
+          "unit-invader-atv",
+          "unit-outrider-squad",
+          "unit-storm-speeder-hailstrike",
+          "unit-storm-speeder-thunderstrike",
+          "unit-storm-speeder-hammerstrike",
+          "unit-stormhawk-interceptor",
+          "unit-stormtalon-gunship",
+          "unit-stormraven-gunship",
+          "unit-chaplain-on-bike",
+          "unit-land-speeder"
+        ]
+      }
     ]
   },
   "dependencyDetachments": {
@@ -88,6 +130,7 @@
     "factionPack": "content/dark-angels-faction-pack.en.json",
     "codexDatasheets": "content/dark-angels-codex-datasheets.en.json",
     "relatedRules": "content/dark-angels-related-rules.en.json",
-    "manifest": "sources/source-manifest.json"
+    "manifest": "sources/source-manifest.json",
+    "codexParity": "content/dark-angels-codex-parity.en.json"
   }
 }

@@ -1,4 +1,12 @@
 window.DG_TERMS={
+  "dark-angels-detachment-rule-masters-of-manoeuvre": {
+    "id": "dark-angels-detachment-rule-masters-of-manoeuvre",
+    "title": "Masters of Manoeuvre",
+    "summary": "Friendly ADEPTUS ASTARTES have: ▪ This unit’s ranged attacks have [ASSAULT]. ▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot. Friendly ADEPTUS ASTARTES MOUNTED have: ▪ This unit’s ranged attacks have [ASSAULT]. ▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Keywords: OUTRIDER SQUAD units from your army gain the BATTLELINE keyword.",
+    "full": "Friendly ADEPTUS ASTARTES have: ▪ This unit’s ranged attacks have [ASSAULT]. ▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot. Friendly ADEPTUS ASTARTES MOUNTED have: ▪ This unit’s ranged attacks have [ASSAULT]. ▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge. Keywords: OUTRIDER SQUAD units from your army gain the BATTLELINE keyword.",
+    "glossary": "glossary-dark-angels-detachment-rule-masters-of-manoeuvre",
+    "rule": "detachment-company-of-hunters"
+  },
   "dark-angels-enhancement-master-of-manoeuvre": {
     "id": "dark-angels-enhancement-master-of-manoeuvre",
     "title": "Master of Manoeuvre",
@@ -126,6 +134,14 @@ window.DG_TERMS={
     "full": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged RAVENWING FLY unit has shot. That RAVENWING FLY unit. Your unit can make a normal move of up to D3+3\". BLACK‑ARMOURED COMBAT CRAFT HUNT THEIR PREY UPON WINGS OF DARK FURY",
     "glossary": "glossary-dark-angels-stratagem-we-are-vengeance",
     "rule": "detachment-darkflight-pursuit"
+  },
+  "dark-angels-detachment-rule-vowed-target": {
+    "id": "dark-angels-detachment-rule-vowed-target",
+    "title": "Vowed Target",
+    "summary": "At the start of your Movement phase, select one of the following: ▪ Defensive Footing: Select one objective you control. Until the start of your next Movement phase, that objective is your Vowed objective. ▪ Aggressive Push: Select one or more objective you do not control. Until the start of your next Movement phase, each of those objectives is one of your Vowed objectives. If a rule refers to a unit or model being within range of your Vowed objective, that rule takes effect if that unit or model is within range of one or more of your Vowed objectives. Each time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objectives, add 1 to the Wound roll.",
+    "full": "At the start of your Movement phase, select one of the following: ▪ Defensive Footing: Select one objective you control. Until the start of your next Movement phase, that objective is your Vowed objective. ▪ Aggressive Push: Select one or more objective you do not control. Until the start of your next Movement phase, each of those objectives is one of your Vowed objectives. If a rule refers to a unit or model being within range of your Vowed objective, that rule takes effect if that unit or model is within range of one or more of your Vowed objectives. Each time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objectives, add 1 to the Wound roll.",
+    "glossary": "glossary-dark-angels-detachment-rule-vowed-target",
+    "rule": "detachment-inner-circle-task-force"
   },
   "dark-angels-enhancement-champion-of-the-deathwing": {
     "id": "dark-angels-enhancement-champion-of-the-deathwing",
@@ -294,6 +310,14 @@ window.DG_TERMS={
     "full": "End of your opponent’s Charge phase. One Deathwing Infantry or Deathwing Walker unit from your army that is within 6\" of one or more enemy units and would be eligible to declare a charge against one or more of those enemy units if it were your Charge phase. Your unit now declares a charge that only targets one or more of those enemy units, and you resolve that charge. Note that even if this charge is successful, your unit does not receive any Charge bonus this turn. 1CP 1CP 1CP 1CP 1CP 2CP",
     "glossary": "glossary-dark-angels-stratagem-inescapable-wrath",
     "rule": "detachment-lion-s-blade-task-force"
+  },
+  "dark-angels-detachment-rule-grim-resolve": {
+    "id": "dark-angels-detachment-rule-grim-resolve",
+    "title": "Grim Resolve",
+    "summary": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'. In your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
+    "full": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'. In your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
+    "glossary": "glossary-dark-angels-detachment-rule-grim-resolve",
+    "rule": "detachment-unforgiven-task-force"
   },
   "dark-angels-enhancement-pennant-of-remembrance": {
     "id": "dark-angels-enhancement-pennant-of-remembrance",
@@ -7720,5 +7744,37 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-ravenwing-darkshroud",
     "statline": "ravenwing-darkshroud-profile"
+  },
+  "dark-angels-enhancement-petition-of-stability-2": {
+    "id": "dark-angels-enhancement-petition-of-stability-2",
+    "title": "Petition of Stability",
+    "summary": "UPGRADE. With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
+    "full": "UPGRADE. With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
+    "glossary": "glossary-dark-angels-enhancement-petition-of-stability-2",
+    "rule": "detachment-dark-age-arsenal"
+  },
+  "dark-angels-enhancement-entreaty-of-perpetual-ardour-2": {
+    "id": "dark-angels-enhancement-entreaty-of-perpetual-ardour-2",
+    "title": "Entreaty of Perpetual Ardour",
+    "summary": "UPGRADE. By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+    "full": "UPGRADE. By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+    "glossary": "glossary-dark-angels-enhancement-entreaty-of-perpetual-ardour-2",
+    "rule": "detachment-dark-age-arsenal"
+  },
+  "dark-angels-enhancement-thundercowl-turbines-2": {
+    "id": "dark-angels-enhancement-thundercowl-turbines-2",
+    "title": "Thundercowl Turbines",
+    "summary": "UPGRADE. These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
+    "full": "UPGRADE. These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
+    "glossary": "glossary-dark-angels-enhancement-thundercowl-turbines-2",
+    "rule": "detachment-darkflight-pursuit"
+  },
+  "dark-angels-enhancement-nightforged-battery-2": {
+    "id": "dark-angels-enhancement-nightforged-battery-2",
+    "title": "Nightforged Battery",
+    "summary": "UPGRADE. Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+    "full": "UPGRADE. Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+    "glossary": "glossary-dark-angels-enhancement-nightforged-battery-2",
+    "rule": "detachment-darkflight-pursuit"
   }
 };

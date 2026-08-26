@@ -41,7 +41,7 @@ for(const text of ['Derived effect: this unit has -3" detection range.','Apply t
 const remaining=fs.readFileSync(path.join(root,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
 assert.match(remaining,/canonicalReference:\{kind:'enhancement',id:source\.id\}/);
 for(const legacy of ["ability('reroll-wounds'","ability('reroll-damage'","reference('vowed-critical','Critical Hits 5+'","reference('battleshocked-values','Improved values while Battle-shocked'"])assert.doesNotMatch(remaining,new RegExp(legacy.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),`remaining provider residual: ${legacy}`);
-const enhancementStart=remaining.indexOf('for(const resolution of enhancements||[])'),abilityStart=remaining.indexOf('for(const [identity,semantic] of smAttachedAbilitySemantics');
+const enhancementStart=remaining.indexOf('for(const resolution of enhancements||[])'),abilityStart=remaining.indexOf('const attachedSemantics=');
 assert.ok(enhancementStart>=0&&abilityStart>enhancementStart,'SM Enhancement provider loop boundaries');
 const enhancementProvider=remaining.slice(enhancementStart,abilityStart);
 assert.match(enhancementProvider,/source=\{kind:'enhancement'/,'Enhancement references retain exact owner provenance');

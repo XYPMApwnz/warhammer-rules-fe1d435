@@ -1,0 +1,225 @@
+{
+  "schema": "wh40k-army-book-codex-parity/v1",
+  "source": {
+    "label": "Current Dark Angels rules update parity",
+    "factionPack": "dark-angels-faction-pack-v1.1"
+  },
+  "detachments": [
+    {
+      "id": "company-of-hunters",
+      "title": "Company of Hunters",
+      "rule": {
+        "id": "dark-angels-detachment-rule-masters-of-manoeuvre",
+        "title": "Masters of Manoeuvre",
+        "text": "Friendly ADEPTUS ASTARTES have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot.\nFriendly ADEPTUS ASTARTES MOUNTED have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.\nKeywords: OUTRIDER SQUAD units from your army gain the BATTLELINE keyword."
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-master-of-manoeuvre",
+          "title": "Master of Manoeuvre",
+          "detachment": "Company of Hunters",
+          "value": 15,
+          "text": "RAVENWING model only. If the bearer's unit starts the battle in Strategic Reserves, its points value does not count towards the combined points limit for units from your army that are in Strategic Reserve, and for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "company-of-hunters",
+          "ruleId": "enhancement-master-of-manoeuvre"
+        },
+        {
+          "id": "enhancement-master-crafted-weapon",
+          "title": "Master-crafted Weapon",
+          "detachment": "Company of Hunters",
+          "value": 10,
+          "text": "RAVENWING model only. Melee weapons equipped by the bearer have the Precision ability.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "company-of-hunters",
+          "ruleId": "enhancement-master-crafted-weapon"
+        },
+        {
+          "id": "enhancement-mounted-strategist",
+          "title": "Mounted Strategist",
+          "detachment": "Company of Hunters",
+          "value": 30,
+          "text": "RAVENWING model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "company-of-hunters",
+          "ruleId": "enhancement-mounted-strategist"
+        },
+        {
+          "id": "enhancement-recon-hunter",
+          "title": "Recon Hunter",
+          "detachment": "Company of Hunters",
+          "value": 20,
+          "text": "RAVENWING model only. Models in the bearer's unit have the Scouts 9\" ability.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "company-of-hunters",
+          "ruleId": "enhancement-recon-hunter"
+        }
+      ],
+      "stratagems": []
+    },
+    {
+      "id": "inner-circle-task-force",
+      "title": "Inner Circle Task Force",
+      "rule": {
+        "id": "dark-angels-detachment-rule-vowed-target",
+        "title": "Vowed Target",
+        "text": "At the start of your Movement phase, select one of the following:\n▪ Defensive Footing: Select one objective you control. Until the start of your next Movement phase, that objective is your Vowed objective.\n▪ Aggressive Push: Select one or more objective you do not control. Until the start of your next Movement phase, each of those objectives is one of your Vowed objectives. If a rule refers to a unit or model being within range of your Vowed objective, that rule takes effect if that unit or model is within range of one or more of your Vowed objectives. Each time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objectives, add 1 to the Wound roll."
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-champion-of-the-deathwing",
+          "title": "Champion of the Deathwing",
+          "detachment": "Inner Circle Task Force",
+          "value": 15,
+          "text": "Deathwing model only. Melee weapons equipped by the bearer have the [LETHAL HITS] ability, and each time the bearer makes a melee attack, if it is within range of your Vowed objective marker, a Critical Hit is scored on an unmodified Hit roll of 5+.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "inner-circle-task-force",
+          "ruleId": "enhancement-champion-of-the-deathwing"
+        },
+        {
+          "id": "enhancement-inner-circle-task-force-deathwing-assault",
+          "title": "Deathwing Assault",
+          "detachment": "Inner Circle Task Force",
+          "value": 30,
+          "text": "Deathwing model with the Deep Strike ability only. The bearer's unit can set up using the Deep Strike ability in the Reinforcement step of your first, second or third Movement phase, regardless of any mission rules.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "inner-circle-task-force",
+          "ruleId": "enhancement-inner-circle-task-force-deathwing-assault"
+        },
+        {
+          "id": "enhancement-eye-of-the-unseen",
+          "title": "Eye of the Unseen",
+          "detachment": "Inner Circle Task Force",
+          "value": 10,
+          "text": "Deathwing model only. Each time you target the bearer's unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+ you gain 1CP.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "inner-circle-task-force",
+          "ruleId": "enhancement-eye-of-the-unseen"
+        },
+        {
+          "id": "enhancement-singular-will",
+          "title": "Singular Will",
+          "detachment": "Inner Circle Task Force",
+          "value": 20,
+          "text": "Deathwing model only. Each time the bearer's unit Pile In or Consolidates, models in that unit can move an additional 3\".",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "inner-circle-task-force",
+          "ruleId": "enhancement-singular-will"
+        }
+      ],
+      "stratagems": []
+    },
+    {
+      "id": "unforgiven-task-force",
+      "title": "Unforgiven Task Force",
+      "rule": {
+        "id": "dark-angels-detachment-rule-grim-resolve",
+        "title": "Grim Resolve",
+        "text": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit."
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-pennant-of-remembrance",
+          "title": "Pennant of Remembrance",
+          "detachment": "Unforgiven Task Force",
+          "value": 10,
+          "text": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit\nis Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "unforgiven-task-force",
+          "ruleId": "enhancement-pennant-of-remembrance"
+        },
+        {
+          "id": "enhancement-shroud-of-heroes",
+          "title": "Shroud of Heroes",
+          "detachment": "Unforgiven Task Force",
+          "value": 25,
+          "text": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "unforgiven-task-force",
+          "ruleId": "enhancement-shroud-of-heroes"
+        },
+        {
+          "id": "enhancement-stubborn-tenacity",
+          "title": "Stubborn Tenacity",
+          "detachment": "Unforgiven Task Force",
+          "value": 15,
+          "text": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "unforgiven-task-force",
+          "ruleId": "enhancement-stubborn-tenacity"
+        },
+        {
+          "id": "enhancement-weapons-of-the-first-legion",
+          "title": "Weapons of the First Legion",
+          "detachment": "Unforgiven Task Force",
+          "value": 15,
+          "text": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
+          "profile": null,
+          "pointsSource": {
+            "label": "Official MFM v1.2",
+            "url": "https://mfm.warhammer-community.com/en/dark-angels",
+            "verifiedAt": "2026-08-11"
+          },
+          "detachmentId": "unforgiven-task-force",
+          "ruleId": "enhancement-weapons-of-the-first-legion"
+        }
+      ],
+      "stratagems": []
+    }
+  ]
+}

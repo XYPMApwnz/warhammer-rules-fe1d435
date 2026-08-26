@@ -13,6 +13,10 @@
   ],
   "includeCoreStratagems": true,
   "rosterSupport": true,
+  "rosterCatalog": {
+    "inferCanonicalDetachmentRuleIds": true,
+    "inferExactWargearAbilitySelections": true
+  },
   "compatibleRulesMatrix": true,
   "customApp": true,
   "dedicatedMobile": true,
@@ -27,7 +31,7 @@
     "ruleFacts": 5,
     "book": 4,
     "tokens": 2,
-    "rosterFilter": 3,
+    "rosterFilter": 4,
     "rosterData": 1
   },
   "expected": {

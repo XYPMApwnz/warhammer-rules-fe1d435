@@ -304,7 +304,7 @@ const APP_SHELL = [
   ,"./books/tau-empire/scripts/target-data.js?v=4"
   ,"./books/tau-empire/mobile/related-rules.inc?v=2"
   ,"./books/shared/book-roster-enhancements.js?v=3"
-  ,"./books/extensions/book-roster-enhancement-providers.js?v=4"
+  ,"./books/extensions/book-roster-enhancement-providers.js?v=5"
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_ENTRY_FALLBACK
   ,CHAOS_SPACE_MARINES_DESKTOP_FALLBACK
@@ -351,7 +351,7 @@ const APP_SHELL = [
   ,"./books/emperors-children/scripts/data.js?v=2"
   ,"./books/emperors-children/scripts/roster-data.js?v=13"
   ,"./books/emperors-children/scripts/target-data.js?v=4"
-  ,"./books/emperors-children/scripts/roster-filter.js?v=3"
+  ,"./books/emperors-children/scripts/roster-filter.js?v=4"
   ,"./books/emperors-children/scripts/stratagem-types.mjs?v=2"
   ,"./books/emperors-children/generated/compatible-rules.json"
   ,"./books/emperors-children/mobile/related-rules.inc?v=2"
@@ -387,7 +387,7 @@ const APP_SHELL = [
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=18"
   ,"./books/shared/roster-context.js?v=14"
-  ,"./books/shared/roster-game-presentation.js?v=17"
+  ,"./books/shared/roster-game-presentation.js?v=18"
 ,"./books/shared/army-book-app.js?v=19"
   ,"./books/shared/offline-status.js?v=2"
   ,"./books/shared/styles/offline-status.css?v=1"

@@ -14,6 +14,7 @@
     "tau:enhancements:qa": "node books/tau-empire/tests/enhancement-runtime-qa.mjs",
     "tau:conformance:qa": "node tests/browser/tau-final-conformance.mjs",
     "ec:enhancements:qa": "node books/emperors-children/tests/enhancement-runtime-qa.mjs",
+    "ec:conformance:qa": "node tests/browser/ec-final-conformance.mjs",
     "tyranids:enhancements:qa": "node books/tyranids/tests/enhancement-runtime-qa.mjs",
     "csm:enhancements:qa": "node books/chaos-space-marines/tests/enhancement-presentation-qa.mjs",
     "csm:build": "node books/shared/tools/build-army-book.mjs books/chaos-space-marines/book.config.json && node books/chaos-space-marines/tools/build-compatible-rules.mjs && node roster-guides/build-points.mjs && node glossary/tools/build-glossary.mjs && node books/chaos-space-marines/mobile/build.mjs && node glossary/tools/build-glossary.mjs",

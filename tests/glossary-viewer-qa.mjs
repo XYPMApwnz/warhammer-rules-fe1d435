@@ -19,7 +19,7 @@ const visibleTextBlocks=term=>{
     Number(meaningful(definition)&&term.presentation!=='profile');
 };
 
-assert.equal(values.length,2432,'canonical entry count must remain stable');
+assert.equal(values.length,2588,'canonical entry count must remain stable');
 assert.equal(Object.keys(aliases).length,662,'alias count must remain stable');
 
 assert.match(viewer,/const titleCounts=new Map\(\)/,'duplicate titles must be detected');
@@ -58,7 +58,7 @@ assert.equal(technicalUnits.filter(term=>term.scope==='death-guard').length,36,'
 assert.equal(technicalUnits.filter(term=>term.scope==='adeptus-mechanicus').length,34,'all 34 Mechanicus technical units must be classified structurally');
 assert.equal(contextOnly.length,93,'exactly 93 confirmed context-only entries must be classified');
 assert.ok(contextOnly.every(term=>term.presentation==='metadata'),'all confirmed context-only entries must be hidden from ordinary search');
-assert.equal(searchable.length,2328,'only the 93 confirmed context-only entries may leave the catalogue');
+assert.equal(searchable.length,2484,'only the 93 confirmed context-only entries may leave the catalogue');
 assert.equal(metadata.length,104,'existing metadata plus 93 context-only entries must remain hidden');
 assert.deepEqual(metadata.map(term=>term.id).sort(),[...existingMetadataIds,...contextOnly.map(term=>term.id)].sort(),'no additional entries may be hidden');
 
@@ -75,7 +75,7 @@ for(const id of [
   'tyranids-ability-warp-field-aura-psychic','adeptus-mechanicus-datasheet-defend-the-divine-work'
 ])assert.ok(searchable.includes(registry[id]),`${id} must remain searchable`);
 const weaponProfiles=values.filter(term=>term.kind==='weapon');
-assert.equal(weaponProfiles.length,803,'weapon profile inventory must remain stable');
+assert.equal(weaponProfiles.length,857,'weapon profile inventory must remain stable');
 assert.ok(weaponProfiles.every(term=>term.presentation==='profile'&&searchable.includes(term)),'all weapon profiles must remain searchable profiles');
 
 const hiddenExistingPrimary=searchable.filter(term=>(meaningful(term.summary?.en)||meaningful(term.definition?.en))&&visibleTextBlocks(term)===0&&term.presentation!=='profile');

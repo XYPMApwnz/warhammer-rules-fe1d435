@@ -94,10 +94,10 @@
     const mapped=selected.every(id=>articles.filter(article=>idFor(article)===id).length===1),visible=new Set(mapped?selected:[]);for(const article of articles)article.hidden=!visible.has(idFor(article));section.hidden=!articles.some(article=>!article.hidden);section.dataset.rosterGameAbilities=resolution.state==='resolved'&&mapped?'filtered':resolution.state==='known-none'?'known-none':'fallback';
   }
   function transformComposition(card,gameUnit){
-    const composition=gameUnit.selection.composition,models=gameUnit.selection.modelCount,section=partEnding(card,'-composition');if(!section||composition?.state!=='resolved'||models?.state!=='resolved')return;
+    const composition=gameUnit.selection.composition,models=gameUnit.selection.modelCount,section=partEnding(card,'-composition');if(!section||models?.state!=='resolved')return;
     const heading=section.querySelector(':scope > h4');for(const child of [...section.children])if(child!==heading){child.hidden=true;child.dataset.rosterGameCanonical='true';}
     const block=element('div','roster-game-composition');block.dataset.rosterGameGenerated='composition';block.append(element('p','roster-game-composition-total',`${models.value} ${models.value===1?'model':'models'}`));
-    const grouped=new Map();for(const model of list(composition.models)){const name=model.sourceText||'Model';grouped.set(name,(grouped.get(name)||0)+Number(model.quantity||0));}
+    const grouped=new Map();if(composition?.state==='resolved')for(const model of list(composition.models)){const name=model.sourceText||'Model';grouped.set(name,(grouped.get(name)||0)+Number(model.quantity||0));}
     if(grouped.size){const rows=element('ul','');for(const [name,quantity] of grouped)rows.append(element('li','',`${quantity} × ${name}`));block.append(rows);}
     section.append(block);section.dataset.rosterGameComposition='actual';
   }

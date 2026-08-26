@@ -15,6 +15,13 @@ const deadly=value=>/\bdeadly demise\b/i.test(String(value||''));
 const abilityText=ability=>ability.text||[ability.openingText,...(ability.options||[]).map(option=>`${option.title}: ${option.text}`)].filter(Boolean).join('\n\n');
 const coreNames=text=>String(text||'').split(',').map(value=>value.trim().replace(/\.$/,'')).filter(Boolean).map(value=>deadly(value)?'DEADLY DEMISE':value);
 const normalized=value=>[...new Set(value.map(ruleFacts.normalizeKeyword))].sort();
+const renderedHtml=(book,reader)=>{
+  const targetPath=path.join(root,'books',book,'scripts','target-data.js');
+  if(!fs.existsSync(targetPath))return reader;
+  const context={window:{}};
+  vm.runInNewContext(fs.readFileSync(targetPath,'utf8'),context,{filename:targetPath});
+  return context.window.WH_ARMY_BOOK_TARGETS?.html||reader;
+};
 
 function genericSource(book){
   const config=read(`books/${book}/book.config.json`),codex=read(`books/${book}/${config.sources.codexDatasheets}`);
@@ -86,8 +93,8 @@ assert.throws(()=>ruleFacts.textFromDomLike({value:'Death Guard'}),TypeError);
 
 const desktopProfiles=new Map();let profiles=0,compatibilityRoutes=0;
 for(const book of Object.keys(sources)){
-  const html=fs.readFileSync(path.join(root,'books',book,'reader.html'),'utf8');
-  assert.match(html,/shared\/rule-facts\.js\?v=\d+/,`${book}: shared facts runtime is absent`);
+  const reader=fs.readFileSync(path.join(root,'books',book,'reader.html'),'utf8'),html=renderedHtml(book,reader);
+  assert.match(reader,/shared\/rule-facts\.js\?v=\d+/,`${book}: shared facts runtime is absent`);
   const expected=sources[book],seen=new Set();
   for(const tag of html.match(/<article class="unit-card\b[^>]*>/g)||[]){
     const unitId=attr(tag,'id'),compiled=JSON.parse(decode(attr(tag,'data-rule-facts'))),source=expected.get(unitId);
@@ -113,7 +120,7 @@ for(const book of Object.keys(sources)){
     const file=path.join(mobileDir,`${source.slug}.html`),mobile=fs.readFileSync(file,'utf8');
     assert.match(mobile,/data-canonical-reader="\.\.\/reader\.html"/,`${book}/${unitId}: compatibility route lacks canonical reader handoff`);
     assert.match(mobile,new RegExp(`data-canonical-target="${unitId}"`),`${book}/${unitId}: compatibility route lacks exact canonical target`);
-    assert.match(mobile,/mobile-route-redirect\.js\?v=1/,`${book}/${unitId}: compatibility route lacks redirect runtime`);
+    assert.match(mobile,/mobile-route-redirect\.js\?v=\d+/,`${book}/${unitId}: compatibility route lacks redirect runtime`);
     assert.doesNotMatch(mobile,/<(?:article|section)\b|\bunit-card\b|\bdata-rule-facts\b/i,`${book}/${unitId}: compatibility route contains copied book content`);
     compatibilityRoutes+=1;
   }

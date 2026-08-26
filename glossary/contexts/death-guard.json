@@ -330,8 +330,7 @@
       "termId": "death-guard-enhancement-daemon-weapon-of-nurgle",
       "navigation": {
         "glossary": "glossary-daemon-weapon-of-nurgle",
-        "rule": "enhancement-daemon-weapon-of-nurgle",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-daemon-weapon-of-nurgle"
+        "rule": "enhancement-daemon-weapon-of-nurgle"
       },
       "owners": [],
       "visible": true
@@ -340,8 +339,7 @@
       "termId": "death-guard-enhancement-furnace-of-plagues",
       "navigation": {
         "glossary": "glossary-furnace-of-plagues",
-        "rule": "enhancement-furnace-of-plagues",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-furnace-of-plagues"
+        "rule": "enhancement-furnace-of-plagues"
       },
       "owners": [],
       "visible": true
@@ -350,8 +348,7 @@
       "termId": "death-guard-enhancement-arch-contaminator",
       "navigation": {
         "glossary": "glossary-arch-contaminator",
-        "rule": "enhancement-arch-contaminator",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-arch-contaminator"
+        "rule": "enhancement-arch-contaminator"
       },
       "owners": [],
       "visible": true
@@ -360,8 +357,7 @@
       "termId": "death-guard-enhancement-revolting-regeneration",
       "navigation": {
         "glossary": "glossary-revolting-regeneration",
-        "rule": "enhancement-revolting-regeneration",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-revolting-regeneration"
+        "rule": "enhancement-revolting-regeneration"
       },
       "owners": [],
       "visible": true
@@ -370,8 +366,7 @@
       "termId": "death-guard-stratagem-putrid-detonation",
       "navigation": {
         "glossary": "glossary-putrid-detonation",
-        "rule": "stratagem-putrid-detonation",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-putrid-detonation"
+        "rule": "stratagem-putrid-detonation"
       },
       "owners": [],
       "visible": true
@@ -380,8 +375,7 @@
       "termId": "death-guard-stratagem-disgustingly-resilient",
       "navigation": {
         "glossary": "glossary-disgustingly-resilient",
-        "rule": "stratagem-disgustingly-resilient",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-disgustingly-resilient"
+        "rule": "stratagem-disgustingly-resilient"
       },
       "owners": [],
       "visible": true
@@ -390,8 +384,7 @@
       "termId": "death-guard-stratagem-plaguesurge",
       "navigation": {
         "glossary": "glossary-plaguesurge",
-        "rule": "stratagem-plaguesurge",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-plaguesurge"
+        "rule": "stratagem-plaguesurge"
       },
       "owners": [],
       "visible": true
@@ -400,8 +393,7 @@
       "termId": "death-guard-stratagem-leechspore-eruption",
       "navigation": {
         "glossary": "glossary-leechspore-eruption",
-        "rule": "stratagem-leechspore-eruption",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-leechspore-eruption"
+        "rule": "stratagem-leechspore-eruption"
       },
       "owners": [],
       "visible": true
@@ -410,8 +402,7 @@
       "termId": "death-guard-stratagem-overwhelming-generosity",
       "navigation": {
         "glossary": "glossary-overwhelming-generosity",
-        "rule": "stratagem-overwhelming-generosity",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-overwhelming-generosity"
+        "rule": "stratagem-overwhelming-generosity"
       },
       "owners": [],
       "visible": true
@@ -420,8 +411,7 @@
       "termId": "death-guard-stratagem-creeping-blight",
       "navigation": {
         "glossary": "glossary-creeping-blight",
-        "rule": "stratagem-creeping-blight",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-creeping-blight"
+        "rule": "stratagem-creeping-blight"
       },
       "owners": [],
       "visible": true
@@ -450,8 +440,7 @@
       "termId": "death-guard-enhancement-eye-of-affliction",
       "navigation": {
         "glossary": "glossary-eye-of-affliction",
-        "rule": "enhancement-eye-of-affliction",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-eye-of-affliction"
+        "rule": "enhancement-eye-of-affliction"
       },
       "owners": [],
       "visible": true
@@ -460,8 +449,7 @@
       "termId": "death-guard-enhancement-bilemaw-blight",
       "navigation": {
         "glossary": "glossary-bilemaw-blight",
-        "rule": "enhancement-bilemaw-blight",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-bilemaw-blight"
+        "rule": "enhancement-bilemaw-blight"
       },
       "owners": [],
       "visible": true
@@ -470,8 +458,7 @@
       "termId": "death-guard-enhancement-shriekworm-familiar",
       "navigation": {
         "glossary": "glossary-shriekworm-familiar",
-        "rule": "enhancement-shriekworm-familiar",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-shriekworm-familiar"
+        "rule": "enhancement-shriekworm-familiar"
       },
       "owners": [],
       "visible": true
@@ -480,8 +467,7 @@
       "termId": "death-guard-enhancement-tendrilous-emissions",
       "navigation": {
         "glossary": "glossary-tendrilous-emissions",
-        "rule": "enhancement-tendrilous-emissions",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-tendrilous-emissions"
+        "rule": "enhancement-tendrilous-emissions"
       },
       "owners": [],
       "visible": true
@@ -490,8 +476,7 @@
       "termId": "death-guard-stratagem-blighted-land",
       "navigation": {
         "glossary": "glossary-blighted-land",
-        "rule": "stratagem-blighted-land",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-blighted-land"
+        "rule": "stratagem-blighted-land"
       },
       "owners": [],
       "visible": true
@@ -500,8 +485,7 @@
       "termId": "death-guard-stratagem-relentless-grind",
       "navigation": {
         "glossary": "glossary-relentless-grind",
-        "rule": "stratagem-relentless-grind",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-relentless-grind"
+        "rule": "stratagem-relentless-grind"
       },
       "owners": [],
       "visible": true
@@ -510,8 +494,7 @@
       "termId": "death-guard-stratagem-drawn-to-despair",
       "navigation": {
         "glossary": "glossary-drawn-to-despair",
-        "rule": "stratagem-drawn-to-despair",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-drawn-to-despair"
+        "rule": "stratagem-drawn-to-despair"
       },
       "owners": [],
       "visible": true
@@ -520,8 +503,7 @@
       "termId": "death-guard-stratagem-font-of-filth",
       "navigation": {
         "glossary": "glossary-font-of-filth",
-        "rule": "stratagem-font-of-filth",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-font-of-filth"
+        "rule": "stratagem-font-of-filth"
       },
       "owners": [],
       "visible": true
@@ -530,8 +512,7 @@
       "termId": "death-guard-stratagem-eyestinger-storm",
       "navigation": {
         "glossary": "glossary-eyestinger-storm",
-        "rule": "stratagem-eyestinger-storm",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-eyestinger-storm"
+        "rule": "stratagem-eyestinger-storm"
       },
       "owners": [],
       "visible": true
@@ -540,8 +521,7 @@
       "termId": "death-guard-stratagem-stinking-mire",
       "navigation": {
         "glossary": "glossary-stinking-mire",
-        "rule": "stratagem-stinking-mire",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-stinking-mire"
+        "rule": "stratagem-stinking-mire"
       },
       "owners": [],
       "visible": true
@@ -570,8 +550,7 @@
       "termId": "death-guard-enhancement-final-ingredient",
       "navigation": {
         "glossary": "glossary-final-ingredient",
-        "rule": "enhancement-final-ingredient",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-final-ingredient"
+        "rule": "enhancement-final-ingredient"
       },
       "owners": [],
       "visible": true
@@ -580,8 +559,7 @@
       "termId": "death-guard-enhancement-visions-of-virulence",
       "navigation": {
         "glossary": "glossary-visions-of-virulence",
-        "rule": "enhancement-visions-of-virulence",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-visions-of-virulence"
+        "rule": "enhancement-visions-of-virulence"
       },
       "owners": [],
       "visible": true
@@ -590,8 +568,7 @@
       "termId": "death-guard-enhancement-needle-of-nurgle",
       "navigation": {
         "glossary": "glossary-needle-of-nurgle",
-        "rule": "enhancement-needle-of-nurgle",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-needle-of-nurgle"
+        "rule": "enhancement-needle-of-nurgle"
       },
       "owners": [],
       "visible": true
@@ -600,8 +577,7 @@
       "termId": "death-guard-enhancement-cornucophagus",
       "navigation": {
         "glossary": "glossary-cornucophagus",
-        "rule": "enhancement-cornucophagus",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-cornucophagus"
+        "rule": "enhancement-cornucophagus"
       },
       "owners": [],
       "visible": true
@@ -610,8 +586,7 @@
       "termId": "death-guard-stratagem-blessings-of-filth",
       "navigation": {
         "glossary": "glossary-blessings-of-filth",
-        "rule": "stratagem-blessings-of-filth",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-blessings-of-filth"
+        "rule": "stratagem-blessings-of-filth"
       },
       "owners": [],
       "visible": true
@@ -620,8 +595,7 @@
       "termId": "death-guard-stratagem-malignance-magnified",
       "navigation": {
         "glossary": "glossary-malignance-magnified",
-        "rule": "stratagem-malignance-magnified",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-malignance-magnified"
+        "rule": "stratagem-malignance-magnified"
       },
       "owners": [],
       "visible": true
@@ -630,8 +604,7 @@
       "termId": "death-guard-stratagem-grotesque-fortitude",
       "navigation": {
         "glossary": "glossary-grotesque-fortitude",
-        "rule": "stratagem-grotesque-fortitude",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-grotesque-fortitude"
+        "rule": "stratagem-grotesque-fortitude"
       },
       "owners": [],
       "visible": true
@@ -640,8 +613,7 @@
       "termId": "death-guard-stratagem-rabid-infusion",
       "navigation": {
         "glossary": "glossary-rabid-infusion",
-        "rule": "stratagem-rabid-infusion",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-rabid-infusion"
+        "rule": "stratagem-rabid-infusion"
       },
       "owners": [],
       "visible": true
@@ -650,8 +622,7 @@
       "termId": "death-guard-stratagem-mobile-vector",
       "navigation": {
         "glossary": "glossary-mobile-vector",
-        "rule": "stratagem-mobile-vector",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-mobile-vector"
+        "rule": "stratagem-mobile-vector"
       },
       "owners": [],
       "visible": true
@@ -660,8 +631,7 @@
       "termId": "death-guard-stratagem-deaths-heads",
       "navigation": {
         "glossary": "glossary-deaths-heads",
-        "rule": "stratagem-deaths-heads",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-deaths-heads"
+        "rule": "stratagem-deaths-heads"
       },
       "owners": [],
       "visible": true
@@ -690,8 +660,7 @@
       "termId": "death-guard-enhancement-beckoning-blight",
       "navigation": {
         "glossary": "glossary-beckoning-blight",
-        "rule": "enhancement-beckoning-blight",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-beckoning-blight"
+        "rule": "enhancement-beckoning-blight"
       },
       "owners": [],
       "visible": true
@@ -700,8 +669,7 @@
       "termId": "death-guard-enhancement-fell-harvester",
       "navigation": {
         "glossary": "glossary-fell-harvester",
-        "rule": "enhancement-fell-harvester",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-fell-harvester"
+        "rule": "enhancement-fell-harvester"
       },
       "owners": [],
       "visible": true
@@ -710,8 +678,7 @@
       "termId": "death-guard-enhancement-entropic-knell",
       "navigation": {
         "glossary": "glossary-entropic-knell",
-        "rule": "enhancement-entropic-knell",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-entropic-knell"
+        "rule": "enhancement-entropic-knell"
       },
       "owners": [],
       "visible": true
@@ -720,8 +687,7 @@
       "termId": "death-guard-enhancement-tome-of-bounteous-blessings",
       "navigation": {
         "glossary": "glossary-tome-of-bounteous-blessings",
-        "rule": "enhancement-tome-of-bounteous-blessings",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-tome-of-bounteous-blessings"
+        "rule": "enhancement-tome-of-bounteous-blessings"
       },
       "owners": [],
       "visible": true
@@ -730,8 +696,7 @@
       "termId": "death-guard-stratagem-persistent-pests",
       "navigation": {
         "glossary": "glossary-persistent-pests",
-        "rule": "stratagem-persistent-pests",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-persistent-pests"
+        "rule": "stratagem-persistent-pests"
       },
       "owners": [],
       "visible": true
@@ -740,8 +705,7 @@
       "termId": "death-guard-stratagem-clutching-corruption",
       "navigation": {
         "glossary": "glossary-clutching-corruption",
-        "rule": "stratagem-clutching-corruption",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-clutching-corruption"
+        "rule": "stratagem-clutching-corruption"
       },
       "owners": [],
       "visible": true
@@ -750,8 +714,7 @@
       "termId": "death-guard-stratagem-all-is-rot",
       "navigation": {
         "glossary": "glossary-all-is-rot",
-        "rule": "stratagem-all-is-rot",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-all-is-rot"
+        "rule": "stratagem-all-is-rot"
       },
       "owners": [],
       "visible": true
@@ -760,8 +723,7 @@
       "termId": "death-guard-stratagem-fleshy-avalanche",
       "navigation": {
         "glossary": "glossary-fleshy-avalanche",
-        "rule": "stratagem-fleshy-avalanche",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-fleshy-avalanche"
+        "rule": "stratagem-fleshy-avalanche"
       },
       "owners": [],
       "visible": true
@@ -770,8 +732,7 @@
       "termId": "death-guard-stratagem-avatars-of-decay",
       "navigation": {
         "glossary": "glossary-avatars-of-decay",
-        "rule": "stratagem-avatars-of-decay",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-avatars-of-decay"
+        "rule": "stratagem-avatars-of-decay"
       },
       "owners": [],
       "visible": true
@@ -780,8 +741,7 @@
       "termId": "death-guard-stratagem-mireslick",
       "navigation": {
         "glossary": "glossary-mireslick",
-        "rule": "stratagem-mireslick",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-mireslick"
+        "rule": "stratagem-mireslick"
       },
       "owners": [],
       "visible": true
@@ -810,8 +770,7 @@
       "termId": "death-guard-enhancement-witherbone-pipes",
       "navigation": {
         "glossary": "glossary-witherbone-pipes",
-        "rule": "enhancement-witherbone-pipes",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-witherbone-pipes"
+        "rule": "enhancement-witherbone-pipes"
       },
       "owners": [],
       "visible": true
@@ -820,8 +779,7 @@
       "termId": "death-guard-enhancement-lord-of-the-walking-pox",
       "navigation": {
         "glossary": "glossary-lord-of-the-walking-pox",
-        "rule": "enhancement-lord-of-the-walking-pox",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-lord-of-the-walking-pox"
+        "rule": "enhancement-lord-of-the-walking-pox"
       },
       "owners": [],
       "visible": true
@@ -830,8 +788,7 @@
       "termId": "death-guard-enhancement-sorrowsyphon",
       "navigation": {
         "glossary": "glossary-sorrowsyphon",
-        "rule": "enhancement-sorrowsyphon",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-sorrowsyphon"
+        "rule": "enhancement-sorrowsyphon"
       },
       "owners": [],
       "visible": true
@@ -840,8 +797,7 @@
       "termId": "death-guard-enhancement-talisman-of-burgeoning",
       "navigation": {
         "glossary": "glossary-talisman-of-burgeoning",
-        "rule": "enhancement-talisman-of-burgeoning",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-talisman-of-burgeoning"
+        "rule": "enhancement-talisman-of-burgeoning"
       },
       "owners": [],
       "visible": true
@@ -850,8 +806,7 @@
       "termId": "death-guard-stratagem-grip-of-the-walking-pox",
       "navigation": {
         "glossary": "glossary-grip-of-the-walking-pox",
-        "rule": "stratagem-grip-of-the-walking-pox",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-grip-of-the-walking-pox"
+        "rule": "stratagem-grip-of-the-walking-pox"
       },
       "owners": [],
       "visible": true
@@ -860,8 +815,7 @@
       "termId": "death-guard-stratagem-smeared-with-filth",
       "navigation": {
         "glossary": "glossary-smeared-with-filth",
-        "rule": "stratagem-smeared-with-filth",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-smeared-with-filth"
+        "rule": "stratagem-smeared-with-filth"
       },
       "owners": [],
       "visible": true
@@ -870,8 +824,7 @@
       "termId": "death-guard-stratagem-gnawing-hunger",
       "navigation": {
         "glossary": "glossary-gnawing-hunger",
-        "rule": "stratagem-gnawing-hunger",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-gnawing-hunger"
+        "rule": "stratagem-gnawing-hunger"
       },
       "owners": [],
       "visible": true
@@ -880,8 +833,7 @@
       "termId": "death-guard-stratagem-hidden-amongst-the-dead",
       "navigation": {
         "glossary": "glossary-hidden-amongst-the-dead",
-        "rule": "stratagem-hidden-amongst-the-dead",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-hidden-amongst-the-dead"
+        "rule": "stratagem-hidden-amongst-the-dead"
       },
       "owners": [],
       "visible": true
@@ -890,8 +842,7 @@
       "termId": "death-guard-stratagem-shock-and-horror",
       "navigation": {
         "glossary": "glossary-shock-and-horror",
-        "rule": "stratagem-shock-and-horror",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-shock-and-horror"
+        "rule": "stratagem-shock-and-horror"
       },
       "owners": [],
       "visible": true
@@ -900,8 +851,7 @@
       "termId": "death-guard-stratagem-shambling-wall",
       "navigation": {
         "glossary": "glossary-shambling-wall",
-        "rule": "stratagem-shambling-wall",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-shambling-wall"
+        "rule": "stratagem-shambling-wall"
       },
       "owners": [],
       "visible": true
@@ -930,8 +880,7 @@
       "termId": "death-guard-enhancement-face-of-death",
       "navigation": {
         "glossary": "glossary-face-of-death",
-        "rule": "enhancement-face-of-death",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-face-of-death"
+        "rule": "enhancement-face-of-death"
       },
       "owners": [],
       "visible": true
@@ -940,8 +889,7 @@
       "termId": "death-guard-enhancement-vile-vigour",
       "navigation": {
         "glossary": "glossary-vile-vigour",
-        "rule": "enhancement-vile-vigour",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-vile-vigour"
+        "rule": "enhancement-vile-vigour"
       },
       "owners": [],
       "visible": true
@@ -950,8 +898,7 @@
       "termId": "death-guard-enhancement-warprot-talisman",
       "navigation": {
         "glossary": "glossary-warprot-talisman",
-        "rule": "enhancement-warprot-talisman",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-warprot-talisman"
+        "rule": "enhancement-warprot-talisman"
       },
       "owners": [],
       "visible": true
@@ -960,8 +907,7 @@
       "termId": "death-guard-enhancement-helm-of-the-fly-king",
       "navigation": {
         "glossary": "glossary-helm-of-the-fly-king",
-        "rule": "enhancement-helm-of-the-fly-king",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-helm-of-the-fly-king"
+        "rule": "enhancement-helm-of-the-fly-king"
       },
       "owners": [],
       "visible": true
@@ -970,8 +916,7 @@
       "termId": "death-guard-stratagem-blooming-pestilence",
       "navigation": {
         "glossary": "glossary-blooming-pestilence",
-        "rule": "stratagem-blooming-pestilence",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-blooming-pestilence"
+        "rule": "stratagem-blooming-pestilence"
       },
       "owners": [],
       "visible": true
@@ -980,8 +925,7 @@
       "termId": "death-guard-stratagem-grim-reapers",
       "navigation": {
         "glossary": "glossary-grim-reapers",
-        "rule": "stratagem-grim-reapers",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-grim-reapers"
+        "rule": "stratagem-grim-reapers"
       },
       "owners": [],
       "visible": true
@@ -990,8 +934,7 @@
       "termId": "death-guard-stratagem-undying-spite",
       "navigation": {
         "glossary": "glossary-undying-spite",
-        "rule": "stratagem-undying-spite",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-undying-spite"
+        "rule": "stratagem-undying-spite"
       },
       "owners": [],
       "visible": true
@@ -1000,8 +943,7 @@
       "termId": "death-guard-stratagem-signal-pox",
       "navigation": {
         "glossary": "glossary-signal-pox",
-        "rule": "stratagem-signal-pox",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-signal-pox"
+        "rule": "stratagem-signal-pox"
       },
       "owners": [],
       "visible": true
@@ -1010,8 +952,7 @@
       "termId": "death-guard-stratagem-mortarions-teachings",
       "navigation": {
         "glossary": "glossary-mortarion-s-teachings",
-        "rule": "stratagem-mortarion-s-teachings",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-mortarion-s-teachings"
+        "rule": "stratagem-mortarion-s-teachings"
       },
       "owners": [],
       "visible": true
@@ -1020,8 +961,7 @@
       "termId": "death-guard-stratagem-sickening-impact",
       "navigation": {
         "glossary": "glossary-sickening-impact",
-        "rule": "stratagem-sickening-impact",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-sickening-impact"
+        "rule": "stratagem-sickening-impact"
       },
       "owners": [],
       "visible": true
@@ -1050,8 +990,7 @@
       "termId": "death-guard-enhancement-parasitic-woe-reaper",
       "navigation": {
         "glossary": "glossary-parasitic-woe-reaper",
-        "rule": "enhancement-parasitic-woe-reaper",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-parasitic-woe-reaper"
+        "rule": "enhancement-parasitic-woe-reaper"
       },
       "owners": [],
       "visible": true
@@ -1060,8 +999,7 @@
       "termId": "death-guard-enhancement-lancet-of-the-worldsore",
       "navigation": {
         "glossary": "glossary-lancet-of-the-worldsore",
-        "rule": "enhancement-lancet-of-the-worldsore",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-lancet-of-the-worldsore"
+        "rule": "enhancement-lancet-of-the-worldsore"
       },
       "owners": [],
       "visible": true
@@ -1070,8 +1008,7 @@
       "termId": "death-guard-stratagem-fresh-vectors",
       "navigation": {
         "glossary": "glossary-fresh-vectors",
-        "rule": "stratagem-fresh-vectors",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-fresh-vectors"
+        "rule": "stratagem-fresh-vectors"
       },
       "owners": [],
       "visible": true
@@ -1080,8 +1017,7 @@
       "termId": "death-guard-stratagem-bloodrust-deluge",
       "navigation": {
         "glossary": "glossary-bloodrust-deluge",
-        "rule": "stratagem-bloodrust-deluge",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-bloodrust-deluge"
+        "rule": "stratagem-bloodrust-deluge"
       },
       "owners": [],
       "visible": true
@@ -1090,8 +1026,7 @@
       "termId": "death-guard-stratagem-soulrot-flux",
       "navigation": {
         "glossary": "glossary-soulrot-flux",
-        "rule": "stratagem-soulrot-flux",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-soulrot-flux"
+        "rule": "stratagem-soulrot-flux"
       },
       "owners": [],
       "visible": true
@@ -1120,8 +1055,7 @@
       "termId": "death-guard-enhancement-insectile-murmuration",
       "navigation": {
         "glossary": "glossary-insectile-murmuration",
-        "rule": "enhancement-insectile-murmuration",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-insectile-murmuration"
+        "rule": "enhancement-insectile-murmuration"
       },
       "owners": [],
       "visible": true
@@ -1130,8 +1064,7 @@
       "termId": "death-guard-enhancement-plagueveil",
       "navigation": {
         "glossary": "glossary-plagueveil",
-        "rule": "enhancement-plagueveil",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-plagueveil"
+        "rule": "enhancement-plagueveil"
       },
       "owners": [],
       "visible": true
@@ -1140,8 +1073,7 @@
       "termId": "death-guard-stratagem-nauseating-paroxysms",
       "navigation": {
         "glossary": "glossary-nauseating-paroxysms",
-        "rule": "stratagem-nauseating-paroxysms",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-nauseating-paroxysms"
+        "rule": "stratagem-nauseating-paroxysms"
       },
       "owners": [],
       "visible": true
@@ -1150,8 +1082,7 @@
       "termId": "death-guard-stratagem-droning-horror",
       "navigation": {
         "glossary": "glossary-droning-horror",
-        "rule": "stratagem-droning-horror",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-droning-horror"
+        "rule": "stratagem-droning-horror"
       },
       "owners": [],
       "visible": true
@@ -1160,8 +1091,7 @@
       "termId": "death-guard-stratagem-eye-of-the-swarm",
       "navigation": {
         "glossary": "glossary-eye-of-the-swarm",
-        "rule": "stratagem-eye-of-the-swarm",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-eye-of-the-swarm"
+        "rule": "stratagem-eye-of-the-swarm"
       },
       "owners": [],
       "visible": true
@@ -1190,8 +1120,7 @@
       "termId": "death-guard-enhancement-rejuvenating-swarm",
       "navigation": {
         "glossary": "glossary-rejuvenating-swarm",
-        "rule": "enhancement-rejuvenating-swarm",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-rejuvenating-swarm"
+        "rule": "enhancement-rejuvenating-swarm"
       },
       "owners": [],
       "visible": true
@@ -1200,8 +1129,7 @@
       "termId": "death-guard-enhancement-host-of-the-hybridised-pox",
       "navigation": {
         "glossary": "glossary-host-of-the-hybridised-pox",
-        "rule": "enhancement-host-of-the-hybridised-pox",
-        "fullRulePath": "books/death-guard/reader.html#enhancement-host-of-the-hybridised-pox"
+        "rule": "enhancement-host-of-the-hybridised-pox"
       },
       "owners": [],
       "visible": true
@@ -1210,8 +1138,7 @@
       "termId": "death-guard-stratagem-territorial-infection",
       "navigation": {
         "glossary": "glossary-territorial-infection",
-        "rule": "stratagem-territorial-infection",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-territorial-infection"
+        "rule": "stratagem-territorial-infection"
       },
       "owners": [],
       "visible": true
@@ -1220,8 +1147,7 @@
       "termId": "death-guard-stratagem-aggravus-spasms",
       "navigation": {
         "glossary": "glossary-aggravus-spasms",
-        "rule": "stratagem-aggravus-spasms",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-aggravus-spasms"
+        "rule": "stratagem-aggravus-spasms"
       },
       "owners": [],
       "visible": true
@@ -1230,8 +1156,7 @@
       "termId": "death-guard-stratagem-simultaneous-contamination",
       "navigation": {
         "glossary": "glossary-simultaneous-contamination",
-        "rule": "stratagem-simultaneous-contamination",
-        "fullRulePath": "books/death-guard/reader.html#stratagem-simultaneous-contamination"
+        "rule": "stratagem-simultaneous-contamination"
       },
       "owners": [],
       "visible": true
@@ -1251,8 +1176,7 @@
       "navigation": {
         "glossary": "glossary-ability-grotesque-regeneration-60c7e2a",
         "rule": "beasts-of-nurgle-ability-grotesque-regeneration",
-        "datasheet": "unit-beasts-of-nurgle",
-        "fullRulePath": "books/death-guard/reader.html#beasts-of-nurgle-ability-grotesque-regeneration"
+        "datasheet": "unit-beasts-of-nurgle"
       },
       "owners": [
         "unit-beasts-of-nurgle"
@@ -1286,8 +1210,7 @@
       "navigation": {
         "glossary": "glossary-ability-foul-infusion-490467e",
         "rule": "biologus-putrifier-ability-foul-infusion",
-        "datasheet": "unit-biologus-putrifier",
-        "fullRulePath": "books/death-guard/reader.html#biologus-putrifier-ability-foul-infusion"
+        "datasheet": "unit-biologus-putrifier"
       },
       "owners": [
         "unit-biologus-putrifier"
@@ -1299,8 +1222,7 @@
       "navigation": {
         "glossary": "glossary-ability-extraction-of-fresh-disease-b14e246",
         "rule": "biologus-putrifier-ability-extraction-of-fresh-disease",
-        "datasheet": "unit-biologus-putrifier",
-        "fullRulePath": "books/death-guard/reader.html#biologus-putrifier-ability-extraction-of-fresh-disease"
+        "datasheet": "unit-biologus-putrifier"
       },
       "owners": [
         "unit-biologus-putrifier"
@@ -1358,8 +1280,7 @@
       "navigation": {
         "glossary": "glossary-ability-blistering-fusillade-01dcc5c",
         "rule": "blightlord-terminators-ability-blistering-fusillade",
-        "datasheet": "unit-blightlord-terminators",
-        "fullRulePath": "books/death-guard/reader.html#blightlord-terminators-ability-blistering-fusillade"
+        "datasheet": "unit-blightlord-terminators"
       },
       "owners": [
         "unit-blightlord-terminators"
@@ -1488,8 +1409,7 @@
       "navigation": {
         "glossary": "glossary-ability-assault-ramp-e5223e4",
         "rule": "chaos-land-raider-ability-assault-ramp",
-        "datasheet": "unit-chaos-land-raider",
-        "fullRulePath": "books/death-guard/reader.html#chaos-land-raider-ability-assault-ramp"
+        "datasheet": "unit-chaos-land-raider"
       },
       "owners": [
         "unit-chaos-land-raider"
@@ -1563,8 +1483,7 @@
       "navigation": {
         "glossary": "glossary-ability-metalophagic-infection-7a47e75",
         "rule": "chaos-predator-annihilator-ability-metalophagic-infection",
-        "datasheet": "unit-chaos-predator-annihilator",
-        "fullRulePath": "books/death-guard/reader.html#chaos-predator-annihilator-ability-metalophagic-infection"
+        "datasheet": "unit-chaos-predator-annihilator"
       },
       "owners": [
         "unit-chaos-predator-annihilator"
@@ -1639,8 +1558,7 @@
       "navigation": {
         "glossary": "glossary-ability-hail-of-corrosive-disease-0f6451f",
         "rule": "chaos-predator-destructor-ability-hail-of-corrosive-disease",
-        "datasheet": "unit-chaos-predator-destructor",
-        "fullRulePath": "books/death-guard/reader.html#chaos-predator-destructor-ability-hail-of-corrosive-disease"
+        "datasheet": "unit-chaos-predator-destructor"
       },
       "owners": [
         "unit-chaos-predator-destructor"
@@ -1674,8 +1592,7 @@
       "navigation": {
         "glossary": "glossary-ability-fire-support-b0918db",
         "rule": "chaos-rhino-ability-fire-support",
-        "datasheet": "unit-chaos-rhino",
-        "fullRulePath": "books/death-guard/reader.html#chaos-rhino-ability-fire-support"
+        "datasheet": "unit-chaos-rhino"
       },
       "owners": [
         "unit-chaos-rhino"
@@ -1697,8 +1614,7 @@
       "navigation": {
         "glossary": "glossary-ability-lethal-ichor-6824af1",
         "rule": "chaos-spawn-ability-lethal-ichor",
-        "datasheet": "unit-chaos-spawn",
-        "fullRulePath": "books/death-guard/reader.html#chaos-spawn-ability-lethal-ichor"
+        "datasheet": "unit-chaos-spawn"
       },
       "owners": [
         "unit-chaos-spawn"
@@ -1732,8 +1648,7 @@
       "navigation": {
         "glossary": "glossary-ability-death-guard-defenders-c306937",
         "rule": "daemon-prince-of-nurgle-ability-death-guard-defenders",
-        "datasheet": "unit-daemon-prince-of-nurgle",
-        "fullRulePath": "books/death-guard/reader.html#daemon-prince-of-nurgle-ability-death-guard-defenders"
+        "datasheet": "unit-daemon-prince-of-nurgle"
       },
       "owners": [
         "unit-daemon-prince-of-nurgle"
@@ -1745,8 +1660,7 @@
       "navigation": {
         "glossary": "glossary-ability-fevered-strategist-9a8ed87",
         "rule": "daemon-prince-of-nurgle-ability-fevered-strategist",
-        "datasheet": "unit-daemon-prince-of-nurgle",
-        "fullRulePath": "books/death-guard/reader.html#daemon-prince-of-nurgle-ability-fevered-strategist"
+        "datasheet": "unit-daemon-prince-of-nurgle"
       },
       "owners": [
         "unit-daemon-prince-of-nurgle"
@@ -1758,8 +1672,7 @@
       "navigation": {
         "glossary": "glossary-ability-miasma-of-pestilence-aura-92fd75f",
         "rule": "daemon-prince-of-nurgle-ability-miasma-of-pestilence-aura",
-        "datasheet": "unit-daemon-prince-of-nurgle",
-        "fullRulePath": "books/death-guard/reader.html#daemon-prince-of-nurgle-ability-miasma-of-pestilence-aura"
+        "datasheet": "unit-daemon-prince-of-nurgle"
       },
       "owners": [
         "unit-daemon-prince-of-nurgle"
@@ -1819,8 +1732,7 @@
       "navigation": {
         "glossary": "glossary-ability-horrifying-visage-bfdb06a",
         "rule": "daemon-prince-of-nurgle-with-wings-ability-horrifying-visage",
-        "datasheet": "unit-daemon-prince-of-nurgle-with-wings",
-        "fullRulePath": "books/death-guard/reader.html#daemon-prince-of-nurgle-with-wings-ability-horrifying-visage"
+        "datasheet": "unit-daemon-prince-of-nurgle-with-wings"
       },
       "owners": [
         "unit-daemon-prince-of-nurgle-with-wings"
@@ -1832,8 +1744,7 @@
       "navigation": {
         "glossary": "glossary-ability-enfeebling-miasma-aura-dba0eef",
         "rule": "daemon-prince-of-nurgle-with-wings-ability-enfeebling-miasma-aura",
-        "datasheet": "unit-daemon-prince-of-nurgle-with-wings",
-        "fullRulePath": "books/death-guard/reader.html#daemon-prince-of-nurgle-with-wings-ability-enfeebling-miasma-aura"
+        "datasheet": "unit-daemon-prince-of-nurgle-with-wings"
       },
       "owners": [
         "unit-daemon-prince-of-nurgle-with-wings"
@@ -1867,8 +1778,7 @@
       "navigation": {
         "glossary": "glossary-ability-silent-bodyguard-03a0a1b",
         "rule": "deathshroud-terminators-ability-silent-bodyguard",
-        "datasheet": "unit-deathshroud-terminators",
-        "fullRulePath": "books/death-guard/reader.html#deathshroud-terminators-ability-silent-bodyguard"
+        "datasheet": "unit-deathshroud-terminators"
       },
       "owners": [
         "unit-deathshroud-terminators"
@@ -1880,8 +1790,7 @@
       "navigation": {
         "glossary": "glossary-ability-death-approaches-3347016",
         "rule": "deathshroud-terminators-ability-death-approaches",
-        "datasheet": "unit-deathshroud-terminators",
-        "fullRulePath": "books/death-guard/reader.html#deathshroud-terminators-ability-death-approaches"
+        "datasheet": "unit-deathshroud-terminators"
       },
       "owners": [
         "unit-deathshroud-terminators"
@@ -1939,8 +1848,7 @@
       "navigation": {
         "glossary": "glossary-ability-scuttling-walker-cb4a0c4",
         "rule": "defiler-ability-scuttling-walker",
-        "datasheet": "unit-defiler",
-        "fullRulePath": "books/death-guard/reader.html#defiler-ability-scuttling-walker"
+        "datasheet": "unit-defiler"
       },
       "owners": [
         "unit-defiler"
@@ -1952,8 +1860,7 @@
       "navigation": {
         "glossary": "glossary-ability-barrage-of-filth-f33e996",
         "rule": "defiler-ability-barrage-of-filth",
-        "datasheet": "unit-defiler",
-        "fullRulePath": "books/death-guard/reader.html#defiler-ability-barrage-of-filth"
+        "datasheet": "unit-defiler"
       },
       "owners": [
         "unit-defiler"
@@ -2119,8 +2026,7 @@
       "navigation": {
         "glossary": "glossary-ability-hovering-death-805d057",
         "rule": "foetid-bloat-drone-ability-hovering-death",
-        "datasheet": "unit-foetid-bloat-drone",
-        "fullRulePath": "books/death-guard/reader.html#foetid-bloat-drone-ability-hovering-death"
+        "datasheet": "unit-foetid-bloat-drone"
       },
       "owners": [
         "unit-foetid-bloat-drone"
@@ -2180,8 +2086,7 @@
       "navigation": {
         "glossary": "glossary-ability-explosive-blight-4fe2f2d",
         "rule": "foetid-bloat-drone-with-heavy-blight-launcher-ability-explosive-blight",
-        "datasheet": "unit-foetid-bloat-drone-with-heavy-blight-launcher",
-        "fullRulePath": "books/death-guard/reader.html#foetid-bloat-drone-with-heavy-blight-launcher-ability-explosive-blight"
+        "datasheet": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
       },
       "owners": [
         "unit-foetid-bloat-drone-with-heavy-blight-launcher"
@@ -2215,8 +2120,7 @@
       "navigation": {
         "glossary": "glossary-ability-blinding-spray-7d189f5",
         "rule": "foul-blightspawn-ability-blinding-spray",
-        "datasheet": "unit-foul-blightspawn",
-        "fullRulePath": "books/death-guard/reader.html#foul-blightspawn-ability-blinding-spray"
+        "datasheet": "unit-foul-blightspawn"
       },
       "owners": [
         "unit-foul-blightspawn"
@@ -2228,8 +2132,7 @@
       "navigation": {
         "glossary": "glossary-ability-putrefying-stink-4f5145b",
         "rule": "foul-blightspawn-ability-putrefying-stink",
-        "datasheet": "unit-foul-blightspawn",
-        "fullRulePath": "books/death-guard/reader.html#foul-blightspawn-ability-putrefying-stink"
+        "datasheet": "unit-foul-blightspawn"
       },
       "owners": [
         "unit-foul-blightspawn"
@@ -2276,8 +2179,7 @@
       "navigation": {
         "glossary": "glossary-ability-daemon-lord-of-nurgle-aura-d613df7",
         "rule": "great-unclean-one-ability-daemon-lord-of-nurgle-aura",
-        "datasheet": "unit-great-unclean-one",
-        "fullRulePath": "books/death-guard/reader.html#great-unclean-one-ability-daemon-lord-of-nurgle-aura"
+        "datasheet": "unit-great-unclean-one"
       },
       "owners": [
         "unit-great-unclean-one"
@@ -2289,8 +2191,7 @@
       "navigation": {
         "glossary": "glossary-ability-nurgles-rot-psychic-80d4e3f",
         "rule": "great-unclean-one-ability-nurgles-rot-psychic",
-        "datasheet": "unit-great-unclean-one",
-        "fullRulePath": "books/death-guard/reader.html#great-unclean-one-ability-nurgles-rot-psychic"
+        "datasheet": "unit-great-unclean-one"
       },
       "owners": [
         "unit-great-unclean-one"
@@ -2384,8 +2285,7 @@
       "navigation": {
         "glossary": "glossary-ability-diseased-malice-caa33aa",
         "rule": "helbrute-ability-diseased-malice",
-        "datasheet": "unit-helbrute",
-        "fullRulePath": "books/death-guard/reader.html#helbrute-ability-diseased-malice"
+        "datasheet": "unit-helbrute"
       },
       "owners": [
         "unit-helbrute"
@@ -2397,8 +2297,7 @@
       "navigation": {
         "glossary": "glossary-ability-froth-spattered-frenzy-9a139e5",
         "rule": "helbrute-ability-froth-spattered-frenzy",
-        "datasheet": "unit-helbrute",
-        "fullRulePath": "books/death-guard/reader.html#helbrute-ability-froth-spattered-frenzy"
+        "datasheet": "unit-helbrute"
       },
       "owners": [
         "unit-helbrute"
@@ -2555,8 +2454,7 @@
       "navigation": {
         "glossary": "glossary-ability-unclean-icon-5dadb9e",
         "rule": "icon-bearer-ability-unclean-icon",
-        "datasheet": "unit-icon-bearer",
-        "fullRulePath": "books/death-guard/reader.html#icon-bearer-ability-unclean-icon"
+        "datasheet": "unit-icon-bearer"
       },
       "owners": [
         "unit-icon-bearer"
@@ -2568,8 +2466,7 @@
       "navigation": {
         "glossary": "glossary-ability-blessed-icon-of-disease-e331a6c",
         "rule": "icon-bearer-ability-blessed-icon-of-disease",
-        "datasheet": "unit-icon-bearer",
-        "fullRulePath": "books/death-guard/reader.html#icon-bearer-ability-blessed-icon-of-disease"
+        "datasheet": "unit-icon-bearer"
       },
       "owners": [
         "unit-icon-bearer"
@@ -2616,8 +2513,7 @@
       "navigation": {
         "glossary": "glossary-ability-vector-of-disease-2498580",
         "rule": "lord-of-contagion-ability-vector-of-disease",
-        "datasheet": "unit-lord-of-contagion",
-        "fullRulePath": "books/death-guard/reader.html#lord-of-contagion-ability-vector-of-disease"
+        "datasheet": "unit-lord-of-contagion"
       },
       "owners": [
         "unit-lord-of-contagion"
@@ -2629,8 +2525,7 @@
       "navigation": {
         "glossary": "glossary-ability-unholy-resilience-745069e",
         "rule": "lord-of-contagion-ability-unholy-resilience",
-        "datasheet": "unit-lord-of-contagion",
-        "fullRulePath": "books/death-guard/reader.html#lord-of-contagion-ability-unholy-resilience"
+        "datasheet": "unit-lord-of-contagion"
       },
       "owners": [
         "unit-lord-of-contagion"
@@ -2676,8 +2571,7 @@
       "navigation": {
         "glossary": "glossary-ability-gift-of-poxes-29d6059",
         "rule": "lord-of-poxes-ability-gift-of-poxes",
-        "datasheet": "unit-lord-of-poxes",
-        "fullRulePath": "books/death-guard/reader.html#lord-of-poxes-ability-gift-of-poxes"
+        "datasheet": "unit-lord-of-poxes"
       },
       "owners": [
         "unit-lord-of-poxes"
@@ -2689,8 +2583,7 @@
       "navigation": {
         "glossary": "glossary-ability-shroud-of-disease-90475da",
         "rule": "lord-of-poxes-ability-shroud-of-disease",
-        "datasheet": "unit-lord-of-poxes",
-        "fullRulePath": "books/death-guard/reader.html#lord-of-poxes-ability-shroud-of-disease"
+        "datasheet": "unit-lord-of-poxes"
       },
       "owners": [
         "unit-lord-of-poxes"
@@ -2748,8 +2641,7 @@
       "navigation": {
         "glossary": "glossary-ability-virulent-aura-c28aa51",
         "rule": "lord-of-virulence-ability-virulent-aura",
-        "datasheet": "unit-lord-of-virulence",
-        "fullRulePath": "books/death-guard/reader.html#lord-of-virulence-ability-virulent-aura"
+        "datasheet": "unit-lord-of-virulence"
       },
       "owners": [
         "unit-lord-of-virulence"
@@ -2761,8 +2653,7 @@
       "navigation": {
         "glossary": "glossary-ability-blight-bombardment-74bfb5b",
         "rule": "lord-of-virulence-ability-blight-bombardment",
-        "datasheet": "unit-lord-of-virulence",
-        "fullRulePath": "books/death-guard/reader.html#lord-of-virulence-ability-blight-bombardment"
+        "datasheet": "unit-lord-of-virulence"
       },
       "owners": [
         "unit-lord-of-virulence"
@@ -2808,8 +2699,7 @@
       "navigation": {
         "glossary": "glossary-ability-gift-of-contagion-psychic-4fea300",
         "rule": "malignant-plaguecaster-ability-gift-of-contagion-psychic",
-        "datasheet": "unit-malignant-plaguecaster",
-        "fullRulePath": "books/death-guard/reader.html#malignant-plaguecaster-ability-gift-of-contagion-psychic"
+        "datasheet": "unit-malignant-plaguecaster"
       },
       "owners": [
         "unit-malignant-plaguecaster"
@@ -2821,8 +2711,7 @@
       "navigation": {
         "glossary": "glossary-ability-pestilent-fallout-psychic-399986c",
         "rule": "malignant-plaguecaster-ability-pestilent-fallout-psychic",
-        "datasheet": "unit-malignant-plaguecaster",
-        "fullRulePath": "books/death-guard/reader.html#malignant-plaguecaster-ability-pestilent-fallout-psychic"
+        "datasheet": "unit-malignant-plaguecaster"
       },
       "owners": [
         "unit-malignant-plaguecaster"
@@ -2894,8 +2783,7 @@
       "navigation": {
         "glossary": "glossary-ability-putrescent-fog-aura-afeaa21",
         "rule": "miasmic-malignifier-ability-putrescent-fog-aura",
-        "datasheet": "unit-miasmic-malignifier",
-        "fullRulePath": "books/death-guard/reader.html#miasmic-malignifier-ability-putrescent-fog-aura"
+        "datasheet": "unit-miasmic-malignifier"
       },
       "owners": [
         "unit-miasmic-malignifier"
@@ -2907,8 +2795,7 @@
       "navigation": {
         "glossary": "glossary-ability-diseased-cover-8d71e30",
         "rule": "miasmic-malignifier-ability-diseased-cover",
-        "datasheet": "unit-miasmic-malignifier",
-        "fullRulePath": "books/death-guard/reader.html#miasmic-malignifier-ability-diseased-cover"
+        "datasheet": "unit-miasmic-malignifier"
       },
       "owners": [
         "unit-miasmic-malignifier"
@@ -2920,8 +2807,7 @@
       "navigation": {
         "glossary": "glossary-ability-fortification-e581151",
         "rule": "miasmic-malignifier-ability-fortification",
-        "datasheet": "unit-miasmic-malignifier",
-        "fullRulePath": "books/death-guard/reader.html#miasmic-malignifier-ability-fortification"
+        "datasheet": "unit-miasmic-malignifier"
       },
       "owners": [
         "unit-miasmic-malignifier"
@@ -2955,8 +2841,7 @@
       "navigation": {
         "glossary": "glossary-ability-lord-of-the-death-guard-90db1c4",
         "rule": "mortarion-ability-lord-of-the-death-guard",
-        "datasheet": "unit-mortarion",
-        "fullRulePath": "books/death-guard/reader.html#mortarion-ability-lord-of-the-death-guard"
+        "datasheet": "unit-mortarion"
       },
       "owners": [
         "unit-mortarion"
@@ -2968,8 +2853,7 @@
       "navigation": {
         "glossary": "glossary-ability-host-of-plagues-2f9d0aa",
         "rule": "mortarion-ability-host-of-plagues",
-        "datasheet": "unit-mortarion",
-        "fullRulePath": "books/death-guard/reader.html#mortarion-ability-host-of-plagues"
+        "datasheet": "unit-mortarion"
       },
       "owners": [
         "unit-mortarion"
@@ -3039,8 +2923,7 @@
       "navigation": {
         "glossary": "glossary-ability-tank-hunters-8831aae",
         "rule": "myphitic-blight-hauler-ability-tank-hunters",
-        "datasheet": "unit-myphitic-blight-hauler",
-        "fullRulePath": "books/death-guard/reader.html#myphitic-blight-hauler-ability-tank-hunters"
+        "datasheet": "unit-myphitic-blight-hauler"
       },
       "owners": [
         "unit-myphitic-blight-hauler"
@@ -3086,8 +2969,7 @@
       "navigation": {
         "glossary": "glossary-ability-sickening-vitality-89bb5ff",
         "rule": "noxious-blightbringer-ability-sickening-vitality",
-        "datasheet": "unit-noxious-blightbringer",
-        "fullRulePath": "books/death-guard/reader.html#noxious-blightbringer-ability-sickening-vitality"
+        "datasheet": "unit-noxious-blightbringer"
       },
       "owners": [
         "unit-noxious-blightbringer"
@@ -3099,8 +2981,7 @@
       "navigation": {
         "glossary": "glossary-ability-tocsin-of-misery-aura-7f2edfb",
         "rule": "noxious-blightbringer-ability-tocsin-of-misery-aura",
-        "datasheet": "unit-noxious-blightbringer",
-        "fullRulePath": "books/death-guard/reader.html#noxious-blightbringer-ability-tocsin-of-misery-aura"
+        "datasheet": "unit-noxious-blightbringer"
       },
       "owners": [
         "unit-noxious-blightbringer"
@@ -3160,8 +3041,7 @@
       "navigation": {
         "glossary": "glossary-ability-mischief-makers-6a686e9",
         "rule": "nurglings-ability-mischief-makers",
-        "datasheet": "unit-nurglings",
-        "fullRulePath": "books/death-guard/reader.html#nurglings-ability-mischief-makers"
+        "datasheet": "unit-nurglings"
       },
       "owners": [
         "unit-nurglings"
@@ -3195,8 +3075,7 @@
       "navigation": {
         "glossary": "glossary-ability-deaths-heads-546f077",
         "rule": "plague-drones-ability-deaths-heads",
-        "datasheet": "unit-plague-drones",
-        "fullRulePath": "books/death-guard/reader.html#plague-drones-ability-deaths-heads"
+        "datasheet": "unit-plague-drones"
       },
       "owners": [
         "unit-plague-drones"
@@ -3255,8 +3134,7 @@
       "navigation": {
         "glossary": "glossary-ability-infused-with-the-blessings-of-nurgle-577c42e",
         "rule": "plague-marines-ability-infused-with-the-blessings-of-nurgle",
-        "datasheet": "unit-plague-marines",
-        "fullRulePath": "books/death-guard/reader.html#plague-marines-ability-infused-with-the-blessings-of-nurgle"
+        "datasheet": "unit-plague-marines"
       },
       "owners": [
         "unit-plague-marines"
@@ -3387,8 +3265,7 @@
       "navigation": {
         "glossary": "glossary-ability-tainted-narthecium-01ba1bd",
         "rule": "plague-surgeon-ability-tainted-narthecium",
-        "datasheet": "unit-plague-surgeon",
-        "fullRulePath": "books/death-guard/reader.html#plague-surgeon-ability-tainted-narthecium"
+        "datasheet": "unit-plague-surgeon"
       },
       "owners": [
         "unit-plague-surgeon"
@@ -3400,8 +3277,7 @@
       "navigation": {
         "glossary": "glossary-ability-inflamed-infections-ca01e1a",
         "rule": "plague-surgeon-ability-inflamed-infections",
-        "datasheet": "unit-plague-surgeon",
-        "fullRulePath": "books/death-guard/reader.html#plague-surgeon-ability-inflamed-infections"
+        "datasheet": "unit-plague-surgeon"
       },
       "owners": [
         "unit-plague-surgeon"
@@ -3435,8 +3311,7 @@
       "navigation": {
         "glossary": "glossary-ability-infected-outbreak-faaf2d1",
         "rule": "plaguebearers-ability-infected-outbreak",
-        "datasheet": "unit-plaguebearers",
-        "fullRulePath": "books/death-guard/reader.html#plaguebearers-ability-infected-outbreak"
+        "datasheet": "unit-plaguebearers"
       },
       "owners": [
         "unit-plaguebearers"
@@ -3458,8 +3333,7 @@
       "navigation": {
         "glossary": "glossary-ability-spore-laced-shock-waves-bc0251b",
         "rule": "plagueburst-crawler-ability-spore-laced-shock-waves",
-        "datasheet": "unit-plagueburst-crawler",
-        "fullRulePath": "books/death-guard/reader.html#plagueburst-crawler-ability-spore-laced-shock-waves"
+        "datasheet": "unit-plagueburst-crawler"
       },
       "owners": [
         "unit-plagueburst-crawler"
@@ -3529,8 +3403,7 @@
       "navigation": {
         "glossary": "glossary-ability-curse-of-the-walking-pox-6a9093e",
         "rule": "poxwalkers-ability-curse-of-the-walking-pox",
-        "datasheet": "unit-poxwalkers",
-        "fullRulePath": "books/death-guard/reader.html#poxwalkers-ability-curse-of-the-walking-pox"
+        "datasheet": "unit-poxwalkers"
       },
       "owners": [
         "unit-poxwalkers"
@@ -3564,8 +3437,7 @@
       "navigation": {
         "glossary": "glossary-ability-virulent-blessing-psychic-62e7cae",
         "rule": "rotigus-ability-virulent-blessing-psychic",
-        "datasheet": "unit-rotigus",
-        "fullRulePath": "books/death-guard/reader.html#rotigus-ability-virulent-blessing-psychic"
+        "datasheet": "unit-rotigus"
       },
       "owners": [
         "unit-rotigus"
@@ -3577,8 +3449,7 @@
       "navigation": {
         "glossary": "glossary-ability-deluge-of-nurgle-aura-49f7690",
         "rule": "rotigus-ability-deluge-of-nurgle-aura",
-        "datasheet": "unit-rotigus",
-        "fullRulePath": "books/death-guard/reader.html#rotigus-ability-deluge-of-nurgle-aura"
+        "datasheet": "unit-rotigus"
       },
       "owners": [
         "unit-rotigus"
@@ -3636,8 +3507,7 @@
       "navigation": {
         "glossary": "glossary-ability-malicious-calculations-8505f03",
         "rule": "tallyman-ability-malicious-calculations",
-        "datasheet": "unit-tallyman",
-        "fullRulePath": "books/death-guard/reader.html#tallyman-ability-malicious-calculations"
+        "datasheet": "unit-tallyman"
       },
       "owners": [
         "unit-tallyman"
@@ -3649,8 +3519,7 @@
       "navigation": {
         "glossary": "glossary-ability-sevenfold-chant-15ec601",
         "rule": "tallyman-ability-sevenfold-chant",
-        "datasheet": "unit-tallyman",
-        "fullRulePath": "books/death-guard/reader.html#tallyman-ability-sevenfold-chant"
+        "datasheet": "unit-tallyman"
       },
       "owners": [
         "unit-tallyman"
@@ -3672,8 +3541,7 @@
       "navigation": {
         "glossary": "glossary-ability-the-destroyer-hive-70f0cc1",
         "rule": "typhus-ability-the-destroyer-hive",
-        "datasheet": "unit-typhus",
-        "fullRulePath": "books/death-guard/reader.html#typhus-ability-the-destroyer-hive"
+        "datasheet": "unit-typhus"
       },
       "owners": [
         "unit-typhus"
@@ -3685,8 +3553,7 @@
       "navigation": {
         "glossary": "glossary-ability-eater-plague-psychic-2c7cc41",
         "rule": "typhus-ability-eater-plague-psychic",
-        "datasheet": "unit-typhus",
-        "fullRulePath": "books/death-guard/reader.html#typhus-ability-eater-plague-psychic"
+        "datasheet": "unit-typhus"
       },
       "owners": [
         "unit-typhus"

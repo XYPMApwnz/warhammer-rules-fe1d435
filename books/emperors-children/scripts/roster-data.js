@@ -107,8 +107,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-daemonettes-wargear-ability-daemonic-icon"
             ]
           },
@@ -120,8 +119,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-daemonettes-wargear-ability-instrument-of-chaos-2"
             ]
           }
@@ -148,12 +146,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-daemonettes-wargear-ability-daemonic-icon",
             "title": "Daemonic Icon",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-daemonettes-selection-daemonic-icon"
+            ]
           },
           {
             "id": "unit-daemonettes-wargear-ability-instrument-of-chaos-2",
             "title": "Instrument of Chaos",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-daemonettes-selection-instrument-of-chaos"
+            ]
           }
         ]
       }
@@ -348,8 +350,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-infractors-wargear-ability-icon-of-excess"
             ]
           }
@@ -466,7 +467,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-infractors-wargear-ability-icon-of-excess",
             "title": "Icon of Excess",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-infractors-selection-icon-of-excess"
+            ]
           }
         ]
       }
@@ -723,8 +726,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-tormentors-wargear-ability-icon-of-excess"
             ]
           }
@@ -915,7 +917,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-tormentors-wargear-ability-icon-of-excess",
             "title": "Icon of Excess",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-tormentors-selection-icon-of-excess"
+            ]
           }
         ]
       }
@@ -1505,8 +1509,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-keeper-of-secrets-wargear-ability-shining-aegis"
             ]
           }
@@ -1623,7 +1626,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-keeper-of-secrets-wargear-ability-shining-aegis",
             "title": "Shining aegis",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-keeper-of-secrets-selection-shining-aegis"
+            ]
           }
         ]
       }
@@ -5395,8 +5400,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-seekers-wargear-ability-daemonic-icon"
             ]
           },
@@ -5408,8 +5412,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-seekers-wargear-ability-instrument-of-chaos-2"
             ]
           }
@@ -5451,12 +5454,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-seekers-wargear-ability-daemonic-icon",
             "title": "Daemonic Icon",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-seekers-selection-daemonic-icon"
+            ]
           },
           {
             "id": "unit-seekers-wargear-ability-instrument-of-chaos-2",
             "title": "Instrument of Chaos",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-seekers-selection-instrument-of-chaos"
+            ]
           }
         ]
       }
@@ -5469,7 +5476,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-daemonic-empowerment"
+      ]
     },
     {
       "id": "coterie-of-the-conceited",
@@ -5477,7 +5486,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-pledges-to-the-dark-prince"
+      ]
     },
     {
       "id": "court-of-the-phoenician",
@@ -5485,7 +5496,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-sensational-performance"
+      ]
     },
     {
       "id": "elegant-brutes",
@@ -5493,7 +5506,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-eager-to-kill"
+      ]
     },
     {
       "id": "frenzied-host",
@@ -5501,7 +5516,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-frantic-focus"
+      ]
     },
     {
       "id": "mercurial-host",
@@ -5509,7 +5526,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-quicksilver-grace"
+      ]
     },
     {
       "id": "peerless-bladesmen",
@@ -5517,7 +5536,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-exquisite-swordsmanship"
+      ]
     },
     {
       "id": "rapid-evisceration",
@@ -5525,7 +5546,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-mechanised-murder"
+      ]
     },
     {
       "id": "slaaneshs-chosen",
@@ -5533,7 +5556,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-internal-rivalries"
+      ]
     },
     {
       "id": "spectacle-of-slaughter",
@@ -5541,10 +5566,103 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-entitled-to-victory"
+      ]
     }
   ],
-  "detachmentRules": [],
+  "detachmentRules": [
+    {
+      "id": "emperors-children-detachment-rule-daemonic-empowerment",
+      "title": "Daemonic Empowerment",
+      "text": "While an EMPEROR’S CHILDREN unit from your army is within 6\" of one or more friendly LEGIONS OF EXCESS units, it is Empowered.While a LEGIONS OF EXCESS unit from your army is within 6\" of one or more friendly EMPEROR’S CHILDREN units, it is Empowered.While a unit from your army is Empowered, weapons equipped by models in that unit have the [sustained hits 1] ability. If such a weapon already has that ability, each time an attack is made with that weapon, an unmodified Hit roll of 5+ scores a Critical Hit.LEGIONS OF EXCESSYou can include LEGIONS OF EXCESS units in your army, even though they do not have the EMPEROR’S CHILDREN Faction keyword. The combined points cost of such units you can include in your army is:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo LEGIONS OF EXCESS models from your army can be your WARLORD.",
+      "sectionId": "carnival-of-excess-rule",
+      "detachmentId": "carnival-of-excess",
+      "detachmentTitle": "Carnival of Excess",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-pledges-to-the-dark-prince",
+      "title": "Pledges to the Dark Prince",
+      "text": "At the start of the battle round, if your WARLORD is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your WARLORD model suffers D3 mortal wounds.EMPEROR’S CHILDREN units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).PACT POINTSBONUS1+Each time a model in this unit makes an attack, re-roll a Hit roll of 1.3+Each time a model in this unit makes an attack, re-roll a Wound roll of 1.5+Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAINED HITS 1] abilities.7+Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.",
+      "sectionId": "coterie-of-the-conceited-rule",
+      "detachmentId": "coterie-of-the-conceited",
+      "detachmentTitle": "Coterie of the Conceited",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-sensational-performance",
+      "title": "Sensational Performance",
+      "text": "EMPEROR’S CHILDREN units from your army have the following ability: Sensational Performance: Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase: This unit cannot target a unit it was within Engagement Range of at the start of the turn. This unit cannot target a unit that was the target of another unit’s attack this phase. Improve the Strength and Armour Penetration characteristics of this unit’s melee weapons by 1.",
+      "sectionId": "court-of-the-phoenician-rule",
+      "detachmentId": "court-of-the-phoenician",
+      "detachmentTitle": "Court of the Phoenician",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-eager-to-kill",
+      "title": "Eager to Kill",
+      "text": "When a friendly EMPEROR’S CHILDREN TERMINATOR unit is set up, that unit has +1 to charge rolls until the end of the turn.",
+      "sectionId": "elegant-brutes-rule",
+      "detachmentId": "elegant-brutes",
+      "detachmentTitle": "Elegant Brutes",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-frantic-focus",
+      "title": "Frantic Focus",
+      "text": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn.",
+      "sectionId": "frenzied-host-rule",
+      "detachmentId": "frenzied-host",
+      "detachmentTitle": "Frenzied Host",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-quicksilver-grace",
+      "title": "Quicksilver Grace",
+      "text": "You can re-roll Advance rolls made for EMPEROR’S CHILDREN units from your army.",
+      "sectionId": "mercurial-host-rule",
+      "detachmentId": "mercurial-host",
+      "detachmentTitle": "Mercurial Host",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-exquisite-swordsmanship",
+      "title": "Exquisite Swordsmanship",
+      "text": "Each time an EMPEROR’S CHILDREN unit from your army is selected to fight, if it made a Charge move this turn, select one of the abilities below. While resolving those attacks, melee weapons equipped by models in that unit have that ability:[LETHAL HITS][SUSTAINED HITS 1]",
+      "sectionId": "peerless-bladesmen-rule",
+      "detachmentId": "peerless-bladesmen",
+      "detachmentTitle": "Peerless Bladesmen",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-mechanised-murder",
+      "title": "Mechanised Murder",
+      "text": "Each time an EMPEROR’S CHILDREN model from your army makes an attack, if it is a TRANSPORT model or disembarked from a TRANSPORT this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+      "sectionId": "rapid-evisceration-rule",
+      "detachmentId": "rapid-evisceration",
+      "detachmentTitle": "Rapid Evisceration",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-internal-rivalries",
+      "title": "Internal Rivalries",
+      "text": "EMPEROR’S CHILDREN CHARACTER units from your army can ignore any or all modifiers to their Move characteristic and any or all modifiers to Advance and Charge rolls made for them.At the start of the battle, your WARLORD’s unit is your army’s Favoured Champions. The first time in each player’s turn that an EMPEROR’S CHILDREN CHARACTER unit from your army destroys an enemy unit, after resolving all of its attacks, that CHARACTER unit becomes your army’s new Favoured Champions, replacing the old one.Each time a model in your army’s Favoured Champions unit makes an attack, you can re-roll the Wound roll.",
+      "sectionId": "slaaneshs-chosen-rule",
+      "detachmentId": "slaaneshs-chosen",
+      "detachmentTitle": "SLAANESH’S CHOSEN",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-entitled-to-victory",
+      "title": "Entitled to Victory",
+      "text": "Friendly FLAWLESS BLADES units have Fights First.",
+      "sectionId": "spectacle-of-slaughter-rule",
+      "detachmentId": "spectacle-of-slaughter",
+      "detachmentTitle": "Spectacle of Slaughter",
+      "sourceBookId": "emperors-children"
+    }
+  ],
   "enhancements": [
     {
       "id": "enhancement-empyric-suffusion",

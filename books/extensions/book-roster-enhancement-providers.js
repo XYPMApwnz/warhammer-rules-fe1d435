@@ -140,8 +140,10 @@
   function enhancementArticle(entry,item){
     const article=root.document.createElement('article');article.className='ability roster-enhancement';article.dataset.rosterEnhancement=normalize(item.title);
     const title=root.document.createElement('h5');title.textContent=item.title;
-    const cost=root.document.createElement('small');cost.className='roster-enhancement-cost';cost.hidden=item.value==null;
-    cost.textContent=Number(entry.exportedCost)&&Number(entry.exportedCost)!==Number(item.value)?`${entry.exportedCost} pts in export · ${item.value} pts current`:`${item.value} pts included`;
+    const cost=root.document.createElement('small');cost.className='roster-enhancement-cost';
+    const exported=Number(entry.exportedCost),current=Number(item.value),hasExported=Number.isFinite(exported)&&exported>0,hasCurrent=item.value!=null&&Number.isFinite(current);
+    cost.textContent=hasCurrent?(hasExported&&exported!==current?`${entry.exportedCost} pts in export · ${item.value} pts current`:`${item.value} pts included`):(hasExported?`${entry.exportedCost} pts in export`:``);
+    cost.hidden=!cost.textContent;
     const text=root.document.createElement('p');text.textContent=item.text;
     article.append(title,cost,text);return article;
   }

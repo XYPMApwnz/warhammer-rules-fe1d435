@@ -10,7 +10,8 @@ const detachmentRecords=rows=>Object.fromEntries(rows.map(row=>[normalize(row.ti
 const decode=value=>String(value||'').replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const readerProfiles=book=>{
   const result={};
-  for(const [tag] of fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8').matchAll(/<article class="unit-card\b[^>]*>/g)){
+  const reader=fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8'),targetPath=path.join(root,`books/${book}/scripts/target-data.js`),targetSource=fs.existsSync(targetPath)?fs.readFileSync(targetPath,'utf8'):'',targetMatch=targetSource.match(/^window\.WH_ARMY_BOOK_TARGETS=Object\.freeze\((\{[\s\S]*\})\);\s*$/),markup=reader.includes('<article class="unit-card')?reader:targetMatch?JSON.parse(targetMatch[1]).html:reader;
+  for(const [tag] of markup.matchAll(/<article class="unit-card\b[^>]*>/g)){
     const attr=name=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
     const unitId=attr('id'),title=attr('data-unit-title');
     const profile=ruleFacts.serializeRuleProfile(ruleFacts.profileFromDataset({

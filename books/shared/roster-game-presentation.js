@@ -22,7 +22,7 @@
     if(source.kind==='enhancement')return list(catalog.enhancements).find(item=>[item.id,item.ruleId,item.legacyKey].includes(source.id))?.title||'Enhancement';
     if(source.kind==='explicit-attachment')return source.ownerInstanceId?instanceTitle(source.ownerInstanceId,projection):'Explicit attachment';
     if(source.kind==='selected-wargear')return 'Selected wargear';
-    if(source.kind==='datasheet')return 'Datasheet';
+    if(source.kind==='datasheet')return source.ownerInstanceId?instanceTitle(source.ownerInstanceId,projection):'Datasheet';
     if(source.kind==='faction-rule')return 'Faction rule';
     return '';
   }

@@ -42,15 +42,19 @@
   "sharedArmyBookApp": true,
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,
+  "rosterCatalog": {
+    "inferCanonicalDetachmentRuleIds": true,
+    "dedupeLegacyEnhancementsByTitle": true
+  },
   "compatibleRulesMatrix": true,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
     "app": 11,
     "armyBook": 19,
-    "rosterContext": 14,
+    "rosterContext": 15,
     "relatedRules": 18,
     "ruleFacts": 5,
-    "rosterFilter": 5
+    "rosterFilter": 6
   },
   "expected": {
     "matchedDetachments": 10,

@@ -73,13 +73,13 @@ assert.equal(/config\.id==='dark-angels'&&[^\n]*sourceId/.test(builder),false,'n
 const familyIdentities=['headhunter-task-force|firestorm-coordinators','firestorm-assault-force|firestorm-assault-force-war-tempered-artifice','gladius-task-force|gladius-task-force-artificer-armour','ironstorm-spearhead|ironstorm-spearhead-the-flesh-is-weak','vanguard-spearhead|vanguard-spearhead-ghostweave-cloak','fulguris-task-force|bellicose-weapon-spirits','fulguris-task-force|raptorial-cogitator-core','subversion-assets|shroud-field','vengeful-hosts|enhancement-orksbane'];
 const providerFor=book=>{let registered;const window={document:{documentElement:{dataset:{bookId:book}}},location:{pathname:`/books/${book}/reader.html`},WHBookRosterEnhancements:{registerProvider(value){registered=value;}}},context={window};vm.createContext(context);vm.runInContext(provider,context);assert.ok(registered,`${book} provider registration`);return registered;};
 const providers=Object.fromEntries(books.map(book=>[book,providerFor(book)]));
-const projected=(book,item,input={ownerStatus:'resolved',ownerUnitId:'owner'})=>Array.from(providers[book].gameEffects({item:{raw:{id:'owner'}},enhancements:[{input,catalog:item}]}),effect=>fact(effect));
+const projected=(book,item,input={ownerStatus:'resolved',ownerUnitId:'owner'})=>{const gameUnit={identity:{instanceId:'owner',canonicalDatasheetId:'unit-captain'},rosterState:{detachments:[item.detachmentId]},selection:{loadout:{selectedWargearAbilityIds:[]}},item:{catalogUnit:{gameSelections:{abilities:[]}}}};return Array.from(providers[book].gameEffects({item:{raw:{id:'owner'}},gameUnit,gameUnits:[gameUnit],enhancements:[{input,catalog:item}]}),effect=>fact(effect));};
 const signature=effects=>effects.map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,delta:effect.delta??null,to:effect.to??null,tag:effect.tag??null,title:effect.title??null,profile:effect.profile??null,state:effect.state??null,certainty:effect.certainty??null}));
 for(const identity of familyIdentities){
   const records=Object.fromEntries(books.map(book=>[book,enhancements[book].find(item=>`${item.detachmentId}|${canonicalSourceId(item,book)}`===identity)]));
   for(const book of books)assert.ok(records[book],`${book} ${identity} stable record`);
   const outputs=Object.fromEntries(books.map(book=>[book,projected(book,records[book])]));
-  for(const book of books)assert.ok(outputs[book].length,`${book} ${identity} qualified emission`);
+  for(const book of books)assert.equal(Boolean(outputs[book].length),identity!=='fulguris-task-force|bellicose-weapon-spirits',`${book} ${identity} qualified emission`);
   assert.deepEqual(signature(outputs['dark-angels']),signature(outputs['space-marines']),`DA ${identity} algorithm parity`);
   assert.deepEqual(signature(outputs['blood-angels']),signature(outputs['space-marines']),`BA ${identity} algorithm parity`);
 }

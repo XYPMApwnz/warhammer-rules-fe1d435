@@ -30,7 +30,7 @@
     if(effect.component==='ability'){const title=effect.title||'Granted ability';return [effect.ruleTitle,effect.operation==='remove'?`${title} removed`:title].filter(Boolean).join(' · ');}
     if(effect.component==='keyword')return `${effect.targetId} ${effect.operation==='remove'?'removed':'added'}`;
     if(effect.component==='stat'){const conditional=effect.state==='conditional'||effect.certainty==='conditional'||Boolean(effect.condition);if(!conditional&&(effect.base==null||effect.effective==null||String(effect.base)===String(effect.effective)))return '';return effect.base!=null&&effect.effective!=null&&effect.base!==effect.effective?`${effect.targetId} ${effect.base} → ${effect.effective}`:`${effect.targetId} ${effect.operation==='set'?`set to ${effect.to}`:signed(effect.delta)}`;}
-    if(effect.component==='weapon'&&effect.operation==='grant-tag')return `${effect.tag} · ${effect.targetId==='all'?'all weapons':`${effect.targetId} weapons`}`;
+    if(effect.component==='weapon'&&effect.operation==='grant-tag'){const applied=(effect.targets||[]).some(target=>JSON.stringify(target?.base)!==JSON.stringify(target?.effective));if(!applied)return'';return `${effect.tag} · ${effect.targetId==='all'?'all weapons':`${effect.targetId} weapons`}`;}
     if(effect.component==='weapon'&&effect.operation==='add-stat'){const conditional=effect.state==='conditional'||effect.certainty==='unknown',applied=(effect.targets||[]).some(target=>target?.base!=null&&target?.effective!=null&&JSON.stringify(target.base)!==JSON.stringify(target.effective));if(!conditional&&!applied)return'';return `${effect.stat} ${signed(effect.delta)} · ${effect.targetId} weapons`;}
     if(effect.component==='weapon'&&effect.operation==='grant-profile')return 'Additional weapon profile';
     return '';
@@ -83,8 +83,8 @@
   function filterWeapons(card,gameUnit){
     const loadout=gameUnit.selection.loadout,resolution=loadout.weaponResolution||{},selected=unique(loadout.selectedProfileIds),rows=[...card.querySelectorAll('.weapon-row:not(.weapon-head)')];
     const idFor=row=>row.dataset.rosterProfileId||row.id||'',complete=resolution.state==='resolved'&&selected.length>0&&selected.every(id=>rows.filter(row=>idFor(row)===id).length===1);
-    if(!complete){card.dataset.rosterGameWeapons='fallback';return;}
-    const visible=new Set(selected);for(const row of rows)row.hidden=!visible.has(idFor(row));
+    if(!complete){for(const row of rows){row.hidden=true;row.style.display='none';}for(const group of card.querySelectorAll('.weapon-group'))group.hidden=true;card.dataset.rosterGameWeapons='fallback';return;}
+    const visible=new Set(selected);for(const row of rows){row.style.removeProperty('display');row.hidden=!visible.has(idFor(row));}
     for(const group of card.querySelectorAll('.weapon-group'))group.hidden=![...group.querySelectorAll('.weapon-row:not(.weapon-head)')].some(row=>!row.hidden);
     card.dataset.rosterGameWeapons='filtered';
   }

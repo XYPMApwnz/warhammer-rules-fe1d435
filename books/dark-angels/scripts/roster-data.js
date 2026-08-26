@@ -2582,8 +2582,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield"
             ]
           }
@@ -2700,7 +2699,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield",
             "title": "Terminator Storm Shield",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-ancient-in-terminator-armor-selection-terminator-storm-shield"
+            ]
           }
         ]
       }
@@ -3516,8 +3517,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-captain-wargear-ability-relic-shield"
             ]
           }
@@ -3679,7 +3679,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-captain-wargear-ability-relic-shield",
             "title": "Relic Shield",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-captain-selection-relic-shield"
+            ]
           }
         ]
       }
@@ -4669,8 +4671,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-captain-with-jump-pack-wargear-ability-relic-shield"
             ]
           }
@@ -4817,7 +4818,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-captain-with-jump-pack-wargear-ability-relic-shield",
             "title": "Relic Shield",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-captain-with-jump-pack-selection-relic-shield"
+            ]
           }
         ]
       }
@@ -5177,8 +5180,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield"
             ]
           }
@@ -5220,7 +5222,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield",
             "title": "Relic Shield",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-chaplain-in-terminator-armour-selection-relic-shield"
+            ]
           }
         ]
       }
@@ -7191,8 +7195,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-lieutenant-wargear-ability-storm-shield"
             ]
           }
@@ -7354,7 +7357,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-lieutenant-wargear-ability-storm-shield",
             "title": "Storm Shield",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-lieutenant-selection-storm-shield"
+            ]
           }
         ]
       }
@@ -8450,8 +8455,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-impulsor-wargear-ability-shield-dome"
             ]
           }
@@ -8600,7 +8604,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-impulsor-wargear-ability-shield-dome",
             "title": "Shield Dome",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-impulsor-selection-shield-dome"
+            ]
           }
         ]
       }
@@ -10166,8 +10172,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers"
             ]
           }
@@ -10239,7 +10244,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers",
             "title": "Centurion Assault Launchers",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-centurion-assault-squad-selection-centurion-assault-launchers"
+            ]
           }
         ]
       }
@@ -13044,8 +13051,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-incursor-squad-wargear-ability-haywire-mine"
             ]
           }
@@ -13102,7 +13108,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-incursor-squad-wargear-ability-haywire-mine",
             "title": "Haywire Mine",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-incursor-squad-selection-haywire-mine"
+            ]
           }
         ]
       }
@@ -13500,8 +13508,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-infiltrator-squad-wargear-ability-helix-gauntlet"
             ]
           },
@@ -13513,8 +13520,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-infiltrator-squad-wargear-ability-infiltrator-comms-array-2"
             ]
           }
@@ -13571,12 +13577,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-infiltrator-squad-wargear-ability-helix-gauntlet",
             "title": "Helix Gauntlet",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-infiltrator-squad-selection-helix-gauntlet"
+            ]
           },
           {
             "id": "unit-infiltrator-squad-wargear-ability-infiltrator-comms-array-2",
             "title": "Infiltrator Comms Array",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-infiltrator-squad-selection-infiltrator-comms-array"
+            ]
           }
         ]
       }
@@ -13750,8 +13760,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-reiver-squad-wargear-ability-grapnel-launchers"
             ]
           },
@@ -13763,8 +13772,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-reiver-squad-wargear-ability-reiver-grav-chute-2"
             ]
           }
@@ -13836,12 +13844,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-reiver-squad-wargear-ability-grapnel-launchers",
             "title": "Grapnel Launchers",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-reiver-squad-selection-grapnel-launchers"
+            ]
           },
           {
             "id": "unit-reiver-squad-wargear-ability-reiver-grav-chute-2",
             "title": "Reiver Grav-chute",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-reiver-squad-selection-reiver-grav-chute"
+            ]
           }
         ]
       }
@@ -14947,8 +14959,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-terminator-assault-squad-wargear-ability-storm-shield"
             ]
           }
@@ -14990,7 +15001,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-terminator-assault-squad-wargear-ability-storm-shield",
             "title": "Storm Shield",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-terminator-assault-squad-selection-storm-shield"
+            ]
           }
         ]
       }
@@ -15577,8 +15590,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-vanguard-veteran-squad-with-jump-packs-wargear-ability-storm-shield"
             ]
           }
@@ -15740,7 +15752,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-vanguard-veteran-squad-with-jump-packs-wargear-ability-storm-shield",
             "title": "Storm Shield",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-vanguard-veteran-squad-with-jump-packs-selection-storm-shield"
+            ]
           }
         ]
       }
@@ -24672,8 +24686,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-sammael-wargear-ability-master-of-the-ravenwing"
             ]
           }
@@ -24745,7 +24758,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-sammael-wargear-ability-master-of-the-ravenwing",
             "title": "Master of the Ravenwing",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-sammael-selection-master-of-the-ravenwing"
+            ]
           }
         ]
       }
@@ -24918,8 +24933,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-deathwing-knights-wargear-ability-watcher-in-the-dark"
             ]
           }
@@ -24991,7 +25005,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-deathwing-knights-wargear-ability-watcher-in-the-dark",
             "title": "Watcher in the Dark",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-deathwing-knights-selection-watcher-in-the-dark"
+            ]
           }
         ]
       }
@@ -25265,8 +25281,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "unit-deathwing-terminator-squad-wargear-ability-watcher-in-the-dark"
             ]
           }
@@ -25472,7 +25487,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "unit-deathwing-terminator-squad-wargear-ability-watcher-in-the-dark",
             "title": "Watcher in the Dark",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-deathwing-terminator-squad-selection-watcher-in-the-dark"
+            ]
           }
         ]
       }

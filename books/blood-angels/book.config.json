@@ -13,6 +13,9 @@
   "mobileRelatedRulesSource": true,
   "includeCoreStratagems": true,
   "rosterSupport": true,
+  "rosterCatalog": {
+    "inferExactWargearAbilitySelections": true
+  },
   "sharedArmyBookApp": true,
   "compatibleRulesMatrix": true,
   "customApp": true,
@@ -93,7 +96,7 @@
     "book": 3,
     "app": 5,
     "armyBook": 19,
-    "rosterContext": 15,
+    "rosterContext": 16,
     "relatedRules": 18,
     "ruleFacts": 5,
     "rosterFilter": 3,

@@ -9,6 +9,9 @@
   "entryCoverImage": "assets/space-marines-cover-480.webp",
   "dedicatedMobile": true,
   "rosterSupport": true,
+  "rosterCatalog": {
+    "inferExactWargearAbilitySelections": true
+  },
   "sharedArmyBookApp": true,
   "compatibleRulesMatrix": true,
   "detachmentQualifiedEnhancementPoints": true,
@@ -58,7 +61,7 @@
   "assetVersions": {
     "app": 9,
     "armyBook": 19,
-    "rosterContext": 15,
+    "rosterContext": 16,
     "relatedRules": 18,
     "ruleFacts": 5,
     "book": 4,

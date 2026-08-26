@@ -31432,6 +31432,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Vengeful Hosts",
       "tags": [],
+      "profile": {
+        "name": "Orksbane",
+        "type": "Melee Weapons",
+        "characteristics": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-2",
+          "D": "3",
+          "Keywords": "Cleave 2"
+        }
+      },
       "owner": {
         "subject": "model",
         "selector": {
@@ -31445,19 +31458,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "profile": {
-        "name": "Orksbane",
-        "type": "Melee Weapons",
-        "characteristics": {
-          "Range": "Melee",
-          "A": "4",
-          "WS": "2+",
-          "S": "8",
-          "AP": "-2",
-          "D": "3",
-          "Keywords": "Cleave 2"
-        }
       },
       "ruleId": "enhancement-orksbane",
       "detachmentId": "vengeful-hosts",
@@ -34140,6 +34140,19 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Vengeful Hosts",
     "tags": [],
+    "profile": {
+      "name": "Orksbane",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "Range": "Melee",
+        "A": "4",
+        "WS": "2+",
+        "S": "8",
+        "AP": "-2",
+        "D": "3",
+        "Keywords": "Cleave 2"
+      }
+    },
     "owner": {
       "subject": "model",
       "selector": {
@@ -34153,19 +34166,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "maxOwners": 1,
       "enhancementChoices": 1,
       "payPointsPerOwner": true
-    },
-    "profile": {
-      "name": "Orksbane",
-      "type": "Melee Weapons",
-      "characteristics": {
-        "Range": "Melee",
-        "A": "4",
-        "WS": "2+",
-        "S": "8",
-        "AP": "-2",
-        "D": "3",
-        "Keywords": "Cleave 2"
-      }
     },
     "ruleId": "enhancement-orksbane",
     "detachmentId": "vengeful-hosts"

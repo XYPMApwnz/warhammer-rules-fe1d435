@@ -27886,6 +27886,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Vengeful Hosts",
       "tags": [],
+      "sourceId": "enhancement-avenging-angel",
       "owner": {
         "subject": "model",
         "selector": {
@@ -27920,7 +27921,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "enhancement-avenging-angel",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -27931,6 +27931,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Vengeful Hosts",
       "tags": [],
+      "sourceId": "enhancement-orksbane",
+      "profile": {
+        "name": "Orksbane",
+        "type": "Melee Weapons",
+        "characteristics": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-2",
+          "D": "3",
+          "Keywords": "Cleave 2"
+        }
+      },
       "owner": {
         "subject": "model",
         "selector": {
@@ -27959,25 +27973,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           2
         ]
       },
-      "profile": {
-        "name": "Orksbane",
-        "type": "Melee Weapons",
-        "characteristics": {
-          "Range": "Melee",
-          "A": "4",
-          "WS": "2+",
-          "S": "8",
-          "AP": "-2",
-          "D": "3",
-          "Keywords": "Cleave 2"
-        }
-      },
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "enhancement-orksbane",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -27988,6 +27988,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Fulguris Task Force",
       "tags": [],
+      "sourceId": "bellicose-weapon-spirits",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28024,7 +28025,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "bellicose-weapon-spirits",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28035,6 +28035,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Fulguris Task Force",
       "tags": [],
+      "sourceId": "raptorial-cogitator-core",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28071,7 +28072,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "raptorial-cogitator-core",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28082,6 +28082,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "celerity",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28117,7 +28118,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "celerity",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28128,6 +28128,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "fusillade",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28163,7 +28164,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "fusillade",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28174,6 +28174,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "obfuscation",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28209,7 +28210,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "obfuscation",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28220,6 +28220,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "prescience",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28254,7 +28255,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "prescience",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28265,6 +28265,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "temporal-corridor",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28300,7 +28301,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "temporal-corridor",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28311,6 +28311,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Subversion Assets",
       "tags": [],
+      "sourceId": "death-in-the-dark",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28352,7 +28353,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "death-in-the-dark",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28363,6 +28363,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Subversion Assets",
       "tags": [],
+      "sourceId": "shroud-field",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28400,7 +28401,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "shroud-field",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28411,6 +28411,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Armoured Speartip",
       "tags": [],
+      "sourceId": "armoured-commander",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28466,7 +28467,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "armoured-commander",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28477,6 +28477,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Armoured Speartip",
       "tags": [],
+      "sourceId": "liberator",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28532,7 +28533,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "liberator",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28543,6 +28543,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Armoured Speartip",
       "tags": [],
+      "sourceId": "shock-deployment",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28581,7 +28582,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "shock-deployment",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28592,6 +28592,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 40,
       "detachment": "Armoured Speartip",
       "tags": [],
+      "sourceId": "tip-of-the-spear",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28647,7 +28648,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "tip-of-the-spear",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28658,6 +28658,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 40,
       "detachment": "Headhunter Task Force",
       "tags": [],
+      "sourceId": "astartes-tank-ace-aura",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28706,7 +28707,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "astartes-tank-ace-aura",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28717,6 +28717,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Headhunter Task Force",
       "tags": [],
+      "sourceId": "firestorm-coordinators",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28765,7 +28766,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "firestorm-coordinators",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28776,6 +28776,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Headhunter Task Force",
       "tags": [],
+      "sourceId": "gunnery-honours",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28824,7 +28825,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "gunnery-honours",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28835,6 +28835,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Headhunter Task Force",
       "tags": [],
+      "sourceId": "redoubtable-machine-spirit",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28883,7 +28884,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "redoubtable-machine-spirit",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28894,6 +28894,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Ceramite Sentinels",
       "tags": [],
+      "sourceId": "castellum-omnivox",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28949,7 +28950,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "castellum-omnivox",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -28960,6 +28960,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Ceramite Sentinels",
       "tags": [],
+      "sourceId": "defensive-mastery",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29015,7 +29016,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "defensive-mastery",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29026,6 +29026,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Ceramite Sentinels",
       "tags": [],
+      "sourceId": "honour-indefatigable",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29060,7 +29061,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "honour-indefatigable",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29071,6 +29071,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "CERAMITE SENTINELS",
       "tags": [],
+      "sourceId": "spy-skull-data-link",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29102,7 +29103,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "spy-skull-data-link",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29113,6 +29113,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Bastion Task Force",
       "tags": [],
+      "sourceId": "blades-of-valour",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29168,7 +29169,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "blades-of-valour",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29179,6 +29179,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Bastion Task Force",
       "tags": [],
+      "sourceId": "bombast-omnivox",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29234,7 +29235,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "bombast-omnivox",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29245,6 +29245,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Bastion Task Force",
       "tags": [],
+      "sourceId": "eye-of-the-primarch",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29300,7 +29301,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "eye-of-the-primarch",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29311,6 +29311,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Bastion Task Force",
       "tags": [],
+      "sourceId": "hero-of-the-chapter",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29366,7 +29367,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "hero-of-the-chapter",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29377,6 +29377,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Orbital Assault Force",
       "tags": [],
+      "sourceId": "dedicated-gunship",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29413,7 +29414,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "dedicated-gunship",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29424,6 +29424,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Orbital Assault Force",
       "tags": [],
+      "sourceId": "laurels-of-thunder",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29479,7 +29480,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "laurels-of-thunder",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29490,6 +29490,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Orbital Assault Force",
       "tags": [],
+      "sourceId": "orbital-uplink-reliquary",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29545,7 +29546,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "orbital-uplink-reliquary",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29556,6 +29556,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Orbital Assault Force",
       "tags": [],
+      "sourceId": "veteran-of-the-vanguard",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29611,7 +29612,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "veteran-of-the-vanguard",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29622,6 +29622,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "1ST COMPANY TASK FORCE",
       "tags": [],
+      "sourceId": "1st-company-task-force-the-imperiums-sword",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29667,7 +29668,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "1st-company-task-force-the-imperiums-sword",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29678,6 +29678,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "1st Company Task Force",
       "tags": [],
+      "sourceId": "1st-company-task-force-fear-made-manifest-aura",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29717,7 +29718,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "detachmentId": "1st-company-task-force",
       "id": "1st-company-task-force-fear-made-manifest-aura",
       "sourceAuthority": "secondary",
-      "sourceId": "1st-company-task-force-fear-made-manifest-aura",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29728,6 +29728,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "1st Company Task Force",
       "tags": [],
+      "sourceId": "1st-company-task-force-rites-of-war",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29754,7 +29755,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "1st-company-task-force-rites-of-war",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29765,6 +29765,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "1st Company Task Force",
       "tags": [],
+      "sourceId": "1st-company-task-force-iron-resolve",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29791,7 +29792,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "1st-company-task-force-iron-resolve",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29802,6 +29802,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Anvil Siege Force",
       "tags": [],
+      "sourceId": "anvil-siege-force-indomitable-fury",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29826,7 +29827,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "anvil-siege-force-indomitable-fury",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29837,6 +29837,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Anvil Siege Force",
       "tags": [],
+      "sourceId": "anvil-siege-force-fleet-commander",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29864,7 +29865,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "anvil-siege-force-fleet-commander",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29875,6 +29875,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Anvil Siege Force",
       "tags": [],
+      "sourceId": "anvil-siege-force-stoic-defender",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29920,7 +29921,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "anvil-siege-force-stoic-defender",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29931,6 +29931,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Anvil Siege Force",
       "tags": [],
+      "sourceId": "anvil-siege-force-architect-of-war",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29976,7 +29977,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "anvil-siege-force-architect-of-war",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -29987,6 +29987,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Firestorm Assault Force",
       "tags": [],
+      "sourceId": "firestorm-assault-force-champion-of-humanity",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30019,7 +30020,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "firestorm-assault-force-champion-of-humanity",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30030,6 +30030,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Firestorm Assault Force",
       "tags": [],
+      "sourceId": "firestorm-assault-force-war-tempered-artifice",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30074,7 +30075,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "firestorm-assault-force-war-tempered-artifice",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30085,6 +30085,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Firestorm Assault Force",
       "tags": [],
+      "sourceId": "firestorm-assault-force-forged-in-battle",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30130,7 +30131,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "firestorm-assault-force-forged-in-battle",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30141,6 +30141,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Firestorm Assault Force",
       "tags": [],
+      "sourceId": "firestorm-assault-force-adamantine-mantle",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30186,7 +30187,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "firestorm-assault-force-adamantine-mantle",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30197,6 +30197,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Gladius Task Force",
       "tags": [],
+      "sourceId": "gladius-task-force-artificer-armour",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30242,7 +30243,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "gladius-task-force-artificer-armour",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30253,6 +30253,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Gladius Task Force",
       "tags": [],
+      "sourceId": "gladius-task-force-the-honour-vehement",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30298,7 +30299,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "gladius-task-force-the-honour-vehement",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30309,6 +30309,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Gladius Task Force",
       "tags": [],
+      "sourceId": "gladius-task-force-adept-of-the-codex",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30336,7 +30337,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "gladius-task-force-adept-of-the-codex",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30347,6 +30347,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Gladius Task Force",
       "tags": [],
+      "sourceId": "gladius-task-force-fire-discipline",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30392,7 +30393,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "gladius-task-force-fire-discipline",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30403,6 +30403,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "Ironstorm Spearhead",
       "tags": [],
+      "sourceId": "ironstorm-spearhead-target-augury-web",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30426,7 +30427,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "ironstorm-spearhead-target-augury-web",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30437,6 +30437,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Ironstorm Spearhead",
       "tags": [],
+      "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30482,7 +30483,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30493,6 +30493,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "detachment": "Ironstorm Spearhead",
       "tags": [],
+      "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30516,7 +30517,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30527,6 +30527,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "IRONSTORM SPEARHEAD",
       "tags": [],
+      "sourceId": "ironstorm-spearhead-master-of-machine-war",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30572,7 +30573,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "ironstorm-spearhead-master-of-machine-war",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30583,6 +30583,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Stormlance Task Force",
       "tags": [],
+      "sourceId": "stormlance-task-force-fury-of-the-storm",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30606,7 +30607,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "stormlance-task-force-fury-of-the-storm",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30617,6 +30617,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Stormlance Task Force",
       "tags": [],
+      "sourceId": "stormlance-task-force-portents-of-wisdom",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30662,7 +30663,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "stormlance-task-force-portents-of-wisdom",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30673,6 +30673,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Stormlance Task Force",
       "tags": [],
+      "sourceId": "stormlance-task-force-feinting-withdrawal",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30718,7 +30719,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "stormlance-task-force-feinting-withdrawal",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30729,6 +30729,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "STORMLANCE TASK FORCE",
       "tags": [],
+      "sourceId": "stormlance-task-force-hunters-instincts",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30752,7 +30753,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "stormlance-task-force-hunters-instincts",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30763,6 +30763,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Vanguard Spearhead",
       "tags": [],
+      "sourceId": "vanguard-spearhead-the-blade-driven-deep",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30807,7 +30808,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "vanguard-spearhead-the-blade-driven-deep",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30818,6 +30818,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Vanguard Spearhead",
       "tags": [],
+      "sourceId": "vanguard-spearhead-ghostweave-cloak",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30863,7 +30864,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "vanguard-spearhead-ghostweave-cloak",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30874,6 +30874,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Vanguard Spearhead",
       "tags": [],
+      "sourceId": "vanguard-spearhead-execute-and-redeploy",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30901,7 +30902,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "vanguard-spearhead-execute-and-redeploy",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     },
@@ -30912,6 +30912,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "Vanguard Spearhead",
       "tags": [],
+      "sourceId": "vanguard-spearhead-shadow-war-veteran",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30939,7 +30940,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/space-marines",
         "verifiedAt": "2026-08-11"
       },
-      "sourceId": "vanguard-spearhead-shadow-war-veteran",
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
     }
@@ -31238,6 +31238,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Vengeful Hosts",
     "tags": [],
+    "sourceId": "enhancement-avenging-angel",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31261,6 +31262,20 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Vengeful Hosts",
     "tags": [],
+    "sourceId": "enhancement-orksbane",
+    "profile": {
+      "name": "Orksbane",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "Range": "Melee",
+        "A": "4",
+        "WS": "2+",
+        "S": "8",
+        "AP": "-2",
+        "D": "3",
+        "Keywords": "Cleave 2"
+      }
+    },
     "owner": {
       "subject": "model",
       "selector": {
@@ -31284,6 +31299,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Fulguris Task Force",
     "tags": [],
+    "sourceId": "bellicose-weapon-spirits",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31309,6 +31325,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Fulguris Task Force",
     "tags": [],
+    "sourceId": "raptorial-cogitator-core",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31334,6 +31351,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 35,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "celerity",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31358,6 +31376,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "fusillade",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31382,6 +31401,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "obfuscation",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31406,6 +31426,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "prescience",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31429,6 +31450,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "temporal-corridor",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31453,6 +31475,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Subversion Assets",
     "tags": [],
+    "sourceId": "death-in-the-dark",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31483,6 +31506,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Subversion Assets",
     "tags": [],
+    "sourceId": "shroud-field",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31509,6 +31533,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Armoured Speartip",
     "tags": [],
+    "sourceId": "armoured-commander",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31553,6 +31578,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Armoured Speartip",
     "tags": [],
+    "sourceId": "liberator",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31597,6 +31623,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Armoured Speartip",
     "tags": [],
+    "sourceId": "shock-deployment",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31624,6 +31651,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 40,
     "detachment": "Armoured Speartip",
     "tags": [],
+    "sourceId": "tip-of-the-spear",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31668,6 +31696,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 40,
     "detachment": "Headhunter Task Force",
     "tags": [],
+    "sourceId": "astartes-tank-ace-aura",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31705,6 +31734,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Headhunter Task Force",
     "tags": [],
+    "sourceId": "firestorm-coordinators",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31742,6 +31772,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Headhunter Task Force",
     "tags": [],
+    "sourceId": "gunnery-honours",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31779,6 +31810,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Headhunter Task Force",
     "tags": [],
+    "sourceId": "redoubtable-machine-spirit",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31816,6 +31848,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Ceramite Sentinels",
     "tags": [],
+    "sourceId": "castellum-omnivox",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31860,6 +31893,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Ceramite Sentinels",
     "tags": [],
+    "sourceId": "defensive-mastery",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31904,6 +31938,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Ceramite Sentinels",
     "tags": [],
+    "sourceId": "honour-indefatigable",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31927,6 +31962,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Ceramite Sentinels",
     "tags": [],
+    "sourceId": "spy-skull-data-link",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31947,6 +31983,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Bastion Task Force",
     "tags": [],
+    "sourceId": "blades-of-valour",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31991,6 +32028,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Bastion Task Force",
     "tags": [],
+    "sourceId": "bombast-omnivox",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32035,6 +32073,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Bastion Task Force",
     "tags": [],
+    "sourceId": "eye-of-the-primarch",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32079,6 +32118,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Bastion Task Force",
     "tags": [],
+    "sourceId": "hero-of-the-chapter",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32123,6 +32163,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Orbital Assault Force",
     "tags": [],
+    "sourceId": "dedicated-gunship",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32148,6 +32189,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Orbital Assault Force",
     "tags": [],
+    "sourceId": "laurels-of-thunder",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32192,6 +32234,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Orbital Assault Force",
     "tags": [],
+    "sourceId": "orbital-uplink-reliquary",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32236,6 +32279,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Orbital Assault Force",
     "tags": [],
+    "sourceId": "veteran-of-the-vanguard",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32280,6 +32324,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "1st Company Task Force",
     "tags": [],
+    "sourceId": "1st-company-task-force-the-imperiums-sword",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32324,6 +32369,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "1st Company Task Force",
     "tags": [],
+    "sourceId": "1st-company-task-force-fear-made-manifest-aura",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32368,6 +32414,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "1st Company Task Force",
     "tags": [],
+    "sourceId": "1st-company-task-force-rites-of-war",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32393,6 +32440,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "1st Company Task Force",
     "tags": [],
+    "sourceId": "1st-company-task-force-iron-resolve",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32418,6 +32466,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Anvil Siege Force",
     "tags": [],
+    "sourceId": "anvil-siege-force-indomitable-fury",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32441,6 +32490,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Anvil Siege Force",
     "tags": [],
+    "sourceId": "anvil-siege-force-fleet-commander",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32467,6 +32517,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Anvil Siege Force",
     "tags": [],
+    "sourceId": "anvil-siege-force-stoic-defender",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32511,6 +32562,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Anvil Siege Force",
     "tags": [],
+    "sourceId": "anvil-siege-force-architect-of-war",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32555,6 +32607,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Firestorm Assault Force",
     "tags": [],
+    "sourceId": "firestorm-assault-force-champion-of-humanity",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32586,6 +32639,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Firestorm Assault Force",
     "tags": [],
+    "sourceId": "firestorm-assault-force-war-tempered-artifice",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32629,6 +32683,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Firestorm Assault Force",
     "tags": [],
+    "sourceId": "firestorm-assault-force-forged-in-battle",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32673,6 +32728,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Firestorm Assault Force",
     "tags": [],
+    "sourceId": "firestorm-assault-force-adamantine-mantle",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32717,6 +32773,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Gladius Task Force",
     "tags": [],
+    "sourceId": "gladius-task-force-artificer-armour",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32761,6 +32818,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Gladius Task Force",
     "tags": [],
+    "sourceId": "gladius-task-force-the-honour-vehement",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32805,6 +32863,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Gladius Task Force",
     "tags": [],
+    "sourceId": "gladius-task-force-adept-of-the-codex",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32831,6 +32890,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Gladius Task Force",
     "tags": [],
+    "sourceId": "gladius-task-force-fire-discipline",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32875,6 +32935,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "Ironstorm Spearhead",
     "tags": [],
+    "sourceId": "ironstorm-spearhead-target-augury-web",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32897,6 +32958,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Ironstorm Spearhead",
     "tags": [],
+    "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32941,6 +33003,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 35,
     "detachment": "Ironstorm Spearhead",
     "tags": [],
+    "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
     "owner": {
       "subject": "model",
       "selector": {
@@ -32963,6 +33026,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Ironstorm Spearhead",
     "tags": [],
+    "sourceId": "ironstorm-spearhead-master-of-machine-war",
     "owner": {
       "subject": "model",
       "selector": {
@@ -33007,6 +33071,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Stormlance Task Force",
     "tags": [],
+    "sourceId": "stormlance-task-force-fury-of-the-storm",
     "owner": {
       "subject": "model",
       "selector": {
@@ -33029,6 +33094,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Stormlance Task Force",
     "tags": [],
+    "sourceId": "stormlance-task-force-portents-of-wisdom",
     "owner": {
       "subject": "model",
       "selector": {
@@ -33073,6 +33139,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Stormlance Task Force",
     "tags": [],
+    "sourceId": "stormlance-task-force-feinting-withdrawal",
     "owner": {
       "subject": "model",
       "selector": {
@@ -33117,6 +33184,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Stormlance Task Force",
     "tags": [],
+    "sourceId": "stormlance-task-force-hunters-instincts",
     "owner": {
       "subject": "model",
       "selector": {
@@ -33139,6 +33207,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Vanguard Spearhead",
     "tags": [],
+    "sourceId": "vanguard-spearhead-the-blade-driven-deep",
     "owner": {
       "subject": "model",
       "selector": {
@@ -33182,6 +33251,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Vanguard Spearhead",
     "tags": [],
+    "sourceId": "vanguard-spearhead-ghostweave-cloak",
     "owner": {
       "subject": "model",
       "selector": {
@@ -33226,6 +33296,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Vanguard Spearhead",
     "tags": [],
+    "sourceId": "vanguard-spearhead-execute-and-redeploy",
     "owner": {
       "subject": "model",
       "selector": {
@@ -33252,6 +33323,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "Vanguard Spearhead",
     "tags": [],
+    "sourceId": "vanguard-spearhead-shadow-war-veteran",
     "owner": {
       "subject": "model",
       "selector": {

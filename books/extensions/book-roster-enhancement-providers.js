@@ -50,18 +50,20 @@
     ['pact of cursed pinions','daemon-melee-attacks-plus-1'],
     ['tzagulla','weapons-attacks-strength-ap-plus-1']
   ]);
-  const smEffects=new Map([
-    ['firestorm coordinators','ranged-sustained-hits-1'],
-    ['armour of antoninus','save-2-feel-no-pain-5'],
-    ['war tempered artifice','melee-strength-plus-3'],
-    ['umbral raptor','stealth-lone-operative'],
-    ['artificer armour','save-2-feel-no-pain-5'],
-    ['the flesh is weak','feel-no-pain-4'],
-    ['ghostweave cloak','stealth-lone-operative'],
-    ['bellicose weapon spirits upgrade','reroll-damage-attacks'],
-    ['raptorial cogitator core upgrade','ranged-ignores-cover'],
-    ['shroud field','stealth-lone-operative'],
-    ['orksbane','new-weapon-profile']
+  const smFamilyEffects=new Map([
+    ['headhunter-task-force|firestorm-coordinators','ranged-sustained-hits-1'],
+    ['firestorm-assault-force|firestorm-assault-force-war-tempered-artifice','melee-strength-plus-3'],
+    ['gladius-task-force|gladius-task-force-artificer-armour','save-2-feel-no-pain-5'],
+    ['ironstorm-spearhead|ironstorm-spearhead-the-flesh-is-weak','feel-no-pain-4'],
+    ['vanguard-spearhead|vanguard-spearhead-ghostweave-cloak','stealth-lone-operative'],
+    ['fulguris-task-force|bellicose-weapon-spirits','reroll-damage-attacks'],
+    ['fulguris-task-force|raptorial-cogitator-core','ranged-ignores-cover'],
+    ['subversion-assets|shroud-field','stealth-lone-operative'],
+    ['vengeful-hosts|enhancement-orksbane','new-weapon-profile']
+  ]),smLocalEffects=new Map([
+    ['blade-of-ultramar|armour-of-antoninus','save-2-feel-no-pain-5'],
+    ['forgefather-s-seekers|war-tempered-artifice','melee-strength-plus-3'],
+    ['shadowmark-talon|umbral-raptor','stealth-lone-operative']
   ]);
   const baEffects=new Map([
     ['legacy-of-grace|enhancement-blood-boil','psychic-anti-reroll-damage'],
@@ -72,23 +74,16 @@
     ['angelic-inheritors|enhancement-prescient-flash','unit-scouts-6'],
     ['rage-cursed-onslaught|enhancement-carmine-reliquary','unit-scouts-6-battleshock-aura']
   ]);
-  const inheritedBaSmEffects=new Set([
-    'vengeful-hosts|enhancement-orksbane',
-    'subversion-assets|enhancement-shroud-field',
-    'headhunter-task-force|enhancement-firestorm-coordinators',
-    'firestorm-assault-force|enhancement-war-tempered-artifice'
-  ]);
-  const inheritedDaSmEffects=new Set([
-    'vengeful-hosts|enhancement-orksbane',
-    'fulguris-task-force|bellicose-weapon-spirits',
-    'fulguris-task-force|raptorial-cogitator-core',
-    'subversion-assets|shroud-field',
-    'headhunter-task-force|firestorm-coordinators',
-    'firestorm-assault-force|firestorm-assault-force-war-tempered-artifice',
-    'gladius-task-force|gladius-task-force-artificer-armour',
-    'ironstorm-spearhead|ironstorm-spearhead-the-flesh-is-weak',
-    'vanguard-spearhead|vanguard-spearhead-ghostweave-cloak'
-  ]);
+  const smFamilyOverlayEligibility=Object.freeze({
+    'space-marines':new Set(smFamilyEffects.keys()),
+    'dark-angels':new Set(smFamilyEffects.keys()),
+    'blood-angels':new Set(smFamilyEffects.keys())
+  });
+  const smFamilyBookId=()=>smBook()?'space-marines':daBook()?'dark-angels':baBook()?'blood-angels':null;
+  const smFamilySourceId=(item,bookId)=>item?.sourceId||(bookId==='space-marines'?item?.ruleId:null);
+  const smFamilyIdentity=(item,bookId)=>`${item?.detachmentId||''}|${smFamilySourceId(item,bookId)||''}`;
+  const smFamilyEffect=item=>{const bookId=smFamilyBookId(),sourceId=smFamilySourceId(item,bookId),identity=smFamilyIdentity(item,bookId);if(!bookId||!sourceId||!item?.owner||!item?.assignment||!smFamilyOverlayEligibility[bookId]?.has(identity))return null;return smFamilyEffects.get(identity)||null;};
+  const smLocalEffect=item=>smBook()&&item?.owner&&item?.assignment?smLocalEffects.get(smFamilyIdentity(item,'space-marines'))||null:null;
   const daEffects=new Map([
     ['company-of-hunters|enhancement-master-of-manoeuvre','strategic-reserves-setup'],
     ['company-of-hunters|enhancement-master-crafted-weapon','melee-precision'],
@@ -470,7 +465,7 @@
   function decorateDa(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`,apply=!Array.isArray(context.projectedEffects);if(inheritedDaSmEffects.has(identity))applySmEffect(card,article,resolution.item,apply);else if(daEffects.has(identity))applyDaEffect(card,article,resolution.item,apply);}list.prepend(article);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`,apply=!Array.isArray(context.projectedEffects);if(smFamilyEffect(resolution.item))applySmEffect(card,article,resolution.item,apply);else if(daEffects.has(identity))applyDaEffect(card,article,resolution.item,apply);}list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
@@ -498,13 +493,13 @@
   function decorateBa(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`,apply=!Array.isArray(context.projectedEffects);if(inheritedBaSmEffects.has(identity))applySmEffect(card,article,resolution.item,apply);else applyBaEffect(card,article,resolution.item,apply);}list.prepend(article);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const apply=!Array.isArray(context.projectedEffects);if(smFamilyEffect(resolution.item))applySmEffect(card,article,resolution.item,apply);else applyBaEffect(card,article,resolution.item,apply);}list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
   function applySmEffect(card,article,item,applyEffects=true){
     if(!applyEffects)return;
-    const effect=smEffects.get(normalize(item.title));
+    const effect=smFamilyEffect(item)||smLocalEffect(item);
     if(effect==='ranged-sustained-hits-1'||effect==='ranged-ignores-cover'){
       const label=effect==='ranged-sustained-hits-1'?'SUSTAINED HITS 1':'IGNORES COVER';if(tagWeapons(card,'ranged',label,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,`Derived profiles: ${label} applied to the bearer's ranged weapons.`);}else warning(article,'Effect could not be applied automatically because no ranged weapon profiles were found.');return;
     }
@@ -613,7 +608,7 @@
     }
     return output;
   }
-  function structuredCode(item){const identity=`${item.detachmentId}|${item.ruleId||item.id}`;if(tauBook())return null;if(ecBook())return ecEffects.get(normalize(item.title));if(tyranidsBook())return tyranidsEffects.get(normalize(item.title));if(csmBook())return csmEffects.get(normalize(item.title));if(smBook())return smEffects.get(normalize(item.title));if(daBook())return inheritedDaSmEffects.has(identity)?smEffects.get(normalize(item.title)):daEffects.get(identity);if(baBook())return inheritedBaSmEffects.has(identity)?smEffects.get(normalize(item.title)):baEffects.get(identity);return null;}
+  function structuredCode(item){const identity=`${item.detachmentId}|${item.ruleId||item.id}`,family=smFamilyEffect(item);if(family)return family;if(tauBook())return null;if(ecBook())return ecEffects.get(normalize(item.title));if(tyranidsBook())return tyranidsEffects.get(normalize(item.title));if(csmBook())return csmEffects.get(normalize(item.title));if(smBook())return smLocalEffect(item);if(daBook())return daEffects.get(identity);if(baBook())return baEffects.get(identity);return null;}
   function gameEffects({item,enhancements}){const output=[];for(const resolution of enhancements||[]){const entry=resolution.input||{},canonical=resolution.catalog;if(entry.ownerStatus!=='resolved'||entry.ownerUnitId!==item.raw.id||!canonical)continue;const code=structuredCode(canonical);if(!code)continue;const source={kind:'enhancement',id:canonical.ruleId||canonical.id,ownerInstanceId:item.raw.id};output.push(...structuredRecords(code,canonical,source));}return output;}
   function decorate(card,roster,units,context={}){
     if(tauBook())return decorateTau(card,roster,units,context);

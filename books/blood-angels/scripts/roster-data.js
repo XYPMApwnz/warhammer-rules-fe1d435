@@ -27749,6 +27749,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Vengeful Hosts",
       "tags": [],
+      "sourceId": "enhancement-avenging-angel",
       "owner": {
         "subject": "model",
         "selector": {
@@ -27793,6 +27794,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Vengeful Hosts",
       "tags": [],
+      "sourceId": "enhancement-orksbane",
+      "profile": {
+        "name": "Orksbane",
+        "type": "Melee Weapons",
+        "characteristics": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-2",
+          "D": "3",
+          "Keywords": "Cleave 2"
+        }
+      },
       "owner": {
         "subject": "model",
         "selector": {
@@ -27821,19 +27836,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           2
         ]
       },
-      "profile": {
-        "name": "Orksbane",
-        "type": "Melee Weapons",
-        "characteristics": {
-          "Range": "Melee",
-          "A": "4",
-          "WS": "2+",
-          "S": "8",
-          "AP": "-2",
-          "D": "3",
-          "Keywords": "Cleave 2"
-        }
-      },
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -27849,6 +27851,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Fulguris Task Force",
       "tags": [],
+      "sourceId": "bellicose-weapon-spirits",
       "owner": {
         "subject": "model",
         "selector": {
@@ -27895,6 +27898,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Fulguris Task Force",
       "tags": [],
+      "sourceId": "raptorial-cogitator-core",
       "owner": {
         "subject": "model",
         "selector": {
@@ -27941,6 +27945,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "celerity",
       "owner": {
         "subject": "model",
         "selector": {
@@ -27986,6 +27991,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "fusillade",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28031,6 +28037,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "obfuscation",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28076,6 +28083,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "prescience",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28120,6 +28128,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Librarius Conclave",
       "tags": [],
+      "sourceId": "temporal-corridor",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28165,6 +28174,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Subversion Assets",
       "tags": [],
+      "sourceId": "death-in-the-dark",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28216,6 +28226,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Subversion Assets",
       "tags": [],
+      "sourceId": "shroud-field",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28263,6 +28274,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Armoured Speartip",
       "tags": [],
+      "sourceId": "armoured-commander",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28328,6 +28340,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Armoured Speartip",
       "tags": [],
+      "sourceId": "liberator",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28393,6 +28406,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Armoured Speartip",
       "tags": [],
+      "sourceId": "shock-deployment",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28441,6 +28455,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 40,
       "detachment": "Armoured Speartip",
       "tags": [],
+      "sourceId": "tip-of-the-spear",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28506,6 +28521,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 40,
       "detachment": "Headhunter Task Force",
       "tags": [],
+      "sourceId": "astartes-tank-ace-aura",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28564,6 +28580,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Headhunter Task Force",
       "tags": [],
+      "sourceId": "firestorm-coordinators",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28622,6 +28639,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Headhunter Task Force",
       "tags": [],
+      "sourceId": "gunnery-honours",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28680,6 +28698,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Headhunter Task Force",
       "tags": [],
+      "sourceId": "redoubtable-machine-spirit",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28738,6 +28757,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Ceramite Sentinels",
       "tags": [],
+      "sourceId": "castellum-omnivox",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28803,6 +28823,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Ceramite Sentinels",
       "tags": [],
+      "sourceId": "defensive-mastery",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28868,6 +28889,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Ceramite Sentinels",
       "tags": [],
+      "sourceId": "honour-indefatigable",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28912,6 +28934,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "CERAMITE SENTINELS",
       "tags": [],
+      "sourceId": "spy-skull-data-link",
       "owner": {
         "subject": "model",
         "selector": {
@@ -28953,6 +28976,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Bastion Task Force",
       "tags": [],
+      "sourceId": "blades-of-valour",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29018,6 +29042,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Bastion Task Force",
       "tags": [],
+      "sourceId": "bombast-omnivox",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29083,6 +29108,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Bastion Task Force",
       "tags": [],
+      "sourceId": "eye-of-the-primarch",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29148,6 +29174,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Bastion Task Force",
       "tags": [],
+      "sourceId": "hero-of-the-chapter",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29213,6 +29240,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Orbital Assault Force",
       "tags": [],
+      "sourceId": "dedicated-gunship",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29259,6 +29287,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Orbital Assault Force",
       "tags": [],
+      "sourceId": "laurels-of-thunder",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29324,6 +29353,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Orbital Assault Force",
       "tags": [],
+      "sourceId": "orbital-uplink-reliquary",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29389,6 +29419,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Orbital Assault Force",
       "tags": [],
+      "sourceId": "veteran-of-the-vanguard",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29454,8 +29485,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "1ST COMPANY TASK FORCE",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "1st-company-task-force-the-imperiums-sword",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-the-imperiums-sword",
       "detachmentId": "1st-company-task-force",
       "id": "enhancement-the-imperiums-sword",
@@ -29476,6 +29541,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "1st Company Task Force",
       "tags": [],
+      "sourceId": "1st-company-task-force-fear-made-manifest-aura",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29525,8 +29591,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "1st Company Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "1st-company-task-force-rites-of-war",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient-in-terminator-armor",
+            "unit-captain-in-terminator-armour",
+            "unit-chaplain-in-terminator-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-rites-of-war",
       "detachmentId": "1st-company-task-force",
       "id": "enhancement-rites-of-war",
@@ -29547,8 +29628,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "1st Company Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "1st-company-task-force-iron-resolve",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient-in-terminator-armor",
+            "unit-captain-in-terminator-armour",
+            "unit-chaplain-in-terminator-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-iron-resolve",
       "detachmentId": "1st-company-task-force",
       "id": "enhancement-iron-resolve",
@@ -29569,8 +29665,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Anvil Siege Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "anvil-siege-force-indomitable-fury",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-apothecary-biologis",
+            "unit-captain-in-gravis-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-indomitable-fury",
       "detachmentId": "anvil-siege-force",
       "id": "enhancement-indomitable-fury",
@@ -29591,8 +29700,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Anvil Siege Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "anvil-siege-force-fleet-commander",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-fleet-commander",
       "detachmentId": "anvil-siege-force",
       "id": "enhancement-fleet-commander",
@@ -29613,8 +29738,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Anvil Siege Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "anvil-siege-force-stoic-defender",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-stoic-defender",
       "detachmentId": "anvil-siege-force",
       "id": "enhancement-stoic-defender",
@@ -29635,8 +29794,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Anvil Siege Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "anvil-siege-force-architect-of-war",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-architect-of-war",
       "detachmentId": "anvil-siege-force",
       "id": "enhancement-architect-of-war",
@@ -29657,8 +29850,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Firestorm Assault Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "firestorm-assault-force-champion-of-humanity",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-apothecary",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-lieutenant",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-champion-of-humanity",
       "detachmentId": "firestorm-assault-force",
       "id": "enhancement-champion-of-humanity",
@@ -29679,6 +29893,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Firestorm Assault Force",
       "tags": [],
+      "sourceId": "firestorm-assault-force-war-tempered-artifice",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29733,6 +29948,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Firestorm Assault Force",
       "tags": [],
+      "sourceId": "firestorm-assault-force-forged-in-battle",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29788,6 +30004,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Firestorm Assault Force",
       "tags": [],
+      "sourceId": "firestorm-assault-force-adamantine-mantle",
       "owner": {
         "subject": "model",
         "selector": {
@@ -29843,8 +30060,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Gladius Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "gladius-task-force-artificer-armour",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-artificer-armour",
       "detachmentId": "gladius-task-force",
       "id": "enhancement-artificer-armour",
@@ -29865,8 +30116,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Gladius Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "gladius-task-force-the-honour-vehement",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-the-honour-vehement",
       "detachmentId": "gladius-task-force",
       "id": "enhancement-the-honour-vehement",
@@ -29887,8 +30172,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Gladius Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "gladius-task-force-adept-of-the-codex",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-adept-of-the-codex",
       "detachmentId": "gladius-task-force",
       "id": "enhancement-adept-of-the-codex",
@@ -29909,8 +30210,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Gladius Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "gladius-task-force-fire-discipline",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-fire-discipline",
       "detachmentId": "gladius-task-force",
       "id": "enhancement-fire-discipline",
@@ -29931,8 +30266,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "Ironstorm Spearhead",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "ironstorm-spearhead-target-augury-web",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-target-augury-web",
       "detachmentId": "ironstorm-spearhead",
       "id": "enhancement-target-augury-web",
@@ -29953,8 +30300,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Ironstorm Spearhead",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-the-flesh-is-weak",
       "detachmentId": "ironstorm-spearhead",
       "id": "enhancement-the-flesh-is-weak",
@@ -29975,8 +30356,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "detachment": "Ironstorm Spearhead",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-adept-of-the-omnissiah",
       "detachmentId": "ironstorm-spearhead",
       "id": "enhancement-adept-of-the-omnissiah",
@@ -29997,8 +30390,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "IRONSTORM SPEARHEAD",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "ironstorm-spearhead-master-of-machine-war",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-master-of-machine-war",
       "detachmentId": "ironstorm-spearhead",
       "id": "enhancement-master-of-machine-war",
@@ -30019,8 +30446,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Stormlance Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "stormlance-task-force-fury-of-the-storm",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-chaplain-on-bike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-fury-of-the-storm",
       "detachmentId": "stormlance-task-force",
       "id": "enhancement-fury-of-the-storm",
@@ -30041,8 +30480,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Stormlance Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "stormlance-task-force-portents-of-wisdom",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-portents-of-wisdom",
       "detachmentId": "stormlance-task-force",
       "id": "enhancement-portents-of-wisdom",
@@ -30063,8 +30536,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Stormlance Task Force",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "stormlance-task-force-feinting-withdrawal",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-feinting-withdrawal",
       "detachmentId": "stormlance-task-force",
       "id": "enhancement-feinting-withdrawal",
@@ -30085,6 +30592,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "STORMLANCE TASK FORCE",
       "tags": [],
+      "sourceId": "stormlance-task-force-hunters-instincts",
       "owner": {
         "subject": "model",
         "selector": {
@@ -30118,8 +30626,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Vanguard Spearhead",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "vanguard-spearhead-the-blade-driven-deep",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-the-blade-driven-deep",
       "detachmentId": "vanguard-spearhead",
       "id": "enhancement-the-blade-driven-deep",
@@ -30140,8 +30681,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Vanguard Spearhead",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "vanguard-spearhead-ghostweave-cloak",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-ghostweave-cloak",
       "detachmentId": "vanguard-spearhead",
       "id": "enhancement-ghostweave-cloak",
@@ -30162,8 +30737,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Vanguard Spearhead",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "vanguard-spearhead-execute-and-redeploy",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-execute-and-redeploy",
       "detachmentId": "vanguard-spearhead",
       "id": "enhancement-execute-and-redeploy",
@@ -30184,8 +30775,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "Vanguard Spearhead",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "sourceId": "vanguard-spearhead-shadow-war-veteran",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-shadow-war-veteran",
       "detachmentId": "vanguard-spearhead",
       "id": "enhancement-shadow-war-veteran",
@@ -30493,6 +31100,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Vengeful Hosts",
     "tags": [],
+    "sourceId": "enhancement-avenging-angel",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30516,6 +31124,20 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Vengeful Hosts",
     "tags": [],
+    "sourceId": "enhancement-orksbane",
+    "profile": {
+      "name": "Orksbane",
+      "type": "Melee Weapons",
+      "characteristics": {
+        "Range": "Melee",
+        "A": "4",
+        "WS": "2+",
+        "S": "8",
+        "AP": "-2",
+        "D": "3",
+        "Keywords": "Cleave 2"
+      }
+    },
     "owner": {
       "subject": "model",
       "selector": {
@@ -30539,6 +31161,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Fulguris Task Force",
     "tags": [],
+    "sourceId": "bellicose-weapon-spirits",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30564,6 +31187,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Fulguris Task Force",
     "tags": [],
+    "sourceId": "raptorial-cogitator-core",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30589,6 +31213,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 35,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "celerity",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30613,6 +31238,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "fusillade",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30637,6 +31263,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "obfuscation",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30661,6 +31288,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "prescience",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30684,6 +31312,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Librarius Conclave",
     "tags": [],
+    "sourceId": "temporal-corridor",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30708,6 +31337,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Subversion Assets",
     "tags": [],
+    "sourceId": "death-in-the-dark",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30738,6 +31368,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Subversion Assets",
     "tags": [],
+    "sourceId": "shroud-field",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30764,6 +31395,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Armoured Speartip",
     "tags": [],
+    "sourceId": "armoured-commander",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30808,6 +31440,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Armoured Speartip",
     "tags": [],
+    "sourceId": "liberator",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30852,6 +31485,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Armoured Speartip",
     "tags": [],
+    "sourceId": "shock-deployment",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30879,6 +31513,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 40,
     "detachment": "Armoured Speartip",
     "tags": [],
+    "sourceId": "tip-of-the-spear",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30923,6 +31558,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 40,
     "detachment": "Headhunter Task Force",
     "tags": [],
+    "sourceId": "astartes-tank-ace-aura",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30960,6 +31596,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Headhunter Task Force",
     "tags": [],
+    "sourceId": "firestorm-coordinators",
     "owner": {
       "subject": "model",
       "selector": {
@@ -30997,6 +31634,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Headhunter Task Force",
     "tags": [],
+    "sourceId": "gunnery-honours",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31034,6 +31672,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Headhunter Task Force",
     "tags": [],
+    "sourceId": "redoubtable-machine-spirit",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31071,6 +31710,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Ceramite Sentinels",
     "tags": [],
+    "sourceId": "castellum-omnivox",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31115,6 +31755,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Ceramite Sentinels",
     "tags": [],
+    "sourceId": "defensive-mastery",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31159,6 +31800,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Ceramite Sentinels",
     "tags": [],
+    "sourceId": "honour-indefatigable",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31182,6 +31824,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Ceramite Sentinels",
     "tags": [],
+    "sourceId": "spy-skull-data-link",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31202,6 +31845,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Bastion Task Force",
     "tags": [],
+    "sourceId": "blades-of-valour",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31246,6 +31890,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Bastion Task Force",
     "tags": [],
+    "sourceId": "bombast-omnivox",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31290,6 +31935,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Bastion Task Force",
     "tags": [],
+    "sourceId": "eye-of-the-primarch",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31334,6 +31980,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Bastion Task Force",
     "tags": [],
+    "sourceId": "hero-of-the-chapter",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31378,6 +32025,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Orbital Assault Force",
     "tags": [],
+    "sourceId": "dedicated-gunship",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31403,6 +32051,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Orbital Assault Force",
     "tags": [],
+    "sourceId": "laurels-of-thunder",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31447,6 +32096,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Orbital Assault Force",
     "tags": [],
+    "sourceId": "orbital-uplink-reliquary",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31491,6 +32141,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Orbital Assault Force",
     "tags": [],
+    "sourceId": "veteran-of-the-vanguard",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31535,8 +32186,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "1st Company Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "1st-company-task-force-the-imperiums-sword",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-the-imperiums-sword",
     "detachmentId": "1st-company-task-force"
   },
@@ -31546,6 +32231,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "1st Company Task Force",
     "tags": [],
+    "sourceId": "1st-company-task-force-fear-made-manifest-aura",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31590,8 +32276,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "1st Company Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "1st-company-task-force-rites-of-war",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-rites-of-war",
     "detachmentId": "1st-company-task-force"
   },
@@ -31601,8 +32302,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "1st Company Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "1st-company-task-force-iron-resolve",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-iron-resolve",
     "detachmentId": "1st-company-task-force"
   },
@@ -31612,8 +32328,21 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Anvil Siege Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "anvil-siege-force-indomitable-fury",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-apothecary-biologis",
+          "unit-captain-in-gravis-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-indomitable-fury",
     "detachmentId": "anvil-siege-force"
   },
@@ -31623,8 +32352,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Anvil Siege Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "anvil-siege-force-fleet-commander",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-fleet-commander",
     "detachmentId": "anvil-siege-force"
   },
@@ -31634,8 +32379,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Anvil Siege Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "anvil-siege-force-stoic-defender",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-stoic-defender",
     "detachmentId": "anvil-siege-force"
   },
@@ -31645,8 +32424,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Anvil Siege Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "anvil-siege-force-architect-of-war",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-architect-of-war",
     "detachmentId": "anvil-siege-force"
   },
@@ -31656,8 +32469,29 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Firestorm Assault Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "firestorm-assault-force-champion-of-humanity",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-apothecary",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-lieutenant",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-champion-of-humanity",
     "detachmentId": "firestorm-assault-force"
   },
@@ -31667,6 +32501,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Firestorm Assault Force",
     "tags": [],
+    "sourceId": "firestorm-assault-force-war-tempered-artifice",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31710,6 +32545,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Firestorm Assault Force",
     "tags": [],
+    "sourceId": "firestorm-assault-force-forged-in-battle",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31754,6 +32590,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Firestorm Assault Force",
     "tags": [],
+    "sourceId": "firestorm-assault-force-adamantine-mantle",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31798,8 +32635,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Gladius Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "gladius-task-force-artificer-armour",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-artificer-armour",
     "detachmentId": "gladius-task-force"
   },
@@ -31809,8 +32680,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Gladius Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "gladius-task-force-the-honour-vehement",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-the-honour-vehement",
     "detachmentId": "gladius-task-force"
   },
@@ -31820,8 +32725,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Gladius Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "gladius-task-force-adept-of-the-codex",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-adept-of-the-codex",
     "detachmentId": "gladius-task-force"
   },
@@ -31831,8 +32752,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Gladius Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "gladius-task-force-fire-discipline",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-fire-discipline",
     "detachmentId": "gladius-task-force"
   },
@@ -31842,8 +32797,20 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "Ironstorm Spearhead",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "ironstorm-spearhead-target-augury-web",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-target-augury-web",
     "detachmentId": "ironstorm-spearhead"
   },
@@ -31853,8 +32820,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Ironstorm Spearhead",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-the-flesh-is-weak",
     "detachmentId": "ironstorm-spearhead"
   },
@@ -31864,8 +32865,20 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 35,
     "detachment": "Ironstorm Spearhead",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-adept-of-the-omnissiah",
     "detachmentId": "ironstorm-spearhead"
   },
@@ -31875,8 +32888,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Ironstorm Spearhead",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "ironstorm-spearhead-master-of-machine-war",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-master-of-machine-war",
     "detachmentId": "ironstorm-spearhead"
   },
@@ -31886,8 +32933,20 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Stormlance Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "stormlance-task-force-fury-of-the-storm",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-chaplain-on-bike"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-fury-of-the-storm",
     "detachmentId": "stormlance-task-force"
   },
@@ -31897,8 +32956,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Stormlance Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "stormlance-task-force-portents-of-wisdom",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-portents-of-wisdom",
     "detachmentId": "stormlance-task-force"
   },
@@ -31908,8 +33001,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Stormlance Task Force",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "stormlance-task-force-feinting-withdrawal",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-feinting-withdrawal",
     "detachmentId": "stormlance-task-force"
   },
@@ -31919,6 +33046,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Stormlance Task Force",
     "tags": [],
+    "sourceId": "stormlance-task-force-hunters-instincts",
     "owner": {
       "subject": "model",
       "selector": {
@@ -31941,8 +33069,41 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Vanguard Spearhead",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "vanguard-spearhead-the-blade-driven-deep",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-the-blade-driven-deep",
     "detachmentId": "vanguard-spearhead"
   },
@@ -31952,8 +33113,42 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Vanguard Spearhead",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "vanguard-spearhead-ghostweave-cloak",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-ghostweave-cloak",
     "detachmentId": "vanguard-spearhead"
   },
@@ -31963,8 +33158,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Vanguard Spearhead",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "vanguard-spearhead-execute-and-redeploy",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-captain-in-phobos-armour",
+          "unit-librarian-in-phobos-armour",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-execute-and-redeploy",
     "detachmentId": "vanguard-spearhead"
   },
@@ -31974,8 +33185,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "Vanguard Spearhead",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "sourceId": "vanguard-spearhead-shadow-war-veteran",
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-captain-in-phobos-armour",
+          "unit-librarian-in-phobos-armour",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-shadow-war-veteran",
     "detachmentId": "vanguard-spearhead"
   }

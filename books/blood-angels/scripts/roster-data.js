@@ -26738,7 +26738,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "blood-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel"
+      ]
     },
     {
       "id": "encarmine-speartip",
@@ -26746,7 +26748,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "blood-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels"
+      ]
     },
     {
       "id": "legacy-of-grace",
@@ -26754,7 +26758,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "blood-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel"
+      ]
     },
     {
       "id": "liberator-assault-group",
@@ -26762,7 +26768,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "blood-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blood-angels-detachment-rule-liberator-assault-group-red-thirst"
+      ]
     },
     {
       "id": "rage-cursed-onslaught",
@@ -26770,7 +26778,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "blood-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity"
+      ]
     },
     {
       "id": "the-angelic-host",
@@ -26778,7 +26788,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "blood-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire"
+      ]
     },
     {
       "id": "the-lost-brethren",
@@ -26786,7 +26798,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "blood-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat"
+      ]
     },
     {
       "id": "wrath-of-the-doomed",
@@ -26794,7 +26808,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "blood-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
-      "detachmentRuleIds": []
+      "detachmentRuleIds": [
+        "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity"
+      ]
     },
     {
       "id": "vengeful-hosts",
@@ -26959,6 +26975,78 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   ],
   "detachmentRules": [
     {
+      "id": "blood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel",
+      "title": "Legacy of the Angel",
+      "text": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+      "sectionId": "blood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel",
+      "detachmentId": "angelic-inheritors",
+      "detachmentTitle": "Angelic Inheritors",
+      "sourceBookId": "blood-angels"
+    },
+    {
+      "id": "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels",
+      "title": "Wrath of Angels",
+      "text": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels",
+      "detachmentId": "encarmine-speartip",
+      "detachmentTitle": "Encarmine Speartip",
+      "sourceBookId": "blood-angels"
+    },
+    {
+      "id": "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel",
+      "title": "Legacy of the Angel",
+      "text": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds and led by their champions of noble bearing. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Friendly BLOOD ANGELS INFANTRY CHARACTER units (excluding COMMANDER DANTE units) have +1 to advance rolls and charge rolls. This detachment has the GRACE tag and cannot be taken with another GRACE detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel",
+      "detachmentId": "legacy-of-grace",
+      "detachmentTitle": "Legacy of Grace",
+      "sourceBookId": "blood-angels"
+    },
+    {
+      "id": "blood-angels-detachment-rule-liberator-assault-group-red-thirst",
+      "title": "Red Thirst",
+      "text": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "blood-angels-detachment-rule-liberator-assault-group-red-thirst",
+      "detachmentId": "liberator-assault-group",
+      "detachmentTitle": "Liberator Assault Group",
+      "sourceBookId": "blood-angels"
+    },
+    {
+      "id": "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity",
+      "title": "Maddened Ferocity",
+      "text": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+      "sectionId": "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity",
+      "detachmentId": "rage-cursed-onslaught",
+      "detachmentTitle": "Rage-cursed Onslaught",
+      "sourceBookId": "blood-angels"
+    },
+    {
+      "id": "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire",
+      "title": "Upon Wings of Fire",
+      "text": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire",
+      "detachmentId": "the-angelic-host",
+      "detachmentTitle": "The Angelic Host",
+      "sourceBookId": "blood-angels"
+    },
+    {
+      "id": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat",
+      "title": "A Noble Death in Combat",
+      "text": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead. If you select this Detachment, DEATH COMPANY MARINES and DEATH COMPANY MARINES WITH BOLT RIFLES units from your army have the BATTLELINE keyword. This Detachment has the DOOMED tag. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat",
+      "detachmentId": "the-lost-brethren",
+      "detachmentTitle": "The Lost Brethren",
+      "sourceBookId": "blood-angels"
+    },
+    {
+      "id": "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity",
+      "title": "Fanatical Celerity",
+      "text": "The madness of the Black Rage burns through the mind of the Lost Brethren with a speed and ferocity matched by the warriors in battle. Swept up in visions of the Primarch’s darkest days of wing‑swift fury, they push their bodies past their limits in efforts to emulate his rapid wrath. When a friendly DEATH COMPANY unit is selected to make an advance move, you can use this ability. If you do: ▪ That unit suffers D3+1 mortal wounds. ▪ That move does not prevent that unit from being eligible to declare a charge. This detachment has the DOOMED tag and cannot be taken with another DOOMED detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity",
+      "detachmentId": "wrath-of-the-doomed",
+      "detachmentTitle": "Wrath of the Doomed",
+      "sourceBookId": "blood-angels"
+    },
+    {
       "id": "vengeful-hosts-imperator-unleashed",
       "title": "Imperator Unleashed",
       "text": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.",
@@ -27111,8 +27199,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Angelic Inheritors",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-prescient-flash",
       "detachmentId": "angelic-inheritors",
       "id": "enhancement-prescient-flash",
@@ -27141,8 +27244,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Angelic Inheritors",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-troubling-visions",
       "detachmentId": "angelic-inheritors",
       "id": "enhancement-troubling-visions",
@@ -27171,8 +27289,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Angelic Inheritors",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "INFANTRY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-blazing-icon",
       "detachmentId": "angelic-inheritors",
       "id": "enhancement-blazing-icon",
@@ -27201,8 +27335,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Angelic Inheritors",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-ordained-sacrifice",
       "detachmentId": "angelic-inheritors",
       "id": "enhancement-ordained-sacrifice",
@@ -27231,8 +27380,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Encarmine Speartip",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-angelic-executioner",
       "detachmentId": "encarmine-speartip",
       "id": "enhancement-angelic-executioner",
@@ -27261,8 +27426,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Encarmine Speartip",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-shadow-of-abomination",
       "detachmentId": "encarmine-speartip",
       "id": "enhancement-shadow-of-abomination",
@@ -27291,8 +27472,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Legacy of Grace",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "PSYKER",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-blood-boil",
       "detachmentId": "legacy-of-grace",
       "id": "enhancement-blood-boil",
@@ -27321,8 +27518,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Legacy of Grace",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-aureole-of-the-angel",
       "detachmentId": "legacy-of-grace",
       "id": "enhancement-aureole-of-the-angel",
@@ -27351,8 +27563,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Liberator Assault Group",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-gift-of-foresight",
       "detachmentId": "liberator-assault-group",
       "id": "enhancement-gift-of-foresight",
@@ -27371,8 +27598,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Liberator Assault Group",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-icon-of-the-angel",
       "detachmentId": "liberator-assault-group",
       "id": "enhancement-icon-of-the-angel",
@@ -27391,8 +27633,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "detachment": "Liberator Assault Group",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-rage-fuelled-warrior",
       "detachmentId": "liberator-assault-group",
       "id": "enhancement-rage-fuelled-warrior",
@@ -27411,8 +27668,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Liberator Assault Group",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-speed-of-the-primarch",
       "detachmentId": "liberator-assault-group",
       "id": "enhancement-speed-of-the-primarch",
@@ -27431,8 +27703,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "Rage-cursed Onslaught",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHAPLAIN",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-carmine-reliquary",
       "detachmentId": "rage-cursed-onslaught",
       "id": "enhancement-carmine-reliquary",
@@ -27461,8 +27749,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Rage-cursed Onslaught",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-master-of-the-red-thirst",
       "detachmentId": "rage-cursed-onslaught",
       "id": "enhancement-master-of-the-red-thirst",
@@ -27490,8 +27793,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
       "detachment": "Rage-cursed Onslaught",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "sanguinary-tear-aura",
       "detachmentId": "rage-cursed-onslaught",
       "id": "sanguinary-tear-aura",
@@ -27514,8 +27832,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Rage-cursed Onslaught",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-angels-fang",
       "detachmentId": "rage-cursed-onslaught",
       "id": "enhancement-angels-fang",
@@ -27544,8 +27877,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "The Angelic Host",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-archangels-shard",
       "detachmentId": "the-angelic-host",
       "id": "enhancement-archangels-shard",
@@ -27564,8 +27913,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "The Angelic Host",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-artisan-of-war",
       "detachmentId": "the-angelic-host",
       "id": "enhancement-artisan-of-war",
@@ -27584,8 +27949,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "The Angelic Host",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-gleaming-pinions",
       "detachmentId": "the-angelic-host",
       "id": "enhancement-gleaming-pinions",
@@ -27604,8 +27985,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "The Angelic Host",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-visage-of-death",
       "detachmentId": "the-angelic-host",
       "id": "enhancement-visage-of-death",
@@ -27624,8 +28021,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "The Lost Brethren",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-blood-shard",
       "detachmentId": "the-lost-brethren",
       "id": "enhancement-blood-shard",
@@ -27644,8 +28057,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "The Lost Brethren",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-sanguinius-grace",
       "detachmentId": "the-lost-brethren",
       "id": "enhancement-sanguinius-grace",
@@ -27664,8 +28093,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "The Lost Brethren",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-to-slay-the-warmaster",
       "detachmentId": "the-lost-brethren",
       "id": "enhancement-to-slay-the-warmaster",
@@ -27684,8 +28129,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "The Lost Brethren",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-vengeful-onslaught",
       "detachmentId": "the-lost-brethren",
       "id": "enhancement-vengeful-onslaught",
@@ -27704,8 +28165,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Wrath of the Doomed",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-instinctive-interception",
       "detachmentId": "wrath-of-the-doomed",
       "id": "enhancement-instinctive-interception",
@@ -27734,8 +28211,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Wrath of the Doomed",
       "tags": [],
-      "owner": null,
-      "assignment": null,
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
       "ruleId": "enhancement-on-the-archtraitors-bridge",
       "detachmentId": "wrath-of-the-doomed",
       "id": "enhancement-on-the-archtraitors-bridge",
@@ -30830,8 +31323,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Angelic Inheritors",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-prescient-flash",
     "detachmentId": "angelic-inheritors"
   },
@@ -30841,8 +31349,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Angelic Inheritors",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-troubling-visions",
     "detachmentId": "angelic-inheritors"
   },
@@ -30852,8 +31375,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Angelic Inheritors",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "INFANTRY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-blazing-icon",
     "detachmentId": "angelic-inheritors"
   },
@@ -30863,8 +31402,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Angelic Inheritors",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-ordained-sacrifice",
     "detachmentId": "angelic-inheritors"
   },
@@ -30874,8 +31428,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Encarmine Speartip",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-angelic-executioner",
     "detachmentId": "encarmine-speartip"
   },
@@ -30885,8 +31455,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Encarmine Speartip",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-shadow-of-abomination",
     "detachmentId": "encarmine-speartip"
   },
@@ -30896,8 +31482,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Legacy of Grace",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "PSYKER",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-blood-boil",
     "detachmentId": "legacy-of-grace"
   },
@@ -30907,8 +31509,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Legacy of Grace",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-aureole-of-the-angel",
     "detachmentId": "legacy-of-grace"
   },
@@ -30918,8 +31535,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "Liberator Assault Group",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-gift-of-foresight",
     "detachmentId": "liberator-assault-group"
   },
@@ -30929,8 +31561,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Liberator Assault Group",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-icon-of-the-angel",
     "detachmentId": "liberator-assault-group"
   },
@@ -30940,8 +31587,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 35,
     "detachment": "Liberator Assault Group",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-rage-fuelled-warrior",
     "detachmentId": "liberator-assault-group"
   },
@@ -30951,8 +31613,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Liberator Assault Group",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-speed-of-the-primarch",
     "detachmentId": "liberator-assault-group"
   },
@@ -30962,8 +31639,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 30,
     "detachment": "Rage-cursed Onslaught",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHAPLAIN",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-carmine-reliquary",
     "detachmentId": "rage-cursed-onslaught"
   },
@@ -30973,8 +31666,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Rage-cursed Onslaught",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-master-of-the-red-thirst",
     "detachmentId": "rage-cursed-onslaught"
   },
@@ -30983,8 +31691,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "text": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
     "detachment": "Rage-cursed Onslaught",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "sanguinary-tear-aura",
     "detachmentId": "rage-cursed-onslaught"
   },
@@ -30994,8 +31717,23 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "Rage-cursed Onslaught",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-angels-fang",
     "detachmentId": "rage-cursed-onslaught"
   },
@@ -31005,8 +31743,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "The Angelic Host",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-archangels-shard",
     "detachmentId": "the-angelic-host"
   },
@@ -31016,8 +31770,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "The Angelic Host",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-artisan-of-war",
     "detachmentId": "the-angelic-host"
   },
@@ -31027,8 +31797,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "The Angelic Host",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-gleaming-pinions",
     "detachmentId": "the-angelic-host"
   },
@@ -31038,8 +31824,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "The Angelic Host",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-visage-of-death",
     "detachmentId": "the-angelic-host"
   },
@@ -31049,8 +31851,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 25,
     "detachment": "The Lost Brethren",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-blood-shard",
     "detachmentId": "the-lost-brethren"
   },
@@ -31060,8 +31878,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "The Lost Brethren",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-sanguinius-grace",
     "detachmentId": "the-lost-brethren"
   },
@@ -31071,8 +31905,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 15,
     "detachment": "The Lost Brethren",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-to-slay-the-warmaster",
     "detachmentId": "the-lost-brethren"
   },
@@ -31082,8 +31932,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "The Lost Brethren",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-vengeful-onslaught",
     "detachmentId": "the-lost-brethren"
   },
@@ -31093,8 +31959,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 10,
     "detachment": "Wrath of the Doomed",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-instinctive-interception",
     "detachmentId": "wrath-of-the-doomed"
   },
@@ -31104,8 +31986,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "value": 20,
     "detachment": "Wrath of the Doomed",
     "tags": [],
-    "owner": null,
-    "assignment": null,
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
     "ruleId": "enhancement-on-the-archtraitors-bridge",
     "detachmentId": "wrath-of-the-doomed"
   },

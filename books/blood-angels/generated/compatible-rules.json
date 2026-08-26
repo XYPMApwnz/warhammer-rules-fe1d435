@@ -1087,12 +1087,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -1275,13 +1269,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -2003,12 +1997,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -2197,13 +2185,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -2893,12 +2881,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -3081,13 +3063,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -3779,12 +3761,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -3967,13 +3943,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -7311,12 +7287,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -7499,13 +7469,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -8543,12 +8513,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -8713,13 +8677,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -9835,12 +9799,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -10023,13 +9981,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -10743,12 +10701,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -10931,13 +10883,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -11633,12 +11585,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -11821,13 +11767,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -12603,12 +12549,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -12797,13 +12737,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -13527,12 +13467,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -13715,13 +13649,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -15643,12 +15577,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -15838,6 +15766,12 @@
       },
       {
         "ruleId": "enhancement-master-of-the-red-thirst",
+        "kind": "enhancement",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -16559,12 +16493,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -16760,6 +16688,12 @@
       },
       {
         "ruleId": "enhancement-master-of-the-red-thirst",
+        "kind": "enhancement",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -17393,12 +17327,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -17578,6 +17506,12 @@
       },
       {
         "ruleId": "enhancement-master-of-the-red-thirst",
+        "kind": "enhancement",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -18267,12 +18201,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -18462,6 +18390,12 @@
       },
       {
         "ruleId": "enhancement-master-of-the-red-thirst",
+        "kind": "enhancement",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -20517,12 +20451,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -20682,12 +20610,6 @@
       },
       {
         "ruleId": "enhancement-angels-fang",
-        "kind": "enhancement",
-        "detachmentId": "rage-cursed-onslaught",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-carmine-reliquary",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -21195,12 +21117,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -21360,12 +21276,6 @@
       },
       {
         "ruleId": "enhancement-angels-fang",
-        "kind": "enhancement",
-        "detachmentId": "rage-cursed-onslaught",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-carmine-reliquary",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -36761,12 +36671,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -36949,13 +36853,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -40797,13 +40701,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -41705,13 +41609,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -42693,13 +42597,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -43389,12 +43293,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -43577,13 +43475,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -44267,12 +44165,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -44455,13 +44347,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -45197,12 +45089,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -45385,13 +45271,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -46117,12 +46003,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -46305,13 +46185,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -52557,12 +52437,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -52727,13 +52601,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
@@ -58973,12 +58847,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-blood-boil",
-        "kind": "enhancement",
-        "detachmentId": "legacy-of-grace",
-        "state": "match"
-      },
-      {
         "ruleId": "aura-of-the-angel-s-grace",
         "kind": "stratagem",
         "detachmentId": "legacy-of-grace",
@@ -59161,13 +59029,13 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-carmine-reliquary",
+        "ruleId": "enhancement-master-of-the-red-thirst",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"
       },
       {
-        "ruleId": "enhancement-master-of-the-red-thirst",
+        "ruleId": "enhancement-sanguinary-tear-aura",
         "kind": "enhancement",
         "detachmentId": "rage-cursed-onslaught",
         "state": "match"

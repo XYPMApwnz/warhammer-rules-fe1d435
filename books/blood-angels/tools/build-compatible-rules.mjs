@@ -43,7 +43,7 @@ function targets(contract){
   if(!roles.length)throw new Error('Compatible rule must declare a friendly unit target.');
   return roles.map(role=>role.selector||{});
 }
-const contractById=(records,id)=>records[id]||Object.entries(records).find(([key])=>key.replace(/[^a-z0-9]/gi,'').toLowerCase()===id.replace(/[^a-z0-9]/gi,'').toLowerCase())?.[1];
+const contractById=(records,...ids)=>ids.map(id=>id&&records[id]).find(Boolean)||Object.entries(records).find(([key])=>ids.some(id=>id&&key.replace(/[^a-z0-9]/gi,'').toLowerCase()===id.replace(/[^a-z0-9]/gi,'').toLowerCase()))?.[1];
 
 export function inputs(){
   return{
@@ -82,8 +82,8 @@ export function buildCompatibleRules({config,pack,parity,codex,points,contracts,
       for(const unit of units)if(targets(contract).some(selector=>matches(selector,unit,grants))){const conditions=contract.conditions?.length?['battle-state-unknown']:[];add(unit.id,{ruleId:item.id,kind:'stratagem',detachmentId:detachment.id,state:conditions.length?'conditional':'match',...(conditions.length?{condition:conditions[0],conditions}:{})});}
     }
     for(const item of detachment.enhancements||[]){
-      const contract=contractById(source.enhancements,item.id);if(!contract)throw new Error(`Missing Enhancement contract ${item.id}`);
       const current=pointEnhancements.get(`${titleKey(detachment.title)}\0${titleKey(item.title)}`);if(!current?.id)throw new Error(`Missing detachment-qualified Enhancement identity ${detachment.title}: ${item.title}`);
+      const contract=contractById(source.enhancements,current.id,item.id);if(!contract)throw new Error(`Missing Enhancement contract ${current.id} (${item.id})`);
       for(const unit of units)if(targets(contract).some(selector=>matches(selector,unit,grants)))add(unit.id,{ruleId:current.id,kind:'enhancement',detachmentId:detachment.id,state:'match'});
     }
   }

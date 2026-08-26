@@ -14,7 +14,8 @@
   "includeCoreStratagems": true,
   "rosterSupport": true,
   "rosterCatalog": {
-    "inferExactWargearAbilitySelections": true
+    "inferExactWargearAbilitySelections": true,
+    "inferCanonicalDetachmentRuleIds": true
   },
   "sharedArmyBookApp": true,
   "compatibleRulesMatrix": true,

@@ -33,7 +33,8 @@
       "forceDisposition": "TAKE AND HOLD",
       "rule": {
         "title": "Red Thirst",
-        "text": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+        "text": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+        "id": "blood-angels-detachment-rule-liberator-assault-group-red-thirst"
       },
       "enhancements": [
         {
@@ -136,7 +137,8 @@
       ],
       "rule": {
         "title": "A Noble Death in Combat",
-        "text": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead. If you select this Detachment, DEATH COMPANY MARINES and DEATH COMPANY MARINES WITH BOLT RIFLES units from your army have the BATTLELINE keyword. This Detachment has the DOOMED tag. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+        "text": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead. If you select this Detachment, DEATH COMPANY MARINES and DEATH COMPANY MARINES WITH BOLT RIFLES units from your army have the BATTLELINE keyword. This Detachment has the DOOMED tag. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+        "id": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat"
       },
       "enhancements": [
         {
@@ -236,7 +238,8 @@
       "forceDisposition": "DISRUPTION",
       "rule": {
         "title": "Upon Wings of Fire",
-        "text": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+        "text": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+        "id": "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire"
       },
       "enhancements": [
         {

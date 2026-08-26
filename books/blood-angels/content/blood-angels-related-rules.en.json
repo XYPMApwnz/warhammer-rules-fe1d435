@@ -1529,1125 +1529,540 @@
     }
   },
   "enhancements": {
-    "enhancement-legacy-of-grace-blood-boil": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-prescient-flash": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "blood-boil": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-troubling-visions": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-legacy-of-grace-aureole-of-the-angel": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-blazing-icon": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "INFANTRY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "aureole-of-the-angel": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-ordained-sacrifice": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-encarmine-speartip-angelic-executioner": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-angelic-executioner": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "angelic-executioner": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-shadow-of-abomination": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-encarmine-speartip-shadow-of-abomination": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-blood-boil": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "PSYKER",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "shadow-of-abomination": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-aureole-of-the-angel": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-wrath-of-the-doomed-instinctive-interception": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-gift-of-foresight": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "instinctive-interception": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-icon-of-the-angel": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-wrath-of-the-doomed-on-the-archtraitor-s-bridge": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-rage-fuelled-warrior": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "on-the-archtraitor-s-bridge": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-speed-of-the-primarch": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-angelic-inheritors-prescient-flash": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-carmine-reliquary": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHAPLAIN",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "prescient-flash": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-master-of-the-red-thirst": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
-    },
-    "enhancement-angelic-inheritors-troubling-visions": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "troubling-visions": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-angelic-inheritors-blazing-icon": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "INFANTRY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "blazing-icon": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "INFANTRY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-angelic-inheritors-ordained-sacrifice": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "ordained-sacrifice": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-rage-cursed-onslaught-carmine-reliquary": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "carmine-reliquary": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-rage-cursed-onslaught-master-of-the-red-thirst": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "master-of-the-red-thirst": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-rage-cursed-onslaught-sanguinary-tear-aura": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "sanguinary-tear-aura": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-rage-cursed-onslaught-angel-s-fang": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-angels-fang": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "angel-s-fang": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-blood-shard": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-liberator-assault-group-gift-of-foresight": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-sanguinius-grace": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "gift-of-foresight": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-to-slay-the-warmaster": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-liberator-assault-group-icon-of-the-angel": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-vengeful-onslaught": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "icon-of-the-angel": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-archangels-shard": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-liberator-assault-group-rage-fuelled-warrior": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-artisan-of-war": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "rage-fuelled-warrior": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-gleaming-pinions": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-liberator-assault-group-speed-of-the-primarch": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-visage-of-death": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "speed-of-the-primarch": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-instinctive-interception": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
-    "enhancement-the-lost-brethren-blood-shard": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+    "enhancement-on-the-archtraitors-bridge": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
-    },
-    "blood-shard": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-the-lost-brethren-sanguinius-grace": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "sanguinius-grace": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-the-lost-brethren-to-slay-the-warmaster": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "to-slay-the-warmaster": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-the-lost-brethren-vengeful-onslaught": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "vengeful-onslaught": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "DEATH COMPANY",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-the-angelic-host-archangels-shard": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "archangels-shard": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-the-angelic-host-artisan-of-war": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "artisan-of-war": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-the-angelic-host-gleaming-pinions": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "gleaming-pinions": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "enhancement-the-angelic-host-visage-of-death": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
-    "visage-of-death": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "allKeywords": [
-              "ADEPTUS ASTARTES",
-              "JUMP PACK",
-              "CHARACTER"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     }
   },
   "keywordGrants": {

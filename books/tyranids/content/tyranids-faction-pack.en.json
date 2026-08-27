@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Tyranids Faction Pack",
-    "version": "1.1",
-    "legalFrom": "2026-07-22",
+    "version": "1.2",
+    "legalFrom": "2026-08-26",
     "pageCount": 31,
-    "sha256": "BBB2B1F9167C8421D13CFB87FC46DF778D59B7E9803D5D8F812060424FA9C79A",
-    "file": "sources/tyranids-faction-pack-v1.1.pdf"
+    "sha256": "D7531867BA2C0939C098DBD247E459E611B206FE009C1BA031C896BCBC541663",
+    "file": "sources/tyranids-faction-pack-v1.2.pdf"
   },
   "provenance": {
-    "sourceId": "tyranids-faction-pack-v1.1",
+    "sourceId": "tyranids-faction-pack-v1.2",
     "sourcePages": [
       1,
       2,
@@ -45,8 +45,8 @@
   },
   "pages": {
     "1": {
-      "sha256": "5AE9CFBDA38F558CF857FBBD544515FC9C616EF4590F6B434D85F042F95FABC9",
-      "text": "TYRANIDS\nFACTION PACK: VERSION 1.1\nLegal for matched play from 22nd July 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW? CONTENTS\n▪ Changes to Rules Updates Detachments .2\n▪ The Red Terror Ambush Predators .2\n▫ Abilities: Remove the Serpentine Fiend ability. Talons of the Norn Queen .3\n▫ Keywords: Add 'MOBILE'. Warrior Bioform Onslaught.4\nSubterranean Assault .5\nDatasheets .7\nThe Red Terror .7\nTyranid Prime with Lash Whip .9\nRaveners.11\nImperial Armour Datasheets .13\nRules Updates .17\nLegends Datasheets .20"
+      "sha256": "B490AC52056A0C5996957521948F47157DE8C260585DB376785941CC08E2451E",
+      "text": "TYRANIDS\nFACTION PACK: VERSION 1.2\nLegal for matched play from 26th August 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW? CONTENTS\n▪ Changes to Rules Updates. Detachments .2\n▪ Harridan, Keywords Section: remove 'FRAME'. Ambush Predators .2\nTalons of the Norn Queen .3\nWarrior Bioform Onslaught.4\nSubterranean Assault .5\nDatasheets .7\nThe Red Terror .7\nTyranid Prime with Lash Whip .9\nRaveners.11\nImperial Armour Datasheets .13\nRules Updates .17\nLegends Datasheets .20"
     },
     "2": {
       "sha256": "157E5F1EB34651BA8447ECC7EB1F1B4097AD3660B65F0FD47C3CE29FA99D2E59",
@@ -101,12 +101,12 @@
       "text": "HYPERADAPTED RAVENERS\nCreated to fight amongst the vanguard swarms, Hyperadapted Raveners\nboast additional biomorphs and weapon symbiotes. The toxic scythes,\nrending talons and crushing claws of the heavier bioforms, coupled with\nbioacids and unnatural senses, allow them to pick off the armoured\nvehicles of the prey.\nLEADER UNIT COMPOSITION\nThis unit can be attached to the following units: Raveners ■ 1 Ravener Prime\n■ 4 Raveners\nThe Ravener Prime is equipped with: Prime claws and talons.\n3 Raveners are equipped with: Ravener heavy claws\nand talons.\n1 Ravener is equipped with: venom bolt; Ravener heavy\nclaws and talons.\nKEYWORDS – ALL MODELS: Infantry, Great Devourer, Vanguard Invader, FACTION KEYWORDS:\nBurrowers, Hyperadapted Raveners | RAVENER PRIME: Character, Synapse Tyranids"
     },
     "15": {
-      "sha256": "2F35F0A65A669FFC03D3978181E292ED914CE66D9C6959B079CABD7BCC6E9366",
-      "text": "HARRIDAN\nM T SV W LD OC\n14\" 10 3+ 30 8+ 0\nRANGED WEAPONS RANGE A BS S AP D ABILITIES\nDire bio-cannon [BLAST] 48\" D6+6 3+ 10 -3 3 CORE: Deadly Demise 2D6, Hover\nMELEE WEAPONS RANGE A WS S AP D FACTION: Synapse\nGargantuan scything talons Melee 6 3+ 14 -2 D6 Frenzied Metabolism: Each time this model is selected to\nshoot, you can use this ability. If you do, until the end of the\nphase, each time this model makes an attack, add 1 to the\nWound roll. After resolving those attacks, roll one D6: on a 2+,\nthis model suffers D3 mortal wounds.\nDAMAGED: 1-10 WOUNDS REMAINING\nWhile this model has 1-10 wounds remaining, each time this\nmodel makes an attack, subtract 1 from the Hit roll.\nKEYWORDS: Monster, Titanic, Fly, Frame, Transport, Great Devourer, FACTION KEYWORDS:\nHarridan Tyranids"
+      "sha256": "391868236FA9DFB30CCAE277B9ACD1AE278943295E72B8BA3B81659B15D77766",
+      "text": "HARRIDAN\nM T SV W LD OC\n14\" 10 3+ 30 8+ 0\nRANGED WEAPONS RANGE A BS S AP D ABILITIES\nDire bio-cannon [BLAST] 48\" D6+6 3+ 10 -3 3 CORE: Deadly Demise 2D6, Hover\nMELEE WEAPONS RANGE A WS S AP D FACTION: Synapse\nGargantuan scything talons Melee 6 3+ 14 -2 D6 Frenzied Metabolism: Each time this model is selected to\nshoot, you can use this ability. If you do, until the end of the\nphase, each time this model makes an attack, add 1 to the\nWound roll. After resolving those attacks, roll one D6: on a 2+,\nthis model suffers D3 mortal wounds.\nDAMAGED: 1-10 WOUNDS REMAINING\nWhile this model has 1-10 wounds remaining, each time this\nmodel makes an attack, subtract 1 from the Hit roll.\nFACTION KEYWORDS:\nKEYWORDS: Monster, Titanic, Fly, Transport, Great Devourer, Harridan\nTyranids"
     },
     "16": {
-      "sha256": "6A17770FC7F17734762BA6167E0F9E65C326D297D9EA7A167DC016F1A60E18CB",
-      "text": "HARRIDAN\nOf the winged horrors of the Tyranids, none are as monstrously\npowerful as the Harridan. Borne on huge membranous wings tipped\nwith bio-cannons, they swoop into enemy lines carving through\ntroops and armour with their scything talons or showering shrieking\nGargoyles that had been clinging batlike to the Harridan’s underbelly.\nWARGEAR OPTIONS UNIT COMPOSITION\n■ None ■ 1 Harridan\nThis model is equipped with: 2 dire bio-cannons; gargantuan\nscything talons.\nTRANSPORT\nThis model has a transport capacity of 20 Gargoyles models\nand 1 Winged Tyranid Prime model.\nKEYWORDS: Monster, Titanic, Fly, Frame, Transport, Great Devourer, FACTION KEYWORDS:\nHarridan Tyranids"
+      "sha256": "459A92B7346CEC80C8E8BBAC740B0A7013223D69CF523A28EDEFB9845161B502",
+      "text": "HARRIDAN\nOf the winged horrors of the Tyranids, none are as monstrously\npowerful as the Harridan. Borne on huge membranous wings tipped\nwith bio-cannons, they swoop into enemy lines carving through\ntroops and armour with their scything talons or showering shrieking\nGargoyles that had been clinging batlike to the Harridan’s underbelly.\nWARGEAR OPTIONS UNIT COMPOSITION\n■ None ■ 1 Harridan\nThis model is equipped with: 2 dire bio-cannons; gargantuan\nscything talons.\nTRANSPORT\nThis model has a transport capacity of 20 Gargoyles models\nand 1 Winged Tyranid Prime model.\nFACTION KEYWORDS:\nKEYWORDS: Monster, Titanic, Fly, Transport, Great Devourer, Harridan\nTyranids"
     },
     "17": {
       "sha256": "71D0FB9E61E6E080A0C298DD94EE4C97E1C339B1F4040158787A6D4038389DAF",
@@ -117,16 +117,16 @@
       "text": "HIEROPHANT\nHierophants are gargantuan specimens of Tyranid adaptation, created\nto rival the largest war machines and annihilate any resistance.\nTowering over the battlefield on spined legs that skewer tanks with\nease, these apex-beasts spray foes with devastating bio-weapons,\ntheir thick chitinous plating making them almost impervious to injury.\nWARGEAR OPTIONS UNIT COMPOSITION\n■ None ■ 1 Hierophant\nThis model is equipped with: bio-plasma torrent; 2 dire\nbio-cannons; lashwhip pods; titanic scything talons.\nTRANSPORT\nThis model has a transport capacity of 20 Tyranids Infantry\nmodels. Each model with a Wounds characteristic of more\nthan 1 takes up the space of 3 models. This model cannot\ntransport models that can Fly.\nKEYWORDS: Monster, Titanic, Towering, Frame, Transport, Great Devourer, FACTION KEYWORDS:\nHierophant Tyranids"
     },
     "19": {
-      "sha256": "510D64B1A373F67E3E56FC7301415D53EBE0C5AE9BE326E8F972149471C2FD4E",
-      "text": "TYRANIDS\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nCRUSHER STAMPEDE DETACHMENT\nUPDATES\nEnraged Behemoths Detachment Rule\nChange to:\nARMY RULES\n‘Each time a TYRANIDS MONSTER model from your army makes an attack,\nShadow in the Warp add 1 to the Hit roll if that model’s unit is below its Starting Strength,\nChange to: and add 1 to the Wound roll as well if that model’s unit is Below\n‘If your Army Faction is TYRANIDS, once per battle, in either player’s Half‑strength. In addition, while a TYRANIDS MONSTER unit from your\nCommand phase, if one or more units from your army with this ability army (excluding Battle‑shocked units) is at its Starting Strength, add 2\nare on the battlefield, you can unleash the Shadow in the Warp. When to the Objective Control characteristic of models in that unit.\nyou do, each enemy unit on the battlefield must take a Battle‑shock\ntest. Each time an enemy unit takes such a Battle‑shock test, if it is Untrammelled Ferocity Stratagem, Effect Section\nwithin 6\" of one or more SYNAPSE units from your army, subtract 1 from Change to:\nthat test.’ ‘Until the end of the phase, each time a model in your unit makes\na Normal, Advance or Fall Back move, it can move through models\nSynapse (excluding TITANIC models) and sections of terrain features that are 4\"\nChange to: or less in height. When doing so:\n‘If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army ▪ It can move within Engagement Range of enemy models, but cannot\nis within 6\" of one or more friendly SYNAPSE models, that TYRANIDS end that move within Engagement Range of them.\nunit is said to be within Synapse Range of that model and of your army. ▪ It can also move through sections of terrain features that are more\nWhile a TYRANIDS unit from your army is within Synapse Range of than 4\" in height, but if it does, after its unit has moved, roll one D6:\nyour army: on a 1, your unit is Battle‑shocked.’\n▪ Each time that unit takes a Battle‑shock test, take that test on 3D6\nSYNAPTIC NEXUS DETACHMENT\ninstead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Reinforced Hive Node Stratagem, Effect Section\nStrength characteristic of that attack.’ Change to:\n'Until the attacking unit has finished making its attacks, each time an\nASSIMILATION SWARM DETACHMENT\nattack targets your unit, worsen the Armour Penetration characteristic\nFeed the Swarm Detachment Rule of that attack by 1.’\nChange to:\nUNENDING SWARM DETACHMENT\n‘In your Command phase, each HARVESTER unit from your army can\nRegenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can Insurmountable Odds Detachment Rule\nonly be regenerated once per phase. Each time a unit regenerates, do Change to:\none of the following: 'In your opponent’s Shooting phase, when an enemy unit has shot, if\n▪ One model in that unit regains up to D3+1 lost wounds. a model from a friendly ENDLESS MULTITUDE unit was destroyed as a\n▪ One destroyed INFANTRY model (excluding CHARACTERS) is returned result of those attacks, that friendly unit can make a surge move of up\nto that unit with its full wounds remaining. If that unit is an ENDLESS to D6\".'\nMULTITUDE unit, up to 3 destroyed models are returned instead.’\nVANGUARD ONLSAUGHT DETACHMENT\nInstinctive Defence Enhancement Chameleonic Enhancement\nChange to: Change to:\nTYRANIDS model only. While the bearer is within 6\" of one or more ‘VANGUARD INVADER model only. This unit has Stealth.’\nfriendly HARVESTER units, when you target this unit with the Heroic\nIntervention stratagem, that use is ‑1 CP. In addition, while the bearer Neuronode Enhancement\nis within 6\" of one or more friendly HARVESTER units, models in the Change to:\nbearer's unit have the Fights First ability. ‘TYRANIDS model only. After both players have deployed their armies,\nyou can select up to three VANGUARD INVADER units from your army\nand redeploy all of those units. When doing so, any of those units can\nbe placed into Strategic Reserves, regardless of how many units are\nalready in Strategic Reserves.’\nHypersensory Scillia Stratagem, Target Section\nChange 9\" to 8\"."
+      "sha256": "3BB845FE9814A9B3D7C56FC910FCAFE647BBE06D3D24E39F2324F5BC7DC3B003",
+      "text": "TYRANIDS\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nCRUSHER STAMPEDE DETACHMENT\nUPDATES\nEnraged Behemoths Detachment Rule\nChange to:\nARMY RULES\n‘Each time a TYRANIDS MONSTER model from your army makes an attack,\nShadow in the Warp add 1 to the Hit roll if that model’s unit is below its Starting Strength,\nChange to: and add 1 to the Wound roll as well if that model’s unit is Below\n‘If your Army Faction is TYRANIDS, once per battle, in either player’s Half‑strength. In addition, while a TYRANIDS MONSTER unit from your\nCommand phase, if one or more units from your army with this ability army (excluding Battle‑shocked units) is at its Starting Strength, add 2\nare on the battlefield, you can unleash the Shadow in the Warp. When to the Objective Control characteristic of models in that unit.\nyou do, each enemy unit on the battlefield must take a Battle‑shock\ntest. Each time an enemy unit takes such a Battle‑shock test, if it is Untrammelled Ferocity Stratagem, Effect Section\nwithin 6\" of one or more SYNAPSE units from your army, subtract 1 from Change to:\nthat test.’ ‘Until the end of the phase, each time a model in your unit makes\na Normal, Advance or Fall Back move, it can move through models\nSynapse (excluding TITANIC models) and sections of terrain features that are 4\"\nChange to: or less in height. When doing so:\n‘If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army ▪ It can move within Engagement Range of enemy models, but cannot\nis within 6\" of one or more friendly SYNAPSE models, that TYRANIDS end that move within Engagement Range of them.\nunit is said to be within Synapse Range of that model and of your army. ▪ It can also move through sections of terrain features that are more\nWhile a TYRANIDS unit from your army is within Synapse Range of than 4\" in height, but if it does, after its unit has moved, roll one D6:\nyour army: on a 1, your unit is Battle‑shocked.’\n▪ Each time that unit takes a Battle‑shock test, take that test on 3D6\nSYNAPTIC NEXUS DETACHMENT\ninstead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Reinforced Hive Node Stratagem, Effect Section\nStrength characteristic of that attack.’ Change to:\n'Until the attacking unit has finished making its attacks, each time an\nASSIMILATION SWARM DETACHMENT\nattack targets your unit, worsen the Armour Penetration characteristic\nFeed the Swarm Detachment Rule of that attack by 1.’\nChange to:\nUNENDING SWARM DETACHMENT\n‘In your Command phase, each HARVESTER unit from your army can\nRegenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can Insurmountable Odds Detachment Rule\nonly be regenerated once per phase. Each time a unit regenerates, do Change to:\none of the following: 'In your opponent’s Shooting phase, when an enemy unit has shot, if\n▪ One model in that unit regains up to D3+1 lost wounds. a model from a friendly ENDLESS MULTITUDE unit was destroyed as a\n▪ One destroyed INFANTRY model (excluding CHARACTERS) is returned result of those attacks, that friendly unit can make a surge move of up\nto that unit with its full wounds remaining. If that unit is an ENDLESS to D6\".'\nMULTITUDE unit, up to 3 destroyed models are returned instead.’\nSynaptic Goading Stratagem, When and Effect Sections\nInstinctive Defence Enhancement Change to:\nChange to: ‘WHEN: Any phase, just before an ENDLESS MULTITUDE unit from your\nTYRANIDS model only. While the bearer is within 6\" of one or more army that is within Synapse Range of your army makes a surge move.\nfriendly HARVESTER units, when you target this unit with the Heroic EFFECT: When making that surge move, you can re‑roll the D6 to\nIntervention stratagem, that use is ‑1 CP. In addition, while the bearer determine how far your unit moves, and your unit can end that move\nis within 6\" of one or more friendly HARVESTER units, models in the as close as possible to the closest objective marker (instead of as close\nbearer's unit have the Fights First ability. as possible to the closest enemy unit). All other rules for making surge\nmoves still apply.’\nVANGUARD ONLSAUGHT DETACHMENT\nChameleonic Enhancement\nChange to:\n‘VANGUARD INVADER model only. This unit has Stealth.’"
     },
     "20": {
-      "sha256": "492B1C10272ADD3BC87E5A18C3055326845674C137663270CC5EC5C4D3B9C496",
-      "text": "DATASHEETS\nThe Swarmlord, Malign Presence Ability\nBiovores, Seed Spore Mine Ability Change to:\nChange 9\" to 8\". 'Once per turn, when your opponent targets a unit from their army\nwithin 12\" of this model with a stratagem, you can use this ability. If you\nBroodlord, Parasite of Mortrex do increase the CP cost of that use of that stratagem by 1CP.'\n▪ Abilities Section: Add ‘FACTION: Shadow in the Warp’\n▪ Keywords Section: Add 'SYNAPSE'. Termagants, Skulking Horrors Ability\nChange to:\nCarnifexes, Blistering Assault Ability 'In your opponent's Movement phase, if an enemy unit ends a move\nChange to: within 8\" of this unit, if this unit is not within Engagement Range of one\n'In your opponent’s Shooting phase, when an enemy unit has shot, if a or more enemy units, this unit can make a Normal move of up to D6\".\nmodel in this unit lost a wound as a result of those attacks, this unit can\nmake a surge move of up to D6+2\".' Trygon, Subterranean Tunnels Ability\nChange to:\nExocrine, Ranged Weapons, bio-plasmic cannon ‘In your Movement phase, when this model is set up on the battlefield\nChange S to '9'. using the Deep Strike ability, it can use a subterranean tunnel. If it does,\nthis model can be set up anywhere on the battlefield that is more than\nHive Tyrant, Onslaught Ability 6” horizontally away from all enemy units, but until the end of the turn,\nChange to: it is not eligible to declare a charge.’\n‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\nweapons equipped by models in that unit have the [ASSAULT] and Tyranid Warriors with Melee Bio-weapons, Adaptive Instincts Ability\n[LETHAL HITS] abilities.’ Change to:\n‘Adaptive Instincts (Once per turn, per unit): In the Fight phase, when\nHarpy, Spore Mine Cysts Ability this unit is selected to fight or when an enemy unit targets this unit,\nChange to: you can select one of the following:\n'At the end of your opponent’s Fight phase, you can do one of ▪ This unit’s melee attacks have +1 S.\nthe following: ▪ Or: This unit has +1 T.’\n▪ Select one visible enemy unit (excluding Lone Operative units)\nwithin 24\" of this unit and roll six D6 for that unit: for each 3+, that Tyrannocyte, Aerial Seeding Ability\nunit suffers 1 mortal wound. Change 9\" to 8\".\n▪ Add a new SPORE MINES unit containing D3 models to your army and\nset it up anywhere on the battlefield that is within 6\" of this model Tyrannofex, Ranged Weapons, Rupture Cannon\nand more than 8\" horizontally away from all enemy units. You cannot Change to:\nselect this option for more than one model per turn.'\nRupture Cannon [HEAVY]\nHive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability\nRANGE A BS S AP D\nChange to:\n48\" 2 3+ 18 ‑4 D6+6\n‘Once per battle round, one model from your army with this ability can\nuse it when a friendly TYRANIDS unit within 12\" of that model is targeted Venomthropes, Foul Spores ability\nwith a Stratagem. If it does, reduce the CP cost of that use of that Change to:\nStratagem by 1CP.’ ‘Friendly TYRANIDS units within 6\" of this unit have Stealth.’\nMawloc, Raveners, Trygon – Keywords Section Von Ryan's Leapers, Pouncing Leap ability\nAdd 'VANGUARD INVADER'. Change to:\n'You can target this unit with the Heroic Intervention stratagem,\nNeurolictor, Keywords Section regardless of any\nAdd 'SYNAPSE'. other uses of that stratagem this phase. If you do:\n▪ That use is ‑1 CP.\nNorn Assimilator, Keywords Section ▪ That use does not prevent any uses of that stratagem on other units\nAdd 'HARVESTER'. this phase.'\nPsychophage Harpy, Hive Crone\n▪ Profile – Change M to 12\". • Core Abilities: Remove 'Hover'.\n▪ Bio-stimulus Ability – Change to: ‘In your Shooting phase, after this • Profile: Change M and OC to '‑'.\nmodel has shot, select one enemy unit hit by one or more of those\nattacks. Until the end of the turn, each time a friendly TYRANIDS\nunit makes a melee attack that targets that enemy unit, improve\nthe Armour Penetration characteristic of that attack by 1. The same\nenemy unit can only be affected by this ability once per turn.'\n▪ Keywords – Add ‘SMOKE’.\n▪ Talons and Betentacled Maw Weapon – Change A to '6' and\nAP to '‑2'.\nSporocyst, Seed Mucolids Ability\nChange 9\" to 8\"."
+      "sha256": "B11A01B4A82861141C81461ED074A81B4C6AC20E3A7DC96A87C17201F06B4256",
+      "text": "Neuronode Enhancement Norn Assimilator, [HARPOONED] Weapon Ability\nChange to: Change to:\n‘TYRANIDS model only. After both players have deployed their armies, ‘Harpooned: When this unit declares a charge, if an enemy MONSTER/\nyou can select up to three VANGUARD INVADER units from your army VEHICLE unit is within 12\" of this unit and was hit by an attack made by\nand redeploy all of those units. When doing so, any of those units can this weapon this turn, you can use this ability. If you do:\nbe placed into Strategic Reserves, regardless of how many units are ▪ This unit has +2 to charge rolls until the end of the phase.\nalready in Strategic Reserves.’ ▪ This unit must end that charge move engaged with that\nMONSTER/VEHICLE unit.’\nHypersensory Scillia Stratagem, Target Section\nChange 9\" to 8\". Psychophage\n▪ Profile – Change M to 12\".\nDATASHEETS\n▪ Bio-stimulus Ability – Change to: ‘In your Shooting phase, after this\nBiovores, Seed Spore Mine Ability model has shot, select one enemy unit hit by one or more of those\nChange 9\" to 8\". attacks. Until the end of the turn, each time a friendly TYRANIDS\nunit makes a melee attack that targets that enemy unit, improve\nBroodlord, Parasite of Mortrex the Armour Penetration characteristic of that attack by 1. The same\n▪ Abilities Section: Add ‘FACTION: Shadow in the Warp’ enemy unit can only be affected by this ability once per turn.'\n▪ Keywords Section: Add 'SYNAPSE'. ▪ Keywords – Add ‘SMOKE’.\n▪ Talons and Betentacled Maw Weapon – Change A to '6' and\nCarnifexes, Blistering Assault Ability AP to '‑2'.\nChange to:\n'In your opponent’s Shooting phase, when an enemy unit has shot, if a Sporocyst, Seed Mucolids Ability\nmodel in this unit lost a wound as a result of those attacks, this unit can Change 9\" to 8\".\nmake a surge move of up to D6+2\".'\nThe Swarmlord, Malign Presence Ability\nExocrine, Ranged Weapons, bio-plasmic cannon Change to:\nChange S to '9'. 'Once per turn, when your opponent targets a unit from their army\nwithin 12\" of this model with a stratagem, you can use this ability. If you\nHive Tyrant, Onslaught Ability do increase the CP cost of that use of that stratagem by 1CP.'\nChange to:\n‘While a friendly TYRANIDSunit is within 6\" of this model, ranged Termagants, Skulking Horrors Ability\nweapons equipped by models in that unit have the [ASSAULT] and Change to:\n[LETHAL HITS] abilities.’ 'In your opponent's Movement phase, if an enemy unit ends a move\nwithin 8\" of this unit, if this unit is not within Engagement Range of one\nHarpy, Spore Mine Cysts Ability or more enemy units, this unit can make a Normal move of up to D6\".\nChange to:\n'At the end of your opponent’s Fight phase, you can do one of Trygon, Subterranean Tunnels Ability\nthe following: Change to:\n▪ Select one visible enemy unit (excluding Lone Operative units) ‘In your Movement phase, when this model is set up on the battlefield\nwithin 24\" of this unit and roll six D6 for that unit: for each 3+, that using the Deep Strike ability, it can use a subterranean tunnel. If it does,\nunit suffers 1 mortal wound. this model can be set up anywhere on the battlefield that is more than\n▪ Add a new SPORE MINES unit containing D3 models to your army and 6” horizontally away from all enemy units, but until the end of the turn,\nset it up anywhere on the battlefield that is within 6\" of this model it is not eligible to declare a charge.’\nand more than 8\" horizontally away from all enemy units. You cannot\nselect this option for more than one model per turn.' Tyranid Warriors with Melee Bio-weapons, Adaptive Instincts Ability\nChange to:\nHive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability ‘Adaptive Instincts (Once per turn, per unit): In the Fight phase, when\nChange to: this unit is selected to fight or when an enemy unit targets this unit,\n‘Once per battle round, one model from your army with this ability can you can select one of the following:\nuse it when a friendly TYRANIDS unit within 12\" of that model is targeted ▪ This unit’s melee attacks have +1 S.\nwith a Stratagem. If it does, reduce the CP cost of that use of that ▪ Or: This unit has +1 T.’\nStratagem by 1CP.’\nTyrannocyte, Aerial Seeding Ability\nMawloc, Raveners, Trygon – Keywords Section Change 9\" to 8\".\nAdd 'VANGUARD INVADER'.\nTyrannofex, Ranged Weapons, Rupture Cannon\nNeurolictor, Keywords Section Change to:\nAdd 'SYNAPSE'.\nRupture Cannon [HEAVY]\nNorn Assimilator, Keywords Section\nRANGE A BS S AP D\nAdd 'HARVESTER'.\n48\" 2 3+ 18 ‑4 D6+6\nVenomthropes, Foul Spores ability\nChange to:\n‘Friendly TYRANIDS units within 6\" of this unit have Stealth.’"
     },
     "21": {
-      "sha256": "288BFF65B7BEA0C2BDA3D18F0C8CA5569B0AD288E445E86CB0887C0099435BC7",
-      "text": "FAQS\nQ: Do units that are repositioned by rules that do not specify that the\nunit being repositioned is first placed into Reserves (e.g. the Grey Knights\nTeleport Assault rule) need to take a Battle‑shock test on a roll of 2+ if\na TYRANIDS CHARACTER with the Hunting Grounds Enhancement is on\nthe battlefield?\nA: Yes. Rules that are triggered by or apply to Reserves units are also\ntriggered by and apply to a repositioned unit when it is set back up.\nQ: Can I use the Rapid Regeneration Stratagem when an ability like\nDoombolt would inflict mortal wounds on a TYRANIDS unit from\nmy army?\nA: No.\nQ: When resolving a Mawloc’s Terror From the Deep ability, which units\nneed to take a Battle‑shock test: every unit within 12\" of the Mawloc, or\nonly those units for which a 5+ was rolled when resolving that ability?\nA: Only those units for which a 5+ was rolled.\nQ: If my opponent uses a rule to place a unit into Strategic Reserves\nduring the first battle round, and that rule states that the unit must\narrive on the battlefield in the next battle round, what happens if a\nmodel from my army uses the Psychostatic Disruption Enhancement in\nthe second battle round when that enemy Strategic Reserves unit is due\nto arrive?\nA: The ‘cannot arrive’ rule takes precedence over the rule stating that\nthe unit ‘must arrive’ from Strategic Reserves. Roll one D6: on a 4+, that\nenemy unit cannot arrive on the battlefield this turn.\nQ: If I select a unit of Neurogaunts for a Neurotyrant’s Neuroloids ability\nthat is not led by a SYNAPSE unit, does that unit of Neurogaunts gain the\nSYNAPSE keyword?\nA: No.\nQ: When using the Reclaim Biomass Stratagem, can the Stratagem effect\nbe used on the unit that was just destroyed?\nA: No.\nQ: Does an Attached unit containing a Hive Tyrant and Tyrant Guard\nreceive the Stealth ability from a Venomthrope’s Foul Spores ability?\nA: No. The unit has the MONSTER keyword and the ability\nexcludes MONSTERS.\nQ: Are Spore Mines units that are added to an army during a battle\nrestricted by abilities that prevent Reserves from being set up within a\ncertain range (e.g. Space Marines Infiltrators’ Omniscrambers)?\nA: No.\nQ: Does a unit affected by the Psychostatic Disruption Enhancement have\nto arrive from Reserves in the next Movement phase?\nA: No.\nQ: Does the Synaptic Goading Stratagem allow a unit to leave\nEngagement Range and move towards the closest objective marker?\nA: Yes.\nQ: Can units targeted by the Shadow in the Warp army rule use the\nInsane Bravery Stratagem?\nA: No. Insane Bravery can only be used in your Command phase.\nQ: While using the Subterranean Assault Detachment, does a Mawloc’s\nTerror from the Deep ability trigger when arriving via a Tunnel Marker?\nA: No."
+      "sha256": "488E701D7AE675368C6F6EA6B53CBBA95831EEF35E7A145F15053681000EEDB3",
+      "text": "Von Ryan's Leapers, Pouncing Leap ability Q: Does a unit affected by the Psychostatic Disruption Enhancement have\nChange to: to arrive from Reserves in the next Movement phase?\n'You can target this unit with the Heroic Intervention stratagem, A: No.\nregardless of any\nother uses of that stratagem this phase. If you do: Q: Does the Synaptic Goading Stratagem allow a unit to leave\n▪ That use is ‑1 CP. Engagement Range and move towards the closest objective marker?\n▪ That use does not prevent any uses of that stratagem on other units A: Yes.\nthis phase.'\nQ: Can units targeted by the Shadow in the Warp army rule use the\nHarpy, Hive Crone Insane Bravery Stratagem?\n• Core Abilities: Remove 'Hover'. A: No. Insane Bravery can only be used in your Command phase.\n• Profile: Change M and OC to '‑'.\nQ: While using the Subterranean Assault Detachment, does a Mawloc’s\nFAQS Terror from the Deep ability trigger when arriving via a Tunnel Marker?\nA: No.\nQ: Do units that are repositioned by rules that do not specify that the\nunit being repositioned is first placed into Reserves (e.g. the Grey Knights\nTeleport Assault rule) need to take a Battle‑shock test on a roll of 2+ if\na TYRANIDS CHARACTER with the Hunting Grounds Enhancement is on\nthe battlefield?\nA: Yes. Rules that are triggered by or apply to Reserves units are also\ntriggered by and apply to a repositioned unit when it is set back up.\nQ: Can I use the Rapid Regeneration Stratagem when an ability like\nDoombolt would inflict mortal wounds on a TYRANIDS unit from\nmy army?\nA: No.\nQ: When resolving a Mawloc’s Terror From the Deep ability, which units\nneed to take a Battle‑shock test: every unit within 12\" of the Mawloc, or\nonly those units for which a 5+ was rolled when resolving that ability?\nA: Only those units for which a 5+ was rolled.\nQ: If my opponent uses a rule to place a unit into Strategic Reserves\nduring the first battle round, and that rule states that the unit must\narrive on the battlefield in the next battle round, what happens if a\nmodel from my army uses the Psychostatic Disruption Enhancement in\nthe second battle round when that enemy Strategic Reserves unit is due\nto arrive?\nA: The ‘cannot arrive’ rule takes precedence over the rule stating that\nthe unit ‘must arrive’ from Strategic Reserves. Roll one D6: on a 4+, that\nenemy unit cannot arrive on the battlefield this turn.\nQ: If I select a unit of Neurogaunts for a Neurotyrant’s Neuroloids ability\nthat is not led by a SYNAPSE unit, does that unit of Neurogaunts gain the\nSYNAPSE keyword?\nA: No.\nQ: When using the Reclaim Biomass Stratagem, can the Stratagem effect\nbe used on the unit that was just destroyed?\nA: No.\nQ: Does an Attached unit containing a Hive Tyrant and Tyrant Guard\nreceive the Stealth ability from a Venomthrope’s Foul Spores ability?\nA: No. The unit has the MONSTER keyword and the ability\nexcludes MONSTERS.\nQ: Are Spore Mines units that are added to an army during a battle\nrestricted by abilities that prevent Reserves from being set up within a\ncertain range (e.g. Space Marines Infiltrators’ Omniscrambers)?\nA: No."
     },
     "22": {
       "sha256": "03B6885BB6BF0D98843E7AF7A1634FCD10584A138B04202996174A7155AEA615",
@@ -177,7 +177,7 @@
         2
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
@@ -189,7 +189,7 @@
           2
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             2
           ]
@@ -204,7 +204,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               2
             ]
@@ -221,7 +221,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               2
             ]
@@ -243,7 +243,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               2
             ]
@@ -260,7 +260,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               2
             ]
@@ -277,7 +277,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               2
             ]
@@ -292,7 +292,7 @@
         3
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -304,7 +304,7 @@
           3
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             3
           ]
@@ -319,7 +319,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               3
             ]
@@ -336,7 +336,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               3
             ]
@@ -358,7 +358,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               3
             ]
@@ -375,7 +375,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               3
             ]
@@ -392,7 +392,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               3
             ]
@@ -407,7 +407,7 @@
         4
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -419,7 +419,7 @@
           4
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             4
           ]
@@ -434,7 +434,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               4
             ]
@@ -449,7 +449,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               4
             ]
@@ -469,7 +469,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               4
             ]
@@ -486,7 +486,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               4
             ]
@@ -503,7 +503,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               4
             ]
@@ -519,7 +519,7 @@
         6
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           5,
           6
@@ -534,7 +534,7 @@
           5
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             5
           ]
@@ -549,7 +549,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               5
             ]
@@ -564,7 +564,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               5
             ]
@@ -579,7 +579,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               5
             ]
@@ -594,7 +594,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               5
             ]
@@ -615,7 +615,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               6
             ]
@@ -633,7 +633,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               6
             ]
@@ -651,7 +651,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               6
             ]
@@ -669,7 +669,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               6
             ]
@@ -687,7 +687,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               6
             ]
@@ -705,7 +705,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "tyranids-faction-pack-v1.1",
+            "sourceId": "tyranids-faction-pack-v1.2",
             "sourcePages": [
               6
             ]
@@ -724,7 +724,7 @@
           8
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             7,
             8
@@ -739,7 +739,7 @@
           10
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             9,
             10
@@ -754,7 +754,7 @@
           12
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             11,
             12
@@ -771,7 +771,7 @@
           14
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             13,
             14
@@ -786,7 +786,7 @@
           16
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             15,
             16
@@ -801,7 +801,7 @@
           18
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             17,
             18
@@ -818,7 +818,7 @@
           23
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             22,
             23
@@ -833,7 +833,7 @@
           25
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             24,
             25
@@ -848,7 +848,7 @@
           27
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             26,
             27
@@ -863,7 +863,7 @@
           29
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             28,
             29
@@ -878,7 +878,7 @@
           31
         ],
         "provenance": {
-          "sourceId": "tyranids-faction-pack-v1.1",
+          "sourceId": "tyranids-faction-pack-v1.2",
           "sourcePages": [
             30,
             31
@@ -897,7 +897,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -912,7 +912,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -927,7 +927,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -942,7 +942,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -957,7 +957,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -972,7 +972,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -987,7 +987,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -1002,7 +1002,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -1017,7 +1017,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -1032,7 +1032,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -1047,7 +1047,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1062,7 +1062,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1077,7 +1077,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1092,7 +1092,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1107,7 +1107,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1122,7 +1122,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1137,7 +1137,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1152,7 +1152,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1167,7 +1167,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1182,7 +1182,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1197,7 +1197,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1212,7 +1212,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1227,7 +1227,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1242,7 +1242,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1257,7 +1257,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1272,7 +1272,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1287,7 +1287,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1302,7 +1302,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1317,7 +1317,7 @@
         19
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           19
         ]
@@ -1332,7 +1332,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1347,7 +1347,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1362,7 +1362,7 @@
         20
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -1378,7 +1378,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1392,7 +1392,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1406,7 +1406,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1420,7 +1420,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1434,7 +1434,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1448,7 +1448,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1462,7 +1462,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1476,7 +1476,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1490,7 +1490,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1504,7 +1504,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1518,7 +1518,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]
@@ -1532,7 +1532,7 @@
         21
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           21
         ]

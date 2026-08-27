@@ -11,14 +11,14 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "chaos-space-marines-faction-pack-v1.1.pdf"
+PDF = ROOT / "sources" / "chaos-space-marines-faction-pack-v1.2.pdf"
 OUTPUT = ROOT / "content" / "chaos-space-marines-faction-pack.en.json"
 RELATED_OUTPUT = ROOT / "content" / "chaos-space-marines-related-rules.en.json"
 RELATED_BASE = ROOT / "sources" / "related-rules-base.en.json"
 CURRENT_DATASHEETS = ROOT / "content" / "chaos-space-marines-codex-datasheets.en.json"
 SECONDARY_CONSENSUS = ROOT / "sources" / "codex-secondary-consensus.en.json"
-SOURCE_ID = "chaos-space-marines-faction-pack-v1.1"
-EXPECTED_SHA256 = "407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998"
+SOURCE_ID = "chaos-space-marines-faction-pack-v1.2"
+EXPECTED_SHA256 = "F3A8D05ED88BAD5085D014BF76FAD684B60336F92CF75CF3AED30B989A33A495"
 EXPECTED_PAGE_COUNT = 102
 
 
@@ -309,9 +309,9 @@ def extract_source() -> tuple[dict, list, dict[str, dict]]:
             page_objects.append(page)
             page_data[str(number)] = {"sha256": hashlib.sha256(text.encode("utf-8")).hexdigest().upper(), "text": text}
         meta = {
-            "title": "Chaos Space Marines Faction Pack", "version": "1.1",
-            "legalFrom": "2026-07-22", "pageCount": len(document.pages),
-            "sha256": digest, "file": "sources/chaos-space-marines-faction-pack-v1.1.pdf",
+            "title": "Chaos Space Marines Faction Pack", "version": "1.2",
+            "legalFrom": "2026-08-26", "pageCount": len(document.pages),
+            "sha256": digest, "file": "sources/chaos-space-marines-faction-pack-v1.2.pdf",
         }
         detachments = extract_detachments(page_objects)
         faqs = parse_faqs(

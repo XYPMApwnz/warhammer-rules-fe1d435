@@ -950,8 +950,8 @@ window.DG_TERMS={
   },
   "datasheet-data-severed": {
     "title": "Data-severed",
-    "summary": "If there are no KASTELAN ROBOT models in this unit: \n- This unit loses VEHICLE.",
-    "full": "If there are no KASTELAN ROBOT models in this unit: \n- This unit loses VEHICLE. \n- This unit has INFANTRY.",
+    "summary": "If there are no KASTELAN ROBOT models in this unit:\n- This unit loses VEHICLE.",
+    "full": "If there are no KASTELAN ROBOT models in this unit:\n- This unit loses VEHICLE.\n- This unit has INFANTRY.",
     "glossary": "glossary-datasheet-data-severed",
     "rule": "unit-cybernetica-datasmith",
     "units": [

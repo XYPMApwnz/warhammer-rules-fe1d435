@@ -815,7 +815,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "intrinsicKeywords": [
         "Cybernetica Datasmith",
         "Tech-Priest",
-        "Infantry",
+        "Vehicle",
         "Character",
         "Imperium",
         "Adeptus Mechanicus",
@@ -881,7 +881,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "id": "datasheet-data-severed",
             "sectionId": "datasheet-data-severed",
             "title": "Data-severed",
-            "text": "If there are no KASTELAN ROBOT models in this unit: \n- This unit loses VEHICLE. \n- This unit has INFANTRY.",
+            "text": "If there are no KASTELAN ROBOT models in this unit:\n- This unit loses VEHICLE.\n- This unit has INFANTRY.",
             "sourceUnitId": "unit-cybernetica-datasmith"
           },
           {

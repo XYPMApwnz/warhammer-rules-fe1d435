@@ -1,0 +1,1224 @@
+{
+  "schema": 1,
+  "title": "Munitorum Field Manual",
+  "version": "v1.3",
+  "verifiedAt": "2026-08-27",
+  "url": "https://mfm.warhammer-community.com/en/tyranids",
+  "captureSha256": "46799B10FDE1CBCB38D947DB719E15561D22891F565A99EA254CD168AF4F429C",
+  "detachments": [
+    {
+      "title": "AMBUSH PREDATORS",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "ASSIMILATION SWARM",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "CRUSHER STAMPEDE",
+      "forceDisposition": "Purge The Foe",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "INVASION FLEET",
+      "forceDisposition": "Take And Hold",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "SUBTERRANEAN ASSAULT",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "SYNAPTIC NEXUS",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "TALONS OF THE NORN QUEEN",
+      "forceDisposition": "Take And Hold",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "UNENDING SWARM",
+      "forceDisposition": "Take And Hold",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "VANGUARD ONSLAUGHT",
+      "forceDisposition": "Reconnaissance",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "WARRIOR BIOFORM ONSLAUGHT",
+      "forceDisposition": "Take And Hold",
+      "detachmentPoints": 1
+    }
+  ],
+  "verifiedUnits": [
+    "BARBGAUNTS",
+    "BIOVORES",
+    "BROODLORD",
+    "CARNIFEXES",
+    "DEATHLEAPER",
+    "EXOCRINE",
+    "GARGOYLES",
+    "GENESTEALERS",
+    "HARPY",
+    "HARRIDAN",
+    "HARUSPEX",
+    "HIEROPHANT",
+    "HIVE CRONE",
+    "HIVE GUARD",
+    "HIVE TYRANT",
+    "HORMAGAUNTS",
+    "HYPERADAPTED RAVENERS",
+    "LICTOR",
+    "MALECEPTOR",
+    "MAWLOC",
+    "MUCOLID SPORES",
+    "NEUROGAUNTS",
+    "NEUROLICTOR",
+    "NEUROTYRANT",
+    "NORN ASSIMILATOR",
+    "NORN EMISSARY",
+    "OLD ONE EYE",
+    "PARASITE OF MORTREX",
+    "PSYCHOPHAGE",
+    "PYROVORES",
+    "RAVENERS",
+    "RIPPER SWARMS",
+    "SCREAMER-KILLER",
+    "SPORE MINES",
+    "SPOROCYST",
+    "TERMAGANTS",
+    "TERVIGON",
+    "THE RED TERROR",
+    "THE SWARMLORD",
+    "TOXICRENE",
+    "TRYGON",
+    "TYRANID PRIME WITH LASH WHIP",
+    "TYRANID WARRIORS WITH MELEE BIO-WEAPONS",
+    "TYRANID WARRIORS WITH RANGED BIO-WEAPONS",
+    "TYRANNOCYTE",
+    "TYRANNOFEX",
+    "TYRANT GUARD",
+    "VENOMTHROPES",
+    "VON RYAN’S LEAPERS",
+    "WINGED HIVE TYRANT",
+    "WINGED TYRANID PRIME",
+    "ZOANTHROPES"
+  ],
+  "unitOverrides": [
+    {
+      "title": "BARBGAUNTS",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 55,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 110,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "BIOVORES",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2 models",
+          "value": 100,
+          "minModels": 2,
+          "maxModels": 2
+        },
+        {
+          "label": "3 models",
+          "value": 140,
+          "minModels": 3,
+          "maxModels": 3
+        }
+      ]
+    },
+    {
+      "title": "BROODLORD",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "GENESTEALERS"
+      ]
+    },
+    {
+      "title": "CARNIFEXES",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2 models",
+          "value": 180,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ]
+    },
+    {
+      "title": "DEATHLEAPER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "EXOCRINE",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "GARGOYLES",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 80,
+          "minModels": 10,
+          "maxModels": 10
+        },
+        {
+          "label": "20 models",
+          "value": 155,
+          "minModels": 20,
+          "maxModels": 20
+        }
+      ]
+    },
+    {
+      "title": "GENESTEALERS",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 5 models",
+          "value": 75,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 10 models",
+          "value": 140,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 150,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "HARPY",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 185,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "HARRIDAN",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 610,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 660,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ]
+    },
+    {
+      "title": "HARUSPEX",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 125,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "HIEROPHANT",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 810,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 910,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ]
+    },
+    {
+      "title": "HIVE CRONE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "HIVE GUARD",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 3 models",
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "HIVE TYRANT",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 195,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "TYRANT GUARD"
+      ]
+    },
+    {
+      "title": "HORMAGAUNTS",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 70,
+          "minModels": 10,
+          "maxModels": 10
+        },
+        {
+          "label": "11-20 models",
+          "value": 120,
+          "minModels": 11,
+          "maxModels": 20
+        }
+      ]
+    },
+    {
+      "title": "HYPERADAPTED RAVENERS",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 5 models",
+          "value": 165,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 175,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        }
+      ],
+      "leader": [
+        "RAVENERS"
+      ]
+    },
+    {
+      "title": "LICTOR",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "MALECEPTOR",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "MAWLOC",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "MUCOLID SPORES",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 30,
+          "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2 models",
+          "value": 60,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ]
+    },
+    {
+      "title": "NEUROGAUNTS",
+      "points": [
+        {
+          "label": "11 models",
+          "value": 45,
+          "minModels": 11,
+          "maxModels": 11
+        },
+        {
+          "label": "22 models",
+          "value": 90,
+          "minModels": 22,
+          "maxModels": 22
+        }
+      ]
+    },
+    {
+      "title": "NEUROLICTOR",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "NEUROTYRANT",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "NEUROGAUNTS",
+        "TYRANT GUARD",
+        "ZOANTHROPES"
+      ]
+    },
+    {
+      "title": "NORN ASSIMILATOR",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 250,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 270,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ]
+    },
+    {
+      "title": "NORN EMISSARY",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 250,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 270,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ]
+    },
+    {
+      "title": "OLD ONE EYE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CARNIFEXES"
+      ]
+    },
+    {
+      "title": "PARASITE OF MORTREX",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "PSYCHOPHAGE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 110,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "PYROVORES",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 2 models",
+          "value": 65,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 3 models",
+          "value": 95,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 2 models",
+          "value": 75,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 105,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "RAVENERS",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 5 models",
+          "value": 125,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "RIPPER SWARMS",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 30,
+          "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2 models",
+          "value": 40,
+          "minModels": 2,
+          "maxModels": 2
+        },
+        {
+          "label": "3 models",
+          "value": 50,
+          "minModels": 3,
+          "maxModels": 3
+        }
+      ]
+    },
+    {
+      "title": "SCREAMER-KILLER",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 125,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "SPORE MINES",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 55,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 110,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "SPOROCYST",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 145,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "TERMAGANTS",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 60,
+          "minModels": 10,
+          "maxModels": 10
+        },
+        {
+          "label": "11-20 models",
+          "value": 110,
+          "minModels": 11,
+          "maxModels": 20
+        }
+      ]
+    },
+    {
+      "title": "TERVIGON",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "THE RED TERROR",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "THE SWARMLORD",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 210,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "TYRANT GUARD"
+      ]
+    },
+    {
+      "title": "TOXICRENE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 120,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "TRYGON",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "TYRANID PRIME WITH LASH WHIP",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "HORMAGAUNTS",
+        "TERMAGANTS",
+        "TYRANID WARRIORS WITH MELEE BIO-WEAPONS",
+        "TYRANID WARRIORS WITH RANGED BIO-WEAPONS"
+      ]
+    },
+    {
+      "title": "TYRANID WARRIORS WITH MELEE BIO-WEAPONS",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "TYRANID WARRIORS WITH RANGED BIO-WEAPONS",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 60,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 120,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "TYRANNOCYTE",
+      "points": [
+        {
+          "label": "1st to 3rd unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
+        },
+        {
+          "label": "4th + unit · 1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
+        }
+      ]
+    },
+    {
+      "title": "TYRANNOFEX",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Acid spray",
+          "value": 10,
+          "modifiers": []
+        },
+        {
+          "name": "Rupture cannon",
+          "value": 20,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "TYRANT GUARD",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "VENOMTHROPES",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 55,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 110,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "VON RYAN’S LEAPERS",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 55,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 105,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "WINGED HIVE TYRANT",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 185,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "WINGED TYRANID PRIME",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 65,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "GARGOYLES",
+        "TYRANID WARRIORS WITH MELEE BIO-WEAPONS",
+        "TYRANID WARRIORS WITH RANGED BIO-WEAPONS"
+      ]
+    },
+    {
+      "title": "ZOANTHROPES",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 200,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    }
+  ],
+  "enhancements": [
+    {
+      "title": "Cryptophotaic Camouflage (Upgrade)",
+      "detachment": "AMBUSH PREDATORS",
+      "value": 15,
+      "sourceTitle": "Cryptophotaic Camouflage"
+    },
+    {
+      "title": "Encircling Horrors (Upgrade)",
+      "detachment": "AMBUSH PREDATORS",
+      "value": 20,
+      "sourceTitle": "Encircling Horrors"
+    },
+    {
+      "title": "Biophagic Flow",
+      "detachment": "ASSIMILATION SWARM",
+      "value": 10,
+      "sourceTitle": "Biophagic Flow (Aura)"
+    },
+    {
+      "title": "Instinctive Defence",
+      "detachment": "ASSIMILATION SWARM",
+      "value": 15,
+      "sourceTitle": "Instinctive Defense"
+    },
+    {
+      "title": "Parasitic Biomorphology",
+      "detachment": "ASSIMILATION SWARM",
+      "value": 25
+    },
+    {
+      "title": "Regenerating Monstrosity",
+      "detachment": "ASSIMILATION SWARM",
+      "value": 20
+    },
+    {
+      "title": "Enraged Reserves",
+      "detachment": "CRUSHER STAMPEDE",
+      "value": 20
+    },
+    {
+      "title": "Monstrous Nemesis",
+      "detachment": "CRUSHER STAMPEDE",
+      "value": 25
+    },
+    {
+      "title": "Null Nodules",
+      "detachment": "CRUSHER STAMPEDE",
+      "value": 10
+    },
+    {
+      "title": "Ominous Presence",
+      "detachment": "CRUSHER STAMPEDE",
+      "value": 15
+    },
+    {
+      "title": "Adaptive Biology",
+      "detachment": "INVASION FLEET",
+      "value": 25
+    },
+    {
+      "title": "Alien Cunning",
+      "detachment": "INVASION FLEET",
+      "value": 30
+    },
+    {
+      "title": "Perfectly Adapted",
+      "detachment": "INVASION FLEET",
+      "value": 15
+    },
+    {
+      "title": "Synaptic Linchpin",
+      "detachment": "INVASION FLEET",
+      "value": 20
+    },
+    {
+      "title": "Synaptic Strategy",
+      "detachment": "SUBTERRANEAN ASSAULT",
+      "value": 15,
+      "sourceTitle": "Synaptic Synergy"
+    },
+    {
+      "title": "Tremor Senses",
+      "detachment": "SUBTERRANEAN ASSAULT",
+      "value": 20
+    },
+    {
+      "title": "Trygon Prime",
+      "detachment": "SUBTERRANEAN ASSAULT",
+      "value": 20
+    },
+    {
+      "title": "Vanguard Intellect",
+      "detachment": "SUBTERRANEAN ASSAULT",
+      "value": 15
+    },
+    {
+      "title": "Power of the Hive Mind",
+      "detachment": "SYNAPTIC NEXUS",
+      "value": 10
+    },
+    {
+      "title": "Psychostatic Disruption (Aura)",
+      "detachment": "SYNAPTIC NEXUS",
+      "value": 30
+    },
+    {
+      "title": "Synaptic Control",
+      "detachment": "SYNAPTIC NEXUS",
+      "value": 20
+    },
+    {
+      "title": "The Dirgeheart of Kharis",
+      "detachment": "SYNAPTIC NEXUS",
+      "value": 15,
+      "sourceTitle": "The Dirgeheart of Kharis (Aura)"
+    },
+    {
+      "title": "Destabilising Predation (Upgrade)",
+      "detachment": "TALONS OF THE NORN QUEEN",
+      "value": 20,
+      "sourceTitle": "Destabilising Predation"
+    },
+    {
+      "title": "Synaptoprescience (Upgrade)",
+      "detachment": "TALONS OF THE NORN QUEEN",
+      "value": 25,
+      "sourceTitle": "Synaptoprescience"
+    },
+    {
+      "title": "Adrenalised Onslaught",
+      "detachment": "UNENDING SWARM",
+      "value": 15
+    },
+    {
+      "title": "Naturalised camouflage",
+      "detachment": "UNENDING SWARM",
+      "value": 30,
+      "sourceTitle": "Naturalised Camoflage"
+    },
+    {
+      "title": "Piercing Talons",
+      "detachment": "UNENDING SWARM",
+      "value": 25
+    },
+    {
+      "title": "Relentless Hunger",
+      "detachment": "UNENDING SWARM",
+      "value": 20
+    },
+    {
+      "title": "Chameleonic",
+      "detachment": "VANGUARD ONSLAUGHT",
+      "value": 15
+    },
+    {
+      "title": "Hunting Grounds",
+      "detachment": "VANGUARD ONSLAUGHT",
+      "value": 30
+    },
+    {
+      "title": "Neuronode",
+      "detachment": "VANGUARD ONSLAUGHT",
+      "value": 20
+    },
+    {
+      "title": "Stalker",
+      "detachment": "VANGUARD ONSLAUGHT",
+      "value": 10
+    },
+    {
+      "title": "Elevated Might",
+      "detachment": "WARRIOR BIOFORM ONSLAUGHT",
+      "value": 30
+    },
+    {
+      "title": "Ocular Adaptation",
+      "detachment": "WARRIOR BIOFORM ONSLAUGHT",
+      "value": 20
+    }
+  ]
+}

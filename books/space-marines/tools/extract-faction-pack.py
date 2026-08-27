@@ -12,14 +12,14 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "space-marines-faction-pack-v1.1.pdf"
+PDF = ROOT / "sources" / "space-marines-faction-pack-v1.2.pdf"
 OUTPUT = ROOT / "content" / "space-marines-faction-pack.en.json"
 RELATED = ROOT / "content" / "space-marines-related-rules.en.json"
 POINTS = ROOT / "content" / "space-marines-points.en.json"
 CODEX = ROOT / "content" / "space-marines-codex-datasheets.en.json"
 BSDATA = ROOT.parents[1] / "tmp" / "bsdata-wh40k-11e" / "Imperium - Space Marines.json"
 BSDATA_LIBRARY = ROOT.parents[1] / "tmp" / "bsdata-wh40k-11e" / "Library - Astartes Heresy Legends.json"
-SOURCE_ID = "space-marines-faction-pack-v1.1"
+SOURCE_ID = "space-marines-faction-pack-v1.2"
 
 DETACHMENTS = [
     ("Fulguris Task Force", 2, 2),
@@ -147,11 +147,11 @@ def pdf_source() -> tuple[dict, dict[str, dict], list[str]]:
             }
         meta = {
             "title": "Space Marines Faction Pack",
-            "version": "1.1",
-            "legalFrom": "2026-07-22",
+            "version": "1.2",
+            "legalFrom": "2026-08-26",
             "pageCount": len(document.pages),
             "sha256": digest,
-            "file": "sources/space-marines-faction-pack-v1.1.pdf",
+            "file": "sources/space-marines-faction-pack-v1.2.pdf",
         }
     return meta, pages, texts
 

@@ -79,6 +79,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-wardens-of-ultramar",
+            "maxCharacters": 2
           }
         ]
       },
@@ -139,6 +143,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-lieutenant",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-wardens-of-ultramar",
               "maxCharacters": 2
             }
           ]
@@ -726,6 +734,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-wardens-of-ultramar",
+            "maxCharacters": 2
           }
         ]
       },
@@ -786,6 +798,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-lieutenant",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-wardens-of-ultramar",
               "maxCharacters": 2
             }
           ]
@@ -12395,7 +12411,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "relations": {
         "canLead": [],
-        "canSupport": [],
+        "canSupport": [
+          {
+            "unitId": "unit-assault-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          }
+        ],
         "canBeLedBy": [
           {
             "unitId": "unit-lieutenant-titus",
@@ -12407,7 +12440,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleFacts": {
         "relations": {
           "canLead": [],
-          "canSupport": [],
+          "canSupport": [
+            {
+              "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad",
+              "maxCharacters": 2
+            }
+          ],
           "canBeLedBy": [
             {
               "unitId": "unit-lieutenant-titus",
@@ -12437,13 +12487,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sectionId": "space-marines-ability-strategium-command",
             "title": "Strategium Command",
             "text": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it\nis embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-            "sourceUnitId": "unit-wardens-of-ultramar"
-          },
-          {
-            "id": "space-marines-ability-heroes-of-ultramar",
-            "sectionId": "space-marines-ability-heroes-of-ultramar",
-            "title": "Heroes of Ultramar",
-            "text": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This\nunit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is\nincreased accordingly.\n\n\n■ ASSAULT INTERCESSOR SQUAD\n■ BLADEGUARD VETERAN SQUAD\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n\n\nThis unit cannot join an Attached unit, and only Captain Titus can join a unit this unit has joined.",
             "sourceUnitId": "unit-wardens-of-ultramar"
           },
           {
@@ -13597,6 +13640,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-wardens-of-ultramar",
+            "maxCharacters": 2
           }
         ]
       },
@@ -13645,6 +13692,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeSupportedBy": [
             {
               "unitId": "unit-lieutenant",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-wardens-of-ultramar",
               "maxCharacters": 2
             }
           ]
@@ -18172,6 +18223,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-wardens-of-ultramar",
+            "maxCharacters": 2
           }
         ]
       },
@@ -18232,6 +18287,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-lieutenant",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-wardens-of-ultramar",
               "maxCharacters": 2
             }
           ]
@@ -27622,7 +27681,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "legacyKey": "anvil-siege-force-stoic-defender",
       "title": "STOIC DEFENDER",
-      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
       "value": 15,
       "detachment": "Anvil Siege Force",
       "tags": [],
@@ -31690,7 +31749,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   },
   "anvil-siege-force-stoic-defender": {
     "title": "STOIC DEFENDER",
-    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
     "value": 15,
     "detachment": "Anvil Siege Force",
     "tags": [],

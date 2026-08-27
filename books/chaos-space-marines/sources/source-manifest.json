@@ -1,19 +1,19 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-08-12",
+  "verifiedAt": "2026-08-27",
   "layers": [
     {
-      "id": "faction-pack-v1.1",
+      "id": "faction-pack-v1.2",
       "authority": "official",
       "role": "11e-overlay",
-      "title": "Chaos Space Marines Faction Pack v1.1",
-      "legalFrom": "2026-07-22",
+      "title": "Chaos Space Marines Faction Pack v1.2",
+      "legalFrom": "2026-08-26",
       "retrievedAt": "2026-08-11",
       "frozenAt": "2026-08-11",
       "pageCount": 102,
-      "sha256": "407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998",
+      "sha256": "F3A8D05ED88BAD5085D014BF76FAD684B60336F92CF75CF3AED30B989A33A495",
       "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
-      "localFile": "chaos-space-marines-faction-pack-v1.1.pdf"
+      "localFile": "chaos-space-marines-faction-pack-v1.2.pdf"
     },
     {
       "id": "codex-transcription",
@@ -29,14 +29,14 @@
       "id": "mfm",
       "authority": "official",
       "role": "points-and-roster-contract",
-      "title": "Munitorum Field Manual v1.2 dated capture",
-      "version": "v1.2",
-      "updated": "2026-07-22",
-      "retrievedAt": "2026-08-12",
-      "frozenAt": "2026-08-12",
-      "captureSha256": "F68930AD770E1FCA6BDB97C86AF9B1C87F2AFF8505F6D3ECE3C13924EC037EFB",
+      "title": "Munitorum Field Manual v1.3 dated capture",
+      "version": "v1.3",
+      "updated": "2026-08-26",
+      "retrievedAt": "2026-08-27",
+      "frozenAt": "2026-08-27",
+      "captureSha256": "D4D1932FC8B50B83DECE5038C135B04B32C5860D0E0DFB0655FF62E88E2778E5",
       "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-      "localFile": "official-mfm-v1.2.json",
+      "localFile": "official-mfm-v1.3.json",
       "status": "dated-live-capture",
       "captureHashScope": "normalizedPayload"
     }
@@ -44,7 +44,7 @@
   "gates": {
     "publishAsComplete": false,
     "reviewLabel": "Verification build",
-    "reason": "Official Faction Pack v1.1 is frozen; official live MFM v1.2 is preserved as a dated repository capture verified 12 August 2026; base sizes are verified against the official GW Event Companion Base Size Guide updated June 2026. Codex-only text is complete under secondary consensus, but no frozen authoritative Codex source is available, so publishAsComplete remains false."
+    "reason": "Official Faction Pack v1.2 is frozen; official live MFM v1.3 is preserved as a dated repository capture verified 27 August 2026; base sizes are verified against the official GW Event Companion Base Size Guide updated June 2026. Codex-only text is complete under secondary consensus, but no frozen authoritative Codex source is available, so publishAsComplete remains false."
   },
   "secondaryConsensus": {
     "authority": "secondary",

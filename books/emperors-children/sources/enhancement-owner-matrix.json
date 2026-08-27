@@ -87,7 +87,7 @@
     "enhancement-possessed-blade": {
       "title": "Possessed Blade",
       "detachmentId": "carnival-of-excess",
-      "points": 25,
+      "points": 35,
       "tags": [],
       "ownerGroup": "emperors-children-character",
       "authority": "secondary-bsdata-carry-forward"
@@ -95,7 +95,7 @@
     "enhancement-warp-walker": {
       "title": "Warp Walker",
       "detachmentId": "carnival-of-excess",
-      "points": 30,
+      "points": 35,
       "tags": [],
       "ownerGroup": "emperors-children-character",
       "authority": "secondary-bsdata-carry-forward"

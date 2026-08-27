@@ -48,6 +48,8 @@
     "test": "npm run test:preview",
     "csm:check": "node books/shared/tools/build-army-book.mjs books/chaos-space-marines/book.config.json --check && node books/chaos-space-marines/tools/build-compatible-rules.mjs --check && node books/chaos-space-marines/mobile/build.mjs --check && node books/chaos-space-marines/tests/abilities-qa.mjs && npm run csm:wargear:qa && npm run csm:consensus:qa",
     "csm:wargear:qa": "node books/chaos-space-marines/tests/wargear-options-qa.mjs",
-    "csm:consensus:qa": "node books/chaos-space-marines/tests/secondary-consensus-qa.mjs"
+    "csm:consensus:qa": "node books/chaos-space-marines/tests/secondary-consensus-qa.mjs",
+    "gw-update:check": "node tests/gw-2026-08-26-update-qa.mjs",
+    "gw-update:browser": "node tests/browser/gw-2026-08-26-update.mjs"
   }
 }

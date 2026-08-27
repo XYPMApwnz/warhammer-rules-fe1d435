@@ -6324,17 +6324,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-masters-of-the-maelstrom"
           },
           {
-            "id": "chaos-space-marines-ability-masters-of-the-maelstrom",
-            "sectionId": "chaos-space-marines-ability-masters-of-the-maelstrom",
-            "title": "Masters of the Maelstrom",
-            "text": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly.\n- Chosen, Legionaries, Red Corsairs Raiders \n\n\nThis unit cannot join an Attached unit, and only Huron Blackheart can join a unit this unit has joined.",
-            "sourceUnitId": "unit-masters-of-the-maelstrom"
-          },
-          {
             "id": "chaos-space-marines-ability-dark-pacts",
             "sectionId": "chaos-space-marines-ability-dark-pacts",
             "title": "Dark Pacts",
             "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]",
+            "sourceUnitId": "unit-masters-of-the-maelstrom"
+          },
+          {
+            "id": "core-support",
+            "sectionId": "core-support",
+            "title": "Support",
+            "text": "",
             "sourceUnitId": "unit-masters-of-the-maelstrom"
           }
         ],
@@ -14267,7 +14267,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Sv": "3+",
           "W": "12",
           "Ld": "6+",
-          "OC": "-",
+          "OC": "0",
           "Invulnerable": "5+",
           "Base": "120x92mm Oval Base"
         },

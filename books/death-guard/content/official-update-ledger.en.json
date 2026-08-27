@@ -4,7 +4,7 @@
     {
       "id": "dg-fp-1.1-p7-contagion-range-cap",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -23,7 +23,7 @@
     {
       "id": "dg-fp-1.1-p7-skullsquirm-blight",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -33,7 +33,7 @@
           "title": "Skullsquirm Blight",
           "field": "text",
           "expectedBefore": null,
-          "effectiveAfter": "Each time a model in this unit makes a melee attack, subtract 1 from the Hit roll.",
+          "effectiveAfter": "Each time a model in this unit makes a ranged attack, enemy units have the Benefit of Cover against that attack.\nEach time a model in this unit makes a melee attack, subtract 1 from the Hit roll.",
           "unavailableReason": null,
           "glossaryTermId": "death-guard-plagues-skullsquirm-blight"
         }
@@ -42,7 +42,7 @@
     {
       "id": "dg-fp-1.1-p7-beckoning-blight",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -61,7 +61,7 @@
     {
       "id": "dg-fp-1.1-p7-frame-keywords",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -210,7 +210,7 @@
     {
       "id": "dg-fp-1.1-p7-typhus-eater-plague",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -230,7 +230,7 @@
     {
       "id": "dg-fp-1.1-p7-predator-autocannon-strength",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -250,7 +250,7 @@
     {
       "id": "dg-fp-1.1-p7-death-approaches",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -270,7 +270,7 @@
     {
       "id": "dg-fp-1.1-p7-worldblight",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -289,7 +289,7 @@
     {
       "id": "dg-fp-1.1-p7-mortarion-lord-of-the-death-guard",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [
@@ -320,7 +320,7 @@
     {
       "id": "dg-fp-1.1-p7-spore-laced-shock-waves-faq",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.1",
+        "documentId": "death-guard-faction-pack-v1.2",
         "page": 7
       },
       "targets": [

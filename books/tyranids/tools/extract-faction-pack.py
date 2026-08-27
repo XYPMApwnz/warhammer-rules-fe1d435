@@ -10,7 +10,7 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "tyranids-faction-pack-v1.1.pdf"
+PDF = ROOT / "sources" / "tyranids-faction-pack-v1.2.pdf"
 OUTPUT = ROOT / "content" / "tyranids-faction-pack.en.json"
 
 
@@ -53,11 +53,11 @@ def extract_source() -> tuple[dict, dict[str, dict]]:
             }
         meta = {
             "title": "Tyranids Faction Pack",
-            "version": "1.1",
-            "legalFrom": "2026-07-22",
+            "version": "1.2",
+            "legalFrom": "2026-08-26",
             "pageCount": len(document.pages),
             "sha256": digest,
-            "file": "sources/tyranids-faction-pack-v1.1.pdf",
+            "file": "sources/tyranids-faction-pack-v1.2.pdf",
         }
     return meta, pages
 
@@ -106,7 +106,7 @@ def validate(data: dict) -> list[str]:
             if not pages or any(not isinstance(page, int) or page < 1 or page > page_count for page in pages):
                 errors.append(f"{item.get('id')}: invalid sourcePages")
             provenance = item.get("provenance", {})
-            if provenance.get("sourceId") != "tyranids-faction-pack-v1.1" or provenance.get("sourcePages") != pages:
+            if provenance.get("sourceId") != "tyranids-faction-pack-v1.2" or provenance.get("sourcePages") != pages:
                 errors.append(f"{item.get('id')}: invalid provenance")
     return errors
 
@@ -129,7 +129,7 @@ def main() -> int:
     data["meta"] = meta
     data["pages"] = pages
     data["provenance"] = {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": list(range(1, meta["pageCount"] + 1)),
     }
     removed_faqs = {"surge-move-choice", "blistering-assault-zero-move"}
@@ -177,7 +177,7 @@ def main() -> int:
         collections.extend(([detachment.get("rule", {})], detachment.get("enhancements", []), detachment.get("stratagems", [])))
     for collection in collections:
         for item in collection:
-            item.setdefault("provenance", {})["sourceId"] = "tyranids-faction-pack-v1.1"
+            item.setdefault("provenance", {})["sourceId"] = "tyranids-faction-pack-v1.2"
             item["provenance"]["sourcePages"] = item.get("sourcePages", [])
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Refreshed {OUTPUT.name}")

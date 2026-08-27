@@ -4678,18 +4678,6 @@
         ]
       }
     },
-    "space-marines-ability-heroes-of-ultramar": {
-      "termId": "space-marines-ability-heroes-of-ultramar",
-      "navigation": {
-        "glossary": "glossary-space-marines-ability-heroes-of-ultramar",
-        "rule": "unit-wardens-of-ultramar",
-        "datasheet": "unit-wardens-of-ultramar",
-        "statline": "wardens-of-ultramar-profile",
-        "units": [
-          "unit-wardens-of-ultramar"
-        ]
-      }
-    },
     "space-marines-ability-storm-shield-2": {
       "termId": "space-marines-ability-storm-shield-2",
       "navigation": {

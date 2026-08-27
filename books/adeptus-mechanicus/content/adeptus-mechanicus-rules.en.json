@@ -1,15 +1,15 @@
 {
   "schema": 2,
-  "version": "adeptus-mechanicus-faction-pack-v1.1-full",
+  "version": "adeptus-mechanicus-faction-pack-v1.2-full",
   "title": "Adeptus Mechanicus Rules",
-  "subtitle": "Complete local reference for Faction Pack v1.1, including Warhammer Legends",
+  "subtitle": "Complete local reference for Faction Pack v1.2, including Warhammer Legends",
   "source": {
     "title": "Adeptus Mechanicus Faction Pack",
-    "version": "1.1",
-    "legalFrom": "2026-07-22",
+    "version": "1.2",
+    "legalFrom": "2026-08-26",
     "pages": 27,
-    "sha256": "FC8D366B0615CDE750E01924277D4A42B680639B1BF96E3823E7FCCE11241345",
-    "file": "sources/adeptus-mechanicus-faction-pack-v1.1.pdf"
+    "sha256": "76819664005154632450E45677D609AA3934DEE965317F74DFEDC26EFC3467AB",
+    "file": "sources/adeptus-mechanicus-faction-pack-v1.2.pdf"
   },
   "armyRule": {
     "id": "army-rule-doctrina",

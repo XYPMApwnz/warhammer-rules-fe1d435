@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-08-13",
+  "verifiedAt": "2026-08-27",
   "layers": [
     {
       "id": "faction-pack-v1.1",
@@ -20,13 +20,13 @@
       "id": "mfm",
       "authority": "official",
       "role": "points-and-roster-contract",
-      "title": "Munitorum Field Manual",
-      "updated": "2026-07-22",
-      "version": "v1.2",
-      "capturedAt": "2026-08-12",
+      "title": "Munitorum Field Manual v1.3",
+      "updated": "2026-08-26",
+      "version": "v1.3",
+      "capturedAt": "2026-08-27",
       "url": "https://mfm.warhammer-community.com/en/blood-angels",
-      "localFile": "official-mfm-v1.2.json",
-      "captureSha256": "7C71D30BB696EC9D2ADF243B7C1311A2A30A426A05E5C713A074FAF744269EA4",
+      "localFile": "official-mfm-v1.3.json",
+      "captureSha256": "20885BCA24A66FE358AB3F6DDB3252CA9E3B2BB6524D426A0F2828F3CB23602F",
       "status": "dated-capture"
     }
   ],
@@ -57,7 +57,7 @@
     {
       "id": "BA-GAP-003",
       "status": "closed",
-      "reason": "Current official MFM v1.2 is preserved as a dated repository capture."
+      "reason": "Current official MFM v1.3 is preserved as a dated repository capture."
     },
     {
       "id": "BA-GAP-004",
@@ -68,6 +68,6 @@
   "gates": {
     "publishAsComplete": false,
     "reviewLabel": "Source-limited preview",
-    "reason": "Current official Blood Angels Faction Pack v1.1 and official live MFM v1.2 dated capture were verified 12 August 2026. The complete frozen Codex Supplement source is not available in this repository."
+    "reason": "Current official Blood Angels Faction Pack v1.1 and official live MFM v1.3 dated capture was verified 27 August 2026. The complete frozen Codex Supplement source is not available in this repository."
   }
 }

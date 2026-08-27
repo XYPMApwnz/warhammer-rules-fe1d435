@@ -6735,10 +6735,6 @@
           "text": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it\nis embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves."
         },
         {
-          "title": "Heroes of Ultramar",
-          "text": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This\nunit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is\nincreased accordingly.\n\n\n■ ASSAULT INTERCESSOR SQUAD\n■ BLADEGUARD VETERAN SQUAD\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n\n\nThis unit cannot join an Attached unit, and only Captain Titus can join a unit this unit has joined."
-        },
-        {
           "title": "Support",
           "text": ""
         }
@@ -6816,7 +6812,12 @@
       "paidWargear": [],
       "relations": {
         "leader": [],
-        "support": [],
+        "support": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
         "attachedUnit": [],
         "transport": []
       }

@@ -4511,6 +4511,11 @@
         {
           "title": "Synapse",
           "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+        },
+        {
+          "id": "62c7-3cb5-45c-cc3b",
+          "title": "Harpooned",
+          "text": "When this unit declares a charge, if an enemy MONSTER or VEHICLE unit is within 12\" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:\n- This unit has +2 to charge rolls until the end of the phase.\n- This unit must end that charge move engaged with that MONSTER or VEHICLE unit."
         }
       ],
       "wargearAbilities": [],

@@ -114,8 +114,8 @@ window.DG_TERMS={
   "space-marines-enhancement-stoic-defender": {
     "id": "space-marines-enhancement-stoic-defender",
     "title": "STOIC DEFENDER",
-    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
-    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
+    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
     "glossary": "glossary-space-marines-enhancement-stoic-defender",
     "rule": "detachment-anvil-siege-force"
   },
@@ -226,8 +226,8 @@ window.DG_TERMS={
   "space-marines-stratagem-rapid-embarkation": {
     "id": "space-marines-stratagem-rapid-embarkation",
     "title": "RAPID EMBARKATION",
-    "summary": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your Adeptus Astartes Infantry unit is wholly within 6\" of that Heavy Transport , it can embark within it.",
-    "full": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your Adeptus Astartes Infantry unit is wholly within 6\" of that Heavy Transport , it can embark within it.",
+    "summary": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your ADEPTUS ASTARTES INFANTRY unit is wholly within 6\" of that HEAVY TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.",
+    "full": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your ADEPTUS ASTARTES INFANTRY unit is wholly within 6\" of that HEAVY TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.",
     "glossary": "glossary-space-marines-stratagem-rapid-embarkation",
     "rule": "detachment-armoured-speartip"
   },
@@ -5121,19 +5121,6 @@ window.DG_TERMS={
     "summary": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
     "full": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
     "glossary": "glossary-space-marines-ability-strategium-command",
-    "rule": "unit-wardens-of-ultramar",
-    "units": [
-      "unit-wardens-of-ultramar"
-    ],
-    "datasheet": "unit-wardens-of-ultramar",
-    "statline": "wardens-of-ultramar-profile"
-  },
-  "space-marines-ability-heroes-of-ultramar": {
-    "id": "space-marines-ability-heroes-of-ultramar",
-    "title": "Heroes of Ultramar",
-    "summary": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly. ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD This unit cannot join an Attached unit, and only Captain Titus can join a unit this unit has joined.",
-    "full": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly. ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD This unit cannot join an Attached unit, and only Captain Titus can join a unit this unit has joined.",
-    "glossary": "glossary-space-marines-ability-heroes-of-ultramar",
     "rule": "unit-wardens-of-ultramar",
     "units": [
       "unit-wardens-of-ultramar"

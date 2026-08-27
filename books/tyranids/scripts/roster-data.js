@@ -6659,6 +6659,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Synapse",
             "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
             "sourceUnitId": "unit-norn-assimilator"
+          },
+          {
+            "id": "tyranids-ability-harpooned",
+            "sectionId": "62c7-3cb5-45c-cc3b",
+            "title": "Harpooned",
+            "text": "When this unit declares a charge, if an enemy MONSTER or VEHICLE unit is within 12\" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:\n- This unit has +2 to charge rolls until the end of the phase.\n- This unit must end that charge move engaged with that MONSTER or VEHICLE unit.",
+            "sourceUnitId": "unit-norn-assimilator"
           }
         ],
         "models": [
@@ -8407,7 +8414,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
@@ -8433,7 +8440,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
@@ -8622,7 +8629,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -8646,7 +8653,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -8670,7 +8677,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -8694,7 +8701,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -8764,7 +8771,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -8790,7 +8797,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -8928,7 +8935,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -8952,7 +8959,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourceId": "tyranids-faction-pack-v1.2",
         "sourcePages": [
           4
         ]

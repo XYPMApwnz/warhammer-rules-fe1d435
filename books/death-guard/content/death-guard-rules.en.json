@@ -66,10 +66,11 @@
           "blocks": [
             {
               "type": "p",
-              "text": "Each time a model in this unit makes a melee attack, subtract 1 from the Hit roll."
+              "text": "Each time a model in this unit makes a ranged attack, enemy units have the Benefit of Cover against that attack.\nEach time a model in this unit makes a melee attack, subtract 1 from the Hit roll."
             }
           ],
-          "number": "1.1.2"
+          "number": "1.1.2",
+          "text": "Each time a model in this unit makes a ranged attack, enemy units have the Benefit of Cover against that attack.\nEach time a model in this unit makes a melee attack, subtract 1 from the Hit roll."
         },
         {
           "id": "rattlejoint-ague",
@@ -540,7 +541,10 @@
                 "WHEN: Start of your opponent’s Charge phase.",
                 "TARGET: One DEATH GUARD VEHICLE unit from your army.",
                 "EFFECT: Until the end of the phase, each time an enemy unit selects your unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)."
-              ]
+              ],
+              "when": "End of your opponent’s Charge phase.",
+              "target": "One friendly unengaged DEATH GUARD VEHICLE unit.",
+              "effect": "Select one visible enemy unit within 12\" of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls."
             }
           ],
           "number": "2.2.3"
@@ -1446,7 +1450,7 @@
               "id": "rule-warped-and-rusted-animus",
               "termId": "detachment-rule-warped-and-rusted-animus",
               "title": "Warped and Rusted Animus",
-              "text": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. This detachment has the ENGINES tag and cannot be taken with another ENGINES detachment."
+              "text": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. "
             }
           ],
           "number": "2.7.1"
@@ -1815,7 +1819,7 @@
         },
         {
           "type": "p",
-          "text": "Nurgle’s Gift - Skullsquirm Blight: each time a model in this unit makes a melee attack, subtract 1 from the Hit roll."
+          "text": "Nurgle’s Gift - Skullsquirm Blight: Each time a model in this unit makes a ranged attack, enemy units have the Benefit of Cover against that attack.\nEach time a model in this unit makes a melee attack, subtract 1 from the Hit roll."
         },
         {
           "type": "p",
@@ -8667,7 +8671,8 @@
       "title": "Skullsquirm Blight",
       "group": "Plagues",
       "short": "A Plague selected during Declare Battle Formations.",
-      "full": "Each time a model in this unit makes a melee attack, subtract 1 from the Hit roll."
+      "full": "Each time a model in this unit makes a ranged attack, enemy units have the Benefit of Cover against that attack.\nEach time a model in this unit makes a melee attack, subtract 1 from the Hit roll.",
+      "text": "Each time a model in this unit makes a ranged attack, enemy units have the Benefit of Cover against that attack.\nEach time a model in this unit makes a melee attack, subtract 1 from the Hit roll."
     },
     {
       "id": "rattlejoint-ague",
@@ -9338,7 +9343,7 @@
       "group": "Detachments",
       "kind": "detachment",
       "short": "Reconnaissance, 1DP, ENGINES.",
-      "full": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. This detachment has the ENGINES tag and cannot be taken with another ENGINES detachment.",
+      "full": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. ",
       "sectionId": "contagion-engines-rule"
     },
     {
@@ -9347,7 +9352,7 @@
       "group": "Detachments",
       "kind": "ability",
       "short": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT].",
-      "full": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. This detachment has the ENGINES tag and cannot be taken with another ENGINES detachment.",
+      "full": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. ",
       "sectionId": "contagion-engines-rule"
     },
     {

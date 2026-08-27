@@ -3389,19 +3389,6 @@ window.DG_TERMS={
     "datasheet": "unit-masters-of-the-maelstrom",
     "statline": "masters-of-the-maelstrom-profile"
   },
-  "chaos-space-marines-ability-masters-of-the-maelstrom": {
-    "id": "chaos-space-marines-ability-masters-of-the-maelstrom",
-    "title": "Masters of the Maelstrom",
-    "summary": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly. - Chosen, Legionaries, Red Corsairs Raiders This unit cannot join an Attached unit, and only Huron Blackheart can join a unit this unit has joined.",
-    "full": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly. - Chosen, Legionaries, Red Corsairs Raiders This unit cannot join an Attached unit, and only Huron Blackheart can join a unit this unit has joined.",
-    "glossary": "glossary-chaos-space-marines-ability-masters-of-the-maelstrom",
-    "rule": "unit-masters-of-the-maelstrom",
-    "units": [
-      "unit-masters-of-the-maelstrom"
-    ],
-    "datasheet": "unit-masters-of-the-maelstrom",
-    "statline": "masters-of-the-maelstrom-profile"
-  },
   "chaos-space-marines-weapon-absolver-bolt-pistol": {
     "id": "chaos-space-marines-weapon-absolver-bolt-pistol",
     "title": "Absolver bolt pistol",

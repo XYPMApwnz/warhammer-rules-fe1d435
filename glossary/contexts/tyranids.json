@@ -2607,6 +2607,18 @@
         ]
       }
     },
+    "tyranids-ability-harpooned": {
+      "termId": "tyranids-ability-harpooned",
+      "navigation": {
+        "glossary": "glossary-tyranids-ability-harpooned",
+        "rule": "unit-norn-assimilator",
+        "datasheet": "unit-norn-assimilator",
+        "statline": "norn-assimilator-profile",
+        "units": [
+          "unit-norn-assimilator"
+        ]
+      }
+    },
     "tyranids-weapon-monstrous-scything-talons-2": {
       "termId": "tyranids-weapon-monstrous-scything-talons-2",
       "navigation": {

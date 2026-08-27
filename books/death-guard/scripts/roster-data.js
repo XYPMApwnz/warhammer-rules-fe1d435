@@ -9932,7 +9932,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "id": "detachment-rule-warped-and-rusted-animus",
       "title": "Warped and Rusted Animus",
-      "text": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. This detachment has the ENGINES tag and cannot be taken with another ENGINES detachment.",
+      "text": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. ",
       "sectionId": "rule-warped-and-rusted-animus",
       "detachmentId": "detachment-contagion-engines",
       "detachmentTitle": "Contagion Engines",

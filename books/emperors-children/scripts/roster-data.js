@@ -5000,7 +5000,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Sv": "3+",
           "W": "14",
           "Ld": "7+",
-          "OC": "-",
+          "OC": "0",
           "Invulnerable": "5+"
         },
         "abilities": [
@@ -5670,9 +5670,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "EMPEROR’S CHILDREN model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
@@ -5684,9 +5684,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, just after an enemy unit has selected its targets, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer has a 3+ invulnerable save.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
@@ -5695,12 +5695,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "id": "enhancement-possessed-blade",
       "title": "Possessed Blade",
-      "value": 25,
+      "value": 35,
       "text": "EMPEROR’S CHILDREN model only. At the start of the battle, select one melee weapon equipped by the bearer; add 1 to the Attacks characteristic of that weapon. In addition, each time the bearer is selected to fight, it can use this Enhancement. If it does, while resolving those attacks, add 1 to the Damage characteristic of that weapon and that weapon has the [devastating wounds] and [hazardous] abilities.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
@@ -5709,12 +5709,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "id": "enhancement-warp-walker",
       "title": "Warp Walker",
-      "value": 30,
+      "value": 35,
       "text": "EMPEROR’S CHILDREN or KEEPER OF SECRETS model only. Each time the bearer’s unit Advances, do not make an Advance roll . Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
@@ -5726,9 +5726,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
@@ -5740,9 +5740,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "EMPEROR’S CHILDREN model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
@@ -5754,9 +5754,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "EMPEROR’S CHILDREN model only. At the start of your Shooting phase , select one enemy unit within 12\" of and visible to the bearer. That unit must take a Leadership test , subtracting 2 from the result if it is Battle-shocked : if failed, that enemy unit suffers 3 mortal wounds .",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
@@ -5768,9 +5768,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "text": "EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll , a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked , it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
@@ -5791,9 +5791,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 25,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "court-of-the-phoenician",
       "sourceBookId": "emperors-children",
@@ -5814,9 +5814,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "court-of-the-phoenician",
       "sourceBookId": "emperors-children",
@@ -5837,9 +5837,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "court-of-the-phoenician",
       "sourceBookId": "emperors-children",
@@ -5860,9 +5860,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "court-of-the-phoenician",
       "sourceBookId": "emperors-children",
@@ -5883,9 +5883,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "elegant-brutes",
       "sourceBookId": "emperors-children",
@@ -5907,9 +5907,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "elegant-brutes",
       "sourceBookId": "emperors-children",
@@ -5930,9 +5930,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "frenzied-host",
       "sourceBookId": "emperors-children",
@@ -5953,9 +5953,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "frenzied-host",
       "sourceBookId": "emperors-children",
@@ -5967,9 +5967,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit below its Starting Strength , add 1 to the Hit roll . If that target is also Below Half-strength , add 1 to the Wound roll as well.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
@@ -5981,9 +5981,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "EMPEROR’S CHILDREN model only. Each time a melee attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll .",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
@@ -5995,9 +5995,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "EMPEROR’S CHILDREN model only. After both players have deployed their armies, select up to two EMPEROR’S CHILDREN units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
@@ -6009,9 +6009,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
@@ -6023,9 +6023,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "EMPEROR’S CHILDREN model only. You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
@@ -6037,9 +6037,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "EMPEROR’S CHILDREN model only. Once per battle, at the start of the Fight phase , the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
@@ -6051,9 +6051,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "EMPEROR’S CHILDREN model only. Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
@@ -6065,9 +6065,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, at the end of the Fight phase , if the bearer is within Engagement Range of three or more enemy models, it can use this Enhancement. If it does, the bearer can fight one additional time. When doing so, you can select one ability using the Exquisite Swordsmanship Detachment rule to apply to those attacks.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
@@ -6079,9 +6079,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your Movement phase , the bearer can use this Enhancement. If it does, select one friendly EMPEROR’S CHILDREN TRANSPORT that is in Strategic Reserves . Until the end of the phase, for the purposes of setting up that TRANSPORT on the battlefield, treat the current battle round number as being one higher than it actually is.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "rapid-evisceration",
       "sourceBookId": "emperors-children",
@@ -6093,9 +6093,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Each time the bearer disembarks from a TRANSPORT , until the end of the turn, you can re-roll Charge rolls made for the bearer’s unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "rapid-evisceration",
       "sourceBookId": "emperors-children",
@@ -6107,9 +6107,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your opponent’s Shooting phase , just after an enemy unit has shot, you can select one friendly EMPEROR’S CHILDREN unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly TRANSPORT that unit is wholly within 6\" of and is able to embark within. That EMPEROR’S CHILDREN unit can embark within that Transport.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "rapid-evisceration",
       "sourceBookId": "emperors-children",
@@ -6121,9 +6121,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle round , when a saving throw is failed for a friendly EMPEROR’S CHILDREN VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "rapid-evisceration",
       "sourceBookId": "emperors-children",
@@ -6135,9 +6135,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "EMPEROR’S CHILDREN model only. You can re-roll Charge rolls made for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions , add 2\" to the Move characteristic of models in that unit.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
@@ -6149,9 +6149,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "EMPEROR’S CHILDREN model only. Each time an enemy unit (excluding MONSTERS and VEHICLES ) within Engagement Range of the bearer’s unit Falls Back , models in that enemy unit must take Desperate Escape tests . When doing so, if the bearer’s unit is your army’s Favoured Champions , subtract 1 from each of those Desperate Escape tests.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
@@ -6163,9 +6163,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "EMPEROR’S CHILDREN model only. You can re-roll Battle-shock and Leadership tests taken for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions , add 1 to the Objective Control characteristic of models in that unit.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
@@ -6177,9 +6177,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "EMPEROR’S CHILDREN model only. The bearer’s melee weapons have the [PRECISION] ability, and each time the bearer makes a melee attack that targets a CHARACTER unit, improve the Strength and Armour Penetration characteristics of that attack by 1.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
@@ -6201,9 +6201,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "spectacle-of-slaughter",
       "sourceBookId": "emperors-children",
@@ -6225,9 +6225,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "spectacle-of-slaughter",
       "sourceBookId": "emperors-children",
@@ -6296,7 +6296,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "title": "Possessed Blade",
       "text": "EMPEROR’S CHILDREN model only. At the start of the battle, select one melee weapon equipped by the bearer; add 1 to the Attacks characteristic of that weapon. In addition, each time the bearer is selected to fight, it can use this Enhancement. If it does, while resolving those attacks, add 1 to the Damage characteristic of that weapon and that weapon has the [devastating wounds] and [hazardous] abilities.",
-      "value": 25,
+      "value": 35,
       "detachment": "Carnival of Excess",
       "tags": [],
       "owner": {
@@ -6326,7 +6326,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "title": "Warp Walker",
       "text": "EMPEROR’S CHILDREN or KEEPER OF SECRETS model only. Each time the bearer’s unit Advances, do not make an Advance roll . Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
-      "value": 30,
+      "value": 35,
       "detachment": "Carnival of Excess",
       "tags": [],
       "owner": {
@@ -7255,7 +7255,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   "possessed blade": {
     "title": "Possessed Blade",
     "text": "EMPEROR’S CHILDREN model only. At the start of the battle, select one melee weapon equipped by the bearer; add 1 to the Attacks characteristic of that weapon. In addition, each time the bearer is selected to fight, it can use this Enhancement. If it does, while resolving those attacks, add 1 to the Damage characteristic of that weapon and that weapon has the [devastating wounds] and [hazardous] abilities.",
-    "value": 25,
+    "value": 35,
     "detachment": "Carnival of Excess",
     "tags": [],
     "owner": {
@@ -7282,7 +7282,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   "warp walker": {
     "title": "Warp Walker",
     "text": "EMPEROR’S CHILDREN or KEEPER OF SECRETS model only. Each time the bearer’s unit Advances, do not make an Advance roll . Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
-    "value": 30,
+    "value": 35,
     "detachment": "Carnival of Excess",
     "tags": [],
     "owner": {

@@ -682,8 +682,8 @@ window.DG_TERMS={
   "space-marines-stratagem-rapid-embarkation": {
     "id": "space-marines-stratagem-rapid-embarkation",
     "title": "RAPID EMBARKATION",
-    "summary": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your Adeptus Astartes Infantry unit is wholly within 6\" of that Heavy Transport , it can embark within it.",
-    "full": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your Adeptus Astartes Infantry unit is wholly within 6\" of that Heavy Transport , it can embark within it.",
+    "summary": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your ADEPTUS ASTARTES INFANTRY unit is wholly within 6\" of that HEAVY TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.",
+    "full": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your ADEPTUS ASTARTES INFANTRY unit is wholly within 6\" of that HEAVY TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.",
     "glossary": "glossary-space-marines-stratagem-rapid-embarkation",
     "rule": "detachment-armoured-speartip"
   },
@@ -1162,8 +1162,8 @@ window.DG_TERMS={
   "space-marines-enhancement-stoic-defender": {
     "id": "space-marines-enhancement-stoic-defender",
     "title": "Stoic Defender",
-    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
-    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
+    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
     "glossary": "glossary-space-marines-enhancement-stoic-defender",
     "rule": "detachment-anvil-siege-force"
   },
@@ -7062,8 +7062,8 @@ window.DG_TERMS={
   "dark-angels-ability-mist-wreathed-shadow-realms": {
     "id": "dark-angels-ability-mist-wreathed-shadow-realms",
     "title": "Mist-wreathed Shadow Realms",
-    "summary": "At the end of your opponent's turn, if this unit is unengaged, you can use this ability. If you do: place this unit in Strategic Reserves; this unit can make an ingress move in your next Movement phase (including in your first turn).",
-    "full": "At the end of your opponent's turn, if this unit is unengaged, you can use this ability. If you do: place this unit in Strategic Reserves; this unit can make an ingress move in your next Movement phase (including in your first turn).",
+    "summary": "In your Command phase, if this unit is unengaged, you can use this ability. If you do: - Place this unit in Strategic Reserves. - This unit can make an ingress move in your next Movement phase (including in your first turn).",
+    "full": "In your Command phase, if this unit is unengaged, you can use this ability. If you do: - Place this unit in Strategic Reserves. - This unit can make an ingress move in your next Movement phase (including in your first turn).",
     "glossary": "glossary-dark-angels-ability-mist-wreathed-shadow-realms",
     "rule": "unit-lion-eljonson",
     "units": [

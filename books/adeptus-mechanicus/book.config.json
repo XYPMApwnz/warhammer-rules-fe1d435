@@ -49,7 +49,7 @@
     "codexDatasheets": "content/adeptus-mechanicus-codex-datasheets.en.json",
     "codexWargear": "content/adeptus-mechanicus-codex-wargear.en.json",
     "points": "content/adeptus-mechanicus-points.en.json",
-    "officialMfm": "sources/official-mfm-v1.2.json",
+    "officialMfm": "sources/official-mfm-v1.3.json",
     "unitImages": "presentation/unit-images.json",
     "globalGlossary": "../../glossary/registry.en.json"
   },

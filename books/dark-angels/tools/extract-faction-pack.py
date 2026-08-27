@@ -10,11 +10,11 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "dark-angels-faction-pack-v1.1.pdf"
+PDF = ROOT / "sources" / "dark-angels-faction-pack-v1.2.pdf"
 OUTPUT = ROOT / "content" / "dark-angels-faction-pack.en.json"
 RELATED_OUTPUT = ROOT / "content" / "dark-angels-related-rules.en.json"
-SOURCE_ID = "dark-angels-faction-pack-v1.1"
-EXPECTED_PDF_SHA256 = "A29FB27970A47E174E4014C7D39DC99FEECB5940684E1DBA04EA218E7BC4106F"
+SOURCE_ID = "dark-angels-faction-pack-v1.2"
+EXPECTED_PDF_SHA256 = "B33B79C207D910A8E6AEC4ABFA8042507154E7FF17CB88D8E9A77D4C02C78BB1"
 
 
 def e(title: str, points: int) -> dict:
@@ -173,7 +173,7 @@ def build() -> dict:
     for number, page in enumerate(page_objects, 1):
         text = page_text(page)
         page_data[str(number)] = {"sha256": hashlib.sha256(text.encode()).hexdigest().upper(), "text": text}
-    meta = {"title": "Dark Angels Faction Pack", "version": "1.1", "legalFrom": "2026-07-22", "pageCount": len(page_objects), "sha256": digest, "file": "sources/dark-angels-faction-pack-v1.1.pdf"}
+    meta = {"title": "Dark Angels Faction Pack", "version": "1.2", "legalFrom": "2026-08-26", "pageCount": len(page_objects), "sha256": digest, "file": "sources/dark-angels-faction-pack-v1.2.pdf"}
     detachments = extract_detachments(page_objects)
     page_nine = page_data["9"]["text"]
     updates_text, datasheets_nine = page_nine.split("\nDATASHEETS\n", 1)

@@ -20,7 +20,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -43,7 +43,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -62,7 +62,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -81,7 +81,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -100,7 +100,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -119,7 +119,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -218,7 +218,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -253,7 +253,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -310,7 +310,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -329,7 +329,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -350,7 +350,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -372,7 +372,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -391,7 +391,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 17
       }
     },
@@ -413,7 +413,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -434,7 +434,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -453,7 +453,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -475,7 +475,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -497,7 +497,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -519,7 +519,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -547,7 +547,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -579,7 +579,42 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
+        "page": 18
+      }
+    },
+    {
+      "id": "cybernetica-datasmith-keywords",
+      "targets": [
+        {
+          "unitId": "unit-cybernetica-datasmith",
+          "keyword": "Infantry",
+          "operation": "remove",
+          "expectedBefore": "Infantry",
+          "effectiveAfter": null,
+          "kind": "datasheet-keyword",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary field mapping."
+          }
+        },
+        {
+          "unitId": "unit-cybernetica-datasmith",
+          "keyword": "Vehicle",
+          "operation": "add",
+          "expectedBefore": null,
+          "effectiveAfter": "Vehicle",
+          "kind": "datasheet-keyword",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -598,7 +633,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -626,7 +661,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -654,7 +689,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -673,7 +708,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -777,7 +812,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -796,7 +831,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -815,7 +850,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -862,7 +897,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 18
       }
     },
@@ -928,7 +963,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 19
       }
     },
@@ -960,7 +995,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 19
       }
     },
@@ -979,7 +1014,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 19
       }
     },
@@ -1014,7 +1049,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 19
       }
     },
@@ -1042,7 +1077,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 19
       }
     },
@@ -1062,7 +1097,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 19
       }
     },
@@ -1094,7 +1129,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 19
       }
     },
@@ -1113,7 +1148,7 @@
         }
       ],
       "source": {
-        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "documentId": "adeptus-mechanicus-faction-pack-v1.2",
         "page": 19
       }
     }

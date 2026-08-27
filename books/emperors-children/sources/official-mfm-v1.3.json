@@ -1,0 +1,654 @@
+{
+  "schema": 1,
+  "title": "Munitorum Field Manual",
+  "version": "v1.3",
+  "verifiedAt": "2026-08-27",
+  "url": "https://mfm.warhammer-community.com/en/emperors-children",
+  "captureSha256": "9E5BA57C1711C4E207BF2F9B94C657DF26F8A2A416A48FA1757402BC3DDF65EF",
+  "detachments": [
+    {
+      "title": "CARNIVAL OF EXCESS",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "COTERIE OF THE CONCEITED",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "COURT OF THE PHOENICIAN",
+      "forceDisposition": "Purge The Foe",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "ELEGANT BRUTES",
+      "forceDisposition": "Take And Hold",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "FRENZIED HOST",
+      "forceDisposition": "Reconnaissance",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "MERCURIAL HOST",
+      "forceDisposition": "Reconnaissance",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "PEERLESS BLADESMEN",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "RAPID EVISCERATION",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "SLAANESH’S CHOSEN",
+      "forceDisposition": "Purge The Foe",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "SPECTACLE OF SLAUGHTER",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 1
+    }
+  ],
+  "verifiedUnits": [
+    "CHAOS LAND RAIDER",
+    "CHAOS RHINO",
+    "CHAOS SPAWN",
+    "CHAOS TERMINATORS",
+    "DAEMON PRINCE OF SLAANESH",
+    "DAEMON PRINCE OF SLAANESH WITH WINGS",
+    "DEFILER",
+    "FLAWLESS BLADES",
+    "FULGRIM",
+    "HELDRAKE",
+    "INFRACTORS",
+    "LORD EXULTANT",
+    "LORD KAKOPHONIST",
+    "LUCIUS THE ETERNAL",
+    "MAULERFIEND",
+    "NOISE MARINES",
+    "SORCERER",
+    "TORMENTORS",
+    "DAEMONETTES",
+    "FIENDS",
+    "KEEPER OF SECRETS",
+    "SEEKERS",
+    "SHALAXI HELBANE"
+  ],
+  "unitOverrides": [
+    {
+      "title": "CHAOS LAND RAIDER",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 240,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "CHAOS RHINO",
+      "points": [
+        {
+          "label": "1st to 3rd unit · 1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
+        },
+        {
+          "label": "4th + unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
+        }
+      ]
+    },
+    {
+      "title": "CHAOS SPAWN",
+      "points": [
+        {
+          "label": "2 models",
+          "value": 70,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ]
+    },
+    {
+      "title": "CHAOS TERMINATORS",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 145,
+          "minModels": 5,
+          "maxModels": 5
+        }
+      ]
+    },
+    {
+      "title": "DAEMON PRINCE OF SLAANESH",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 185,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ]
+    },
+    {
+      "title": "DAEMON PRINCE OF SLAANESH WITH WINGS",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 205,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 235,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ]
+    },
+    {
+      "title": "DEFILER",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 340,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Heavy reaper autocannon",
+          "value": 15,
+          "modifiers": []
+        },
+        {
+          "name": "Hades lascannon",
+          "value": 15,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "FLAWLESS BLADES",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 95,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 190,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "FULGRIM",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 340,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "HELDRAKE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 175,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "INFRACTORS",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 160,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "LORD EXULTANT",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "leader": [
+        "INFRACTORS",
+        "TORMENTORS"
+      ]
+    },
+    {
+      "title": "LORD KAKOPHONIST",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHAOS TERMINATORS",
+        "NOISE MARINES"
+      ]
+    },
+    {
+      "title": "LUCIUS THE ETERNAL",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 120,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "FLAWLESS BLADES"
+      ]
+    },
+    {
+      "title": "MAULERFIEND",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 120,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "NOISE MARINES",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 6 models",
+          "value": 145,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "SORCERER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "INFRACTORS",
+        "NOISE MARINES",
+        "TORMENTORS"
+      ]
+    },
+    {
+      "title": "TORMENTORS",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 80,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 160,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "DAEMONETTES",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 90,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "FIENDS",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 180,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "KEEPER OF SECRETS",
+      "points": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 255,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 270,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "SEEKERS",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 80,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 155,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "SHALAXI HELBANE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 315,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    }
+  ],
+  "enhancements": [
+    {
+      "title": "Dark Blessings",
+      "detachment": "CARNIVAL OF EXCESS",
+      "value": 10
+    },
+    {
+      "title": "Empyric Suffusion",
+      "detachment": "CARNIVAL OF EXCESS",
+      "value": 15
+    },
+    {
+      "title": "Possessed Blade",
+      "detachment": "CARNIVAL OF EXCESS",
+      "value": 35
+    },
+    {
+      "title": "Warp Walker",
+      "detachment": "CARNIVAL OF EXCESS",
+      "value": 35
+    },
+    {
+      "title": "Pledge of Dark Glory",
+      "detachment": "COTERIE OF THE CONCEITED",
+      "value": 25
+    },
+    {
+      "title": "Pledge of Eternal Servitude",
+      "detachment": "COTERIE OF THE CONCEITED",
+      "value": 25
+    },
+    {
+      "title": "Pledge of Mortal Pain",
+      "detachment": "COTERIE OF THE CONCEITED",
+      "value": 15
+    },
+    {
+      "title": "Pledge of Unholy Fortune",
+      "detachment": "COTERIE OF THE CONCEITED",
+      "value": 30
+    },
+    {
+      "title": "Exalted Patron",
+      "detachment": "COURT OF THE PHOENICIAN",
+      "value": 15
+    },
+    {
+      "title": "Soulstain Made Manifest",
+      "detachment": "COURT OF THE PHOENICIAN",
+      "value": 15
+    },
+    {
+      "title": "Spiritsliver",
+      "detachment": "COURT OF THE PHOENICIAN",
+      "value": 20
+    },
+    {
+      "title": "Tears of the Phoenix",
+      "detachment": "COURT OF THE PHOENICIAN",
+      "value": 25
+    },
+    {
+      "title": "Cacophonic Accompaniment",
+      "detachment": "ELEGANT BRUTES",
+      "value": 20
+    },
+    {
+      "title": "Frenzied Ferocity (Upgrade)",
+      "detachment": "ELEGANT BRUTES",
+      "value": 15,
+      "sourceTitle": "Frenzied Ferocity"
+    },
+    {
+      "title": "Euphoric Crown",
+      "detachment": "FRENZIED HOST",
+      "value": 20
+    },
+    {
+      "title": "Howling Plate",
+      "detachment": "FRENZIED HOST",
+      "value": 20
+    },
+    {
+      "title": "Intoxicating Musk",
+      "detachment": "MERCURIAL HOST",
+      "value": 20
+    },
+    {
+      "title": "Loathsome Dexterity",
+      "detachment": "MERCURIAL HOST",
+      "value": 10
+    },
+    {
+      "title": "Steeped in Suffering",
+      "detachment": "MERCURIAL HOST",
+      "value": 20
+    },
+    {
+      "title": "Tactical Perfection",
+      "detachment": "MERCURIAL HOST",
+      "value": 15
+    },
+    {
+      "title": "Blinding Speed",
+      "detachment": "PEERLESS BLADESMEN",
+      "value": 25
+    },
+    {
+      "title": "Distortion",
+      "detachment": "PEERLESS BLADESMEN",
+      "value": 25
+    },
+    {
+      "title": "Faultless Opportunist",
+      "detachment": "PEERLESS BLADESMEN",
+      "value": 15
+    },
+    {
+      "title": "Rise to the Challenge",
+      "detachment": "PEERLESS BLADESMEN",
+      "value": 30
+    },
+    {
+      "title": "Accomplished Tactician",
+      "detachment": "RAPID EVISCERATION",
+      "value": 35
+    },
+    {
+      "title": "Heretek Adept",
+      "detachment": "RAPID EVISCERATION",
+      "value": 35
+    },
+    {
+      "title": "Spearhead Striker",
+      "detachment": "RAPID EVISCERATION",
+      "value": 20
+    },
+    {
+      "title": "Sublime Prescience",
+      "detachment": "RAPID EVISCERATION",
+      "value": 25
+    },
+    {
+      "title": "Eager to Prove",
+      "detachment": "SLAANESH’S CHOSEN",
+      "value": 15
+    },
+    {
+      "title": "Proud and Vainglorious",
+      "detachment": "SLAANESH’S CHOSEN",
+      "value": 20
+    },
+    {
+      "title": "Repulsed by Weakness",
+      "detachment": "SLAANESH’S CHOSEN",
+      "value": 25
+    },
+    {
+      "title": "Slayer of Champions",
+      "detachment": "SLAANESH’S CHOSEN",
+      "value": 15
+    },
+    {
+      "title": "Beguiling Grotesquerie (Upgrade)",
+      "detachment": "SPECTACLE OF SLAUGHTER",
+      "value": 15,
+      "sourceTitle": "Beguiling Grotesquerie"
+    },
+    {
+      "title": "Eager Patrons (Upgrade)",
+      "detachment": "SPECTACLE OF SLAUGHTER",
+      "value": 20,
+      "sourceTitle": "Eager Patrons"
+    }
+  ]
+}

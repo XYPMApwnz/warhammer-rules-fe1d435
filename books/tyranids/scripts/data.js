@@ -602,8 +602,8 @@ window.DG_TERMS={
   "tyranids-stratagem-synaptic-goading": {
     "id": "tyranids-stratagem-synaptic-goading",
     "title": "SYNAPTIC GOADING",
-    "summary": "Any phase, just before an ENDLESS MULTITUDE unit from your army that is within Synapse Range of your army makes a Surge move. That ENDLESS MULTITUDE unit. When making that Surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making Surge moves still apply.",
-    "full": "Any phase, just before an ENDLESS MULTITUDE unit from your army that is within Synapse Range of your army makes a Surge move. That ENDLESS MULTITUDE unit. When making that Surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making Surge moves still apply.",
+    "summary": "Any phase, just before an ENDLESS MULTITUDE unit from your army that is within Synapse Range of your army makes a surge move. That ENDLESS MULTITUDE unit. When making that surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making surge moves still apply.",
+    "full": "Any phase, just before an ENDLESS MULTITUDE unit from your army that is within Synapse Range of your army makes a surge move. That ENDLESS MULTITUDE unit. When making that surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making surge moves still apply.",
     "glossary": "glossary-tyranids-stratagem-synaptic-goading",
     "rule": "detachment-unending-swarm"
   },
@@ -2848,6 +2848,19 @@ window.DG_TERMS={
     "units": [
       "unit-norn-assimilator",
       "unit-norn-emissary"
+    ],
+    "datasheet": "unit-norn-assimilator",
+    "statline": "norn-assimilator-profile"
+  },
+  "tyranids-ability-harpooned": {
+    "id": "tyranids-ability-harpooned",
+    "title": "Harpooned",
+    "summary": "When this unit declares a charge, if an enemy MONSTER or VEHICLE unit is within 12\" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do: - This unit has +2 to charge rolls until the end of the phase. - This unit must end that charge move engaged with that MONSTER or VEHICLE unit.",
+    "full": "When this unit declares a charge, if an enemy MONSTER or VEHICLE unit is within 12\" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do: - This unit has +2 to charge rolls until the end of the phase. - This unit must end that charge move engaged with that MONSTER or VEHICLE unit.",
+    "glossary": "glossary-tyranids-ability-harpooned",
+    "rule": "unit-norn-assimilator",
+    "units": [
+      "unit-norn-assimilator"
     ],
     "datasheet": "unit-norn-assimilator",
     "statline": "norn-assimilator-profile"

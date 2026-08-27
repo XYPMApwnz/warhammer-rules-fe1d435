@@ -1,0 +1,1505 @@
+{
+  "schema": 2,
+  "title": "Chaos Space Marines Munitorum Field Manual dated capture",
+  "version": "v1.3",
+  "sourceUpdatedAt": "2026-08-26",
+  "capturedAt": "2026-08-27",
+  "verifiedAt": "2026-08-27",
+  "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+  "captureSha256": "9E672C442322E5A4305746762B6DFBEAD475784A71611EB18A42793144A6659B",
+  "hashModel": {
+    "algorithm": "SHA-256",
+    "scope": "normalizedPayload",
+    "serialization": "UTF-8 JSON with recursively sorted object keys and preserved array order",
+    "fields": [
+      "version",
+      "url",
+      "sourceUpdatedAt",
+      "verifiedUnits",
+      "unitOverrides",
+      "detachments",
+      "enhancements"
+    ]
+  },
+  "counts": {
+    "units": 54,
+    "unitPointSchedules": 91,
+    "pricedOptions": 3,
+    "detachments": 17,
+    "enhancements": 62
+  },
+  "verifiedUnits": [
+    "CULTIST MOB",
+    "LEGIONARIES",
+    "CHAOS LORD",
+    "CHAOS LORD IN TERMINATOR ARMOUR",
+    "CHAOS LORD WITH JUMP PACK",
+    "CULTIST FIREBRAND",
+    "DARK APOSTLE",
+    "DARK COMMUNE",
+    "HERETIC ASTARTES DAEMON PRINCE",
+    "HERETIC ASTARTES DAEMON PRINCE WITH WINGS",
+    "LORD DISCORDANT ON HELSTALKER",
+    "MASTER OF EXECUTIONS",
+    "MASTER OF POSSESSION",
+    "RED CORSAIRS REAVE-CAPTAIN",
+    "SORCERER",
+    "SORCERER IN TERMINATOR ARMOUR",
+    "TRAITOR ENFORCER",
+    "WARPSMITH",
+    "CHAOS RHINO",
+    "ABADDON THE DESPOILER",
+    "CYPHER",
+    "FABIUS BILE",
+    "HAARKEN WORLDCLAIMER",
+    "HURON BLACKHEART",
+    "KRAVEK MORNE",
+    "MASTERS OF THE MAELSTROM",
+    "VASHTORR THE ARKIFANE",
+    "ACCURSED CULTISTS",
+    "CHAOS TERMINATOR SQUAD",
+    "CHOSEN",
+    "FELLGOR BEASTMEN",
+    "HAVOCS",
+    "MUTILATORS",
+    "NEMESIS CLAW",
+    "OBLITERATORS",
+    "POSSESSED",
+    "RAPTORS",
+    "RED CORSAIRS RAIDERS",
+    "TRAITOR GUARDSMEN SQUAD",
+    "WARP TALONS",
+    "CHAOS BIKERS",
+    "CHAOS LAND RAIDER",
+    "CHAOS PREDATOR ANNIHILATOR",
+    "CHAOS PREDATOR DESTRUCTOR",
+    "CHAOS SPAWN",
+    "CHAOS VINDICATOR",
+    "DEFILER",
+    "FORGEFIEND",
+    "HELBRUTE",
+    "HELDRAKE",
+    "KHORNE LORD OF SKULLS",
+    "MAULERFIEND",
+    "NOCTILITH CROWN",
+    "VENOMCRAWLER"
+  ],
+  "unitOverrides": [
+    {
+      "title": "CULTIST MOB",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 50,
+          "minModels": 10,
+          "maxModels": 10
+        },
+        {
+          "label": "20 models",
+          "value": 90,
+          "minModels": 20,
+          "maxModels": 20
+        }
+      ]
+    },
+    {
+      "title": "LEGIONARIES",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 90,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 170,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "CHAOS LORD",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "NEMESIS CLAW",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "CHAOS LORD IN TERMINATOR ARMOUR",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHAOS TERMINATOR SQUAD"
+      ]
+    },
+    {
+      "title": "CHAOS LORD WITH JUMP PACK",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "RAPTORS"
+      ]
+    },
+    {
+      "title": "CULTIST FIREBRAND",
+      "points": [
+        {
+          "label": "1st-2nd unit · 1 model",
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "leader": [
+        "ACCURSED CULTISTS",
+        "CULTIST MOB"
+      ]
+    },
+    {
+      "title": "DARK APOSTLE",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 65,
+          "minModels": 3,
+          "maxModels": 3
+        }
+      ],
+      "leader": [
+        "ACCURSED CULTISTS",
+        "CHOSEN",
+        "CULTIST MOB",
+        "LEGIONARIES",
+        "NEMESIS CLAW",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "DARK COMMUNE",
+      "points": [
+        {
+          "label": "1st-2nd unit · 5 models",
+          "value": 90,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 100,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        }
+      ],
+      "leader": [
+        "ACCURSED CULTISTS",
+        "CULTIST MOB"
+      ]
+    },
+    {
+      "title": "HERETIC ASTARTES DAEMON PRINCE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 165,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "HERETIC ASTARTES DAEMON PRINCE WITH WINGS",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "LORD DISCORDANT ON HELSTALKER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "MASTER OF EXECUTIONS",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "support": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "NEMESIS CLAW",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "MASTER OF POSSESSION",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "NEMESIS CLAW",
+        "POSSESSED",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "RED CORSAIRS REAVE-CAPTAIN",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "NEMESIS CLAW",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "SORCERER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "NEMESIS CLAW",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "SORCERER IN TERMINATOR ARMOUR",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHAOS TERMINATOR SQUAD"
+      ]
+    },
+    {
+      "title": "TRAITOR ENFORCER",
+      "points": [
+        {
+          "label": "2 models",
+          "value": 70,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ],
+      "leader": [
+        "TRAITOR GUARDSMEN SQUAD"
+      ]
+    },
+    {
+      "title": "WARPSMITH",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHOSEN",
+        "HAVOCS",
+        "LEGIONARIES",
+        "NEMESIS CLAW",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "CHAOS RHINO",
+      "points": [
+        {
+          "label": "1st-3rd unit · 1 model",
+          "value": 65,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
+        },
+        {
+          "label": "4th + unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
+        }
+      ]
+    },
+    {
+      "title": "ABADDON THE DESPOILER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 295,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHAOS TERMINATOR SQUAD",
+        "CHOSEN"
+      ]
+    },
+    {
+      "title": "CYPHER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "FABIUS BILE",
+      "points": [
+        {
+          "label": "2 models",
+          "value": 100,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ],
+      "leader": [
+        "ACCURSED CULTISTS",
+        "CHOSEN",
+        "CULTIST MOB",
+        "LEGIONARIES",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "HAARKEN WORLDCLAIMER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "RAPTORS"
+      ]
+    },
+    {
+      "title": "HURON BLACKHEART",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHAOS TERMINATOR SQUAD",
+        "CHOSEN",
+        "LEGIONARIES",
+        "MASTERS OF THE MAELSTROM",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "KRAVEK MORNE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 120,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "leader": [
+        "CHAOS TERMINATOR SQUAD",
+        "MUTILATORS",
+        "OBLITERATORS"
+      ]
+    },
+    {
+      "title": "MASTERS OF THE MAELSTROM",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 145,
+          "minModels": 5,
+          "maxModels": 5
+        }
+      ],
+      "support": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "RED CORSAIRS RAIDERS"
+      ]
+    },
+    {
+      "title": "VASHTORR THE ARKIFANE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "ACCURSED CULTISTS",
+      "points": [
+        {
+          "label": "1st-2nd unit · 8 models",
+          "value": 90,
+          "minModels": 8,
+          "maxModels": 8,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st-2nd unit · 16 models",
+          "value": 195,
+          "minModels": 16,
+          "maxModels": 16,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 8 models",
+          "value": 110,
+          "minModels": 8,
+          "maxModels": 8,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 16 models",
+          "value": 215,
+          "minModels": 16,
+          "maxModels": 16,
+          "minCopies": 3
+        }
+      ],
+      "replaceDatasheetPoints": true
+    },
+    {
+      "title": "CHAOS TERMINATOR SQUAD",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 175,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 350,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "CHOSEN",
+      "points": [
+        {
+          "label": "1st-2nd unit · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st-2nd unit · 10 models",
+          "value": 270,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 145,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 280,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "replaceDatasheetPoints": true
+    },
+    {
+      "title": "FELLGOR BEASTMEN",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 60,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "HAVOCS",
+      "points": [
+        {
+          "label": "1st-2nd unit · 5 models",
+          "value": 125,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "MUTILATORS",
+      "points": [
+        {
+          "label": "1st-2nd unit · 3 models",
+          "value": 165,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "NEMESIS CLAW",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 100,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 180,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "OBLITERATORS",
+      "points": [
+        {
+          "label": "1st-2nd unit · 2 models",
+          "value": 160,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 2 models",
+          "value": 170,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        }
+      ],
+      "replaceDatasheetPoints": true
+    },
+    {
+      "title": "POSSESSED",
+      "points": [
+        {
+          "label": "1st-2nd unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st-2nd unit · 10 models",
+          "value": 250,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 130,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 260,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "replaceDatasheetPoints": true
+    },
+    {
+      "title": "RAPTORS",
+      "points": [
+        {
+          "label": "1st-2nd unit · 5 models",
+          "value": 110,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st-2nd unit · 10 models",
+          "value": 210,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "replaceDatasheetPoints": true
+    },
+    {
+      "title": "RED CORSAIRS RAIDERS",
+      "points": [
+        {
+          "label": "1st-2nd unit · 5 models",
+          "value": 110,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st-2nd unit · 10 models",
+          "value": 210,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "replaceDatasheetPoints": true
+    },
+    {
+      "title": "TRAITOR GUARDSMEN SQUAD",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 70,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "WARP TALONS",
+      "points": [
+        {
+          "label": "1st-2nd unit · 5 models",
+          "value": 125,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st-2nd unit · 10 models",
+          "value": 280,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 290,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "replaceDatasheetPoints": true
+    },
+    {
+      "title": "CHAOS BIKERS",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 70,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 130,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "CHAOS LAND RAIDER",
+      "points": [
+        {
+          "label": "1st-2nd unit · 1 model",
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 240,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "CHAOS PREDATOR ANNIHILATOR",
+      "points": [
+        {
+          "label": "1st-2nd unit · 1 model",
+          "value": 145,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 155,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "CHAOS PREDATOR DESTRUCTOR",
+      "points": [
+        {
+          "label": "1st-2nd unit · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "CHAOS SPAWN",
+      "points": [
+        {
+          "label": "2 models",
+          "value": 60,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ]
+    },
+    {
+      "title": "CHAOS VINDICATOR",
+      "points": [
+        {
+          "label": "1st-2nd unit · 1 model",
+          "value": 185,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 195,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "DEFILER",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 340,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Heavy reaper autocannon",
+          "value": 15,
+          "modifiers": []
+        },
+        {
+          "name": "Hades lascannon",
+          "value": 15,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "FORGEFIEND",
+      "points": [
+        {
+          "label": "1st-2nd unit · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Ectoplasma cannon",
+          "value": 5,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "HELBRUTE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "HELDRAKE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 175,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "KHORNE LORD OF SKULLS",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 450,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 475,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ]
+    },
+    {
+      "title": "MAULERFIEND",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "NOCTILITH CROWN",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 125,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "VENOMCRAWLER",
+      "points": [
+        {
+          "label": "1st-2nd unit · 1 model",
+          "value": 120,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    }
+  ],
+  "detachments": [
+    {
+      "title": "CABAL OF CHAOS",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "CHAOS CULT",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "CREATIONS OF BILE",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "CULT OF THE ARKIFANE",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "DECEPTORS",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "DEVOTEES OF DESTRUCTION",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "DREAD TALONS",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "FELLHAMMER SIEGE-HOST",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "HURON’S MARAUDERS",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "MURDERTALON RAIDERS",
+      "forceDisposition": "RECONNAISSANCE",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "NIGHTMARE HUNT",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "PACTBOUND ZEALOTS",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "RENEGADE RAIDERS",
+      "forceDisposition": "RECONNAISSANCE",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "RENEGADE WARBAND",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "SOULFORGED WARPACK",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "VETERANS OF THE LONG WAR",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "WARPSTRIKE CHAMPIONS",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 2
+    }
+  ],
+  "enhancements": [
+    {
+      "title": "Conduit of Chaos",
+      "detachment": "CABAL OF CHAOS",
+      "value": 20
+    },
+    {
+      "title": "Touched by the Warp",
+      "detachment": "CABAL OF CHAOS",
+      "value": 10
+    },
+    {
+      "title": "Amulet of Tainted Vigour",
+      "detachment": "CHAOS CULT",
+      "value": 20
+    },
+    {
+      "title": "Cultist’s Brand",
+      "detachment": "CHAOS CULT",
+      "value": 30
+    },
+    {
+      "title": "Incendiary Goad",
+      "detachment": "CHAOS CULT",
+      "value": 25
+    },
+    {
+      "title": "Warped Foresight",
+      "detachment": "CHAOS CULT",
+      "value": 10
+    },
+    {
+      "title": "Helm of All-Seeing",
+      "detachment": "CREATIONS OF BILE",
+      "value": 25
+    },
+    {
+      "title": "Living Carapace",
+      "detachment": "CREATIONS OF BILE",
+      "value": 15
+    },
+    {
+      "title": "Prime Test Subject",
+      "detachment": "CREATIONS OF BILE",
+      "value": 35
+    },
+    {
+      "title": "Surgical Precision",
+      "detachment": "CREATIONS OF BILE",
+      "value": 10
+    },
+    {
+      "title": "Crown of Worms",
+      "detachment": "CULT OF THE ARKIFANE",
+      "value": 15
+    },
+    {
+      "title": "Cybinfernal Font",
+      "detachment": "CULT OF THE ARKIFANE",
+      "value": 20
+    },
+    {
+      "title": "Mark of the Soul Forges",
+      "detachment": "CULT OF THE ARKIFANE",
+      "value": 20
+    },
+    {
+      "title": "Wyredjinn",
+      "detachment": "CULT OF THE ARKIFANE",
+      "value": 25
+    },
+    {
+      "title": "Cursed Fang",
+      "detachment": "DECEPTORS",
+      "value": 10
+    },
+    {
+      "title": "Falsehood",
+      "detachment": "DECEPTORS",
+      "value": 10
+    },
+    {
+      "title": "Shroud of Obfuscation",
+      "detachment": "DECEPTORS",
+      "value": 15
+    },
+    {
+      "title": "Soul Link",
+      "detachment": "DECEPTORS",
+      "value": 5
+    },
+    {
+      "title": "Eye of Oblivion",
+      "detachment": "DEVOTEES OF DESTRUCTION",
+      "value": 20
+    },
+    {
+      "title": "Pact of Destruction",
+      "detachment": "DEVOTEES OF DESTRUCTION",
+      "value": 15
+    },
+    {
+      "title": "Eater of Dread",
+      "detachment": "DREAD TALONS",
+      "value": 15
+    },
+    {
+      "title": "Night’s Shroud",
+      "detachment": "DREAD TALONS",
+      "value": 10
+    },
+    {
+      "title": "Warp-Fuelled Thrusters",
+      "detachment": "DREAD TALONS",
+      "value": 20
+    },
+    {
+      "title": "Willbreaker",
+      "detachment": "DREAD TALONS",
+      "value": 10
+    },
+    {
+      "title": "Bastion Plate",
+      "detachment": "FELLHAMMER SIEGE-HOST",
+      "value": 10
+    },
+    {
+      "title": "Iron Artifice",
+      "detachment": "FELLHAMMER SIEGE-HOST",
+      "value": 10
+    },
+    {
+      "title": "Ironbound Enmity",
+      "detachment": "FELLHAMMER SIEGE-HOST",
+      "value": 15
+    },
+    {
+      "title": "Warp Tracer",
+      "detachment": "FELLHAMMER SIEGE-HOST",
+      "value": 20
+    },
+    {
+      "title": "Dread Reputation",
+      "detachment": "HURON’S MARAUDERS",
+      "value": 25
+    },
+    {
+      "title": "Eager for Bloodshed",
+      "detachment": "HURON’S MARAUDERS",
+      "value": 30
+    },
+    {
+      "title": "Raid Leader",
+      "detachment": "HURON’S MARAUDERS",
+      "value": 20
+    },
+    {
+      "title": "Voice of the Tyrant",
+      "detachment": "HURON’S MARAUDERS",
+      "value": 25
+    },
+    {
+      "title": "Pact of Cursed Pinions",
+      "detachment": "MURDERTALON RAIDERS",
+      "value": 20
+    },
+    {
+      "title": "Shadowcowl Talisman",
+      "detachment": "MURDERTALON RAIDERS",
+      "value": 20
+    },
+    {
+      "title": "Greyveil Hex",
+      "detachment": "NIGHTMARE HUNT",
+      "value": 25
+    },
+    {
+      "title": "Sorrowscent Vulture",
+      "detachment": "NIGHTMARE HUNT",
+      "value": 35
+    },
+    {
+      "title": "Terrorglut Parasite",
+      "detachment": "NIGHTMARE HUNT",
+      "value": 20
+    },
+    {
+      "title": "Warp-Fuelled Thrusters",
+      "detachment": "NIGHTMARE HUNT",
+      "value": 20
+    },
+    {
+      "title": "Eye of Tzeentch",
+      "detachment": "PACTBOUND ZEALOTS",
+      "value": 15
+    },
+    {
+      "title": "Intoxicating Elixir",
+      "detachment": "PACTBOUND ZEALOTS",
+      "value": 15
+    },
+    {
+      "title": "Orbs of Unlife",
+      "detachment": "PACTBOUND ZEALOTS",
+      "value": 15
+    },
+    {
+      "title": "Talisman of Burning Blood",
+      "detachment": "PACTBOUND ZEALOTS",
+      "value": 15
+    },
+    {
+      "title": "Despot’s Claim",
+      "detachment": "RENEGADE RAIDERS",
+      "value": 15
+    },
+    {
+      "title": "Dread Reaver",
+      "detachment": "RENEGADE RAIDERS",
+      "value": 15
+    },
+    {
+      "title": "Mark of the Hound",
+      "detachment": "RENEGADE RAIDERS",
+      "value": 25
+    },
+    {
+      "title": "Tyrant’s Lash",
+      "detachment": "RENEGADE RAIDERS",
+      "value": 20
+    },
+    {
+      "title": "Empyric Symbiote",
+      "detachment": "RENEGADE WARBAND",
+      "value": 15
+    },
+    {
+      "title": "Eyes of the Hunter",
+      "detachment": "RENEGADE WARBAND",
+      "value": 15
+    },
+    {
+      "title": "Fratricidal Trophies",
+      "detachment": "RENEGADE WARBAND",
+      "value": 5
+    },
+    {
+      "title": "Weaponised Hatred",
+      "detachment": "RENEGADE WARBAND",
+      "value": 35
+    },
+    {
+      "title": "Forge’s Blessing",
+      "detachment": "SOULFORGED WARPACK",
+      "value": 20
+    },
+    {
+      "title": "Invigorated Mechatendrils",
+      "detachment": "SOULFORGED WARPACK",
+      "value": 15
+    },
+    {
+      "title": "Soul Harvester",
+      "detachment": "SOULFORGED WARPACK",
+      "value": 15
+    },
+    {
+      "title": "Tempting Addendum",
+      "detachment": "SOULFORGED WARPACK",
+      "value": 40
+    },
+    {
+      "title": "Eager for Vengeance",
+      "detachment": "VETERANS OF THE LONG WAR",
+      "value": 20
+    },
+    {
+      "title": "Eye of Abaddon",
+      "detachment": "VETERANS OF THE LONG WAR",
+      "value": 15
+    },
+    {
+      "title": "Mark of Legend",
+      "detachment": "VETERANS OF THE LONG WAR",
+      "value": 10
+    },
+    {
+      "title": "Warmaster’s Gift",
+      "detachment": "VETERANS OF THE LONG WAR",
+      "value": 15
+    },
+    {
+      "title": "Akshur’s Binding Runes",
+      "detachment": "WARPSTRIKE CHAMPIONS",
+      "value": 20
+    },
+    {
+      "title": "Eye of the Warp",
+      "detachment": "WARPSTRIKE CHAMPIONS",
+      "value": 15
+    },
+    {
+      "title": "Infernal Fulgurite",
+      "detachment": "WARPSTRIKE CHAMPIONS",
+      "value": 20
+    },
+    {
+      "title": "Tzagulla",
+      "detachment": "WARPSTRIKE CHAMPIONS",
+      "value": 25
+    }
+  ]
+}

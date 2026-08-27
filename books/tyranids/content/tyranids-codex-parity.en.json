@@ -267,9 +267,9 @@
           "title": "SYNAPTIC GOADING",
           "cp": 1,
           "category": "Strategic Ploy",
-          "when": "Any phase, just before an ENDLESS MULTITUDE unit from your army that is within Synapse Range of your army makes a Surge move.",
+          "when": "Any phase, just before an ENDLESS MULTITUDE unit from your army that is within Synapse Range of your army makes a surge move.",
           "target": "That ENDLESS MULTITUDE unit.",
-          "effect": "When making that Surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making Surge moves still apply.",
+          "effect": "When making that surge move, you can re-roll the D6 to determine how far your unit moves, and your unit can end that move as close as possible to the closest objective marker (instead of as close as possible to the closest enemy unit). All other rules for making surge moves still apply.",
           "restrictions": ""
         },
         {

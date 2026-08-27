@@ -427,7 +427,7 @@
         },
         {
           "title": "Data-severed",
-          "text": "If there are no KASTELAN ROBOT models in this unit: \n- This unit loses VEHICLE. \n- This unit has INFANTRY."
+          "text": "If there are no KASTELAN ROBOT models in this unit:\n- This unit loses VEHICLE.\n- This unit has INFANTRY."
         },
         {
           "title": "Doctrina Imperatives",
@@ -451,7 +451,7 @@
       "keywords": [
         "Cybernetica Datasmith",
         "Tech-Priest",
-        "Infantry",
+        "Vehicle",
         "Character",
         "Imperium",
         "Adeptus Mechanicus",

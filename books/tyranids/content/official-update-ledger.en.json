@@ -5,7 +5,7 @@
     {
       "id": "army-shadow-in-the-warp",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -23,7 +23,7 @@
     {
       "id": "army-synapse",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -41,7 +41,7 @@
     {
       "id": "assimilation-feed-the-swarm",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -60,7 +60,7 @@
     {
       "id": "assimilation-instinctive-defence",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -80,7 +80,7 @@
     {
       "id": "crusher-enraged-behemoths",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -99,7 +99,7 @@
     {
       "id": "crusher-untrammelled-ferocity",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -119,7 +119,7 @@
     {
       "id": "synaptic-reinforced-hive-node",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -139,7 +139,7 @@
     {
       "id": "unending-insurmountable-odds",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -158,7 +158,7 @@
     {
       "id": "vanguard-hypersensory-scilia",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -178,7 +178,7 @@
     {
       "id": "vanguard-neuronode",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -198,7 +198,7 @@
     {
       "id": "biovores-seed-spore-mine",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -217,7 +217,7 @@
     {
       "id": "broodlord-parasite-faction-abilities-keywords",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -264,7 +264,7 @@
     {
       "id": "carnifexes-blistering-assault",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -283,7 +283,7 @@
     {
       "id": "exocrine-bio-plasmic-cannon",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -302,7 +302,7 @@
     {
       "id": "hive-tyrant-onslaught",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -321,7 +321,7 @@
     {
       "id": "harpy-spore-mine-cysts",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -340,7 +340,7 @@
     {
       "id": "hive-tyrants-will-of-the-hive-mind",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -369,7 +369,7 @@
     {
       "id": "mawloc-raveners-trygon-keywords",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -414,7 +414,7 @@
     {
       "id": "neurolictor-keywords",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -432,7 +432,7 @@
     {
       "id": "norn-assimilator-keywords",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -453,7 +453,7 @@
     {
       "id": "psychophage-updates",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -517,7 +517,7 @@
     {
       "id": "swarmlord-malign-presence",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -536,7 +536,7 @@
     {
       "id": "tyrannofex-rupture-cannon",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -555,7 +555,7 @@
     {
       "id": "trygon-subterranean-tunnels",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -574,7 +574,7 @@
     {
       "id": "sporocyst-seed-mucolids",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -593,7 +593,7 @@
     {
       "id": "termagants-skulking-horrors",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -612,7 +612,7 @@
     {
       "id": "von-ryans-leapers-pouncing-leap",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -631,7 +631,7 @@
     {
       "id": "harpy-hive-crone-aircraft",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -716,7 +716,7 @@
     {
       "id": "vanguard-chameleonic",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 19
       },
       "targets": [
@@ -736,7 +736,7 @@
     {
       "id": "tyranid-warriors-melee-adaptive-instincts",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -755,7 +755,7 @@
     {
       "id": "tyrannocyte-aerial-seeding",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [
@@ -774,7 +774,7 @@
     {
       "id": "venomthropes-foul-spores",
       "source": {
-        "documentId": "tyranids-faction-pack-v1.1",
+        "documentId": "tyranids-faction-pack-v1.2",
         "page": 20
       },
       "targets": [

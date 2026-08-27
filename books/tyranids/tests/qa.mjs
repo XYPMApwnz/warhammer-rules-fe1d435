@@ -9,7 +9,7 @@ const datasheets=json('books/tyranids/content/tyranids-codex-datasheets.en.json'
 const scope={window:{}};scope.window.window=scope.window;vm.runInNewContext(fs.readFileSync(path.join(root,'books/tyranids/scripts/target-data.js'),'utf8'),scope);vm.runInNewContext(fs.readFileSync(path.join(root,'books/tyranids/scripts/roster-data.js'),'utf8'),scope);
 const targets=scope.window.WH_ARMY_BOOK_TARGETS,catalog=scope.window.WH_BOOK_ROSTER_CATALOG,detachments=[...pack.detachments,...parity.detachments],enhancements=detachments.flatMap(item=>item.enhancements||[]),stratagems=detachments.flatMap(item=>item.stratagems||[]),abilityCount=datasheets.datasheets.reduce((sum,unit)=>sum+(unit.abilities?.length||0),0),weaponCount=datasheets.datasheets.reduce((sum,unit)=>sum+(unit.weapons?.length||0),0),leaders=catalog.units.filter(unit=>unit.relations.canLead.length);
 assert.equal(datasheets.datasheets.length,50);
-assert.equal(abilityCount,227);
+assert.equal(abilityCount,228);
 assert.equal(weaponCount,127);
 assert.ok(datasheets.datasheets.every(unit=>unit.wargearAbilities.length===0));
 assert.equal(detachments.length,10);

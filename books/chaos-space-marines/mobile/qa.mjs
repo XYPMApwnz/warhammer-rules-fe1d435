@@ -1,10 +1,14 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 
 const root=path.dirname(fileURLToPath(import.meta.url)),bookRoot=path.resolve(root,'..');
-const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8');
+const readerShell=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),sandbox={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(bookRoot,'scripts','target-data.js'),'utf8'),sandbox);
+const generated=sandbox.window.WH_ARMY_BOOK_TARGETS,reader=readerShell+generated.html;
+const runtimeVersions=JSON.parse(fs.readFileSync(path.join(bookRoot,'..','shared','runtime-asset-versions.json'),'utf8'));
 const config=JSON.parse(fs.readFileSync(path.join(bookRoot,'book.config.json'),'utf8'));
 const manifest=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources/source-manifest.json'),'utf8'));
 const source=JSON.parse(fs.readFileSync(path.join(bookRoot,'content/chaos-space-marines-codex-datasheets.en.json'),'utf8'));
@@ -39,10 +43,10 @@ assert.deepEqual(Object.fromEntries(categories.map(category=>[category.title,cat
 
 for(const route of routes){
   const html=fs.readFileSync(path.join(root,route),'utf8');
-  const expectedTarget=route==='index.html'?'start':route==='army-rules.html'?'army-rules':route==='updates.html'?'updates':detachmentIds.includes(`detachment-${route.slice(0,-5)}`)?`detachment-${route.slice(0,-5)}`:`unit-${route.slice(0,-5)}`;
+  const expectedTarget=/data-canonical-target="([^"]+)"/.exec(html)?.[1];
   assert.match(html,/data-canonical-reader="\.\.\/reader\.html"/);
-  assert.match(html,new RegExp(`data-canonical-target="${expectedTarget}"`));
-  assert.match(html,/\.\.\/\.\.\/shared\/mobile-route-redirect\.js\?v=1/);
+  assert.ok(expectedTarget&&(generated.targets[expectedTarget]||generated.targets[generated.aliases?.[expectedTarget]]),`${route}: generated target is absent`);
+  assert.match(html,new RegExp(`\\.\\.\\/\\.\\.\\/shared\\/mobile-route-redirect\\.js\\?v=${runtimeVersions.shared.mobileRouteRedirect}`));
   assert.doesNotMatch(html,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/);
   assert.doesNotMatch(html,/mobile\.(?:js|css)|phone-popup-controller/);
 }

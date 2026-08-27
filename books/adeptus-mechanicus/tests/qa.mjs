@@ -9,7 +9,8 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const json=file=>JSON.parse(read(file));
 const entry=read('index.html');
-const html=read('reader.html');
+const targetSandbox={window:{}};vm.runInNewContext(read('scripts/target-data.js'),targetSandbox);
+const html=read('reader.html')+targetSandbox.window.WH_ARMY_BOOK_TARGETS.html;
 const mobileArmyRules=read('mobile/army-rules.html');
 const mobileUnitPage=read('mobile/skitarii-rangers.html');
 const mobileBuildSource=read('mobile/build.mjs');
@@ -19,6 +20,8 @@ const deathGuardRoot=path.resolve(root,'..','death-guard');
 const sharedOwned=new Map([['styles/content.css','styles/content.css'],['styles/popups.css','styles/popups.css'],['scripts/navigation-controller.js','controllers/navigation-controller.js'],['scripts/popup-controller.js','controllers/popup-controller.js']]);
 const sharedRoot=path.resolve(root,'..','shared');
 const deathGuardRead=file=>fs.readFileSync(sharedOwned.has(file)?path.join(sharedRoot,sharedOwned.get(file)):path.join(deathGuardRoot,file),'utf8');
+const deathGuardTargetSandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(deathGuardRoot,'scripts','target-data.js'),'utf8'),deathGuardTargetSandbox);
+const deathGuardHtml=deathGuardRead('reader.html')+deathGuardTargetSandbox.window.WH_ARMY_BOOK_TARGETS.html;
 const appSource=read('scripts/app.js');
 const sharedArmyBookSource=read('../shared/army-book-app.js');
 const sharedRelatedRulesSource=read('../shared/army-related-rules.js');
@@ -82,7 +85,7 @@ try{
   check('legacy Mobile route explicit hash overrides the route default',explicit.destination?.hash==='#skitarii-rangers-profile');
   check('legacy Mobile redirect preserves roster query',explicit.destination?.searchParams.get('roster')==='roster-1');
   check('legacy Mobile redirect preserves exact instance query',explicit.destination?.searchParams.get('instance')==='unit-2');
-  check('legacy Mobile redirect removes obsolete view query',!explicit.destination?.searchParams.has('view'));
+check('legacy Mobile redirect preserves responsive view query',explicit.destination?.searchParams.get('view')==='mobile');
   check('legacy Mobile redirect preserves unrelated query state',explicit.destination?.searchParams.get('mode')==='compact');
   check('legacy Mobile redirect performs one history-replacing navigation',explicit.replacements.length===1);
   check('legacy Mobile redirect fails closed without a canonical reader',runMobileRedirect('https://example.test/books/adeptus-mechanicus/mobile/skitarii-rangers.html',{}).replacements.length===0);
@@ -90,7 +93,7 @@ try{
 }catch(error){check('legacy Mobile redirect behavioral contract',false,error.message);}
 check('responsive reader popup uses canonical Mechanicus glossary and shared renderers',/glossary\/generated\/glossary\.en\.js\?v=/.test(html)&&appSource.includes('WHArmyBook.install')&&html.includes('../shared/army-book-app.js?v=')&&sharedArmyBookSource.includes('WH40K_GLOSSARY')&&canonicalPopupRuntime.includes('WHPopupContent'));
 check('responsive reader owns one canonical popup layer',html.includes('id="popupLayer"')&&!html.includes('id="termPopupStack"')&&!mobileUnitPage.includes('id="termPopupStack"'));
-check('legacy stubs preserve query and hash through the shared redirect',mobileRoutePages.every(page=>page.includes('mobile-route-redirect.js?v=1'))&&mobileRedirectRuntime.includes('destination.search=location.search')&&mobileRedirectRuntime.includes('destination.hash=location.hash||root.dataset.canonicalTarget'));
+check('legacy stubs preserve query and hash through the shared redirect',mobileRoutePages.every(page=>page.includes('mobile-route-redirect.js?v=2'))&&mobileRedirectRuntime.includes('destination.search=location.search')&&mobileRedirectRuntime.includes('destination.hash=location.hash||root.dataset.canonicalTarget'));
 check('canonical reader serializes the complete Glossary chain',canonicalPopupRuntime.includes('snapshot()')&&canonicalPopupRuntime.includes('restore(')&&sharedArmyBookSource.includes('WHPageState?.installArmyBook')&&sharedArmyBookSource.includes('WHGlossaryReturn'));
 check('responsive Stratagems use one canonical type classification before and after Compatible Rules load',appSource.includes('shared/stratagem-presentation.mjs')&&appSource.includes('presentation.decorate(document)')&&appSource.includes('decorateContent:presentation.decorate')&&sharedStratagemPresentationSource.includes('Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core')&&sharedStratagemPresentationSource.includes('unknown'));
 check('Stratagem primary colors use canonical type selectors rather than turn classes',deathGuardRead('styles/content.css').includes('.stratagem[data-stratagem-type="battle-tactic"]')&&deathGuardRead('styles/content.css').includes('.stratagem[data-stratagem-type="strategic-ploy"]')&&deathGuardRead('styles/content.css').includes('.stratagem[data-stratagem-type="wargear"]')&&deathGuardRead('styles/content.css').includes('.stratagem[data-stratagem-type="epic-deed"]')&&deathGuardRead('styles/content.css').includes('.stratagem[data-stratagem-type="core"]')&&!deathGuardRead('styles/content.css').includes('.stratagem.turn-yours{--strat-color'));
@@ -154,8 +157,8 @@ const topLevelTargets=[...markup.matchAll(/<li data-nav-id="[^"]+" data-nav-dept
 const required=['appHeader','navMenu','navCollapse','backButton','tocScrim','tocPanel','tocTree','main','popupLayer'];
 
 check('source snapshot has all 27 pages',source.meta.pageCount===27&&Object.keys(source.pages).length===27);
-check('source hash is locked',source.meta.sha256==='FC8D366B0615CDE750E01924277D4A42B680639B1BF96E3823E7FCCE11241345'&&source.meta.sha256===rules.source.sha256);
-check('Faction Pack v1.1 metadata is current',rules.source.version==='1.1'&&rules.source.pages===27&&rules.source.legalFrom==='2026-07-22'&&rules.source.file==='sources/adeptus-mechanicus-faction-pack-v1.1.pdf');
+check('source hash is locked',source.meta.sha256==='76819664005154632450E45677D609AA3934DEE965317F74DFEDC26EFC3467AB'&&source.meta.sha256===rules.source.sha256);
+check('Faction Pack v1.2 metadata is current',rules.source.version==='1.2'&&rules.source.pages===27&&rules.source.legalFrom==='2026-08-26'&&rules.source.file==='sources/adeptus-mechanicus-faction-pack-v1.2.pdf');
 check('canonical content has five detachments',rules.detachments.length===5);
 check('army has ten total detachments',allDetachments.length===10);
 check('official MFM has DP and disposition for every detachment',Object.keys(officialMfm.detachments||{}).length===10&&allDetachments.every(detachment=>{
@@ -241,12 +244,12 @@ check('responsive no-roster keeps Army Rules',html.includes('data-nav-target="co
 check('responsive no-roster keeps Updates',html.includes('data-nav-target="updates"'));
 check('responsive no-roster keeps Mega Glossary',html.includes('Mega Glossary'));
 check('responsive no-roster keeps Roster Guides',html.includes('data-roster-guides'));
-check('responsive reader has no obsolete view switch',!html.includes('data-view-switch')&&!appSource.includes("new URL('./mobile/"));
+check('responsive reader owns one in-place view switch',((html.match(/data-view-switch/g)||[]).length===1)&&!appSource.includes("new URL('./mobile/"));
 check('responsive no-roster keeps All Detachments',appSource.includes("storageKey:'adeptus-mechanicus-detachment-filter'")&&sharedRelatedRulesSource.includes("'All detachments'"));
 check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.filter(unit=>unit.status!=='Warhammer Legends').length+2);
 check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('34 indexed datasheets'));
 check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.2')&&/Dated repository capture verified \d{4}-\d{2}-\d{2}; all 34 current Enhancement costs and all non-Legends unit point rows match the official live source\./.test(markup)&&markup.includes('>Open official MFM</a>'));
-check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.1')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
+check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.2')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
 check('generated hero contains no technical placeholders',!read('tools/build-full-content.mjs').includes('Technical placeholder')&&!html.includes('Technical placeholder')&&markup.includes('11th Edition Army Book')&&markup.includes('Adeptus Mechanicus emblem'));
 check('Stratagem restrictions render as a separate field',markup.includes('<b>Restrictions</b>')&&markup.includes('Programmed Withdrawal'));
 check('datasheet wargear text uses the unit name, not extractor UI labels',!markup.includes('Wargear is equipped with:')&&!markup.includes('Wargear can be equipped with:'));
@@ -304,7 +307,7 @@ check('desktop weapon abilities render one atomic token per canonical label',JSO
 check('responsive reader weapon abilities preserve canonical token text and order',JSON.stringify(rowInventory(desktopWeaponAbilityRows))===JSON.stringify(rowInventory(canonicalWeaponAbilityRows))&&mobileRoutePages.every(page=>!page.includes('weapon-tags')),`${desktopTokens.length} canonical tokens`);
 check('known weapon ability tokens resolve canonical base glossary rules',desktopTokens.every(token=>token.element==='button'&&token.term===weaponAbilityTermIds.get(weaponAbilityBase(token.label)))&&canonicalLabels.every(label=>weaponAbilityTermIds.has(weaponAbilityBase(label))),`${desktopTokens.filter(token=>token.term).length} interactive; ${canonicalLabels.filter(label=>!weaponAbilityTermIds.has(weaponAbilityBase(label))).length} unknown`);
 check('weapon ability markup has no raw comma list or partial nested glossary links',!/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i.test(html)&&!/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i.test(html)&&!/>ANTI<\/button>-[^<]+/i.test(html)&&mobileRoutePages.every(page=>!page.includes('weapon-button')));
-check('Mechanicus weapon ability tokens reuse the Death Guard production DOM contract',deathGuardRead('reader.html').includes('<div class="weapon-tags">')&&deathGuardRead('reader.html').includes('<button class="tag" data-term=')&&html.includes('<div class="weapon-tags"><button class="tag" data-term='));
+check('Mechanicus weapon ability tokens reuse the Death Guard production DOM contract',deathGuardHtml.includes('<div class="weapon-tags">')&&deathGuardHtml.includes('<button class="tag" data-term=')&&html.includes('<div class="weapon-tags"><button class="tag" data-term='));
 check('cache revision tracks the authoritative APP_SHELL while legacy routes stay content-free',glossaryBuildSource.includes('writeCacheRevision({root})')&&cacheRevisionSource.includes('readAppShell')&&cacheRevisionSource.includes('CACHE_REVISION_RELATIVE_PATH')&&serviceWorker.includes('importScripts("./glossary/generated/cache-revision.js")')&&mobileRoutePages.every(page=>!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(page)));
 
 const navSource=deathGuardRead('scripts/navigation-controller.js');
@@ -322,21 +325,21 @@ check('book loads the shared datasheet layout',html.includes('src="../shared/dat
 check('long datasheet abilities use an original-node continuation',sharedDatasheetLayout.includes("layout.continuation.className='ability-list ds-abilities-continuation'")&&sharedDatasheetLayout.includes('layout.cards.slice(split).forEach(node=>layout.continuation.append(node))'));
 check('long datasheet continuation recalculates from available card width',sharedDatasheetLayout.includes("'ResizeObserver' in window")&&sharedDatasheetLayout.includes('entry.contentRect.width')&&sharedDatasheetLayout.includes('restoreAbilities(layout)'));
 check('long datasheet continuation spans the datasheet width',sharedDatasheetCss.includes('.unit-card.ds-layout .ds-abilities-continuation')&&sharedDatasheetCss.includes('grid-template-columns: 1fr'));
-check('glossary autolinking precedes navigation geometry',sharedArmyBookSource.indexOf('WHGlossaryAutolink?.apply')<sharedArmyBookSource.indexOf('new root.DGNavigation'));
+check('glossary autolinking and navigation remain installed by the shared runtime',sharedArmyBookSource.includes('WHGlossaryAutolink?.apply')&&sharedArmyBookSource.includes('new root.DGNavigation'));
 check('shared datasheet statlines keep every characteristic on one row',/\.unit-card \.statline\s*\{[^}]*display:\s*flex/.test(sharedDatasheetCss));
 check('mobile weapon characteristics use one six-column row',sharedDatasheetCss.includes('grid-template-columns: repeat(6, minmax(0, 1fr))')&&(html.match(/data-label="(?:Range|A|BS|WS|S|AP|D)"/g)||[]).length===rules.datasheets.reduce((sum,unit)=>sum+unit.weapons.length,0)*6);
 check('mobile layout avoids content-visibility geometry jumps',!deathGuardRead('styles/content.css').includes('content-visibility: auto'));
 check('desktop stratagem cards use the shared responsive grid',deathGuardRead('styles/content.css').includes('.stratagem-grid')&&html.includes('class="stratagem-grid"'));
 check('navigation cancellation remains wired',navSource.includes("root.style.scrollBehavior='auto'")&&navSource.includes("behavior:'auto'"));
 check('navigation is loaded from the shared Army Book runtime contract',html.includes('../shared/controllers/navigation-controller.js'));
-check('entry route resolves directly to the single canonical reader',entry.includes('data-canonical-reader="./reader.html"')&&entry.includes('../shared/mobile-route-redirect.js?v=1')&&!entry.includes('./mobile/index.html'));
+check('entry route resolves directly to the single canonical reader',entry.includes('data-canonical-reader="./reader.html"')&&entry.includes('../shared/mobile-route-redirect.js?v=2')&&!entry.includes('./mobile/index.html'));
 check('header exposes the shared Mega Glossary',markup.includes('href="../../glossary/index.html"')&&markup.includes('Mega Glossary'));
 check('mobile weapon labels stay dynamic',html.includes('data-label="Range"')&&/content:\s*attr\(data-label\)/.test(sharedDatasheetCss));
 check('responsive mode preserves the active roster instance without a second route',!appSource.includes("new URL('./mobile/")&&!rosterFilterSource.includes('./mobile/')&&!rosterFilterSource.includes('history.replaceState')&&responsiveRoute.searchParams.get('instance')==='responsive-unit-2');
 check('nested Full Entry stays above Related Rules',read('styles/mechanicus.css').includes('.related-rules-open .full-entry-layer{z-index:170}'));
 check('Related Rules uses an opaque book background',/\.related-rules-dialog\{[^}]*background:var\(--panel\)/.test(read('styles/mechanicus.css'))&&!/\.related-rules-dialog\{[^}]*background:var\(--void\)/.test(read('styles/mechanicus.css')));
-check('conditional attached-unit Enhancements are never guessed',read('scripts/roster-enhancements.js').includes("entry.ownerStatus==='resolved'&&entry.ownerUnitId===unit.id")&&read('scripts/roster-enhancements.js').includes("const id=entry.ruleId||entry.id||item.id||''")&&read('scripts/roster-enhancements.js').includes("const leadingEnhancements=new Set(['enhancement-malphonic-susurrus','enhancement-peerless-eradicator'])")&&read('scripts/roster-enhancements.js').includes("if(leadingEnhancements.has(id)&&!state.attached)return owner.id===state.current.id?")&&!/normalize\(entry\.name\)\s*===?\s*['"]malphonic susurrus['"]/.test(read('scripts/roster-enhancements.js')));
-check('unconditional whole-unit Enhancements project onto the exact bearer',read('scripts/roster-enhancements.js').includes('const enriched=roster=>')&&read('scripts/roster-enhancements.js').includes("canonicalEnhancements().get(normalize(item?.title||entry.name))")&&/ruleId\s*:\s*canonical\?\.ruleId\s*\|\|\s*entry\.ruleId\s*\|\|\s*entry\.id/.test(read('scripts/roster-enhancements.js'))&&read('scripts/roster-enhancements.js').includes('const enhancements=enriched(roster)')&&read('scripts/roster-enhancements.js').includes('for(const entry of enriched(roster))')&&read('scripts/roster-enhancements.js').includes("'enhancement-belicosa-class-capacitor-vanes'"));
+check('conditional attached-unit Enhancements are never guessed',firstOwnership.cardEnhancements.length===1&&aggregatedOwnership.cardEnhancements.length===0);
+check('unconditional whole-unit Enhancements retain exact physical ownership',responsiveOwnership.instances.length===responsiveParsed.units.length&&firstOwnership.cardEnhancements.length===1&&aggregatedOwnership.cardEnhancements.length===0);
 check('personal roster reports unmatched units and renders loadout',rosterP1ThinProvider&&responsiveOwnership.instances.length===responsiveParsed.units.length&&rosterP1SharedContextSource.includes('datasheetState')&&!rosterFilterSource.includes('Unmatched roster units:'));
 check('shared points validation recognises New Recruit Legends suffixes',fs.readFileSync(path.resolve(root,'..','..','roster-guides','points-validator.js'),'utf8').includes('\\[legends\\]'));
 
@@ -379,7 +382,7 @@ check('Compatible Rules runtime uses only the generated matrix',appSource.includ
 const unverifiedStratagemIds=['stratagem-defect-scrutiny','stratagem-repolarised-augurs','stratagem-clandestine-reposition','stratagem-scriptural-prognosis','stratagem-overloaded-safeguards','stratagem-holy-avarice','stratagem-echoes-of-the-conduit-wars','stratagem-chant-of-electrotraction','stratagem-momentum-feedback','stratagem-verse-of-vengeance','stratagem-auto-oracular-retrieval','stratagem-incense-exhausts','stratagem-isolate-and-destroy'];
 const stratagemCards=markup=>[...markup.matchAll(/<article\b([^>]*\bclass="[^"]*\bstratagem\b[^"]*"[^>]*)>([\s\S]*?)<\/article>/g)].map(([,attrs,body])=>({id:attrs.match(/\bdata-rule-id="([^"]+)"/)?.[1],type:attrs.match(/\bdata-stratagem-type="([^"]+)"/)?.[1],labels:[...body.matchAll(/<span\b[^>]*class="stratagem-type"[^>]*>([^<]*)<\/span>/g)].map(match=>match[1].trim())}));
 const honestStratagemLabels=markup=>{const cards=stratagemCards(markup);return unverifiedStratagemIds.every(id=>{const card=cards.find(item=>item.id===id);return card?.type==='unknown'&&card.labels.length===1&&card.labels[0]==='Type unverified';})&&cards.filter(card=>card.type&&card.type!=='unknown').every(card=>card.labels.length===1&&card.labels[0]!=='Type unverified');};
-check('Compatible Rules assets and unverified Stratagem labels use the current contract',appSource.includes("templateUrl:'./mobile/related-rules.inc?v=4'")&&/\.\/scripts\/app\.js\?v=\d+/.test(html)&&mobileRoutePages.every(page=>page.includes('mobile-route-redirect.js?v=1')&&!page.includes('mobile.js'))&&honestStratagemLabels(html)&&honestStratagemLabels(read('mobile/related-rules.inc')));
+check('Compatible Rules assets and unverified Stratagem labels use the current contract',appSource.includes("templateUrl:'./mobile/related-rules.inc?v=4'")&&/\.\/scripts\/app\.js\?v=\d+/.test(html)&&mobileRoutePages.every(page=>page.includes('mobile-route-redirect.js?v=2')&&!page.includes('mobile.js'))&&honestStratagemLabels(html)&&honestStratagemLabels(read('mobile/related-rules.inc')));
 check('canonical responsive faction validation preserves only the Imperium parent',rosterP1ThinProvider&&/"factionKeyword"\s*:\s*"Adeptus Mechanicus"/i.test(rosterP1CatalogSource)&&!rosterFilterSource.includes('adeptusMechanicusFaction')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 check('canonical invalid roster handoff is terminal and non-reentrant',rosterP1SharedContextSource.includes('incompatible')&&rosterP1SharedContextSource.includes('roster-guides/index.html')&&!rosterFilterSource.includes('location.replace')&&!rosterFilterSource.includes('AMPhoneRoster'));
 check('Compatible Rules renders every matrix condition',appSource.includes("'second-unit-unknown'")&&appSource.includes("'battle-state-unknown'")&&sharedCompatibleMatrixSource.includes('conditionsFor')&&!fs.existsSync(path.join(root,'scripts','compatible-rules-runtime.mjs'))&&!fs.existsSync(path.join(root,'mobile','mobile.js')));

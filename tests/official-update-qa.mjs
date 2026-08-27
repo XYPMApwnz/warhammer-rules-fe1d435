@@ -1,12 +1,19 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {isDeepStrictEqual} from 'node:util';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const json=file=>JSON.parse(read(file));
+const runtimeVersions=json('books/shared/runtime-asset-versions.json');
+const generatedBook=bookId=>{
+  const sandbox={window:{}};
+  vm.runInNewContext(read(`books/${bookId}/scripts/target-data.js`),sandbox);
+  return sandbox.window.WH_ARMY_BOOK_TARGETS;
+};
 const clean=value=>String(value??'').replaceAll('\u00a0',' ').replace(/\r\n?/g,'\n').replace(/[ \t]+/g,' ').trim();
 const slug=value=>clean(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const decode=html=>clean(html.replace(/<[^>]+>/g,' ').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>'))
@@ -146,7 +153,8 @@ const amOfficialMarkers=[
   ['belisarius-cawl-mantra-of-discipline',18,'Mantra of Discipline Ability'],
   ['belisarius-cawl-shroudpsalm',18,'Shroudpsalm (Aura) Ability'],
   ['belisarius-cawl-solar-atomiser',18,'Solar atomiser weapon: Change A to'],
-  ['cybernetica-datasmith-core-abilities',18,'Cybernetica Datasmith, Core Abilities section'],
+  ['cybernetica-datasmith-core-abilities',18,'Core Abilities section: Remove ‘Leader’, add ‘Support’'],
+  ['cybernetica-datasmith-keywords',18,'Keywords section: Remove ‘INFANTRY’, add ‘VEHICLE’'],
   ['cybernetica-datasmith-data-severed',18,'Data-severed: If there are no KASTELAN ROBOT models'],
   ['ironstrider-ballistarii-twin-cognis-autocannon',18,'Twin Cognis Autocannon'],
   ['ironstrider-ballistarii-twin-cognis-lascannon',18,'Twin Cognis Lascannon'],
@@ -345,13 +353,7 @@ function mobileFile(bookId,target){
   if(bookId==='death-guard'&&target.owner==='faq-spore-laced-shock-waves')return 'books/death-guard/mobile/updates.html';
   if(target.unitId)return `books/${bookId}/mobile/${target.unitId.slice(5)}.html`;
   if(target.kind==='army-rule'||target.kind==='army-rule-branch'||bookId==='death-guard'&&['contagion-range-cap','skullsquirm-blight'].includes(target.owner))return `books/${bookId}/mobile/army-rules.html`;
-  if(bookId==='death-guard'){
-    const matches=fs.readdirSync(path.join(root,'books/death-guard/mobile')).filter(name=>name.endsWith('.html')).filter(name=>{
-      const html=read(`books/death-guard/mobile/${name}`);
-      return html.includes(` id="${target.owner}"`)||html.includes(` data-rule-id="${target.owner}"`);
-    });
-    return `books/death-guard/mobile/${exactlyOne(matches,`DG mobile ${target.owner}`)}`;
-  }
+  if(bookId==='death-guard')return 'books/death-guard/mobile/index.html';
   const detachment=target.detachmentId?.replace(/^detachment-/,'')||target.owner;
   return `books/${bookId}/mobile/${detachment}.html`;
 }
@@ -465,7 +467,7 @@ const ranks={matched:0,'already-effective':0,unavailable:1,invalid:2};
 let updateCount=0,targetCount=0,warnings=0;
 
 for(const [bookId,config] of Object.entries(configs)){
-  const ledger=json(config.ledger),desktop=read(config.desktop),updateIds=new Set(),globalAddresses=new Set();
+  const ledger=json(config.ledger),generated=generatedBook(bookId),desktop=generated.html,updateIds=new Set(),globalAddresses=new Set();
   assert.equal(ledger.schema,1);
   assert.equal(ledger.bookId,bookId);
   assert.ok(ledger.updates.length,`${bookId}: ledger is empty`);
@@ -491,9 +493,9 @@ for(const [bookId,config] of Object.entries(configs)){
       let observed,state;
       try{
         observed=config.source(update,target);
-        state=target.expectedBefore!==null&&target.expectedBefore!==undefined&&isDeepStrictEqual(observed,target.expectedBefore)
+        state=target.expectedBefore!==null&&target.expectedBefore!==undefined&&isDeepStrictEqual(normalizedSurface(observed),normalizedSurface(target.expectedBefore))
           ?'matched'
-          :isDeepStrictEqual(observed,target.effectiveAfter)?'already-effective':'invalid';
+          :isDeepStrictEqual(normalizedSurface(observed),normalizedSurface(target.effectiveAfter))?'already-effective':'invalid';
         assert.notEqual(state,'invalid',`${bookId}/${update.id}: source target does not equal expectedBefore or effectiveAfter`);
       }catch(error){
         if(target.unavailableReason&&['base-source-unavailable','source-field-unavailable'].includes(target.unavailableReason.category)){
@@ -505,7 +507,10 @@ for(const [bookId,config] of Object.entries(configs)){
       assert.deepStrictEqual(normalizedSurface(surfaceObserved(bookId,target,desktop)),normalizedSurface(target.effectiveAfter),`${bookId}/${update.id}: desktop target mismatch`);
       const mobile=mobileFile(bookId,target);
       assert.ok(fs.existsSync(path.join(root,mobile)),`${bookId}/${update.id}: missing ${mobile}`);
-      assert.deepStrictEqual(normalizedSurface(surfaceObserved(bookId,target,read(mobile))),normalizedSurface(target.effectiveAfter),`${bookId}/${update.id}: mobile target mismatch`);
+      const mobileStub=read(mobile),routeTarget=attr(mobileStub,'data-canonical-target');
+      assert.equal(attr(mobileStub,'data-canonical-reader'),'../reader.html',`${bookId}/${update.id}: mobile route lost canonical reader`);
+      assert.match(mobileStub,new RegExp(`mobile-route-redirect\\.js\\?v=${runtimeVersions.shared.mobileRouteRedirect}`),`${bookId}/${update.id}: mobile route uses stale redirect runtime`);
+      assert.ok(routeTarget&&(generated.targets[routeTarget]||generated.targets[generated.aliases?.[routeTarget]]),`${bookId}/${update.id}: mobile target ${routeTarget||'(missing)'} is absent from generated content`);
       verifyGlossary(bookId,update,target);
     }
     const state=states.reduce((worst,current)=>ranks[current]>ranks[worst]?current:worst,'already-effective');

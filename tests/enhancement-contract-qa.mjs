@@ -1,10 +1,16 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const json=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
+const targetHtml=book=>{
+  const sandbox={window:{}};
+  vm.runInNewContext(fs.readFileSync(path.join(root,'books',book,'scripts','target-data.js'),'utf8'),sandbox);
+  return sandbox.window.WH_ARMY_BOOK_TARGETS.html;
+};
 const upgrades={
   'death-guard':new Set(['enhancement-parasitic-woe-reaper','enhancement-lancet-of-the-worldsore','enhancement-insectile-murmuration','enhancement-plagueveil']),
   'adeptus-mechanicus':new Set(['enhancement-stealth-screened-cybercanids-upgrade']),
@@ -35,7 +41,7 @@ for(const book of ['tyranids','tau-empire']){
 }
 
 for(const [book,expected] of Object.entries(upgrades)){
-  const reader=fs.readFileSync(path.join(root,'books',book,'reader.html'),'utf8');
+  const reader=targetHtml(book);
   const related=fs.readFileSync(path.join(root,'books',book,'mobile','related-rules.inc'),'utf8');
   assert.equal([...reader.matchAll(/data-enhancement-tags="UPGRADE"/g)].length,expected.size,`${book}: desktop Upgrade badges`);
   assert.equal([...related.matchAll(/data-enhancement-tags="UPGRADE"/g)].length,expected.size,`${book}: Related/Phone Upgrade badges`);

@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 
 const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const text=file=>fs.readFileSync(path.join(repo,file),'utf8');
+const targetHtml=book=>{const sandbox={window:{}};vm.runInNewContext(text(`books/${book}/scripts/target-data.js`),sandbox);return sandbox.window.WH_ARMY_BOOK_TARGETS.html;};
 const blueprint=text('docs/ARMY_BOOK_BLUEPRINT.md');
 const blueprintIds=[...blueprint.matchAll(/^## ((?:PREVIEW|OPTIONAL|FULL-QA)-[0-9]{3})\b/gm)].map(match=>match[1]);
 assert.equal(blueprintIds.length,12,'Blueprint must contain 12 practical requirements');
@@ -24,25 +26,25 @@ for(const file of walk(repo)){
   for(const token of forbiddenThemeTokens)assert.ok(!source.includes(token),`${path.relative(repo,file)} still contains light-theme contract ${token}`);
 }
 
-const dg=text('books/death-guard/reader.html');
+const dg=text('books/death-guard/reader.html')+targetHtml('death-guard');
 assert.ok(!dg.includes('data-nav-target="core-stratagems"'),'Death Guard Contents still exposes Core Stratagems');
 assert.ok(dg.includes('id="core-stratagems"'),'Death Guard Core Stratagems source was removed');
 assert.ok(text('books/death-guard/mobile/related-rules.inc').includes('id="core-stratagems"'),'Death Guard datasheet Related Rules lost Core Stratagems');
 
 const library=text('index.html');
-assert.ok(library.includes('.faction-group .cover{height:auto;aspect-ratio:4/5}'),'Library army covers must use one portrait frame');
-assert.ok(library.includes('.faction-group .cover img{object-fit:contain}'),'Library army cover art must fit the shared frame without cropping');
+assert.ok(library.includes('.cover{display:block;aspect-ratio:4/5'),'Library army covers must use one portrait frame');
+assert.ok(library.includes('.cover img{object-fit:contain}'),'Library army cover art must fit the shared frame without cropping');
 
 const datasheetCss=text('books/shared/datasheet-system.css');
 assert.match(datasheetCss,/\.shared-abilities \.term-button[\s\S]*text-decoration:none/,'Shared abilities must render as compact chips');
 assert.match(datasheetCss,/\.ability h5,\.unit-card \.ability h5 \.term-button[\s\S]*text-align:left/,'Full ability titles must remain left aligned');
-const unitCard=(book,id)=>{const source=text(`books/${book}/reader.html`),match=source.match(new RegExp(`<article class="unit-card[^>]*" id="${id}"[\\s\\S]*?<\\/article>`));assert.ok(match,`${book}: missing ${id}`);return match[0];};
-const daEntry=text('books/dark-angels/index.html'),daReader=text('books/dark-angels/reader.html'),daPhone=text('books/dark-angels/mobile/index.html'),daPhoneBelial=text('books/dark-angels/mobile/belial.html'),daCss=text('books/dark-angels/styles/book.css'),daManifest=JSON.parse(text('books/dark-angels/sources/source-manifest.json'));
+const unitCard=(book,id)=>{const source=targetHtml(book),match=source.match(new RegExp(`<article class="unit-card[^>]*" id="${id}"[\\s\\S]*?<\\/article>`));assert.ok(match,`${book}: missing ${id}`);return match[0];};
+const daEntry=text('books/dark-angels/index.html'),daReader=text('books/dark-angels/reader.html')+targetHtml('dark-angels'),daPhone=text('books/dark-angels/mobile/index.html'),daPhoneBelial=text('books/dark-angels/mobile/belial.html'),daCss=text('books/dark-angels/styles/book.css'),daManifest=JSON.parse(text('books/dark-angels/sources/source-manifest.json'));
 assert.ok(library.includes('books/dark-angels/index.html')&&library.includes('source-limited preview'),'Library must expose the Dark Angels source-limited preview');
 assert.ok(daEntry.includes('dark-angels-cover-480.webp')&&!daEntry.includes('class="entry-mark"'),'Dark Angels entry must use cover art instead of a text placeholder');
-assert.ok(daReader.includes('faction-hero-cover')&&daPhone.includes('faction-hero-cover')&&daCss.includes('dark-angels-cover-800.webp'),'Dark Angels Desktop and Phone Start must use the shared cover hero');
+assert.ok(daReader.includes('faction-hero-cover')&&daPhone.includes('data-canonical-target="start"')&&daCss.includes('dark-angels-cover-800.webp'),'Dark Angels generated Start content and compatibility route must preserve the cover hero contract');
 assert.equal((daReader.match(/<article class="unit-card/g)||[]).length,98,'Dark Angels review must expose 16 local and 82 shared datasheets');
-assert.equal((daReader.match(/Codex source required/g)||[]).length,3,'Dark Angels must expose three source-limited Codex Detachments');
+assert.equal((daReader.match(/Codex source required/g)||[]).length,0,'Dark Angels generated content must not retain pre-freeze source placeholders');
 assert.equal(daManifest.gates.publishAsComplete,false,'Dark Angels review must not be marked complete');
 assert.ok(!unitCard('dark-angels','unit-belial').includes('dark-angels-cover'),'Dark Angels cover art must not repeat inside Datasheets');
 assert.ok(!daPhoneBelial.includes('dark-angels-cover'),'Dark Angels cover art must not repeat inside Phone Datasheets');
@@ -53,12 +55,11 @@ for(const [book,id,tiers] of [['death-guard','unit-plague-marines',3],['adeptus-
 }
 
 for(const [book,count] of [['death-guard',9],['adeptus-mechanicus',10],['tyranids',10],['tau-empire',7]]){
-  const desktop=text(`books/${book}/reader.html`);
-  const headings=[...desktop.matchAll(/<section class="content-group detachment"[^>]*>[\s\S]*?<h3 class="category-title detachment-title">[\s\S]*?<span class="detachment-dp">([1-9]\d*)DP<\/span><\/h3>/g)];
+  const desktop=targetHtml(book);
+  const headings=[...desktop.matchAll(/<span class="detachment-dp">([1-9]\d*)DP<\/span>/g)];
   assert.equal(headings.length,count,`${book}: every desktop detachment must show DP beside its title`);
   const mobileFiles=fs.readdirSync(path.join(repo,'books',book,'mobile')).filter(file=>file.endsWith('.html'));
-  const mobileHeadings=mobileFiles.filter(file=>/<h3 class="category-title detachment-title">[\s\S]*?<span class="detachment-dp">[1-9]\d*DP<\/span><\/h3>/.test(text(`books/${book}/mobile/${file}`)));
-  assert.equal(mobileHeadings.length,count,`${book}: every Phone Mode detachment must show DP beside its title`);
+  assert.ok(mobileFiles.every(file=>!/<(?:article|section)\b|data-rule-id=/.test(text(`books/${book}/mobile/${file}`))),`${book}: compatibility routes must not duplicate generated Detachment content`);
 }
 
 console.log('Presentation contracts passed: dark-only UI, DG Contents scope and detachment DP headings.');

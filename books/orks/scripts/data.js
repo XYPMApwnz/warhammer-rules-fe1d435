@@ -1,4 +1,188 @@
 window.DG_TERMS={
+  "orks-detachment-rule-eager-for-the-fight": {
+    "id": "orks-detachment-rule-eager-for-the-fight",
+    "title": "Eager for the Fight",
+    "summary": "Each time an ORKS unit from your army disembarks from a TRANSPORT, until the end of the turn, you can re-roll Advance and Charge rolls made for that ORKS unit.",
+    "full": "Each time an ORKS unit from your army disembarks from a TRANSPORT, until the end of the turn, you can re-roll Advance and Charge rolls made for that ORKS unit.",
+    "glossary": "glossary-orks-detachment-rule-eager-for-the-fight",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-enhancement-runnin-boots": {
+    "id": "orks-enhancement-runnin-boots",
+    "title": "Runnin' Boots",
+    "summary": "ORKS INFANTRY CHARACTER model only. Each time you make a Charge roll for the bearer's unit, if that unit disembarked from a TRANSPORT this turn, add 1 to the result.",
+    "full": "ORKS INFANTRY CHARACTER model only. Each time you make a Charge roll for the bearer's unit, if that unit disembarked from a TRANSPORT this turn, add 1 to the result.",
+    "glossary": "glossary-orks-enhancement-runnin-boots",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-enhancement-blitzkaptin": {
+    "id": "orks-enhancement-blitzkaptin",
+    "title": "Blitzkaptin",
+    "summary": "ORKS CHARACTER model only. After both players have deployed their armies, if the bearer's unit (or any TRANSPORT it is embarked within) is on the battlefield, select up to three ORKS VEHICLE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "full": "ORKS CHARACTER model only. After both players have deployed their armies, if the bearer's unit (or any TRANSPORT it is embarked within) is on the battlefield, select up to three ORKS VEHICLE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "glossary": "glossary-orks-enhancement-blitzkaptin",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-enhancement-supercharged-squig-oil": {
+    "id": "orks-enhancement-supercharged-squig-oil",
+    "title": "Supercharged Squig Oil",
+    "summary": "MEK model only. Each time the bearer uses its Mekaniak ability, until the end of the turn, you can re-roll Charge rolls for the selected VEHICLE model's unit.",
+    "full": "MEK model only. Each time the bearer uses its Mekaniak ability, until the end of the turn, you can re-roll Charge rolls for the selected VEHICLE model's unit.",
+    "glossary": "glossary-orks-enhancement-supercharged-squig-oil",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-enhancement-tuff-git": {
+    "id": "orks-enhancement-tuff-git",
+    "title": "Tuff Git",
+    "summary": "ORKS INFANTRY CHARACTER model only. At the end of a phase in which the bearer's unit disembarked from a TRANSPORT, if that unit is Battle-shocked, it is no longer Battle-shocked.",
+    "full": "ORKS INFANTRY CHARACTER model only. At the end of a phase in which the bearer's unit disembarked from a TRANSPORT, if that unit is Battle-shocked, it is no longer Battle-shocked.",
+    "glossary": "glossary-orks-enhancement-tuff-git",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-stratagem-mount-up-ladz": {
+    "id": "orks-stratagem-mount-up-ladz",
+    "title": "Mount Up, Ladz",
+    "summary": "End of the Fight phase. One ORKS INFANTRY unit from your army that is not within Engagement Range of one or more enemy units, and one friendly TRANSPORT it is able to embark within. If your ORKS INFANTRY unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
+    "full": "End of the Fight phase. One ORKS INFANTRY unit from your army that is not within Engagement Range of one or more enemy units, and one friendly TRANSPORT it is able to embark within. If your ORKS INFANTRY unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
+    "glossary": "glossary-orks-stratagem-mount-up-ladz",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-stratagem-mekanised-brutality": {
+    "id": "orks-stratagem-mekanised-brutality",
+    "title": "Mekanised Brutality",
+    "summary": "Your Movement phase. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that has not been selected to move this phase. Until the end of the turn, each time a unit disembarks from your unit after your unit makes a Normal move, that disembarked unit is still eligible to declare a charge this turn.",
+    "full": "Your Movement phase. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that has not been selected to move this phase. Until the end of the turn, each time a unit disembarks from your unit after your unit makes a Normal move, that disembarked unit is still eligible to declare a charge this turn.",
+    "glossary": "glossary-orks-stratagem-mekanised-brutality",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-stratagem-run-em-down": {
+    "id": "orks-stratagem-run-em-down",
+    "title": "Run 'Em Down",
+    "summary": "Your Movement phase. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that has not been selected to move this phase. Select up to two other friendly ORKS VEHICLE or ORKS MONSTER units within 6\" of your unit. Until the end of the turn, your unit and each unit you selected are eligible to declare a charge in a turn in which they Advanced.",
+    "full": "Your Movement phase. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that has not been selected to move this phase. Select up to two other friendly ORKS VEHICLE or ORKS MONSTER units within 6\" of your unit. Until the end of the turn, your unit and each unit you selected are eligible to declare a charge in a turn in which they Advanced.",
+    "glossary": "glossary-orks-stratagem-run-em-down",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-stratagem-armoured-duellists": {
+    "id": "orks-stratagem-armoured-duellists",
+    "title": "Armoured Duellists",
+    "summary": "Your Shooting phase. One ORKS VEHICLE unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time your unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+    "full": "Your Shooting phase. One ORKS VEHICLE unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time your unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+    "glossary": "glossary-orks-stratagem-armoured-duellists",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-stratagem-impervious": {
+    "id": "orks-stratagem-impervious",
+    "title": "Impervious",
+    "summary": "Your opponent's Shooting phase, just after an enemy unit has selected its targets. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that was selected as the target of one or more of the attacking unit's attacks. Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
+    "full": "Your opponent's Shooting phase, just after an enemy unit has selected its targets. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that was selected as the target of one or more of the attacking unit's attacks. Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
+    "glossary": "glossary-orks-stratagem-impervious",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-stratagem-yooz-in-trouble-now": {
+    "id": "orks-stratagem-yooz-in-trouble-now",
+    "title": "Yooz in Trouble Now",
+    "summary": "Your opponent's Shooting phase, just after an enemy unit has shot. One BATTLEWAGON, HUNTA RIG or KILL RIG model from your army that was hit by one or more of the attacking unit's attacks. One ORKS INFANTRY unit embarked within your model makes a disembark move, then makes a surge move of up to D6\".",
+    "full": "Your opponent's Shooting phase, just after an enemy unit has shot. One BATTLEWAGON, HUNTA RIG or KILL RIG model from your army that was hit by one or more of the attacking unit's attacks. One ORKS INFANTRY unit embarked within your model makes a disembark move, then makes a surge move of up to D6\".",
+    "glossary": "glossary-orks-stratagem-yooz-in-trouble-now",
+    "rule": "detachment-blitz-brigade"
+  },
+  "orks-enhancement-eadstompa": {
+    "id": "orks-enhancement-eadstompa",
+    "title": "’Eadstompa",
+    "summary": "Infantry Warboss model only. Each time the bearer makes an attack that targets a unit that is below its Starting Strength, re-roll a Wound roll of 1. If that unit is Below Half-strength, you can re-roll the Wound roll instead.",
+    "full": "Infantry Warboss model only. Each time the bearer makes an attack that targets a unit that is below its Starting Strength, re-roll a Wound roll of 1. If that unit is Below Half-strength, you can re-roll the Wound roll instead.",
+    "glossary": "glossary-orks-enhancement-eadstompa",
+    "rule": "detachment-bully-boyz"
+  },
+  "orks-enhancement-big-gob": {
+    "id": "orks-enhancement-big-gob",
+    "title": "Big Gob",
+    "summary": "Infantry Warboss model only. At the start of the Fight phase, select one enemy unit within Engagement range of the bearer. That unit must take a Battle-shock test, and when doing so, subtract 1 from the result.",
+    "full": "Infantry Warboss model only. At the start of the Fight phase, select one enemy unit within Engagement range of the bearer. That unit must take a Battle-shock test, and when doing so, subtract 1 from the result.",
+    "glossary": "glossary-orks-enhancement-big-gob",
+    "rule": "detachment-bully-boyz"
+  },
+  "orks-enhancement-da-biggest-boss": {
+    "id": "orks-enhancement-da-biggest-boss",
+    "title": "Da Biggest Boss",
+    "summary": "Infantry Warboss model only. Add 2 to the bearer's Wounds characteristic.",
+    "full": "Infantry Warboss model only. Add 2 to the bearer's Wounds characteristic.",
+    "glossary": "glossary-orks-enhancement-da-biggest-boss",
+    "rule": "detachment-bully-boyz"
+  },
+  "orks-enhancement-tellyporta": {
+    "id": "orks-enhancement-tellyporta",
+    "title": "Tellyporta",
+    "summary": "Warboss In Mega Armour model only. Models in the bearer's unit have the Deep Strike ability.",
+    "full": "Warboss In Mega Armour model only. Models in the bearer's unit have the Deep Strike ability.",
+    "glossary": "glossary-orks-enhancement-tellyporta",
+    "rule": "detachment-bully-boyz"
+  },
+  "orks-enhancement-glory-hog": {
+    "id": "orks-enhancement-glory-hog",
+    "title": "Glory Hog",
+    "summary": "Beastboss On Squigosaur model only. Models in the bearer's unit have the Scouts 9\" ability.",
+    "full": "Beastboss On Squigosaur model only. Models in the bearer's unit have the Scouts 9\" ability.",
+    "glossary": "glossary-orks-enhancement-glory-hog",
+    "rule": "detachment-da-big-hunt"
+  },
+  "orks-enhancement-proper-killy": {
+    "id": "orks-enhancement-proper-killy",
+    "title": "Proper Killy",
+    "summary": "Beast Snagga model only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer.",
+    "full": "Beast Snagga model only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer.",
+    "glossary": "glossary-orks-enhancement-proper-killy",
+    "rule": "detachment-da-big-hunt"
+  },
+  "orks-enhancement-skrag-every-stash": {
+    "id": "orks-enhancement-skrag-every-stash",
+    "title": "Skrag Every Stash!",
+    "summary": "Beast Snagga model only. At the end of your Command phase, if the bearer is within range of an objective marker you control, that objective market remains under your control, even if you have no models within range of it, until your opponent controls it at the start of end of any turn.",
+    "full": "Beast Snagga model only. At the end of your Command phase, if the bearer is within range of an objective marker you control, that objective market remains under your control, even if you have no models within range of it, until your opponent controls it at the start of end of any turn.",
+    "glossary": "glossary-orks-enhancement-skrag-every-stash",
+    "rule": "detachment-da-big-hunt"
+  },
+  "orks-enhancement-surly-as-a-squiggoth": {
+    "id": "orks-enhancement-surly-as-a-squiggoth",
+    "title": "Surly as a Squiggoth",
+    "summary": "Beastboss On Squigosaur model only. While the bearer is leading a unit, each time an attack targets that unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+    "full": "Beastboss On Squigosaur model only. While the bearer is leading a unit, each time an attack targets that unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+    "glossary": "glossary-orks-enhancement-surly-as-a-squiggoth",
+    "rule": "detachment-da-big-hunt"
+  },
+  "orks-enhancement-gitfinder-gogglez": {
+    "id": "orks-enhancement-gitfinder-gogglez",
+    "title": "Gitfinder Gogglez",
+    "summary": "Mek model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
+    "full": "Mek model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
+    "glossary": "glossary-orks-enhancement-gitfinder-gogglez",
+    "rule": "detachment-dread-mob"
+  },
+  "orks-enhancement-press-it-fasta": {
+    "id": "orks-enhancement-press-it-fasta",
+    "title": "Press It Fasta!",
+    "summary": "Mek model only. Each time the bearer's unit is selected to shoot, when rolling to determine which ability that unit's weapons gain from the Try Dat Button! Detachment rule, roll one additional D6; until the end of the phase, ranged weapons equipped by models in that unit gain both Button Effects generated by those rolls. If a duplicate Button Effect is rolled, it has no additional effect.",
+    "full": "Mek model only. Each time the bearer's unit is selected to shoot, when rolling to determine which ability that unit's weapons gain from the Try Dat Button! Detachment rule, roll one additional D6; until the end of the phase, ranged weapons equipped by models in that unit gain both Button Effects generated by those rolls. If a duplicate Button Effect is rolled, it has no additional effect.",
+    "glossary": "glossary-orks-enhancement-press-it-fasta",
+    "rule": "detachment-dread-mob"
+  },
+  "orks-enhancement-smoky-gubbinz": {
+    "id": "orks-enhancement-smoky-gubbinz",
+    "title": "Smoky Gubbinz",
+    "summary": "Mek model only. Models in the bearer's unit have the Stealth ability.",
+    "full": "Mek model only. Models in the bearer's unit have the Stealth ability.",
+    "glossary": "glossary-orks-enhancement-smoky-gubbinz",
+    "rule": "detachment-dread-mob"
+  },
+  "orks-enhancement-supa-glowy-fing": {
+    "id": "orks-enhancement-supa-glowy-fing",
+    "title": "Supa-glowy Fing",
+    "summary": "Mek model only. In your Command phase, select one enemy unit within 18\" and visible to the bearer, then roll one D6: on a 1-2, that enemy unit must take a Battle-shock test; on a 3-4, that enemy unit suffers D3 mortal wounds; on a 5-6, until the start of your next Command phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.",
+    "full": "Mek model only. In your Command phase, select one enemy unit within 18\" and visible to the bearer, then roll one D6: on a 1-2, that enemy unit must take a Battle-shock test; on a 3-4, that enemy unit suffers D3 mortal wounds; on a 5-6, until the start of your next Command phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-orks-enhancement-supa-glowy-fing",
+    "rule": "detachment-dread-mob"
+  },
   "orks-detachment-rule-jungle-know-wotz": {
     "id": "orks-detachment-rule-jungle-know-wotz",
     "title": "Jungle Know-Wotz",
@@ -47,53 +231,157 @@ window.DG_TERMS={
     "glossary": "glossary-orks-stratagem-deyre-over-ere",
     "rule": "detachment-equatorial-hordes"
   },
-  "orks-detachment-rule-thundering-wagons": {
-    "id": "orks-detachment-rule-thundering-wagons",
-    "title": "Thundering Wagons",
-    "summary": "Friendly BATTLEWAGON/HUNTA RIG/KILL RIG units have WAGON. Friendly WAGON units can re-roll charge rolls. When a friendly WAGON unit is selected to make an advance move, that unit can change advance rolls to a 6. This detachment has the WAGONS tag and cannot be taken with another WAGONS detachment.",
-    "full": "Friendly BATTLEWAGON/HUNTA RIG/KILL RIG units have WAGON. Friendly WAGON units can re-roll charge rolls. When a friendly WAGON unit is selected to make an advance move, that unit can change advance rolls to a 6. This detachment has the WAGONS tag and cannot be taken with another WAGONS detachment.",
-    "glossary": "glossary-orks-detachment-rule-thundering-wagons",
-    "rule": "detachment-rollin-deff"
+  "orks-detachment-rule-here-be-loot": {
+    "id": "orks-detachment-rule-here-be-loot",
+    "title": "Here Be Loot",
+    "summary": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your loot objective. Each time a model in an ORKS INFANTRY, ORKS MOUNTED or ORKS WALKER unit from your army makes an attack, that attack has the [SUSTAINED HITS 1] ability if either or both of the following are true: That model's unit is within range of your loot objective. That attack targets a unit within range of your loot objective.",
+    "full": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your loot objective. Each time a model in an ORKS INFANTRY, ORKS MOUNTED or ORKS WALKER unit from your army makes an attack, that attack has the [SUSTAINED HITS 1] ability if either or both of the following are true: That model's unit is within range of your loot objective. That attack targets a unit within range of your loot objective.",
+    "glossary": "glossary-orks-detachment-rule-here-be-loot",
+    "rule": "detachment-freebooter-krew"
   },
-  "orks-enhancement-boarding-ramps": {
-    "id": "orks-enhancement-boarding-ramps",
-    "title": "Boarding Ramps",
-    "summary": "WAGON unit only. When a unit embarked within this unit is selected to make a disembark move, that unit has +1 to charge rolls until the end of the turn.",
-    "full": "WAGON unit only. When a unit embarked within this unit is selected to make a disembark move, that unit has +1 to charge rolls until the end of the turn.",
-    "glossary": "glossary-orks-enhancement-boarding-ramps",
-    "rule": "detachment-rollin-deff"
+  "orks-enhancement-da-kaptin": {
+    "id": "orks-enhancement-da-kaptin",
+    "title": "Da Kaptin",
+    "summary": "WARBOSS model only. Once per battle round, at the start of any phase, you can select one friendly ORKS unit that is Battle-shocked and within 12\" of the bearer. That unit suffers D3 mortal wounds and it is no longer Battle-shocked.",
+    "full": "WARBOSS model only. Once per battle round, at the start of any phase, you can select one friendly ORKS unit that is Battle-shocked and within 12\" of the bearer. That unit suffers D3 mortal wounds and it is no longer Battle-shocked.",
+    "glossary": "glossary-orks-enhancement-da-kaptin",
+    "rule": "detachment-freebooter-krew"
   },
-  "orks-enhancement-targetin-gizmos": {
-    "id": "orks-enhancement-targetin-gizmos",
-    "title": "Targetin' Gizmos",
-    "summary": "WAGON unit only. While a BIG MEK model is embarked within this unit: This unit's ranged attacks have [IGNORES COVER]. If the Waaagh! is active for this unit, this unit's ranged attacks have [SUSTAINED HITS 1].",
-    "full": "WAGON unit only. While a BIG MEK model is embarked within this unit: This unit's ranged attacks have [IGNORES COVER]. If the Waaagh! is active for this unit, this unit's ranged attacks have [SUSTAINED HITS 1].",
-    "glossary": "glossary-orks-enhancement-targetin-gizmos",
-    "rule": "detachment-rollin-deff"
+  "orks-enhancement-git-spotter-squig": {
+    "id": "orks-enhancement-git-spotter-squig",
+    "title": "Git-spotter Squig",
+    "summary": "ORKS model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
+    "full": "ORKS model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
+    "glossary": "glossary-orks-enhancement-git-spotter-squig",
+    "rule": "detachment-freebooter-krew"
   },
-  "orks-stratagem-brutal-broadside": {
-    "id": "orks-stratagem-brutal-broadside",
-    "title": "Brutal Broadside",
-    "summary": "Your Shooting phase, when a friendly BATTLEWAGON unit is selected to shoot. That BATTLEWAGON unit. Your unit's ranged attacks (excluding attacks made by weapons selected with Firing Deck) have [RAPID FIRE X], where X is that attack's A.",
-    "full": "Your Shooting phase, when a friendly BATTLEWAGON unit is selected to shoot. That BATTLEWAGON unit. Your unit's ranged attacks (excluding attacks made by weapons selected with Firing Deck) have [RAPID FIRE X], where X is that attack's A.",
-    "glossary": "glossary-orks-stratagem-brutal-broadside",
-    "rule": "detachment-rollin-deff"
+  "orks-enhancement-bionik-workshop": {
+    "id": "orks-enhancement-bionik-workshop",
+    "title": "Bionik Workshop",
+    "summary": "BIG MEK or PAINBOY model only. At the start of the battle, roll one D3 and compare the result to the list below. Until the end of the battle, models in the bearer's unit have that bioniks ability. 1. Bionik Legs: Add 2\" to the Move characteristic of this model. 2. Bionik Arms: Add 1 to the Strength characteristic of melee weapons equipped by this model. 3. Bionik Bonce: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.",
+    "full": "BIG MEK or PAINBOY model only. At the start of the battle, roll one D3 and compare the result to the list below. Until the end of the battle, models in the bearer's unit have that bioniks ability. 1. Bionik Legs: Add 2\" to the Move characteristic of this model. 2. Bionik Arms: Add 1 to the Strength characteristic of melee weapons equipped by this model. 3. Bionik Bonce: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.",
+    "glossary": "glossary-orks-enhancement-bionik-workshop",
+    "rule": "detachment-freebooter-krew"
   },
-  "orks-stratagem-impending-crunch": {
-    "id": "orks-stratagem-impending-crunch",
-    "title": "Impending Crunch",
-    "summary": "Your Charge phase, when a friendly WAGON unit ends a charge move. That WAGON unit. Each enemy unit engaged with your unit makes a battle-shock roll, with -1 to that battle-shock roll.",
-    "full": "Your Charge phase, when a friendly WAGON unit ends a charge move. That WAGON unit. Each enemy unit engaged with your unit makes a battle-shock roll, with -1 to that battle-shock roll.",
-    "glossary": "glossary-orks-stratagem-impending-crunch",
-    "rule": "detachment-rollin-deff"
+  "orks-enhancement-razgits-magik-map": {
+    "id": "orks-enhancement-razgits-magik-map",
+    "title": "Razgit's Magik Map",
+    "summary": "ORKS model only. After both players have deployed their armies, select up to three ORKS INFANTRY units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "full": "ORKS model only. After both players have deployed their armies, select up to three ORKS INFANTRY units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "glossary": "glossary-orks-enhancement-razgits-magik-map",
+    "rule": "detachment-freebooter-krew"
   },
-  "orks-stratagem-devastating-drift": {
-    "id": "orks-stratagem-devastating-drift",
-    "title": "Devastating Drift",
-    "summary": "Your Fight phase, when a friendly WAGON unit that made a charge move this turn is selected to fight. That WAGON unit. Your unit's melee attacks have [CLEAVE 1].",
-    "full": "Your Fight phase, when a friendly WAGON unit that made a charge move this turn is selected to fight. That WAGON unit. Your unit's melee attacks have [CLEAVE 1].",
-    "glossary": "glossary-orks-stratagem-devastating-drift",
-    "rule": "detachment-rollin-deff"
+  "orks-stratagem-bash-and-grab": {
+    "id": "orks-stratagem-bash-and-grab",
+    "title": "Bash and Grab",
+    "summary": "The Fight phase. One ORKS unit from your army that has not been selected to fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit within range of the loot objective, you can re-roll the Wound roll.",
+    "full": "The Fight phase. One ORKS unit from your army that has not been selected to fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit within range of the loot objective, you can re-roll the Wound roll.",
+    "glossary": "glossary-orks-stratagem-bash-and-grab",
+    "rule": "detachment-freebooter-krew"
+  },
+  "orks-stratagem-grab-and-bash": {
+    "id": "orks-stratagem-grab-and-bash",
+    "title": "Grab and Bash",
+    "summary": "Your Command phase. One ORKS unit from your army (excluding GRETCHIN units) that is within range of the loot objective. Until the start of your next Command phase, the Waaagh! is active for your unit, even if you have already called a Waaagh! this battle.",
+    "full": "Your Command phase. One ORKS unit from your army (excluding GRETCHIN units) that is within range of the loot objective. Until the start of your next Command phase, the Waaagh! is active for your unit, even if you have already called a Waaagh! this battle.",
+    "glossary": "glossary-orks-stratagem-grab-and-bash",
+    "rule": "detachment-freebooter-krew"
+  },
+  "orks-stratagem-boardin-rush": {
+    "id": "orks-stratagem-boardin-rush",
+    "title": "Boardin' Rush",
+    "summary": "Your Movement phase. One ORKS unit from your army that has not been selected to move this phase. Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+    "full": "Your Movement phase. One ORKS unit from your army that has not been selected to move this phase. Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+    "glossary": "glossary-orks-stratagem-boardin-rush",
+    "rule": "detachment-freebooter-krew"
+  },
+  "orks-stratagem-deck-fraggers": {
+    "id": "orks-stratagem-deck-fraggers",
+    "title": "Deck Fraggers",
+    "summary": "Your Shooting phase. One ORKS unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit targets an INFANTRY unit with a ranged weapon, that weapon has the [BLAST] ability.",
+    "full": "Your Shooting phase. One ORKS unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit targets an INFANTRY unit with a ranged weapon, that weapon has the [BLAST] ability.",
+    "glossary": "glossary-orks-stratagem-deck-fraggers",
+    "rule": "detachment-freebooter-krew"
+  },
+  "orks-stratagem-rolling-loot-heap": {
+    "id": "orks-stratagem-rolling-loot-heap",
+    "title": "Rolling Loot-heap",
+    "summary": "Your Shooting phase. One FLASH GITZ unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [ANTI-VEHICLE 4+] ability.",
+    "full": "Your Shooting phase. One FLASH GITZ unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [ANTI-VEHICLE 4+] ability.",
+    "glossary": "glossary-orks-stratagem-rolling-loot-heap",
+    "rule": "detachment-freebooter-krew"
+  },
+  "orks-stratagem-krump-and-run": {
+    "id": "orks-stratagem-krump-and-run",
+    "title": "Krump and Run",
+    "summary": "Your opponent's Movement phase, just after an enemy unit falls back. One ORKS unit from your army that was within engagement range of that enemy unit at the start of the phase and is not within range of one or more enemy units. Your unit can make a Normal move of up to 6\".",
+    "full": "Your opponent's Movement phase, just after an enemy unit falls back. One ORKS unit from your army that was within engagement range of that enemy unit at the start of the phase and is not within range of one or more enemy units. Your unit can make a Normal move of up to 6\".",
+    "glossary": "glossary-orks-stratagem-krump-and-run",
+    "rule": "detachment-freebooter-krew"
+  },
+  "orks-enhancement-bloodthirsty-belligerence": {
+    "id": "orks-enhancement-bloodthirsty-belligerence",
+    "title": "Bloodthirsty Belligerence",
+    "summary": "Orks Infantry model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit. While that unit contains 10 or more models, you can re-roll Charge rolls made for that unit as well.",
+    "full": "Orks Infantry model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit. While that unit contains 10 or more models, you can re-roll Charge rolls made for that unit as well.",
+    "glossary": "glossary-orks-enhancement-bloodthirsty-belligerence",
+    "rule": "detachment-green-tide"
+  },
+  "orks-enhancement-brutal-but-kunnin": {
+    "id": "orks-enhancement-brutal-but-kunnin",
+    "title": "Brutal But Kunnin’",
+    "summary": "Orks Infantry model only. In your Command phase, if the bearer is on the battlefield (or is embarked within a Transport that is on the battlefield), roll one D6, adding 2 to the result if the bearer's unit contains 10 or more models: on a 5+, you gain 1 CP.",
+    "full": "Orks Infantry model only. In your Command phase, if the bearer is on the battlefield (or is embarked within a Transport that is on the battlefield), roll one D6, adding 2 to the result if the bearer's unit contains 10 or more models: on a 5+, you gain 1 CP.",
+    "glossary": "glossary-orks-enhancement-brutal-but-kunnin",
+    "rule": "detachment-green-tide"
+  },
+  "orks-enhancement-ferocious-show-off": {
+    "id": "orks-enhancement-ferocious-show-off",
+    "title": "Ferocious Show Off",
+    "summary": "Orks Infantry model only. Each time the bearer fights, while resolving those attacks, add 1 to the Strength characteristic of the bearer's melee weapons. If the bearer's unit contains 10 or more models, while resolving those attacks, add 3 to the Strength characteristic instead.",
+    "full": "Orks Infantry model only. Each time the bearer fights, while resolving those attacks, add 1 to the Strength characteristic of the bearer's melee weapons. If the bearer's unit contains 10 or more models, while resolving those attacks, add 3 to the Strength characteristic instead.",
+    "glossary": "glossary-orks-enhancement-ferocious-show-off",
+    "rule": "detachment-green-tide"
+  },
+  "orks-enhancement-raucous-warcaller": {
+    "id": "orks-enhancement-raucous-warcaller",
+    "title": "Raucous Warcaller",
+    "summary": "Orks Infantry model only. While the bearer is leading a unit, that unit always counts as containing 10 or more models for the purposes of your Detachment rule and any Stratagems you use.",
+    "full": "Orks Infantry model only. While the bearer is leading a unit, that unit always counts as containing 10 or more models for the purposes of your Detachment rule and any Stratagems you use.",
+    "glossary": "glossary-orks-enhancement-raucous-warcaller",
+    "rule": "detachment-green-tide"
+  },
+  "orks-enhancement-fasta-than-yooz": {
+    "id": "orks-enhancement-fasta-than-yooz",
+    "title": "Fasta Than Yooz",
+    "summary": "Orks Infantry model only. Each time the bearer's unit disembarks from a Transport after that Transport has made a Normal move, the bearer's unit is still eligible to declare a charge this turn.",
+    "full": "Orks Infantry model only. Each time the bearer's unit disembarks from a Transport after that Transport has made a Normal move, the bearer's unit is still eligible to declare a charge this turn.",
+    "glossary": "glossary-orks-enhancement-fasta-than-yooz",
+    "rule": "detachment-kult-of-speed"
+  },
+  "orks-enhancement-speed-makes-right": {
+    "id": "orks-enhancement-speed-makes-right",
+    "title": "Speed Makes Right",
+    "summary": "Orks model only. In your Command phase, if the bearer (or a Transport the bearer is embarked within) is within 9\" of one or more enemy units, roll one D6; on a 3+, you gain 1CP.",
+    "full": "Orks model only. In your Command phase, if the bearer (or a Transport the bearer is embarked within) is within 9\" of one or more enemy units, roll one D6; on a 3+, you gain 1CP.",
+    "glossary": "glossary-orks-enhancement-speed-makes-right",
+    "rule": "detachment-kult-of-speed"
+  },
+  "orks-enhancement-squig-hide-tyres": {
+    "id": "orks-enhancement-squig-hide-tyres",
+    "title": "Squig-hide Tyres",
+    "summary": "Deffkilla Wartrike model only. Each time a model in the bearer's unit makes a Consolidation move, it can move up to 6\" instead of up to 3\".",
+    "full": "Deffkilla Wartrike model only. Each time a model in the bearer's unit makes a Consolidation move, it can move up to 6\" instead of up to 3\".",
+    "glossary": "glossary-orks-enhancement-squig-hide-tyres",
+    "rule": "detachment-kult-of-speed"
+  },
+  "orks-enhancement-wazblasta": {
+    "id": "orks-enhancement-wazblasta",
+    "title": "Wazblasta",
+    "summary": "Deffkilla Wartrike model only. In your Shooting phase, after the bearer's unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, it is not eligible to declare a charge.",
+    "full": "Deffkilla Wartrike model only. In your Shooting phase, after the bearer's unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, it is not eligible to declare a charge.",
+    "glossary": "glossary-orks-enhancement-wazblasta",
+    "rule": "detachment-kult-of-speed"
   },
   "orks-detachment-rule-dakka-dakka-dakka": {
     "id": "orks-detachment-rule-dakka-dakka-dakka",
@@ -143,53 +431,53 @@ window.DG_TERMS={
     "glossary": "glossary-orks-stratagem-call-dat-dakka",
     "rule": "detachment-more-dakka"
   },
-  "orks-detachment-rule-lissen-ere": {
-    "id": "orks-detachment-rule-lissen-ere",
-    "title": "Lissen 'Ere",
-    "summary": "Friendly STORMBOYZ units have BATTLELINE. When a friendly BOYZ/KOMMANDOS/STORMBOYZ unit is selected to make an advance/fall-back move, that move does not prevent that unit from being eligible to start an action.",
-    "full": "Friendly STORMBOYZ units have BATTLELINE. When a friendly BOYZ/KOMMANDOS/STORMBOYZ unit is selected to make an advance/fall-back move, that move does not prevent that unit from being eligible to start an action.",
-    "glossary": "glossary-orks-detachment-rule-lissen-ere",
-    "rule": "detachment-taktikal-brigade"
+  "orks-detachment-rule-thundering-wagons": {
+    "id": "orks-detachment-rule-thundering-wagons",
+    "title": "Thundering Wagons",
+    "summary": "Friendly BATTLEWAGON/HUNTA RIG/KILL RIG units have WAGON. Friendly WAGON units can re-roll charge rolls. When a friendly WAGON unit is selected to make an advance move, that unit can change advance rolls to a 6. This detachment has the WAGONS tag and cannot be taken with another WAGONS detachment.",
+    "full": "Friendly BATTLEWAGON/HUNTA RIG/KILL RIG units have WAGON. Friendly WAGON units can re-roll charge rolls. When a friendly WAGON unit is selected to make an advance move, that unit can change advance rolls to a 6. This detachment has the WAGONS tag and cannot be taken with another WAGONS detachment.",
+    "glossary": "glossary-orks-detachment-rule-thundering-wagons",
+    "rule": "detachment-rollin-deff"
   },
-  "orks-enhancement-morks-kunnin": {
-    "id": "orks-enhancement-morks-kunnin",
-    "title": "Mork's Kunnin'",
-    "summary": "ORKS model only. When both players have deployed their armies, you can redeploy up to three friendly ORKS INFANTRY units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves.",
-    "full": "ORKS model only. When both players have deployed their armies, you can redeploy up to three friendly ORKS INFANTRY units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves.",
-    "glossary": "glossary-orks-enhancement-morks-kunnin",
-    "rule": "detachment-taktikal-brigade"
+  "orks-enhancement-boarding-ramps": {
+    "id": "orks-enhancement-boarding-ramps",
+    "title": "Boarding Ramps",
+    "summary": "WAGON unit only. When a unit embarked within this unit is selected to make a disembark move, that unit has +1 to charge rolls until the end of the turn.",
+    "full": "WAGON unit only. When a unit embarked within this unit is selected to make a disembark move, that unit has +1 to charge rolls until the end of the turn.",
+    "glossary": "glossary-orks-enhancement-boarding-ramps",
+    "rule": "detachment-rollin-deff"
   },
-  "orks-enhancement-slippery-git": {
-    "id": "orks-enhancement-slippery-git",
-    "title": "Slippery Git",
-    "summary": "INFANTRY WARBOSS model only (excluding MEGA ARMOUR models). This model has Infiltrators and Stealth.",
-    "full": "INFANTRY WARBOSS model only (excluding MEGA ARMOUR models). This model has Infiltrators and Stealth.",
-    "glossary": "glossary-orks-enhancement-slippery-git",
-    "rule": "detachment-taktikal-brigade"
+  "orks-enhancement-targetin-gizmos": {
+    "id": "orks-enhancement-targetin-gizmos",
+    "title": "Targetin' Gizmos",
+    "summary": "WAGON unit only. While a BIG MEK model is embarked within this unit: This unit's ranged attacks have [IGNORES COVER]. If the Waaagh! is active for this unit, this unit's ranged attacks have [SUSTAINED HITS 1].",
+    "full": "WAGON unit only. While a BIG MEK model is embarked within this unit: This unit's ranged attacks have [IGNORES COVER]. If the Waaagh! is active for this unit, this unit's ranged attacks have [SUSTAINED HITS 1].",
+    "glossary": "glossary-orks-enhancement-targetin-gizmos",
+    "rule": "detachment-rollin-deff"
   },
-  "orks-stratagem-taktikal-retreat": {
-    "id": "orks-stratagem-taktikal-retreat",
-    "title": "Taktikal Retreat",
-    "summary": "Your Movement phase, when a friendly KOMMANDOS/STORMBOYZ unit is selected to make a fall-back move. That KOMMANDOS/STORMBOYZ unit. That move does not prevent your unit from being eligible to declare a charge.",
-    "full": "Your Movement phase, when a friendly KOMMANDOS/STORMBOYZ unit is selected to make a fall-back move. That KOMMANDOS/STORMBOYZ unit. That move does not prevent your unit from being eligible to declare a charge.",
-    "glossary": "glossary-orks-stratagem-taktikal-retreat",
-    "rule": "detachment-taktikal-brigade"
+  "orks-stratagem-brutal-broadside": {
+    "id": "orks-stratagem-brutal-broadside",
+    "title": "Brutal Broadside",
+    "summary": "Your Shooting phase, when a friendly BATTLEWAGON unit is selected to shoot. That BATTLEWAGON unit. Your unit's ranged attacks (excluding attacks made by weapons selected with Firing Deck) have [RAPID FIRE X], where X is that attack's A.",
+    "full": "Your Shooting phase, when a friendly BATTLEWAGON unit is selected to shoot. That BATTLEWAGON unit. Your unit's ranged attacks (excluding attacks made by weapons selected with Firing Deck) have [RAPID FIRE X], where X is that attack's A.",
+    "glossary": "glossary-orks-stratagem-brutal-broadside",
+    "rule": "detachment-rollin-deff"
   },
-  "orks-stratagem-on-to-da-next": {
-    "id": "orks-stratagem-on-to-da-next",
-    "title": "On to Da Next",
-    "summary": "End of your opponent's Movement phase. One friendly unengaged BOYZ/KOMMANDOS/STORMBOYZ unit that was engaged at the start of the phase. Your unit can make a normal move of up to 6\".",
-    "full": "End of your opponent's Movement phase. One friendly unengaged BOYZ/KOMMANDOS/STORMBOYZ unit that was engaged at the start of the phase. Your unit can make a normal move of up to 6\".",
-    "glossary": "glossary-orks-stratagem-on-to-da-next",
-    "rule": "detachment-taktikal-brigade"
+  "orks-stratagem-impending-crunch": {
+    "id": "orks-stratagem-impending-crunch",
+    "title": "Impending Crunch",
+    "summary": "Your Charge phase, when a friendly WAGON unit ends a charge move. That WAGON unit. Each enemy unit engaged with your unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+    "full": "Your Charge phase, when a friendly WAGON unit ends a charge move. That WAGON unit. Each enemy unit engaged with your unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+    "glossary": "glossary-orks-stratagem-impending-crunch",
+    "rule": "detachment-rollin-deff"
   },
-  "orks-stratagem-ded-sneaky": {
-    "id": "orks-stratagem-ded-sneaky",
-    "title": "Ded Sneaky",
-    "summary": "End of your opponent's Fight phase. One friendly unengaged KOMMANDOS/STORMBOYZ unit. Place your unit in strategic reserves.",
-    "full": "End of your opponent's Fight phase. One friendly unengaged KOMMANDOS/STORMBOYZ unit. Place your unit in strategic reserves.",
-    "glossary": "glossary-orks-stratagem-ded-sneaky",
-    "rule": "detachment-taktikal-brigade"
+  "orks-stratagem-devastating-drift": {
+    "id": "orks-stratagem-devastating-drift",
+    "title": "Devastating Drift",
+    "summary": "Your Fight phase, when a friendly WAGON unit that made a charge move this turn is selected to fight. That WAGON unit. Your unit's melee attacks have [CLEAVE 1].",
+    "full": "Your Fight phase, when a friendly WAGON unit that made a charge move this turn is selected to fight. That WAGON unit. Your unit's melee attacks have [CLEAVE 1].",
+    "glossary": "glossary-orks-stratagem-devastating-drift",
+    "rule": "detachment-rollin-deff"
   },
   "orks-detachment-rule-turbo-boostas": {
     "id": "orks-detachment-rule-turbo-boostas",
@@ -279,181 +567,85 @@ window.DG_TERMS={
     "glossary": "glossary-orks-stratagem-evasive-manoova",
     "rule": "detachment-speedwaaagh"
   },
-  "orks-detachment-rule-eager-for-the-fight": {
-    "id": "orks-detachment-rule-eager-for-the-fight",
-    "title": "Eager for the Fight",
-    "summary": "Each time an ORKS unit from your army disembarks from a TRANSPORT, until the end of the turn, you can re-roll Advance and Charge rolls made for that ORKS unit.",
-    "full": "Each time an ORKS unit from your army disembarks from a TRANSPORT, until the end of the turn, you can re-roll Advance and Charge rolls made for that ORKS unit.",
-    "glossary": "glossary-orks-detachment-rule-eager-for-the-fight",
-    "rule": "detachment-blitz-brigade"
+  "orks-detachment-rule-lissen-ere": {
+    "id": "orks-detachment-rule-lissen-ere",
+    "title": "Lissen 'Ere",
+    "summary": "Friendly STORMBOYZ units have BATTLELINE. When a friendly BOYZ/KOMMANDOS/STORMBOYZ unit is selected to make an advance/fall-back move, that move does not prevent that unit from being eligible to start an action.",
+    "full": "Friendly STORMBOYZ units have BATTLELINE. When a friendly BOYZ/KOMMANDOS/STORMBOYZ unit is selected to make an advance/fall-back move, that move does not prevent that unit from being eligible to start an action.",
+    "glossary": "glossary-orks-detachment-rule-lissen-ere",
+    "rule": "detachment-taktikal-brigade"
   },
-  "orks-enhancement-runnin-boots": {
-    "id": "orks-enhancement-runnin-boots",
-    "title": "Runnin' Boots",
-    "summary": "ORKS INFANTRY CHARACTER model only. Each time you make a Charge roll for the bearer's unit, if that unit disembarked from a TRANSPORT this turn, add 1 to the result.",
-    "full": "ORKS INFANTRY CHARACTER model only. Each time you make a Charge roll for the bearer's unit, if that unit disembarked from a TRANSPORT this turn, add 1 to the result.",
-    "glossary": "glossary-orks-enhancement-runnin-boots",
-    "rule": "detachment-blitz-brigade"
+  "orks-enhancement-morks-kunnin": {
+    "id": "orks-enhancement-morks-kunnin",
+    "title": "Mork's Kunnin'",
+    "summary": "ORKS model only. When both players have deployed their armies, you can redeploy up to three friendly ORKS INFANTRY units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves.",
+    "full": "ORKS model only. When both players have deployed their armies, you can redeploy up to three friendly ORKS INFANTRY units. When doing so, you can set those units up in strategic reserves, regardless of how many units are already in strategic reserves.",
+    "glossary": "glossary-orks-enhancement-morks-kunnin",
+    "rule": "detachment-taktikal-brigade"
   },
-  "orks-enhancement-blitzkaptin": {
-    "id": "orks-enhancement-blitzkaptin",
-    "title": "Blitzkaptin",
-    "summary": "ORKS CHARACTER model only. After both players have deployed their armies, if the bearer's unit (or any TRANSPORT it is embarked within) is on the battlefield, select up to three ORKS VEHICLE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "full": "ORKS CHARACTER model only. After both players have deployed their armies, if the bearer's unit (or any TRANSPORT it is embarked within) is on the battlefield, select up to three ORKS VEHICLE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "glossary": "glossary-orks-enhancement-blitzkaptin",
-    "rule": "detachment-blitz-brigade"
+  "orks-enhancement-slippery-git": {
+    "id": "orks-enhancement-slippery-git",
+    "title": "Slippery Git",
+    "summary": "INFANTRY WARBOSS model only (excluding MEGA ARMOUR models). This model has Infiltrators and Stealth.",
+    "full": "INFANTRY WARBOSS model only (excluding MEGA ARMOUR models). This model has Infiltrators and Stealth.",
+    "glossary": "glossary-orks-enhancement-slippery-git",
+    "rule": "detachment-taktikal-brigade"
   },
-  "orks-enhancement-supercharged-squig-oil": {
-    "id": "orks-enhancement-supercharged-squig-oil",
-    "title": "Supercharged Squig Oil",
-    "summary": "MEK model only. Each time the bearer uses its Mekaniak ability, until the end of the turn, you can re-roll Charge rolls for the selected VEHICLE model's unit.",
-    "full": "MEK model only. Each time the bearer uses its Mekaniak ability, until the end of the turn, you can re-roll Charge rolls for the selected VEHICLE model's unit.",
-    "glossary": "glossary-orks-enhancement-supercharged-squig-oil",
-    "rule": "detachment-blitz-brigade"
+  "orks-stratagem-taktikal-retreat": {
+    "id": "orks-stratagem-taktikal-retreat",
+    "title": "Taktikal Retreat",
+    "summary": "Your Movement phase, when a friendly KOMMANDOS/STORMBOYZ unit is selected to make a fall-back move. That KOMMANDOS/STORMBOYZ unit. That move does not prevent your unit from being eligible to declare a charge.",
+    "full": "Your Movement phase, when a friendly KOMMANDOS/STORMBOYZ unit is selected to make a fall-back move. That KOMMANDOS/STORMBOYZ unit. That move does not prevent your unit from being eligible to declare a charge.",
+    "glossary": "glossary-orks-stratagem-taktikal-retreat",
+    "rule": "detachment-taktikal-brigade"
   },
-  "orks-enhancement-tuff-git": {
-    "id": "orks-enhancement-tuff-git",
-    "title": "Tuff Git",
-    "summary": "ORKS INFANTRY CHARACTER model only. At the end of a phase in which the bearer's unit disembarked from a TRANSPORT, if that unit is Battle-shocked, it is no longer Battle-shocked.",
-    "full": "ORKS INFANTRY CHARACTER model only. At the end of a phase in which the bearer's unit disembarked from a TRANSPORT, if that unit is Battle-shocked, it is no longer Battle-shocked.",
-    "glossary": "glossary-orks-enhancement-tuff-git",
-    "rule": "detachment-blitz-brigade"
+  "orks-stratagem-on-to-da-next": {
+    "id": "orks-stratagem-on-to-da-next",
+    "title": "On to Da Next",
+    "summary": "End of your opponent's Movement phase. One friendly unengaged BOYZ/KOMMANDOS/STORMBOYZ unit that was engaged at the start of the phase. Your unit can make a normal move of up to 6\".",
+    "full": "End of your opponent's Movement phase. One friendly unengaged BOYZ/KOMMANDOS/STORMBOYZ unit that was engaged at the start of the phase. Your unit can make a normal move of up to 6\".",
+    "glossary": "glossary-orks-stratagem-on-to-da-next",
+    "rule": "detachment-taktikal-brigade"
   },
-  "orks-stratagem-mount-up-ladz": {
-    "id": "orks-stratagem-mount-up-ladz",
-    "title": "Mount Up, Ladz",
-    "summary": "End of the Fight phase. One ORKS INFANTRY unit from your army that is not within Engagement Range of one or more enemy units, and one friendly TRANSPORT it is able to embark within. If your ORKS INFANTRY unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
-    "full": "End of the Fight phase. One ORKS INFANTRY unit from your army that is not within Engagement Range of one or more enemy units, and one friendly TRANSPORT it is able to embark within. If your ORKS INFANTRY unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
-    "glossary": "glossary-orks-stratagem-mount-up-ladz",
-    "rule": "detachment-blitz-brigade"
+  "orks-stratagem-ded-sneaky": {
+    "id": "orks-stratagem-ded-sneaky",
+    "title": "Ded Sneaky",
+    "summary": "End of your opponent's Fight phase. One friendly unengaged KOMMANDOS/STORMBOYZ unit. Place your unit in strategic reserves.",
+    "full": "End of your opponent's Fight phase. One friendly unengaged KOMMANDOS/STORMBOYZ unit. Place your unit in strategic reserves.",
+    "glossary": "glossary-orks-stratagem-ded-sneaky",
+    "rule": "detachment-taktikal-brigade"
   },
-  "orks-stratagem-mekanised-brutality": {
-    "id": "orks-stratagem-mekanised-brutality",
-    "title": "Mekanised Brutality",
-    "summary": "Your Movement phase. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that has not been selected to move this phase. Until the end of the turn, each time a unit disembarks from your unit after your unit makes a Normal move, that disembarked unit is still eligible to declare a charge this turn.",
-    "full": "Your Movement phase. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that has not been selected to move this phase. Until the end of the turn, each time a unit disembarks from your unit after your unit makes a Normal move, that disembarked unit is still eligible to declare a charge this turn.",
-    "glossary": "glossary-orks-stratagem-mekanised-brutality",
-    "rule": "detachment-blitz-brigade"
+  "orks-enhancement-follow-me-ladz": {
+    "id": "orks-enhancement-follow-me-ladz",
+    "title": "Follow Me Ladz",
+    "summary": "Orks model only. While the bearer is leading a unit, add 2\" to the Move characteristic of models in that unit.",
+    "full": "Orks model only. While the bearer is leading a unit, add 2\" to the Move characteristic of models in that unit.",
+    "glossary": "glossary-orks-enhancement-follow-me-ladz",
+    "rule": "detachment-war-horde"
   },
-  "orks-stratagem-run-em-down": {
-    "id": "orks-stratagem-run-em-down",
-    "title": "Run 'Em Down",
-    "summary": "Your Movement phase. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that has not been selected to move this phase. Select up to two other friendly ORKS VEHICLE or ORKS MONSTER units within 6\" of your unit. Until the end of the turn, your unit and each unit you selected are eligible to declare a charge in a turn in which they Advanced.",
-    "full": "Your Movement phase. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that has not been selected to move this phase. Select up to two other friendly ORKS VEHICLE or ORKS MONSTER units within 6\" of your unit. Until the end of the turn, your unit and each unit you selected are eligible to declare a charge in a turn in which they Advanced.",
-    "glossary": "glossary-orks-stratagem-run-em-down",
-    "rule": "detachment-blitz-brigade"
+  "orks-enhancement-headwoppas-killchoppa": {
+    "id": "orks-enhancement-headwoppas-killchoppa",
+    "title": "Headwoppa’s Killchoppa",
+    "summary": "Orks model only. Melee weapons equipped by the bearer (excluding Extra Attacks weapons) have the [DEVASTATING WOUNDS] ability.",
+    "full": "Orks model only. Melee weapons equipped by the bearer (excluding Extra Attacks weapons) have the [DEVASTATING WOUNDS] ability.",
+    "glossary": "glossary-orks-enhancement-headwoppas-killchoppa",
+    "rule": "detachment-war-horde"
   },
-  "orks-stratagem-armoured-duellists": {
-    "id": "orks-stratagem-armoured-duellists",
-    "title": "Armoured Duellists",
-    "summary": "Your Shooting phase. One ORKS VEHICLE unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time your unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll.",
-    "full": "Your Shooting phase. One ORKS VEHICLE unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time your unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll.",
-    "glossary": "glossary-orks-stratagem-armoured-duellists",
-    "rule": "detachment-blitz-brigade"
+  "orks-enhancement-kunnin-but-brutal": {
+    "id": "orks-enhancement-kunnin-but-brutal",
+    "title": "Kunnin’ But Brutal",
+    "summary": "Orks model only. While the bearer is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+    "full": "Orks model only. While the bearer is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+    "glossary": "glossary-orks-enhancement-kunnin-but-brutal",
+    "rule": "detachment-war-horde"
   },
-  "orks-stratagem-impervious": {
-    "id": "orks-stratagem-impervious",
-    "title": "Impervious",
-    "summary": "Your opponent's Shooting phase, just after an enemy unit has selected its targets. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that was selected as the target of one or more of the attacking unit's attacks. Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
-    "full": "Your opponent's Shooting phase, just after an enemy unit has selected its targets. One BATTLEWAGON, KILL RIG or HUNTA RIG unit from your army that was selected as the target of one or more of the attacking unit's attacks. Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
-    "glossary": "glossary-orks-stratagem-impervious",
-    "rule": "detachment-blitz-brigade"
-  },
-  "orks-stratagem-yooz-in-trouble-now": {
-    "id": "orks-stratagem-yooz-in-trouble-now",
-    "title": "Yooz in Trouble Now",
-    "summary": "Your opponent's Shooting phase, just after an enemy unit has shot. One BATTLEWAGON, HUNTA RIG or KILL RIG model from your army that was hit by one or more of the attacking unit's attacks. One ORKS INFANTRY unit embarked within your model makes a disembark move, then makes a surge move of up to D6\".",
-    "full": "Your opponent's Shooting phase, just after an enemy unit has shot. One BATTLEWAGON, HUNTA RIG or KILL RIG model from your army that was hit by one or more of the attacking unit's attacks. One ORKS INFANTRY unit embarked within your model makes a disembark move, then makes a surge move of up to D6\".",
-    "glossary": "glossary-orks-stratagem-yooz-in-trouble-now",
-    "rule": "detachment-blitz-brigade"
-  },
-  "orks-detachment-rule-here-be-loot": {
-    "id": "orks-detachment-rule-here-be-loot",
-    "title": "Here Be Loot",
-    "summary": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your loot objective. Each time a model in an ORKS INFANTRY, ORKS MOUNTED or ORKS WALKER unit from your army makes an attack, that attack has the [SUSTAINED HITS 1] ability if either or both of the following are true: That model's unit is within range of your loot objective. That attack targets a unit within range of your loot objective.",
-    "full": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your loot objective. Each time a model in an ORKS INFANTRY, ORKS MOUNTED or ORKS WALKER unit from your army makes an attack, that attack has the [SUSTAINED HITS 1] ability if either or both of the following are true: That model's unit is within range of your loot objective. That attack targets a unit within range of your loot objective.",
-    "glossary": "glossary-orks-detachment-rule-here-be-loot",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-enhancement-da-kaptin": {
-    "id": "orks-enhancement-da-kaptin",
-    "title": "Da Kaptin",
-    "summary": "WARBOSS model only. Once per battle round, at the start of any phase, you can select one friendly ORKS unit that is Battle-shocked and within 12\" of the bearer. That unit suffers D3 mortal wounds and it is no longer Battle-shocked.",
-    "full": "WARBOSS model only. Once per battle round, at the start of any phase, you can select one friendly ORKS unit that is Battle-shocked and within 12\" of the bearer. That unit suffers D3 mortal wounds and it is no longer Battle-shocked.",
-    "glossary": "glossary-orks-enhancement-da-kaptin",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-enhancement-git-spotter-squig": {
-    "id": "orks-enhancement-git-spotter-squig",
-    "title": "Git-spotter Squig",
-    "summary": "ORKS model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
-    "full": "ORKS model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
-    "glossary": "glossary-orks-enhancement-git-spotter-squig",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-enhancement-bionik-workshop": {
-    "id": "orks-enhancement-bionik-workshop",
-    "title": "Bionik Workshop",
-    "summary": "BIG MEK or PAINBOY model only. At the start of the battle, roll one D3 and compare the result to the list below. Until the end of the battle, models in the bearer's unit have that bioniks ability. 1. Bionik Legs: Add 2\" to the Move characteristic of this model. 2. Bionik Arms: Add 1 to the Strength characteristic of melee weapons equipped by this model. 3. Bionik Bonce: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.",
-    "full": "BIG MEK or PAINBOY model only. At the start of the battle, roll one D3 and compare the result to the list below. Until the end of the battle, models in the bearer's unit have that bioniks ability. 1. Bionik Legs: Add 2\" to the Move characteristic of this model. 2. Bionik Arms: Add 1 to the Strength characteristic of melee weapons equipped by this model. 3. Bionik Bonce: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.",
-    "glossary": "glossary-orks-enhancement-bionik-workshop",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-enhancement-razgits-magik-map": {
-    "id": "orks-enhancement-razgits-magik-map",
-    "title": "Razgit's Magik Map",
-    "summary": "ORKS model only. After both players have deployed their armies, select up to three ORKS INFANTRY units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "full": "ORKS model only. After both players have deployed their armies, select up to three ORKS INFANTRY units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "glossary": "glossary-orks-enhancement-razgits-magik-map",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-stratagem-bash-and-grab": {
-    "id": "orks-stratagem-bash-and-grab",
-    "title": "Bash and Grab",
-    "summary": "The Fight phase. One ORKS unit from your army that has not been selected to fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit within range of the loot objective, you can re-roll the Wound roll.",
-    "full": "The Fight phase. One ORKS unit from your army that has not been selected to fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit within range of the loot objective, you can re-roll the Wound roll.",
-    "glossary": "glossary-orks-stratagem-bash-and-grab",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-stratagem-grab-and-bash": {
-    "id": "orks-stratagem-grab-and-bash",
-    "title": "Grab and Bash",
-    "summary": "Your Command phase. One ORKS unit from your army (excluding GRETCHIN units) that is within range of the loot objective. Until the start of your next Command phase, the Waaagh! is active for your unit, even if you have already called a Waaagh! this battle.",
-    "full": "Your Command phase. One ORKS unit from your army (excluding GRETCHIN units) that is within range of the loot objective. Until the start of your next Command phase, the Waaagh! is active for your unit, even if you have already called a Waaagh! this battle.",
-    "glossary": "glossary-orks-stratagem-grab-and-bash",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-stratagem-boardin-rush": {
-    "id": "orks-stratagem-boardin-rush",
-    "title": "Boardin' Rush",
-    "summary": "Your Movement phase. One ORKS unit from your army that has not been selected to move this phase. Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
-    "full": "Your Movement phase. One ORKS unit from your army that has not been selected to move this phase. Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
-    "glossary": "glossary-orks-stratagem-boardin-rush",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-stratagem-deck-fraggers": {
-    "id": "orks-stratagem-deck-fraggers",
-    "title": "Deck Fraggers",
-    "summary": "Your Shooting phase. One ORKS unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit targets an INFANTRY unit with a ranged weapon, that weapon has the [BLAST] ability.",
-    "full": "Your Shooting phase. One ORKS unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit targets an INFANTRY unit with a ranged weapon, that weapon has the [BLAST] ability.",
-    "glossary": "glossary-orks-stratagem-deck-fraggers",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-stratagem-rolling-loot-heap": {
-    "id": "orks-stratagem-rolling-loot-heap",
-    "title": "Rolling Loot-heap",
-    "summary": "Your Shooting phase. One FLASH GITZ unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [ANTI-VEHICLE 4+] ability.",
-    "full": "Your Shooting phase. One FLASH GITZ unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [ANTI-VEHICLE 4+] ability.",
-    "glossary": "glossary-orks-stratagem-rolling-loot-heap",
-    "rule": "detachment-freebooter-krew"
-  },
-  "orks-stratagem-krump-and-run": {
-    "id": "orks-stratagem-krump-and-run",
-    "title": "Krump and Run",
-    "summary": "Your opponent's Movement phase, just after an enemy unit falls back. One ORKS unit from your army that was within engagement range of that enemy unit at the start of the phase and is not within range of one or more enemy units. Your unit can make a Normal move of up to 6\".",
-    "full": "Your opponent's Movement phase, just after an enemy unit falls back. One ORKS unit from your army that was within engagement range of that enemy unit at the start of the phase and is not within range of one or more enemy units. Your unit can make a Normal move of up to 6\".",
-    "glossary": "glossary-orks-stratagem-krump-and-run",
-    "rule": "detachment-freebooter-krew"
+  "orks-enhancement-supa-cybork-body": {
+    "id": "orks-enhancement-supa-cybork-body",
+    "title": "Supa-Cybork Body",
+    "summary": "Orks model only. The bearer has the Feel No Pain 4+ ability.",
+    "full": "Orks model only. The bearer has the Feel No Pain 4+ ability.",
+    "glossary": "glossary-orks-enhancement-supa-cybork-body",
+    "rule": "detachment-war-horde"
   },
   "orks-ability-monster-hunters": {
     "id": "orks-ability-monster-hunters",
@@ -4054,197 +4246,5 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-gargantuan-squiggoth",
     "statline": "gargantuan-squiggoth-profile"
-  },
-  "orks-enhancement-eadstompa": {
-    "id": "orks-enhancement-eadstompa",
-    "title": "’Eadstompa",
-    "summary": "Infantry Warboss model only. Each time the bearer makes an attack that targets a unit that is below its Starting Strength, re-roll a Wound roll of 1. If that unit is Below Half-strength, you can re-roll the Wound roll instead.",
-    "full": "Infantry Warboss model only. Each time the bearer makes an attack that targets a unit that is below its Starting Strength, re-roll a Wound roll of 1. If that unit is Below Half-strength, you can re-roll the Wound roll instead.",
-    "glossary": "glossary-orks-enhancement-eadstompa",
-    "rule": "detachment-bully-boyz"
-  },
-  "orks-enhancement-big-gob": {
-    "id": "orks-enhancement-big-gob",
-    "title": "Big Gob",
-    "summary": "Infantry Warboss model only. At the start of the Fight phase, select one enemy unit within Engagement range of the bearer. That unit must take a Battle-shock test, and when doing so, subtract 1 from the result.",
-    "full": "Infantry Warboss model only. At the start of the Fight phase, select one enemy unit within Engagement range of the bearer. That unit must take a Battle-shock test, and when doing so, subtract 1 from the result.",
-    "glossary": "glossary-orks-enhancement-big-gob",
-    "rule": "detachment-bully-boyz"
-  },
-  "orks-enhancement-da-biggest-boss": {
-    "id": "orks-enhancement-da-biggest-boss",
-    "title": "Da Biggest Boss",
-    "summary": "Infantry Warboss model only. Add 2 to the bearer's Wounds characteristic.",
-    "full": "Infantry Warboss model only. Add 2 to the bearer's Wounds characteristic.",
-    "glossary": "glossary-orks-enhancement-da-biggest-boss",
-    "rule": "detachment-bully-boyz"
-  },
-  "orks-enhancement-tellyporta": {
-    "id": "orks-enhancement-tellyporta",
-    "title": "Tellyporta",
-    "summary": "Warboss In Mega Armour model only. Models in the bearer's unit have the Deep Strike ability.",
-    "full": "Warboss In Mega Armour model only. Models in the bearer's unit have the Deep Strike ability.",
-    "glossary": "glossary-orks-enhancement-tellyporta",
-    "rule": "detachment-bully-boyz"
-  },
-  "orks-enhancement-glory-hog": {
-    "id": "orks-enhancement-glory-hog",
-    "title": "Glory Hog",
-    "summary": "Beastboss On Squigosaur model only. Models in the bearer's unit have the Scouts 9\" ability.",
-    "full": "Beastboss On Squigosaur model only. Models in the bearer's unit have the Scouts 9\" ability.",
-    "glossary": "glossary-orks-enhancement-glory-hog",
-    "rule": "detachment-da-big-hunt"
-  },
-  "orks-enhancement-proper-killy": {
-    "id": "orks-enhancement-proper-killy",
-    "title": "Proper Killy",
-    "summary": "Beast Snagga model only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer.",
-    "full": "Beast Snagga model only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer.",
-    "glossary": "glossary-orks-enhancement-proper-killy",
-    "rule": "detachment-da-big-hunt"
-  },
-  "orks-enhancement-skrag-every-stash": {
-    "id": "orks-enhancement-skrag-every-stash",
-    "title": "Skrag Every Stash!",
-    "summary": "Beast Snagga model only. At the end of your Command phase, if the bearer is within range of an objective marker you control, that objective market remains under your control, even if you have no models within range of it, until your opponent controls it at the start of end of any turn.",
-    "full": "Beast Snagga model only. At the end of your Command phase, if the bearer is within range of an objective marker you control, that objective market remains under your control, even if you have no models within range of it, until your opponent controls it at the start of end of any turn.",
-    "glossary": "glossary-orks-enhancement-skrag-every-stash",
-    "rule": "detachment-da-big-hunt"
-  },
-  "orks-enhancement-surly-as-a-squiggoth": {
-    "id": "orks-enhancement-surly-as-a-squiggoth",
-    "title": "Surly as a Squiggoth",
-    "summary": "Beastboss On Squigosaur model only. While the bearer is leading a unit, each time an attack targets that unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
-    "full": "Beastboss On Squigosaur model only. While the bearer is leading a unit, each time an attack targets that unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
-    "glossary": "glossary-orks-enhancement-surly-as-a-squiggoth",
-    "rule": "detachment-da-big-hunt"
-  },
-  "orks-enhancement-gitfinder-gogglez": {
-    "id": "orks-enhancement-gitfinder-gogglez",
-    "title": "Gitfinder Gogglez",
-    "summary": "Mek model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
-    "full": "Mek model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability.",
-    "glossary": "glossary-orks-enhancement-gitfinder-gogglez",
-    "rule": "detachment-dread-mob"
-  },
-  "orks-enhancement-press-it-fasta": {
-    "id": "orks-enhancement-press-it-fasta",
-    "title": "Press It Fasta!",
-    "summary": "Mek model only. Each time the bearer's unit is selected to shoot, when rolling to determine which ability that unit's weapons gain from the Try Dat Button! Detachment rule, roll one additional D6; until the end of the phase, ranged weapons equipped by models in that unit gain both Button Effects generated by those rolls. If a duplicate Button Effect is rolled, it has no additional effect.",
-    "full": "Mek model only. Each time the bearer's unit is selected to shoot, when rolling to determine which ability that unit's weapons gain from the Try Dat Button! Detachment rule, roll one additional D6; until the end of the phase, ranged weapons equipped by models in that unit gain both Button Effects generated by those rolls. If a duplicate Button Effect is rolled, it has no additional effect.",
-    "glossary": "glossary-orks-enhancement-press-it-fasta",
-    "rule": "detachment-dread-mob"
-  },
-  "orks-enhancement-smoky-gubbinz": {
-    "id": "orks-enhancement-smoky-gubbinz",
-    "title": "Smoky Gubbinz",
-    "summary": "Mek model only. Models in the bearer's unit have the Stealth ability.",
-    "full": "Mek model only. Models in the bearer's unit have the Stealth ability.",
-    "glossary": "glossary-orks-enhancement-smoky-gubbinz",
-    "rule": "detachment-dread-mob"
-  },
-  "orks-enhancement-supa-glowy-fing": {
-    "id": "orks-enhancement-supa-glowy-fing",
-    "title": "Supa-glowy Fing",
-    "summary": "Mek model only. In your Command phase, select one enemy unit within 18\" and visible to the bearer, then roll one D6: on a 1-2, that enemy unit must take a Battle-shock test; on a 3-4, that enemy unit suffers D3 mortal wounds; on a 5-6, until the start of your next Command phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.",
-    "full": "Mek model only. In your Command phase, select one enemy unit within 18\" and visible to the bearer, then roll one D6: on a 1-2, that enemy unit must take a Battle-shock test; on a 3-4, that enemy unit suffers D3 mortal wounds; on a 5-6, until the start of your next Command phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-orks-enhancement-supa-glowy-fing",
-    "rule": "detachment-dread-mob"
-  },
-  "orks-enhancement-bloodthirsty-belligerence": {
-    "id": "orks-enhancement-bloodthirsty-belligerence",
-    "title": "Bloodthirsty Belligerence",
-    "summary": "Orks Infantry model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit. While that unit contains 10 or more models, you can re-roll Charge rolls made for that unit as well.",
-    "full": "Orks Infantry model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit. While that unit contains 10 or more models, you can re-roll Charge rolls made for that unit as well.",
-    "glossary": "glossary-orks-enhancement-bloodthirsty-belligerence",
-    "rule": "detachment-green-tide"
-  },
-  "orks-enhancement-brutal-but-kunnin": {
-    "id": "orks-enhancement-brutal-but-kunnin",
-    "title": "Brutal But Kunnin’",
-    "summary": "Orks Infantry model only. In your Command phase, if the bearer is on the battlefield (or is embarked within a Transport that is on the battlefield), roll one D6, adding 2 to the result if the bearer's unit contains 10 or more models: on a 5+, you gain 1 CP.",
-    "full": "Orks Infantry model only. In your Command phase, if the bearer is on the battlefield (or is embarked within a Transport that is on the battlefield), roll one D6, adding 2 to the result if the bearer's unit contains 10 or more models: on a 5+, you gain 1 CP.",
-    "glossary": "glossary-orks-enhancement-brutal-but-kunnin",
-    "rule": "detachment-green-tide"
-  },
-  "orks-enhancement-ferocious-show-off": {
-    "id": "orks-enhancement-ferocious-show-off",
-    "title": "Ferocious Show Off",
-    "summary": "Orks Infantry model only. Each time the bearer fights, while resolving those attacks, add 1 to the Strength characteristic of the bearer's melee weapons. If the bearer's unit contains 10 or more models, while resolving those attacks, add 3 to the Strength characteristic instead.",
-    "full": "Orks Infantry model only. Each time the bearer fights, while resolving those attacks, add 1 to the Strength characteristic of the bearer's melee weapons. If the bearer's unit contains 10 or more models, while resolving those attacks, add 3 to the Strength characteristic instead.",
-    "glossary": "glossary-orks-enhancement-ferocious-show-off",
-    "rule": "detachment-green-tide"
-  },
-  "orks-enhancement-raucous-warcaller": {
-    "id": "orks-enhancement-raucous-warcaller",
-    "title": "Raucous Warcaller",
-    "summary": "Orks Infantry model only. While the bearer is leading a unit, that unit always counts as containing 10 or more models for the purposes of your Detachment rule and any Stratagems you use.",
-    "full": "Orks Infantry model only. While the bearer is leading a unit, that unit always counts as containing 10 or more models for the purposes of your Detachment rule and any Stratagems you use.",
-    "glossary": "glossary-orks-enhancement-raucous-warcaller",
-    "rule": "detachment-green-tide"
-  },
-  "orks-enhancement-fasta-than-yooz": {
-    "id": "orks-enhancement-fasta-than-yooz",
-    "title": "Fasta Than Yooz",
-    "summary": "Orks Infantry model only. Each time the bearer's unit disembarks from a Transport after that Transport has made a Normal move, the bearer's unit is still eligible to declare a charge this turn.",
-    "full": "Orks Infantry model only. Each time the bearer's unit disembarks from a Transport after that Transport has made a Normal move, the bearer's unit is still eligible to declare a charge this turn.",
-    "glossary": "glossary-orks-enhancement-fasta-than-yooz",
-    "rule": "detachment-kult-of-speed"
-  },
-  "orks-enhancement-speed-makes-right": {
-    "id": "orks-enhancement-speed-makes-right",
-    "title": "Speed Makes Right",
-    "summary": "Orks model only. In your Command phase, if the bearer (or a Transport the bearer is embarked within) is within 9\" of one or more enemy units, roll one D6; on a 3+, you gain 1CP.",
-    "full": "Orks model only. In your Command phase, if the bearer (or a Transport the bearer is embarked within) is within 9\" of one or more enemy units, roll one D6; on a 3+, you gain 1CP.",
-    "glossary": "glossary-orks-enhancement-speed-makes-right",
-    "rule": "detachment-kult-of-speed"
-  },
-  "orks-enhancement-squig-hide-tyres": {
-    "id": "orks-enhancement-squig-hide-tyres",
-    "title": "Squig-hide Tyres",
-    "summary": "Deffkilla Wartrike model only. Each time a model in the bearer's unit makes a Consolidation move, it can move up to 6\" instead of up to 3\".",
-    "full": "Deffkilla Wartrike model only. Each time a model in the bearer's unit makes a Consolidation move, it can move up to 6\" instead of up to 3\".",
-    "glossary": "glossary-orks-enhancement-squig-hide-tyres",
-    "rule": "detachment-kult-of-speed"
-  },
-  "orks-enhancement-wazblasta": {
-    "id": "orks-enhancement-wazblasta",
-    "title": "Wazblasta",
-    "summary": "Deffkilla Wartrike model only. In your Shooting phase, after the bearer's unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, it is not eligible to declare a charge.",
-    "full": "Deffkilla Wartrike model only. In your Shooting phase, after the bearer's unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, it is not eligible to declare a charge.",
-    "glossary": "glossary-orks-enhancement-wazblasta",
-    "rule": "detachment-kult-of-speed"
-  },
-  "orks-enhancement-follow-me-ladz": {
-    "id": "orks-enhancement-follow-me-ladz",
-    "title": "Follow Me Ladz",
-    "summary": "Orks model only. While the bearer is leading a unit, add 2\" to the Move characteristic of models in that unit.",
-    "full": "Orks model only. While the bearer is leading a unit, add 2\" to the Move characteristic of models in that unit.",
-    "glossary": "glossary-orks-enhancement-follow-me-ladz",
-    "rule": "detachment-war-horde"
-  },
-  "orks-enhancement-headwoppas-killchoppa": {
-    "id": "orks-enhancement-headwoppas-killchoppa",
-    "title": "Headwoppa’s Killchoppa",
-    "summary": "Orks model only. Melee weapons equipped by the bearer (excluding Extra Attacks weapons) have the [DEVASTATING WOUNDS] ability.",
-    "full": "Orks model only. Melee weapons equipped by the bearer (excluding Extra Attacks weapons) have the [DEVASTATING WOUNDS] ability.",
-    "glossary": "glossary-orks-enhancement-headwoppas-killchoppa",
-    "rule": "detachment-war-horde"
-  },
-  "orks-enhancement-kunnin-but-brutal": {
-    "id": "orks-enhancement-kunnin-but-brutal",
-    "title": "Kunnin’ But Brutal",
-    "summary": "Orks model only. While the bearer is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-    "full": "Orks model only. While the bearer is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-    "glossary": "glossary-orks-enhancement-kunnin-but-brutal",
-    "rule": "detachment-war-horde"
-  },
-  "orks-enhancement-supa-cybork-body": {
-    "id": "orks-enhancement-supa-cybork-body",
-    "title": "Supa-Cybork Body",
-    "summary": "Orks model only. The bearer has the Feel No Pain 4+ ability.",
-    "full": "Orks model only. The bearer has the Feel No Pain 4+ ability.",
-    "glossary": "glossary-orks-enhancement-supa-cybork-body",
-    "rule": "detachment-war-horde"
   }
 };

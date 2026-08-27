@@ -31,7 +31,9 @@ const datasheetText=(title,value)=>title==='Pteraxii Sterylizors'
   :clean(value);
 const abilityText=(unitTitle,title,value)=>{
   if(/^(?:leader|support)$/i.test(clean(title))&&attachmentTargets[unitTitle])return `This model can be attached to the following units:\n${attachmentTargets[unitTitle].map(target=>`■ ${target}`).join('\n')}`;
-  if(!/^broad spectrum data-tether$/i.test(clean(title)))return clean(value);
+  const text=clean(value);
+  if(unitTitle==='Cybernetica Datasmith'&&clean(title)==='Data-severed')return text.replace(/[ \t]+\n/g,'\n');
+  if(!/^broad spectrum data-tether$/i.test(clean(title)))return text;
   if(unitTitle==='Onager Dunecrawler')return 'The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.';
   return 'Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.';
 };
@@ -224,6 +226,10 @@ const datasheets=points.units.map(pointUnit=>{
   const abilities=abilityRecords.filter(item=>(item.origin!=='wargear'||alwaysDatasheetAbilities.has(key(item.title)))&&!conditionalTitles.has(key(item.title))).concat(rulesFor(entry));
   const wargearAbilities=abilityRecords.filter(item=>item.origin==='wargear'&&conditionalTitles.has(key(item.title))&&!abilities.some(ability=>key(ability.title)===key(item.title)));
   const categories=unique(categoryLinks.map(item=>clean(item.name).replace(/^Faction:\s*/i,'')).filter(item=>!nonDatasheetCategories.has(key(item))),item=>item.toLowerCase());
+  if(pointUnit.title==='Cybernetica Datasmith'){
+    const infantry=categories.findIndex(item=>key(item)==='infantry');
+    if(infantry!==-1)categories.splice(infantry,1,'Vehicle'); // Faction Pack v1.2, p. 18; Data-severed owns the conditional return to INFANTRY.
+  }
   const invulnerable=profiles.filter(item=>item.typeName==='Unit').map(item=>characteristics(item,categoryIds).InSv).find(Boolean)||old.invulnerable||'';
   const status=/\[Legends]/i.test(link.name)?'Warhammer Legends':'Codex transcription';
   const result={

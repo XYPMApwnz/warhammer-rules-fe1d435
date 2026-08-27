@@ -2,11 +2,14 @@ import assert from 'node:assert/strict';
 import ruleFacts from '../books/shared/rule-facts.js';
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=relative=>fs.readFileSync(path.join(root,relative),'utf8');
 const json=relative=>JSON.parse(read(relative));
+const runtimeVersions=json('books/shared/runtime-asset-versions.json');
+const targetHtml=bookId=>{const sandbox={window:{}};vm.runInNewContext(read(`books/${bookId}/scripts/target-data.js`),sandbox);return sandbox.window.WH_ARMY_BOOK_TARGETS.html;};
 const clean=value=>String(value||'').replace(/<[^>]+>/g,' ').replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
 const count=(text,value)=>text.split(value).length-1;
 const card=(html,id)=>{
@@ -24,7 +27,7 @@ const migratedStubs=new Map([...migratedBooks].map(([bookId,expected])=>{
   assert.equal(stubs.length,expected,`${bookId}: legacy compatibility route inventory changed`);
   for(const [file,html] of stubs){
     assert.match(html,/data-canonical-reader="\.\.\/reader\.html"/,`${bookId}/${file}: canonical reader target is absent`);
-    assert.match(html,/mobile-route-redirect\.js\?v=1/,`${bookId}/${file}: shared redirect runtime is absent`);
+    assert.match(html,new RegExp(`mobile-route-redirect\\.js\\?v=${runtimeVersions.shared.mobileRouteRedirect}`),`${bookId}/${file}: shared redirect runtime is absent`);
     assert.doesNotMatch(html,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${bookId}/${file}: compatibility stub contains duplicated rule content`);
   }
   return[bookId,stubs];
@@ -38,7 +41,7 @@ const sources=[
   ['emperors-children','books/emperors-children/content/emperors-children-codex-parity.en.json','books/emperors-children/reader.html','books/emperors-children/mobile/related-rules.inc']
 ];
 for(const [bookId,sourceFile,readerFile,relatedFile] of sources){
-  const source=json(sourceFile),reader=read(readerFile),related=read(relatedFile);
+  const source=json(sourceFile),reader=targetHtml(bookId),related=read(relatedFile);
   for(const rule of source.detachments.flatMap(detachment=>detachment.stratagems||[]).filter(item=>item.restrictions)){
     for(const [surface,html] of [['desktop',reader],['Related Rules',related]]){
       const rendered=card(html,rule.id);
@@ -61,7 +64,7 @@ for(const [bookId,sourceFile,readerFile,relatedFile] of sources){
 }
 
 const dgSource=json('books/death-guard/content/death-guard-rules.en.json');
-const dgReader=read('books/death-guard/reader.html'),dgRelated=read('books/death-guard/mobile/related-rules.inc');
+const dgReader=targetHtml('death-guard'),dgRelated=read('books/death-guard/mobile/related-rules.inc');
 const dgDetachments=dgSource.sections.filter(section=>section.id.startsWith('detachment-'));
 const dgStratagems=dgDetachments.flatMap(detachment=>
   (detachment.subsections||[]).flatMap(subsection=>subsection.blocks||[])
@@ -139,7 +142,7 @@ for(const file of ['books/death-guard/scripts/app.js','books/tyranids/scripts/ap
 const css=read('books/shared/styles/content.css');
 const ecPackStratagems=json('books/emperors-children/content/emperors-children-faction-pack.en.json').detachments.flatMap(detachment=>detachment.stratagems);
 const ecCodexStratagems=json('books/emperors-children/content/emperors-children-codex-parity.en.json').detachments.flatMap(detachment=>detachment.stratagems);
-const ecReader=read('books/emperors-children/reader.html');
+const ecReader=targetHtml('emperors-children');
 assert.equal(ecCodexStratagems.length,36);
 assert.equal(ecCodexStratagems.every(item=>item.typeStatus==='confirmed'&&['battle-tactic','strategic-ploy','wargear','epic-deed'].includes(item.canonicalType)),true);
 assert.equal(ecPackStratagems.length,15);
@@ -167,7 +170,7 @@ const sharedMobileBuilder=read('books/shared/tools/build-mobile-stubs.mjs');
 assert.match(sharedMobileBuilder,/data-canonical-reader="\.\.\/reader\.html"/);
 for(const buildFile of ['books/tyranids/mobile/build.mjs','books/emperors-children/mobile/build.mjs','books/tau-empire/mobile/build.mjs'])assert.match(read(buildFile),/runMobileStubBuilder\(import\.meta\.url/);
 assert.match(dgReader,/data-term="core-rule-15-04-insane-bravery"/);
-assert.match(read('books/adeptus-mechanicus/reader.html'),/data-term="stratagem-priority-reclamation"/);
+assert.match(targetHtml('adeptus-mechanicus'),/data-term="stratagem-priority-reclamation"/);
 assert.match(read('books/shared/army-related-rules.js'),/Compatible Stratagems & Enhancements/);
 assert.equal(ruleFacts.staticCompatible({state:'match'}),true);
 assert.equal(ruleFacts.staticCompatible({state:'conditional',condition:'battle-state-unknown'}),true);

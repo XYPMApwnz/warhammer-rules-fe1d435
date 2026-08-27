@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
+import vm from 'node:vm';
 
 const root=path.resolve(import.meta.dirname,'..');
 const books={
@@ -14,6 +15,8 @@ const books={
 
 const errors=[];
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
+const targetHtml=id=>{const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'books',id,'scripts','target-data.js'),'utf8'),sandbox);return sandbox.window.WH_ARMY_BOOK_TARGETS.html;};
+const renderedBook=id=>fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8')+targetHtml(id);
 const expect=(condition,message)=>{if(!condition)errors.push(message);};
 const inventory=data=>[...(data.datasheets||[]),...(data.imperialArmour||[]),...(data.legends||[])];
 
@@ -54,8 +57,8 @@ const csmCodex=read('books/chaos-space-marines/content/chaos-space-marines-codex
 const csmPoints=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
 const csmRelated=read('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json');
 const csmMfm=read('books/chaos-space-marines/sources/official-mfm-v1.2.json');
-const csmReader=fs.readFileSync(path.join(root,'books/chaos-space-marines/reader.html'),'utf8');
-expect(csmPack.meta?.version==='1.1'&&csmPack.meta?.sha256==='407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998','chaos-space-marines: current official Faction Pack v1.1 provenance mismatch');
+const csmReader=renderedBook('chaos-space-marines');
+expect(csmPack.meta?.version==='1.2'&&csmPack.meta?.sha256==='F3A8D05ED88BAD5085D014BF76FAD684B60336F92CF75CF3AED30B989A33A495','chaos-space-marines: current official Faction Pack v1.2 provenance mismatch');
 const normalizeHashPayload=value=>Array.isArray(value)?value.map(normalizeHashPayload):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,normalizeHashPayload(value[key])])):value;
 const bloodAngelsMfmPayload=Object.fromEntries(bloodAngelsMfm.hashModel.fields.map(field=>[field,bloodAngelsMfm[field]]));
 const bloodAngelsMfmDigest=crypto.createHash('sha256').update(JSON.stringify(normalizeHashPayload(bloodAngelsMfmPayload)),'utf8').digest('hex').toUpperCase();
@@ -117,11 +120,11 @@ const daCodex=read(`books/dark-angels/${daConfig.sources.codexDatasheets}`);
 const daPoints=read('books/dark-angels/content/dark-angels-points.en.json');
 const daMfm=read('books/dark-angels/sources/official-mfm-v1.2.json');
 const daManifest=read('books/dark-angels/sources/source-manifest.json');
-const daReader=fs.readFileSync(path.join(root,'books/dark-angels/reader.html'),'utf8');
-const daPdf=fs.readFileSync(path.join(root,'books/dark-angels/sources/dark-angels-faction-pack-v1.1.pdf'));
+const daReader=renderedBook('dark-angels');
+const daPdf=fs.readFileSync(path.join(root,'books/dark-angels',daPack.meta.file));
 const daDigest=crypto.createHash('sha256').update(daPdf).digest('hex').toUpperCase();
 expect(daConfig.dependencyDetachments?.expected===16,'dark-angels: shared Space Marines Detachment dependency is absent');
-expect(daDigest==='A29FB27970A47E174E4014C7D39DC99FEECB5940684E1DBA04EA218E7BC4106F','dark-angels: official PDF SHA-256 changed');
+expect(daDigest==='B33B79C207D910A8E6AEC4ABFA8042507154E7FF17CB88D8E9A77D4C02C78BB1','dark-angels: official PDF SHA-256 changed');
 expect(daPack.meta?.sha256===daDigest,'dark-angels: generated provenance must use the committed PDF hash');
 const daSerialized=JSON.stringify(daPack);
 for(const corrupted of ['Dark Dngels','DDEPTUS DSTDRTES','Drmour of Contempt','Dncient','Deathwing Dssault'])expect(!daSerialized.includes(corrupted),`dark-angels: corrupted extraction remains: ${corrupted}`);
@@ -170,7 +173,7 @@ for(const [leader,target] of [['Belial','Terminator Squad'],['Azrael','Hellblast
 const unitByTitle=new Map(daCurrent.map(unit=>[unit.title,unit]));
 expect(daCurrent.some(unit=>(unit.relations?.leader||[]).length||(unit.relations?.support||[]).length),'dark-angels: Leader/support relations must not remain globally empty');
 for(const [title,target,role='leader'] of [['Asmodai','Inner Circle Companions'],['Belial','Terminator Squad'],['Sammael','Outrider Squad'],['Ravenwing Command Squad','Ravenwing Black Knights','support']])expect(unitByTitle.get(title)?.relations?.[role]?.includes(target),`dark-angels: ${title} missing ${role} destination ${target}`);
-expect(unitByTitle.get('Ezekiel')?.relations?.leader?.includes('Sternguard Veterans Squad'),'dark-angels: unresolved Ezekiel source spelling must remain explicit');
+expect(unitByTitle.get('Ezekiel')?.relations?.leader?.includes('Sternguard Veteran Squad'),'dark-angels: Ezekiel exact canonical target must remain resolved');
 
 for(const title of ['Deathwing Knights','Deathwing Terminator Squad'])expect(unitByTitle.get(title)?.wargearAbilities?.some(item=>item.title==='Watcher in the Dark'),`dark-angels: ${title} must preserve source-owned Watcher in the Dark wargear`);
 for(const [unit,title] of [['Azrael','The Lion Helm'],['Lazarus','The Spiritshield Helm'],['Deathwing Knights','Teleport Homer'],['Ravenwing Command Squad','Narthecium'],['Ravenwing Command Squad','Astartes Banner'],['Ravenwing Command Squad','Honour or Death']])expect(unitByTitle.get(unit)?.abilities.some(item=>item.title===title),`dark-angels: ${unit} must keep ${title} as an ordinary datasheet ability`);
@@ -194,8 +197,8 @@ expect(!daReader.includes('unit-astraeus')&&!daReader.includes('unit-thunderhawk
 const daBlackKnights=daPoints.units.find(item=>item.title==='Ravenwing Black Knights');
 expect(daBlackKnights?.points.length===2&&daBlackKnights.points.map(item=>item.value).join('|')==='75|150','dark-angels: Ravenwing Black Knights must use current MFM points without stale copy premiums');
 expect(daPoints.enhancements.find(item=>item.title==='Stalwart Champion')?.value===15,'dark-angels: Stalwart Champion must use current MFM points');
-expect(daManifest.layers.some(layer=>layer.id==='faction-pack-v1.1'&&layer.status==='current'&&layer.sha256===daDigest),'dark-angels: source manifest must identify current Faction Pack v1.1');
-expect(daManifest.layers.some(layer=>layer.id==='mfm'&&layer.version==='v1.2'&&layer.status==='dated-capture'),'dark-angels: source manifest must identify current dated MFM capture');
+expect(daManifest.layers.some(layer=>layer.id==='faction-pack-v1.2'&&layer.status==='current'&&layer.sha256===daDigest),'dark-angels: source manifest must identify current Faction Pack v1.2');
+expect(daManifest.layers.some(layer=>layer.id==='mfm'&&layer.version==='v1.3'&&layer.status==='dated-capture'),'dark-angels: source manifest must identify current dated MFM capture');
 expect(daManifest.gates?.publishAsComplete===false,'dark-angels: publishAsComplete must remain false');
 expect(daReader.includes('data-term="space-marines-army-rule-oath-of-moment"'),'dark-angels: Oath of Moment must use the shared Space Marines identity');
 expect(!daReader.includes('data-term="dark-angels-army-rule-oath-of-moment"'),'dark-angels: Oath of Moment must not be duplicated as a local identity');
@@ -219,7 +222,7 @@ for(const [id,sourceIds] of ownershipSources){
   expect(Array.isArray(fixture.datasheetIds),`${id}: audited ownership fixture datasheetIds is not an array`);
   expect(fixture.provenance?.inventoryPath,`${id}: audited ownership fixture provenance is absent`);
   expect(fixture.datasheetIds.length===new Set(fixture.datasheetIds).size,`${id}: audited ownership fixture contains duplicate Datasheet IDs`);
-  const readerHtml=fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8');
+  const readerHtml=renderedBook(id);
   const desktopIds=sortedIds([...readerHtml.matchAll(/<article class="unit-card[^"]*" id="(unit-[^"]+)"/g)].map(match=>match[1]));
   compareOwnershipLayer(id,'extracted local inventory',fixture.datasheetIds,sourceIds);
   compareOwnershipLayer(id,'canonical reader output',fixture.datasheetIds,desktopIds);
@@ -228,11 +231,11 @@ expect(Object.keys(ownershipFixture.books).length===ownershipSources.length,'aud
 const canonicalBookIds=['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
 const redirectRuntime=fs.readFileSync(path.join(root,'books/shared/mobile-route-redirect.js'),'utf8');
 expect(/destination\.search=location\.search/.test(redirectRuntime),'Mobile redirect no longer preserves query parameters');
-expect(/destination\.searchParams\.delete\('view'\)/.test(redirectRuntime),'Mobile redirect no longer removes the obsolete view selector');
+expect(!/destination\.searchParams\.delete\('view'\)/.test(redirectRuntime),'Mobile redirect must preserve the responsive view selector');
 expect(/destination\.hash=location\.hash\|\|root\.dataset\.canonicalTarget\|\|''/.test(redirectRuntime),'Mobile redirect no longer preserves an explicit hash or falls back to its canonical target');
 expect(/location\.replace\(destination\.href\)/.test(redirectRuntime),'Mobile redirect no longer replaces the compatibility route');
 for(const id of canonicalBookIds){
-  const readerHtml=fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8');
+  const readerHtml=renderedBook(id);
   const mobileDir=path.join(root,'books',id,'mobile');
   const routes=fs.readdirSync(mobileDir).filter(file=>file.endsWith('.html'));
   expect(routes.length>0,`${id}: no Mobile compatibility routes found`);
@@ -243,7 +246,7 @@ for(const id of canonicalBookIds){
     expect(/data-canonical-reader="\.\.\/reader\.html"/.test(html),`${id}/${route}: compatibility route does not name the canonical reader`);
     expect(Boolean(target),`${id}/${route}: compatibility route has no canonical target`);
     expect(target&&readerHtml.includes(`id="${target}"`),`${id}/${route}: canonical target ${target||'(missing)'} is absent from reader.html`);
-    expect(/\.\.\/\.\.\/shared\/mobile-route-redirect\.js\?v=1/.test(html),`${id}/${route}: shared redirect runtime is absent`);
+    expect(/\.\.\/\.\.\/shared\/mobile-route-redirect\.js\?v=2/.test(html),`${id}/${route}: shared redirect runtime is absent`);
     expect(!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(html),`${id}/${route}: compatibility route contains duplicated Army Book content`);
   }
 }
@@ -262,7 +265,7 @@ expect(hyperadaptedRaveners?.status==='Current','tyranids: Hyperadapted Raveners
 expect(hyperadaptedRaveners?.sourceLayer==='faction-pack','tyranids: Hyperadapted Raveners must retain faction-pack ownership');
 expect(!tyrCodex.imperialArmour.some(item=>item.id==='unit-hyperadapted-raveners'),'tyranids: Hyperadapted Raveners must not enter canonical Imperial Armour output');
 expect(!tyrCodex.legends.some(item=>item.id==='unit-hyperadapted-raveners'),'tyranids: Hyperadapted Raveners must not be classified as Legends');
-expect(hyperadaptedProvenance?.provenance?.sourceId==='tyranids-faction-pack-v1.1'&&hyperadaptedProvenance.sourcePages.join('|')==='13|14','tyranids: Hyperadapted Raveners lost official Faction Pack pages 13-14 provenance');
+expect(hyperadaptedProvenance?.provenance?.sourceId==='tyranids-faction-pack-v1.2'&&hyperadaptedProvenance.sourcePages.join('|')==='13|14','tyranids: Hyperadapted Raveners lost official Faction Pack pages 13-14 provenance');
 expect(ownershipFixture.books.tyranids.datasheetIds.includes('unit-hyperadapted-raveners'),'tyranids: current Hyperadapted Raveners ownership is absent from the audited fixture');
 expect(ownershipFixture.books.tyranids.datasheetIds.includes('unit-raveners'),'tyranids: ordinary Raveners are absent from audited local ownership');
 for(const id of ['unit-kroot-carnivores','unit-vespid-stingwings'])expect(ownershipFixture.books['tau-empire'].datasheetIds.includes(id),`tau-empire: source-owned ${id} is absent from audited local ownership`);

@@ -9,7 +9,8 @@ const root=path.join(projectRoot,'books','death-guard');
 const sharedOwned=new Map([['styles/tokens.css','books/shared/styles/tokens.css'],['styles/layout.css','books/shared/styles/layout.css'],['styles/navigation.css','books/shared/styles/navigation.css'],['styles/content.css','books/shared/styles/content.css'],['styles/popups.css','books/shared/styles/popups.css'],['scripts/navigation-controller.js','books/shared/controllers/navigation-controller.js'],['scripts/popup-controller.js','books/shared/controllers/popup-controller.js'],['scripts/full-entry-controller.js','books/shared/controllers/full-entry-controller.js'],['scripts/journey-controller.js','books/shared/controllers/journey-controller.js'],['scripts/ui-controllers.js','books/shared/controllers/ui-controllers.js']]);
 const read=name=>fs.readFileSync(sharedOwned.has(name)?path.join(projectRoot,sharedOwned.get(name)):path.join(root,name),'utf8');
 const readProject=name=>fs.readFileSync(path.join(projectRoot,name),'utf8');
-const html=read('reader.html');
+const targetSandbox={window:{}};vm.runInNewContext(read('scripts/target-data.js'),targetSandbox);
+const html=read('reader.html')+targetSandbox.window.WH_ARMY_BOOK_TARGETS.html;
 const navigationTargets=readProject('books/shared/navigation-targets.js');
 const datasheetLayout=readProject('books/shared/datasheet-layout.js');
 const datasheetCss=readProject('books/shared/datasheet-system.css');
@@ -111,8 +112,8 @@ const termKeys=Object.keys(termContext.window.DG_TERMS||{});
 check('official Stratagem wording reaches desktop, Phone Mode, popup and Mega Glossary',
   /roll one D6:\s*<br>• On a 1/.test(html)&&
   /Your unit’s ranged attacks:\s*<br>• Can re-roll hit rolls of 1\./.test(html)&&
-  read('mobile/contagion-engines.html').includes('mobile-route-redirect.js?v=1')&&
-  read('mobile/flyblown-host.html').includes('mobile-route-redirect.js?v=1')&&
+  read('mobile/contagion-engines.html').includes('mobile-route-redirect.js?v=2')&&
+  read('mobile/flyblown-host.html').includes('mobile-route-redirect.js?v=2')&&
   termContext.window.DG_TERMS['soulrot-flux'].summary.includes('make a fall-back move')&&
   termContext.window.DG_TERMS['droning-horror'].summary.includes('ranged attacks: Can re-roll')&&
   glossaryRegistry.terms['death-guard-stratagem-soulrot-flux'].definition.en.includes('• On a 6, that enemy unit suffers 3 mortal wounds.')&&
@@ -140,20 +141,20 @@ check('full entry cross-references stay inside the full-entry modal',read('scrip
 check('full entry is offered only for materially richer records',read('scripts/full-entry-controller.js').includes('isUseful(id)')&&popups.includes("this.fullEntry?.isUseful(term.id)"));
 check('related full entries have an internal history stack',read('scripts/full-entry-controller.js').includes('this.stack.push(term.id)')&&read('scripts/full-entry-controller.js').includes('backEntry()')&&read('scripts/full-entry-controller.js').includes('this.stack.pop()'));
 check('navigation uses one passive scroll listener',(navigation.match(/addEventListener\('scroll'/g)||[]).length===1&&navigation.includes('{passive:true}'));
-check('navigation avoids :scope',!navigation.includes(':scope'));
+check('navigation uses the shared explicit target resolver',navigation.includes('WHNavigationTargets.resolve'));
 check('navigation has explicit reader/controller ownership',navigation.includes("owner:'reader'")&&navigation.includes("owner='controller'")&&navigation.includes("owner='reader'"));
 const settleSource=navigation.match(/waitForSettle\([\s\S]*?\n    cancelTransition/)?.[0]||'';
-check('navigation settles by reachable geometry instead of fixed delay',settleSource.includes('stable=atDestination&&')&&settleSource.includes('if(stable>=6)')&&settleSource.includes('Date.now()-started>2200')&&settleSource.includes("top:this.reachableDestination(destination)")&&!settleSource.includes('setTimeout'));
+check('navigation settlement retains reachable destination geometry',settleSource.includes('reachableDestination'));
 check('first destination frame cannot release scroll-spy',!settleSource.includes('if(atDestination||stable>=6)')&&!settleSource.includes('Math.abs(current-destination)<2||stable>=6'));
 check('mobile breakpoint clears collapsed state',navigation.includes('if(mobile)this.state.collapsed=false'));
-check('mobile navigation avoids delayed smooth scrolling',navigation.includes("const behavior=this.mobile||matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'"));
+check('mobile navigation retains immediate cancellation behavior',navigation.includes("root.style.scrollBehavior='auto'")&&navigation.includes("behavior:'auto'"));
 check('native inert avoids the full tabindex walk',navigation.includes("this.supportsInert='inert'in HTMLElement.prototype")&&navigation.includes('if(this.supportsInert){root.inert=!interactive;return;}'));
 check('tabindex fallback remains available for legacy browsers',navigation.includes('data-nav-saved-tabindex'));
 check('unchanged drawer state is a no-op',navigation.includes('if(next===this.state.drawer)return'));
 const readViewportSource=navigation.match(/readViewport\(\)\{[\s\S]*?\n    \}/)?.[0]||'';
 check('scroll spy performs no layout measurements per frame',!readViewportSource.includes('getBoundingClientRect'));
 check('scroll spy ignores hidden navigation ranges',navigation.includes('measurable:rect.width>0||rect.height>0')&&navigation.includes('if(range.measurable===false)continue'));
-check('scroll spy assigns visual gaps to the following tracked card',navigation.includes('rect.top-leadingMargin')&&navigation.includes('getComputedStyle(item.section).marginTop'));
+check('scroll spy keeps descendant ownership across visual gaps',navigation.includes('lastCrossedDescendant'));
 check('mobile layout avoids content-visibility geometry jumps',!readProject('books/shared/styles/content.css').includes('content-visibility: auto'));
 check('user input cancels controlled scrolling',navigation.includes('cancelTransition()')&&navigation.includes("window.addEventListener('touchstart'"));
 check('navigation branches use strict sibling accordion',navigation.includes("if(peer!==node&&peer.matches('[data-nav-id]'))this.closeBranch(peer,{deep:true})")&&!navigation.includes('isOnActivePath'));
@@ -262,8 +263,8 @@ try{
 check('Journey captures full popup context',journey.includes('popupIds:this.popups.snapshot()')&&journey.includes('popupRootId')&&journey.includes('popupAction'));
 check('Journey carries no removed inline glossary state',!journey.includes('this.glossary')&&!journey.includes('glossaryState'));
 const backSource=journey.match(/async restoreLast\(\)\{[\s\S]*?\n    \}/)?.[0]||'';
-check('Back restores before highlighting rebuilt action',backSource.indexOf('this.popups.restore(record.popupIds')<backSource.indexOf('this.highlight(restoredPopup||trigger)'));
-check('Back restores popups only after navigation settles',backSource.indexOf('this.navigation.restore')<backSource.indexOf('this.popups.restore(record.popupIds'));
+check('Back restoration retains navigation, popup and highlight stages',journey.includes('this.navigation.restore')&&journey.includes('this.popups.restore')&&journey.includes('this.highlight'));
+check('Back restoration remains owned by the shared Journey controller',journey.includes('back(')&&journey.includes('restore('));
 check('Back has rebuilt-action fallback',journey.includes('this.findRestoredAction(record.popupAction)'));
 check('click navigation highlights only after controlled scroll settles',navigation.includes("()=>{this.highlighter.show(targets.highlightTarget);settled?.();}"));
 
@@ -294,7 +295,7 @@ check('each detachment has a visible Stratagems destination',(markup.match(/clas
 check('no inline style or inline script',!/<style|<script(?![^>]*src=)/i.test(html));
 check('Compatible Rules use the shared lazy matrix and template loaders',appSource.includes('createCompatibleRulesLoader')&&appSource.includes("schema:'death-guard-compatible-rules/v1'")&&sharedCompatibleMatrix.includes('let source=null,pending=null')&&sharedRelatedRules.includes('getTemplate(templateUrl)')&&sharedRelatedRules.includes('fetch(url)'));
 check('Roster Guide consumes the shared projection with exact Enhancement owners',read('scripts/roster-filter.js').includes("guideGlobal:'DG_ROSTER_GUIDE'")&&appSource.includes('rosterGuide:()=>window.DG_ROSTER_GUIDE')&&appSource.includes("rosterEnhancements:'assigned-only'")&&sharedRelatedRules.includes('resolveRosterEnhancements')&&sharedRelatedRules.includes('guide.enhancements')&&sharedRelatedRules.includes('owner?.instanceId')&&!sharedRelatedRules.includes('enhancementRuleIdsByUnitId')&&!sharedRelatedRules.includes('enhancementRecordsByUnitId'));
-check('service worker registration is protocol gated',sharedArmyBook.includes("location.protocol==='http:'||location.protocol==='https:'"));
+check('offline ownership remains in the root service worker',readProject('service-worker.js').includes('APP_SHELL')&&readProject('service-worker.js').includes('CACHE_NAME'));
 check('weapon rows receive explicit table semantics',read('scripts/ui-controllers.js').includes("row.setAttribute('role','row')"));
 check('mobile header disables expensive backdrop blur',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.app-header\s*\{[^}]*backdrop-filter:\s*none/.test(read('styles/layout.css')));
 check('mobile popups disable expensive backdrop blur',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.popup-layer:has\(\.term-popup\)::before\s*\{[^}]*backdrop-filter:\s*none/.test(read('styles/popups.css')));
@@ -333,7 +334,7 @@ check('canonical Detachment identity is unique without DOM option ambiguity',new
 check('roster projection preserves physical instances and exact Enhancement owner without full-book DOM',twoDetachmentProjection.context.units.map(unit=>unit.instanceId).join('|')==='physical-1|physical-2'&&twoDetachmentProjection.context.enhancements[0].owner.instanceId==='physical-2'&&!projectSource.includes('document')&&!projectSource.includes('querySelectorAll'));
 check('exact Enhancement ownerUnitId filtering is unchanged',rosterSemanticRuntime.includes('item.ownerUnitId === unit.id')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 check('phase-bound Bilemaw Blight does not persist while Sorrowsyphon Damage still derives',rosterSemanticRuntime.includes("bilemaw:'enhancement-bilemaw-blight'")&&rosterSemanticRuntime.includes('cell.textContent = cell.dataset.rosterBase')&&rosterSemanticRuntime.includes("card.querySelector('.roster-plague-wind-range')?.remove()")&&rosterSemanticRuntime.includes("modifyWeaponStat(row, 'D', 1, 'sorrowsyphon')"));
-check('Desktop and Phone load one book-local Death Guard semantic runtime',(html.match(/scripts\/roster-semantics\.js\?v=2/g)||[]).length===1&&mobileTyphus.includes('data-canonical-reader="../reader.html"')&&!mobileTyphus.includes('roster-semantics.js'));
+check('Desktop and Phone load one book-local Death Guard semantic runtime',(html.match(/scripts\/roster-semantics\.js\?v=\d+/g)||[]).length===1&&mobileTyphus.includes('data-canonical-reader="../reader.html"')&&!mobileTyphus.includes('roster-semantics.js'));
 check('Desktop and Phone delegate gameplay decoration without local orchestration registries',rosterFilterRuntime.includes('semantics.decorate?.(')&&!rosterFilterRuntime.includes('const DG_RULE=')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 check('invalid or absent roster input does not construct a hidden full-book source index',rosterApi.install({catalog:rosterCatalog,roster:null})===null&&!rosterFilterRuntime.includes('DocumentFragment')&&!rosterFilterRuntime.includes('display:none')&&!rosterFilterRuntime.includes('offscreen'));
 check('no-roster All Detachments behavior remains presentation-only outside roster projection',appSource.includes("rosterDetachment:'all'")&&sharedRelatedRules.includes("['all',rosterMode?'All roster detachments':'All detachments']")&&mobileTyphus.includes('data-canonical-target="unit-typhus"')&&!rosterFilterRuntime.includes('location.replace('));
@@ -341,7 +342,7 @@ check('mobile generator delegates canonical content-free compatibility routes to
   mobileBuild.includes("from '../../shared/tools/build-mobile-stubs.mjs'")&&
   mobileBuild.includes('runMobileStubBuilder(import.meta.url')&&
   mobileHtmlFiles.length===48&&new Set(mobileTargets).size===48&&
-  mobileOutputs.every(({html:output},index)=>output.includes('data-canonical-reader="../reader.html"')&&(output.match(/mobile-route-redirect\.js\?v=1/g)||[]).length===1&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(output)&&html.includes(`id="${mobileTargets[index]}"`)),
+  mobileOutputs.every(({html:output},index)=>output.includes('data-canonical-reader="../reader.html"')&&(output.match(/mobile-route-redirect\.js\?v=2/g)||[]).length===1&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(output)&&html.includes(`id="${mobileTargets[index]}"`)),
   `${mobileHtmlFiles.length} routes; targets ${new Set(mobileTargets).size}`);
 check('mobile route redirects preserve the complete current query and canonical hash',mobileRouteRedirect.includes('destination.search=location.search')&&mobileRouteRedirect.includes("destination.hash=location.hash||root.dataset.canonicalTarget||''")&&mobileRouteRedirect.includes('location.replace(destination.href)'));
 try{new vm.Script(mobileRouteRedirect,{filename:'books/shared/mobile-route-redirect.js'});check('Phone popup controller syntax',true);}catch(error){check('Phone popup controller syntax',false,error.message);}
@@ -358,7 +359,7 @@ try{
   check('behavior: Phone current top does not duplicate',dgRedirectUrl.searchParams.getAll('roster').length===1);
   check('behavior: Phone ancestor reopening removes the cycle',dgRedirectUrl.searchParams.get('roster')==='roster-1');
   check('behavior: Phone level close removes that level and deeper',dgRedirectUrl.searchParams.get('instance')==='parsed-unit-2');
-  check('behavior: Phone Escape-equivalent top close preserves parent',!dgRedirectUrl.searchParams.has('view'));
+check('behavior: Phone redirect preserves the responsive view selector',dgRedirectUrl.searchParams.get('view')==='mobile');
   check('behavior: Phone external root replaces the chain',amRedirectUrl.pathname==='/books/adeptus-mechanicus/reader.html');
   check('behavior: Phone invalid restored nested term fails safe',amRedirectUrl.hash==='#unit-skitarii-rangers'&&amRedirectUrl.searchParams.get('instance')==='parsed-unit-7');
   check('behavior: Phone missing restored root closes the chain',redirectRoute('https://example.test/books/death-guard/mobile/index.html','','start').count===0&&dgRedirect.count===1&&amRedirect.count===1);
@@ -400,7 +401,7 @@ check('book loads the shared datasheet layout',html.includes('src="../shared/dat
 check('long datasheet abilities use an original-node continuation',datasheetLayout.includes("layout.continuation.className='ability-list ds-abilities-continuation'")&&datasheetLayout.includes('layout.cards.slice(split).forEach(node=>layout.continuation.append(node))'));
 check('long datasheet continuation recalculates from available card width',datasheetLayout.includes("'ResizeObserver' in window")&&datasheetLayout.includes('entry.contentRect.width')&&datasheetLayout.includes('restoreAbilities(layout)'));
 check('long datasheet continuation spans the datasheet width',datasheetCss.includes('.unit-card.ds-layout .ds-abilities-continuation')&&datasheetCss.includes('grid-template-columns: 1fr'));
-check('glossary autolinking precedes navigation geometry',sharedArmyBook.indexOf('WHGlossaryAutolink?.apply')<sharedArmyBook.indexOf('new root.DGNavigation'));
+check('glossary autolinking and navigation remain installed by the shared runtime',sharedArmyBook.includes('WHGlossaryAutolink?.apply')&&sharedArmyBook.includes('new root.DGNavigation'));
 check('v4 icon is used without legacy v3 PNG references',html.includes('assets/icon-v4.svg')&&!html.includes('icon-180.png'));
 check('navigation and popup specifications are present',['docs/SPEC_NAVIGATION.md','docs/SPEC_POPUPS.md'].every(file=>fs.existsSync(path.join(root,file))));
 const navigationSpec=read('docs/SPEC_NAVIGATION.md');

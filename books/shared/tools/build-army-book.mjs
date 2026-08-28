@@ -41,6 +41,7 @@ const dependencyCodices=(config.dependencies||[]).map(id=>{
 });
 const dependencyById=new Map(dependencyCodices.map(item=>[item.id,item]));
 const dependencyScope=config.dependencyDatasheets||{};
+const dependencyPointOverrides=dependencyScope.pointOverrides||{};
 const excludedDependencyKeywords=new Set((dependencyScope.excludeAnyKeywords||[]).map(value=>clean(value).toUpperCase()));
 const dependencyKeywordOverlays=new Map();
 for(const overlay of dependencyScope.keywordOverlays||[])for(const unitId of overlay.unitIds||[]){
@@ -48,13 +49,25 @@ for(const overlay of dependencyScope.keywordOverlays||[])for(const unitId of ove
   keywords.add(clean(overlay.keyword).toUpperCase());
   dependencyKeywordOverlays.set(unitId,keywords);
 }
+const validateDependencyPointOverride=(unitId,override)=>{
+  for(const [index,row] of (override.points||[]).entries()){
+    if(typeof row?.label!=='string'||!clean(row.label))throw new Error(`${config.id}: dependency point override ${unitId} row ${index+1} requires a non-empty label`);
+    if(typeof row?.value!=='number'||!Number.isFinite(row.value))throw new Error(`${config.id}: dependency point override ${unitId} row ${index+1} requires a finite numeric value`);
+  }
+};
 const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.currentOnly?dependency.codex.datasheets||[]:unitInventory(dependency.codex))
   .filter(unit=>!(unit.keywords||[]).some(keyword=>excludedDependencyKeywords.has(clean(keyword).toUpperCase())))
   .map(unit=>{
-    const point=dependency.pointsByTitle.get(titleKey(unit.title)),exact=dependency.wargearByTitle.get(titleKey(unit.title)),official=dependency.officialByTitle.get(titleKey(unit.title));
+    const inheritedPoint=dependency.pointsByTitle.get(titleKey(unit.title)),pointOverride=dependencyPointOverrides[unit.id],exact=dependency.wargearByTitle.get(titleKey(unit.title)),official=dependency.officialByTitle.get(titleKey(unit.title));
+    if(pointOverride&&!inheritedPoint)throw new Error(`${config.id}: dependency point override ${unit.id} has no inherited point record`);
+    if(pointOverride&&titleKey(pointOverride.title)!==titleKey(unit.title))throw new Error(`${config.id}: dependency point override ${unit.id} title mismatch`);
+    if(pointOverride)validateDependencyPointOverride(unit.id,pointOverride);
+    const point=pointOverride?{...inheritedPoint,...pointOverride}:inheritedPoint;
     const overlayKeywords=dependencyKeywordOverlays.get(unit.id)||new Set();
     return {...unit,keywords:[...new Set([...(unit.keywords||[]),...overlayKeywords])],...(point?{points:point.points,paidWargear:point.paidWargear,pointsSource:point.pointsSource}:{}),...(exact?{wargear:exact.wargear,compositionText:exact.composition,wargearSource:{label:dependency.wargearSource?.label||'Current 11e reference',url:exact.url}}:{}),...(official?{sourcePages:official.sourcePages,provenance:official.provenance}:{}),dependencyBook:dependency.id,dependencyTitle:dependency.config.title,dependencySourceFile:path.basename(dependency.pack.meta.file),dependencySourceVersion:dependency.pack.meta.version,dependencyCompactSharedAbilities:dependency.config.compactSharedAbilities||[],sourceLayer:`${dependency.id}-${official&&unit.sourceLayer==='codex'?'faction-pack':unit.sourceLayer||'source'}`};
   }));
+const dependencyUnitIds=new Set(dependencyUnits.map(unit=>unit.id));
+for(const unitId of Object.keys(dependencyPointOverrides))if(!dependencyUnitIds.has(unitId))throw new Error(`${config.id}: dependency point override ${unitId} does not resolve to an effective dependency Datasheet`);
 const ownUnits=config.currentDatasheetLayers?config.currentDatasheetLayers.flatMap(layer=>codex[layer]||[]):config.currentDatasheetsOnly?codex.datasheets||[]:unitInventory(codex);
 const pointsByTitle=new Map(points.units.map(item=>[titleKey(item.title),item]));
 const wargearByTitle=new Map((codexWargear?.units||[]).map(item=>[titleKey(item.title),item]));

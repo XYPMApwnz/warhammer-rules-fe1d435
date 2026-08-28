@@ -243,4 +243,5 @@ assert.equal(nightmareWarp.enhancements[0].ownerEligibility,'valid');
 const dreadWarp=WHRosterPoints.check(csmRoster('Dread Talons'),'chaos space marines');
 assert.equal(dreadWarp.enhancements[0].id,'enhancement-dread-talons-warp-fuelled-thrusters');
 assert.equal(dreadWarp.enhancements[0].ownerEligibility,'valid');
+await import('./points-consumer-convergence-qa.mjs');
 console.log('Roster parser and points QA passed.');

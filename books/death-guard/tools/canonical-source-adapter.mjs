@@ -5,6 +5,103 @@ const keywordId=value=>`keyword-${slug(value)}`;
 const plainKeywordNames=new Set(['CHAOS LORD','CULTISTS','POSSESSED','SORCERER']);
 export const coreTermIdByCode=Object.freeze({'15.02':'core-rule-15-02-command-re-roll','15.03':'core-rule-15-03-epic-challenge','15.04':'core-rule-15-04-insane-bravery','15.05':'core-rule-15-05-explosives','15.06':'core-rule-15-06-crushing-impact','15.07':'core-rule-15-07-rapid-ingress','15.08':'core-stratagem-fire-overwatch','15.10':'core-rule-15-10-smokescreen','15.11':'core-rule-15-11-heroic-intervention','15.12':'core-rule-15-12-counteroffensive'});
 
+const normalizeFactText=value=>String(value??'').normalize('NFKC').replace(/[\u2010-\u2015]/g,'-').replace(/\s+/g,' ').trim().toLowerCase();
+const ordinalPattern='\\d+(?:st|nd|rd|th)';
+const uniqueIndex=(items,keyFor,label)=>{
+  if(!Array.isArray(items))throw new Error(`Death Guard MFM ownership: ${label} is not an array`);
+  const index=new Map();
+  for(const item of items){const key=keyFor(item);if(!key)throw new Error(`Death Guard MFM ownership: ${label} has an empty identity`);if(index.has(key))throw new Error(`Death Guard MFM ownership: duplicate ${label} identity ${key}`);index.set(key,item);}
+  return index;
+};
+const assertSameIdentities=(canonical,official,label)=>{
+  const missing=[...canonical.keys()].filter(key=>!official.has(key)),extra=[...official.keys()].filter(key=>!canonical.has(key));
+  if(missing.length||extra.length)throw new Error(`Death Guard MFM ownership: ${label} identity mismatch; missing [${missing.join(', ')}], extra [${extra.join(', ')}]`);
+};
+const mfmTierKey=label=>{
+  const value=normalizeFactText(label).replace(/^your\s+/,'').replace(/\s+costs?$/,'').replace(/\bunits\b/g,'unit').replace(/\s+to\s+/g,'-').replace(/\s*\+\s*/g,'+ ');
+  if(value==='unit')return 'any';
+  const match=new RegExp(`^(${ordinalPattern})(?:-(${ordinalPattern})|(\\+))?\\s+unit$`).exec(value);
+  if(!match)throw new Error(`Death Guard MFM ownership: unsupported official schedule label ${label}`);
+  return match[2]?`${match[1]}-${match[2]}`:match[3]?`${match[1]}+`:match[1];
+};
+const canonicalPointKey=label=>{
+  const value=normalizeFactText(label),separator=value.indexOf(':');
+  if(separator<0)return `any|${value}`;
+  const prefix=value.slice(0,separator).replace(/\s+unit$/,'').replace(/\s*\+\s*/g,'+').replace(/\s*-\s*/g,'-'),model=value.slice(separator+1).trim();
+  if(!new RegExp(`^${ordinalPattern}(?:-${ordinalPattern}|\\+)?$`).test(prefix)||!model)throw new Error(`Death Guard MFM ownership: unsupported canonical point label ${label}`);
+  return `${prefix}|${model}`;
+};
+const officialPointRows=unit=>{
+  const rows=[];
+  for(const schedule of unit.schedules||[]){const tier=mfmTierKey(schedule.label);if(!Array.isArray(schedule.values)||!schedule.values.length)throw new Error(`Death Guard MFM ownership: ${unit.unitId} has an empty official schedule`);for(const point of schedule.values)rows.push({key:`${tier}|${normalizeFactText(point.label)}`,value:point.value});}
+  return rows;
+};
+const reconcilePointRows=(canonicalRows,officialRows,label)=>{
+  const canonical=uniqueIndex(canonicalRows,row=>canonicalPointKey(row.label),`${label} canonical brackets`),official=uniqueIndex(officialRows,row=>row.key,`${label} official brackets`);
+  assertSameIdentities(canonical,official,`${label} brackets`);
+  for(const [key,row] of canonical)if(row.value!==official.get(key).value)throw new Error(`Death Guard MFM ownership: ${label} value mismatch for ${key}: canonical ${row.value}, official ${official.get(key).value}`);
+  return canonicalRows.map(row=>({...row,value:official.get(canonicalPointKey(row.label)).value}));
+};
+const reconcileNamedRows=(canonicalRows,officialRows,label)=>{
+  const canonical=uniqueIndex(canonicalRows||[],row=>normalizeFactText(row.label),`${label} canonical records`),official=uniqueIndex(officialRows||[],row=>normalizeFactText(row.label),`${label} official records`);
+  assertSameIdentities(canonical,official,label);
+  for(const [key,row] of canonical)if(row.value!==official.get(key).value)throw new Error(`Death Guard MFM ownership: ${label} value mismatch for ${key}: canonical ${row.value}, official ${official.get(key).value}`);
+  return (canonicalRows||[]).map(row=>({...row,value:official.get(normalizeFactText(row.label)).value}));
+};
+const enhancementIdentity=(detachmentId,title)=>`${detachmentId}|enhancement-${slug(String(title).replace(/\s*\(Upgrade\)\s*$/i,''))}`;
+const officialEnhancements=points=>{
+  const nested=[];
+  for(const detachment of points.detachments||[]){const detachmentId=`detachment-${slug(detachment.title)}`;for(const enhancement of detachment.enhancements||[])nested.push({...enhancement,detachmentId,key:enhancementIdentity(detachmentId,enhancement.title),upgrade:/\(Upgrade\)\s*$/i.test(enhancement.title)});}
+  const nestedIndex=uniqueIndex(nested,item=>item.key,'official Detachment Enhancements');
+  const flatIndex=uniqueIndex((points.enhancements||[]).map(item=>{const detachmentId=`detachment-${slug(item.detachment)}`;return {...item,detachmentId,key:enhancementIdentity(detachmentId,item.title)};}),item=>item.key,'official Enhancement inventory');
+  assertSameIdentities(nestedIndex,flatIndex,'official Enhancement inventories');
+  for(const [key,item] of nestedIndex)if(item.value!==flatIndex.get(key).value)throw new Error(`Death Guard MFM ownership: official Enhancement inventory value mismatch for ${key}`);
+  return nestedIndex;
+};
+
+export function applyDeathGuardMfmOwnership(book,points,expected={}){
+  if(points?.schema!==1||!Array.isArray(points.units)||!Array.isArray(points.detachments)||!Array.isArray(points.enhancements))throw new Error('Death Guard MFM ownership: invalid official source schema');
+  const canonicalUnits=uniqueIndex(book.sections.filter(section=>section.kind==='unit'),unit=>unit.id,'canonical Datasheets'),officialUnits=uniqueIndex(points.units,unit=>unit.unitId,'official Datasheets');
+  assertSameIdentities(canonicalUnits,officialUnits,'Datasheet');
+  if(points.counts?.units!==officialUnits.size||expected.datasheets!==undefined&&expected.datasheets!==officialUnits.size)throw new Error('Death Guard MFM ownership: Datasheet count metadata mismatch');
+  for(const [unitId,unit] of canonicalUnits){
+    const official=officialUnits.get(unitId),pointBlocks=(unit.blocks||[]).filter(block=>block.type==='points');
+    if(pointBlocks.length!==1)throw new Error(`Death Guard MFM ownership: ${unitId} must have exactly one canonical points block`);
+    const rows=officialPointRows(official),pointBlock=pointBlocks[0];
+    unit.points=reconcilePointRows(unit.points||[],rows,`${unitId} section points`);
+    pointBlock.values=reconcilePointRows(pointBlock.values||[],rows,`${unitId} point block`);
+    pointBlock.wargear=reconcileNamedRows(pointBlock.wargear||[],official.paidWargear||[],`${unitId} paid wargear`);
+  }
+  const canonicalDetachments=uniqueIndex(book.sections.filter(section=>section.id?.startsWith('detachment-')),section=>section.id,'canonical Detachments'),officialDetachments=uniqueIndex(points.detachments,item=>`detachment-${slug(item.title)}`,'official Detachments');
+  assertSameIdentities(canonicalDetachments,officialDetachments,'Detachment');
+  if(points.counts?.detachments!==officialDetachments.size||expected.detachments!==undefined&&expected.detachments!==officialDetachments.size)throw new Error('Death Guard MFM ownership: Detachment count metadata mismatch');
+  const enhancements=officialEnhancements(points),canonicalEnhancements=new Map();
+  for(const [detachmentId,section] of canonicalDetachments){
+    const official=officialDetachments.get(detachmentId),factBlocks=(section.blocks||[]).filter(block=>block.type==='p'&&/Force Disposition:/i.test(block.text||''));
+    if(normalizeFactText(section.title)!==normalizeFactText(official.title))throw new Error(`Death Guard MFM ownership: ${detachmentId} title mismatch`);
+    if(factBlocks.length!==1)throw new Error(`Death Guard MFM ownership: ${detachmentId} must have exactly one factual metadata block`);
+    const match=/Force Disposition:\s*([^.]+)\.\s*Detachment Points:\s*([^.]+)\./i.exec(factBlocks[0].text||'');
+    if(!match||normalizeFactText(match[1])!==normalizeFactText(official.disposition)||normalizeFactText(match[2])!==normalizeFactText(official.dp))throw new Error(`Death Guard MFM ownership: ${detachmentId} factual metadata mismatch`);
+    const parts=(section.subsections||[]).filter(part=>part.title==='Enhancements');
+    if(parts.length!==1)throw new Error(`Death Guard MFM ownership: ${detachmentId} must have exactly one Enhancement section`);
+    for(const block of parts[0].blocks||[]){
+      const titleMatch=/^(.*?)\s+-\s+(\d+)\s+pts$/i.exec(block.title||'');
+      if(!titleMatch)throw new Error(`Death Guard MFM ownership: invalid canonical Enhancement title ${block.title}`);
+      const key=`${detachmentId}|${block.id}`;
+      if(canonicalEnhancements.has(key))throw new Error(`Death Guard MFM ownership: duplicate canonical Enhancement identity ${key}`);
+      canonicalEnhancements.set(key,block);
+      const source=enhancements.get(key),upgrade=(block.tags||[]).map(normalizeFactText).includes('upgrade');
+      if(!source||normalizeFactText(titleMatch[1])!==normalizeFactText(String(source.title).replace(/\s*\(Upgrade\)\s*$/i,''))||Number(titleMatch[2])!==source.value||upgrade!==source.upgrade)throw new Error(`Death Guard MFM ownership: Enhancement mismatch for ${key}`);
+      block.title=`${titleMatch[1]} - ${source.value} pts`;
+    }
+  }
+  assertSameIdentities(canonicalEnhancements,enhancements,'Enhancement');
+  if(points.counts?.enhancements!==enhancements.size||expected.enhancements!==undefined&&expected.enhancements!==enhancements.size)throw new Error('Death Guard MFM ownership: Enhancement count metadata mismatch');
+  const paidWargearCount=points.units.reduce((total,unit)=>total+(unit.paidWargear||[]).length,0);
+  if(points.counts?.pricedOptions!==paidWargearCount)throw new Error('Death Guard MFM ownership: paid-wargear count metadata mismatch');
+  return book;
+}
+
 const weaponObject=weapon=>({Range:weapon.range,A:weapon.a,[weapon.mode==='ranged'?'BS':'WS']:weapon.skill,S:weapon.s,AP:weapon.ap,D:weapon.d,Abilities:Array.isArray(weapon.abilities)?weapon.abilities.join(', ')||'-':weapon.abilities||'-'});
 const legendGlossaryFor=legends=>legends.units.flatMap(unit=>[
   {id:`term-${unit.id.slice(5)}`,title:unit.title,group:'Datasheets',kind:'unit',showGlossary:false,short:'Warhammer Legends datasheet.',full:`Complete Warhammer Legends datasheet: ${unit.title}.`,sectionId:unit.id,statline:unit.statline,points:unit.points,legends:true},
@@ -34,7 +131,7 @@ const keywordsOf=unit=>{
 export function buildDeathGuardCanonicalModel(context){
   const {config}=context,book=structuredClone(context.readJson(config.sources.canonical)),legends=context.readJson(config.sources.legends),updates=context.readJson(config.sources.officialUpdates),manifest=context.readJson(config.sources.manifest),points=context.readJson(config.sources.points),presentation=context.readJson(config.sources.presentation),runtimeRelated=context.readJson(config.sources.runtimeRelatedTerms),unitImages=context.readJson(config.sources.unitImages),core=context.readRepoJson(config.sources.coreRules);
   if(updates.updates?.length!==config.expected.officialUpdates)throw new Error(`Death Guard official update ledger: expected ${config.expected.officialUpdates}, got ${updates.updates?.length||0}`);
-  if(points.units?.length!==config.expected.datasheets||points.enhancements?.length!==config.expected.enhancements)throw new Error('Death Guard MFM inventory does not match the canonical contract');
+  applyDeathGuardMfmOwnership(book,points,config.expected);
   if(!Array.isArray(manifest.sources)||!manifest.sources.length)throw new Error('Death Guard source manifest is empty');
   if(legends.units.length!==config.expected.legends)throw new Error(`Death Guard Legends: expected ${config.expected.legends}, got ${legends.units.length}`);
   if(presentation.schema!==1||presentation.bookId!==config.id||presentation.provenance.generatedOutputsAreBuildInputs!==false)throw new Error('Death Guard presentation metadata contract is invalid');

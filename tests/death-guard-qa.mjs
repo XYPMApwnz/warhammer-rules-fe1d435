@@ -414,3 +414,4 @@ for(const result of results)console.log(`${result.ok?'PASS':'FAIL'}  ${result.na
 const failed=results.filter(result=>!result.ok);
 console.log(`\n${results.length-failed.length}/${results.length} checks passed.`);
 if(failed.length)process.exitCode=1;
+await import('./death-guard-mfm-ownership-qa.mjs');

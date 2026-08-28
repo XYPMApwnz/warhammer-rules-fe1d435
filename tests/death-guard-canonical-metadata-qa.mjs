@@ -11,7 +11,7 @@ const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(at(file))).d
 const metadata=json('books/death-guard/sources/canonical-presentation-contract.json');
 const canonical=json('books/death-guard/content/death-guard-rules.en.json');
 const legends=json('books/death-guard/content/death-guard-legends.en.json');
-const points=json('books/death-guard/sources/official-mfm-v1.2.json');
+const points=json('books/death-guard/sources/official-mfm-v1.3.json');
 const core=json('books/core-rules/content/core-rules.digital-11e.json');
 const reader=read('books/death-guard/reader.html');
 const runtimeSource=read('books/death-guard/scripts/data.js');
@@ -34,7 +34,7 @@ check(metadata.provenance.captureOnly===true&&metadata.provenance.generatedOutpu
 check(hash('books/death-guard/reader.html')===metadata.provenance.oracleHashes.reader,'reader oracle hash');
 check(hash('books/death-guard/scripts/data.js')===metadata.provenance.oracleHashes.runtime,'runtime oracle hash');
 check(hash('books/death-guard/mobile/related-rules.inc')===metadata.provenance.oracleHashes.relatedRules,'related-rules oracle hash');
-const frozenFiles={canonical:'books/death-guard/content/death-guard-rules.en.json',legends:'books/death-guard/content/death-guard-legends.en.json',officialUpdates:'books/death-guard/content/official-update-ledger.en.json',points:'books/death-guard/sources/official-mfm-v1.2.json',compatibleRules:'books/death-guard/generated/compatible-rules.json',runtimeRelatedTerms:'books/death-guard/sources/runtime-related-terms.json',rosterSemantics:'books/death-guard/scripts/roster-semantics.js',rosterFilter:'books/death-guard/scripts/roster-filter.js'};
+const frozenFiles={canonical:'books/death-guard/content/death-guard-rules.en.json',legends:'books/death-guard/content/death-guard-legends.en.json',officialUpdates:'books/death-guard/content/official-update-ledger.en.json',points:'books/death-guard/sources/official-mfm-v1.3.json',compatibleRules:'books/death-guard/generated/compatible-rules.json',runtimeRelatedTerms:'books/death-guard/sources/runtime-related-terms.json',rosterSemantics:'books/death-guard/scripts/roster-semantics.js',rosterFilter:'books/death-guard/scripts/roster-filter.js'};
 for(const [key,file] of Object.entries(frozenFiles))check(hash(file)===metadata.provenance.frozenSourceHashes[key],`${key} frozen hash`);
 
 check(metadata.termLinks.expectedOccurrences===1317&&metadata.termLinks.expectedUniqueTermIds===373,'curated term counts');

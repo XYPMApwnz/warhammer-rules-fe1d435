@@ -118,6 +118,50 @@ for(const [name,cost] of Object.entries(deathGuardMfmEnhancements)){
 const mechanicus=WHRosterPoints.check({units:[{quantity:10,name:'Skitarii Rangers',models:[]}],declared:85,unitLineTotal:85,enhancements:[]},'adeptus mechanicus');
 assert.equal(mechanicus.total,85);
 assert.equal(mechanicus.difference,0);
+
+const starscytheRoster=WHRosterParser.parse(`FACTION KEYWORD: Xenos - T'au Empire
+TOTAL ARMY POINTS: 325pts
+1x Crisis Starscythe Battlesuits (105 pts)
+• 3x Crisis Starscythe Battlesuit
+    1 with T'au flamer
+1x Crisis Starscythe Battlesuits (105 pts)
+• 3x Crisis Starscythe Battlesuit
+    1 with T'au flamer
+1x Crisis Starscythe Battlesuits (115 pts)
+• 3x Crisis Starscythe Battlesuit
+    1 with T'au flamer`);
+assert.deepEqual(Array.from(starscytheRoster.units,unit=>unit.quantity),[1,1,1],'unit quantity remains the physical selection-copy quantity');
+assert.deepEqual(Array.from(starscytheRoster.units,unit=>unit.models.reduce((sum,model)=>sum+model.quantity,0)),[3,3,3],'model records preserve the physical model count');
+for(const [count,expected] of [[1,105],[2,210],[3,325]]){
+  const roster={...starscytheRoster,units:starscytheRoster.units.slice(0,count),declared:expected,unitLineTotal:expected};
+  const result=WHRosterPoints.check(roster,'t au empire');
+  assert.equal(result.total,expected,`Starscythe copy ${count} must use physical model count while retaining occurrence-tier pricing and paid wargear`);
+  assert.equal(result.unresolved.length,0);
+}
+const legacyStarscythe=WHRosterPoints.check({units:[{quantity:3,name:'Crisis Starscythe Battlesuits',models:[]}],declared:100,unitLineTotal:100,enhancements:[]},'t au empire');
+assert.equal(legacyStarscythe.total,100,'unit.quantity remains the fallback when no model records exist');
+assert.equal(legacyStarscythe.unresolved.length,0);
+const mortarionPoints=WHRosterPoints.check({units:[{quantity:1,name:'Mortarion',models:[]}],declared:375,unitLineTotal:375,enhancements:[]},'death guard');
+assert.equal(mortarionPoints.total,375,'single-model fallback remains supported');
+const defilerPoints=WHRosterPoints.check({units:[{quantity:1,name:'Defiler',models:[]}],declared:300,unitLineTotal:300,enhancements:[]},'chaos space marines');
+assert.equal(defilerPoints.total,300,'copy-tier schedules without model-count clauses remain supported');
+for(const quantity of [undefined,0,-1,1.5,Number.NaN]){
+  const malformed=WHRosterPoints.check({units:[{quantity:1,name:'Crisis Starscythe Battlesuits',models:[{quantity,name:'Crisis Starscythe Battlesuit',wargear:'',loadouts:[]}]}],declared:0,unitLineTotal:0,enhancements:[]},'t au empire');
+  assert.equal(malformed.total,0,`invalid physical model quantity ${String(quantity)} must not resolve a model-count tier`);
+  assert.equal(malformed.unresolved.length,1);
+}
+const malformedModels=WHRosterPoints.check({units:[{quantity:1,name:'Crisis Starscythe Battlesuits',models:{quantity:3}}],declared:0,unitLineTotal:0,enhancements:[]},'t au empire');
+assert.equal(malformedModels.total,0,'non-array model composition must fail closed for model-count tiers');
+assert.equal(malformedModels.unresolved.length,1);
+const matchingFallbackQuantity=WHRosterPoints.check({units:[{quantity:3,name:'Crisis Starscythe Battlesuits',models:[{quantity:0,name:'Crisis Starscythe Battlesuit',wargear:'',loadouts:[]}]}],declared:0,unitLineTotal:0,enhancements:[]},'t au empire');
+assert.equal(matchingFallbackQuantity.total,0,'malformed explicit models must not fall back to a matching unit.quantity tier');
+assert.equal(matchingFallbackQuantity.unresolved.length,1);
+const splitModelStarscythe=WHRosterPoints.check({units:[{quantity:1,name:'Crisis Starscythe Battlesuits',models:[
+  {quantity:1,name:'Crisis Starscythe Battlesuit',wargear:'',loadouts:[{quantity:1,wargear:"T'au flamer"}]},
+  {quantity:2,name:'Crisis Starscythe Battlesuit',wargear:'',loadouts:[]}
+]}],declared:105,unitLineTotal:105,enhancements:[]},'t au empire');
+assert.equal(splitModelStarscythe.total,105,'physical model count must sum all model records while preserving paid wargear');
+assert.equal(splitModelStarscythe.unresolved.length,0);
 const emperorChildrenRoster=WHRosterParser.parse(`FACTION KEYWORD: Chaos - Emperor's Children
 BATTLE SIZE: 3. Strike Force (2000 Point limit)
 DETACHMENT: Coterie of the Conceited, Carnival of Excess

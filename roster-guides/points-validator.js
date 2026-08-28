@@ -15,7 +15,22 @@
     const exact=text.match(/(\d+)(?:st|nd|rd|th)?\s+unit/);
     return !exact||index===Number(exact[1]);
   };
-  const modelMatches=(label,quantity)=>{const match=String(label||'').match(/(\d+)\s+models?/i);return !match||Number(match[1])===quantity;};
+  const physicalModelCount=unit=>{
+    const models=unit?.models;
+    if(models==null||(Array.isArray(models)&&models.length===0)){
+      const quantity=Number(unit?.quantity);
+      return Number.isInteger(quantity)&&quantity>0?quantity:null;
+    }
+    if(!Array.isArray(models))return null;
+    let total=0;
+    for(const model of models){
+      const quantity=Number(model?.quantity);
+      if(!Number.isInteger(quantity)||quantity<=0)return null;
+      total+=quantity;
+    }
+    return total||null;
+  };
+  const modelMatches=(label,quantity)=>{const match=String(label||'').match(/(\d+)\s+models?/i);return !match||(Number.isInteger(quantity)&&Number(match[1])===quantity);};
   const loadouts=unit=>{
     if(!unit.models?.length)return unit.wargear?[{quantity:unit.quantity||1,text:unit.wargear}]:[];
     return unit.models.flatMap(model=>model.loadouts?.length?model.loadouts.map(item=>({quantity:item.quantity||1,text:item.wargear})):model.wargear?[{quantity:model.quantity||1,text:model.wargear}]:[]);
@@ -41,7 +56,8 @@
     for(const unit of roster.units){
       const key=normalize(unit.name),definition=catalog.units[key],index=(occurrences.get(key)||0)+1;occurrences.set(key,index);
       if(!definition){unresolved.push(`Unit: ${unit.name}`);continue;}
-      const prices=definition.points.filter(row=>copyMatches(row.label,index)&&modelMatches(row.label,unit.quantity));
+      const modelCount=physicalModelCount(unit);
+      const prices=definition.points.filter(row=>copyMatches(row.label,index)&&modelMatches(row.label,modelCount));
       if(prices.length!==1){unresolved.push(`Unit size or repeat: ${unit.quantity}x ${unit.name}`);continue;}
       total+=Number(prices[0].value);
       for(const item of definition.wargear||[])total+=gearCount(unit,String(item.label||item.name).replace(/^per\s+/i,''))*Number(item.value);

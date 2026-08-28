@@ -11294,12 +11294,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "id": "enhancement-strike-swiftly",
       "title": "Strike Swiftly",
-      "value": 35,
+      "value": 45,
       "text": "In the Resolve Pre-battle Abilities step, you can select up to two friendly T’AU EMPIRE units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "montka",
       "sourceBookId": "tau-empire",
@@ -11854,7 +11854,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   "strike swiftly": {
     "title": "Strike Swiftly",
     "text": "In the Resolve Pre-battle Abilities step, you can select up to two friendly T’AU EMPIRE units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability.",
-    "value": 35,
+    "value": 45,
     "detachment": "Mont'ka",
     "tags": [],
     "owner": {

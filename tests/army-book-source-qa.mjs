@@ -195,7 +195,7 @@ expect(daMfm.dependencyInventory.specialScope.map(item=>item.title).join('|')===
 expect(daMfm.dependencyInventory.specialScope.every(item=>item.includedInCurrentDatasheets===false),'dark-angels: MFM-only special-scope records must not enter current Datasheets');
 expect(!daReader.includes('unit-astraeus')&&!daReader.includes('unit-thunderhawk-gunship'),'dark-angels: special/Imperial Armour records leaked into current navigation');
 const daBlackKnights=daPoints.units.find(item=>item.title==='Ravenwing Black Knights');
-expect(daBlackKnights?.points.length===2&&daBlackKnights.points.map(item=>item.value).join('|')==='75|150','dark-angels: Ravenwing Black Knights must use current MFM points without stale copy premiums');
+expect(daBlackKnights?.points.length===4&&daBlackKnights.points.map(item=>item.value).join('|')==='75|150|85|160','dark-angels: Ravenwing Black Knights must use the current MFM copy-tier schedule');
 expect(daPoints.enhancements.find(item=>item.title==='Stalwart Champion')?.value===15,'dark-angels: Stalwart Champion must use current MFM points');
 expect(daManifest.layers.some(layer=>layer.id==='faction-pack-v1.2'&&layer.status==='current'&&layer.sha256===daDigest),'dark-angels: source manifest must identify current Faction Pack v1.2');
 expect(daManifest.layers.some(layer=>layer.id==='mfm'&&layer.version==='v1.3'&&layer.status==='dated-capture'),'dark-angels: source manifest must identify current dated MFM capture');

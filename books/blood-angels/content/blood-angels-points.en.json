@@ -375,7 +375,7 @@
       "points": [
         {
           "label": "1st to 2nd · 5 models",
-          "value": 120,
+          "value": 115,
           "minModels": 5,
           "maxModels": 5,
           "minCopies": 1,
@@ -391,7 +391,7 @@
         },
         {
           "label": "3rd + · 5 models",
-          "value": 135,
+          "value": 130,
           "minModels": 5,
           "maxModels": 5,
           "minCopies": 3
@@ -406,9 +406,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -484,7 +484,7 @@
       "points": [
         {
           "label": "1st to 2nd · 3 models",
-          "value": 125,
+          "value": 120,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 1,
@@ -500,7 +500,7 @@
         },
         {
           "label": "3rd + · 3 models",
-          "value": 145,
+          "value": 140,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 3
@@ -515,9 +515,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -587,16 +587,16 @@
       "points": [
         {
           "label": "unit · 1 model",
-          "value": 130,
+          "value": 120,
           "minModels": 1,
           "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {

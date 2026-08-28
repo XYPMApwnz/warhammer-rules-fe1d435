@@ -129,7 +129,7 @@
       "points": [
         [
           "1st unit: 2 models",
-          160
+          150
         ],
         [
           "2nd+ unit: 2 models",
@@ -137,11 +137,11 @@
         ],
         [
           "1st unit: 4 models",
-          320
+          300
         ],
         [
           "2nd+ unit: 4 models",
-          340
+          330
         ]
       ]
     },
@@ -181,11 +181,11 @@
       "points": [
         [
           "1st–2nd unit: 5 models",
-          80
+          75
         ],
         [
           "3rd+ unit: 5 models",
-          90
+          85
         ],
         [
           "1st–2nd unit: 10 models",
@@ -201,19 +201,19 @@
       "points": [
         [
           "1st–2nd unit: 5 models",
-          80
+          75
         ],
         [
           "3rd+ unit: 5 models",
-          90
+          85
         ],
         [
           "1st–2nd unit: 10 models",
-          160
+          150
         ],
         [
           "3rd+ unit: 10 models",
-          170
+          160
         ]
       ]
     },
@@ -244,8 +244,12 @@
     "Servitor Battleclade": {
       "points": [
         [
-          "9 models",
+          "1st–2nd unit: 9 models",
           65
+        ],
+        [
+          "3rd+ unit: 9 models",
+          75
         ]
       ]
     },
@@ -383,7 +387,7 @@
       "points": [
         [
           "1 model",
-          65
+          60
         ]
       ]
     },
@@ -498,5 +502,6 @@
     "Clandestine Infiltrator": 15,
     "Veiled Hunter": 10
   },
-  "captureSha256": "CBC09172457B3ADBF866F2396477A389C9F7AD5180F81A1E4B81D2186A2BD07F"
+  "captureSha256": "CBC09172457B3ADBF866F2396477A389C9F7AD5180F81A1E4B81D2186A2BD07F",
+  "sourceArtifactSha256": "0737F37D888978C87F1C3ABE194ABB2088A8A16998F8E7F7EB779A7BCDD4EFD6"
 }

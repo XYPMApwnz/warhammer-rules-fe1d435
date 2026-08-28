@@ -1,0 +1,2456 @@
+{
+  "schema": "gw-2026-08-26-owner-points-ledger/v1",
+  "frozenAt": "2026-08-27",
+  "historicalAggregateCountsAreAuthority": false,
+  "units": [
+    {
+      "ownerBook": "death-guard",
+      "canonicalUnitId": "unit-blightlord-terminators",
+      "title": "Blightlord Terminators",
+      "canonicalPath": "books/death-guard/content/death-guard-rules.en.json",
+      "canonicalKind": "dg-section",
+      "snapshotPath": "books/death-guard/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dg-schedules",
+      "baselinePoints": [
+        {
+          "label": "3 models",
+          "value": 115
+        },
+        {
+          "label": "5 models",
+          "value": 185
+        },
+        {
+          "label": "10 models",
+          "value": 370
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "3 models",
+          "value": 115
+        },
+        {
+          "label": "5 models",
+          "value": 180
+        },
+        {
+          "label": "10 models",
+          "value": 360
+        }
+      ],
+      "effectiveBooks": [
+        "death-guard"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/death-guard",
+        "artifactSha256": "B8278F2944C593AFFA277E2685531406E1275A1EA13C7416FBCDE031691A5A05",
+        "record": "Blightlord Terminators"
+      }
+    },
+    {
+      "ownerBook": "death-guard",
+      "canonicalUnitId": "unit-defiler",
+      "title": "Defiler",
+      "canonicalPath": "books/death-guard/content/death-guard-rules.en.json",
+      "canonicalKind": "dg-section",
+      "snapshotPath": "books/death-guard/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dg-schedules",
+      "baselinePoints": [
+        {
+          "label": "1st unit: 1 model",
+          "value": 300
+        },
+        {
+          "label": "2nd+ unit: 1 model",
+          "value": 340
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st unit: 1 model",
+          "value": 300
+        },
+        {
+          "label": "2nd+ unit: 1 model",
+          "value": 350
+        }
+      ],
+      "effectiveBooks": [
+        "death-guard"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/death-guard",
+        "artifactSha256": "B8278F2944C593AFFA277E2685531406E1275A1EA13C7416FBCDE031691A5A05",
+        "record": "Defiler"
+      }
+    },
+    {
+      "ownerBook": "death-guard",
+      "canonicalUnitId": "unit-foul-blightspawn",
+      "title": "Foul Blightspawn",
+      "canonicalPath": "books/death-guard/content/death-guard-rules.en.json",
+      "canonicalKind": "dg-section",
+      "snapshotPath": "books/death-guard/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dg-schedules",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 65
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 60
+        }
+      ],
+      "effectiveBooks": [
+        "death-guard"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/death-guard",
+        "artifactSha256": "B8278F2944C593AFFA277E2685531406E1275A1EA13C7416FBCDE031691A5A05",
+        "record": "Foul Blightspawn"
+      }
+    },
+    {
+      "ownerBook": "death-guard",
+      "canonicalUnitId": "unit-mortarion",
+      "title": "Mortarion",
+      "canonicalPath": "books/death-guard/content/death-guard-rules.en.json",
+      "canonicalKind": "dg-section",
+      "snapshotPath": "books/death-guard/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dg-schedules",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 390
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 375
+        }
+      ],
+      "effectiveBooks": [
+        "death-guard"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/death-guard",
+        "artifactSha256": "B8278F2944C593AFFA277E2685531406E1275A1EA13C7416FBCDE031691A5A05",
+        "record": "Mortarion"
+      }
+    },
+    {
+      "ownerBook": "death-guard",
+      "canonicalUnitId": "unit-myphitic-blight-hauler",
+      "title": "Myphitic Blight-hauler",
+      "canonicalPath": "books/death-guard/content/death-guard-rules.en.json",
+      "canonicalKind": "dg-section",
+      "snapshotPath": "books/death-guard/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dg-schedules",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 100
+        },
+        {
+          "label": "2 models",
+          "value": 200
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 95
+        },
+        {
+          "label": "2 models",
+          "value": 190
+        }
+      ],
+      "effectiveBooks": [
+        "death-guard"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/death-guard",
+        "artifactSha256": "B8278F2944C593AFFA277E2685531406E1275A1EA13C7416FBCDE031691A5A05",
+        "record": "Myphitic Blight-hauler"
+      }
+    },
+    {
+      "ownerBook": "death-guard",
+      "canonicalUnitId": "unit-noxious-blightbringer",
+      "title": "Noxious Blightbringer",
+      "canonicalPath": "books/death-guard/content/death-guard-rules.en.json",
+      "canonicalKind": "dg-section",
+      "snapshotPath": "books/death-guard/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dg-schedules",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 60
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 50
+        }
+      ],
+      "effectiveBooks": [
+        "death-guard"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/death-guard",
+        "artifactSha256": "B8278F2944C593AFFA277E2685531406E1275A1EA13C7416FBCDE031691A5A05",
+        "record": "Noxious Blightbringer"
+      }
+    },
+    {
+      "ownerBook": "death-guard",
+      "canonicalUnitId": "unit-plagueburst-crawler",
+      "title": "Plagueburst Crawler",
+      "canonicalPath": "books/death-guard/content/death-guard-rules.en.json",
+      "canonicalKind": "dg-section",
+      "snapshotPath": "books/death-guard/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dg-schedules",
+      "baselinePoints": [
+        {
+          "label": "1st unit: 1 model",
+          "value": 185
+        },
+        {
+          "label": "2nd+ unit: 1 model",
+          "value": 210
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st unit: 1 model",
+          "value": 170
+        },
+        {
+          "label": "2nd+ unit: 1 model",
+          "value": 200
+        }
+      ],
+      "effectiveBooks": [
+        "death-guard"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/death-guard",
+        "artifactSha256": "B8278F2944C593AFFA277E2685531406E1275A1EA13C7416FBCDE031691A5A05",
+        "record": "Plagueburst Crawler"
+      }
+    },
+    {
+      "ownerBook": "adeptus-mechanicus",
+      "canonicalUnitId": "unit-kastelan-robots",
+      "title": "Kastelan Robots",
+      "canonicalPath": "books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/adeptus-mechanicus/sources/official-mfm-v1.3.json",
+      "snapshotKind": "am-map",
+      "baselinePoints": [
+        {
+          "label": "1st unit: 2 models",
+          "value": 160
+        },
+        {
+          "label": "2nd+ unit: 2 models",
+          "value": 180
+        },
+        {
+          "label": "1st unit: 4 models",
+          "value": 320
+        },
+        {
+          "label": "2nd+ unit: 4 models",
+          "value": 340
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st unit: 2 models",
+          "value": 150
+        },
+        {
+          "label": "2nd+ unit: 2 models",
+          "value": 180
+        },
+        {
+          "label": "1st unit: 4 models",
+          "value": 300
+        },
+        {
+          "label": "2nd+ unit: 4 models",
+          "value": 330
+        }
+      ],
+      "effectiveBooks": [
+        "adeptus-mechanicus"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/adeptus-mechanicus",
+        "artifactSha256": "0737F37D888978C87F1C3ABE194ABB2088A8A16998F8E7F7EB779A7BCDD4EFD6",
+        "record": "Kastelan Robots"
+      }
+    },
+    {
+      "ownerBook": "adeptus-mechanicus",
+      "canonicalUnitId": "unit-pteraxii-skystalkers",
+      "title": "Pteraxii Skystalkers",
+      "canonicalPath": "books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/adeptus-mechanicus/sources/official-mfm-v1.3.json",
+      "snapshotKind": "am-map",
+      "baselinePoints": [
+        {
+          "label": "1st–2nd unit: 5 models",
+          "value": 80
+        },
+        {
+          "label": "3rd+ unit: 5 models",
+          "value": 90
+        },
+        {
+          "label": "1st–2nd unit: 10 models",
+          "value": 150
+        },
+        {
+          "label": "3rd+ unit: 10 models",
+          "value": 160
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st–2nd unit: 5 models",
+          "value": 75
+        },
+        {
+          "label": "3rd+ unit: 5 models",
+          "value": 85
+        },
+        {
+          "label": "1st–2nd unit: 10 models",
+          "value": 150
+        },
+        {
+          "label": "3rd+ unit: 10 models",
+          "value": 160
+        }
+      ],
+      "effectiveBooks": [
+        "adeptus-mechanicus"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/adeptus-mechanicus",
+        "artifactSha256": "0737F37D888978C87F1C3ABE194ABB2088A8A16998F8E7F7EB779A7BCDD4EFD6",
+        "record": "Pteraxii Skystalkers"
+      }
+    },
+    {
+      "ownerBook": "adeptus-mechanicus",
+      "canonicalUnitId": "unit-pteraxii-sterylizors",
+      "title": "Pteraxii Sterylizors",
+      "canonicalPath": "books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/adeptus-mechanicus/sources/official-mfm-v1.3.json",
+      "snapshotKind": "am-map",
+      "baselinePoints": [
+        {
+          "label": "1st–2nd unit: 5 models",
+          "value": 80
+        },
+        {
+          "label": "3rd+ unit: 5 models",
+          "value": 90
+        },
+        {
+          "label": "1st–2nd unit: 10 models",
+          "value": 160
+        },
+        {
+          "label": "3rd+ unit: 10 models",
+          "value": 170
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st–2nd unit: 5 models",
+          "value": 75
+        },
+        {
+          "label": "3rd+ unit: 5 models",
+          "value": 85
+        },
+        {
+          "label": "1st–2nd unit: 10 models",
+          "value": 150
+        },
+        {
+          "label": "3rd+ unit: 10 models",
+          "value": 160
+        }
+      ],
+      "effectiveBooks": [
+        "adeptus-mechanicus"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/adeptus-mechanicus",
+        "artifactSha256": "0737F37D888978C87F1C3ABE194ABB2088A8A16998F8E7F7EB779A7BCDD4EFD6",
+        "record": "Pteraxii Sterylizors"
+      }
+    },
+    {
+      "ownerBook": "adeptus-mechanicus",
+      "canonicalUnitId": "unit-servitor-battleclade",
+      "title": "Servitor Battleclade",
+      "canonicalPath": "books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/adeptus-mechanicus/sources/official-mfm-v1.3.json",
+      "snapshotKind": "am-map",
+      "baselinePoints": [
+        {
+          "label": "9 models",
+          "value": 65
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st–2nd unit: 9 models",
+          "value": 65
+        },
+        {
+          "label": "3rd+ unit: 9 models",
+          "value": 75
+        }
+      ],
+      "effectiveBooks": [
+        "adeptus-mechanicus"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/adeptus-mechanicus",
+        "artifactSha256": "0737F37D888978C87F1C3ABE194ABB2088A8A16998F8E7F7EB779A7BCDD4EFD6",
+        "record": "Servitor Battleclade"
+      }
+    },
+    {
+      "ownerBook": "adeptus-mechanicus",
+      "canonicalUnitId": "unit-tech-priest-dominus",
+      "title": "Tech-Priest Dominus",
+      "canonicalPath": "books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/adeptus-mechanicus/sources/official-mfm-v1.3.json",
+      "snapshotKind": "am-map",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 65
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 60
+        }
+      ],
+      "effectiveBooks": [
+        "adeptus-mechanicus"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/adeptus-mechanicus",
+        "artifactSha256": "0737F37D888978C87F1C3ABE194ABB2088A8A16998F8E7F7EB779A7BCDD4EFD6",
+        "record": "Tech-Priest Dominus"
+      }
+    },
+    {
+      "ownerBook": "tau-empire",
+      "canonicalUnitId": "unit-crisis-starscythe-battlesuits",
+      "title": "Crisis Starscythe Battlesuits",
+      "canonicalPath": "books/tau-empire/content/tau-empire-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/tau-empire/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 100,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 100,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 110,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "tau-empire"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "artifactSha256": "8A88D9B09A035712597AC79B967B20EABF820FEEBCDB0D8D05DF5BEF95E2FB4C",
+        "record": "Crisis Starscythe Battlesuits"
+      }
+    },
+    {
+      "ownerBook": "tau-empire",
+      "canonicalUnitId": "unit-the-twin-lance",
+      "title": "The Twin Lance",
+      "canonicalPath": "books/tau-empire/content/tau-empire-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/tau-empire/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "2 models",
+          "value": 220,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "2 models",
+          "value": 230,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ],
+      "effectiveBooks": [
+        "tau-empire"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "artifactSha256": "8A88D9B09A035712597AC79B967B20EABF820FEEBCDB0D8D05DF5BEF95E2FB4C",
+        "record": "The Twin Lance"
+      }
+    },
+    {
+      "ownerBook": "emperors-children",
+      "canonicalUnitId": "unit-daemonettes",
+      "title": "Daemonettes",
+      "canonicalPath": "books/emperors-children/content/emperors-children-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/emperors-children/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "10 models",
+          "value": 90,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "10 models",
+          "value": 100,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ],
+      "effectiveBooks": [
+        "emperors-children"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/emperors-children",
+        "artifactSha256": "CAEA20FC3B86A0852E3622F1B395120D942228EF69257274054A5C456BCBED32",
+        "record": "Daemonettes"
+      }
+    },
+    {
+      "ownerBook": "emperors-children",
+      "canonicalUnitId": "unit-defiler",
+      "title": "Defiler",
+      "canonicalPath": "books/emperors-children/content/emperors-children-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/emperors-children/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 340,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 350,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "effectiveBooks": [
+        "emperors-children"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/emperors-children",
+        "artifactSha256": "CAEA20FC3B86A0852E3622F1B395120D942228EF69257274054A5C456BCBED32",
+        "record": "Defiler"
+      }
+    },
+    {
+      "ownerBook": "emperors-children",
+      "canonicalUnitId": "unit-fiends",
+      "title": "Fiends",
+      "canonicalPath": "books/emperors-children/content/emperors-children-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/emperors-children/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 180,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 190,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "effectiveBooks": [
+        "emperors-children"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/emperors-children",
+        "artifactSha256": "CAEA20FC3B86A0852E3622F1B395120D942228EF69257274054A5C456BCBED32",
+        "record": "Fiends"
+      }
+    },
+    {
+      "ownerBook": "emperors-children",
+      "canonicalUnitId": "unit-keeper-of-secrets",
+      "title": "Keeper of Secrets",
+      "canonicalPath": "books/emperors-children/content/emperors-children-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/emperors-children/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 255,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 270,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 265,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 280,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "emperors-children"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/emperors-children",
+        "artifactSha256": "CAEA20FC3B86A0852E3622F1B395120D942228EF69257274054A5C456BCBED32",
+        "record": "Keeper of Secrets"
+      }
+    },
+    {
+      "ownerBook": "emperors-children",
+      "canonicalUnitId": "unit-lord-exultant",
+      "title": "Lord Exultant",
+      "canonicalPath": "books/emperors-children/content/emperors-children-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/emperors-children/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "emperors-children"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/emperors-children",
+        "artifactSha256": "CAEA20FC3B86A0852E3622F1B395120D942228EF69257274054A5C456BCBED32",
+        "record": "Lord Exultant"
+      }
+    },
+    {
+      "ownerBook": "emperors-children",
+      "canonicalUnitId": "unit-seekers",
+      "title": "Seekers",
+      "canonicalPath": "books/emperors-children/content/emperors-children-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/emperors-children/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "5 models",
+          "value": 80,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 155,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "5 models",
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 155,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ],
+      "effectiveBooks": [
+        "emperors-children"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/emperors-children",
+        "artifactSha256": "CAEA20FC3B86A0852E3622F1B395120D942228EF69257274054A5C456BCBED32",
+        "record": "Seekers"
+      }
+    },
+    {
+      "ownerBook": "tyranids",
+      "canonicalUnitId": "unit-exocrine",
+      "title": "Exocrine",
+      "canonicalPath": "books/tyranids/content/tyranids-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/tyranids/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 145,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "tyranids"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "artifactSha256": "D7A9868A4A6A32F8836357E33799E7B5D77F43DDCA7515CCD567AD2AF927342A",
+        "record": "Exocrine"
+      }
+    },
+    {
+      "ownerBook": "tyranids",
+      "canonicalUnitId": "unit-maleceptor",
+      "title": "Maleceptor",
+      "canonicalPath": "books/tyranids/content/tyranids-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/tyranids/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "tyranids"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "artifactSha256": "D7A9868A4A6A32F8836357E33799E7B5D77F43DDCA7515CCD567AD2AF927342A",
+        "record": "Maleceptor"
+      }
+    },
+    {
+      "ownerBook": "tyranids",
+      "canonicalUnitId": "unit-pyrovores",
+      "title": "Pyrovores",
+      "canonicalPath": "books/tyranids/content/tyranids-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/tyranids/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 2 models",
+          "value": 65,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 3 models",
+          "value": 95,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 2 models",
+          "value": 75,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 105,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 40,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 2 models",
+          "value": 70,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 3 models",
+          "value": 100,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 2 models",
+          "value": 80,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 110,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "tyranids"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "artifactSha256": "D7A9868A4A6A32F8836357E33799E7B5D77F43DDCA7515CCD567AD2AF927342A",
+        "record": "Pyrovores"
+      }
+    },
+    {
+      "ownerBook": "tyranids",
+      "canonicalUnitId": "unit-tyrannofex",
+      "title": "Tyrannofex",
+      "canonicalPath": "books/tyranids/content/tyranids-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/tyranids/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "tyranids"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "artifactSha256": "D7A9868A4A6A32F8836357E33799E7B5D77F43DDCA7515CCD567AD2AF927342A",
+        "record": "Tyrannofex"
+      }
+    },
+    {
+      "ownerBook": "tyranids",
+      "canonicalUnitId": "unit-tyrant-guard",
+      "title": "Tyrant Guard",
+      "canonicalPath": "books/tyranids/content/tyranids-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/tyranids/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "3 models",
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "3 models",
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "effectiveBooks": [
+        "tyranids"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "artifactSha256": "D7A9868A4A6A32F8836357E33799E7B5D77F43DDCA7515CCD567AD2AF927342A",
+        "record": "Tyrant Guard"
+      }
+    },
+    {
+      "ownerBook": "tyranids",
+      "canonicalUnitId": "unit-zoanthropes",
+      "title": "Zoanthropes",
+      "canonicalPath": "books/tyranids/content/tyranids-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/tyranids/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 200,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 190,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "effectiveBooks": [
+        "tyranids"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "artifactSha256": "D7A9868A4A6A32F8836357E33799E7B5D77F43DDCA7515CCD567AD2AF927342A",
+        "record": "Zoanthropes"
+      }
+    },
+    {
+      "ownerBook": "chaos-space-marines",
+      "canonicalUnitId": "unit-defiler",
+      "title": "Defiler",
+      "canonicalPath": "books/chaos-space-marines/content/chaos-space-marines-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/chaos-space-marines/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 340,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 350,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "effectiveBooks": [
+        "chaos-space-marines"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "artifactSha256": "37BB3C3A196486B9820C6EC1B2A844BA1251335A6729BA61CBB939E86A20AD17",
+        "record": "Defiler"
+      }
+    },
+    {
+      "ownerBook": "space-marines",
+      "canonicalUnitId": "unit-centurion-devastator-squad",
+      "title": "Centurion Devastator Squad",
+      "canonicalPath": "books/space-marines/content/space-marines-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/space-marines/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 350,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 365,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "effectiveBooks": [
+        "space-marines"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "artifactSha256": "07B7BC2AC1F4244FF8E790065C14E9C78715B31C643D2CFD7559DEC6DAB8CBFC",
+        "record": "Centurion Devastator Squad"
+      }
+    },
+    {
+      "ownerBook": "space-marines",
+      "canonicalUnitId": "unit-land-raider-redeemer",
+      "title": "Land Raider Redeemer",
+      "canonicalPath": "books/space-marines/content/space-marines-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/space-marines/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 250,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 270,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 260,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 280,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "artifactSha256": "07B7BC2AC1F4244FF8E790065C14E9C78715B31C643D2CFD7559DEC6DAB8CBFC",
+        "record": "Land Raider Redeemer"
+      }
+    },
+    {
+      "ownerBook": "space-marines",
+      "canonicalUnitId": "unit-librarian-in-terminator-armour",
+      "title": "Librarian in Terminator Armour",
+      "canonicalPath": "books/space-marines/content/space-marines-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/space-marines/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "effectiveBooks": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "artifactSha256": "07B7BC2AC1F4244FF8E790065C14E9C78715B31C643D2CFD7559DEC6DAB8CBFC",
+        "record": "Librarian in Terminator Armour"
+      }
+    },
+    {
+      "ownerBook": "space-marines",
+      "canonicalUnitId": "unit-vulkan-hestan",
+      "title": "Vulkan He'stan",
+      "canonicalPath": "books/space-marines/content/space-marines-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/space-marines/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "effectiveBooks": [
+        "space-marines"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "artifactSha256": "07B7BC2AC1F4244FF8E790065C14E9C78715B31C643D2CFD7559DEC6DAB8CBFC",
+        "record": "Vulkan He'stan"
+      }
+    },
+    {
+      "ownerBook": "dark-angels",
+      "canonicalUnitId": "unit-ravenwing-black-knights",
+      "title": "Ravenwing Black Knights",
+      "canonicalPath": "books/dark-angels/content/dark-angels-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/dark-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "unit · 3 models",
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "unit · 6 models",
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 3 models",
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 6 models",
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 85,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "dark-angels"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "artifactSha256": "FD5E29BF95ED45E0F44393D8BC49DA54AD7D17F2BAD5BEC589ED529D301A08B3",
+        "record": "Ravenwing Black Knights"
+      }
+    },
+    {
+      "ownerBook": "dark-angels",
+      "canonicalUnitId": "unit-sammael",
+      "title": "Sammael",
+      "canonicalPath": "books/dark-angels/content/dark-angels-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/dark-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "unit · 1 model",
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "unit · 1 model",
+          "value": 105,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "effectiveBooks": [
+        "dark-angels"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "artifactSha256": "FD5E29BF95ED45E0F44393D8BC49DA54AD7D17F2BAD5BEC589ED529D301A08B3",
+        "record": "Sammael"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-death-company-marines-with-jump-packs",
+      "title": "Death Company Marines with Jump Packs",
+      "canonicalPath": "books/blood-angels/content/blood-angels-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 10 models",
+          "value": 230,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 245,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 115,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 10 models",
+          "value": 230,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 130,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 245,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Death Company Marines with Jump Packs"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-sanguinary-guard",
+      "title": "Sanguinary Guard",
+      "canonicalPath": "books/blood-angels/content/blood-angels-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd · 3 models",
+          "value": 125,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 6 models",
+          "value": 260,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 3 models",
+          "value": 145,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 6 models",
+          "value": 280,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd · 3 models",
+          "value": 120,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 6 models",
+          "value": 260,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 3 models",
+          "value": 140,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 6 models",
+          "value": 280,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Sanguinary Guard"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-the-sanguinor",
+      "title": "The Sanguinor",
+      "canonicalPath": "books/blood-angels/content/blood-angels-points.en.json",
+      "canonicalKind": "points-unit",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "unit-overrides",
+      "baselinePoints": [
+        {
+          "label": "unit · 1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "unit · 1 model",
+          "value": 120,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "The Sanguinor"
+      }
+    },
+    {
+      "ownerBook": "dark-angels",
+      "canonicalUnitId": "unit-repulsor-executioner",
+      "title": "Repulsor Executioner",
+      "canonicalPath": "books/dark-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/dark-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 255,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 275,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 230,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 250,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "dark-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "artifactSha256": "FD5E29BF95ED45E0F44393D8BC49DA54AD7D17F2BAD5BEC589ED529D301A08B3",
+        "record": "Repulsor Executioner"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-assault-intercessor-squad",
+      "title": "Assault Intercessor Squad",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "5 models",
+          "value": 75,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 150,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "5 models",
+          "value": 80,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 150,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Assault Intercessor Squad"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-assault-intercessors-with-jump-packs",
+      "title": "Assault Intercessors with Jump Packs",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 5 models",
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 10 models",
+          "value": 160,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 95,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 170,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 5 models",
+          "value": 95,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 10 models",
+          "value": 180,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 105,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 190,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Assault Intercessors with Jump Packs"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-bladeguard-veteran-squad",
+      "title": "Bladeguard Veteran Squad",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 3 models",
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 3 models",
+          "value": 85,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 95,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 180,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Bladeguard Veteran Squad"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-captain-with-jump-pack",
+      "title": "Captain with Jump Pack",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Captain with Jump Pack"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-chaplain-with-jump-pack",
+      "title": "Chaplain with Jump Pack",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Chaplain with Jump Pack"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-outrider-squad",
+      "title": "Outrider Squad",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "3 models",
+          "value": 70,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 140,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "3 models",
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 140,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Outrider Squad"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-repulsor-executioner",
+      "title": "Repulsor Executioner",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 255,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 275,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 1 model",
+          "value": 230,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 250,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Repulsor Executioner"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-vanguard-veteran-squad-with-jump-packs",
+      "title": "Vanguard Veteran Squad with Jump Packs",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "1st to 2nd unit · 5 models",
+          "value": 105,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 10 models",
+          "value": 210,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 115,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "1st to 2nd unit · 5 models",
+          "value": 110,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 230,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": false,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Vanguard Veteran Squad with Jump Packs"
+      }
+    }
+  ],
+  "protectiveOverlays": [
+    {
+      "ownerBook": "dark-angels",
+      "canonicalUnitId": "unit-centurion-devastator-squad",
+      "title": "Centurion Devastator Squad",
+      "canonicalPath": "books/dark-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/dark-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 350,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 350,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "effectiveBooks": [
+        "dark-angels"
+      ],
+      "protective": true,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "artifactSha256": "FD5E29BF95ED45E0F44393D8BC49DA54AD7D17F2BAD5BEC589ED529D301A08B3",
+        "record": "Centurion Devastator Squad"
+      }
+    },
+    {
+      "ownerBook": "blood-angels",
+      "canonicalUnitId": "unit-centurion-devastator-squad",
+      "title": "Centurion Devastator Squad",
+      "canonicalPath": "books/blood-angels/book.config.json",
+      "canonicalKind": "dependency-point-override",
+      "snapshotPath": "books/blood-angels/sources/official-mfm-v1.3.json",
+      "snapshotKind": "dependency-point-override",
+      "baselinePoints": [
+        {
+          "label": "3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 350,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "officialPoints": [
+        {
+          "label": "3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 350,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "effectiveBooks": [
+        "blood-angels"
+      ],
+      "protective": true,
+      "officialSource": {
+        "version": "v1.3",
+        "updatedAt": "2026-08-26",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "artifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666",
+        "record": "Centurion Devastator Squad"
+      }
+    }
+  ],
+  "metadata": [
+    {
+      "ownerBook": "tau-empire",
+      "entityType": "enhancement",
+      "id": "enhancement-strike-swiftly",
+      "title": "Strike Swiftly",
+      "baseline": 35,
+      "official": 45,
+      "canonicalPath": "books/tau-empire/content/tau-empire-points.en.json",
+      "snapshotPath": "books/tau-empire/sources/official-mfm-v1.3.json"
+    },
+    {
+      "ownerBook": "tyranids",
+      "entityType": "enhancement",
+      "id": "enhancement-synaptoprescience",
+      "title": "Synaptoprescience (Upgrade)",
+      "baseline": 25,
+      "official": 30,
+      "canonicalPath": "books/tyranids/content/tyranids-points.en.json",
+      "snapshotPath": "books/tyranids/sources/official-mfm-v1.3.json"
+    },
+    {
+      "ownerBook": "dark-angels",
+      "entityType": "enhancement",
+      "id": "enhancement-recon-hunter",
+      "title": "Recon Hunter",
+      "baseline": 20,
+      "official": 30,
+      "canonicalPath": "books/dark-angels/content/dark-angels-points.en.json",
+      "snapshotPath": "books/dark-angels/sources/official-mfm-v1.3.json"
+    },
+    {
+      "ownerBook": "chaos-space-marines",
+      "entityType": "detachment",
+      "title": "HURON’S MARAUDERS",
+      "field": "forceDisposition",
+      "baseline": "DISRUPTION",
+      "official": "PURGE THE FOE",
+      "canonicalPath": "books/chaos-space-marines/content/chaos-space-marines-points.en.json",
+      "snapshotPath": "books/chaos-space-marines/sources/official-mfm-v1.3.json"
+    }
+  ],
+  "verifiedAlreadyCorrect": [
+    {
+      "book": "tau-empire",
+      "unit": "Tidewall Shieldline",
+      "field": "paidWargear",
+      "name": "Tidewall Defence Platform",
+      "value": 20
+    },
+    {
+      "book": "space-marines",
+      "unit": "Outrider Squad",
+      "field": "paidWargear",
+      "name": "Invader ATV",
+      "value": 60
+    },
+    {
+      "book": "dark-angels",
+      "unit": "Outrider Squad",
+      "field": "inheritedPaidWargear",
+      "name": "Invader ATV",
+      "value": 60
+    }
+  ]
+}

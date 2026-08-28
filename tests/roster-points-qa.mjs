@@ -48,9 +48,9 @@ Enhancement: Parasitic Woe-Reaper (+15 pts)
 1x Myphitic Blight-hauler (100 pts): Bile spurt, Gnashing maw, Missile launcher, Multi-melta`;
 
 for(const [declared,name,lordPoints,effect,currentTotal] of [
-  [1025,'Revolting Regeneration',150,'persistent',1025],
-  [1020,'Furnace of Plagues',145,'furnace',1020],
-  [1005,'Daemon Weapon of Nurgle',130,'critical-hit-5',1005]
+  [1025,'Revolting Regeneration',150,'persistent',1020],
+  [1020,'Furnace of Plagues',145,'furnace',1015],
+  [1005,'Daemon Weapon of Nurgle',130,'critical-hit-5',1000]
 ]){
   const roster=WHRosterParser.parse(common(declared,name,lordPoints));
   assert.equal(roster.units.length,9);
@@ -198,8 +198,8 @@ Enhancement: Sanctified Ordnance (+10 pts)
 assert.equal(mechanicusRoster.faction,'Imperium - Adeptus Mechanicus');
 assert.equal(mechanicusRoster.enhancements[0].ownerStatus,'resolved');
 const mechanicusCheck=WHRosterPoints.check(mechanicusRoster,'adeptus mechanicus');
-assert.equal(mechanicusCheck.total,880,'current total includes current unit size, Enhancement and paid lascannons');
-assert.equal(mechanicusCheck.difference,40);
+assert.equal(mechanicusCheck.total,860,'current total includes the current unit-size tier, Enhancement and paid lascannons');
+assert.equal(mechanicusCheck.difference,20);
 assert.equal(mechanicusCheck.enhancements[0].effect,'ranged-range-6');
 
 const unresolved=WHRosterParser.parse(`+ FACTION KEYWORD: Chaos — Death Guard\n+ TOTAL ARMY POINTS: 120pts\n+ ENHANCEMENT: Furnace of Plagues (on Char9: Missing Owner)\n1x Lord of Contagion (120 pts): Manreaper`);

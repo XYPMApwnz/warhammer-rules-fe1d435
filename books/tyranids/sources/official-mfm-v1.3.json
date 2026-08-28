@@ -199,7 +199,7 @@
       "points": [
         {
           "label": "1st to 2nd unit · 1 model",
-          "value": 140,
+          "value": 135,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
@@ -207,7 +207,7 @@
         },
         {
           "label": "3rd + unit · 1 model",
-          "value": 150,
+          "value": 145,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 3
@@ -453,7 +453,7 @@
       "points": [
         {
           "label": "1st to 2nd unit · 1 model",
-          "value": 190,
+          "value": 180,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
@@ -461,7 +461,7 @@
         },
         {
           "label": "3rd + unit · 1 model",
-          "value": 200,
+          "value": 190,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 3
@@ -630,7 +630,7 @@
       "points": [
         {
           "label": "1st to 2nd unit · 1 model",
-          "value": 45,
+          "value": 40,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
@@ -638,7 +638,7 @@
         },
         {
           "label": "1st to 2nd unit · 2 models",
-          "value": 65,
+          "value": 70,
           "minModels": 2,
           "maxModels": 2,
           "minCopies": 1,
@@ -646,7 +646,7 @@
         },
         {
           "label": "1st to 2nd unit · 3 models",
-          "value": 95,
+          "value": 100,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 1,
@@ -654,21 +654,21 @@
         },
         {
           "label": "3rd + unit · 1 model",
-          "value": 55,
+          "value": 50,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 3
         },
         {
           "label": "3rd + unit · 2 models",
-          "value": 75,
+          "value": 80,
           "minModels": 2,
           "maxModels": 2,
           "minCopies": 3
         },
         {
           "label": "3rd + unit · 3 models",
-          "value": 105,
+          "value": 110,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 3
@@ -917,7 +917,7 @@
       "points": [
         {
           "label": "1st to 2nd unit · 1 model",
-          "value": 180,
+          "value": 170,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
@@ -925,7 +925,7 @@
         },
         {
           "label": "3rd + unit · 1 model",
-          "value": 190,
+          "value": 180,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 3
@@ -955,7 +955,7 @@
         },
         {
           "label": "6 models",
-          "value": 160,
+          "value": 170,
           "minModels": 6,
           "maxModels": 6
         }
@@ -1033,7 +1033,7 @@
         },
         {
           "label": "6 models",
-          "value": 200,
+          "value": 190,
           "minModels": 6,
           "maxModels": 6
         }
@@ -1166,7 +1166,7 @@
     {
       "title": "Synaptoprescience (Upgrade)",
       "detachment": "TALONS OF THE NORN QUEEN",
-      "value": 25,
+      "value": 30,
       "sourceTitle": "Synaptoprescience"
     },
     {
@@ -1220,5 +1220,6 @@
       "detachment": "WARRIOR BIOFORM ONSLAUGHT",
       "value": 20
     }
-  ]
+  ],
+  "sourceArtifactSha256": "D7A9868A4A6A32F8836357E33799E7B5D77F43DDCA7515CCD567AD2AF927342A"
 }

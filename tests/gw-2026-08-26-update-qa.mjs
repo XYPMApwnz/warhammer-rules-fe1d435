@@ -123,15 +123,16 @@ assert.equal(Object.values(daRelated.enhancements||{}).filter(item=>item.owner).
 assert.equal(Object.values(daRelated.enhancements||{}).filter(item=>item.assignment).length,26);
 
 const manifestMfmHashes={
-  'death-guard':'6AD17A84133D348DC782A39AC73EFBFA223E906F52AD0471EE81C27A40EA1FD6',
-  'emperors-children':'D402B4D1FD8438DD5DEC03BD316F11A067345DD05B84481B9F188B3E432B1A2B',
-  tyranids:'F17E3DFC60422AC4C225D543A341623127E06B83FCFA8DC93D4FDCAC5D9134C6',
-  'chaos-space-marines':'D4D1932FC8B50B83DECE5038C135B04B32C5860D0E0DFB0655FF62E88E2778E5',
-  'space-marines':'81F5257A5A574918D87C33E8DA0F563D6D91EB562D3E8701E24C5155142E7512',
-  'dark-angels':'4D2506585C1E5C852F48829889D508F1D27CA3DB4C7147BB79A10522B37E3FA4',
-  'blood-angels':'20885BCA24A66FE358AB3F6DDB3252CA9E3B2BB6524D426A0F2828F3CB23602F'
+  "death-guard": "6AD17A84133D348DC782A39AC73EFBFA223E906F52AD0471EE81C27A40EA1FD6",
+  "emperors-children": "BC3AB9AF7DCF6F0F5BC331FA4C1D1B91A572832C744FE9518F6C08E82473CF1B",
+  "tyranids": "E4C0637752D07A3CB1023730B6CE40C7E0704721BC91FDE9D844A76614F1C7AC",
+  "chaos-space-marines": "FBE45A9D08B1A99E8E1B2C8011BD510180D9BDFF3657442902F88C519A3E54F7",
+  "space-marines": "D5E8765D56FCE1445F7718AD7CA4D249D5AC3FFD6D68E8D8ABEA46E539D0546B",
+  "dark-angels": "6A90E2D6F9517520D75E532BB8090435B5368240F7A828598158B0ACDCFE6FB0",
+  "blood-angels": "57B72C15F5EB38737E2E39BE8DD5364C6C4F1A4F0D7D6657BE3B13C4309F3D7A",
+  "tau-empire": "4530DBC81B604766C4182EA4AAF7BF01F5DCE6CD37F208373E73F01724A05589"
 };
-for(const book of ['death-guard','adeptus-mechanicus','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels']){
+for(const book of ['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels']){
   const config=source('books/'+book+'/book.config.json');
   const manifestPath=path.join(root,'books',book,'sources','source-manifest.json');
   const manifest=fs.existsSync(manifestPath)?fs.readFileSync(manifestPath,'utf8'):'';
@@ -143,7 +144,6 @@ for(const book of ['death-guard','adeptus-mechanicus','emperors-children','tyran
     assert.equal(actualHash,manifestMfmHashes[book],book+' current MFM file hash');
   }
 }
-assert.match(source('books/tau-empire/book.config.json')+source('books/tau-empire/sources/source-manifest.json'),/official-mfm-v1\.2\.json/);
 
 const factualProjection=mfm=>({
   units:(Array.isArray(mfm.units)?mfm.units:Object.values(mfm.units||{})).map(u=>({id:u.unitId||u.id,title:u.title,schedules:u.schedules,paidWargear:u.paidWargear,points:u.points,value:u.value})),
@@ -161,12 +161,35 @@ const changedPaths=(a,b,prefix='',out=[])=>{
 };
 const dgDiff=changedPaths(factualProjection(dgOld),factualProjection(dg));
 assert.equal(dgDiff.every(p=>/units\/(1|10|13|21|22|23|24)|detachments\/(0|1|3|4)\/tags/.test(p)),true,'unexpected DG factual delta '+dgDiff.join(','));
-const ecDiff=changedPaths(factualProjection(ecOld),factualProjection(ec));
-assert.equal(ecDiff.every(p=>/Possessed Blade|Warp Walker|detachments\/|enhancements\//.test(p)),true,'unexpected EC factual delta '+ecDiff.join(','));
-for(const book of ['adeptus-mechanicus','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels']){
-  const oldMfm=json('books/'+book+'/sources/official-mfm-v1.2.json');
-  const newMfm=json('books/'+book+'/sources/official-mfm-v1.3.json');
-  assert.deepEqual(factualProjection(newMfm),factualProjection(oldMfm),book+' MFM facts');
+const package1aLedger=json('tests/fixtures/gw-2026-08-26-owner-points-ledger.json');
+const recordByTitle=(records,title)=>{const values=Array.isArray(records)?records:Object.entries(records||{}).map(([name,value])=>({title:name,...value}));return one(values.filter(item=>norm(item.title)===norm(title)),title);};
+const canonicalPointRecord=entry=>{const document=json(entry.canonicalPath);if(entry.canonicalKind==='dg-section')return one(byId(document,entry.canonicalUnitId),entry.canonicalUnitId);if(entry.canonicalKind==='dependency-point-override')return document.dependencyDatasheets.pointOverrides[entry.canonicalUnitId];return one((document.units||[]).filter(item=>item.id===entry.canonicalUnitId||norm(item.title)===norm(entry.title)),entry.canonicalUnitId);};
+const snapshotPointRecord=entry=>{const document=json(entry.snapshotPath);if(entry.snapshotKind==='dg-schedules')return one(byId(document,entry.canonicalUnitId),entry.canonicalUnitId);if(entry.snapshotKind==='am-map')return recordByTitle(document.units,entry.title);if(entry.snapshotKind==='dependency-point-override')return document.dependencyInventory.pointOverrides[entry.canonicalUnitId];return recordByTitle(document.unitOverrides,entry.title);};
+const snapshotPoints=(entry,record)=>{if(entry.snapshotKind==='dg-schedules')return record.schedules.flatMap(schedule=>schedule.values.map(row=>({label:(schedule.label==='YOUR 1ST UNIT COSTS'?'1st unit: ':schedule.label==='YOUR 2ND + UNIT COSTS'?'2nd+ unit: ':'')+row.label,value:row.value})));if(entry.snapshotKind==='am-map')return record.points.map(([label,value])=>({label,value}));return record.points;};
+for(const entry of [...package1aLedger.units,...package1aLedger.protectiveOverlays]){
+  const canonical=canonicalPointRecord(entry),snapshot=snapshotPointRecord(entry);
+  assert.deepEqual(canonical.points,entry.officialPoints,entry.ownerBook+' canonical '+entry.title);
+  assert.deepEqual(snapshotPoints(entry,snapshot),entry.officialPoints,entry.ownerBook+' official snapshot '+entry.title);
+  assert.equal(json(entry.snapshotPath).version,'v1.3',entry.ownerBook+' snapshot version');
+  const sourceArtifactHash=json(entry.snapshotPath).sourceArtifactSha256;
+  if(sourceArtifactHash!=null)assert.equal(sourceArtifactHash,entry.officialSource.artifactSha256,entry.ownerBook+' source artifact hash');
+  if(entry.canonicalKind==='dg-section')assert.deepEqual(canonical.blocks.find(block=>block.type==='points').values,entry.officialPoints,entry.title+' duplicated DG points block');
 }
+for(const item of package1aLedger.metadata){
+  const canonical=json(item.canonicalPath),snapshot=json(item.snapshotPath);
+  if(item.entityType==='enhancement'){
+    const current=one(canonical.enhancements.filter(entry=>entry.id===item.id),item.id);
+    assert.equal(current.value,item.official,item.title+' canonical value');
+    assert.equal(recordByTitle(snapshot.enhancements,item.title).value,item.official,item.title+' snapshot value');
+  }else{
+    assert.equal(recordByTitle(canonical.detachments,item.title)[item.field],item.official,item.title+' canonical metadata');
+    assert.equal(recordByTitle(snapshot.detachments,item.title)[item.field],item.official,item.title+' snapshot metadata');
+  }
+}
+const tauPoints=json('books/tau-empire/content/tau-empire-points.en.json');
+assert.equal(recordByTitle(tauPoints.units,'Tidewall Shieldline').paidWargear.find(item=>item.name==='Tidewall Defence Platform')?.value,20);
+const smPoints=json('books/space-marines/content/space-marines-points.en.json');
+assert.equal(recordByTitle(smPoints.units,'Outrider Squad').paidWargear.find(item=>item.name==='Invader ATV')?.value,60);
+assert.equal(json('books/blood-angels/book.config.json').dependencyDetachments.pointOverrides['Stormlance Task Force'].detachmentPoints,2,'BA Stormlance factual override');
 
 console.log('GW 26-Aug-2026 exact official delta QA: PASS');

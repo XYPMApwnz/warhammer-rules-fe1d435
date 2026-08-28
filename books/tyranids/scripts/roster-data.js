@@ -8805,11 +8805,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [
         "UPGRADE"
       ],
-      "value": 25,
+      "value": 30,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "talons-of-the-norn-queen",
       "sourceBookId": "tyranids",
@@ -9638,7 +9638,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   "synaptoprescience": {
     "title": "Synaptoprescience",
     "text": "NORN ASSIMILATOR unit only. This unit has 4+ InSv.",
-    "value": 25,
+    "value": 30,
     "detachment": "Talons of the Norn Queen",
     "tags": [
       "UPGRADE"

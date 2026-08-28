@@ -1,0 +1,919 @@
+{
+  "schema": 1,
+  "title": "Munitorum Field Manual",
+  "version": "v1.3",
+  "verifiedAt": "2026-08-27",
+  "url": "https://mfm.warhammer-community.com/en/tau-empire",
+  "detachments": [
+    {
+      "title": "ADVANCED ACQUISITION CADRE",
+      "forceDisposition": "RECONNAISSANCE",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "AUXILIARY CADRE",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "EXPERIMENTAL PROTOTYPE CADRE",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "KAUYON",
+      "forceDisposition": "RECONNAISSANCE",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "KROOT HUNTING PACK",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "MONT'KA",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "RETALIATION CADRE",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 3
+    }
+  ],
+  "verifiedUnits": [
+    "Breacher Team",
+    "Strike Team",
+    "Cadre Fireblade",
+    "Commander in Coldstar Battlesuit",
+    "Commander in Enforcer Battlesuit",
+    "Ethereal",
+    "Firesight Team",
+    "Kroot Flesh Shaper",
+    "Kroot Lone-spear",
+    "Kroot Trail Shaper",
+    "Kroot War Shaper",
+    "Devilfish",
+    "Commander Farsight",
+    "Commander Shadowsun",
+    "Darkstrider",
+    "The Twin Lance",
+    "Kroot Carnivores",
+    "Kroot Farstalkers",
+    "Pathfinder Team",
+    "Stealth Battlesuits",
+    "Vespid Stingwings",
+    "Broadside Battlesuits",
+    "Crisis Fireknife Battlesuits",
+    "Crisis Starscythe Battlesuits",
+    "Crisis Sunforge Battlesuits",
+    "Ghostkeel Battlesuit",
+    "Hammerhead Gunship",
+    "Kroot Hounds",
+    "Krootox Rampagers",
+    "Krootox Riders",
+    "Piranhas",
+    "Razorshark Strike Fighter",
+    "Riptide Battlesuit",
+    "Sky Ray Gunship",
+    "Stormsurge",
+    "Sun Shark Bomber",
+    "Tidewall Droneport",
+    "Tidewall Gunrig",
+    "Tidewall Shieldline"
+  ],
+  "unitOverrides": [
+    {
+      "title": "Breacher Team",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 90,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "Strike Team",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 70,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "Cadre Fireblade",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Commander in Coldstar Battlesuit",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Commander in Enforcer Battlesuit",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Ethereal",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Firesight Team",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Kroot Flesh Shaper",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Kroot Lone-spear",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Kroot Trail Shaper",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Kroot War Shaper",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Devilfish",
+      "points": [
+        {
+          "label": "1st to 3rd unit cost · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
+        },
+        {
+          "label": "4th + unit · 1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
+        }
+      ]
+    },
+    {
+      "title": "Commander Farsight",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Commander Shadowsun",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Darkstrider",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "The Twin Lance",
+      "points": [
+        {
+          "label": "2 models",
+          "value": 230,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ]
+    },
+    {
+      "title": "Kroot Carnivores",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 65,
+          "minModels": 10,
+          "maxModels": 10
+        },
+        {
+          "label": "20 models",
+          "value": 130,
+          "minModels": 20,
+          "maxModels": 20
+        }
+      ]
+    },
+    {
+      "title": "Kroot Farstalkers",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 12 models",
+          "value": 75,
+          "minModels": 12,
+          "maxModels": 12,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 12 models",
+          "value": 85,
+          "minModels": 12,
+          "maxModels": 12,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Pathfinder Team",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 10 models",
+          "value": 85,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 100,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Ion rifle",
+          "value": 5,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "Stealth Battlesuits",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 5 models",
+          "value": 100,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 110,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Vespid Stingwings",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 70,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 115,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "Broadside Battlesuits",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit cost · 2 models",
+          "value": 150,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 255,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 2 models",
+          "value": 170,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 275,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "High-yield missile pods",
+          "value": 5,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "Crisis Fireknife Battlesuits",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 100,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 110,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Missile pod",
+          "value": 5,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "Crisis Starscythe Battlesuits",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 100,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 110,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "T'au flamer",
+          "value": 5,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "Crisis Sunforge Battlesuits",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 125,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 135,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Ghostkeel Battlesuit",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 165,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Cyclic Ion Raker",
+          "value": 15,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "Hammerhead Gunship",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Kroot Hounds",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 45,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 65,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "Krootox Rampagers",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 85,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit cost · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 95,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 180,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Krootox Riders",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2 models",
+          "value": 60,
+          "minModels": 2,
+          "maxModels": 2
+        },
+        {
+          "label": "3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
+        }
+      ]
+    },
+    {
+      "title": "Piranhas",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 65,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit cost · 2 models",
+          "value": 110,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 165,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 2 models",
+          "value": 120,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Razorshark Strike Fighter",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Riptide Battlesuit",
+      "points": [
+        {
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Ion accelerator",
+          "value": 25,
+          "modifiers": []
+        }
+      ]
+    },
+    {
+      "title": "Sky Ray Gunship",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Stormsurge",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 375,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 400,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ]
+    },
+    {
+      "title": "Sun Shark Bomber",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Tidewall Droneport",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Tidewall Gunrig",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Tidewall Shieldline",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Tidewall Defence Platform",
+          "value": 20,
+          "modifiers": []
+        }
+      ]
+    }
+  ],
+  "enhancements": [
+    {
+      "title": "Negation Emitters (Upgrade)",
+      "detachment": "ADVANCED ACQUISITION CADRE",
+      "value": 15,
+      "sourceTitle": "Negation Emitters"
+    },
+    {
+      "title": "Unmasking Suite (Upgrade)",
+      "detachment": "ADVANCED ACQUISITION CADRE",
+      "value": 15,
+      "sourceTitle": "Unmasking Suite"
+    },
+    {
+      "title": "Admired Leader",
+      "detachment": "AUXILIARY CADRE",
+      "value": 20
+    },
+    {
+      "title": "Student of Kauyon",
+      "detachment": "AUXILIARY CADRE",
+      "value": 20
+    },
+    {
+      "title": "Plasma Accelerator Rifle",
+      "detachment": "EXPERIMENTAL PROTOTYPE CADRE",
+      "value": 20
+    },
+    {
+      "title": "Supernova Launcher",
+      "detachment": "EXPERIMENTAL PROTOTYPE CADRE",
+      "value": 15
+    },
+    {
+      "title": "Thermoneutronic Projector",
+      "detachment": "EXPERIMENTAL PROTOTYPE CADRE",
+      "value": 15
+    },
+    {
+      "title": "Exemplar of the Kauyon",
+      "detachment": "KAUYON",
+      "value": 20
+    },
+    {
+      "title": "Precision of the Patient Hunter",
+      "detachment": "KAUYON",
+      "value": 15
+    },
+    {
+      "title": "Solid-image Projection Unit",
+      "detachment": "KAUYON",
+      "value": 20
+    },
+    {
+      "title": "Through Unity, Devastation",
+      "detachment": "KAUYON",
+      "value": 30
+    },
+    {
+      "title": "Borthrod Gland",
+      "detachment": "KROOT HUNTING PACK",
+      "value": 15
+    },
+    {
+      "title": "Kroothawk Flock",
+      "detachment": "KROOT HUNTING PACK",
+      "value": 10
+    },
+    {
+      "title": "Nomadic Hunter",
+      "detachment": "KROOT HUNTING PACK",
+      "value": 20
+    },
+    {
+      "title": "Root-carved Weapons",
+      "detachment": "KROOT HUNTING PACK",
+      "value": 10
+    },
+    {
+      "title": "Coordinated Exploitation",
+      "detachment": "MONT'KA",
+      "value": 30
+    },
+    {
+      "title": "Exemplar of the Mont’ka",
+      "detachment": "MONT'KA",
+      "value": 10,
+      "sourceTitle": "Exemplar of the Mont'ka"
+    },
+    {
+      "title": "Strategic Conqueror",
+      "detachment": "MONT'KA",
+      "value": 15
+    },
+    {
+      "title": "Strike Swiftly",
+      "detachment": "MONT'KA",
+      "value": 45
+    },
+    {
+      "title": "Internal Grenade Racks",
+      "detachment": "RETALIATION CADRE",
+      "value": 20
+    },
+    {
+      "title": "Prototype Weapon System",
+      "detachment": "RETALIATION CADRE",
+      "value": 15
+    },
+    {
+      "title": "Puretide Engram Neurochip",
+      "detachment": "RETALIATION CADRE",
+      "value": 15
+    },
+    {
+      "title": "Starflare Ignition System",
+      "detachment": "RETALIATION CADRE",
+      "value": 20
+    }
+  ],
+  "sourceUpdatedAt": "2026-08-26",
+  "capturedAt": "2026-08-27",
+  "sourceArtifactSha256": "8A88D9B09A035712597AC79B967B20EABF820FEEBCDB0D8D05DF5BEF95E2FB4C"
+}

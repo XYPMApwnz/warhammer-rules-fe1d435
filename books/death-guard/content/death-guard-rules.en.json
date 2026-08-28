@@ -1437,7 +1437,7 @@
         },
         {
           "type": "p",
-          "text": "Rules source: Death Guard Faction Pack v1.1, p.2. Force Disposition and Detachment Points: Munitorum Field Manual v1.2, 22 July 2026."
+          "text": "Rules source: Death Guard Faction Pack v1.1, p.2. Force Disposition and Detachment Points: Munitorum Field Manual v1.3, 26 August 2026."
         }
       ],
       "subsections": [
@@ -1881,7 +1881,7 @@
       "points": [
         {
           "label": "1 model",
-          "value": 390
+          "value": 375
         }
       ],
       "blocks": [
@@ -1890,7 +1890,7 @@
           "values": [
             {
               "label": "1 model",
-              "value": 390
+              "value": 375
             }
           ],
           "wargear": []
@@ -2676,7 +2676,7 @@
       "points": [
         {
           "label": "1 model",
-          "value": 65
+          "value": 60
         }
       ],
       "blocks": [
@@ -2685,7 +2685,7 @@
           "values": [
             {
               "label": "1 model",
-              "value": 65
+              "value": 60
             }
           ],
           "wargear": []
@@ -3575,7 +3575,7 @@
       "points": [
         {
           "label": "1 model",
-          "value": 60
+          "value": 50
         }
       ],
       "blocks": [
@@ -3584,7 +3584,7 @@
           "values": [
             {
               "label": "1 model",
-              "value": 60
+              "value": 50
             }
           ],
           "wargear": []
@@ -4410,11 +4410,11 @@
         },
         {
           "label": "5 models",
-          "value": 185
+          "value": 180
         },
         {
           "label": "10 models",
-          "value": 370
+          "value": 360
         }
       ],
       "blocks": [
@@ -4427,11 +4427,11 @@
             },
             {
               "label": "5 models",
-              "value": 185
+              "value": 180
             },
             {
               "label": "10 models",
-              "value": 370
+              "value": 360
             }
           ],
           "wargear": []
@@ -5799,7 +5799,7 @@
         },
         {
           "label": "2nd+ unit: 1 model",
-          "value": 340
+          "value": 350
         }
       ],
       "blocks": [
@@ -5812,7 +5812,7 @@
             },
             {
               "label": "2nd+ unit: 1 model",
-              "value": 340
+              "value": 350
             }
           ],
           "wargear": [
@@ -6713,11 +6713,11 @@
       "points": [
         {
           "label": "1 model",
-          "value": 100
+          "value": 95
         },
         {
           "label": "2 models",
-          "value": 200
+          "value": 190
         }
       ],
       "blocks": [
@@ -6726,11 +6726,11 @@
           "values": [
             {
               "label": "1 model",
-              "value": 100
+              "value": 95
             },
             {
               "label": "2 models",
-              "value": 200
+              "value": 190
             }
           ],
           "wargear": []
@@ -6887,11 +6887,11 @@
       "points": [
         {
           "label": "1st unit: 1 model",
-          "value": 185
+          "value": 170
         },
         {
           "label": "2nd+ unit: 1 model",
-          "value": 210
+          "value": 200
         }
       ],
       "blocks": [
@@ -6900,11 +6900,11 @@
           "values": [
             {
               "label": "1st unit: 1 model",
-              "value": 185
+              "value": 170
             },
             {
               "label": "2nd+ unit: 1 model",
-              "value": 210
+              "value": 200
             }
           ],
           "wargear": []
@@ -8407,7 +8407,7 @@
         },
         {
           "type": "p",
-          "text": "Official points: Munitorum Field Manual v1.2 live source, updated 22 July 2026; dated repository capture verified 11 August 2026."
+          "text": "Official points: Munitorum Field Manual v1.3 live source, updated 26 August 2026; dated repository capture verified 27 August 2026."
         },
         {
           "type": "p",
@@ -13891,8 +13891,8 @@
     "datasheets": 36,
     "currentFactionPack": "v1.1",
     "officialFactionPackDate": "2026-07-22",
-    "currentMFM": "v1.2",
+    "currentMFM": "v1.3",
     "glossary": 366,
-    "verifiedAt": "2026-08-11"
+    "verifiedAt": "2026-08-27"
   }
 }

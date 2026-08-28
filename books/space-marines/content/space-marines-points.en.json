@@ -545,7 +545,7 @@
         },
         {
           "label": "6 models",
-          "value": 350,
+          "value": 365,
           "minModels": 6,
           "maxModels": 6
         }
@@ -558,9 +558,9 @@
         }
       ],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1470,7 +1470,7 @@
       "points": [
         {
           "label": "1st to 2nd unit · 1 model",
-          "value": 250,
+          "value": 260,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
@@ -1478,7 +1478,7 @@
         },
         {
           "label": "3rd + unit · 1 model",
-          "value": 270,
+          "value": 280,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 3
@@ -1486,9 +1486,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1568,16 +1568,16 @@
       "points": [
         {
           "label": "1 model",
-          "value": 75,
+          "value": 85,
           "minModels": 1,
           "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -2553,7 +2553,7 @@
       "points": [
         {
           "label": "1 model",
-          "value": 85,
+          "value": 95,
           "minModels": 1,
           "maxModels": 1
         }

@@ -92,16 +92,16 @@
       ]
     },
     {
-      "id": "mfm-v1.2",
+      "id": "mfm-v1.3",
       "authority": "official",
       "role": "points-and-roster-contract",
-      "title": "Munitorum Field Manual v1.2",
+      "title": "Munitorum Field Manual v1.3",
       "url": "https://mfm.warhammer-community.com/en/tau-empire",
-      "version": "1.2",
-      "verifiedAt": "2026-08-11",
-      "localFile": "official-mfm-v1.2.json",
-      "retrievedAt": "2026-08-11",
-      "frozenAt": "2026-08-11",
+      "version": "1.3",
+      "verifiedAt": "2026-08-27",
+      "localFile": "official-mfm-v1.3.json",
+      "retrievedAt": "2026-08-27",
+      "frozenAt": "2026-08-27",
       "scope": [
         "43 live unit records (39 current Codex surface; 4 Imperial Armour / special scope)",
         "23 Enhancements",
@@ -124,13 +124,13 @@
         "points data",
         "roster views"
       ],
-      "sha256": "491FA51845D931A84D32A11AF7274C4B3A0F7912D345A7F3F9067CC1C15C3534",
-      "localPath": "books/tau-empire/sources/official-mfm-v1.2.json"
+      "sha256": "4530DBC81B604766C4182EA4AAF7BF01F5DCE6CD37F208373E73F01724A05589",
+      "localPath": "books/tau-empire/sources/official-mfm-v1.3.json"
     }
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Official Faction Pack v1.1 is frozen; official live MFM v1.2 is preserved as a dated repository capture verified 11 August 2026. Codex text remains a pinned community transcription checked against secondary parity evidence."
+    "reason": "Official Faction Pack v1.1 is frozen; official live MFM v1.3 is preserved as a dated repository capture verified 27 August 2026. Codex text remains a pinned community transcription checked against secondary parity evidence."
   },
   "bookId": "tau-empire",
   "edition": "11th Edition",
@@ -138,7 +138,7 @@
   "publishAsComplete": false,
   "precedence": [
     "official-faction-pack-v1.1",
-    "official-mfm-v1.2",
+    "official-mfm-v1.3",
     "community-codex-transcription",
     "wahapedia-secondary-parity"
   ],

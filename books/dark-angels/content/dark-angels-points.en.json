@@ -325,23 +325,41 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "unit · 3 models",
+          "label": "1st to 2nd unit · 3 models",
           "value": 75,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "unit · 6 models",
+          "label": "1st to 2nd unit · 6 models",
           "value": 150,
           "minModels": 6,
-          "maxModels": 6
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 85,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -436,16 +454,16 @@
       "points": [
         {
           "label": "unit · 1 model",
-          "value": 95,
+          "value": 105,
           "minModels": 1,
           "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     }
   ],
@@ -493,13 +511,13 @@
       "id": "enhancement-recon-hunter",
       "title": "Recon Hunter",
       "detachment": "Company of Hunters",
-      "value": 20,
+      "value": 30,
       "text": "RAVENWING model only. Models in the bearer's unit have the Scouts 9\" ability.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     },
     {

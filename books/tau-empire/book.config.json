@@ -73,7 +73,8 @@
     "codexParity": "content/tau-empire-codex-parity.en.json",
     "points": "content/tau-empire-points.en.json",
     "relatedRules": "content/tau-empire-related-rules.en.json",
-    "manifest": "sources/source-manifest.json"
+    "manifest": "sources/source-manifest.json",
+    "officialMfm": "sources/official-mfm-v1.3.json"
   },
   "relatedRulesOwnership": {
     "mode": "authoritative-runtime-source",

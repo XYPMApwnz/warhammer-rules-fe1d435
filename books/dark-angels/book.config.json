@@ -81,7 +81,46 @@
           "unit-land-speeder"
         ]
       }
-    ]
+    ],
+    "pointOverrides": {
+      "unit-centurion-devastator-squad": {
+        "title": "Centurion Devastator Squad",
+        "points": [
+          {
+            "label": "3 models",
+            "value": 175,
+            "minModels": 3,
+            "maxModels": 3
+          },
+          {
+            "label": "6 models",
+            "value": 350,
+            "minModels": 6,
+            "maxModels": 6
+          }
+        ]
+      },
+      "unit-repulsor-executioner": {
+        "title": "Repulsor Executioner",
+        "points": [
+          {
+            "label": "1st to 2nd unit · 1 model",
+            "value": 230,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "3rd + unit · 1 model",
+            "value": 250,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 3
+          }
+        ]
+      }
+    }
   },
   "dependencyDetachments": {
     "render": true,

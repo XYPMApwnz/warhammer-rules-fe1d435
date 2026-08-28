@@ -699,7 +699,7 @@
       "status": "Codex transcription",
       "category": "Characters",
       "points": [
-        "65"
+        "60"
       ],
       "stats": {
         "M": "6\"",
@@ -2253,8 +2253,8 @@
       "status": "Codex transcription",
       "category": "Infantry",
       "points": [
-        "80",
-        "90",
+        "75",
+        "85",
         "150",
         "160"
       ],
@@ -2386,10 +2386,10 @@
       "status": "Codex transcription",
       "category": "Infantry",
       "points": [
-        "80",
-        "90",
-        "160",
-        "170"
+        "75",
+        "85",
+        "150",
+        "160"
       ],
       "stats": {
         "M": "12\"",
@@ -2518,7 +2518,8 @@
       "status": "Codex transcription",
       "category": "Infantry",
       "points": [
-        "65"
+        "65",
+        "75"
       ],
       "stats": {
         "M": "6\"",
@@ -3634,10 +3635,10 @@
       "status": "Codex transcription",
       "category": "Vehicle",
       "points": [
-        "160",
+        "150",
         "180",
-        "320",
-        "340"
+        "300",
+        "330"
       ],
       "stats": {
         "M": "6\"",

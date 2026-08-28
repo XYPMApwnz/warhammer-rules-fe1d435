@@ -242,7 +242,7 @@
       "points": [
         {
           "label": "1st to 2nd unit cost · 3 models",
-          "value": 90,
+          "value": 100,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 1,
@@ -250,7 +250,7 @@
         },
         {
           "label": "3rd + unit · 3 models",
-          "value": 100,
+          "value": 110,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 3
@@ -264,9 +264,9 @@
         }
       ],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -963,16 +963,16 @@
       "points": [
         {
           "label": "2 models",
-          "value": 220,
+          "value": 230,
           "minModels": 2,
           "maxModels": 2
         }
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1307,13 +1307,13 @@
       "id": "enhancement-strike-swiftly",
       "title": "Strike Swiftly",
       "detachment": "Mont'ka",
-      "value": 35,
+      "value": 45,
       "text": "In the Resolve Pre-battle Abilities step, you can select up to two friendly T’AU EMPIRE units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       }
     },
     {

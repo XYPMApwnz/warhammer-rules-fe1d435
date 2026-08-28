@@ -6,8 +6,8 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": 7,
     "officialUrl": "https://mfm.warhammer-community.com/en/adeptus-mechanicus",
-    "officialVersion": "v1.2",
-    "verifiedAt": "2026-08-11",
+    "officialVersion": "v1.3",
+    "verifiedAt": "2026-08-27",
     "sha256": "0C473B0E8C94495414B43DB8F7AE4CCD4623FCA0FAAA024AB27D12318044CD89"
   },
   "units": [
@@ -129,7 +129,7 @@
       "points": [
         {
           "label": "1st unit: 2 models",
-          "value": 160
+          "value": 150
         },
         {
           "label": "2nd+ unit: 2 models",
@@ -137,11 +137,11 @@
         },
         {
           "label": "1st unit: 4 models",
-          "value": 320
+          "value": 300
         },
         {
           "label": "2nd+ unit: 4 models",
-          "value": 340
+          "value": 330
         }
       ],
       "wargear": []
@@ -189,11 +189,11 @@
       "points": [
         {
           "label": "1st–2nd unit: 5 models",
-          "value": 80
+          "value": 75
         },
         {
           "label": "3rd+ unit: 5 models",
-          "value": 90
+          "value": 85
         },
         {
           "label": "1st–2nd unit: 10 models",
@@ -211,19 +211,19 @@
       "points": [
         {
           "label": "1st–2nd unit: 5 models",
-          "value": 80
+          "value": 75
         },
         {
           "label": "3rd+ unit: 5 models",
-          "value": 90
+          "value": 85
         },
         {
           "label": "1st–2nd unit: 10 models",
-          "value": 160
+          "value": 150
         },
         {
           "label": "3rd+ unit: 10 models",
-          "value": 170
+          "value": 160
         }
       ],
       "wargear": []
@@ -364,7 +364,7 @@
       "points": [
         {
           "label": "1 model",
-          "value": 65
+          "value": 60
         }
       ],
       "wargear": []
@@ -449,8 +449,12 @@
       "title": "Servitor Battleclade",
       "points": [
         {
-          "label": "9 models",
+          "label": "1st–2nd unit: 9 models",
           "value": 65
+        },
+        {
+          "label": "3rd+ unit: 9 models",
+          "value": 75
         }
       ],
       "wargear": []

@@ -198,7 +198,7 @@
         },
         {
           "label": "2nd + unit · 1 model",
-          "value": 340,
+          "value": 350,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 2
@@ -278,7 +278,7 @@
       "points": [
         {
           "label": "1st to 2nd unit · 1 model",
-          "value": 80,
+          "value": 90,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
@@ -286,7 +286,7 @@
         },
         {
           "label": "3rd + unit · 1 model",
-          "value": 90,
+          "value": 100,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 3
@@ -404,7 +404,7 @@
       "points": [
         {
           "label": "10 models",
-          "value": 90,
+          "value": 100,
           "minModels": 10,
           "maxModels": 10
         }
@@ -421,7 +421,7 @@
         },
         {
           "label": "6 models",
-          "value": 180,
+          "value": 190,
           "minModels": 6,
           "maxModels": 6
         }
@@ -432,7 +432,7 @@
       "points": [
         {
           "label": "1st to 2nd unit · 1 model",
-          "value": 255,
+          "value": 265,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
@@ -440,7 +440,7 @@
         },
         {
           "label": "3rd + unit · 1 model",
-          "value": 270,
+          "value": 280,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 3
@@ -452,7 +452,7 @@
       "points": [
         {
           "label": "5 models",
-          "value": 80,
+          "value": 85,
           "minModels": 5,
           "maxModels": 5
         },
@@ -650,5 +650,6 @@
       "value": 20,
       "sourceTitle": "Eager Patrons"
     }
-  ]
+  ],
+  "sourceArtifactSha256": "CAEA20FC3B86A0852E3622F1B395120D942228EF69257274054A5C456BCBED32"
 }

@@ -49,7 +49,7 @@ const codexParity=json('content/adeptus-mechanicus-codex-parity.en.json');
 const codexDatasheets=json('content/adeptus-mechanicus-codex-datasheets.en.json');
 const codexWargear=json('content/adeptus-mechanicus-codex-wargear.en.json');
 const currentPoints=json('content/adeptus-mechanicus-points.en.json');
-const officialMfm=json('sources/official-mfm-v1.2.json');
+const officialMfm=json('sources/official-mfm-v1.3.json');
 const relatedRulesConfig=json('content/adeptus-mechanicus-related-rules.en.json');
 const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
 const mergedDatasheets=codexDatasheets.datasheets.map(unit=>factionDatasheets.has(unit.id)?{...unit,...factionDatasheets.get(unit.id),category:unit.category}:unit);
@@ -248,7 +248,7 @@ check('responsive reader owns one in-place view switch',((html.match(/data-view-
 check('responsive no-roster keeps All Detachments',appSource.includes("storageKey:'adeptus-mechanicus-detachment-filter'")&&sharedRelatedRulesSource.includes("'All detachments'"));
 check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.filter(unit=>unit.status!=='Warhammer Legends').length+2);
 check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('34 indexed datasheets'));
-check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.2')&&/Dated repository capture verified \d{4}-\d{2}-\d{2}; all 34 current Enhancement costs and all non-Legends unit point rows match the official live source\./.test(markup)&&markup.includes('>Open official MFM</a>'));
+check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.3')&&/Dated repository capture verified \d{4}-\d{2}-\d{2}; all 34 current Enhancement costs and all non-Legends unit point rows match the official live source\./.test(markup)&&markup.includes('>Open official MFM</a>'));
 check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.2')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
 check('generated hero contains no technical placeholders',!read('tools/build-full-content.mjs').includes('Technical placeholder')&&!html.includes('Technical placeholder')&&markup.includes('11th Edition Army Book')&&markup.includes('Adeptus Mechanicus emblem'));
 check('Stratagem restrictions render as a separate field',markup.includes('<b>Restrictions</b>')&&markup.includes('Programmed Withdrawal'));
@@ -371,11 +371,11 @@ check('official MFM unit sizes are locked',[
   ['Ironstrider Ballistarii','3rd+ unit: 3 models'],
   ['Sydonian Dragoons with radium jezzails','3 models'],
   ['Sydonian Dragoons with taser lances','3 models'],
-  ['Servitor Battleclade','9 models'],
+  ['Servitor Battleclade','1st–2nd unit: 9 models'],
   ['Skitarii Rangers','10 models'],
   ['Sydonian Skatros','1 model']
 ].every(([title,label])=>currentPoints.units.find(unit=>unit.title===title)?.points.some(row=>row.label===label)));
-check('official MFM provenance is locked',currentPoints.source.officialVersion==='v1.2'&&currentPoints.source.officialUrl==='https://mfm.warhammer-community.com/en/adeptus-mechanicus');
+check('official MFM provenance is locked',currentPoints.source.officialVersion==='v1.3'&&currentPoints.source.officialUrl==='https://mfm.warhammer-community.com/en/adeptus-mechanicus');
 check('carried-forward rules no longer use placeholder wording',!JSON.stringify(codex).match(/rule's listed roll|following the rule's unit restrictions|under the listed Acquisition conditions|according to the Stratagem's conditions/));
 check('personal roster integration is loaded',/\.\.\/shared\/roster-parser\.js\?v=\d+/.test(html)&&/\.\.\/\.\.\/roster-guides\/points-validator\.js\?v=\d+/.test(html)&&/\.\/scripts\/roster-filter\.js\?v=\d+/.test(html)&&html.includes('data-roster-guides'));
 check('Compatible Rules runtime uses only the generated matrix',appSource.includes('generated/compatible-rules.json')&&appSource.includes('createCompatibleRulesLoader')&&appSource.includes('fetch:loadCompatibleRulesMatrix')&&appSource.includes("replace(/^detachment-/,'')")&&!fs.existsSync(path.join(root,'scripts','compatible-rules-runtime.mjs'))&&!appSource.includes('AMRelatedRules')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));

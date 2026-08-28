@@ -233,7 +233,7 @@
       "points": [
         {
           "label": "1st to 2nd · 5 models",
-          "value": 120,
+          "value": 115,
           "minModels": 5,
           "maxModels": 5,
           "minCopies": 1,
@@ -249,7 +249,7 @@
         },
         {
           "label": "3rd + · 5 models",
-          "value": 135,
+          "value": 130,
           "minModels": 5,
           "maxModels": 5,
           "minCopies": 3
@@ -283,7 +283,7 @@
       "points": [
         {
           "label": "1st to 2nd · 3 models",
-          "value": 125,
+          "value": 120,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 1,
@@ -299,7 +299,7 @@
         },
         {
           "label": "3rd + · 3 models",
-          "value": 145,
+          "value": 140,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 3
@@ -349,7 +349,7 @@
       "points": [
         {
           "label": "unit · 1 model",
-          "value": 130,
+          "value": 120,
           "minModels": 1,
           "maxModels": 1
         }
@@ -690,7 +690,207 @@
     "spellingAliases": {
       "ANCIENT IN TERMINATOR ARMOUR": "Ancient in Terminator Armor"
     },
-    "unresolved": []
+    "unresolved": [],
+    "pointOverrides": {
+      "unit-centurion-devastator-squad": {
+        "title": "Centurion Devastator Squad",
+        "points": [
+          {
+            "label": "3 models",
+            "value": 175,
+            "minModels": 3,
+            "maxModels": 3
+          },
+          {
+            "label": "6 models",
+            "value": 350,
+            "minModels": 6,
+            "maxModels": 6
+          }
+        ]
+      },
+      "unit-assault-intercessor-squad": {
+        "title": "Assault Intercessor Squad",
+        "points": [
+          {
+            "label": "5 models",
+            "value": 80,
+            "minModels": 5,
+            "maxModels": 5
+          },
+          {
+            "label": "10 models",
+            "value": 150,
+            "minModels": 10,
+            "maxModels": 10
+          }
+        ]
+      },
+      "unit-assault-intercessors-with-jump-packs": {
+        "title": "Assault Intercessors with Jump Packs",
+        "points": [
+          {
+            "label": "1st to 2nd unit · 5 models",
+            "value": 95,
+            "minModels": 5,
+            "maxModels": 5,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "1st to 2nd unit · 10 models",
+            "value": 180,
+            "minModels": 10,
+            "maxModels": 10,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "3rd + unit · 5 models",
+            "value": 105,
+            "minModels": 5,
+            "maxModels": 5,
+            "minCopies": 3
+          },
+          {
+            "label": "3rd + unit · 10 models",
+            "value": 190,
+            "minModels": 10,
+            "maxModels": 10,
+            "minCopies": 3
+          }
+        ]
+      },
+      "unit-bladeguard-veteran-squad": {
+        "title": "Bladeguard Veteran Squad",
+        "points": [
+          {
+            "label": "1st to 2nd unit · 3 models",
+            "value": 85,
+            "minModels": 3,
+            "maxModels": 3,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "1st to 2nd unit · 6 models",
+            "value": 170,
+            "minModels": 6,
+            "maxModels": 6,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "3rd + unit · 3 models",
+            "value": 95,
+            "minModels": 3,
+            "maxModels": 3,
+            "minCopies": 3
+          },
+          {
+            "label": "3rd + unit · 6 models",
+            "value": 180,
+            "minModels": 6,
+            "maxModels": 6,
+            "minCopies": 3
+          }
+        ]
+      },
+      "unit-captain-with-jump-pack": {
+        "title": "Captain with Jump Pack",
+        "points": [
+          {
+            "label": "1 model",
+            "value": 80,
+            "minModels": 1,
+            "maxModels": 1
+          }
+        ]
+      },
+      "unit-chaplain-with-jump-pack": {
+        "title": "Chaplain with Jump Pack",
+        "points": [
+          {
+            "label": "1 model",
+            "value": 80,
+            "minModels": 1,
+            "maxModels": 1
+          }
+        ]
+      },
+      "unit-outrider-squad": {
+        "title": "Outrider Squad",
+        "points": [
+          {
+            "label": "3 models",
+            "value": 75,
+            "minModels": 3,
+            "maxModels": 3
+          },
+          {
+            "label": "6 models",
+            "value": 140,
+            "minModels": 6,
+            "maxModels": 6
+          }
+        ]
+      },
+      "unit-repulsor-executioner": {
+        "title": "Repulsor Executioner",
+        "points": [
+          {
+            "label": "1st to 2nd unit · 1 model",
+            "value": 230,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "3rd + unit · 1 model",
+            "value": 250,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 3
+          }
+        ]
+      },
+      "unit-vanguard-veteran-squad-with-jump-packs": {
+        "title": "Vanguard Veteran Squad with Jump Packs",
+        "points": [
+          {
+            "label": "1st to 2nd unit · 5 models",
+            "value": 110,
+            "minModels": 5,
+            "maxModels": 5,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "1st to 2nd unit · 10 models",
+            "value": 220,
+            "minModels": 10,
+            "maxModels": 10,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "3rd + unit · 5 models",
+            "value": 120,
+            "minModels": 5,
+            "maxModels": 5,
+            "minCopies": 3
+          },
+          {
+            "label": "3rd + unit · 10 models",
+            "value": 230,
+            "minModels": 10,
+            "maxModels": 10,
+            "minCopies": 3
+          }
+        ]
+      }
+    }
   },
   "legends": [],
   "hashModel": {
@@ -708,5 +908,6 @@
       "dependencyInventory"
     ]
   },
-  "captureSha256": "22159EB4D49BAE036557AE0A1C11653A358DAC79B9D0D294D8E73E061117F009"
+  "captureSha256": "7327670AAE62C6F53AC0EBF3276B4FE4471AB8C0FF5C9721CACB90896A0494BC",
+  "sourceArtifactSha256": "51CD132613944C368369A82ECDBCFCAFEACF10F2A682E6049F086B1B8B006666"
 }

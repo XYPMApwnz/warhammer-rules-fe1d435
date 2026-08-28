@@ -209,16 +209,34 @@
       "title": "Ravenwing Black Knights",
       "points": [
         {
-          "label": "unit · 3 models",
+          "label": "1st to 2nd unit · 3 models",
           "value": 75,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "unit · 6 models",
+          "label": "1st to 2nd unit · 6 models",
           "value": 150,
           "minModels": 6,
-          "maxModels": 6
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 85,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ]
     },
@@ -269,7 +287,7 @@
       "points": [
         {
           "label": "unit · 1 model",
-          "value": 95,
+          "value": 105,
           "minModels": 1,
           "maxModels": 1
         }
@@ -337,7 +355,7 @@
     {
       "title": "Recon Hunter",
       "detachment": "Company of Hunters",
-      "value": 20
+      "value": 30
     },
     {
       "title": "Entreaty of Perpetual Ardour",
@@ -610,7 +628,46 @@
     "spellingAliases": {
       "ANCIENT IN TERMINATOR ARMOUR": "Ancient in Terminator Armor"
     },
-    "unresolved": []
+    "unresolved": [],
+    "pointOverrides": {
+      "unit-centurion-devastator-squad": {
+        "title": "Centurion Devastator Squad",
+        "points": [
+          {
+            "label": "3 models",
+            "value": 175,
+            "minModels": 3,
+            "maxModels": 3
+          },
+          {
+            "label": "6 models",
+            "value": 350,
+            "minModels": 6,
+            "maxModels": 6
+          }
+        ]
+      },
+      "unit-repulsor-executioner": {
+        "title": "Repulsor Executioner",
+        "points": [
+          {
+            "label": "1st to 2nd unit · 1 model",
+            "value": 230,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 1,
+            "maxCopies": 2
+          },
+          {
+            "label": "3rd + unit · 1 model",
+            "value": 250,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 3
+          }
+        ]
+      }
+    }
   },
   "legends": [
     {
@@ -656,5 +713,6 @@
       "includedInCurrentDatasheets": false
     }
   ],
-  "captureDataSha256": "9D5277A780B5D8B9DC99DB5C6819049E5AF1B6B5844D52664F82BFE3D18A1553"
+  "captureDataSha256": "9D5277A780B5D8B9DC99DB5C6819049E5AF1B6B5844D52664F82BFE3D18A1553",
+  "sourceArtifactSha256": "FD5E29BF95ED45E0F44393D8BC49DA54AD7D17F2BAD5BEC589ED529D301A08B3"
 }

@@ -27466,7 +27466,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "legacyKey": "enhancement-recon-hunter",
       "title": "Recon Hunter",
       "text": "RAVENWING model only. Models in the bearer's unit have the Scouts 9\" ability.",
-      "value": 20,
+      "value": 30,
       "detachment": "Company of Hunters",
       "tags": [],
       "owner": {
@@ -27490,9 +27490,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-recon-hunter",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceId": "enhancement-recon-hunter",
       "sourceBookId": "dark-angels"
@@ -31543,7 +31543,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   "enhancement-recon-hunter": {
     "title": "Recon Hunter",
     "text": "RAVENWING model only. Models in the bearer's unit have the Scouts 9\" ability.",
-    "value": 20,
+    "value": 30,
     "detachment": "Company of Hunters",
     "tags": [],
     "owner": {

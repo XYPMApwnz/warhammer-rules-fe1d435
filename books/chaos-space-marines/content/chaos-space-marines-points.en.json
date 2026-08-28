@@ -710,7 +710,7 @@
         },
         {
           "label": "2nd + unit · 1 model",
-          "value": 340,
+          "value": 350,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 2
@@ -729,9 +729,9 @@
         }
       ],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -3074,7 +3074,7 @@
     },
     {
       "title": "HURON’S MARAUDERS",
-      "forceDisposition": "DISRUPTION",
+      "forceDisposition": "PURGE THE FOE",
       "detachmentPoints": 3
     },
     {

@@ -6,7 +6,7 @@
   "capturedAt": "2026-08-27",
   "verifiedAt": "2026-08-27",
   "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-  "captureSha256": "9E672C442322E5A4305746762B6DFBEAD475784A71611EB18A42793144A6659B",
+  "captureSha256": "3602214C49B09C49B317CAB423C365CD68C428EEDD1ABEB846FB68F8500E036B",
   "hashModel": {
     "algorithm": "SHA-256",
     "scope": "normalizedPayload",
@@ -972,7 +972,7 @@
         },
         {
           "label": "2nd + unit · 1 model",
-          "value": 340,
+          "value": 350,
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 2
@@ -1146,7 +1146,7 @@
     },
     {
       "title": "HURON’S MARAUDERS",
-      "forceDisposition": "DISRUPTION",
+      "forceDisposition": "PURGE THE FOE",
       "detachmentPoints": 3
     },
     {
@@ -1501,5 +1501,6 @@
       "detachment": "WARPSTRIKE CHAMPIONS",
       "value": 25
     }
-  ]
+  ],
+  "sourceArtifactSha256": "37BB3C3A196486B9820C6EC1B2A844BA1251335A6729BA61CBB939E86A20AD17"
 }

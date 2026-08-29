@@ -35,6 +35,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-captain-titus",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-chaplain",
             "maxCharacters": 2
           },
@@ -52,10 +56,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-librarian",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-lieutenant-titus",
             "maxCharacters": 2
           },
           {
@@ -108,6 +108,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-captain-titus",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-chaplain",
               "maxCharacters": 2
             },
@@ -125,10 +129,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-librarian",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-lieutenant-titus",
               "maxCharacters": 2
             },
             {
@@ -706,6 +706,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-captain-titus",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-chaplain",
             "maxCharacters": 2
           },
@@ -723,10 +727,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-librarian",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-lieutenant-titus",
             "maxCharacters": 2
           },
           {
@@ -775,6 +775,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-captain-titus",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-chaplain",
               "maxCharacters": 2
             },
@@ -792,10 +796,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-librarian",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-lieutenant-titus",
               "maxCharacters": 2
             },
             {
@@ -10895,10 +10895,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
-      "id": "unit-lieutenant-titus",
-      "title": "Lieutenant Titus",
+      "id": "unit-captain-titus",
+      "title": "Captain Titus",
       "sourceBookId": "space-marines",
-      "sourceLayer": "codex",
+      "sourceLayer": "faction-pack",
       "intrinsicKeywords": [
         "Infantry",
         "Character",
@@ -10906,7 +10906,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Grenades",
         "Epic Hero",
         "Tacticus",
-        "Lieutenant",
+        "Captain",
         "Titus",
         "Adeptus Astartes",
         "Ultramarines"
@@ -10919,6 +10919,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-company-heroes",
             "maxCharacters": 2
           },
           {
@@ -10936,6 +10940,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "unitId": "unit-sternguard-veteran-squad",
             "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-victrix-honour-guard",
+            "maxCharacters": 1
           },
           {
             "unitId": "unit-wardens-of-ultramar",
@@ -10958,6 +10966,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-company-heroes",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-hellblaster-squad",
               "maxCharacters": 2
             },
@@ -10972,6 +10984,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             {
               "unitId": "unit-sternguard-veteran-squad",
               "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-victrix-honour-guard",
+              "maxCharacters": 1
             },
             {
               "unitId": "unit-wardens-of-ultramar",
@@ -10998,47 +11014,47 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sectionId": "space-marines-ability-honour-of-ultramar",
             "title": "Honour of Ultramar",
             "text": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+,\ndo not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
-            "sourceUnitId": "unit-lieutenant-titus"
+            "sourceUnitId": "unit-captain-titus"
           },
           {
             "id": "core-leader",
             "sectionId": "core-leader",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR.",
-            "sourceUnitId": "unit-lieutenant-titus"
+            "sourceUnitId": "unit-captain-titus"
           },
           {
             "id": "space-marines-ability-oath-of-moment",
             "sectionId": "space-marines-ability-oath-of-moment",
             "title": "Oath of Moment",
             "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
-            "sourceUnitId": "unit-lieutenant-titus"
+            "sourceUnitId": "unit-captain-titus"
           },
           {
             "id": "core-feel-no-pain",
             "sectionId": "core-feel-no-pain",
             "title": "Feel No Pain 5+",
             "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-            "sourceUnitId": "unit-lieutenant-titus"
+            "sourceUnitId": "unit-captain-titus"
           },
           {
             "id": "space-marines-ability-press-the-attack",
             "sectionId": "space-marines-ability-press-the-attack",
             "title": "Press the Attack",
             "text": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
-            "sourceUnitId": "unit-lieutenant-titus"
+            "sourceUnitId": "unit-captain-titus"
           },
           {
             "id": "space-marines-ability-honour-of-the-chapter",
             "sectionId": "space-marines-ability-honour-of-the-chapter",
             "title": "Honour of the Chapter",
             "text": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
-            "sourceUnitId": "unit-lieutenant-titus"
+            "sourceUnitId": "unit-captain-titus"
           }
         ],
         "models": [
           {
-            "id": "unit-lieutenant-titus-model-captain-titus",
+            "id": "unit-captain-titus-model-captain-titus",
             "title": "Captain Titus",
             "aliases": [
               "Captain Titus"
@@ -11047,26 +11063,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "selections": [
           {
-            "id": "unit-lieutenant-titus-selection-heavy-bolt-pistol",
+            "id": "unit-captain-titus-selection-heavy-bolt-pistol",
             "title": "Heavy bolt pistol",
             "aliases": [
               "Heavy bolt pistol"
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lieutenant-titus-profile-heavy-bolt-pistol-ranged"
+              "unit-captain-titus-profile-heavy-bolt-pistol-ranged"
             ],
             "wargearAbilityIds": []
           },
           {
-            "id": "unit-lieutenant-titus-selection-astartes-chainsword",
+            "id": "unit-captain-titus-selection-astartes-chainsword",
             "title": "Astartes chainsword",
             "aliases": [
               "Astartes chainsword"
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lieutenant-titus-profile-astartes-chainsword-melee-2"
+              "unit-captain-titus-profile-astartes-chainsword-melee-2"
             ],
             "wargearAbilityIds": []
           }
@@ -11074,7 +11090,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-lieutenant-titus-profile-heavy-bolt-pistol-ranged",
+            "id": "unit-captain-titus-profile-heavy-bolt-pistol-ranged",
             "title": "Heavy bolt pistol",
             "mode": "ranged",
             "range": "18\"",
@@ -11085,11 +11101,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Pistol",
             "sourceSelectionIds": [
-              "unit-lieutenant-titus-selection-heavy-bolt-pistol"
+              "unit-captain-titus-selection-heavy-bolt-pistol"
             ]
           },
           {
-            "id": "unit-lieutenant-titus-profile-astartes-chainsword-melee-2",
+            "id": "unit-captain-titus-profile-astartes-chainsword-melee-2",
             "title": "Astartes chainsword",
             "mode": "melee",
             "range": "Melee",
@@ -11100,7 +11116,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Anti-Infantry 2+",
             "sourceSelectionIds": [
-              "unit-lieutenant-titus-selection-astartes-chainsword"
+              "unit-captain-titus-selection-astartes-chainsword"
             ]
           }
         ],
@@ -12555,7 +12571,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "canBeLedBy": [
           {
-            "unitId": "unit-lieutenant-titus",
+            "unitId": "unit-captain-titus",
             "maxCharacters": 1
           }
         ],
@@ -12584,7 +12600,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeLedBy": [
             {
-              "unitId": "unit-lieutenant-titus",
+              "unitId": "unit-captain-titus",
               "maxCharacters": 1
             }
           ],
@@ -13732,6 +13748,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-captain-titus",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-chaplain",
             "maxCharacters": 2
           },
@@ -13745,10 +13765,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-korsarro-khan",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-lieutenant-titus",
             "maxCharacters": 2
           },
           {
@@ -13789,6 +13805,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-captain-titus",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-chaplain",
               "maxCharacters": 2
             },
@@ -13802,10 +13822,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-korsarro-khan",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-lieutenant-titus",
               "maxCharacters": 2
             },
             {
@@ -14510,6 +14526,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-captain-titus",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-korsarro-khan",
             "maxCharacters": 2
           },
@@ -14548,6 +14568,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-captain",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-captain-titus",
               "maxCharacters": 2
             },
             {
@@ -16424,15 +16448,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-captain-titus",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-chaplain",
             "maxCharacters": 2
           },
           {
             "unitId": "unit-librarian",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-lieutenant-titus",
             "maxCharacters": 2
           }
         ],
@@ -16461,15 +16485,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-captain-titus",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-chaplain",
               "maxCharacters": 2
             },
             {
               "unitId": "unit-librarian",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-lieutenant-titus",
               "maxCharacters": 2
             }
           ],
@@ -17199,6 +17223,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-captain-titus",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-chaplain",
             "maxCharacters": 2
           },
@@ -17208,10 +17236,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-librarian",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-lieutenant-titus",
             "maxCharacters": 2
           },
           {
@@ -17252,6 +17276,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-captain-titus",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-chaplain",
               "maxCharacters": 2
             },
@@ -17261,10 +17289,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-librarian",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-lieutenant-titus",
               "maxCharacters": 2
             },
             {
@@ -18335,6 +18359,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-captain-titus",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-chaplain",
             "maxCharacters": 2
           },
@@ -18352,10 +18380,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-librarian",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-lieutenant-titus",
             "maxCharacters": 2
           },
           {
@@ -18404,6 +18428,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-captain-titus",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-chaplain",
               "maxCharacters": 2
             },
@@ -18421,10 +18449,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-librarian",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-lieutenant-titus",
               "maxCharacters": 2
             },
             {
@@ -19919,6 +19943,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 1
           },
           {
+            "unitId": "unit-captain-titus",
+            "maxCharacters": 1
+          },
+          {
             "unitId": "unit-marneus-calgar-in-armour-of-antilochus",
             "maxCharacters": 1
           },
@@ -19936,6 +19964,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [
             {
               "unitId": "unit-captain",
+              "maxCharacters": 1
+            },
+            {
+              "unitId": "unit-captain-titus",
               "maxCharacters": 1
             },
             {

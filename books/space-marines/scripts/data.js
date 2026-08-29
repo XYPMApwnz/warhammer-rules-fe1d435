@@ -1804,7 +1804,7 @@ window.DG_TERMS={
       "unit-iron-father-feirros",
       "unit-kayvaan-shrike",
       "unit-korsarro-khan",
-      "unit-lieutenant-titus",
+      "unit-captain-titus",
       "unit-marneus-calgar-in-armour-of-antilochus",
       "unit-pedro-kantor",
       "unit-roboute-guilliman",
@@ -2927,7 +2927,7 @@ window.DG_TERMS={
       "unit-captain",
       "unit-lieutenant",
       "unit-aethon-shaan",
-      "unit-lieutenant-titus",
+      "unit-captain-titus",
       "unit-suboden-khan"
     ],
     "datasheet": "unit-captain",
@@ -4614,12 +4614,12 @@ window.DG_TERMS={
     "summary": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
     "full": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
     "glossary": "glossary-space-marines-ability-honour-of-ultramar",
-    "rule": "unit-lieutenant-titus",
+    "rule": "unit-captain-titus",
     "units": [
-      "unit-lieutenant-titus"
+      "unit-captain-titus"
     ],
-    "datasheet": "unit-lieutenant-titus",
-    "statline": "lieutenant-titus-profile"
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
   },
   "space-marines-ability-press-the-attack": {
     "id": "space-marines-ability-press-the-attack",
@@ -4627,12 +4627,12 @@ window.DG_TERMS={
     "summary": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
     "full": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
     "glossary": "glossary-space-marines-ability-press-the-attack",
-    "rule": "unit-lieutenant-titus",
+    "rule": "unit-captain-titus",
     "units": [
-      "unit-lieutenant-titus"
+      "unit-captain-titus"
     ],
-    "datasheet": "unit-lieutenant-titus",
-    "statline": "lieutenant-titus-profile"
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
   },
   "space-marines-ability-honour-of-the-chapter": {
     "id": "space-marines-ability-honour-of-the-chapter",
@@ -4640,12 +4640,12 @@ window.DG_TERMS={
     "summary": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
     "full": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
     "glossary": "glossary-space-marines-ability-honour-of-the-chapter",
-    "rule": "unit-lieutenant-titus",
+    "rule": "unit-captain-titus",
     "units": [
-      "unit-lieutenant-titus"
+      "unit-captain-titus"
     ],
-    "datasheet": "unit-lieutenant-titus",
-    "statline": "lieutenant-titus-profile"
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
   },
   "space-marines-weapon-astartes-chainsword-4": {
     "id": "space-marines-weapon-astartes-chainsword-4",
@@ -4653,12 +4653,12 @@ window.DG_TERMS={
     "summary": "Melee · Melee · A 8 · WS 2+ · S 4 · AP -1 · D 1 · Anti-Infantry 2+",
     "full": "Melee · Melee · A 8 · WS 2+ · S 4 · AP -1 · D 1 · Anti-Infantry 2+",
     "glossary": "glossary-space-marines-weapon-astartes-chainsword-4",
-    "rule": "unit-lieutenant-titus",
+    "rule": "unit-captain-titus",
     "units": [
-      "unit-lieutenant-titus"
+      "unit-captain-titus"
     ],
-    "datasheet": "unit-lieutenant-titus",
-    "statline": "lieutenant-titus-profile"
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
   },
   "space-marines-ability-inspiring-leader": {
     "id": "space-marines-ability-inspiring-leader",

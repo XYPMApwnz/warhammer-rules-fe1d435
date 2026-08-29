@@ -12363,6 +12363,581 @@
         "state": "match"
       }
     ],
+    "unit-captain-titus": [
+      {
+        "ruleId": "1st-company-task-force-armour-of-contempt",
+        "detachmentId": "1st-company-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "anvil-siege-force-armour-of-contempt",
+        "detachmentId": "anvil-siege-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "anvil-siege-force-battle-drill-recall",
+        "detachmentId": "anvil-siege-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "anvil-siege-force-hail-of-vengeance",
+        "detachmentId": "anvil-siege-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "anvil-siege-force-no-threat-too-great",
+        "detachmentId": "anvil-siege-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "anvil-siege-force-not-one-backwards-step",
+        "detachmentId": "anvil-siege-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "anvil-siege-force-rigid-discipline",
+        "detachmentId": "anvil-siege-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "armoured-speartip-armour-of-contempt",
+        "detachmentId": "armoured-speartip",
+        "state": "match"
+      },
+      {
+        "ruleId": "armoured-speartip-purgation-doctrine",
+        "detachmentId": "armoured-speartip",
+        "state": "match"
+      },
+      {
+        "ruleId": "armoured-speartip-rapid-embarkation",
+        "detachmentId": "armoured-speartip",
+        "state": "conditional",
+        "condition": "transport-wounds-characteristic-14-or-more",
+        "conditions": [
+          "transport-wounds-characteristic-14-or-more",
+          "infantry-able-to-embark",
+          "infantry-wholly-within-6"
+        ]
+      },
+      {
+        "ruleId": "bastion-task-force-codex-discipline",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "bastion-task-force-heresy-undone",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "bastion-task-force-light-of-vengeance",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "blade-of-ultramar-armour-of-contempt",
+        "detachmentId": "blade-of-ultramar",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "blade-of-ultramar-courage-and-honour",
+        "detachmentId": "blade-of-ultramar",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "blade-of-ultramar-exemplary-vigilance",
+        "detachmentId": "blade-of-ultramar",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "blade-of-ultramar-practical-tactics",
+        "detachmentId": "blade-of-ultramar",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "blade-of-ultramar-tactical-foresight",
+        "detachmentId": "blade-of-ultramar",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "blade-of-ultramar-ultramarian-adaptivity",
+        "detachmentId": "blade-of-ultramar",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "ceramite-sentinels-armour-of-contempt",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-augmented-targeting",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-evasive-repositioning",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-priority-strike",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-stand-to-the-end",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-unyielding-might",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "emperor-s-shield-armour-of-contempt",
+        "detachmentId": "emperor-s-shield",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-imperial-fists",
+        "conditions": [
+          "detachment-army-restricted-to-imperial-fists"
+        ]
+      },
+      {
+        "ruleId": "firestorm-assault-force-armour-of-contempt",
+        "detachmentId": "firestorm-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "firestorm-assault-force-crucible-of-battle",
+        "detachmentId": "firestorm-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "firestorm-assault-force-immolation-protocols",
+        "detachmentId": "firestorm-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "firestorm-assault-force-onslaught-of-fire",
+        "detachmentId": "firestorm-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "firestorm-assault-force-rapid-embarkation",
+        "detachmentId": "firestorm-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "forgefather-s-seekers-armour-of-contempt",
+        "detachmentId": "forgefather-s-seekers",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-salamanders",
+        "conditions": [
+          "detachment-army-restricted-to-salamanders"
+        ]
+      },
+      {
+        "ruleId": "forgefather-s-seekers-blazing-earth",
+        "detachmentId": "forgefather-s-seekers",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-salamanders",
+        "conditions": [
+          "detachment-army-restricted-to-salamanders",
+          "unit-equipped-with-torrent-weapon"
+        ]
+      },
+      {
+        "ruleId": "forgefather-s-seekers-crucible-of-battle",
+        "detachmentId": "forgefather-s-seekers",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-salamanders",
+        "conditions": [
+          "detachment-army-restricted-to-salamanders"
+        ]
+      },
+      {
+        "ruleId": "forgefather-s-seekers-immolation-protocols",
+        "detachmentId": "forgefather-s-seekers",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-salamanders",
+        "conditions": [
+          "detachment-army-restricted-to-salamanders"
+        ]
+      },
+      {
+        "ruleId": "forgefather-s-seekers-wrathful-inferno",
+        "detachmentId": "forgefather-s-seekers",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-salamanders",
+        "conditions": [
+          "detachment-army-restricted-to-salamanders"
+        ]
+      },
+      {
+        "ruleId": "gladius-task-force-adaptive-strategy",
+        "detachmentId": "gladius-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "gladius-task-force-armour-of-contempt",
+        "detachmentId": "gladius-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "gladius-task-force-honour-the-chapter",
+        "detachmentId": "gladius-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "gladius-task-force-only-in-death-does-duty-end",
+        "detachmentId": "gladius-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "gladius-task-force-squad-tactics",
+        "detachmentId": "gladius-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "gladius-task-force-storm-of-fire",
+        "detachmentId": "gladius-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "hammer-of-avernii-armour-of-contempt",
+        "detachmentId": "hammer-of-avernii",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-iron-hands",
+        "conditions": [
+          "detachment-army-restricted-to-iron-hands"
+        ]
+      },
+      {
+        "ruleId": "headhunter-task-force-armour-of-contempt",
+        "detachmentId": "headhunter-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "headhunter-task-force-rapid-gunnery",
+        "detachmentId": "headhunter-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "ironstorm-spearhead-armour-of-contempt",
+        "detachmentId": "ironstorm-spearhead",
+        "state": "match"
+      },
+      {
+        "ruleId": "ironstorm-spearhead-mercy-is-weakness",
+        "detachmentId": "ironstorm-spearhead",
+        "state": "match"
+      },
+      {
+        "ruleId": "ironstorm-spearhead-unbowed-conviction",
+        "detachmentId": "ironstorm-spearhead",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-auto-sense-coordination",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-blind-screen",
+        "detachmentId": "orbital-assault-force",
+        "state": "conditional",
+        "condition": "screening-unit-within-9",
+        "conditions": [
+          "screening-unit-within-9"
+        ]
+      },
+      {
+        "ruleId": "orbital-assault-force-onward-for-the-emperor",
+        "detachmentId": "orbital-assault-force",
+        "state": "conditional",
+        "condition": "infantry-not-set-up-this-turn",
+        "conditions": [
+          "infantry-not-set-up-this-turn",
+          "infantry-able-to-embark"
+        ]
+      },
+      {
+        "ruleId": "orbital-assault-force-shock-onslaught",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-suppression-strafing",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-tactical-decapitation",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "reclamation-force-crusading-conquerors",
+        "detachmentId": "reclamation-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "reclamation-force-fight-to-the-end",
+        "detachmentId": "reclamation-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "reclamation-force-furious-dedication",
+        "detachmentId": "reclamation-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "reclamation-force-marching-ever-on",
+        "detachmentId": "reclamation-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "reclamation-force-scions-of-guilliman",
+        "detachmentId": "reclamation-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "reclamation-force-ultramarian-destiny",
+        "detachmentId": "reclamation-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-ultramarines",
+        "conditions": [
+          "detachment-army-restricted-to-ultramarines"
+        ]
+      },
+      {
+        "ruleId": "shadowmark-talon-armour-of-contempt",
+        "detachmentId": "shadowmark-talon",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-raven-guard",
+        "conditions": [
+          "detachment-army-restricted-to-raven-guard"
+        ]
+      },
+      {
+        "ruleId": "shadowmark-talon-feint-and-thrust",
+        "detachmentId": "shadowmark-talon",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-raven-guard",
+        "conditions": [
+          "detachment-army-restricted-to-raven-guard"
+        ]
+      },
+      {
+        "ruleId": "shadowmark-talon-into-darkness",
+        "detachmentId": "shadowmark-talon",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-raven-guard",
+        "conditions": [
+          "detachment-army-restricted-to-raven-guard",
+          "up-to-two-phobos-or-scout-units-or-one-other-infantry-unit"
+        ]
+      },
+      {
+        "ruleId": "shadowmark-talon-lay-low-the-tyrants",
+        "detachmentId": "shadowmark-talon",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-raven-guard",
+        "conditions": [
+          "detachment-army-restricted-to-raven-guard"
+        ]
+      },
+      {
+        "ruleId": "shadowmark-talon-raptorial-vigilance",
+        "detachmentId": "shadowmark-talon",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-raven-guard",
+        "conditions": [
+          "detachment-army-restricted-to-raven-guard"
+        ]
+      },
+      {
+        "ruleId": "shadowmark-talon-stunning-fusillade",
+        "detachmentId": "shadowmark-talon",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-raven-guard",
+        "conditions": [
+          "detachment-army-restricted-to-raven-guard"
+        ]
+      },
+      {
+        "ruleId": "spearpoint-task-force-armour-of-contempt",
+        "detachmentId": "spearpoint-task-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-white-scars",
+        "conditions": [
+          "detachment-army-restricted-to-white-scars"
+        ]
+      },
+      {
+        "ruleId": "spearpoint-task-force-hunter-s-instincts",
+        "detachmentId": "spearpoint-task-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-white-scars",
+        "conditions": [
+          "detachment-army-restricted-to-white-scars"
+        ]
+      },
+      {
+        "ruleId": "spearpoint-task-force-mobile-lethality",
+        "detachmentId": "spearpoint-task-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-white-scars",
+        "conditions": [
+          "detachment-army-restricted-to-white-scars"
+        ]
+      },
+      {
+        "ruleId": "spearpoint-task-force-spear-thrust-and-sabre-swing",
+        "detachmentId": "spearpoint-task-force",
+        "state": "conditional",
+        "condition": "detachment-army-restricted-to-white-scars",
+        "conditions": [
+          "detachment-army-restricted-to-white-scars"
+        ]
+      },
+      {
+        "ruleId": "stormlance-task-force-armour-of-contempt",
+        "detachmentId": "stormlance-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "stormlance-task-force-blitzing-fusillade",
+        "detachmentId": "stormlance-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "stormlance-task-force-shock-assault",
+        "detachmentId": "stormlance-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "stormlance-task-force-wind-swift-evasion",
+        "detachmentId": "stormlance-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "vanguard-spearhead-a-deadly-prize",
+        "detachmentId": "vanguard-spearhead",
+        "state": "match"
+      },
+      {
+        "ruleId": "vanguard-spearhead-armour-of-contempt",
+        "detachmentId": "vanguard-spearhead",
+        "state": "match"
+      },
+      {
+        "ruleId": "vanguard-spearhead-calculated-feint",
+        "detachmentId": "vanguard-spearhead",
+        "state": "match"
+      },
+      {
+        "ruleId": "vanguard-spearhead-guerrilla-tactics",
+        "detachmentId": "vanguard-spearhead",
+        "state": "match"
+      },
+      {
+        "ruleId": "vanguard-spearhead-strike-from-the-shadows",
+        "detachmentId": "vanguard-spearhead",
+        "state": "match"
+      },
+      {
+        "ruleId": "vanguard-spearhead-surgical-strikes",
+        "detachmentId": "vanguard-spearhead",
+        "state": "match"
+      }
+    ],
     "unit-captain-with-jump-pack": [
       {
         "ruleId": "1st-company-task-force-armour-of-contempt",
@@ -40918,581 +41493,6 @@
         "ruleId": "war-tempered-artifice",
         "kind": "enhancement",
         "detachmentId": "forgefather-s-seekers",
-        "state": "match"
-      }
-    ],
-    "unit-lieutenant-titus": [
-      {
-        "ruleId": "1st-company-task-force-armour-of-contempt",
-        "detachmentId": "1st-company-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "anvil-siege-force-armour-of-contempt",
-        "detachmentId": "anvil-siege-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "anvil-siege-force-battle-drill-recall",
-        "detachmentId": "anvil-siege-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "anvil-siege-force-hail-of-vengeance",
-        "detachmentId": "anvil-siege-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "anvil-siege-force-no-threat-too-great",
-        "detachmentId": "anvil-siege-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "anvil-siege-force-not-one-backwards-step",
-        "detachmentId": "anvil-siege-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "anvil-siege-force-rigid-discipline",
-        "detachmentId": "anvil-siege-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "armoured-speartip-armour-of-contempt",
-        "detachmentId": "armoured-speartip",
-        "state": "match"
-      },
-      {
-        "ruleId": "armoured-speartip-purgation-doctrine",
-        "detachmentId": "armoured-speartip",
-        "state": "match"
-      },
-      {
-        "ruleId": "armoured-speartip-rapid-embarkation",
-        "detachmentId": "armoured-speartip",
-        "state": "conditional",
-        "condition": "transport-wounds-characteristic-14-or-more",
-        "conditions": [
-          "transport-wounds-characteristic-14-or-more",
-          "infantry-able-to-embark",
-          "infantry-wholly-within-6"
-        ]
-      },
-      {
-        "ruleId": "bastion-task-force-codex-discipline",
-        "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "bastion-task-force-heresy-undone",
-        "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "bastion-task-force-light-of-vengeance",
-        "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "blade-of-ultramar-armour-of-contempt",
-        "detachmentId": "blade-of-ultramar",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "blade-of-ultramar-courage-and-honour",
-        "detachmentId": "blade-of-ultramar",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "blade-of-ultramar-exemplary-vigilance",
-        "detachmentId": "blade-of-ultramar",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "blade-of-ultramar-practical-tactics",
-        "detachmentId": "blade-of-ultramar",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "blade-of-ultramar-tactical-foresight",
-        "detachmentId": "blade-of-ultramar",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "blade-of-ultramar-ultramarian-adaptivity",
-        "detachmentId": "blade-of-ultramar",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "ceramite-sentinels-armour-of-contempt",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
-        "ruleId": "ceramite-sentinels-augmented-targeting",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
-        "ruleId": "ceramite-sentinels-evasive-repositioning",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
-        "ruleId": "ceramite-sentinels-priority-strike",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
-        "ruleId": "ceramite-sentinels-stand-to-the-end",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
-        "ruleId": "ceramite-sentinels-unyielding-might",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
-        "ruleId": "core-stratagem-command-re-roll",
-        "scope": "core",
-        "state": "match"
-      },
-      {
-        "ruleId": "core-stratagem-counteroffensive",
-        "scope": "core",
-        "state": "match"
-      },
-      {
-        "ruleId": "core-stratagem-epic-challenge",
-        "scope": "core",
-        "state": "match"
-      },
-      {
-        "ruleId": "core-stratagem-explosives",
-        "scope": "core",
-        "state": "match"
-      },
-      {
-        "ruleId": "core-stratagem-fire-overwatch",
-        "scope": "core",
-        "state": "match"
-      },
-      {
-        "ruleId": "core-stratagem-heroic-intervention",
-        "scope": "core",
-        "state": "match"
-      },
-      {
-        "ruleId": "core-stratagem-insane-bravery",
-        "scope": "core",
-        "state": "match"
-      },
-      {
-        "ruleId": "core-stratagem-rapid-ingress",
-        "scope": "core",
-        "state": "match"
-      },
-      {
-        "ruleId": "emperor-s-shield-armour-of-contempt",
-        "detachmentId": "emperor-s-shield",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-imperial-fists",
-        "conditions": [
-          "detachment-army-restricted-to-imperial-fists"
-        ]
-      },
-      {
-        "ruleId": "firestorm-assault-force-armour-of-contempt",
-        "detachmentId": "firestorm-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "firestorm-assault-force-crucible-of-battle",
-        "detachmentId": "firestorm-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "firestorm-assault-force-immolation-protocols",
-        "detachmentId": "firestorm-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "firestorm-assault-force-onslaught-of-fire",
-        "detachmentId": "firestorm-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "firestorm-assault-force-rapid-embarkation",
-        "detachmentId": "firestorm-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "forgefather-s-seekers-armour-of-contempt",
-        "detachmentId": "forgefather-s-seekers",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-salamanders",
-        "conditions": [
-          "detachment-army-restricted-to-salamanders"
-        ]
-      },
-      {
-        "ruleId": "forgefather-s-seekers-blazing-earth",
-        "detachmentId": "forgefather-s-seekers",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-salamanders",
-        "conditions": [
-          "detachment-army-restricted-to-salamanders",
-          "unit-equipped-with-torrent-weapon"
-        ]
-      },
-      {
-        "ruleId": "forgefather-s-seekers-crucible-of-battle",
-        "detachmentId": "forgefather-s-seekers",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-salamanders",
-        "conditions": [
-          "detachment-army-restricted-to-salamanders"
-        ]
-      },
-      {
-        "ruleId": "forgefather-s-seekers-immolation-protocols",
-        "detachmentId": "forgefather-s-seekers",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-salamanders",
-        "conditions": [
-          "detachment-army-restricted-to-salamanders"
-        ]
-      },
-      {
-        "ruleId": "forgefather-s-seekers-wrathful-inferno",
-        "detachmentId": "forgefather-s-seekers",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-salamanders",
-        "conditions": [
-          "detachment-army-restricted-to-salamanders"
-        ]
-      },
-      {
-        "ruleId": "gladius-task-force-adaptive-strategy",
-        "detachmentId": "gladius-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "gladius-task-force-armour-of-contempt",
-        "detachmentId": "gladius-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "gladius-task-force-honour-the-chapter",
-        "detachmentId": "gladius-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "gladius-task-force-only-in-death-does-duty-end",
-        "detachmentId": "gladius-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "gladius-task-force-squad-tactics",
-        "detachmentId": "gladius-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "gladius-task-force-storm-of-fire",
-        "detachmentId": "gladius-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "hammer-of-avernii-armour-of-contempt",
-        "detachmentId": "hammer-of-avernii",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-iron-hands",
-        "conditions": [
-          "detachment-army-restricted-to-iron-hands"
-        ]
-      },
-      {
-        "ruleId": "headhunter-task-force-armour-of-contempt",
-        "detachmentId": "headhunter-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "headhunter-task-force-rapid-gunnery",
-        "detachmentId": "headhunter-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "ironstorm-spearhead-armour-of-contempt",
-        "detachmentId": "ironstorm-spearhead",
-        "state": "match"
-      },
-      {
-        "ruleId": "ironstorm-spearhead-mercy-is-weakness",
-        "detachmentId": "ironstorm-spearhead",
-        "state": "match"
-      },
-      {
-        "ruleId": "ironstorm-spearhead-unbowed-conviction",
-        "detachmentId": "ironstorm-spearhead",
-        "state": "match"
-      },
-      {
-        "ruleId": "orbital-assault-force-auto-sense-coordination",
-        "detachmentId": "orbital-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "orbital-assault-force-blind-screen",
-        "detachmentId": "orbital-assault-force",
-        "state": "conditional",
-        "condition": "screening-unit-within-9",
-        "conditions": [
-          "screening-unit-within-9"
-        ]
-      },
-      {
-        "ruleId": "orbital-assault-force-onward-for-the-emperor",
-        "detachmentId": "orbital-assault-force",
-        "state": "conditional",
-        "condition": "infantry-not-set-up-this-turn",
-        "conditions": [
-          "infantry-not-set-up-this-turn",
-          "infantry-able-to-embark"
-        ]
-      },
-      {
-        "ruleId": "orbital-assault-force-shock-onslaught",
-        "detachmentId": "orbital-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "orbital-assault-force-suppression-strafing",
-        "detachmentId": "orbital-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "orbital-assault-force-tactical-decapitation",
-        "detachmentId": "orbital-assault-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "reclamation-force-crusading-conquerors",
-        "detachmentId": "reclamation-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "reclamation-force-fight-to-the-end",
-        "detachmentId": "reclamation-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "reclamation-force-furious-dedication",
-        "detachmentId": "reclamation-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "reclamation-force-marching-ever-on",
-        "detachmentId": "reclamation-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "reclamation-force-scions-of-guilliman",
-        "detachmentId": "reclamation-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "reclamation-force-ultramarian-destiny",
-        "detachmentId": "reclamation-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-ultramarines",
-        "conditions": [
-          "detachment-army-restricted-to-ultramarines"
-        ]
-      },
-      {
-        "ruleId": "shadowmark-talon-armour-of-contempt",
-        "detachmentId": "shadowmark-talon",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-raven-guard",
-        "conditions": [
-          "detachment-army-restricted-to-raven-guard"
-        ]
-      },
-      {
-        "ruleId": "shadowmark-talon-feint-and-thrust",
-        "detachmentId": "shadowmark-talon",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-raven-guard",
-        "conditions": [
-          "detachment-army-restricted-to-raven-guard"
-        ]
-      },
-      {
-        "ruleId": "shadowmark-talon-into-darkness",
-        "detachmentId": "shadowmark-talon",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-raven-guard",
-        "conditions": [
-          "detachment-army-restricted-to-raven-guard",
-          "up-to-two-phobos-or-scout-units-or-one-other-infantry-unit"
-        ]
-      },
-      {
-        "ruleId": "shadowmark-talon-lay-low-the-tyrants",
-        "detachmentId": "shadowmark-talon",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-raven-guard",
-        "conditions": [
-          "detachment-army-restricted-to-raven-guard"
-        ]
-      },
-      {
-        "ruleId": "shadowmark-talon-raptorial-vigilance",
-        "detachmentId": "shadowmark-talon",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-raven-guard",
-        "conditions": [
-          "detachment-army-restricted-to-raven-guard"
-        ]
-      },
-      {
-        "ruleId": "shadowmark-talon-stunning-fusillade",
-        "detachmentId": "shadowmark-talon",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-raven-guard",
-        "conditions": [
-          "detachment-army-restricted-to-raven-guard"
-        ]
-      },
-      {
-        "ruleId": "spearpoint-task-force-armour-of-contempt",
-        "detachmentId": "spearpoint-task-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-white-scars",
-        "conditions": [
-          "detachment-army-restricted-to-white-scars"
-        ]
-      },
-      {
-        "ruleId": "spearpoint-task-force-hunter-s-instincts",
-        "detachmentId": "spearpoint-task-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-white-scars",
-        "conditions": [
-          "detachment-army-restricted-to-white-scars"
-        ]
-      },
-      {
-        "ruleId": "spearpoint-task-force-mobile-lethality",
-        "detachmentId": "spearpoint-task-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-white-scars",
-        "conditions": [
-          "detachment-army-restricted-to-white-scars"
-        ]
-      },
-      {
-        "ruleId": "spearpoint-task-force-spear-thrust-and-sabre-swing",
-        "detachmentId": "spearpoint-task-force",
-        "state": "conditional",
-        "condition": "detachment-army-restricted-to-white-scars",
-        "conditions": [
-          "detachment-army-restricted-to-white-scars"
-        ]
-      },
-      {
-        "ruleId": "stormlance-task-force-armour-of-contempt",
-        "detachmentId": "stormlance-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "stormlance-task-force-blitzing-fusillade",
-        "detachmentId": "stormlance-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "stormlance-task-force-shock-assault",
-        "detachmentId": "stormlance-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "stormlance-task-force-wind-swift-evasion",
-        "detachmentId": "stormlance-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "vanguard-spearhead-a-deadly-prize",
-        "detachmentId": "vanguard-spearhead",
-        "state": "match"
-      },
-      {
-        "ruleId": "vanguard-spearhead-armour-of-contempt",
-        "detachmentId": "vanguard-spearhead",
-        "state": "match"
-      },
-      {
-        "ruleId": "vanguard-spearhead-calculated-feint",
-        "detachmentId": "vanguard-spearhead",
-        "state": "match"
-      },
-      {
-        "ruleId": "vanguard-spearhead-guerrilla-tactics",
-        "detachmentId": "vanguard-spearhead",
-        "state": "match"
-      },
-      {
-        "ruleId": "vanguard-spearhead-strike-from-the-shadows",
-        "detachmentId": "vanguard-spearhead",
-        "state": "match"
-      },
-      {
-        "ruleId": "vanguard-spearhead-surgical-strikes",
-        "detachmentId": "vanguard-spearhead",
         "state": "match"
       }
     ],

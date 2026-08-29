@@ -5674,8 +5674,8 @@
       }
     },
     {
-      "id": "unit-lieutenant-titus",
-      "title": "Lieutenant Titus",
+      "id": "unit-captain-titus",
+      "title": "Captain Titus",
       "status": "Current",
       "sourceLayer": "codex",
       "category": "Epic Heroes",
@@ -5689,7 +5689,7 @@
       ],
       "profiles": [
         {
-          "name": "Lieutenant Titus",
+          "name": "Captain Titus",
           "stats": {
             "M": "6\"",
             "T": "4",
@@ -5758,7 +5758,7 @@
         "Grenades",
         "Epic Hero",
         "Tacticus",
-        "Lieutenant",
+        "Captain",
         "Titus",
         "Adeptus Astartes",
         "Ultramarines"
@@ -5778,10 +5778,12 @@
         "leader": [
           "Assault Intercessor Squad",
           "Bladeguard Veteran Squad",
+          "Company Heroes",
           "Hellblaster Squad",
           "Infernus Squad",
           "Intercessor Squad",
           "Sternguard Veteran Squad",
+          "Victrix Honour Guard",
           "Wardens of Ultramar"
         ],
         "support": [],

@@ -1601,8 +1601,8 @@
       }
     },
     {
-      "id": "unit-lieutenant-titus",
-      "title": "Lieutenant Titus",
+      "id": "unit-captain-titus",
+      "title": "Captain Titus",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [

@@ -1588,7 +1588,7 @@
           "unit-iron-father-feirros",
           "unit-kayvaan-shrike",
           "unit-korsarro-khan",
-          "unit-lieutenant-titus",
+          "unit-captain-titus",
           "unit-marneus-calgar-in-armour-of-antilochus",
           "unit-pedro-kantor",
           "unit-roboute-guilliman",
@@ -2642,7 +2642,7 @@
           "unit-captain",
           "unit-lieutenant",
           "unit-aethon-shaan",
-          "unit-lieutenant-titus",
+          "unit-captain-titus",
           "unit-suboden-khan"
         ]
       }
@@ -4202,11 +4202,11 @@
       "termId": "space-marines-ability-honour-of-ultramar",
       "navigation": {
         "glossary": "glossary-space-marines-ability-honour-of-ultramar",
-        "rule": "unit-lieutenant-titus",
-        "datasheet": "unit-lieutenant-titus",
-        "statline": "lieutenant-titus-profile",
+        "rule": "unit-captain-titus",
+        "datasheet": "unit-captain-titus",
+        "statline": "captain-titus-profile",
         "units": [
-          "unit-lieutenant-titus"
+          "unit-captain-titus"
         ]
       }
     },
@@ -4214,11 +4214,11 @@
       "termId": "space-marines-ability-press-the-attack",
       "navigation": {
         "glossary": "glossary-space-marines-ability-press-the-attack",
-        "rule": "unit-lieutenant-titus",
-        "datasheet": "unit-lieutenant-titus",
-        "statline": "lieutenant-titus-profile",
+        "rule": "unit-captain-titus",
+        "datasheet": "unit-captain-titus",
+        "statline": "captain-titus-profile",
         "units": [
-          "unit-lieutenant-titus"
+          "unit-captain-titus"
         ]
       }
     },
@@ -4226,11 +4226,11 @@
       "termId": "space-marines-ability-honour-of-the-chapter",
       "navigation": {
         "glossary": "glossary-space-marines-ability-honour-of-the-chapter",
-        "rule": "unit-lieutenant-titus",
-        "datasheet": "unit-lieutenant-titus",
-        "statline": "lieutenant-titus-profile",
+        "rule": "unit-captain-titus",
+        "datasheet": "unit-captain-titus",
+        "statline": "captain-titus-profile",
         "units": [
-          "unit-lieutenant-titus"
+          "unit-captain-titus"
         ]
       }
     },
@@ -4238,11 +4238,11 @@
       "termId": "space-marines-weapon-astartes-chainsword-4",
       "navigation": {
         "glossary": "glossary-space-marines-weapon-astartes-chainsword-4",
-        "rule": "unit-lieutenant-titus",
-        "datasheet": "unit-lieutenant-titus",
-        "statline": "lieutenant-titus-profile",
+        "rule": "unit-captain-titus",
+        "datasheet": "unit-captain-titus",
+        "statline": "captain-titus-profile",
         "units": [
-          "unit-lieutenant-titus"
+          "unit-captain-titus"
         ]
       }
     },

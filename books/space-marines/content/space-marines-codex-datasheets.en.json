@@ -5660,7 +5660,14 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -6589,7 +6596,12 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "COMPANY HEROES",
+          "INFERNUS SQUAD",
+          "TACTICAL SQUAD"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []

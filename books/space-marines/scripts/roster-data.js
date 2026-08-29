@@ -47,6 +47,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-korsarro-khan",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-librarian",
             "maxCharacters": 2
           },
@@ -64,6 +68,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-uriel-ventris",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-vulkan-hestan",
             "maxCharacters": 2
           }
         ],
@@ -112,6 +120,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-korsarro-khan",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-librarian",
               "maxCharacters": 2
             },
@@ -129,6 +141,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-uriel-ventris",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-vulkan-hestan",
               "maxCharacters": 2
             }
           ],
@@ -702,6 +718,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-korsarro-khan",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-librarian",
             "maxCharacters": 2
           },
@@ -764,6 +784,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-judiciar",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-korsarro-khan",
               "maxCharacters": 2
             },
             {
@@ -1276,6 +1300,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 1
           },
           {
+            "unitId": "unit-korsarro-khan",
+            "maxCharacters": 1
+          },
+          {
             "unitId": "unit-librarian",
             "maxCharacters": 1
           },
@@ -1293,6 +1321,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-uriel-ventris",
+            "maxCharacters": 1
+          },
+          {
+            "unitId": "unit-vulkan-hestan",
             "maxCharacters": 1
           }
         ],
@@ -1324,6 +1356,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 1
             },
             {
+              "unitId": "unit-korsarro-khan",
+              "maxCharacters": 1
+            },
+            {
               "unitId": "unit-librarian",
               "maxCharacters": 1
             },
@@ -1341,6 +1377,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-uriel-ventris",
+              "maxCharacters": 1
+            },
+            {
+              "unitId": "unit-vulkan-hestan",
               "maxCharacters": 1
             }
           ],
@@ -10673,14 +10713,64 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Tacticus"
       ],
       "relations": {
-        "canLead": [],
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-company-heroes",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-tactical-squad",
+            "maxCharacters": 1
+          }
+        ],
         "canSupport": [],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
       "ruleFacts": {
         "relations": {
-          "canLead": [],
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-company-heroes",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-tactical-squad",
+              "maxCharacters": 1
+            }
+          ],
           "canSupport": [],
           "canBeLedBy": [],
           "canBeSupportedBy": []
@@ -12229,14 +12319,48 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Tacticus"
       ],
       "relations": {
-        "canLead": [],
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-company-heroes",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-infernus-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-tactical-squad",
+            "maxCharacters": 1
+          }
+        ],
         "canSupport": [],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
       "ruleFacts": {
         "relations": {
-          "canLead": [],
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-company-heroes",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-infernus-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-tactical-squad",
+              "maxCharacters": 1
+            }
+          ],
           "canSupport": [],
           "canBeLedBy": [],
           "canBeSupportedBy": []
@@ -13620,6 +13744,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-korsarro-khan",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant-titus",
             "maxCharacters": 2
           },
@@ -13670,6 +13798,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-judiciar",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-korsarro-khan",
               "maxCharacters": 2
             },
             {
@@ -14378,6 +14510,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-korsarro-khan",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-marneus-calgar-in-armour-of-antilochus",
             "maxCharacters": 2
           },
@@ -14387,6 +14523,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-uriel-ventris",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-vulkan-hestan",
             "maxCharacters": 2
           }
         ],
@@ -14411,6 +14551,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-korsarro-khan",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-marneus-calgar-in-armour-of-antilochus",
               "maxCharacters": 2
             },
@@ -14420,6 +14564,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-uriel-ventris",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-vulkan-hestan",
               "maxCharacters": 2
             }
           ],
@@ -17069,6 +17217,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "unitId": "unit-marneus-calgar-in-armour-of-antilochus",
             "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-vulkan-hestan",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
@@ -17117,6 +17269,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-marneus-calgar-in-armour-of-antilochus",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-vulkan-hestan",
               "maxCharacters": 2
             }
           ],
@@ -18191,6 +18347,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-korsarro-khan",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-librarian",
             "maxCharacters": 2
           },
@@ -18253,6 +18413,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-judiciar",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-korsarro-khan",
               "maxCharacters": 2
             },
             {

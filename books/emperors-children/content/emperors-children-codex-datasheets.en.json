@@ -1159,7 +1159,8 @@
       "paidWargear": [],
       "relations": {
         "leader": [
-          "Noise Marines"
+          "Noise Marines",
+          "Chaos Terminators"
         ],
         "support": [],
         "attachedUnit": [],

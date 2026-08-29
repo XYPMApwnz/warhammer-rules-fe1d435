@@ -2032,6 +2032,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
+            "unitId": "unit-chaos-terminators",
+            "maxCharacters": 1
+          },
+          {
             "unitId": "unit-noise-marines",
             "maxCharacters": 1
           }
@@ -2043,6 +2047,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleFacts": {
         "relations": {
           "canLead": [
+            {
+              "unitId": "unit-chaos-terminators",
+              "maxCharacters": 1
+            },
             {
               "unitId": "unit-noise-marines",
               "maxCharacters": 1
@@ -3326,14 +3334,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [],
         "canSupport": [],
-        "canBeLedBy": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-lord-kakophonist",
+            "maxCharacters": 1
+          }
+        ],
         "canBeSupportedBy": []
       },
       "ruleFacts": {
         "relations": {
           "canLead": [],
           "canSupport": [],
-          "canBeLedBy": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-lord-kakophonist",
+              "maxCharacters": 1
+            }
+          ],
           "canBeSupportedBy": []
         }
       },

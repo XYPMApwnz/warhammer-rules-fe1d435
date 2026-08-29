@@ -35,6 +35,29 @@ CURRENT_FACTION_PACK = {
 }
 
 
+def resolved_path(path: Path) -> Path:
+    return path.expanduser().resolve(strict=False)
+
+
+def path_within(candidate: Path, root: Path) -> bool:
+    try:
+        candidate.relative_to(root)
+        return True
+    except ValueError:
+        return False
+
+
+def validate_candidate_destination(value: str) -> Path:
+    candidate = resolved_path(Path(value))
+    allowed_roots = (
+        resolved_path(Path(tempfile.gettempdir())),
+        resolved_path(REPO / "tmp" / "candidates" / "space-marines"),
+    )
+    if not any(path_within(candidate, root) for root in allowed_roots):
+        raise ValueError("space-marines: candidate destination is outside approved roots")
+    return candidate
+
+
 def key(value: str) -> str:
     return " ".join("".join(char.lower() if char.isalnum() else " " for char in value).split())
 
@@ -159,7 +182,16 @@ def build() -> tuple[dict, dict, dict]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--candidate-dir")
     args = parser.parse_args()
+    candidate_dir = None
+    if not args.check:
+        if not args.candidate_dir:
+            parser.error("write-run requires --candidate-dir")
+        try:
+            candidate_dir = validate_candidate_destination(args.candidate_dir)
+        except ValueError as error:
+            parser.error(str(error))
     snapshot, datasheets, points = build()
     errors = []
     if len(datasheets["datasheets"]) != 101:
@@ -180,10 +212,15 @@ def main() -> int:
         print("\n".join(errors))
         return 1
     if not args.check:
-        for path, value in ((SNAPSHOT, snapshot), (DATASHEETS, datasheets), (POINTS, points)):
+        outputs = (
+            (candidate_dir / SNAPSHOT.name, snapshot),
+            (candidate_dir / DATASHEETS.name, datasheets),
+            (candidate_dir / POINTS.name, points),
+        )
+        for path, value in outputs:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print("Wrote Space Marines BSData snapshot, datasheets and points")
+        print(f"Wrote Space Marines candidate BSData layer to {candidate_dir}")
     else:
         print("Space Marines BSData source layer is current")
     return 0

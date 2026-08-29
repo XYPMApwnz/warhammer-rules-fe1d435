@@ -1,9 +1,14 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
+import {fileURLToPath} from 'node:url';
 
 const args=process.argv.slice(2);
 const check=args.includes('--check');
+const candidateDirIndex=args.indexOf('--candidate-dir');
+const candidateDirArg=candidateDirIndex<0?null:args[candidateDirIndex+1];
+if(candidateDirIndex>=0&&(!candidateDirArg||candidateDirArg.startsWith('--')))throw new Error('--candidate-dir requires a path');
 const configArg=args.find(arg=>!arg.startsWith('--'));
 if(!configArg)throw new Error('Usage: node extract-bsdata-11e.mjs <config.json> [--check]');
 
@@ -11,6 +16,32 @@ const configPath=path.resolve(configArg);
 const configDir=path.dirname(configPath);
 const config=JSON.parse(fs.readFileSync(configPath,'utf8'));
 const resolvePath=value=>path.resolve(configDir,value);
+const pathKey=value=>process.platform==='win32'?value.toLowerCase():value;
+const resolvedPath=value=>{
+  let current=path.resolve(value),suffix=[];
+  while(!fs.existsSync(current)){
+    const parent=path.dirname(current);
+    if(parent===current)break;
+    suffix.unshift(path.basename(current));
+    current=parent;
+  }
+  return path.resolve(fs.realpathSync.native(current),...suffix);
+};
+const pathWithin=(candidate,root)=>{
+  const relative=path.relative(pathKey(root),pathKey(candidate));
+  return relative===''||(!relative.startsWith(`..${path.sep}`)&&relative!=='..'&&!path.isAbsolute(relative));
+};
+const candidateOnly=config.writePolicy?.mode==='candidate-only';
+let candidateDir=null;
+if(!check&&candidateOnly){
+  if(!candidateDirArg)throw new Error(`${config.faction?.id||'book'}: write-run requires --candidate-dir`);
+  candidateDir=resolvedPath(candidateDirArg);
+  const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
+  const allowedRoots=[resolvedPath(os.tmpdir()),resolvedPath(path.join(repo,'tmp','candidates',config.faction.id))];
+  if(!allowedRoots.some(root=>pathWithin(candidateDir,root)))throw new Error(`${config.faction?.id||'book'}: candidate destination is outside approved roots`);
+}else if(candidateDirArg&&!candidateOnly){
+  throw new Error(`${config.faction?.id||'book'}: --candidate-dir requires candidate-only write policy`);
+}
 const sha256=buffer=>crypto.createHash('sha256').update(buffer).digest('hex').toUpperCase();
 const json=value=>`${JSON.stringify(value,null,2)}\n`;
 const textCorrections=new Map(Object.entries(config.textCorrections||{}));
@@ -525,10 +556,11 @@ if(config.outputs.officialPoints){
   points.audit.enhancements=points.enhancements.length;
 }
 
+const outputPath=value=>candidateDir?path.join(candidateDir,path.basename(resolvePath(value))):resolvePath(value);
 const outputs=[
-  [resolvePath(config.outputs.snapshot),json(snapshot)],
-  [resolvePath(config.outputs.datasheets),json(datasheets)],
-  [resolvePath(config.outputs.points),json(points)]
+  [outputPath(config.outputs.snapshot),json(snapshot)],
+  [outputPath(config.outputs.datasheets),json(datasheets)],
+  [outputPath(config.outputs.points),json(points)]
 ];
 for(const [file,content] of outputs){
   if(check){

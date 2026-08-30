@@ -120,7 +120,34 @@
           }
         ]
       }
-    }
+    },
+    "relationAdds": [
+      {
+        "sourceId": "unit-ancient",
+        "role": "support",
+        "targetId": "unit-inner-circle-companions"
+      },
+      {
+        "sourceId": "unit-apothecary",
+        "role": "support",
+        "targetId": "unit-inner-circle-companions"
+      },
+      {
+        "sourceId": "unit-lieutenant",
+        "role": "support",
+        "targetId": "unit-inner-circle-companions"
+      },
+      {
+        "sourceId": "unit-ancient-in-terminator-armor",
+        "role": "support",
+        "targetId": "unit-deathwing-knights"
+      },
+      {
+        "sourceId": "unit-ancient-in-terminator-armor",
+        "role": "support",
+        "targetId": "unit-deathwing-terminator-squad"
+      }
+    ]
   },
   "dependencyDetachments": {
     "render": true,

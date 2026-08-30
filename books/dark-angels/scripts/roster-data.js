@@ -1205,42 +1205,55 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canBeLedBy": [
           {
             "unitId": "unit-asmodai",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-azrael",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-captain",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-chaplain",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-ezekiel",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-judiciar",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-lazarus",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-librarian",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-techmarine",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
-        "canBeSupportedBy": []
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-apothecary",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-lieutenant",
+            "maxCharacters": 2
+          }
+        ]
       },
       "ruleFacts": {
         "relations": {
@@ -1249,42 +1262,55 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [
             {
               "unitId": "unit-asmodai",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-azrael",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-captain",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-chaplain",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-ezekiel",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-judiciar",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-lazarus",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-librarian",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-techmarine",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
-          "canBeSupportedBy": []
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-lieutenant",
+              "maxCharacters": 2
+            }
+          ]
         }
       },
       "gameSelections": {
@@ -2183,11 +2209,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-inner-circle-companions",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-intercessor-squad",
             "maxCharacters": 2
           },
           {
             "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-tactical-squad",
             "maxCharacters": 2
           }
         ],
@@ -2219,11 +2253,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-inner-circle-companions",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-intercessor-squad",
               "maxCharacters": 2
             },
             {
               "unitId": "unit-sternguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-tactical-squad",
               "maxCharacters": 2
             }
           ],
@@ -2414,7 +2456,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [],
         "canSupport": [
           {
+            "unitId": "unit-deathwing-knights",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-deathwing-terminator-squad",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-terminator-assault-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-terminator-squad",
             "maxCharacters": 2
           }
         ],
@@ -2426,7 +2480,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [],
           "canSupport": [
             {
+              "unitId": "unit-deathwing-knights",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-deathwing-terminator-squad",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-terminator-assault-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-terminator-squad",
               "maxCharacters": 2
             }
           ],
@@ -2745,11 +2811,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-inner-circle-companions",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-intercessor-squad",
             "maxCharacters": 2
           },
           {
             "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-tactical-squad",
             "maxCharacters": 2
           }
         ],
@@ -2781,11 +2855,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-inner-circle-companions",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-intercessor-squad",
               "maxCharacters": 2
             },
             {
               "unitId": "unit-sternguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-tactical-squad",
               "maxCharacters": 2
             }
           ],
@@ -3275,7 +3357,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-inner-circle-companions",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-intercessor-squad",
@@ -3287,7 +3369,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -3319,7 +3401,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-inner-circle-companions",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-intercessor-squad",
@@ -3331,7 +3413,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -4228,11 +4310,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [
           {
             "unitId": "unit-deathwing-knights",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-deathwing-terminator-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-terminator-assault-squad",
@@ -4240,7 +4322,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-terminator-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -4252,11 +4334,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [
             {
               "unitId": "unit-deathwing-knights",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-deathwing-terminator-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-terminator-assault-squad",
@@ -4264,7 +4346,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-terminator-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -4862,7 +4944,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-inner-circle-companions",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-intercessor-squad",
@@ -4874,7 +4956,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -4902,7 +4984,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-inner-circle-companions",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-intercessor-squad",
@@ -4914,7 +4996,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -5051,11 +5133,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [
           {
             "unitId": "unit-deathwing-knights",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-deathwing-terminator-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-terminator-assault-squad",
@@ -5063,7 +5145,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-terminator-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -5075,11 +5157,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [
             {
               "unitId": "unit-deathwing-knights",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-deathwing-terminator-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-terminator-assault-squad",
@@ -5087,7 +5169,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-terminator-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -5909,7 +5991,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-inner-circle-companions",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-intercessor-squad",
@@ -5921,7 +6003,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -5945,7 +6027,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-inner-circle-companions",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-intercessor-squad",
@@ -5957,7 +6039,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -6122,7 +6204,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-inner-circle-companions",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-intercessor-squad",
@@ -6134,7 +6216,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -6166,7 +6248,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-inner-circle-companions",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-intercessor-squad",
@@ -6178,7 +6260,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -6663,11 +6745,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [
           {
             "unitId": "unit-deathwing-knights",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-deathwing-terminator-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-terminator-assault-squad",
@@ -6675,7 +6757,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-terminator-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -6687,11 +6769,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [
             {
               "unitId": "unit-deathwing-knights",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-deathwing-terminator-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-terminator-assault-squad",
@@ -6699,7 +6781,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-terminator-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -6973,11 +7055,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-inner-circle-companions",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-intercessor-squad",
             "maxCharacters": 2
           },
           {
             "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-tactical-squad",
             "maxCharacters": 2
           }
         ],
@@ -7009,11 +7099,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             },
             {
+              "unitId": "unit-inner-circle-companions",
+              "maxCharacters": 2
+            },
+            {
               "unitId": "unit-intercessor-squad",
               "maxCharacters": 2
             },
             {
               "unitId": "unit-sternguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-tactical-squad",
               "maxCharacters": 2
             }
           ],
@@ -7940,7 +8038,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -7968,7 +8066,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -15044,22 +15142,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canBeLedBy": [
           {
             "unitId": "unit-belial",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-captain-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-chaplain-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-librarian-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
-        "canBeSupportedBy": []
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient-in-terminator-armor",
+            "maxCharacters": 2
+          }
+        ]
       },
       "ruleFacts": {
         "relations": {
@@ -15068,22 +15171,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [
             {
               "unitId": "unit-belial",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-captain-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-chaplain-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-librarian-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
-          "canBeSupportedBy": []
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient-in-terminator-armor",
+              "maxCharacters": 2
+            }
+          ]
         }
       },
       "gameSelections": {
@@ -23259,7 +23367,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-inner-circle-companions",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-intercessor-squad",
@@ -23271,7 +23379,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -23299,7 +23407,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-inner-circle-companions",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-intercessor-squad",
@@ -23311,7 +23419,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -23510,7 +23618,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-inner-circle-companions",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-intercessor-squad",
@@ -23522,7 +23630,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -23550,7 +23658,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-inner-circle-companions",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-intercessor-squad",
@@ -23562,7 +23670,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -23695,11 +23803,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [
           {
             "unitId": "unit-deathwing-knights",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-deathwing-terminator-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-terminator-assault-squad",
@@ -23707,7 +23815,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-terminator-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -23719,11 +23827,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [
             {
               "unitId": "unit-deathwing-knights",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-deathwing-terminator-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-terminator-assault-squad",
@@ -23731,7 +23839,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-terminator-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -23881,7 +23989,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-inner-circle-companions",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-intercessor-squad",
@@ -23893,7 +24001,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -23921,7 +24029,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-inner-circle-companions",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-intercessor-squad",
@@ -23933,7 +24041,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -24162,7 +24270,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-inner-circle-companions",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-intercessor-squad",
@@ -24174,7 +24282,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-tactical-squad",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -24198,7 +24306,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-inner-circle-companions",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-intercessor-squad",
@@ -24210,7 +24318,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-tactical-squad",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -24830,22 +24938,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canBeLedBy": [
           {
             "unitId": "unit-belial",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-captain-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-chaplain-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-librarian-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
-        "canBeSupportedBy": []
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient-in-terminator-armor",
+            "maxCharacters": 2
+          }
+        ]
       },
       "ruleFacts": {
         "relations": {
@@ -24854,22 +24967,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [
             {
               "unitId": "unit-belial",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-captain-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-chaplain-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-librarian-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
-          "canBeSupportedBy": []
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient-in-terminator-armor",
+              "maxCharacters": 2
+            }
+          ]
         }
       },
       "gameSelections": {
@@ -25077,22 +25195,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canBeLedBy": [
           {
             "unitId": "unit-belial",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-captain-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-chaplain-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-librarian-in-terminator-armour",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
-        "canBeSupportedBy": []
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient-in-terminator-armor",
+            "maxCharacters": 2
+          }
+        ]
       },
       "ruleFacts": {
         "relations": {
@@ -25101,22 +25224,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [
             {
               "unitId": "unit-belial",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-captain-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-chaplain-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-librarian-in-terminator-armour",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
-          "canBeSupportedBy": []
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient-in-terminator-armor",
+              "maxCharacters": 2
+            }
+          ]
         }
       },
       "gameSelections": {
@@ -25559,38 +25687,51 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canBeLedBy": [
           {
             "unitId": "unit-asmodai",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-azrael",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-captain",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-chaplain",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-ezekiel",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-judiciar",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-lazarus",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-librarian",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
-        "canBeSupportedBy": []
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-apothecary",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-lieutenant",
+            "maxCharacters": 2
+          }
+        ]
       },
       "ruleFacts": {
         "relations": {
@@ -25599,38 +25740,51 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [
             {
               "unitId": "unit-asmodai",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-azrael",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-captain",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-chaplain",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-ezekiel",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-judiciar",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-lazarus",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-librarian",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
-          "canBeSupportedBy": []
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-lieutenant",
+              "maxCharacters": 2
+            }
+          ]
         }
       },
       "gameSelections": {

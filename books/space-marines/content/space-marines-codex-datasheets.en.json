@@ -1034,7 +1034,8 @@
           "HELLBLASTER SQUAD",
           "INFERNUS SQUAD",
           "INTERCESSOR SQUAD",
-          "STERNGUARD VETERAN SQUAD"
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
         ],
         "attachedUnit": [],
         "transport": []
@@ -1201,7 +1202,8 @@
       "relations": {
         "leader": [],
         "support": [
-          "TERMINATOR ASSAULT SQUAD"
+          "TERMINATOR ASSAULT SQUAD",
+          "TERMINATOR SQUAD"
         ],
         "attachedUnit": [],
         "transport": []
@@ -1322,7 +1324,8 @@
           "HELLBLASTER SQUAD",
           "INFERNUS SQUAD",
           "INTERCESSOR SQUAD",
-          "STERNGUARD VETERAN SQUAD"
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
         ],
         "attachedUnit": [],
         "transport": []
@@ -3592,7 +3595,8 @@
           "HELLBLASTER SQUAD",
           "INFERNUS SQUAD",
           "INTERCESSOR SQUAD",
-          "STERNGUARD VETERAN SQUAD"
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
         ],
         "attachedUnit": [],
         "transport": []

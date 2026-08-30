@@ -187,7 +187,12 @@ for(const leader of units){
     }
   }
 }
-const relationGraphs=buildRelationGraphs(relationUnits,relationEdges);
+const relationGraphs=buildRelationGraphs(relationUnits,relationEdges,{
+  bookId:config.id,
+  inheritedUnits:dependencyUnits,
+  effectiveUnits:units,
+  adds:dependencyScope.relationAdds||[]
+});
 
 const terms=new Map();
 function addTerm(title,summary,sectionId,kind='faction-term',unitId='',termScope=config.id){

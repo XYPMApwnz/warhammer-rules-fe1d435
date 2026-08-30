@@ -1,11 +1,42 @@
 const keys=['canLead','canSupport','canBeLedBy','canBeSupportedBy'];
 const inverse={leader:['canLead','canBeLedBy'],support:['canSupport','canBeSupportedBy']};
 
-export function buildRelationGraphs(units,edges){
+const edgeKey=edge=>`${edge.role}\0${edge.sourceId}\0${edge.targetId}`;
+const stableId=value=>typeof value==='string'&&value.length>0&&value.trim()===value;
+
+export function applyDependencyRelationAdds({bookId='book',inheritedUnits=[],effectiveUnits=[],edges=[],adds=[]}){
+  if(!Array.isArray(adds))throw new Error(`${bookId}: dependency relationAdds must be an array`);
+  if(adds.length===0)return edges;
+  const baseEdges=new Set(edges.map(edgeKey)),overlayEdges=new Set(),result=[...edges];
+  for(const [index,record] of adds.entries()){
+    const label=`${bookId}: dependency relation ADD ${index+1}`;
+    if(!record||typeof record!=='object'||Array.isArray(record))throw new Error(`${label} must be an object`);
+    if(Object.hasOwn(record,'operation'))throw new Error(`${label} must use implicit ADD; explicit operations are unsupported`);
+    const {sourceId,role,targetId}=record;
+    if(!stableId(sourceId))throw new Error(`${label} requires a stable sourceId`);
+    if(!stableId(targetId))throw new Error(`${label} requires a stable targetId`);
+    if(!Object.hasOwn(inverse,role))throw new Error(`${label} has unsupported relation role ${role}`);
+    const sourceMatches=inheritedUnits.filter(unit=>unit.id===sourceId);
+    if(sourceMatches.length===0)throw new Error(`${label} source ${sourceId} is not provided by a declared dependency`);
+    if(sourceMatches.length!==1)throw new Error(`${label} source ${sourceId} is ambiguous across declared dependencies`);
+    const targetMatches=effectiveUnits.filter(unit=>unit.id===targetId);
+    if(targetMatches.length===0)throw new Error(`${label} target ${targetId} is not in the final effective inventory`);
+    if(targetMatches.length!==1)throw new Error(`${label} target ${targetId} is ambiguous in the final effective inventory`);
+    const key=edgeKey(record);
+    if(baseEdges.has(key))throw new Error(`${label} duplicates an existing direct relation ${sourceId} -> ${targetId}`);
+    if(overlayEdges.has(key))throw new Error(`${label} duplicates another dependency relation ADD ${sourceId} -> ${targetId}`);
+    overlayEdges.add(key);
+    result.push({role,sourceId,targetId});
+  }
+  return result;
+}
+
+export function buildRelationGraphs(units,edges,dependencyRelationAdds=null){
+  const graphEdges=dependencyRelationAdds?applyDependencyRelationAdds({...dependencyRelationAdds,edges}):edges;
   const byId=new Map(units.map(unit=>[unit.id,unit]));
   const graphs=new Map(units.map(unit=>[unit.id,Object.fromEntries(keys.map(key=>[key,[]]))]));
   const seen=new Set();
-  for(const edge of edges){
+  for(const edge of graphEdges){
     const pair=inverse[edge.role];
     if(!pair)throw new Error(`Unsupported relation role: ${edge.role}`);
     const source=byId.get(edge.sourceId),target=byId.get(edge.targetId);

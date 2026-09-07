@@ -19,6 +19,49 @@ assert.equal(Object.keys(WH_POINTS_CATALOG['emperor s children'].detachments).le
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['emperor s children'].enhancements).map(item=>item.title)).size,34);
 assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].units).length,101);
 assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].detachments).length,23);
+
+const catalogUnitsById=faction=>new Map(Object.values(WH_POINTS_CATALOG[faction].units).map(unit=>[unit.id,unit]));
+const catalogRelation=(faction,sourceId,kind,targetId)=>{
+  const source=catalogUnitsById(faction).get(sourceId);
+  assert.ok(source,`${faction}: missing catalogue unit ${sourceId}`);
+  return (source.relations?.[kind]||[]).filter(item=>item.unitId===targetId);
+};
+const sharedR3bSupport=[
+  ['unit-ancient','unit-tactical-squad'],
+  ['unit-apothecary','unit-tactical-squad'],
+  ['unit-lieutenant','unit-tactical-squad'],
+  ['unit-ancient-in-terminator-armor','unit-terminator-squad']
+];
+const darkAngelsR3bSupport=[
+  ['unit-ancient','unit-inner-circle-companions'],
+  ['unit-apothecary','unit-inner-circle-companions'],
+  ['unit-lieutenant','unit-inner-circle-companions'],
+  ['unit-ancient-in-terminator-armor','unit-deathwing-knights'],
+  ['unit-ancient-in-terminator-armor','unit-deathwing-terminator-squad']
+];
+const assertR3bSupport=(faction,sourceId,targetId)=>{
+  const direct=catalogRelation(faction,sourceId,'canSupport',targetId);
+  const inverse=catalogRelation(faction,targetId,'canBeSupportedBy',sourceId);
+  assert.equal(direct.length,1,`${faction}: support ${sourceId}>${targetId}`);
+  assert.equal(inverse.length,1,`${faction}: inverse ${targetId}<${sourceId}`);
+  assert.equal(direct[0].maxCharacters,2,`${faction}: support capacity ${sourceId}>${targetId}`);
+  assert.equal(inverse[0].maxCharacters,2,`${faction}: inverse capacity ${targetId}<${sourceId}`);
+};
+let r3bEffectiveManifestations=0;
+for(const faction of ['space marines','dark angels','blood angels'])for(const [sourceId,targetId] of sharedR3bSupport){
+  assertR3bSupport(faction,sourceId,targetId);
+  r3bEffectiveManifestations++;
+}
+for(const [sourceId,targetId] of darkAngelsR3bSupport){
+  assertR3bSupport('dark angels',sourceId,targetId);
+  r3bEffectiveManifestations++;
+  for(const faction of ['space marines','blood angels']){
+    assert.equal(catalogRelation(faction,sourceId,'canSupport',targetId).length,0,`${faction}: DA-local support leak ${sourceId}>${targetId}`);
+    const target=catalogUnitsById(faction).get(targetId);
+    if(target)assert.equal(catalogRelation(faction,targetId,'canBeSupportedBy',sourceId).length,0,`${faction}: DA-local inverse leak ${targetId}<${sourceId}`);
+  }
+}
+assert.equal(r3bEffectiveManifestations,17,'Roster Guides must expose all 17 effective R3B support manifestations');
 const common=(declared,header,lordPoints)=>`+++++++++++++++++++++++++++++++++++++++++++++++
 + FACTION KEYWORD: Chaos - Death Guard
 + DETACHMENT: Virulent Vectorium (Worldblight)

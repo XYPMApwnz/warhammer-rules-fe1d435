@@ -575,12 +575,12 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-enhancement-temporal-corridor",
     "rule": "detachment-librarius-conclave"
   },
-  "space-marines-detachment-rule-new-rule": {
-    "id": "space-marines-detachment-rule-new-rule",
-    "title": "New Rule",
+  "space-marines-detachment-rule-nowhere-to-hide": {
+    "id": "space-marines-detachment-rule-nowhere-to-hide",
+    "title": "Nowhere to Hide",
     "summary": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: ▪ While a unit is detected, that unit has +3\" detection range.",
     "full": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: ▪ While a unit is detected, that unit has +3\" detection range.",
-    "glossary": "glossary-space-marines-detachment-rule-new-rule",
+    "glossary": "glossary-space-marines-detachment-rule-nowhere-to-hide",
     "rule": "detachment-subversion-assets"
   },
   "space-marines-enhancement-death-in-the-dark-upgrade": {

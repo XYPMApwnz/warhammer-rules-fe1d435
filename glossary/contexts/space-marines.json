@@ -1374,10 +1374,10 @@
         "rule": "detachment-shadowmark-talon"
       }
     },
-    "space-marines-detachment-rule-new-rule": {
-      "termId": "space-marines-detachment-rule-new-rule",
+    "space-marines-detachment-rule-nowhere-to-hide": {
+      "termId": "space-marines-detachment-rule-nowhere-to-hide",
       "navigation": {
-        "glossary": "glossary-space-marines-detachment-rule-new-rule",
+        "glossary": "glossary-space-marines-detachment-rule-nowhere-to-hide",
         "rule": "detachment-subversion-assets"
       }
     },

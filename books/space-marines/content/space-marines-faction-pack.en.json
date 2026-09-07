@@ -1326,8 +1326,8 @@
         ]
       },
       "rule": {
-        "id": "subversion-assets-new-rule",
-        "title": "New Rule",
+        "id": "subversion-assets-nowhere-to-hide",
+        "title": "Nowhere to Hide",
         "text": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: ▪ While a unit is detected, that unit has +3\" detection range.",
         "sourcePages": [
           5

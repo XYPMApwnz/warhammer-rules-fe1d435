@@ -55418,14 +55418,14 @@
       ],
       "mentions": []
     },
-    "space-marines-detachment-rule-new-rule": {
-      "id": "space-marines-detachment-rule-new-rule",
+    "space-marines-detachment-rule-nowhere-to-hide": {
+      "id": "space-marines-detachment-rule-nowhere-to-hide",
       "kind": "detachment-rule",
       "scope": "space-marines",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "New Rule"
+        "en": "Nowhere to Hide"
       },
       "summary": {
         "en": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: • While a unit is detected, that unit has +3\" detection range."

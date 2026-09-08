@@ -768,7 +768,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "s": "4",
             "ap": "0",
             "d": "1",
-            "abilities": "Pistol",
+            "abilities": "Pistol, Precision",
             "sourceSelectionIds": [
               "unit-tormentors-selection-bolt-pistol"
             ]
@@ -783,7 +783,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "s": "7",
             "ap": "-2",
             "d": "1",
-            "abilities": "Pistol",
+            "abilities": "Pistol, Precision",
             "sourceSelectionIds": [
               "unit-tormentors-selection-plasma-pistol-standard",
               "unit-tormentors-weapon-family-plasma-pistol-selection"
@@ -799,7 +799,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "s": "8",
             "ap": "-3",
             "d": "2",
-            "abilities": "Hazardous, Pistol",
+            "abilities": "Hazardous, Pistol, Precision",
             "sourceSelectionIds": [
               "unit-tormentors-selection-plasma-pistol-supercharge",
               "unit-tormentors-weapon-family-plasma-pistol-selection"
@@ -1941,8 +1941,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Power fist",
             "mode": "melee",
             "range": "Melee",
-            "a": "3",
-            "skill": "3+",
+            "a": "5",
+            "skill": "2+",
             "s": "8",
             "ap": "-2",
             "d": "2",

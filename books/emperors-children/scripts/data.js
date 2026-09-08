@@ -880,7 +880,6 @@ window.DG_TERMS={
     "rule": "unit-infractors",
     "units": [
       "unit-infractors",
-      "unit-tormentors",
       "unit-lord-exultant",
       "unit-sorcerer",
       "unit-flawless-blades"
@@ -897,7 +896,6 @@ window.DG_TERMS={
     "rule": "unit-infractors",
     "units": [
       "unit-infractors",
-      "unit-tormentors",
       "unit-lord-exultant"
     ],
     "datasheet": "unit-infractors",
@@ -912,7 +910,6 @@ window.DG_TERMS={
     "rule": "unit-infractors",
     "units": [
       "unit-infractors",
-      "unit-tormentors",
       "unit-lord-exultant"
     ],
     "datasheet": "unit-infractors",
@@ -966,6 +963,45 @@ window.DG_TERMS={
     "summary": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
     "full": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
     "glossary": "glossary-emperors-children-ability-objective-defiled",
+    "rule": "unit-tormentors",
+    "units": [
+      "unit-tormentors"
+    ],
+    "datasheet": "unit-tormentors",
+    "statline": "tormentors-profile"
+  },
+  "emperors-children-weapon-bolt-pistol-2": {
+    "id": "emperors-children-weapon-bolt-pistol-2",
+    "title": "Bolt pistol",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol, Precision",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol, Precision",
+    "glossary": "glossary-emperors-children-weapon-bolt-pistol-2",
+    "rule": "unit-tormentors",
+    "units": [
+      "unit-tormentors"
+    ],
+    "datasheet": "unit-tormentors",
+    "statline": "tormentors-profile"
+  },
+  "emperors-children-weapon-plasma-pistol-standard-2": {
+    "id": "emperors-children-weapon-plasma-pistol-standard-2",
+    "title": "➤ Plasma pistol - standard",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol, Precision",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol, Precision",
+    "glossary": "glossary-emperors-children-weapon-plasma-pistol-standard-2",
+    "rule": "unit-tormentors",
+    "units": [
+      "unit-tormentors"
+    ],
+    "datasheet": "unit-tormentors",
+    "statline": "tormentors-profile"
+  },
+  "emperors-children-weapon-plasma-pistol-supercharge-2": {
+    "id": "emperors-children-weapon-plasma-pistol-supercharge-2",
+    "title": "➤ Plasma pistol - supercharge",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol, Precision",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol, Precision",
+    "glossary": "glossary-emperors-children-weapon-plasma-pistol-supercharge-2",
     "rule": "unit-tormentors",
     "units": [
       "unit-tormentors"
@@ -1348,13 +1384,12 @@ window.DG_TERMS={
   "emperors-children-weapon-power-fist": {
     "id": "emperors-children-weapon-power-fist",
     "title": "Power fist",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2",
+    "summary": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2",
+    "full": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2",
     "glossary": "glossary-emperors-children-weapon-power-fist",
     "rule": "unit-lord-exultant",
     "units": [
-      "unit-lord-exultant",
-      "unit-chaos-terminators"
+      "unit-lord-exultant"
     ],
     "datasheet": "unit-lord-exultant",
     "statline": "lord-exultant-profile"
@@ -1852,6 +1887,19 @@ window.DG_TERMS={
     "summary": "Melee · Melee · A 3 · WS 4+ · S 8 · AP -2 · D 2 · Anti-VEHICLE 3+",
     "full": "Melee · Melee · A 3 · WS 4+ · S 8 · AP -2 · D 2 · Anti-VEHICLE 3+",
     "glossary": "glossary-emperors-children-weapon-chainfist",
+    "rule": "unit-chaos-terminators",
+    "units": [
+      "unit-chaos-terminators"
+    ],
+    "datasheet": "unit-chaos-terminators",
+    "statline": "chaos-terminators-profile"
+  },
+  "emperors-children-weapon-power-fist-2": {
+    "id": "emperors-children-weapon-power-fist-2",
+    "title": "Power fist",
+    "summary": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2",
+    "full": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2",
+    "glossary": "glossary-emperors-children-weapon-power-fist-2",
     "rule": "unit-chaos-terminators",
     "units": [
       "unit-chaos-terminators"

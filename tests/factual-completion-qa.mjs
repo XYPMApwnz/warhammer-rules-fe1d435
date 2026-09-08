@@ -15,6 +15,33 @@ function generatedBook(bookId){
   return sandbox.window.WH_ARMY_BOOK_TARGETS;
 }
 
+function generatedRoster(bookId){
+  const sandbox={window:{}};
+  vm.runInNewContext(read(`books/${bookId}/scripts/roster-data.js`),sandbox);
+  return sandbox.window.WH_BOOK_ROSTER_CATALOG;
+}
+
+function objectsById(value,id,found=[]){
+  if(!value||typeof value!=='object')return found;
+  if(value.id===id)found.push(value);
+  for(const child of Object.values(value))objectsById(child,id,found);
+  return found;
+}
+
+function assertGeneratedProfile(root,id,expected){
+  const matches=objectsById(root,id);
+  assert.equal(matches.length,1,`${id}: generated profile cardinality`);
+  const profile=matches[0];
+  const scalar=(...keys)=>keys.map(key=>profile[key]).find(value=>value!==undefined);
+  assert.equal(scalar('range'),expected.range,`${id}: range`);
+  assert.equal(scalar('a','attacks'),expected.a,`${id}: attacks`);
+  assert.equal(scalar('skill','weaponSkill','ballisticSkill'),expected.skill,`${id}: skill`);
+  assert.equal(scalar('s','strength'),expected.s,`${id}: strength`);
+  assert.equal(scalar('ap','armourPenetration','armorPenetration'),expected.ap,`${id}: AP`);
+  assert.equal(scalar('d','damage'),expected.d,`${id}: damage`);
+  assert.equal(scalar('abilities'),expected.abilities,`${id}: abilities`);
+}
+
 const daExpected=new Map([
   ['company-of-hunters',[
     {id:'stratagem-rapid-reappraisal',title:'Rapid Reappraisal',cp:1,category:'Battle Tactic',when:'End of your opponent’s Fight phase.',target:'One RAVENWING unit from your army that is not within Engagement Range of one or more enemy units.',effect:'Remove your unit from the battlefield and place it into Strategic Reserves.',canonicalType:'battle-tactic',typeStatus:'confirmed',sourceLabel:'Company of Hunters · Battle Tactic Stratagem'},
@@ -60,4 +87,36 @@ for(const rule of expectedDaRules){
   assert.equal(eligibility.roles?.filter(role=>role.side==='friendly').length,1,`${eligibilityId}: friendly role cardinality`);
 }
 
-console.log(`Factual completion QA passed: ${expectedDaRules.length} Dark Angels Stratagems.`);
+const ec=json('books/emperors-children/content/emperors-children-codex-datasheets.en.json');
+const ecUnit=id=>{
+  const matches=ec.datasheets.filter(unit=>unit.id===id);
+  assert.equal(matches.length,1,`${id}: canonical Datasheet cardinality`);
+  return matches[0];
+};
+const exactWeapon=(unit,name)=>{
+  const matches=unit.weapons.filter(weapon=>weapon.name===name);
+  assert.equal(matches.length,1,`${unit.id} / ${name}: canonical profile cardinality`);
+  return matches[0];
+};
+
+const lordPowerFist={name:'Power fist',mode:'melee',range:'Melee',a:'5',skill:'2+',s:'8',ap:'-2',d:'2',abilities:''};
+assert.deepEqual(exactWeapon(ecUnit('unit-lord-exultant'),'Power fist'),lordPowerFist,'Lord Exultant Power fist profile');
+
+const tormentorProfiles=[
+  {name:'Bolt pistol',mode:'ranged',range:'12"',a:'1',skill:'3+',s:'4',ap:'0',d:'1',abilities:'Pistol, Precision'},
+  {name:'➤ Plasma pistol - standard',mode:'ranged',range:'12"',a:'1',skill:'3+',s:'7',ap:'-2',d:'1',abilities:'Pistol, Precision'},
+  {name:'➤ Plasma pistol - supercharge',mode:'ranged',range:'12"',a:'1',skill:'3+',s:'8',ap:'-3',d:'2',abilities:'Hazardous, Pistol, Precision'}
+];
+const tormentors=ecUnit('unit-tormentors');
+for(const profile of tormentorProfiles)assert.deepEqual(exactWeapon(tormentors,profile.name),profile,`Tormentors ${profile.name}`);
+
+const ecRoster=generatedRoster('emperors-children');
+assertGeneratedProfile(ecRoster,'unit-lord-exultant-profile-power-fist-melee-5',lordPowerFist);
+assertGeneratedProfile(ecRoster,'unit-tormentors-profile-bolt-pistol-ranged',tormentorProfiles[0]);
+assertGeneratedProfile(ecRoster,'unit-tormentors-profile-plasma-pistol-standard-ranged-2',tormentorProfiles[1]);
+assertGeneratedProfile(ecRoster,'unit-tormentors-profile-plasma-pistol-supercharge-ranged-3',tormentorProfiles[2]);
+
+const ecGenerated=generatedBook('emperors-children');
+for(const unitId of ['unit-lord-exultant','unit-tormentors'])assert.ok(ecGenerated.targets[unitId],`${unitId}: generated target card`);
+
+console.log(`Factual completion QA passed: ${expectedDaRules.length} Dark Angels Stratagems and 3 EC factual repairs.`);

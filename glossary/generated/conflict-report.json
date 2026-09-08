@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 2588,
+    "terms": 2592,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
@@ -1331,6 +1331,7 @@
         "death-guard-weapon-plasma-pistol-standard-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-standard-noxious-blightbringer-plague-marines-tallyman",
         "emperors-children-weapon-plasma-pistol-standard",
+        "emperors-children-weapon-plasma-pistol-standard-2",
         "space-marines-weapon-plasma-pistol-standard",
         "blood-angels-weapon-plasma-pistol-standard",
         "blood-angels-weapon-plasma-pistol-standard-2"
@@ -1344,6 +1345,7 @@
         "death-guard-weapon-plasma-pistol-supercharge-noxious-blightbringer",
         "death-guard-weapon-plasma-pistol-supercharge-plague-marines-tallyman",
         "emperors-children-weapon-plasma-pistol-supercharge",
+        "emperors-children-weapon-plasma-pistol-supercharge-2",
         "space-marines-weapon-plasma-pistol-supercharge",
         "blood-angels-weapon-plasma-pistol-supercharge",
         "blood-angels-weapon-plasma-pistol-supercharge-2"
@@ -1357,6 +1359,7 @@
         "death-guard-weapon-power-fist-plague-marines",
         "adeptus-mechanicus-weapon-power-fist",
         "emperors-children-weapon-power-fist",
+        "emperors-children-weapon-power-fist-2",
         "space-marines-weapon-power-fist",
         "space-marines-weapon-power-fist-2",
         "space-marines-weapon-power-fist-3",
@@ -1372,6 +1375,7 @@
       "termIds": [
         "death-guard-weapon-bolt-pistol-malignant-plaguecaster-plague-marines-plague-surgeon",
         "emperors-children-weapon-bolt-pistol",
+        "emperors-children-weapon-bolt-pistol-2",
         "space-marines-weapon-bolt-pistol",
         "space-marines-weapon-bolt-pistol-2",
         "blood-angels-weapon-bolt-pistol"
@@ -2495,8 +2499,8 @@
     {
       "termIds": [
         "emperors-children-weapon-power-fist",
-        "space-marines-weapon-power-fist",
-        "blood-angels-weapon-power-fist-2"
+        "space-marines-weapon-power-fist-4",
+        "blood-angels-weapon-power-fist"
       ],
       "status": "review-required"
     },
@@ -2519,6 +2523,14 @@
       "termIds": [
         "emperors-children-weapon-chainfist",
         "space-marines-weapon-chainfist-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-power-fist-2",
+        "space-marines-weapon-power-fist",
+        "blood-angels-weapon-power-fist-2"
       ],
       "status": "review-required"
     },
@@ -2684,13 +2696,6 @@
       "termIds": [
         "space-marines-ability-rites-of-battle",
         "blood-angels-ability-rites-of-battle"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "space-marines-weapon-power-fist-4",
-        "blood-angels-weapon-power-fist"
       ],
       "status": "review-required"
     },

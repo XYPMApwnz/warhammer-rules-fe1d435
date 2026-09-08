@@ -44292,6 +44292,46 @@
       ],
       "mentions": []
     },
+    "emperors-children-weapon-bolt-pistol-2": {
+      "id": "emperors-children-weapon-bolt-pistol-2",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Bolt pistol"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol, Precision"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol, Precision"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "4",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-tormentors"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-tormentors",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-weapon-boltgun": {
       "id": "emperors-children-weapon-boltgun",
       "kind": "weapon",
@@ -46172,6 +46212,46 @@
       ],
       "mentions": []
     },
+    "emperors-children-weapon-plasma-pistol-standard-2": {
+      "id": "emperors-children-weapon-plasma-pistol-standard-2",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Plasma pistol - standard"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol, Precision"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol, Precision"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "7",
+          "AP": "-2",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-tormentors"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-tormentors",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-weapon-plasma-pistol-supercharge": {
       "id": "emperors-children-weapon-plasma-pistol-supercharge",
       "kind": "weapon",
@@ -46212,8 +46292,88 @@
       ],
       "mentions": []
     },
+    "emperors-children-weapon-plasma-pistol-supercharge-2": {
+      "id": "emperors-children-weapon-plasma-pistol-supercharge-2",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Plasma pistol - supercharge"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol, Precision"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol, Precision"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "8",
+          "AP": "-3",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-tormentors"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-tormentors",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-weapon-power-fist": {
       "id": "emperors-children-weapon-power-fist",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Power fist"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "5",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-lord-exultant"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-lord-exultant",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-power-fist-2": {
+      "id": "emperors-children-weapon-power-fist-2",
       "kind": "weapon",
       "scope": "emperors-children",
       "edition": "11e",
@@ -46243,9 +46403,9 @@
       "canonicalSource": {
         "documentId": "emperors-children-codex-transcription",
         "revision": "pinned BSData",
-        "locator": "unit-lord-exultant"
+        "locator": "unit-chaos-terminators"
       },
-      "fullRulePath": "books/emperors-children/reader.html#unit-lord-exultant",
+      "fullRulePath": "books/emperors-children/reader.html#unit-chaos-terminators",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"

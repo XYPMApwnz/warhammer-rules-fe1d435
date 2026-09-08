@@ -781,7 +781,6 @@
         "statline": "infractors-profile",
         "units": [
           "unit-infractors",
-          "unit-tormentors",
           "unit-lord-exultant",
           "unit-sorcerer",
           "unit-flawless-blades"
@@ -797,7 +796,6 @@
         "statline": "infractors-profile",
         "units": [
           "unit-infractors",
-          "unit-tormentors",
           "unit-lord-exultant"
         ]
       }
@@ -811,7 +809,6 @@
         "statline": "infractors-profile",
         "units": [
           "unit-infractors",
-          "unit-tormentors",
           "unit-lord-exultant"
         ]
       }
@@ -859,6 +856,42 @@
       "termId": "emperors-children-ability-objective-defiled",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-objective-defiled",
+        "rule": "unit-tormentors",
+        "datasheet": "unit-tormentors",
+        "statline": "tormentors-profile",
+        "units": [
+          "unit-tormentors"
+        ]
+      }
+    },
+    "emperors-children-weapon-bolt-pistol-2": {
+      "termId": "emperors-children-weapon-bolt-pistol-2",
+      "navigation": {
+        "glossary": "glossary-emperors-children-weapon-bolt-pistol-2",
+        "rule": "unit-tormentors",
+        "datasheet": "unit-tormentors",
+        "statline": "tormentors-profile",
+        "units": [
+          "unit-tormentors"
+        ]
+      }
+    },
+    "emperors-children-weapon-plasma-pistol-standard-2": {
+      "termId": "emperors-children-weapon-plasma-pistol-standard-2",
+      "navigation": {
+        "glossary": "glossary-emperors-children-weapon-plasma-pistol-standard-2",
+        "rule": "unit-tormentors",
+        "datasheet": "unit-tormentors",
+        "statline": "tormentors-profile",
+        "units": [
+          "unit-tormentors"
+        ]
+      }
+    },
+    "emperors-children-weapon-plasma-pistol-supercharge-2": {
+      "termId": "emperors-children-weapon-plasma-pistol-supercharge-2",
+      "navigation": {
+        "glossary": "glossary-emperors-children-weapon-plasma-pistol-supercharge-2",
         "rule": "unit-tormentors",
         "datasheet": "unit-tormentors",
         "statline": "tormentors-profile",
@@ -1219,8 +1252,7 @@
         "datasheet": "unit-lord-exultant",
         "statline": "lord-exultant-profile",
         "units": [
-          "unit-lord-exultant",
-          "unit-chaos-terminators"
+          "unit-lord-exultant"
         ]
       }
     },
@@ -1678,6 +1710,18 @@
       "termId": "emperors-children-weapon-chainfist",
       "navigation": {
         "glossary": "glossary-emperors-children-weapon-chainfist",
+        "rule": "unit-chaos-terminators",
+        "datasheet": "unit-chaos-terminators",
+        "statline": "chaos-terminators-profile",
+        "units": [
+          "unit-chaos-terminators"
+        ]
+      }
+    },
+    "emperors-children-weapon-power-fist-2": {
+      "termId": "emperors-children-weapon-power-fist-2",
+      "navigation": {
+        "glossary": "glossary-emperors-children-weapon-power-fist-2",
         "rule": "unit-chaos-terminators",
         "datasheet": "unit-chaos-terminators",
         "statline": "chaos-terminators-profile",

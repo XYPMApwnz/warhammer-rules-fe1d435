@@ -4,6 +4,21 @@
     "label": "Current Dark Angels rules update parity",
     "factionPack": "dark-angels-faction-pack-v1.1"
   },
+  "armyRules": [
+    {
+      "id": "army-rule-the-unforgiven",
+      "name": "The Unforgiven",
+      "title": "The Unforgiven",
+      "text": "■ If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit’s Chapter. For example, Asmodai has both the ADEPTUS ASTARTES and DARK ANGELS Faction keywords, and is therefore from the Dark Angels Chapter.\n■ You cannot include units from more than one Chapter in your army.\n\nDesigner’s Note: The rules presented in this section assume that the ADEPTUS ASTARTES units in your army are from the Dark Angels Chapter, but they can also be used to represent any Dark Angels successor Chapter, such as one described in the background section of this book, or even one of your own invention. However, players who wish to faithfully recreate the Dark Angels Chapter on the tabletop should only include DARK ANGELS EPIC HEROES if their collection is intended to represent the First Founding Chapter itself; Ezekiel is the Chief Librarian of the Dark Angels, for example, and not of any of their successors.",
+      "provenance": {
+        "authority": "primary-official",
+        "checkedAt": "2026-09-08",
+        "sources": [
+          "Warhammer 40,000: The App v2.6.0, data version 946"
+        ]
+      }
+    }
+  ],
   "detachments": [
     {
       "id": "company-of-hunters",

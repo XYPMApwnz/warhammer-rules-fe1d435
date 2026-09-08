@@ -160,10 +160,12 @@
     "Dedicated Transport": "Dedicated Transports"
   },
   "armyRules": [
-    "Oath of Moment"
+    "Oath of Moment",
+    "The Unforgiven"
   ],
   "armyRuleTermIds": {
-    "Oath of Moment": "space-marines-army-rule-oath-of-moment"
+    "Oath of Moment": "space-marines-army-rule-oath-of-moment",
+    "The Unforgiven": "army-rule-the-unforgiven"
   },
   "compactSharedAbilities": [
     "Oath of Moment",

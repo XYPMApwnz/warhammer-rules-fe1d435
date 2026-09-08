@@ -207,4 +207,23 @@ for(const [title,text] of fulgrimExpectedAbilities){
   assert.ok(fulgrimTargetText.includes(text),`Fulgrim target text: ${title}`);
 }
 
-console.log(`Factual completion QA passed: ${expectedDaRules.length} Dark Angels Stratagems, 3 EC factual repairs, and PIDB package A representation repairs.`);
+const unforgivenText='■ If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit’s Chapter. For example, Asmodai has both the ADEPTUS ASTARTES and DARK ANGELS Faction keywords, and is therefore from the Dark Angels Chapter.\n■ You cannot include units from more than one Chapter in your army.\n\nDesigner’s Note: The rules presented in this section assume that the ADEPTUS ASTARTES units in your army are from the Dark Angels Chapter, but they can also be used to represent any Dark Angels successor Chapter, such as one described in the background section of this book, or even one of your own invention. However, players who wish to faithfully recreate the Dark Angels Chapter on the tabletop should only include DARK ANGELS EPIC HEROES if their collection is intended to represent the First Founding Chapter itself; Ezekiel is the Chief Librarian of the Dark Angels, for example, and not of any of their successors.';
+const daParity=JSON.parse(pidbReadFileSync(pidbResolve(pidbRoot,'books/dark-angels/content/dark-angels-codex-parity.en.json'),'utf8'));
+const unforgivenMatches=(daParity.armyRules??[]).filter(rule=>rule?.id==='army-rule-the-unforgiven');
+assert.equal(unforgivenMatches.length,1,'Dark Angels parity must own The Unforgiven exactly once');
+assert.deepEqual({id:unforgivenMatches[0].id,name:unforgivenMatches[0].name,title:unforgivenMatches[0].title,text:unforgivenMatches[0].text},{id:'army-rule-the-unforgiven',name:'The Unforgiven',title:'The Unforgiven',text:unforgivenText});
+
+const daConfig=JSON.parse(pidbReadFileSync(pidbResolve(pidbRoot,'books/dark-angels/book.config.json'),'utf8'));
+assert.equal(daConfig.armyRules.filter(title=>title==='The Unforgiven').length,1,'DA army-rule registration');
+assert.equal(daConfig.armyRules.filter(title=>title==='Oath of Moment').length,1,'Oath of Moment remains registered');
+assert.equal(daConfig.armyRuleTermIds?.['The Unforgiven'],'army-rule-the-unforgiven');
+assert.equal(daConfig.armyRuleTermIds?.['Oath of Moment'],'space-marines-army-rule-oath-of-moment');
+
+const unforgivenTarget=pidbGeneratedTarget('dark-angels','army-rule-the-unforgiven');
+const unforgivenRenderedText=pidbRenderedText(unforgivenTarget);
+assert.ok(unforgivenTarget.includes('The Unforgiven'));
+assert.ok(unforgivenRenderedText.includes('You cannot include units from more than one Chapter in your army.'));
+assert.ok(unforgivenRenderedText.includes('Ezekiel is the Chief Librarian of the Dark Angels'));
+assert.ok(generatedBook('dark-angels').targets?.['army-rule-oath-of-moment'],'Oath of Moment generated target remains present');
+
+console.log(`Factual completion QA passed: ${expectedDaRules.length} Dark Angels Stratagems, 3 EC factual repairs, and all four PIDB representation repairs.`);

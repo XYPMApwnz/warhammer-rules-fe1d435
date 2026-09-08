@@ -5,7 +5,8 @@ import {buildCompatibleRules,inputs} from '../tools/build-compatible-rules.mjs';
 const read=file=>JSON.parse(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
 const generated=read('../generated/compatible-rules.json'),source=inputs(),rebuilt=buildCompatibleRules(source);
 const excluded=new Set(source.config.dependencyDatasheets.excludeAnyKeywords.map(value=>value.toUpperCase()));
-const shared=source.spaceMarines.datasheets.filter(unit=>!(unit.keywords||[]).some(item=>excluded.has(String(item).toUpperCase()))),expectedIds=new Set([...source.codex.datasheets,...shared].map(unit=>unit.id));
+const compatibilityKeywords=unit=>source.spaceMarinesConfig.unitCompatibleChapterKeywords?.[unit.id]||[],inclusionKeywords=unit=>[...(unit.keywords||[]),...compatibilityKeywords(unit)];
+const shared=source.spaceMarines.datasheets.filter(unit=>!inclusionKeywords(unit).some(item=>excluded.has(String(item).toUpperCase()))),expectedIds=new Set([...source.codex.datasheets,...shared].map(unit=>unit.id));
 const titleKey=value=>String(value||'').replace(/\s*\(Aura\)$/i,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),chapterKey=titleKey(source.config.dependencyDetachments.chapterKeyword),currentSharedTitles=new Set(source.spaceMarinesPoints.detachments.map(item=>titleKey(item.title)));
 const localDetachments=[...(source.pack.detachments||[]),...(source.parity.detachments||[])],sharedDetachments=[...(source.spaceMarinesPack.detachments||[]),...(source.spaceMarinesParity.detachments||[])].filter(item=>{const restriction=item.restriction||source.spaceMarinesConfig.detachmentChapterRestrictions?.[item.title];return currentSharedTitles.has(titleKey(item.title))&&(!restriction||titleKey(restriction)===chapterKey);}),detachments=[...localDetachments,...sharedDetachments],detachmentIds=new Set(detachments.map(item=>item.id)),rows=Object.values(generated.units).flat();
 const localPoints=source.points.enhancements,sharedPoints=source.spaceMarinesPoints.enhancements,factionRules=new Set(detachments.flatMap(item=>[...(item.stratagems||[]).map(rule=>rule.id),...(item.enhancements||[]).map(rule=>(sharedDetachments.includes(item)?sharedPoints:localPoints).find(point=>titleKey(point.detachment)===titleKey(item.title)&&titleKey(point.title)===titleKey(rule.title))?.id).filter(Boolean)]));
@@ -14,6 +15,8 @@ assert.deepEqual(generated,rebuilt,'Blood Angels Compatible Rules matrix is stal
 assert.equal(generated.schema,'blood-angels-compatible-rules/v1');
 assert.equal(Object.keys(generated.units).length,97);
 assert.deepEqual(new Set(Object.keys(generated.units)),expectedIds);
+assert.ok(!expectedIds.has('unit-pedro-kantor'),'Pedro Kantor compatibility must exclude him from the Blood Angels shared inventory');
+assert.equal(generated.units['unit-pedro-kantor'],undefined,'Pedro Kantor leaked into the Blood Angels Compatible Rules matrix');
 assert.equal(localDetachments.length,8);
 assert.equal(sharedDetachments.length,16);
 assert.equal(detachments.length,24);

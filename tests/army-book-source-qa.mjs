@@ -151,8 +151,24 @@ for(const [category,count] of Object.entries({'Characters':1,'Epic Heroes':7,'In
 expect(!categoryCounts.Other,'dark-angels: source categories must not fall through to Other');
 
 const chapterKeywords=new Set(daConfig.dependencyDatasheets.excludeAnyKeywords);
+const smConfig=read('books/space-marines/book.config.json');
 const smCodex=read('books/space-marines/content/space-marines-codex-datasheets.en.json');
-const smGeneric=smCodex.datasheets.filter(unit=>!unit.keywords.some(keyword=>chapterKeywords.has(keyword.toUpperCase())));
+const compatibilityKeywords=unit=>smConfig.unitCompatibleChapterKeywords?.[unit.id]||[];
+const inclusionKeywords=unit=>[...(unit.keywords||[]),...compatibilityKeywords(unit)];
+const intrinsicKeywordMatches=(unit,keyword)=>(unit.keywords||[]).some(value=>value.toUpperCase()===keyword);
+const smGeneric=smCodex.datasheets.filter(unit=>!inclusionKeywords(unit).some(keyword=>chapterKeywords.has(keyword.toUpperCase())));
+const pedro=smCodex.datasheets.find(unit=>unit.id==='unit-pedro-kantor');
+expect(Boolean(pedro),'space-marines: Pedro Kantor source datasheet missing');
+expect(!intrinsicKeywordMatches(pedro,'IMPERIAL FISTS'),'space-marines: Pedro Kantor must not have intrinsic IMPERIAL FISTS');
+expect(intrinsicKeywordMatches(pedro,'CRIMSON FISTS'),'space-marines: Pedro Kantor must have intrinsic CRIMSON FISTS');
+expect(compatibilityKeywords(pedro).map(keyword=>keyword.toUpperCase()).includes('IMPERIAL FISTS'),'space-marines: Pedro Kantor must declare IMPERIAL FISTS compatibility');
+expect(!smGeneric.includes(pedro),'dark-angels: Pedro Kantor compatibility must exclude him from generic dependency candidates');
+const lysander=smCodex.datasheets.find(unit=>unit.id==='unit-darnath-lysander');
+expect(Boolean(lysander),'space-marines: Darnath Lysander source datasheet missing');
+expect(intrinsicKeywordMatches(lysander,'IMPERIAL FISTS'),'space-marines: Darnath Lysander intrinsic IMPERIAL FISTS identity changed');
+expect(compatibilityKeywords(lysander).length===0,'space-marines: Darnath Lysander must not require compatibility metadata');
+expect(!smGeneric.includes(lysander),'dark-angels: intrinsic IMPERIAL FISTS units must remain excluded');
+expect(smCodex.datasheets.filter(unit=>intrinsicKeywordMatches(unit,'CRIMSON FISTS')).every(unit=>unit.id==='unit-pedro-kantor'),'space-marines: CRIMSON FISTS leaked beyond Pedro Kantor');
 expect(smCodex.datasheets.length-smGeneric.length===19,'dark-angels: expected 19 source-keyworded other-Chapter Space Marines exclusions');
 expect(smGeneric.length===82,'dark-angels: expected 82 generic Space Marines dependency candidates');
 const daReaderUnitIds=[...daReader.matchAll(/<article class="unit-card[^>]* id="([^"]+)"/g)].map(match=>match[1]);

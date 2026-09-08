@@ -101,6 +101,32 @@ for(const [bookId,requiredEnhancementId] of books){
 assert.deepEqual([...components].sort(),['ability','keyword','stat','weapon'],'structured component families');
 assert.ok(conditionalCount>0,'conditional game-state effects are absent');
 
+const detachmentFixture=(bookId,unitId,instanceId,detachments,gameUnits=null)=>{
+  const {api,catalog}=loadBook(bookId),unit=catalog.units.find(candidate=>candidate.id===unitId);
+  assert.ok(unit,`${bookId}: missing ${unitId}`);
+  const keywords=unit.intrinsicKeywords||[],item={instanceId,unitId,raw:{id:instanceId}},gameUnit={identity:{instanceId,canonicalDatasheetId:unit.id},rosterState:{detachments,keywordProfile:{intrinsic:keywords,added:[],removed:[],effective:keywords}},selection:{loadout:{selectedWargearAbilityIds:[]}},item:{catalogUnit:unit}};
+  const allUnits=gameUnits||[gameUnit];
+  return{api,catalog,item,gameUnit,effects:api.gameEffects({item,gameUnit,gameUnits:allUnits,byInstance:new Map(allUnits.map(entry=>[entry.identity.instanceId,entry])),enhancements:[]})};
+};
+const masterRuleId='emperors-children-detachment-rule-master-of-the-pageant';
+const masterReferences=fixture=>fixture.effects.filter(effect=>effect.canonicalReference?.kind==='detachment-rule'&&effect.canonicalReference.id===masterRuleId);
+const fulgrimA=detachmentFixture('emperors-children','unit-fulgrim','ec-fulgrim-a',['court-of-the-phoenician']);
+assert.equal(masterReferences(fulgrimA).length,1,'Master of the Pageant must emit exactly once for physical Fulgrim');
+assert.deepEqual(
+  JSON.parse(JSON.stringify(masterReferences(fulgrimA).map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,state:effect.state,sourceKind:effect.source?.kind,sourceId:effect.source?.id,owner:effect.source?.ownerInstanceId,rosterFact:effect.provenance?.rosterFact})))),
+  [{component:'ability',targetId:masterRuleId,operation:'reference',state:'reference',sourceKind:'detachment',sourceId:'court-of-the-phoenician',owner:null,rosterFact:'detachment-rule-reference'}],
+  'Master of the Pageant must remain a reference-only effect'
+);
+assert.equal(fulgrimA.effects.length,1,'Master of the Pageant must not add automatic mutations');
+assert.equal(masterReferences(detachmentFixture('emperors-children','unit-fulgrim','ec-fulgrim-other',['rapid-evisceration'])).length,0,'Master of the Pageant leaked to another EC Detachment');
+assert.equal(masterReferences(detachmentFixture('emperors-children','unit-seekers','ec-non-fulgrim',['court-of-the-phoenician'])).length,0,'Master of the Pageant leaked to a non-Fulgrim unit');
+assert.equal(masterReferences(detachmentFixture('chaos-space-marines','unit-chaos-lord','csm-wrong-faction',['court-of-the-phoenician'])).length,0,'Master of the Pageant leaked cross-faction');
+for(const instanceId of ['ec-fulgrim-copy-1','ec-fulgrim-copy-2'])assert.equal(masterReferences(detachmentFixture('emperors-children','unit-fulgrim',instanceId,['court-of-the-phoenician'])).length,1,`Master of the Pageant physical isolation ${instanceId}`);
+for(const bookId of ['space-marines','dark-angels','blood-angels']){
+  const nowhere=detachmentFixture(bookId,'unit-scout-squad',`${bookId}-scout`,['subversion-assets']).effects.filter(effect=>effect.canonicalReference?.kind==='detachment-rule');
+  assert.deepEqual(Array.from(nowhere,effect=>effect.canonicalReference.id),['subversion-assets-nowhere-to-hide'],`${bookId}: Nowhere to Hide reference regression`);
+}
+
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
 const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.statusCode=204;response.end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));

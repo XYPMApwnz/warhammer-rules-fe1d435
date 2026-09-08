@@ -304,7 +304,7 @@ const APP_SHELL = [
   ,"./books/tau-empire/scripts/target-data.js?v=4"
   ,"./books/tau-empire/mobile/related-rules.inc?v=2"
   ,"./books/shared/book-roster-enhancements.js?v=3"
-  ,"./books/extensions/book-roster-enhancement-providers.js?v=5"
+  ,"./books/extensions/book-roster-enhancement-providers.js?v=6"
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_ENTRY_FALLBACK
   ,CHAOS_SPACE_MARINES_DESKTOP_FALLBACK

@@ -3735,8 +3735,7 @@ window.DG_TERMS={
     "rule": "unit-chaos-terminator-squad",
     "units": [
       "unit-chaos-terminator-squad",
-      "unit-chosen",
-      "unit-nemesis-claw"
+      "unit-chosen"
     ],
     "datasheet": "unit-chaos-terminator-squad",
     "statline": "chaos-terminator-squad-profile"
@@ -4059,6 +4058,19 @@ window.DG_TERMS={
     "summary": "Melee · Melee · A 4 · WS 3+ · S 8 · AP -2 · D 1 · Sustained Hits 1",
     "full": "Melee · Melee · A 4 · WS 3+ · S 8 · AP -2 · D 1 · Sustained Hits 1",
     "glossary": "glossary-chaos-space-marines-weapon-nostraman-chainglaive",
+    "rule": "unit-nemesis-claw",
+    "units": [
+      "unit-nemesis-claw"
+    ],
+    "datasheet": "unit-nemesis-claw",
+    "statline": "nemesis-claw-profile"
+  },
+  "chaos-space-marines-weapon-paired-accursed-weapons-3": {
+    "id": "chaos-space-marines-weapon-paired-accursed-weapons-3",
+    "title": "Paired accursed weapons",
+    "summary": "Melee · Melee · A 4 · WS 3+ · S 5 · AP -2 · D 1 · Twin-linked",
+    "full": "Melee · Melee · A 4 · WS 3+ · S 5 · AP -2 · D 1 · Twin-linked",
+    "glossary": "glossary-chaos-space-marines-weapon-paired-accursed-weapons-3",
     "rule": "unit-nemesis-claw",
     "units": [
       "unit-nemesis-claw"

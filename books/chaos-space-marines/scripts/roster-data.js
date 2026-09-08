@@ -9678,7 +9678,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Paired accursed weapons",
             "mode": "melee",
             "range": "Melee",
-            "a": "5",
+            "a": "4",
             "skill": "3+",
             "s": "5",
             "ap": "-2",

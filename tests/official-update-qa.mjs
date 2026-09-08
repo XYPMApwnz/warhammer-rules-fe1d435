@@ -114,6 +114,13 @@ const tyrCodex=json('books/tyranids/content/tyranids-codex-datasheets.en.json');
 const tauPack=json('books/tau-empire/content/tau-empire-faction-pack.en.json');
 const tauParity=json('books/tau-empire/content/tau-empire-codex-parity.en.json');
 const tauCodex=json('books/tau-empire/content/tau-empire-codex-datasheets.en.json');
+const csmCodex=json('books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json');
+const nemesisClaw=exactlyOne(csmCodex.datasheets.filter(unit=>unit.id==='unit-nemesis-claw'),'CSM unit-nemesis-claw');
+assert.deepEqual(
+  exactlyOne(nemesisClaw.weapons.filter(weapon=>weapon.name==='Paired accursed weapons'),'Nemesis Claw paired accursed weapons'),
+  {name:'Paired accursed weapons',mode:'melee',range:'Melee',a:'4',skill:'3+',s:'5',ap:'-2',d:'1',abilities:'Twin-linked'},
+  'Nemesis Claw paired accursed weapons must match the official v1.2 profile'
+);
 const glossary=json('glossary/registry.en.json').terms;
 const glossaryContexts=Object.fromEntries(['death-guard','adeptus-mechanicus','tyranids','tau-empire'].map(bookId=>[
   bookId,json(`glossary/contexts/${bookId}.json`).terms

@@ -1621,12 +1621,51 @@ window.DG_TERMS={
     "datasheet": "unit-fulgrim",
     "statline": "fulgrim-profile"
   },
-  "emperors-children-ability-daemon-prince-of-slaanesh": {
-    "id": "emperors-children-ability-daemon-prince-of-slaanesh",
-    "title": "Daemon Prince of Slaanesh",
-    "summary": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability.",
-    "full": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability.",
-    "glossary": "glossary-emperors-children-ability-daemon-prince-of-slaanesh",
+  "emperors-children-ability-daemon-primarch-of-slaanesh": {
+    "id": "emperors-children-ability-daemon-primarch-of-slaanesh",
+    "title": "Daemon Primarch of Slaanesh",
+    "summary": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section (see below). Until the start of your opponent’s next Command phase, this model has that ability.",
+    "full": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section (see below). Until the start of your opponent’s next Command phase, this model has that ability.",
+    "glossary": "glossary-emperors-children-ability-daemon-primarch-of-slaanesh",
+    "rule": "unit-fulgrim",
+    "units": [
+      "unit-fulgrim"
+    ],
+    "datasheet": "unit-fulgrim",
+    "statline": "fulgrim-profile"
+  },
+  "emperors-children-ability-beguiling-form": {
+    "id": "emperors-children-ability-beguiling-form",
+    "title": "Beguiling Form",
+    "summary": "Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.",
+    "full": "Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.",
+    "glossary": "glossary-emperors-children-ability-beguiling-form",
+    "rule": "unit-fulgrim",
+    "units": [
+      "unit-fulgrim"
+    ],
+    "datasheet": "unit-fulgrim",
+    "statline": "fulgrim-profile"
+  },
+  "emperors-children-ability-daemonic-speed": {
+    "id": "emperors-children-ability-daemonic-speed",
+    "title": "Daemonic Speed",
+    "summary": "This model has the Fights First ability.",
+    "full": "This model has the Fights First ability.",
+    "glossary": "glossary-emperors-children-ability-daemonic-speed",
+    "rule": "unit-fulgrim",
+    "units": [
+      "unit-fulgrim"
+    ],
+    "datasheet": "unit-fulgrim",
+    "statline": "fulgrim-profile"
+  },
+  "emperors-children-ability-enthralling-hypnosis-aura": {
+    "id": "emperors-children-ability-enthralling-hypnosis-aura",
+    "title": "Enthralling Hypnosis (Aura)",
+    "summary": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
+    "full": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
+    "glossary": "glossary-emperors-children-ability-enthralling-hypnosis-aura",
     "rule": "unit-fulgrim",
     "units": [
       "unit-fulgrim"

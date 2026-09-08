@@ -2837,6 +2837,11 @@
       ],
       "abilities": [
         {
+          "title": "Supreme Commander",
+          "text": "If this model is in your army, it must be your WARLORD.",
+          "abilityClass": "datasheet"
+        },
+        {
           "title": "The Warmaster",
           "text": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability.",
           "abilityClass": "datasheet"

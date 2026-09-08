@@ -2694,10 +2694,31 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-fulgrim"
           },
           {
-            "id": "emperors-children-ability-daemon-prince-of-slaanesh",
-            "sectionId": "emperors-children-ability-daemon-prince-of-slaanesh",
-            "title": "Daemon Prince of Slaanesh",
-            "text": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability.",
+            "id": "emperors-children-ability-daemon-primarch-of-slaanesh",
+            "sectionId": "emperors-children-ability-daemon-primarch-of-slaanesh",
+            "title": "Daemon Primarch of Slaanesh",
+            "text": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section (see below). Until the start of your opponent’s next Command phase, this model has that ability.",
+            "sourceUnitId": "unit-fulgrim"
+          },
+          {
+            "id": "emperors-children-ability-beguiling-form",
+            "sectionId": "emperors-children-ability-beguiling-form",
+            "title": "Beguiling Form",
+            "text": "Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-fulgrim"
+          },
+          {
+            "id": "emperors-children-ability-daemonic-speed",
+            "sectionId": "emperors-children-ability-daemonic-speed",
+            "title": "Daemonic Speed",
+            "text": "This model has the Fights First ability.",
+            "sourceUnitId": "unit-fulgrim"
+          },
+          {
+            "id": "emperors-children-ability-enthralling-hypnosis-aura",
+            "sectionId": "emperors-children-ability-enthralling-hypnosis-aura",
+            "title": "Enthralling Hypnosis (Aura)",
+            "text": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
             "sourceUnitId": "unit-fulgrim"
           },
           {

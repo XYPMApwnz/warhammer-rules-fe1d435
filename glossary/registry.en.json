@@ -39429,6 +39429,37 @@
       ],
       "mentions": []
     },
+    "emperors-children-ability-beguiling-form": {
+      "id": "emperors-children-ability-beguiling-form",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Beguiling Form"
+      },
+      "summary": {
+        "en": "Each time a model makes an attack that targets this model, subtract 1 from the Hit roll."
+      },
+      "definition": {
+        "en": "Each time a model makes an attack that targets this model, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-fulgrim"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-fulgrim",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-ability-daemon-lord-of-slaanesh-aura": {
       "id": "emperors-children-ability-daemon-lord-of-slaanesh-aura",
       "kind": "datasheet-ability",
@@ -39460,20 +39491,20 @@
       ],
       "mentions": []
     },
-    "emperors-children-ability-daemon-prince-of-slaanesh": {
-      "id": "emperors-children-ability-daemon-prince-of-slaanesh",
+    "emperors-children-ability-daemon-primarch-of-slaanesh": {
+      "id": "emperors-children-ability-daemon-primarch-of-slaanesh",
       "kind": "datasheet-ability",
       "scope": "emperors-children",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Daemon Prince of Slaanesh"
+        "en": "Daemon Primarch of Slaanesh"
       },
       "summary": {
-        "en": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability."
+        "en": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section (see below). Until the start of your opponent’s next Command phase, this model has that ability."
       },
       "definition": {
-        "en": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability."
+        "en": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section (see below). Until the start of your opponent’s next Command phase, this model has that ability."
       },
       "structured": {},
       "presentation": "atomic",
@@ -39601,6 +39632,37 @@
       },
       "structured": {},
       "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-fulgrim"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-fulgrim",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-daemonic-speed": {
+      "id": "emperors-children-ability-daemonic-speed",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Daemonic Speed"
+      },
+      "summary": {
+        "en": "This model has the Fights First ability."
+      },
+      "definition": {
+        "en": "This model has the Fights First ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -39795,6 +39857,37 @@
         "locator": "unit-daemon-prince-of-slaanesh"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-daemon-prince-of-slaanesh",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-enthralling-hypnosis-aura": {
+      "id": "emperors-children-ability-enthralling-hypnosis-aura",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Enthralling Hypnosis (Aura)"
+      },
+      "summary": {
+        "en": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+      },
+      "definition": {
+        "en": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-fulgrim"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-fulgrim",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"

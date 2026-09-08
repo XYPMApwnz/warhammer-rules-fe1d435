@@ -129,4 +129,82 @@ assertGeneratedProfile(ecRoster,'unit-tormentors-profile-plasma-pistol-superchar
 const ecGenerated=generatedBook('emperors-children');
 for(const unitId of ['unit-lord-exultant','unit-tormentors'])assert.ok(ecGenerated.targets[unitId],`${unitId}: generated target card`);
 
-console.log(`Factual completion QA passed: ${expectedDaRules.length} Dark Angels Stratagems and 3 EC factual repairs.`);
+const { readFileSync: pidbReadFileSync } = await import('node:fs');
+const { dirname: pidbDirname, resolve: pidbResolve } = await import('node:path');
+const { fileURLToPath: pidbFileURLToPath } = await import('node:url');
+
+const pidbRoot=pidbResolve(process.env.FACTUAL_COMPLETION_ROOT||pidbResolve(pidbDirname(pidbFileURLToPath(import.meta.url)),'..'));
+
+function pidbCanonicalUnit(relativePath,unitId){
+  const payload=JSON.parse(pidbReadFileSync(pidbResolve(pidbRoot,relativePath),'utf8'));
+  const units=Array.isArray(payload)?payload:(payload.datasheets??payload.units??[]);
+  const matches=units.filter(unit=>unit?.id===unitId);
+  assert.equal(matches.length,1,`${unitId} must resolve exactly once in ${relativePath}`);
+  return matches[0];
+}
+
+function pidbAbility(unit,title){
+  const matches=(unit.abilities??[]).filter(ability=>ability?.title===title);
+  assert.equal(matches.length,1,`${unit.id} must expose ${title} exactly once`);
+  return matches[0];
+}
+
+function pidbGeneratedRosterUnit(bookId,unitId){
+  const matches=objectsById(generatedRoster(bookId),unitId).filter(entry=>Array.isArray(entry?.gameSelections?.abilities));
+  assert.equal(matches.length,1,`${bookId} generated roster must contain exactly one ${unitId}`);
+  return matches[0];
+}
+
+function pidbGeneratedTarget(bookId,unitId){
+  const generated=generatedBook(bookId);
+  const range=generated.targets?.[unitId];
+  assert.ok(range&&Number.isInteger(range.start)&&Number.isInteger(range.end),`${bookId} target range for ${unitId}`);
+  return generated.html.slice(range.start,range.end);
+}
+
+function pidbRenderedText(html){
+  return html.replace(/<[^>]*>/g,' ').replace(/&quot;/g,'"').replace(/&#39;|&apos;|&#x27;/g,"'").replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim();
+}
+
+const supremeCommanderText='If this model is in your army, it must be your WARLORD.';
+const supremeCommanderUnits=[
+  {bookId:'chaos-space-marines',unitId:'unit-abaddon-the-despoiler',source:'books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json'},
+  {bookId:'dark-angels',unitId:'unit-lion-eljonson',source:'books/dark-angels/content/dark-angels-codex-datasheets.en.json'},
+];
+
+for(const spec of supremeCommanderUnits){
+  const unit=pidbCanonicalUnit(spec.source,spec.unitId);
+  assert.equal(pidbAbility(unit,'Supreme Commander').text,supremeCommanderText);
+  const generatedUnit=pidbGeneratedRosterUnit(spec.bookId,spec.unitId);
+  assert.equal(generatedUnit.gameSelections.abilities.filter(ability=>ability?.title==='Supreme Commander'&&ability?.text===supremeCommanderText).length,1,`${spec.unitId}: generated Supreme Commander`);
+  const generatedTarget=pidbGeneratedTarget(spec.bookId,spec.unitId);
+  assert.match(generatedTarget,/Supreme Commander/);
+  assert.match(generatedTarget,/must be your WARLORD/);
+}
+
+const fulgrim=pidbCanonicalUnit('books/emperors-children/content/emperors-children-codex-datasheets.en.json','unit-fulgrim');
+const fulgrimExpectedAbilities=new Map([
+  ['Daemon Primarch of Slaanesh','At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section (see below). Until the start of your opponent’s next Command phase, this model has that ability.'],
+  ['Beguiling Form','Each time a model makes an attack that targets this model, subtract 1 from the Hit roll.'],
+  ['Daemonic Speed','This model has the Fights First ability.'],
+  ['Enthralling Hypnosis (Aura)','While an enemy unit is within 6" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.'],
+]);
+
+for(const [title,text] of fulgrimExpectedAbilities)assert.equal(pidbAbility(fulgrim,title).text,text);
+assert.equal((fulgrim.abilities??[]).filter(ability=>ability?.title==='Daemon Prince of Slaanesh').length,0,'Fulgrim stale parent identity');
+
+const daemonPrince=pidbCanonicalUnit('books/emperors-children/content/emperors-children-codex-datasheets.en.json','unit-daemon-prince-of-slaanesh');
+assert.equal(daemonPrince.title,'Daemon Prince of Slaanesh');
+
+const fulgrimRoster=pidbGeneratedRosterUnit('emperors-children','unit-fulgrim');
+for(const [title,text] of fulgrimExpectedAbilities)assert.equal(fulgrimRoster.gameSelections.abilities.filter(candidate=>candidate?.title===title&&candidate?.text===text).length,1,`Fulgrim generated ${title}`);
+assert.equal(fulgrimRoster.gameSelections.abilities.some(candidate=>candidate?.title==='Daemon Prince of Slaanesh'),false);
+
+const fulgrimTarget=pidbGeneratedTarget('emperors-children','unit-fulgrim');
+const fulgrimTargetText=pidbRenderedText(fulgrimTarget);
+for(const [title,text] of fulgrimExpectedAbilities){
+  assert.ok(fulgrimTarget.includes(title),`Fulgrim target title: ${title}`);
+  assert.ok(fulgrimTargetText.includes(text),`Fulgrim target text: ${title}`);
+}
+
+console.log(`Factual completion QA passed: ${expectedDaRules.length} Dark Angels Stratagems, 3 EC factual repairs, and PIDB package A representation repairs.`);

@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 2592,
+    "terms": 2595,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,

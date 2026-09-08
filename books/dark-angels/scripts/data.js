@@ -7100,6 +7100,19 @@ window.DG_TERMS={
     "datasheet": "unit-lazarus",
     "statline": "lazarus-profile"
   },
+  "dark-angels-ability-supreme-commander": {
+    "id": "dark-angels-ability-supreme-commander",
+    "title": "Supreme Commander",
+    "summary": "If this model is in your army, it must be your WARLORD.",
+    "full": "If this model is in your army, it must be your WARLORD.",
+    "glossary": "glossary-dark-angels-ability-supreme-commander",
+    "rule": "unit-lion-eljonson",
+    "units": [
+      "unit-lion-eljonson"
+    ],
+    "datasheet": "unit-lion-eljonson",
+    "statline": "lion-eljonson-profile"
+  },
   "dark-angels-ability-primarch-of-the-first-legion": {
     "id": "dark-angels-ability-primarch-of-the-first-legion",
     "title": "Primarch of the First Legion",

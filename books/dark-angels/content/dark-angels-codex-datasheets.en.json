@@ -841,6 +841,10 @@
       ],
       "abilities": [
         {
+          "title": "Supreme Commander",
+          "text": "If this model is in your army, it must be your WARLORD."
+        },
+        {
           "title": "Primarch of the First Legion",
           "text": "At the start of your Command phase, select two Primarch of the First Legion abilities. Until the start of your next Command phase, this model has those abilities."
         },

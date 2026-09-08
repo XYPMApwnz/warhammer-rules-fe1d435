@@ -1504,8 +1504,20 @@
           "text": "In your Shooting phase and the Fight phase, after this model has finished making its attacks, select one enemy unit hit by one or more of those attacks. Until the end of the battle, that enemy unit is poisoned. At the start of each player's Command phase, roll one D6 for each poisoned enemy unit on the battlefield: on a 4+, that enemy unit suffers D3 mortal wounds."
         },
         {
-          "title": "Daemon Prince of Slaanesh",
-          "text": "At the start of your opponent's Command phase, select one of the abilities in the Daemon Prince of Slaanesh section. Until the start of your opponent's next Command phase, this model has that ability."
+          "title": "Daemon Primarch of Slaanesh",
+          "text": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section (see below). Until the start of your opponent’s next Command phase, this model has that ability."
+        },
+        {
+          "title": "Beguiling Form",
+          "text": "Each time a model makes an attack that targets this model, subtract 1 from the Hit roll."
+        },
+        {
+          "title": "Daemonic Speed",
+          "text": "This model has the Fights First ability."
+        },
+        {
+          "title": "Enthralling Hypnosis (Aura)",
+          "text": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
         },
         {
           "title": "Damaged: 1-6 Wounds Remaining",

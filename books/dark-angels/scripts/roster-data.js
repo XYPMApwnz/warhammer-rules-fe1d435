@@ -24465,6 +24465,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
+            "id": "dark-angels-ability-supreme-commander",
+            "sectionId": "dark-angels-ability-supreme-commander",
+            "title": "Supreme Commander",
+            "text": "If this model is in your army, it must be your WARLORD.",
+            "sourceUnitId": "unit-lion-eljonson"
+          },
+          {
             "id": "dark-angels-ability-primarch-of-the-first-legion",
             "sectionId": "dark-angels-ability-primarch-of-the-first-legion",
             "title": "Primarch of the First Legion",

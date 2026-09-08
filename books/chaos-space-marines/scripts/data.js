@@ -2960,6 +2960,19 @@ window.DG_TERMS={
     "datasheet": "unit-chaos-rhino",
     "statline": "chaos-rhino-profile"
   },
+  "chaos-space-marines-ability-supreme-commander": {
+    "id": "chaos-space-marines-ability-supreme-commander",
+    "title": "Supreme Commander",
+    "summary": "If this model is in your army, it must be your WARLORD.",
+    "full": "If this model is in your army, it must be your WARLORD.",
+    "glossary": "glossary-chaos-space-marines-ability-supreme-commander",
+    "rule": "unit-abaddon-the-despoiler",
+    "units": [
+      "unit-abaddon-the-despoiler"
+    ],
+    "datasheet": "unit-abaddon-the-despoiler",
+    "statline": "abaddon-the-despoiler-profile"
+  },
   "chaos-space-marines-ability-the-warmaster": {
     "id": "chaos-space-marines-ability-the-warmaster",
     "title": "The Warmaster",

@@ -5132,6 +5132,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
+            "id": "chaos-space-marines-ability-supreme-commander",
+            "sectionId": "chaos-space-marines-ability-supreme-commander",
+            "title": "Supreme Commander",
+            "text": "If this model is in your army, it must be your WARLORD.",
+            "sourceUnitId": "unit-abaddon-the-despoiler"
+          },
+          {
             "id": "chaos-space-marines-ability-the-warmaster",
             "sectionId": "chaos-space-marines-ability-the-warmaster",
             "title": "The Warmaster",

@@ -21,11 +21,11 @@ const visibleTextBlocks=term=>{
     Number(meaningful(definition)&&term.presentation!=='profile');
 };
 
-assert.equal(values.length,2592,'canonical entry count must remain stable');
+assert.equal(values.length,2595,'canonical entry count must remain stable');
 assert.equal(Object.keys(aliases).length,662,'alias count must remain stable');
 assert.ok(Object.entries(registry).every(([id,term])=>term.id===id),'registry keys and canonical IDs must remain identical');
 assert.equal(new Set(values.map(term=>term.id)).size,values.length,'canonical glossary IDs must remain unique');
-assert.equal(crypto.createHash('sha256').update(registryIds.join('\n')).digest('hex'),'af8215a253210c2cf194f92fb1d08f5b336f89c13e79390a59e52ce90cf3d635','canonical glossary identity set must remain stable');
+assert.equal(crypto.createHash('sha256').update(registryIds.join('\n')).digest('hex'),'5556a294fae001bd1e1d6ec484ac30aeb4818f0197c6520cd7bf364b716e3837','canonical glossary identity set must remain stable');
 
 const expectedFactualProfiles=[
   {id:'emperors-children-weapon-bolt-pistol-2',title:'Bolt pistol',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'4',AP:'0',D:'1'}},
@@ -80,7 +80,7 @@ assert.equal(technicalUnits.filter(term=>term.scope==='death-guard').length,36,'
 assert.equal(technicalUnits.filter(term=>term.scope==='adeptus-mechanicus').length,34,'all 34 Mechanicus technical units must be classified structurally');
 assert.equal(contextOnly.length,93,'exactly 93 confirmed context-only entries must be classified');
 assert.ok(contextOnly.every(term=>term.presentation==='metadata'),'all confirmed context-only entries must be hidden from ordinary search');
-assert.equal(searchable.length,2488,'only the 93 confirmed context-only entries may leave the catalogue');
+assert.equal(searchable.length,2491,'only the 93 confirmed context-only entries may leave the catalogue');
 assert.equal(metadata.length,104,'existing metadata plus 93 context-only entries must remain hidden');
 assert.deepEqual(metadata.map(term=>term.id).sort(),[...existingMetadataIds,...contextOnly.map(term=>term.id)].sort(),'no additional entries may be hidden');
 

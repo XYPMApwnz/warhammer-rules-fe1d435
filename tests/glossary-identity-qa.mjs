@@ -20,8 +20,24 @@ for(const id of registryIds)assert.equal(registry[id].id,id,`${id}: registry key
 assert.equal(api.counts.terms,registryIds.length,'generated glossary term count differs from the canonical registry');
 assert.equal(api.counts.aliases,aliasIds.length,'generated glossary alias count differs from the canonical aliases');
 assert.match(api.contentHash,/^[a-f0-9]{64}$/,'generated glossary content hash is not deterministic');
-assert.equal(registryIds.length,2592,'current canonical glossary inventory changed unexpectedly');
-assert.equal(crypto.createHash('sha256').update([...registryIds].sort().join('\n')).digest('hex'),'af8215a253210c2cf194f92fb1d08f5b336f89c13e79390a59e52ce90cf3d635','current canonical glossary identity set changed unexpectedly');
+assert.equal(registryIds.length,2595,'current canonical glossary inventory changed unexpectedly');
+assert.equal(crypto.createHash('sha256').update([...registryIds].sort().join('\n')).digest('hex'),'5556a294fae001bd1e1d6ec484ac30aeb4818f0197c6520cd7bf364b716e3837','current canonical glossary identity set changed unexpectedly');
+const pidbFulgrimIdentities=new Map([
+  ['emperors-children-ability-daemon-primarch-of-slaanesh','Daemon Primarch of Slaanesh'],
+  ['emperors-children-ability-beguiling-form','Beguiling Form'],
+  ['emperors-children-ability-daemonic-speed','Daemonic Speed'],
+  ['emperors-children-ability-enthralling-hypnosis-aura','Enthralling Hypnosis (Aura)']
+]);
+for(const [id,title] of pidbFulgrimIdentities){
+  const term=registry[id];
+  assert.ok(term,`${id}: expected PIDB glossary identity is missing`);
+  assert.equal(term.title.en,title,`${id}: title`);
+  assert.equal(term.kind,'datasheet-ability',`${id}: kind`);
+  assert.equal(term.scope,'emperors-children',`${id}: scope`);
+  assert.equal(term.canonicalSource.locator,'unit-fulgrim',`${id}: source unit`);
+  assert.equal(api.get(id).id,id,`${id}: generated glossary cannot resolve the PIDB identity`);
+}
+assert.ok(!registry['emperors-children-ability-daemon-prince-of-slaanesh'],'stale Fulgrim parent glossary identity must remain absent');
 assert.equal(Object.keys(aliases).length,662,'the three old canonical IDs must remain aliases');
 for(const id of [
   'emperors-children-weapon-bolt-pistol-2',

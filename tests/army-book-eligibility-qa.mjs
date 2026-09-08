@@ -4,6 +4,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import ruleFacts from '../books/shared/rule-facts.js';
+import './pedro-kantor-identity-qa.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const booksRoot=path.join(root,'books');

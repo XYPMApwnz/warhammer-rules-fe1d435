@@ -49,6 +49,17 @@ for(const overlay of dependencyScope.keywordOverlays||[])for(const unitId of ove
   keywords.add(clean(overlay.keyword).toUpperCase());
   dependencyKeywordOverlays.set(unitId,keywords);
 }
+const dependencyCompatibilityKeywords=(dependency,unit)=>{
+  const declared=dependency.config.unitCompatibleChapterKeywords?.[unit.id];
+  if(declared==null)return [];
+  if(!Array.isArray(declared)||!declared.length||declared.some(value=>typeof value!=='string'||!clean(value)))throw new Error(`${dependency.id}: unit compatibility ${unit.id} requires non-empty chapter keywords`);
+  if(new Set(declared.map(value=>clean(value).toUpperCase())).size!==declared.length)throw new Error(`${dependency.id}: unit compatibility ${unit.id} contains duplicate chapter keywords`);
+  return declared;
+};
+for(const dependency of dependencyCodices){
+  const unitIds=new Set((dependency.codex.datasheets||[]).map(unit=>unit.id));
+  for(const unitId of Object.keys(dependency.config.unitCompatibleChapterKeywords||{}))if(!unitIds.has(unitId))throw new Error(`${dependency.id}: unit compatibility references unknown unit ${unitId}`);
+}
 const validateDependencyPointOverride=(unitId,override)=>{
   for(const [index,row] of (override.points||[]).entries()){
     if(typeof row?.label!=='string'||!clean(row.label))throw new Error(`${config.id}: dependency point override ${unitId} row ${index+1} requires a non-empty label`);
@@ -56,7 +67,7 @@ const validateDependencyPointOverride=(unitId,override)=>{
   }
 };
 const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.currentOnly?dependency.codex.datasheets||[]:unitInventory(dependency.codex))
-  .filter(unit=>!(unit.keywords||[]).some(keyword=>excludedDependencyKeywords.has(clean(keyword).toUpperCase())))
+  .filter(unit=>![...(unit.keywords||[]),...dependencyCompatibilityKeywords(dependency,unit)].some(keyword=>excludedDependencyKeywords.has(clean(keyword).toUpperCase())))
   .map(unit=>{
     const inheritedPoint=dependency.pointsByTitle.get(titleKey(unit.title)),pointOverride=dependencyPointOverrides[unit.id],exact=dependency.wargearByTitle.get(titleKey(unit.title)),official=dependency.officialByTitle.get(titleKey(unit.title));
     if(pointOverride&&!inheritedPoint)throw new Error(`${config.id}: dependency point override ${unit.id} has no inherited point record`);

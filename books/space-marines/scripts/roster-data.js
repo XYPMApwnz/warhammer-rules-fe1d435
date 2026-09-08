@@ -11437,8 +11437,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "Imperium",
         "Chapter Master",
         "Adeptus Astartes",
-        "Imperial Fists",
+        "Crimson Fists",
         "Pedro Kantor"
+      ],
+      "compatibleChapterKeywords": [
+        "IMPERIAL FISTS"
       ],
       "relations": {
         "canLead": [

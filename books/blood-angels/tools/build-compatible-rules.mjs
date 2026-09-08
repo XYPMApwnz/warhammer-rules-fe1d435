@@ -64,7 +64,12 @@ export function inputs(){
 
 export function buildCompatibleRules({config,pack,parity,codex,points,contracts,spaceMarines,spaceMarinesConfig,spaceMarinesPack,spaceMarinesParity,spaceMarinesPoints,spaceMarinesContracts}){
   const excluded=new Set(config.dependencyDatasheets.excludeAnyKeywords.map(keyword));
-  const local=codex.datasheets,shared=spaceMarines.datasheets.filter(unit=>!(unit.keywords||[]).some(item=>excluded.has(keyword(item)))).map(unit=>({...unit,keywords:[...new Set([...(unit.keywords||[]),'ADEPTUS ASTARTES'])]}));
+  const compatibilityByUnit=spaceMarinesConfig.unitCompatibleChapterKeywords||{},spaceMarinesIds=new Set(spaceMarines.datasheets.map(unit=>unit.id));
+  for(const [unitId,keywords] of Object.entries(compatibilityByUnit)){
+    if(!spaceMarinesIds.has(unitId))throw new Error(`Space Marines unit compatibility references unknown unit ${unitId}`);
+    if(!Array.isArray(keywords)||!keywords.length||keywords.some(value=>typeof value!=='string'||!value.trim()))throw new Error(`Space Marines unit compatibility ${unitId} requires non-empty chapter keywords`);
+  }
+  const local=codex.datasheets,shared=spaceMarines.datasheets.filter(unit=>![...(unit.keywords||[]),...(compatibilityByUnit[unit.id]||[])].some(item=>excluded.has(keyword(item)))).map(unit=>({...unit,keywords:[...new Set([...(unit.keywords||[]),'ADEPTUS ASTARTES'])]}));
   const localIds=new Set(local.map(unit=>unit.id)),collisions=shared.filter(unit=>localIds.has(unit.id));
   if(local.length!==15||shared.length!==82||collisions.length)throw new Error(`Expected 15 local and 82 shared Datasheets with no collisions; found ${local.length}, ${shared.length} and ${collisions.length}`);
   const units=[...local,...shared],rows=new Map(units.map(unit=>[unit.id,new Map()]));

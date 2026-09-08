@@ -26,6 +26,11 @@
     "Emperor's Shield": "IMPERIAL FISTS",
     "Shadowmark Talon": "RAVEN GUARD"
   },
+  "unitCompatibleChapterKeywords": {
+    "unit-pedro-kantor": [
+      "IMPERIAL FISTS"
+    ]
+  },
   "armyRules": [
     "Oath of Moment"
   ],

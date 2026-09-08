@@ -147,7 +147,7 @@ const spaceMarinesParity=read('books/space-marines/content/space-marines-current
 const spaceMarinesContracts=read('books/space-marines/content/space-marines-related-rules.en.json').enhancements;
 const bloodAngelsContracts=read('books/blood-angels/content/blood-angels-related-rules.en.json').enhancements;
 const darkAngelsContracts=read('books/dark-angels/content/dark-angels-related-rules.en.json').enhancements||{};
-const spaceMarinesRecord=unit=>({...unit,wargear:unit.paidWargear||[],...(spaceMarinesProfiles[unit.id]||spaceMarinesProfiles[normalize(unit.title)])});
+const spaceMarinesRecord=unit=>{const compatibleChapterKeywords=spaceMarinesConfig.unitCompatibleChapterKeywords?.[unit.id]||[];return {...unit,wargear:unit.paidWargear||[],...(compatibleChapterKeywords.length?{compatibleChapterKeywords:[...compatibleChapterKeywords]}:{}),...(spaceMarinesProfiles[unit.id]||spaceMarinesProfiles[normalize(unit.title)])};};
 const dependencyUnitPointRecord=(unit,config)=>{const override=config.dependencyDatasheets?.pointOverrides?.[unit.id];if(!override)return unit;if(normalize(override.title)!==normalize(unit.title))throw new Error(`${config.id}: dependency point override ${unit.id} title mismatch`);return {...unit,...override};};
 const chapterUnitRecord=(unit,config,profiles,dependency=false)=>{const current=dependency?dependencyUnitPointRecord(unit,config):unit;return {...current,wargear:current.paidWargear||[],...(profiles[current.id]||profiles[normalize(current.title)])};};
 const spaceMarinesUnits=Object.fromEntries(spaceMarines.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),spaceMarinesRecord(unit)]));

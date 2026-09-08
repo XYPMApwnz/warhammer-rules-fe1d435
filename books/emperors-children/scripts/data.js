@@ -2405,12 +2405,12 @@ window.DG_TERMS={
     "datasheet": "unit-seekers",
     "statline": "seekers-profile"
   },
-  "emperors-children-weapon-lashing-tongues": {
-    "id": "emperors-children-weapon-lashing-tongues",
-    "title": "Lashing tongues",
+  "emperors-children-weapon-lashing-tongue": {
+    "id": "emperors-children-weapon-lashing-tongue",
+    "title": "Lashing tongue",
     "summary": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits",
     "full": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits",
-    "glossary": "glossary-emperors-children-weapon-lashing-tongues",
+    "glossary": "glossary-emperors-children-weapon-lashing-tongue",
     "rule": "unit-seekers",
     "units": [
       "unit-seekers"

@@ -45492,14 +45492,14 @@
       ],
       "mentions": []
     },
-    "emperors-children-weapon-lashing-tongues": {
-      "id": "emperors-children-weapon-lashing-tongues",
+    "emperors-children-weapon-lashing-tongue": {
+      "id": "emperors-children-weapon-lashing-tongue",
       "kind": "weapon",
       "scope": "emperors-children",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Lashing tongues"
+        "en": "Lashing tongue"
       },
       "summary": {
         "en": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits"

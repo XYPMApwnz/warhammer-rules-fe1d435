@@ -2190,10 +2190,10 @@
         ]
       }
     },
-    "emperors-children-weapon-lashing-tongues": {
-      "termId": "emperors-children-weapon-lashing-tongues",
+    "emperors-children-weapon-lashing-tongue": {
+      "termId": "emperors-children-weapon-lashing-tongue",
       "navigation": {
-        "glossary": "glossary-emperors-children-weapon-lashing-tongues",
+        "glossary": "glossary-emperors-children-weapon-lashing-tongue",
         "rule": "unit-seekers",
         "datasheet": "unit-seekers",
         "statline": "seekers-profile",

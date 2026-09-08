@@ -5387,14 +5387,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "selections": [
           {
-            "id": "unit-seekers-selection-lashing-tongues",
-            "title": "Lashing tongues",
+            "id": "unit-seekers-selection-lashing-tongue",
+            "title": "Lashing tongue",
             "aliases": [
-              "Lashing tongues"
+              "Lashing tongue"
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-seekers-profile-lashing-tongues-melee"
+              "unit-seekers-profile-lashing-tongue-melee"
             ],
             "wargearAbilityIds": []
           },
@@ -5438,8 +5438,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-seekers-profile-lashing-tongues-melee",
-            "title": "Lashing tongues",
+            "id": "unit-seekers-profile-lashing-tongue-melee",
+            "title": "Lashing tongue",
             "mode": "melee",
             "range": "Melee",
             "a": "2",
@@ -5449,7 +5449,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Extra Attacks, Lethal Hits",
             "sourceSelectionIds": [
-              "unit-seekers-selection-lashing-tongues"
+              "unit-seekers-selection-lashing-tongue"
             ]
           },
           {

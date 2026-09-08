@@ -114,6 +114,14 @@ const tyrCodex=json('books/tyranids/content/tyranids-codex-datasheets.en.json');
 const tauPack=json('books/tau-empire/content/tau-empire-faction-pack.en.json');
 const tauParity=json('books/tau-empire/content/tau-empire-codex-parity.en.json');
 const tauCodex=json('books/tau-empire/content/tau-empire-codex-datasheets.en.json');
+const ecCodex=json('books/emperors-children/content/emperors-children-codex-datasheets.en.json');
+const seekers=exactlyOne(ecCodex.datasheets.filter(unit=>unit.id==='unit-seekers'),'EC unit-seekers');
+assert.deepEqual(
+  exactlyOne(seekers.weapons.filter(weapon=>weapon.name==='Lashing tongue'),'Seekers Lashing tongue'),
+  {name:'Lashing tongue',mode:'melee',range:'Melee',a:'2',skill:'4+',s:'4',ap:'0',d:'1',abilities:'Extra Attacks, Lethal Hits'},
+  'Seekers Lashing tongue must match the reviewed official profile'
+);
+assert.equal(seekers.weapons.filter(weapon=>weapon.name==='Lashing tongues').length,0,'Seekers stale plural weapon identity must be absent');
 const csmCodex=json('books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json');
 const nemesisClaw=exactlyOne(csmCodex.datasheets.filter(unit=>unit.id==='unit-nemesis-claw'),'CSM unit-nemesis-claw');
 assert.deepEqual(

@@ -79,12 +79,22 @@ for(const rule of expectedDaRules){
 }
 
 const daRelatedRules=json('books/dark-angels/content/dark-angels-related-rules.en.json');
+const daEligibilityExpected=new Map([
+  ['rapid-reappraisal',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['RAVENWING']}}],conditions:['not-within-engagement-range']}],
+  ['high-speed-focus',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['RAVENWING']}}],conditions:['targeted-by-enemy-attack']}],
+  ['hunters-trail',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['RAVENWING','MOUNTED']}}],conditions:['within-range-of-objective-you-control']}],
+  ['unmatched-fortitude',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['DEATHWING','INFANTRY']}}],conditions:['targeted-by-enemy-attack']}],
+  ['martial-mastery',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['DEATHWING','INFANTRY']}}],conditions:['not-selected-to-fight']}],
+  ['wrath-of-the-lion',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['DEATHWING','INFANTRY']}}],conditions:['ended-charge-move']}],
+  ['duty-unto-death',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['DEATHWING']}}],conditions:['targeted-by-enemy-attack']}],
+  ['unbreakable-lines',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['ADEPTUS ASTARTES']}}],conditions:['enemy-unit-ended-charge-move','within-engagement-range-of-that-unit']}],
+  ['unforgiven-fury',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['ADEPTUS ASTARTES']}}],conditions:['not-selected-to-attack']}],
+  ['grim-retribution',{v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{allKeywords:['ADEPTUS ASTARTES']}}],conditions:['unit-has-been-shot','lost-one-or-more-models']}]
+]);
 for(const rule of expectedDaRules){
   const eligibilityId=rule.id.replace(/^stratagem-/,'');
   const eligibility=daRelatedRules.stratagems?.[eligibilityId];
-  assert.ok(eligibility,`${eligibilityId}: eligibility contract is absent`);
-  assert.equal(eligibility.v,1,`${eligibilityId}: eligibility version`);
-  assert.equal(eligibility.roles?.filter(role=>role.side==='friendly').length,1,`${eligibilityId}: friendly role cardinality`);
+  assert.deepEqual(eligibility,daEligibilityExpected.get(eligibilityId),`${eligibilityId}: exact eligibility contract`);
 }
 
 const ec=json('books/emperors-children/content/emperors-children-codex-datasheets.en.json');

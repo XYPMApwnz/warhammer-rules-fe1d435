@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 
 const read=path=>fs.readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
@@ -9,6 +10,7 @@ const sw=read('service-worker.js');
 const registry=JSON.parse(read('glossary/registry.en.json')).terms;
 const aliases=JSON.parse(read('glossary/aliases.en.json')).aliases;
 const values=Object.values(registry);
+const registryIds=Object.keys(registry).sort();
 const normalize=value=>String(value||'').toLocaleLowerCase().replace(/\s+/g,' ').trim();
 const placeholder=/^(?:See full rule|Open full rule|Reference entry)\.?$/i;
 const meaningful=value=>Boolean(normalize(value))&&!placeholder.test(String(value).trim());
@@ -19,8 +21,28 @@ const visibleTextBlocks=term=>{
     Number(meaningful(definition)&&term.presentation!=='profile');
 };
 
-assert.equal(values.length,2588,'canonical entry count must remain stable');
+assert.equal(values.length,2592,'canonical entry count must remain stable');
 assert.equal(Object.keys(aliases).length,662,'alias count must remain stable');
+assert.ok(Object.entries(registry).every(([id,term])=>term.id===id),'registry keys and canonical IDs must remain identical');
+assert.equal(new Set(values.map(term=>term.id)).size,values.length,'canonical glossary IDs must remain unique');
+assert.equal(crypto.createHash('sha256').update(registryIds.join('\n')).digest('hex'),'af8215a253210c2cf194f92fb1d08f5b336f89c13e79390a59e52ce90cf3d635','canonical glossary identity set must remain stable');
+
+const expectedFactualProfiles=[
+  {id:'emperors-children-weapon-bolt-pistol-2',title:'Bolt pistol',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'4',AP:'0',D:'1'}},
+  {id:'emperors-children-weapon-plasma-pistol-standard-2',title:'➤ Plasma pistol - standard',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'7',AP:'-2',D:'1'}},
+  {id:'emperors-children-weapon-plasma-pistol-supercharge-2',title:'➤ Plasma pistol - supercharge',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'8',AP:'-3',D:'2'}},
+  {id:'emperors-children-weapon-power-fist-2',title:'Power fist',locator:'unit-chaos-terminators',summary:'Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2',weapon:{Range:'Melee',A:'3',WS:'3+',S:'8',AP:'-2',D:'2'}}
+];
+for(const expected of expectedFactualProfiles){
+  const term=registry[expected.id];
+  assert.ok(term,`${expected.id} must remain present`);
+  assert.equal(term.kind,'weapon',`${expected.id} kind`);
+  assert.equal(term.scope,'emperors-children',`${expected.id} scope`);
+  assert.equal(term.title.en,expected.title,`${expected.id} title`);
+  assert.equal(term.summary.en,expected.summary,`${expected.id} summary`);
+  assert.deepEqual(term.structured.weapon,expected.weapon,`${expected.id} structured profile`);
+  assert.equal(term.canonicalSource.locator,expected.locator,`${expected.id} source identity`);
+}
 
 assert.match(viewer,/const titleCounts=new Map\(\)/,'duplicate titles must be detected');
 assert.match(viewer,/className='term-qualifier'/,'duplicate titles must display a source qualifier');
@@ -58,7 +80,7 @@ assert.equal(technicalUnits.filter(term=>term.scope==='death-guard').length,36,'
 assert.equal(technicalUnits.filter(term=>term.scope==='adeptus-mechanicus').length,34,'all 34 Mechanicus technical units must be classified structurally');
 assert.equal(contextOnly.length,93,'exactly 93 confirmed context-only entries must be classified');
 assert.ok(contextOnly.every(term=>term.presentation==='metadata'),'all confirmed context-only entries must be hidden from ordinary search');
-assert.equal(searchable.length,2484,'only the 93 confirmed context-only entries may leave the catalogue');
+assert.equal(searchable.length,2488,'only the 93 confirmed context-only entries may leave the catalogue');
 assert.equal(metadata.length,104,'existing metadata plus 93 context-only entries must remain hidden');
 assert.deepEqual(metadata.map(term=>term.id).sort(),[...existingMetadataIds,...contextOnly.map(term=>term.id)].sort(),'no additional entries may be hidden');
 
@@ -75,7 +97,7 @@ for(const id of [
   'tyranids-ability-warp-field-aura-psychic','adeptus-mechanicus-datasheet-defend-the-divine-work'
 ])assert.ok(searchable.includes(registry[id]),`${id} must remain searchable`);
 const weaponProfiles=values.filter(term=>term.kind==='weapon');
-assert.equal(weaponProfiles.length,857,'weapon profile inventory must remain stable');
+assert.equal(weaponProfiles.length,861,'weapon profile inventory must remain stable');
 assert.ok(weaponProfiles.every(term=>term.presentation==='profile'&&searchable.includes(term)),'all weapon profiles must remain searchable profiles');
 
 const hiddenExistingPrimary=searchable.filter(term=>(meaningful(term.summary?.en)||meaningful(term.definition?.en))&&visibleTextBlocks(term)===0&&term.presentation!=='profile');

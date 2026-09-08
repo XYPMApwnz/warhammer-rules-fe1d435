@@ -64,7 +64,7 @@ const gameSelectionsFor=(unit,options={})=>{
 
 const detachmentRulesFor=(detachment,options={})=>{
   const candidates=[...values(detachment.detachmentRules),...values(detachment.rules)];
-  if(detachment.rule)candidates.push(detachment.rule);
+  if(detachment.rule)candidates.push(detachment.rule,...values(detachment.rule.additionalRules));
   for(const section of values(detachment.subsections))if(section?.kind==='detachment-rule'||/detachment rule/i.test(section?.title||''))for(const block of values(section.blocks))candidates.push({...block,sectionId:block.sectionId||block.id||section.id});
   const records=new Map();for(const item of candidates){const id=item?.termId||item?.ruleId||item?.id||(options.inferCanonicalDetachmentRuleIds&&item?.title?`${options.bookId||'book'}-detachment-rule-${slug(item.title)}`:null);if(!id)continue;records.set(id,{id,title:item.title||'',text:item.text||item.full||item.short||'',sectionId:item.sectionId||item.sourceId||item.id||`${detachment.id}-rule`,detachmentId:detachment.id,detachmentTitle:detachment.title,sourceBookId:detachment.dependencyBook||detachment.sourceBookId||null});}
   return [...records.values()];

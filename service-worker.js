@@ -351,7 +351,7 @@ const APP_SHELL = [
   ,"./books/emperors-children/scripts/data.js?v=2"
   ,"./books/emperors-children/scripts/roster-data.js?v=13"
   ,"./books/emperors-children/scripts/target-data.js?v=4"
-  ,"./books/emperors-children/scripts/roster-filter.js?v=4"
+  ,"./books/emperors-children/scripts/roster-filter.js?v=5"
   ,"./books/emperors-children/scripts/stratagem-types.mjs?v=2"
   ,"./books/emperors-children/generated/compatible-rules.json"
   ,"./books/emperors-children/mobile/related-rules.inc?v=2"

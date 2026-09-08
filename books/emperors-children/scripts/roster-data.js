@@ -5515,7 +5515,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
-        "emperors-children-detachment-rule-sensational-performance"
+        "emperors-children-detachment-rule-sensational-performance",
+        "emperors-children-detachment-rule-master-of-the-pageant"
       ]
     },
     {
@@ -5612,6 +5613,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "emperors-children-detachment-rule-sensational-performance",
       "title": "Sensational Performance",
       "text": "EMPEROR’S CHILDREN units from your army have the following ability: Sensational Performance: Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase: This unit cannot target a unit it was within Engagement Range of at the start of the turn. This unit cannot target a unit that was the target of another unit’s attack this phase. Improve the Strength and Armour Penetration characteristics of this unit’s melee weapons by 1.",
+      "sectionId": "court-of-the-phoenician-rule",
+      "detachmentId": "court-of-the-phoenician",
+      "detachmentTitle": "Court of the Phoenician",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-master-of-the-pageant",
+      "title": "Master of the Pageant",
+      "text": "Once per battle round, when you target a FULGRIM unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.",
       "sectionId": "court-of-the-phoenician-rule",
       "detachmentId": "court-of-the-phoenician",
       "detachmentTitle": "Court of the Phoenician",

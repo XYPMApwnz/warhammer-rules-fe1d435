@@ -31,7 +31,7 @@
     "ruleFacts": 5,
     "book": 4,
     "tokens": 2,
-    "rosterFilter": 4,
+    "rosterFilter": 5,
     "rosterData": 1
   },
   "expected": {

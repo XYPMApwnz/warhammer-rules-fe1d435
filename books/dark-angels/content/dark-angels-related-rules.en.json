@@ -2,6 +2,136 @@
   "schema": 1,
   "faction": "Dark Angels",
   "stratagems": {
+    "rapid-reappraisal": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["RAVENWING"] }
+        }
+      ],
+      "conditions": ["not-within-engagement-range"]
+    },
+    "high-speed-focus": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["RAVENWING"] }
+        }
+      ],
+      "conditions": ["targeted-by-enemy-attack"]
+    },
+    "hunters-trail": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["RAVENWING", "MOUNTED"] }
+        }
+      ],
+      "conditions": ["within-range-of-objective-you-control"]
+    },
+    "unmatched-fortitude": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["DEATHWING", "INFANTRY"] }
+        }
+      ],
+      "conditions": ["targeted-by-enemy-attack"]
+    },
+    "martial-mastery": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["DEATHWING", "INFANTRY"] }
+        }
+      ],
+      "conditions": ["not-selected-to-fight"]
+    },
+    "wrath-of-the-lion": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["DEATHWING", "INFANTRY"] }
+        }
+      ],
+      "conditions": ["ended-charge-move"]
+    },
+    "duty-unto-death": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["DEATHWING"] }
+        }
+      ],
+      "conditions": ["targeted-by-enemy-attack"]
+    },
+    "unbreakable-lines": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["ADEPTUS ASTARTES"] }
+        }
+      ],
+      "conditions": ["enemy-unit-ended-charge-move", "within-engagement-range-of-that-unit"]
+    },
+    "unforgiven-fury": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["ADEPTUS ASTARTES"] }
+        }
+      ],
+      "conditions": ["not-selected-to-attack"]
+    },
+    "grim-retribution": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": { "allKeywords": ["ADEPTUS ASTARTES"] }
+        }
+      ],
+      "conditions": ["unit-has-been-shot", "lost-one-or-more-models"]
+    },
     "searing-bursts": {
       "v": 1,
       "roles": [

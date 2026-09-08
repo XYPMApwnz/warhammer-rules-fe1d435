@@ -39,6 +39,30 @@ window.DG_TERMS={
     "glossary": "glossary-dark-angels-enhancement-recon-hunter",
     "rule": "detachment-company-of-hunters"
   },
+  "dark-angels-stratagem-rapid-reappraisal": {
+    "id": "dark-angels-stratagem-rapid-reappraisal",
+    "title": "Rapid Reappraisal",
+    "summary": "End of your opponent’s Fight phase. One RAVENWING unit from your army that is not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
+    "full": "End of your opponent’s Fight phase. One RAVENWING unit from your army that is not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
+    "glossary": "glossary-dark-angels-stratagem-rapid-reappraisal",
+    "rule": "detachment-company-of-hunters"
+  },
+  "dark-angels-stratagem-high-speed-focus": {
+    "id": "dark-angels-stratagem-high-speed-focus",
+    "title": "High-speed Focus",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One RAVENWING unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One RAVENWING unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+    "glossary": "glossary-dark-angels-stratagem-high-speed-focus",
+    "rule": "detachment-company-of-hunters"
+  },
+  "dark-angels-stratagem-hunters-trail": {
+    "id": "dark-angels-stratagem-hunters-trail",
+    "title": "Hunters’ Trail",
+    "summary": "Command phase. One RAVENWING MOUNTED unit from your army that is within range of an objective marker you control. That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+    "full": "Command phase. One RAVENWING MOUNTED unit from your army that is within range of an objective marker you control. That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+    "glossary": "glossary-dark-angels-stratagem-hunters-trail",
+    "rule": "detachment-company-of-hunters"
+  },
   "dark-angels-detachment-rule-invocations-of-ancient-fury": {
     "id": "dark-angels-detachment-rule-invocations-of-ancient-fury",
     "title": "Invocations of Ancient Fury",
@@ -173,6 +197,38 @@ window.DG_TERMS={
     "summary": "Deathwing model only. Each time the bearer's unit Pile In or Consolidates, models in that unit can move an additional 3\".",
     "full": "Deathwing model only. Each time the bearer's unit Pile In or Consolidates, models in that unit can move an additional 3\".",
     "glossary": "glossary-dark-angels-enhancement-singular-will",
+    "rule": "detachment-inner-circle-task-force"
+  },
+  "dark-angels-stratagem-unmatched-fortitude": {
+    "id": "dark-angels-stratagem-unmatched-fortitude",
+    "title": "Unmatched Fortitude",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One DEATHWING INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than your unit’s Toughness characteristic, subtract 1 from the Wound roll.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One DEATHWING INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than your unit’s Toughness characteristic, subtract 1 from the Wound roll.",
+    "glossary": "glossary-dark-angels-stratagem-unmatched-fortitude",
+    "rule": "detachment-inner-circle-task-force"
+  },
+  "dark-angels-stratagem-martial-mastery": {
+    "id": "dark-angels-stratagem-martial-mastery",
+    "title": "Martial Mastery",
+    "summary": "Fight phase. One DEATHWING INFANTRY unit from your army that has not been selected to fight this phase. Until the end of the phase, each time a model in your unit makes an attack, re-roll a Wound roll of 1. If your unit is within range of your Vowed objective marker, you can re-roll the Wound roll instead.",
+    "full": "Fight phase. One DEATHWING INFANTRY unit from your army that has not been selected to fight this phase. Until the end of the phase, each time a model in your unit makes an attack, re-roll a Wound roll of 1. If your unit is within range of your Vowed objective marker, you can re-roll the Wound roll instead.",
+    "glossary": "glossary-dark-angels-stratagem-martial-mastery",
+    "rule": "detachment-inner-circle-task-force"
+  },
+  "dark-angels-stratagem-wrath-of-the-lion": {
+    "id": "dark-angels-stratagem-wrath-of-the-lion",
+    "title": "Wrath of the Lion",
+    "summary": "Your Charge phase. One DEATHWING INFANTRY unit from your army that just ended a Charge move. Select one enemy unit within Engagement Range of your unit and roll one D6 for each model in your unit, adding 1 to the result if that enemy unit is within range of your Vowed objective marker: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 3 mortal wounds).",
+    "full": "Your Charge phase. One DEATHWING INFANTRY unit from your army that just ended a Charge move. Select one enemy unit within Engagement Range of your unit and roll one D6 for each model in your unit, adding 1 to the result if that enemy unit is within range of your Vowed objective marker: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 3 mortal wounds).",
+    "glossary": "glossary-dark-angels-stratagem-wrath-of-the-lion",
+    "rule": "detachment-inner-circle-task-force"
+  },
+  "dark-angels-stratagem-duty-unto-death": {
+    "id": "dark-angels-stratagem-duty-unto-death",
+    "title": "Duty Unto Death",
+    "summary": "Fight phase, just after an enemy unit has selected its targets. One DEATHWING unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 if your unit is within range of your Vowed objective marker. On a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+    "full": "Fight phase, just after an enemy unit has selected its targets. One DEATHWING unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 if your unit is within range of your Vowed objective marker. On a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+    "glossary": "glossary-dark-angels-stratagem-duty-unto-death",
     "rule": "detachment-inner-circle-task-force"
   },
   "dark-angels-detachment-rule-dread-catechism": {
@@ -349,6 +405,30 @@ window.DG_TERMS={
     "summary": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
     "full": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
     "glossary": "glossary-dark-angels-enhancement-weapons-of-the-first-legion",
+    "rule": "detachment-unforgiven-task-force"
+  },
+  "dark-angels-stratagem-unbreakable-lines": {
+    "id": "dark-angels-stratagem-unbreakable-lines",
+    "title": "Unbreakable Lines",
+    "summary": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move. One ADEPTUS ASTARTES unit from your army within Engagement Range of that enemy unit. Until the end of the turn, each time an attack targets your unit, subtract 1 from the Wound roll.",
+    "full": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move. One ADEPTUS ASTARTES unit from your army within Engagement Range of that enemy unit. Until the end of the turn, each time an attack targets your unit, subtract 1 from the Wound roll.",
+    "glossary": "glossary-dark-angels-stratagem-unbreakable-lines",
+    "rule": "detachment-unforgiven-task-force"
+  },
+  "dark-angels-stratagem-unforgiven-fury": {
+    "id": "dark-angels-stratagem-unforgiven-fury",
+    "title": "Unforgiven Fury",
+    "summary": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more ADEPTUS ASTARTES units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+    "full": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more ADEPTUS ASTARTES units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+    "glossary": "glossary-dark-angels-stratagem-unforgiven-fury",
+    "rule": "detachment-unforgiven-task-force"
+  },
+  "dark-angels-stratagem-grim-retribution": {
+    "id": "dark-angels-stratagem-grim-retribution",
+    "title": "Grim Retribution",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has shot. One ADEPTUS ASTARTES unit from your army that had one or more models destroyed as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but it must target the enemy unit that just attacked it, and can only do so if that enemy unit is an eligible target.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has shot. One ADEPTUS ASTARTES unit from your army that had one or more models destroyed as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but it must target the enemy unit that just attacked it, and can only do so if that enemy unit is an eligible target.",
+    "glossary": "glossary-dark-angels-stratagem-grim-retribution",
     "rule": "detachment-unforgiven-task-force"
   },
   "dark-angels-detachment-rule-dutiful-tenacity": {

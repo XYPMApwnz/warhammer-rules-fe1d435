@@ -40,7 +40,13 @@ assert.match(amSource,/lord-of-the-machine-cult.*Feel No Pain/,'Dominus determin
 assert.match(amSource,/galvanic-field.*LETHAL HITS/,'Manipulus deterministic weapon mutation must remain');
 
 const remainingProvider=fs.readFileSync(path.join(root,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
-assert.doesNotMatch(remainingProvider,/explicit-attachment/,'Remaining-seven Enhancement provider must not be misclassified as explicit attachment routing');
+const enhancementStart=remainingProvider.indexOf('for(const resolution of enhancements||[])'),attachedStart=remainingProvider.indexOf('const attachedSemantics='),bodyguardStart=remainingProvider.indexOf('const bodyguardSemantics=');
+assert.ok(enhancementStart>=0&&attachedStart>enhancementStart&&bodyguardStart>attachedStart,'current Enhancement/attachment provider boundaries');
+const enhancementProvider=remainingProvider.slice(enhancementStart,attachedStart),attachedAbilityProvider=remainingProvider.slice(attachedStart,bodyguardStart);
+assert.match(enhancementProvider,/source=\{kind:'enhancement'/,'Enhancement references retain Enhancement provenance');
+assert.doesNotMatch(enhancementProvider,/explicit-attachment/,'Enhancements must not use explicit attachment routing');
+assert.match(attachedAbilityProvider,/source=\{kind:'explicit-attachment'/,'attached canonical Abilities use explicit attachment routing');
+assert.match(attachedAbilityProvider,/smReferenceRecord\('ability'/,'attached canonical Abilities emit canonical references');
 
 const contentTypes={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.png':'image/png','.svg':'image/svg+xml'};
 const server=http.createServer((request,response)=>{const pathname=decodeURIComponent(new URL(request.url,'http://127.0.0.1').pathname),relative=pathname.replace(/^\/+/, '')||'index.html',file=path.resolve(root,relative);if(file!==root&&!file.startsWith(`${root}${path.sep}`)){response.writeHead(403).end();return;}try{const stat=fs.statSync(file),target=stat.isDirectory()?path.join(file,'index.html'):file;response.writeHead(200,{'content-type':contentTypes[path.extname(target)]||'application/octet-stream'});fs.createReadStream(target).pipe(response);}catch{response.writeHead(404).end();}});
@@ -54,7 +60,7 @@ try{
 
   const dgCatalog=loadCatalog('death-guard'),malicious=ability(dgCatalog,'ability-malicious-calculations-8505f03');
   const dgText=`Death Guard
-1x Tallyman (45 pts): Close combat weapon, Infected plasma pistol
+1x Tallyman (45 pts): Close combat weapon, Plasma pistol
 7x Plague Marines (125 pts)
 • 6x Plague Marine
     4 with Boltgun, Plague knives
@@ -75,7 +81,7 @@ try{
   const foul=ability(dgCatalog,'ability-foul-infusion-490467e');
   const foulRecord={id:'canonical-foul-class-c',sourceText:`Death Guard
 1x Biologus Putrifier (60 pts): Hyper blight grenades, Injector pistol, Plague knives
-1x Tallyman (45 pts): Close combat weapon, Infected plasma pistol
+1x Tallyman (45 pts): Close combat weapon, Plasma pistol
 7x Plague Marines (125 pts)
 • 6x Plague Marine
     4 with Boltgun, Plague knives

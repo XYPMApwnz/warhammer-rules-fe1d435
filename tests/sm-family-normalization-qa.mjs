@@ -25,13 +25,23 @@ assert.equal(excluded('dark-angels').length,19,'DA incompatible SM exclusions');
 assert.equal(excluded('blood-angels').length,19,'BA incompatible SM exclusions');
 assert.deepEqual(excluded('dark-angels'),excluded('blood-angels'),'DA/BA preserve the same dependency filter');
 const edges=(catalog,field)=>new Set(catalog.units.flatMap(unit=>(unit.relations?.[field]||[]).map(target=>`${unit.id}>${target.unitId}`)));
-for(const [book,expectedAdd] of [['dark-angels',50],['blood-angels',27]]){
+const daDependencySupportAdds=new Set([
+  'unit-ancient>unit-inner-circle-companions',
+  'unit-apothecary>unit-inner-circle-companions',
+  'unit-lieutenant>unit-inner-circle-companions',
+  'unit-ancient-in-terminator-armor>unit-deathwing-knights',
+  'unit-ancient-in-terminator-armor>unit-deathwing-terminator-squad'
+]);
+assert.deepEqual([...daDependencySupportAdds].filter(edge=>!edges(catalogs['dark-angels'],'canSupport').has(edge)),[],'DA dependency Support overlays');
+for(const book of ['space-marines','blood-angels'])assert.deepEqual([...daDependencySupportAdds].filter(edge=>edges(catalogs[book],'canSupport').has(edge)),[],`${book} rejects DA-local Support overlays`);
+for(const [book,baseChapterAdds] of [['dark-angels',50],['blood-angels',27]]){
   const effectiveIds=new Set(catalogs[book].units.map(unit=>unit.id));
   const baseLead=[...edges(catalogs['space-marines'],'canLead')].filter(edge=>edge.split('>').every(id=>effectiveIds.has(id)));
   const effectiveLead=edges(catalogs[book],'canLead');
   assert.equal(baseLead.filter(edge=>!effectiveLead.has(edge)).length,0,`${book} preserves every available base Leader relation`);
   const adds=['canLead','canSupport'].flatMap(field=>[...edges(catalogs[book],field)].filter(edge=>!edges(catalogs['space-marines'],field).has(edge)));
-  assert.equal(adds.length,expectedAdd,`${book} chapter relation ADD count`);
+  const dependencySupportCount=book==='dark-angels'?daDependencySupportAdds.size:0;
+  assert.equal(adds.length-dependencySupportCount,baseChapterAdds,`${book} base chapter relation ADD composition`);
   assert.equal(catalogs[book].units.flatMap(unit=>Object.values(unit.relations||{}).flat()).filter(target=>!effectiveIds.has(target.unitId)).length,0,`${book} unresolved generated relation targets`);
 }
 const commonDetachments=catalogs['space-marines'].detachments.filter(item=>catalogs['dark-angels'].detachments.some(other=>other.id===item.id)&&catalogs['blood-angels'].detachments.some(other=>other.id===item.id));

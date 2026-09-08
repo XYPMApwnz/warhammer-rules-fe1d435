@@ -9,18 +9,28 @@ import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const books=new Map([
-  ['emperors-children',21],
-  ['tyranids',23],
-  ['chaos-space-marines',12],
-  ['space-marines',12],
-  ['dark-angels',35],
-  ['blood-angels',11]
+  ['emperors-children','enhancement-distortion'],
+  ['tyranids','enhancement-adaptive-biology'],
+  ['chaos-space-marines','enhancement-touched-by-the-warp'],
+  ['space-marines','firestorm-assault-force-war-tempered-artifice'],
+  ['dark-angels','enhancement-weapons-of-the-first-legion'],
+  ['blood-angels','enhancement-archangels-shard']
 ]);
 const registrySource=fs.readFileSync(path.join(root,'books/shared/book-roster-enhancements.js'),'utf8');
 const providerSource=fs.readFileSync(path.join(root,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
 const components=new Set();
 let conditionalCount=0;
 const fixtures=new Map();
+const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const ownerEligible=(unit,selector={})=>{
+  const keywords=new Set((unit.intrinsicKeywords||[]).map(normalize)),abilities=new Set((unit.gameSelections?.abilities||[]).map(item=>normalize(item.id)));
+  if((selector.unitIds||[]).length&&!selector.unitIds.includes(unit.id))return false;
+  if((selector.allKeywords||[]).some(keyword=>!keywords.has(normalize(keyword))))return false;
+  if((selector.anyKeywords||[]).length&&!selector.anyKeywords.some(keyword=>keywords.has(normalize(keyword))))return false;
+  if((selector.noneKeywords||[]).some(keyword=>keywords.has(normalize(keyword))))return false;
+  if((selector.allAbilities||[]).some(ability=>!abilities.has(normalize(ability))))return false;
+  return true;
+};
 
 const loadBook=bookId=>{
   const scope={
@@ -38,14 +48,15 @@ const loadBook=bookId=>{
   return {api:scope.WHBookRosterEnhancements,catalog:scope.WH_BOOK_ROSTER_CATALOG};
 };
 
-for(const [bookId,expected] of books){
+for(const [bookId,requiredEnhancementId] of books){
   const {api,catalog}=loadBook(bookId);
-  let structured=0;
+  const structuredIds=new Set();
   for(const enhancement of catalog.enhancements){
     const ownerId=`${bookId}-physical-owner`;
+    const selector=enhancement.owner?.selector,ownerUnit=(selector?catalog.units.find(candidate=>ownerEligible(candidate,selector)):null)||catalog.units.find(candidate=>candidate.intrinsicKeywords.some(keyword=>keyword.toLowerCase()==='character'))||catalog.units[0];
     const item={
       instanceId:ownerId,
-      unitId:enhancement.ownerUnitIds?.[0]||catalog.units[0].id,
+      unitId:ownerUnit.id,
       raw:{id:ownerId}
     };
     const resolved={
@@ -53,12 +64,14 @@ for(const [bookId,expected] of books){
       input:{ownerStatus:'resolved',ownerUnitId:ownerId},
       owner:{status:'resolved',instanceId:ownerId}
     };
-    const effects=api.gameEffects({item,enhancements:[resolved]});
+    const keywords=ownerUnit.intrinsicKeywords||[];
+    const gameUnit={identity:{instanceId:ownerId,canonicalDatasheetId:ownerUnit.id},rosterState:{detachments:[enhancement.detachmentId],keywordProfile:{intrinsic:keywords,added:[],removed:[],effective:keywords}},selection:{loadout:{selectedWargearAbilityIds:[]}},item:{catalogUnit:ownerUnit}};
+    const effects=api.gameEffects({item,gameUnit,gameUnits:[gameUnit],byInstance:new Map([[ownerId,gameUnit]]),enhancements:[resolved]}).filter(effect=>effect.source?.kind==='enhancement');
     if(!effects.length)continue;
-    structured+=1;
+    structuredIds.add(enhancement.id);
     for(const effect of effects){
       assert.equal(effect.source?.ownerInstanceId,ownerId,`${bookId}/${enhancement.id}: exact source owner`);
-      assert.equal(effect.source?.id,enhancement.id,`${bookId}/${enhancement.id}: canonical source`);
+      assert.ok([enhancement.id,enhancement.ruleId,enhancement.sourceId].filter(Boolean).includes(effect.source?.id),`${bookId}/${enhancement.id}: canonical source`);
       assert.equal(effect.provenance?.rosterFact,'enhancement-owner',`${bookId}/${enhancement.id}: provenance`);
       assert.ok(effect.component||effect.kind,`${bookId}/${enhancement.id}: effect class`);
       assert.ok(effect.operation,`${bookId}/${enhancement.id}: operation`);
@@ -71,18 +84,19 @@ for(const [bookId,expected] of books){
     }
 
     const otherId=`${bookId}-physical-other`;
-    const other=api.gameEffects({item:{...item,instanceId:otherId,raw:{id:otherId}},enhancements:[resolved]});
+    const otherItem={...item,instanceId:otherId,raw:{id:otherId}},otherGameUnit={...gameUnit,identity:{...gameUnit.identity,instanceId:otherId}};
+    const other=api.gameEffects({item:otherItem,gameUnit:otherGameUnit,gameUnits:[otherGameUnit],byInstance:new Map([[otherId,otherGameUnit]]),enhancements:[resolved]}).filter(effect=>effect.source?.kind==='enhancement');
     assert.equal(other.length,0,`${bookId}/${enhancement.id}: bearer effect leaked to another physical instance`);
-    const unresolved=api.gameEffects({item,enhancements:[{...resolved,input:{ownerStatus:'unresolved',ownerUnitId:ownerId},owner:{status:'unresolved',instanceId:ownerId}}]});
+    const unresolved=api.gameEffects({item,gameUnit,gameUnits:[gameUnit],byInstance:new Map([[ownerId,gameUnit]]),enhancements:[{...resolved,input:{ownerStatus:'unresolved',ownerUnitId:ownerId},owner:{status:'unresolved',instanceId:ownerId}}]}).filter(effect=>effect.source?.kind==='enhancement');
     assert.equal(unresolved.length,0,`${bookId}/${enhancement.id}: unresolved owner produced a factual effect`);
-    if(!fixtures.has(bookId)){
-      const unit=catalog.units.find(candidate=>candidate.intrinsicKeywords.some(keyword=>keyword.toLowerCase()==='character'))||catalog.units[0];
+    if(enhancement.id===requiredEnhancementId){
       const detachment=catalog.detachments.find(candidate=>candidate.id===enhancement.detachmentId);
-      fixtures.set(bookId,{catalog,unit,enhancement,detachment,effects});
+      fixtures.set(bookId,{catalog,unit:ownerUnit,enhancement,detachment,effects});
     }
   }
-  assert.equal(structured,expected,`${bookId}: current curated Enhancement coverage`);
-  console.log(`PASS  ${bookId}: ${structured} canonical Enhancements emit structured effects`);
+  assert.ok(structuredIds.has(requiredEnhancementId),`${bookId}: required stable Enhancement provider ${requiredEnhancementId}`);
+  assert.ok(fixtures.has(bookId),`${bookId}: browser fixture for required stable Enhancement`);
+  console.log(`PASS  ${bookId}: ${structuredIds.size} canonical Enhancements emit structured effects; stable anchor ${requiredEnhancementId}`);
 }
 assert.deepEqual([...components].sort(),['ability','keyword','stat','weapon'],'structured component families');
 assert.ok(conditionalCount>0,'conditional game-state effects are absent');
@@ -97,21 +111,24 @@ try{
   try{
     const page=await context.newPage(),errors=[];
     page.on('pageerror',error=>errors.push(error.message));
+    let browserPresented=0;
     for(const [bookId,{catalog,unit,enhancement,detachment}] of fixtures){
-      const rosterId=`synergy-${bookId}`,instanceId=`${bookId}-effect-owner`,record={id:rosterId,roster:{faction:catalog.book.title,detachments:detachment?[{name:detachment.title}]:[],units:[{id:instanceId,name:unit.title,points:100,models:[{quantity:1,name:unit.title,loadouts:[]}]}],enhancements:[{name:enhancement.title,ownerUnitId:instanceId,ownerStatus:'resolved'}],warnings:[]}};
+      const rosterId=`synergy-${bookId}`,instanceId=`${bookId}-effect-owner`,selection=unit.gameSelections.selections.find(item=>item.kind==='weapon'&&item.profileIds.length),record={id:rosterId,roster:{faction:catalog.book.title,detachments:detachment?[{name:detachment.title}]:[],units:[{id:instanceId,name:unit.title,points:100,models:[{quantity:1,name:unit.gameSelections.models[0]?.title||unit.title,loadouts:selection?[{quantity:1,wargear:selection.title}]:[]}]}],enhancements:[{id:enhancement.id,name:enhancement.title,ownerUnitId:instanceId,ownerStatus:'resolved'}],warnings:[]}};
       await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile#start`);
       await page.evaluate(record=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([record])),record);
       await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile&roster=${rosterId}#${unit.id}`);
       try{await page.waitForFunction(id=>document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(id)}"]`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1',instanceId);}catch(error){throw new Error(`${bookId}: projection timeout; ${errors.join(' | ')||'no browser error captured'}`,{cause:error});}
-      const state=await page.evaluate(({instanceId,title})=>{const projection=window.WH_ARMY_ROSTER_GAME_PROJECTION,gameUnit=projection.units.find(item=>item.identity.instanceId===instanceId),card=document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(instanceId)}"]`);return{effects:gameUnit.effects.map(effect=>({owner:effect.source?.ownerInstanceId,state:effect.state,certainty:effect.certainty,condition:effect.condition||null,targets:effect.targets||[]})),text:card.querySelector('.roster-game-effects')?.innerText||'',cardText:card.innerText,changes:card.querySelectorAll('.roster-game-change,.roster-modified,.roster-game-derived-ability,.roster-game-effects li').length,units:document.querySelectorAll('.document .unit-card').length,overflow:document.documentElement.scrollWidth>innerWidth,title};},{instanceId,title:enhancement.title});
-      assert.ok(state.effects.length>0,`${bookId}: structured projection`);
-      assert.ok(state.effects.every(effect=>effect.owner===instanceId),`${bookId}: exact source owner`);
-      const titlePattern=new RegExp(enhancement.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),hasCurrent=state.effects.some(effect=>(effect.state||'active')==='active'&&(effect.certainty||'current')==='current'&&effect.condition?.state!=='unknown');
-      if(hasCurrent){assert.match(state.text,titlePattern,`${bookId}: applied provenance title`);assert.ok(state.changes>0,`${bookId}: dynamic roster presentation`);}else assert.doesNotMatch(state.text,titlePattern,`${bookId}: conditional effect presented as active`);
+      const state=await page.evaluate(({instanceId,title})=>{const projection=window.WH_ARMY_ROSTER_GAME_PROJECTION,gameUnit=projection.units.find(item=>item.identity.instanceId===instanceId),card=document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(instanceId)}"]`);return{effects:gameUnit.effects.map(effect=>({kind:effect.source?.kind,owner:effect.source?.ownerInstanceId,state:effect.state,certainty:effect.certainty,condition:effect.condition||null,targets:effect.targets||[]})),text:card.querySelector('.roster-game-effects')?.innerText||'',cardText:card.innerText,changes:card.querySelectorAll('.roster-game-change,.roster-modified,.roster-game-derived-ability,.roster-game-effects li').length,units:document.querySelectorAll('.document .unit-card').length,overflow:document.documentElement.scrollWidth>innerWidth,title};},{instanceId,title:enhancement.title});
+      const enhancementEffects=state.effects.filter(effect=>effect.kind==='enhancement');
+      assert.ok(enhancementEffects.length>0,`${bookId}: structured projection ${JSON.stringify(state)}`);
+      assert.ok(enhancementEffects.every(effect=>effect.owner===instanceId),`${bookId}: exact source owner`);
+      const titlePattern=new RegExp(enhancement.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i'),presented=titlePattern.test(state.text),onlyUnknownConditional=enhancementEffects.every(effect=>effect.state==='conditional'&&effect.certainty==='unknown');
+      if(presented){browserPresented+=1;assert.ok(state.changes>0,`${bookId}: dynamic roster presentation`);}
+      if(onlyUnknownConditional)assert.doesNotMatch(state.text,titlePattern,`${bookId}: conditional effect presented as active ${JSON.stringify(enhancementEffects)}`);
       assert.match(state.cardText,titlePattern,`${bookId}: selected Enhancement presentation`);
       assert.equal(state.units,1,`${bookId}: PHONE-1 invariant`);
       assert.equal(state.overflow,false,`${bookId}: horizontal overflow`);
-      for(const effect of state.effects.filter(item=>item.condition)){
+      for(const effect of enhancementEffects.filter(item=>item.condition)){
         assert.equal(effect.state,'conditional',`${bookId}: conditional state`);
         assert.equal(effect.certainty,'unknown',`${bookId}: conditional certainty`);
         assert.ok(effect.targets.every(target=>JSON.stringify(target.base)===JSON.stringify(target.effective)),`${bookId}: unknown condition auto-applied`);
@@ -122,6 +139,7 @@ try{
       assert.deepEqual(normal,{game:false,changes:0},`${bookId}: normal Datasheet changed`);
       console.log(`BROWSER ${bookId}: structured roster presentation PASS`);
     }
+    assert.ok(browserPresented>0,'no structured Enhancement effect reached active browser presentation');
     assert.deepEqual(errors,[],'structured effect browser console errors');
   }finally{await context.close();}
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

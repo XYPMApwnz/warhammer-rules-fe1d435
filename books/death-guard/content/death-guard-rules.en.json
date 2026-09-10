@@ -539,10 +539,10 @@
               "category": "Mortarion’s Hammer – Strategic Ploy Stratagem",
               "lines": [
                 "WHEN: Start of your opponent’s Charge phase.",
-                "TARGET: One DEATH GUARD VEHICLE unit from your army.",
-                "EFFECT: Until the end of the phase, each time an enemy unit selects your unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)."
+                "TARGET: One friendly unengaged DEATH GUARD VEHICLE unit.",
+                "EFFECT: Select one visible enemy unit within 12\" of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls."
               ],
-              "when": "End of your opponent’s Charge phase.",
+              "when": "Start of your opponent’s Charge phase.",
               "target": "One friendly unengaged DEATH GUARD VEHICLE unit.",
               "effect": "Select one visible enemy unit within 12\" of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls."
             }
@@ -8901,8 +8901,8 @@
       "title": "STINKING MIRE",
       "group": "Stratagems",
       "kind": "stratagem",
-      "short": "WHEN: Start of your opponent’s Charge phase. TARGET: One DEATH GUARD VEHICLE unit from your army.",
-      "full": "WHEN: Start of your opponent’s Charge phase. TARGET: One DEATH GUARD VEHICLE unit from your army. EFFECT: Until the end of the phase, each time an enemy unit selects your unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll).",
+      "short": "WHEN: Start of your opponent’s Charge phase. TARGET: One friendly unengaged DEATH GUARD VEHICLE unit. EFFECT: Select one visible enemy unit within 12\" of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls.",
+      "full": "WHEN: Start of your opponent’s Charge phase. TARGET: One friendly unengaged DEATH GUARD VEHICLE unit. EFFECT: Select one visible enemy unit within 12\" of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls.",
       "sectionId": "stratagem-stinking-mire"
     },
     {

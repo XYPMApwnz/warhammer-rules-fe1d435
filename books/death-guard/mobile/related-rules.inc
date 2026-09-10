@@ -277,7 +277,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="stinking-mire" data-term-title="STINKING MIRE" data-term-summary="WHEN: Start of your opponent’s Charge phase. TARGET: One DEATH GUARD VEHICLE unit from your army. EFFECT: Until the end of the phase, each time an enemy unit selects your unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)." data-full-rule-path="books/death-guard/reader.html#stratagem-stinking-mire" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-stinking-mire">STINKING MIRE</button>
+<button class="term-button" data-term="stinking-mire" data-term-title="STINKING MIRE" data-term-summary="WHEN: Start of your opponent’s Charge phase. TARGET: One friendly unengaged DEATH GUARD VEHICLE unit. EFFECT: Select one visible enemy unit within 12&quot; of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls." data-full-rule-path="books/death-guard/reader.html#stratagem-stinking-mire" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-stinking-mire">STINKING MIRE</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="mortarions-hammer" data-term-title="Mortarion’s Hammer" data-term-summary="Purge the Foe, 2DP." data-full-rule-path="books/death-guard/reader.html#mortarions-hammer-rule" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#mortarions-hammer-rule">Mortarion’s Hammer</button> – Strategic Ploy Stratagem</span>
@@ -289,10 +289,10 @@
 <br>Start of your opponent’s Charge phase.</p>
 <p class="field">
 <b>TARGET</b>
-<br>One <button class="term-button" data-term="keyword-death-guard" data-term-title="DEATH GUARD" data-term-summary="Rules that specify DEATH GUARD apply only to models or units with this keyword.">DEATH GUARD</button> <button class="term-button" data-term="keyword-vehicle" data-term-title="VEHICLE" data-term-summary="VEHICLE units use HAZARD ROLLS, CLOSE-QUARTERS SHOOTING, MOVING MONSTERS AND VEHICLES and SHOOTING AT ENGAGED MONSTERS AND VEHICLES.">VEHICLE</button> unit from your army.</p>
+<br>One friendly unengaged <button class="term-button" data-term="keyword-death-guard" data-term-title="DEATH GUARD" data-term-summary="Rules that specify DEATH GUARD apply only to models or units with this keyword.">DEATH GUARD</button> <button class="term-button" data-term="keyword-vehicle" data-term-title="VEHICLE" data-term-summary="VEHICLE units use HAZARD ROLLS, CLOSE-QUARTERS SHOOTING, MOVING MONSTERS AND VEHICLES and SHOOTING AT ENGAGED MONSTERS AND VEHICLES.">VEHICLE</button> unit.</p>
 <p class="field">
 <b>EFFECT</b>
-<br>Until the end of the phase, each time an enemy unit selects your unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll).</p>
+<br>Select one visible enemy unit within 12&quot; of your unit. When that enemy unit declares a charge, that enemy unit has -1 to charge rolls.</p>
 </article>
 </div>
 </section></div>

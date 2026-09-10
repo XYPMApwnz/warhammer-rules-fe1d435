@@ -31,8 +31,8 @@ const APP_SHELL = [
   LIBRARY_FALLBACK,
   "./roster-guides/",
   ROSTER_GUIDES_FALLBACK,
-  "./roster-guides/points-data.js?v=9",
-  "./roster-guides/points-validator.js?v=5",
+  "./roster-guides/points-data.js?v=10",
+  "./roster-guides/points-validator.js?v=6",
   "./roster-guides/app.js?v=19",
   "./manifest.webmanifest",
   "./assets/apple-touch-icon.png",
@@ -386,8 +386,8 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/app.js?v=8"
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=18"
-  ,"./books/shared/roster-context.js?v=16"
-  ,"./books/shared/roster-game-presentation.js?v=20"
+  ,"./books/shared/roster-context.js?v=17"
+  ,"./books/shared/roster-game-presentation.js?v=21"
 ,"./books/shared/army-book-app.js?v=19"
   ,"./books/shared/offline-status.js?v=2"
   ,"./books/shared/styles/offline-status.css?v=1"

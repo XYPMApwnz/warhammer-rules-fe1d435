@@ -70,7 +70,7 @@
   function buildSummary(card,gameUnit,projection){
     const summary=element('div','roster-game-summary');summary.setAttribute('aria-label','Roster details');
     const facts=element('div','roster-game-facts');
-    for(const enhancement of list(gameUnit.rosterState.enhancements))if(enhancement.title)facts.append(element('span','roster-game-enhancement',`Enhancement: ${enhancement.title}`));
+    for(const enhancement of list(gameUnit.rosterState.enhancements))if(enhancement.title)facts.append(element('span','roster-game-enhancement',`Enhancement: ${enhancement.title}${enhancement.active===false?` [inactive: ${enhancement.ownerMessage}]`:""}${enhancement.sourceMessage?` [${enhancement.sourceMessage}]`:""}`));
     if(facts.children.length)summary.append(facts);
     const leaders=list(gameUnit.attachments.leaders).filter(currentRelation),leading=list(gameUnit.attachments.leading).filter(currentRelation);
     const relations=element('div','roster-game-relations');

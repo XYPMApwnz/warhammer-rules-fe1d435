@@ -23,7 +23,18 @@ export function finishCanonicalBuild(context,outputs,{normalizeLineEndings=false
   if(!(outputs instanceof Map)||![...outputs].every(([relative,content])=>typeof relative==='string'&&typeof content==='string'))throw new Error(`${context.config.id}: build extension must return a Map of text outputs`);
   const compare=normalizeLineEndings?normalizeEol:String;
   const stale=[];
-  for(const [relative,content] of outputs){
+  for(const [relative,rawContent] of outputs){
+    let content=rawContent;
+    if(relative==='reader.html'){
+      const marker=/<script\s+src="\.\.\/shared\/roster-context\.js\?v=\d+"\s*>\s*<\/script\s*>/;
+      if(marker.test(content)){
+        // The shared synchronous handoff needs the existing assessment before providers run.
+        const assets=[];
+        if(!content.includes('../../roster-guides/points-data.js?'))assets.push('<script src="../../roster-guides/points-data.js?v='+context.runtimeVersions.points.data+'"></script>');
+        if(!content.includes('../../roster-guides/points-validator.js?'))assets.push('<script src="../../roster-guides/points-validator.js?v='+context.runtimeVersions.points.validator+'"></script>');
+        content=content.replace(marker,match=>assets.join('')+match);
+      }
+    }
     const file=path.join(context.root,relative);
     if(context.check){
       if(!fs.existsSync(file)||compare(fs.readFileSync(file,'utf8'))!==compare(content))stale.push(relative);

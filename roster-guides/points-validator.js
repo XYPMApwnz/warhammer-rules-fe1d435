@@ -41,14 +41,72 @@
   const grantedKeywords=(faction,detachment,unit)=>faction==='death guard'&&normalize(detachment)==='contagion engines'&&['unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler'].includes(unit?.unitId)?['CONTAGION ENGINE']:[];
   const ownerMatches=(enhancement,unit,faction)=>{
     if(!enhancement.owner||!unit)return false;
-    const selector=enhancement.owner.selector||{},unitKeywords=keywords(unit);
+    const selector=enhancement.owner.selector||{},unitKeywords=keywords(unit),abilities=new Set([...(unit.abilities||[]),...(unit.termIds||[])].map(normalize));
     grantedKeywords(faction,enhancement.detachment,unit).forEach(keyword=>unitKeywords.add(keyword));
-    if((selector.unitIds||[]).length&&!(selector.unitIds||[]).includes(unit.unitId))return false;
-    if((selector.allKeywords||[]).some(value=>!unitKeywords.has(keyword(value))))return false;
-    if((selector.anyKeywords||[]).length&&!(selector.anyKeywords||[]).some(value=>unitKeywords.has(keyword(value))))return false;
-    if((selector.noneKeywords||[]).some(value=>unitKeywords.has(keyword(value))))return false;
-    return true;
+    const matches=selector=>{
+      if(selector.alternatives?.length)return selector.alternatives.some(matches);
+      if((selector.unitIds||[]).length&&!selector.unitIds.includes(unit.unitId))return false;
+      if((selector.allKeywords||[]).some(value=>!unitKeywords.has(keyword(value))))return false;
+      if((selector.anyKeywords||[]).length&&!selector.anyKeywords.some(value=>unitKeywords.has(keyword(value))))return false;
+      if((selector.noneKeywords||[]).some(value=>unitKeywords.has(keyword(value))))return false;
+      if((selector.allAbilities||[]).some(value=>!abilities.has(normalize(value))))return false;
+      return true;
+    };
+    return matches(selector);
   };
+
+function assessEnhancements(roster, faction, catalog=root.WH_POINTS_CATALOG?.[faction]) {
+  const enhancements = [], enhancementWarnings = [], unresolved = [];
+  const assignments = (roster.enhancements || []).map((input, inputIndex) => ({
+    inputIndex, input, catalog: null, assessment: null,
+    status: catalog ? 'unresolved' : 'unavailable'
+  }));
+  if (!catalog) return {
+    available: false, assignments, enhancements, enhancementWarnings,
+    unresolved: ['Army Book point data is unavailable.'],
+    enhancementChoices: 0, enhancementAssignments: 0
+  };
+  const selectedDetachments = new Set((roster.detachments || [{name: roster.detachment, label: roster.detachment}]).map(item => normalize(item.name || item.label)).filter(Boolean));
+  for (const assignment of assignments) {
+    const raw = assignment.input, name = enhancementName(raw);
+    if (!name) { assignment.status = 'empty'; continue; }
+    const entry = catalog.enhancements[normalize(name)], candidates = (Array.isArray(entry) ? entry : [entry]).filter(Boolean), selected = candidates.filter(item => !item.detachment || selectedDetachments.has(normalize(item.detachment)));
+    const enhancement = selected.length === 1 ? selected[0] : candidates.length === 1 ? candidates[0] : null;
+    if (!enhancement) { unresolved.push(`Enhancement Detachment: ${name}`); continue; }
+    const rosterUnit = (roster.units || []).find(unit => unit.id === raw.ownerUnitId), owner = catalog.units[normalize(rosterUnit?.name)];
+    const sourceCoverage=enhancement.sourceLimited||!enhancement.owner?.selector?'sourceLimited':'verified';
+    const sourceMessage=sourceCoverage==='sourceLimited'?'Enhancement source/contract coverage is limited':'';
+    let ownerEligibility = 'valid', ownerMessage = '';
+    if (raw.ownerStatus !== 'resolved' || !rosterUnit || !owner) { ownerEligibility = 'invalid'; ownerMessage = 'Invalid Enhancement owner'; }
+    else if (enhancement.detachment && !selectedDetachments.has(normalize(enhancement.detachment))) { ownerEligibility = 'invalid'; ownerMessage = 'Enhancement is not available in the selected Detachment'; }
+    else if (!enhancement.owner?.selector) { ownerEligibility = 'unresolved'; ownerMessage = 'Enhancement owner contract is unavailable'; }
+    else if (!ownerMatches(enhancement, owner, faction)) { ownerEligibility = 'invalid'; ownerMessage = keywords(owner).has('EPIC HERO') ? 'Epic Hero cannot receive this Enhancement' : 'Invalid Enhancement owner'; }
+    const result = {...raw, id: enhancement.id, name: enhancement.title, currentCost: Number(enhancement.value), text: enhancement.text || '', effect: enhancement.effect || '', tags: enhancement.tags || [], assignment: enhancement.assignment || null, ownerEligibility, ownerMessage, sourceCoverage, sourceMessage};
+    assignment.catalog = enhancement;
+    assignment.assessment = result;
+    assignment.status = 'assessed';
+    enhancements.push(result);
+    if (ownerMessage) enhancementWarnings.push(`${enhancement.title}: ${ownerMessage}.`);
+    if (sourceMessage) enhancementWarnings.push(`${enhancement.title}: ${sourceMessage}.`);
+  }
+  for (const id of new Set(enhancements.map(item => item.id))) {
+    const group = enhancements.filter(item => item.id === id), limit = Number(group[0].assignment?.maxOwners || 1), seen = new Set();
+    group.forEach((item, index) => {
+      if (item.ownerUnitId && seen.has(item.ownerUnitId)) {
+        item.ownerEligibility = 'invalid'; item.ownerMessage = 'Enhancement is assigned more than once to the same unit';
+        enhancementWarnings.push(`${item.name}: ${item.ownerMessage}.`);
+      }
+      if (item.ownerUnitId) seen.add(item.ownerUnitId);
+      if (index >= limit) {
+        item.ownerEligibility = 'invalid'; item.ownerMessage = 'Upgrade assignment limit exceeded';
+        enhancementWarnings.push(`${item.name}: ${item.ownerMessage} (${group.length}/${limit}).`);
+      }
+    });
+  }
+  const enhancementChoices = [...new Set(enhancements.map(item => item.id))].reduce((sum, id) => sum + Number(enhancements.find(item => item.id === id)?.assignment?.enhancementChoices || 1), 0);
+  if (enhancementChoices > 3) enhancementWarnings.push(`Enhancement choice limit exceeded (${enhancementChoices}/3).`);
+  return {available: true, assignments, enhancements, enhancementWarnings, unresolved, enhancementChoices, enhancementAssignments: enhancements.length};
+}
 
   function check(roster,faction){
     const catalog=root.WH_POINTS_CATALOG?.[faction],unresolved=[],enhancementWarnings=[],detachmentWarnings=[],occurrences=new Map(),enhancements=[];let total=0;
@@ -72,33 +130,11 @@
       detachmentPoints+=Number(detachment.detachmentPoints);
     }
     if(detachmentPointLimit!==null&&detachmentPoints>detachmentPointLimit)detachmentWarnings.push(`Detachment Points limit exceeded (${detachmentPoints}/${detachmentPointLimit} DP).`);
-    for(const raw of roster.enhancements||[]){
-      const name=enhancementName(raw);if(!name)continue;
-      const entry=catalog.enhancements[normalize(name)],candidates=(Array.isArray(entry)?entry:[entry]).filter(Boolean),selected=candidates.filter(item=>!item.detachment||selectedDetachments.has(normalize(item.detachment)));
-      const enhancement=selected.length===1?selected[0]:candidates.length===1?candidates[0]:null;
-      if(!enhancement){unresolved.push(`Enhancement Detachment: ${name}`);continue;}
-      total+=Number(enhancement.value);
-      const rosterUnit=(roster.units||[]).find(unit=>unit.id===raw.ownerUnitId),owner=catalog.units[normalize(rosterUnit?.name)];
-      let ownerEligibility='valid',ownerMessage='';
-      if(raw.ownerStatus!=='resolved'||!rosterUnit||!owner){ownerEligibility='invalid';ownerMessage='Invalid Enhancement owner';}
-      else if(enhancement.detachment&&!selectedDetachments.has(normalize(enhancement.detachment))){ownerEligibility='invalid';ownerMessage='Enhancement is not available in the selected Detachment';}
-      else if(enhancement.sourceLimited){ownerEligibility='unverified';ownerMessage='Enhancement owner eligibility is source-limited';}
-      else if(!ownerMatches(enhancement,owner,faction)){ownerEligibility='invalid';ownerMessage=keywords(owner).has('EPIC HERO')?'Epic Hero cannot receive this Enhancement':'Invalid Enhancement owner';}
-      const result={...raw,id:enhancement.id,name:enhancement.title,currentCost:Number(enhancement.value),text:enhancement.text||'',effect:enhancement.effect||'',tags:enhancement.tags||[],assignment:enhancement.assignment||null,ownerEligibility,ownerMessage};
-      enhancements.push(result);
-      if(ownerMessage)enhancementWarnings.push(`${enhancement.title}: ${ownerMessage}.`);
-    }
-    for(const id of new Set(enhancements.map(item=>item.id))){
-      const group=enhancements.filter(item=>item.id===id),limit=Number(group[0].assignment?.maxOwners||1),seen=new Set();
-      group.forEach((item,index)=>{
-        if(item.ownerUnitId&&seen.has(item.ownerUnitId)){item.ownerEligibility='invalid';item.ownerMessage='Enhancement is assigned more than once to the same unit';enhancementWarnings.push(`${item.name}: ${item.ownerMessage}.`);}
-        if(item.ownerUnitId)seen.add(item.ownerUnitId);
-        if(index>=limit){item.ownerEligibility='invalid';item.ownerMessage='Upgrade assignment limit exceeded';enhancementWarnings.push(`${item.name}: ${item.ownerMessage} (${group.length}/${limit}).`);}
-      });
-    }
-    const enhancementChoices=[...new Set(enhancements.map(item=>item.id))].reduce((sum,id)=>sum+Number(enhancements.find(item=>item.id===id)?.assignment?.enhancementChoices||1),0);
-    if(enhancementChoices>3)enhancementWarnings.push(`Enhancement choice limit exceeded (${enhancementChoices}/3).`);
+    const assessment=assessEnhancements(roster,faction,catalog);
+    unresolved.push(...assessment.unresolved);enhancementWarnings.push(...assessment.enhancementWarnings);enhancements.push(...assessment.enhancements);
+    for(const row of assessment.assignments)if(row.catalog)total+=Number(row.catalog.value);
+    const enhancementChoices=assessment.enhancementChoices;
     return{total,unresolved,enhancements,enhancementWarnings,enhancementChoices,enhancementAssignments:enhancements.length,detachmentPoints,detachmentPointLimit,detachmentWarnings,difference:total-Number(roster.declared||0),unitLineTotal:Number(roster.unitLineTotal??roster.calculated??0),exportMatches:Number(roster.declared||0)===Number(roster.unitLineTotal??roster.calculated??0)};
   }
-  root.WHRosterPoints=Object.freeze({check,normalize});
+  root.WHRosterPoints=Object.freeze({check,normalize,assessEnhancements});
 }(typeof window==='undefined'?globalThis:window));

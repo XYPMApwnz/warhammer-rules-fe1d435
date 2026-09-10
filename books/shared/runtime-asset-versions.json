@@ -8,9 +8,9 @@
     "navigationTargets": 4,
     "relatedRules": 18,
     "rosterParser": 3,
-    "rosterContext": 16,
+    "rosterContext": 17,
     "rosterCatalog": 13,
-    "rosterGamePresentation": 20,
+    "rosterGamePresentation": 21,
     "ruleFacts": 5,
     "bookRosterEnhancements": 3,
     "rosterEffectProviders": 6,
@@ -33,7 +33,7 @@
     "viewRouter": 4
   },
   "points": {
-    "data": 9,
-    "validator": 5
+    "data": 10,
+    "validator": 6
   }
 }

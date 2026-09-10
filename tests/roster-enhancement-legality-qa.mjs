@@ -1,0 +1,161 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import {fileURLToPath} from 'node:url';
+import {catalog as builtCatalog,resolveEnhancementOwner} from '../roster-guides/build-points.mjs';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const sources=new Map();
+const read=file=>{if(!sources.has(file))sources.set(file,fs.readFileSync(path.join(root,file),'utf8'));return sources.get(file);};
+const json=file=>JSON.parse(read(file));
+const local=value=>value===undefined?undefined:JSON.parse(JSON.stringify(value));
+const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const bookCatalog=book=>{const scope={window:{}};vm.runInNewContext(read('books/'+book+'/scripts/roster-data.js'),scope);return scope.window.WH_BOOK_ROSTER_CATALOG;};
+const anchors=[
+  {book:'space-marines',unit:'unit-ancient',id:'firestorm-assault-force-war-tempered-artifice',detachment:'Firestorm Assault Force'},
+  {book:'dark-angels',unit:'unit-ancient',id:'enhancement-weapons-of-the-first-legion',detachment:'Unforgiven Task Force'},
+  {book:'blood-angels',unit:'unit-captain-with-jump-pack',id:'enhancement-archangels-shard',detachment:'The Angelic Host'}
+];
+function lookupChecks(resolve=resolveEnhancementOwner){
+  for(const anchor of anchors){
+    const book=bookCatalog(anchor.book),canonical=book.enhancements.find(e=>e.id===anchor.id);
+    const point=json('books/'+anchor.book+'/content/'+anchor.book+'-points.en.json').enhancements.find(e=>normalize(e.title)===normalize(canonical.title)&&normalize(e.detachment)===normalize(anchor.detachment));
+    assert.ok(point,anchor.book+': exact fixture point record');
+    const contracts=json('books/'+anchor.book+'/content/'+anchor.book+'-related-rules.en.json').enhancements;
+    const result=resolve(point,book,contracts);
+    assert.deepEqual(local(result.owner),local(canonical.owner),anchor.book+': owner form preserved');
+    assert.equal(result.canonicalEnhancementId,canonical.id,anchor.book+': exact canonical identity');
+    assert.notEqual(result.sourceLimited,true,anchor.book+': owner contract must not become sourceLimited');
+    const entries=Object.values(builtCatalog[normalize(book.book.title)].enhancements).flat();
+    assert.ok(entries.some(e=>e.owner&&!e.sourceLimited),anchor.book+': sourceLimited cannot cover every owner contract');
+  }
+  const sm=bookCatalog('space-marines'),contracts=json('books/space-marines/content/space-marines-related-rules.en.json').enhancements;
+  const fire=sm.enhancements.find(e=>e.id==='firestorm-assault-force-war-tempered-artifice'),forge=sm.enhancements.find(e=>e.id==='war-tempered-artifice');
+  const point=json('books/space-marines/content/space-marines-points.en.json').enhancements.find(e=>e.id==='enhancement-war-tempered-artifice'&&normalize(e.detachment)==='forgefather s seekers');
+  assert.ok(fire&&forge&&point,'retained same-name different-Detachment fixtures');
+  const colliding={...sm,enhancements:[fire,forge]};
+  assert.equal(resolve(point,colliding,contracts).canonicalEnhancementId,forge.id,'collision must use selected Detachment, not first match');
+  assert.equal(resolve(point,{...sm,enhancements:[forge,fire]},contracts).canonicalEnhancementId,forge.id,'input order cannot alter identity');
+  const ambiguous=resolve(point,{...sm,enhancements:[forge,{...forge}]},contracts);
+  assert.equal(ambiguous.sourceLimited,true,'duplicate identity stays ambiguous');
+  assert.equal(ambiguous.owner,undefined,'ambiguous identity cannot inherit first owner');
+  const titleOnly=resolve({...point,id:'enhancement-unrelated-identity'},sm,contracts);
+  assert.equal(titleOnly.owner,undefined,'same title is not identity');
+  const missingDetachment=resolve({...point,detachment:'Not a known Detachment'},sm,contracts);
+  assert.equal(missingDetachment.owner,undefined,'unknown Detachment fails closed');
+  const ec=bookCatalog('emperors-children'),ecContracts=json('books/emperors-children/content/emperors-children-related-rules.en.json').enhancements;
+  const exalted=json('books/emperors-children/content/emperors-children-points.en.json').enhancements.find(e=>e.id==='enhancement-exalted-patron');
+  const legacy=resolve(exalted,ec,ecContracts);
+  assert.equal(legacy.canonicalEnhancementId,'exalted-patron','existing prefixed/source identity');
+  assert.deepEqual(local(legacy.owner.selector),local(ecContracts['exalted-patron'].roles[0].selector),'roles contract preserved');
+  const csm=bookCatalog('chaos-space-marines'),csmContracts=json('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json').enhancements;
+  const thrusters=json('books/chaos-space-marines/content/chaos-space-marines-points.en.json').enhancements.filter(e=>e.id.endsWith('-warp-fuelled-thrusters'));
+  assert.equal(thrusters.length,2,'retained CSM Detachment collision');
+  for(const point of thrusters){
+    const result=resolve(point,csm,csmContracts),key=point.id.includes('dread-talons')?point.id:'warp-fuelled-thrusters';
+    assert.deepEqual(local(result.owner.selector),local(csmContracts[key].roles[0].selector),'exact canonical/source ID precedes a different Detachment alias');
+  }
+}
+function loadBook(book,overrides={}){
+  const scope={console,URL,URLSearchParams,location:{href:'http://localhost/books/'+book+'/reader.html',pathname:'/books/'+book+'/reader.html',search:''},
+    document:{documentElement:{dataset:{bookId:book}},querySelectorAll:()=>[],querySelector:()=>null},
+    CustomEvent:class{constructor(type,options){this.type=type;this.detail=options?.detail;}},
+    dispatchEvent(){},addEventListener(){}};
+  scope.window=scope;scope.globalThis=scope;vm.createContext(scope);
+  const run=file=>vm.runInContext(overrides[file]??read(file),scope,{filename:file});
+  for(const file of ['books/shared/rule-facts.js','roster-guides/points-data.js','roster-guides/points-validator.js',
+    'books/'+book+'/scripts/roster-data.js','books/shared/book-roster-enhancements.js',
+    'books/extensions/book-roster-enhancement-providers.js','books/shared/roster-context.js'])run(file);
+  const api=scope.WHArmyRosterContext;
+  let provider={keywordProfile:(context,base)=>base,gameEffects:context=>scope.WHBookRosterEnhancements.gameEffects(context)};
+  if(book==='emperors-children'){
+    let installation;
+    scope.WHArmyRosterContext={...api,install:options=>{installation=options;}};
+    run('books/emperors-children/scripts/roster-filter.js');
+    assert.ok(installation?.provider,'actual EC provider installation captured');
+    provider=installation.provider;scope.WHArmyRosterContext=api;
+  }
+  return {scope,catalog:scope.WH_BOOK_ROSTER_CATALOG,api,provider};
+}
+function fixture(loaded,unitId,id,detachment,raw=false){
+  const unit=loaded.catalog.units.find(u=>u.id===unitId),enhancement=loaded.catalog.enhancements.find(e=>e.id===id);
+  assert.ok(unit&&enhancement,'stable fixture identities');
+  const melee=new Set(unit.gameSelections.weaponProfiles.filter(p=>p.mode==='melee').map(p=>p.id));
+  const selection=unit.gameSelections.selections.find(s=>s.kind==='weapon'&&s.profileIds.some(id=>melee.has(id)));
+  return {faction:loaded.catalog.book.title,detachments:[{name:detachment}],units:[
+    {id:'physical-owner',canonicalUnitId:unitId,name:unit.title,points:100,quantity:1,
+      models:[{quantity:1,name:unit.gameSelections.models[0]?.title||unit.title,loadouts:selection?[{quantity:1,wargear:selection.title}]:[]}]}
+  ],enhancements:[{...(raw?{}:{id}),name:enhancement.title,ownerUnitId:'physical-owner',ownerStatus:'resolved',source:raw?'raw/source-unverified':'inline'}],warnings:[]};
+}
+function project(loaded,roster){
+  const original=JSON.stringify(roster);
+  const result=loaded.api.project({catalog:loaded.catalog,provider:loaded.provider,roster,record:{id:'legality-qa',roster}});
+  assert.equal(JSON.stringify(roster),original,'raw assignment preservation');
+  assert.equal(result.context.enhancements.length,roster.enhancements.length,'diagnostics remain inspectable');
+  return result;
+}
+const effects=projection=>projection.game.units.flatMap(u=>u.effects.filter(e=>e.source?.kind==='enhancement'&&e.state==='active'));
+function legalityChecks(overrides={}){
+  for(const anchor of anchors){
+    const loaded=loadBook(anchor.book,overrides),roster=fixture(loaded,anchor.unit,anchor.id,anchor.detachment);
+    let result=project(loaded,roster);
+    assert.ok(effects(result).length>0,anchor.book+': verified legal positive active');
+    const entries=Object.values(loaded.scope.WH_POINTS_CATALOG[normalize(loaded.catalog.book.title)].enhancements).flat();
+    const entry=entries.find(e=>e.canonicalEnhancementId===anchor.id);
+    assert.ok(entry?.owner,anchor.book+': generated owner metadata');
+    // TEMP VM metadata only: same canonical legality, reduced source coverage.
+    entry.sourceLimited=true;
+    result=project(loaded,roster);
+    assert.equal(result.context.enhancements[0].ownerEligibility,'valid',anchor.book+': sourceLimited legal owner remains valid');
+    assert.equal(result.context.enhancements[0].sourceCoverage,'sourceLimited',anchor.book+': source warning retained');
+    assert.ok(effects(result).length>0,anchor.book+': sourceLimited legal positive active');
+    assert.ok(result.roster.warnings.some(w=>w.includes('source/contract coverage')),anchor.book+': active warning visible');
+    assert.ok(effects(result).every(e=>e.source.ownerInstanceId==='physical-owner'),anchor.book+': physical ownership');
+  }
+  const ec=loadBook('emperors-children',overrides),entry=ec.scope.WH_POINTS_CATALOG['emperor s children'].enhancements['exalted patron'];
+  assert.deepEqual(local(entry.owner.selector.unitIds),['unit-lord-exultant'],'Exalted canonical owner is not fabricated');
+  entry.sourceLimited=true;
+  const lord=fixture(ec,'unit-lord-exultant','exalted-patron','Court of the Phoenician',true);
+  const prince=fixture(ec,'unit-daemon-prince-of-slaanesh','exalted-patron','Court of the Phoenician',true);
+  assert.equal(Object.hasOwn(lord.enhancements[0],'id'),false,'raw fixture must remain raw');
+  assert.equal(Object.hasOwn(prince.enhancements[0],'id'),false,'wrong-bearer fixture must remain raw');
+  const legal=project(ec,lord),illegal=project(ec,prince);
+  assert.equal(legal.context.enhancements[0].ownerEligibility,'valid','sourceLimited Lord Exultant legality');
+  assert.equal(illegal.context.enhancements[0].ownerEligibility,'invalid','sourceLimited Daemon Prince legality');
+  assert.equal(legal.context.enhancements[0].sourceCoverage,illegal.context.enhancements[0].sourceCoverage,'same warning / different legality');
+  assert.equal(legal.context.enhancements[0].sourceCoverage,'sourceLimited');
+  assert.deepEqual(local(legal.roster.warnings.filter(w=>w.includes('source/contract coverage'))),local(illegal.roster.warnings.filter(w=>w.includes('source/contract coverage'))),'identical source warning retained');
+  assert.equal(legal.game.units[0].effective.stats.M,'8"','legal Exalted Patron remains active');
+  assert.equal(illegal.game.units[0].effective.stats.M,'10"','illegal Exalted Patron cannot alter Move');
+  assert.equal(effects(illegal).length,0,'illegal bearer has no active effects');
+  assert.equal(illegal.roster.enhancements.length,0,'inactive assignment excluded from activation only');
+  assert.equal(illegal.sourceRoster.enhancements.length,1,'inactive raw assignment remains stored');
+  delete entry.owner;
+  const unknown=project(ec,lord);
+  assert.equal(unknown.context.enhancements[0].ownerEligibility,'unresolved','missing owner contract is not invented');
+  assert.equal(effects(unknown).length,0,'genuinely unknown legality remains inactive');
+}
+function mutations(){
+  const validator=read('roster-guides/points-validator.js'),marker="    else if (!enhancement.owner?.selector)";
+  assert.ok(validator.includes(marker),'status mutation anchor');
+  const scenarios=[
+    ['M6_SOURCE_LIMITED_AUTO_INVALID',()=>legalityChecks({'roster-guides/points-validator.js':validator.replace(marker,"    else if (enhancement.sourceLimited) { ownerEligibility = 'invalid'; }\n"+marker)}),/sourceLimited legal owner remains valid/],
+    ['M7_SOURCE_LIMITED_AUTO_VALID',()=>legalityChecks({'roster-guides/points-validator.js':validator.replace(marker,"    else if (enhancement.sourceLimited) { ownerEligibility = 'valid'; }\n"+marker)}),/sourceLimited Daemon Prince legality/],
+    ['M8_ROLES_ONLY_LOOKUP',()=>lookupChecks(vm.runInNewContext('('+resolveEnhancementOwner.toString().replace('const owned=canonical.owner||contract?.owner;','const owned=null;')+')')),/owner form preserved/],
+    ['M9_FIRST_MATCH_IDENTITY',()=>lookupChecks(vm.runInNewContext('('+resolveEnhancementOwner.toString().replace('const candidates=catalog.enhancements.filter(item=>item.detachmentId===detachment.id&&matches(item,detachment.id));','const candidates=catalog.enhancements.filter(item=>matches(item,item.detachmentId)).slice(0,1);')+')')),/collision must use selected Detachment|exact canonical identity/]
+  ];
+  for(const [name,run,intended] of scenarios){
+    let killed=false;
+    try{run();}catch(error){assert.match(error.message,intended,name+': intended contract');killed=true;}
+    assert.ok(killed,name+': mutation survived');
+    console.log(name+': KILLED');
+  }
+}
+lookupChecks();
+legalityChecks();
+const generated={window:{}};
+vm.runInNewContext(read('roster-guides/points-data.js'),generated);
+assert.deepEqual(local(generated.window.WH_POINTS_CATALOG),local(builtCatalog),'deterministic points owner metadata must be current');
+console.log('RA02 legality/source coverage: PASS (owner + roles, scoped identities, ambiguity, same-warning legal/illegal, raw preservation)');
+if(process.argv.includes('--mutations'))mutations();

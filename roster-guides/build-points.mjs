@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import vm from 'node:vm';
 import ruleFacts from '../books/shared/rule-facts.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -9,6 +10,49 @@ const bookConfigs=new Map();
 const bookConfig=book=>{if(!bookConfigs.has(book))bookConfigs.set(book,read(`books/${book}/book.config.json`));return bookConfigs.get(book);};
 const readBookSource=(book,key)=>{const source=bookConfig(book).sources?.[key];if(!source)throw new Error(`${book}: missing configured ${key} source`);return read(`books/${book}/${source}`);};
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const rosterCatalogs=new Map();
+const rosterCatalog=book=>{
+  if(!rosterCatalogs.has(book)){
+    const scope={window:{}};
+    vm.runInNewContext(fs.readFileSync(path.join(root,`books/${book}/scripts/roster-data.js`),'utf8'),scope);
+    const catalog=scope.window.WH_BOOK_ROSTER_CATALOG;
+    if(catalog?.schema!=='wh40k-army-roster-catalog/v1'||catalog.book.id!==book)throw new Error(`${book}: invalid canonical roster catalog`);
+    rosterCatalogs.set(book,catalog);
+  }
+  return rosterCatalogs.get(book);
+};
+
+// Reuse the book catalog's canonical IDs, source IDs and Detachment ownership.
+// Prefix/punctuation aliases follow the existing book contract, never titles.
+export function resolveEnhancementOwner(enhancement,catalog,contracts={}){
+  const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+  const identity=(value,detachmentId='')=>{
+    let id=String(value||'').toLowerCase().trim().replace(/^enhancement-/,'');
+    const detachment=String(detachmentId).toLowerCase().replace(/^detachment-/,'');
+    if(detachment&&id.startsWith(detachment+'-'))id=id.slice(detachment.length+1);
+    return id.replace(/[^a-z0-9]/g,'');
+  };
+  const ids=item=>[item.id,item.ruleId,item.sourceId,item.legacyKey].filter(Boolean);
+  const detachments=catalog.detachments.filter(item=>enhancement.detachmentId?item.id===enhancement.detachmentId:normalize(item.title)===normalize(enhancement.detachment));
+  if(detachments.length!==1||!enhancement.id)return {sourceLimited:true};
+  const detachment=detachments[0];
+  const matches=(item,detachmentId)=>ids(item).some(id=>identity(id,detachmentId)===identity(enhancement.id,detachmentId));
+  const candidates=catalog.enhancements.filter(item=>item.detachmentId===detachment.id&&matches(item,detachment.id));
+  if(candidates.length!==1)return {sourceLimited:true};
+  const canonical=candidates[0],keys=new Set(ids(canonical).map(id=>identity(id,detachment.id)));
+  const exact=Object.entries(contracts).filter(([id])=>ids(canonical).includes(id));
+  const related=exact.length?exact:Object.entries(contracts).filter(([id])=>keys.has(identity(id,detachment.id)));
+  const contract=related.length===1?related[0][1]:null;
+  const owned=canonical.owner||contract?.owner;
+  const roles=(contract?.roles||[]).filter(role=>role.side==='friendly'&&['unit','model'].includes(role.subject));
+  const owner=owned?.selector?owned:roles.length===1&&roles[0].selector?{subject:roles[0].subject,selector:roles[0].selector}:null;
+  const assignment=canonical.assignment||contract?.assignment,tags=canonical.tags||contract?.tags;
+  return {
+    canonicalEnhancementId:canonical.id,canonicalDetachmentId:detachment.id,
+    ...(owner?{owner}:{}),...(assignment?{assignment}:{}),...(tags?{tags}:{}),
+    ...(!owner||canonical.sourceLimited||contract?.sourceLimited?{sourceLimited:true}:{})
+  };
+}
 const detachmentRecords=rows=>Object.fromEntries(rows.map(row=>[normalize(row.title),{title:row.title,detachmentPoints:Number(String(row.detachmentPoints??row.dp??0).match(/\d+/)?.[0]||0),forceDisposition:row.forceDisposition||row.disposition||''}]));
 const decode=value=>String(value||'').replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const readerProfiles=book=>{
@@ -116,22 +160,15 @@ const emperorChildren=read('books/emperors-children/content/emperors-children-po
 const emperorChildrenContracts=read('books/emperors-children/content/emperors-children-related-rules.en.json').enhancements;
 const emperorChildrenUnits=Object.fromEntries(emperorChildren.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),{...unit,wargear:unit.paidWargear||[],...emperorChildrenProfiles[normalize(unit.title)]}]));
 const emperorChildrenEnhancements=Object.fromEntries(emperorChildren.enhancements.map(enhancement=>{
-  const contract=emperorChildrenContracts[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit');
-  return[normalize(enhancement.title),{...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})}];
+  return[normalize(enhancement.title),{...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog('emperors-children'),emperorChildrenContracts)}];
 }));
 
 const csm=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
-const csmPack=read('books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json');
 const csmContracts=read('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json').enhancements;
 const csmUnits=Object.fromEntries(csm.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),{...unit,wargear:unit.paidWargear||[],...csmProfiles[normalize(unit.title)]}]));
-const csmPackDetachments=new Map(csmPack.detachments.map(detachment=>[normalize(detachment.title),detachment]));
 const csmEnhancementGroups=new Map();
 for(const enhancement of csm.enhancements){
-  const detachment=csmPackDetachments.get(normalize(enhancement.detachment));
-  const source=detachment?.enhancements.find(item=>normalize(item.title)===normalize(enhancement.title));
-  const contract=source&&csmContracts[source.id];
-  const role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit');
-  const record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})};
+  const record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog('chaos-space-marines'),csmContracts)};
   const key=normalize(enhancement.title),group=csmEnhancementGroups.get(key)||[];group.push(record);csmEnhancementGroups.set(key,group);
 }
 const csmEnhancements=Object.fromEntries([...csmEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
@@ -152,7 +189,7 @@ const dependencyUnitPointRecord=(unit,config)=>{const override=config.dependency
 const chapterUnitRecord=(unit,config,profiles,dependency=false)=>{const current=dependency?dependencyUnitPointRecord(unit,config):unit;return {...current,wargear:current.paidWargear||[],...(profiles[current.id]||profiles[normalize(current.title)])};};
 const spaceMarinesUnits=Object.fromEntries(spaceMarines.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),spaceMarinesRecord(unit)]));
 const spaceMarinesEnhancementGroups=new Map();
-for(const enhancement of spaceMarines.enhancements){const contract=spaceMarinesContracts[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit'),record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})},key=normalize(enhancement.title),group=spaceMarinesEnhancementGroups.get(key)||[];group.push(record);spaceMarinesEnhancementGroups.set(key,group);}
+for(const enhancement of spaceMarines.enhancements){const record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog('space-marines'),spaceMarinesContracts)},key=normalize(enhancement.title),group=spaceMarinesEnhancementGroups.get(key)||[];group.push(record);spaceMarinesEnhancementGroups.set(key,group);}
 const spaceMarinesEnhancements=Object.fromEntries([...spaceMarinesEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 const sharedDetachmentTitles=config=>{const chapter=normalize(config.dependencyDetachments.chapterKeyword),current=new Set(spaceMarines.detachments.map(item=>normalize(item.title)));return new Set([...spaceMarinesPack.detachments,...spaceMarinesParity.detachments].filter(item=>{const restriction=item.restriction||spaceMarinesConfig.detachmentChapterRestrictions?.[item.title];return current.has(normalize(item.title))&&(!restriction||normalize(restriction)===chapter);}).map(item=>normalize(item.title)));};
 const bloodAngelsSharedDetachmentTitles=sharedDetachmentTitles(bloodAngelsConfig),darkAngelsSharedDetachmentTitles=sharedDetachmentTitles(darkAngelsConfig);
@@ -166,8 +203,8 @@ if(bloodAngelsLocal.length!==15||bloodAngelsShared.length!==82)throw new Error(`
 const bloodAngelsUnits=Object.fromEntries([...bloodAngelsLocal.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,bloodAngelsConfig,bloodAngelsProfiles)]),...bloodAngelsShared.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,bloodAngelsConfig,bloodAngelsProfiles,true)])]);
 const bloodAngelsEnhancementGroups=new Map();
 for(const enhancement of [...bloodAngels.enhancements,...spaceMarines.enhancements.filter(item=>bloodAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){
-  const contract=(bloodAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment))?spaceMarinesContracts:bloodAngelsContracts)[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit');
-  const record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})};
+  const shared=bloodAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment));
+  const record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog(shared?'space-marines':'blood-angels'),shared?spaceMarinesContracts:bloodAngelsContracts)};
   const key=normalize(enhancement.title),group=bloodAngelsEnhancementGroups.get(key)||[];group.push(record);bloodAngelsEnhancementGroups.set(key,group);
 }
 const bloodAngelsEnhancements=Object.fromEntries([...bloodAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
@@ -175,7 +212,7 @@ const darkAngelsProfile=unit=>darkAngelsProfiles[unit.id]||darkAngelsProfiles[no
 const darkAngelsLocal=darkAngels.units.filter(unit=>unit.status==='Current'&&darkAngelsProfile(unit)),darkAngelsLocalTitles=new Set(darkAngelsLocal.map(unit=>normalize(unit.title))),darkAngelsShared=spaceMarines.units.filter(unit=>unit.status==='Current'&&!darkAngelsLocalTitles.has(normalize(unit.title))&&darkAngelsProfile(unit));
 if(darkAngelsLocal.length!==16||darkAngelsShared.length!==82)throw new Error(`Dark Angels roster inventory: expected 16 local + 82 shared, got ${darkAngelsLocal.length} + ${darkAngelsShared.length}`);
 const darkAngelsUnits=Object.fromEntries([...darkAngelsLocal.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,darkAngelsConfig,darkAngelsProfiles)]),...darkAngelsShared.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,darkAngelsConfig,darkAngelsProfiles,true)])]),darkAngelsEnhancementGroups=new Map();
-for(const enhancement of [...darkAngels.enhancements,...spaceMarines.enhancements.filter(item=>darkAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){const contract=(darkAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment))?spaceMarinesContracts:darkAngelsContracts)[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit'),record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})},key=normalize(enhancement.title),group=darkAngelsEnhancementGroups.get(key)||[];group.push(record);darkAngelsEnhancementGroups.set(key,group);}
+for(const enhancement of [...darkAngels.enhancements,...spaceMarines.enhancements.filter(item=>darkAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){const shared=darkAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment)),record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog(shared?'space-marines':'dark-angels'),shared?spaceMarinesContracts:darkAngelsContracts)},key=normalize(enhancement.title),group=darkAngelsEnhancementGroups.get(key)||[];group.push(record);darkAngelsEnhancementGroups.set(key,group);}
 const darkAngelsEnhancements=Object.fromEntries([...darkAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 
 const catalog={
@@ -189,5 +226,8 @@ const catalog={
   'blood angels':{units:bloodAngelsUnits,enhancements:bloodAngelsEnhancements,detachments:detachmentRecords([...bloodAngels.detachments,...bloodAngelsSharedDetachments])},
   'dark angels':{units:darkAngelsUnits,enhancements:darkAngelsEnhancements,detachments:detachmentRecords([...darkAngels.detachments,...darkAngelsSharedDetachments])}
 };
-fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
-console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(emperorChildrenUnits).length} Emperor's Children, ${Object.keys(csmUnits).length} Chaos Space Marines, ${Object.keys(spaceMarinesUnits).length} Space Marines, ${Object.keys(bloodAngelsUnits).length} Blood Angels and ${Object.keys(darkAngelsUnits).length} Dark Angels units.`);
+export {catalog};
+if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+  fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
+  console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(emperorChildrenUnits).length} Emperor's Children, ${Object.keys(csmUnits).length} Chaos Space Marines, ${Object.keys(spaceMarinesUnits).length} Space Marines, ${Object.keys(bloodAngelsUnits).length} Blood Angels and ${Object.keys(darkAngelsUnits).length} Dark Angels units.`);
+}

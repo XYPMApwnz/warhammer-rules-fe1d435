@@ -4,7 +4,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 
-const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),sources=new Map(),read=file=>{if(!sources.has(file))sources.set(file,fs.readFileSync(path.join(root,file),'utf8'));return sources.get(file);};
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const scope={console,WHRosterParser:{normalize},addEventListener(){}};scope.window=scope;scope.globalThis=scope;
 vm.runInNewContext(read('books/tau-empire/scripts/roster-data.js'),scope,{filename:'tau-roster-data.js'});
@@ -30,6 +30,73 @@ assert.ok(has(effects(breachers,[fireblade,breachers,duplicate]),'volley-fire'),
 assert.ok(has(effects(fireblade,[fireblade,breachers,duplicate]),'volley-fire'),'Leader is part of its Attached Unit');
 assert.equal(has(effects(duplicate,[fireblade,breachers,duplicate]),'volley-fire'),false,'same-canonical duplicate isolation');
 const loneFireblade=draft('fireblade-lone','unit-cadre-fireblade');assert.equal(effects(loneFireblade,[loneFireblade]).length,0,'unattached Character does not lead itself');
+
+// Fixed numeric facts, independent of the provider recipe and its actual delta.
+const breacherBase={
+  'unit-breacher-team-profile-pulse-pistol-ranged':'1',
+  'unit-breacher-team-profile-pulse-blaster-ranged-3':'2',
+  'unit-breacher-team-profile-close-combat-weapon-melee-2':'1'
+};
+const breacherVolley={
+  'unit-breacher-team-profile-pulse-pistol-ranged':'2',
+  'unit-breacher-team-profile-pulse-blaster-ranged-3':'3',
+  'unit-breacher-team-profile-close-combat-weapon-melee-2':'1'
+};
+const firebladeBase={
+  'unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged':'1',
+  'unit-cadre-fireblade-profile-close-combat-weapon-melee-2':'3'
+};
+const firebladeVolley={
+  'unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged':'2',
+  'unit-cadre-fireblade-profile-close-combat-weapon-melee-2':'3'
+};
+vm.runInNewContext(read('books/shared/roster-context.js'),scope,{filename:'roster-context.js'});
+const rawFireblade=id=>({id,name:'Cadre Fireblade',quantity:1,points:50,wargear:'Close combat weapon, Fireblade pulse rifle'});
+const rawBreachers=id=>({id,name:'Breacher Team',quantity:10,points:100,models:[
+  {name:"Breacher Fire Warrior Shas'ui",quantity:1,wargear:'Close combat weapon, Pulse blaster, Pulse pistol'},
+  {name:'Breacher Fire Warrior',quantity:9,wargear:'Close combat weapon, Pulse blaster, Pulse pistol'}
+]});
+// The first same-datasheet Character is deliberately NOT the physical owner.
+const volleyRoster={faction:"T'au Empire",units:[rawFireblade('fireblade-lone'),rawFireblade('fireblade-1'),rawBreachers('breachers-1'),rawBreachers('breachers-2')]};
+const projectVolley=(attachments={'breachers-1':['fireblade-1']})=>scope.WHArmyRosterContext.project({catalog,roster:volleyRoster,record:{attachments},provider:{gameEffects:semantics.projectEffects}}).game;
+const assertVolleyProjection=(projection,instanceId,canonicalId,base,expected,owner=null)=>{
+  const member=projection.units.find(item=>item.identity.instanceId===instanceId);
+  assert.ok(member,`${instanceId}: physical projection exists`);
+  assert.equal(member.identity.canonicalDatasheetId,canonicalId,`${instanceId}: canonical identity`);
+  assert.equal(member.selection.loadout.weaponResolution.state,'resolved',`${instanceId}: fixture equipment resolves`);
+  assert.deepEqual(Array.from(member.selection.loadout.selectedProfileIds).sort(),Object.keys(expected).sort(),`${instanceId}: exact selected equipment`);
+  for(const [profileId,value] of Object.entries(expected)){
+    assert.equal(unit(canonicalId).gameSelections.weaponProfiles.find(profile=>profile.id===profileId)?.a,base[profileId],`${instanceId}/${profileId}: canonical base A`);
+    assert.equal(member.effective.weaponProfiles.find(profile=>profile.id===profileId)?.values.A,value,`${instanceId}/${profileId}: semantic A`);
+  }
+  const volley=Array.from(member.effects).filter(effect=>effect.id==='volley-fire');
+  assert.equal(volley.length,owner?1:0,`${instanceId}: exactly one owned Volley Fire, or none`);
+  if(owner){
+    const effect=volley[0];
+    assert.deepEqual({id:effect.id,component:effect.component,targetId:effect.targetId,operation:effect.operation,stat:effect.stat,delta:effect.delta,targetInstanceId:effect.targetInstanceId,targetState:effect.targetState,state:effect.state,certainty:effect.certainty,source:{...effect.source}},
+      {id:'volley-fire',component:'weapon',targetId:'ranged',operation:'add-stat',stat:'A',delta:1,targetInstanceId:instanceId,targetState:'resolved',state:'active',certainty:'current',source:{kind:'explicit-attachment',id:'tau-empire-ability-volley-fire',ownerInstanceId:owner}},`${instanceId}: exact Volley Fire recipe and physical owner`);
+    const targets=Object.keys(expected).filter(id=>base[id]!==expected[id]).sort().map(profileId=>({profileId,field:'A',base:base[profileId],effective:expected[profileId]}));
+    assert.deepEqual(Array.from(effect.targets,target=>({...target})).sort((a,b)=>a.profileId.localeCompare(b.profileId)),targets,`${instanceId}: exact ranged numeric reduction targets`);
+  }
+  return member;
+};
+const firstVolleyProjection=projectVolley();
+for(const projection of [firstVolleyProjection,projectVolley(),projectVolley()]){
+  assert.equal(projection.status,'ready','physical Volley Fire fixture is fully resolved');
+  assert.equal(projection.units.length,4,'two physical Fireblades and two physical Breacher Teams');
+  const body=assertVolleyProjection(projection,'breachers-1','unit-breacher-team',breacherBase,breacherVolley,'fireblade-1');
+  const leader=assertVolleyProjection(projection,'fireblade-1','unit-cadre-fireblade',firebladeBase,firebladeVolley,'fireblade-1');
+  const otherBody=assertVolleyProjection(projection,'breachers-2','unit-breacher-team',breacherBase,breacherBase);
+  const otherLeader=assertVolleyProjection(projection,'fireblade-lone','unit-cadre-fireblade',firebladeBase,firebladeBase);
+  assert.equal(body.selection.modelCount.value,10,'ten models do not multiply the per-profile bonus');
+  assert.deepEqual(Array.from(body.attachments.leaders,item=>item.instanceId),['fireblade-1'],'exact physical leader attachment');
+  assert.deepEqual(Array.from(leader.attachments.leading,item=>item.instanceId),['breachers-1'],'reciprocal physical bodyguard attachment');
+  for(const member of [otherBody,otherLeader])assert.equal(member.attachments.leaders.length+member.attachments.leading.length,0,'unattached duplicate isolation');
+  assert.equal(JSON.stringify(projection),JSON.stringify(firstVolleyProjection),'reprojection does not compound Volley Fire');
+}
+const unresolvedVolleyProjection=projectVolley({'breachers-1':['missing-fireblade']});
+assertVolleyProjection(unresolvedVolleyProjection,'breachers-1','unit-breacher-team',breacherBase,breacherBase);
+assertVolleyProjection(unresolvedVolleyProjection,'fireblade-1','unit-cadre-fireblade',firebladeBase,firebladeBase);
 
 const ethereal=draft('ethereal-1','unit-ethereal'),strike=draft('strike-1','unit-strike-team');attach(strike,ethereal);
 for(const member of [ethereal,strike])assert.ok(has(effects(member,[ethereal,strike]),'ethereal-fnp'),`${member.identity.instanceId}: attached FNP 5+`);

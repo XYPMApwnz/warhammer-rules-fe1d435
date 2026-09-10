@@ -6,9 +6,10 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
+import {runHelbruteBrowserQa} from '../helpers/death-guard-helbrute.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const bookIds=['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
+const bookIds=process.argv.includes('--helbrute')?['death-guard']:['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
 const catalogFor=bookId=>{const scope={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,`books/${bookId}/scripts/roster-data.js`),'utf8'),scope);return scope.window.WH_BOOK_ROSTER_CATALOG;};
 const catalogs=new Map(bookIds.map(bookId=>[bookId,catalogFor(bookId)]));
@@ -57,6 +58,8 @@ const openRecord=async({bookId,record,instance,unitId})=>{const context=await br
 const visibleStats=page=>page.evaluate(()=>{const card=document.querySelector('.unit-card.roster-game-view');return Object.fromEntries([...card.querySelectorAll('.stat[data-source-field^="stats."]')].map(node=>[node.dataset.sourceField.slice(6),node.querySelector('span')?.textContent.trim()||'']));});
 
 try{
+  const helbruteQa=await runHelbruteBrowserQa({openRecord});
+  if(process.argv.includes('--helbrute')){console.log(`Death Guard Helbrute browser QA: PASS (${helbruteQa.count} physical controls).`);}else{
   for(const bookId of bookIds){
     const catalog=catalogs.get(bookId),unit=catalog.units.find(item=>item.gameSelections.models.length===1),instance='parsed-unit-1';
     assert.ok(unit,`${bookId}: canonical single-model fixture`);
@@ -213,4 +216,5 @@ try{
   }
 
   console.log('Roster effective stats and physical composition QA: PASS (9/9).');
+  }
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

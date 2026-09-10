@@ -91,6 +91,59 @@
       attachmentEnhancementStateKey(unit)
     ].join('\0');
 
+    const helbruteMeleeProfileIds = (unit, gameUnit = null) => {
+      const catalog = root.WH_BOOK_ROSTER_CATALOG;
+      let canonical = gameUnit?.item?.catalogUnit;
+      if (!gameUnit) {
+        if (!catalog || !root.WHArmyRosterContext?.project) return [];
+        // The legacy decorator uses the same resolved equipment boundary, without effects.
+        const projection = root.WHArmyRosterContext.project({catalog, roster:{...roster, units:[unit]}, record:{attachments:{}}});
+        const item = projection.units.find(item => item.raw.id === unit?.id);
+        canonical = item?.catalogUnit;
+        gameUnit = item?.game;
+      }
+      canonical ||= catalog?.units?.find(item => item.id === gameUnit?.identity?.canonicalDatasheetId);
+      const loadout = gameUnit?.selection?.loadout, metadata = canonical?.gameSelections;
+      if (canonical?.id !== 'unit-helbrute' || gameUnit?.identity?.instanceId !== unit?.id ||
+          gameUnit?.identity?.state !== 'resolved' || gameUnit?.selection?.modelCount?.state !== 'resolved' ||
+          gameUnit.selection.modelCount.value !== 1 || loadout?.state !== 'resolved' ||
+          loadout.weaponResolution?.state !== 'resolved' || !metadata) return [];
+      const selections = new Map((metadata.selections || []).map(item => [item.id, item]));
+      const profiles = new Map((metadata.weaponProfiles || []).map(item => [item.id, item]));
+      const selectedIds = new Set(loadout.selectedProfileIds || []), equipment = new Map(), targets = new Set();
+      for (const selected of loadout.weapons || []) {
+        const selection = selections.get(selected.selectionId), ids = selection?.profileIds || [];
+        if (selected.state !== 'resolved' || selection?.kind !== 'weapon' || !ids.length ||
+            !Number.isInteger(selected.quantity) || selected.quantity <= 0 || selected.modelQuantity !== 1 ||
+            selected.totalQuantity !== selected.quantity || ids.length !== new Set(selected.profileIds || []).size ||
+            !ids.every(id => selected.profileIds.includes(id) && selectedIds.has(id) && profiles.has(id))) return [];
+        const weaponProfiles = ids.map(id => profiles.get(id));
+        if (weaponProfiles.some(profile => !['melee', 'ranged'].includes(profile.mode))) return [];
+        const meleeIds = weaponProfiles.filter(profile => profile.mode === 'melee' && profile.id !== 'helbrute-weapon-close-combat-weapon').map(profile => profile.id);
+        if (!meleeIds.length) continue;
+        // Mixed/overlapping identities cannot prove two physical melee items.
+        if (meleeIds.length !== ids.length) return [];
+        const families = (metadata.weaponFamilies || []).filter(family => ids.some(id => family.profileIds?.includes(id)));
+        if (families.length > 1 || (selection.familyId && families[0]?.id !== selection.familyId) ||
+            (families.length && !ids.every(id => families[0].profileIds.includes(id)))) return [];
+        const equipmentId = families[0]?.id || selection.id;
+        const records = equipment.get(equipmentId) || new Map(), previous = records.get(selection.id);
+        if (!previous && [...records.values()].some(record => record.profileIds.some(id => ids.includes(id)))) return [];
+        records.set(selection.id, {quantity:(previous?.quantity || 0) + selected.totalQuantity, profileIds:ids});
+        equipment.set(equipmentId, records);
+        meleeIds.forEach(id => targets.add(id));
+      }
+      let itemCount = 0;
+      for (const records of equipment.values()) {
+        // Alternate modes describe one equipment family; repeated identical selections
+        // and explicit quantities describe additional copies of that equipment.
+        const quantities = new Set([...records.values()].map(record => record.quantity));
+        if (quantities.size !== 1) return [];
+        itemCount += quantities.values().next().value;
+      }
+      return itemCount === 2 ? [...targets] : [];
+    };
+
     const projectEffects = (unit, cardId, detachmentIds = [], gameUnit = null) => {
       const output = [], detachments = new Set(detachmentIds), bodyguard = bodyguardFor(unit), group = attachedGroup(unit) || [unit];
       const source = (kind, id, ownerInstanceId = null, rosterFact = kind) => ({source:{kind,id,ownerInstanceId},provenance:{rosterFact}});
@@ -121,7 +174,7 @@
       const blightspawn=leader('unit-foul-blightspawn');if(blightspawn&&cardId!=='unit-foul-blightspawn')canonicalAbility(DG_RULE.blinding,attachmentSource(DG_RULE.blinding,blightspawn));
       const surgeon=leader('unit-plague-surgeon');if(surgeon&&cardId!=='unit-plague-surgeon')canonicalAbility(DG_RULE.tainted,attachmentSource(DG_RULE.tainted,surgeon));
       if(cardId!=='unit-deathshroud-terminators'&&canonicalUnitId(bodyguard)==='unit-deathshroud-terminators')add('silent-bodyguard','ability','core-feel-no-pain','grant',{title:'Feel No Pain 4+',summary:'This model has Feel No Pain 4+.',ruleTitle:'Silent Bodyguard'},attachmentSource(DG_RULE.silent,bodyguard));
-      if(cardId==='unit-helbrute'&&unitLoadout(unit).flatMap(splitLabels).filter(label=>normalize(label)!=='close combat weapon').length===2)weapon('froth-spattered-frenzy','selected-melee','add-stat',{stat:'A',delta:2,profileIds:gameUnit?.selection?.loadout?.selectedProfileIds||[]},source('datasheet',DG_RULE.froth,unit.id,'selected-wargear'));
+      if(cardId==='unit-helbrute'){const profileIds=helbruteMeleeProfileIds(unit,gameUnit);if(profileIds.length)weapon('froth-spattered-frenzy','selected-melee','add-stat',{stat:'A',delta:2,profileIds},source('datasheet',DG_RULE.froth,unit.id,'selected-wargear'));}
       if(['unit-plague-drones','unit-plaguebearers'].includes(cardId)&&hasWargear(unit,'Daemonic Icon'))stat('daemonic-icon','Ld','set','6+',source('selected-wargear','daemonic-icon',unit.id,'selected-wargear'));
       if(['unit-plague-drones','unit-plaguebearers'].includes(cardId)&&hasWargear(unit,'Instrument of Chaos'))canonicalAbility(cardId==='unit-plague-drones'?DG_RULE.dronesInstrument:DG_RULE.bearersInstrument,source('selected-wargear',cardId==='unit-plague-drones'?DG_RULE.dronesInstrument:DG_RULE.bearersInstrument,unit.id,'selected-wargear'));
       for(const enhancement of ownEnhancements){const id=enhancementIdentity(enhancement),origin=source('enhancement',id,unit.id,'enhancement-owner');if(id===DG_ENH.regeneration)add('revolting-regeneration','ability','core-feel-no-pain','grant',{title:'Feel No Pain 5+',summary:'This model has Feel No Pain 5+.',ruleTitle:'Revolting Regeneration'},origin);if(id===DG_ENH.sorrowsyphon&&canonicalUnitId(bodyguard)==='unit-poxwalkers')weapon('sorrowsyphon','family:plague-wind','add-stat',{stat:'D',delta:1},origin);if(id===DG_ENH.bilemaw)continue;switch(enhancement.effect){case'furnace':weapon('furnace-attacks','melee','add-stat',{stat:'A',delta:1},origin);weapon('furnace-strength','melee','add-stat',{stat:'S',delta:1},origin);weapon('furnace-devastating','melee','grant-tag',{tag:'DEVASTATING WOUNDS',termId:'core-devastating-wounds'},origin);break;case'critical-hit-5':weapon('critical-hit-5','selected-melee','grant-tag',{tag:'CRITICAL HITS 5+',profileIds:gameUnit?.selection?.loadout?.selectedProfileIds||[]},origin);break;case'melee-a-2':weapon('melee-a-2','melee','add-stat',{stat:'A',delta:2},origin);break;case'plague-wind-range-12':weapon('plague-wind-range','family:plague-wind','add-stat',{stat:'Range',delta:12},origin);break;case'mobile':add('mobile-keyword','keyword','MOBILE','grant',{},origin);break;}}
@@ -246,7 +299,7 @@
       if (terms[DG_RULE.vector] && from('unit-lord-of-contagion')) weaponRows('melee').forEach((row) => { addWeaponTag(row, 'SUSTAINED HITS 1', 'core-sustained-hits', 'vector-of-disease'); addWeaponTag(row, 'LANCE', 'core-lance', 'vector-of-disease'); });
       if (terms[DG_RULE.vitality] && from('unit-noxious-blightbringer')) modifyModelStat('M', 1, 'sickening-vitality');
       if (terms[DG_RULE.silent] && entryEvery((unit) => canonicalUnitId(unit) !== 'unit-deathshroud-terminators' && canonicalUnitId(bodyguardFor(unit)) === 'unit-deathshroud-terminators')) addDerivedAbility('silent-bodyguard', 'Silent Bodyguard', 'Feel No Pain 4+.', DG_RULE.silent);
-      if (cardId === 'unit-helbrute' && terms[DG_RULE.froth]) { const rows = weaponRows('melee').filter((row) => normalize(row.querySelector('.weapon-button')?.textContent || row.firstElementChild?.textContent) !== 'close combat weapon' && root.WHRosterEntities.loadoutIncludesProfile(unitLoadout(first), row.querySelector('.weapon-button')?.textContent || row.firstElementChild?.textContent)); if (rows.length === 2) rows.forEach((row) => modifyWeaponStat(row, 'A', 2, 'froth-spattered-frenzy')); }
+      if (cardId === 'unit-helbrute' && terms[DG_RULE.froth] && units.length === 1) { const profileIds = helbruteMeleeProfileIds(first); weaponRows('melee').filter(row => profileIds.includes(row.id)).forEach(row => modifyWeaponStat(row, 'A', 2, 'froth-spattered-frenzy')); }
       if ((cardId === 'unit-plague-drones' || cardId === 'unit-plaguebearers') && entryEvery((unit) => hasWargear(unit, 'Daemonic Icon'))) setModelStat('Ld', '6+', 'daemonic-icon');
       if (entryEvery((unit) => canonicalUnitId(bodyguardFor(unit)) === 'unit-poxwalkers' && Boolean(attachedEnhancementOwner(unit, DG_ENH.pipes)))) modifyModelStat('OC', 1, 'witherbone-pipes');
       if (entryEvery((unit) => ownsEnhancement(unit, DG_ENH.sorrowsyphon) && canonicalUnitId(bodyguardFor(unit)) === 'unit-poxwalkers')) weaponRows('ranged').filter((row) => root.WHRosterEntities.weaponFamily(row.querySelector('.weapon-button')?.textContent || row.firstElementChild?.textContent) === 'plague wind').forEach((row) => modifyWeaponStat(row, 'D', 1, 'sorrowsyphon'));

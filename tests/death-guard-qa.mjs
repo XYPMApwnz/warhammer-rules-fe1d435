@@ -3,8 +3,11 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import {runHelbruteProviderQa} from './helpers/death-guard-helbrute.mjs';
 
 const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const helbruteQa=runHelbruteProviderQa({root:projectRoot});
+if(process.argv.includes('--helbrute')){console.log(`Death Guard Helbrute provider QA: PASS (${helbruteQa.count} controls).`);process.exit(0);}
 const root=path.join(projectRoot,'books','death-guard');
 const sharedOwned=new Map([['styles/tokens.css','books/shared/styles/tokens.css'],['styles/layout.css','books/shared/styles/layout.css'],['styles/navigation.css','books/shared/styles/navigation.css'],['styles/content.css','books/shared/styles/content.css'],['styles/popups.css','books/shared/styles/popups.css'],['scripts/navigation-controller.js','books/shared/controllers/navigation-controller.js'],['scripts/popup-controller.js','books/shared/controllers/popup-controller.js'],['scripts/full-entry-controller.js','books/shared/controllers/full-entry-controller.js'],['scripts/journey-controller.js','books/shared/controllers/journey-controller.js'],['scripts/ui-controllers.js','books/shared/controllers/ui-controllers.js']]);
 const read=name=>fs.readFileSync(sharedOwned.has(name)?path.join(projectRoot,sharedOwned.get(name)):path.join(root,name),'utf8');

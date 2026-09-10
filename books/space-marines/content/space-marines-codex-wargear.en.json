@@ -859,15 +859,15 @@
       "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-Titus",
       "source": {
         "authority": "official",
-        "sourceId": "space-marines-faction-pack-v1.1",
-        "localFile": "../sources/space-marines-faction-pack-v1.1.pdf",
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "localFile": "../sources/space-marines-faction-pack-v1.2.pdf",
         "pages": [
-          20,
-          21
+          40,
+          41
         ]
       },
       "wargear": [],
-      "composition": "1 Captain Titus – Epic Hero\nThis model is equipped with: heavy bolt pistol; Astartes chainsword."
+      "composition": "1 Captain Titus – Epic Hero\nThis model is equipped with: bolt pistol; master-crafted bolter; master-crafted chainsword."
     },
     {
       "title": "Lieutenant with Combi-weapon",

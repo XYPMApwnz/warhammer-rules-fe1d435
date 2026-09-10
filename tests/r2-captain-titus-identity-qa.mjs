@@ -50,7 +50,7 @@ const wargearRoot=json('books/space-marines/content/space-marines-codex-wargear.
 const wargearRecords=objects(wargearRoot,item=>item.title===newTitle);
 assert.equal(wargearRecords.length,1,'Captain Titus wargear owner identity');
 assert.equal(objects(wargearRoot,item=>item.title===oldTitle).length,0,'Old Titus wargear title');
-assert.equal(fingerprint(wargearRecords[0]),'c2111b7940a5e0f60f90551e41f2f3d9107424f4def3ed5427d263a189b2593a','Titus wargear factual fingerprint');
+assert.equal(fingerprint(wargearRecords[0]),'dfacaa2cad4fbfbe356b5d607da9a06969863a95d7d3eedaf16e59da07e2fa19','Titus wargear factual fingerprint');
 
 const compatibleSnapshot=json('books/space-marines/sources/wahapedia-compatible-rules.snapshot.json');
 assert.ok(compatibleSnapshot.units?.[newId],'Captain Titus compatible-rules canonical reference');

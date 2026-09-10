@@ -51641,37 +51641,6 @@
       ],
       "mentions": []
     },
-    "space-marines-ability-honour-of-the-chapter": {
-      "id": "space-marines-ability-honour-of-the-chapter",
-      "kind": "datasheet-ability",
-      "scope": "space-marines",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Honour of the Chapter"
-      },
-      "summary": {
-        "en": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
-      },
-      "definition": {
-        "en": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-captain-titus"
-      },
-      "fullRulePath": "books/space-marines/reader.html#unit-captain-titus",
-      "status": "provisional",
-      "sourceRefs": [
-        "space-marines"
-      ],
-      "mentions": []
-    },
     "space-marines-ability-honour-of-ultramar": {
       "id": "space-marines-ability-honour-of-ultramar",
       "kind": "datasheet-ability",
@@ -52922,10 +52891,10 @@
         "en": "Press the Attack"
       },
       "summary": {
-        "en": "Weapons equipped by models in this unit have the Sustained Hits 1 ability."
+        "en": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
       },
       "definition": {
-        "en": "Weapons equipped by models in this unit have the Sustained Hits 1 ability."
+        "en": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
       },
       "structured": {},
       "presentation": "atomic",
@@ -62695,46 +62664,6 @@
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Astartes chainsword"
-      },
-      "summary": {
-        "en": "Melee · Melee · A 8 · WS 2+ · S 4 · AP -1 · D 1 · Anti-Infantry 2+"
-      },
-      "definition": {
-        "en": "Melee · Melee · A 8 · WS 2+ · S 4 · AP -1 · D 1 · Anti-Infantry 2+"
-      },
-      "structured": {
-        "weapon": {
-          "Range": "Melee",
-          "A": "8",
-          "WS": "2+",
-          "S": "4",
-          "AP": "-1",
-          "D": "1"
-        }
-      },
-      "presentation": "profile",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-captain-titus"
-      },
-      "fullRulePath": "books/space-marines/reader.html#unit-captain-titus",
-      "status": "provisional",
-      "sourceRefs": [
-        "space-marines"
-      ],
-      "mentions": []
-    },
-    "space-marines-weapon-astartes-chainsword-5": {
-      "id": "space-marines-weapon-astartes-chainsword-5",
-      "kind": "weapon",
-      "scope": "space-marines",
-      "edition": "11e",
-      "language": "en",
-      "title": {
         "en": "Astartes Chainsword"
       },
       "summary": {
@@ -67644,6 +67573,86 @@
         "locator": "unit-captain"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-weapon-master-crafted-bolter-2": {
+      "id": "space-marines-weapon-master-crafted-bolter-2",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Master-crafted bolter"
+      },
+      "summary": {
+        "en": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2 · Assault, Heavy"
+      },
+      "definition": {
+        "en": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2 · Assault, Heavy"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "24\"",
+          "A": "2",
+          "BS": "2+",
+          "S": "4",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-captain-titus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-captain-titus",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-weapon-master-crafted-chainsword": {
+      "id": "space-marines-weapon-master-crafted-chainsword",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Master-crafted chainsword"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -1 · D 2 · Anti-Infantry 2+"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -1 · D 2 · Anti-Infantry 2+"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "8",
+          "WS": "2+",
+          "S": "5",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-captain-titus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-captain-titus",
       "status": "provisional",
       "sourceRefs": [
         "space-marines"

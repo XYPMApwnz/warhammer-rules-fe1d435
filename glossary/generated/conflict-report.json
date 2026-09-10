@@ -6,7 +6,7 @@
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 165,
+    "aliasCandidates": 167,
     "duplicateCandidates": 49,
     "keywordCandidates": 16
   },
@@ -1829,7 +1829,6 @@
         "space-marines-weapon-astartes-chainsword-2",
         "space-marines-weapon-astartes-chainsword-3",
         "space-marines-weapon-astartes-chainsword-4",
-        "space-marines-weapon-astartes-chainsword-5",
         "blood-angels-weapon-astartes-chainsword",
         "blood-angels-weapon-astartes-chainsword-2",
         "blood-angels-weapon-astartes-chainsword-3"
@@ -1944,6 +1943,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "master-crafted-bolter",
+      "termIds": [
+        "space-marines-weapon-master-crafted-bolter",
+        "space-marines-weapon-master-crafted-bolter-2"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "neo-volkite-pistol",
       "termIds": [
         "space-marines-weapon-neo-volkite-pistol",
@@ -2037,6 +2044,14 @@
         "space-marines-ability-inspiring-commander-4",
         "space-marines-ability-inspiring-commander-5",
         "space-marines-ability-inspiring-commander-6"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "master-crafted-chainsword",
+      "termIds": [
+        "space-marines-weapon-master-crafted-chainsword",
+        "blood-angels-weapon-master-crafted-chainsword"
       ],
       "status": "review-required"
     },

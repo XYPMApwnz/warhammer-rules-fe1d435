@@ -2870,6 +2870,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-desolation-squad",
             "maxCharacters": 2
           },
@@ -2907,6 +2911,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [
             {
               "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
               "maxCharacters": 2
             },
             {
@@ -3262,14 +3270,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "relations": {
         "canLead": [],
-        "canSupport": [],
+        "canSupport": [
+          {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          }
+        ],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
       "ruleFacts": {
         "relations": {
           "canLead": [],
-          "canSupport": [],
+          "canSupport": [
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
+              "maxCharacters": 2
+            }
+          ],
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
@@ -3435,7 +3453,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-victrix-honour-guard",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -3479,7 +3497,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-victrix-honour-guard",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -7680,14 +7698,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "relations": {
         "canLead": [],
-        "canSupport": [],
+        "canSupport": [
+          {
+            "unitId": "unit-reiver-squad",
+            "maxCharacters": 2
+          }
+        ],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
       "ruleFacts": {
         "relations": {
           "canLead": [],
-          "canSupport": [],
+          "canSupport": [
+            {
+              "unitId": "unit-reiver-squad",
+              "maxCharacters": 2
+            }
+          ],
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
@@ -9695,14 +9723,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "relations": {
         "canLead": [],
-        "canSupport": [],
+        "canSupport": [
+          {
+            "unitId": "unit-victrix-honour-guard",
+            "maxCharacters": 2
+          }
+        ],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
       "ruleFacts": {
         "relations": {
           "canLead": [],
-          "canSupport": [],
+          "canSupport": [
+            {
+              "unitId": "unit-victrix-honour-guard",
+              "maxCharacters": 2
+            }
+          ],
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
@@ -11001,7 +11039,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-victrix-honour-guard",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-wardens-of-ultramar",
@@ -11045,7 +11083,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-victrix-honour-guard",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-wardens-of-ultramar",
@@ -11062,9 +11100,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "M": "6\"",
           "T": "4",
           "Sv": "3+",
-          "W": "5",
+          "W": "6",
           "Ld": "6+",
-          "OC": "1"
+          "OC": "1",
+          "Invulnerable": "4+"
         },
         "abilities": [
           {
@@ -11099,14 +11138,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "id": "space-marines-ability-press-the-attack",
             "sectionId": "space-marines-ability-press-the-attack",
             "title": "Press the Attack",
-            "text": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
-            "sourceUnitId": "unit-captain-titus"
-          },
-          {
-            "id": "space-marines-ability-honour-of-the-chapter",
-            "sectionId": "space-marines-ability-honour-of-the-chapter",
-            "title": "Honour of the Chapter",
-            "text": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+            "text": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
             "sourceUnitId": "unit-captain-titus"
           }
         ],
@@ -11121,26 +11153,38 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "selections": [
           {
-            "id": "unit-captain-titus-selection-heavy-bolt-pistol",
-            "title": "Heavy bolt pistol",
+            "id": "unit-captain-titus-selection-bolt-pistol",
+            "title": "Bolt pistol",
             "aliases": [
-              "Heavy bolt pistol"
+              "Bolt pistol"
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-captain-titus-profile-heavy-bolt-pistol-ranged"
+              "unit-captain-titus-profile-bolt-pistol-ranged"
             ],
             "wargearAbilityIds": []
           },
           {
-            "id": "unit-captain-titus-selection-astartes-chainsword",
-            "title": "Astartes chainsword",
+            "id": "unit-captain-titus-selection-master-crafted-bolter",
+            "title": "Master-crafted bolter",
             "aliases": [
-              "Astartes chainsword"
+              "Master-crafted bolter"
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-captain-titus-profile-astartes-chainsword-melee-2"
+              "unit-captain-titus-profile-master-crafted-bolter-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-captain-titus-selection-master-crafted-chainsword",
+            "title": "Master-crafted chainsword",
+            "aliases": [
+              "Master-crafted chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-captain-titus-profile-master-crafted-chainsword-melee-3"
             ],
             "wargearAbilityIds": []
           }
@@ -11148,33 +11192,48 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-captain-titus-profile-heavy-bolt-pistol-ranged",
-            "title": "Heavy bolt pistol",
+            "id": "unit-captain-titus-profile-bolt-pistol-ranged",
+            "title": "Bolt pistol",
             "mode": "ranged",
-            "range": "18\"",
+            "range": "12\"",
             "a": "1",
             "skill": "2+",
             "s": "4",
-            "ap": "-1",
+            "ap": "0",
             "d": "1",
             "abilities": "Pistol",
             "sourceSelectionIds": [
-              "unit-captain-titus-selection-heavy-bolt-pistol"
+              "unit-captain-titus-selection-bolt-pistol"
             ]
           },
           {
-            "id": "unit-captain-titus-profile-astartes-chainsword-melee-2",
-            "title": "Astartes chainsword",
+            "id": "unit-captain-titus-profile-master-crafted-bolter-ranged-2",
+            "title": "Master-crafted bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "2+",
+            "s": "4",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Assault, Heavy",
+            "sourceSelectionIds": [
+              "unit-captain-titus-selection-master-crafted-bolter"
+            ]
+          },
+          {
+            "id": "unit-captain-titus-profile-master-crafted-chainsword-melee-3",
+            "title": "Master-crafted chainsword",
             "mode": "melee",
             "range": "Melee",
             "a": "8",
             "skill": "2+",
-            "s": "4",
+            "s": "5",
             "ap": "-1",
-            "d": "1",
+            "d": "2",
             "abilities": "Anti-Infantry 2+",
             "sourceSelectionIds": [
-              "unit-captain-titus-selection-astartes-chainsword"
+              "unit-captain-titus-selection-master-crafted-chainsword"
             ]
           }
         ],
@@ -11249,7 +11308,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-victrix-honour-guard",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -11309,7 +11368,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-victrix-honour-guard",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -12196,7 +12255,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           },
           {
             "unitId": "unit-victrix-honour-guard",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -12232,7 +12291,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-victrix-honour-guard",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -13843,6 +13902,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "canBeSupportedBy": [
           {
+            "unitId": "unit-apothecary",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-bladeguard-ancient",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           },
@@ -13899,6 +13966,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             }
           ],
           "canBeSupportedBy": [
+            {
+              "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-ancient",
+              "maxCharacters": 2
+            },
             {
               "unitId": "unit-lieutenant",
               "maxCharacters": 2
@@ -17765,6 +17840,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "unitId": "unit-lieutenant-in-phobos-armour",
             "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-lieutenant-in-reiver-armour",
+            "maxCharacters": 2
           }
         ]
       },
@@ -17785,6 +17864,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeSupportedBy": [
             {
               "unitId": "unit-lieutenant-in-phobos-armour",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-lieutenant-in-reiver-armour",
               "maxCharacters": 2
             }
           ]
@@ -20011,22 +20094,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canBeLedBy": [
           {
             "unitId": "unit-captain",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-captain-titus",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-marneus-calgar-in-armour-of-antilochus",
-            "maxCharacters": 1
+            "maxCharacters": 2
           },
           {
             "unitId": "unit-uriel-ventris",
-            "maxCharacters": 1
+            "maxCharacters": 2
           }
         ],
-        "canBeSupportedBy": []
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-cato-sicarius",
+            "maxCharacters": 2
+          }
+        ]
       },
       "ruleFacts": {
         "relations": {
@@ -20035,22 +20123,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [
             {
               "unitId": "unit-captain",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-captain-titus",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-marneus-calgar-in-armour-of-antilochus",
-              "maxCharacters": 1
+              "maxCharacters": 2
             },
             {
               "unitId": "unit-uriel-ventris",
-              "maxCharacters": 1
+              "maxCharacters": 2
             }
           ],
-          "canBeSupportedBy": []
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-cato-sicarius",
+              "maxCharacters": 2
+            }
+          ]
         }
       },
       "gameSelections": {

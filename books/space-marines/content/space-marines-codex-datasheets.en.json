@@ -1283,7 +1283,7 @@
         },
         {
           "title": "Support",
-          "text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSOR SQUAD \n■ CRUSADER SQUAD \n■ DEATHWATCH VETERANS \n■ DECIMUS KILL TEAM \n■ DESOLATION SQUAD \n■ DEVASTATOR SQUAD \n■ FORTIS KILL TEAM\n■ HELLBLASTER SQUAD\n■ INFERNUS SQUAD\n■ INNER CIRCLE COMPANIONS\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n■ SWORD BRETHREN SQUAD\n■ TACTICAL SQUAD\n\n\nYou can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+          "text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSOR SQUAD \n■ BLADEGUARD VETERAN SQUAD \n■ CRUSADER SQUAD \n■ DEATHWATCH VETERANS \n■ DECIMUS KILL TEAM \n■ DESOLATION SQUAD \n■ DEVASTATOR SQUAD \n■ FORTIS KILL TEAM\n■ HELLBLASTER SQUAD\n■ INFERNUS SQUAD\n■ INNER CIRCLE COMPANIONS\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n■ SWORD BRETHREN SQUAD\n■ TACTICAL SQUAD\n\n\nYou can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
         },
         {
           "title": "Support",
@@ -1319,6 +1319,7 @@
         "leader": [],
         "support": [
           "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
           "DESOLATION SQUAD",
           "DEVASTATOR SQUAD",
           "HELLBLASTER SQUAD",
@@ -1535,7 +1536,9 @@
       "paidWargear": [],
       "relations": {
         "leader": [],
-        "support": [],
+        "support": [
+          "BLADEGUARD VETERAN SQUAD"
+        ],
         "attachedUnit": [],
         "transport": []
       }
@@ -3834,7 +3837,9 @@
       "paidWargear": [],
       "relations": {
         "leader": [],
-        "support": [],
+        "support": [
+          "REIVER SQUAD"
+        ],
         "attachedUnit": [],
         "transport": []
       }
@@ -5078,7 +5083,9 @@
       "paidWargear": [],
       "relations": {
         "leader": [],
-        "support": [],
+        "support": [
+          "VICTRIX HONOUR GUARD"
+        ],
         "attachedUnit": [],
         "transport": []
       }
@@ -5698,33 +5705,45 @@
             "M": "6\"",
             "T": "4",
             "Sv": "3+",
-            "W": "5",
+            "W": "6",
             "Ld": "6+",
-            "OC": "1"
+            "OC": "1",
+            "Invulnerable": "4+"
           }
         }
       ],
       "weapons": [
         {
-          "name": "Heavy bolt pistol",
+          "name": "Bolt pistol",
           "mode": "ranged",
-          "range": "18\"",
+          "range": "12\"",
           "a": "1",
           "skill": "2+",
           "s": "4",
-          "ap": "-1",
+          "ap": "0",
           "d": "1",
           "abilities": "Pistol"
         },
         {
-          "name": "Astartes chainsword",
+          "name": "Master-crafted bolter",
+          "mode": "ranged",
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "abilities": "Assault, Heavy"
+        },
+        {
+          "name": "Master-crafted chainsword",
           "mode": "melee",
           "range": "Melee",
           "a": "8",
           "skill": "2+",
-          "s": "4",
+          "s": "5",
           "ap": "-1",
-          "d": "1",
+          "d": "2",
           "abilities": "Anti-Infantry 2+"
         }
       ],
@@ -5747,11 +5766,7 @@
         },
         {
           "title": "Press the Attack",
-          "text": "Weapons equipped by models in this unit have the Sustained Hits 1 ability."
-        },
-        {
-          "title": "Honour of the Chapter",
-          "text": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
+          "text": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
         }
       ],
       "wargearAbilities": [],

@@ -2795,6 +2795,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-desolation-squad",
             "maxCharacters": 2
           },
@@ -2836,6 +2840,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [
             {
               "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
               "maxCharacters": 2
             },
             {
@@ -3196,14 +3204,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "relations": {
         "canLead": [],
-        "canSupport": [],
+        "canSupport": [
+          {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          }
+        ],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
       "ruleFacts": {
         "relations": {
           "canLead": [],
-          "canSupport": [],
+          "canSupport": [
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
+              "maxCharacters": 2
+            }
+          ],
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
@@ -7706,14 +7724,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "relations": {
         "canLead": [],
-        "canSupport": [],
+        "canSupport": [
+          {
+            "unitId": "unit-reiver-squad",
+            "maxCharacters": 2
+          }
+        ],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
       "ruleFacts": {
         "relations": {
           "canLead": [],
-          "canSupport": [],
+          "canSupport": [
+            {
+              "unitId": "unit-reiver-squad",
+              "maxCharacters": 2
+            }
+          ],
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
@@ -9905,6 +9933,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "canBeSupportedBy": [
           {
+            "unitId": "unit-apothecary",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-bladeguard-ancient",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           }
@@ -9945,6 +9981,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             }
           ],
           "canBeSupportedBy": [
+            {
+              "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-ancient",
+              "maxCharacters": 2
+            },
             {
               "unitId": "unit-lieutenant",
               "maxCharacters": 2
@@ -13727,6 +13771,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "unitId": "unit-lieutenant-in-phobos-armour",
             "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-lieutenant-in-reiver-armour",
+            "maxCharacters": 2
           }
         ]
       },
@@ -13747,6 +13795,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeSupportedBy": [
             {
               "unitId": "unit-lieutenant-in-phobos-armour",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-lieutenant-in-reiver-armour",
               "maxCharacters": 2
             }
           ]

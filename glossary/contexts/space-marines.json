@@ -2613,6 +2613,7 @@
           "unit-chief-librarian-tigurius",
           "unit-iron-father-feirros",
           "unit-korsarro-khan",
+          "unit-captain-titus",
           "unit-uriel-ventris",
           "unit-vulkan-hestan"
         ]
@@ -2642,7 +2643,6 @@
           "unit-captain",
           "unit-lieutenant",
           "unit-aethon-shaan",
-          "unit-captain-titus",
           "unit-suboden-khan"
         ]
       }
@@ -4222,10 +4222,10 @@
         ]
       }
     },
-    "space-marines-ability-honour-of-the-chapter": {
-      "termId": "space-marines-ability-honour-of-the-chapter",
+    "space-marines-weapon-master-crafted-bolter-2": {
+      "termId": "space-marines-weapon-master-crafted-bolter-2",
       "navigation": {
-        "glossary": "glossary-space-marines-ability-honour-of-the-chapter",
+        "glossary": "glossary-space-marines-weapon-master-crafted-bolter-2",
         "rule": "unit-captain-titus",
         "datasheet": "unit-captain-titus",
         "statline": "captain-titus-profile",
@@ -4234,10 +4234,10 @@
         ]
       }
     },
-    "space-marines-weapon-astartes-chainsword-4": {
-      "termId": "space-marines-weapon-astartes-chainsword-4",
+    "space-marines-weapon-master-crafted-chainsword": {
+      "termId": "space-marines-weapon-master-crafted-chainsword",
       "navigation": {
-        "glossary": "glossary-space-marines-weapon-astartes-chainsword-4",
+        "glossary": "glossary-space-marines-weapon-master-crafted-chainsword",
         "rule": "unit-captain-titus",
         "datasheet": "unit-captain-titus",
         "statline": "captain-titus-profile",
@@ -5773,10 +5773,10 @@
         ]
       }
     },
-    "space-marines-weapon-astartes-chainsword-5": {
-      "termId": "space-marines-weapon-astartes-chainsword-5",
+    "space-marines-weapon-astartes-chainsword-4": {
+      "termId": "space-marines-weapon-astartes-chainsword-4",
       "navigation": {
-        "glossary": "glossary-space-marines-weapon-astartes-chainsword-5",
+        "glossary": "glossary-space-marines-weapon-astartes-chainsword-4",
         "rule": "unit-sternguard-veteran-squad",
         "datasheet": "unit-sternguard-veteran-squad",
         "statline": "sternguard-veteran-squad-profile",

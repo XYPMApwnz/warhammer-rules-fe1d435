@@ -2896,6 +2896,7 @@ window.DG_TERMS={
       "unit-chief-librarian-tigurius",
       "unit-iron-father-feirros",
       "unit-korsarro-khan",
+      "unit-captain-titus",
       "unit-uriel-ventris",
       "unit-vulkan-hestan"
     ],
@@ -2927,7 +2928,6 @@ window.DG_TERMS={
       "unit-captain",
       "unit-lieutenant",
       "unit-aethon-shaan",
-      "unit-captain-titus",
       "unit-suboden-khan"
     ],
     "datasheet": "unit-captain",
@@ -4624,8 +4624,8 @@ window.DG_TERMS={
   "space-marines-ability-press-the-attack": {
     "id": "space-marines-ability-press-the-attack",
     "title": "Press the Attack",
-    "summary": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
-    "full": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
+    "summary": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
+    "full": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
     "glossary": "glossary-space-marines-ability-press-the-attack",
     "rule": "unit-captain-titus",
     "units": [
@@ -4634,12 +4634,12 @@ window.DG_TERMS={
     "datasheet": "unit-captain-titus",
     "statline": "captain-titus-profile"
   },
-  "space-marines-ability-honour-of-the-chapter": {
-    "id": "space-marines-ability-honour-of-the-chapter",
-    "title": "Honour of the Chapter",
-    "summary": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
-    "full": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
-    "glossary": "glossary-space-marines-ability-honour-of-the-chapter",
+  "space-marines-weapon-master-crafted-bolter-2": {
+    "id": "space-marines-weapon-master-crafted-bolter-2",
+    "title": "Master-crafted bolter",
+    "summary": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2 · Assault, Heavy",
+    "full": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2 · Assault, Heavy",
+    "glossary": "glossary-space-marines-weapon-master-crafted-bolter-2",
     "rule": "unit-captain-titus",
     "units": [
       "unit-captain-titus"
@@ -4647,12 +4647,12 @@ window.DG_TERMS={
     "datasheet": "unit-captain-titus",
     "statline": "captain-titus-profile"
   },
-  "space-marines-weapon-astartes-chainsword-4": {
-    "id": "space-marines-weapon-astartes-chainsword-4",
-    "title": "Astartes chainsword",
-    "summary": "Melee · Melee · A 8 · WS 2+ · S 4 · AP -1 · D 1 · Anti-Infantry 2+",
-    "full": "Melee · Melee · A 8 · WS 2+ · S 4 · AP -1 · D 1 · Anti-Infantry 2+",
-    "glossary": "glossary-space-marines-weapon-astartes-chainsword-4",
+  "space-marines-weapon-master-crafted-chainsword": {
+    "id": "space-marines-weapon-master-crafted-chainsword",
+    "title": "Master-crafted chainsword",
+    "summary": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -1 · D 2 · Anti-Infantry 2+",
+    "full": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -1 · D 2 · Anti-Infantry 2+",
+    "glossary": "glossary-space-marines-weapon-master-crafted-chainsword",
     "rule": "unit-captain-titus",
     "units": [
       "unit-captain-titus"
@@ -6312,12 +6312,12 @@ window.DG_TERMS={
     "datasheet": "unit-sternguard-veteran-squad",
     "statline": "sternguard-veteran-squad-profile"
   },
-  "space-marines-weapon-astartes-chainsword-5": {
-    "id": "space-marines-weapon-astartes-chainsword-5",
+  "space-marines-weapon-astartes-chainsword-4": {
+    "id": "space-marines-weapon-astartes-chainsword-4",
     "title": "Astartes Chainsword",
     "summary": "Melee · Melee · A 6 · WS 3+ · S 4 · AP -1 · D 1",
     "full": "Melee · Melee · A 6 · WS 3+ · S 4 · AP -1 · D 1",
-    "glossary": "glossary-space-marines-weapon-astartes-chainsword-5",
+    "glossary": "glossary-space-marines-weapon-astartes-chainsword-4",
     "rule": "unit-sternguard-veteran-squad",
     "units": [
       "unit-sternguard-veteran-squad"

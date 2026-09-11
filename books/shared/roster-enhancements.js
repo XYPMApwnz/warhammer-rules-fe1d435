@@ -2,10 +2,11 @@
   'use strict';
 
   const normalize = value => root.WHRosterParser?.normalize(value) || String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const enhancementName = value => typeof value === 'string' ? value.replace(/\s+[-–—]\s+\d+\s*pts?\s*$/i, '').trim() : '';
   const catalog = () => root.WH_POINTS_CATALOG?.['death guard']?.enhancements || {};
   const enriched = roster => (roster?.enhancements || []).map(item => {
     const entry = typeof item === 'string' ? { name:item, ownerStatus:'unresolved' } : item;
-    const canonical = catalog()[normalize(entry.name)];
+    const canonical = catalog()[normalize(enhancementName(entry?.name))];
     return canonical ? { ...entry, ...canonical, name:canonical.title, currentCost:Number(canonical.value) } : entry;
   });
   const add = (value, amount) => {

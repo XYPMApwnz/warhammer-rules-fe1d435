@@ -60,6 +60,12 @@ assert.equal(unknown.relations.attachments.state,'unknown');
 const catalog={schema:api.CATALOG_SCHEMA,book:{id:'fixture',title:'Fixture Book',factionKeyword:'FIXTURE FACTION',parentBookId:null,dependencies:[]},units:[{id:'unit-example',title:'Example Unit',sourceBookId:'fixture',intrinsicKeywords:['INFANTRY']}],detachments:[{id:'detachment-alpha',title:'Alpha'},{id:'detachment-beta',title:'Beta'}],enhancements:[]};
 const validRoster={faction:'Fixture Faction',units:[{id:'physical-1',name:'Example Unit'}],detachments:[{name:'Alpha'}],enhancements:[]};
 assert.equal(api.project({catalog,roster:validRoster,record:{id:'valid-roster'}}).context.status,'ready','valid complete projection did not restore the v1 ready status');
+const enhancementCatalog={...catalog,enhancements:[{id:'enhancement-example',title:'Example Enhancement - 25 pts',detachmentId:'detachment-alpha'}]};
+for(const name of ['Example Enhancement','Example Enhancement - 25 pts']){
+  const projection=api.project({catalog:enhancementCatalog,roster:{...validRoster,enhancements:[{name,ownerUnitId:'physical-1'}]},record:{id:'enhancement-roster'}});
+  assert.equal(projection.context.status,'ready',`${name}: supported Enhancement title did not resolve`);
+  assert.equal(projection.context.enhancements[0].id,'enhancement-example',`${name}: canonical Enhancement identity changed`);
+}
 assert.equal(api.fromRuntime({force:true,catalog,bookId:'fixture',location:{search:''},storage:{getItem:()=>"[]"}}).status,'not-requested','no-roster v1 status changed');
 assert.equal(api.fromRuntime({force:true,catalog,bookId:'fixture',location:{search:'?roster=missing'},storage:{getItem:()=>"[]"}}).status,'unavailable','invalid roster v1 status changed');
 assert.equal(api.project({catalog,roster:{units:[{id:'physical-missing',name:'Missing Unit'}]},record:{id:'incomplete'}}).context.status,'unknown','incomplete unit projection was falsely marked ready');

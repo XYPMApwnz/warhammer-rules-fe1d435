@@ -57,7 +57,10 @@
     return rows;
   };
   const gearCount=(rows,name)=>rows.reduce((total,row)=>normalize(row.text).includes(normalize(name))?safeAdd(total,row.quantity):total,0);
-  const enhancementName=value=>record(value)?value.name:String(value||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+[-–—]\s+\d+\s*pts?\s*$/i,'').trim();
+  const enhancementName=value=>{
+    const name=record(value)?own(value,'name'):value;
+    return typeof name==='string'?name.replace(/\s+[-–—]\s+\d+\s*pts?\s*$/i,'').trim():'';
+  };
   const keywords=unit=>new Set((unit?.keywords||[]).map(keyword));
   const grantedKeywords=(faction,detachment,unit)=>faction==='death guard'&&normalize(detachment)==='contagion engines'&&['unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler'].includes(unit?.unitId)?['CONTAGION ENGINE']:[];
   const ownerMatches=(enhancement,unit,faction)=>{

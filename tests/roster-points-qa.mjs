@@ -271,6 +271,31 @@ assert.equal(legalIncursionCheck.detachmentPointLimit,2);
 assert.deepEqual([...legalIncursionCheck.detachmentWarnings],[],'Incursion must allow up to 2 Detachment Points');
 const rosterUnit=(id,name,quantity=1)=>({id,name,quantity,models:[]});
 const ownedEnhancement=(name,ownerUnitId)=>({name,ownerUnitId,ownerStatus:'resolved'});
+const enhancementLookupRoster=(enhancement,unit,detachment)=>({units:[unit],detachments:[{name:detachment}],enhancements:[enhancement],declared:0,unitLineTotal:0});
+const assertEnhancementLookup=(label,faction,enhancement,unit,detachment,id,cost)=>{
+  const result=WHRosterPoints.check(enhancementLookupRoster(enhancement,unit,detachment),faction);
+  assert.equal(result.unresolved.length,0,`${label}: exact Enhancement name must resolve`);
+  assert.equal(result.enhancements[0]?.id,id,`${label}: canonical Enhancement identity`);
+  assert.equal(result.enhancements[0]?.currentCost,cost,`${label}: current Enhancement cost`);
+  return result;
+};
+const surgeon=rosterUnit('surgeon','Plague Surgeon'),blightbringer=rosterUnit('blightbringer','Noxious Blightbringer');
+for(const name of ['Needle of Nurgle','Needle of Nurgle - 25 pts']){
+  assertEnhancementLookup(`Death Guard object ${name}`,'death guard',ownedEnhancement(name,surgeon.id),surgeon,'Champions of Contagion','enhancement-needle-of-nurgle',25);
+  assertEnhancementLookup(`Death Guard string ${name}`,'death guard',name,surgeon,'Champions of Contagion','enhancement-needle-of-nurgle',25);
+}
+for(const name of ['Witherbone Pipes','Witherbone Pipes - 25 pts'])assertEnhancementLookup(`Death Guard object ${name}`,'death guard',ownedEnhancement(name,blightbringer.id),blightbringer,'Shamblerot Vectorium','enhancement-witherbone-pipes',25);
+const deathGuardEnhancementScope={window:{WHRosterParser,WH_POINTS_CATALOG}};
+vm.runInNewContext(fs.readFileSync('books/shared/roster-enhancements.js','utf8'),deathGuardEnhancementScope,{filename:'books/shared/roster-enhancements.js'});
+for(const [name,id] of [['Needle of Nurgle - 25 pts','enhancement-needle-of-nurgle'],['Witherbone Pipes - 25 pts','enhancement-witherbone-pipes']])assert.equal(deathGuardEnhancementScope.window.WHRosterEnhancements.enriched({enhancements:[ownedEnhancement(name,'owner')]})[0].id,id,`${name}: shared Death Guard enrichment must preserve canonical identity`);
+const eagerOwner={...rosterUnit('flawless','Flawless Blades'),models:[{quantity:3,name:'Flawless Blade',loadouts:[]}]};
+assertEnhancementLookup("Emperor's Children object Eager Patrons - 20 pts",'emperor s children',ownedEnhancement('Eager Patrons - 20 pts',eagerOwner.id),eagerOwner,'Spectacle of Slaughter','enhancement-eager-patrons',20);
+const unknownEnhancement=WHRosterPoints.check(enhancementLookupRoster(ownedEnhancement('Unknown Relic - 99 pts',surgeon.id),surgeon,'Champions of Contagion'),'death guard');
+assert.equal(unknownEnhancement.enhancements.length,0,'unknown suffixed Enhancement must fail closed');
+assert.deepEqual([...unknownEnhancement.unresolved],['Enhancement Detachment: Unknown Relic']);
+const wrongNeedleDetachment=assertEnhancementLookup('Needle wrong Detachment','death guard',ownedEnhancement('Needle of Nurgle - 25 pts',surgeon.id),surgeon,'Virulent Vectorium','enhancement-needle-of-nurgle',25);
+assert.equal(wrongNeedleDetachment.enhancements[0].ownerEligibility,'invalid');
+assert.equal(wrongNeedleDetachment.enhancements[0].ownerMessage,'Enhancement is not available in the selected Detachment');
 const upgradeRoster=count=>{
   const owners=[
     rosterUnit('drone-a','Foetid Bloat-drone'),

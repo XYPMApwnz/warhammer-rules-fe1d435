@@ -45,6 +45,7 @@
     "codexDatasheets": "content/emperors-children-codex-datasheets.en.json",
     "relatedRules": "content/emperors-children-related-rules.en.json",
     "enhancementOwners": "sources/enhancement-owner-matrix.json",
+    "officialMfm": "sources/official-mfm-v1.3.json",
     "manifest": "sources/source-manifest.json"
   },
   "compactSharedAbilities": [

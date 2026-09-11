@@ -157,10 +157,13 @@ const tauEnhancements=Object.fromEntries(tau.enhancements.flatMap(enhancement=>{
   return [...new Set([enhancement.title,base,`${base} Upgrade`,`${base} (Upgrade)`])].map(name=>[normalize(name),record]);
 }));
 const emperorChildren=read('books/emperors-children/content/emperors-children-points.en.json');
+const emperorChildrenMfm=readBookSource('emperors-children','officialMfm');
 const emperorChildrenContracts=read('books/emperors-children/content/emperors-children-related-rules.en.json').enhancements;
 const emperorChildrenUnits=Object.fromEntries(emperorChildren.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),{...unit,wargear:unit.paidWargear||[],...emperorChildrenProfiles[normalize(unit.title)]}]));
-const emperorChildrenEnhancements=Object.fromEntries(emperorChildren.enhancements.map(enhancement=>{
-  return[normalize(enhancement.title),{...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog('emperors-children'),emperorChildrenContracts)}];
+const emperorChildrenPointIdentities=new Map((emperorChildrenMfm.enhancements||[]).filter(item=>item.id&&item.sourceTitle).map(item=>[`${normalize(item.detachment)}\0${normalize(item.title)}`,item]));
+const emperorChildrenEnhancements=Object.fromEntries(emperorChildren.enhancements.flatMap(enhancement=>{
+  const publication=emperorChildrenPointIdentities.get(`${normalize(enhancement.detachment)}\0${normalize(enhancement.title)}`),identity=resolveEnhancementOwner(publication?{...enhancement,id:publication.id}:enhancement,rosterCatalog('emperors-children'),emperorChildrenContracts),sourceTitle=identity.canonicalEnhancementId?publication?.sourceTitle:null,record={...enhancement,...(sourceTitle?{id:publication.id}:{}),...identity};
+  return [...new Set([enhancement.title,sourceTitle].filter(Boolean))].map(title=>[normalize(title),record]);
 }));
 
 const csm=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');

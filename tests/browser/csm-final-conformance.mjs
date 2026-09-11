@@ -32,7 +32,7 @@ const crownText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
 Char1: 1x Warpsmith (70 pts): Exalted weapon, Flamer tendril, Melta tendril, Plasma pistol
 Enhancement: Crown of Worms (+20 pts)`;
 const tzagullaText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Warpstrike Claw
++ DETACHMENT: Warpstrike Champions
 Char1: 1x Chaos Lord in Terminator Armour (95 pts): Chainfist, Combi-bolter
 Enhancement: Tzagulla (+20 pts)`;
 const bearerText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
@@ -41,7 +41,7 @@ Char1: 1x Chaos Lord (90 pts): Daemon hammer, Plasma pistol
 Enhancement: Living Carapace (+20 pts)
 Char2: 1x Chaos Lord (90 pts): Daemon hammer, Plasma pistol`;
 const loadoutText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Devotees of the Red God
++ DETACHMENT: Devotees of Destruction
 5x Havocs (125 pts)
 • 1x Havoc Champion: Astartes chainsword, Plasma gun
 • 2x Havoc: Havoc lascannon

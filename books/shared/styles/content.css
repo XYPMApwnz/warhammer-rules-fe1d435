@@ -322,7 +322,7 @@ html.related-rules-open{overflow:hidden}
   text-transform: uppercase;
 }
 .weapon-row { display: grid; grid-template-columns: minmax(150px,2.5fr) repeat(6,minmax(38px,.62fr)); }
-.unit-card.roster-game-view[data-roster-game-weapons="filtered"] .weapon-row[hidden] { display: none !important; }
+.unit-card.roster-game-view:is([data-roster-game-weapons="filtered"],[data-roster-game-weapons="partial"],[data-roster-game-weapons="unknown"]) .weapon-row[hidden] { display: none !important; }
 .unit-card.roster-game-view [data-roster-game-canonical="true"][hidden] { display: none !important; }
 .weapon-row > div { min-width: 0; padding: 10px 6px; text-align: center; font: 760 var(--data-size)/1.3 ui-monospace, monospace; border-top: 1px solid var(--soft-line); border-left: 1px solid var(--soft-line); }
 .weapon-row > div:first-child { text-align: left; border-left: 0; font-family: Georgia, serif; }
@@ -437,7 +437,8 @@ html.related-rules-open{overflow:hidden}
 .unit-card.roster-game-view{--roster-game-accent:var(--faction-primary-bright,var(--green))}
 .roster-game-summary{display:flex;flex-wrap:wrap;align-items:center;gap:5px 14px;margin:7px 0 2px;padding:0 2px;color:var(--muted);font-size:12px}
 .roster-game-facts,.roster-game-relations{display:flex;flex-wrap:wrap;align-items:center;gap:5px 14px}.roster-game-facts>span,.roster-game-relations p{margin:0}.roster-game-facts .roster-game-enhancement{color:var(--bronze-bright);font-weight:750}.roster-game-relations strong{color:var(--roster-game-accent)}
-.unit-card .roster-game-cost{display:grid;justify-items:start;gap:2px;min-width:min(190px,100%)}.roster-game-cost strong{font-size:clamp(20px,3vw,28px)}.roster-game-cost small{color:var(--muted);font-weight:750}
+.unit-card .roster-game-cost{display:grid;grid-template-columns:repeat(2,max-content);align-items:end;justify-items:start;gap:3px 12px;min-width:min(190px,100%)}.roster-game-current-cost,.roster-game-exported-cost{display:grid;justify-items:start;gap:1px}.roster-game-current-cost strong{font-size:clamp(20px,3vw,28px)}.roster-game-cost-label{color:var(--muted);font:800 8px/1.3 var(--ds-data,ui-monospace);letter-spacing:.06em;text-transform:uppercase}.roster-game-exported-cost span{color:var(--muted);font-weight:750;white-space:nowrap}.roster-game-model-count{grid-column:1/-1;color:var(--muted);font-weight:750}
+.roster-game-loadout-status{margin:10px 0 14px;padding:10px 12px;border-left:3px solid var(--bronze-bright);background:color-mix(in srgb,var(--bronze-bright) 7%,var(--panel))}.roster-game-loadout-status h5,.roster-game-loadout-status p{margin:0}.roster-game-loadout-status p{margin-top:5px;color:var(--muted);font-size:12px;line-height:1.45}.roster-game-loadout-status .roster-game-loadout-unresolved{color:var(--ink)}.roster-game-reference-link{display:inline-block;margin-top:9px}
 .roster-game-composition{display:grid;gap:7px}.roster-game-composition p{margin:0}.roster-game-composition-total{font-size:clamp(18px,3vw,24px);font-weight:850}.roster-game-composition ul{display:grid;gap:4px;margin:0;padding-left:20px}
 .roster-game-effects{margin-top:12px;padding:10px 12px;border-left:3px solid color-mix(in srgb,var(--roster-game-accent) 62%,var(--line));background:color-mix(in srgb,var(--roster-game-accent) 5%,var(--panel))}.roster-game-effects h5{margin:0 0 7px}.roster-game-effects ul{display:grid;gap:5px;margin:0;padding:0;list-style:none}.roster-game-effects li{line-height:1.4}
 .roster-game-keyword-changes{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.roster-game-keyword-changes span{padding:4px 7px;border:1px solid var(--line);font:800 10px var(--ds-data,ui-monospace);letter-spacing:.05em}.roster-game-added{color:var(--green)}.roster-game-removed{color:var(--pink)}

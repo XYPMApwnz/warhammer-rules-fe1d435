@@ -61,11 +61,14 @@
   function applyEffectiveState(card,gameUnit,projection){applyEffectiveStats(card,gameUnit,projection);applyEffectiveWeapons(card,gameUnit,projection);applyEffectiveAbilities(card,gameUnit,projection);applyEffectiveKeywords(card,gameUnit);}
   function replaceCost(card,gameUnit){
     const points=gameUnit.selection.points,models=gameUnit.selection.modelCount;
-    if(points?.state!=='resolved')return;
     const cost=card.querySelector(':scope > :is(.unit-head,.unit-header) :is(.points,.unit-status)');if(!cost)return;
-    cost.replaceChildren();cost.classList.add('roster-game-cost');
-    cost.append(element('strong','',`${points.value} pts`));
-    if(models?.state==='resolved')cost.append(element('small','',`${models.value} ${models.value===1?'model':'models'}`));
+    const canonical=element('div','roster-game-current-cost'),label=element('small','roster-game-cost-label','Current points · authoritative');
+    canonical.append(label,...cost.childNodes);cost.replaceChildren(canonical);cost.classList.add('roster-game-cost');
+    if(points?.state==='resolved'){
+      const exported=element('div','roster-game-exported-cost'),currentValues=[...canonical.textContent.matchAll(/(\d+)\s*pts\b/gi)].map(match=>Number(match[1])),matches=currentValues.length===1&&currentValues[0]===Number(points.value);
+      exported.append(element('small','roster-game-cost-label',`Exported points · source roster${matches?' · matches current':''}`),element('span','',`${points.value} pts${models?.state==='resolved'?` · ${models.value} ${models.value===1?'model':'models'} in roster`:''}`));cost.append(exported);
+    }
+    else if(models?.state==='resolved')cost.append(element('small','roster-game-model-count',`${models.value} ${models.value===1?'model':'models'} in roster`));
   }
   function buildSummary(card,gameUnit,projection){
     const summary=element('div','roster-game-summary');summary.setAttribute('aria-label','Roster details');
@@ -82,11 +85,18 @@
   }
   function filterWeapons(card,gameUnit){
     const loadout=gameUnit.selection.loadout,resolution=loadout.weaponResolution||{},selected=unique(loadout.selectedProfileIds),rows=[...card.querySelectorAll('.weapon-row:not(.weapon-head)')];
-    const idFor=row=>row.dataset.rosterProfileId||row.id||'',complete=resolution.state==='resolved'&&selected.length>0&&selected.every(id=>rows.filter(row=>idFor(row)===id).length===1);
-    if(!complete){for(const row of rows){row.hidden=true;row.style.display='none';}for(const group of card.querySelectorAll('.weapon-group'))group.hidden=true;card.dataset.rosterGameWeapons='fallback';return;}
-    const visible=new Set(selected);for(const row of rows){row.style.removeProperty('display');row.hidden=!visible.has(idFor(row));}
+    const idFor=row=>row.dataset.rosterProfileId||row.id||'',mapped=selected.every(id=>rows.filter(row=>idFor(row)===id).length===1),complete=resolution.state==='resolved'&&selected.length>0&&mapped,visible=new Set(mapped?selected:[]);
+    for(const row of rows){row.style.removeProperty('display');row.hidden=!visible.has(idFor(row));}
     for(const group of card.querySelectorAll('.weapon-group'))group.hidden=![...group.querySelectorAll('.weapon-row:not(.weapon-head)')].some(row=>!row.hidden);
-    card.dataset.rosterGameWeapons='filtered';
+    if(complete){card.dataset.rosterGameWeapons='filtered';return;}
+    if(!rows.length)return;
+    card.dataset.rosterGameWeapons=visible.size?'partial':'unknown';
+    const profile=partEnding(card,'-profile');if(!profile)return;
+    const notice=element('aside','roster-game-loadout-status'),title=visible.size?'Weapon loadout partially known':'Weapon loadout unknown',unresolved=unique(list(resolution.unresolved).map(item=>item.sourceText));
+    notice.setAttribute('aria-label',title);notice.append(element('h5','',title),element('p','',visible.size?'Known equipped weapons are shown. Other exported selections could not be matched, so no additional weapons are assumed.':'No equipped weapons could be confirmed from this roster export. No weapons are assumed.'));
+    if(unresolved.length)notice.append(element('p','roster-game-loadout-unresolved',`Could not match: ${unresolved.join(', ')}`));
+    const reference=element('a','popup-action roster-game-reference-link','Open full datasheet reference'),url=new URL(root.location.href);url.searchParams.delete('roster');url.searchParams.delete('rosterInstance');url.hash=gameUnit.identity.canonicalDatasheetId;reference.href=url.href;notice.append(reference);
+    const heading=profile.querySelector(':scope > h4');heading?.after(notice);
   }
   function filterWargearAbilities(card,gameUnit){
     const section=partEnding(card,'-wargear-abilities');if(!section)return;

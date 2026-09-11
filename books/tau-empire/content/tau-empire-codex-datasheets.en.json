@@ -3113,17 +3113,6 @@
           "abilities": "Assault, Twin-linked"
         },
         {
-          "name": "Missile pod",
-          "mode": "ranged",
-          "range": "30\"",
-          "a": "2",
-          "skill": "5+",
-          "s": "7",
-          "ap": "-1",
-          "d": "2",
-          "abilities": ""
-        },
-        {
           "name": "Pulse pistol",
           "mode": "ranged",
           "range": "12\"",
@@ -3161,14 +3150,6 @@
         {
           "title": "Marker Drone",
           "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
-        },
-        {
-          "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
-        },
-        {
-          "title": "Guardian Drone",
-          "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll."
         }
       ],
       "keywords": [

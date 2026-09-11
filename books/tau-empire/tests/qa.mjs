@@ -60,7 +60,10 @@ assert.equal(mobileRouteFiles.length,49);
 for(const output of mobileRoutes){assert.match(output,/data-canonical-reader="\.\.\/reader\.html"/);assert.match(output,/mobile-route-redirect\.js\?v=2/);assert.doesNotMatch(output,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/);}
 assert.match(reader,/shared\/styles\/content\.css\?v=\d+/);assert.match(reader,/shared\/styles\/popups\.css\?v=\d+/);assert.match(reader,/shared\/datasheet-system\.css\?v=\d+/);
 const sourceWargearAbilities=allUnits.flatMap(unit=>(unit.wargearAbilities||[]).map(ability=>({unit,ability})));
-assert.deepEqual([sourceWargearAbilities.length,new Set(sourceWargearAbilities.map(item=>item.ability.title)).size,new Set(sourceWargearAbilities.map(item=>item.unit.id)).size],[52,14,16]);
+assert.deepEqual([sourceWargearAbilities.length,new Set(sourceWargearAbilities.map(item=>item.ability.title)).size,new Set(sourceWargearAbilities.map(item=>item.unit.id)).size],[50,14,16]);
+const stealthBattlesuits=allUnits.find(unit=>unit.id==='unit-stealth-battlesuits');
+assert.deepEqual(stealthBattlesuits.weapons.map(weapon=>weapon.name),['Battlesuit fists','Burst cannon','Fusion blaster','Twin pulse carbine','Pulse pistol']);
+assert.deepEqual(stealthBattlesuits.wargearAbilities.map(ability=>ability.title),['Homing Beacon','Marker Drone']);
 for(const unit of allUnits){
   const abilities=unit.wargearAbilities||[],id=`${unit.id.slice(5)}-wargear-abilities`;
   assert.equal(unit.abilities.some(ability=>abilities.some(wargearAbility=>key(ability.title)===key(wargearAbility.title))),false,`${unit.title}: Wargear Ability duplicated in ordinary Abilities`);

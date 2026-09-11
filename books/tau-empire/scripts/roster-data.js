@@ -5893,18 +5893,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
-            "id": "unit-stealth-battlesuits-selection-missile-pod",
-            "title": "Missile pod",
-            "aliases": [
-              "Missile pod"
-            ],
-            "kind": "weapon",
-            "profileIds": [
-              "unit-stealth-battlesuits-profile-missile-pod-ranged-5"
-            ],
-            "wargearAbilityIds": []
-          },
-          {
             "id": "unit-stealth-battlesuits-selection-pulse-pistol",
             "title": "Pulse pistol",
             "aliases": [
@@ -5912,7 +5900,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-stealth-battlesuits-profile-pulse-pistol-ranged-6"
+              "unit-stealth-battlesuits-profile-pulse-pistol-ranged-5"
             ],
             "wargearAbilityIds": []
           },
@@ -5938,30 +5926,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "profileIds": [],
             "wargearAbilityIds": [
               "unit-stealth-battlesuits-wargear-ability-marker-drone-2"
-            ]
-          },
-          {
-            "id": "unit-stealth-battlesuits-selection-shield-drone",
-            "title": "Shield Drone",
-            "aliases": [
-              "Shield Drone"
-            ],
-            "kind": "wargear",
-            "profileIds": [],
-            "wargearAbilityIds": [
-              "unit-stealth-battlesuits-wargear-ability-shield-drone-3"
-            ]
-          },
-          {
-            "id": "unit-stealth-battlesuits-selection-guardian-drone",
-            "title": "Guardian Drone",
-            "aliases": [
-              "Guardian Drone"
-            ],
-            "kind": "wargear",
-            "profileIds": [],
-            "wargearAbilityIds": [
-              "unit-stealth-battlesuits-wargear-ability-guardian-drone-4"
             ]
           }
         ],
@@ -6028,22 +5992,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-stealth-battlesuits-profile-missile-pod-ranged-5",
-            "title": "Missile pod",
-            "mode": "ranged",
-            "range": "30\"",
-            "a": "2",
-            "skill": "5+",
-            "s": "7",
-            "ap": "-1",
-            "d": "2",
-            "abilities": "",
-            "sourceSelectionIds": [
-              "unit-stealth-battlesuits-selection-missile-pod"
-            ]
-          },
-          {
-            "id": "unit-stealth-battlesuits-profile-pulse-pistol-ranged-6",
+            "id": "unit-stealth-battlesuits-profile-pulse-pistol-ranged-5",
             "title": "Pulse pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -6071,20 +6020,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Marker Drone",
             "requiredSelectionIds": [
               "unit-stealth-battlesuits-selection-marker-drone"
-            ]
-          },
-          {
-            "id": "unit-stealth-battlesuits-wargear-ability-shield-drone-3",
-            "title": "Shield Drone",
-            "requiredSelectionIds": [
-              "unit-stealth-battlesuits-selection-shield-drone"
-            ]
-          },
-          {
-            "id": "unit-stealth-battlesuits-wargear-ability-guardian-drone-4",
-            "title": "Guardian Drone",
-            "requiredSelectionIds": [
-              "unit-stealth-battlesuits-selection-guardian-drone"
             ]
           }
         ]

@@ -176,6 +176,30 @@ try{
     console.log('PASS opaque UI fixture: '+record.name);
   }
   const beforeInvalid=await stored();
+  const duplicatePhysicalId=structuredClone(records[0]);
+  duplicatePhysicalId.id='duplicate-physical-id';
+  duplicatePhysicalId.name='WBA010 duplicate physical identity';
+  duplicatePhysicalId.roster.units[1].id=duplicatePhysicalId.roster.units[0].id;
+  await importRecord(duplicatePhysicalId,false);
+  assert.deepEqual(await stored(),beforeInvalid,'colliding physical IDs must not change stored records');
+  const whitespaceDuplicatePhysicalId=structuredClone(records[0]);
+  whitespaceDuplicatePhysicalId.id='whitespace-duplicate-physical-id';
+  whitespaceDuplicatePhysicalId.name='WBA010 whitespace duplicate physical identity';
+  whitespaceDuplicatePhysicalId.roster.units[1].id=` ${whitespaceDuplicatePhysicalId.roster.units[0].id} `;
+  await importRecord(whitespaceDuplicatePhysicalId,false);
+  assert.deepEqual(await stored(),beforeInvalid,'physical IDs colliding after trim must not change stored records');
+  const canonicalPhysicalId=structuredClone(records[0]);
+  canonicalPhysicalId.id='canonical-physical-id';
+  canonicalPhysicalId.name='WBA010 canonical/physical identity collision';
+  canonicalPhysicalId.roster.units[2].id='unit-captain';
+  await importRecord(canonicalPhysicalId,false);
+  assert.deepEqual(await stored(),beforeInvalid,'canonical Datasheet IDs must not be accepted as physical IDs');
+  const whitespaceCanonicalPhysicalId=structuredClone(records[0]);
+  whitespaceCanonicalPhysicalId.id='whitespace-canonical-physical-id';
+  whitespaceCanonicalPhysicalId.name='WBA010 whitespace canonical/physical identity collision';
+  whitespaceCanonicalPhysicalId.roster.units[2].id=' unit-captain ';
+  await importRecord(whitespaceCanonicalPhysicalId,false);
+  assert.deepEqual(await stored(),beforeInvalid,'canonical Datasheet IDs padded with whitespace must not be accepted as physical IDs');
   for(const badId of [undefined,42,' \t ']){
     const invalid=structuredClone(records[0]);
     if(badId===undefined)delete invalid.id;else invalid.id=badId;
@@ -202,6 +226,6 @@ try{
     await safeState(records.length-index-1);
   }
   assert.deepEqual(errors,[],'Roster Guides runtime errors');
-  assert.equal(dialogs.filter(item=>item.type==='alert').length,3,'only schema-negative alerts');
-  console.log('WBA058 opaque backup identifier QA: PASS (5 IDs; import/reload/Open/Export/Delete/attachments; physical isolation; persisted bypass; 3 schema negatives).');
+  assert.equal(dialogs.filter(item=>item.type==='alert').length,7,'only schema-negative alerts');
+  console.log('WBA058/WBA010 backup identifier QA: PASS (5 opaque IDs; import/reload/Open/Export/Delete/attachments; physical isolation; persisted bypass; 7 schema negatives).');
 }finally{await stop();}

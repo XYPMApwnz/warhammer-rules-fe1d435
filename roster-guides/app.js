@@ -37,6 +37,13 @@ function isImportableRecord(record){
     (record.roster.detachments===undefined||Array.isArray(record.roster.detachments))
   );
 }
+function hasSafePhysicalUnitIds(roster){
+  const catalog=window.WH_POINTS_CATALOG?.[knownFaction(roster?.faction)]?.units||{},ids=(roster?.units||[]).map(unit=>typeof unit?.id==='string'?unit.id.trim():'');
+  return ids.every(Boolean)&&new Set(ids).size===ids.length&&(roster?.units||[]).every(unit=>{
+    const canonical=unit.canonicalDatasheetId||unit.canonicalUnitId||catalog[unitKey(unit.name)]?.unitId||catalog[unitKey(unit.name)]?.id;
+    return !canonical||unit.id.trim()!==String(canonical).trim();
+  });
+}
 function escapeHtml(value){const node=document.createElement('span');node.textContent=String(value??'');return node.innerHTML;}
 function rosterId(text){let hash=2166136261;for(const char of text)hash=Math.imul(hash^char.charCodeAt(0),16777619);return `roster-${(hash>>>0).toString(36)}`;}
 function recordDetachments(record){const items=Array.isArray(record.roster.detachments)?record.roster.detachments:[{label:record.roster.detachment}];return items.map(item=>item?.label).filter(Boolean).join(' + ');}
@@ -161,7 +168,7 @@ document.querySelector('#roster-clear').addEventListener('click',()=>{document.q
 document.querySelector('#roster-result').addEventListener('change',event=>{const select=event.target.closest('[data-attachment-bodyguard]');if(select)updateAttachment(select.dataset.rosterId,select.dataset.attachmentBodyguard,select.value);});
 savedHost.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.openRoster)openSavedRoster(button.dataset.openRoster);if(button.dataset.editAttachments)editAttachments(button.dataset.editAttachments);if(button.dataset.exportRoster)exportRoster(button.dataset.exportRoster);if(button.dataset.deleteRoster&&confirm('Delete this roster from this device?')){putSavedRosters(getSavedRosters().filter(record=>record?.id!==button.dataset.deleteRoster));renderSavedRosters();}});
 document.querySelector('#import-roster').addEventListener('click',()=>document.querySelector('#import-roster-file').click());
-document.querySelector('#import-roster-file').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{const record=JSON.parse(await file.text());if(!isImportableRecord(record))throw new Error();const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)record.roster=parsed;const faction=knownFaction(record.roster.faction),records=getSavedRosters();if(!faction)throw new Error();record.roster.faction=FACTION_LABELS[faction];record.roster.pointsCheck=window.WHRosterPoints.check(record.roster,faction);putSavedRosters([{...record,updatedAt:new Date().toISOString()},...records.filter(item=>item?.id!==record.id)]);renderSavedRosters();if(!FACTION_READERS[faction])alert(`${FACTION_LABELS[faction]} was imported, but a personal reader is not available yet.`);}catch{alert('Could not import the roster backup.');}event.target.value='';});
+document.querySelector('#import-roster-file').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{const record=JSON.parse(await file.text());if(!isImportableRecord(record))throw new Error();const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)record.roster=parsed;if(!hasSafePhysicalUnitIds(record.roster))throw new Error();const faction=knownFaction(record.roster.faction),records=getSavedRosters();if(!faction)throw new Error();record.roster.faction=FACTION_LABELS[faction];record.roster.pointsCheck=window.WHRosterPoints.check(record.roster,faction);putSavedRosters([{...record,updatedAt:new Date().toISOString()},...records.filter(item=>item?.id!==record.id)]);renderSavedRosters();if(!FACTION_READERS[faction])alert(`${FACTION_LABELS[faction]} was imported, but a personal reader is not available yet.`);}catch{alert('Could not import the roster backup.');}event.target.value='';});
 
 renderSavedRosters();
 const requestedRoster=new URLSearchParams(location.search).get('roster');

@@ -1,6 +1,6 @@
 .popup-layer { position: fixed; z-index: var(--z-popup); inset: 0; pointer-events: none; }
 .popup-layer:has(.term-popup) { pointer-events: auto; }
-html:has(dialog[open]),body:has(dialog[open]),html:has(.popup-layer .term-popup),body:has(.popup-layer .term-popup) { overflow: hidden; overscroll-behavior: none; }
+html:has(dialog[open]),body:has(dialog[open]) { overflow: hidden; overscroll-behavior: none; }
 .popup-layer:has(.term-popup)::before {
   content: "";
   position: fixed;

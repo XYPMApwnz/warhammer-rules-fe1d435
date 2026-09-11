@@ -14,6 +14,7 @@
       this.api=api;
       this.current='';
       this.returnFocus=null;
+      this.inerted=[];
       this.layer=this.createLayer();
       this.bind();
     }
@@ -64,6 +65,7 @@
       if(first){
         this.returnFocus=trigger||document.activeElement;
         this.layer.hidden=false;
+        this.inertBackground();
         document.documentElement.classList.add('full-entry-open');
         document.body.classList.add('full-entry-open');
         history.pushState({...history.state,dgFullEntry:term.id},'',location.href);
@@ -90,7 +92,7 @@
     restore(state){
       const term=this.api.get(state?.id);if(!term)return;
       this.returnFocus=document.activeElement;
-      this.layer.hidden=false;document.documentElement.classList.add('full-entry-open');document.body.classList.add('full-entry-open');
+      this.layer.hidden=false;this.inertBackground();document.documentElement.classList.add('full-entry-open');document.body.classList.add('full-entry-open');
       this.stack=(state.stack||[term.id]).filter(id=>this.api.get(id));if(!this.stack.length)this.stack=[term.id];
       this.current=term.id;this.render(term);this.content.scrollTop=state.scrollTop||0;
       this.layer.querySelector('[data-full-entry-close]')?.focus({preventScroll:true});
@@ -120,6 +122,7 @@
       this.stack=[];
       document.documentElement.classList.remove('full-entry-open');
       document.body.classList.remove('full-entry-open');
+      this.restoreBackground();
       if(restoreFocus&&this.returnFocus?.isConnected)this.returnFocus.focus({preventScroll:true});
     }
 
@@ -184,11 +187,22 @@
       window.WHGlossaryReturn?.save({popupIds:popups?.snapshot?.()||[],rootTerm:root?.dataset?.term||'',unitId:unit?.id||''});
     }
 
+    inertBackground(){
+      this.inerted=[...document.body.children].filter(node=>node!==this.layer&&!node.inert);
+      this.inerted.forEach(node=>{node.inert=true;});
+    }
+
+    restoreBackground(){
+      this.inerted.forEach(node=>{node.inert=false;});
+      this.inerted=[];
+    }
+
     trapFocus(event){
-      const controls=[...this.dialog.querySelectorAll('a,button,[tabindex]')].filter(node=>node.tabIndex>=0);
+      const controls=[...this.dialog.querySelectorAll('a,button,[tabindex]')].filter(node=>node.tabIndex>=0&&!node.hidden&&node.getClientRects().length);
       if(!controls.length)return;const first=controls[0],last=controls[controls.length-1];
-      if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
-      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+      if(!this.dialog.contains(document.activeElement)){event.preventDefault();(event.shiftKey?last:first).focus({preventScroll:true});}
+      else if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus({preventScroll:true});}
+      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus({preventScroll:true});}
     }
   }
 

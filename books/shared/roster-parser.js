@@ -103,7 +103,7 @@
 
   function parse(text) {
     const lines = String(text || '').replace(/\u00a0/g, ' ').split(/\r?\n/).map(line => line.trim()).filter(Boolean);
-    const firstUnit = lines.findIndex(line => /^(?:(?:Char\d+):\s*)?\d+x\s+.+?\s+\((?:\d+|\d{1,3}(?:,\d{3})+)\s*pts?\)/i.test(line));
+    const firstUnit = lines.findIndex(line => /^(?:(?:Char\d+):\s*)?\d+x\s+\S(?:.*?\S)?\s+\((?:\d+|\d{1,3}(?:,\d{3})+)\s*pts?\)/i.test(line));
     const metadataLines = firstUnit < 0 ? lines : lines.slice(0, firstUnit);
     const values = key => {
       const prefix = new RegExp(`^\\+?\\s*${key.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&')}\\s*:`, 'i');
@@ -118,7 +118,7 @@
     let currentModel = null;
 
     for (const line of lines) {
-      const unit = line.match(/^(?:(Char\d+):\s*)?(\d+)x\s+(.+?)\s+\((\d+|\d{1,3}(?:,\d{3})+)\s*pts?\)(?::\s*(.*))?$/i);
+      const unit = line.match(/^(?:(Char\d+):\s*)?(\d+)x\s+(\S(?:.*?\S)?)\s+\((\d+|\d{1,3}(?:,\d{3})+)\s*pts?\)(?::\s*(.*))?$/i);
       if (unit) {
         const wargear = selectionParts(unit[5]);
         currentUnit = { id:`parsed-unit-${units.length + 1}`, sourceRef:unit[1] || '', quantity:integer(unit[2]), name:unit[3], points:integer(unit[4]), wargear:wargear.value, models:[], warlord:null };

@@ -89,4 +89,10 @@ const standaloneWarlord=parse(`FACTION KEYWORD: Tyranids
 • Warlord`);
 assert.equal(standaloneWarlord.units[0].warlord,true,'standalone Warlord marker resolves to the current physical unit');
 
+const parentheticalUnit=parse('1x Captain (Terminator Armour) (95 pts)');
+assert.equal(parentheticalUnit.units[0].name,'Captain (Terminator Armour)','parentheses inside valid unit names remain supported');
+
+const whitespaceHeavyNearMatch=parse(`1x ${' '.repeat(8192)}X`);
+assert.equal(whitespaceHeavyNearMatch.units.length,0,'whitespace-heavy unit near-match is rejected without ambiguous name/separator work');
+
 console.log('Shared roster parser robustness QA: PASS');

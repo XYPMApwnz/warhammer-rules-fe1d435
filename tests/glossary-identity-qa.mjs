@@ -80,7 +80,7 @@ for(const [id,singular,plural] of rollLabels){
 
 const grav=registry['space-marines-weapon-grav-cannon-2'];
 assert.ok(grav,'the canonical BS 3+ Grav-cannon must remain in the registry');
-assert.deepEqual(grav.structured.weapon,{Range:'24"',A:'3',BS:'3+',S:'6',AP:'-1',D:'3'});
+assert.deepEqual(grav.structured.weapon,{Range:'24"',A:'3',BS:'3+',S:'6',AP:'-1',D:'3',Abilities:'Anti-vehicle 2+'});
 assert.match(grav.definition.en,/Anti-vehicle 2\+$/i);
 assert.ok(registry['space-marines-weapon-grav-cannon'],'the distinct BS 4+ Grav-cannon must remain canonical');
 assert.equal(contexts['space-marines']['space-marines-weapon-grav-cannon-3'].termId,grav.id);

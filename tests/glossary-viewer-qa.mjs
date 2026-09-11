@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import fs from 'node:fs';
+import vm from 'node:vm';
 
 const read=path=>fs.readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
 const viewer=read('glossary/viewer.js');
@@ -28,9 +29,9 @@ assert.equal(new Set(values.map(term=>term.id)).size,values.length,'canonical gl
 assert.equal(crypto.createHash('sha256').update(registryIds.join('\n')).digest('hex'),'7786036224b9369f75cbe20a35ae1421bc28cf8dc49cfd872930c5608bd6cba7','canonical glossary identity set must remain stable');
 
 const expectedFactualProfiles=[
-  {id:'emperors-children-weapon-bolt-pistol-2',title:'Bolt pistol',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'4',AP:'0',D:'1'}},
-  {id:'emperors-children-weapon-plasma-pistol-standard-2',title:'➤ Plasma pistol - standard',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'7',AP:'-2',D:'1'}},
-  {id:'emperors-children-weapon-plasma-pistol-supercharge-2',title:'➤ Plasma pistol - supercharge',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'8',AP:'-3',D:'2'}},
+  {id:'emperors-children-weapon-bolt-pistol-2',title:'Bolt pistol',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'4',AP:'0',D:'1',Abilities:'Pistol, Precision'}},
+  {id:'emperors-children-weapon-plasma-pistol-standard-2',title:'➤ Plasma pistol - standard',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'7',AP:'-2',D:'1',Abilities:'Pistol, Precision'}},
+  {id:'emperors-children-weapon-plasma-pistol-supercharge-2',title:'➤ Plasma pistol - supercharge',locator:'unit-tormentors',summary:'Ranged · 12" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol, Precision',weapon:{Range:'12"',A:'1',BS:'3+',S:'8',AP:'-3',D:'2',Abilities:'Hazardous, Pistol, Precision'}},
   {id:'emperors-children-weapon-power-fist-2',title:'Power fist',locator:'unit-chaos-terminators',summary:'Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2',weapon:{Range:'Melee',A:'3',WS:'3+',S:'8',AP:'-2',D:'2'}}
 ];
 for(const expected of expectedFactualProfiles){
@@ -122,4 +123,28 @@ const viewerAsset=index.match(/<script src="\.\/(viewer\.js\?v=\d+)"/i)?.[1];
 assert.ok(viewerAsset,'Glossary viewer must use a versioned asset URL');
 assert.ok(sw.includes(`"./glossary/${viewerAsset}"`),'service worker and Glossary must use the same viewer asset URL');
 
-console.log(`Glossary viewer QA passed: ${values.length} canonical entries, ${Object.keys(aliases).length} aliases, ${hiddenExistingPrimary.length} hidden-primary violations, ${characteristics.length} visible characteristics.`);
+// Execute the production parser without running the producer or cache writer.
+const builder=read('glossary/tools/build-glossary.mjs');
+const cleanSource=builder.slice(builder.indexOf('const clean='),builder.indexOf('const cleanRuleText='));
+const parserSource=builder.match(/function weaponProfile\(summary\)\{[\s\S]*?\n\}/)[0];
+const productionParser=vm.runInNewContext(cleanSource+'\n'+parserSource+'\nweaponProfile');
+const parse=value=>JSON.parse(JSON.stringify(productionParser(value)));
+const plain='Ranged · 18" · A 1 · BS 3+ · S 4 · AP -1 · D 1';
+assert.equal(parse(plain+' · Pistol').Abilities,'Pistol','PISTOL_PROFILE_REGRESSION');
+assert.equal(parse(plain).Abilities,undefined,'stats-only profile stays stats-only');
+assert.equal(parse(plain+' · Abilities Pistol').Abilities,'Pistol','labelled abilities remain supported');
+assert.equal(parse(plain+' · Pistol · unrelated body').Abilities,undefined,'do not collect arbitrary extra body fields');
+assert.equal(parse(plain.replace(' · S 4',' · unrelated body · S 4')+' · Pistol').Abilities,undefined,'do not collect unmatched middle fields');
+const daScope={window:{}};vm.runInNewContext(read('books/dark-angels/scripts/data.js'),daScope);
+const daPistol=daScope.window.DG_TERMS['dark-angels-weapon-heavy-bolt-pistol'];
+assert.equal(parse(daPistol.full).Abilities,'Pistol','DA uses the same production parser without global registration');
+for(const [suffix,abilities] of [['plasma-pistol-standard','Pistol'],['plasma-pistol-supercharge','Hazardous, Pistol']]){
+  const term=registry['space-marines-weapon-'+suffix];
+  assert.equal(term.structured.weapon.Abilities,abilities,'profile mode isolation');
+  assert.equal(parse(term.definition.en).Abilities,abilities,'production parser preserves this mode only');
+}
+if(process.argv.includes('--browser'))await (await import('./browser/glossary-profile-full-entry.mjs')).profileBrowserChecks({
+  id:daPistol.id,kind:'weapon',scope:'dark-angels',edition:'11e',title:{en:daPistol.title},summary:{en:daPistol.summary},definition:{en:daPistol.full},
+  structured:{weapon:parse(daPistol.full)},presentation:'profile'
+});
+console.log(`Glossary viewer QA passed: ${values.length} canonical entries, ${Object.keys(aliases).length} aliases, ${hiddenExistingPrimary.length} hidden-primary violations, ${characteristics.length} visible characteristics; weapon abilities and mode isolation preserved.`);

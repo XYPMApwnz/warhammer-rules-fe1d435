@@ -53,11 +53,16 @@ function weaponProfile(summary){
   if(parts.length<6)return null;
   const profile={},mode=/^(Ranged|Melee)$/i.test(parts[0])?parts.shift():'';
   if(mode&&parts.length&&!/^(?:Range|A|BS|WS|S|AP|D|Abilities?)\s+/i.test(parts[0]))profile.Range=parts.shift();
+  // Army Book summaries append one unlabelled abilities field after the stats.
+  // Only that producer shape qualifies; arbitrary unmatched body text does not.
+  const abilityTail=mode&&parts.length===6&&['A',/^Ranged$/i.test(mode)?'BS':'WS','S','AP','D'].every((key,index)=>parts[index].startsWith(key+' '))
+    &&!/^(?:Range|A|BS|WS|S|AP|D|Abilities?)\s+/i.test(parts[5])?parts[5]:'';
   for(const part of parts){
     const match=part.match(/^(Range|A|BS|WS|S|AP|D|Abilities?)\s+(.+)$/i);if(!match)continue;
     profile[match[1].replace(/^Abilities?$/i,'Abilities')]=match[2].trim();
   }
   if(!profile.Range&&mode==='Melee')profile.Range='Melee';
+  if(abilityTail)profile.Abilities=abilityTail;
   return profile.Range&&profile.A&&(profile.BS||profile.WS)&&profile.S&&profile.AP&&profile.D?profile:null;
 }
 

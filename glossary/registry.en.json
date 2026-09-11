@@ -6879,7 +6879,8 @@
           "WS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Vehicle 4+"
         }
       },
       "presentation": "profile",
@@ -6920,7 +6921,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Anti-Vehicle 4+, Devastating Wounds, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -6961,7 +6963,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Vehicle 4+, Devastating Wounds, Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -7043,7 +7046,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Indirect Fire"
         }
       },
       "presentation": "profile",
@@ -7084,7 +7088,8 @@
           "WS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Vehicle 4+, Devastating Wounds, Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -7453,7 +7458,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -7494,7 +7500,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 3, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -7535,7 +7542,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 9, Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -7617,7 +7625,8 @@
           "BS": "4+",
           "S": "10",
           "AP": "-2",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Anti-Fly 2+"
         }
       },
       "presentation": "profile",
@@ -7699,7 +7708,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-2",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -7781,7 +7791,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -7822,7 +7833,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol, Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -7863,7 +7875,8 @@
           "WS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -7904,7 +7917,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -7945,7 +7959,8 @@
           "BS": "4+",
           "S": "10",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -7986,7 +8001,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Infantry 4+"
         }
       },
       "presentation": "profile",
@@ -8027,7 +8043,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Infantry 4+"
         }
       },
       "presentation": "profile",
@@ -8191,7 +8208,8 @@
           "BS": "4+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -8273,7 +8291,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -8355,7 +8374,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Vehicle 4+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -8396,7 +8416,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover"
         }
       },
       "presentation": "profile",
@@ -8437,7 +8458,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-Vehicle 4+, Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -8478,7 +8500,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-Vehicle 4+, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -8519,7 +8542,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Heavy, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -8560,7 +8584,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Vehicle 2+"
         }
       },
       "presentation": "profile",
@@ -8601,7 +8626,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover"
         }
       },
       "presentation": "profile",
@@ -8683,7 +8709,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Fly 4+, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -8724,7 +8751,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -8765,7 +8793,8 @@
           "BS": "N/A",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -8847,7 +8876,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -8888,7 +8918,8 @@
           "BS": "2+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+2"
+          "D": "D6+2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -8970,7 +9001,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover"
         }
       },
       "presentation": "profile",
@@ -9052,7 +9084,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous"
         }
       },
       "presentation": "profile",
@@ -9093,7 +9126,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -9134,7 +9168,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -9175,7 +9210,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -9216,7 +9252,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Pistol"
         }
       },
       "presentation": "profile",
@@ -9257,7 +9294,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Pistol"
         }
       },
       "presentation": "profile",
@@ -9298,7 +9336,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -9380,7 +9419,8 @@
           "BS": "4+",
           "S": "16",
           "AP": "-4",
-          "D": "D6+2"
+          "D": "D6+2",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -9544,7 +9584,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Ignores cover"
         }
       },
       "presentation": "profile",
@@ -9585,7 +9626,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -9626,7 +9668,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -9667,7 +9710,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol"
         }
       },
       "presentation": "profile",
@@ -9708,7 +9752,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Pistol"
         }
       },
       "presentation": "profile",
@@ -9749,7 +9794,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Pistol"
         }
       },
       "presentation": "profile",
@@ -9790,7 +9836,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -9872,7 +9919,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous"
         }
       },
       "presentation": "profile",
@@ -10077,7 +10125,8 @@
           "BS": "4+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Infantry 4+"
         }
       },
       "presentation": "profile",
@@ -10118,7 +10167,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Heavy, Precision, Anti-Infantry 3+"
         }
       },
       "presentation": "profile",
@@ -10159,7 +10209,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-Infantry 3+, Heavy, Precision"
         }
       },
       "presentation": "profile",
@@ -10282,7 +10333,8 @@
           "WS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Vehicle 4+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -10323,7 +10375,8 @@
           "WS": "4+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -10405,7 +10458,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Heavy, Precision, Anti-Monster 4+, Anti-Vehicle 4+"
         }
       },
       "presentation": "profile",
@@ -10446,7 +10500,8 @@
           "BS": "2+",
           "S": "14",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 3"
         }
       },
       "presentation": "profile",
@@ -10487,7 +10542,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -10528,7 +10584,8 @@
           "BS": "N/A",
           "S": "3",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol, Torrent"
         }
       },
       "presentation": "profile",
@@ -10610,7 +10667,8 @@
           "WS": "4+",
           "S": "6",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -10651,7 +10709,8 @@
           "WS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -10692,7 +10751,8 @@
           "WS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Walker 2+, Lance, Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -10733,7 +10793,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Infantry 2+, Blast"
         }
       },
       "presentation": "profile",
@@ -10774,7 +10835,8 @@
           "WS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Precision"
         }
       },
       "presentation": "profile",
@@ -10815,7 +10877,8 @@
           "WS": "4+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Infantry 3+, Devastating Wounds, Precision"
         }
       },
       "presentation": "profile",
@@ -10856,7 +10919,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Torrent"
         }
       },
       "presentation": "profile",
@@ -10897,7 +10961,8 @@
           "WS": "4+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Infantry 3+, Precision"
         }
       },
       "presentation": "profile",
@@ -10938,7 +11003,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Heavy, Precision"
         }
       },
       "presentation": "profile",
@@ -10979,7 +11045,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -11020,7 +11087,8 @@
           "BS": "4+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Sustained hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -11061,7 +11129,8 @@
           "BS": "4+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -11102,7 +11171,8 @@
           "WS": "4+",
           "S": "12",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -11143,7 +11213,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -11184,7 +11255,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -11225,7 +11297,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -14366,7 +14439,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -14406,7 +14480,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -14446,7 +14521,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -14646,7 +14722,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -14726,7 +14803,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -14766,7 +14844,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -14806,7 +14885,8 @@
           "WS": "3+",
           "S": "12",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -14846,7 +14926,8 @@
           "WS": "3+",
           "S": "12",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -14886,7 +14967,8 @@
           "WS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -14926,7 +15008,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -14966,7 +15049,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Heavy"
         }
       },
       "presentation": "profile",
@@ -15086,7 +15170,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -15126,7 +15211,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Lance"
         }
       },
       "presentation": "profile",
@@ -15166,7 +15252,8 @@
           "WS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -15206,7 +15293,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Hazardous, Pistol, Psychic, Sustained Hits 3"
         }
       },
       "presentation": "profile",
@@ -15246,7 +15334,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Pistol, Psychic, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -15286,7 +15375,8 @@
           "BS": "N/A",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol, Torrent"
         }
       },
       "presentation": "profile",
@@ -15326,7 +15416,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -15366,7 +15457,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -15406,7 +15498,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -15446,7 +15539,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -15486,7 +15580,8 @@
           "BS": "2+",
           "S": "14",
           "AP": "-3",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "One Shot"
         }
       },
       "presentation": "profile",
@@ -15526,7 +15621,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-4",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Melta 2, Pistol"
         }
       },
       "presentation": "profile",
@@ -15566,7 +15662,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-4",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Melta 2, Pistol"
         }
       },
       "presentation": "profile",
@@ -15646,7 +15743,8 @@
           "BS": "2+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2, Pistol, Sustained Hits D3"
         }
       },
       "presentation": "profile",
@@ -15686,7 +15784,8 @@
           "BS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -15726,7 +15825,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -15766,7 +15866,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Pistol"
         }
       },
       "presentation": "profile",
@@ -15806,7 +15907,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Pistol"
         }
       },
       "presentation": "profile",
@@ -16006,7 +16108,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -16046,7 +16149,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Lethal Hits"
         }
       },
       "presentation": "profile",
@@ -16086,7 +16190,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Lethal Hits"
         }
       },
       "presentation": "profile",
@@ -16126,7 +16231,8 @@
           "WS": "2+",
           "S": "7",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Precision"
         }
       },
       "presentation": "profile",
@@ -16166,7 +16272,8 @@
           "WS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -16206,7 +16313,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Devastating wounds, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -16246,7 +16354,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -16286,7 +16395,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-FLY 4+, Rapid Fire 3, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -16326,7 +16436,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -16366,7 +16477,8 @@
           "WS": "2+",
           "S": "9",
           "AP": "-3",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Lethal Hits, Psychic"
         }
       },
       "presentation": "profile",
@@ -24869,7 +24981,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -25229,7 +25342,8 @@
           "BS": "4+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -25269,7 +25383,8 @@
           "WS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Precision"
         }
       },
       "presentation": "profile",
@@ -25309,7 +25424,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-CHARACTER 2+, Precision"
         }
       },
       "presentation": "profile",
@@ -25349,7 +25465,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -25389,7 +25506,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -25429,7 +25547,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -25509,7 +25628,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -25589,7 +25709,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -25629,7 +25750,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -25669,7 +25791,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -25709,7 +25832,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -25789,7 +25913,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -25869,7 +25994,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-VEHICLE 3+"
         }
       },
       "presentation": "profile",
@@ -25909,7 +26035,8 @@
           "WS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-VEHICLE 3+"
         }
       },
       "presentation": "profile",
@@ -26229,7 +26356,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -26269,7 +26397,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -26309,7 +26438,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -26349,7 +26479,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -26429,7 +26560,8 @@
           "WS": "4+",
           "S": "3",
           "AP": "0",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -26469,7 +26601,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -26509,7 +26642,8 @@
           "WS": "4+",
           "S": "4",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Devastating Wounds, Psychic"
         }
       },
       "presentation": "profile",
@@ -26549,7 +26683,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Psychic"
         }
       },
       "presentation": "profile",
@@ -26629,7 +26764,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -26709,7 +26845,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Heavy, Precision"
         }
       },
       "presentation": "profile",
@@ -26749,7 +26886,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Pistol, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -26789,7 +26927,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -26829,7 +26968,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Pistol, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -26869,7 +27009,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -26909,7 +27050,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -26949,7 +27091,8 @@
           "BS": "3+",
           "S": "14",
           "AP": "-4",
-          "D": "D6+2"
+          "D": "D6+2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -26989,7 +27132,8 @@
           "BS": "3+",
           "S": "14",
           "AP": "-3",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -27029,7 +27173,8 @@
           "WS": "2+",
           "S": "14",
           "AP": "-4",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -27069,7 +27214,8 @@
           "BS": "3+",
           "S": "10",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -27109,7 +27255,8 @@
           "BS": "3+",
           "S": "12",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -27149,7 +27296,8 @@
           "WS": "3+",
           "S": "12",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks, Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -27269,7 +27417,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -27309,7 +27458,8 @@
           "BS": "N/A",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol, Torrent"
         }
       },
       "presentation": "profile",
@@ -27349,7 +27499,8 @@
           "BS": "3+",
           "S": "12",
           "AP": "-3",
-          "D": "4"
+          "D": "4",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -27389,7 +27540,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -27429,7 +27581,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -27589,7 +27742,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -27629,7 +27783,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -27669,7 +27824,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-VEHICLE 4+"
         }
       },
       "presentation": "profile",
@@ -27749,7 +27905,8 @@
           "BS": "3+",
           "S": "10",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -27949,7 +28106,8 @@
           "BS": "3+",
           "S": "10",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -27989,7 +28147,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -28069,7 +28228,8 @@
           "BS": "N/A",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol, Torrent"
         }
       },
       "presentation": "profile",
@@ -28189,7 +28349,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -28269,7 +28430,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -28309,7 +28471,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -28429,7 +28592,8 @@
           "BS": "N/A",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -28469,7 +28633,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Heavy, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -28509,7 +28674,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -28549,7 +28715,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -28629,7 +28796,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -28709,7 +28877,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Devastating Wounds, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -28829,7 +28998,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Hazardous"
         }
       },
       "presentation": "profile",
@@ -28869,7 +29039,8 @@
           "WS": "3+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-FLY 2+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -28989,7 +29160,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Assault, Sustained Hits D3"
         }
       },
       "presentation": "profile",
@@ -29029,7 +29201,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Extra Attacks, Lance, Sustained Hits D3"
         }
       },
       "presentation": "profile",
@@ -29109,7 +29282,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -29229,7 +29403,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -29269,7 +29444,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Lance"
         }
       },
       "presentation": "profile",
@@ -29349,7 +29525,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Devastating Wounds, Hazardous, Psychic"
         }
       },
       "presentation": "profile",
@@ -29389,7 +29566,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -29429,7 +29607,8 @@
           "BS": "4+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -29509,7 +29688,8 @@
           "BS": "4+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -29549,7 +29729,8 @@
           "WS": "3+",
           "S": "7",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -29629,7 +29810,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -29669,7 +29851,8 @@
           "WS": "2+",
           "S": "10",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -29709,7 +29892,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -29749,7 +29933,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -29789,7 +29974,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -29869,7 +30055,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-4",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Melta 1, Pistol"
         }
       },
       "presentation": "profile",
@@ -29909,7 +30096,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -29949,7 +30137,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -29989,7 +30178,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Precision, Psychic"
         }
       },
       "presentation": "profile",
@@ -30029,7 +30219,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -30069,7 +30260,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -30109,7 +30301,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-2",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -30189,7 +30382,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -30269,7 +30463,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -30309,7 +30504,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -30389,7 +30585,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -30429,7 +30626,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -30469,7 +30667,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -30509,7 +30708,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -30549,7 +30749,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -30589,7 +30790,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -30629,7 +30831,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -30669,7 +30872,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -30709,7 +30913,8 @@
           "BS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -30749,7 +30954,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -30789,7 +30995,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Pistol"
         }
       },
       "presentation": "profile",
@@ -30829,7 +31036,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Pistol"
         }
       },
       "presentation": "profile",
@@ -30869,7 +31077,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Pistol"
         }
       },
       "presentation": "profile",
@@ -31189,7 +31398,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -31269,7 +31479,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -31309,7 +31520,8 @@
           "BS": "3+",
           "S": "14",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -31349,7 +31561,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -31389,7 +31602,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -31509,7 +31723,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-PSYKER 2+, Hazardous, Pistol, Precision, Psychic"
         }
       },
       "presentation": "profile",
@@ -31549,7 +31764,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-PSYKER 2+, Pistol, Precision, Psychic"
         }
       },
       "presentation": "profile",
@@ -31629,7 +31845,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Vehicle 2+, Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -31869,7 +32086,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Anti-PSYKER 2+, Psychic"
         }
       },
       "presentation": "profile",
@@ -31949,7 +32167,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -31989,7 +32208,8 @@
           "WS": "2+",
           "S": "7",
           "AP": "-3",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -32029,7 +32249,8 @@
           "WS": "3+",
           "S": "3",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-VEHICLE 2+, Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -32069,7 +32290,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -32109,7 +32331,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -32149,7 +32372,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -32189,7 +32413,8 @@
           "BS": "3+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -32229,7 +32454,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -32309,7 +32535,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol, Torrent"
         }
       },
       "presentation": "profile",
@@ -32349,7 +32576,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-VEHICLE 4+, Torrent"
         }
       },
       "presentation": "profile",
@@ -32389,7 +32617,8 @@
           "WS": "2+",
           "S": "14",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-VEHICLE 4+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -32429,7 +32658,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-VEHICLE 4+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -32469,7 +32699,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -32509,7 +32740,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Psychic, Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -32549,7 +32781,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -32589,7 +32822,8 @@
           "BS": "2+",
           "S": "2",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-INFANTRY 2+, Pistol"
         }
       },
       "presentation": "profile",
@@ -60221,7 +60455,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Devastating Wounds, Hazardous, Psychic"
         }
       },
       "presentation": "profile",
@@ -60261,7 +60496,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -60381,7 +60617,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -60421,7 +60658,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -60461,7 +60699,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -60501,7 +60740,8 @@
           "BS": "3+",
           "S": "10",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Ignores Cover"
         }
       },
       "presentation": "profile",
@@ -60541,7 +60781,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover"
         }
       },
       "presentation": "profile",
@@ -60621,7 +60862,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -60661,7 +60903,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol, Precision"
         }
       },
       "presentation": "profile",
@@ -60701,7 +60944,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -60741,7 +60985,8 @@
           "WS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-VEHICLE 3+"
         }
       },
       "presentation": "profile",
@@ -60861,7 +61106,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -60901,7 +61147,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -60941,7 +61188,8 @@
           "WS": "2+",
           "S": "14",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -60981,7 +61229,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -61021,7 +61270,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -61061,7 +61311,8 @@
           "BS": "3+",
           "S": "12",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -61101,7 +61352,8 @@
           "WS": "3+",
           "S": "12",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks, Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -61181,7 +61433,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -61261,7 +61514,8 @@
           "BS": "3+",
           "S": "10",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -61341,7 +61595,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -61381,7 +61636,8 @@
           "BS": "N/A",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -61421,7 +61677,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -61461,7 +61718,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -61541,7 +61799,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Devastating Wounds, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -61581,7 +61840,8 @@
           "WS": "3+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-FLY 2+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -61781,7 +62041,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -61821,7 +62082,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -61861,7 +62123,8 @@
           "WS": "3+",
           "S": "7",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -61901,7 +62164,8 @@
           "WS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks, Lethal Hits"
         }
       },
       "presentation": "profile",
@@ -61941,7 +62205,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -61981,7 +62246,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -62021,7 +62287,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -62061,7 +62328,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -62101,7 +62369,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -62181,7 +62450,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2, Precision"
         }
       },
       "presentation": "profile",
@@ -62221,7 +62491,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -62261,7 +62532,8 @@
           "BS": "2+",
           "S": "9",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Hazardous, Devastating Wounds, Psychic, Sustained Hits 3"
         }
       },
       "presentation": "profile",
@@ -62301,7 +62573,8 @@
           "BS": "2+",
           "S": "9",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Devastating Wounds, Psychic"
         }
       },
       "presentation": "profile",
@@ -62341,7 +62614,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Hazardous, Psychic"
         }
       },
       "presentation": "profile",
@@ -62381,7 +62655,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Psychic"
         }
       },
       "presentation": "profile",
@@ -62421,7 +62696,8 @@
           "WS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Lance"
         }
       },
       "presentation": "profile",
@@ -62461,7 +62737,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Precision, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -62501,7 +62778,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Precision, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -62541,7 +62819,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -62581,7 +62860,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol, Precision"
         }
       },
       "presentation": "profile",
@@ -62621,7 +62901,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Pistol"
         }
       },
       "presentation": "profile",
@@ -62661,7 +62942,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Pistol, Precision"
         }
       },
       "presentation": "profile",
@@ -62901,7 +63183,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -62941,7 +63224,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -62981,7 +63265,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -63021,7 +63306,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Pistol"
         }
       },
       "presentation": "profile",
@@ -63061,7 +63347,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Pistol"
         }
       },
       "presentation": "profile",
@@ -63101,7 +63388,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -63141,7 +63429,8 @@
           "WS": "3+",
           "S": "16",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -63221,7 +63510,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -63261,7 +63551,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Devastating Wounds, Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -63301,7 +63592,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover"
         }
       },
       "presentation": "profile",
@@ -63341,7 +63633,8 @@
           "WS": "2+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+2"
+          "D": "D6+2",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -63421,7 +63714,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -78333,7 +78627,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -78373,7 +78668,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -78413,7 +78709,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -78653,7 +78950,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-vehicle 2+"
         }
       },
       "presentation": "profile",
@@ -78693,7 +78991,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -78733,7 +79032,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Pistol, Sustained Hits 2, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -78773,7 +79073,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -78973,7 +79274,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -79053,7 +79355,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -79093,7 +79396,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Psychic"
         }
       },
       "presentation": "profile",
@@ -79133,7 +79437,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -79293,7 +79598,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -79373,7 +79679,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -79413,7 +79720,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Fly 2+"
         }
       },
       "presentation": "profile",
@@ -79493,7 +79801,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol, Precision"
         }
       },
       "presentation": "profile",
@@ -79533,7 +79842,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -79573,7 +79883,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -79613,7 +79924,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Close-Quarters"
         }
       },
       "presentation": "profile",
@@ -79653,7 +79965,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -79693,7 +80006,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Heavy"
         }
       },
       "presentation": "profile",
@@ -79773,7 +80087,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Heavy, Precision"
         }
       },
       "presentation": "profile",
@@ -79853,7 +80168,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -79893,7 +80209,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -79933,7 +80250,8 @@
           "WS": "3+",
           "S": "12",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -79973,7 +80291,8 @@
           "WS": "3+",
           "S": "12",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -80013,7 +80332,8 @@
           "WS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -80053,7 +80373,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Indirect Fire"
         }
       },
       "presentation": "profile",
@@ -80093,7 +80414,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 3, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -80173,7 +80495,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -80213,7 +80536,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti Vehicle 3+"
         }
       },
       "presentation": "profile",
@@ -80253,7 +80577,8 @@
           "WS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Vehicle 3+"
         }
       },
       "presentation": "profile",
@@ -80293,7 +80618,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 2, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -80693,7 +81019,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -80733,7 +81060,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -80813,7 +81141,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Infantry 4+, Devastating Wounds, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -80893,7 +81222,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -80973,7 +81303,8 @@
           "BS": "3+",
           "S": "14",
           "AP": "-3",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -81013,7 +81344,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Rapid Fire 2, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -81053,7 +81385,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol, Torrent"
         }
       },
       "presentation": "profile",
@@ -81133,7 +81466,8 @@
           "WS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Precision"
         }
       },
       "presentation": "profile",
@@ -81173,7 +81507,8 @@
           "WS": "2+",
           "S": "10",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -81253,7 +81588,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -81293,7 +81629,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -81333,7 +81670,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -81373,7 +81711,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -81413,7 +81752,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -81493,7 +81833,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -81533,7 +81874,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol, Torrent"
         }
       },
       "presentation": "profile",
@@ -81573,7 +81915,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -81613,7 +81956,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -81693,7 +82037,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -81733,7 +82078,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-vehicle 2+, Heavy"
         }
       },
       "presentation": "profile",
@@ -81773,7 +82119,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-vehicle 2+"
         }
       },
       "presentation": "profile",
@@ -81815,7 +82162,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-vehicle 2+"
         }
       },
       "presentation": "profile",
@@ -81855,7 +82203,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-vehicle 2+, Pistol"
         }
       },
       "presentation": "profile",
@@ -81895,7 +82244,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-vehicle 2+, Pistol"
         }
       },
       "presentation": "profile",
@@ -81935,7 +82285,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Defensive Array, Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -81975,7 +82326,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Defensive Array, Ignores Cover, Torrent, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -82015,7 +82367,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -82135,7 +82488,8 @@
           "BS": "N/A",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Pistol, Torrent"
         }
       },
       "presentation": "profile",
@@ -82215,7 +82569,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -82255,7 +82610,8 @@
           "WS": "2+",
           "S": "14",
           "AP": "-4",
-          "D": "4"
+          "D": "4",
+          "Abilities": "Lethal Hits"
         }
       },
       "presentation": "profile",
@@ -82335,7 +82691,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -82375,7 +82732,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -82415,7 +82773,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Heavy"
         }
       },
       "presentation": "profile",
@@ -82455,7 +82814,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Heavy, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -82495,7 +82855,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Heavy, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -82535,7 +82896,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Heavy, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -82575,7 +82937,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -82615,7 +82978,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -82655,7 +83019,8 @@
           "BS": "3+",
           "S": "16",
           "AP": "-4",
-          "D": "D6+4"
+          "D": "D6+4",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -82695,7 +83060,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -82735,7 +83101,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Hazardous"
         }
       },
       "presentation": "profile",
@@ -82775,7 +83142,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -82815,7 +83183,8 @@
           "BS": "2+",
           "S": "14",
           "AP": "-3",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "One Shot"
         }
       },
       "presentation": "profile",
@@ -82855,7 +83224,8 @@
           "BS": "2+",
           "S": "14",
           "AP": "-3",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Indirect Fire, One Shot"
         }
       },
       "presentation": "profile",
@@ -82895,7 +83265,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 6, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -82935,7 +83306,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-fly 2+"
         }
       },
       "presentation": "profile",
@@ -82975,7 +83347,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Fly 2+"
         }
       },
       "presentation": "profile",
@@ -83015,7 +83388,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -83055,7 +83429,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-4",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Melta 2, Pistol"
         }
       },
       "presentation": "profile",
@@ -83095,7 +83470,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -83135,7 +83511,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -83255,7 +83632,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 3"
         }
       },
       "presentation": "profile",
@@ -83295,7 +83673,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Fly 4+, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -83375,7 +83754,8 @@
           "BS": "3+",
           "S": "14",
           "AP": "-4",
-          "D": "D6+3"
+          "D": "D6+3",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -83415,7 +83795,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-3",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -83495,7 +83876,8 @@
           "BS": "4+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -83575,7 +83957,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -83615,7 +83998,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Hazardous"
         }
       },
       "presentation": "profile",
@@ -83695,7 +84079,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -83775,7 +84160,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -83855,7 +84241,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Heavy"
         }
       },
       "presentation": "profile",
@@ -83895,7 +84282,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Infantry 2+"
         }
       },
       "presentation": "profile",
@@ -83935,7 +84323,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Assault, Heavy"
         }
       },
       "presentation": "profile",
@@ -83975,7 +84364,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Heavy, Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -84135,7 +84525,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -84255,7 +84646,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol, Precision"
         }
       },
       "presentation": "profile",
@@ -84295,7 +84687,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -84335,7 +84728,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -84375,7 +84769,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Heavy, Melta 2"
         }
       },
       "presentation": "profile",
@@ -84415,7 +84810,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -84455,7 +84851,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -84495,7 +84892,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -84535,7 +84933,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-2",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -84615,7 +85014,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Precision"
         }
       },
       "presentation": "profile",
@@ -84655,7 +85055,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Heavy, Melta 2"
         }
       },
       "presentation": "profile",
@@ -84695,7 +85096,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -84735,7 +85137,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "0",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Pistol"
         }
       },
       "presentation": "profile",
@@ -84775,7 +85178,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Pistol"
         }
       },
       "presentation": "profile",
@@ -84815,7 +85219,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Ignores Cover"
         }
       },
       "presentation": "profile",
@@ -84895,7 +85300,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -84935,7 +85341,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -84975,7 +85382,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -85015,7 +85423,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Infantry 4+, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -85055,7 +85464,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -85095,7 +85505,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -85135,7 +85546,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Heavy, Hazardous"
         }
       },
       "presentation": "profile",
@@ -85175,7 +85587,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Pistol, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -85215,7 +85628,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Assault, Pistol, Hazardous, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -85255,7 +85669,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -85295,7 +85710,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Rapid Fire 1, Hazardous"
         }
       },
       "presentation": "profile",
@@ -85335,7 +85751,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Heavy"
         }
       },
       "presentation": "profile",
@@ -85375,7 +85792,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Heavy, Hazardous"
         }
       },
       "presentation": "profile",
@@ -85415,7 +85833,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -85455,7 +85874,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Pistol"
         }
       },
       "presentation": "profile",
@@ -85935,7 +86355,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -85975,7 +86396,8 @@
           "BS": "3+",
           "S": "14",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -86015,7 +86437,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -86055,7 +86478,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -86135,7 +86559,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-4",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -86175,7 +86600,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -86215,7 +86641,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -86255,7 +86682,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -86455,7 +86883,8 @@
           "WS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -86495,7 +86924,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Heavy, Precision"
         }
       },
       "presentation": "profile",
@@ -86535,7 +86965,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -86575,7 +87006,8 @@
           "WS": "3+",
           "S": "10",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -86615,7 +87047,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Anti-Fly 2+"
         }
       },
       "presentation": "profile",
@@ -86655,7 +87088,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Anti-Fly 2+, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -86695,7 +87129,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Devastating Wounds, Hazardous, Psychic"
         }
       },
       "presentation": "profile",
@@ -86735,7 +87170,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Psychic"
         }
       },
       "presentation": "profile",
@@ -86775,7 +87211,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -86815,7 +87252,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol, Precision"
         }
       },
       "presentation": "profile",
@@ -86855,7 +87293,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Pistol"
         }
       },
       "presentation": "profile",
@@ -86895,7 +87334,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Devastating Wounds, Heavy, Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -86935,7 +87375,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Heavy, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -86975,7 +87416,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -87015,7 +87457,8 @@
           "BS": "2+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -87055,7 +87498,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Hazardous, Psychic"
         }
       },
       "presentation": "profile",
@@ -87095,7 +87539,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Psychic"
         }
       },
       "presentation": "profile",
@@ -87255,7 +87700,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Lance, Anti-monster 4+, Anti-vehicle 4+"
         }
       },
       "presentation": "profile",
@@ -87295,7 +87741,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -87335,7 +87782,8 @@
           "BS": "4+",
           "S": "10",
           "AP": "-2",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -87375,7 +87823,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -87415,7 +87864,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -87455,7 +87905,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -87495,7 +87946,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -87535,7 +87987,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 4"
         }
       },
       "presentation": "profile",
@@ -87575,7 +88028,8 @@
           "WS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -87615,7 +88069,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -87655,7 +88110,8 @@
           "WS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -87695,7 +88151,8 @@
           "WS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -87735,7 +88192,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -87775,7 +88233,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -87815,7 +88274,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -87895,7 +88355,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating wounds, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -87935,7 +88396,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -87975,7 +88437,8 @@
           "BS": "2+",
           "S": "9",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88015,7 +88478,8 @@
           "BS": "2+",
           "S": "10",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88055,7 +88519,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88095,7 +88560,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88135,7 +88601,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88175,7 +88642,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Devastating Wounds, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88215,7 +88683,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88255,7 +88724,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Hazardous, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88295,7 +88765,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-FLY 4+, Rapid Fire 3, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88335,7 +88806,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Fly 2+, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88375,7 +88847,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88415,7 +88888,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 3, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88455,7 +88929,8 @@
           "BS": "3+",
           "S": "10",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88495,7 +88970,8 @@
           "BS": "3+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88535,7 +89011,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88575,7 +89052,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88615,7 +89093,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88655,7 +89134,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88695,7 +89175,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88735,7 +89216,8 @@
           "WS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88775,7 +89257,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 2, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -88815,7 +89298,8 @@
           "BS": "3+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -88935,7 +89419,8 @@
           "BS": "2+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Indirect Fire"
         }
       },
       "presentation": "profile",
@@ -88975,7 +89460,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Indirect Fire"
         }
       },
       "presentation": "profile",
@@ -93529,7 +94015,8 @@
           "BS": "3+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Indirect Fire"
         }
       },
       "presentation": "profile",
@@ -93769,7 +94256,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Lethal Hits"
         }
       },
       "presentation": "profile",
@@ -93809,7 +94297,8 @@
           "BS": "4+",
           "S": "10",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault, Blast"
         }
       },
       "presentation": "profile",
@@ -94129,7 +94618,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -94209,7 +94699,8 @@
           "BS": "3+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous"
         }
       },
       "presentation": "profile",
@@ -94289,7 +94780,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Hazardous"
         }
       },
       "presentation": "profile",
@@ -94369,7 +94861,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Infantry 3+, Assault, Heavy"
         }
       },
       "presentation": "profile",
@@ -94489,7 +94982,8 @@
           "BS": "4+",
           "S": "16",
           "AP": "-4",
-          "D": "D6+2"
+          "D": "D6+2",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -94569,7 +95063,8 @@
           "BS": "5+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -94609,7 +95104,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -94649,7 +95145,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -94689,7 +95186,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -94769,7 +95267,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -94809,7 +95308,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -94849,7 +95349,8 @@
           "BS": "4+",
           "S": "12",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -94889,7 +95390,8 @@
           "BS": "2+",
           "S": "10",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -94929,7 +95431,8 @@
           "WS": "4+",
           "S": "10",
           "AP": "-4",
-          "D": "D6+2"
+          "D": "D6+2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -95049,7 +95552,8 @@
           "BS": "4+",
           "S": "12",
           "AP": "-4",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Heavy, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -95089,7 +95593,8 @@
           "BS": "2+",
           "S": "10",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2"
         }
       },
       "presentation": "profile",
@@ -95209,7 +95714,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -95289,7 +95795,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Lance"
         }
       },
       "presentation": "profile",
@@ -95329,7 +95836,8 @@
           "WS": "3+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Lance"
         }
       },
       "presentation": "profile",
@@ -95409,7 +95917,8 @@
           "BS": "4+",
           "S": "10",
           "AP": "-3",
-          "D": "4"
+          "D": "4",
+          "Abilities": "Hazardous"
         }
       },
       "presentation": "profile",
@@ -95449,7 +95958,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Hazardous"
         }
       },
       "presentation": "profile",
@@ -95489,7 +95999,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -95529,7 +96040,8 @@
           "BS": "5+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Heavy"
         }
       },
       "presentation": "profile",
@@ -95569,7 +96081,8 @@
           "BS": "5+",
           "S": "7",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -95609,7 +96122,8 @@
           "WS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -95649,7 +96163,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Hazardous, Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -95689,7 +96204,8 @@
           "BS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -95729,7 +96245,8 @@
           "WS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -95809,7 +96326,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Heavy, Precision"
         }
       },
       "presentation": "profile",
@@ -95849,7 +96367,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -95889,7 +96408,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Pistol"
         }
       },
       "presentation": "profile",
@@ -95929,7 +96449,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -95969,7 +96490,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -96009,7 +96531,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -96089,7 +96612,8 @@
           "BS": "5+",
           "S": "7",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Vehicle 4+, Devastating Wounds, Heavy"
         }
       },
       "presentation": "profile",
@@ -96129,7 +96653,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Heavy, Precision"
         }
       },
       "presentation": "profile",
@@ -96289,7 +96814,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -96329,7 +96855,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Infantry 3+, Blast"
         }
       },
       "presentation": "profile",
@@ -96369,7 +96896,8 @@
           "BS": "4+",
           "S": "10",
           "AP": "-4",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -96449,7 +96977,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 4"
         }
       },
       "presentation": "profile",
@@ -96569,7 +97098,8 @@
           "BS": "4+",
           "S": "10",
           "AP": "-2",
-          "D": "4"
+          "D": "4",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -96609,7 +97139,8 @@
           "BS": "4+",
           "S": "24",
           "AP": "-6",
-          "D": "12"
+          "D": "12",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -96649,7 +97180,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -96729,7 +97261,8 @@
           "BS": "4+",
           "S": "12",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -96769,7 +97302,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -96809,7 +97343,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -96849,7 +97384,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -96889,7 +97425,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -96929,7 +97466,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -96969,7 +97507,8 @@
           "BS": "5+",
           "S": "10",
           "AP": "-4",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Devastating Wounds, Heavy"
         }
       },
       "presentation": "profile",
@@ -97009,7 +97548,8 @@
           "BS": "4+",
           "S": "20",
           "AP": "-5",
-          "D": "D6+6"
+          "D": "D6+6",
+          "Abilities": "Heavy, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -97049,7 +97589,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks, Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -97089,7 +97630,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -97249,7 +97791,8 @@
           "BS": "4+",
           "S": "14",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "One Shot"
         }
       },
       "presentation": "profile",
@@ -97289,7 +97832,8 @@
           "BS": "4+",
           "S": "14",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -97329,7 +97873,8 @@
           "BS": "4+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Vehicle 4+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -97409,7 +97954,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "0",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -97489,7 +98035,8 @@
           "BS": "2+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -97529,7 +98076,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Indirect Fire"
         }
       },
       "presentation": "profile",
@@ -97609,7 +98157,8 @@
           "BS": "5+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Indirect Fire, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -97649,7 +98198,8 @@
           "BS": "5+",
           "S": "20",
           "AP": "-5",
-          "D": "D6+6"
+          "D": "D6+6",
+          "Abilities": "Devastating Wounds, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -97689,7 +98239,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -97729,7 +98280,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -97769,7 +98321,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -97809,7 +98362,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Rapid Fire 1"
         }
       },
       "presentation": "profile",
@@ -97889,7 +98443,8 @@
           "BS": "4+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy, Indirect Fire, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -97929,7 +98484,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -97969,7 +98525,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Heavy, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98009,7 +98566,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-4",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98049,7 +98607,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Hazardous, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98089,7 +98648,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98129,7 +98689,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98169,7 +98730,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98209,7 +98771,8 @@
           "BS": "5+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98249,7 +98812,8 @@
           "BS": "5+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98289,7 +98853,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked, Assault"
         }
       },
       "presentation": "profile",
@@ -98329,7 +98894,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98369,7 +98935,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98409,7 +98976,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Indirect Fire, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98449,7 +99017,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Indirect Fire, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98489,7 +99058,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Heavy, Indirect Fire, Twin-Linked"
         }
       },
       "presentation": "profile",
@@ -98529,7 +99099,8 @@
           "BS": "N/A",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -98569,7 +99140,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Rapid Fire 2"
         }
       },
       "presentation": "profile",
@@ -104185,7 +104757,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Torrent"
         }
       },
       "presentation": "profile",
@@ -104225,7 +104798,8 @@
           "WS": "2+",
           "S": "3",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-infantry 3+, Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -104265,7 +104839,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -104305,7 +104880,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -104345,7 +104921,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 2"
         }
       },
       "presentation": "profile",
@@ -104385,7 +104962,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Blast"
         }
       },
       "presentation": "profile",
@@ -104425,7 +105003,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-3",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -104465,7 +105044,8 @@
           "BS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Blast"
         }
       },
       "presentation": "profile",
@@ -104585,7 +105165,8 @@
           "WS": "2+",
           "S": "9",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -104625,7 +105206,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Devastating Wounds, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -104705,7 +105287,8 @@
           "WS": "4+",
           "S": "9",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -105025,7 +105608,8 @@
           "WS": "5+",
           "S": "2",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Sustained Hits 1"
         }
       },
       "presentation": "profile",
@@ -105105,7 +105689,8 @@
           "WS": "4+",
           "S": "8",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -105305,7 +105890,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-infantry 4+, Devastating Wounds, Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -105345,7 +105931,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Torrent"
         }
       },
       "presentation": "profile",
@@ -105385,7 +105972,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -105465,7 +106053,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -105505,7 +106094,8 @@
           "BS": "3+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Heavy, Sustained Hits 1, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -105545,7 +106135,8 @@
           "WS": "2+",
           "S": "5",
           "AP": "-",
-          "D": "D3+2"
+          "D": "D3+2",
+          "Abilities": "Extra Attacks, Devastating Wounds, Precision"
         }
       },
       "presentation": "profile",
@@ -105625,7 +106216,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -105665,7 +106257,8 @@
           "BS": "2+",
           "S": "9",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -105705,7 +106298,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -105785,7 +106379,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Heavy, Indirect Fire"
         }
       },
       "presentation": "profile",
@@ -105825,7 +106420,8 @@
           "WS": "2+",
           "S": "4",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -105905,7 +106501,8 @@
           "WS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -106145,7 +106742,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-infantry 2+"
         }
       },
       "presentation": "profile",
@@ -106185,7 +106783,8 @@
           "BS": "3+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-infantry 2+"
         }
       },
       "presentation": "profile",
@@ -106265,7 +106864,8 @@
           "WS": "2+",
           "S": "9",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -106305,7 +106905,8 @@
           "WS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -106345,7 +106946,8 @@
           "WS": "2+",
           "S": "7",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -106545,7 +107147,8 @@
           "WS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Precision"
         }
       },
       "presentation": "profile",
@@ -106665,7 +107268,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -106745,7 +107349,8 @@
           "BS": "3+",
           "S": "10",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Psychic"
         }
       },
       "presentation": "profile",
@@ -106785,7 +107390,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Ignores Cover, Psychic, Torrent"
         }
       },
       "presentation": "profile",
@@ -106825,7 +107431,8 @@
           "BS": "2+",
           "S": "6",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Psychic"
         }
       },
       "presentation": "profile",
@@ -106865,7 +107472,8 @@
           "BS": "2+",
           "S": "12",
           "AP": "-3",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Melta 2, Psychic"
         }
       },
       "presentation": "profile",
@@ -106905,7 +107513,8 @@
           "BS": "2+",
           "S": "8",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Precision, Psychic"
         }
       },
       "presentation": "profile",
@@ -106945,7 +107554,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -106985,7 +107595,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -107025,7 +107636,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -107145,7 +107757,8 @@
           "BS": "3+",
           "S": "18",
           "AP": "-4",
-          "D": "D6+6"
+          "D": "D6+6",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -107385,7 +107998,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Blast, Heavy"
         }
       },
       "presentation": "profile",
@@ -107425,7 +108039,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-1",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Anti-Vehicle 2+"
         }
       },
       "presentation": "profile",
@@ -107465,7 +108080,8 @@
           "WS": "3+",
           "S": "14",
           "AP": "-2",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -107505,7 +108121,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Heavy"
         }
       },
       "presentation": "profile",
@@ -107545,7 +108162,8 @@
           "BS": "4+",
           "S": "5",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault"
         }
       },
       "presentation": "profile",
@@ -107585,7 +108203,8 @@
           "BS": "4+",
           "S": "4",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Pistol, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -107625,7 +108244,8 @@
           "BS": "5+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Pistol"
         }
       },
       "presentation": "profile",
@@ -107665,7 +108285,8 @@
           "BS": "4+",
           "S": "6",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Devastating Wounds, Heavy, Indirect Fire"
         }
       },
       "presentation": "profile",
@@ -107785,7 +108406,8 @@
           "BS": "2+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -107825,7 +108447,8 @@
           "BS": "4+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -107865,7 +108488,8 @@
           "BS": "N/A",
           "S": "2",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Devastating Wounds, Torrent"
         }
       },
       "presentation": "profile",
@@ -107905,7 +108529,8 @@
           "BS": "N/A",
           "S": "5",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Psychic, Torrent"
         }
       },
       "presentation": "profile",
@@ -107945,7 +108570,8 @@
           "WS": "3+",
           "S": "6",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-Psyker 4+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -107985,7 +108611,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "0",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Anti-vehicle 4+, Devastating Wounds"
         }
       },
       "presentation": "profile",
@@ -108065,7 +108692,8 @@
           "BS": "4+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Pistol, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -108105,7 +108733,8 @@
           "WS": "3+",
           "S": "10",
           "AP": "-3",
-          "D": "D6"
+          "D": "D6",
+          "Abilities": "Anti-fly 2+, Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -108145,7 +108774,8 @@
           "WS": "3+",
           "S": "3",
           "AP": "0",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Anti-Infantry 2+"
         }
       },
       "presentation": "profile",
@@ -108185,7 +108815,8 @@
           "WS": "2+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Extra Attacks"
         }
       },
       "presentation": "profile",
@@ -108225,7 +108856,8 @@
           "BS": "2+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Harpooned"
         }
       },
       "presentation": "profile",
@@ -108305,7 +108937,8 @@
           "BS": "3+",
           "S": "9",
           "AP": "-2",
-          "D": "3"
+          "D": "3",
+          "Abilities": "Blast, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -108345,7 +108978,8 @@
           "BS": "2+",
           "S": "7",
           "AP": "-1",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast, Twin-linked"
         }
       },
       "presentation": "profile",
@@ -108385,7 +109019,8 @@
           "WS": "3+",
           "S": "5",
           "AP": "-2",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Twin-linked"
         }
       },
       "presentation": "profile",
@@ -108545,7 +109180,8 @@
           "BS": "N/A",
           "S": "6",
           "AP": "-1",
-          "D": "1"
+          "D": "1",
+          "Abilities": "Assault, Ignores Cover, Torrent"
         }
       },
       "presentation": "profile",
@@ -108585,7 +109221,8 @@
           "BS": "4+",
           "S": "9",
           "AP": "-2",
-          "D": "2"
+          "D": "2",
+          "Abilities": "Blast"
         }
       },
       "presentation": "profile",
@@ -108625,7 +109262,8 @@
           "BS": "3+",
           "S": "12",
           "AP": "-3",
-          "D": "D6+1"
+          "D": "D6+1",
+          "Abilities": "Lethal Hits, Psychic"
         }
       },
       "presentation": "profile",
@@ -108665,7 +109303,8 @@
           "BS": "3+",
           "S": "7",
           "AP": "-2",
-          "D": "D3"
+          "D": "D3",
+          "Abilities": "Blast, Psychic"
         }
       },
       "presentation": "profile",

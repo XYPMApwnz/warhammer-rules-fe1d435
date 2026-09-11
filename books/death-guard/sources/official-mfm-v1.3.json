@@ -996,24 +996,32 @@
       "value": 15
     },
     {
+      "id": "enhancement-face-of-death",
       "detachment": "DEATH LORD’S CHOSEN",
       "title": "Face of Death",
-      "value": 10
+      "value": 10,
+      "sourceTitle": "Face of Death"
     },
     {
+      "id": "enhancement-helm-of-the-fly-king",
       "detachment": "DEATH LORD’S CHOSEN",
       "title": "Helm of The Fly King",
-      "value": 20
+      "value": 20,
+      "sourceTitle": "Helm of the Fly King"
     },
     {
+      "id": "enhancement-vile-vigour",
       "detachment": "DEATH LORD’S CHOSEN",
       "title": "Vile Vigour",
-      "value": 15
+      "value": 15,
+      "sourceTitle": "Vile Vigour"
     },
     {
+      "id": "enhancement-warprot-talisman",
       "detachment": "DEATH LORD’S CHOSEN",
       "title": "Warprot Talisman",
-      "value": 30
+      "value": 30,
+      "sourceTitle": "Warprot Talisman"
     },
     {
       "detachment": "FLYBLOWN HOST",

@@ -311,6 +311,18 @@ assert.equal(bilemaw.enhancements[0].ownerEligibility,'valid');
 const wrongBilemaw=assertEnhancementLookup('Mortarion’s Hammer wrong Detachment','death guard',ownedEnhancement('Bilemaw Blight - 10 pts',plaguecaster.id),plaguecaster,'Virulent Vectorium','enhancement-bilemaw-blight',10);
 assert.equal(wrongBilemaw.enhancements[0].ownerEligibility,'invalid');
 assert.equal(wrongBilemaw.enhancements[0].ownerMessage,'Enhancement is not available in the selected Detachment');
+const deathLordsDetachment=deathGuardRules.sections.find(section=>section.id==='detachment-death-lords-chosen');
+assert.equal(deathLordsDetachment.title,'Death Lord’s Chosen','canonical Death Lord’s Chosen Detachment identity');
+const deathLordsEnhancementIds=['enhancement-face-of-death','enhancement-helm-of-the-fly-king','enhancement-vile-vigour','enhancement-warprot-talisman'],deathLordsPointIdentities=deathGuardMfm.enhancements.filter(item=>deathLordsEnhancementIds.includes(item.id));
+assert.equal(deathLordsPointIdentities.length,4,'MFM identity bridge must cover all four Death Lord’s Chosen Enhancements');
+assert.ok(deathLordsPointIdentities.every(item=>item.detachment==='DEATH LORD’S CHOSEN'&&item.sourceTitle),'Death Lord’s Chosen bridge must retain exact canonical source titles and Detachment');
+for(const identity of deathLordsPointIdentities){const published=WH_POINTS_CATALOG['death guard'].enhancements[identity.sourceTitle.toLowerCase()];assert.equal(published.id,identity.id);assert.equal(published.detachment,'DEATH LORD’S CHOSEN');assert.equal(published.canonicalDetachmentId,'detachment-death-lords-chosen');}
+const warprotOwner=rosterUnit('warprot-lord','Lord of Virulence');
+const warprot=assertEnhancementLookup('Death Lord’s Chosen Warprot path','death guard',ownedEnhancement('Warprot Talisman - 30 pts',warprotOwner.id),warprotOwner,'Death Lord’s Chosen','enhancement-warprot-talisman',30);
+assert.equal(warprot.enhancements[0].ownerEligibility,'valid');
+const wrongWarprot=assertEnhancementLookup('Death Lord’s Chosen wrong Detachment','death guard',ownedEnhancement('Warprot Talisman - 30 pts',warprotOwner.id),warprotOwner,'Virulent Vectorium','enhancement-warprot-talisman',30);
+assert.equal(wrongWarprot.enhancements[0].ownerEligibility,'invalid');
+assert.equal(wrongWarprot.enhancements[0].ownerMessage,'Enhancement is not available in the selected Detachment');
 const upgradeRoster=count=>{
   const owners=[
     rosterUnit('drone-a','Foetid Bloat-drone'),

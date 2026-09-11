@@ -183,6 +183,14 @@ window.DG_TERMS={
     "glossary": "glossary-emperors-children-detachment-rule-sensational-performance",
     "rule": "detachment-court-of-the-phoenician"
   },
+  "emperors-children-detachment-rule-master-of-the-pageant": {
+    "id": "emperors-children-detachment-rule-master-of-the-pageant",
+    "title": "Master of the Pageant",
+    "summary": "Once per battle round, when you target a FULGRIM unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.",
+    "full": "Once per battle round, when you target a FULGRIM unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.",
+    "glossary": "glossary-emperors-children-detachment-rule-master-of-the-pageant",
+    "rule": "court-of-the-phoenician-rule-master-of-the-pageant"
+  },
   "emperors-children-enhancement-tears-of-the-phoenix": {
     "id": "emperors-children-enhancement-tears-of-the-phoenix",
     "title": "Tears of the Phoenix",

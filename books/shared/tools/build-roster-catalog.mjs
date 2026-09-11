@@ -20,7 +20,7 @@ const dependencyRecords=config=>{const source=config?.dependencies;if(Array.isAr
 const singularModelTitle=(value,max)=>{const title=String(value||'').replace(/\s+[\u2013\u2014-]\s+EPIC HERO\s*$/i,'').trim();return Number(max)>1&&/s$/i.test(title)&&!/(ss|us)$/i.test(title)?title.slice(0,-1):title;};
 const canonicalCompositionModelsFor=unit=>{
   const structured=values(unit.composition);
-  if(structured.length)return structured.map(model=>({name:model.name||'',aliases:values(model.aliases)})).filter(model=>model.name);
+  if(structured.length)return structured.map(model=>({name:model.name||'',aliases:values(model.aliases),...(model.intrinsicKeywords===undefined?{}:{intrinsicKeywords:model.intrinsicKeywords})})).filter(model=>model.name);
   const section=values(unit.subsections).find(item=>normalize(item?.title)==='unit composition');
   const text=typeof unit.composition==='string'?unit.composition:values(section?.blocks).filter(block=>block?.type==='p').map(block=>block.text||'').join(' ');
   if(!text.trim())return [];
@@ -36,6 +36,11 @@ const canonicalCompositionModelsFor=unit=>{
   }
   return records;
 };
+export const canonicalRosterModelsFor=unit=>canonicalCompositionModelsFor(unit).map((model,index)=>{
+  const keywords=model.intrinsicKeywords;
+  if(keywords!==undefined&&(!Array.isArray(keywords)||keywords.some(keyword=>typeof keyword!=='string'||!keyword.trim())||new Set(keywords.map(normalize)).size!==keywords.length))throw new Error(`${unit.id}: invalid model-scoped intrinsic keywords for ${model.name}`);
+  return {id:model.id||`${unit.id}-model-${slug(model.name)}${index?'-'+(index+1):''}`,title:model.name||'',aliases:[...new Set([model.name,...values(model.aliases)].filter(Boolean))],...(keywords===undefined?{}:{intrinsicKeywords:[...keywords]})};
+});
 const gameSelectionsFor=(unit,options={})=>{
   if(unit.gameSelections)return unit.gameSelections;
   const canonicalWeapons=values(unit.weapons).length?values(unit.weapons):values(unit.blocks).filter(block=>block?.type==='weapon');
@@ -57,9 +62,9 @@ const gameSelectionsFor=(unit,options={})=>{
   for(const declared of declaredWargearSelections){const existing=selections.find(selection=>selection.id===declared.id);if(existing)existing.wargearAbilityIds=[...new Set([...values(existing.wargearAbilityIds),...declared.wargearAbilityIds])];else selections.push(declared);}
   for(const ability of wargearAbilities)if(!ability.requiredSelectionIds.length){const id=`${unit.id}-selection-${slug(ability.title)}`;if(options.inferExactWargearAbilitySelections){ability.requiredSelectionIds=[id];selections.push({id,title:ability.title,aliases:[ability.title],kind:'wargear',profileIds:[],wargearAbilityIds:[ability.id]});}else selections.push({id,title:ability.title,aliases:[ability.title],kind:'wargear',profileIds:[],wargearAbilityIds:[],candidateWargearAbilityIds:[ability.id]});}
   for(const ability of wargearAbilities)for(const selectionId of ability.requiredSelectionIds){const selection=selections.find(item=>item.id===selectionId);if(selection)selection.wargearAbilityIds=[...new Set([...values(selection.wargearAbilityIds),ability.id])];}
-  const stats=normalizedStatsFor(unit),compositionModels=canonicalCompositionModelsFor(unit);
+  const stats=normalizedStatsFor(unit);
   const abilities=[...new Map(canonicalAbilities.map((ability,index)=>{const id=ability.termId||ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;return[id,{id,sectionId:ability.id||id,title:ability.title||'',text:ability.text||ability.summary||'',sourceUnitId:unit.id}];})).values()];
-  return {stats:{...stats},abilities,models:compositionModels.map((model,index)=>({id:model.id||`${unit.id}-model-${slug(model.name)}${index?'-'+(index+1):''}`,title:model.name||'',aliases:[...new Set([model.name,...values(model.aliases)].filter(Boolean))]})),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
+  return {stats:{...stats},abilities,models:canonicalRosterModelsFor(unit),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
 };
 
 const detachmentRulesFor=(detachment,options={})=>{

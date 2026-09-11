@@ -163,6 +163,13 @@
         "rule": "detachment-court-of-the-phoenician"
       }
     },
+    "emperors-children-detachment-rule-master-of-the-pageant": {
+      "termId": "emperors-children-detachment-rule-master-of-the-pageant",
+      "navigation": {
+        "glossary": "glossary-emperors-children-detachment-rule-master-of-the-pageant",
+        "rule": "court-of-the-phoenician-rule-master-of-the-pageant"
+      }
+    },
     "emperors-children-enhancement-tears-of-the-phoenix": {
       "termId": "emperors-children-enhancement-tears-of-the-phoenix",
       "navigation": {

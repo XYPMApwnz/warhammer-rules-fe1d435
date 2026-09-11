@@ -5,6 +5,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {recordText} from '../../books/core-rules/content/record-content.mjs';
 import {writeCacheRevision} from '../../tools/cache-revision.mjs';
+import {createReaderAnchorValidator,isAutoPublishedRulePath} from './reader-path-contract.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..');
 const glossaryRoot=path.join(root,'glossary');
@@ -85,7 +86,7 @@ const allGenericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:
     if(!config.sources?.relatedRules||!fs.existsSync(packFile))return[];
     return [{id:config.id,title:config.title,root:bookRoot,config,runtime:loadWindow(runtimeFile).DG_TERMS,pack:readJson(packFile)}];
   });
-const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','space-marines','blood-angels'].includes(book.id)).sort((a,b)=>(a.id==='blood-angels')-(b.id==='blood-angels'));
+const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels'].includes(book.id)).sort((a,b)=>(a.id==='blood-angels')-(b.id==='blood-angels'));
 const coreData=loadWindow(path.join(root,'books','core-rules','content','core-rules.en.js')).CORE_RULES;
 const coreCurated=coreData.terms;
 const coreSource=loadWindow(path.join(root,'books','core-rules','content','core-rules.source.en.js')).CORE_PDF_SOURCE;
@@ -492,10 +493,7 @@ for(const term of registry.values()){
   term.mentions=[...new Set((term.mentions||[]).map(value=>aliases[value]||value).filter(value=>registry.has(value)))];
 }
 
-function hasAnchor(relativePath){
-  const [file,anchor='']=relativePath.split('#'),absolute=path.join(root,...file.split('/'));
-  return fs.existsSync(absolute)&&(!anchor||fs.readFileSync(absolute,'utf8').includes(`id="${anchor}"`));
-}
+const hasAnchor=createReaderAnchorValidator(root,fs);
 for(const rule of coreDigital.records){
   if(glossaryExcludedCodes.has(rule.code))continue;
   const section=coreSectionByNumber.get(rule.code.slice(0,2));
@@ -670,7 +668,7 @@ for(const [bookId,records] of Object.entries(contexts))for(const record of Objec
   const rule=record.navigation?.rule;
   if(!rule)continue;
   const candidate=bookId==='death-guard'?`books/death-guard/reader.html#${rule}`:bookId==='adeptus-mechanicus'?`books/adeptus-mechanicus/index.html#${rule}`:'';
-  if(candidate&&hasAnchor(candidate))record.navigation.fullRulePath=candidate;
+  if(candidate&&isAutoPublishedRulePath(root,candidate,fs))record.navigation.fullRulePath=candidate;
 }
 for(const term of registry.values())if(term.fullRulePath&&!hasAnchor(term.fullRulePath))throw new Error(`Broken fullRulePath for ${term.id}: ${term.fullRulePath}`);
 const aliasCandidates=[...titleIndex.entries()].filter(([,ids])=>new Set(ids).size>1).map(([normalizedTitle,ids])=>({normalizedTitle,termIds:[...new Set(ids)],status:'review-required'}));

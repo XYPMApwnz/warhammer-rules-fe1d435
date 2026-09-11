@@ -6317,6 +6317,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
+            "id": "chaos-space-marines-ability-choice-samples",
+            "sectionId": "chaos-space-marines-ability-choice-samples",
+            "title": "Choice Samples",
+            "text": "While this unit’s Garreon the Corpsemaster is on the battlefield, in your Command phase, select one of the following: you can return 1 destroyed model (excluding Character models) to this unit, or, if one or more Heretic Astartes Infantry units from your army are below Starting Strength and within 3\" of this unit, you gain 1CP.",
+            "sourceUnitId": "unit-masters-of-the-maelstrom"
+          },
+          {
             "id": "chaos-space-marines-ability-fleet-command",
             "sectionId": "chaos-space-marines-ability-fleet-command",
             "title": "Fleet Command",
@@ -6358,6 +6365,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Garlon Souleater",
             "aliases": [
               "Garlon Souleater"
+            ],
+            "intrinsicKeywords": [
+              "PSYKER"
             ]
           },
           {

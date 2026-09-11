@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {buildRelationGraphs} from './build-relation-graph.mjs';
-import {canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,serializeRosterCatalog} from './build-roster-catalog.mjs';
+import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,serializeRosterCatalog} from './build-roster-catalog.mjs';
 import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
 import {createCanonicalBuildContext,finishCanonicalBuild,runCanonicalBuildExtension} from './canonical-build-contract.mjs';
 
@@ -212,9 +212,20 @@ function addTerm(title,summary,sectionId,kind='faction-term',unitId='',termScope
   else if(unitId&&!terms.get(id).units.includes(unitId))terms.get(id).units.push(unitId);
   return id;
 }
+const detachmentRuleEntries=det=>{
+  if(!det.rule)return [];
+  const entries=[{rule:det.rule,anchor:`${det.id}-rule`,additional:false},...(det.rule.additionalRules||[]).map(rule=>({rule,anchor:`${det.id}-rule-${slug(rule.id||rule.title)}`,additional:true}))];
+  const anchors=new Set(),titles=new Set();
+  for(const entry of entries){
+    if(entry.additional&&(!clean(entry.rule.title)||!clean(entry.rule.text)))throw new Error(`${det.id}: additional Detachment rule requires title and full text`);
+    if(anchors.has(entry.anchor)||titles.has(titleKey(entry.rule.title)))throw new Error(`${det.id}: duplicate Detachment rule identity`);
+    anchors.add(entry.anchor);titles.add(titleKey(entry.rule.title));
+  }
+  return entries;
+};
 for(const det of detachments){
   const scope=det.dependencyBook||config.id;
-  if(det.rule)addTerm(det.rule.title,det.rule.text,`detachment-${det.id}`,'detachment-rule','',scope);
+  for(const {rule,anchor,additional} of detachmentRuleEntries(det))addTerm(rule.title,rule.text,additional?anchor:`detachment-${det.id}`,'detachment-rule','',scope);
   for(const item of det.enhancements)addTerm(item.title,item.text,`detachment-${det.id}`,'enhancement','',scope);
   for(const item of det.stratagems)addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem','',scope);
 }
@@ -251,6 +262,7 @@ const categoryNav=(group,depth)=>navBranch(group.id,group.title,depth,group.unit
 const datasheetNav=groupedDependencyDatasheets?datasheetLayers.map(layer=>navBranch(layer.id,layer.title,2,layer.categories.map(group=>categoryNav(group,3)).join(''))).join(''):categories.map(group=>categoryNav(group,2)).join('');
 const detachmentNav=detachments.map(det=>navBranch(`detachment-${det.id}`,det.title,2,
   navLeaf(`${det.id}-rule`,'Detachment Rule',3)
+  +detachmentRuleEntries(det).filter(entry=>entry.additional).map(entry=>navLeaf(entry.anchor,entry.rule.title,3)).join('')
   +((det.enhancements||[]).length?navLeaf(`${det.id}-enhancements`,'Enhancement',3):'')
   +((det.stratagems||[]).length?navLeaf(`${det.id}-stratagems`,'Stratagems',3):'')
 )).join('');
@@ -271,7 +283,7 @@ const stratagemCard=(item,det)=>{const eligibility=config.legacyRelatedRuleAttri
 const dependencyDetachmentSourceLink=det=>`<a class="source-link" href="../${esc(det.dependencyBook)}/sources/${esc(det.dependencySourceFile)}#page=${det.sourcePages[0]}">${esc(det.dependencyTitle)} Faction Pack v${esc(det.dependencySourceVersion)} · p. ${det.sourcePages.join('–')}</a>`;
 const detachmentHtml=detachments.map(det=>{
   const official=Boolean(det.sourcePages),enhancements=(det.enhancements||[]).map(item=>enhancementCard(item,det)).join(''),stratagems=(det.stratagems||[]).map(item=>stratagemCard(item,det)).join('');
-  const rule=det.rule?`<article class="rule-card surface"><h4><button class="term-button" data-term="${addTerm(det.rule.title,det.rule.text,`detachment-${det.id}`,'detachment-rule','',det.dependencyBook||config.id)}">${esc(det.rule.title)}</button></h4><p data-source-field="text">${esc(det.rule.text).replace(/\n/g,'<br>')}</p></article>`:`<article class="rule-card surface source-warning"><h4>Codex source required</h4><p>This Detachment is current, but its complete rule and Stratagem text is not present in Faction Pack v${esc(pack.meta.version)}. It is not reproduced here until the Codex layer is verified.</p></article>`;
+  const rule=det.rule?detachmentRuleEntries(det).map(({rule,anchor,additional})=>`<article class="rule-card surface"${additional?` id="${esc(anchor)}" data-track="${esc(anchor)}"`:''}><h4><button class="term-button" data-term="${addTerm(rule.title,rule.text,additional?anchor:`detachment-${det.id}`,'detachment-rule','',det.dependencyBook||config.id)}">${esc(rule.title)}</button></h4><p data-source-field="text">${esc(rule.text).replace(/\n/g,'<br>')}</p></article>`).join(''):`<article class="rule-card surface source-warning"><h4>Codex source required</h4><p>This Detachment is current, but its complete rule and Stratagem text is not present in Faction Pack v${esc(pack.meta.version)}. It is not reproduced here until the Codex layer is verified.</p></article>`;
   const ruleSection=`<section class="detachment-part" id="${esc(det.id)}-rule" data-track="${esc(det.id)}-rule"><h4 class="subheading">Detachment Rule</h4>${rule}</section>`;
   const enhancementSection=enhancements?`<section class="detachment-part" id="${esc(det.id)}-enhancements" data-track="${esc(det.id)}-enhancements"><h4 class="subheading">Enhancements</h4><div class="detachment-grid">${enhancements}</div></section>`:'';
   const stratagemSection=stratagems?`<section class="detachment-part" id="${esc(det.id)}-stratagems" data-track="${esc(det.id)}-stratagems"><h4 class="subheading">Stratagems</h4><div class="detachment-grid stratagem-grid">${stratagems}</div></section>`:'';
@@ -308,12 +320,13 @@ const unitCard=unit=>{
   const leader=(unit.relations?.leader||[]).length?`<section class="unit-part" id="${parts.leader}" data-source-field="relations.leader"><h4>Leader</h4><p>This model can be attached to: ${unit.relations.leader.map(relationLabel).join('; ')}.</p></section>`:'';
   const support=parts.support?`<section class="unit-part" id="${parts.support}" data-source-field="relations.support"><h4>Support</h4><p>This unit can join: ${unit.relations.support.map(relationLabel).join('; ')}.</p></section>`:'';
   const transport=parts.transport?`<section class="unit-part" id="${parts.transport}" data-source-field="relations.transport"><h4>Transport</h4>${unit.relations.transport.map(item=>`<p>${esc(item)}</p>`).join('')}</section>`:'';
+  const modelKeywords=canonicalRosterModelsFor(unit).filter(model=>model.intrinsicKeywords?.length).map(model=>`<p class="model-keywords" data-roster-model-id="${esc(model.id)}"><button class="term-button" data-term="${addTerm(model.title,`${model.title} only: ${model.intrinsicKeywords.join(', ')}.`,`${base}-keywords`,'model-keywords',unit.id,unit.dependencyBook||config.id)}">${esc(model.title)}</button> only: ${model.intrinsicKeywords.map(keyword=>`<span data-model-keyword="${esc(keyword)}">${esc(keyword)}</span>`).join(', ')}</p>`).join('');
   const sourceAbilities=[...(unit.abilities||[]),...(unit.wargearAbilities||[])];
   const deadlyDemise=sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(item.text||''));
   const abilityNames=sourceAbilities.map(item=>/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title);
   const relations=relationGraphs.get(unit.id),canAttach=Object.values(relations).some(items=>items.length);
   const ruleFacts={id:unit.id,unitId:unit.id,slug:base,keywords:unit.keywords||[],intrinsicKeywords:unit.keywords||[],abilities:[...new Set(abilityNames)],termIds:[...new Set([...sourceAbilities,...(unit.weapons||[])].map(item=>item.termId).filter(Boolean))],epic:(unit.keywords||[]).some(item=>titleKey(item)==='epic hero'),deadlyDemise,attached:canAttach?null:false,attachmentKnown:!canAttach,characterCount:(unit.keywords||[]).some(item=>titleKey(item)==='character')?1:0,twoCharacters:null,warlord:null,relations};
-  return`<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)} · ${esc(unit.sourceLayer)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${esc(pointsSummary||'POINTS PENDING')}</div></div>${unitSourceState(unit)}<div class="local-nav">${tabs}</div><section class="unit-part" id="${parts.profile}"><h4>Profile & Weapons</h4>${pointsPanel}${statline(unit)}${weaponTables(unit)}</section><section class="unit-part" id="${parts.abilities}"><h4>Abilities</h4>${compactAbilities}<div class="ability-list">${specific.map(item=>`<article class="ability" data-source-field="abilities.${esc(slug(item.title))}"><h5><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.text?`<p data-source-field="text">${esc(item.text)}</p>`:''}</article>`).join('')}</div></section>${wargearAbilitySection}<section class="unit-part" id="${parts.composition}"><h4>Composition & Wargear</h4>${composition}${wargear}${unit.paidWargear?.length?`<h5>Paid wargear</h5><ul>${unit.paidWargear.map(item=>`<li>${esc(item.name)} · +${item.value} pts</li>`).join('')}</ul>`:''}</section>${leader}${support}${transport}<section class="unit-part" id="${parts.keywords}"><h4>Keywords</h4><div class="keyword-list">${(unit.keywords||[]).map(item=>`<span data-source-field="keywords.${esc(slug(item))}">${esc(item)}</span>`).join('')}</div></section>${unit.sourcePages?`<p class="source">${unitSourceLink(unit)}</p>`:''}</article>`;
+  return`<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)} · ${esc(unit.sourceLayer)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${esc(pointsSummary||'POINTS PENDING')}</div></div>${unitSourceState(unit)}<div class="local-nav">${tabs}</div><section class="unit-part" id="${parts.profile}"><h4>Profile & Weapons</h4>${pointsPanel}${statline(unit)}${weaponTables(unit)}</section><section class="unit-part" id="${parts.abilities}"><h4>Abilities</h4>${compactAbilities}<div class="ability-list">${specific.map(item=>`<article class="ability" data-source-field="abilities.${esc(slug(item.title))}"><h5><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.text?`<p data-source-field="text">${esc(item.text)}</p>`:''}</article>`).join('')}</div></section>${wargearAbilitySection}<section class="unit-part" id="${parts.composition}"><h4>Composition & Wargear</h4>${composition}${wargear}${unit.paidWargear?.length?`<h5>Paid wargear</h5><ul>${unit.paidWargear.map(item=>`<li>${esc(item.name)} · +${item.value} pts</li>`).join('')}</ul>`:''}</section>${leader}${support}${transport}<section class="unit-part" id="${parts.keywords}"><h4>Keywords</h4><div class="keyword-list">${(unit.keywords||[]).map(item=>`<span data-source-field="keywords.${esc(slug(item))}">${esc(item)}</span>`).join('')}</div>${modelKeywords}</section>${unit.sourcePages?`<p class="source">${unitSourceLink(unit)}</p>`:''}</article>`;
 };
 const datasheetHtml=groupedDependencyDatasheets?datasheetLayers.map(layer=>tracked(layer.id,layer.title,`<p class="eyebrow">${layer.kind==='shared'?'Shared Space Marines':'Dark Angels publication-owned'} · ${layer.units.length} datasheets</p>${layer.categories.map(group=>tracked(group.id,group.title,group.units.map(unitCard).join(''))).join('')}`,'datasheet-source-group')).join(''):categories.map(group=>tracked(group.id,group.title,group.units.map(unitCard).join(''))).join('');
 const armyRuleSourceLink=item=>item.source==='dependency'?`<a class="source-link" href="../${esc(item.sourceBook)}/${esc(item.sourceFile)}#page=${item.sourcePages[0]}">${esc(item.sourceBook)} Faction Pack v${esc(item.sourceVersion)} · p. ${item.sourcePages.join('–')}</a>`:item.source==='faction-pack'?sourceLink(item.sourcePages):item.source==='datasheet'?'<span class="source-link">Current structured Datasheet evidence</span>':codexSourceLink();

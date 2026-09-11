@@ -3727,6 +3727,11 @@
       ],
       "abilities": [
         {
+          "title": "Choice Samples",
+          "text": "While this unit’s Garreon the Corpsemaster is on the battlefield, in your Command phase, select one of the following: you can return 1 destroyed model (excluding Character models) to this unit, or, if one or more Heretic Astartes Infantry units from your army are below Starting Strength and within 3\" of this unit, you gain 1CP.",
+          "abilityClass": "datasheet"
+        },
+        {
           "title": "Fleet Command",
           "text": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield) select up to three Heretic Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
           "abilityClass": "datasheet"
@@ -3771,6 +3776,9 @@
           "max": 1,
           "models": [
             "Garlon Souleater"
+          ],
+          "intrinsicKeywords": [
+            "PSYKER"
           ]
         },
         {

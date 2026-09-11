@@ -44,242 +44,81 @@
         "rule": "detachment-cabal-of-chaos"
       }
     },
-    "chaos-space-marines-detachment-rule-rain-of-ruin": {
-      "termId": "chaos-space-marines-detachment-rule-rain-of-ruin",
+    "chaos-space-marines-detachment-rule-desperate-devotion": {
+      "termId": "chaos-space-marines-detachment-rule-desperate-devotion",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-detachment-rule-rain-of-ruin",
-        "rule": "detachment-devotees-of-destruction"
+        "glossary": "glossary-chaos-space-marines-detachment-rule-desperate-devotion",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-enhancement-pact-of-destruction": {
-      "termId": "chaos-space-marines-enhancement-pact-of-destruction",
+    "chaos-space-marines-enhancement-amulet-of-tainted-vigour": {
+      "termId": "chaos-space-marines-enhancement-amulet-of-tainted-vigour",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-pact-of-destruction",
-        "rule": "detachment-devotees-of-destruction"
+        "glossary": "glossary-chaos-space-marines-enhancement-amulet-of-tainted-vigour",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-enhancement-eye-of-oblivion": {
-      "termId": "chaos-space-marines-enhancement-eye-of-oblivion",
+    "chaos-space-marines-enhancement-cultists-brand": {
+      "termId": "chaos-space-marines-enhancement-cultists-brand",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-eye-of-oblivion",
-        "rule": "detachment-devotees-of-destruction"
+        "glossary": "glossary-chaos-space-marines-enhancement-cultists-brand",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-stratagem-ruinations-bounty": {
-      "termId": "chaos-space-marines-stratagem-ruinations-bounty",
+    "chaos-space-marines-enhancement-incendiary-goad": {
+      "termId": "chaos-space-marines-enhancement-incendiary-goad",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-ruinations-bounty",
-        "rule": "detachment-devotees-of-destruction"
+        "glossary": "glossary-chaos-space-marines-enhancement-incendiary-goad",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-stratagem-snare-of-fire": {
-      "termId": "chaos-space-marines-stratagem-snare-of-fire",
+    "chaos-space-marines-enhancement-warped-foresight": {
+      "termId": "chaos-space-marines-enhancement-warped-foresight",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-snare-of-fire",
-        "rule": "detachment-devotees-of-destruction"
+        "glossary": "glossary-chaos-space-marines-enhancement-warped-foresight",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-stratagem-undying-hatred": {
-      "termId": "chaos-space-marines-stratagem-undying-hatred",
+    "chaos-space-marines-stratagem-chosen-for-glory": {
+      "termId": "chaos-space-marines-stratagem-chosen-for-glory",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred",
-        "rule": "detachment-devotees-of-destruction"
+        "glossary": "glossary-chaos-space-marines-stratagem-chosen-for-glory",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-detachment-rule-prey-on-the-weak": {
-      "termId": "chaos-space-marines-detachment-rule-prey-on-the-weak",
+    "chaos-space-marines-stratagem-selfless-demise": {
+      "termId": "chaos-space-marines-stratagem-selfless-demise",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-detachment-rule-prey-on-the-weak",
-        "rule": "detachment-murdertalon-raiders"
+        "glossary": "glossary-chaos-space-marines-stratagem-selfless-demise",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-enhancement-shadowcowl-talisman": {
-      "termId": "chaos-space-marines-enhancement-shadowcowl-talisman",
+    "chaos-space-marines-stratagem-infernal-sacrifice": {
+      "termId": "chaos-space-marines-stratagem-infernal-sacrifice",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-shadowcowl-talisman",
-        "rule": "detachment-murdertalon-raiders"
+        "glossary": "glossary-chaos-space-marines-stratagem-infernal-sacrifice",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-enhancement-pact-of-cursed-pinions": {
-      "termId": "chaos-space-marines-enhancement-pact-of-cursed-pinions",
+    "chaos-space-marines-stratagem-crazed-focus": {
+      "termId": "chaos-space-marines-stratagem-crazed-focus",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-pact-of-cursed-pinions",
-        "rule": "detachment-murdertalon-raiders"
+        "glossary": "glossary-chaos-space-marines-stratagem-crazed-focus",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-stratagem-plunging-talons": {
-      "termId": "chaos-space-marines-stratagem-plunging-talons",
+    "chaos-space-marines-stratagem-reckless-haste": {
+      "termId": "chaos-space-marines-stratagem-reckless-haste",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-plunging-talons",
-        "rule": "detachment-murdertalon-raiders"
+        "glossary": "glossary-chaos-space-marines-stratagem-reckless-haste",
+        "rule": "detachment-chaos-cult"
       }
     },
-    "chaos-space-marines-stratagem-raking-pass": {
-      "termId": "chaos-space-marines-stratagem-raking-pass",
+    "chaos-space-marines-stratagem-mortal-thralls": {
+      "termId": "chaos-space-marines-stratagem-mortal-thralls",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-raking-pass",
-        "rule": "detachment-murdertalon-raiders"
-      }
-    },
-    "chaos-space-marines-stratagem-warp-twisted-terrors": {
-      "termId": "chaos-space-marines-stratagem-warp-twisted-terrors",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-warp-twisted-terrors",
-        "rule": "detachment-murdertalon-raiders"
-      }
-    },
-    "chaos-space-marines-detachment-rule-warp-portals": {
-      "termId": "chaos-space-marines-detachment-rule-warp-portals",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-detachment-rule-warp-portals",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-enhancement-infernal-fulgurite": {
-      "termId": "chaos-space-marines-enhancement-infernal-fulgurite",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-infernal-fulgurite",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-enhancement-eye-of-the-warp": {
-      "termId": "chaos-space-marines-enhancement-eye-of-the-warp",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-eye-of-the-warp",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-enhancement-akshurs-binding-runes": {
-      "termId": "chaos-space-marines-enhancement-akshurs-binding-runes",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-akshurs-binding-runes",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-enhancement-tzagulla": {
-      "termId": "chaos-space-marines-enhancement-tzagulla",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-tzagulla",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-stratagem-empyric-dislocation": {
-      "termId": "chaos-space-marines-stratagem-empyric-dislocation",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-empyric-dislocation",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-stratagem-warp-tainted": {
-      "termId": "chaos-space-marines-stratagem-warp-tainted",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-warp-tainted",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-stratagem-armour-of-corruption": {
-      "termId": "chaos-space-marines-stratagem-armour-of-corruption",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-armour-of-corruption",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-stratagem-siegebreaker-strike": {
-      "termId": "chaos-space-marines-stratagem-siegebreaker-strike",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-siegebreaker-strike",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-stratagem-warp-flicker": {
-      "termId": "chaos-space-marines-stratagem-warp-flicker",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-warp-flicker",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-stratagem-portal-of-spite": {
-      "termId": "chaos-space-marines-stratagem-portal-of-spite",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-portal-of-spite",
-        "rule": "detachment-warpstrike-champions"
-      }
-    },
-    "chaos-space-marines-detachment-rule-soul-forge-boons": {
-      "termId": "chaos-space-marines-detachment-rule-soul-forge-boons",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-detachment-rule-soul-forge-boons",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-enhancement-wyredjinn": {
-      "termId": "chaos-space-marines-enhancement-wyredjinn",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-wyredjinn",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-enhancement-cybinfernal-font": {
-      "termId": "chaos-space-marines-enhancement-cybinfernal-font",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-cybinfernal-font",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-enhancement-mark-of-the-soul-forges": {
-      "termId": "chaos-space-marines-enhancement-mark-of-the-soul-forges",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-mark-of-the-soul-forges",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-enhancement-crown-of-worms": {
-      "termId": "chaos-space-marines-enhancement-crown-of-worms",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-crown-of-worms",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-stratagem-touch-of-the-arkifane": {
-      "termId": "chaos-space-marines-stratagem-touch-of-the-arkifane",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-touch-of-the-arkifane",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-stratagem-biomechanoid-regeneration": {
-      "termId": "chaos-space-marines-stratagem-biomechanoid-regeneration",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-biomechanoid-regeneration",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-stratagem-balefire-boon": {
-      "termId": "chaos-space-marines-stratagem-balefire-boon",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-balefire-boon",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-stratagem-forge-fire-surge": {
-      "termId": "chaos-space-marines-stratagem-forge-fire-surge",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-forge-fire-surge",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-stratagem-soul-tally-offering": {
-      "termId": "chaos-space-marines-stratagem-soul-tally-offering",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-soul-tally-offering",
-        "rule": "detachment-cult-of-the-arkifane"
-      }
-    },
-    "chaos-space-marines-stratagem-unholy-fortitude": {
-      "termId": "chaos-space-marines-stratagem-unholy-fortitude",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-unholy-fortitude",
-        "rule": "detachment-cult-of-the-arkifane"
+        "glossary": "glossary-chaos-space-marines-stratagem-mortal-thralls",
+        "rule": "detachment-chaos-cult"
       }
     },
     "chaos-space-marines-detachment-rule-experimental-augmentations": {
@@ -359,312 +198,81 @@
         "rule": "detachment-creations-of-bile"
       }
     },
-    "chaos-space-marines-detachment-rule-terror-made-manifest": {
-      "termId": "chaos-space-marines-detachment-rule-terror-made-manifest",
+    "chaos-space-marines-detachment-rule-soul-forge-boons": {
+      "termId": "chaos-space-marines-detachment-rule-soul-forge-boons",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-detachment-rule-terror-made-manifest",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-detachment-rule-soul-forge-boons",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-enhancement-greyveil-hex": {
-      "termId": "chaos-space-marines-enhancement-greyveil-hex",
+    "chaos-space-marines-enhancement-wyredjinn": {
+      "termId": "chaos-space-marines-enhancement-wyredjinn",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-greyveil-hex",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-enhancement-wyredjinn",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-enhancement-warp-fuelled-thrusters": {
-      "termId": "chaos-space-marines-enhancement-warp-fuelled-thrusters",
+    "chaos-space-marines-enhancement-cybinfernal-font": {
+      "termId": "chaos-space-marines-enhancement-cybinfernal-font",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-enhancement-cybinfernal-font",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-enhancement-terrorglut-parasite": {
-      "termId": "chaos-space-marines-enhancement-terrorglut-parasite",
+    "chaos-space-marines-enhancement-mark-of-the-soul-forges": {
+      "termId": "chaos-space-marines-enhancement-mark-of-the-soul-forges",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-terrorglut-parasite",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-enhancement-mark-of-the-soul-forges",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-enhancement-sorrowscent-vulture": {
-      "termId": "chaos-space-marines-enhancement-sorrowscent-vulture",
+    "chaos-space-marines-enhancement-crown-of-worms": {
+      "termId": "chaos-space-marines-enhancement-crown-of-worms",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-sorrowscent-vulture",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-enhancement-crown-of-worms",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-stratagem-talons-sunk-deep": {
-      "termId": "chaos-space-marines-stratagem-talons-sunk-deep",
+    "chaos-space-marines-stratagem-touch-of-the-arkifane": {
+      "termId": "chaos-space-marines-stratagem-touch-of-the-arkifane",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-talons-sunk-deep",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-stratagem-touch-of-the-arkifane",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-stratagem-malicious-surge": {
-      "termId": "chaos-space-marines-stratagem-malicious-surge",
+    "chaos-space-marines-stratagem-biomechanoid-regeneration": {
+      "termId": "chaos-space-marines-stratagem-biomechanoid-regeneration",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-malicious-surge",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-stratagem-biomechanoid-regeneration",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-stratagem-prey-on-the-weak": {
-      "termId": "chaos-space-marines-stratagem-prey-on-the-weak",
+    "chaos-space-marines-stratagem-balefire-boon": {
+      "termId": "chaos-space-marines-stratagem-balefire-boon",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-prey-on-the-weak",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-stratagem-balefire-boon",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-stratagem-relentless-terror": {
-      "termId": "chaos-space-marines-stratagem-relentless-terror",
+    "chaos-space-marines-stratagem-forge-fire-surge": {
+      "termId": "chaos-space-marines-stratagem-forge-fire-surge",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-relentless-terror",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-stratagem-forge-fire-surge",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-stratagem-sadistic-display": {
-      "termId": "chaos-space-marines-stratagem-sadistic-display",
+    "chaos-space-marines-stratagem-soul-tally-offering": {
+      "termId": "chaos-space-marines-stratagem-soul-tally-offering",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-sadistic-display",
-        "rule": "detachment-nightmare-hunt"
+        "glossary": "glossary-chaos-space-marines-stratagem-soul-tally-offering",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
-    "chaos-space-marines-stratagem-horrific-incursion": {
-      "termId": "chaos-space-marines-stratagem-horrific-incursion",
+    "chaos-space-marines-stratagem-unholy-fortitude": {
+      "termId": "chaos-space-marines-stratagem-unholy-fortitude",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-horrific-incursion",
-        "rule": "detachment-nightmare-hunt"
-      }
-    },
-    "chaos-space-marines-detachment-rule-tyrannical-motivation": {
-      "termId": "chaos-space-marines-detachment-rule-tyrannical-motivation",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-detachment-rule-tyrannical-motivation",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-enhancement-voice-of-the-tyrant": {
-      "termId": "chaos-space-marines-enhancement-voice-of-the-tyrant",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-voice-of-the-tyrant",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-enhancement-raid-leader": {
-      "termId": "chaos-space-marines-enhancement-raid-leader",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-raid-leader",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-enhancement-dread-reputation": {
-      "termId": "chaos-space-marines-enhancement-dread-reputation",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-dread-reputation",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-enhancement-eager-for-bloodshed": {
-      "termId": "chaos-space-marines-enhancement-eager-for-bloodshed",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-eager-for-bloodshed",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-stratagem-hardened-killers": {
-      "termId": "chaos-space-marines-stratagem-hardened-killers",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-hardened-killers",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-stratagem-reavers-flurry": {
-      "termId": "chaos-space-marines-stratagem-reavers-flurry",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-reavers-flurry",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-stratagem-at-the-tyrants-command": {
-      "termId": "chaos-space-marines-stratagem-at-the-tyrants-command",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-at-the-tyrants-command",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-stratagem-to-the-favoured-the-spoils": {
-      "termId": "chaos-space-marines-stratagem-to-the-favoured-the-spoils",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-to-the-favoured-the-spoils",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-stratagem-seize-the-prize": {
-      "termId": "chaos-space-marines-stratagem-seize-the-prize",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-seize-the-prize",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-stratagem-encircling-surge": {
-      "termId": "chaos-space-marines-stratagem-encircling-surge",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-encircling-surge",
-        "rule": "detachment-huron-s-marauders"
-      }
-    },
-    "chaos-space-marines-detachment-rule-slaves-to-none": {
-      "termId": "chaos-space-marines-detachment-rule-slaves-to-none",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-detachment-rule-slaves-to-none",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-enhancement-weaponised-hatred": {
-      "termId": "chaos-space-marines-enhancement-weaponised-hatred",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-weaponised-hatred",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-enhancement-eyes-of-the-hunter": {
-      "termId": "chaos-space-marines-enhancement-eyes-of-the-hunter",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-eyes-of-the-hunter",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-enhancement-fratricidal-trophies": {
-      "termId": "chaos-space-marines-enhancement-fratricidal-trophies",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-fratricidal-trophies",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-enhancement-empyric-symbiote": {
-      "termId": "chaos-space-marines-enhancement-empyric-symbiote",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-empyric-symbiote",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-stratagem-never-outgunned": {
-      "termId": "chaos-space-marines-stratagem-never-outgunned",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-never-outgunned",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-stratagem-renegade-claim": {
-      "termId": "chaos-space-marines-stratagem-renegade-claim",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-renegade-claim",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-stratagem-vengeful-destruction": {
-      "termId": "chaos-space-marines-stratagem-vengeful-destruction",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-vengeful-destruction",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-stratagem-corrupted-munitions": {
-      "termId": "chaos-space-marines-stratagem-corrupted-munitions",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-corrupted-munitions",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-stratagem-undying-hatred-2": {
-      "termId": "chaos-space-marines-stratagem-undying-hatred-2",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred-2",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-stratagem-reavers-reaction": {
-      "termId": "chaos-space-marines-stratagem-reavers-reaction",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-reavers-reaction",
-        "rule": "detachment-renegade-warband"
-      }
-    },
-    "chaos-space-marines-detachment-rule-desperate-devotion": {
-      "termId": "chaos-space-marines-detachment-rule-desperate-devotion",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-detachment-rule-desperate-devotion",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-enhancement-amulet-of-tainted-vigour": {
-      "termId": "chaos-space-marines-enhancement-amulet-of-tainted-vigour",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-amulet-of-tainted-vigour",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-enhancement-cultists-brand": {
-      "termId": "chaos-space-marines-enhancement-cultists-brand",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-cultists-brand",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-enhancement-incendiary-goad": {
-      "termId": "chaos-space-marines-enhancement-incendiary-goad",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-incendiary-goad",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-enhancement-warped-foresight": {
-      "termId": "chaos-space-marines-enhancement-warped-foresight",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-warped-foresight",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-stratagem-chosen-for-glory": {
-      "termId": "chaos-space-marines-stratagem-chosen-for-glory",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-chosen-for-glory",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-stratagem-selfless-demise": {
-      "termId": "chaos-space-marines-stratagem-selfless-demise",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-selfless-demise",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-stratagem-infernal-sacrifice": {
-      "termId": "chaos-space-marines-stratagem-infernal-sacrifice",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-infernal-sacrifice",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-stratagem-crazed-focus": {
-      "termId": "chaos-space-marines-stratagem-crazed-focus",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-crazed-focus",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-stratagem-reckless-haste": {
-      "termId": "chaos-space-marines-stratagem-reckless-haste",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-reckless-haste",
-        "rule": "detachment-chaos-cult"
-      }
-    },
-    "chaos-space-marines-stratagem-mortal-thralls": {
-      "termId": "chaos-space-marines-stratagem-mortal-thralls",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-mortal-thralls",
-        "rule": "detachment-chaos-cult"
+        "glossary": "glossary-chaos-space-marines-stratagem-unholy-fortitude",
+        "rule": "detachment-cult-of-the-arkifane"
       }
     },
     "chaos-space-marines-detachment-rule-masters-of-misdirection": {
@@ -744,6 +352,48 @@
         "rule": "detachment-deceptors"
       }
     },
+    "chaos-space-marines-detachment-rule-rain-of-ruin": {
+      "termId": "chaos-space-marines-detachment-rule-rain-of-ruin",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-detachment-rule-rain-of-ruin",
+        "rule": "detachment-devotees-of-destruction"
+      }
+    },
+    "chaos-space-marines-enhancement-pact-of-destruction": {
+      "termId": "chaos-space-marines-enhancement-pact-of-destruction",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-pact-of-destruction",
+        "rule": "detachment-devotees-of-destruction"
+      }
+    },
+    "chaos-space-marines-enhancement-eye-of-oblivion": {
+      "termId": "chaos-space-marines-enhancement-eye-of-oblivion",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-eye-of-oblivion",
+        "rule": "detachment-devotees-of-destruction"
+      }
+    },
+    "chaos-space-marines-stratagem-ruinations-bounty": {
+      "termId": "chaos-space-marines-stratagem-ruinations-bounty",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-ruinations-bounty",
+        "rule": "detachment-devotees-of-destruction"
+      }
+    },
+    "chaos-space-marines-stratagem-snare-of-fire": {
+      "termId": "chaos-space-marines-stratagem-snare-of-fire",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-snare-of-fire",
+        "rule": "detachment-devotees-of-destruction"
+      }
+    },
+    "chaos-space-marines-stratagem-undying-hatred": {
+      "termId": "chaos-space-marines-stratagem-undying-hatred",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred",
+        "rule": "detachment-devotees-of-destruction"
+      }
+    },
     "chaos-space-marines-detachment-rule-terror-descends-aura": {
       "termId": "chaos-space-marines-detachment-rule-terror-descends-aura",
       "navigation": {
@@ -765,10 +415,10 @@
         "rule": "detachment-dread-talons"
       }
     },
-    "chaos-space-marines-enhancement-warp-fuelled-thrusters-2": {
-      "termId": "chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+    "chaos-space-marines-enhancement-warp-fuelled-thrusters": {
+      "termId": "chaos-space-marines-enhancement-warp-fuelled-thrusters",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+        "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters",
         "rule": "detachment-dread-talons"
       }
     },
@@ -800,10 +450,10 @@
         "rule": "detachment-dread-talons"
       }
     },
-    "chaos-space-marines-stratagem-relentless-terror-2": {
-      "termId": "chaos-space-marines-stratagem-relentless-terror-2",
+    "chaos-space-marines-stratagem-relentless-terror": {
+      "termId": "chaos-space-marines-stratagem-relentless-terror",
       "navigation": {
-        "glossary": "glossary-chaos-space-marines-stratagem-relentless-terror-2",
+        "glossary": "glossary-chaos-space-marines-stratagem-relentless-terror",
         "rule": "detachment-dread-talons"
       }
     },
@@ -896,6 +546,202 @@
       "navigation": {
         "glossary": "glossary-chaos-space-marines-stratagem-siegecraft",
         "rule": "detachment-fellhammer-siege-host"
+      }
+    },
+    "chaos-space-marines-detachment-rule-tyrannical-motivation": {
+      "termId": "chaos-space-marines-detachment-rule-tyrannical-motivation",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-detachment-rule-tyrannical-motivation",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-enhancement-voice-of-the-tyrant": {
+      "termId": "chaos-space-marines-enhancement-voice-of-the-tyrant",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-voice-of-the-tyrant",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-enhancement-raid-leader": {
+      "termId": "chaos-space-marines-enhancement-raid-leader",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-raid-leader",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-enhancement-dread-reputation": {
+      "termId": "chaos-space-marines-enhancement-dread-reputation",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-dread-reputation",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-enhancement-eager-for-bloodshed": {
+      "termId": "chaos-space-marines-enhancement-eager-for-bloodshed",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-eager-for-bloodshed",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-stratagem-hardened-killers": {
+      "termId": "chaos-space-marines-stratagem-hardened-killers",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-hardened-killers",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-stratagem-reavers-flurry": {
+      "termId": "chaos-space-marines-stratagem-reavers-flurry",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-reavers-flurry",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-stratagem-at-the-tyrants-command": {
+      "termId": "chaos-space-marines-stratagem-at-the-tyrants-command",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-at-the-tyrants-command",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-stratagem-to-the-favoured-the-spoils": {
+      "termId": "chaos-space-marines-stratagem-to-the-favoured-the-spoils",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-to-the-favoured-the-spoils",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-stratagem-seize-the-prize": {
+      "termId": "chaos-space-marines-stratagem-seize-the-prize",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-seize-the-prize",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-stratagem-encircling-surge": {
+      "termId": "chaos-space-marines-stratagem-encircling-surge",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-encircling-surge",
+        "rule": "detachment-huron-s-marauders"
+      }
+    },
+    "chaos-space-marines-detachment-rule-prey-on-the-weak": {
+      "termId": "chaos-space-marines-detachment-rule-prey-on-the-weak",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-detachment-rule-prey-on-the-weak",
+        "rule": "detachment-murdertalon-raiders"
+      }
+    },
+    "chaos-space-marines-enhancement-shadowcowl-talisman": {
+      "termId": "chaos-space-marines-enhancement-shadowcowl-talisman",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-shadowcowl-talisman",
+        "rule": "detachment-murdertalon-raiders"
+      }
+    },
+    "chaos-space-marines-enhancement-pact-of-cursed-pinions": {
+      "termId": "chaos-space-marines-enhancement-pact-of-cursed-pinions",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-pact-of-cursed-pinions",
+        "rule": "detachment-murdertalon-raiders"
+      }
+    },
+    "chaos-space-marines-stratagem-plunging-talons": {
+      "termId": "chaos-space-marines-stratagem-plunging-talons",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-plunging-talons",
+        "rule": "detachment-murdertalon-raiders"
+      }
+    },
+    "chaos-space-marines-stratagem-raking-pass": {
+      "termId": "chaos-space-marines-stratagem-raking-pass",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-raking-pass",
+        "rule": "detachment-murdertalon-raiders"
+      }
+    },
+    "chaos-space-marines-stratagem-warp-twisted-terrors": {
+      "termId": "chaos-space-marines-stratagem-warp-twisted-terrors",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-warp-twisted-terrors",
+        "rule": "detachment-murdertalon-raiders"
+      }
+    },
+    "chaos-space-marines-detachment-rule-terror-made-manifest": {
+      "termId": "chaos-space-marines-detachment-rule-terror-made-manifest",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-detachment-rule-terror-made-manifest",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-enhancement-greyveil-hex": {
+      "termId": "chaos-space-marines-enhancement-greyveil-hex",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-greyveil-hex",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-enhancement-warp-fuelled-thrusters-2": {
+      "termId": "chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-enhancement-terrorglut-parasite": {
+      "termId": "chaos-space-marines-enhancement-terrorglut-parasite",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-terrorglut-parasite",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-enhancement-sorrowscent-vulture": {
+      "termId": "chaos-space-marines-enhancement-sorrowscent-vulture",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-sorrowscent-vulture",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-stratagem-talons-sunk-deep": {
+      "termId": "chaos-space-marines-stratagem-talons-sunk-deep",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-talons-sunk-deep",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-stratagem-malicious-surge": {
+      "termId": "chaos-space-marines-stratagem-malicious-surge",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-malicious-surge",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-stratagem-prey-on-the-weak": {
+      "termId": "chaos-space-marines-stratagem-prey-on-the-weak",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-prey-on-the-weak",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-stratagem-relentless-terror-2": {
+      "termId": "chaos-space-marines-stratagem-relentless-terror-2",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-relentless-terror-2",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-stratagem-sadistic-display": {
+      "termId": "chaos-space-marines-stratagem-sadistic-display",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-sadistic-display",
+        "rule": "detachment-nightmare-hunt"
+      }
+    },
+    "chaos-space-marines-stratagem-horrific-incursion": {
+      "termId": "chaos-space-marines-stratagem-horrific-incursion",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-horrific-incursion",
+        "rule": "detachment-nightmare-hunt"
       }
     },
     "chaos-space-marines-detachment-rule-marks-of-chaos": {
@@ -1052,6 +898,83 @@
         "rule": "detachment-renegade-raiders"
       }
     },
+    "chaos-space-marines-detachment-rule-slaves-to-none": {
+      "termId": "chaos-space-marines-detachment-rule-slaves-to-none",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-detachment-rule-slaves-to-none",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-enhancement-weaponised-hatred": {
+      "termId": "chaos-space-marines-enhancement-weaponised-hatred",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-weaponised-hatred",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-enhancement-eyes-of-the-hunter": {
+      "termId": "chaos-space-marines-enhancement-eyes-of-the-hunter",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-eyes-of-the-hunter",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-enhancement-fratricidal-trophies": {
+      "termId": "chaos-space-marines-enhancement-fratricidal-trophies",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-fratricidal-trophies",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-enhancement-empyric-symbiote": {
+      "termId": "chaos-space-marines-enhancement-empyric-symbiote",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-empyric-symbiote",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-stratagem-never-outgunned": {
+      "termId": "chaos-space-marines-stratagem-never-outgunned",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-never-outgunned",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-stratagem-renegade-claim": {
+      "termId": "chaos-space-marines-stratagem-renegade-claim",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-renegade-claim",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-stratagem-vengeful-destruction": {
+      "termId": "chaos-space-marines-stratagem-vengeful-destruction",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-vengeful-destruction",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-stratagem-corrupted-munitions": {
+      "termId": "chaos-space-marines-stratagem-corrupted-munitions",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-corrupted-munitions",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-stratagem-undying-hatred-2": {
+      "termId": "chaos-space-marines-stratagem-undying-hatred-2",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred-2",
+        "rule": "detachment-renegade-warband"
+      }
+    },
+    "chaos-space-marines-stratagem-reavers-reaction": {
+      "termId": "chaos-space-marines-stratagem-reavers-reaction",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-reavers-reaction",
+        "rule": "detachment-renegade-warband"
+      }
+    },
     "chaos-space-marines-detachment-rule-debt-to-the-soul-forge": {
       "termId": "chaos-space-marines-detachment-rule-debt-to-the-soul-forge",
       "navigation": {
@@ -1204,6 +1127,83 @@
       "navigation": {
         "glossary": "glossary-chaos-space-marines-stratagem-millennia-of-experience",
         "rule": "detachment-veterans-of-the-long-war"
+      }
+    },
+    "chaos-space-marines-detachment-rule-warp-portals": {
+      "termId": "chaos-space-marines-detachment-rule-warp-portals",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-detachment-rule-warp-portals",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-enhancement-infernal-fulgurite": {
+      "termId": "chaos-space-marines-enhancement-infernal-fulgurite",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-infernal-fulgurite",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-enhancement-eye-of-the-warp": {
+      "termId": "chaos-space-marines-enhancement-eye-of-the-warp",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-eye-of-the-warp",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-enhancement-akshurs-binding-runes": {
+      "termId": "chaos-space-marines-enhancement-akshurs-binding-runes",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-akshurs-binding-runes",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-enhancement-tzagulla": {
+      "termId": "chaos-space-marines-enhancement-tzagulla",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-enhancement-tzagulla",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-stratagem-empyric-dislocation": {
+      "termId": "chaos-space-marines-stratagem-empyric-dislocation",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-empyric-dislocation",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-stratagem-warp-tainted": {
+      "termId": "chaos-space-marines-stratagem-warp-tainted",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-warp-tainted",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-stratagem-armour-of-corruption": {
+      "termId": "chaos-space-marines-stratagem-armour-of-corruption",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-armour-of-corruption",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-stratagem-siegebreaker-strike": {
+      "termId": "chaos-space-marines-stratagem-siegebreaker-strike",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-siegebreaker-strike",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-stratagem-warp-flicker": {
+      "termId": "chaos-space-marines-stratagem-warp-flicker",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-warp-flicker",
+        "rule": "detachment-warpstrike-champions"
+      }
+    },
+    "chaos-space-marines-stratagem-portal-of-spite": {
+      "termId": "chaos-space-marines-stratagem-portal-of-spite",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-stratagem-portal-of-spite",
+        "rule": "detachment-warpstrike-champions"
       }
     },
     "chaos-space-marines-ability-for-the-dark-gods": {
@@ -2682,6 +2682,18 @@
         ]
       }
     },
+    "chaos-space-marines-ability-supreme-commander": {
+      "termId": "chaos-space-marines-ability-supreme-commander",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-ability-supreme-commander",
+        "rule": "unit-abaddon-the-despoiler",
+        "datasheet": "unit-abaddon-the-despoiler",
+        "statline": "abaddon-the-despoiler-profile",
+        "units": [
+          "unit-abaddon-the-despoiler"
+        ]
+      }
+    },
     "chaos-space-marines-ability-the-warmaster": {
       "termId": "chaos-space-marines-ability-the-warmaster",
       "navigation": {
@@ -3054,6 +3066,18 @@
         ]
       }
     },
+    "chaos-space-marines-ability-choice-samples": {
+      "termId": "chaos-space-marines-ability-choice-samples",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-ability-choice-samples",
+        "rule": "unit-masters-of-the-maelstrom",
+        "datasheet": "unit-masters-of-the-maelstrom",
+        "statline": "masters-of-the-maelstrom-profile",
+        "units": [
+          "unit-masters-of-the-maelstrom"
+        ]
+      }
+    },
     "chaos-space-marines-ability-fleet-command": {
       "termId": "chaos-space-marines-ability-fleet-command",
       "navigation": {
@@ -3070,18 +3094,6 @@
       "termId": "chaos-space-marines-ability-plunder",
       "navigation": {
         "glossary": "glossary-chaos-space-marines-ability-plunder",
-        "rule": "unit-masters-of-the-maelstrom",
-        "datasheet": "unit-masters-of-the-maelstrom",
-        "statline": "masters-of-the-maelstrom-profile",
-        "units": [
-          "unit-masters-of-the-maelstrom"
-        ]
-      }
-    },
-    "chaos-space-marines-ability-masters-of-the-maelstrom": {
-      "termId": "chaos-space-marines-ability-masters-of-the-maelstrom",
-      "navigation": {
-        "glossary": "glossary-chaos-space-marines-ability-masters-of-the-maelstrom",
         "rule": "unit-masters-of-the-maelstrom",
         "datasheet": "unit-masters-of-the-maelstrom",
         "statline": "masters-of-the-maelstrom-profile",
@@ -3411,8 +3423,7 @@
         "statline": "chaos-terminator-squad-profile",
         "units": [
           "unit-chaos-terminator-squad",
-          "unit-chosen",
-          "unit-nemesis-claw"
+          "unit-chosen"
         ]
       }
     },
@@ -3708,6 +3719,18 @@
       "termId": "chaos-space-marines-weapon-nostraman-chainglaive",
       "navigation": {
         "glossary": "glossary-chaos-space-marines-weapon-nostraman-chainglaive",
+        "rule": "unit-nemesis-claw",
+        "datasheet": "unit-nemesis-claw",
+        "statline": "nemesis-claw-profile",
+        "units": [
+          "unit-nemesis-claw"
+        ]
+      }
+    },
+    "chaos-space-marines-weapon-paired-accursed-weapons-3": {
+      "termId": "chaos-space-marines-weapon-paired-accursed-weapons-3",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-weapon-paired-accursed-weapons-3",
         "rule": "unit-nemesis-claw",
         "datasheet": "unit-nemesis-claw",
         "statline": "nemesis-claw-profile",
@@ -4866,6 +4889,18 @@
       "navigation": {
         "glossary": "glossary-chaos-space-marines-detachment-rule-masters-of-misdirection-2",
         "rule": "detachment-deceptors"
+      }
+    },
+    "chaos-space-marines-model-keywords-garlon-souleater": {
+      "termId": "chaos-space-marines-model-keywords-garlon-souleater",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-model-keywords-garlon-souleater",
+        "rule": "masters-of-the-maelstrom-keywords",
+        "datasheet": "unit-masters-of-the-maelstrom",
+        "statline": "masters-of-the-maelstrom-profile",
+        "units": [
+          "unit-masters-of-the-maelstrom"
+        ]
       }
     },
     "chaos-space-marines-army-rule-dark-pacts": {

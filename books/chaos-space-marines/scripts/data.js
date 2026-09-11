@@ -3376,6 +3376,19 @@ window.DG_TERMS={
     "datasheet": "unit-kravek-morne",
     "statline": "kravek-morne-profile"
   },
+  "chaos-space-marines-ability-choice-samples": {
+    "id": "chaos-space-marines-ability-choice-samples",
+    "title": "Choice Samples",
+    "summary": "While this unit’s Garreon the Corpsemaster is on the battlefield, in your Command phase, select one of the following: you can return 1 destroyed model (excluding Character models) to this unit, or, if one or more Heretic Astartes Infantry units from your army are below Starting Strength and within 3\" of this unit, you gain 1CP.",
+    "full": "While this unit’s Garreon the Corpsemaster is on the battlefield, in your Command phase, select one of the following: you can return 1 destroyed model (excluding Character models) to this unit, or, if one or more Heretic Astartes Infantry units from your army are below Starting Strength and within 3\" of this unit, you gain 1CP.",
+    "glossary": "glossary-chaos-space-marines-ability-choice-samples",
+    "rule": "unit-masters-of-the-maelstrom",
+    "units": [
+      "unit-masters-of-the-maelstrom"
+    ],
+    "datasheet": "unit-masters-of-the-maelstrom",
+    "statline": "masters-of-the-maelstrom-profile"
+  },
   "chaos-space-marines-ability-fleet-command": {
     "id": "chaos-space-marines-ability-fleet-command",
     "title": "Fleet Command",
@@ -5338,6 +5351,19 @@ window.DG_TERMS={
     "full": "",
     "glossary": "glossary-chaos-space-marines-detachment-rule-masters-of-misdirection-2",
     "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-model-keywords-garlon-souleater": {
+    "id": "chaos-space-marines-model-keywords-garlon-souleater",
+    "title": "Garlon Souleater",
+    "summary": "Garlon Souleater only: PSYKER.",
+    "full": "Garlon Souleater only: PSYKER.",
+    "glossary": "glossary-chaos-space-marines-model-keywords-garlon-souleater",
+    "rule": "masters-of-the-maelstrom-keywords",
+    "units": [
+      "unit-masters-of-the-maelstrom"
+    ],
+    "datasheet": "unit-masters-of-the-maelstrom",
+    "statline": "masters-of-the-maelstrom-profile"
   },
   "chaos-space-marines-army-rule-dark-pacts": {
     "id": "chaos-space-marines-army-rule-dark-pacts",

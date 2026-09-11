@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {createReaderAnchorValidator} from './reader-path-contract.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const repoRoot=path.resolve(root,'..');
@@ -9,9 +10,10 @@ const aliases=JSON.parse(fs.readFileSync(path.join(root,'aliases.en.json'),'utf8
 const report=JSON.parse(fs.readFileSync(path.join(root,'generated','conflict-report.json'),'utf8'));
 const deathGuardSource=JSON.parse(fs.readFileSync(path.join(repoRoot,'books','death-guard','content','death-guard-rules.en.json'),'utf8'));
 const errors=[];
+const hasAnchor=createReaderAnchorValidator(repoRoot);
 const ids=new Set(Object.keys(registry.terms));
 const presentations=new Set(['atomic','article','profile','reference','metadata']);
-const publicScopes=new Set(['global','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines','blood-angels']);
+const publicScopes=new Set(['global','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels']);
 const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
 function semanticAnomalies(value){
   const text=String(value||''),issues=[];
@@ -35,7 +37,7 @@ function checkFullRulePath(owner,value){
   if(value.startsWith('/')||/^[a-z]+:/i.test(value)||value.includes('..')){errors.push(`${owner}: unsafe fullRulePath ${value}`);return;}
   const [file,anchor='']=value.split('#',2),target=path.join(repoRoot,...file.split('/'));
   if(!fs.existsSync(target)){errors.push(`${owner}: missing fullRulePath file ${value}`);return;}
-  if(anchor&&!fs.readFileSync(target,'utf8').includes(`id="${anchor}"`))errors.push(`${owner}: missing fullRulePath anchor ${value}`);
+  if(anchor&&!hasAnchor(value))errors.push(`${owner}: missing fullRulePath anchor ${value}`);
 }
 for(const [id,term] of Object.entries(registry.terms)){
   if(!publicScopes.has(term.scope))errors.push(`${id}: unpublished scope ${term.scope} leaked into the public registry`);
@@ -77,7 +79,7 @@ for(const entry of deathGuardSource.glossary.filter(entry=>entry.kind==='unit'&&
   if(!target||!unit)errors.push(`${entry.id}: missing Death Guard unit mapping`);
   else if(JSON.stringify(registry.terms[target]?.structured?.points||[])!==JSON.stringify(unit.points||[]))errors.push(`${entry.id}: glossary points differ from the effective datasheet`);
 }
-for(const bookId of ['core-rules','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines','blood-angels']){
+for(const bookId of ['core-rules','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels']){
   const context=JSON.parse(fs.readFileSync(path.join(root,'contexts',`${bookId}.json`),'utf8'));
   for(const [localId,entry] of Object.entries(context.terms)){
     if(!ids.has(aliases[entry.termId]||entry.termId))errors.push(`${bookId}/${localId}: unknown term ${entry.termId}`);

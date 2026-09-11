@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 2595,
+    "terms": 3063,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 167,
-    "duplicateCandidates": 49,
+    "aliasCandidates": 207,
+    "duplicateCandidates": 106,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -972,6 +972,8 @@
       "normalizedTitle": "combi-bolter",
       "termIds": [
         "death-guard-weapon-combi-bolter-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-helbrute",
+        "chaos-space-marines-weapon-combi-bolter",
+        "chaos-space-marines-weapon-combi-bolter-2",
         "emperors-children-weapon-combi-bolter"
       ],
       "status": "review-required"
@@ -980,6 +982,8 @@
       "normalizedTitle": "combi-weapon",
       "termIds": [
         "death-guard-weapon-combi-weapon-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
+        "chaos-space-marines-weapon-combi-weapon",
+        "chaos-space-marines-weapon-combi-weapon-2",
         "emperors-children-weapon-combi-weapon",
         "space-marines-weapon-combi-weapon"
       ],
@@ -989,6 +993,7 @@
       "normalizedTitle": "reaper-autocannon",
       "termIds": [
         "death-guard-weapon-reaper-autocannon-blightlord-terminators",
+        "chaos-space-marines-weapon-reaper-autocannon",
         "emperors-children-weapon-reaper-autocannon"
       ],
       "status": "review-required"
@@ -1004,6 +1009,11 @@
         "adeptus-mechanicus-weapon-close-combat-weapon-3",
         "adeptus-mechanicus-weapon-close-combat-weapon-4",
         "adeptus-mechanicus-weapon-close-combat-weapon-5",
+        "chaos-space-marines-weapon-close-combat-weapon",
+        "chaos-space-marines-weapon-close-combat-weapon-2",
+        "chaos-space-marines-weapon-close-combat-weapon-3",
+        "chaos-space-marines-weapon-close-combat-weapon-4",
+        "chaos-space-marines-weapon-close-combat-weapon-5",
         "emperors-children-weapon-close-combat-weapon",
         "emperors-children-weapon-close-combat-weapon-2",
         "space-marines-weapon-close-combat-weapon",
@@ -1026,6 +1036,7 @@
       "normalizedTitle": "assault-ramp",
       "termIds": [
         "death-guard-ability-assault-ramp-chaos-land-raider",
+        "chaos-space-marines-ability-assault-ramp",
         "emperors-children-ability-assault-ramp",
         "space-marines-ability-assault-ramp"
       ],
@@ -1035,6 +1046,7 @@
       "normalizedTitle": "havoc-launcher",
       "termIds": [
         "death-guard-weapon-havoc-launcher-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
+        "chaos-space-marines-weapon-havoc-launcher",
         "emperors-children-weapon-havoc-launcher"
       ],
       "status": "review-required"
@@ -1043,6 +1055,7 @@
       "normalizedTitle": "soulshatter-lascannon",
       "termIds": [
         "death-guard-weapon-soulshatter-lascannon-chaos-land-raider",
+        "chaos-space-marines-weapon-soulshatter-lascannon",
         "emperors-children-weapon-soulshatter-lascannon"
       ],
       "status": "review-required"
@@ -1051,6 +1064,7 @@
       "normalizedTitle": "twin-heavy-bolter",
       "termIds": [
         "death-guard-weapon-twin-heavy-bolter-chaos-land-raider-helbrute",
+        "chaos-space-marines-weapon-twin-heavy-bolter",
         "emperors-children-weapon-twin-heavy-bolter",
         "space-marines-weapon-twin-heavy-bolter",
         "blood-angels-weapon-twin-heavy-bolter"
@@ -1062,6 +1076,8 @@
       "termIds": [
         "death-guard-weapon-armoured-tracks-chaos-land-raider",
         "death-guard-weapon-armoured-tracks-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-plagueburst-crawler",
+        "chaos-space-marines-weapon-armoured-tracks",
+        "chaos-space-marines-weapon-armoured-tracks-2",
         "emperors-children-weapon-armoured-tracks",
         "emperors-children-weapon-armoured-tracks-2",
         "space-marines-weapon-armoured-tracks",
@@ -1075,6 +1091,8 @@
       "termIds": [
         "death-guard-weapon-heavy-bolter-chaos-predator-annihilator-chaos-predator-destructor",
         "adeptus-mechanicus-weapon-heavy-bolter",
+        "chaos-space-marines-weapon-heavy-bolter",
+        "chaos-space-marines-weapon-heavy-bolter-2",
         "space-marines-weapon-heavy-bolter",
         "space-marines-weapon-heavy-bolter-2",
         "space-marines-weapon-heavy-bolter-3",
@@ -1087,6 +1105,8 @@
       "normalizedTitle": "lascannon",
       "termIds": [
         "death-guard-weapon-lascannon-chaos-predator-annihilator-chaos-predator-destructor",
+        "chaos-space-marines-weapon-lascannon",
+        "chaos-space-marines-weapon-lascannon-2",
         "space-marines-weapon-lascannon",
         "space-marines-weapon-lascannon-2"
       ],
@@ -1096,6 +1116,7 @@
       "normalizedTitle": "predator-twin-lascannon",
       "termIds": [
         "death-guard-weapon-predator-twin-lascannon-chaos-predator-annihilator",
+        "chaos-space-marines-weapon-predator-twin-lascannon",
         "space-marines-weapon-predator-twin-lascannon"
       ],
       "status": "review-required"
@@ -1104,6 +1125,7 @@
       "normalizedTitle": "predator-autocannon",
       "termIds": [
         "death-guard-weapon-predator-autocannon-chaos-predator-destructor",
+        "chaos-space-marines-weapon-predator-autocannon",
         "space-marines-weapon-predator-autocannon"
       ],
       "status": "review-required"
@@ -1121,6 +1143,8 @@
       "normalizedTitle": "hideous-mutations",
       "termIds": [
         "death-guard-weapon-hideous-mutations-chaos-spawn",
+        "chaos-space-marines-weapon-hideous-mutations",
+        "chaos-space-marines-weapon-hideous-mutations-2",
         "emperors-children-weapon-hideous-mutations"
       ],
       "status": "review-required"
@@ -1130,6 +1154,7 @@
       "termIds": [
         "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle",
         "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle-with-wings",
+        "chaos-space-marines-weapon-infernal-cannon",
         "emperors-children-weapon-infernal-cannon"
       ],
       "status": "review-required"
@@ -1138,6 +1163,7 @@
       "normalizedTitle": "hellforged-weapons-strike",
       "termIds": [
         "death-guard-weapon-hellforged-weapons-strike-daemon-prince-of-nurgle-daemon-prince-of-nurgle-with-wings",
+        "chaos-space-marines-weapon-hellforged-weapons-strike",
         "emperors-children-weapon-hellforged-weapons-strike"
       ],
       "status": "review-required"
@@ -1146,6 +1172,7 @@
       "normalizedTitle": "hellforged-weapons-sweep",
       "termIds": [
         "death-guard-weapon-hellforged-weapons-sweep-daemon-prince-of-nurgle-daemon-prince-of-nurgle-with-wings",
+        "chaos-space-marines-weapon-hellforged-weapons-sweep",
         "emperors-children-weapon-hellforged-weapons-sweep"
       ],
       "status": "review-required"
@@ -1171,6 +1198,7 @@
       "termIds": [
         "death-guard-ability-scuttling-walker-defiler",
         "adeptus-mechanicus-datasheet-scuttling-walker",
+        "chaos-space-marines-ability-scuttling-walker",
         "emperors-children-ability-scuttling-walker"
       ],
       "status": "review-required"
@@ -1179,6 +1207,7 @@
       "normalizedTitle": "ectoplasma-destructor",
       "termIds": [
         "death-guard-weapon-ectoplasma-destructor-defiler",
+        "chaos-space-marines-weapon-ectoplasma-destructor",
         "emperors-children-weapon-ectoplasma-destructor"
       ],
       "status": "review-required"
@@ -1187,6 +1216,7 @@
       "normalizedTitle": "excruciator-cannon",
       "termIds": [
         "death-guard-weapon-excruciator-cannon-defiler",
+        "chaos-space-marines-weapon-excruciator-cannon",
         "emperors-children-weapon-excruciator-cannon"
       ],
       "status": "review-required"
@@ -1195,6 +1225,7 @@
       "normalizedTitle": "hades-battle-cannon",
       "termIds": [
         "death-guard-weapon-hades-battle-cannon-defiler",
+        "chaos-space-marines-weapon-hades-battle-cannon",
         "emperors-children-weapon-hades-battle-cannon"
       ],
       "status": "review-required"
@@ -1203,6 +1234,7 @@
       "normalizedTitle": "hades-lascannon",
       "termIds": [
         "death-guard-weapon-hades-lascannon-defiler",
+        "chaos-space-marines-weapon-hades-lascannon",
         "emperors-children-weapon-hades-lascannon"
       ],
       "status": "review-required"
@@ -1211,6 +1243,7 @@
       "normalizedTitle": "heavy-baleflamer",
       "termIds": [
         "death-guard-weapon-heavy-baleflamer-defiler",
+        "chaos-space-marines-weapon-heavy-baleflamer",
         "emperors-children-weapon-heavy-baleflamer"
       ],
       "status": "review-required"
@@ -1219,6 +1252,7 @@
       "normalizedTitle": "heavy-missile-launcher-krak",
       "termIds": [
         "death-guard-weapon-heavy-missile-launcher-krak-defiler",
+        "chaos-space-marines-weapon-heavy-missile-launcher-krak",
         "emperors-children-weapon-heavy-missile-launcher-krak"
       ],
       "status": "review-required"
@@ -1227,6 +1261,7 @@
       "normalizedTitle": "heavy-missile-launcher-frag",
       "termIds": [
         "death-guard-weapon-heavy-missile-launcher-frag-defiler",
+        "chaos-space-marines-weapon-heavy-missile-launcher-frag",
         "emperors-children-weapon-heavy-missile-launcher-frag"
       ],
       "status": "review-required"
@@ -1235,6 +1270,7 @@
       "normalizedTitle": "heavy-reaper-autocannon",
       "termIds": [
         "death-guard-weapon-heavy-reaper-autocannon-defiler",
+        "chaos-space-marines-weapon-heavy-reaper-autocannon",
         "emperors-children-weapon-heavy-reaper-autocannon"
       ],
       "status": "review-required"
@@ -1251,6 +1287,7 @@
       "normalizedTitle": "electroscourge",
       "termIds": [
         "death-guard-weapon-electroscourge-defiler",
+        "chaos-space-marines-weapon-electroscourge",
         "emperors-children-weapon-electroscourge"
       ],
       "status": "review-required"
@@ -1259,6 +1296,7 @@
       "normalizedTitle": "shearing-claws-strike",
       "termIds": [
         "death-guard-weapon-shearing-claws-strike-defiler",
+        "chaos-space-marines-weapon-shearing-claws-strike",
         "emperors-children-weapon-shearing-claws-strike"
       ],
       "status": "review-required"
@@ -1267,6 +1305,7 @@
       "normalizedTitle": "shearing-claws-sweep",
       "termIds": [
         "death-guard-weapon-shearing-claws-sweep-defiler",
+        "chaos-space-marines-weapon-shearing-claws-sweep",
         "emperors-children-weapon-shearing-claws-sweep"
       ],
       "status": "review-required"
@@ -1275,6 +1314,7 @@
       "normalizedTitle": "heavy-flamer",
       "termIds": [
         "death-guard-weapon-heavy-flamer-helbrute",
+        "chaos-space-marines-weapon-heavy-flamer",
         "emperors-children-weapon-heavy-flamer",
         "space-marines-weapon-heavy-flamer",
         "blood-angels-weapon-heavy-flamer"
@@ -1285,6 +1325,8 @@
       "normalizedTitle": "missile-launcher-frag",
       "termIds": [
         "death-guard-weapon-missile-launcher-frag-helbrute-myphitic-blight-hauler",
+        "chaos-space-marines-weapon-missile-launcher-frag",
+        "chaos-space-marines-weapon-missile-launcher-frag-2",
         "space-marines-weapon-missile-launcher-frag",
         "space-marines-weapon-missile-launcher-frag-2"
       ],
@@ -1294,6 +1336,8 @@
       "normalizedTitle": "missile-launcher-krak",
       "termIds": [
         "death-guard-weapon-missile-launcher-krak-helbrute-myphitic-blight-hauler",
+        "chaos-space-marines-weapon-missile-launcher-krak",
+        "chaos-space-marines-weapon-missile-launcher-krak-2",
         "space-marines-weapon-missile-launcher-krak",
         "space-marines-weapon-missile-launcher-krak-2"
       ],
@@ -1303,8 +1347,17 @@
       "normalizedTitle": "multi-melta",
       "termIds": [
         "death-guard-weapon-multi-melta-helbrute-myphitic-blight-hauler",
+        "chaos-space-marines-weapon-multi-melta",
         "space-marines-weapon-multi-melta",
         "space-marines-weapon-multi-melta-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-autocannon",
+      "termIds": [
+        "death-guard-weapon-twin-autocannon-helbrute",
+        "chaos-space-marines-weapon-twin-autocannon"
       ],
       "status": "review-required"
     },
@@ -1312,7 +1365,32 @@
       "normalizedTitle": "twin-lascannon",
       "termIds": [
         "death-guard-weapon-twin-lascannon-helbrute",
+        "chaos-space-marines-weapon-twin-lascannon",
         "space-marines-weapon-twin-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "helbrute-fist",
+      "termIds": [
+        "death-guard-weapon-helbrute-fist-helbrute",
+        "chaos-space-marines-weapon-helbrute-fist"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "helbrute-hammer",
+      "termIds": [
+        "death-guard-weapon-helbrute-hammer-helbrute",
+        "chaos-space-marines-weapon-helbrute-hammer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "power-scourge",
+      "termIds": [
+        "death-guard-weapon-power-scourge-helbrute",
+        "chaos-space-marines-weapon-power-scourge"
       ],
       "status": "review-required"
     },
@@ -1320,6 +1398,8 @@
       "normalizedTitle": "boltgun",
       "termIds": [
         "death-guard-weapon-boltgun-icon-bearer-plague-marines",
+        "chaos-space-marines-weapon-boltgun",
+        "chaos-space-marines-weapon-boltgun-2",
         "emperors-children-weapon-boltgun",
         "space-marines-weapon-boltgun"
       ],
@@ -1330,6 +1410,9 @@
       "termIds": [
         "death-guard-weapon-plasma-pistol-standard-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-standard-noxious-blightbringer-plague-marines-tallyman",
+        "chaos-space-marines-weapon-plasma-pistol-standard",
+        "chaos-space-marines-weapon-plasma-pistol-standard-2",
+        "chaos-space-marines-weapon-plasma-pistol-standard-3",
         "emperors-children-weapon-plasma-pistol-standard",
         "emperors-children-weapon-plasma-pistol-standard-2",
         "space-marines-weapon-plasma-pistol-standard",
@@ -1344,6 +1427,9 @@
         "death-guard-weapon-plasma-pistol-supercharge-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-supercharge-noxious-blightbringer",
         "death-guard-weapon-plasma-pistol-supercharge-plague-marines-tallyman",
+        "chaos-space-marines-weapon-plasma-pistol-supercharge",
+        "chaos-space-marines-weapon-plasma-pistol-supercharge-2",
+        "chaos-space-marines-weapon-plasma-pistol-supercharge-3",
         "emperors-children-weapon-plasma-pistol-supercharge",
         "emperors-children-weapon-plasma-pistol-supercharge-2",
         "space-marines-weapon-plasma-pistol-supercharge",
@@ -1358,6 +1444,10 @@
         "death-guard-weapon-power-fist-lord-of-virulence",
         "death-guard-weapon-power-fist-plague-marines",
         "adeptus-mechanicus-weapon-power-fist",
+        "chaos-space-marines-weapon-power-fist",
+        "chaos-space-marines-weapon-power-fist-2",
+        "chaos-space-marines-weapon-power-fist-3",
+        "chaos-space-marines-weapon-power-fist-4",
         "emperors-children-weapon-power-fist",
         "emperors-children-weapon-power-fist-2",
         "space-marines-weapon-power-fist",
@@ -1374,6 +1464,10 @@
       "normalizedTitle": "bolt-pistol",
       "termIds": [
         "death-guard-weapon-bolt-pistol-malignant-plaguecaster-plague-marines-plague-surgeon",
+        "chaos-space-marines-weapon-bolt-pistol",
+        "chaos-space-marines-weapon-bolt-pistol-2",
+        "chaos-space-marines-weapon-bolt-pistol-3",
+        "chaos-space-marines-weapon-bolt-pistol-4",
         "emperors-children-weapon-bolt-pistol",
         "emperors-children-weapon-bolt-pistol-2",
         "space-marines-weapon-bolt-pistol",
@@ -1386,6 +1480,7 @@
       "normalizedTitle": "fortification",
       "termIds": [
         "death-guard-ability-fortification-miasmic-malignifier",
+        "chaos-space-marines-ability-fortification",
         "space-marines-ability-fortification",
         "tau-empire-ability-fortification"
       ],
@@ -1396,6 +1491,8 @@
       "termIds": [
         "death-guard-weapon-meltagun-plague-marines",
         "adeptus-mechanicus-weapon-meltagun",
+        "chaos-space-marines-weapon-meltagun",
+        "chaos-space-marines-weapon-meltagun-2",
         "emperors-children-weapon-meltagun",
         "space-marines-weapon-meltagun"
       ],
@@ -1405,6 +1502,8 @@
       "normalizedTitle": "plasma-gun-standard",
       "termIds": [
         "death-guard-weapon-plasma-gun-standard-plague-marines",
+        "chaos-space-marines-weapon-plasma-gun-standard",
+        "chaos-space-marines-weapon-plasma-gun-standard-2",
         "emperors-children-weapon-plasma-gun-standard",
         "space-marines-weapon-plasma-gun-standard"
       ],
@@ -1414,6 +1513,8 @@
       "normalizedTitle": "plasma-gun-supercharge",
       "termIds": [
         "death-guard-weapon-plasma-gun-supercharge-plague-marines",
+        "chaos-space-marines-weapon-plasma-gun-supercharge",
+        "chaos-space-marines-weapon-plasma-gun-supercharge-2",
         "emperors-children-weapon-plasma-gun-supercharge",
         "space-marines-weapon-plasma-gun-supercharge"
       ],
@@ -1491,6 +1592,7 @@
       "normalizedTitle": "supreme-commander",
       "termIds": [
         "adeptus-mechanicus-datasheet-supreme-commander",
+        "chaos-space-marines-ability-supreme-commander",
         "emperors-children-ability-supreme-commander",
         "space-marines-ability-supreme-commander",
         "tau-empire-ability-supreme-commander"
@@ -1510,6 +1612,7 @@
       "termIds": [
         "adeptus-mechanicus-weapon-power-weapon",
         "adeptus-mechanicus-weapon-power-weapon-2",
+        "chaos-space-marines-weapon-power-weapon",
         "space-marines-weapon-power-weapon",
         "space-marines-weapon-power-weapon-2",
         "space-marines-weapon-power-weapon-3",
@@ -1571,10 +1674,387 @@
       "normalizedTitle": "damaged-1-4-wounds-remaining",
       "termIds": [
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
+        "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
         "space-marines-ability-damaged-1-4-wounds-remaining",
         "tau-empire-ability-damaged-1-4-wounds-remaining",
         "tyranids-ability-damaged-1-4-wounds-remaining",
         "blood-angels-ability-damaged-1-4-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "surgical-precision",
+      "termIds": [
+        "chaos-space-marines-enhancement-surgical-precision",
+        "space-marines-ability-surgical-precision"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "masters-of-misdirection",
+      "termIds": [
+        "chaos-space-marines-detachment-rule-masters-of-misdirection",
+        "chaos-space-marines-detachment-rule-masters-of-misdirection-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "undying-hatred",
+      "termIds": [
+        "chaos-space-marines-stratagem-undying-hatred",
+        "chaos-space-marines-stratagem-undying-hatred-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "warp-fuelled-thrusters",
+      "termIds": [
+        "chaos-space-marines-enhancement-warp-fuelled-thrusters",
+        "chaos-space-marines-enhancement-warp-fuelled-thrusters-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "relentless-terror",
+      "termIds": [
+        "chaos-space-marines-stratagem-relentless-terror",
+        "chaos-space-marines-stratagem-relentless-terror-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "prey-on-the-weak",
+      "termIds": [
+        "chaos-space-marines-detachment-rule-prey-on-the-weak",
+        "chaos-space-marines-stratagem-prey-on-the-weak"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "feeding-frenzy",
+      "termIds": [
+        "chaos-space-marines-stratagem-feeding-frenzy",
+        "tyranids-ability-feeding-frenzy"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "contemptuous-disregard",
+      "termIds": [
+        "chaos-space-marines-stratagem-contemptuous-disregard",
+        "emperors-children-stratagem-contemptuous-disregard"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "dark-pacts",
+      "termIds": [
+        "chaos-space-marines-ability-dark-pacts",
+        "chaos-space-marines-army-rule-dark-pacts"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "accursed-weapon",
+      "termIds": [
+        "chaos-space-marines-weapon-accursed-weapon",
+        "chaos-space-marines-weapon-accursed-weapon-2",
+        "emperors-children-weapon-accursed-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "astartes-chainsword",
+      "termIds": [
+        "chaos-space-marines-weapon-astartes-chainsword",
+        "space-marines-weapon-astartes-chainsword",
+        "space-marines-weapon-astartes-chainsword-2",
+        "space-marines-weapon-astartes-chainsword-3",
+        "space-marines-weapon-astartes-chainsword-4",
+        "blood-angels-weapon-astartes-chainsword",
+        "blood-angels-weapon-astartes-chainsword-2",
+        "blood-angels-weapon-astartes-chainsword-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "flamer",
+      "termIds": [
+        "chaos-space-marines-weapon-flamer",
+        "space-marines-weapon-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "havoc-autocannon",
+      "termIds": [
+        "chaos-space-marines-weapon-havoc-autocannon",
+        "chaos-space-marines-weapon-havoc-autocannon-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "lord-of-chaos",
+      "termIds": [
+        "chaos-space-marines-ability-lord-of-chaos",
+        "chaos-space-marines-ability-lord-of-chaos-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "chainfist",
+      "termIds": [
+        "chaos-space-marines-weapon-chainfist",
+        "chaos-space-marines-weapon-chainfist-2",
+        "emperors-children-weapon-chainfist",
+        "space-marines-weapon-chainfist",
+        "space-marines-weapon-chainfist-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "paired-accursed-weapons",
+      "termIds": [
+        "chaos-space-marines-weapon-paired-accursed-weapons",
+        "chaos-space-marines-weapon-paired-accursed-weapons-2",
+        "chaos-space-marines-weapon-paired-accursed-weapons-3",
+        "emperors-children-weapon-paired-accursed-weapons"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-lightning-claws",
+      "termIds": [
+        "chaos-space-marines-weapon-twin-lightning-claws",
+        "space-marines-weapon-twin-lightning-claws",
+        "space-marines-weapon-twin-lightning-claws-2",
+        "space-marines-weapon-twin-lightning-claws-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "daemonic-destruction",
+      "termIds": [
+        "chaos-space-marines-ability-daemonic-destruction",
+        "emperors-children-ability-daemonic-destruction"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "baleflamer",
+      "termIds": [
+        "chaos-space-marines-weapon-baleflamer",
+        "emperors-children-weapon-baleflamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "magma-cutter",
+      "termIds": [
+        "chaos-space-marines-weapon-magma-cutter",
+        "chaos-space-marines-weapon-magma-cutter-2",
+        "emperors-children-weapon-magma-cutter"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "trophy-taker",
+      "termIds": [
+        "chaos-space-marines-ability-trophy-taker",
+        "space-marines-ability-trophy-taker"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "power-sword",
+      "termIds": [
+        "chaos-space-marines-weapon-power-sword",
+        "emperors-children-weapon-power-sword",
+        "emperors-children-weapon-power-sword-2",
+        "space-marines-weapon-power-sword"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "force-weapon",
+      "termIds": [
+        "chaos-space-marines-weapon-force-weapon",
+        "emperors-children-weapon-force-weapon",
+        "space-marines-weapon-force-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "self-repair",
+      "termIds": [
+        "chaos-space-marines-ability-self-repair",
+        "space-marines-ability-self-repair"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "talon-of-horus",
+      "termIds": [
+        "chaos-space-marines-weapon-talon-of-horus",
+        "chaos-space-marines-weapon-talon-of-horus-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "cyphers-bolt-pistol",
+      "termIds": [
+        "chaos-space-marines-weapon-cyphers-bolt-pistol",
+        "chaos-space-marines-weapon-cyphers-bolt-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "cyphers-plasma-pistol",
+      "termIds": [
+        "chaos-space-marines-weapon-cyphers-plasma-pistol",
+        "chaos-space-marines-weapon-cyphers-plasma-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hellspear",
+      "termIds": [
+        "chaos-space-marines-weapon-hellspear",
+        "chaos-space-marines-weapon-hellspear-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "force-stave",
+      "termIds": [
+        "chaos-space-marines-weapon-force-stave",
+        "space-marines-weapon-force-stave"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "chainsword",
+      "termIds": [
+        "chaos-space-marines-weapon-chainsword",
+        "chaos-space-marines-weapon-chainsword-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "corrupted-stave",
+      "termIds": [
+        "chaos-space-marines-weapon-corrupted-stave",
+        "chaos-space-marines-weapon-corrupted-stave-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hand-flamer",
+      "termIds": [
+        "chaos-space-marines-weapon-hand-flamer",
+        "space-marines-weapon-hand-flamer",
+        "blood-angels-weapon-hand-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-5-wounds-remaining",
+      "termIds": [
+        "chaos-space-marines-ability-damaged-1-5-wounds-remaining",
+        "emperors-children-ability-damaged-1-5-wounds-remaining",
+        "space-marines-ability-damaged-1-5-wounds-remaining",
+        "tau-empire-ability-damaged-1-5-wounds-remaining",
+        "tau-empire-ability-damaged-1-5-wounds-remaining-2",
+        "tyranids-ability-damaged-1-5-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "annihilator",
+      "termIds": [
+        "chaos-space-marines-ability-annihilator",
+        "space-marines-ability-annihilator"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "destructor",
+      "termIds": [
+        "chaos-space-marines-ability-destructor",
+        "space-marines-ability-destructor"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "siege-shield",
+      "termIds": [
+        "chaos-space-marines-ability-siege-shield",
+        "space-marines-ability-siege-shield"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "demolisher-cannon",
+      "termIds": [
+        "chaos-space-marines-weapon-demolisher-cannon",
+        "space-marines-weapon-demolisher-cannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-6-wounds-remaining",
+      "termIds": [
+        "chaos-space-marines-ability-damaged-1-6-wounds-remaining",
+        "emperors-children-ability-damaged-1-6-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hades-autocannon",
+      "termIds": [
+        "chaos-space-marines-weapon-hades-autocannon",
+        "emperors-children-weapon-hades-autocannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "airborne-predator",
+      "termIds": [
+        "chaos-space-marines-ability-airborne-predator",
+        "emperors-children-ability-airborne-predator",
+        "tyranids-ability-airborne-predator"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "heldrake-claws",
+      "termIds": [
+        "chaos-space-marines-weapon-heldrake-claws",
+        "emperors-children-weapon-heldrake-claws"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "deadly-demise-d6-2",
+      "termIds": [
+        "chaos-space-marines-ability-deadly-demise-d6-2",
+        "tau-empire-ability-deadly-demise-d6-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "maulerfiend-fists",
+      "termIds": [
+        "chaos-space-marines-weapon-maulerfiend-fists",
+        "emperors-children-weapon-maulerfiend-fists"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "lasher-tendrils",
+      "termIds": [
+        "chaos-space-marines-weapon-lasher-tendrils",
+        "emperors-children-weapon-lasher-tendrils"
       ],
       "status": "review-required"
     },
@@ -1619,15 +2099,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "power-sword",
-      "termIds": [
-        "emperors-children-weapon-power-sword",
-        "emperors-children-weapon-power-sword-2",
-        "space-marines-weapon-power-sword"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "screamer-pistol",
       "termIds": [
         "emperors-children-weapon-screamer-pistol",
@@ -1636,46 +2107,10 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "force-weapon",
-      "termIds": [
-        "emperors-children-weapon-force-weapon",
-        "space-marines-weapon-force-weapon"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "assault-vehicle",
       "termIds": [
         "emperors-children-ability-assault-vehicle",
         "space-marines-ability-assault-vehicle"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "chainfist",
-      "termIds": [
-        "emperors-children-weapon-chainfist",
-        "space-marines-weapon-chainfist",
-        "space-marines-weapon-chainfist-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "damaged-1-5-wounds-remaining",
-      "termIds": [
-        "emperors-children-ability-damaged-1-5-wounds-remaining",
-        "space-marines-ability-damaged-1-5-wounds-remaining",
-        "tau-empire-ability-damaged-1-5-wounds-remaining",
-        "tau-empire-ability-damaged-1-5-wounds-remaining-2",
-        "tyranids-ability-damaged-1-5-wounds-remaining"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "airborne-predator",
-      "termIds": [
-        "emperors-children-ability-airborne-predator",
-        "tyranids-ability-airborne-predator"
       ],
       "status": "review-required"
     },
@@ -1805,33 +2240,12 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "hand-flamer",
-      "termIds": [
-        "space-marines-weapon-hand-flamer",
-        "blood-angels-weapon-hand-flamer"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "heavy-bolt-pistol",
       "termIds": [
         "space-marines-weapon-heavy-bolt-pistol",
         "space-marines-weapon-heavy-bolt-pistol-2",
         "blood-angels-weapon-heavy-bolt-pistol",
         "blood-angels-weapon-heavy-bolt-pistol-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "astartes-chainsword",
-      "termIds": [
-        "space-marines-weapon-astartes-chainsword",
-        "space-marines-weapon-astartes-chainsword-2",
-        "space-marines-weapon-astartes-chainsword-3",
-        "space-marines-weapon-astartes-chainsword-4",
-        "blood-angels-weapon-astartes-chainsword",
-        "blood-angels-weapon-astartes-chainsword-2",
-        "blood-angels-weapon-astartes-chainsword-3"
       ],
       "status": "review-required"
     },
@@ -1886,15 +2300,6 @@
         "space-marines-weapon-storm-bolter",
         "space-marines-weapon-storm-bolter-2",
         "blood-angels-weapon-storm-bolter"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "twin-lightning-claws",
-      "termIds": [
-        "space-marines-weapon-twin-lightning-claws",
-        "space-marines-weapon-twin-lightning-claws-2",
-        "space-marines-weapon-twin-lightning-claws-3"
       ],
       "status": "review-required"
     },
@@ -2413,6 +2818,7 @@
     {
       "termIds": [
         "death-guard-ability-assault-ramp-chaos-land-raider",
+        "chaos-space-marines-ability-assault-ramp",
         "emperors-children-ability-assault-ramp",
         "space-marines-ability-assault-ramp"
       ],
@@ -2421,7 +2827,15 @@
     {
       "termIds": [
         "death-guard-ability-scuttling-walker-defiler",
+        "chaos-space-marines-ability-scuttling-walker",
         "emperors-children-ability-scuttling-walker"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "adeptus-mechanicus-weapon-close-combat-weapon",
+        "chaos-space-marines-weapon-close-combat-weapon-3"
       ],
       "status": "review-required"
     },
@@ -2449,6 +2863,7 @@
     {
       "termIds": [
         "adeptus-mechanicus-datasheet-supreme-commander",
+        "chaos-space-marines-ability-supreme-commander",
         "emperors-children-ability-supreme-commander",
         "space-marines-ability-supreme-commander",
         "tau-empire-ability-supreme-commander"
@@ -2458,13 +2873,22 @@
     {
       "termIds": [
         "adeptus-mechanicus-weapon-heavy-bolter",
+        "chaos-space-marines-weapon-heavy-bolter",
         "space-marines-weapon-heavy-bolter-2"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
+        "adeptus-mechanicus-weapon-meltagun",
+        "chaos-space-marines-weapon-meltagun-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
+        "chaos-space-marines-ability-damaged-1-4-wounds-remaining",
         "space-marines-ability-damaged-1-4-wounds-remaining",
         "tau-empire-ability-damaged-1-4-wounds-remaining",
         "tyranids-ability-damaged-1-4-wounds-remaining",
@@ -2474,6 +2898,36 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-detachment-rule-masters-of-misdirection",
+        "chaos-space-marines-detachment-rule-masters-of-misdirection-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-ability-dark-pacts",
+        "chaos-space-marines-army-rule-dark-pacts"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-accursed-weapon",
+        "emperors-children-weapon-accursed-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-astartes-chainsword",
+        "space-marines-weapon-astartes-chainsword",
+        "blood-angels-weapon-astartes-chainsword-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-bolt-pistol-2",
         "emperors-children-weapon-bolt-pistol",
         "blood-angels-weapon-bolt-pistol"
       ],
@@ -2481,6 +2935,7 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-plasma-pistol-standard",
         "emperors-children-weapon-plasma-pistol-standard",
         "space-marines-weapon-plasma-pistol-standard",
         "blood-angels-weapon-plasma-pistol-standard-2"
@@ -2489,6 +2944,7 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-plasma-pistol-supercharge",
         "emperors-children-weapon-plasma-pistol-supercharge",
         "space-marines-weapon-plasma-pistol-supercharge",
         "blood-angels-weapon-plasma-pistol-supercharge-2"
@@ -2497,6 +2953,14 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-boltgun",
+        "space-marines-weapon-boltgun"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-close-combat-weapon",
         "emperors-children-weapon-close-combat-weapon",
         "space-marines-weapon-close-combat-weapon",
         "tau-empire-weapon-close-combat-weapon-3",
@@ -2506,13 +2970,49 @@
     },
     {
       "termIds": [
-        "emperors-children-weapon-close-combat-weapon-2",
-        "space-marines-weapon-close-combat-weapon-5"
+        "chaos-space-marines-weapon-flamer",
+        "space-marines-weapon-flamer"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-lascannon",
+        "space-marines-weapon-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-missile-launcher-frag",
+        "space-marines-weapon-missile-launcher-frag"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-missile-launcher-krak",
+        "space-marines-weapon-missile-launcher-krak"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-plasma-gun-standard",
+        "space-marines-weapon-plasma-gun-standard"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-meltagun",
+        "space-marines-weapon-meltagun"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-power-fist",
         "emperors-children-weapon-power-fist",
         "space-marines-weapon-power-fist-4",
         "blood-angels-weapon-power-fist"
@@ -2521,6 +3021,92 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-plasma-pistol-standard-2",
+        "blood-angels-weapon-plasma-pistol-standard"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-plasma-pistol-supercharge-2",
+        "blood-angels-weapon-plasma-pistol-supercharge"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-twin-lightning-claws",
+        "space-marines-weapon-twin-lightning-claws-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-bolt-pistol-3",
+        "space-marines-weapon-bolt-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-hellforged-weapons-strike",
+        "emperors-children-weapon-hellforged-weapons-strike"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-hellforged-weapons-sweep",
+        "emperors-children-weapon-hellforged-weapons-sweep"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-infernal-cannon",
+        "emperors-children-weapon-infernal-cannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-baleflamer",
+        "emperors-children-weapon-baleflamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-magma-cutter",
+        "emperors-children-weapon-magma-cutter"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-force-weapon",
+        "space-marines-weapon-force-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-combi-bolter-2",
+        "emperors-children-weapon-combi-bolter"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-combi-weapon-2",
+        "emperors-children-weapon-combi-weapon",
+        "space-marines-weapon-combi-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-armoured-tracks",
         "emperors-children-weapon-armoured-tracks",
         "space-marines-weapon-armoured-tracks",
         "blood-angels-weapon-armoured-tracks"
@@ -2529,20 +3115,21 @@
     },
     {
       "termIds": [
-        "emperors-children-weapon-combi-weapon",
-        "space-marines-weapon-combi-weapon"
+        "chaos-space-marines-weapon-havoc-launcher",
+        "emperors-children-weapon-havoc-launcher"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
-        "emperors-children-weapon-chainfist",
-        "space-marines-weapon-chainfist-2"
+        "chaos-space-marines-weapon-hideous-mutations",
+        "emperors-children-weapon-hideous-mutations"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-power-fist-3",
         "emperors-children-weapon-power-fist-2",
         "space-marines-weapon-power-fist",
         "blood-angels-weapon-power-fist-2"
@@ -2551,6 +3138,15 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-chainfist-2",
+        "emperors-children-weapon-chainfist",
+        "space-marines-weapon-chainfist-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-heavy-flamer",
         "emperors-children-weapon-heavy-flamer",
         "space-marines-weapon-heavy-flamer"
       ],
@@ -2558,6 +3154,36 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-reaper-autocannon",
+        "emperors-children-weapon-reaper-autocannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-paired-accursed-weapons-2",
+        "emperors-children-weapon-paired-accursed-weapons"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-power-fist-4",
+        "space-marines-weapon-power-fist-5"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-hand-flamer",
+        "space-marines-weapon-hand-flamer",
+        "blood-angels-weapon-hand-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-ability-damaged-1-5-wounds-remaining",
         "emperors-children-ability-damaged-1-5-wounds-remaining",
         "space-marines-ability-damaged-1-5-wounds-remaining",
         "tau-empire-ability-damaged-1-5-wounds-remaining",
@@ -2567,6 +3193,7 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-armoured-tracks-2",
         "emperors-children-weapon-armoured-tracks-2",
         "space-marines-weapon-armoured-tracks-2"
       ],
@@ -2574,9 +3201,220 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-weapon-soulshatter-lascannon",
+        "emperors-children-weapon-soulshatter-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-twin-heavy-bolter",
         "emperors-children-weapon-twin-heavy-bolter",
         "space-marines-weapon-twin-heavy-bolter",
         "blood-angels-weapon-twin-heavy-bolter"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-predator-twin-lascannon",
+        "space-marines-weapon-predator-twin-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-heavy-bolter-2",
+        "space-marines-weapon-heavy-bolter-4"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-lascannon-2",
+        "space-marines-weapon-lascannon-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-predator-autocannon",
+        "space-marines-weapon-predator-autocannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-ability-siege-shield",
+        "space-marines-ability-siege-shield"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-demolisher-cannon",
+        "space-marines-weapon-demolisher-cannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-ability-damaged-1-6-wounds-remaining",
+        "emperors-children-ability-damaged-1-6-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-shearing-claws-sweep",
+        "emperors-children-weapon-shearing-claws-sweep"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-heavy-missile-launcher-frag",
+        "emperors-children-weapon-heavy-missile-launcher-frag"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-heavy-missile-launcher-krak",
+        "emperors-children-weapon-heavy-missile-launcher-krak"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-electroscourge",
+        "emperors-children-weapon-electroscourge"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-hades-lascannon",
+        "emperors-children-weapon-hades-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-heavy-reaper-autocannon",
+        "emperors-children-weapon-heavy-reaper-autocannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-hades-battle-cannon",
+        "emperors-children-weapon-hades-battle-cannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-ectoplasma-destructor",
+        "emperors-children-weapon-ectoplasma-destructor"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-heavy-baleflamer",
+        "emperors-children-weapon-heavy-baleflamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-excruciator-cannon",
+        "emperors-children-weapon-excruciator-cannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-hades-autocannon",
+        "emperors-children-weapon-hades-autocannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-close-combat-weapon-5",
+        "space-marines-weapon-close-combat-weapon-8"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-missile-launcher-frag-2",
+        "space-marines-weapon-missile-launcher-frag-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-missile-launcher-krak-2",
+        "space-marines-weapon-missile-launcher-krak-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-multi-melta",
+        "space-marines-weapon-multi-melta-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-twin-lascannon",
+        "space-marines-weapon-twin-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-heldrake-claws",
+        "emperors-children-weapon-heldrake-claws"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-ability-deadly-demise-d6-2",
+        "tau-empire-ability-deadly-demise-d6-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-maulerfiend-fists",
+        "emperors-children-weapon-maulerfiend-fists"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-weapon-lasher-tendrils",
+        "emperors-children-weapon-lasher-tendrils"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "chaos-space-marines-ability-fortification",
+        "tau-empire-ability-fortification"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-close-combat-weapon-2",
+        "space-marines-weapon-close-combat-weapon-5"
       ],
       "status": "review-required"
     },
@@ -2618,22 +3456,8 @@
     },
     {
       "termIds": [
-        "space-marines-weapon-hand-flamer",
-        "blood-angels-weapon-hand-flamer"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
         "space-marines-weapon-heavy-bolt-pistol",
         "blood-angels-weapon-heavy-bolt-pistol-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "space-marines-weapon-astartes-chainsword",
-        "blood-angels-weapon-astartes-chainsword-3"
       ],
       "status": "review-required"
     },

@@ -2844,6 +2844,10 @@
         {
           "title": "The Warmaster",
           "text": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability.",
+          "sourceAvailability": {
+            "status": "unavailable",
+            "missing": "verified-option-definitions"
+          },
           "abilityClass": "datasheet"
         },
         {

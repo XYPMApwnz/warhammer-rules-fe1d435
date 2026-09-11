@@ -2400,6 +2400,10 @@
       "rule": {
         "title": "Masters of Misdirection",
         "text": "",
+        "sourceAvailability": {
+          "status": "unavailable",
+          "missing": "verified-rule-body"
+        },
         "provenance": {
           "authority": "secondary",
           "status": "SECONDARY CONSENSUS",

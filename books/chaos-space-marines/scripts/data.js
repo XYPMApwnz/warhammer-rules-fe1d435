@@ -314,8 +314,8 @@ window.DG_TERMS={
   "chaos-space-marines-detachment-rule-masters-of-misdirection": {
     "id": "chaos-space-marines-detachment-rule-masters-of-misdirection",
     "title": "Masters of Misdirection",
-    "summary": "Masters of Misdirection appears in the Chaos Space Marines reference.",
-    "full": "",
+    "summary": "Known rule identity. Verified rule body is unavailable in this publication.",
+    "full": "Known rule identity. Verified rule body is unavailable in this publication.",
     "glossary": "glossary-chaos-space-marines-detachment-rule-masters-of-misdirection",
     "rule": "detachment-deceptors"
   },
@@ -2976,8 +2976,8 @@ window.DG_TERMS={
   "chaos-space-marines-ability-the-warmaster": {
     "id": "chaos-space-marines-ability-the-warmaster",
     "title": "The Warmaster",
-    "summary": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability.",
-    "full": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability.",
+    "summary": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability. Known choice instruction. Verified option definitions are unavailable in this publication.",
+    "full": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability. Known choice instruction. Verified option definitions are unavailable in this publication.",
     "glossary": "glossary-chaos-space-marines-ability-the-warmaster",
     "rule": "unit-abaddon-the-despoiler",
     "units": [
@@ -5343,14 +5343,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-venomcrawler",
     "statline": "venomcrawler-profile"
-  },
-  "chaos-space-marines-detachment-rule-masters-of-misdirection-2": {
-    "id": "chaos-space-marines-detachment-rule-masters-of-misdirection-2",
-    "title": "Masters of Misdirection",
-    "summary": "Masters of Misdirection appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-masters-of-misdirection-2",
-    "rule": "detachment-deceptors"
   },
   "chaos-space-marines-model-keywords-garlon-souleater": {
     "id": "chaos-space-marines-model-keywords-garlon-souleater",

@@ -35,11 +35,12 @@ function modelOracle(models,label){
 // Exercise actual builder functions on synthetic input without importing its CLI entry point.
 function publication(source,det){
   const entry=source.slice(source.indexOf('const detachmentRuleEntries='),source.indexOf('for(const det of detachments){',source.indexOf('const detachmentRuleEntries=')));
+  const availability=source.slice(source.indexOf('const sourceAvailabilityMessages='),source.indexOf('function addTerm',source.indexOf('const sourceAvailabilityMessages=')));
   const rule=source.split('\n').find(line=>line.trimStart().startsWith('const rule=det.rule?'));
-  assert.ok(entry&&rule,'actual publication functions exist');
+  assert.ok(entry&&availability&&rule,'actual publication functions exist');
   const terms=[];
   const scope={det,clean,slug,esc,titleKey:x=>clean(x).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),config:{id:'synthetic'},pack:{meta:{version:'fixture'}},addTerm:(title,text,anchor)=>{const id='term-'+slug(title);terms.push({id,title,text,anchor});return id;}};
-  vm.runInNewContext(entry+'\n'+rule+'\nthis.output={html:rule,entries:detachmentRuleEntries(det)};',scope);
+  vm.runInNewContext(availability+'\n'+entry+'\n'+rule+'\nthis.output={html:rule,entries:detachmentRuleEntries(det)};',scope);
   return {...plain(scope.output),terms};
 }
 

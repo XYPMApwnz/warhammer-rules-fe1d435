@@ -19,6 +19,8 @@ const validUnpublished='books/death-guard/reader.html#enhancement-daemon-weapon-
 const published='books/death-guard/reader.html#unit-typhus';
 // Exact complete context snapshots before the CSM coverage rescope. EC already
 // contains the separately authorized Master of the Pageant publication.
+// Fingerprint generated content with LF line endings, not checkout-specific CRLF.
+// All other content remains significant; the frozen hashes are unchanged.
 const frozenContexts={
   "glossary/contexts/core-rules.json": "4dd7c8636fe157979a57882c5f5ac759ee88e34bafba6afd2bafa7cd6397167c",
   "glossary/contexts/death-guard.json": "dce21292cb4d7cc6cd4a11957b5456b17d5f78cbcacb70d570fc6f62db1a520d",
@@ -53,7 +55,7 @@ function publicationOracle(eligible=isAutoPublishedRulePath){
   assert.equal(hash(JSON.stringify(pairs)),frozenDg.hash,'DG publication freeze exact canonical-ID/path mapping');
   assert.equal(eligible(root,validUnpublished),false,'validity must not imply publication');
   assert.equal(eligible(root,published),true,'existing publication eligibility preserved');
-  for(const [p,expected] of Object.entries(frozenContexts))assert.equal(hash(read(p)),expected,p+': exact context freeze');
+  for(const [p,expected] of Object.entries(frozenContexts))assert.equal(hash(read(p).replace(/\r\n/g,'\n')),expected,p+': exact context freeze');
 }
 
 function coverageOracle(registry=JSON.parse(read('glossary/registry.en.json')).terms){

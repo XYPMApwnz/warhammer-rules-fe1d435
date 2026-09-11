@@ -20,8 +20,8 @@ for(const id of registryIds)assert.equal(registry[id].id,id,`${id}: registry key
 assert.equal(api.counts.terms,registryIds.length,'generated glossary term count differs from the canonical registry');
 assert.equal(api.counts.aliases,aliasIds.length,'generated glossary alias count differs from the canonical aliases');
 assert.match(api.contentHash,/^[a-f0-9]{64}$/,'generated glossary content hash is not deterministic');
-assert.equal(registryIds.length,3063,'current canonical glossary inventory changed unexpectedly');
-assert.equal(crypto.createHash('sha256').update([...registryIds].sort().join('\n')).digest('hex'),'7786036224b9369f75cbe20a35ae1421bc28cf8dc49cfd872930c5608bd6cba7','current canonical glossary identity set changed unexpectedly');
+assert.equal(registryIds.length,3223,'current canonical glossary inventory changed unexpectedly');
+assert.equal(crypto.createHash('sha256').update([...registryIds].sort().join('\n')).digest('hex'),'13195c54975d74549f8708ab25697d722645bc9b53221e05d9641c6103b169dc','current canonical glossary identity set changed unexpectedly');
 const pidbFulgrimIdentities=new Map([
   ['emperors-children-ability-daemon-primarch-of-slaanesh','Daemon Primarch of Slaanesh'],
   ['emperors-children-ability-beguiling-form','Beguiling Form'],

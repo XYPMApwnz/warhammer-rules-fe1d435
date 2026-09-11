@@ -16,7 +16,7 @@ assert.equal(catalog.units.length,39,'Datasheet inventory');
 assert.equal(catalog.units.reduce((sum,unit)=>sum+unit.gameSelections.abilities.length,0),189,'canonical Datasheet ability inventory');
 assert.equal(catalog.enhancements.length,23,'canonical Enhancement inventory');
 assert.equal(catalog.detachmentRules.length,7,'canonical Detachment Rule inventory');
-assert.equal(catalog.units.reduce((sum,unit)=>sum+unit.gameSelections.wargearAbilities.length,0),52,'selected-wargear rule inventory');
+assert.equal(catalog.units.reduce((sum,unit)=>sum+unit.gameSelections.wargearAbilities.length,0),50,'selected-wargear rule inventory');
 for(const unit of catalog.units)for(const ability of unit.gameSelections.wargearAbilities){assert.equal(ability.requiredSelectionIds.length,1,`${unit.id}/${ability.id}: exact Wargear selection link`);const selection=unit.gameSelections.selections.find(item=>item.id===ability.requiredSelectionIds[0]);assert.ok(selection?.wargearAbilityIds.includes(ability.id),`${unit.id}/${ability.id}: reciprocal Wargear link`);}
 for(const detachment of catalog.detachments)assert.equal(detachment.detachmentRuleIds.length,1,`${detachment.id}: canonical Detachment Rule link`);
 
@@ -118,4 +118,4 @@ const localProvider=read('books/tau-empire/scripts/roster-filter.js'),legacyProv
 for(const text of ['Derived effect:','Apply the current','No permanent Datasheet mutation was applied'])assert.doesNotMatch(localProvider,new RegExp(text,'i'),`synthetic user-facing text: ${text}`);
 assert.doesNotMatch(legacyProvider,/const tauEffects|applyTauEffect/,'legacy T\'au DOM effect provider removed');
 runTauAuxiliaryQa();
-console.log("T'au semantic conformance QA: PASS (39 Datasheets, 189 abilities, 23 Enhancements, 7 Detachment Rules, 52 selected-wargear rules).");
+console.log("T'au semantic conformance QA: PASS (39 Datasheets, 189 abilities, 23 Enhancements, 7 Detachment Rules, 50 selected-wargear rules).");

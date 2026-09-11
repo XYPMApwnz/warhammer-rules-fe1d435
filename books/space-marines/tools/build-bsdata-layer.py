@@ -18,6 +18,7 @@ SNAPSHOT = ROOT / "sources" / "bsdata-space-marines-11e.json"
 DATASHEETS = ROOT / "content" / "space-marines-codex-datasheets.en.json"
 POINTS = ROOT / "content" / "space-marines-points.en.json"
 OFFICIAL_MFM = ROOT / "sources" / "official-mfm-v1.2.json"
+FACTION_PACK = ROOT / "content" / "space-marines-faction-pack.en.json"
 SUPPLEMENTAL_CATALOGUES = (
     "Imperium - Imperial Fists.json",
     "Imperium - Iron Hands.json",
@@ -96,6 +97,39 @@ def extract(config: dict, folder: Path, faction: str) -> tuple[dict, dict, dict]
     return tuple(json.loads((folder / name).read_text(encoding="utf-8")) for name in ("snapshot.json", "datasheets.json", "points.json"))
 
 
+def apply_faction_pack_facts(datasheets: dict) -> None:
+    pack = json.loads(FACTION_PACK.read_text(encoding="utf-8"))
+    if pack.get("meta", {}).get("version") != "1.2":
+        raise ValueError("Space Marines Faction Pack v1.2 is required for current Datasheet facts")
+    oath_update = next((item for item in pack.get("updates", []) if item.get("id") == "oath-of-moment"), None)
+    if not oath_update or not oath_update.get("change") or oath_update.get("sourcePages") != [60]:
+        raise ValueError("Current Oath of Moment definition was not found on Faction Pack page 60")
+
+    units = {item["title"]: item for item in datasheets["datasheets"]}
+    for title in ("Eradicator Squad with Heavy Bolters", "Wardens of Ultramar"):
+        unit = units[title]
+        memberships = [ability for ability in unit.get("abilities", []) if key(ability["title"]) == "oath of moment"]
+        if len(memberships) > 1:
+            raise ValueError(f"{title}: expected at most one Oath of Moment ability")
+        if not memberships:
+            unit.setdefault("abilities", []).append({"title": "Oath of Moment", "text": ""})
+
+    oath_members = 0
+    for unit in datasheets["datasheets"]:
+        for ability in unit.get("abilities", []):
+            if key(ability["title"]) == "oath of moment":
+                ability["text"] = oath_update["change"]
+                oath_members += 1
+    if not oath_members:
+        raise ValueError("No Oath of Moment Datasheet memberships were found")
+
+    land_speeder = units["Land Speeder"]
+    heavy_flamers = [weapon for weapon in land_speeder["weapons"] if key(weapon["name"]) == "heavy flamer"]
+    if len(heavy_flamers) != 1:
+        raise ValueError("Land Speeder: expected exactly one Heavy Flamer profile")
+    heavy_flamers[0]["abilities"] = "Torrent"
+
+
 def build() -> tuple[dict, dict, dict]:
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     official = json.loads(OFFICIAL_MFM.read_text(encoding="utf-8"))
@@ -136,6 +170,7 @@ def build() -> tuple[dict, dict, dict]:
         unit["abilities"] = [ability for ability in unit.get("abilities", []) if key(ability["title"]) != "templar vows"]
         if key(unit["title"]) in CURRENT_FACTION_PACK:
             unit["sourceLayer"] = "faction-pack"
+    apply_faction_pack_facts(datasheets)
     titus = next(item for item in datasheets["datasheets"] if item["title"] == "Lieutenant Titus")
     titus["profiles"] = [{"name": "Lieutenant Titus", "stats": {"M": '6"', "T": "4", "Sv": "3+", "W": "5", "Ld": "6+", "OC": "1"}}]
     titus["weapons"] = [

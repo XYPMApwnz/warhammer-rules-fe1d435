@@ -15,6 +15,9 @@ html:has(dialog[open]),body:has(dialog[open]){overflow:hidden;overscroll-behavio
 .filters{flex-wrap:wrap;overflow:visible;scrollbar-width:auto}
 .term-qualifier{display:inline-block;margin-left:8px;padding:3px 5px;border:1px solid var(--line);color:var(--gold);font:700 8px monospace;letter-spacing:.08em;text-transform:uppercase;vertical-align:.18em}
 .term-detail h2{font-size:clamp(40px,5vw,72px);overflow-wrap:anywhere}
+@media(min-width:761px){
+  .term-detail{scroll-margin-top:72px}
+}
 @media(min-width:761px) and (max-width:1366px){
   .workspace{grid-template-columns:minmax(320px,36%) minmax(0,1fr)}
   .term-detail{padding:clamp(32px,4vw,56px)}

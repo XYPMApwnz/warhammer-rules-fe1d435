@@ -205,6 +205,50 @@ const splitModelStarscythe=WHRosterPoints.check({units:[{quantity:1,name:'Crisis
 ]}],declared:105,unitLineTotal:105,enhancements:[]},'t au empire');
 assert.equal(splitModelStarscythe.total,105,'physical model count must sum all model records while preserving paid wargear');
 assert.equal(splitModelStarscythe.unresolved.length,0);
+
+const fixtureDefinition={title:'Bounded Unit',points:[{label:'1 model',value:100}],wargear:[{label:'upgrade',value:10}]};
+const fixtureCatalog={fixture:{units:{'bounded unit':fixtureDefinition},enhancements:{},detachments:{}}};
+const fixturePoints=catalog=>{
+  const scope={window:{WHRuleFacts:{normalizeKeyword:value=>String(value).toUpperCase()},WH_POINTS_CATALOG:catalog}};
+  vm.runInNewContext(fs.readFileSync('roster-guides/points-validator.js','utf8'),scope,{filename:'roster-guides/points-validator.js'});
+  return scope.window.WHRosterPoints;
+};
+const boundedRoster=quantity=>({units:[{id:'bounded',quantity:1,name:'Bounded Unit',models:[{quantity:1,name:'Bounded Unit',loadouts:[{quantity,wargear:'upgrade'}]}]}],declared:110,unitLineTotal:110,enhancements:[],detachments:[]});
+const validBounds=fixturePoints(fixtureCatalog).check(boundedRoster(1),'fixture');
+assert.equal(validBounds.total,110,'safe structured quantities and point values must remain valid');
+assert.equal(validBounds.unresolved.length,0);
+for(const quantity of ['1',0,-1,1.5,Number.NaN,Number.POSITIVE_INFINITY,Number.MAX_SAFE_INTEGER+1]){
+  const rejected=fixturePoints(fixtureCatalog).check(boundedRoster(quantity),'fixture');
+  assert.equal(rejected.total,0,`invalid loadout quantity ${String(quantity)} must not alter the total`);
+  assert.equal(rejected.unresolved.length,1);
+}
+for(const value of ['100',-1,1.5,Number.NaN,Number.POSITIVE_INFINITY,Number.MAX_SAFE_INTEGER+1]){
+  const invalidDefinition={...fixtureDefinition,points:[{label:'1 model',value}]};
+  const rejected=fixturePoints({fixture:{units:{'bounded unit':invalidDefinition},enhancements:{},detachments:{}}}).check(boundedRoster(1),'fixture');
+  assert.equal(rejected.total,0,`invalid catalog point value ${String(value)} must not be priced`);
+  assert.equal(rejected.unresolved.length,1);
+}
+for(const maxOwners of ['3',0,1.5,Number.POSITIVE_INFINITY,Number.MAX_SAFE_INTEGER+1]){
+  const enhancement={id:'enhancement-bounded',title:'Bounded Upgrade',value:10,assignment:{maxOwners,enhancementChoices:1}};
+  const catalog={fixture:{units:{'bounded unit':fixtureDefinition},enhancements:{'bounded upgrade':enhancement},detachments:{}}};
+  const rejected=fixturePoints(catalog).check({...boundedRoster(1),enhancements:[{name:'Bounded Upgrade'}]},'fixture');
+  assert.equal(rejected.total,110,`invalid Enhancement owner bound ${String(maxOwners)} must not be priced`);
+  assert.equal(rejected.unresolved.length,1);
+}
+const inheritedCatalog=Object.create({fixture:fixtureCatalog.fixture});
+assert.equal(fixturePoints(inheritedCatalog).check(boundedRoster(1),'fixture').total,null,'inherited faction catalog must be unavailable');
+const inheritedUnits=Object.create({'bounded unit':fixtureDefinition});
+const inheritedUnitResult=fixturePoints({fixture:{units:inheritedUnits,enhancements:{},detachments:{}}}).check(boundedRoster(1),'fixture');
+assert.equal(inheritedUnitResult.total,0,'inherited unit definition must not be priced');
+assert.equal(inheritedUnitResult.unresolved.length,1);
+const inheritedEnhancements=Object.create({'borrowed upgrade':{id:'enhancement-borrowed',title:'Borrowed Upgrade',value:10}});
+const inheritedEnhancementResult=fixturePoints({fixture:{units:{'bounded unit':fixtureDefinition},enhancements:inheritedEnhancements,detachments:{}}}).check({...boundedRoster(1),enhancements:[{name:'Borrowed Upgrade'}]},'fixture');
+assert.equal(inheritedEnhancementResult.total,110,'inherited Enhancement must not be priced');
+assert.equal(inheritedEnhancementResult.unresolved.length,1);
+const inheritedDetachments=Object.create({'borrowed detachment':{title:'Borrowed Detachment',detachmentPoints:1}});
+const inheritedDetachmentResult=fixturePoints({fixture:{units:{'bounded unit':fixtureDefinition},enhancements:{},detachments:inheritedDetachments}}).check({...boundedRoster(1),detachments:[{name:'Borrowed Detachment'}]},'fixture');
+assert.equal(inheritedDetachmentResult.detachmentPoints,0,'inherited Detachment must not be priced');
+assert.equal(inheritedDetachmentResult.detachmentWarnings.length,1);
 const emperorChildrenRoster=WHRosterParser.parse(`FACTION KEYWORD: Chaos - Emperor's Children
 BATTLE SIZE: 3. Strike Force (2000 Point limit)
 DETACHMENT: Coterie of the Conceited, Carnival of Excess

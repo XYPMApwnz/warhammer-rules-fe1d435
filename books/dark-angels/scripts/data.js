@@ -7869,5 +7869,13 @@ window.DG_TERMS={
     "full": "UPGRADE. Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
     "glossary": "glossary-dark-angels-enhancement-nightforged-battery-2",
     "rule": "detachment-darkflight-pursuit"
+  },
+  "dark-angels-army-rule-the-unforgiven": {
+    "id": "dark-angels-army-rule-the-unforgiven",
+    "title": "The Unforgiven",
+    "summary": "■ If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit’s Chapter. For example, Asmodai has both the ADEPTUS ASTARTES and DARK ANGELS Faction keywords, and is therefore from the Dark Angels Chapter. ■ You cannot include units from more than one Chapter in your army. Designer’s Note: The rules presented in this section assume that the ADEPTUS ASTARTES units in your army are from the Dark Angels Chapter, but they can also be used to represent any Dark Angels successor Chapter, such as one described in the background section of this book, or even one of your own invention. However, players who wish to faithfully recreate the Dark Angels Chapter on the tabletop should only include DARK ANGELS EPIC HEROES if their collection is intended to represent the First Founding Chapter itself; Ezekiel is the Chief Librarian of the Dark Angels, for example, and not of any of their successors.",
+    "full": "■ If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit’s Chapter. For example, Asmodai has both the ADEPTUS ASTARTES and DARK ANGELS Faction keywords, and is therefore from the Dark Angels Chapter. ■ You cannot include units from more than one Chapter in your army. Designer’s Note: The rules presented in this section assume that the ADEPTUS ASTARTES units in your army are from the Dark Angels Chapter, but they can also be used to represent any Dark Angels successor Chapter, such as one described in the background section of this book, or even one of your own invention. However, players who wish to faithfully recreate the Dark Angels Chapter on the tabletop should only include DARK ANGELS EPIC HEROES if their collection is intended to represent the First Founding Chapter itself; Ezekiel is the Chief Librarian of the Dark Angels, for example, and not of any of their successors.",
+    "glossary": "glossary-dark-angels-army-rule-the-unforgiven",
+    "rule": "army-rule-the-unforgiven"
   }
 };

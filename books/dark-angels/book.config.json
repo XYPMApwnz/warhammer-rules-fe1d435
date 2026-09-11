@@ -164,8 +164,7 @@
     "The Unforgiven"
   ],
   "armyRuleTermIds": {
-    "Oath of Moment": "space-marines-army-rule-oath-of-moment",
-    "The Unforgiven": "army-rule-the-unforgiven"
+    "Oath of Moment": "space-marines-army-rule-oath-of-moment"
   },
   "compactSharedAbilities": [
     "Oath of Moment",

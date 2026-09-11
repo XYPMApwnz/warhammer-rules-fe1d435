@@ -373,7 +373,7 @@ function sectionPage(id,index){
 
 const groups=data.groups.map(group=>`<section class="home-section"><header><span class="eyebrow">${escapeHtml(group.pages)}</span><h2>${escapeHtml(group.title)}</h2><p>${escapeHtml(group.description)}</p></header><div class="home-grid">${group.sections.map(section=>`<a class="home-card" href="${fileFor(section.id)}"><small>${escapeHtml(pageLabel(pdf.sections[section.id]||[]))}</small><strong>${escapeHtml(section.title)}</strong><span>${escapeHtml(section.summary)}</span><em>Open chapter →</em></a>`).join('')}</div></section>`).join('');
 const intro=data.introduction;
-const indexContent=`<section class="chapter-hero"><span class="eyebrow">Warhammer 40,000 // Core Rules 11E</span><h2>Core Rules Reference</h2><p>Technical placeholder.</p><div class="hero-actions"><a class="button" href="${fileFor(intro.id)}">Start with Introduction →</a><a class="button source" href="${pdfUrl}" target="_blank" rel="noreferrer">Official GW PDF ↗</a></div></section>${groups}`;
+const indexContent=`<section class="chapter-hero"><span class="eyebrow">Warhammer 40,000 // Core Rules 11E</span><h2>Core Rules Reference</h2><p>Core Rules</p><div class="hero-actions"><a class="button" href="${fileFor(intro.id)}">Start with Introduction →</a><a class="button source" href="${pdfUrl}" target="_blank" rel="noreferrer">Official GW PDF ↗</a></div></section>${groups}`;
 fs.writeFileSync(path.join(root,'index.html'),shell({title:'Core Rules Reference',content:indexContent}));
 for(const [index,id] of order.entries())fs.writeFileSync(path.join(root,fileFor(id)),sectionPage(id,index));
 const searchIndex=digital.records.map(record=>{

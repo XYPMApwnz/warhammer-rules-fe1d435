@@ -62,7 +62,6 @@ assert(mechanicusWrapper.split(/\r?\n/).filter(Boolean).length<=8&&mechanicusWra
 const checks=[...sharedBuildBooks.map(id=>['books/shared/tools/build-army-book.mjs',['books/'+id+'/book.config.json','--check']]),...books.map(id=>['books/'+id+'/mobile/build.mjs',['--check']])];
 for(const [script,args] of checks){const result=spawnSync(process.execPath,[script,...args],{cwd:root,encoding:'utf8',maxBuffer:16*1024*1024});assert(result.status===0,'Generated check failed: '+script+' '+args.join(' ')+'\n'+(result.stderr||result.stdout));}
 assert(status()===before,'Wiring checks changed working tree');
-if(failures.length){console.error('Repository wiring consistency: FAIL');for(const failure of failures)console.error('- '+failure);process.exit(1);}
 const resolveConsumerAsset=(consumer,asset)=>{const resolved=new URL(asset,`https://offline.local/${consumer}`);return `.${resolved.pathname}${resolved.search}`;};
 const exactScriptAsset=(consumer,pattern,label)=>{const source=fs.readFileSync(path.join(root,...consumer.split('/')),'utf8'),match=source.match(pattern);assert(match,`${label} active script URL is missing`);return resolveConsumerAsset(consumer,match[1]);};
 const glossaryRuntimeUrl=exactScriptAsset('glossary/index.html',/<script src="(\.\/generated\/glossary\.en\.js\?v=[^"]+)"/, 'Standalone Glossary');
@@ -72,5 +71,6 @@ for(const file of fs.readdirSync(coreReaderDir).filter(file=>file.endsWith('.htm
 assert(coreDiagramUrls.size===39,'Core Rules required diagram inventory changed');
 const firstInstallRequired=[glossaryRuntimeUrl,ruleFactsRuntimeUrl,...coreDiagramUrls],runtimeOnlyRequired=firstInstallRequired.filter(url=>!urls.has(url));
 assert(runtimeOnlyRequired.length===0,'Required first-install assets are absent from exact APP_SHELL URLs: '+runtimeOnlyRequired.join(', '));
+if(failures.length){console.error('Repository wiring consistency: FAIL');for(const failure of failures)console.error('- '+failure);process.exit(1);}
 console.log('Repository wiring consistency: PASS');console.log('Books: '+books.length+'; APP_SHELL URLs: '+shell.urls.length+'; cache revision: '+revision.revision+'; generated checks: '+checks.length+'.');console.log('First-install required URLs: '+firstInstallRequired.length+'; runtime-only required: '+runtimeOnlyRequired.length+'; network-only required: 0; Core Rules diagrams: '+coreDiagramUrls.size+'.');
 console.log('Dynamic local URLs: '+dynamic.length+'; intentional network-only exclusions: '+dynamicNetworkOnly.size+'.');

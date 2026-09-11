@@ -586,8 +586,8 @@ window.DG_TERMS={
   "emperors-children-stratagem-onto-the-next": {
     "id": "emperors-children-stratagem-onto-the-next",
     "title": "ONTO THE NEXT",
-    "summary": "End of the Fight phase. One EMPEROR’S CHILDREN unit from your army that destroyed an enemy unit this phase, and one friendly TRANSPORT it is able to embark within. If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
-    "full": "End of the Fight phase. One EMPEROR’S CHILDREN unit from your army that destroyed an enemy unit this phase, and one friendly TRANSPORT it is able to embark within. If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
+    "summary": "End of the Fight phase. One EMPEROR’S CHILDREN unit from your army that destroyed an enemy unit this phase, and one friendly TRANSPORT it is able to embark within. If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.",
+    "full": "End of the Fight phase. One EMPEROR’S CHILDREN unit from your army that destroyed an enemy unit this phase, and one friendly TRANSPORT it is able to embark within. If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.",
     "glossary": "glossary-emperors-children-stratagem-onto-the-next",
     "rule": "detachment-rapid-evisceration"
   },

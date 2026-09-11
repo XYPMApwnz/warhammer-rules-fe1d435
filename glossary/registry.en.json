@@ -65288,13 +65288,13 @@
         "en": "ONTO THE NEXT"
       },
       "summary": {
-        "en": "End of the Fight phase. One EMPEROR’S CHILDREN unit from your army that destroyed an enemy unit this phase, and one friendly TRANSPORT it is able to embark within. If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it."
+        "en": "End of the Fight phase. One EMPEROR’S CHILDREN unit from your army that destroyed an enemy unit this phase, and one friendly TRANSPORT it is able to embark within. If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it.…"
       },
       "definition": {
-        "en": "End of the Fight phase. One EMPEROR’S CHILDREN unit from your army that destroyed an enemy unit this phase, and one friendly TRANSPORT it is able to embark within. If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it."
+        "en": "End of the Fight phase. One EMPEROR’S CHILDREN unit from your army that destroyed an enemy unit this phase, and one friendly TRANSPORT it is able to embark within. If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "article",
       "aliases": [],
       "related": [],
       "canonicalSource": {

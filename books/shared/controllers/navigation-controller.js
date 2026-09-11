@@ -58,10 +58,10 @@
 
   function physicalNavigationInput(){
     const params=new URLSearchParams(location.search),rosterId=params.get('roster'),projection=window.WH_ARMY_ROSTER_PROJECTION,catalog=window.WH_BOOK_ROSTER_CATALOG,game=projection?.game,rawUnits=list(projection?.roster?.units),gameUnits=list(game?.units),catalogUnits=list(catalog?.units);
-    if(!rosterId||projection?.context?.rosterId!==rosterId||game?.schema!==GAME_SCHEMA||!rawUnits.length||rawUnits.length!==gameUnits.length||!catalogUnits.length)return null;
+    if(!rosterId||projection?.context?.rosterId!==rosterId||game?.schema!==GAME_SCHEMA||!rawUnits.length||!gameUnits.length||!catalogUnits.length)return null;
     const rawIds=rawUnits.map(unit=>String(unit?.id||'').trim()),gameIds=gameUnits.map(unit=>String(unit?.identity?.instanceId||'').trim()),rawSet=new Set(rawIds),gameSet=new Set(gameIds),catalogCounts=new Map();
     for(const unit of catalogUnits)catalogCounts.set(unit.id,(catalogCounts.get(unit.id)||0)+1);
-    if(rawIds.some(id=>!id)||gameIds.some(id=>!id)||rawSet.size!==rawIds.length||gameSet.size!==gameIds.length||rawIds.some(id=>!gameSet.has(id))||gameIds.some(id=>!rawSet.has(id)))return null;
+    if(rawIds.some(id=>!id)||gameIds.some(id=>!id)||rawSet.size!==rawIds.length||gameSet.size!==gameIds.length||gameIds.some(id=>!rawSet.has(id)))return null;
     if(gameUnits.some(unit=>{const targetId=String(unit?.identity?.canonicalDatasheetId||'').trim();return!targetId||catalogCounts.get(targetId)!==1;}))return null;
     return{projection,game,catalog};
   }

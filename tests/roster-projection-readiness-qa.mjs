@@ -16,7 +16,11 @@ const catalog={
     {id:'unit-gamma',title:'Unique Name',sourceBookId:'fixture',intrinsicKeywords:['INFANTRY']}
   ],
   detachments:[],
-  enhancements:[]
+  enhancements:[
+    {id:'enhancement-ambiguous-a',title:'Shared Enhancement',detachmentId:'detachment-alpha'},
+    {id:'enhancement-ambiguous-b',title:'Shared Enhancement',detachmentId:'detachment-alpha'},
+    {id:'enhancement-unique',title:'Unique Enhancement',detachmentId:'detachment-beta'}
+  ]
 };
 const roster=units=>({faction:'Fixture Faction',units,detachments:[],enhancements:[],warnings:[]});
 
@@ -49,5 +53,23 @@ assert.equal(unknownCompatibility.compatibility.state,'unknown','missing roster 
 assert.equal(unknownCompatibility.context.status,'unknown','unknown compatibility was marked ready');
 assert.equal(unknownCompatibility.context.units.length,1,'known canonical unit facts were discarded with unknown compatibility');
 assert.deepEqual([...unknownCompatibility.context.units[0].keywordProfile.intrinsic],['INFANTRY'],'intrinsic facts did not survive an unknown readiness state');
+
+const enhancementRoster=(name,detachments=[])=>({faction:'Fixture Faction',units:[{id:'physical-gamma',canonicalUnitId:'unit-gamma',name:'Unique Name'}],detachments,enhancements:[{name,ownerUnitId:'physical-gamma',ownerStatus:'resolved',source:'raw/source-unverified'}],warnings:[]});
+const ambiguousEnhancement=api.project({catalog,roster:enhancementRoster('Shared Enhancement',[{id:'detachment-alpha',name:'Alpha'}])});
+assert.equal(ambiguousEnhancement.context.status,'unknown','ambiguous Enhancement projection was marked ready');
+assert.equal(ambiguousEnhancement.context.enhancements[0].id,'Shared Enhancement','ambiguous Enhancement inherited candidate zero identity');
+assert.equal(ambiguousEnhancement.context.enhancements[0].detachmentId,null,'ambiguous Enhancement inherited candidate zero Detachment');
+assert.equal(ambiguousEnhancement.context.enhancements[0].owner.state,'unresolved','ambiguous Enhancement ownership was marked resolved');
+assert.equal(ambiguousEnhancement.context.enhancements[0].sourceCoverage,'sourceLimited','ambiguous Enhancement source confidence was discarded');
+assert.equal(ambiguousEnhancement.context.enhancements[0].ownerEligibility,'unavailable','source confidence became a legality decision');
+assert.equal(ambiguousEnhancement.units[0].context.enhancements[0].id,'Shared Enhancement','ambiguous owned Enhancement inherited candidate zero identity');
+assert.equal(ambiguousEnhancement.units[0].context.enhancements[0].status,'unresolved','ambiguous owned Enhancement resolution was marked resolved');
+assert.equal(ambiguousEnhancement.enhancements.length,0,'ambiguous Enhancement entered the active projection');
+assert.equal(ambiguousEnhancement.sourceRoster.enhancements[0].source,'raw/source-unverified','ambiguous Enhancement source confidence was discarded');
+
+const uniqueEnhancement=api.project({catalog,roster:enhancementRoster('Unique Enhancement')});
+assert.equal(uniqueEnhancement.context.enhancements[0].id,'enhancement-unique','unique Enhancement did not resolve canonically');
+assert.equal(uniqueEnhancement.context.enhancements[0].detachmentId,'detachment-beta','unique Enhancement canonical facts were discarded');
+assert.equal(uniqueEnhancement.context.enhancements[0].owner.state,'resolved','unique Enhancement ownership did not remain resolved');
 
 console.log('Roster projection readiness QA: PASS (exact/unique positive, ambiguous/stale/unknown negative, physical isolation)');

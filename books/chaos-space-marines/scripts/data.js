@@ -2989,8 +2989,8 @@ window.DG_TERMS={
   "chaos-space-marines-ability-dark-destiny": {
     "id": "chaos-space-marines-ability-dark-destiny",
     "title": "Dark Destiny",
-    "summary": "Each time this model makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
-    "full": "Each time this model makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
+    "summary": "Each time this model’s unit makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
+    "full": "Each time this model’s unit makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
     "glossary": "glossary-chaos-space-marines-ability-dark-destiny",
     "rule": "unit-abaddon-the-despoiler",
     "units": [

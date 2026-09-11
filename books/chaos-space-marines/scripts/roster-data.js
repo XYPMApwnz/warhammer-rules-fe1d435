@@ -5149,7 +5149,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "id": "chaos-space-marines-ability-dark-destiny",
             "sectionId": "chaos-space-marines-ability-dark-destiny",
             "title": "Dark Destiny",
-            "text": "Each time this model makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
+            "text": "Each time this model’s unit makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
             "sourceUnitId": "unit-abaddon-the-despoiler"
           },
           {

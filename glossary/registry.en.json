@@ -17405,10 +17405,10 @@
         "en": "Dark Destiny"
       },
       "summary": {
-        "en": "Each time this model makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP."
+        "en": "Each time this model’s unit makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP."
       },
       "definition": {
-        "en": "Each time this model makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP."
+        "en": "Each time this model’s unit makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP."
       },
       "structured": {},
       "presentation": "atomic",

@@ -27,15 +27,48 @@ const sandbox = vm.createContext({ console, window: {}, globalThis: null, addEve
 sandbox.globalThis = sandbox;
 sandbox.window = sandbox;
 loadScript('books/chaos-space-marines/scripts/roster-data.js', sandbox);
+loadScript('books/chaos-space-marines/scripts/target-data.js', sandbox);
 loadScript('books/chaos-space-marines/scripts/roster-filter.js', sandbox);
 
 const catalog = sandbox.WH_BOOK_ROSTER_CATALOG;
+const rendered = sandbox.WH_ARMY_BOOK_TARGETS.html;
+const canonical = JSON.parse(fs.readFileSync(path.join(root, 'books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json'), 'utf8'));
 const provider = sandbox.CSM_ROSTER_SEMANTICS.gameEffects;
 assert.ok(catalog, 'generated CSM roster catalog must load');
 assert.equal(typeof provider, 'function', 'CSM effect provider must register');
 assert.equal(catalog.units.length, 54, 'current CSM Datasheet count');
 assert.equal(catalog.enhancements.length, 62, 'current CSM Enhancement count');
 assert.equal(catalog.detachmentRules.length, 17, 'current CSM Detachment Rule count');
+
+const catalogUnit = (title) => catalog.units.find((unit) => unit.title === title);
+const canonicalUnit = (title) => canonical.datasheets.find((unit) => unit.title === title);
+assert.deepEqual(canonicalUnit('Huron Blackheart').relations.leader,
+  ['CHAOS TERMINATOR SQUAD', 'CHOSEN', 'LEGIONARIES', 'MASTERS OF THE MAELSTROM', 'RED CORSAIRS RAIDERS'],
+  'canonical Huron Leader targets must retain the source-backed Masters relation');
+const huronRelations = catalogUnit('Huron Blackheart').relations;
+assert.deepEqual(Array.from(huronRelations.canLead, (relation) => relation.unitId), [
+  'unit-chaos-terminator-squad',
+  'unit-chosen',
+  'unit-legionaries',
+  'unit-masters-of-the-maelstrom',
+  'unit-red-corsairs-raiders',
+], 'current Huron Leader targets must retain the source-backed Masters relation');
+assert.deepEqual(Array.from(catalogUnit('Masters of the Maelstrom').relations.canBeLedBy, (relation) => relation.unitId),
+  ['unit-huron-blackheart'], 'Masters must retain the inverse Huron Leader relation');
+for (const title of ['Chaos Terminator Squad', 'Chosen', 'Legionaries', 'Red Corsairs Raiders']) {
+  assert.equal(catalogUnit(title).relations.canBeLedBy.filter((relation) => relation.unitId === 'unit-huron-blackheart').length, 1,
+    `${title}: source-backed Huron inverse relation changed`);
+}
+const darkDestiny = catalogUnit('Abaddon the Despoiler').gameSelections.abilities.find((ability) => ability.title === 'Dark Destiny');
+const darkDestinyText = 'Each time this model’s unit makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.';
+assert.equal(canonicalUnit('Abaddon the Despoiler').abilities.find((ability) => ability.title === 'Dark Destiny').text, darkDestinyText,
+  'canonical Dark Destiny must apply to this model’s unit');
+assert.equal(darkDestiny.text, darkDestinyText,
+  'generated Dark Destiny must apply to this model’s unit');
+assert.match(rendered, /Each time this model’s unit makes a Dark Pact/,
+  'rendered Dark Destiny must apply to this model’s unit');
+assert.doesNotMatch(rendered, /Each time this model makes a Dark Pact/,
+  'rendered Dark Destiny must not retain the model-only subject');
 
 const providerSource = fs.readFileSync(path.join(root, 'books/chaos-space-marines/scripts/roster-filter.js'), 'utf8');
 assert.doesNotMatch(providerSource, /WHBookRosterEnhancements/, 'legacy synthetic provider must be removed');

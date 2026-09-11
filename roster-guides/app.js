@@ -6,6 +6,7 @@ const FACTION_PARENTS=Object.freeze({'death guard':'chaos','adeptus mechanicus':
 const FACTION_LABELS=Object.freeze({'death guard':'Death Guard','adeptus mechanicus':'Adeptus Mechanicus','tyranids':'Tyranids','t au empire':"T'au Empire",'emperor s children':"Emperor's Children",'chaos space marines':'Chaos Space Marines','space marines':'Space Marines','blood angels':'Blood Angels','dark angels':'Dark Angels'});
 const FACTION_READERS=Object.freeze({'death guard':'../books/death-guard/index.html','adeptus mechanicus':'../books/adeptus-mechanicus/index.html','tyranids':'../books/tyranids/index.html','t au empire':'../books/tau-empire/index.html','emperor s children':"../books/emperors-children/index.html",'chaos space marines':'../books/chaos-space-marines/index.html','space marines':'../books/space-marines/index.html','blood angels':'../books/blood-angels/index.html','dark angels':'../books/dark-angels/index.html'});
 const savedHost=document.querySelector('#saved-roster-list');
+const rosterResult=document.querySelector('#roster-result');
 
 function factionParts(value){const match=String(value||'').trim().match(/^(?:(Chaos|Imperium|Xenos)\s*[-–—]\s*)?(.*)$/i),key=match[2].replace(/[^a-z0-9]+/gi,' ').trim().toLowerCase();return{parent:(match[1]||'').toLowerCase(),key:FACTION_ALIASES[key]||key};}
 function normalizeFaction(value){return factionParts(value).key;}
@@ -65,8 +66,7 @@ function saveRoster(roster,sourceText){
   const records=getSavedRosters(),id=rosterId(sourceText),previous=records.find(record=>record?.id===id);
   let record={id,name:`${roster.faction} · ${roster.declared||roster.calculated} pts`,createdAt:previous?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString(),sourceText,roster,attachments:previous?.attachments||{}};record=validatedAttachmentRecord(record,roster);
   putSavedRosters([record,...records.filter(item=>item?.id!==id)]);
-  navigator.storage?.persist?.();
-  renderSavedRosters();
+  try{navigator.storage?.persist?.().catch(()=>{});}catch{}
   return record;
 }
 
@@ -120,6 +120,8 @@ function renderSavedRosters(){
   savedHost.replaceChildren(grid);
 }
 
+function clearRosterPreview(){delete rosterResult.dataset.rosterId;rosterResult.innerHTML='<p class="eyebrow">Preview</p><h2>No roster loaded</h2><p class="help">The faction, Detachment, export total check and recognised units will appear here.</p>';}
+
 function parseRoster(text){
   return window.WHRosterParser.parse(text);
 }
@@ -149,7 +151,8 @@ function renderRoster(roster,record){
       :check?'<div class="status warn">! Detachment Points were not checked because Battle Size is unavailable.</div>':'';
   enhancementStatus=detachmentStatus+enhancementStatus;
   const hasReader=Boolean(FACTION_READERS[knownFaction(roster.faction)]);
-  document.querySelector('#roster-result').innerHTML=`<p class="eyebrow">Preview // ${roster.units.length} units</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">${escapeHtml((roster.detachments||[{label:roster.detachment}]).map(item=>item.label).join(' + '))} · ${escapeHtml(roster.disposition)}</p><div class="summary"><div class="stat"><small>Declared in export</small><strong>${roster.declared||'—'} pts</strong></div><div class="stat"><small>${currentPointsLabel}</small><strong>${check?.total??'—'} pts</strong></div></div>${exportStatus}${pointsStatus}${enhancementStatus}<p class="help">Unit limits and wargear legality are not checked.</p><ul class="units">${roster.units.map(unit=>{const owned=(check?.enhancements||[]).filter(item=>item.ownerUnitId===unit.id);return `<li><div><strong>${escapeHtml(unit.name)}${owned.map(item=>{const exported=Number(item.exportedCost),current=Number(item.currentCost),price=Number.isFinite(exported)&&Number.isFinite(current)&&exported!==current?`${exported} pts in export · ${current} pts current`:`included +${item.exportedCost??item.currentCost} pts`;return `<small class="unit-enhancement">${escapeHtml(item.name)} · ${price}${item.ownerEligibility!=='valid'?` · ${escapeHtml(item.ownerMessage)}`:''}</small>`;}).join('')}</strong></div><span>${unit.points} pts in export</span></li>`}).join('')}</ul><div class="actions">${hasReader?'<button class="action primary" id="open-guide" type="button">Open personal guide</button>':'<p class="help">Saved. A personal reader is not available for this faction yet.</p>'}</div>`;
+  rosterResult.dataset.rosterId=record.id;
+  rosterResult.innerHTML=`<p class="eyebrow">Preview // ${roster.units.length} units</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">${escapeHtml((roster.detachments||[{label:roster.detachment}]).map(item=>item.label).join(' + '))} · ${escapeHtml(roster.disposition)}</p><div class="summary"><div class="stat"><small>Declared in export</small><strong>${roster.declared||'—'} pts</strong></div><div class="stat"><small>${currentPointsLabel}</small><strong>${check?.total??'—'} pts</strong></div></div>${exportStatus}${pointsStatus}${enhancementStatus}<p class="help">Unit limits and wargear legality are not checked.</p><ul class="units">${roster.units.map(unit=>{const owned=(check?.enhancements||[]).filter(item=>item.ownerUnitId===unit.id);return `<li><div><strong>${escapeHtml(unit.name)}${owned.map(item=>{const exported=Number(item.exportedCost),current=Number(item.currentCost),price=Number.isFinite(exported)&&Number.isFinite(current)&&exported!==current?`${exported} pts in export · ${current} pts current`:`included +${item.exportedCost??item.currentCost} pts`;return `<small class="unit-enhancement">${escapeHtml(item.name)} · ${price}${item.ownerEligibility!=='valid'?` · ${escapeHtml(item.ownerMessage)}`:''}</small>`;}).join('')}</strong></div><span>${unit.points} pts in export</span></li>`}).join('')}</ul><div class="actions">${hasReader?'<button class="action primary" id="open-guide" type="button">Open personal guide</button>':'<p class="help">Saved. A personal reader is not available for this faction yet.</p>'}</div>`;
   document.querySelectorAll('#roster-result .units > li > div').forEach((host,index)=>{const editor=attachmentEditor(roster,record,roster.units[index],attachmentModel);if(editor)host.append(editor);});
   if(!hasReader)return;
   document.querySelector('#open-guide').addEventListener('click',()=>openSavedRoster(record.id));
@@ -157,16 +160,19 @@ function renderRoster(roster,record){
 
 document.querySelector('#roster-form').addEventListener('submit',event=>{
   event.preventDefault();setTimeout(()=>document.querySelector('#roster-result').scrollIntoView({behavior:'smooth',block:'start'}),0);const input=document.querySelector('#roster-input'),roster=parseRoster(input.value);
-  if(!roster.units.length){document.querySelector('#roster-result').innerHTML='<p class="eyebrow">Import error</p><h2>No units found</h2><p class="help">Paste a New Recruit export containing entries such as “1x Unit (100 pts)”.</p>';return;}
+  if(!roster.units.length){delete rosterResult.dataset.rosterId;rosterResult.innerHTML='<p class="eyebrow">Import error</p><h2>No units found</h2><p class="help">Paste a New Recruit export containing entries such as “1x Unit (100 pts)”.</p>';return;}
   const faction=knownFaction(roster.faction);
-  if(!faction){document.querySelector('#roster-result').innerHTML=roster.faction?`<p class="eyebrow">Unknown faction</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">This faction is not recognised. The roster was not saved.</p>`:'<p class="eyebrow">Import error</p><h2>Faction not found</h2><p class="help">The export has no FACTION KEYWORD line. The roster was not saved.</p>';return;}
+  if(!faction){delete rosterResult.dataset.rosterId;rosterResult.innerHTML=roster.faction?`<p class="eyebrow">Unknown faction</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">This faction is not recognised. The roster was not saved.</p>`:'<p class="eyebrow">Import error</p><h2>Faction not found</h2><p class="help">The export has no FACTION KEYWORD line. The roster was not saved.</p>';return;}
   roster.faction=FACTION_LABELS[faction];
   roster.pointsCheck=window.WHRosterPoints.check(roster,faction);
-  const record=saveRoster(roster,input.value);renderRoster(roster,record);
+  let record;
+  try{record=saveRoster(roster,input.value);}
+  catch{delete rosterResult.dataset.rosterId;rosterResult.innerHTML='<p class="eyebrow">Save error</p><h2>Roster not saved</h2><p class="help">The browser could not store this roster. Your roster text is still in the editor. Check available site storage, then try again.</p>';return;}
+  renderSavedRosters();renderRoster(roster,record);
 });
-document.querySelector('#roster-clear').addEventListener('click',()=>{document.querySelector('#roster-form').reset();document.querySelector('#roster-result').innerHTML='<p class="eyebrow">Preview</p><h2>No roster loaded</h2><p class="help">The faction, Detachment, export total check and recognised units will appear here.</p>';document.querySelector('#roster-input').focus();});
+document.querySelector('#roster-clear').addEventListener('click',()=>{document.querySelector('#roster-form').reset();clearRosterPreview();document.querySelector('#roster-input').focus();});
 document.querySelector('#roster-result').addEventListener('change',event=>{const select=event.target.closest('[data-attachment-bodyguard]');if(select)updateAttachment(select.dataset.rosterId,select.dataset.attachmentBodyguard,select.value);});
-savedHost.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.openRoster)openSavedRoster(button.dataset.openRoster);if(button.dataset.editAttachments)editAttachments(button.dataset.editAttachments);if(button.dataset.exportRoster)exportRoster(button.dataset.exportRoster);if(button.dataset.deleteRoster&&confirm('Delete this roster from this device?')){putSavedRosters(getSavedRosters().filter(record=>record?.id!==button.dataset.deleteRoster));renderSavedRosters();}});
+savedHost.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.openRoster)openSavedRoster(button.dataset.openRoster);if(button.dataset.editAttachments)editAttachments(button.dataset.editAttachments);if(button.dataset.exportRoster)exportRoster(button.dataset.exportRoster);if(button.dataset.deleteRoster&&confirm('Delete this roster from this device?')){const id=button.dataset.deleteRoster;putSavedRosters(getSavedRosters().filter(record=>record?.id!==id));renderSavedRosters();if(rosterResult.dataset.rosterId===id)clearRosterPreview();}});
 document.querySelector('#import-roster').addEventListener('click',()=>document.querySelector('#import-roster-file').click());
 document.querySelector('#import-roster-file').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{const record=JSON.parse(await file.text());if(!isImportableRecord(record))throw new Error();const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)record.roster=parsed;if(!hasSafePhysicalUnitIds(record.roster))throw new Error();const faction=knownFaction(record.roster.faction),records=getSavedRosters();if(!faction)throw new Error();record.roster.faction=FACTION_LABELS[faction];record.roster.pointsCheck=window.WHRosterPoints.check(record.roster,faction);putSavedRosters([{...record,updatedAt:new Date().toISOString()},...records.filter(item=>item?.id!==record.id)]);renderSavedRosters();if(!FACTION_READERS[faction])alert(`${FACTION_LABELS[faction]} was imported, but a personal reader is not available yet.`);}catch{alert('Could not import the roster backup.');}event.target.value='';});
 

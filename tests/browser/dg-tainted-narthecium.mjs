@@ -21,6 +21,7 @@ const server=http.createServer((request,response)=>{
 await new Promise((resolve,reject)=>server.listen(0,'127.0.0.1',error=>error?reject(error):resolve()));
 const origin=`http://127.0.0.1:${server.address().port}`;
 const sourceText=`Death Guard
++ DETACHMENT: Champions of Contagion
 1x Plague Surgeon (50 pts): Balesword, Plague bolt pistol
 Enhancement: Needle of Nurgle (+25 pts)
 7x Plague Marines (125 pts)
@@ -34,7 +35,8 @@ Enhancement: Needle of Nurgle (+25 pts)
     2 with Plague knives, Plasma gun
 • 1x Plague Champion: Boltgun, Plague knives`;
 const sourceTextNoNeedle=sourceText.replace('\nEnhancement: Needle of Nurgle (+25 pts)','');
-const record=(id,{needle=true,attached=true}={})=>({id,sourceText:needle?sourceText:sourceTextNoNeedle,attachments:attached?{'parsed-unit-2':['parsed-unit-1']}: {}});
+const sourceTextSuffixed=sourceText.replace('Enhancement: Needle of Nurgle (+25 pts)','Enhancement: Needle of Nurgle - 25 pts (+25 pts)');
+const record=(id,{needle=true,attached=true,suffixed=false}={})=>({id,sourceText:needle?(suffixed?sourceTextSuffixed:sourceText):sourceTextNoNeedle,attachments:attached?{'parsed-unit-2':['parsed-unit-1']}: {}});
 const providerSource=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-semantics.js'),'utf8');
 assert.doesNotMatch(providerSource,/narthecium-d3|Apply the current Narthecium D3 effect\./,'legacy synthetic Needle/Narthecium gameplay record must be removed');
 assert.match(providerSource,/canonicalEnhancement\(DG_ENH\.needle/,'Needle must use the shared canonical Enhancement reference path');
@@ -88,6 +90,11 @@ try{
   assert.match(attachedResult.composition,/7 models/);
   assert.doesNotMatch(attachedResult.composition,/8 models/);
   await attached.context.close();
+
+  const suffixed=await open(record('needle-suffixed',{suffixed:true}),'parsed-unit-2','unit-plague-marines');
+  const suffixedResult=await suffixed.page.evaluate(needleId=>{const context=window.WH_ARMY_ROSTER_CONTEXT,unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-2');return{enhancementId:context.enhancements[0]?.id,effects:unit.effects.filter(item=>item.canonicalReference?.id===needleId).length};},needleId);
+  assert.deepEqual(suffixedResult,{enhancementId:needleId,effects:1},'point-suffixed Needle must resolve to the same canonical browser projection');
+  await suffixed.context.close();
 
   const other=await open(record('needle-attached'),'parsed-unit-3','unit-plague-marines');
   const otherResult=await other.page.evaluate(({taintedId,needleId,inflamedId})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-3'),card=document.querySelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-3"]');return{taintedEffects:unit.effects.filter(effect=>effect.canonicalAbilityId===taintedId).length,taintedArticles:card.querySelectorAll(`[data-roster-canonical-ability-id="${taintedId}"]`).length,needleEffects:unit.effects.filter(effect=>effect.canonicalReference?.id===needleId).length,needleArticles:card.querySelectorAll(`[data-roster-canonical-reference-id="${needleId}"]`).length,inflamed:card.querySelectorAll(`[data-roster-canonical-ability-id="${inflamedId}"]`).length};},{taintedId,needleId,inflamedId});

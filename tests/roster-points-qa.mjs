@@ -296,6 +296,21 @@ assert.deepEqual([...unknownEnhancement.unresolved],['Enhancement Detachment: Un
 const wrongNeedleDetachment=assertEnhancementLookup('Needle wrong Detachment','death guard',ownedEnhancement('Needle of Nurgle - 25 pts',surgeon.id),surgeon,'Virulent Vectorium','enhancement-needle-of-nurgle',25);
 assert.equal(wrongNeedleDetachment.enhancements[0].ownerEligibility,'invalid');
 assert.equal(wrongNeedleDetachment.enhancements[0].ownerMessage,'Enhancement is not available in the selected Detachment');
+const deathGuardMfm=JSON.parse(fs.readFileSync('books/death-guard/sources/official-mfm-v1.3.json','utf8'));
+const deathGuardRules=JSON.parse(fs.readFileSync('books/death-guard/content/death-guard-rules.en.json','utf8'));
+const mortarionDetachment=deathGuardRules.sections.find(section=>section.id==='detachment-mortarions-hammer');
+assert.equal(mortarionDetachment.title,'Mortarion’s Hammer','canonical source Detachment identity');
+assert.ok(deathGuardRules.glossary.some(item=>item.id==='mortarions-hammer'&&item.sectionId==='mortarions-hammer-rule'),'published Mortarion’s Hammer slug must remain canonical');
+const mortarionEnhancementIds=['enhancement-bilemaw-blight','enhancement-eye-of-affliction','enhancement-shriekworm-familiar','enhancement-tendrilous-emissions'],mortarionPointIdentities=deathGuardMfm.enhancements.filter(item=>mortarionEnhancementIds.includes(item.id));
+assert.equal(mortarionPointIdentities.length,4,'MFM identity bridge must cover all four Mortarion’s Hammer Enhancements');
+assert.ok(mortarionPointIdentities.every(item=>item.detachment==='MORTARION’S HAMMER'&&item.sourceTitle===item.title),'MFM identity bridge must retain exact source titles and Detachment');
+for(const identity of mortarionPointIdentities){const published=WH_POINTS_CATALOG['death guard'].enhancements[identity.sourceTitle.toLowerCase()];assert.equal(published.id,identity.id);assert.equal(published.detachment,'MORTARION’S HAMMER');assert.equal(published.canonicalDetachmentId,'detachment-mortarions-hammer');}
+const plaguecaster=rosterUnit('plaguecaster','Malignant Plaguecaster');
+const bilemaw=assertEnhancementLookup('Mortarion’s Hammer Bilemaw path','death guard',ownedEnhancement('Bilemaw Blight - 10 pts',plaguecaster.id),plaguecaster,'Mortarion’s Hammer','enhancement-bilemaw-blight',10);
+assert.equal(bilemaw.enhancements[0].ownerEligibility,'valid');
+const wrongBilemaw=assertEnhancementLookup('Mortarion’s Hammer wrong Detachment','death guard',ownedEnhancement('Bilemaw Blight - 10 pts',plaguecaster.id),plaguecaster,'Virulent Vectorium','enhancement-bilemaw-blight',10);
+assert.equal(wrongBilemaw.enhancements[0].ownerEligibility,'invalid');
+assert.equal(wrongBilemaw.enhancements[0].ownerMessage,'Enhancement is not available in the selected Detachment');
 const upgradeRoster=count=>{
   const owners=[
     rosterUnit('drone-a','Foetid Bloat-drone'),

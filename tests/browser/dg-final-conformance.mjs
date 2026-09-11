@@ -12,6 +12,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'books/death-guard/scripts/ros
 const catalog=scope.window.WH_BOOK_ROSTER_CATALOG;
 const byUnit=id=>catalog.units.find(unit=>unit.id===id);
 const byEnhancement=id=>catalog.enhancements.find(item=>item.id===id);
+const byDetachment=id=>catalog.detachments.find(item=>item.id===id);
 const rule=id=>catalog.detachmentRules.find(item=>item.id===id);
 const unit=(instanceId,canonicalUnitId,selections=[])=>{const canonical=byUnit(canonicalUnitId);return{id:instanceId,canonicalUnitId,name:canonical.title,points:0,quantity:1,models:selections.length?[{quantity:1,name:canonical.title,loadouts:[{quantity:1,wargear:selections.join(', ')}]}]:[]};};
 const enhancement=(id,ownerUnitId)=>{const item=byEnhancement(id);return{id:item.id,name:item.title.replace(/\s+-\s+\d+\s*pts$/i,''),ownerUnitId,ownerStatus:'resolved'};};
@@ -53,15 +54,18 @@ try{
     ['enhancement-host-of-the-hybridised-pox','unit-biologus-putrifier','unit-plague-marines']
   ];
   for(const [id,sourceId,targetId] of attachedCases){
-    const item=byEnhancement(id),saved=record(`dg-ref-${id}`,{units:[unit('source',sourceId),unit('target',targetId),unit('other',targetId)],detachments:[{id:item.detachmentId}],enhancements:[enhancement(id,'source')],attachments:{target:['source']}}),opened=await open(saved,'target',targetId);
+    const item=byEnhancement(id),detachment=byDetachment(item.detachmentId),saved=record(`dg-ref-${id}`,{units:[unit('source',sourceId),unit('target',targetId),unit('other',targetId)],detachments:[{id:detachment.id,name:detachment.title}],enhancements:[enhancement(id,'source')],attachments:{target:['source']}}),opened=await open(saved,'target',targetId);
     const result=await opened.page.evaluate(id=>{const target=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.instanceId==='target'),other=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.instanceId==='other'),effect=target.effects.find(item=>item.canonicalReference?.id===id),article=document.querySelector(`[data-roster-canonical-reference-id="${id}"]`);return{effect,other:other.effects.filter(item=>item.canonicalReference?.id===id).length,title:article?.querySelector('h5')?.textContent.trim()||'',text:article?.querySelector('p')?.textContent.trim()||'',source:article?.querySelector('.roster-game-ability-source')?.textContent.trim()||'',active:document.querySelector('.roster-game-effects')?.textContent||''};},id);
     assert.equal(result.effect?.source?.ownerInstanceId,'source',id);
     assert.equal(result.effect?.targetInstanceId,'target',id);
     assert.equal(result.effect?.canonicalReference?.kind,'enhancement',id);
+    assert.equal(result.effect?.provenance?.kind,'curated-provider',id);
+    assert.equal(result.effect?.provenance?.rosterFact,'explicit-attachment',id);
     assert.equal(result.other,0,id);
     assert.equal(result.title,item.title.replace(/\s+-\s+\d+\s*pts$/i,''),id);
     assert.equal(result.text,item.text,id);
     assert.ok(result.source.startsWith(byUnit(sourceId).title),id);
+    if(id==='enhancement-arch-contaminator')assert.equal(result.source,'Biologus Putrifier');
     assert.doesNotMatch(result.active,new RegExp(item.title.replace(/\s+-\s+\d+\s*pts$/i,'').replace(/[.*+?^${}()|[\]\\]/g,'\\$&')),id);
     await opened.context.close();
   }

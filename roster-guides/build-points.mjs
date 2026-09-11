@@ -74,6 +74,7 @@ const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles
 const deathGuard=read('books/death-guard/content/death-guard-rules.en.json');
 const deathGuardMfm=readBookSource('death-guard','points');
 const dgDetachments=detachmentRecords(deathGuardMfm.detachments);
+const deathGuardPointIdentities=new Map((deathGuardMfm.enhancements||[]).filter(item=>item.id&&item.sourceTitle).map(item=>[item.id,item]));
 const dgUnits={};
 for(const unit of deathGuard.sections.filter(section=>section.kind==='unit')){
   const pointsBlock=unit.blocks.find(block=>block.type==='points');
@@ -118,7 +119,9 @@ for(const section of deathGuard.sections){
         'host of the hybridised pox':'once'
       };
       const aliases=(enhancement.tags||[]).includes('UPGRADE')?[`${match[1]} Upgrade`,`${match[1]} (Upgrade)`]:[];
-      const record={id:enhancement.id,title:match[1],value:Number(match[2]),text:enhancement.text,effect:effects[normalize(match[1])]||'',detachment:String(section.id).replace(/^detachment-/,''),tags:enhancement.tags||[],owner:enhancement.owner||null,assignment:enhancement.assignment||null,aliases};
+      const publication=deathGuardPointIdentities.get(enhancement.id);
+      if(publication&&(normalize(publication.sourceTitle)!==normalize(match[1])||Number(publication.value)!==Number(match[2])))throw new Error(`Death Guard point identity mismatch: ${enhancement.id}`);
+      const record={id:enhancement.id,title:match[1],value:Number(match[2]),text:enhancement.text,effect:effects[normalize(match[1])]||'',detachment:publication?.detachment||String(section.id).replace(/^detachment-/,''),...(publication?{canonicalEnhancementId:enhancement.id,canonicalDetachmentId:section.id}:{}),tags:enhancement.tags||[],owner:enhancement.owner||null,assignment:enhancement.assignment||null,aliases};
       for(const name of [match[1],...aliases])dgEnhancements[normalize(name)]=record;
     }
   }

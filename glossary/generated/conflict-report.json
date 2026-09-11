@@ -6,7 +6,7 @@
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 224,
+    "aliasCandidates": 223,
     "duplicateCandidates": 114,
     "keywordCandidates": 16
   },
@@ -1320,6 +1320,7 @@
         "chaos-space-marines-weapon-heavy-flamer",
         "emperors-children-weapon-heavy-flamer",
         "space-marines-weapon-heavy-flamer",
+        "space-marines-weapon-heavy-flamer-2",
         "blood-angels-weapon-heavy-flamer",
         "dark-angels-weapon-heavy-flamer"
       ],
@@ -1698,14 +1699,6 @@
       "termIds": [
         "chaos-space-marines-enhancement-surgical-precision",
         "space-marines-ability-surgical-precision"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "masters-of-misdirection",
-      "termIds": [
-        "chaos-space-marines-detachment-rule-masters-of-misdirection",
-        "chaos-space-marines-detachment-rule-masters-of-misdirection-2"
       ],
       "status": "review-required"
     },
@@ -3056,13 +3049,6 @@
     },
     {
       "termIds": [
-        "chaos-space-marines-detachment-rule-masters-of-misdirection",
-        "chaos-space-marines-detachment-rule-masters-of-misdirection-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
         "chaos-space-marines-ability-dark-pacts",
         "chaos-space-marines-army-rule-dark-pacts"
       ],
@@ -3617,6 +3603,13 @@
       "termIds": [
         "space-marines-stratagem-crucible-of-battle",
         "space-marines-stratagem-crucible-of-battle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-ability-oath-of-moment",
+        "space-marines-army-rule-oath-of-moment"
       ],
       "status": "review-required"
     },

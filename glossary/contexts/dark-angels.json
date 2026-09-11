@@ -1548,6 +1548,7 @@
           "unit-devastator-squad",
           "unit-eliminator-squad",
           "unit-eradicator-squad",
+          "unit-eradicator-squad-with-heavy-bolters",
           "unit-hellblaster-squad",
           "unit-inceptor-squad",
           "unit-incursor-squad",
@@ -4787,7 +4788,6 @@
         "units": [
           "unit-terminator-squad",
           "unit-dreadnought",
-          "unit-land-speeder",
           "unit-redemptor-dreadnought"
         ]
       }
@@ -5504,6 +5504,18 @@
       "termId": "space-marines-weapon-stormfury-missile-launcher",
       "navigation": {
         "glossary": "glossary-space-marines-weapon-stormfury-missile-launcher",
+        "rule": "unit-land-speeder",
+        "datasheet": "unit-land-speeder",
+        "statline": "land-speeder-profile",
+        "units": [
+          "unit-land-speeder"
+        ]
+      }
+    },
+    "space-marines-weapon-heavy-flamer-2": {
+      "termId": "space-marines-weapon-heavy-flamer-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-weapon-heavy-flamer-2",
         "rule": "unit-land-speeder",
         "datasheet": "unit-land-speeder",
         "statline": "land-speeder-profile",
@@ -7212,6 +7224,13 @@
       "navigation": {
         "glossary": "glossary-dark-angels-enhancement-nightforged-battery-2",
         "rule": "detachment-darkflight-pursuit"
+      }
+    },
+    "space-marines-army-rule-oath-of-moment": {
+      "termId": "space-marines-army-rule-oath-of-moment",
+      "navigation": {
+        "glossary": "glossary-space-marines-army-rule-oath-of-moment",
+        "rule": "army-rule-oath-of-moment"
       }
     },
     "dark-angels-army-rule-the-unforgiven": {

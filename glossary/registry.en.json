@@ -19079,10 +19079,10 @@
         "en": "The Warmaster"
       },
       "summary": {
-        "en": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability."
+        "en": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability. Known choice instruction. Verified option definitions are unavailable in this publication."
       },
       "definition": {
-        "en": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability."
+        "en": "In your Command phase, select one Warmaster ability. Until the start of your next Command phase, this model has that ability. Known choice instruction. Verified option definitions are unavailable in this publication."
       },
       "structured": {},
       "presentation": "atomic",
@@ -19792,41 +19792,10 @@
         "en": "Masters of Misdirection"
       },
       "summary": {
-        "en": "Masters of Misdirection appears in the Chaos Space Marines reference."
+        "en": "Known rule identity. Verified rule body is unavailable in this publication."
       },
       "definition": {
-        "en": "Masters of Misdirection appears in the Chaos Space Marines reference."
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "chaos-space-marines-faction-pack",
-        "revision": "1.2",
-        "locator": "detachment-deceptors"
-      },
-      "fullRulePath": "books/chaos-space-marines/reader.html#detachment-deceptors",
-      "status": "verified",
-      "sourceRefs": [
-        "chaos-space-marines"
-      ],
-      "mentions": []
-    },
-    "chaos-space-marines-detachment-rule-masters-of-misdirection-2": {
-      "id": "chaos-space-marines-detachment-rule-masters-of-misdirection-2",
-      "kind": "detachment-rule",
-      "scope": "chaos-space-marines",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Masters of Misdirection"
-      },
-      "summary": {
-        "en": "Masters of Misdirection appears in the Chaos Space Marines reference."
-      },
-      "definition": {
-        "en": "Masters of Misdirection appears in the Chaos Space Marines reference."
+        "en": "Known rule identity. Verified rule body is unavailable in this publication."
       },
       "structured": {},
       "presentation": "atomic",
@@ -74696,10 +74665,10 @@
         "en": "Oath of Moment"
       },
       "summary": {
-        "en": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target.…"
+        "en": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target.…"
       },
       "definition": {
-        "en": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ■ You can reroll the Hit roll ■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well."
+        "en": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: • You can re-roll the Hit roll. • If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’"
       },
       "structured": {},
       "presentation": "article",
@@ -88496,6 +88465,47 @@
         "locator": "unit-terminator-squad"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-terminator-squad",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-weapon-heavy-flamer-2": {
+      "id": "space-marines-weapon-heavy-flamer-2",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Heavy Flamer"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Torrent"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Torrent"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "D6",
+          "BS": "N/A",
+          "S": "5",
+          "AP": "-1",
+          "D": "1",
+          "Abilities": "Torrent"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-land-speeder"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-land-speeder",
       "status": "provisional",
       "sourceRefs": [
         "space-marines"

@@ -7,6 +7,7 @@ const load=(file,key)=>{const scope={window:{}};vm.runInNewContext(read(file),sc
 const one=(items,label)=>{assert.equal(items.length,1,`${label}: expected exactly one record`);return items[0];};
 const normalized=value=>String(value).replace(/[‘’]/g,"'").replace(/[▪•■]/g,'').replace(/\s+/g,' ').trim();
 const oathId='space-marines-army-rule-oath-of-moment';
+const oathAbilityId='space-marines-ability-oath-of-moment';
 const auditedIds=['unit-eradicator-squad-with-heavy-bolters','unit-wardens-of-ultramar'];
 
 const manifest=JSON.parse(read('books/space-marines/sources/source-manifest.json'));
@@ -46,13 +47,19 @@ assert.deepEqual(landSpeeder.weapons.filter(item=>item.name!=='Heavy Flamer'),[
   {name:'Close combat weapon',mode:'melee',range:'Melee',a:'4',skill:'3+',s:'4',ap:'0',d:'1',abilities:''}
 ]);
 
-const glossary=JSON.parse(read('glossary/registry.en.json')).terms[oathId];
+const glossaryTerms=JSON.parse(read('glossary/registry.en.json')).terms;
+const glossary=glossaryTerms[oathId],abilityGlossary=glossaryTerms[oathAbilityId];
 assert.match(glossary.definition.en,/Munitorum Field Manual sections/);
 assert.equal(normalized(glossary.definition.en),normalized(oathUpdate.change));
+assert.equal(normalized(abilityGlossary.definition.en),normalized(oathUpdate.change));
+assert.equal(abilityGlossary.canonicalSource.locator,'unit-assault-intercessor-squad');
 
 for(const book of ['space-marines','dark-angels','blood-angels']){
+  const terms=load(`books/${book}/scripts/data.js`,'DG_TERMS');
   const roster=load(`books/${book}/scripts/roster-data.js`,'WH_BOOK_ROSTER_CATALOG');
   const targets=load(`books/${book}/scripts/target-data.js`,'WH_ARMY_BOOK_TARGETS');
+  assert.equal(terms[oathId].rule,'army-rule-oath-of-moment',`${book}: canonical Oath term publication`);
+  assert.equal(terms[oathAbilityId].rule,'unit-assault-intercessor-squad',`${book}: Datasheet Oath identity publication`);
   const eradicator=roster.units.find(unit=>unit.id===auditedIds[0]);
   assert.ok(eradicator,`${book}: inherited Eradicator missing`);
   const oath=one(eradicator.gameSelections.abilities.filter(item=>item.id===oathId),`${book}: Eradicator Oath`);

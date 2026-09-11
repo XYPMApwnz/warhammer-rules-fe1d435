@@ -5878,7 +5878,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "profileIds": [
               "unit-stealth-battlesuits-profile-fusion-blaster-ranged-3"
             ],
-            "wargearAbilityIds": []
+            "wargearAbilityIds": [],
+            "maxTotalQuantity": 2
           },
           {
             "id": "unit-stealth-battlesuits-selection-twin-pulse-carbine",
@@ -5927,6 +5928,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": [
               "unit-stealth-battlesuits-wargear-ability-marker-drone-2"
             ]
+          },
+          {
+            "id": "unit-stealth-battlesuits-selection-gun-drone",
+            "title": "Gun Drone",
+            "aliases": [
+              "Gun Drone"
+            ],
+            "kind": "wargear",
+            "profileIds": [
+              "unit-stealth-battlesuits-profile-twin-pulse-carbine-ranged-4"
+            ],
+            "wargearAbilityIds": []
           }
         ],
         "weaponFamilies": [],
@@ -5988,7 +6001,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Assault, Twin-linked",
             "sourceSelectionIds": [
-              "unit-stealth-battlesuits-selection-twin-pulse-carbine"
+              "unit-stealth-battlesuits-selection-twin-pulse-carbine",
+              "unit-stealth-battlesuits-selection-gun-drone"
             ]
           },
           {

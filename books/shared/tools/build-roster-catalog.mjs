@@ -62,6 +62,22 @@ const gameSelectionsFor=(unit,options={})=>{
   for(const declared of declaredWargearSelections){const existing=selections.find(selection=>selection.id===declared.id);if(existing)existing.wargearAbilityIds=[...new Set([...values(existing.wargearAbilityIds),...declared.wargearAbilityIds])];else selections.push(declared);}
   for(const ability of wargearAbilities)if(!ability.requiredSelectionIds.length){const id=`${unit.id}-selection-${slug(ability.title)}`;if(options.inferExactWargearAbilitySelections){ability.requiredSelectionIds=[id];selections.push({id,title:ability.title,aliases:[ability.title],kind:'wargear',profileIds:[],wargearAbilityIds:[ability.id]});}else selections.push({id,title:ability.title,aliases:[ability.title],kind:'wargear',profileIds:[],wargearAbilityIds:[],candidateWargearAbilityIds:[ability.id]});}
   for(const ability of wargearAbilities)for(const selectionId of ability.requiredSelectionIds){const selection=selections.find(item=>item.id===selectionId);if(selection)selection.wargearAbilityIds=[...new Set([...values(selection.wargearAbilityIds),ability.id])];}
+  for(const contract of values(unit.gameSelectionContracts)){
+    const title=String(contract?.title||'').trim(),id=contract?.id||`${unit.id}-selection-${slug(title)}`;
+    if(!title)throw new Error(`${unit.id}: game selection contract requires a title`);
+    const matches=selections.filter(selection=>selection.id===id||normalize(selection.title)===normalize(title));
+    if(matches.length>1)throw new Error(`${unit.id}: game selection contract ${title} is ambiguous`);
+    const existing=matches[0],kind=contract.kind||existing?.kind||'wargear';
+    if(!['weapon','wargear'].includes(kind))throw new Error(`${unit.id}: game selection contract ${title} has invalid kind ${kind}`);
+    if(existing&&contract.kind&&existing.kind!==contract.kind)throw new Error(`${unit.id}: game selection contract ${title} conflicts with canonical kind ${existing.kind}`);
+    const profileIds=values(contract.profileTitles).flatMap(profileTitle=>{const profiles=profileRecords.filter(profile=>normalize(profile.title)===normalize(profileTitle));if(profiles.length!==1)throw new Error(`${unit.id}: game selection contract ${title} profile ${profileTitle} must resolve exactly once`);return profiles.map(profile=>profile.id);});
+    if(contract.maxTotalQuantity!==undefined&&(!Number.isInteger(contract.maxTotalQuantity)||contract.maxTotalQuantity<1))throw new Error(`${unit.id}: game selection contract ${title} has invalid maxTotalQuantity`);
+    const selection=existing||{id,title,aliases:[title],kind,profileIds:[],wargearAbilityIds:[]};
+    selection.aliases=[...new Set([selection.title,...values(selection.aliases),...values(contract.aliases)].filter(Boolean))];
+    selection.profileIds=[...new Set([...values(selection.profileIds),...profileIds])];
+    if(contract.maxTotalQuantity!==undefined)selection.maxTotalQuantity=contract.maxTotalQuantity;
+    if(!existing)selections.push(selection);
+  }
   const stats=normalizedStatsFor(unit);
   const abilities=[...new Map(canonicalAbilities.map((ability,index)=>{const id=ability.termId||ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;return[id,{id,sectionId:ability.id||id,title:ability.title||'',text:ability.text||ability.summary||'',sourceUnitId:unit.id}];})).values()];
   return {stats:{...stats},abilities,models:canonicalRosterModelsFor(unit),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};

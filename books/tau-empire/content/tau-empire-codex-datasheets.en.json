@@ -3152,6 +3152,19 @@
           "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
         }
       ],
+      "gameSelectionContracts": [
+        {
+          "title": "Gun Drone",
+          "kind": "wargear",
+          "profileTitles": [
+            "Twin pulse carbine"
+          ]
+        },
+        {
+          "title": "Fusion blaster",
+          "maxTotalQuantity": 2
+        }
+      ],
       "keywords": [
         "Infantry",
         "Fly",

@@ -64,6 +64,35 @@ assert.deepEqual([sourceWargearAbilities.length,new Set(sourceWargearAbilities.m
 const stealthBattlesuits=allUnits.find(unit=>unit.id==='unit-stealth-battlesuits');
 assert.deepEqual(stealthBattlesuits.weapons.map(weapon=>weapon.name),['Battlesuit fists','Burst cannon','Fusion blaster','Twin pulse carbine','Pulse pistol']);
 assert.deepEqual(stealthBattlesuits.wargearAbilities.map(ability=>ability.title),['Homing Beacon','Marker Drone']);
+const stealthWargear=wargear.units.find(unit=>unit.title==='Stealth Battlesuits');
+assert.deepEqual(stealthWargear.wargear,[
+  'The Stealth Shas’vre can be equipped with 1 gun drone.',
+  'The Stealth Shas’vre can be equipped with 1 marker drone.',
+  'The Stealth Shas’vre can be equipped with 1 pulse pistol.',
+  '1 Stealth Shas’ui can be equipped with 1 homing beacon.',
+  '2 models can each have their burst cannon replaced with 1 fusion blaster.'
+]);
+const rosterScope={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'scripts','roster-data.js'),'utf8'),rosterScope);
+vm.runInNewContext(fs.readFileSync(path.join(repo,'books','shared','roster-context.js'),'utf8'),rosterScope);
+const stealthCatalog=rosterScope.window.WH_BOOK_ROSTER_CATALOG.units.find(unit=>unit.id==='unit-stealth-battlesuits');
+const stealthSelections=stealthCatalog.gameSelections.selections,selection=title=>stealthSelections.find(item=>item.title===title);
+for(const title of ['Burst cannon','Fusion blaster','Pulse pistol','Gun Drone','Marker Drone','Homing Beacon'])assert.ok(selection(title),`Stealth Battlesuits missing selectable ${title}`);
+for(const title of ['Missile pod','Shield Drone','Guardian Drone'])assert.equal(selection(title),undefined,`Stealth Battlesuits exposes forbidden ${title}`);
+const fusionSelection=selection('Fusion blaster'),gunDroneSelection=selection('Gun Drone'),twinPulseCarbine=stealthCatalog.gameSelections.weaponProfiles.find(profile=>profile.title==='Twin pulse carbine');
+assert.equal(fusionSelection.maxTotalQuantity,2,'Stealth Battlesuits Fusion blaster maximum');
+assert.deepEqual(Array.from(gunDroneSelection.profileIds),[twinPulseCarbine.id],'Gun Drone must reference its Twin pulse carbine profile');
+assert.deepEqual(Array.from(gunDroneSelection.wargearAbilityIds),[],'Gun Drone must not invent an ordinary Wargear Ability');
+const projectSelection=(title,quantities)=>{const rows=Array.isArray(quantities)?quantities:[quantities];return rosterScope.window.WHArmyRosterContext.project({catalog:rosterScope.window.WH_BOOK_ROSTER_CATALOG,bookId:'tau-empire',record:{id:`stealth-${title}-${rows.join('-')}`},roster:{faction:"T'au Empire",detachments:[],enhancements:[],warnings:[],units:[{id:'stealth-physical',canonicalUnitId:'unit-stealth-battlesuits',name:'Stealth Battlesuits',points:100,models:rows.map((quantity,index)=>({quantity,name:`Stealth Shas'ui ${index+1}`,loadouts:[{quantity,wargear:title}]}))}]}}).game;};
+const legalFusion=projectSelection('Fusion blaster',[1,1]).units[0],illegalFusion=projectSelection('Fusion blaster',[2,1]).units[0],gunDrone=projectSelection('Gun Drone',1).units[0];
+assert.ok(legalFusion.selection.loadout.weapons.every(item=>item.state==='resolved'),'two Fusion blasters must remain legal');
+assert.ok(illegalFusion.selection.loadout.weapons.every(item=>item.state==='invalid'),'three Fusion blasters must fail the unit-wide maximum');
+assert.ok(illegalFusion.selection.loadout.weapons.every(item=>item.reason==='selection-quantity-exceeds-maximum'&&item.selectedTotalQuantity===3));
+assert.equal(gunDrone.selection.loadout.wargear[0].state,'resolved','Gun Drone must resolve as selected Wargear');
+assert.ok(gunDrone.selection.loadout.selectedProfileIds.includes(twinPulseCarbine.id),'Gun Drone must activate its referenced weapon profile');
+const stealthReader=unitMarkup(reader,'unit-stealth-battlesuits');
+for(const option of stealthWargear.wargear)assert.ok(stealthReader.includes(option),`Stealth reader missing ${option}`);
+for(const title of ['Missile pod','Shield Drone','Guardian Drone'])assert.doesNotMatch(stealthReader,new RegExp(title,'i'),`Stealth reader exposes forbidden ${title}`);
 for(const unit of allUnits){
   const abilities=unit.wargearAbilities||[],id=`${unit.id.slice(5)}-wargear-abilities`;
   assert.equal(unit.abilities.some(ability=>abilities.some(wargearAbility=>key(ability.title)===key(wargearAbility.title))),false,`${unit.title}: Wargear Ability duplicated in ordinary Abilities`);

@@ -4642,7 +4642,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "id": "ability-death-approaches-3347016",
             "sectionId": "deathshroud-terminators-ability-death-approaches",
             "title": "Death Approaches",
-            "text": "Each time this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from all other enemy units.",
+            "text": "In your Movement phase, each time this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from all other enemy units.",
             "sourceUnitId": "unit-deathshroud-terminators"
           },
           {

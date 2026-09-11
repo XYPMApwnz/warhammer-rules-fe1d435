@@ -216,12 +216,13 @@ assert.deepEqual({id:unforgivenMatches[0].id,name:unforgivenMatches[0].name,titl
 const daConfig=JSON.parse(pidbReadFileSync(pidbResolve(pidbRoot,'books/dark-angels/book.config.json'),'utf8'));
 assert.equal(daConfig.armyRules.filter(title=>title==='The Unforgiven').length,1,'DA army-rule registration');
 assert.equal(daConfig.armyRules.filter(title=>title==='Oath of Moment').length,1,'Oath of Moment remains registered');
-assert.equal(daConfig.armyRuleTermIds?.['The Unforgiven'],'army-rule-the-unforgiven');
+assert.equal(daConfig.armyRuleTermIds?.['The Unforgiven'],undefined,'The Unforgiven must use the standard DA-local Army Book identity');
 assert.equal(daConfig.armyRuleTermIds?.['Oath of Moment'],'space-marines-army-rule-oath-of-moment');
 
 const unforgivenTarget=pidbGeneratedTarget('dark-angels','army-rule-the-unforgiven');
 const unforgivenRenderedText=pidbRenderedText(unforgivenTarget);
 assert.ok(unforgivenTarget.includes('The Unforgiven'));
+assert.ok(unforgivenTarget.includes('data-term="dark-angels-army-rule-the-unforgiven"'),'The Unforgiven generated target must publish its DA-local glossary identity');
 assert.ok(unforgivenRenderedText.includes('You cannot include units from more than one Chapter in your army.'));
 assert.ok(unforgivenRenderedText.includes('Ezekiel is the Chief Librarian of the Dark Angels'));
 assert.ok(generatedBook('dark-angels').targets?.['army-rule-oath-of-moment'],'Oath of Moment generated target remains present');

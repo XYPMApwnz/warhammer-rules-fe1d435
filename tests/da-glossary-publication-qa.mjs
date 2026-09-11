@@ -10,6 +10,7 @@ import {createReaderAnchorValidator} from '../glossary/tools/reader-path-contrac
 
 const file=fileURLToPath(import.meta.url),root=path.resolve(path.dirname(file),'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const normalizeEol=text=>text.replace(/\r\n/g,'\n');
 const json=p=>JSON.parse(read(p));
 const load=p=>{const scope={window:{}};vm.runInNewContext(read(p),scope);return scope.window;};
 const representative='dark-angels-weapon-heavy-bolt-pistol';
@@ -84,7 +85,7 @@ if(process.argv.includes('--probe')){
   assert.ok(!built[navigationOnly]&&!built['dark-angels-'+navigationOnly],'NAVIGATION_IS_NOT_PUBLICATION');
   const builtContext=JSON.parse(outputs.get('glossary/contexts/dark-angels.json')||'{"terms":{}}').terms;
   coverage(built,builtContext,JSON.parse(outputs.get('glossary/aliases.en.json')).aliases);
-  for(const [relative,value] of outputs)assert.equal(value,read(relative),`${relative}: authoritative generated output is current`);
+  for(const [relative,value] of outputs)assert.equal(normalizeEol(value),normalizeEol(read(relative)),`${relative}: authoritative generated output is current`);
   console.log('DA publication producer probe PASS: navigation-only target excluded; generated outputs current');
 }else{
   coverage(registry,context,aliases);

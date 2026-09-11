@@ -5806,13 +5806,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-stealth-battlesuits"
           },
           {
-            "id": "tau-empire-ability-localised-stealth-projectors-aura",
-            "sectionId": "tau-empire-ability-localised-stealth-projectors-aura",
-            "title": "Localised Stealth Projectors (Aura)",
-            "text": "When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden.",
-            "sourceUnitId": "unit-stealth-battlesuits"
-          },
-          {
             "id": "core-infiltrators",
             "sectionId": "core-infiltrators",
             "title": "Infiltrators",

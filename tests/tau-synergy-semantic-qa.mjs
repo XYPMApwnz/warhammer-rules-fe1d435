@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {runTauAuxiliaryQa} from './tau-auxiliary-provenance-qa.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),sources=new Map(),read=file=>{if(!sources.has(file))sources.set(file,fs.readFileSync(path.join(root,file),'utf8'));return sources.get(file);};
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
@@ -12,7 +13,7 @@ vm.runInNewContext(read('books/tau-empire/scripts/roster-filter.js'),scope,{file
 const catalog=scope.WH_BOOK_ROSTER_CATALOG,semantics=scope.TAURosterSemantics;
 assert.ok(semantics,'T\'au semantic provider API');
 assert.equal(catalog.units.length,39,'Datasheet inventory');
-assert.equal(catalog.units.reduce((sum,unit)=>sum+unit.gameSelections.abilities.length,0),190,'canonical Datasheet ability inventory');
+assert.equal(catalog.units.reduce((sum,unit)=>sum+unit.gameSelections.abilities.length,0),189,'canonical Datasheet ability inventory');
 assert.equal(catalog.enhancements.length,23,'canonical Enhancement inventory');
 assert.equal(catalog.detachmentRules.length,7,'canonical Detachment Rule inventory');
 assert.equal(catalog.units.reduce((sum,unit)=>sum+unit.gameSelections.wargearAbilities.length,0),52,'selected-wargear rule inventory');
@@ -116,4 +117,5 @@ const pathfinder=draft('pathfinder-1','unit-pathfinder-team',{wargear:['Pulse Ac
 const localProvider=read('books/tau-empire/scripts/roster-filter.js'),legacyProvider=read('books/extensions/book-roster-enhancement-providers.js');
 for(const text of ['Derived effect:','Apply the current','No permanent Datasheet mutation was applied'])assert.doesNotMatch(localProvider,new RegExp(text,'i'),`synthetic user-facing text: ${text}`);
 assert.doesNotMatch(legacyProvider,/const tauEffects|applyTauEffect/,'legacy T\'au DOM effect provider removed');
-console.log("T'au semantic conformance QA: PASS (39 Datasheets, 190 abilities, 23 Enhancements, 7 Detachment Rules, 52 selected-wargear rules).");
+runTauAuxiliaryQa();
+console.log("T'au semantic conformance QA: PASS (39 Datasheets, 189 abilities, 23 Enhancements, 7 Detachment Rules, 52 selected-wargear rules).");

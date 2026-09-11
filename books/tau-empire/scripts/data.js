@@ -2174,20 +2174,6 @@ window.DG_TERMS={
     "datasheet": "unit-stealth-battlesuits",
     "statline": "stealth-battlesuits-profile"
   },
-  "tau-empire-ability-localised-stealth-projectors-aura": {
-    "id": "tau-empire-ability-localised-stealth-projectors-aura",
-    "title": "Localised Stealth Projectors (Aura)",
-    "summary": "When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden.",
-    "full": "When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden.",
-    "glossary": "glossary-tau-empire-ability-localised-stealth-projectors-aura",
-    "rule": "unit-stealth-battlesuits",
-    "units": [
-      "unit-stealth-battlesuits",
-      "unit-ghostkeel-battlesuit"
-    ],
-    "datasheet": "unit-stealth-battlesuits",
-    "statline": "stealth-battlesuits-profile"
-  },
   "tau-empire-ability-homing-beacon": {
     "id": "tau-empire-ability-homing-beacon",
     "title": "Homing Beacon",
@@ -2532,6 +2518,19 @@ window.DG_TERMS={
       "unit-razorshark-strike-fighter",
       "unit-riptide-battlesuit",
       "unit-sun-shark-bomber"
+    ],
+    "datasheet": "unit-ghostkeel-battlesuit",
+    "statline": "ghostkeel-battlesuit-profile"
+  },
+  "tau-empire-ability-localised-stealth-projectors-aura": {
+    "id": "tau-empire-ability-localised-stealth-projectors-aura",
+    "title": "Localised Stealth Projectors (Aura)",
+    "summary": "When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden.",
+    "full": "When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden.",
+    "glossary": "glossary-tau-empire-ability-localised-stealth-projectors-aura",
+    "rule": "unit-ghostkeel-battlesuit",
+    "units": [
+      "unit-ghostkeel-battlesuit"
     ],
     "datasheet": "unit-ghostkeel-battlesuit",
     "statline": "ghostkeel-battlesuit-profile"

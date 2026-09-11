@@ -74063,9 +74063,9 @@
       "canonicalSource": {
         "documentId": "tau-empire-codex-transcription",
         "revision": "pinned BSData",
-        "locator": "unit-stealth-battlesuits"
+        "locator": "unit-ghostkeel-battlesuit"
       },
-      "fullRulePath": "books/tau-empire/reader.html#unit-stealth-battlesuits",
+      "fullRulePath": "books/tau-empire/reader.html#unit-ghostkeel-battlesuit",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"

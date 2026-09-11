@@ -1998,19 +1998,6 @@
         ]
       }
     },
-    "tau-empire-ability-localised-stealth-projectors-aura": {
-      "termId": "tau-empire-ability-localised-stealth-projectors-aura",
-      "navigation": {
-        "glossary": "glossary-tau-empire-ability-localised-stealth-projectors-aura",
-        "rule": "unit-stealth-battlesuits",
-        "datasheet": "unit-stealth-battlesuits",
-        "statline": "stealth-battlesuits-profile",
-        "units": [
-          "unit-stealth-battlesuits",
-          "unit-ghostkeel-battlesuit"
-        ]
-      }
-    },
     "tau-empire-ability-homing-beacon": {
       "termId": "tau-empire-ability-homing-beacon",
       "navigation": {
@@ -2330,6 +2317,18 @@
           "unit-razorshark-strike-fighter",
           "unit-riptide-battlesuit",
           "unit-sun-shark-bomber"
+        ]
+      }
+    },
+    "tau-empire-ability-localised-stealth-projectors-aura": {
+      "termId": "tau-empire-ability-localised-stealth-projectors-aura",
+      "navigation": {
+        "glossary": "glossary-tau-empire-ability-localised-stealth-projectors-aura",
+        "rule": "unit-ghostkeel-battlesuit",
+        "datasheet": "unit-ghostkeel-battlesuit",
+        "statline": "ghostkeel-battlesuit-profile",
+        "units": [
+          "unit-ghostkeel-battlesuit"
         ]
       }
     },

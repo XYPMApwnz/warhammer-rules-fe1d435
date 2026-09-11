@@ -91,7 +91,9 @@ const allGenericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:
     if(!config.sources?.relatedRules||!fs.existsSync(packFile))return[];
     return [{id:config.id,title:config.title,root:bookRoot,config,runtime:loadWindow(runtimeFile).DG_TERMS,pack:readJson(packFile)}];
   });
-const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels'].includes(book.id)).sort((a,b)=>(a.id==='blood-angels')-(b.id==='blood-angels'));
+// Registration publishes source-backed runtime concepts, not arbitrary reader targets.
+// Dependency owners must be registered before their overlay contexts.
+const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels','dark-angels'].includes(book.id)).sort((a,b)=>(a.config.dependencies?.length||0)-(b.config.dependencies?.length||0));
 const coreData=loadWindow(path.join(root,'books','core-rules','content','core-rules.en.js')).CORE_RULES;
 const coreCurated=coreData.terms;
 const coreSource=loadWindow(path.join(root,'books','core-rules','content','core-rules.source.en.js')).CORE_PDF_SOURCE;
@@ -432,9 +434,9 @@ for(const book of genericArmyBooks){
     ...(detachment.stratagems||[]).map(item=>item.title)
   ]).filter(Boolean).map(normalTitle));
   for(const [localId,entry] of Object.entries(book.runtime)){
-    if(book.id==='blood-angels'&&localId.startsWith('space-marines-')){
+    if((book.config.dependencies||[]).some(id=>localId.startsWith(`${id}-`))){
       const canonicalId=confirmedCanonicalAliases[localId]||localId;
-      if(!registry.has(canonicalId))throw new Error(`Blood Angels shared glossary target is absent: ${localId}`);
+      if(!registry.has(canonicalId))throw new Error(`${book.title} shared glossary target is absent: ${localId}`);
       if(canonicalId!==localId)aliases[localId]=canonicalId;
       addContext(book.id,localId,canonicalId,entry);
       continue;

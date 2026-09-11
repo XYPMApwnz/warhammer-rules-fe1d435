@@ -74,7 +74,7 @@ try{
   await wrongWalkingPage.context.close();
 
   const biologus=byUnit('unit-biologus-putrifier'),melee=biologus.gameSelections.selections.find(selection=>selection.kind==='weapon'&&selection.profileIds.some(id=>biologus.gameSelections.weaponProfiles.find(profile=>profile.id===id)?.mode==='melee')),ranged=biologus.gameSelections.selections.find(selection=>selection.kind==='weapon'&&selection.profileIds.some(id=>biologus.gameSelections.weaponProfiles.find(profile=>profile.id===id)?.mode==='ranged'));
-  const daemonId='enhancement-daemon-weapon-of-nurgle',daemonItem=byEnhancement(daemonId),daemonPage=await open(record('dg-daemon',{units:[unit('source','unit-biologus-putrifier',[melee.title,ranged.title])],detachments:[{id:daemonItem.detachmentId}],enhancements:[enhancement(daemonId,'source')]}),'source','unit-biologus-putrifier');
+  const daemonId='enhancement-daemon-weapon-of-nurgle',daemonItem=byEnhancement(daemonId),daemonPage=await open(record('dg-daemon',{units:[unit('source','unit-biologus-putrifier',[melee.title,ranged.title])],detachments:[{id:daemonItem.detachmentId,name:byDetachment(daemonItem.detachmentId).title}],enhancements:[enhancement(daemonId,'source')]}),'source','unit-biologus-putrifier');
   const daemonResult=await daemonPage.page.evaluate(()=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='source'),effect=unit.effects.find(item=>item.id==='critical-hit-5'),rows=[...document.querySelectorAll('.weapon-row:not(.weapon-head)')].filter(row=>!row.hidden);return{effect,tagged:rows.filter(row=>row.textContent.includes('CRITICAL HITS 5+')).map(row=>row.id),synthetic:[...document.querySelectorAll('.ability h5')].filter(node=>node.textContent.trim()==='Critical Hits 5+').length,active:document.querySelector('.roster-game-effects')?.textContent||''};});
   assert.equal(daemonResult.effect?.component,'weapon');
   assert.equal(daemonResult.effect?.operation,'grant-tag');
@@ -84,14 +84,14 @@ try{
   assert.match(daemonResult.active,/CRITICAL HITS 5\+/);
   await daemonPage.context.close();
 
-  const regenId='enhancement-revolting-regeneration',regenItem=byEnhancement(regenId),regenPage=await open(record('dg-regen',{units:[unit('source','unit-biologus-putrifier')],detachments:[{id:regenItem.detachmentId}],enhancements:[enhancement(regenId,'source')]}),'source','unit-biologus-putrifier');
+  const regenId='enhancement-revolting-regeneration',regenItem=byEnhancement(regenId),regenPage=await open(record('dg-regen',{units:[unit('source','unit-biologus-putrifier')],detachments:[{id:regenItem.detachmentId,name:byDetachment(regenItem.detachmentId).title}],enhancements:[enhancement(regenId,'source')]}),'source','unit-biologus-putrifier');
   const regenResult=await regenPage.page.evaluate(()=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='source'),effect=unit.effects.find(item=>item.id==='revolting-regeneration'),core=[...document.querySelectorAll('.ability')].find(article=>article.querySelector('h5')?.textContent.trim()==='CORE')?.textContent||'';return{effect,core,synthetic:[...document.querySelectorAll('.roster-game-derived-ability h5')].filter(node=>node.textContent.trim()==='Revolting Regeneration').length};});
   assert.equal(regenResult.effect?.targetId,'core-feel-no-pain');
   assert.match(regenResult.core,/Feel No Pain 5\+/);
   assert.equal(regenResult.synthetic,0);
   await regenPage.context.close();
 
-  const plagueveilId='enhancement-plagueveil',plagueveil=byEnhancement(plagueveilId),plagueveilPage=await open(record('dg-plagueveil',{units:[unit('source','unit-plague-marines')],detachments:[{id:plagueveil.detachmentId}],enhancements:[enhancement(plagueveilId,'source')]}),'source','unit-plague-marines');
+  const plagueveilId='enhancement-plagueveil',plagueveil=byEnhancement(plagueveilId),plagueveilPage=await open(record('dg-plagueveil',{units:[unit('source','unit-plague-marines')],detachments:[{id:plagueveil.detachmentId,name:byDetachment(plagueveil.detachmentId).title}],enhancements:[enhancement(plagueveilId,'source')]}),'source','unit-plague-marines');
   const plagueveilResult=await plagueveilPage.page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='source');return{effects:unit.effects.filter(item=>item.id==='plagueveil'||item.canonicalReference?.id===id).length,headings:[...document.querySelectorAll('h3,h4,h5')].filter(node=>node.textContent.trim().replace(/\s+-\s+\d+\s*pts$/i,'')==='Plagueveil').length};},plagueveilId);
   assert.equal(plagueveilResult.effects,0);
   assert.equal(plagueveilResult.headings,1);

@@ -421,7 +421,7 @@
       return true;
     }
     navigateHash(){return this.restoreInitial();}
-    hashTarget(){return decodeURIComponent((window.WHPageState?.initialHash?.()||location.hash).slice(1));}
+    hashTarget(){try{return decodeURIComponent((window.WHPageState?.initialHash?.()||location.hash).slice(1));}catch{history.replaceState(history.state,'',location.pathname+location.search);return '';}}
     pushHistoryState(state,url){
       this.historyIndex+=1;
       const next={...state,whNavigationIndex:this.historyIndex};

@@ -21,7 +21,7 @@ const BLOOD_ANGELS_DESKTOP_FALLBACK = "./books/blood-angels/reader.html";
 const BLOOD_ANGELS_MOBILE_FALLBACK = "./books/blood-angels/mobile/index.html";
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
 const EMPERORS_CHILDREN_FALLBACK = "./books/emperors-children/index.html";
-const SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
+const SPACE_MARINES_ENTRY_FALLBACK = "./books/space-marines/";
 const SPACE_MARINES_DESKTOP_FALLBACK = "./books/space-marines/reader.html";
 const DARK_ANGELS_ENTRY_FALLBACK = "./books/dark-angels/index.html";
 const DARK_ANGELS_DESKTOP_FALLBACK = "./books/dark-angels/reader.html";
@@ -414,7 +414,7 @@ function navigationFallback(url) {
   if (path.includes("/books/orks/")) return ORKS_FALLBACK;
   if (path.includes("/books/emperors-children/")) return EMPERORS_CHILDREN_FALLBACK;
   if (path.endsWith("/books/space-marines/reader.html")) return SPACE_MARINES_DESKTOP_FALLBACK;
-  if (path.includes("/books/space-marines/")) return SPACE_MARINES_FALLBACK;
+  if (path.includes("/books/space-marines/")) return SPACE_MARINES_ENTRY_FALLBACK;
   if (path.includes("/books/dark-angels/mobile/")) return DARK_ANGELS_MOBILE_FALLBACK;
   if (path.endsWith("/books/dark-angels/reader.html")) return DARK_ANGELS_DESKTOP_FALLBACK;
   if (path.includes("/books/dark-angels/")) return DARK_ANGELS_ENTRY_FALLBACK;
@@ -477,8 +477,12 @@ self.addEventListener("activate", (event) => {
 async function fetchAndCache(request, cacheKey = request) {
   const response = await fetch(request);
   if (response.ok) {
-    const cache = await caches.open(CACHE_NAME);
-    await cache.put(cacheKey, response.clone());
+    try {
+      const cache = await caches.open(CACHE_NAME);
+      await cache.put(cacheKey, response.clone());
+    } catch (error) {
+      console.warn("Service Worker cache write failed", error);
+    }
   }
   return response;
 }

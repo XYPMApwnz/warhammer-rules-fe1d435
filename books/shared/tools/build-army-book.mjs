@@ -11,7 +11,17 @@ const {args,check,configPath,root,repo,readJson,config,runtimeVersions}=context;
 if(config.buildExtension){await runCanonicalBuildExtension(context);process.exit(0);}
 const glossaryTerms=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en.json'),'utf8')).terms;
 const bookMark=config.mark||config.title.split(/\s+/).map(word=>word[0]).join('').slice(0,4).toUpperCase();
+const validateCanonicalIds=(data,sourceConfig)=>{
+  // Each canonical source owns unique definitions; dependency/local overlays remain separate.
+  const seen=new Map(),layers=new Set(['datasheets','imperialArmour','legends',...(sourceConfig.currentDatasheetLayers||[])]);
+  for(const layer of layers)for(const [index,unit] of (data[layer]||[]).entries()){
+    const location=`${sourceConfig.sources.codexDatasheets}:${layer}[${index}] (${unit.title})`;
+    if(seen.has(unit.id))throw new Error(`${sourceConfig.id}: duplicate canonical ID "${unit.id}": ${seen.get(unit.id)} conflicts with ${location}`);
+    seen.set(unit.id,location);
+  }
+};
 const pack=readJson(config.sources.factionPack),codex=readJson(config.sources.codexDatasheets);
+validateCanonicalIds(codex,config);
 const points=readJson(config.sources.points||'content/'+config.id+'-points.en.json');
 const codexWargear=config.sources.codexWargear?readJson(config.sources.codexWargear):null;
 const codexParity=config.sources.codexParity?readJson(config.sources.codexParity):null;
@@ -32,6 +42,7 @@ const unitInventory=layer=>[...(layer.datasheets||[]),...(layer.imperialArmour||
 const dependencyCodices=(config.dependencies||[]).map(id=>{
   const dependencyRoot=path.join(repo,'books',id),dependencyConfig=JSON.parse(fs.readFileSync(path.join(dependencyRoot,'book.config.json'),'utf8'));
   const dependencyCodex=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexDatasheets),'utf8'));
+  validateCanonicalIds(dependencyCodex,dependencyConfig);
   const dependencyPack=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.factionPack),'utf8'));
   const dependencyPoints=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.points||`content/${id}-points.en.json`),'utf8'));
   const dependencyParity=dependencyConfig.sources.codexParity?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexParity),'utf8')):null;

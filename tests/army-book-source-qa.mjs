@@ -1,7 +1,10 @@
+import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import vm from 'node:vm';
+import os from 'node:os';
+import {spawnSync} from 'node:child_process';
 
 const root=path.resolve(import.meta.dirname,'..');
 const books={
@@ -19,6 +22,87 @@ const targetHtml=id=>{const sandbox={window:{}};vm.runInNewContext(fs.readFileSy
 const renderedBook=id=>fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8')+targetHtml(id);
 const expect=(condition,message)=>{if(!condition)errors.push(message);};
 const inventory=data=>[...(data.datasheets||[]),...(data.imperialArmour||[]),...(data.legends||[])];
+
+// Compile synthetic canonical sources through the real CLI, including dependency loading.
+function canonicalIdCompilerControls(){
+  const temp=fs.mkdtempSync(path.join(os.tmpdir(),'canonical-id-qa-'));
+  const tools=path.join(temp,'books/shared/tools'),builder=path.join(tools,'build-army-book.mjs');
+  const writeJson=(file,value)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(value));};
+  const first={id:'unit-first',title:'First definition',category:'Infantry',keywords:['INFANTRY']};
+  const second={...first,id:'unit-second',title:'Second definition'};
+  const duplicate={...second,id:first.id};
+  const fixture=(id,codex,options={})=>{
+    const base=path.join(temp,'books',id),config={schema:1,id,title:id,factionKeyword:'SYNTHETIC',rosterSupport:true,
+      expected:{matchedDetachments:1,factionPackDetachments:1,legendsDatasheets:(codex.legends||[]).length},
+      sources:{codexDatasheets:'codex.json',factionPack:'pack.json',points:'points.json',manifest:'manifest.json'},...options};
+    writeJson(path.join(base,'book.config.json'),config);writeJson(path.join(base,'codex.json'),codex);
+    writeJson(path.join(base,'pack.json'),{meta:{file:'synthetic.pdf',version:'1'},datasheets:{},
+      detachments:[{id:'synthetic-detachment',title:'Synthetic Detachment',stratagems:[],enhancements:[],rule:{title:'Synthetic Rule',text:'Synthetic rule text.'}}],
+      updates:[{id:'synthetic-update',title:'Synthetic Update',text:'Synthetic update text.',sourcePages:[1]}],faqs:[]});
+    writeJson(path.join(base,'points.json'),{units:[],enhancements:[]});writeJson(path.join(base,'manifest.json'),{});
+    return base;
+  };
+  const compile=(base,...args)=>spawnSync(process.execPath,[builder,path.join(base,'book.config.json'),...args],{cwd:temp,encoding:'utf8'});
+  const output=result=>`${result.stdout||''}\n${result.stderr||''}`;
+  const succeeds=base=>{const result=compile(base);assert.equal(result.status,0,output(result));const checked=compile(base,'--check');assert.equal(checked.status,0,output(checked));};
+  const catalog=base=>{const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(base,'scripts/roster-data.js'),'utf8'),sandbox);return JSON.parse(JSON.stringify(sandbox.window.WH_BOOK_ROSTER_CATALOG.units));};
+  const rejects=(base,owner,locations)=>{
+    const result=compile(base);
+    assert.equal(result.status,1,'duplicate canonical ID must fail compilation: '+output(result));
+    const diagnostic=result.stderr.split(/\r?\n/).find(line=>line.startsWith('Error: '));
+    assert.equal(diagnostic,`Error: ${owner}: duplicate canonical ID "unit-first": codex.json:${locations[0]} (First definition) conflicts with codex.json:${locations[1]} (Second definition)`);
+    assert.equal(result.stdout,'','rejection must precede build success');
+    assert.equal(fs.existsSync(path.join(base,'reader.html')),false,'duplicate must not publish outputs');
+    assert.equal(compile(base).stderr.split(/\r?\n/).find(line=>line.startsWith('Error: ')),diagnostic,'deterministic duplicate diagnostic');
+  };
+  try{
+    fs.mkdirSync(tools,{recursive:true});
+    for(const file of ['build-army-book.mjs','canonical-build-contract.mjs','build-relation-graph.mjs','build-roster-catalog.mjs','build-army-book-targets.mjs'])fs.copyFileSync(path.join(root,'books/shared/tools',file),path.join(tools,file));
+    fs.copyFileSync(path.join(root,'books/shared/runtime-asset-versions.json'),path.join(temp,'books/shared/runtime-asset-versions.json'));
+    writeJson(path.join(temp,'glossary/registry.en.json'),{terms:{}});
+    const unique=fixture('unique',{datasheets:[first,second]});succeeds(unique);
+    assert.deepEqual(catalog(unique).map(({id,title})=>({id,title})),[first,second].map(({id,title})=>({id,title})),'unique definitions survive normal compilation');
+    const local=fixture('duplicate-local',{datasheets:[first,duplicate]});
+    rejects(local,'duplicate-local',['datasheets[0]','datasheets[1]']);
+    const crossLayer=fixture('duplicate-layer',{datasheets:[first],imperialArmour:[duplicate]},{currentDatasheetsOnly:true});
+    rejects(crossLayer,'duplicate-layer',['datasheets[0]','imperialArmour[0]']);
+    fixture('duplicate-dependency',{datasheets:[first],legends:[duplicate]});
+    const inherited=fixture('consumer',{datasheets:[second]},{dependencies:['duplicate-dependency'],dependencyDatasheets:{currentOnly:true}});
+    rejects(inherited,'duplicate-dependency',['datasheets[0]','legends[0]']);
+    fixture('base',{datasheets:[first,second]});
+    const overlay=fixture('overlay',{datasheets:[{...first,title:'Local overlay'}]},{dependencies:['base'],dependencyDatasheets:{keywordOverlays:[{keyword:'OVERLAY',unitIds:[second.id]}]}});
+    succeeds(overlay);
+    const overlaid=catalog(overlay);
+    assert.deepEqual(overlaid.map(({id,title})=>({id,title})),[{id:first.id,title:'Local overlay'},{id:second.id,title:second.title}],'local-over-dependency precedence preserved');
+    assert.ok(overlaid.find(unit=>unit.id===second.id).intrinsicKeywords.includes('OVERLAY'),'dependency keyword augmentation preserved');
+    // A sentinel at the first destructive merge proves rejection happens before that boundary.
+    const source=fs.readFileSync(builder,'utf8'),boundary='const mergedUnits=new Map();';
+    assert.equal(source.split(boundary).length,2);
+    fs.writeFileSync(builder,source.replace(boundary,"throw new Error('canonical merge boundary reached');"+boundary));
+    try{
+      assert.match(compile(unique).stderr,/Error: canonical merge boundary reached/,'positive control reaches merge boundary');
+      rejects(local,'duplicate-local',['datasheets[0]','datasheets[1]']);
+      rejects(inherited,'duplicate-dependency',['datasheets[0]','legends[0]']);
+    }finally{fs.writeFileSync(builder,source);}
+    if(process.argv.includes('--duplicate-id-mutation')){
+      const guard=source.split('\n').find(line=>line.includes('if(seen.has(unit.id))throw new Error')&&line.includes('duplicate canonical ID'));
+      assert.ok(guard,'duplicate guard mutation anchor');
+      fs.writeFileSync(builder,source.replace(guard,''));
+      try{
+        assert.throws(()=>rejects(local,'duplicate-local',['datasheets[0]','datasheets[1]']),/duplicate canonical ID must fail compilation/,'disabled guard must make the regression oracle red');
+        assert.deepEqual(catalog(local).map(({id,title})=>({id,title})),[{id:first.id,title:second.title}],'disabled guard reproduces destructive last-write-wins merge');
+        console.log('Duplicate canonical ID mutation: KILLED (compiler exited 0; regression rejected false success)');
+      }finally{fs.writeFileSync(builder,source);}
+      rejects(fixture('restored',{datasheets:[first,duplicate]}),'restored',['datasheets[0]','datasheets[1]']);
+    }
+    console.log('Canonical ID compiler controls passed: unique, duplicate, cross-layer, dependency, overlay, pre-merge rejection');
+  }finally{
+    assert.equal(path.dirname(path.resolve(temp)),path.resolve(os.tmpdir()),'TEMP cleanup boundary');
+    assert.ok(path.basename(temp).startsWith('canonical-id-qa-'),'TEMP cleanup ownership');
+    fs.rmSync(temp,{recursive:true,force:true});
+  }
+}
+canonicalIdCompilerControls();
 
 for(const [id,expected] of Object.entries(books)){
   const base=`books/${id}`;

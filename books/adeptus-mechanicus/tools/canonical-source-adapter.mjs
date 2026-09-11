@@ -66,7 +66,7 @@ for(const leader of rules.datasheets){
   }
 }
 for(const bodyguard of rules.datasheets){
-  const text=[bodyguard.composition||'',...(bodyguard.abilities||[]).filter(ability=>/^attached unit$/i.test(ability.title)).map(ability=>ability.text||'')].join(' ');
+  const text=[bodyguard.compositionText||bodyguard.composition||'',...(bodyguard.abilities||[]).filter(ability=>/^attached unit$/i.test(ability.title)).map(ability=>ability.text||'')].join(' ');
   const proxy=[...unitByTitle.values()].find(unit=>text.toLowerCase().includes(unit.title.toLowerCase()));
   if(proxy)for(const edge of [...attachments])if(edge.targetId===proxy.id)attachments.push({...edge,targetId:bodyguard.id});
 }

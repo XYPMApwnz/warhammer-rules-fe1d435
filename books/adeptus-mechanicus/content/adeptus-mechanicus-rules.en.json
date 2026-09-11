@@ -1478,14 +1478,33 @@
           "text": "While this unit contains one or more TECH-PRIEST models, it can perform an Action after Advancing and is eligible to shoot in a turn in which it started an Action."
         }
       ],
-      "composition": "1 Servitor Underseer, 2 Gun Servitors and 6 Combat Servitors. The Underseer is equipped with a Mechanicus pistol and dataspikes. One Gun Servitor has a heavy arc rifle and servo-claw; the other has a heavy bolter and servo-claw. Every Combat Servitor has a phosphor blaster and servo-claw. A Character that can attach to KATAPHRON BREACHERS can attach to this unit instead.",
+      "composition": [
+        {
+          "name": "Servitor Underseer",
+          "min": 1,
+          "max": 1,
+          "intrinsicKeywords": [
+            "TECH-PRIEST"
+          ]
+        },
+        {
+          "name": "Gun Servitor",
+          "min": 2,
+          "max": 2
+        },
+        {
+          "name": "Combat Servitor",
+          "min": 6,
+          "max": 6
+        }
+      ],
+      "compositionText": "1 Servitor Underseer, 2 Gun Servitors and 6 Combat Servitors. The Underseer is equipped with a Mechanicus pistol and dataspikes. One Gun Servitor has a heavy arc rifle and servo-claw; the other has a heavy bolter and servo-claw. Every Combat Servitor has a phosphor blaster and servo-claw. A Character that can attach to KATAPHRON BREACHERS can attach to this unit instead.",
       "wargear": "One Combat Servitor can replace its phosphor blaster with a meltagun. Up to three can replace their phosphor blasters with incendine igniters.",
       "keywords": [
         "INFANTRY",
         "IMPERIUM",
         "CULT MECHANICUS",
         "SERVITOR BATTLECLADE",
-        "TECH-PRIEST",
         "ADEPTUS MECHANICUS"
       ]
     },

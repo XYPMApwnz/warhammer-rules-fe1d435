@@ -43,6 +43,8 @@ const glossaryRegistry=JSON.parse(glossaryRegistryText);
 const glossaryBuildSource=fs.readFileSync(path.resolve(root,'..','..','glossary','tools','build-glossary.mjs'),'utf8');
 const cacheRevisionSource=fs.readFileSync(path.resolve(root,'..','..','tools','cache-revision.mjs'),'utf8');
 const factionRules=json('content/adeptus-mechanicus-rules.en.json');
+const rosterCatalogSandbox={window:{}};vm.runInNewContext(read('scripts/roster-data.js'),rosterCatalogSandbox);
+const rosterCatalog=rosterCatalogSandbox.window.WH_BOOK_ROSTER_CATALOG;
 const source=json('content/adeptus-mechanicus-source.en.json');
 const codex=json('content/adeptus-mechanicus-codex-detachments.en.json');
 const codexParity=json('content/adeptus-mechanicus-codex-parity.en.json');
@@ -58,6 +60,25 @@ const allDetachments=[...rules.detachments,...codex.detachments];
 const node=process.execPath;
 const results=[];
 const check=(name,ok,detail='')=>results.push({name,ok,detail});
+
+const servitorId='unit-servitor-battleclade';
+const canonicalServitors=factionRules.datasheets.find(unit=>unit.id===servitorId);
+const rosterServitors=rosterCatalog.units.find(unit=>unit.id===servitorId);
+const underseer=rosterServitors?.gameSelections.models.find(model=>model.title==='Servitor Underseer');
+const servitorHtml=(()=>{const range=targetSandbox.window.WH_ARMY_BOOK_TARGETS.targets[servitorId];return range?targetSandbox.window.WH_ARMY_BOOK_TARGETS.html.slice(range.start,range.end):'';})();
+check('Servitor Battleclade authoritative model scope stays canonical',
+  source.meta.version==='1.2'&&source.meta.legalFrom==='2026-08-26'&&canonicalServitors.sourcePages.join(',')==='15,16'
+  &&canonicalServitors.keywords.includes('TECH-PRIEST')===false
+  &&canonicalServitors.composition.find(model=>model.name==='Servitor Underseer')?.intrinsicKeywords?.join(',')==='TECH-PRIEST'
+  &&canonicalServitors.composition.filter(model=>model.name!=='Servitor Underseer').every(model=>model.intrinsicKeywords===undefined));
+check('Servitor Battleclade roster metadata does not flatten TECH-PRIEST',
+  rosterServitors.intrinsicKeywords.includes('TECH-PRIEST')===false
+  &&underseer?.intrinsicKeywords?.join(',')==='TECH-PRIEST'
+  &&rosterServitors.gameSelections.models.filter(model=>model!==underseer).every(model=>model.intrinsicKeywords===undefined));
+check('Servitor Battleclade presentation scopes TECH-PRIEST to the Underseer',
+  (servitorHtml.match(/data-model-keyword="TECH-PRIEST"/g)||[]).length===1
+  &&servitorHtml.includes(`data-roster-model-id="${underseer?.id}"`)
+  &&servitorHtml.includes('data-source-field="keywords.tech-priest"')===false);
 
 check('BSData source hash ignores LF/CRLF differences',
   normalizedTextSha256('{\n  "revision": 1\n}\n')===normalizedTextSha256('{\r\n  "revision": 1\r\n}\r\n'));
@@ -126,6 +147,11 @@ const canonicalFaction=canonicalFactionContext.result;
 const responsiveParsed={faction:'Adeptus Mechanicus',detachments:[{label:knownDetachment}],units:[{id:'responsive-unit-1',name:'Skitarii Rangers',points:85},{id:'responsive-unit-2',name:'Skitarii Rangers',points:85}],enhancements:[{name:'Exact Owner Enhancement',ownerStatus:'resolved',ownerUnitId:'responsive-unit-1'}]};
 const responsiveOwnership=rosterLogic.resolveOwnership(responsiveParsed,responsiveParsed.units);
 const rosterP1SharedContextSource=fs.readFileSync(path.resolve(root,'..','shared','roster-context.js'),'utf8'),rosterP1CatalogSource=read('scripts/roster-data.js'),rosterP1ThinProvider=rosterFilterSource.includes('WHArmyRosterContext.install({')&&(rosterFilterSource.match(/WHArmyRosterContext\.install\(/g)||[]).length===1&&!rosterFilterSource.includes('querySelectorAll')&&!rosterFilterSource.includes('DocumentFragment')&&!rosterFilterSource.includes('resolvedDetachmentIds')&&!rosterFilterSource.includes('group.units.push')&&!rosterFilterSource.includes('location.replace')&&!rosterFilterSource.includes('history.replaceState')&&!rosterFilterSource.includes('./mobile/')&&!rosterFilterSource.includes('AMPhoneRoster');
+const projectionScope={URLSearchParams,CustomEvent:class{},dispatchEvent(){}};vm.runInNewContext(rosterP1SharedContextSource,projectionScope);
+const servitorProjection=projectionScope.WHArmyRosterContext.project({catalog:rosterCatalog,roster:{faction:'Adeptus Mechanicus',units:[{id:'servitor-physical',name:'Servitor Battleclade',points:65,models:[{quantity:1,name:'Servitor Underseer',loadouts:[]},{quantity:2,name:'Gun Servitor',loadouts:[]},{quantity:6,name:'Combat Servitor',loadouts:[]}]}],detachments:[],enhancements:[],warnings:[]},record:{id:'servitor-scope-fixture'}}).game.units[0];
+check('personal Servitor Battleclade projection keeps scoped keyword out of unit identity',
+  servitorProjection.rosterState.keywordProfile.intrinsic.includes('TECH-PRIEST')===false
+  &&servitorProjection.effective.keywords.includes('TECH-PRIEST')===false);
 const canonicalNavTargets=[...html.matchAll(/data-nav-target="([^"]+)"/g)].map(match=>match[1]);
 check('responsive reader accepts plain and Imperium faction identities',rosterP1ThinProvider&&/"factionKeyword"\s*:\s*"Adeptus Mechanicus"/i.test(rosterP1CatalogSource)&&rosterP1SharedContextSource.includes('factionKeyword'));
 check('responsive reader rejects wrong faction parents',['Chaos - Adeptus Mechanicus','Xenos - Adeptus Mechanicus','Chaos \u2013 Adeptus Mechanicus','Xenos \u2014 Adeptus Mechanicus','Adeptus Mechanic',''].every(value=>!canonicalFaction(value)));

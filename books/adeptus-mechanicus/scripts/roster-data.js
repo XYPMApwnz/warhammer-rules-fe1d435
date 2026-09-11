@@ -4606,7 +4606,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "IMPERIUM",
         "CULT MECHANICUS",
         "SERVITOR BATTLECLADE",
-        "TECH-PRIEST",
         "ADEPTUS MECHANICUS"
       ],
       "relations": {
@@ -4686,10 +4685,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-servitor-battleclade-model-servitor-underseer-2-gun-servitors-and-6-combat-servitors",
-            "title": "Servitor Underseer, 2 Gun Servitors and 6 Combat Servitors",
+            "id": "unit-servitor-battleclade-model-servitor-underseer",
+            "title": "Servitor Underseer",
             "aliases": [
-              "Servitor Underseer, 2 Gun Servitors and 6 Combat Servitors"
+              "Servitor Underseer"
+            ],
+            "intrinsicKeywords": [
+              "TECH-PRIEST"
+            ]
+          },
+          {
+            "id": "unit-servitor-battleclade-model-gun-servitor-2",
+            "title": "Gun Servitor",
+            "aliases": [
+              "Gun Servitor"
+            ]
+          },
+          {
+            "id": "unit-servitor-battleclade-model-combat-servitor-3",
+            "title": "Combat Servitor",
+            "aliases": [
+              "Combat Servitor"
             ]
           }
         ],

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createAdeptusMechanicusCanonicalModel} from './canonical-source-adapter.mjs';
-import {canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,serializeRosterCatalog} from '../../shared/tools/build-roster-catalog.mjs';
+import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,serializeRosterCatalog} from '../../shared/tools/build-roster-catalog.mjs';
 import {createArmyBookTargetBuild} from '../../shared/tools/build-army-book-targets.mjs';
 import {renderUnitArt} from '../../shared/tools/render-unit-art.mjs';
 
@@ -160,6 +160,12 @@ const abilityKind=item=>{
 };
 const abilityCard=(item,unit,wargearAbilityId='')=>`<article class="ability"${wargearAbilityId?` data-roster-wargear-ability-id="${esc(wargearAbilityId)}"`:''} data-source-field="abilities.${esc(slugKey(item.title))}"><h5 data-source-field="title"><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.openingText?`<p data-source-field="openingText">${decorate(item.openingText,unit.id)}</p>`:''}${(item.options||[]).map(option=>`<div class="ability-option" data-source-field="options.${esc(option.id)}"><h6>${esc(option.title)}</h6><p data-source-field="text">${decorate(option.text,unit.id)}</p></div>`).join('')}${item.text?`<p data-source-field="text">${decorate(item.text,unit.id)}</p>`:''}</article>`;
 const compactAbilities=(title,items,unit)=>items.length?`<div class="shared-ability-group" data-ability-class="${esc(slugKey(title))}"><h5>${title}</h5><div class="keyword-list shared-abilities">${items.map(item=>/^core$/i.test(item.title)?decorate(abilityText(item),unit.id):`<button class="term-button" data-term="${item.termId}" data-source-field="abilities.${esc(slugKey(item.title))}">${esc(item.title)}</button>`).join(' ')}</div></div>`:'';
+const composition=unit=>unit.compositionText
+  ?`<p>${decorate(unit.compositionText,unit.id)}</p>`
+  :Array.isArray(unit.composition)
+    ?`<ul>${unit.composition.map(model=>`<li>${model.min}${model.max!==model.min?`–${model.max}`:''} ${esc(model.name)}</li>`).join('')}</ul>`
+    :`<p>${decorate(unit.composition,unit.id)}</p>`;
+const modelKeywords=unit=>canonicalRosterModelsFor(unit).filter(model=>model.intrinsicKeywords?.length).map(model=>`<p class="model-keywords" data-roster-model-id="${esc(model.id)}"><b>${esc(model.title)}</b> only: ${model.intrinsicKeywords.map(keyword=>`<span data-model-keyword="${esc(keyword)}">${esc(keyword)}</span>`).join(', ')}</p>`).join('');
 const unitCard=unit=>{
   const slug=unit.id.replace('unit-','');
   const grouped={core:[],faction:[],datasheet:[],relation:[],damaged:[],transport:[]};
@@ -174,13 +180,13 @@ const unitCard=unit=>{
   const parts=[
     ['Profile & Weapons',`${slug}-profile`,`${pointsPanel}${stats(unit)}${weapons(unit)}`],
     ['Abilities',`${slug}-abilities`,`<div class="ability-list">${compactAbilities('CORE',grouped.core,unit)}${compactAbilities('FACTION',grouped.faction,unit)}${grouped.datasheet.map(item=>abilityCard(item,unit)).join('')}</div>`],
-    ['Unit Composition',`${slug}-composition`,`<p>${decorate(unit.composition,unit.id)}</p>`],
+    ['Unit Composition',`${slug}-composition`,composition(unit)],
     ...grouped.relation.map(item=>[item.title,`${slug}-${slugify(item.title)}`,`<div class="ability-list">${abilityCard(item,unit)}</div>`]),
     ...grouped.transport.map(item=>['Transport',`${slug}-transport`,`<div class="ability-list">${abilityCard(item,unit)}</div>`]),
     ...grouped.damaged.map(item=>['Damaged',`${slug}-damaged`,`<div class="ability-list">${abilityCard(item,unit)}</div>`]),
     ...(wargear.length?[['Wargear Options',`${slug}-wargear-options`,`<ul>${wargear.map(x=>`<li>${decorate(x,unit.id)}</li>`).join('')}</ul>`]]:[]),
     ...(wargearAbilities.length?[['Wargear Abilities',`${slug}-wargear-abilities`,`<p class="unit-note">These abilities apply only while the corresponding wargear is equipped.</p><div class="ability-list">${wargearAbilities.map((item,index)=>abilityCard(item,unit,canonicalWargearAbilityId(unit,item,index))).join('')}</div>`]]:[]),
-    ['Keywords',`${slug}-keywords`,`<div class="keyword-list">${unit.keywords.map(x=>`<span data-source-field="keywords.${esc(slugKey(x))}">${esc(x)}</span>`).join('')}</div>`]
+    ['Keywords',`${slug}-keywords`,`<div class="keyword-list">${unit.keywords.map(x=>`<span data-source-field="keywords.${esc(slugKey(x))}">${esc(x)}</span>`).join('')}</div>${modelKeywords(unit)}`]
   ];
   const tabs=parts.map(([label,id])=>`<button class="local-tab" data-journey-target="${id}" data-journey-type="datasheet">${label}</button>`).join('');
   const sections=parts.map(([label,id,body])=>`<section class="unit-part" id="${id}"><h4>${label}</h4>${body}</section>`).join('');

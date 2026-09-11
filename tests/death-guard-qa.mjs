@@ -164,7 +164,7 @@ check('navigation branches use strict sibling accordion',navigation.includes("if
 check('manual accordion state yields back to scroll tracking',navigation.includes('pathIsOpen(node)')&&navigation.includes("else if(item&&!this.pathIsOpen(item.node))this.revealPath(item.node,{includeSelf:true})"));
 check('branch labels and arrows have separate actions',navigation.includes("event.target.closest('[data-nav-toggle]')")&&navigation.includes("event.target.closest('[data-nav-target]')"));
 check('Start closes every open navigation branch before returning to the top',navigation.includes("if(label.dataset.navTarget==='start')this.closeEveryBranch()"));
-const navigationClassSource=navigation.match(/(class NavigationController\{[\s\S]*?\n  \})\n\n  window\.DGNavigation/)?.[1]||'';
+const navigationClassSource=navigation.replace(/\r\n/g,'\n').match(/(class NavigationController\{[\s\S]*?\n  \})\n\n  window\.DGNavigation/)?.[1]||'';
 try{
   const NavigationController=Function(`"use strict";return (${navigationClassSource});`)();
   const controller=Object.create(NavigationController.prototype);

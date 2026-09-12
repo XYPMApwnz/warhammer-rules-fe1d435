@@ -36,6 +36,15 @@ const canonicalCompositionModelsFor=unit=>{
   }
   return records;
 };
+const canonicalAbilityRecord=(unit,ability,id)=>({id,sectionId:ability.id||id,title:ability.title||'',text:ability.text||ability.summary||'',sourceUnitId:unit.id});
+const assertMatchingAbilityRecords=(unit,abilities,wargearAbilities)=>{
+  const ordinaryById=new Map(abilities.map(ability=>[ability.id,ability]));
+  for(const wargearAbility of wargearAbilities){
+    const ordinary=ordinaryById.get(wargearAbility.id);
+    if(!ordinary)continue;
+    for(const field of ['sectionId','title','text','sourceUnitId'])if(ordinary[field]&&wargearAbility[field]&&ordinary[field]!==wargearAbility[field])throw new Error(`${unit.id}: conflicting canonical ability ${wargearAbility.id} field ${field}`);
+  }
+};
 export const canonicalRosterModelsFor=unit=>canonicalCompositionModelsFor(unit).map((model,index)=>{
   const keywords=model.intrinsicKeywords;
   if(keywords!==undefined&&(!Array.isArray(keywords)||keywords.some(keyword=>typeof keyword!=='string'||!keyword.trim())||new Set(keywords.map(normalize)).size!==keywords.length))throw new Error(`${unit.id}: invalid model-scoped intrinsic keywords for ${model.name}`);
@@ -58,7 +67,7 @@ const gameSelectionsFor=(unit,options={})=>{
   const weaponFamilies=[...familyGroups.values()].filter(group=>group.profiles.length>1).map(group=>({id:`${unit.id}-weapon-family-${slug(group.title)}`,title:group.title,aliases:[group.title],profileIds:group.profiles.map(profile=>profile.id),ambiguousAlias:grouped.has(normalize(group.title))}));
   for(const family of weaponFamilies)selections.push({id:`${family.id}-selection`,title:family.title,aliases:[...family.aliases],kind:'weapon',familyId:family.id,profileIds:[...family.profileIds],wargearAbilityIds:[]});
   const declaredWargearSelections=[];
-  const wargearAbilities=canonicalWargearAbilities.map((ability,index)=>{const abilityId=canonicalWargearAbilityId(unit,ability,index),declared=values(ability.requiredSelections).map(selection=>{const record=typeof selection==='string'?{title:selection}:selection||{},title=record.title||'',id=record.id||`${unit.id}-selection-${slug(title)}`;declaredWargearSelections.push({id,title,aliases:[...new Set([title,...values(record.aliases)].filter(Boolean))],kind:'wargear',profileIds:[],wargearAbilityIds:[abilityId]});return id;});return{id:abilityId,title:ability.title||'',requiredSelectionIds:[...new Set([...values(ability.requiredSelectionIds),...declared])]};});
+  const wargearAbilities=canonicalWargearAbilities.map((ability,index)=>{const abilityId=canonicalWargearAbilityId(unit,ability,index),declared=values(ability.requiredSelections).map(selection=>{const record=typeof selection==='string'?{title:selection}:selection||{},title=record.title||'',id=record.id||`${unit.id}-selection-${slug(title)}`;declaredWargearSelections.push({id,title,aliases:[...new Set([title,...values(record.aliases)].filter(Boolean))],kind:'wargear',profileIds:[],wargearAbilityIds:[abilityId]});return id;});return{...canonicalAbilityRecord(unit,ability,abilityId),requiredSelectionIds:[...new Set([...values(ability.requiredSelectionIds),...declared])]};});
   for(const declared of declaredWargearSelections){const existing=selections.find(selection=>selection.id===declared.id);if(existing)existing.wargearAbilityIds=[...new Set([...values(existing.wargearAbilityIds),...declared.wargearAbilityIds])];else selections.push(declared);}
   for(const ability of wargearAbilities)if(!ability.requiredSelectionIds.length){const id=`${unit.id}-selection-${slug(ability.title)}`;if(options.inferExactWargearAbilitySelections){ability.requiredSelectionIds=[id];selections.push({id,title:ability.title,aliases:[ability.title],kind:'wargear',profileIds:[],wargearAbilityIds:[ability.id]});}else selections.push({id,title:ability.title,aliases:[ability.title],kind:'wargear',profileIds:[],wargearAbilityIds:[],candidateWargearAbilityIds:[ability.id]});}
   for(const ability of wargearAbilities)for(const selectionId of ability.requiredSelectionIds){const selection=selections.find(item=>item.id===selectionId);if(selection)selection.wargearAbilityIds=[...new Set([...values(selection.wargearAbilityIds),ability.id])];}
@@ -79,7 +88,8 @@ const gameSelectionsFor=(unit,options={})=>{
     if(!existing)selections.push(selection);
   }
   const stats=normalizedStatsFor(unit);
-  const abilities=[...new Map(canonicalAbilities.map((ability,index)=>{const id=ability.termId||ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;return[id,{id,sectionId:ability.id||id,title:ability.title||'',text:ability.text||ability.summary||'',sourceUnitId:unit.id}];})).values()];
+  const abilities=[...new Map(canonicalAbilities.map((ability,index)=>{const id=ability.termId||ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;return[id,canonicalAbilityRecord(unit,ability,id)];})).values()];
+  assertMatchingAbilityRecords(unit,abilities,wargearAbilities);
   return {stats:{...stats},abilities,models:canonicalRosterModelsFor(unit),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
 };
 

@@ -396,14 +396,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-skitarii-rangers-wargear-ability-enhanced-data-tether",
+            "sectionId": "unit-skitarii-rangers-wargear-ability-enhanced-data-tether",
             "title": "Enhanced data-tether",
+            "text": "Each time you select the bearer’s unit\nas the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-skitarii-rangers",
             "requiredSelectionIds": [
               "unit-skitarii-rangers-selection-enhanced-data-tether"
             ]
           },
           {
             "id": "unit-skitarii-rangers-wargear-ability-omnispex-2",
+            "sectionId": "unit-skitarii-rangers-wargear-ability-omnispex-2",
             "title": "Omnispex",
+            "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
+            "sourceUnitId": "unit-skitarii-rangers",
             "requiredSelectionIds": [
               "unit-skitarii-rangers-selection-omnispex"
             ]
@@ -792,14 +798,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-skitarii-vanguard-wargear-ability-enhanced-data-tether",
+            "sectionId": "unit-skitarii-vanguard-wargear-ability-enhanced-data-tether",
             "title": "Enhanced data-tether",
+            "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-skitarii-vanguard",
             "requiredSelectionIds": [
               "unit-skitarii-vanguard-selection-enhanced-data-tether"
             ]
           },
           {
             "id": "unit-skitarii-vanguard-wargear-ability-omnispex-2",
+            "sectionId": "unit-skitarii-vanguard-wargear-ability-omnispex-2",
             "title": "Omnispex",
+            "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
+            "sourceUnitId": "unit-skitarii-vanguard",
             "requiredSelectionIds": [
               "unit-skitarii-vanguard-selection-omnispex"
             ]
@@ -5432,7 +5444,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-serberys-raiders-wargear-ability-enhanced-data-tether",
+            "sectionId": "unit-serberys-raiders-wargear-ability-enhanced-data-tether",
             "title": "Enhanced data-tether",
+            "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-serberys-raiders",
             "requiredSelectionIds": [
               "unit-serberys-raiders-selection-enhanced-data-tether"
             ]
@@ -5816,14 +5831,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-archaeopter-fusilave-wargear-ability-chaff-launcher",
+            "sectionId": "unit-archaeopter-fusilave-wargear-ability-chaff-launcher",
             "title": "Chaff Launcher",
+            "text": "The bearer has the Smoke keyword.",
+            "sourceUnitId": "unit-archaeopter-fusilave",
             "requiredSelectionIds": [
               "unit-archaeopter-fusilave-selection-chaff-launcher"
             ]
           },
           {
             "id": "unit-archaeopter-fusilave-wargear-ability-command-uplink-2",
+            "sectionId": "unit-archaeopter-fusilave-wargear-ability-command-uplink-2",
             "title": "Command Uplink",
+            "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-archaeopter-fusilave",
             "requiredSelectionIds": [
               "unit-archaeopter-fusilave-selection-command-uplink"
             ]
@@ -6032,14 +6053,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-archaeopter-stratoraptor-wargear-ability-chaff-launcher",
+            "sectionId": "unit-archaeopter-stratoraptor-wargear-ability-chaff-launcher",
             "title": "Chaff Launcher",
+            "text": "The bearer has the Smoke keyword.",
+            "sourceUnitId": "unit-archaeopter-stratoraptor",
             "requiredSelectionIds": [
               "unit-archaeopter-stratoraptor-selection-chaff-launcher"
             ]
           },
           {
             "id": "unit-archaeopter-stratoraptor-wargear-ability-command-uplink-2",
+            "sectionId": "unit-archaeopter-stratoraptor-wargear-ability-command-uplink-2",
             "title": "Command Uplink",
+            "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-archaeopter-stratoraptor",
             "requiredSelectionIds": [
               "unit-archaeopter-stratoraptor-selection-command-uplink"
             ]
@@ -6208,14 +6235,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-archaeopter-transvector-wargear-ability-chaff-launcher",
+            "sectionId": "unit-archaeopter-transvector-wargear-ability-chaff-launcher",
             "title": "Chaff Launcher",
+            "text": "The bearer has the Smoke keyword.",
+            "sourceUnitId": "unit-archaeopter-transvector",
             "requiredSelectionIds": [
               "unit-archaeopter-transvector-selection-chaff-launcher"
             ]
           },
           {
             "id": "unit-archaeopter-transvector-wargear-ability-command-uplink-2",
+            "sectionId": "unit-archaeopter-transvector-wargear-ability-command-uplink-2",
             "title": "Command Uplink",
+            "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-archaeopter-transvector",
             "requiredSelectionIds": [
               "unit-archaeopter-transvector-selection-command-uplink"
             ]
@@ -7007,7 +7040,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether",
+            "sectionId": "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether",
             "title": "Broad spectrum data-tether",
+            "text": "The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "sourceUnitId": "unit-onager-dunecrawler",
             "requiredSelectionIds": [
               "unit-onager-dunecrawler-selection-broad-spectrum-data-tether"
             ]

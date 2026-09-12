@@ -310,21 +310,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-breacher-team-wargear-ability-marker-drone",
+            "sectionId": "unit-breacher-team-wargear-ability-marker-drone",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-breacher-team",
             "requiredSelectionIds": [
               "unit-breacher-team-selection-marker-drone"
             ]
           },
           {
             "id": "unit-breacher-team-wargear-ability-shield-drone-2",
+            "sectionId": "unit-breacher-team-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-breacher-team",
             "requiredSelectionIds": [
               "unit-breacher-team-selection-shield-drone"
             ]
           },
           {
             "id": "unit-breacher-team-wargear-ability-guardian-drone-3",
+            "sectionId": "unit-breacher-team-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-breacher-team",
             "requiredSelectionIds": [
               "unit-breacher-team-selection-guardian-drone"
             ]
@@ -661,21 +670,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-strike-team-wargear-ability-marker-drone",
+            "sectionId": "unit-strike-team-wargear-ability-marker-drone",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-strike-team",
             "requiredSelectionIds": [
               "unit-strike-team-selection-marker-drone"
             ]
           },
           {
             "id": "unit-strike-team-wargear-ability-shield-drone-2",
+            "sectionId": "unit-strike-team-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-strike-team",
             "requiredSelectionIds": [
               "unit-strike-team-selection-shield-drone"
             ]
           },
           {
             "id": "unit-strike-team-wargear-ability-guardian-drone-3",
+            "sectionId": "unit-strike-team-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-strike-team",
             "requiredSelectionIds": [
               "unit-strike-team-selection-guardian-drone"
             ]
@@ -929,21 +947,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-cadre-fireblade-wargear-ability-marker-drone",
+            "sectionId": "unit-cadre-fireblade-wargear-ability-marker-drone",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-cadre-fireblade",
             "requiredSelectionIds": [
               "unit-cadre-fireblade-selection-marker-drone"
             ]
           },
           {
             "id": "unit-cadre-fireblade-wargear-ability-shield-drone-2",
+            "sectionId": "unit-cadre-fireblade-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-cadre-fireblade",
             "requiredSelectionIds": [
               "unit-cadre-fireblade-selection-shield-drone"
             ]
           },
           {
             "id": "unit-cadre-fireblade-wargear-ability-guardian-drone-3",
+            "sectionId": "unit-cadre-fireblade-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-cadre-fireblade",
             "requiredSelectionIds": [
               "unit-cadre-fireblade-selection-guardian-drone"
             ]
@@ -1484,42 +1511,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-battlesuit-support-system",
+            "sectionId": "unit-commander-in-coldstar-battlesuit-wargear-ability-battlesuit-support-system",
             "title": "Battlesuit Support System",
+            "text": "The bearer’s unit is eligible to shoot in a turn in which it Fell Back, but when doing so only models equipped with this wargear can make ranged attacks.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-coldstar-battlesuit-selection-battlesuit-support-system"
             ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-generator-2",
+            "sectionId": "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-generator-2",
             "title": "Shield Generator",
+            "text": "The bearer has a 4+ invulnerable save.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-coldstar-battlesuit-selection-shield-generator"
             ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-weapon-support-system-3",
+            "sectionId": "unit-commander-in-coldstar-battlesuit-wargear-ability-weapon-support-system-3",
             "title": "Weapon Support System",
+            "text": "Each time the bearer makes a ranged attack, you can ignore any or all modifiers to the Hit roll.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-coldstar-battlesuit-selection-weapon-support-system"
             ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-marker-drone-4",
+            "sectionId": "unit-commander-in-coldstar-battlesuit-wargear-ability-marker-drone-4",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-coldstar-battlesuit-selection-marker-drone"
             ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-drone-5",
+            "sectionId": "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-drone-5",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-coldstar-battlesuit-selection-shield-drone"
             ]
           },
           {
             "id": "unit-commander-in-coldstar-battlesuit-wargear-ability-guardian-drone-6",
+            "sectionId": "unit-commander-in-coldstar-battlesuit-wargear-ability-guardian-drone-6",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-commander-in-coldstar-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-coldstar-battlesuit-selection-guardian-drone"
             ]
@@ -2026,42 +2071,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-battlesuit-support-system",
+            "sectionId": "unit-commander-in-enforcer-battlesuit-wargear-ability-battlesuit-support-system",
             "title": "Battlesuit Support System",
+            "text": "The bearer’s unit is eligible to shoot in a turn in which it Fell Back, but when doing so only models equipped with this wargear can make ranged attacks.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-enforcer-battlesuit-selection-battlesuit-support-system"
             ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-generator-2",
+            "sectionId": "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-generator-2",
             "title": "Shield Generator",
+            "text": "The bearer has a 4+ invulnerable save.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-enforcer-battlesuit-selection-shield-generator"
             ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-weapon-support-system-3",
+            "sectionId": "unit-commander-in-enforcer-battlesuit-wargear-ability-weapon-support-system-3",
             "title": "Weapon Support System",
+            "text": "Each time the bearer makes a ranged attack, you can ignore any or all modifiers to the Hit roll.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-enforcer-battlesuit-selection-weapon-support-system"
             ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-marker-drone-4",
+            "sectionId": "unit-commander-in-enforcer-battlesuit-wargear-ability-marker-drone-4",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-enforcer-battlesuit-selection-marker-drone"
             ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-drone-5",
+            "sectionId": "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-drone-5",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-enforcer-battlesuit-selection-shield-drone"
             ]
           },
           {
             "id": "unit-commander-in-enforcer-battlesuit-wargear-ability-guardian-drone-6",
+            "sectionId": "unit-commander-in-enforcer-battlesuit-wargear-ability-guardian-drone-6",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-commander-in-enforcer-battlesuit",
             "requiredSelectionIds": [
               "unit-commander-in-enforcer-battlesuit-selection-guardian-drone"
             ]
@@ -2306,28 +2369,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-ethereal-wargear-ability-hover-drone",
+            "sectionId": "unit-ethereal-wargear-ability-hover-drone",
             "title": "Hover Drone",
+            "text": "The bearer can Fly and has a Move characteristic of 10\".",
+            "sourceUnitId": "unit-ethereal",
             "requiredSelectionIds": [
               "unit-ethereal-selection-hover-drone"
             ]
           },
           {
             "id": "unit-ethereal-wargear-ability-marker-drone-2",
+            "sectionId": "unit-ethereal-wargear-ability-marker-drone-2",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-ethereal",
             "requiredSelectionIds": [
               "unit-ethereal-selection-marker-drone"
             ]
           },
           {
             "id": "unit-ethereal-wargear-ability-shield-drone-3",
+            "sectionId": "unit-ethereal-wargear-ability-shield-drone-3",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-ethereal",
             "requiredSelectionIds": [
               "unit-ethereal-selection-shield-drone"
             ]
           },
           {
             "id": "unit-ethereal-wargear-ability-guardian-drone-4",
+            "sectionId": "unit-ethereal-wargear-ability-guardian-drone-4",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-ethereal",
             "requiredSelectionIds": [
               "unit-ethereal-selection-guardian-drone"
             ]
@@ -4585,7 +4660,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-the-twin-lance-wargear-ability-mv15-gun-drone",
+            "sectionId": "unit-the-twin-lance-wargear-ability-mv15-gun-drone",
             "title": "MV15 Gun Drone",
+            "text": "The bearer is equipped with 1 twin pulse blaster.",
+            "sourceUnitId": "unit-the-twin-lance",
             "requiredSelectionIds": [
               "unit-the-twin-lance-selection-mv15-gun-drone"
             ]
@@ -5715,42 +5793,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-pathfinder-team-wargear-ability-grav-inhibitor-drone",
+            "sectionId": "unit-pathfinder-team-wargear-ability-grav-inhibitor-drone",
             "title": "Grav-inhibitor Drone",
+            "text": "Each time an enemy unit selects the bearer's unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll).",
+            "sourceUnitId": "unit-pathfinder-team",
             "requiredSelectionIds": [
               "unit-pathfinder-team-selection-grav-inhibitor-drone"
             ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-pulse-accelerator-drone-2",
+            "sectionId": "unit-pathfinder-team-wargear-ability-pulse-accelerator-drone-2",
             "title": "Pulse Accelerator Drone",
+            "text": "Add 6\" to the Range characteristic of pulse carbines equipped by models in the bearer’s unit.",
+            "sourceUnitId": "unit-pathfinder-team",
             "requiredSelectionIds": [
               "unit-pathfinder-team-selection-pulse-accelerator-drone"
             ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-recon-drone-3",
+            "sectionId": "unit-pathfinder-team-wargear-ability-recon-drone-3",
             "title": "Recon Drone",
+            "text": "The bearer is equipped with 1 drone burst cannon and the bearer’s unit has the Infiltrators ability.",
+            "sourceUnitId": "unit-pathfinder-team",
             "requiredSelectionIds": [
               "unit-pathfinder-team-selection-recon-drone"
             ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-marker-drone-4",
+            "sectionId": "unit-pathfinder-team-wargear-ability-marker-drone-4",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-pathfinder-team",
             "requiredSelectionIds": [
               "unit-pathfinder-team-selection-marker-drone"
             ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-shield-drone-5",
+            "sectionId": "unit-pathfinder-team-wargear-ability-shield-drone-5",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-pathfinder-team",
             "requiredSelectionIds": [
               "unit-pathfinder-team-selection-shield-drone"
             ]
           },
           {
             "id": "unit-pathfinder-team-wargear-ability-guardian-drone-6",
+            "sectionId": "unit-pathfinder-team-wargear-ability-guardian-drone-6",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-pathfinder-team",
             "requiredSelectionIds": [
               "unit-pathfinder-team-selection-guardian-drone"
             ]
@@ -6024,14 +6120,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-stealth-battlesuits-wargear-ability-homing-beacon",
+            "sectionId": "unit-stealth-battlesuits-wargear-ability-homing-beacon",
             "title": "Homing Beacon",
+            "text": "Once per battle, you can use the Rapid Ingress Stratagem for 0CP. The target must be set up within 3\" of the bearer’s unit and more than 8\" away from all enemy units.\n Designer’s Note: *Place a Homing Beacon token next to this unit, removing it once this ability is used.*",
+            "sourceUnitId": "unit-stealth-battlesuits",
             "requiredSelectionIds": [
               "unit-stealth-battlesuits-selection-homing-beacon"
             ]
           },
           {
             "id": "unit-stealth-battlesuits-wargear-ability-marker-drone-2",
+            "sectionId": "unit-stealth-battlesuits-wargear-ability-marker-drone-2",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-stealth-battlesuits",
             "requiredSelectionIds": [
               "unit-stealth-battlesuits-selection-marker-drone"
             ]
@@ -6262,7 +6364,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-vespid-stingwings-wargear-ability-oversight-drone",
+            "sectionId": "unit-vespid-stingwings-wargear-ability-oversight-drone",
             "title": "Oversight Drone",
+            "text": "Once per battle, when the bearer’s unit is selected to shoot, until the end of the phase, ranged weapons equipped by models in this unit have the [IGNORES COVER] ability.\n\nDesigner’s Note: Place an Oversight Drone token next to the bearer, removing it once this ability has been used.",
+            "sourceUnitId": "unit-vespid-stingwings",
             "requiredSelectionIds": [
               "unit-vespid-stingwings-selection-oversight-drone"
             ]
@@ -6618,28 +6723,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-broadside-battlesuits-wargear-ability-weapon-support-system",
+            "sectionId": "unit-broadside-battlesuits-wargear-ability-weapon-support-system",
             "title": "Weapon Support System",
+            "text": "Each time the bearer makes a ranged attack, you can ignore any or all modifiers to the Hit roll.",
+            "sourceUnitId": "unit-broadside-battlesuits",
             "requiredSelectionIds": [
               "unit-broadside-battlesuits-selection-weapon-support-system"
             ]
           },
           {
             "id": "unit-broadside-battlesuits-wargear-ability-marker-drone-2",
+            "sectionId": "unit-broadside-battlesuits-wargear-ability-marker-drone-2",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-broadside-battlesuits",
             "requiredSelectionIds": [
               "unit-broadside-battlesuits-selection-marker-drone"
             ]
           },
           {
             "id": "unit-broadside-battlesuits-wargear-ability-shield-drone-3",
+            "sectionId": "unit-broadside-battlesuits-wargear-ability-shield-drone-3",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-broadside-battlesuits",
             "requiredSelectionIds": [
               "unit-broadside-battlesuits-selection-shield-drone"
             ]
           },
           {
             "id": "unit-broadside-battlesuits-wargear-ability-guardian-drone-4",
+            "sectionId": "unit-broadside-battlesuits-wargear-ability-guardian-drone-4",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-broadside-battlesuits",
             "requiredSelectionIds": [
               "unit-broadside-battlesuits-selection-guardian-drone"
             ]
@@ -6926,21 +7043,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-crisis-fireknife-battlesuits-wargear-ability-marker-drone",
+            "sectionId": "unit-crisis-fireknife-battlesuits-wargear-ability-marker-drone",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-crisis-fireknife-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-fireknife-battlesuits-selection-marker-drone"
             ]
           },
           {
             "id": "unit-crisis-fireknife-battlesuits-wargear-ability-shield-drone-2",
+            "sectionId": "unit-crisis-fireknife-battlesuits-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-crisis-fireknife-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-fireknife-battlesuits-selection-shield-drone"
             ]
           },
           {
             "id": "unit-crisis-fireknife-battlesuits-wargear-ability-guardian-drone-3",
+            "sectionId": "unit-crisis-fireknife-battlesuits-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-crisis-fireknife-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-fireknife-battlesuits-selection-guardian-drone"
             ]
@@ -7238,21 +7364,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-crisis-starscythe-battlesuits-wargear-ability-marker-drone",
+            "sectionId": "unit-crisis-starscythe-battlesuits-wargear-ability-marker-drone",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-crisis-starscythe-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-starscythe-battlesuits-selection-marker-drone"
             ]
           },
           {
             "id": "unit-crisis-starscythe-battlesuits-wargear-ability-shield-drone-2",
+            "sectionId": "unit-crisis-starscythe-battlesuits-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-crisis-starscythe-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-starscythe-battlesuits-selection-shield-drone"
             ]
           },
           {
             "id": "unit-crisis-starscythe-battlesuits-wargear-ability-guardian-drone-3",
+            "sectionId": "unit-crisis-starscythe-battlesuits-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-crisis-starscythe-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-starscythe-battlesuits-selection-guardian-drone"
             ]
@@ -7516,21 +7651,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-crisis-sunforge-battlesuits-wargear-ability-marker-drone",
+            "sectionId": "unit-crisis-sunforge-battlesuits-wargear-ability-marker-drone",
             "title": "Marker Drone",
+            "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "sourceUnitId": "unit-crisis-sunforge-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-sunforge-battlesuits-selection-marker-drone"
             ]
           },
           {
             "id": "unit-crisis-sunforge-battlesuits-wargear-ability-shield-drone-2",
+            "sectionId": "unit-crisis-sunforge-battlesuits-wargear-ability-shield-drone-2",
             "title": "Shield Drone",
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "sourceUnitId": "unit-crisis-sunforge-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-sunforge-battlesuits-selection-shield-drone"
             ]
           },
           {
             "id": "unit-crisis-sunforge-battlesuits-wargear-ability-guardian-drone-3",
+            "sectionId": "unit-crisis-sunforge-battlesuits-wargear-ability-guardian-drone-3",
             "title": "Guardian Drone",
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "sourceUnitId": "unit-crisis-sunforge-battlesuits",
             "requiredSelectionIds": [
               "unit-crisis-sunforge-battlesuits-selection-guardian-drone"
             ]
@@ -7882,7 +8026,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-ghostkeel-battlesuit-wargear-ability-battlesuit-support-system",
+            "sectionId": "unit-ghostkeel-battlesuit-wargear-ability-battlesuit-support-system",
             "title": "Battlesuit Support System",
+            "text": "The bearer is eligible to shoot in a turn in which it Fell Back but it loses the Smoke keyword.",
+            "sourceUnitId": "unit-ghostkeel-battlesuit",
             "requiredSelectionIds": [
               "unit-ghostkeel-battlesuit-selection-battlesuit-support-system"
             ]
@@ -10760,7 +10907,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-tidewall-shieldline-wargear-ability-tidewall-defence-platform",
+            "sectionId": "unit-tidewall-shieldline-wargear-ability-tidewall-defence-platform",
             "title": "Tidewall Defence Platform",
+            "text": "If equipped with a Tidewall defence platform, this FORTIFICATION has a Wounds characteristic of 15.",
+            "sourceUnitId": "unit-tidewall-shieldline",
             "requiredSelectionIds": [
               "unit-tidewall-shieldline-selection-tidewall-defence-platform"
             ]

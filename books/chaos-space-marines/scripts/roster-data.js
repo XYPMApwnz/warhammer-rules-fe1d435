@@ -974,7 +974,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-legionaries-wargear-ability-chaos-icon",
+            "sectionId": "unit-legionaries-wargear-ability-chaos-icon",
             "title": "Chaos icon",
+            "text": "Each time the bearer’s unit takes a Leadership test for the Dark Pacts ability, you can re-roll that test.",
+            "sourceUnitId": "unit-legionaries",
             "requiredSelectionIds": [
               "unit-legionaries-selection-chaos-icon"
             ]
@@ -2504,7 +2507,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-dark-commune-wargear-ability-chaos-icon",
+            "sectionId": "unit-dark-commune-wargear-ability-chaos-icon",
             "title": "Chaos icon",
+            "text": "Each time the bearer’s unit takes a Leadership test for the Dark Pacts ability, you can re-roll that test.",
+            "sourceUnitId": "unit-dark-commune",
             "requiredSelectionIds": [
               "unit-dark-commune-selection-chaos-icon"
             ]
@@ -4412,7 +4418,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-sorcerer-in-terminator-armour-wargear-ability-chaos-familiar",
+            "sectionId": "unit-sorcerer-in-terminator-armour-wargear-ability-chaos-familiar",
             "title": "Chaos Familiar",
+            "text": "Once per battle, when an attack is allocated to the bearer, you can change the Damage characteristic to 0.",
+            "sourceUnitId": "unit-sorcerer-in-terminator-armour",
             "requiredSelectionIds": [
               "unit-sorcerer-in-terminator-armour-selection-chaos-familiar"
             ]
@@ -7833,7 +7842,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-chosen-wargear-ability-chaos-icon",
+            "sectionId": "unit-chosen-wargear-ability-chaos-icon",
             "title": "Chaos icon",
+            "text": "Each time the bearer’s unit takes a Leadership test for the Dark Pacts ability, you can re-roll that test.",
+            "sourceUnitId": "unit-chosen",
             "requiredSelectionIds": [
               "unit-chosen-selection-chaos-icon"
             ]
@@ -9709,7 +9721,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-nemesis-claw-wargear-ability-voice-eater",
+            "sectionId": "unit-nemesis-claw-wargear-ability-voice-eater",
             "title": "Voice eater",
+            "text": "Enemy units (excluding MONSTERS and VEHICLES) cannot be targeted with Stratagems while they are within Engagement Range of the bearer’s unit.",
+            "sourceUnitId": "unit-nemesis-claw",
             "requiredSelectionIds": [
               "unit-nemesis-claw-selection-voice-eater"
             ]
@@ -10063,7 +10078,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-possessed-wargear-ability-chaos-icon",
+            "sectionId": "unit-possessed-wargear-ability-chaos-icon",
             "title": "Chaos icon",
+            "text": "Each time the bearer’s unit takes a Leadership test for the Dark Pacts ability, you can re-roll that test.",
+            "sourceUnitId": "unit-possessed",
             "requiredSelectionIds": [
               "unit-possessed-selection-chaos-icon"
             ]
@@ -11993,7 +12011,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-chaos-bikers-wargear-ability-chaos-icon",
+            "sectionId": "unit-chaos-bikers-wargear-ability-chaos-icon",
             "title": "Chaos icon",
+            "text": "Each time the bearer’s unit takes a Leadership test for the Dark Pacts ability, you can re-roll that test.",
+            "sourceUnitId": "unit-chaos-bikers",
             "requiredSelectionIds": [
               "unit-chaos-bikers-selection-chaos-icon"
             ]

@@ -18603,6 +18603,7 @@
         "tabs": [
           "unit-plaguebearers-profile",
           "plaguebearers-abilities",
+          "plaguebearers-wargear-abilities",
           "plaguebearers-composition",
           "plaguebearers-keywords",
           "plaguebearers-wargear-options"
@@ -18610,6 +18611,7 @@
         "sections": [
           "unit-plaguebearers-profile",
           "plaguebearers-abilities",
+          "plaguebearers-wargear-abilities",
           "plaguebearers-composition",
           "plaguebearers-wargear-options",
           "plaguebearers-keywords"

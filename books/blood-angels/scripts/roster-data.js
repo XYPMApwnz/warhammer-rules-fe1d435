@@ -2692,7 +2692,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield",
+            "sectionId": "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield",
             "title": "Terminator Storm Shield",
+            "text": "The bearer has a Wounds characteristic of 6.",
+            "sourceUnitId": "unit-ancient-in-terminator-armor",
             "requiredSelectionIds": [
               "unit-ancient-in-terminator-armor-selection-terminator-storm-shield"
             ]
@@ -3690,7 +3693,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-captain-wargear-ability-relic-shield",
+            "sectionId": "unit-captain-wargear-ability-relic-shield",
             "title": "Relic Shield",
+            "text": "Add 1 to the bearer's Wounds characteristic.",
+            "sourceUnitId": "unit-captain",
             "requiredSelectionIds": [
               "unit-captain-selection-relic-shield"
             ]
@@ -4821,7 +4827,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-captain-with-jump-pack-wargear-ability-relic-shield",
+            "sectionId": "unit-captain-with-jump-pack-wargear-ability-relic-shield",
             "title": "Relic Shield",
+            "text": "Add 1 to the bearer's Wounds characteristic.",
+            "sourceUnitId": "unit-captain-with-jump-pack",
             "requiredSelectionIds": [
               "unit-captain-with-jump-pack-selection-relic-shield"
             ]
@@ -5217,7 +5226,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield",
+            "sectionId": "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield",
             "title": "Relic Shield",
+            "text": "Add 1 to the bearer's Wounds characteristic.",
+            "sourceUnitId": "unit-chaplain-in-terminator-armour",
             "requiredSelectionIds": [
               "unit-chaplain-in-terminator-armour-selection-relic-shield"
             ]
@@ -7328,7 +7340,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-lieutenant-wargear-ability-storm-shield",
+            "sectionId": "unit-lieutenant-wargear-ability-storm-shield",
             "title": "Storm Shield",
+            "text": "The bearer has a 4+ invulnerable save",
+            "sourceUnitId": "unit-lieutenant",
             "requiredSelectionIds": [
               "unit-lieutenant-selection-storm-shield"
             ]
@@ -8585,7 +8600,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-impulsor-wargear-ability-shield-dome",
+            "sectionId": "unit-impulsor-wargear-ability-shield-dome",
             "title": "Shield Dome",
+            "text": "The bearer has a 5+ invulnerable save.",
+            "sourceUnitId": "unit-impulsor",
             "requiredSelectionIds": [
               "unit-impulsor-selection-shield-dome"
             ]
@@ -10225,7 +10243,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers",
+            "sectionId": "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers",
             "title": "Centurion Assault Launchers",
+            "text": "The bearer has the Grenades keyword.",
+            "sourceUnitId": "unit-centurion-assault-squad",
             "requiredSelectionIds": [
               "unit-centurion-assault-squad-selection-centurion-assault-launchers"
             ]
@@ -13104,7 +13125,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-incursor-squad-wargear-ability-haywire-mine",
+            "sectionId": "unit-incursor-squad-wargear-ability-haywire-mine",
             "title": "Haywire Mine",
+            "text": "Once per battle, at the start of any phase, you can select one enemy unit within 3\" of the bearer and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a Vehicle unit.",
+            "sourceUnitId": "unit-incursor-squad",
             "requiredSelectionIds": [
               "unit-incursor-squad-selection-haywire-mine"
             ]
@@ -13557,14 +13581,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-infiltrator-squad-wargear-ability-helix-gauntlet",
+            "sectionId": "unit-infiltrator-squad-wargear-ability-helix-gauntlet",
             "title": "Helix Gauntlet",
+            "text": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
+            "sourceUnitId": "unit-infiltrator-squad",
             "requiredSelectionIds": [
               "unit-infiltrator-squad-selection-helix-gauntlet"
             ]
           },
           {
             "id": "unit-infiltrator-squad-wargear-ability-infiltrator-comms-array-2",
+            "sectionId": "unit-infiltrator-squad-wargear-ability-infiltrator-comms-array-2",
             "title": "Infiltrator Comms Array",
+            "text": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP",
+            "sourceUnitId": "unit-infiltrator-squad",
             "requiredSelectionIds": [
               "unit-infiltrator-squad-selection-infiltrator-comms-array"
             ]
@@ -13832,14 +13862,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-reiver-squad-wargear-ability-grapnel-launchers",
+            "sectionId": "unit-reiver-squad-wargear-ability-grapnel-launchers",
             "title": "Grapnel Launchers",
+            "text": "Each time the bearer’s unit makes a Normal, Advance, Fall Back or Charge move, ignore any vertical distance when determining the total distance the\nbearer can be moved during that move",
+            "sourceUnitId": "unit-reiver-squad",
             "requiredSelectionIds": [
               "unit-reiver-squad-selection-grapnel-launchers"
             ]
           },
           {
             "id": "unit-reiver-squad-wargear-ability-reiver-grav-chute-2",
+            "sectionId": "unit-reiver-squad-wargear-ability-reiver-grav-chute-2",
             "title": "Reiver Grav-chute",
+            "text": "The bearer has the Deep Strike ability.",
+            "sourceUnitId": "unit-reiver-squad",
             "requiredSelectionIds": [
               "unit-reiver-squad-selection-reiver-grav-chute"
             ]
@@ -14973,7 +15009,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-terminator-assault-squad-wargear-ability-storm-shield",
+            "sectionId": "unit-terminator-assault-squad-wargear-ability-storm-shield",
             "title": "Storm Shield",
+            "text": "The bearer has a Wounds characteristic of 4.",
+            "sourceUnitId": "unit-terminator-assault-squad",
             "requiredSelectionIds": [
               "unit-terminator-assault-squad-selection-storm-shield"
             ]
@@ -15734,7 +15773,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-vanguard-veteran-squad-with-jump-packs-wargear-ability-storm-shield",
+            "sectionId": "unit-vanguard-veteran-squad-with-jump-packs-wargear-ability-storm-shield",
             "title": "Storm Shield",
+            "text": "The bearer has a 4+ invulnerable save",
+            "sourceUnitId": "unit-vanguard-veteran-squad-with-jump-packs",
             "requiredSelectionIds": [
               "unit-vanguard-veteran-squad-with-jump-packs-selection-storm-shield"
             ]
@@ -26267,7 +26309,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-sanguinary-guard-wargear-ability-sanguinary-banner",
+            "sectionId": "unit-sanguinary-guard-wargear-ability-sanguinary-banner",
             "title": "Sanguinary Banner",
+            "text": "Add 1 to the Objective Control characteristic of models in the bearer’s unit.",
+            "sourceUnitId": "unit-sanguinary-guard",
             "requiredSelectionIds": [
               "unit-sanguinary-guard-selection-sanguinary-banner"
             ]

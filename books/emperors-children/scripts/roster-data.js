@@ -145,14 +145,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-daemonettes-wargear-ability-daemonic-icon",
+            "sectionId": "unit-daemonettes-wargear-ability-daemonic-icon",
             "title": "Daemonic Icon",
+            "text": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+            "sourceUnitId": "unit-daemonettes",
             "requiredSelectionIds": [
               "unit-daemonettes-selection-daemonic-icon"
             ]
           },
           {
             "id": "unit-daemonettes-wargear-ability-instrument-of-chaos-2",
+            "sectionId": "unit-daemonettes-wargear-ability-instrument-of-chaos-2",
             "title": "Instrument of Chaos",
+            "text": "Add 1 to Charge rolls made for the bearer's unit.",
+            "sourceUnitId": "unit-daemonettes",
             "requiredSelectionIds": [
               "unit-daemonettes-selection-instrument-of-chaos"
             ]
@@ -466,7 +472,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-infractors-wargear-ability-icon-of-excess",
+            "sectionId": "unit-infractors-wargear-ability-icon-of-excess",
             "title": "Icon of Excess",
+            "text": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
+            "sourceUnitId": "unit-infractors",
             "requiredSelectionIds": [
               "unit-infractors-selection-icon-of-excess"
             ]
@@ -916,7 +925,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-tormentors-wargear-ability-icon-of-excess",
+            "sectionId": "unit-tormentors-wargear-ability-icon-of-excess",
             "title": "Icon of Excess",
+            "text": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
+            "sourceUnitId": "unit-tormentors",
             "requiredSelectionIds": [
               "unit-tormentors-selection-icon-of-excess"
             ]
@@ -1625,7 +1637,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-keeper-of-secrets-wargear-ability-shining-aegis",
+            "sectionId": "unit-keeper-of-secrets-wargear-ability-shining-aegis",
             "title": "Shining aegis",
+            "text": "The bearer has a Save characteristic of 3+.",
+            "sourceUnitId": "unit-keeper-of-secrets",
             "requiredSelectionIds": [
               "unit-keeper-of-secrets-selection-shining-aegis"
             ]
@@ -5492,14 +5507,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "unit-seekers-wargear-ability-daemonic-icon",
+            "sectionId": "unit-seekers-wargear-ability-daemonic-icon",
             "title": "Daemonic Icon",
+            "text": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+            "sourceUnitId": "unit-seekers",
             "requiredSelectionIds": [
               "unit-seekers-selection-daemonic-icon"
             ]
           },
           {
             "id": "unit-seekers-wargear-ability-instrument-of-chaos-2",
+            "sectionId": "unit-seekers-wargear-ability-instrument-of-chaos-2",
             "title": "Instrument of Chaos",
+            "text": "Add 1 to Charge rolls made for the bearer's unit.",
+            "sourceUnitId": "unit-seekers",
             "requiredSelectionIds": [
               "unit-seekers-selection-instrument-of-chaos"
             ]

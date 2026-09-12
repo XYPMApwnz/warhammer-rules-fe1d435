@@ -4127,7 +4127,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "plague-marines-ability-icon-of-despair-aura",
+            "sectionId": "plague-marines-ability-icon-of-despair-aura",
             "title": "Icon of Despair (Aura)",
+            "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+            "sourceUnitId": "unit-plague-marines",
             "requiredSelectionIds": []
           }
         ]
@@ -4800,7 +4803,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "wargearAbilities": [
           {
             "id": "deathshroud-terminators-ability-icon-of-despair-aura",
+            "sectionId": "deathshroud-terminators-ability-icon-of-despair-aura",
             "title": "Icon of Despair (Aura)",
+            "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+            "sourceUnitId": "unit-deathshroud-terminators",
             "requiredSelectionIds": [
               "unit-deathshroud-terminators-selection-icon-of-despair"
             ]
@@ -9395,8 +9401,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Deep Strike",
           "Pact of Decay",
           "Infected Outbreak",
-          "Daemonic Icon",
-          "Instrument of Chaos"
+          "Daemonic Icon"
         ],
         "termIds": [
           "keyword-infantry",
@@ -9500,6 +9505,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "plaguebearers-weapon-plaguesword"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plaguebearers-selection-instrument-of-chaos",
+            "title": "Instrument of Chaos",
+            "aliases": [
+              "Instrument of Chaos"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [
+              "plaguebearers-ability-instrument-of-chaos"
+            ],
+            "maxTotalQuantity": 1
           }
         ],
         "weaponFamilies": [],
@@ -9520,7 +9538,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
-        "wargearAbilities": []
+        "wargearAbilities": [
+          {
+            "id": "plaguebearers-ability-instrument-of-chaos",
+            "sectionId": "plaguebearers-ability-instrument-of-chaos",
+            "title": "Instrument of Chaos",
+            "text": "Add 1 to Charge rolls made for the bearer’s unit.",
+            "sourceUnitId": "unit-plaguebearers",
+            "requiredSelectionIds": [
+              "unit-plaguebearers-selection-instrument-of-chaos"
+            ]
+          }
+        ]
       }
     },
     {

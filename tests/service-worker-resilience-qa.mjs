@@ -9,12 +9,14 @@ const source=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 
 function workerRuntime(){
   const listeners={},warnings=[],cacheMatches=[],puts=[];
-  const behavior={fetch:async()=>new Response('network',{status:200}),put:async()=>{},match:async()=>undefined};
+  let skipWaitingCalls=0;
+  const behavior={fetch:async request=>new Response(String(request?.url||request).includes('cache-revision.js')?'self.WH40K_CACHE_REVISION="testrevision";':'network',{status:200}),put:async()=>{},match:async()=>undefined};
   const self={
     location:new URL('https://example.test/service-worker.js'),
+    WH40K_CACHE_REVISION:'testrevision',
     registration:{active:{}},
     clients:{claim:async()=>{},matchAll:async()=>[]},
-    skipWaiting:async()=>{},
+    skipWaiting:async()=>{skipWaitingCalls+=1;},
     addEventListener(type,listener){listeners[type]=listener;}
   };
   const context=vm.createContext({
@@ -35,7 +37,7 @@ function workerRuntime(){
     }
   });
   vm.runInContext(source,context,{filename:'service-worker.js'});
-  return {context,listeners,warnings,cacheMatches,puts,behavior};
+  return {context,listeners,warnings,cacheMatches,puts,behavior,get skipWaitingCalls(){return skipWaitingCalls;}};
 }
 
 function fallback(runtime,url){
@@ -53,6 +55,13 @@ async function dispatchFetch(runtime,request){
   runtime.listeners.fetch({request,respondWith(value){responsePromise=value;}});
   assert.ok(responsePromise,'Service Worker did not handle the same-origin GET');
   return responsePromise;
+}
+
+async function dispatchMessage(runtime,data){
+  let reply,waited=Promise.resolve();
+  runtime.listeners.message({data,ports:[{postMessage(value){reply=value;}}],waitUntil(value){waited=value;}});
+  await waited;
+  return reply;
 }
 
 const routing=workerRuntime();
@@ -98,4 +107,18 @@ const fallbackResponse=await dispatchFetch(failedFetch,{method:'GET',mode:'navig
 assert.equal(await fallbackResponse.text(),'cached book entry','true network failure did not retain navigation fallback behavior');
 assert.equal(failedFetch.puts.length,0,'failed network request attempted a cache write');
 
-console.log('Service Worker resilience QA passed: offline routes, cache-write isolation, and network fallback.');
+const lifecycle=workerRuntime();
+let installed;
+lifecycle.listeners.install({waitUntil(value){installed=value;}});
+await installed;
+assert.equal(lifecycle.skipWaitingCalls,0,'A successfully cached update activated before user confirmation');
+const version=await dispatchMessage(lifecycle,{type:'GET_VERSION'});
+assert.deepEqual(JSON.parse(JSON.stringify(version)),{type:'VERSION',revision:'testrevision',cacheName:'warhammer-rules-fe1d435-testrevision'},'Version query did not expose the worker cache identity');
+const rejectedActivation=await dispatchMessage(lifecycle,{type:'SKIP_WAITING',revision:'wrongrevision'});
+assert.equal(rejectedActivation.accepted,false,'Waiting worker accepted an activation request for another revision');
+assert.equal(lifecycle.skipWaitingCalls,0,'Rejected activation request called skipWaiting');
+const acceptedActivation=await dispatchMessage(lifecycle,{type:'SKIP_WAITING',revision:'testrevision'});
+assert.equal(acceptedActivation.accepted,true,'Ready waiting worker rejected explicit activation');
+assert.equal(lifecycle.skipWaitingCalls,1,'Explicit activation did not call skipWaiting exactly once');
+
+console.log('Service Worker resilience QA passed: offline routes, cache-write isolation, network fallback, and explicit update activation.');

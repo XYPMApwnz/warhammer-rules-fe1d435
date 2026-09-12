@@ -179,4 +179,4 @@ document.querySelector('#import-roster-file').addEventListener('change',async ev
 renderSavedRosters();
 const requestedRoster=new URLSearchParams(location.search).get('roster');
 if(requestedRoster)openSavedRoster(requestedRoster);
-if('serviceWorker' in navigator&&location.protocol.startsWith('http'))addEventListener('load',()=>navigator.serviceWorker.register('../service-worker.js'));
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))addEventListener('load',()=>navigator.serviceWorker.register('../service-worker.js',{updateViaCache:'none'}).catch(()=>{}));

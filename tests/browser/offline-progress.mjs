@@ -100,7 +100,7 @@ try{
     await page.waitForURL(url=>url.pathname==='/books/core-rules/reader/index.html');
     await assertCorePresentation(page,'Compatibility Core Rules offline');
     assert.ok(offlineResponses.some(item=>item.url==='/books/core-rules/reader/styles.css?v=14'&&item.type.startsWith('text/css')),'Core Rules CSS did not return the cached CSS MIME type');
-    assert.ok(offlineResponses.some(item=>item.url==='/books/core-rules/reader/app.js?v=14'&&item.type.startsWith('text/javascript')),'Core Rules app.js did not return the cached JavaScript MIME type');
+    assert.ok(offlineResponses.some(item=>item.url==='/books/core-rules/reader/app.js?v=15'&&item.type.startsWith('text/javascript')),'Core Rules app.js did not return the cached JavaScript MIME type');
     assert.ok(!offlineResponses.some(item=>item.url.startsWith('/books/core-rules/styles.css')||item.url.startsWith('/books/core-rules/app.js')),'Core Rules requested assets from the compatibility directory');
 
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-tech-priest-manipulus`,{waitUntil:'domcontentloaded'});

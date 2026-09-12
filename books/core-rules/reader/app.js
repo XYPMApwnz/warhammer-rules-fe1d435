@@ -166,5 +166,5 @@
     restorePopup(record);
   });
 
-  if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('../../../service-worker.js');
+  if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('../../../service-worker.js',{updateViaCache:'none'}).catch(()=>{});
 }());

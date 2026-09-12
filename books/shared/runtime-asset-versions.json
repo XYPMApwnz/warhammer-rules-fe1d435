@@ -2,8 +2,8 @@
   "schema": 1,
   "shared": {
     "armyBook": 19,
-    "offlineStatus": 2,
-    "offlineStatusCss": 1,
+    "offlineStatus": 3,
+    "offlineStatusCss": 2,
     "glossaryReturn": 5,
     "navigationTargets": 4,
     "relatedRules": 18,

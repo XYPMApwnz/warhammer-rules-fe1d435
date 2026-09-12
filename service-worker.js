@@ -33,7 +33,7 @@ const APP_SHELL = [
   ROSTER_GUIDES_FALLBACK,
   "./roster-guides/points-data.js?v=10",
   "./roster-guides/points-validator.js?v=6",
-  "./roster-guides/app.js?v=19",
+  "./roster-guides/app.js?v=20",
   "./manifest.webmanifest",
   "./assets/apple-touch-icon.png",
   "./assets/icon-192.png",
@@ -162,7 +162,7 @@ const APP_SHELL = [
   "./books/core-rules/index.html",
   CORE_RULES_FALLBACK,
   "./books/core-rules/reader/styles.css?v=14",
-  "./books/core-rules/reader/app.js?v=14",
+  "./books/core-rules/reader/app.js?v=15",
   "./books/core-rules/reader/search-index.json",
   "./books/core-rules/reader/introduction.html",
   "./books/core-rules/reader/core-concepts.html",
@@ -389,8 +389,8 @@ const APP_SHELL = [
   ,"./books/shared/roster-context.js?v=19"
   ,"./books/shared/roster-game-presentation.js?v=21"
 ,"./books/shared/army-book-app.js?v=19"
-  ,"./books/shared/offline-status.js?v=2"
-  ,"./books/shared/styles/offline-status.css?v=1"
+  ,"./books/shared/offline-status.js?v=3"
+  ,"./books/shared/styles/offline-status.css?v=2"
 ];
 
 function navigationFallback(url) {
@@ -440,26 +440,44 @@ async function cacheAppShell() {
   await setOfflinePackageStatus("ready", APP_SHELL.length);
 }
 
+async function assertCacheRevisionFresh() {
+  const response = await fetch(new URL("./glossary/generated/cache-revision.js", self.location.href), {cache: "no-store"});
+  if (!response.ok) throw new Error(`Cache revision check failed with ${response.status}`);
+  const source = await response.text();
+  const revision = source.match(/WH40K_CACHE_REVISION\s*=\s*["']([^"']+)["']/)?.[1];
+  if (!revision || revision !== self.WH40K_CACHE_REVISION) throw new Error("Imported cache revision is stale");
+}
+
 const OFFLINE_PACKAGE_STATUS = "WH_OFFLINE_PACKAGE_STATUS";
 const OFFLINE_PACKAGE_QUERY = "WH_OFFLINE_PACKAGE_STATUS_QUERY";
+const VERSION_QUERY = "GET_VERSION";
+const VERSION_RESPONSE = "VERSION";
+const ACTIVATE_UPDATE = "SKIP_WAITING";
+let offlinePackageSequence = 0;
 let offlinePackageStatus = {status: "idle", completed: 0, total: APP_SHELL.length, error: null};
-function offlinePackagePayload() {return {type: OFFLINE_PACKAGE_STATUS, revision: self.WH40K_CACHE_REVISION, ...offlinePackageStatus};}
+function offlinePackagePayload() {return {type: OFFLINE_PACKAGE_STATUS, revision: self.WH40K_CACHE_REVISION, sequence: offlinePackageSequence, ...offlinePackageStatus};}
+function versionPayload(extra={}) {return {type: VERSION_RESPONSE, revision: self.WH40K_CACHE_REVISION, cacheName: CACHE_NAME, ...extra};}
 async function broadcastOfflinePackageStatus() {const clients=await self.clients.matchAll({type:"window",includeUncontrolled:true}),payload=offlinePackagePayload();for(const client of clients)client.postMessage(payload);}
-async function setOfflinePackageStatus(status,completed,error=null){offlinePackageStatus={status,completed,total:APP_SHELL.length,error:error?String(error.message||error):null};await broadcastOfflinePackageStatus();return offlinePackagePayload();}
+async function setOfflinePackageStatus(status,completed,error=null){offlinePackageSequence+=1;offlinePackageStatus={status,completed,total:APP_SHELL.length,error:error?String(error.message||error):null};await broadcastOfflinePackageStatus();return offlinePackagePayload();}
 async function currentOfflinePackageStatus(){
   if(offlinePackageStatus.status!=="idle")return offlinePackagePayload();
   const cache=await caches.open(CACHE_NAME),cached=new Set((await cache.keys()).map(request=>request.url));
   const completed=APP_SHELL.reduce((count,url)=>count+cached.has(new URL(url,self.location.href).href),0);
-  offlinePackageStatus={status:completed===APP_SHELL.length?"ready":"error",completed,total:APP_SHELL.length,error:null};
+  offlinePackageSequence+=1;offlinePackageStatus={status:completed===APP_SHELL.length?"ready":"error",completed,total:APP_SHELL.length,error:null};
   return offlinePackagePayload();
 }
 self.addEventListener("message",event=>{
-  if(event.data?.type!==OFFLINE_PACKAGE_QUERY)return;
-  event.waitUntil(currentOfflinePackageStatus().then(payload=>{if(event.ports[0])event.ports[0].postMessage(payload);else if(event.source)event.source.postMessage(payload);}));
+  const reply=payload=>{if(event.ports[0])event.ports[0].postMessage(payload);else if(event.source)event.source.postMessage(payload);};
+  if(event.data?.type===OFFLINE_PACKAGE_QUERY){event.waitUntil(currentOfflinePackageStatus().then(reply));return;}
+  if(event.data?.type===VERSION_QUERY){reply(versionPayload());return;}
+  if(event.data?.type!==ACTIVATE_UPDATE)return;
+  const accepted=event.data.revision===self.WH40K_CACHE_REVISION&&offlinePackageStatus.status==="ready"&&offlinePackageStatus.completed===APP_SHELL.length;
+  reply(versionPayload({accepted}));
+  if(accepted)event.waitUntil(Promise.resolve(self.skipWaiting()));
 });
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(cacheAppShell().then(() => self.skipWaiting()));
+  event.waitUntil(assertCacheRevisionFresh().then(cacheAppShell));
 });
 
 self.addEventListener("activate", (event) => {

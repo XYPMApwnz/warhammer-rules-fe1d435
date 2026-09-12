@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="WH40K Rules">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="books/shared/styles/offline-status.css?v=1">
+  <link rel="stylesheet" href="books/shared/styles/offline-status.css?v=2">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <title>Warhammer 40,000 Rules Library</title>
   <script>
@@ -46,6 +46,16 @@
 <body data-last-checked="2026-08-11">
   <header class="topbar"><div class="brand"><a href="https://warhammer40000.com/" target="_blank" rel="noreferrer"><img class="warhammer-logo" src="assets/warhammer-40000-logo-optimized.png" alt="Warhammer 40,000"></a><a class="gw-link" href="https://www.warhammer.com/" target="_blank" rel="noreferrer"><img class="gw-logo" src="assets/games-workshop-logo.png" alt="Games Workshop"></a></div><div class="top-actions"><a class="utility glossary-link" href="glossary/index.html">Mega Glossary</a><div class="status"><i></i><span>Source status</span></div></div></header>
   <main>
+    <section class="pwa-update-panel" data-pwa-updater data-state="idle" aria-label="Offline application updates">
+      <div class="pwa-update-copy">
+        <strong data-pwa-update-status role="status" aria-live="polite" aria-atomic="true">Check for updates</strong>
+        <span class="pwa-update-versions">
+          <small>Offline version: <code data-pwa-installed-version>checking…</code></small>
+          <small data-pwa-available-row hidden>Available version: <code data-pwa-available-version></code></small>
+        </span>
+      </div>
+      <button type="button" data-pwa-update-action>Check for updates</button>
+    </section>
     <section class="hero"><p class="eyebrow">Library // 11th Edition</p><h1>In the grim darkness of the far future, there is only <span>KURILKA WAHAEBA</span>.</h1><p class="hero-copy">A unified reference for Core Rules, Army Books, shared terminology and roster-specific game guides.</p></section>
     <section class="library" aria-labelledby="library-title">
       <div class="section-head"><h2 id="library-title">Library</h2></div>
@@ -76,7 +86,7 @@
     <section class="support" aria-labelledby="support-title"><div class="section-head"><h2 id="support-title">Project information</h2><span>Supporting material</span></div><div class="support-grid"><article class="support-card"><h3>Sources & updates</h3><p>Official Games Workshop publications are the primary source. <a href="https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/" target="_blank" rel="noreferrer">Open official downloads ↗</a></p><div class="checked">Source status</div></article><article class="support-card"><h3>Mega Glossary</h3><p>The shared terminology service used by every rules space. <a href="glossary/index.html">Search the glossary →</a></p></article></div></section>
   </main>
   <footer class="footer"><span>WH40K Rules Library</span><span>Warhammer 40,000 and related marks belong to Games Workshop.</span></footer>
-  <script src="books/shared/offline-status.js?v=2" data-service-worker="./service-worker.js"></script>
+  <script src="books/shared/offline-status.js?v=3" data-service-worker="./service-worker.js"></script>
   <script>
     const checkedAt=new Date(`${document.body.dataset.lastChecked}T12:00:00`),stale=(Date.now()-checkedAt.getTime())/86400000>14,date=new Intl.DateTimeFormat('en-GB').format(checkedAt);
     for(const element of document.querySelectorAll('.status,.checked')){element.classList.toggle('stale',stale);if(element.classList.contains('status'))element.querySelector('span').textContent=`Source status · ${stale?'Audit refresh due':'Audit run'} · ${date}`;else element.textContent=`Audit run: ${date} // ${stale?'Refresh due':'Per-book authority varies'}`;}

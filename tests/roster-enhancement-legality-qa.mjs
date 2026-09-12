@@ -4,6 +4,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {catalog as builtCatalog,resolveEnhancementOwner} from '../roster-guides/build-points.mjs';
+import {createRosterFixture} from './helpers/roster-fixtures.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sources=new Map();
@@ -13,14 +14,14 @@ const local=value=>value===undefined?undefined:JSON.parse(JSON.stringify(value))
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const bookCatalog=book=>{const scope={window:{}};vm.runInNewContext(read('books/'+book+'/scripts/roster-data.js'),scope);return scope.window.WH_BOOK_ROSTER_CATALOG;};
 const anchors=[
-  {book:'space-marines',unit:'unit-ancient',id:'firestorm-assault-force-war-tempered-artifice',detachment:'Firestorm Assault Force'},
-  {book:'dark-angels',unit:'unit-ancient',id:'enhancement-weapons-of-the-first-legion',detachment:'Unforgiven Task Force'},
-  {book:'blood-angels',unit:'unit-captain-with-jump-pack',id:'enhancement-archangels-shard',detachment:'The Angelic Host'}
+  {book:'space-marines',unit:'unit-ancient',id:'firestorm-assault-force-war-tempered-artifice',detachmentId:'firestorm-assault-force'},
+  {book:'dark-angels',unit:'unit-ancient',id:'enhancement-weapons-of-the-first-legion',detachmentId:'unforgiven-task-force'},
+  {book:'blood-angels',unit:'unit-captain-with-jump-pack',id:'enhancement-archangels-shard',detachmentId:'the-angelic-host'}
 ];
 function lookupChecks(resolve=resolveEnhancementOwner){
   for(const anchor of anchors){
-    const book=bookCatalog(anchor.book),canonical=book.enhancements.find(e=>e.id===anchor.id);
-    const point=json('books/'+anchor.book+'/content/'+anchor.book+'-points.en.json').enhancements.find(e=>normalize(e.title)===normalize(canonical.title)&&normalize(e.detachment)===normalize(anchor.detachment));
+    const book=bookCatalog(anchor.book),canonical=book.enhancements.find(e=>e.id===anchor.id),detachment=book.detachments.find(e=>e.id===anchor.detachmentId);
+    const point=json('books/'+anchor.book+'/content/'+anchor.book+'-points.en.json').enhancements.find(e=>normalize(e.title)===normalize(canonical.title)&&normalize(e.detachment)===normalize(detachment.title));
     assert.ok(point,anchor.book+': exact fixture point record');
     const contracts=json('books/'+anchor.book+'/content/'+anchor.book+'-related-rules.en.json').enhancements;
     const result=resolve(point,book,contracts);
@@ -66,7 +67,7 @@ function loadBook(book,overrides={}){
   const run=file=>vm.runInContext(overrides[file]??read(file),scope,{filename:file});
   for(const file of ['books/shared/rule-facts.js','roster-guides/points-data.js','roster-guides/points-validator.js',
     'books/'+book+'/scripts/roster-data.js','books/shared/book-roster-enhancements.js',
-    'books/extensions/book-roster-enhancement-providers.js','books/shared/roster-context.js'])run(file);
+    'books/extensions/book-roster-enhancement-providers.js','books/shared/roster-parser.js','books/shared/roster-context.js'])run(file);
   const api=scope.WHArmyRosterContext;
   let provider={keywordProfile:(context,base)=>base,gameEffects:context=>scope.WHBookRosterEnhancements.gameEffects(context)};
   if(book==='emperors-children'){
@@ -78,15 +79,19 @@ function loadBook(book,overrides={}){
   }
   return {scope,catalog:scope.WH_BOOK_ROSTER_CATALOG,api,provider};
 }
-function fixture(loaded,unitId,id,detachment,raw=false){
-  const unit=loaded.catalog.units.find(u=>u.id===unitId),enhancement=loaded.catalog.enhancements.find(e=>e.id===id);
-  assert.ok(unit&&enhancement,'stable fixture identities');
+function fixture(loaded,unitId,id,detachmentId,raw=false){
+  const unit=loaded.catalog.units.find(u=>u.id===unitId),enhancement=loaded.catalog.enhancements.find(e=>e.id===id),detachment=loaded.catalog.detachments.find(e=>e.id===detachmentId);
+  assert.ok(unit&&enhancement&&detachment,'stable fixture identities');
   const melee=new Set(unit.gameSelections.weaponProfiles.filter(p=>p.mode==='melee').map(p=>p.id));
   const selection=unit.gameSelections.selections.find(s=>s.kind==='weapon'&&s.profileIds.some(id=>melee.has(id)));
-  return {faction:loaded.catalog.book.title,detachments:[{name:detachment}],units:[
+  if(!raw){
+    const key=normalize(loaded.catalog.book.title),created=createRosterFixture({catalog:loaded.catalog,pointsCatalog:loaded.scope.WH_POINTS_CATALOG[key],id:'legality-fixture',detachmentId,units:[{datasheetId:unitId,instanceId:'parsed-unit-1',quantity:1,selectionIds:selection?[selection.id]:[],enhancementId:id}]});
+    return loaded.scope.WHRosterParser.parse(created.record.sourceText);
+  }
+  return {faction:loaded.catalog.book.title,detachments:[{name:detachment.title}],units:[
     {id:'physical-owner',canonicalUnitId:unitId,name:unit.title,points:100,quantity:1,
       models:[{quantity:1,name:unit.gameSelections.models[0]?.title||unit.title,loadouts:selection?[{quantity:1,wargear:selection.title}]:[]}]}
-  ],enhancements:[{...(raw?{}:{id}),name:enhancement.title,ownerUnitId:'physical-owner',ownerStatus:'resolved',source:raw?'raw/source-unverified':'inline'}],warnings:[]};
+  ],enhancements:[{name:enhancement.title,ownerUnitId:'physical-owner',ownerStatus:'resolved',source:'raw/source-unverified'}],warnings:[]};
 }
 function project(loaded,roster){
   const original=JSON.stringify(roster);
@@ -98,7 +103,7 @@ function project(loaded,roster){
 const effects=projection=>projection.game.units.flatMap(u=>u.effects.filter(e=>e.source?.kind==='enhancement'&&e.state==='active'));
 function legalityChecks(overrides={}){
   for(const anchor of anchors){
-    const loaded=loadBook(anchor.book,overrides),roster=fixture(loaded,anchor.unit,anchor.id,anchor.detachment);
+    const loaded=loadBook(anchor.book,overrides),roster=fixture(loaded,anchor.unit,anchor.id,anchor.detachmentId);
     let result=project(loaded,roster);
     assert.ok(effects(result).length>0,anchor.book+': verified legal positive active');
     const entries=Object.values(loaded.scope.WH_POINTS_CATALOG[normalize(loaded.catalog.book.title)].enhancements).flat();
@@ -111,13 +116,13 @@ function legalityChecks(overrides={}){
     assert.equal(result.context.enhancements[0].sourceCoverage,'sourceLimited',anchor.book+': source warning retained');
     assert.ok(effects(result).length>0,anchor.book+': sourceLimited legal positive active');
     assert.ok(result.roster.warnings.some(w=>w.includes('source/contract coverage')),anchor.book+': active warning visible');
-    assert.ok(effects(result).every(e=>e.source.ownerInstanceId==='physical-owner'),anchor.book+': physical ownership');
+    assert.ok(effects(result).every(e=>e.source.ownerInstanceId==='parsed-unit-1'),anchor.book+': physical ownership');
   }
   const ec=loadBook('emperors-children',overrides),entry=ec.scope.WH_POINTS_CATALOG['emperor s children'].enhancements['exalted patron'];
   assert.deepEqual(local(entry.owner.selector.unitIds),['unit-lord-exultant'],'Exalted canonical owner is not fabricated');
   entry.sourceLimited=true;
-  const lord=fixture(ec,'unit-lord-exultant','exalted-patron','Court of the Phoenician',true);
-  const prince=fixture(ec,'unit-daemon-prince-of-slaanesh','exalted-patron','Court of the Phoenician',true);
+  const lord=fixture(ec,'unit-lord-exultant','exalted-patron','court-of-the-phoenician',true);
+  const prince=fixture(ec,'unit-daemon-prince-of-slaanesh','exalted-patron','court-of-the-phoenician',true);
   assert.equal(Object.hasOwn(lord.enhancements[0],'id'),false,'raw fixture must remain raw');
   assert.equal(Object.hasOwn(prince.enhancements[0],'id'),false,'wrong-bearer fixture must remain raw');
   const legal=project(ec,lord),illegal=project(ec,prince);

@@ -3,26 +3,23 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
 import {runTauAuxiliaryBrowser} from '../tau-auxiliary-provenance-qa.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),mime={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
+const fixtureScope=vm.createContext({window:{}});for(const file of ['books/tau-empire/scripts/roster-data.js','roster-guides/points-data.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),fixtureScope,{filename:file});
+const catalog=fixtureScope.window.WH_BOOK_ROSTER_CATALOG,pointsCatalog=fixtureScope.window.WH_POINTS_CATALOG['t au empire'];
 const server=http.createServer((request,response)=>{const pathname=decodeURIComponent(new URL(request.url,'http://localhost').pathname),file=path.resolve(root,`.${pathname==='/'?'/index.html':pathname}`);if(pathname==='/favicon.ico'){response.writeHead(204).end();return;}if(!file.startsWith(root)||!fs.existsSync(file)||!fs.statSync(file).isFile()){response.writeHead(404).end('Not found');return;}response.setHeader('content-type',mime[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(response);});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const base=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium();
-const source=`+ FACTION KEYWORD: T'au Empire
-+ DETACHMENT: Kauyon
-+ TOTAL ARMY POINTS: 415pts
-
-Char1: 1x Cadre Fireblade (50 pts): Close combat weapon, Fireblade pulse rifle, Marker Drone
-Char2: 1x Ethereal (65 pts): Honour stave, Hover Drone, Marker Drone, Shield Drone
-Enhancement: Precision of the Patient Hunter (+15 pts)
-Char3: 1x Cadre Fireblade (50 pts): Close combat weapon, Fireblade pulse rifle
-10x Breacher Team (100 pts)
-• 1x Breacher Fire Warrior Shas'ui: Close combat weapon, Pulse blaster, Pulse pistol, Guardian Drone
-• 9x Breacher Fire Warrior: Close combat weapon, Pulse blaster, Pulse pistol
-10x Breacher Team (100 pts)
-• 1x Breacher Fire Warrior Shas'ui: Close combat weapon, Pulse blaster, Pulse pistol
-• 9x Breacher Fire Warrior: Close combat weapon, Pulse blaster, Pulse pistol`;
+const fixture=createRosterFixture({catalog,pointsCatalog,id:'tau-final-conformance',detachmentId:'kauyon',attachments:{'parsed-unit-4':['parsed-unit-1']},units:[
+  {datasheetId:'unit-cadre-fireblade',instanceId:'parsed-unit-1',selectionIds:['unit-cadre-fireblade-selection-close-combat-weapon','unit-cadre-fireblade-selection-fireblade-pulse-rifle','unit-cadre-fireblade-selection-marker-drone']},
+  {datasheetId:'unit-ethereal',instanceId:'parsed-unit-2',selectionIds:['unit-ethereal-selection-honour-stave','unit-ethereal-selection-hover-drone','unit-ethereal-selection-marker-drone','unit-ethereal-selection-shield-drone'],enhancementId:'enhancement-precision-of-the-patient-hunter'},
+  {datasheetId:'unit-cadre-fireblade',instanceId:'parsed-unit-3',selectionIds:['unit-cadre-fireblade-selection-close-combat-weapon','unit-cadre-fireblade-selection-fireblade-pulse-rifle']},
+  {datasheetId:'unit-breacher-team',instanceId:'parsed-unit-4',quantity:10,selectionIds:['unit-breacher-team-selection-close-combat-weapon','unit-breacher-team-selection-pulse-blaster','unit-breacher-team-selection-pulse-pistol','unit-breacher-team-selection-guardian-drone']},
+  {datasheetId:'unit-breacher-team',instanceId:'parsed-unit-5',quantity:10,selectionIds:['unit-breacher-team-selection-close-combat-weapon','unit-breacher-team-selection-pulse-blaster','unit-breacher-team-selection-pulse-pistol']},
+]});
 // Independent base/effective expectations, never base + the actual effect.delta.
 const breacherBase={
   'unit-breacher-team-profile-pulse-pistol-ranged':'1',
@@ -68,8 +65,10 @@ const assertAttacks=(snapshot,instanceId,canonicalId,base,expected,owner=null)=>
 };
 try{
   const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}}),page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
-  await page.goto(`${base}/roster-guides/index.html`);const before=await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').length);await page.locator('#roster-input').fill(source);await page.locator('#roster-form button[type="submit"]').click();await page.waitForFunction(count=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').length>count,before);
-  const ids=await page.evaluate(()=>{const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1')),record=records[0],fireblades=record.roster.units.filter(unit=>unit.name==='Cadre Fireblade'),fireblade=fireblades[0],ethereal=record.roster.units.find(unit=>unit.name==='Ethereal'),breachers=record.roster.units.filter(unit=>unit.name==='Breacher Team');if(fireblades.length!==2||!ethereal||breachers.length!==2)throw new Error('raw T\'au fixture did not parse');record.attachments={[breachers[0].id]:[fireblade.id]};record.roster.attachments=record.attachments;localStorage.setItem('wh40k-rosters-v1',JSON.stringify(records));return{roster:record.id,fireblade:fireblade.id,loneFireblade:fireblades[1].id,ethereal:ethereal.id,body:breachers[0].id,duplicate:breachers[1].id};});
+  await page.goto(`${base}/roster-guides/index.html`);const before=await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').map(record=>record.id));await page.locator('#roster-input').fill(fixture.record.sourceText);await page.locator('#roster-form button[type="submit"]').click();await page.waitForFunction(ids=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').some(record=>!ids.includes(record.id)),before);
+  const imported=await page.evaluate(({previous,attachments})=>{const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1')),record=records.find(item=>!previous.includes(item.id));record.attachments=attachments;record.roster.attachments=attachments;localStorage.setItem('wh40k-rosters-v1',JSON.stringify(records));return{roster:record.id,unitIds:record.roster.units.map(unit=>unit.id)};},{previous:before,attachments:fixture.record.attachments});
+  assert.deepEqual(imported.unitIds,fixture.units.map(unit=>unit.instanceId),'parser changed canonical T\'au fixture physical order');
+  const ids={roster:imported.roster,fireblade:fixture.units[0].instanceId,ethereal:fixture.units[1].instanceId,loneFireblade:fixture.units[2].instanceId,body:fixture.units[3].instanceId,duplicate:fixture.units[4].instanceId};
   assert.equal(new Set([ids.fireblade,ids.loneFireblade,ids.ethereal,ids.body,ids.duplicate]).size,5,'distinct physical fixture identities');
   const inspect=instance=>page.evaluate(id=>{
     const projection=window.WH_ARMY_ROSTER_GAME_PROJECTION,gameUnit=projection.units.find(unit=>unit.identity.instanceId===id),card=document.querySelector(`.unit-card[data-roster-instance="${CSS.escape(id)}"]`),rows=[...card.querySelectorAll('.weapon-row:not(.weapon-head)')];

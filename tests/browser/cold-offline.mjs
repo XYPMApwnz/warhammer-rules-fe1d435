@@ -9,7 +9,7 @@ import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const fixtureData=async(slug,key)=>{const scope=vm.createContext({window:{}});for(const file of [`books/${slug}/scripts/roster-data.js`,'roster-guides/points-data.js'])vm.runInContext(await readFile(path.join(root,file),'utf8'),scope,{filename:file});return{catalog:scope.window.WH_BOOK_ROSTER_CATALOG,points:scope.window.WH_POINTS_CATALOG[key]};};
-const {catalog:csmCatalog,points:csmPoints}=await fixtureData('chaos-space-marines','chaos space marines'),{catalog:ecCatalog,points:ecPoints}=await fixtureData('emperors-children','emperor s children'),{catalog:tyrCatalog,points:tyrPoints}=await fixtureData('tyranids','tyranids');
+const {catalog:csmCatalog,points:csmPoints}=await fixtureData('chaos-space-marines','chaos space marines'),{catalog:ecCatalog,points:ecPoints}=await fixtureData('emperors-children','emperor s children'),{catalog:tyrCatalog,points:tyrPoints}=await fixtureData('tyranids','tyranids'),{catalog:tauCatalog,points:tauPoints}=await fixtureData('tau-empire','t au empire');
 const runtimeVersions=JSON.parse(await readFile(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
 const server=createServer(async(request,response)=>{
@@ -291,7 +291,8 @@ try{
   try{
     const {page,errors}=await observedPage(rosterContext);
     await page.goto(`${origin}/roster-guides/index.html`);
-    await page.locator('#roster-input').fill("+ FACTION KEYWORD: T'au Empire\n+ DETACHMENT: Kauyon\n+ TOTAL ARMY POINTS: 50pts\n\nChar1: 1x Cadre Fireblade (50 pts)");
+    const tauFixture=createRosterFixture({catalog:tauCatalog,pointsCatalog:tauPoints,id:'smoke-one-detachment',detachmentId:'kauyon',units:[{datasheetId:'unit-cadre-fireblade',instanceId:'parsed-unit-1',selectionIds:['unit-cadre-fireblade-selection-close-combat-weapon','unit-cadre-fireblade-selection-fireblade-pulse-rifle']}]});
+    await page.locator('#roster-input').fill(tauFixture.record.sourceText);
     await page.locator('#roster-form button[type="submit"]').click();
     await page.waitForFunction(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').length>0);
     const rosterId=await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')).at(-1).id);

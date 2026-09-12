@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {createCatalogGameUnit,createRosterFixture} from './helpers/roster-fixtures.mjs';
 import {runTauAuxiliaryQa} from './tau-auxiliary-provenance-qa.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),sources=new Map(),read=file=>{if(!sources.has(file))sources.set(file,fs.readFileSync(path.join(root,file),'utf8'));return sources.get(file);};
@@ -10,7 +11,8 @@ const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' '
 const scope={console,WHRosterParser:{normalize},addEventListener(){}};scope.window=scope;scope.globalThis=scope;
 vm.runInNewContext(read('books/tau-empire/scripts/roster-data.js'),scope,{filename:'tau-roster-data.js'});
 vm.runInNewContext(read('books/tau-empire/scripts/roster-filter.js'),scope,{filename:'tau-roster-filter.js'});
-const catalog=scope.WH_BOOK_ROSTER_CATALOG,semantics=scope.TAURosterSemantics;
+vm.runInNewContext(read('roster-guides/points-data.js'),scope,{filename:'points-data.js'});
+const catalog=scope.WH_BOOK_ROSTER_CATALOG,pointsCatalog=scope.WH_POINTS_CATALOG['t au empire'],semantics=scope.TAURosterSemantics;
 assert.ok(semantics,'T\'au semantic provider API');
 assert.equal(catalog.units.length,39,'Datasheet inventory');
 assert.equal(catalog.units.reduce((sum,unit)=>sum+unit.gameSelections.abilities.length,0),189,'canonical Datasheet ability inventory');
@@ -21,7 +23,7 @@ for(const unit of catalog.units)for(const ability of unit.gameSelections.wargear
 for(const detachment of catalog.detachments)assert.equal(detachment.detachmentRuleIds.length,1,`${detachment.id}: canonical Detachment Rule link`);
 
 const unit=id=>catalog.units.find(item=>item.id===id);
-const draft=(instanceId,unitId,{detachments=[],wargear=[],quantity=1}={})=>{const catalogUnit=unit(unitId),selectedIds=catalogUnit.gameSelections.wargearAbilities.filter(item=>wargear.includes(item.title)).map(item=>item.id);return{identity:{instanceId,canonicalDatasheetId:unitId},item:{catalogUnit},selection:{modelCount:{value:quantity},loadout:{selectedWargearAbilityIds:selectedIds}},rosterState:{detachments,keywordProfile:{effective:catalogUnit.intrinsicKeywords}},attachments:{leaders:[],leading:[]}};};
+const draft=(instanceId,unitId,{detachments=[],selectionIds=[],quantity=1}={})=>{const gameUnit=createCatalogGameUnit({catalog,datasheetId:unitId,instanceId}),selected=selectionIds.map(id=>{const matches=gameUnit.item.catalogUnit.gameSelections.selections.filter(item=>item.id===id);assert.equal(matches.length,1,`${unitId}: exact Selection ${id}`);return matches[0];});gameUnit.selection.modelCount={value:quantity};gameUnit.selection.loadout.selectedProfileIds=selected.flatMap(item=>item.profileIds);gameUnit.selection.loadout.selectedWargearAbilityIds=selected.flatMap(item=>item.wargearAbilityIds);gameUnit.rosterState.detachments=detachments;return gameUnit;};
 const attach=(body,...leaders)=>{body.attachments.leaders=leaders.map(leader=>({instanceId:leader.identity.instanceId}));for(const leader of leaders)leader.attachments.leading=[{instanceId:body.identity.instanceId}];};
 const effects=(target,units,enhancements=[])=>semantics.projectEffects({gameUnit:target,byInstance:new Map(units.map(item=>[item.identity.instanceId,item])),enhancements});
 const has=(records,id)=>records.some(item=>item.id===id);
@@ -51,15 +53,16 @@ const firebladeVolley={
   'unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged':'2',
   'unit-cadre-fireblade-profile-close-combat-weapon-melee-2':'3'
 };
+vm.runInNewContext(read('books/shared/roster-parser.js'),scope,{filename:'roster-parser.js'});
 vm.runInNewContext(read('books/shared/roster-context.js'),scope,{filename:'roster-context.js'});
-const rawFireblade=id=>({id,name:'Cadre Fireblade',quantity:1,points:50,wargear:'Close combat weapon, Fireblade pulse rifle'});
-const rawBreachers=id=>({id,name:'Breacher Team',quantity:10,points:100,models:[
-  {name:"Breacher Fire Warrior Shas'ui",quantity:1,wargear:'Close combat weapon, Pulse blaster, Pulse pistol'},
-  {name:'Breacher Fire Warrior',quantity:9,wargear:'Close combat weapon, Pulse blaster, Pulse pistol'}
+const volleyFixture=createRosterFixture({catalog,pointsCatalog,id:'tau-volley-semantic',detachmentId:'kauyon',attachments:{'parsed-unit-3':['parsed-unit-2']},units:[
+  {datasheetId:'unit-cadre-fireblade',instanceId:'parsed-unit-1',selectionIds:['unit-cadre-fireblade-selection-close-combat-weapon','unit-cadre-fireblade-selection-fireblade-pulse-rifle']},
+  {datasheetId:'unit-cadre-fireblade',instanceId:'parsed-unit-2',selectionIds:['unit-cadre-fireblade-selection-close-combat-weapon','unit-cadre-fireblade-selection-fireblade-pulse-rifle']},
+  {datasheetId:'unit-breacher-team',instanceId:'parsed-unit-3',quantity:10,selectionIds:['unit-breacher-team-selection-close-combat-weapon','unit-breacher-team-selection-pulse-blaster','unit-breacher-team-selection-pulse-pistol']},
+  {datasheetId:'unit-breacher-team',instanceId:'parsed-unit-4',quantity:10,selectionIds:['unit-breacher-team-selection-close-combat-weapon','unit-breacher-team-selection-pulse-blaster','unit-breacher-team-selection-pulse-pistol']},
 ]});
-// The first same-datasheet Character is deliberately NOT the physical owner.
-const volleyRoster={faction:"T'au Empire",units:[rawFireblade('fireblade-lone'),rawFireblade('fireblade-1'),rawBreachers('breachers-1'),rawBreachers('breachers-2')]};
-const projectVolley=(attachments={'breachers-1':['fireblade-1']})=>scope.WHArmyRosterContext.project({catalog,roster:volleyRoster,record:{attachments},provider:{gameEffects:semantics.projectEffects}}).game;
+const volleyRoster=scope.WHRosterParser.parse(volleyFixture.record.sourceText),[loneFirebladeFixture,firebladeFixture,breacherFixture,duplicateFixture]=volleyFixture.units;
+const projectVolley=(attachments=volleyFixture.record.attachments)=>scope.WHArmyRosterContext.project({catalog,roster:volleyRoster,record:{id:volleyFixture.record.id,attachments},provider:{gameEffects:semantics.projectEffects}}).game;
 const assertVolleyProjection=(projection,instanceId,canonicalId,base,expected,owner=null)=>{
   const member=projection.units.find(item=>item.identity.instanceId===instanceId);
   assert.ok(member,`${instanceId}: physical projection exists`);
@@ -85,19 +88,19 @@ const firstVolleyProjection=projectVolley();
 for(const projection of [firstVolleyProjection,projectVolley(),projectVolley()]){
   assert.equal(projection.status,'ready','physical Volley Fire fixture is fully resolved');
   assert.equal(projection.units.length,4,'two physical Fireblades and two physical Breacher Teams');
-  const body=assertVolleyProjection(projection,'breachers-1','unit-breacher-team',breacherBase,breacherVolley,'fireblade-1');
-  const leader=assertVolleyProjection(projection,'fireblade-1','unit-cadre-fireblade',firebladeBase,firebladeVolley,'fireblade-1');
-  const otherBody=assertVolleyProjection(projection,'breachers-2','unit-breacher-team',breacherBase,breacherBase);
-  const otherLeader=assertVolleyProjection(projection,'fireblade-lone','unit-cadre-fireblade',firebladeBase,firebladeBase);
+  const body=assertVolleyProjection(projection,breacherFixture.instanceId,breacherFixture.datasheetId,breacherBase,breacherVolley,firebladeFixture.instanceId);
+  const leader=assertVolleyProjection(projection,firebladeFixture.instanceId,firebladeFixture.datasheetId,firebladeBase,firebladeVolley,firebladeFixture.instanceId);
+  const otherBody=assertVolleyProjection(projection,duplicateFixture.instanceId,duplicateFixture.datasheetId,breacherBase,breacherBase);
+  const otherLeader=assertVolleyProjection(projection,loneFirebladeFixture.instanceId,loneFirebladeFixture.datasheetId,firebladeBase,firebladeBase);
   assert.equal(body.selection.modelCount.value,10,'ten models do not multiply the per-profile bonus');
-  assert.deepEqual(Array.from(body.attachments.leaders,item=>item.instanceId),['fireblade-1'],'exact physical leader attachment');
-  assert.deepEqual(Array.from(leader.attachments.leading,item=>item.instanceId),['breachers-1'],'reciprocal physical bodyguard attachment');
+  assert.deepEqual(Array.from(body.attachments.leaders,item=>item.instanceId),[firebladeFixture.instanceId],'exact physical leader attachment');
+  assert.deepEqual(Array.from(leader.attachments.leading,item=>item.instanceId),[breacherFixture.instanceId],'reciprocal physical bodyguard attachment');
   for(const member of [otherBody,otherLeader])assert.equal(member.attachments.leaders.length+member.attachments.leading.length,0,'unattached duplicate isolation');
   assert.equal(JSON.stringify(projection),JSON.stringify(firstVolleyProjection),'reprojection does not compound Volley Fire');
 }
-const unresolvedVolleyProjection=projectVolley({'breachers-1':['missing-fireblade']});
-assertVolleyProjection(unresolvedVolleyProjection,'breachers-1','unit-breacher-team',breacherBase,breacherBase);
-assertVolleyProjection(unresolvedVolleyProjection,'fireblade-1','unit-cadre-fireblade',firebladeBase,firebladeBase);
+const unresolvedVolleyProjection=projectVolley({[breacherFixture.instanceId]:['missing-fireblade']});
+assertVolleyProjection(unresolvedVolleyProjection,breacherFixture.instanceId,breacherFixture.datasheetId,breacherBase,breacherBase);
+assertVolleyProjection(unresolvedVolleyProjection,firebladeFixture.instanceId,firebladeFixture.datasheetId,firebladeBase,firebladeBase);
 
 const ethereal=draft('ethereal-1','unit-ethereal'),strike=draft('strike-1','unit-strike-team');attach(strike,ethereal);
 for(const member of [ethereal,strike])assert.ok(has(effects(member,[ethereal,strike]),'ethereal-fnp'),`${member.identity.instanceId}: attached FNP 5+`);
@@ -110,9 +113,9 @@ const experimental=draft('experimental-1','unit-commander-in-coldstar-battlesuit
 const precisionOwner=draft('precision-1','unit-cadre-fireblade');const precisionResolution={input:{ownerStatus:'resolved',ownerUnitId:'precision-1'},catalog:catalog.enhancements.find(item=>item.id===semantics.ENHANCEMENT.precision)};const precisionEffects=effects(precisionOwner,[precisionOwner],[precisionResolution]);assert.ok(precisionEffects.some(item=>item.canonicalReference?.id===semantics.ENHANCEMENT.precision));assert.equal(precisionEffects.some(item=>item.operation!=='reference'),false,'Precision live roll modifiers are not profile mutations');
 const shaper=draft('shaper-1','unit-kroot-war-shaper'),carnivores=draft('kroot-1','unit-kroot-carnivores');attach(carnivores,shaper);const kroothawkResolution={input:{ownerStatus:'resolved',ownerUnitId:'shaper-1'},catalog:catalog.enhancements.find(item=>item.id===semantics.ENHANCEMENT.kroothawk)};const krootEffects=effects(carnivores,[shaper,carnivores],[kroothawkResolution]);assert.ok(has(krootEffects,'kroothawk-cover'));assert.ok(krootEffects.some(item=>item.canonicalReference?.id===semantics.ENHANCEMENT.kroothawk),'Class C full canonical reference');
 
-const droneEthereal=draft('drone-ethereal','unit-ethereal',{wargear:['Hover Drone','Marker Drone','Shield Drone']});const droneEffects=effects(droneEthereal,[droneEthereal]);for(const id of ['hover-drone-move','hover-drone-fly','marker-drone-keyword','shield-drone-wounds'])assert.ok(has(droneEffects,id),`selected Wargear effect ${id}`);
-const shieldCommander=draft('shield-commander','unit-commander-in-coldstar-battlesuit',{wargear:['Shield Generator']});assert.ok(has(effects(shieldCommander,[shieldCommander]),'shield-generator-invulnerable'));
-const pathfinder=draft('pathfinder-1','unit-pathfinder-team',{wargear:['Pulse Accelerator Drone','Recon Drone'],quantity:10});const pathEffects=effects(pathfinder,[pathfinder]);for(const id of ['pulse-accelerator-range','recon-drone-infiltrators','recon-drone-profile'])assert.ok(has(pathEffects,id),`selected Pathfinder Wargear effect ${id}`);
+const droneEthereal=draft('drone-ethereal','unit-ethereal',{selectionIds:['unit-ethereal-selection-hover-drone','unit-ethereal-selection-marker-drone','unit-ethereal-selection-shield-drone']});const droneEffects=effects(droneEthereal,[droneEthereal]);for(const id of ['hover-drone-move','hover-drone-fly','marker-drone-keyword','shield-drone-wounds'])assert.ok(has(droneEffects,id),`selected Wargear effect ${id}`);
+const shieldCommander=draft('shield-commander','unit-commander-in-coldstar-battlesuit',{selectionIds:['unit-commander-in-coldstar-battlesuit-selection-shield-generator']});assert.ok(has(effects(shieldCommander,[shieldCommander]),'shield-generator-invulnerable'));
+const pathfinder=draft('pathfinder-1','unit-pathfinder-team',{selectionIds:['unit-pathfinder-team-selection-pulse-accelerator-drone','unit-pathfinder-team-selection-recon-drone'],quantity:10});const pathEffects=effects(pathfinder,[pathfinder]);for(const id of ['pulse-accelerator-range','recon-drone-infiltrators','recon-drone-profile'])assert.ok(has(pathEffects,id),`selected Pathfinder Wargear effect ${id}`);
 
 const localProvider=read('books/tau-empire/scripts/roster-filter.js'),legacyProvider=read('books/extensions/book-roster-enhancement-providers.js');
 for(const text of ['Derived effect:','Apply the current','No permanent Datasheet mutation was applied'])assert.doesNotMatch(localProvider,new RegExp(text,'i'),`synthetic user-facing text: ${text}`);

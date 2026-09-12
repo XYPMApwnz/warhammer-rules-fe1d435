@@ -75,6 +75,33 @@ assert.equal(renamedTyrPeerBehavior.some(effect=>effect.source?.id==='enhancemen
 assert.throws(()=>createRosterFixture({catalog:tyrCatalog,pointsCatalog:tyrPoints,id:'tyr-helper-wrong-enhancement',detachmentId:'invasion-fleet',units:[{datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-1',enhancementId:'adaptive-biology'}]}),/Enhancement canonical ID/);
 assert.throws(()=>createRosterFixture({catalog:tyrCatalog,pointsCatalog:tyrPoints,id:'tyr-helper-wrong-detachment',detachmentId:'synaptic-nexus',units:[{datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-1',enhancementId:'enhancement-adaptive-biology'}]}),/is not owned by a selected Detachment/);
 
+const tauSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});tauSandbox.globalThis=tauSandbox;tauSandbox.window=tauSandbox;
+for(const file of ['books/tau-empire/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/tau-empire/scripts/roster-filter.js','books/shared/roster-context.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),tauSandbox,{filename:file});
+const tauCatalog=tauSandbox.WH_BOOK_ROSTER_CATALOG,tauPoints=tauSandbox.WH_POINTS_CATALOG['t au empire'],renamedTau=JSON.parse(JSON.stringify(tauCatalog));
+renamedTau.detachments.find(item=>item.id==='kauyon').title='Renamed T\'au Detachment';
+renamedTau.enhancements.find(item=>item.id==='enhancement-precision-of-the-patient-hunter').title='Renamed T\'au Enhancement';
+renamedTau.units.find(item=>item.id==='unit-cadre-fireblade').title='Renamed Cadre Fireblade';
+const renamedTauFixture=createRosterFixture({catalog:renamedTau,pointsCatalog:tauPoints,id:'tau-helper-rename',detachmentId:'kauyon',attachments:{'parsed-unit-2':['parsed-unit-1']},units:[
+  {datasheetId:'unit-cadre-fireblade',instanceId:'parsed-unit-1',selectionIds:['unit-cadre-fireblade-selection-close-combat-weapon','unit-cadre-fireblade-selection-fireblade-pulse-rifle']},
+  {datasheetId:'unit-breacher-team',instanceId:'parsed-unit-2',quantity:10,selectionIds:['unit-breacher-team-selection-close-combat-weapon','unit-breacher-team-selection-pulse-blaster','unit-breacher-team-selection-pulse-pistol']},
+  {datasheetId:'unit-breacher-team',instanceId:'parsed-unit-3',quantity:10,selectionIds:['unit-breacher-team-selection-close-combat-weapon','unit-breacher-team-selection-pulse-blaster','unit-breacher-team-selection-pulse-pistol']},
+  {datasheetId:'unit-ethereal',instanceId:'parsed-unit-4',selectionIds:['unit-ethereal-selection-honour-stave'],enhancementId:'enhancement-precision-of-the-patient-hunter'},
+]});
+const renamedTauRoster=tauSandbox.WHRosterParser.parse(renamedTauFixture.record.sourceText),renamedTauProjection=tauSandbox.WHArmyRosterContext.project({catalog:renamedTau,roster:renamedTauRoster,record:renamedTauFixture.record,provider:{gameEffects:tauSandbox.TAURosterSemantics.projectEffects}}).game,renamedTauBody=renamedTauProjection.units.find(item=>item.identity.instanceId==='parsed-unit-2'),renamedTauPeer=renamedTauProjection.units.find(item=>item.identity.instanceId==='parsed-unit-3'),renamedTauEnhancementOwner=createCatalogGameUnit({catalog:renamedTau,datasheetId:'unit-ethereal',instanceId:'parsed-unit-4'}),renamedTauEnhancement=renamedTau.enhancements.find(item=>item.id==='enhancement-precision-of-the-patient-hunter'),renamedTauEnhancementEffects=tauSandbox.TAURosterSemantics.projectEffects({gameUnit:renamedTauEnhancementOwner,byInstance:new Map([['parsed-unit-4',renamedTauEnhancementOwner]]),enhancements:[{catalog:renamedTauEnhancement,input:{ownerStatus:'resolved',ownerUnitId:'parsed-unit-4'}}]});
+assert.match(renamedTauFixture.record.sourceText,/DETACHMENT: Renamed T'au Detachment/);
+assert.match(renamedTauFixture.record.sourceText,/Enhancement: Renamed T'au Enhancement/);
+assert.equal(renamedTauRoster.detachments[0].name,"Renamed T'au Detachment");
+assert.equal(renamedTauRoster.enhancements[0].name,"Renamed T'au Enhancement");
+assert.equal(renamedTauRoster.units[0].name,'Renamed Cadre Fireblade');
+assert.deepEqual(renamedTauFixture.units.slice(1,3).map(item=>[item.instanceId,item.datasheetId]),[['parsed-unit-2','unit-breacher-team'],['parsed-unit-3','unit-breacher-team']]);
+assert.equal(renamedTauProjection.status,'ready','renamed T\'au fixture must remain fully resolved');
+assert.ok(renamedTauBody.effects.some(effect=>effect.id==='volley-fire'&&effect.source?.ownerInstanceId==='parsed-unit-1'),'T\'au behavior must remain keyed by canonical and physical identities');
+assert.equal(renamedTauPeer.effects.some(effect=>effect.id==='volley-fire'),false,'T\'au effect must not leak to a duplicate physical Datasheet instance');
+assert.ok(renamedTauEnhancementEffects.some(effect=>effect.canonicalReference?.id==='enhancement-precision-of-the-patient-hunter'),'T\'au Enhancement behavior must remain keyed by canonical identity');
+assert.throws(()=>createRosterFixture({catalog:tauCatalog,pointsCatalog:tauPoints,id:'tau-helper-wrong-datasheet',detachmentId:'kauyon',units:[{datasheetId:'Cadre Fireblade',instanceId:'parsed-unit-1'}]}),/Datasheet canonical ID/);
+assert.throws(()=>createRosterFixture({catalog:tauCatalog,pointsCatalog:tauPoints,id:'tau-helper-wrong-detachment',detachmentId:'Kauyon',units:[{datasheetId:'unit-cadre-fireblade',instanceId:'parsed-unit-1'}]}),/Detachment canonical ID/);
+assert.throws(()=>createRosterFixture({catalog:tauCatalog,pointsCatalog:tauPoints,id:'tau-helper-wrong-enhancement',detachmentId:'kauyon',units:[{datasheetId:'unit-ethereal',instanceId:'parsed-unit-1',enhancementId:'Precision of the Patient Hunter'}]}),/Enhancement canonical ID/);
+
 for(const [label,change] of [
   ['Datasheet',input=>input.units[0].datasheetId='Chosen'],
   ['Detachment',input=>input.detachmentId='Renegade Warband'],

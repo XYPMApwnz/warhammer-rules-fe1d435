@@ -4,9 +4,15 @@ import fs from 'node:fs';
 import http from 'node:http';
 import os from 'node:os';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const fixtureScope=vm.createContext({window:{}});
+for(const file of ['books/chaos-space-marines/scripts/roster-data.js','roster-guides/points-data.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),fixtureScope,{filename:file});
+const catalog=fixtureScope.window.WH_BOOK_ROSTER_CATALOG,pointsCatalog=fixtureScope.window.WH_POINTS_CATALOG['chaos space marines'];
+const fixture=(id,detachmentId,units,attachments={})=>createRosterFixture({catalog,pointsCatalog,id,detachmentId,units,attachments,factionPrefix:'Chaos - '}).record;
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.png':'image/png','.webp':'image/webp'};
 const screenshotDir=path.join(os.tmpdir(),`csm-real-front-${process.pid}`);
 fs.mkdirSync(screenshotDir,{recursive:true});
@@ -15,53 +21,28 @@ const server=http.createServer((request,response)=>{const pathname=decodeURIComp
 await new Promise((resolve,reject)=>server.listen(0,'127.0.0.1',error=>error?reject(error):resolve()));
 const origin=`http://127.0.0.1:${server.address().port}`;
 const browser=await launchChromium();
-const record=(id,sourceText,attachments={})=>({id,sourceText,attachments});
-
-const attachedText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Creations of Bile
-Char1: 1x Fabius Bile (85 pts): Surgeon acolyte, Xyclos needler, Rod of torment
-Char2: 1x Master of Executions (80 pts): Axe of dismemberment, Bolt pistol
-10x Legionaries (170 pts): Bolt pistol, Boltgun, Close combat weapon, Chaos icon
-10x Legionaries (170 pts): Bolt pistol, Boltgun, Close combat weapon`;
-const communeText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Chaos Cult
-5x Dark Commune (65 pts)
-16x Accursed Cultists (195 pts)`;
-const crownText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Cult of the Arkifane
-Char1: 1x Warpsmith (70 pts): Exalted weapon, Flamer tendril, Melta tendril, Plasma pistol
-Enhancement: Crown of Worms (+20 pts)`;
-const tzagullaText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Warpstrike Champions
-Char1: 1x Chaos Lord in Terminator Armour (95 pts): Chainfist, Combi-bolter
-Enhancement: Tzagulla (+20 pts)`;
-const bearerText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Creations of Bile
-Char1: 1x Chaos Lord (90 pts): Daemon hammer, Plasma pistol
-Enhancement: Living Carapace (+20 pts)
-Char2: 1x Chaos Lord (90 pts): Daemon hammer, Plasma pistol`;
-const loadoutText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Devotees of Destruction
-5x Havocs (125 pts)
-• 1x Havoc Champion: Astartes chainsword, Plasma gun
-• 2x Havoc: Havoc lascannon
-• 2x Havoc: Havoc autocannon`;
-const renegadeText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Renegade Warband
-5x Chosen (125 pts): Bolt pistol, Boltgun, Accursed weapon`;
-const arkifaneText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Cult of the Arkifane
-1x Chaos Predator Destructor (130 pts): Armoured tracks, Predator autocannon, Combi-bolter, Havoc launcher`;
-const pactboundText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Pactbound Zealots
-5x Legionaries (90 pts): Bolt pistol, Boltgun, Close combat weapon`;
-const pregameText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Creations of Bile
-5x Chosen (125 pts): Bolt pistol, Boltgun, Accursed weapon`;
-const soulText=`+ FACTION KEYWORD: Chaos - Chaos Space Marines
-+ DETACHMENT: Deceptors
-Char1: 1x Sorcerer (60 pts): Bolt pistol, Force weapon, Infernal Gaze
-Enhancement: Soul Link (+5 pts)`;
+const attachedRecord=fixture('csm-attached','creations-of-bile',[
+  {datasheetId:'unit-fabius-bile',instanceId:'parsed-unit-1',selectionIds:['unit-fabius-bile-selection-surgeon-acolytes-tools','unit-fabius-bile-selection-xyclos-needler','unit-fabius-bile-selection-rod-of-torment']},
+  {datasheetId:'unit-master-of-executions',instanceId:'parsed-unit-2',selectionIds:['unit-master-of-executions-selection-axe-of-dismemberment','unit-master-of-executions-selection-bolt-pistol']},
+  {datasheetId:'unit-legionaries',instanceId:'parsed-unit-3',quantity:10,selectionIds:['unit-legionaries-selection-bolt-pistol','unit-legionaries-selection-boltgun','unit-legionaries-selection-close-combat-weapon','unit-legionaries-selection-chaos-icon']},
+  {datasheetId:'unit-legionaries',instanceId:'parsed-unit-4',quantity:10,selectionIds:['unit-legionaries-selection-bolt-pistol','unit-legionaries-selection-boltgun','unit-legionaries-selection-close-combat-weapon']},
+],{'parsed-unit-3':['parsed-unit-1','parsed-unit-2']});
+const communeRecord=fixture('csm-commune','chaos-cult',[
+  {datasheetId:'unit-dark-commune',instanceId:'parsed-unit-1'},
+  {datasheetId:'unit-accursed-cultists',instanceId:'parsed-unit-2',quantity:16},
+],{'parsed-unit-2':['parsed-unit-1']});
+const crownRecord=fixture('csm-crown','cult-of-the-arkifane',[{datasheetId:'unit-warpsmith',instanceId:'parsed-unit-1',selectionIds:['unit-warpsmith-selection-forge-weapon','unit-warpsmith-selection-flamer-tendril','unit-warpsmith-selection-melta-tendril','unit-warpsmith-weapon-family-plasma-pistol-selection'],enhancementId:'enhancement-crown-of-worms'}]);
+const tzagullaRecord=fixture('csm-tzagulla','warpstrike-champions',[{datasheetId:'unit-chaos-lord-in-terminator-armour',instanceId:'parsed-unit-1',selectionIds:['unit-chaos-lord-in-terminator-armour-selection-chainfist','unit-chaos-lord-in-terminator-armour-selection-combi-bolter'],enhancementId:'enhancement-tzagulla'}]);
+const bearerRecord=fixture('csm-bearer','creations-of-bile',[
+  {datasheetId:'unit-chaos-lord',instanceId:'parsed-unit-1',selectionIds:['unit-chaos-lord-selection-daemon-hammer','unit-chaos-lord-weapon-family-plasma-pistol-selection'],enhancementId:'enhancement-living-carapace'},
+  {datasheetId:'unit-chaos-lord',instanceId:'parsed-unit-2',selectionIds:['unit-chaos-lord-selection-daemon-hammer','unit-chaos-lord-weapon-family-plasma-pistol-selection']},
+]);
+const loadoutRecord=fixture('csm-loadout','devotees-of-destruction',[{datasheetId:'unit-havocs',instanceId:'parsed-unit-1',quantity:5,selectionIds:['unit-havocs-selection-astartes-chainsword','unit-havocs-weapon-family-plasma-gun-selection',{id:'unit-havocs-selection-havoc-lascannon',quantity:2},{id:'unit-havocs-selection-havoc-autocannon',quantity:2}]}]);
+const renegadeFixture=createRosterFixture({catalog,pointsCatalog,id:'csm-renegade',detachmentId:'renegade-warband',factionPrefix:'Chaos - ',units:[{datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5,selectionIds:['unit-chosen-selection-bolt-pistol','unit-chosen-selection-boltgun','unit-chosen-selection-accursed-weapon']}]}),renegadeRecord=renegadeFixture.record,renegadeTitle=renegadeFixture.detachments[0].title;
+const arkifaneRecord=fixture('csm-arkifane','cult-of-the-arkifane',[{datasheetId:'unit-chaos-predator-destructor',instanceId:'parsed-unit-1',selectionIds:['unit-chaos-predator-destructor-selection-armoured-tracks','unit-chaos-predator-destructor-selection-predator-autocannon','unit-chaos-predator-destructor-selection-combi-bolter','unit-chaos-predator-destructor-selection-havoc-launcher']}]);
+const pactboundRecord=fixture('csm-live','pactbound-zealots',[{datasheetId:'unit-legionaries',instanceId:'parsed-unit-1',quantity:5,selectionIds:['unit-legionaries-selection-bolt-pistol','unit-legionaries-selection-boltgun','unit-legionaries-selection-close-combat-weapon']}]);
+const pregameRecord=fixture('csm-pregame','creations-of-bile',[{datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5,selectionIds:['unit-chosen-selection-bolt-pistol','unit-chosen-selection-boltgun','unit-chosen-selection-accursed-weapon']}]);
+const soulRecord=fixture('csm-soul-link','deceptors',[{datasheetId:'unit-sorcerer',instanceId:'parsed-unit-1',selectionIds:['unit-sorcerer-selection-bolt-pistol','unit-sorcerer-selection-force-weapon','unit-sorcerer-weapon-family-infernal-gaze-selection'],enhancementId:'enhancement-soul-link'}]);
 
 async function open(saved,instanceId,canonicalId,viewport={width:390,height:844}) {
   const context=await browser.newContext({serviceWorkers:'block',viewport});
@@ -77,7 +58,6 @@ const state=(page,id)=>page.evaluate(instanceId=>{const unit=window.WH_ARMY_ROST
 async function shot(page,name){const target=path.join(screenshotDir,`${name}.png`);await page.screenshot({path:target,fullPage:true});screenshots.push(target);}
 
 try {
-  const attachedRecord=record('csm-attached',attachedText,{'parsed-unit-3':['parsed-unit-1','parsed-unit-2']});
   const bodyView=await open(attachedRecord,'parsed-unit-3','unit-legionaries'),body=await state(bodyView.page,'parsed-unit-3');
   assert.equal(body.unit.effective.stats.T,'5');
   assert.ok(body.unit.effects.some(effect=>effect.source?.id==='chaos-space-marines-ability-enhanced-warriors'));
@@ -90,29 +70,28 @@ try {
   assert.equal(duplicate.refs.some(ref=>ref.id==='chaos-space-marines-ability-warp-sighted-butcher'),false);
   await shot(duplicateView.page,'02-duplicate-isolation');await duplicateView.context.close();
 
-  const detachedView=await open(record('csm-detached',attachedText),'parsed-unit-3','unit-legionaries'),detached=await state(detachedView.page,'parsed-unit-3');
+  const detachedView=await open({...attachedRecord,id:'csm-detached',attachments:{}},'parsed-unit-3','unit-legionaries'),detached=await state(detachedView.page,'parsed-unit-3');
   assert.equal(detached.unit.effective.stats.T,'4');assert.equal(detached.refs.some(ref=>ref.id==='chaos-space-marines-ability-warp-sighted-butcher'),false);await detachedView.context.close();
 
-  const communeRecord=record('csm-commune',communeText,{'parsed-unit-2':['parsed-unit-1']});
   const communeView=await open(communeRecord,'parsed-unit-2','unit-accursed-cultists'),commune=await state(communeView.page,'parsed-unit-2');
   assert.ok(commune.refs.some(ref=>ref.id==='chaos-space-marines-ability-faithful-flock'&&ref.source==='Dark Commune'));
   assert.equal(commune.unit.effective.stats.Invulnerable,'5+');
   assert.doesNotMatch(commune.active,/Faithful Flock/);await shot(communeView.page,'03-canonical-ability');await communeView.context.close();
 
-  const crownView=await open(record('csm-crown',crownText),'parsed-unit-1','unit-warpsmith'),crown=await state(crownView.page,'parsed-unit-1');
+  const crownView=await open(crownRecord,'parsed-unit-1','unit-warpsmith'),crown=await state(crownView.page,'parsed-unit-1');
   const crownCanonical=await crownView.page.evaluate(()=>window.WH_BOOK_ROSTER_CATALOG.enhancements.find(item=>item.id==='enhancement-crown-of-worms').text.replace(/\s+/g,' ').trim());
   assert.ok(crown.text.replace(/\s+/g,' ').includes(crownCanonical));
   assert.equal(crown.unit.effects.filter(effect=>effect.source?.id==='enhancement-crown-of-worms').length,1);
   assert.doesNotMatch(crown.text,/Ability ranges \+3/);assert.equal(crown.synthetic,0);assert.doesNotMatch(crown.active,/Crown of Worms/);
   await shot(crownView.page,'04-crown-of-worms');await crownView.context.close();
 
-  const tzagullaView=await open(record('csm-tzagulla',tzagullaText),'parsed-unit-1','unit-chaos-lord-in-terminator-armour'),tzagulla=await state(tzagullaView.page,'parsed-unit-1');
+  const tzagullaView=await open(tzagullaRecord,'parsed-unit-1','unit-chaos-lord-in-terminator-armour'),tzagulla=await state(tzagullaView.page,'parsed-unit-1');
   assert.ok(tzagulla.unit.effects.some(effect=>effect.source?.id==='enhancement-tzagulla'&&effect.operation==='add-stat'&&effect.component==='weapon'));
   assert.ok(tzagulla.refs.some(ref=>ref.id==='enhancement-tzagulla'));
   assert.equal(tzagulla.unit.effects.some(effect=>effect.source?.id==='enhancement-tzagulla'&&effect.field==='D'),false);
   await shot(tzagullaView.page,'05-tzagulla-class-c');await tzagullaView.context.close();
 
-  const bearerRecord=record('csm-bearer',bearerText),bearerView=await open(bearerRecord,'parsed-unit-1','unit-chaos-lord'),bearer=await state(bearerView.page,'parsed-unit-1');
+  const bearerView=await open(bearerRecord,'parsed-unit-1','unit-chaos-lord'),bearer=await state(bearerView.page,'parsed-unit-1');
   assert.ok(bearer.unit.effects.some(effect=>effect.source?.id==='enhancement-living-carapace'));
   const bearerEffectiveW=bearer.unit.effective.stats.W;await shot(bearerView.page,'06-bearer-only');await bearerView.context.close();
   const plainView=await open(bearerRecord,'parsed-unit-2','unit-chaos-lord'),plain=await state(plainView.page,'parsed-unit-2');
@@ -121,7 +100,7 @@ try {
   await plainView.page.goBack({waitUntil:'networkidle'});await plainView.page.waitForSelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-2"]');const backState=await state(plainView.page,'parsed-unit-2');assert.equal(backState.mounted,1);assert.equal(backState.unit.effects.some(effect=>effect.source?.id==='enhancement-living-carapace'),false);
   await plainView.page.goForward({waitUntil:'networkidle'});await plainView.page.waitForSelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-1"]');await plainView.page.reload({waitUntil:'networkidle'});await plainView.page.waitForSelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-1"]');const reloaded=await state(plainView.page,'parsed-unit-1');assert.equal(reloaded.mounted,1);assert.ok(reloaded.unit.effects.some(effect=>effect.source?.id==='enhancement-living-carapace'));await shot(plainView.page,'07-history-reload');await plainView.context.close();
 
-  const loadoutRecord=record('csm-loadout',loadoutText),loadoutView=await open(loadoutRecord,'parsed-unit-1','unit-havocs',{width:1280,height:900}),loadout=await state(loadoutView.page,'parsed-unit-1');
+  const loadoutView=await open(loadoutRecord,'parsed-unit-1','unit-havocs',{width:1280,height:900}),loadout=await state(loadoutView.page,'parsed-unit-1');
   assert.ok(loadout.visibleWeapons.some(name=>/lascannon/i.test(name)));assert.ok(loadout.visibleWeapons.some(name=>/autocannon/i.test(name)));
   assert.ok(loadout.hiddenWeapons.some(row=>/missile launcher|heavy bolter|reaper chaincannon/i.test(row.name)));
   assert.equal(loadout.hiddenWeapons.some(row=>row.display!=='none'||row.height!==0),false);
@@ -133,25 +112,25 @@ try {
   const noIconView=await open(attachedRecord,'parsed-unit-4','unit-legionaries'),noIcon=await state(noIconView.page,'parsed-unit-4');
   assert.equal(noIcon.unit.selection.loadout.selectedWargearAbilityIds.includes('unit-legionaries-wargear-ability-chaos-icon'),false);await noIconView.context.close();
 
-  const renegadeView=await open(record('csm-renegade',renegadeText),'parsed-unit-1','unit-chosen'),renegade=await state(renegadeView.page,'parsed-unit-1');
+  const renegadeView=await open(renegadeRecord,'parsed-unit-1','unit-chosen'),renegade=await state(renegadeView.page,'parsed-unit-1');
   assert.ok(renegade.refs.some(ref=>ref.id==='chaos-space-marines-detachment-rule-slaves-to-none'));
   assert.ok(renegade.unit.effects.some(effect=>effect.source?.id==='renegade-warband'));
   assert.equal(renegade.unit.effective.abilities.some(ability=>ability.id==='chaos-space-marines-ability-dark-pacts'||ability.title==='Dark Pacts'),false);
   assert.deepEqual(renegade.darkPactPresentation,[{hidden:true,display:'none',height:0}]);
-  assert.match(renegade.active,/Renegade Warband → Dark Pacts removed/);
+  assert.match(renegade.active,new RegExp(`${renegadeTitle} → Dark Pacts removed`));
   assert.doesNotMatch(renegade.active,/Slaves to None/);await shot(renegadeView.page,'09-detachment-class-c');await renegadeView.context.close();
 
-  const arkifaneView=await open(record('csm-arkifane',arkifaneText),'parsed-unit-1','unit-chaos-predator-destructor'),arkifane=await state(arkifaneView.page,'parsed-unit-1');
+  const arkifaneView=await open(arkifaneRecord,'parsed-unit-1','unit-chaos-predator-destructor'),arkifane=await state(arkifaneView.page,'parsed-unit-1');
   assert.ok(arkifane.unit.effective.keywords.includes('DAEMON'));assert.ok(arkifane.unit.effective.keywords.includes('SOUL FORGE'));
   assert.equal(arkifane.unit.effective.stats.Invulnerable,'5+');await arkifaneView.context.close();
 
-  const liveView=await open(record('csm-live',pactboundText),'parsed-unit-1','unit-legionaries'),live=await state(liveView.page,'parsed-unit-1');
+  const liveView=await open(pactboundRecord,'parsed-unit-1','unit-legionaries'),live=await state(liveView.page,'parsed-unit-1');
   assert.equal(live.unit.effects.some(effect=>effect.operation==='grant-tag'&&['LETHAL HITS','SUSTAINED HITS 1'].includes(effect.tag)),false);
   assert.doesNotMatch(live.active,/LETHAL HITS|SUSTAINED HITS/);await shot(liveView.page,'10-live-state-fail-closed');await liveView.context.close();
 
-  const pregameView=await open(record('csm-pregame',pregameText),'parsed-unit-1','unit-chosen'),pregame=await state(pregameView.page,'parsed-unit-1');
+  const pregameView=await open(pregameRecord,'parsed-unit-1','unit-chosen'),pregame=await state(pregameView.page,'parsed-unit-1');
   assert.equal(pregame.unit.effects.some(effect=>/experimental|augmentation/i.test(effect.source?.id||'')),false);await pregameView.context.close();
-  const soulView=await open(record('csm-soul-link',soulText),'parsed-unit-1','unit-sorcerer'),soul=await state(soulView.page,'parsed-unit-1');
+  const soulView=await open(soulRecord,'parsed-unit-1','unit-sorcerer'),soul=await state(soulView.page,'parsed-unit-1');
   assert.equal(soul.unit.effects.some(effect=>effect.source?.id==='enhancement-soul-link'&&effect.operation!=='reference'),false);await soulView.context.close();
 
   const compositionView=await open(attachedRecord,'parsed-unit-4','unit-legionaries'),composition=await state(compositionView.page,'parsed-unit-4');

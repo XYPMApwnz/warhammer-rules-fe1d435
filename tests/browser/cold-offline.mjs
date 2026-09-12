@@ -3,9 +3,14 @@ import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const fixtureScope=vm.createContext({window:{}});
+for(const file of ['books/chaos-space-marines/scripts/roster-data.js','roster-guides/points-data.js'])vm.runInContext(await readFile(path.join(root,file),'utf8'),fixtureScope,{filename:file});
+const csmCatalog=fixtureScope.window.WH_BOOK_ROSTER_CATALOG,csmPoints=fixtureScope.window.WH_POINTS_CATALOG['chaos space marines'];
 const runtimeVersions=JSON.parse(await readFile(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
 const server=createServer(async(request,response)=>{
@@ -362,7 +367,7 @@ try{
     assert.ok(!phoneHeadings.some(title=>title.startsWith('Court of the Phoenician')),'Responsive roster union included a foreign Detachment');
     assert.equal(phoneHeadings.filter(title=>title==='Core Stratagems').length,1,'Responsive roster union duplicated Core Stratagems');
     assert.deepEqual(errors,[],'Responsive roster Compatible Rules emitted an uncaught runtime error');
-    const csmRosterRecord={id:'csm-publication-roster',name:'CSM publication fixture',roster:{faction:'Chaos - Chaos Space Marines',detachment:'Nightmare Hunt',detachments:[{label:'Nightmare Hunt'}],units:[{id:'fixture-chaos-lord-jump-pack',name:'Chaos Lord with Jump Pack',quantity:1,points:80}],enhancements:[]}};
+    const csmFixture=createRosterFixture({catalog:csmCatalog,pointsCatalog:csmPoints,id:'csm-publication-roster',name:'CSM publication fixture',detachmentId:'nightmare-hunt',factionPrefix:'Chaos - ',units:[{datasheetId:'unit-chaos-lord-with-jump-pack',instanceId:'parsed-unit-1'}]}),csmRosterRecord=csmFixture.record;
     await page.evaluate(record=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([record])),csmRosterRecord);
     await page.goto(`${origin}/books/chaos-space-marines/reader.html?roster=${csmRosterRecord.id}#unit-chaos-lord-with-jump-pack`);
     await page.waitForFunction(()=>window.WH_ARMY_ROSTER_CONTEXT?.status==='ready'&&document.querySelector('#unit-chaos-lord-with-jump-pack[data-roster-selected="true"]'));
@@ -370,7 +375,7 @@ try{
     await page.locator('.full-related-content').waitFor({state:'visible'});
     assert.equal(await page.locator('.full-related-filter').count(),0,'CSM roster mode still exposes a Detachment selector');
     const csmHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
-    assert.ok(csmHeadings.some(title=>title.startsWith('Nightmare Hunt'))&&csmHeadings.includes('Core Stratagems'),'CSM roster lost deterministic Compatible Rules');
+    assert.ok(csmHeadings.some(title=>title.startsWith(csmFixture.detachments[0].title))&&csmHeadings.includes('Core Stratagems'),'CSM roster lost deterministic Compatible Rules');
     assert.deepEqual(errors,[],'CSM roster publication smoke emitted an uncaught runtime error');
     console.log('PASS roster Compatible Rules for published books without a selector on Desktop and Phone');
   }finally{

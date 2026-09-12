@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
+import { createCatalogGameUnit } from '../../../tests/helpers/roster-fixtures.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..', '..', '..');
@@ -10,17 +11,6 @@ const root = path.resolve(here, '..', '..', '..');
 function loadScript(relativePath, sandbox) {
   const filename = path.join(root, relativePath);
   vm.runInContext(fs.readFileSync(filename, 'utf8'), sandbox, { filename });
-}
-
-function makeUnit(id, canonicalId, name, keywords = [], enhancementIds = [], abilities = []) {
-  return {
-    identity: { instanceId: id, canonicalDatasheetId: canonicalId, title: name },
-    attachments: { leading: [], leaders: [] },
-    rosterState: { keywordProfile: { effective: keywords, intrinsic: keywords } },
-    item: { catalogUnit: { intrinsicKeywords: keywords, gameSelections: { abilities, stats: { T: '4', W: '5', Invulnerable: '' } } } },
-    selection: { loadout: { weaponResolution: { state: 'resolved' }, selectedProfileIds: ['fixture-profile'] } },
-    enhancementIds,
-  };
 }
 
 const sandbox = vm.createContext({ console, window: {}, globalThis: null, addEventListener() {} });
@@ -96,10 +86,11 @@ function matching(list, operation, target, sourceId) {
     && (!sourceId || effect.source?.id === sourceId));
 }
 
-const fabius = makeUnit('fabius-1', 'unit-fabius-bile', 'Fabius Bile', ['CHARACTER', 'INFANTRY', 'HERETIC ASTARTES']);
-const executioner = makeUnit('moe-1', 'unit-master-of-executions', 'Master of Executions', ['CHARACTER', 'INFANTRY', 'HERETIC ASTARTES']);
-const legionariesA = makeUnit('legionaries-a', 'unit-legionaries', 'Legionaries', ['INFANTRY', 'HERETIC ASTARTES']);
-const legionariesB = makeUnit('legionaries-b', 'unit-legionaries', 'Legionaries', ['INFANTRY', 'HERETIC ASTARTES']);
+const gameUnit = (instanceId, datasheetId, enhancementIds = []) => createCatalogGameUnit({ catalog, instanceId, datasheetId, enhancementIds });
+const fabius = gameUnit('fabius-1', 'unit-fabius-bile');
+const executioner = gameUnit('moe-1', 'unit-master-of-executions');
+const legionariesA = gameUnit('legionaries-a', 'unit-legionaries');
+const legionariesB = gameUnit('legionaries-b', 'unit-legionaries');
 let result = effects([fabius, executioner, legionariesA, legionariesB], {
   attachments: [
     { sourcePhysicalInstanceId: 'fabius-1', targetPhysicalInstanceId: 'legionaries-a' },
@@ -120,8 +111,8 @@ assert.equal(result.filter((effect) => effect.source?.id === 'chaos-space-marine
 assert.equal(matching(result, 'reference', 'legionaries-a', 'chaos-space-marines-ability-warp-sighted-butcher').length, 1,
   'Warp-sighted Butcher must reference exact attached Bodyguard');
 
-const commune = makeUnit('commune-1', 'unit-dark-commune', 'Dark Commune', ['CHARACTER', 'INFANTRY', 'HERETIC ASTARTES']);
-const accursed = makeUnit('accursed-1', 'unit-accursed-cultists', 'Accursed Cultists', ['INFANTRY', 'CULTIST']);
+const commune = gameUnit('commune-1', 'unit-dark-commune');
+const accursed = gameUnit('accursed-1', 'unit-accursed-cultists');
 result = effects([commune, accursed], {
   attachments: [{ sourcePhysicalInstanceId: 'commune-1', targetPhysicalInstanceId: 'accursed-1' }]
 });
@@ -133,14 +124,14 @@ assert.equal(result.filter((effect) => effect.operation === 'set' && effect.comp
   && effect.source?.id === 'chaos-space-marines-ability-faithful-flock').length, 1,
   'Faithful Flock deterministic Invulnerable Save must reach exact Attached Unit');
 
-const crown = makeUnit('warpsmith-crown', 'unit-warpsmith', 'Warpsmith', ['CHARACTER', 'INFANTRY', 'WARPSMITH', 'HERETIC ASTARTES'], ['enhancement-crown-of-worms']);
+const crown = gameUnit('warpsmith-crown', 'unit-warpsmith', ['enhancement-crown-of-worms']);
 result = effects([crown]);
 assert.equal(matching(result, 'reference', 'warpsmith-crown', 'enhancement-crown-of-worms').length, 1,
   'Crown of Worms must use its full canonical Enhancement reference');
 assert.equal(result.filter((effect) => effect.source?.id === 'enhancement-crown-of-worms' && effect.operation !== 'reference').length, 0,
   'Crown of Worms must not claim an unsupported structured prose mutation');
 
-const tzagulla = makeUnit('lord-tzagulla', 'unit-chaos-lord-in-terminator-armour', 'Chaos Lord in Terminator Armour', ['CHARACTER', 'INFANTRY', 'HERETIC ASTARTES'], ['enhancement-tzagulla'], [{ id: 'core-deep-strike', title: 'Deep Strike' }]);
+const tzagulla = gameUnit('lord-tzagulla', 'unit-chaos-lord-in-terminator-armour', ['enhancement-tzagulla']);
 result = effects([tzagulla]);
 assert.equal(matching(result, 'reference', 'lord-tzagulla', 'enhancement-tzagulla').length, 1,
   'Tzagulla must retain full canonical Class C reference');
@@ -152,7 +143,7 @@ for (const field of ['A', 'S', 'AP']) {
 assert.equal(result.filter((effect) => effect.source?.id === 'enhancement-tzagulla' && effect.stat === 'D').length, 0,
   'Tzagulla conditional Reserves Damage must fail closed');
 
-const chosen = makeUnit('chosen-1', 'unit-chosen', 'Chosen', ['INFANTRY', 'HERETIC ASTARTES']);
+const chosen = gameUnit('chosen-1', 'unit-chosen');
 result = effects([chosen], { detachmentId: 'renegade-warband' });
 assert.equal(result.filter((effect) => effect.operation === 'grant-tag' && effect.component === 'weapon'
   && effect.targetInstanceId === 'chosen-1' && effect.source?.id === 'renegade-warband').length, 1,

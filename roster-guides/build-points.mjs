@@ -3,6 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import vm from 'node:vm';
 import ruleFacts from '../books/shared/rule-facts.js';
+import {pointTierContract} from '../books/shared/tools/point-tier-contract.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -221,7 +222,8 @@ const darkAngelsUnits=Object.fromEntries([...darkAngelsLocal.map(unit=>[normaliz
 for(const enhancement of [...darkAngels.enhancements,...spaceMarines.enhancements.filter(item=>darkAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){const shared=darkAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment)),record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog(shared?'space-marines':'dark-angels'),shared?spaceMarinesContracts:darkAngelsContracts)},key=normalize(enhancement.title),group=darkAngelsEnhancementGroups.get(key)||[];group.push(record);darkAngelsEnhancementGroups.set(key,group);}
 const darkAngelsEnhancements=Object.fromEntries([...darkAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 
-const catalog={
+const normalizePointUnits=units=>Object.fromEntries(Object.entries(units).map(([key,unit])=>[key,unit.points?.length>1?{...unit,points:pointTierContract.normalizeTiers(unit.points)}:unit]));
+const rawCatalog={
   'death guard':{units:dgUnits,enhancements:dgEnhancements,detachments:dgDetachments},
   'adeptus mechanicus':{units:mechanicusUnits,enhancements:mechanicusEnhancements,detachments:mechanicusDetachments},
   'tyranids':{units:tyranidsUnits,enhancements:tyranidsEnhancements,detachments:detachmentRecords(tyranids.detachments)},
@@ -232,7 +234,8 @@ const catalog={
   'blood angels':{units:bloodAngelsUnits,enhancements:bloodAngelsEnhancements,detachments:detachmentRecords([...bloodAngels.detachments,...bloodAngelsSharedDetachments])},
   'dark angels':{units:darkAngelsUnits,enhancements:darkAngelsEnhancements,detachments:detachmentRecords([...darkAngels.detachments,...darkAngelsSharedDetachments])}
 };
-export {catalog};
+const catalog=Object.fromEntries(Object.entries(rawCatalog).map(([book,records])=>[book,{...records,units:normalizePointUnits(records.units)}]));
+export {catalog,rawCatalog};
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
   console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(emperorChildrenUnits).length} Emperor's Children, ${Object.keys(csmUnits).length} Chaos Space Marines, ${Object.keys(spaceMarinesUnits).length} Space Marines, ${Object.keys(bloodAngelsUnits).length} Blood Angels and ${Object.keys(darkAngelsUnits).length} Dark Angels units.`);

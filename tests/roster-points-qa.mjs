@@ -427,4 +427,5 @@ const dreadWarp=WHRosterPoints.check(csmRoster('Dread Talons'),'chaos space mari
 assert.equal(dreadWarp.enhancements[0].id,'enhancement-dread-talons-warp-fuelled-thrusters');
 assert.equal(dreadWarp.enhancements[0].ownerEligibility,'valid');
 await import('./points-consumer-convergence-qa.mjs');
+await import('./point-tier-contract-qa.mjs');
 console.log('Roster parser and points QA passed.');

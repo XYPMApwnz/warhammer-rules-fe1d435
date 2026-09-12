@@ -11,16 +11,44 @@
   const safeAdd=(left,right)=>{if(!safeInteger(left)||!safeInteger(right))return null;const value=left+right;return Number.isSafeInteger(value)?value:null;};
   const catalogFor=faction=>own(root.WH_POINTS_CATALOG,faction);
   const validAssignment=value=>value==null||record(value)&&(own(value,'maxOwners')===undefined||safeInteger(own(value,'maxOwners'),1))&&(own(value,'enhancementChoices')===undefined||safeInteger(own(value,'enhancementChoices'),1));
-  const copyMatches=(label,index)=>{
-    const text=String(label||'').toLowerCase();
-    if(!text.includes('unit'))return true;
-    const range=text.match(/(\d+)(?:st|nd|rd|th)?\s*(?:-|–|—|to)\s*(\d+)(?:st|nd|rd|th)?\s+unit/);
-    if(range)return index>=Number(range[1])&&index<=Number(range[2]);
-    const plus=text.match(/(\d+)(?:st|nd|rd|th)?\s*\+\s+unit/);
-    if(plus)return index>=Number(plus[1]);
-    const exact=text.match(/(\d+)(?:st|nd|rd|th)?\s+unit/);
-    return !exact||index===Number(exact[1]);
+  const parseTierLabel=label=>{
+    const text=String(label||'').trim(),lower=text.toLowerCase(),bounds={};
+    const modelRange=lower.match(/(\d+)\s*(?:-|–|—|to)\s*(\d+)\s+models?/),modelExact=lower.match(/(\d+)\s+models?/);
+    if(modelRange){bounds.minModels=Number(modelRange[1]);bounds.maxModels=Number(modelRange[2]);}
+    else if(modelExact){bounds.minModels=Number(modelExact[1]);bounds.maxModels=Number(modelExact[1]);}
+    const schedule=lower.replace(/^your\s+/,'').replace(/\s+costs?$/,'').replace(/\bunits\b/g,'unit').split(/[·:]/,1)[0].trim();
+    const copyRange=schedule.match(/^(\d+)(?:st|nd|rd|th)?\s*(?:-|–|—|to)\s*(\d+)(?:st|nd|rd|th)?(?:\s+unit(?:\s+cost)?)?$/),copyPlus=schedule.match(/^(\d+)(?:st|nd|rd|th)?\s*\+(?:\s+unit(?:\s+cost)?)?$/),copyExact=schedule.match(/^(\d+)(?:st|nd|rd|th)?(?:\s+unit(?:\s+cost)?)$/);
+    if(copyRange){bounds.minCopies=Number(copyRange[1]);bounds.maxCopies=Number(copyRange[2]);}
+    else if(copyPlus)bounds.minCopies=Number(copyPlus[1]);
+    else if(copyExact){bounds.minCopies=Number(copyExact[1]);bounds.maxCopies=Number(copyExact[1]);}
+    return bounds;
   };
+  const boundsKey=bounds=>`${bounds.minCopies??'*'}-${bounds.maxCopies??'*'}|${bounds.minModels??'*'}-${bounds.maxModels??'*'}`;
+  const normalizeTier=row=>{
+    if(!record(row)||typeof row.label!=='string'||!safeInteger(row.value))throw new Error('Point tier requires a label and non-negative integer value');
+    const parsed=parseTierLabel(row.label),fields=['minModels','maxModels','minCopies','maxCopies'];
+    for(const field of fields)if(own(row,field)!==undefined&&own(row,field)!==parsed[field])throw new Error(`Point tier ${JSON.stringify(row.label)} ${field} disagrees with its label`);
+    if(!safeInteger(parsed.minModels,1)||!safeInteger(parsed.maxModels,parsed.minModels))throw new Error(`Point tier ${JSON.stringify(row.label)} has no supported model bounds`);
+    if(parsed.minCopies!==undefined&&!safeInteger(parsed.minCopies,1)||parsed.maxCopies!==undefined&&!safeInteger(parsed.maxCopies,parsed.minCopies??1))throw new Error(`Point tier ${JSON.stringify(row.label)} has invalid copy bounds`);
+    return {...row,...parsed};
+  };
+  const structuredTier=row=>record(row)&&safeInteger(own(row,'minModels'),1)&&safeInteger(own(row,'maxModels'),own(row,'minModels'))&&(own(row,'minCopies')===undefined||safeInteger(own(row,'minCopies'),1))&&(own(row,'maxCopies')===undefined||safeInteger(own(row,'maxCopies'),own(row,'minCopies')??1));
+  const structuredTierMatches=(row,quantity,index)=>structuredTier(row)&&quantity>=row.minModels&&quantity<=row.maxModels&&index>=Number(row.minCopies??index)&&index<=Number(row.maxCopies??index);
+  const labelTierMatches=(row,quantity,index)=>{const bounds=parseTierLabel(row?.label);return safeInteger(bounds.minModels,1)&&quantity>=bounds.minModels&&quantity<=bounds.maxModels&&index>=Number(bounds.minCopies??index)&&index<=Number(bounds.maxCopies??index);};
+  const tierMatches=(row,quantity,index)=>['minModels','maxModels','minCopies','maxCopies'].some(field=>own(row,field)!==undefined)?structuredTierMatches(row,quantity,index):labelTierMatches(row,quantity,index);
+  const tiersOverlap=(left,right)=>left.minModels<=right.maxModels&&right.minModels<=left.maxModels&&Number(left.minCopies??1)<=Number(right.maxCopies??Infinity)&&Number(right.minCopies??1)<=Number(left.maxCopies??Infinity);
+  const validateStructuredTiers=rows=>{
+    if(!Array.isArray(rows)||rows.length<2)throw new Error('Multi-tier point schedule requires at least two rows');
+    for(const row of rows){
+      if(!structuredTier(row))throw new Error(`Point tier ${JSON.stringify(row?.label)} is missing structured bounds`);
+      const parsed=parseTierLabel(row.label);
+      for(const field of ['minModels','maxModels','minCopies','maxCopies'])if(own(row,field)!==parsed[field])throw new Error(`Point tier ${JSON.stringify(row.label)} ${field} disagrees with its label`);
+    }
+    for(let left=0;left<rows.length;left++)for(let right=left+1;right<rows.length;right++)if(tiersOverlap(rows[left],rows[right]))throw new Error(`Point tiers ${JSON.stringify(rows[left].label)} and ${JSON.stringify(rows[right].label)} overlap`);
+    return rows;
+  };
+  const normalizeTiers=rows=>validateStructuredTiers(rows.map(normalizeTier));
+  const tierContract=Object.freeze({parseTierLabel,boundsKey,normalizeTier,normalizeTiers,validateStructuredTiers,structuredTier,structuredTierMatches,labelTierMatches,tierMatches});
   const physicalModelCount=unit=>{
     const models=unit?.models;
     if(models==null||(Array.isArray(models)&&models.length===0)){
@@ -37,7 +65,6 @@
     }
     return total||null;
   };
-  const modelMatches=(label,quantity)=>{const match=String(label||'').match(/(\d+)\s+models?/i);return !match||(Number.isInteger(quantity)&&Number(match[1])===quantity);};
   const loadouts=unit=>{
     if(unit.models!=null&&!Array.isArray(unit.models))return null;
     if(!unit.models?.length){
@@ -152,7 +179,7 @@ function assessEnhancements(roster, faction, catalog=catalogFor(faction)) {
       const modelCount=physicalModelCount(unit);
       const selectedLoadouts=loadouts(unit),pointRows=definition.points;
       if(modelCount===null||selectedLoadouts===null||pointRows.some(row=>!record(row)||typeof own(row,'label')!=='string'||!safeInteger(own(row,'value')))){unresolved.push(`Unit size or repeat: ${unit.quantity}x ${unit.name}`);continue;}
-      const prices=pointRows.filter(row=>copyMatches(row.label,index)&&modelMatches(row.label,modelCount));
+      const prices=pointRows.filter(row=>tierMatches(row,modelCount,index));
       if(prices.length!==1){unresolved.push(`Unit size or repeat: ${unit.quantity}x ${unit.name}`);continue;}
       const wargear=own(definition,'wargear')===undefined?[]:definition.wargear;
       if(!Array.isArray(wargear)||wargear.some(item=>!record(item)||typeof (own(item,'label')??own(item,'name'))!=='string'||!safeInteger(own(item,'value')))){unresolved.push(`Unit points: ${unit.name}`);continue;}
@@ -185,5 +212,5 @@ function assessEnhancements(roster, faction, catalog=catalogFor(faction)) {
     const declared=safeInteger(roster.declared)?roster.declared:0,unitLineTotal=safeInteger(roster.unitLineTotal??roster.calculated)?roster.unitLineTotal??roster.calculated:0;
     return{total,unresolved,enhancements,enhancementWarnings,enhancementChoices,enhancementAssignments:enhancements.length,detachmentPoints,detachmentPointLimit,detachmentWarnings,difference:total-declared,unitLineTotal,exportMatches:declared===unitLineTotal};
   }
-  root.WHRosterPoints=Object.freeze({check,normalize,assessEnhancements});
+  root.WHRosterPoints=Object.freeze({check,normalize,assessEnhancements,tierContract});
 }(typeof window==='undefined'?globalThis:window));

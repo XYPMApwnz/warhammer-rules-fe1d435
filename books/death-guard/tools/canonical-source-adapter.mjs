@@ -1,4 +1,5 @@
 import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
+import {pointTierContract} from '../../shared/tools/point-tier-contract.mjs';
 
 const slug=value=>String(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const keywordId=value=>`keyword-${slug(value)}`;
@@ -6,7 +7,6 @@ const plainKeywordNames=new Set(['CHAOS LORD','CULTISTS','POSSESSED','SORCERER']
 export const coreTermIdByCode=Object.freeze({'15.02':'core-rule-15-02-command-re-roll','15.03':'core-rule-15-03-epic-challenge','15.04':'core-rule-15-04-insane-bravery','15.05':'core-rule-15-05-explosives','15.06':'core-rule-15-06-crushing-impact','15.07':'core-rule-15-07-rapid-ingress','15.08':'core-stratagem-fire-overwatch','15.10':'core-rule-15-10-smokescreen','15.11':'core-rule-15-11-heroic-intervention','15.12':'core-rule-15-12-counteroffensive'});
 
 const normalizeFactText=value=>String(value??'').normalize('NFKC').replace(/[\u2010-\u2015]/g,'-').replace(/\s+/g,' ').trim().toLowerCase();
-const ordinalPattern='\\d+(?:st|nd|rd|th)';
 const uniqueIndex=(items,keyFor,label)=>{
   if(!Array.isArray(items))throw new Error(`Death Guard MFM ownership: ${label} is not an array`);
   const index=new Map();
@@ -18,22 +18,18 @@ const assertSameIdentities=(canonical,official,label)=>{
   if(missing.length||extra.length)throw new Error(`Death Guard MFM ownership: ${label} identity mismatch; missing [${missing.join(', ')}], extra [${extra.join(', ')}]`);
 };
 const mfmTierKey=label=>{
-  const value=normalizeFactText(label).replace(/^your\s+/,'').replace(/\s+costs?$/,'').replace(/\bunits\b/g,'unit').replace(/\s+to\s+/g,'-').replace(/\s*\+\s*/g,'+ ');
-  if(value==='unit')return 'any';
-  const match=new RegExp(`^(${ordinalPattern})(?:-(${ordinalPattern})|(\\+))?\\s+unit$`).exec(value);
-  if(!match)throw new Error(`Death Guard MFM ownership: unsupported official schedule label ${label}`);
-  return match[2]?`${match[1]}-${match[2]}`:match[3]?`${match[1]}+`:match[1];
+  const bounds=pointTierContract.parseTierLabel(label);
+  if(bounds.minModels!==undefined||bounds.minCopies===undefined&&normalizeFactText(label).replace(/^your\s+/,'').replace(/\s+costs?$/,'')!=='unit')throw new Error(`Death Guard MFM ownership: unsupported official schedule label ${label}`);
+  return pointTierContract.boundsKey(bounds);
 };
 const canonicalPointKey=label=>{
-  const value=normalizeFactText(label),separator=value.indexOf(':');
-  if(separator<0)return `any|${value}`;
-  const prefix=value.slice(0,separator).replace(/\s+unit$/,'').replace(/\s*\+\s*/g,'+').replace(/\s*-\s*/g,'-'),model=value.slice(separator+1).trim();
-  if(!new RegExp(`^${ordinalPattern}(?:-${ordinalPattern}|\\+)?$`).test(prefix)||!model)throw new Error(`Death Guard MFM ownership: unsupported canonical point label ${label}`);
-  return `${prefix}|${model}`;
+  const bounds=pointTierContract.parseTierLabel(label);
+  if(bounds.minModels===undefined)throw new Error(`Death Guard MFM ownership: unsupported canonical point label ${label}`);
+  return pointTierContract.boundsKey(bounds);
 };
 const officialPointRows=unit=>{
   const rows=[];
-  for(const schedule of unit.schedules||[]){const tier=mfmTierKey(schedule.label);if(!Array.isArray(schedule.values)||!schedule.values.length)throw new Error(`Death Guard MFM ownership: ${unit.unitId} has an empty official schedule`);for(const point of schedule.values)rows.push({key:`${tier}|${normalizeFactText(point.label)}`,value:point.value});}
+  for(const schedule of unit.schedules||[]){const tier=mfmTierKey(schedule.label);if(!Array.isArray(schedule.values)||!schedule.values.length)throw new Error(`Death Guard MFM ownership: ${unit.unitId} has an empty official schedule`);for(const point of schedule.values){const model=pointTierContract.parseTierLabel(point.label);if(model.minModels===undefined||model.minCopies!==undefined)throw new Error(`Death Guard MFM ownership: unsupported official model label ${point.label}`);rows.push({key:pointTierContract.boundsKey({...model,...pointTierContract.parseTierLabel(schedule.label)}),value:point.value});}}
   return rows;
 };
 const reconcilePointRows=(canonicalRows,officialRows,label)=>{

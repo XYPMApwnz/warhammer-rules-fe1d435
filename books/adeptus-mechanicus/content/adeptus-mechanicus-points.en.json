@@ -506,6 +506,9 @@
       "profile": null,
       "detachment": "skitarii-hunter-cohort",
       "effect": "",
+      "id": "enhancement-cantic-thrallnet",
+      "canonicalEnhancementId": "enhancement-cantic-thrallnet",
+      "canonicalDetachmentId": "detachment-skitarii-hunter-cohort",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -532,6 +535,9 @@
       "profile": null,
       "detachment": "skitarii-hunter-cohort",
       "effect": "infiltrators-scouts-6",
+      "id": "enhancement-clandestine-infiltrator",
+      "canonicalEnhancementId": "enhancement-clandestine-infiltrator",
+      "canonicalDetachmentId": "detachment-skitarii-hunter-cohort",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -561,6 +567,9 @@
       "profile": null,
       "detachment": "skitarii-hunter-cohort",
       "effect": "",
+      "id": "enhancement-veiled-hunter",
+      "canonicalEnhancementId": "enhancement-veiled-hunter",
+      "canonicalDetachmentId": "detachment-skitarii-hunter-cohort",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -587,6 +596,9 @@
       "profile": null,
       "detachment": "skitarii-hunter-cohort",
       "effect": "",
+      "id": "enhancement-battle-sphere-uplink",
+      "canonicalEnhancementId": "enhancement-battle-sphere-uplink",
+      "canonicalDetachmentId": "detachment-skitarii-hunter-cohort",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -616,6 +628,9 @@
       "profile": null,
       "detachment": "rad-zone-corps",
       "effect": "",
+      "id": "enhancement-radial-suffusion",
+      "canonicalEnhancementId": "enhancement-radial-suffusion",
+      "canonicalDetachmentId": "detachment-rad-zone-corps",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -645,6 +660,9 @@
       "profile": null,
       "detachment": "rad-zone-corps",
       "effect": "stealth",
+      "id": "enhancement-malphonic-susurrus",
+      "canonicalEnhancementId": "enhancement-malphonic-susurrus",
+      "canonicalDetachmentId": "detachment-rad-zone-corps",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -674,6 +692,9 @@
       "profile": null,
       "detachment": "rad-zone-corps",
       "effect": "sustained-hits-1",
+      "id": "enhancement-peerless-eradicator",
+      "canonicalEnhancementId": "enhancement-peerless-eradicator",
+      "canonicalDetachmentId": "detachment-rad-zone-corps",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -703,6 +724,9 @@
       "profile": null,
       "detachment": "rad-zone-corps",
       "effect": "anti-infantry-monster",
+      "id": "enhancement-autoclavic-denunciation",
+      "canonicalEnhancementId": "enhancement-autoclavic-denunciation",
+      "canonicalDetachmentId": "detachment-rad-zone-corps",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -732,6 +756,9 @@
       "profile": null,
       "detachment": "explorator-maniple",
       "effect": "",
+      "id": "enhancement-magos",
+      "canonicalEnhancementId": "enhancement-magos",
+      "canonicalDetachmentId": "detachment-explorator-maniple",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -761,6 +788,9 @@
       "profile": null,
       "detachment": "explorator-maniple",
       "effect": "",
+      "id": "enhancement-genetor",
+      "canonicalEnhancementId": "enhancement-genetor",
+      "canonicalDetachmentId": "detachment-explorator-maniple",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -790,6 +820,9 @@
       "profile": null,
       "detachment": "explorator-maniple",
       "effect": "",
+      "id": "enhancement-logis",
+      "canonicalEnhancementId": "enhancement-logis",
+      "canonicalDetachmentId": "detachment-explorator-maniple",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -819,6 +852,9 @@
       "profile": null,
       "detachment": "explorator-maniple",
       "effect": "",
+      "id": "enhancement-artisan",
+      "canonicalEnhancementId": "enhancement-artisan",
+      "canonicalDetachmentId": "detachment-explorator-maniple",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -848,6 +884,9 @@
       "profile": null,
       "detachment": "data-psalm-conclave",
       "effect": "leadership-6",
+      "id": "enhancement-mechanicus-locum",
+      "canonicalEnhancementId": "enhancement-mechanicus-locum",
+      "canonicalDetachmentId": "detachment-data-psalm-conclave",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -877,6 +916,9 @@
       "profile": null,
       "detachment": "data-psalm-conclave",
       "effect": "",
+      "id": "enhancement-mantle-of-the-gnosticarch",
+      "canonicalEnhancementId": "enhancement-mantle-of-the-gnosticarch",
+      "canonicalDetachmentId": "detachment-data-psalm-conclave",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -906,6 +948,9 @@
       "profile": null,
       "detachment": "data-psalm-conclave",
       "effect": "",
+      "id": "enhancement-data-blessed-autosermon",
+      "canonicalEnhancementId": "enhancement-data-blessed-autosermon",
+      "canonicalDetachmentId": "detachment-data-psalm-conclave",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -935,6 +980,9 @@
       "profile": null,
       "detachment": "data-psalm-conclave",
       "effect": "fights-first",
+      "id": "enhancement-temporcopia",
+      "canonicalEnhancementId": "enhancement-temporcopia",
+      "canonicalDetachmentId": "detachment-data-psalm-conclave",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -964,6 +1012,9 @@
       "profile": null,
       "detachment": "cohort-cybernetica",
       "effect": "",
+      "id": "enhancement-necromechanic",
+      "canonicalEnhancementId": "enhancement-necromechanic",
+      "canonicalDetachmentId": "detachment-cohort-cybernetica",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -993,6 +1044,9 @@
       "profile": null,
       "detachment": "cohort-cybernetica",
       "effect": "",
+      "id": "enhancement-lord-of-machines",
+      "canonicalEnhancementId": "enhancement-lord-of-machines",
+      "canonicalDetachmentId": "detachment-cohort-cybernetica",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1022,6 +1076,9 @@
       "profile": null,
       "detachment": "cohort-cybernetica",
       "effect": "",
+      "id": "enhancement-emotionless-clarity",
+      "canonicalEnhancementId": "enhancement-emotionless-clarity",
+      "canonicalDetachmentId": "detachment-cohort-cybernetica",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1051,6 +1108,9 @@
       "profile": null,
       "detachment": "cohort-cybernetica",
       "effect": "anti-vehicle-4",
+      "id": "enhancement-arch-negator",
+      "canonicalEnhancementId": "enhancement-arch-negator",
+      "canonicalDetachmentId": "detachment-cohort-cybernetica",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1080,6 +1140,9 @@
       "profile": null,
       "detachment": "haloscreed-battle-clade",
       "effect": "halo-override",
+      "id": "enhancement-transoracular-dyad-wafers",
+      "canonicalEnhancementId": "enhancement-transoracular-dyad-wafers",
+      "canonicalDetachmentId": "detachment-haloscreed-battle-clade",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1106,6 +1169,9 @@
       "profile": null,
       "detachment": "haloscreed-battle-clade",
       "effect": "",
+      "id": "enhancement-cognitive-reinforcement",
+      "canonicalEnhancementId": "enhancement-cognitive-reinforcement",
+      "canonicalDetachmentId": "detachment-haloscreed-battle-clade",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1136,6 +1202,9 @@
       "profile": null,
       "detachment": "haloscreed-battle-clade",
       "effect": "ranged-range-6",
+      "id": "enhancement-sanctified-ordnance",
+      "canonicalEnhancementId": "enhancement-sanctified-ordnance",
+      "canonicalDetachmentId": "detachment-haloscreed-battle-clade",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1165,6 +1234,9 @@
       "profile": null,
       "detachment": "haloscreed-battle-clade",
       "effect": "melee-attacks-3-damage-1",
+      "id": "enhancement-inloaded-lethality",
+      "canonicalEnhancementId": "enhancement-inloaded-lethality",
+      "canonicalDetachmentId": "detachment-haloscreed-battle-clade",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1196,6 +1268,9 @@
       "profile": null,
       "detachment": "cohort-acquisitus",
       "effect": "infiltrators",
+      "id": "enhancement-explorator-dispensation",
+      "canonicalEnhancementId": "enhancement-explorator-dispensation",
+      "canonicalDetachmentId": "detachment-cohort-acquisitus",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1222,6 +1297,9 @@
       "profile": null,
       "detachment": "lords-of-the-forge",
       "effect": "mobile",
+      "id": "enhancement-vinghs-wafers-of-dynamism",
+      "canonicalEnhancementId": "enhancement-vinghs-wafers-of-dynamism",
+      "canonicalDetachmentId": "detachment-lords-of-the-forge",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1258,6 +1336,9 @@
       },
       "detachment": "lords-of-the-forge",
       "effect": "tl-409-profile",
+      "id": "enhancement-tl-4-9",
+      "canonicalEnhancementId": "enhancement-tl-4-9",
+      "canonicalDetachmentId": "detachment-lords-of-the-forge",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1287,6 +1368,9 @@
       "profile": null,
       "detachment": "luminen-auto-choir",
       "effect": "stealth",
+      "id": "enhancement-electromiasmic-brazier",
+      "canonicalEnhancementId": "enhancement-electromiasmic-brazier",
+      "canonicalDetachmentId": "detachment-luminen-auto-choir",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1316,6 +1400,9 @@
       "profile": null,
       "detachment": "luminen-auto-choir",
       "effect": "",
+      "id": "enhancement-voltagheist-reliquary",
+      "canonicalEnhancementId": "enhancement-voltagheist-reliquary",
+      "canonicalDetachmentId": "detachment-luminen-auto-choir",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1345,6 +1432,9 @@
       "profile": null,
       "detachment": "eradication-cohort",
       "effect": "",
+      "id": "enhancement-omnicogitator",
+      "canonicalEnhancementId": "enhancement-omnicogitator",
+      "canonicalDetachmentId": "detachment-eradication-cohort",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1371,6 +1461,9 @@
       "profile": null,
       "detachment": "eradication-cohort",
       "effect": "skitarii",
+      "id": "enhancement-martial-signatum-amplificator",
+      "canonicalEnhancementId": "enhancement-martial-signatum-amplificator",
+      "canonicalDetachmentId": "detachment-eradication-cohort",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1400,6 +1493,9 @@
       "profile": null,
       "detachment": "eradication-cohort",
       "effect": "ranged-range-6-strength-1",
+      "id": "enhancement-belicosa-class-capacitor-vanes",
+      "canonicalEnhancementId": "enhancement-belicosa-class-capacitor-vanes",
+      "canonicalDetachmentId": "detachment-eradication-cohort",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1429,6 +1525,9 @@
       "profile": null,
       "detachment": "eradication-cohort",
       "effect": "melee-attacks-2-ap-1-damage-1",
+      "id": "enhancement-omnissiahs-fury",
+      "canonicalEnhancementId": "enhancement-omnissiahs-fury",
+      "canonicalDetachmentId": "detachment-eradication-cohort",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -1454,6 +1553,9 @@
       "text": "SERBERYS RAIDERS unit only. This unit has Lone Operative 15\".",
       "detachment": "cohort-acquisitus",
       "effect": "lone-operative-15",
+      "id": "enhancement-stealth-screened-cybercanids-upgrade",
+      "canonicalEnhancementId": "enhancement-stealth-screened-cybercanids-upgrade",
+      "canonicalDetachmentId": "detachment-cohort-acquisitus",
       "tags": [
         "UPGRADE"
       ],

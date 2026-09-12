@@ -45,6 +45,8 @@ const cacheRevisionSource=fs.readFileSync(path.resolve(root,'..','..','tools','c
 const factionRules=json('content/adeptus-mechanicus-rules.en.json');
 const rosterCatalogSandbox={window:{}};vm.runInNewContext(read('scripts/roster-data.js'),rosterCatalogSandbox);
 const rosterCatalog=rosterCatalogSandbox.window.WH_BOOK_ROSTER_CATALOG;
+const pointsCatalogSandbox={window:{}};vm.runInNewContext(read('../../roster-guides/points-data.js'),pointsCatalogSandbox);
+const publishedMechanicusPoints=pointsCatalogSandbox.window.WH_POINTS_CATALOG['adeptus mechanicus'].enhancements;
 const source=json('content/adeptus-mechanicus-source.en.json');
 const codex=json('content/adeptus-mechanicus-codex-detachments.en.json');
 const codexParity=json('content/adeptus-mechanicus-codex-parity.en.json');
@@ -416,6 +418,14 @@ check('roster Compatible Rules fail closed and filter assigned owners',rosterLog
 const relatedRulesMarkup=read('mobile/related-rules.inc');
 check('Compatible Rules artifact keeps canonical group structure',(relatedRulesMarkup.match(/<section class="related-detachment(?: related-core)?"/g)||[]).length===11&&(relatedRulesMarkup.match(/<h2>Core Stratagems<\/h2>/g)||[]).length===1&&!/<h[34]\b[^>]*>(?:Core )?Stratagems<\/h[34]>/.test(relatedRulesMarkup)&&(relatedRulesMarkup.match(/<article\b[^>]*\bid="(?:core-stratagem|stratagem|enhancement)-[^"]+"/g)||[]).length===95);
 check('every Enhancement has a detachment and current cost',json('content/adeptus-mechanicus-points.en.json').enhancements.length===34&&json('content/adeptus-mechanicus-points.en.json').enhancements.every(item=>item.detachment&&item.value>0));
+const canonicalEnhancements=allDetachments.flatMap(detachment=>(detachment.enhancements||[]).map(item=>({id:item.id,detachmentId:detachment.id})));
+const uniquePublishedEnhancements=[...new Map(Object.values(publishedMechanicusPoints).map(item=>[JSON.stringify(item),item])).values()];
+check('Enhancement points preserve exact canonical identity',canonicalEnhancements.length===34&&uniquePublishedEnhancements.length===34&&canonicalEnhancements.every(item=>uniquePublishedEnhancements.filter(point=>point.id===item.id&&point.canonicalEnhancementId===item.id&&point.canonicalDetachmentId===item.detachmentId&&Number.isFinite(Number(point.value))).length===1));
+check('Enhancement points aliases preserve one canonical identity',[
+  ['autoclavic denounciation','autoclavic denunciation'],
+  ['tl 409','tl 4 9'],
+  ['stealth screened cybercanids','stealth screened cybercanids upgrade']
+].every(([alias,canonical])=>JSON.stringify(publishedMechanicusPoints[alias])===JSON.stringify(publishedMechanicusPoints[canonical])&&publishedMechanicusPoints[alias]?.canonicalEnhancementId));
 const build=spawnSync(node,[path.join(root,'tools','build-full-content.mjs'),'--check'],{encoding:'utf8'});
 check('generated project artifacts are current',build.status===0,(build.stderr||build.stdout).trim());
 const mobileBuild=spawnSync(node,[path.join(root,'mobile','build.mjs'),'--check'],{encoding:'utf8'});

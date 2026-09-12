@@ -1,9 +1,9 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const semantics=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-semantics.js'),'utf8');
@@ -31,7 +31,7 @@ const server=http.createServer((request,response)=>{
 await new Promise((resolve,reject)=>server.listen(0,'127.0.0.1',error=>error?reject(error):resolve()));
 const origin=`http://127.0.0.1:${server.address().port}`;
 
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await launchChromium();
 try{
   const page=await browser.newPage();
   await page.setContent(`<!doctype html><body>

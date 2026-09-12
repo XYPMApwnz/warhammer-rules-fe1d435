@@ -1,3 +1,4 @@
+import {launchChromium} from './helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -142,11 +143,10 @@ function runMutations(){
 }
 
 async function runBrowser(){
-  const {chromium}=await import('playwright');
   const types={'.js':'text/javascript','.html':'text/html','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
   const server=createServer((req,res)=>{try{let file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));assert.ok(file.startsWith(root+path.sep));if(req.url==='/favicon.ico'){res.writeHead(204).end();return;}if(fs.statSync(file).isDirectory())file=path.join(file,'index.html');res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(res);}catch{res.writeHead(404).end();}});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  const browser=await chromium.launch({channel:'chrome',headless:true}),origin=`http://127.0.0.1:${server.address().port}`;
+  const browser=await launchChromium(),origin=`http://127.0.0.1:${server.address().port}`;
   const errors=[];
   const open=async(book,id,roster,instance='physical-1')=>{
     const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}}),record={id:'ra02-browser',roster};

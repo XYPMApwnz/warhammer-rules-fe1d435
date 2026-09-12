@@ -1,3 +1,4 @@
+import {launchChromium} from './helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
@@ -141,7 +142,6 @@ async function mutations(base){
 }
 
 async function browserChecks(){
-  const {chromium}=await import('playwright');
   const assets=new Map(),mime={'.html':'text/html','.inc':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.webp':'image/webp','.woff2':'font/woff2'};
   const server=http.createServer((req,res)=>{
     try{
@@ -162,7 +162,7 @@ async function browserChecks(){
   const inspectCard=element=>({visible:!element.hidden&&!!element.getClientRects().length,
     fields:Object.fromEntries([...element.querySelectorAll('p.field')].map(p=>{const label=p.querySelector('b').textContent.trim();const clone=p.cloneNode(true);clone.querySelector('b').remove();return [label,clone.textContent.trim()];})),cp:element.querySelector('.cp').textContent.trim()});
   try{
-    browser=await chromium.launch({headless:true,...(process.platform==='win32'?{channel:'msedge'}:{})});
+    browser=await launchChromium();
     for(const mode of ['full','mobile']){
       const context=await browser.newContext({viewport:mode==='mobile'?{width:390,height:844}:{width:1365,height:900},serviceWorkers:'block'});
       try{

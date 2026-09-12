@@ -1,10 +1,10 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const inventory=Object.freeze({
@@ -53,7 +53,7 @@ const server=http.createServer((request,response)=>{const pathname=decodeURIComp
 await new Promise((resolve,reject)=>server.listen(0,'127.0.0.1',error=>error?reject(error):resolve()));
 const origin=`http://127.0.0.1:${server.address().port}`;
 
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await launchChromium();
 try{
   const open=async(book,record,instanceId,canonicalId)=>{const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});await context.addInitScript(value=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([value])),record);const page=await context.newPage();await page.goto(`${origin}/books/${book}/reader.html?view=mobile&roster=${record.id}&rosterInstance=${instanceId}#${canonicalId}`,{waitUntil:'networkidle'});await page.waitForFunction(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION?.units.some(unit=>unit.identity.instanceId===id)&&document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${id}"]`),instanceId);return{context,page};};
   const inspectReference=async(page,instanceId,id)=>page.evaluate(({instanceId,id})=>{const gameUnit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.instanceId===instanceId),card=document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${instanceId}"]`),effect=gameUnit.effects.find(item=>item.canonicalAbilityId===id),articles=[...card.querySelectorAll(`[data-roster-canonical-ability-id="${id}"]`)];return{effect,articleCount:articles.length,title:articles[0]?.querySelector('h5')?.textContent.trim()||'',source:articles[0]?.querySelector('.roster-game-ability-source')?.textContent.trim()||'',text:articles[0]?.querySelector('p')?.textContent.trim()||'',activeText:card.querySelector('.roster-game-effects')?.textContent||'',cardCount:document.querySelectorAll('.unit-card[data-roster-game-instance]').length};},{instanceId,id});

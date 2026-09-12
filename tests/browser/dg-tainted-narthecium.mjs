@@ -1,9 +1,9 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const taintedId='ability-tainted-narthecium-01ba1bd';
@@ -41,7 +41,7 @@ const providerSource=fs.readFileSync(path.join(root,'books/death-guard/scripts/r
 assert.doesNotMatch(providerSource,/narthecium-d3|Apply the current Narthecium D3 effect\./,'legacy synthetic Needle/Narthecium gameplay record must be removed');
 assert.match(providerSource,/canonicalEnhancement\(DG_ENH\.needle/,'Needle must use the shared canonical Enhancement reference path');
 
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await launchChromium();
 try{
   const open=async(saved,instanceId,canonicalId)=>{
     const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});

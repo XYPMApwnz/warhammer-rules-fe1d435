@@ -1,18 +1,16 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
-import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
 
-const require=createRequire(import.meta.url);
-const {chromium}=(()=>{try{return require('playwright');}catch(error){if(!process.env.CODEX_NODE_MODULES)throw error;return require(path.join(process.env.CODEX_NODE_MODULES,'playwright'));}})();
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.webp':'image/webp'};
 const server=http.createServer((request,response)=>{const pathname=decodeURIComponent(new URL(request.url,'http://127.0.0.1').pathname),file=path.resolve(root,pathname.replace(/^\/+/, '')||'index.html');if(file!==root&&!file.startsWith(`${root}${path.sep}`)){response.writeHead(403).end();return;}try{const stat=fs.statSync(file),target=stat.isDirectory()?path.join(file,'index.html'):file;response.writeHead(200,{'content-type':types[path.extname(target)]||'application/octet-stream'});fs.createReadStream(target).pipe(response);}catch{response.writeHead(404).end();}});
 await new Promise((resolve,reject)=>server.listen(0,'127.0.0.1',error=>error?reject(error):resolve()));
 const origin=`http://127.0.0.1:${server.address().port}`;
-const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+const browser=await launchChromium();
 
 try{
   const context=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:900}}),errors=[];

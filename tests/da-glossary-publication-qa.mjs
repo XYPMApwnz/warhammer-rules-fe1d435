@@ -1,3 +1,4 @@
+import {launchChromium} from './helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -107,7 +108,6 @@ if(process.argv.includes('--probe')){
     console.log(`${mutation}: killed, exit ${result.status}, ${marker}, no PASS`);
   }
   if(process.argv.includes('--browser')){
-    const {chromium}=await import('playwright');
     const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.svg':'image/svg+xml'};
     const server=createServer((req,res)=>{try{
       if(req.url==='/favicon.ico'){res.writeHead(204).end();return;}
@@ -117,7 +117,7 @@ if(process.argv.includes('--probe')){
     }catch{res.writeHead(404).end();}});
     await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));let browser;
     try{
-      browser=await chromium.launch({channel:'chrome',headless:true});
+      browser=await launchChromium();
       for(const [view,width] of [['full',1280],['mobile',390]]){
         const browserContext=await browser.newContext({serviceWorkers:'block',viewport:{width,height:844}});
         try{

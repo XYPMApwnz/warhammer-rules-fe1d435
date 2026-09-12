@@ -1,9 +1,9 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const giftId='ability-gift-of-contagion-psychic-4fea300';
@@ -31,7 +31,7 @@ const sourceText=`Death Guard
 • 1x Plague Champion: Boltgun, Plague knives`;
 const record=id=>({id,sourceText,attachments:id==='gift-attached'?{'parsed-unit-2':['parsed-unit-1']}: {}});
 
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await launchChromium();
 try{
   const open=async(saved,instanceId,canonicalId)=>{
     const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});

@@ -1,3 +1,4 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
@@ -5,7 +6,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const books=[
@@ -58,7 +58,7 @@ for(const book of books){const reader=fs.readFileSync(path.join(root,`books/${bo
 
 const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.statusCode=204;response.end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true}),records=[...fixtures.values()].map(fixture=>fixture.record);
+const origin=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium(),records=[...fixtures.values()].map(fixture=>fixture.record);
 const waitNav=async page=>{try{await page.waitForFunction(()=>document.querySelector('#tocTree[data-roster-navigation="physical"]')&&window.DG_APP?.navigation?.rosterNavigation?.active&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1');}catch(error){console.error('ROSTER NAV DIAGNOSTIC',await page.evaluate(()=>({href:location.href,context:window.WH_ARMY_ROSTER_CONTEXT?.status||null,game:window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema||null,gameUnits:window.WH_ARMY_ROSTER_GAME_PROJECTION?.units?.length||0,projection:window.WH_ARMY_ROSTER_PROJECTION?.status||null,nav:window.DG_APP?.navigation?.rosterNavigation||null,tree:document.querySelector('#tocTree')?.dataset.rosterNavigation||'',bookError:document.documentElement.dataset.bookError||null})));throw error;}};
 const navState=page=>page.evaluate(()=>{
   const tree=document.getElementById('tocTree'),physical=[...tree.querySelectorAll('[data-roster-instance]')],allTargets=[...tree.querySelectorAll('[data-nav-target]')],projection=window.WH_ARMY_ROSTER_PROJECTION,game=projection?.game,metadata=Array.isArray(window.WH_ARMY_BOOK_TARGETS?.nodes)?window.WH_ARMY_BOOK_TARGETS.nodes:[];

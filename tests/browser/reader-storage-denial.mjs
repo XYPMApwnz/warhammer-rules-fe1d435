@@ -1,9 +1,9 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
@@ -11,7 +11,7 @@ const server=createServer(async(request,response)=>{try{const url=new URL(reques
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin=`http://127.0.0.1:${server.address().port}`;
 const reader=`${origin}/books/death-guard/reader.html?view=mobile`;
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await launchChromium();
 const denyStorage=()=>Object.defineProperty(window,'localStorage',{configurable:true,get(){throw new DOMException('Access denied','SecurityError');}});
 const open=async(context,url)=>{const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});await page.goto(url,{waitUntil:'networkidle'});await page.waitForFunction(()=>window.WH_ARMY_BOOK_APP||document.documentElement.dataset.bookError,{timeout:5000});return {page,errors};};
 

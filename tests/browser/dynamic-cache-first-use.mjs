@@ -1,9 +1,9 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const types={'.css':'text/css','.html':'text/html','.inc':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
@@ -20,7 +20,7 @@ const server=createServer(async(request,response)=>{
 });
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin=`http://127.0.0.1:${server.address().port}`;
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await launchChromium();
 const books=[
   {name:'Chaos Space Marines',id:'chaos-space-marines',unit:'unit-chaos-lord-with-jump-pack'},
   {name:'Blood Angels',id:'blood-angels',unit:'unit-sanguinary-priest'}

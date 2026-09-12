@@ -1,13 +1,11 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
-import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const require=createRequire(path.join(root,'package.json'));
-const {chromium}=(()=>{try{return require('playwright');}catch(error){if(!process.env.CODEX_NODE_MODULES)throw error;return require(path.join(process.env.CODEX_NODE_MODULES,'playwright'));}})();
 const contentTypes={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json'};
 const server=createServer((request,response)=>{
   const pathname=decodeURIComponent(new URL(request.url,'http://localhost').pathname);
@@ -28,7 +26,7 @@ const assertClearAndClickable=async(page,label)=>{
 
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin=`http://127.0.0.1:${server.address().port}`;
-const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+const browser=await launchChromium();
 const observations=[];
 try{
   for(const viewport of [{width:1280,height:800},{width:1536,height:864}]){

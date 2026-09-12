@@ -1,3 +1,4 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -6,7 +7,6 @@ import {fileURLToPath} from 'node:url';
 
 const file=fileURLToPath(import.meta.url),root=path.resolve(path.dirname(file),'../..');
 export async function profileBrowserChecks(localProfile){
-  const {chromium}=await import('playwright');
   const registry=JSON.parse(fs.readFileSync(path.join(root,'glossary/registry.en.json'),'utf8')).terms;
   const ids=['heavy-bolt-pistol','hand-flamer','heavy-bolt-rifle','storm-bolter','hand-of-dominion-2','heavy-bolter','thunder-hammer','twin-lightning-claws','meltagun','instigator-bolt-carbine','castellan-launcher','plasma-pistol-standard','plasma-pistol-supercharge'].map(id=>'space-marines-weapon-'+id);
   ids.push('death-guard-weapon-balesword-plague-surgeon','space-marines-army-rule-oath-of-moment');
@@ -19,7 +19,7 @@ export async function profileBrowserChecks(localProfile){
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));let browser;
   const observations=[],failures=[];
   try{
-    browser=await chromium.launch({channel:'chrome',headless:true});
+    browser=await launchChromium();
     for(const [view,width] of [['full',1280],['mobile',390]]){
       const context=await browser.newContext({serviceWorkers:'block',viewport:{width,height:844}});
       try{

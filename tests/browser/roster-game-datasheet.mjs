@@ -1,3 +1,4 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
@@ -5,7 +6,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const runtimeVersions=JSON.parse(fs.readFileSync(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
@@ -27,7 +27,7 @@ for(const [,book] of books){const reader=fs.readFileSync(path.join(root,`books/$
 
 const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.statusCode=204;response.end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true});
+const origin=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium();
 const initRecords=Object.fromEntries([...fixtures].map(([book,fixture])=>[book,fixture.record]));
 const ready=(page,instance)=>page.waitForFunction(id=>document.querySelector(`.unit-card[data-roster-instance="${CSS.escape(id)}"].roster-game-view`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1'&&window.DG_APP?.navigation,instance);
 const snapshot=page=>page.evaluate(()=>{const card=document.querySelector('.unit-card.roster-game-view'),rows=[...card.querySelectorAll('.weapon-row:not(.weapon-head)')],isVisible=row=>getComputedStyle(row).display!=='none'&&row.getClientRects().length>0&&row.getBoundingClientRect().height>0,nav=[...card.querySelectorAll(':scope > .local-nav [data-journey-target]')],composition=[...card.querySelectorAll(':scope > .unit-part')].find(part=>part.id.endsWith('-composition')),keywords=[...card.querySelectorAll(':scope > .unit-part')].find(part=>part.id.endsWith('-keywords'));return{instance:card.dataset.rosterInstance,summary:card.querySelector('.roster-game-summary')?.innerText||'',cost:card.querySelector(':scope > :is(.unit-head,.unit-header) :is(.points,.unit-status)')?.innerText||'',kickers:card.querySelectorAll('.roster-game-kicker').length,weaponProvenance:card.querySelectorAll('.roster-game-weapon-effects').length,diagnostics:card.querySelectorAll('.roster-game-fallback,.roster-game-kicker').length,visibleProfiles:rows.filter(isVisible).map(row=>row.dataset.rosterProfileId||row.id),hiddenProfiles:rows.filter(row=>row.hidden&&getComputedStyle(row).display==='none'&&row.getClientRects().length===0&&row.getBoundingClientRect().height===0).length,hiddenLaidOut:rows.filter(row=>row.hidden&&isVisible(row)).length,weaponMode:card.dataset.rosterGameWeapons,composition:Boolean(card.querySelector('[data-roster-game-generated="composition"]')),compositionHeadings:[...composition?.querySelectorAll(':scope > h4')||[]].filter(node=>!node.hidden).map(node=>node.textContent.trim()),wargearOptions:[...card.querySelectorAll(':scope > .unit-part')].filter(part=>part.id.endsWith('-wargear-options')).map(part=>part.hidden),keywords:Boolean(card.querySelector('[data-roster-game-effective="true"]')),keywordTitle:keywords?.querySelector(':scope > h4')?.textContent.trim()||'',orphanNav:nav.filter(button=>!button.hidden&&card.querySelector(`[id="${CSS.escape(button.dataset.journeyTarget)}"]`)?.hidden).length,stratagems:card.querySelectorAll('[data-datasheet-command="stratagems"]').length,units:document.querySelectorAll('.document .unit-card').length,owners:Object.keys(window.WHArmyBookTargetMount.catalog.targets).filter(id=>document.getElementById(id)).length,overflow:document.documentElement.scrollWidth>innerWidth};});

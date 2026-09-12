@@ -1,3 +1,4 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
@@ -5,7 +6,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 import {runHelbruteBrowserQa} from '../helpers/death-guard-helbrute.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
@@ -50,7 +50,7 @@ for(const [bookId,catalog] of catalogs){
 
 const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.statusCode=204;response.end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true});
+const origin=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium();
 const ready=(page,instance)=>page.waitForFunction(id=>document.querySelector(`.unit-card[data-roster-instance="${CSS.escape(id)}"].roster-game-view`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1',instance);
 const selectedModel=(unit,id,quantity=3)=>{const selection=unit.gameSelections.selections.find(item=>item.kind==='weapon'&&item.profileIds.length);return{id,name:unit.title,points:100,models:[{quantity,name:unit.gameSelections.models[0]?.title||unit.title,loadouts:selection?[{quantity,wargear:selection.title}]:[]}]};};
 const rawRecord=(catalog,id,body)=>({id,sourceText:`${catalog.book.title}\n${body}`});

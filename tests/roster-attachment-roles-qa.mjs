@@ -1,3 +1,4 @@
+import {launchChromium} from './helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -120,10 +121,10 @@ function mutations(){
   checks();console.log('Restored role-assignment QA: PASS');
 }
 async function browserChecks(){
-  const {createServer}=await import('node:http'),{chromium}=await import('playwright');
+  const {createServer}=await import('node:http');
   const server=createServer((request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.writeHead(204).end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if(fs.statSync(file).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'})[path.extname(file)]||'application/octet-stream');response.end(fs.readFileSync(file));}catch{response.writeHead(404).end('Not found');}});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  const origin='http://127.0.0.1:'+server.address().port,browser=await chromium.launch({channel:'chrome',headless:true}),errors=[];
+  const origin='http://127.0.0.1:'+server.address().port,browser=await launchChromium(),errors=[];
   const saved=(page,id)=>page.evaluate(id=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')).find(row=>row.id===id),id);
   const edit=async(page,id)=>{await page.goto(origin+'/roster-guides/index.html');await page.locator('[data-edit-attachments="'+id+'"]').click();};
   const select=(page,body,value)=>page.locator('select[data-attachment-bodyguard="'+body+'"]').filter({has:page.locator('option[value="'+value+'"]')});

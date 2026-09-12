@@ -1,3 +1,4 @@
+import {launchChromium} from './helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -99,8 +100,7 @@ function mutations(){
 }
 
 async function browserChecks({registry}){
-  const {chromium}=await import('playwright');
-  const browser=await chromium.launch({channel:'chrome',headless:true});
+  const browser=await launchChromium();
   const types={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png'};
   const server=createServer((req,res)=>{try{if(req.url==='/favicon.ico'){res.writeHead(204).end();return;}let p=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://local').pathname));assert.ok(p.startsWith(root+path.sep));if(fs.statSync(p).isDirectory())p=path.join(p,'index.html');res.setHeader('Content-Type',types[path.extname(p)]||'application/octet-stream');fs.createReadStream(p).pipe(res);}catch{res.writeHead(404).end();}});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));

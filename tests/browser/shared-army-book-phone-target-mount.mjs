@@ -1,16 +1,16 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
 const books=[['DG','death-guard'],['AM','adeptus-mechanicus'],["T'au",'tau-empire'],['EC','emperors-children'],['Tyr','tyranids'],['CSM','chaos-space-marines'],['SM','space-marines'],['DA','dark-angels'],['BA','blood-angels']];
 const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true}),metrics={};
+const origin=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium(),metrics={};
 const observe=page=>{const errors=[],failed=[];page.on('pageerror',error=>errors.push(error.message));page.on('requestfailed',request=>failed.push(request.url()));return{errors,failed};};
 const ready=page=>page.waitForFunction(()=>Boolean(window.DG_APP?.navigation&&window.WHArmyBookTargetMount?.catalog));
 const mounted=(page,id)=>page.waitForFunction(target=>{const mount=window.WHArmyBookTargetMount,resolved=mount?.resolve(target),button=document.querySelector(`[data-nav-target="${CSS.escape(target)}"]`);return location.hash===`#${target}`&&document.documentElement.dataset.mountedTarget===resolved?.ownerId&&button?.classList.contains('is-current');},id);

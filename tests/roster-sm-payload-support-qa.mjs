@@ -1,3 +1,4 @@
+import {launchChromium} from './helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -142,11 +143,10 @@ function mutations(){
 }
 
 async function browserChecks(state){
-  const {chromium}=await import('playwright');
   const types={'.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.html':'text/html','.css':'text/css','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
   const server=createServer((req,res)=>{try{let file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));assert.ok(file.startsWith(root+path.sep));if(req.url==='/favicon.ico'){res.writeHead(204).end();return;}if(fs.statSync(file).isDirectory())file=path.join(file,'index.html');res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(res);}catch{res.writeHead(404).end();}});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true}),errors=[];
+  const origin=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium(),errors=[];
   const raw=(unit,id,weapons=[])=>({id,canonicalUnitId:unit.id,name:unit.title,points:100,quantity:1,models:[{quantity:1,name:unit.gameSelections.models[0]?.title||unit.title,loadouts:weapons.map(wargear=>({quantity:1,wargear}))}]});
   const record=(book,id,units)=>({id,name:id,createdAt:'2026-09-11T00:00:00.000Z',updatedAt:'2026-09-11T00:00:00.000Z',sourceText:'',attachments:{},roster:{faction:state.catalogs[book].book.title,units,detachments:[],enhancements:[],warnings:[]}});
   const contextFor=async record=>{const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});if(record)await context.addInitScript(r=>{if(!localStorage.getItem('wh40k-rosters-v1'))localStorage.setItem('wh40k-rosters-v1',JSON.stringify([r]));},record);const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));return {context,page};};

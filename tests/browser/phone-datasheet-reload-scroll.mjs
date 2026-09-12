@@ -1,9 +1,9 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const books=[
@@ -15,7 +15,7 @@ const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs
 const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.statusCode=204;response.end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin=`http://127.0.0.1:${server.address().port}`;
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await launchChromium();
 
 const waitForApp=(page,unitId)=>page.waitForFunction(id=>Boolean(window.DG_APP?.navigation&&window.WHArmyBookTargetMount&&document.querySelector('.document .unit-card')?.id===id),unitId);
 const waitForReader=page=>page.waitForFunction(()=>window.DG_APP?.navigation?.state?.owner==='reader');

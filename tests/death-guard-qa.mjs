@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {runHelbruteProviderQa} from './helpers/death-guard-helbrute.mjs';
+import {extractControllerClass} from './helpers/controller-source-extraction.mjs';
 
 const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const helbruteQa=runHelbruteProviderQa({root:projectRoot});
@@ -164,7 +165,7 @@ check('navigation branches use strict sibling accordion',navigation.includes("if
 check('manual accordion state yields back to scroll tracking',navigation.includes('pathIsOpen(node)')&&navigation.includes("else if(item&&!this.pathIsOpen(item.node))this.revealPath(item.node,{includeSelf:true})"));
 check('branch labels and arrows have separate actions',navigation.includes("event.target.closest('[data-nav-toggle]')")&&navigation.includes("event.target.closest('[data-nav-target]')"));
 check('Start closes every open navigation branch before returning to the top',navigation.includes("if(label.dataset.navTarget==='start')this.closeEveryBranch()"));
-const navigationClassSource=navigation.replace(/\r\n/g,'\n').match(/(class NavigationController\{[\s\S]*?\n  \})\n\n  window\.DGNavigation/)?.[1]||'';
+const navigationClassSource=extractControllerClass(navigation,'NavigationController','DGNavigation');
 try{
   const NavigationController=Function(`"use strict";return (${navigationClassSource});`)();
   const controller=Object.create(NavigationController.prototype);
@@ -224,7 +225,7 @@ check('Mega Glossary transitions use the shared return helper',/\.\.\/\.\.\/glos
 check('popups use the shared semantic profile renderer',popups.includes('WHPopupContent.render')&&popupContent.includes("document.createElement('table')")&&popupContent.includes("document.createElement('dl')"));
 check('unit popup grid has a mobile no-overflow layout',/\.popup-stats\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit, minmax\(54px, 1fr\)\)/.test(read('styles/popups.css'))&&/@media\s*\(max-width:\s*480px\)[\s\S]*?\.popup-stats\s*\{[^}]*grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\)/.test(read('styles/popups.css')));
 
-const popupClassSource=popups.match(/(class PopupController\{[\s\S]*?\n  \})\n\n  window\.DGPopups/)?.[1]||'';
+const popupClassSource=extractControllerClass(popups,'PopupController','DGPopups');
 try{
   const PopupController=Function(`"use strict";return (${popupClassSource});`)();
   const controller=Object.create(PopupController.prototype);

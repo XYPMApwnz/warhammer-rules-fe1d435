@@ -1,3 +1,4 @@
+import {launchChromium} from './helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -142,11 +143,10 @@ function mutations(){
 }
 
 async function browserChecks(state){
-  const {chromium}=await import('playwright');
   const types={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
   const server=createServer((req,res)=>{try{if(req.url==='/favicon.ico'){res.writeHead(204).end();return;}let file=path.resolve(root,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));assert.ok(file.startsWith(root+path.sep));if(fs.statSync(file).isDirectory())file=path.join(file,'index.html');res.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(res);}catch{res.writeHead(404).end();}});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-  const base=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true}),errors=[];
+  const base=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium(),errors=[];
   const context=await browser.newContext({serviceWorkers:'block',viewport:{width:1100,height:850}}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   async function cardCheck(personal){
     const card=page.locator(personal?'.unit-card.roster-game-view':`#${masterId}`);await card.waitFor();

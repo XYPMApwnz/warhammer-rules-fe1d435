@@ -1,3 +1,4 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
@@ -5,7 +6,6 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const books=[
@@ -57,7 +57,7 @@ const first=attachmentsApi.attach({units:multipleUnits,attachments:{},bodyguardI
 
 const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.statusCode=204;response.end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
-const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true}),records=[...fixtures.values()].map(item=>item.record);
+const origin=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium(),records=[...fixtures.values()].map(item=>item.record);
 const waitRoster=(page,instanceId)=>page.waitForFunction(id=>document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(id)}"]`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1'&&window.DG_APP?.navigation,instanceId);
 const stored=(page,id)=>page.evaluate(rosterId=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').find(item=>item.id===rosterId),id);
 try{

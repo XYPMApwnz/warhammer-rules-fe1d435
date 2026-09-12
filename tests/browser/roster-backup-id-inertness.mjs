@@ -1,12 +1,11 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
-import {createRequire} from 'node:module';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(process.env.WBA058_ROOT||path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'));
-const {chromium}=createRequire(path.join(root,'package.json'))('playwright');
 const override=process.env.WBA058_APP_OVERRIDE?await readFile(process.env.WBA058_APP_OVERRIDE):null;
 const types={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer(async(request,response)=>{
@@ -27,7 +26,7 @@ let browser,context,page;
 const key='wh40k-rosters-v1',dialogs=[],errors=[];
 let confirmDelete=false;
 async function start(){
-  browser=await chromium.launch({channel:'chrome',headless:true});
+  browser=await launchChromium();
   context=await browser.newContext({serviceWorkers:'block',acceptDownloads:true,viewport:{width:1280,height:900}});
   page=await context.newPage();
   page.setDefaultTimeout(15000);

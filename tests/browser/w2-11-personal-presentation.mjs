@@ -1,10 +1,10 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),scope={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-data.js'),'utf8'),scope);
@@ -14,7 +14,7 @@ const record={id:'w2-11-personal',roster:{faction:'Death Guard',units:[rosterUni
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.png':'image/png','.svg':'image/svg+xml'};
 const server=http.createServer((request,response)=>{const relative=decodeURIComponent(new URL(request.url,'http://127.0.0.1').pathname).replace(/^\/+/, '')||'index.html',file=path.resolve(root,relative);if(file!==root&&!file.startsWith(`${root}${path.sep}`)){response.writeHead(403).end();return;}try{const stat=fs.statSync(file),target=stat.isDirectory()?path.join(file,'index.html'):file;response.writeHead(200,{'content-type':types[path.extname(target)]||'application/octet-stream'});fs.createReadStream(target).pipe(response);}catch{response.writeHead(404).end();}});
 await new Promise((resolve,reject)=>server.listen(0,'127.0.0.1',error=>error?reject(error):resolve()));
-const origin=`http://127.0.0.1:${server.address().port}`,browser=await chromium.launch({channel:'chrome',headless:true}),context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
+const origin=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium(),context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
 await context.addInitScript(value=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([value])),record);
 const page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(error.message));
 const open=async instance=>{await page.goto(`${origin}/books/death-guard/reader.html?view=mobile&roster=${record.id}&rosterInstance=${instance}#${unit.id}`);await page.waitForFunction(id=>document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${id}"]`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.units.some(item=>item.identity.instanceId===id),instance);return page.evaluate(({instance,canonicalPoints})=>{const card=document.querySelector('.unit-card.roster-game-view'),gameUnit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===instance),rows=[...card.querySelectorAll('.weapon-row:not(.weapon-head)')],visible=row=>!row.hidden&&getComputedStyle(row).display!=='none'&&row.getClientRects().length>0,cost=card.querySelector('.roster-game-cost'),reference=card.querySelector('.roster-game-reference-link'),ids=[...document.querySelectorAll('[id]')].map(node=>node.id);return{instance:card.dataset.rosterGameInstance,cards:document.querySelectorAll('.unit-card.roster-game-view').length,resolution:gameUnit.selection.loadout.weaponResolution.state,selected:[...gameUnit.selection.loadout.selectedProfileIds],visible:rows.filter(visible).map(row=>row.dataset.rosterProfileId||row.id).filter(Boolean),mode:card.dataset.rosterGameWeapons,notice:card.querySelector('.roster-game-loadout-status')?.innerText||'',reference:reference?.href||'',cost:cost?.innerText||'',costHeight:cost?.getBoundingClientRect().height||0,currentText:cost?.querySelector('.roster-game-current-cost')?.innerText||'',exportedText:cost?.querySelector('.roster-game-exported-cost')?.innerText||'',canonicalPoints:window.WH_BOOK_ROSTER_CATALOG.units.find(item=>item.id==='unit-biologus-putrifier').points||canonicalPoints,duplicates:[...new Set(ids.filter((id,index)=>ids.indexOf(id)!==index))]};},{instance,canonicalPoints});};

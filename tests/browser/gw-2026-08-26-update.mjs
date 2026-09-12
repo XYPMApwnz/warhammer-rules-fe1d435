@@ -1,10 +1,10 @@
+import {launchChromium} from '../helpers/browser-launch.mjs';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import http from 'node:http';
 import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const screenshotDir=path.join(os.tmpdir(),'gw-2026-08-26','screens');
@@ -30,7 +30,7 @@ const fixtures={
   da:record('gw-da',"FACTION KEYWORD: Imperium - Dark Angels\n1x Lion El'Jonson (0 pts)"),
   ba:record('gw-ba',"FACTION KEYWORD: Imperium - Blood Angels\n1x Blood Angels Captain (0 pts)")
 };
-const browser=await chromium.launch({channel:'chrome',headless:true});
+const browser=await launchChromium();
 let scenarios=0,mobile=0,desktop=0,screens=0;
 const open=async(book,saved,instanceId,canonicalId,viewport={width:390,height:844})=>{
   const context=await browser.newContext({serviceWorkers:'block',viewport});

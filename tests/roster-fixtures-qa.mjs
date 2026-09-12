@@ -22,13 +22,33 @@ assert.equal(fixture.totalPoints,270,'fixture points must come from the current 
 
 const renamed=JSON.parse(JSON.stringify(catalog));
 renamed.detachments.find(item=>item.id==='renegade-warband').title='Renamed Canonical Detachment';
+renamed.units.find(item=>item.id==='unit-chosen').title='Renamed Canonical Datasheet';
 const renamedFixture=createRosterFixture({catalog:renamed,pointsCatalog,id:'helper-rename',detachmentId:'renegade-warband',units:[{datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5}]});
 assert.match(renamedFixture.record.sourceText,/DETACHMENT: Renamed Canonical Detachment/);
+assert.match(renamedFixture.record.sourceText,/5x Renamed Canonical Datasheet/);
 const renamedRoster=sandbox.WHRosterParser.parse(renamedFixture.record.sourceText);
 const renamedUnit=createCatalogGameUnit({catalog:renamed,datasheetId:'unit-chosen',instanceId:'parsed-unit-1'});
 const behavior=sandbox.CSM_ROSTER_SEMANTICS.gameEffects({gameUnit:renamedUnit,byInstance:new Map([[renamedUnit.identity.instanceId,renamedUnit]]),enhancements:[],detachments:[{id:'renegade-warband'}]});
 assert.ok(behavior.some(effect=>effect.source?.id==='renegade-warband'));
 assert.equal(renamedRoster.detachments[0].name,'Renamed Canonical Detachment');
+assert.equal(renamedRoster.units[0].name,'Renamed Canonical Datasheet');
+
+renamed.detachments.find(item=>item.id==='creations-of-bile').title='Renamed Enhancement Detachment';
+renamed.enhancements.find(item=>item.id==='enhancement-living-carapace').title='Renamed Canonical Enhancement';
+renamed.units.find(item=>item.id==='unit-chaos-lord').title='Renamed Enhancement Bearer';
+const renamedEnhancementFixture=createRosterFixture({catalog:renamed,pointsCatalog,id:'helper-enhancement-rename',detachmentId:'creations-of-bile',units:[
+  {datasheetId:'unit-chaos-lord',instanceId:'parsed-unit-1',enhancementId:'enhancement-living-carapace'},
+  {datasheetId:'unit-chaos-lord',instanceId:'parsed-unit-2'},
+]});
+assert.match(renamedEnhancementFixture.record.sourceText,/Enhancement: Renamed Canonical Enhancement/);
+assert.equal(renamedEnhancementFixture.record.sourceText.match(/1x Renamed Enhancement Bearer/g)?.length,2);
+const renamedEnhancementRoster=sandbox.WHRosterParser.parse(renamedEnhancementFixture.record.sourceText),renamedEnhancementOwner=createCatalogGameUnit({catalog:renamed,datasheetId:'unit-chaos-lord',instanceId:'parsed-unit-1',enhancementIds:['enhancement-living-carapace']}),renamedEnhancementPeer=createCatalogGameUnit({catalog:renamed,datasheetId:'unit-chaos-lord',instanceId:'parsed-unit-2'}),csmByInstance=new Map([[renamedEnhancementOwner.identity.instanceId,renamedEnhancementOwner],[renamedEnhancementPeer.identity.instanceId,renamedEnhancementPeer]]),renamedLivingCarapace=renamed.enhancements.find(item=>item.id==='enhancement-living-carapace'),csmEnhancements=[{catalog:renamedLivingCarapace,input:{ownerStatus:'resolved',ownerUnitId:renamedEnhancementOwner.identity.instanceId}}],csmDetachments=[{id:'creations-of-bile'}];
+const renamedEnhancementBehavior=sandbox.CSM_ROSTER_SEMANTICS.gameEffects({gameUnit:renamedEnhancementOwner,byInstance:csmByInstance,enhancements:csmEnhancements,detachments:csmDetachments}),renamedEnhancementPeerBehavior=sandbox.CSM_ROSTER_SEMANTICS.gameEffects({gameUnit:renamedEnhancementPeer,byInstance:csmByInstance,enhancements:csmEnhancements,detachments:csmDetachments});
+assert.equal(renamedEnhancementRoster.detachments[0].name,'Renamed Enhancement Detachment');
+assert.equal(renamedEnhancementRoster.enhancements[0].name,'Renamed Canonical Enhancement');
+assert.deepEqual(Array.from(renamedEnhancementRoster.units,item=>[item.id,item.name]),[['parsed-unit-1','Renamed Enhancement Bearer'],['parsed-unit-2','Renamed Enhancement Bearer']]);
+assert.ok(renamedEnhancementBehavior.some(effect=>effect.source?.id==='enhancement-living-carapace'&&effect.operation==='add'&&effect.targetId==='W'),'CSM Enhancement behavior must remain keyed by canonical identity');
+assert.equal(renamedEnhancementPeerBehavior.some(effect=>effect.source?.id==='enhancement-living-carapace'),false,'CSM Enhancement must not leak to a second physical Datasheet instance');
 
 const ecSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});ecSandbox.globalThis=ecSandbox;ecSandbox.window=ecSandbox;
 for(const file of ['books/emperors-children/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/emperors-children/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ecSandbox,{filename:file});

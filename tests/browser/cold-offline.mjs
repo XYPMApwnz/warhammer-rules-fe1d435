@@ -8,9 +8,8 @@ import {fileURLToPath} from 'node:url';
 import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const fixtureScope=vm.createContext({window:{}});
-for(const file of ['books/chaos-space-marines/scripts/roster-data.js','roster-guides/points-data.js'])vm.runInContext(await readFile(path.join(root,file),'utf8'),fixtureScope,{filename:file});
-const csmCatalog=fixtureScope.window.WH_BOOK_ROSTER_CATALOG,csmPoints=fixtureScope.window.WH_POINTS_CATALOG['chaos space marines'];
+const fixtureData=async(slug,key)=>{const scope=vm.createContext({window:{}});for(const file of [`books/${slug}/scripts/roster-data.js`,'roster-guides/points-data.js'])vm.runInContext(await readFile(path.join(root,file),'utf8'),scope,{filename:file});return{catalog:scope.window.WH_BOOK_ROSTER_CATALOG,points:scope.window.WH_POINTS_CATALOG[key]};};
+const {catalog:csmCatalog,points:csmPoints}=await fixtureData('chaos-space-marines','chaos space marines'),{catalog:ecCatalog,points:ecPoints}=await fixtureData('emperors-children','emperor s children');
 const runtimeVersions=JSON.parse(await readFile(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
 const server=createServer(async(request,response)=>{
@@ -328,7 +327,8 @@ try{
   const compatibleRosterContext=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
   try{
     const {page,errors}=await observedPage(compatibleRosterContext);
-    const rosterRecord={id:'multi-detachment-compatible',name:'Multi-detachment Compatible Rules fixture',roster:{faction:"Emperor's Children",detachment:'Carnival of Excess',detachments:[{label:'Carnival of Excess'},{label:'Frenzied Host'}],units:[{id:'fixture-lord-exultant',name:'Lord Exultant',quantity:1,points:0}],enhancements:[{name:'Dark Blessings',ownerStatus:'resolved',ownerUnitId:'fixture-lord-exultant'},{name:'Euphoric Crown',ownerStatus:'resolved',ownerUnitId:'fixture-lord-exultant'}]}};
+    const ecFixture=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'multi-detachment-compatible',name:'Multi-detachment Compatible Rules fixture',detachmentIds:['carnival-of-excess','frenzied-host'],factionPrefix:'Chaos - ',units:[{datasheetId:'unit-lord-exultant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-dark-blessings','euphoric-crown']}]}),rosterRecord=ecFixture.record,[carnival,frenzied]=ecFixture.detachments,foreign=ecCatalog.detachments.find(item=>item.id==='court-of-the-phoenician');
+    assert.ok(foreign,'canonical foreign Detachment control');
     await page.goto(`${origin}/books/emperors-children/reader.html#unit-lord-exultant`);
     await page.locator('#unit-lord-exultant .related-rules-trigger').click();
     await page.locator('.full-related-filter').waitFor({state:'visible'});
@@ -342,12 +342,12 @@ try{
     await page.locator('.full-related-content').waitFor({state:'visible'});
     assert.equal(await page.locator('.full-related-filter').count(),0,'Desktop roster mode still exposes a Detachment selector');
     const desktopHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
-    assert.ok(desktopHeadings.some(title=>title.startsWith('Carnival of Excess'))&&desktopHeadings.some(title=>title.startsWith('Frenzied Host')),'Desktop roster union omitted a roster Detachment');
-    assert.ok(!desktopHeadings.some(title=>title.startsWith('Court of the Phoenician')),'Desktop roster union included a foreign Detachment');
+    assert.ok(desktopHeadings.some(title=>title.startsWith(carnival.title))&&desktopHeadings.some(title=>title.startsWith(frenzied.title)),'Desktop roster union omitted a roster Detachment');
+    assert.ok(!desktopHeadings.some(title=>title.startsWith(foreign.title)),'Desktop roster union included a foreign Detachment');
     assert.equal(desktopHeadings.filter(title=>title==='Core Stratagems').length,1,'Desktop roster union duplicated Core Stratagems');
     await page.locator('[data-kind="enhancements"]').click();
     const enhancementHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
-    assert.ok(enhancementHeadings.some(title=>title.startsWith('Carnival of Excess'))&&enhancementHeadings.some(title=>title.startsWith('Frenzied Host')),'Desktop roster union omitted an assigned Enhancement group');
+    assert.ok(enhancementHeadings.some(title=>title.startsWith(carnival.title))&&enhancementHeadings.some(title=>title.startsWith(frenzied.title)),'Desktop roster union omitted an assigned Enhancement group');
     const snapshot=await page.evaluate(()=>{const related=window.DG_APP.relatedRules;return related.snapshot(related.layer.querySelector('[data-kind="enhancements"]'));});
     assert.equal(snapshot.detachment,'all','Roster snapshot persisted a manual Detachment');
     await page.locator('.related-rules-close').click();
@@ -363,8 +363,8 @@ try{
     await page.locator('.full-related-content').waitFor({state:'visible'});
     assert.equal(await page.locator('.full-related-filter').count(),0,'Responsive roster mode still exposes a Detachment selector');
     const phoneHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
-    assert.ok(phoneHeadings.some(title=>title.startsWith('Carnival of Excess'))&&phoneHeadings.some(title=>title.startsWith('Frenzied Host')),'Responsive roster union omitted a roster Detachment');
-    assert.ok(!phoneHeadings.some(title=>title.startsWith('Court of the Phoenician')),'Responsive roster union included a foreign Detachment');
+    assert.ok(phoneHeadings.some(title=>title.startsWith(carnival.title))&&phoneHeadings.some(title=>title.startsWith(frenzied.title)),'Responsive roster union omitted a roster Detachment');
+    assert.ok(!phoneHeadings.some(title=>title.startsWith(foreign.title)),'Responsive roster union included a foreign Detachment');
     assert.equal(phoneHeadings.filter(title=>title==='Core Stratagems').length,1,'Responsive roster union duplicated Core Stratagems');
     assert.deepEqual(errors,[],'Responsive roster Compatible Rules emitted an uncaught runtime error');
     const csmFixture=createRosterFixture({catalog:csmCatalog,pointsCatalog:csmPoints,id:'csm-publication-roster',name:'CSM publication fixture',detachmentId:'nightmare-hunt',factionPrefix:'Chaos - ',units:[{datasheetId:'unit-chaos-lord-with-jump-pack',instanceId:'parsed-unit-1'}]}),csmRosterRecord=csmFixture.record;

@@ -30,6 +30,26 @@ const behavior=sandbox.CSM_ROSTER_SEMANTICS.gameEffects({gameUnit:renamedUnit,by
 assert.ok(behavior.some(effect=>effect.source?.id==='renegade-warband'));
 assert.equal(renamedRoster.detachments[0].name,'Renamed Canonical Detachment');
 
+const ecSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});ecSandbox.globalThis=ecSandbox;ecSandbox.window=ecSandbox;
+for(const file of ['books/emperors-children/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/emperors-children/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ecSandbox,{filename:file});
+const ecCatalog=ecSandbox.WH_BOOK_ROSTER_CATALOG,ecPoints=ecSandbox.WH_POINTS_CATALOG['emperor s children'],renamedEc=JSON.parse(JSON.stringify(ecCatalog));
+renamedEc.detachments.find(item=>item.id==='spectacle-of-slaughter').title='Renamed EC Detachment';
+renamedEc.enhancements.find(item=>item.id==='eager-patrons').title='Renamed Eager Patrons';
+const renamedEcFixture=createRosterFixture({catalog:renamedEc,pointsCatalog:ecPoints,id:'ec-helper-rename',detachmentId:'spectacle-of-slaughter',factionPrefix:'Chaos - ',units:[{datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',quantity:3,enhancementId:'eager-patrons'}]});
+assert.match(renamedEcFixture.record.sourceText,/DETACHMENT: Renamed EC Detachment/);
+assert.match(renamedEcFixture.record.sourceText,/Enhancement: Renamed Eager Patrons \(\+20 pts\)/);
+assert.deepEqual({detachmentId:renamedEcFixture.detachments[0].id,enhancementId:renamedEcFixture.units[0].enhancement.id},{detachmentId:'spectacle-of-slaughter',enhancementId:'eager-patrons'});
+const renamedEcRoster=ecSandbox.WHRosterParser.parse(renamedEcFixture.record.sourceText),renamedEcUnit=createCatalogGameUnit({catalog:renamedEc,datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',enhancementIds:['eager-patrons']});
+renamedEcUnit.rosterState.detachments=['spectacle-of-slaughter'];
+const renamedEnhancement=renamedEc.enhancements.find(item=>item.id==='eager-patrons'),renamedEcBehavior=ecSandbox.ECRosterSemantics.projectEffects({gameUnit:renamedEcUnit,byInstance:new Map([[renamedEcUnit.identity.instanceId,renamedEcUnit]]),enhancements:[{catalog:renamedEnhancement,input:{ownerStatus:'resolved',ownerUnitId:renamedEcUnit.identity.instanceId}}]});
+assert.equal(renamedEcRoster.detachments[0].name,'Renamed EC Detachment');
+assert.equal(renamedEcRoster.enhancements[0].name,'Renamed Eager Patrons');
+assert.ok(renamedEcBehavior.some(effect=>effect.id==='eager-patrons-move'),'EC behavior must remain keyed by canonical identities');
+assert.throws(()=>createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-wrong-detachment',detachmentId:'peerless-bladesmen',units:[{datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',quantity:3,enhancementId:'eager-patrons'}]}),/is not owned by a selected Detachment/);
+const multiEnhancement=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-multiple-enhancements',detachmentIds:['carnival-of-excess','frenzied-host'],factionPrefix:'Chaos - ',units:[{datasheetId:'unit-lord-exultant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-dark-blessings','euphoric-crown']}]}),multiParsed=ecSandbox.WHRosterParser.parse(multiEnhancement.record.sourceText);
+assert.deepEqual(Array.from(multiParsed.enhancements,item=>item.name),['Dark Blessings','Euphoric Crown']);
+assert.equal(multiEnhancement.totalPoints,120,'multiple Enhancement costs must come from canonical identities');
+
 for(const [label,change] of [
   ['Datasheet',input=>input.units[0].datasheetId='Chosen'],
   ['Detachment',input=>input.detachmentId='Renegade Warband'],

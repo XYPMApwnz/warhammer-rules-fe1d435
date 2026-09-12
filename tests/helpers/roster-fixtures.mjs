@@ -27,8 +27,13 @@ function selection(catalogUnit, input) {
 }
 
 function enhancementCost(bookEnhancement, pointsCatalog) {
-  const pointsMatches = flatEntries(pointsCatalog?.enhancements).filter(record =>
-    record?.id === bookEnhancement.id || record?.canonicalEnhancementId === bookEnhancement.id);
+  const candidates = flatEntries(pointsCatalog?.enhancements).filter(record =>
+    (record?.id === bookEnhancement.id || record?.canonicalEnhancementId === bookEnhancement.id)
+    && (!record?.canonicalDetachmentId || record.canonicalDetachmentId === bookEnhancement.detachmentId));
+  const pointsMatches = [...new Map(candidates.map(record => [
+    JSON.stringify([record.id, record.canonicalEnhancementId, record.canonicalDetachmentId, record.value]),
+    record,
+  ])).values()];
   if (pointsMatches.length > 1) throw new Error(`Enhancement canonical ID ${JSON.stringify(bookEnhancement.id)} resolved ${pointsMatches.length} point records`);
   const value = pointsMatches[0]?.value ?? bookEnhancement.points ?? bookEnhancement.value;
   if (!Number.isFinite(Number(value))) throw new Error(`Enhancement ${JSON.stringify(bookEnhancement.id)} has no canonical points value`);
@@ -70,10 +75,19 @@ export function createRosterFixture({
     if (!Number.isInteger(quantity) || quantity < 1) throw new Error(`Datasheet ${JSON.stringify(unit.id)} requires an explicit valid quantity`);
     const tier = pointTier(pointsUnit, quantity, copyIndex);
     const selections = entries(spec.selectionIds).map(value => selection(unit, value));
-    const chosenEnhancement = spec.enhancementId ? exact(catalog.enhancements, spec.enhancementId, 'Enhancement') : null;
-    if (chosenEnhancement && !detachments.some(item => item.id === chosenEnhancement.detachmentId)) {
-      throw new Error(`Enhancement ${JSON.stringify(chosenEnhancement.id)} is not owned by a selected Detachment`);
+    const requestedEnhancements = spec.enhancementIds ?? (spec.enhancementId ? [spec.enhancementId] : []);
+    if (!Array.isArray(requestedEnhancements)) throw new Error('Enhancement canonical IDs must be an array');
+    const chosenEnhancements = requestedEnhancements.map(id => exact(catalog.enhancements, id, 'Enhancement'));
+    for (const chosenEnhancement of chosenEnhancements) {
+      if (!detachments.some(item => item.id === chosenEnhancement.detachmentId)) {
+        throw new Error(`Enhancement ${JSON.stringify(chosenEnhancement.id)} is not owned by a selected Detachment`);
+      }
     }
+    const enhancements = chosenEnhancements.map(chosenEnhancement => ({
+      id:chosenEnhancement.id,
+      title:chosenEnhancement.title,
+      points:enhancementCost(chosenEnhancement, pointsCatalog),
+    }));
     return {
       instanceId:spec.instanceId,
       datasheetId:unit.id,
@@ -81,14 +95,11 @@ export function createRosterFixture({
       quantity,
       points:Number(tier.value),
       selections,
-      enhancement:chosenEnhancement ? {
-        id:chosenEnhancement.id,
-        title:chosenEnhancement.title,
-        points:enhancementCost(chosenEnhancement, pointsCatalog),
-      } : null,
+      enhancements,
+      enhancement:enhancements[0] || null,
     };
   });
-  const enhancementPoints = resolvedUnits.reduce((sum, unit) => sum + (unit.enhancement?.points || 0), 0);
+  const enhancementPoints = resolvedUnits.reduce((sum, unit) => sum + unit.enhancements.reduce((subtotal, enhancement) => subtotal + enhancement.points, 0), 0);
   const totalPoints = resolvedUnits.reduce((sum, unit) => sum + unit.points, enhancementPoints);
   const lines = [
     `+ FACTION KEYWORD: ${factionPrefix}${catalog.book.title}`,
@@ -99,7 +110,7 @@ export function createRosterFixture({
   for (const unit of resolvedUnits) {
     const loadout = unit.selections.map(item => `${item.quantity > 1 ? `${item.quantity}x ` : ''}${item.title}`).join(', ');
     lines.push(`${unit.quantity}x ${unit.title} (${unit.points} pts)${loadout ? `: ${loadout}` : ''}`);
-    if (unit.enhancement) lines.push(`Enhancement: ${unit.enhancement.title} (+${unit.enhancement.points} pts)`);
+    for (const enhancement of unit.enhancements) lines.push(`Enhancement: ${enhancement.title} (+${enhancement.points} pts)`);
   }
   return {
     record:{ id, name, sourceText:lines.join('\n'), attachments },

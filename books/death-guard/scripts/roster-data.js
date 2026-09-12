@@ -3645,13 +3645,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Infused with the Blessings of Nurgle",
             "text": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is Afflicted.",
             "sourceUnitId": "unit-plague-marines"
-          },
-          {
-            "id": "plague-marines-ability-icon-of-despair-aura",
-            "sectionId": "plague-marines-ability-icon-of-despair-aura",
-            "title": "Icon of Despair (Aura)",
-            "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
-            "sourceUnitId": "unit-plague-marines"
           }
         ],
         "models": [
@@ -4646,13 +4639,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sectionId": "deathshroud-terminators-ability-death-approaches",
             "title": "Death Approaches",
             "text": "In your Movement phase, each time this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from all other enemy units.",
-            "sourceUnitId": "unit-deathshroud-terminators"
-          },
-          {
-            "id": "deathshroud-terminators-ability-icon-of-despair-aura",
-            "sectionId": "deathshroud-terminators-ability-icon-of-despair-aura",
-            "title": "Icon of Despair (Aura)",
-            "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
             "sourceUnitId": "unit-deathshroud-terminators"
           }
         ],
@@ -9466,13 +9452,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sectionId": "plaguebearers-ability-daemonic-icon",
             "title": "Daemonic Icon",
             "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
-            "sourceUnitId": "unit-plaguebearers"
-          },
-          {
-            "id": "plaguebearers-ability-instrument-of-chaos",
-            "sectionId": "plaguebearers-ability-instrument-of-chaos",
-            "title": "Instrument of Chaos",
-            "text": "Add 1 to Charge rolls made for the bearer’s unit.",
             "sourceUnitId": "unit-plaguebearers"
           }
         ],

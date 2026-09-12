@@ -193,13 +193,14 @@ const unitCard=unit=>{
   const provenance=unit.sourcePages
     ?`<div class="source">${sourceLink(unit.sourcePages)}</div>${transcript(unit.sourcePages)}`
     :unit.source?.url?`<div class="source"><a class="source-link" href="${esc(unit.source.url)}">${esc(unit.source.label||'Pinned Codex transcription')}</a></div>`:'';
-  const sourceAbilities=[...unit.abilities,...wargearAbilities];
+  const sourceAbilities=[...unit.abilities];
   const deadlyDemise=sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(abilityText(item)));
   const abilityNames=sourceAbilities.flatMap(item=>{
     if(/^core$/i.test(item.title))return abilityText(item).split(',').map(value=>value.trim().replace(/\.$/,'' )).filter(Boolean).map(value=>/^deadly demise\b/i.test(value)?'DEADLY DEMISE':value);
     return [/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title];
   });
-  const renderedTermIds=[...sections.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]);
+  const gatedTermIds=new Set(wargearAbilities.map(item=>item.termId).filter(Boolean));
+  const renderedTermIds=[...sections.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]).filter(id=>!gatedTermIds.has(id));
   const relations=relationGraphs.get(unit.id),mandatory=Object.values(relations).flat().some(relation=>relation.mandatory),canAttach=Object.values(relations).some(items=>items.length);
   const ruleFacts={id:unit.id,unitId:unit.id,slug,keywords:unit.keywords,intrinsicKeywords:unit.keywords,abilities:[...new Set(abilityNames)],termIds:[...new Set(renderedTermIds)],epic:unit.keywords.includes('Epic Hero'),deadlyDemise,attached:mandatory?true:canAttach?null:false,attachmentKnown:mandatory||!canAttach,formationRequired:mandatory,characterCount:unit.keywords.includes('Character')?1:0,twoCharacters:null,warlord:null,relations};
   const art=renderUnitArt({unit,unitImages,escape:esc});

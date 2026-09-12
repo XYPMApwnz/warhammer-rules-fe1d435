@@ -344,7 +344,7 @@ const unitCard=unit=>{
   const support=parts.support?`<section class="unit-part" id="${parts.support}" data-source-field="relations.support"><h4>Support</h4><p>This unit can join: ${unit.relations.support.map(relationLabel).join('; ')}.</p></section>`:'';
   const transport=parts.transport?`<section class="unit-part" id="${parts.transport}" data-source-field="relations.transport"><h4>Transport</h4>${unit.relations.transport.map(item=>`<p>${esc(item)}</p>`).join('')}</section>`:'';
   const modelKeywords=canonicalRosterModelsFor(unit).filter(model=>model.intrinsicKeywords?.length).map(model=>`<p class="model-keywords" data-roster-model-id="${esc(model.id)}"><button class="term-button" data-term="${addTerm(model.title,`${model.title} only: ${model.intrinsicKeywords.join(', ')}.`,`${base}-keywords`,'model-keywords',unit.id,unit.dependencyBook||config.id)}">${esc(model.title)}</button> only: ${model.intrinsicKeywords.map(keyword=>`<span data-model-keyword="${esc(keyword)}">${esc(keyword)}</span>`).join(', ')}</p>`).join('');
-  const sourceAbilities=[...(unit.abilities||[]),...(unit.wargearAbilities||[])];
+  const sourceAbilities=[...(unit.abilities||[])];
   const deadlyDemise=sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(item.text||''));
   const abilityNames=sourceAbilities.map(item=>/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title);
   const relations=relationGraphs.get(unit.id),canAttach=Object.values(relations).some(items=>items.length);

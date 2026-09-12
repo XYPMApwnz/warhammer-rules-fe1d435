@@ -32,7 +32,7 @@ function genericSource(book){
   }
   for(const unit of inventory(codex))units.set(unit.id,unit);
   return new Map([...units].map(([id,unit])=>{
-    const abilities=[...(unit.abilities||[]),...(unit.wargearAbilities||[])];
+    const abilities=unit.abilities||[];
     const names=abilities.map(item=>deadly(item.title)?'DEADLY DEMISE':item.title);
     return [id,{id,slug:id.replace(/^unit-/,''),title:unit.title,keywords:unit.keywords||[],abilities:names,relations:unit.relations||{},epic:(unit.keywords||[]).some(value=>titleKey(value)==='epic hero'),deadlyDemise:abilities.some(item=>deadly(item.title)||deadly(item.text))}];
   }));
@@ -56,7 +56,7 @@ function mechanicusSource(){
   }
   units.push(...officialById.values());
   return new Map(units.map(unit=>{
-    const abilities=[...(unit.abilities||[]),...(unit.wargearAbilities||[])];
+    const abilities=unit.abilities||[];
     const names=abilities.flatMap(item=>/^core$/i.test(item.title)?coreNames(abilityText(item)):[deadly(item.title)?'DEADLY DEMISE':item.title]);
     return [unit.id,{id:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:unit.keywords,abilities:names,epic:unit.keywords.includes('Epic Hero'),deadlyDemise:abilities.some(item=>deadly(item.title)||deadly(abilityText(item)))}];
   }));

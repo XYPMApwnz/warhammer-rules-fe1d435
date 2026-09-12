@@ -21,8 +21,9 @@ const syntheticUnit={
 };
 const synthetic=createRosterCatalog({config:{id:'test-book',title:'Test Book'},units:[syntheticUnit]});
 const syntheticGame=synthetic.units[0].gameSelections,ordinary=syntheticGame.abilities.find(item=>item.id==='ability-banner'),wargear=syntheticGame.wargearAbilities.find(item=>item.id==='ability-banner');
-assert.ok(ordinary&&wargear,'same canonical ability must be emitted in both projections');
-for(const field of ['id','sectionId','title','text','sourceUnitId'])assert.equal(wargear[field],ordinary[field],`wargear ability preserves canonical ${field}`);
+assert.equal(ordinary,undefined,'selection-gated ability must not be emitted as an ordinary ability');
+assert.ok(wargear,'selection-gated ability remains in the Wargear Ability projection');
+assert.deepEqual(Object.fromEntries(['id','sectionId','title','text','sourceUnitId'].map(field=>[field,wargear[field]])),{id:'ability-banner',sectionId:'ability-banner',title:'Banner',text:'Canonical banner text.',sourceUnitId:'unit-test'});
 assert.deepEqual(wargear.requiredSelectionIds,['selection-banner']);
 assert.throws(()=>createRosterCatalog({config:{id:'test-book',title:'Test Book'},units:[{...syntheticUnit,wargearAbilities:[{...syntheticUnit.wargearAbilities[0],text:'Conflicting text.'}]}]}),/conflicting canonical ability ability-banner field text/,'conflicting same-ID semantic records fail closed');
 

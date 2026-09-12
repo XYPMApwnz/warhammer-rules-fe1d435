@@ -88,8 +88,9 @@ const gameSelectionsFor=(unit,options={})=>{
     if(!existing)selections.push(selection);
   }
   const stats=normalizedStatsFor(unit);
-  const abilities=[...new Map(canonicalAbilities.map((ability,index)=>{const id=ability.termId||ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;return[id,canonicalAbilityRecord(unit,ability,id)];})).values()];
-  assertMatchingAbilityRecords(unit,abilities,wargearAbilities);
+  const ordinaryAbilityRecords=[...new Map(canonicalAbilities.map((ability,index)=>{const id=ability.termId||ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;return[id,canonicalAbilityRecord(unit,ability,id)];})).values()];
+  assertMatchingAbilityRecords(unit,ordinaryAbilityRecords,wargearAbilities);
+  const wargearAbilityIds=new Set(wargearAbilities.map(ability=>ability.id)),abilities=ordinaryAbilityRecords.filter(ability=>!wargearAbilityIds.has(ability.id));
   return {stats:{...stats},abilities,models:canonicalRosterModelsFor(unit),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
 };
 

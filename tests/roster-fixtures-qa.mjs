@@ -19,6 +19,39 @@ assert.deepEqual(Array.from(parsed.units,unit=>unit.id),['parsed-unit-1','parsed
 assert.deepEqual(Array.from(parsed.units,unit=>unit.name),['Chosen','Chosen']);
 assert.deepEqual(fixture.units.map(unit=>unit.datasheetId),['unit-chosen','unit-chosen']);
 assert.equal(fixture.totalPoints,270,'fixture points must come from the current canonical point tiers');
+const explicitListFixture=createRosterFixture({catalog,pointsCatalog,id:'helper-explicit-list',detachmentIds:['renegade-warband'],units:[
+  {datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5},
+  {datasheetId:'unit-chosen',instanceId:'parsed-unit-2',quantity:5},
+]});
+assert.equal(explicitListFixture.record.sourceText,fixture.record.sourceText,'explicit Detachment fixture output remains byte-equivalent');
+
+const noDetachmentFixture=createRosterFixture({catalog,pointsCatalog,id:'helper-no-detachment',units:[
+  {datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5},
+  {datasheetId:'unit-chosen',instanceId:'parsed-unit-2',quantity:5},
+]});
+const nullDetachmentFixture=createRosterFixture({catalog,pointsCatalog,id:'helper-null-detachment',detachmentId:null,units:[
+  {datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5},
+  {datasheetId:'unit-chosen',instanceId:'parsed-unit-2',quantity:5},
+]});
+assert.deepEqual(noDetachmentFixture.detachments,[],'omitted Detachment produces an empty canonical list');
+assert.deepEqual(nullDetachmentFixture.detachments,[],'null Detachment produces an empty canonical list');
+assert.equal(nullDetachmentFixture.record.sourceText,noDetachmentFixture.record.sourceText,'null and omitted Detachment produce the same source');
+assert.doesNotMatch(noDetachmentFixture.record.sourceText,/^\+ DETACHMENT:/m,'omitted Detachment emits no source line');
+const noDetachmentRoster=sandbox.WHRosterParser.parse(noDetachmentFixture.record.sourceText);
+assert.equal(noDetachmentRoster.detachment,'—');
+assert.deepEqual(Array.from(noDetachmentRoster.detachments),[]);
+assert.deepEqual(Array.from(noDetachmentRoster.units,unit=>unit.id),['parsed-unit-1','parsed-unit-2'],'physical instances remain distinct without a Detachment');
+assert.throws(()=>createRosterFixture({catalog,pointsCatalog,id:'helper-no-detachment-enhancement',units:[{datasheetId:'unit-chaos-lord',instanceId:'parsed-unit-1',enhancementId:'enhancement-living-carapace'}]}),/is not owned by a selected Detachment/,'Enhancement remains fail-closed without its owning Detachment');
+assert.throws(()=>createRosterFixture({catalog,pointsCatalog,id:'helper-unknown-detachment',detachmentId:'unknown-detachment',units:[{datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5}]}),/Detachment canonical ID/);
+assert.throws(()=>createRosterFixture({catalog,pointsCatalog,id:'helper-title-detachment',detachmentId:'Renegade Warband',units:[{datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5}]}),/Detachment canonical ID/);
+
+const dgSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});dgSandbox.globalThis=dgSandbox;dgSandbox.window=dgSandbox;
+for(const file of ['books/death-guard/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),dgSandbox,{filename:file});
+const dgCatalog=dgSandbox.WH_BOOK_ROSTER_CATALOG,dgPoints=dgSandbox.WH_POINTS_CATALOG['death guard'],dgNoDetachment=createRosterFixture({catalog:dgCatalog,pointsCatalog:dgPoints,id:'dg-helper-no-detachment',units:[{datasheetId:'unit-plaguebearers',instanceId:'parsed-unit-1',quantity:10}]}),dgRoster=dgSandbox.WHRosterParser.parse(dgNoDetachment.record.sourceText);
+assert.deepEqual(dgNoDetachment.detachments,[]);
+assert.doesNotMatch(dgNoDetachment.record.sourceText,/^\+ DETACHMENT:/m);
+assert.equal(dgRoster.detachment,'—');
+assert.deepEqual(Array.from(dgRoster.detachments),[]);
 
 const renamed=JSON.parse(JSON.stringify(catalog));
 renamed.detachments.find(item=>item.id==='renegade-warband').title='Renamed Canonical Detachment';

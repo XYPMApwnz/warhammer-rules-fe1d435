@@ -54,8 +54,8 @@ export function createRosterFixture({
 }) {
   if (!catalog?.book?.title) throw new Error('Roster catalog book title is required');
   if (!Array.isArray(units) || !units.length) throw new Error('At least one roster unit is required');
-  const requestedDetachments = detachmentIds || (detachmentId ? [detachmentId] : []);
-  if (!requestedDetachments.length) throw new Error('At least one Detachment canonical ID is required');
+  const requestedDetachments = detachmentIds ?? (detachmentId == null ? [] : [detachmentId]);
+  if (!Array.isArray(requestedDetachments)) throw new Error('Detachment canonical IDs must be an array');
   const detachments = requestedDetachments.map(value => exact(catalog.detachments, value, 'Detachment'));
   const copies = new Map();
   const resolvedUnits = units.map((spec, index) => {

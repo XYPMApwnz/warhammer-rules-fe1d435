@@ -7,12 +7,15 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {runHelbruteBrowserQa} from '../helpers/death-guard-helbrute.mjs';
+import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const bookIds=process.argv.includes('--helbrute')?['death-guard']:['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
 const catalogFor=bookId=>{const scope={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,`books/${bookId}/scripts/roster-data.js`),'utf8'),scope);return scope.window.WH_BOOK_ROSTER_CATALOG;};
 const catalogs=new Map(bookIds.map(bookId=>[bookId,catalogFor(bookId)]));
+const pointsScope={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'roster-guides/points-data.js'),'utf8'),pointsScope,{filename:'roster-guides/points-data.js'});
 
 const extractFunction=(source,marker)=>{
   const start=source.indexOf(marker);
@@ -52,8 +55,8 @@ const server=createServer(async(request,response)=>{try{const url=new URL(reques
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium();
 const ready=(page,instance)=>page.waitForFunction(id=>document.querySelector(`.unit-card[data-roster-instance="${CSS.escape(id)}"].roster-game-view`)&&window.WH_ARMY_ROSTER_GAME_PROJECTION?.schema==='wh40k-physical-unit-game-projection/v1',instance);
-const selectedModel=(unit,id,quantity=3)=>{const selection=unit.gameSelections.selections.find(item=>item.kind==='weapon'&&item.profileIds.length);return{id,name:unit.title,points:100,models:[{quantity,name:unit.gameSelections.models[0]?.title||unit.title,loadouts:selection?[{quantity,wargear:selection.title}]:[]}]};};
 const rawRecord=(catalog,id,body)=>({id,sourceText:`${catalog.book.title}\n${body}`});
+const dgFixture=(id,detachmentId,units,attachments={})=>createRosterFixture({catalog:catalogs.get('death-guard'),pointsCatalog:pointsScope.window.WH_POINTS_CATALOG['death guard'],id,detachmentId,units,attachments}).record;
 const openRecord=async({bookId,record,instance,unitId})=>{const context=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});await context.addInitScript(value=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([value])),record);const page=await context.newPage();await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile&roster=${record.id}&rosterInstance=${instance}#${unitId}`);await ready(page,instance);return{context,page};};
 const visibleStats=page=>page.evaluate(()=>{const card=document.querySelector('.unit-card.roster-game-view');return Object.fromEntries([...card.querySelectorAll('.stat[data-source-field^="stats."]')].map(node=>[node.dataset.sourceField.slice(6),node.querySelector('span')?.textContent.trim()||'']));});
 
@@ -115,8 +118,11 @@ try{
     try{const state=await page.evaluate(sourceText=>{const parsed=window.WHRosterParser.parse(sourceText),unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units[0];return{raw:parsed.units[0],modelCount:unit.selection.modelCount,composition:unit.selection.composition};},ambiguousRecord.sourceText);assert.equal(state.raw.models.length,0);assert.deepEqual({value:state.modelCount.value,state:state.modelCount.state},{value:7,state:'resolved'});assert.equal(state.composition.state,'partial');assert.deepEqual(state.composition.models,[]);assert.equal(state.composition.unresolved[0]?.reason,'ambiguous-canonical-model-identities');}finally{await context.close();}
   }
 
-  const pairRecord={id:'noxious-poxwalkers-effective-stats',roster:{faction:dg.book.title,units:[selectedModel(noxious,'noxious',1),selectedModel(poxwalkers,'poxwalkers',10)],detachments:[{name:detachment.title}],enhancements:[{id:pipes.id,name:pipes.title,ownerUnitId:'noxious',ownerStatus:'resolved'}],warnings:[]},attachments:{poxwalkers:['noxious']}};
-  for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){
+  const pairRecord=dgFixture('noxious-poxwalkers-effective-stats',detachment.id,[
+    {datasheetId:noxious.id,instanceId:'parsed-unit-1',quantity:1,enhancementId:pipes.id},
+    {datasheetId:poxwalkers.id,instanceId:'parsed-unit-2',quantity:10},
+  ],{'parsed-unit-2':['parsed-unit-1']});
+  for(const [instance,unitId] of [['parsed-unit-2',poxwalkers.id],['parsed-unit-1',noxious.id]]){
     const {context,page}=await openRecord({bookId:'death-guard',record:pairRecord,instance,unitId});
     try{
       const projected=await page.evaluate(({id,pipesId})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id),stats=unit.effects.filter(effect=>effect.component==='stat'),vitalityId='ability-sickening-vitality-89bb5ff',pipesReference=unit.effects.find(effect=>effect.canonicalReference?.id===pipesId),pipesArticle=document.querySelector(`[data-roster-canonical-reference-id="${pipesId}"]`);return{effective:unit.effective.stats,effects:stats.map(effect=>({id:effect.id,targetId:effect.targetId,base:effect.base,effective:effect.effective,owner:effect.source?.ownerInstanceId})),text:document.querySelector('.roster-game-effects')?.innerText||'',vitality:unit.effects.find(effect=>effect.canonicalAbilityId===vitalityId),vitalityText:document.querySelector(`[data-roster-canonical-ability-id="${vitalityId}"]`)?.innerText||'',pipesReference,pipesText:pipesArticle?.querySelector('p')?.textContent.trim()||'',pipesSource:pipesArticle?.querySelector('.roster-game-ability-source')?.textContent.trim()||''};},{id:instance,pipesId:pipes.id}),dom=await visibleStats(page);
@@ -124,14 +130,14 @@ try{
       assert.equal(projected.effective.OC,'2',`${instance}: effective OC`);
       assert.equal(dom.M,'6"',`${instance}: visible M`);
       assert.equal(dom.OC,'2',`${instance}: visible OC`);
-      assert.equal(projected.effects.filter(effect=>effect.targetId==='M'&&effect.base==='5"'&&effect.effective==='6"'&&effect.owner==='noxious').length,1,`${instance}: Sickening Vitality reduction`);
-      assert.equal(projected.effects.filter(effect=>effect.targetId==='OC'&&effect.base==='1'&&effect.effective==='2'&&effect.owner==='noxious').length,1,`${instance}: Witherbone Pipes reduction`);
-      if(instance==='poxwalkers'){
+      assert.equal(projected.effects.filter(effect=>effect.targetId==='M'&&effect.base==='5"'&&effect.effective==='6"'&&effect.owner==='parsed-unit-1').length,1,`${instance}: Sickening Vitality reduction`);
+      assert.equal(projected.effects.filter(effect=>effect.targetId==='OC'&&effect.base==='1'&&effect.effective==='2'&&effect.owner==='parsed-unit-1').length,1,`${instance}: Witherbone Pipes reduction`);
+      if(instance==='parsed-unit-2'){
         assert.equal(projected.vitality?.operation,'reference',`${instance}: Sickening Vitality canonical reference`);
         assert.match(projected.vitalityText,/Sickening Vitality[\s\S]*Noxious Blightbringer[\s\S]*re-roll Advance and Charge/i,`${instance}: canonical Sickening Vitality ability/source`);
         assert.doesNotMatch(projected.text,/Sickening Vitality/i,`${instance}: no Active roster effects reference duplicate`);
         assert.equal(projected.pipesReference?.canonicalReference?.kind,'enhancement',`${instance}: Witherbone canonical reference kind`);
-        assert.equal(projected.pipesReference?.source?.ownerInstanceId,'noxious',`${instance}: Witherbone exact source`);
+        assert.equal(projected.pipesReference?.source?.ownerInstanceId,'parsed-unit-1',`${instance}: Witherbone exact source`);
         assert.equal(projected.pipesText,pipes.text,`${instance}: Witherbone full canonical text`);
         assert.equal(projected.pipesSource,'Noxious Blightbringer',`${instance}: Witherbone source label`);
         assert.doesNotMatch(projected.text,/Witherbone Pipes/i,`${instance}: no Active roster effects reference duplicate`);
@@ -139,28 +145,34 @@ try{
     }finally{await context.close();}
   }
 
-  const inspectEnhancementReference=async({enhancement,record,instance='blightlords',expectM=null})=>{
+  const inspectEnhancementReference=async({enhancement,record,instance='parsed-unit-2',expectM=null})=>{
     const {context,page}=await openRecord({bookId:'death-guard',record,instance,unitId:blightlords.id});
     try{return await page.evaluate(({instance,id,text,expectM})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===instance),card=document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${instance}"]`),effect=unit.effects.find(item=>item.canonicalReference?.id===id),article=card.querySelector(`[data-roster-canonical-reference-id="${id}"]`),visibleM=[...card.querySelectorAll('.stat[data-source-field="stats.M"] span')][0]?.textContent.trim()||null;return{effectKind:effect?.canonicalReference?.kind,owner:effect?.source?.ownerInstanceId,target:effect?.targetInstanceId,text:article?.querySelector('p')?.textContent.trim()||'',source:article?.querySelector('.roster-game-ability-source')?.textContent.trim()||'',count:card.querySelectorAll(`[data-roster-canonical-reference-id="${id}"]`).length,active:card.querySelector('.roster-game-effects')?.innerText||'',visibleM,effectiveM:unit.effective.stats.M,expectM,canonicalText:text};},{instance,id:enhancement.id,text:enhancement.text,expectM});}finally{await context.close();}
   };
-  const enhancementRecord=(id,enhancement)=>({id,roster:{faction:dg.book.title,units:[selectedModel(lordOfVirulence,'lov',1),selectedModel(blightlords,'blightlords',5)],detachments:[{name:dg.detachments.find(item=>item.id===enhancement.detachmentId)?.title||''}],enhancements:[{id:enhancement.id,name:enhancement.title,ownerUnitId:'lov',ownerStatus:'resolved'}],warnings:[]},attachments:{blightlords:['lov']}});
+  const enhancementRecord=(id,enhancement)=>dgFixture(id,enhancement.detachmentId,[
+    {datasheetId:lordOfVirulence.id,instanceId:'parsed-unit-1',quantity:1,enhancementId:enhancement.id},
+    {datasheetId:blightlords.id,instanceId:'parsed-unit-2',quantity:5},
+  ],{'parsed-unit-2':['parsed-unit-1']});
   const vigourState=await inspectEnhancementReference({enhancement:vigour,record:enhancementRecord('vile-vigour-reference',vigour),expectM:'6"'});
-  assert.deepEqual({kind:vigourState.effectKind,owner:vigourState.owner,target:vigourState.target,count:vigourState.count,text:vigourState.text,source:vigourState.source,effectiveM:vigourState.effectiveM,visibleM:vigourState.visibleM},{kind:'enhancement',owner:'lov',target:'blightlords',count:1,text:vigour.text,source:'Lord of Virulence',effectiveM:'6"',visibleM:'6"'});
+  assert.deepEqual({kind:vigourState.effectKind,owner:vigourState.owner,target:vigourState.target,count:vigourState.count,text:vigourState.text,source:vigourState.source,effectiveM:vigourState.effectiveM,visibleM:vigourState.visibleM},{kind:'enhancement',owner:'parsed-unit-1',target:'parsed-unit-2',count:1,text:vigour.text,source:'Lord of Virulence',effectiveM:'6"',visibleM:'6"'});
   assert.match(vigourState.active,/M 5" → 6"/);
   assert.doesNotMatch(vigourState.active,/Vile Vigour/);
   const helmState=await inspectEnhancementReference({enhancement:helm,record:enhancementRecord('helm-reference',helm)});
-  assert.deepEqual({kind:helmState.effectKind,owner:helmState.owner,target:helmState.target,count:helmState.count,text:helmState.text,source:helmState.source},{kind:'enhancement',owner:'lov',target:'blightlords',count:1,text:helm.text,source:'Lord of Virulence'});
+  assert.deepEqual({kind:helmState.effectKind,owner:helmState.owner,target:helmState.target,count:helmState.count,text:helmState.text,source:helmState.source},{kind:'enhancement',owner:'parsed-unit-1',target:'parsed-unit-2',count:1,text:helm.text,source:'Lord of Virulence'});
   assert.doesNotMatch(helmState.active,/Helm of the Fly King/);
 
   const plagueWindProfiles=['malignant-plaguecaster-weapon-plague-wind-witchfire','malignant-plaguecaster-weapon-plague-wind-focused-witchfire'];
-  const casterSelection=selectedModel(plaguecaster,'caster',1);
-  casterSelection.models[0].loadouts=[{quantity:1,wargear:'Plague Wind'}];
-  const sorrowsyphonRecord={id:'sorrowsyphon-poxwalkers',roster:{faction:dg.book.title,units:[casterSelection,selectedModel(poxwalkers,'sorrowsyphon-pox',10)],detachments:[{name:dg.detachments.find(item=>item.id===sorrowsyphon.detachmentId)?.title||''}],enhancements:[{id:sorrowsyphon.id,name:sorrowsyphon.title,ownerUnitId:'caster',ownerStatus:'resolved'}],warnings:[]},attachments:{'sorrowsyphon-pox':['caster']}};
+  const sorrowsyphonFixture=(id,{attached=true,enhancement=true,bodyId=poxwalkers.id,duplicate=false}={})=>dgFixture(id,sorrowsyphon.detachmentId,[
+    {datasheetId:plaguecaster.id,instanceId:'parsed-unit-1',quantity:1,selectionIds:['unit-malignant-plaguecaster-weapon-family-plague-wind-selection'],...(enhancement?{enhancementId:sorrowsyphon.id}:{})},
+    {datasheetId:bodyId,instanceId:'parsed-unit-2',quantity:bodyId===plagueMarines.id?7:10},
+    ...(duplicate?[{datasheetId:poxwalkers.id,instanceId:'parsed-unit-3',quantity:10}]:[]),
+  ],attached?{'parsed-unit-2':['parsed-unit-1']}:{});
+  const sorrowsyphonRecord=sorrowsyphonFixture('sorrowsyphon-poxwalkers');
   {
-    const {context,page}=await openRecord({bookId:'death-guard',record:sorrowsyphonRecord,instance:'caster',unitId:plaguecaster.id});
+    const {context,page}=await openRecord({bookId:'death-guard',record:sorrowsyphonRecord,instance:'parsed-unit-1',unitId:plaguecaster.id});
     try{
-      const state=await page.evaluate(profileIds=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='caster'),effect=unit.effects.find(item=>item.id==='sorrowsyphon'),card=document.querySelector('.unit-card.roster-game-view'),targets=(effect?.targets||[]).map(target=>({id:target.profileId||target.id||target.targetId,base:typeof target.base==='object'?target.base.D:target.base,effective:typeof target.effective==='object'?target.effective.D:target.effective})),visible=Object.fromEntries(profileIds.map(profileId=>{const focused=profileId.includes('-focused-'),row=[...card.querySelectorAll('.weapon-row')].find(node=>/Plague Wind/i.test(node.innerText)&&focused===/focused witchfire/i.test(node.innerText));return[profileId,row?.innerText||''];}));return{source:effect?.source,component:effect?.component,operation:effect?.operation,targetId:effect?.targetId,targets,visible,active:card.querySelector('.roster-game-effects')?.innerText||'',derivedOnBearer:card.querySelectorAll('[data-roster-canonical-reference-id="enhancement-sorrowsyphon"]').length};},plagueWindProfiles);
-      assert.deepEqual({kind:state.source?.kind,id:state.source?.id,owner:state.source?.ownerInstanceId,component:state.component,operation:state.operation,targetId:state.targetId},{kind:'enhancement',id:sorrowsyphon.id,owner:'caster',component:'weapon',operation:'add-stat',targetId:'family:plague-wind'});
+      const state=await page.evaluate(profileIds=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-1'),effect=unit.effects.find(item=>item.id==='sorrowsyphon'),card=document.querySelector('.unit-card.roster-game-view'),targets=(effect?.targets||[]).map(target=>({id:target.profileId||target.id||target.targetId,base:typeof target.base==='object'?target.base.D:target.base,effective:typeof target.effective==='object'?target.effective.D:target.effective})),visible=Object.fromEntries(profileIds.map(profileId=>{const focused=profileId.includes('-focused-'),row=[...card.querySelectorAll('.weapon-row')].find(node=>/Plague Wind/i.test(node.innerText)&&focused===/focused witchfire/i.test(node.innerText));return[profileId,row?.innerText||''];}));return{source:effect?.source,component:effect?.component,operation:effect?.operation,targetId:effect?.targetId,targets,visible,active:card.querySelector('.roster-game-effects')?.innerText||'',derivedOnBearer:card.querySelectorAll('[data-roster-canonical-reference-id="enhancement-sorrowsyphon"]').length};},plagueWindProfiles);
+      assert.deepEqual({kind:state.source?.kind,id:state.source?.id,owner:state.source?.ownerInstanceId,component:state.component,operation:state.operation,targetId:state.targetId},{kind:'enhancement',id:sorrowsyphon.id,owner:'parsed-unit-1',component:'weapon',operation:'add-stat',targetId:'family:plague-wind'});
       assert.deepEqual(state.targets.map(target=>target.id).sort(),[...plagueWindProfiles].sort(),'Sorrowsyphon exact Plague Wind family targets');
       for(const target of state.targets)assert.deepEqual({base:target.base,effective:target.effective},{base:'D3',effective:'D3+1'},`${target.id}: Sorrowsyphon damage`);
       for(const profileId of plagueWindProfiles)assert.match(state.visible[profileId],/D3\+1/,`${profileId}: visible Sorrowsyphon damage`);
@@ -169,48 +181,51 @@ try{
     }finally{await context.close();}
   }
   {
-    const {context,page}=await openRecord({bookId:'death-guard',record:sorrowsyphonRecord,instance:'sorrowsyphon-pox',unitId:poxwalkers.id});
+    const {context,page}=await openRecord({bookId:'death-guard',record:sorrowsyphonRecord,instance:'parsed-unit-2',unitId:poxwalkers.id});
     try{
-      const state=await page.evaluate(({id,text})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='sorrowsyphon-pox'),effect=unit.effects.find(item=>item.canonicalReference?.id===id),article=document.querySelector(`[data-roster-canonical-reference-id="${id}"]`),casualties=unit.effects.filter(item=>/destroy|casualt/i.test(`${item.component||''} ${item.operation||''} ${item.targetId||''}`)).length;return{kind:effect?.canonicalReference?.kind,owner:effect?.source?.ownerInstanceId,target:effect?.targetInstanceId,count:document.querySelectorAll(`[data-roster-canonical-reference-id="${id}"]`).length,text:article?.querySelector('p')?.textContent.trim()||'',canonicalText:text,source:article?.querySelector('.roster-game-ability-source')?.textContent.trim()||'',active:document.querySelector('.roster-game-effects')?.innerText||'',modelCount:unit.selection.modelCount.value,composition:unit.selection.composition.models.reduce((sum,model)=>sum+model.quantity,0),casualties};},{id:sorrowsyphon.id,text:sorrowsyphon.text});
-      assert.deepEqual({kind:state.kind,owner:state.owner,target:state.target,count:state.count,text:state.text,source:state.source},{kind:'enhancement',owner:'caster',target:'sorrowsyphon-pox',count:1,text:sorrowsyphon.text,source:'Malignant Plaguecaster'});
+      const state=await page.evaluate(({id,text})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-2'),effect=unit.effects.find(item=>item.canonicalReference?.id===id),article=document.querySelector(`[data-roster-canonical-reference-id="${id}"]`),casualties=unit.effects.filter(item=>/destroy|casualt/i.test(`${item.component||''} ${item.operation||''} ${item.targetId||''}`)).length;return{kind:effect?.canonicalReference?.kind,owner:effect?.source?.ownerInstanceId,target:effect?.targetInstanceId,count:document.querySelectorAll(`[data-roster-canonical-reference-id="${id}"]`).length,text:article?.querySelector('p')?.textContent.trim()||'',canonicalText:text,source:article?.querySelector('.roster-game-ability-source')?.textContent.trim()||'',active:document.querySelector('.roster-game-effects')?.innerText||'',modelCount:unit.selection.modelCount.value,composition:unit.selection.composition.models.reduce((sum,model)=>sum+model.quantity,0),casualties};},{id:sorrowsyphon.id,text:sorrowsyphon.text});
+      assert.deepEqual({kind:state.kind,owner:state.owner,target:state.target,count:state.count,text:state.text,source:state.source},{kind:'enhancement',owner:'parsed-unit-1',target:'parsed-unit-2',count:1,text:sorrowsyphon.text,source:'Malignant Plaguecaster'});
       assert.doesNotMatch(state.active,/Sorrowsyphon/,'Poxwalkers generic Sorrowsyphon Active-effects duplicate');
       assert.deepEqual({modelCount:state.modelCount,composition:state.composition,casualties:state.casualties},{modelCount:10,composition:10,casualties:0},'Sorrowsyphon must not execute Bodyguard losses');
     }finally{await context.close();}
   }
   for(const record of [
-    {...sorrowsyphonRecord,id:'sorrowsyphon-no-attachment',attachments:{}},
-    {...sorrowsyphonRecord,id:'sorrowsyphon-no-enhancement',roster:{...sorrowsyphonRecord.roster,enhancements:[]}}
+    sorrowsyphonFixture('sorrowsyphon-no-attachment',{attached:false}),
+    sorrowsyphonFixture('sorrowsyphon-no-enhancement',{enhancement:false})
   ]){
-    const {context,page}=await openRecord({bookId:'death-guard',record,instance:'caster',unitId:plaguecaster.id});
+    const {context,page}=await openRecord({bookId:'death-guard',record,instance:'parsed-unit-1',unitId:plaguecaster.id});
     try{const leaked=await page.evaluate(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.flatMap(unit=>unit.effects).filter(effect=>effect.id==='sorrowsyphon'||effect.canonicalReference?.id===id).length,sorrowsyphon.id);assert.equal(leaked,0,`${record.id}: Sorrowsyphon leakage`);}finally{await context.close();}
   }
-  const wrongBodyguardRecord={...sorrowsyphonRecord,id:'sorrowsyphon-wrong-bodyguard',roster:{...sorrowsyphonRecord.roster,units:[casterSelection,selectedModel(plagueMarines,'wrong-bodyguard',7)]},attachments:{'wrong-bodyguard':['caster']}};
+  const wrongBodyguardRecord=sorrowsyphonFixture('sorrowsyphon-wrong-bodyguard',{bodyId:plagueMarines.id});
   {
-    const {context,page}=await openRecord({bookId:'death-guard',record:wrongBodyguardRecord,instance:'caster',unitId:plaguecaster.id});
+    const {context,page}=await openRecord({bookId:'death-guard',record:wrongBodyguardRecord,instance:'parsed-unit-1',unitId:plaguecaster.id});
     try{const leaked=await page.evaluate(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.flatMap(unit=>unit.effects).filter(effect=>effect.id==='sorrowsyphon'||effect.canonicalReference?.id===id).length,sorrowsyphon.id);assert.equal(leaked,0,'Sorrowsyphon wrong-Bodyguard leakage');}finally{await context.close();}
   }
-  const duplicatePoxRecord={...sorrowsyphonRecord,id:'sorrowsyphon-duplicate-pox',roster:{...sorrowsyphonRecord.roster,units:[casterSelection,selectedModel(poxwalkers,'sorrowsyphon-pox',10),selectedModel(poxwalkers,'other-pox',10)]}};
+  const duplicatePoxRecord=sorrowsyphonFixture('sorrowsyphon-duplicate-pox',{duplicate:true});
   {
-    const {context,page}=await openRecord({bookId:'death-guard',record:duplicatePoxRecord,instance:'other-pox',unitId:poxwalkers.id});
-    try{const leaked=await page.evaluate(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.instanceId==='other-pox').effects.filter(effect=>effect.canonicalReference?.id===id).length,sorrowsyphon.id);assert.equal(leaked,0,'Sorrowsyphon cross-instance leakage');}finally{await context.close();}
+    const {context,page}=await openRecord({bookId:'death-guard',record:duplicatePoxRecord,instance:'parsed-unit-3',unitId:poxwalkers.id});
+    try{const leaked=await page.evaluate(id=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.instanceId==='parsed-unit-3').effects.filter(effect=>effect.canonicalReference?.id===id).length,sorrowsyphon.id);assert.equal(leaked,0,'Sorrowsyphon cross-instance leakage');}finally{await context.close();}
   }
 
   const noAttachment={...pairRecord,id:'noxious-poxwalkers-no-attachment',attachments:{}};
-  for(const [instance,unitId] of [['poxwalkers',poxwalkers.id],['noxious',noxious.id]]){
+  for(const [instance,unitId] of [['parsed-unit-2',poxwalkers.id],['parsed-unit-1',noxious.id]]){
     const {context,page}=await openRecord({bookId:'death-guard',record:noAttachment,instance,unitId});
     try{const state=await page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id);return unit.effects.filter(effect=>effect.id==='sickening-vitality-move'||effect.id==='witherbone-pipes-oc').length;},instance),dom=await visibleStats(page);assert.equal(state,0,`${instance}: no-attachment effect leakage`);assert.equal(dom.M,'5"');assert.equal(dom.OC,'1');}finally{await context.close();}
   }
 
   const leaderRecipeUnitIds=['unit-typhus','unit-biologus-putrifier','unit-icon-bearer','unit-lord-of-contagion','unit-lord-of-poxes','unit-lord-of-virulence','unit-noxious-blightbringer','unit-tallyman'],leaderRecipeUnits=leaderRecipeUnitIds.map(unitId=>dg.units.find(unit=>unit.id===unitId));
   assert.equal(leaderRecipeUnits.every(Boolean),true,'DG attachment-required Leader fixture coverage');
-  const unattachedLeaders={id:'dg-unattached-leader-recipes',roster:{faction:dg.book.title,units:leaderRecipeUnits.map((unit,index)=>selectedModel(unit,`unattached-leader-${index+1}`,1)),detachments:[],enhancements:[],warnings:[]},attachments:{}};
+  const unattachedLeaders=dgFixture('dg-unattached-leader-recipes',null,leaderRecipeUnitIds.map((datasheetId,index)=>({datasheetId,instanceId:`parsed-unit-${index+1}`,quantity:1})));
   {
-    const {context,page}=await openRecord({bookId:'death-guard',record:unattachedLeaders,instance:'unattached-leader-1',unitId:leaderRecipeUnits[0].id});
+    const {context,page}=await openRecord({bookId:'death-guard',record:unattachedLeaders,instance:'parsed-unit-1',unitId:leaderRecipeUnits[0].id});
     try{const falseEffects=await page.evaluate(()=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.flatMap(unit=>unit.effects.filter(effect=>effect.source?.kind==='explicit-attachment').map(effect=>`${unit.identity.instanceId}:${effect.id}`)));assert.deepEqual(falseEffects,[],'DG attachment-required Leader recipe self-activation');}finally{await context.close();}
   }
 
-  const wrongBodyguard={id:'noxious-wrong-bodyguard',roster:{faction:dg.book.title,units:[selectedModel(noxious,'noxious',1),selectedModel(plagueMarines,'plague-marines',5)],detachments:[{name:detachment.title}],enhancements:[{id:pipes.id,name:pipes.title,ownerUnitId:'noxious',ownerStatus:'resolved'}],warnings:[]},attachments:{'plague-marines':['noxious']}};
-  for(const [instance,unitId] of [['noxious',noxious.id],['plague-marines',plagueMarines.id]]){
+  const wrongBodyguard=dgFixture('noxious-wrong-bodyguard',detachment.id,[
+    {datasheetId:noxious.id,instanceId:'parsed-unit-1',quantity:1,enhancementId:pipes.id},
+    {datasheetId:plagueMarines.id,instanceId:'parsed-unit-2',quantity:5},
+  ],{'parsed-unit-2':['parsed-unit-1']});
+  for(const [instance,unitId] of [['parsed-unit-1',noxious.id],['parsed-unit-2',plagueMarines.id]]){
     const {context,page}=await openRecord({bookId:'death-guard',record:wrongBodyguard,instance,unitId});
     try{const state=await page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===id);return unit.effects.filter(effect=>effect.id==='witherbone-pipes-oc').length;},instance);assert.equal(state,0,`${instance}: Witherbone Pipes leaked to wrong Bodyguard`);}finally{await context.close();}
   }

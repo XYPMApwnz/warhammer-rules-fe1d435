@@ -18032,22 +18032,6 @@
         "parentId": "unit-great-unclean-one"
       },
       {
-        "id": "plague-drones-ability-daemonic-icon",
-        "parentId": "unit-plague-drones"
-      },
-      {
-        "id": "plague-drones-ability-instrument-of-chaos",
-        "parentId": "unit-plague-drones"
-      },
-      {
-        "id": "plaguebearers-ability-daemonic-icon",
-        "parentId": "unit-plaguebearers"
-      },
-      {
-        "id": "plaguebearers-ability-instrument-of-chaos",
-        "parentId": "unit-plaguebearers"
-      },
-      {
         "id": "pact-of-decay-datasheets",
         "parentId": "datasheets"
       }
@@ -18587,6 +18571,7 @@
         "tabs": [
           "unit-plague-drones-profile",
           "plague-drones-abilities",
+          "plague-drones-wargear-abilities",
           "plague-drones-composition",
           "plague-drones-keywords",
           "plague-drones-wargear-options"
@@ -18594,6 +18579,7 @@
         "sections": [
           "unit-plague-drones-profile",
           "plague-drones-abilities",
+          "plague-drones-wargear-abilities",
           "plague-drones-composition",
           "plague-drones-wargear-options",
           "plague-drones-keywords"

@@ -4057,6 +4057,14 @@
           "value": 180
         }
       ],
+      "gameSelectionContracts": [
+        {
+          "id": "unit-plague-marines-selection-icon-of-despair",
+          "title": "Icon of Despair",
+          "kind": "wargear",
+          "maxTotalQuantity": 1
+        }
+      ],
       "blocks": [
         {
           "type": "points",
@@ -4319,7 +4327,16 @@
               "termId": null,
               "id": "plague-marines-ability-icon-of-despair-aura",
               "title": "Icon of Despair (Aura)",
-              "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1."
+              "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+              "requiredSelections": [
+                {
+                  "id": "unit-plague-marines-selection-icon-of-despair",
+                  "title": "Icon of Despair",
+                  "aliases": [
+                    "Icon of Despair"
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -7928,6 +7945,20 @@
           "value": 220
         }
       ],
+      "gameSelectionContracts": [
+        {
+          "id": "unit-plague-drones-selection-daemonic-icon",
+          "title": "Daemonic Icon",
+          "kind": "wargear",
+          "maxTotalQuantity": 1
+        },
+        {
+          "id": "unit-plague-drones-selection-instrument-of-chaos",
+          "title": "Instrument of Chaos",
+          "kind": "wargear",
+          "maxTotalQuantity": 1
+        }
+      ],
       "blocks": [
         {
           "type": "points",
@@ -8031,20 +8062,45 @@
               "termId": "ability-deaths-heads-546f077",
               "title": "Death’s Heads",
               "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly PLAGUE LEGIONS unit makes an attack that targets that unit, you can re-roll the Wound roll."
-            },
+            }
+          ],
+          "number": ""
+        },
+        {
+          "id": "plague-drones-wargear-abilities",
+          "title": "Wargear Abilities",
+          "blocks": [
             {
               "type": "ability",
               "termId": null,
               "id": "plague-drones-ability-daemonic-icon",
               "title": "Daemonic Icon",
-              "text": "Models in the bearer’s unit have a Leadership characteristic of 6+."
+              "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
+              "requiredSelections": [
+                {
+                  "id": "unit-plague-drones-selection-daemonic-icon",
+                  "title": "Daemonic Icon",
+                  "aliases": [
+                    "Daemonic Icon"
+                  ]
+                }
+              ]
             },
             {
               "type": "ability",
               "termId": null,
               "id": "plague-drones-ability-instrument-of-chaos",
               "title": "Instrument of Chaos",
-              "text": "Add 1 to Charge rolls made for the bearer’s unit."
+              "text": "Add 1 to Charge rolls made for the bearer’s unit.",
+              "requiredSelections": [
+                {
+                  "id": "unit-plague-drones-selection-instrument-of-chaos",
+                  "title": "Instrument of Chaos",
+                  "aliases": [
+                    "Instrument of Chaos"
+                  ]
+                }
+              ]
             }
           ],
           "number": ""
@@ -8107,6 +8163,12 @@
         {
           "id": "unit-plaguebearers-selection-instrument-of-chaos",
           "title": "Instrument of Chaos",
+          "kind": "wargear",
+          "maxTotalQuantity": 1
+        },
+        {
+          "id": "unit-plaguebearers-selection-daemonic-icon",
+          "title": "Daemonic Icon",
           "kind": "wargear",
           "maxTotalQuantity": 1
         }
@@ -8182,13 +8244,6 @@
               "termId": "ability-infected-outbreak-faaf2d1",
               "title": "Infected Outbreak",
               "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
-            },
-            {
-              "type": "ability",
-              "termId": null,
-              "id": "plaguebearers-ability-daemonic-icon",
-              "title": "Daemonic Icon",
-              "text": "Models in the bearer’s unit have a Leadership characteristic of 6+."
             }
           ],
           "number": ""
@@ -8197,6 +8252,22 @@
           "id": "plaguebearers-wargear-abilities",
           "title": "Wargear Abilities",
           "blocks": [
+            {
+              "type": "ability",
+              "termId": null,
+              "id": "plaguebearers-ability-daemonic-icon",
+              "title": "Daemonic Icon",
+              "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
+              "requiredSelections": [
+                {
+                  "id": "unit-plaguebearers-selection-daemonic-icon",
+                  "title": "Daemonic Icon",
+                  "aliases": [
+                    "Daemonic Icon"
+                  ]
+                }
+              ]
+            },
             {
               "type": "ability",
               "termId": null,

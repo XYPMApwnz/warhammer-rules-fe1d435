@@ -99,7 +99,7 @@ try{
 
   const plaguebearers=byUnit('unit-plaguebearers'),instrumentId='plaguebearers-ability-instrument-of-chaos',instrumentPage=await open(record('dg-instrument',{units:[unit('source','unit-plaguebearers',['Instrument of Chaos'])]}),'source','unit-plaguebearers');
   const instrumentResult=await instrumentPage.page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='source'),effect=unit.effects.find(item=>item.canonicalReference?.id===id),article=document.querySelector(`[data-roster-canonical-reference-id="${id}"]`);return{effect,count:document.querySelectorAll(`[data-roster-canonical-reference-id="${id}"]`).length,title:article?.querySelector('h5')?.textContent.trim()||'',text:article?.querySelector('p')?.textContent.trim()||''};},instrumentId);
-  const canonicalInstrument=plaguebearers.gameSelections.abilities.find(item=>item.id===instrumentId);
+  const canonicalInstrument=plaguebearers.gameSelections.wargearAbilities.find(item=>item.id===instrumentId);
   assert.equal(instrumentResult.effect?.source?.kind,'selected-wargear');
   assert.equal(instrumentResult.count,1);
   assert.equal(instrumentResult.title,canonicalInstrument.title);

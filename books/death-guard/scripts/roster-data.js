@@ -3862,17 +3862,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
-            "id": "unit-plague-marines-selection-icon-of-despair-aura",
-            "title": "Icon of Despair (Aura)",
+            "id": "unit-plague-marines-selection-icon-of-despair",
+            "title": "Icon of Despair",
             "aliases": [
-              "Icon of Despair (Aura)"
+              "Icon of Despair"
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "plague-marines-ability-icon-of-despair-aura"
-            ]
+            ],
+            "maxTotalQuantity": 1
           }
         ],
         "weaponFamilies": [
@@ -4124,7 +4124,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Icon of Despair (Aura)",
             "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
             "sourceUnitId": "unit-plague-marines",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-plague-marines-selection-icon-of-despair"
+            ]
           }
         ]
       }
@@ -9153,9 +9155,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "abilities": [
           "Deep Strike",
           "Pact of Decay",
-          "Death’s Heads",
-          "Daemonic Icon",
-          "Instrument of Chaos"
+          "Death’s Heads"
         ],
         "termIds": [
           "keyword-mounted",
@@ -9216,20 +9216,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Death’s Heads",
             "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly PLAGUE LEGIONS unit makes an attack that targets that unit, you can re-roll the Wound roll.",
             "sourceUnitId": "unit-plague-drones"
-          },
-          {
-            "id": "plague-drones-ability-daemonic-icon",
-            "sectionId": "plague-drones-ability-daemonic-icon",
-            "title": "Daemonic Icon",
-            "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
-            "sourceUnitId": "unit-plague-drones"
-          },
-          {
-            "id": "plague-drones-ability-instrument-of-chaos",
-            "sectionId": "plague-drones-ability-instrument-of-chaos",
-            "title": "Instrument of Chaos",
-            "text": "Add 1 to Charge rolls made for the bearer’s unit.",
-            "sourceUnitId": "unit-plague-drones"
           }
         ],
         "models": [
@@ -9285,6 +9271,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "plague-drones-weapon-plaguesword"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-drones-selection-daemonic-icon",
+            "title": "Daemonic Icon",
+            "aliases": [
+              "Daemonic Icon"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [
+              "plague-drones-ability-daemonic-icon"
+            ],
+            "maxTotalQuantity": 1
+          },
+          {
+            "id": "unit-plague-drones-selection-instrument-of-chaos",
+            "title": "Instrument of Chaos",
+            "aliases": [
+              "Instrument of Chaos"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [
+              "plague-drones-ability-instrument-of-chaos"
+            ],
+            "maxTotalQuantity": 1
           }
         ],
         "weaponFamilies": [],
@@ -9335,7 +9347,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
-        "wargearAbilities": []
+        "wargearAbilities": [
+          {
+            "id": "plague-drones-ability-daemonic-icon",
+            "sectionId": "plague-drones-ability-daemonic-icon",
+            "title": "Daemonic Icon",
+            "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
+            "sourceUnitId": "unit-plague-drones",
+            "requiredSelectionIds": [
+              "unit-plague-drones-selection-daemonic-icon"
+            ]
+          },
+          {
+            "id": "plague-drones-ability-instrument-of-chaos",
+            "sectionId": "plague-drones-ability-instrument-of-chaos",
+            "title": "Instrument of Chaos",
+            "text": "Add 1 to Charge rolls made for the bearer’s unit.",
+            "sourceUnitId": "unit-plague-drones",
+            "requiredSelectionIds": [
+              "unit-plague-drones-selection-instrument-of-chaos"
+            ]
+          }
+        ]
       }
     },
     {
@@ -9386,8 +9419,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "abilities": [
           "Deep Strike",
           "Pact of Decay",
-          "Infected Outbreak",
-          "Daemonic Icon"
+          "Infected Outbreak"
         ],
         "termIds": [
           "keyword-infantry",
@@ -9446,13 +9478,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Infected Outbreak",
             "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
             "sourceUnitId": "unit-plaguebearers"
-          },
-          {
-            "id": "plaguebearers-ability-daemonic-icon",
-            "sectionId": "plaguebearers-ability-daemonic-icon",
-            "title": "Daemonic Icon",
-            "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
-            "sourceUnitId": "unit-plaguebearers"
           }
         ],
         "models": [
@@ -9484,6 +9509,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "plaguebearers-weapon-plaguesword"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plaguebearers-selection-daemonic-icon",
+            "title": "Daemonic Icon",
+            "aliases": [
+              "Daemonic Icon"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [
+              "plaguebearers-ability-daemonic-icon"
+            ],
+            "maxTotalQuantity": 1
           },
           {
             "id": "unit-plaguebearers-selection-instrument-of-chaos",
@@ -9518,6 +9556,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           }
         ],
         "wargearAbilities": [
+          {
+            "id": "plaguebearers-ability-daemonic-icon",
+            "sectionId": "plaguebearers-ability-daemonic-icon",
+            "title": "Daemonic Icon",
+            "text": "Models in the bearer’s unit have a Leadership characteristic of 6+.",
+            "sourceUnitId": "unit-plaguebearers",
+            "requiredSelectionIds": [
+              "unit-plaguebearers-selection-daemonic-icon"
+            ]
+          },
           {
             "id": "plaguebearers-ability-instrument-of-chaos",
             "sectionId": "plaguebearers-ability-instrument-of-chaos",

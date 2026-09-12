@@ -6,6 +6,7 @@ import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {createRosterFixture} from './helpers/roster-fixtures.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const books=new Map([
@@ -18,6 +19,7 @@ const books=new Map([
 ]);
 const registrySource=fs.readFileSync(path.join(root,'books/shared/book-roster-enhancements.js'),'utf8');
 const providerSource=fs.readFileSync(path.join(root,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
+const pointsScope={};pointsScope.window=pointsScope;vm.runInNewContext(fs.readFileSync(path.join(root,'roster-guides/points-data.js'),'utf8'),pointsScope,{filename:'points-data.js'});
 const components=new Set();
 let conditionalCount=0;
 const fixtures=new Map();
@@ -165,29 +167,31 @@ try{
       assert.deepEqual(normal,{game:false,changes:0},`${bookId}: normal Datasheet changed`);
       console.log(`BROWSER ${bookId}: structured roster presentation PASS`);
     }
-    const realRosterCase=async({bookId,faction,detachment='',unitTitle,unitId,points=100})=>{
-      const rosterId=`real-provider-${bookId}-${unitId}-${detachment||'none'}`,sourceText=[`+ FACTION KEYWORD: ${faction}`,detachment?`+ DETACHMENT: ${detachment}`:'',`+ TOTAL ARMY POINTS: ${points}pts`,'',`Char1: 1x ${unitTitle} (${points} pts)`].filter(Boolean).join('\n'),record={id:rosterId,sourceText};
+    const realRosterCase=async({bookId,detachmentId=null,datasheetId,quantity})=>{
+      const fixtureBook=fixtures.get(bookId),pointsCatalog=pointsScope.WH_POINTS_CATALOG[normalize(fixtureBook?.catalog.book.title)];
+      assert.ok(fixtureBook&&pointsCatalog,`${bookId}: canonical fixture catalogs`);
+      const rosterId=`real-provider-${bookId}-${datasheetId}-${detachmentId||'none'}`,record=createRosterFixture({catalog:fixtureBook.catalog,pointsCatalog,id:rosterId,detachmentId,units:[{datasheetId,instanceId:'parsed-unit-1',quantity}]}).record,unitId=datasheetId;
       await page.evaluate(value=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([value])),record);
       await page.goto(`${origin}/books/${bookId}/reader.html?view=mobile&roster=${rosterId}&rosterInstance=parsed-unit-1#${unitId}`);
       await page.waitForFunction(({instanceId,unitId})=>window.WH_ARMY_ROSTER_GAME_PROJECTION?.units.some(unit=>unit.identity.instanceId===instanceId&&unit.identity.canonicalDatasheetId===unitId)&&document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(instanceId)}"]`),{instanceId:'parsed-unit-1',unitId});
       return page.evaluate(({instanceId,unitId})=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId===instanceId),card=document.querySelector(`.unit-card.roster-game-view[data-roster-instance="${CSS.escape(instanceId)}"]`);return{identity:unit.identity,effects:unit.effects.map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,state:effect.state,targetState:effect.targetState,canonicalReference:effect.canonicalReference,source:effect.source,provenance:effect.provenance,targets:effect.targets})),cardText:card.innerText,unitId};},{instanceId:'parsed-unit-1',unitId});
     };
-    const masterReal=await realRosterCase({bookId:'emperors-children',faction:"Emperor's Children",detachment:'Court of the Phoenician',unitTitle:'Fulgrim',unitId:'unit-fulgrim',points:340}),masterRealReferences=masterReal.effects.filter(effect=>effect.canonicalReference?.id===masterRuleId);
+    const masterReal=await realRosterCase({bookId:'emperors-children',detachmentId:'court-of-the-phoenician',datasheetId:'unit-fulgrim',quantity:1}),masterRealReferences=masterReal.effects.filter(effect=>effect.canonicalReference?.id===masterRuleId);
     assert.equal(masterReal.identity.instanceId,'parsed-unit-1','Master of the Pageant real path physical instance');
     assert.equal(masterReal.identity.canonicalDatasheetId,'unit-fulgrim','Master of the Pageant real path canonical identity');
     assert.equal(masterRealReferences.length,1,'Master of the Pageant real production path reference');
     assert.deepEqual(JSON.parse(JSON.stringify(masterRealReferences.map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,state:effect.state,targetState:effect.targetState,sourceKind:effect.source?.kind,sourceId:effect.source?.id,owner:effect.source?.ownerInstanceId,rosterFact:effect.provenance?.rosterFact,targets:effect.targets})))),[{component:'ability',targetId:masterRuleId,operation:'reference',state:'reference',targetState:'resolved',sourceKind:'detachment',sourceId:'court-of-the-phoenician',owner:null,rosterFact:'detachment-rule-reference',targets:[]}],'Master of the Pageant real path remains reference-only');
     assert.match(masterReal.cardText,/Master of the Pageant/i,'Master of the Pageant missing from physical Fulgrim presentation');
-    const masterNonFulgrim=await realRosterCase({bookId:'emperors-children',faction:"Emperor's Children",detachment:'Court of the Phoenician',unitTitle:'Seekers',unitId:'unit-seekers'});
+    const masterNonFulgrim=await realRosterCase({bookId:'emperors-children',detachmentId:'court-of-the-phoenician',datasheetId:'unit-seekers',quantity:5});
     assert.equal(masterNonFulgrim.effects.filter(effect=>effect.canonicalReference?.id===masterRuleId).length,0,'Master of the Pageant leaked to a real non-Fulgrim unit');
-    const masterWrongDetachment=await realRosterCase({bookId:'emperors-children',faction:"Emperor's Children",detachment:'Rapid Evisceration',unitTitle:'Fulgrim',unitId:'unit-fulgrim',points:340});
+    const masterWrongDetachment=await realRosterCase({bookId:'emperors-children',detachmentId:'rapid-evisceration',datasheetId:'unit-fulgrim',quantity:1});
     assert.equal(masterWrongDetachment.effects.filter(effect=>effect.canonicalReference?.id===masterRuleId).length,0,'Master of the Pageant leaked to a real wrong Detachment');
-    const masterMissingDetachment=await realRosterCase({bookId:'emperors-children',faction:"Emperor's Children",unitTitle:'Fulgrim',unitId:'unit-fulgrim',points:340});
+    const masterMissingDetachment=await realRosterCase({bookId:'emperors-children',datasheetId:'unit-fulgrim',quantity:1});
     assert.equal(masterMissingDetachment.effects.filter(effect=>effect.canonicalReference?.id===masterRuleId).length,0,'Master of the Pageant leaked without a Detachment');
-    const masterWrongFaction=await realRosterCase({bookId:'chaos-space-marines',faction:'Chaos Space Marines',detachment:'Court of the Phoenician',unitTitle:'Chaos Lord',unitId:'unit-chaos-lord'});
+    const masterWrongFaction=await realRosterCase({bookId:'chaos-space-marines',detachmentId:'pactbound-zealots',datasheetId:'unit-chaos-lord',quantity:1});
     assert.equal(masterWrongFaction.effects.filter(effect=>effect.canonicalReference?.id===masterRuleId).length,0,'Master of the Pageant leaked through a real wrong-faction path');
-    for(const [bookId,faction] of [['space-marines','Space Marines'],['dark-angels','Dark Angels'],['blood-angels','Blood Angels']]){
-      const nowhere=await realRosterCase({bookId,faction,detachment:'Subversion Assets',unitTitle:'Scout Squad',unitId:'unit-scout-squad',points:70}),references=nowhere.effects.filter(effect=>effect.canonicalReference?.kind==='detachment-rule');
+    for(const bookId of ['space-marines','dark-angels','blood-angels']){
+      const nowhere=await realRosterCase({bookId,detachmentId:'subversion-assets',datasheetId:'unit-scout-squad',quantity:5}),references=nowhere.effects.filter(effect=>effect.canonicalReference?.kind==='detachment-rule');
       assert.deepEqual(references.map(effect=>effect.canonicalReference.id),['subversion-assets-nowhere-to-hide'],`${bookId}: real-path Nowhere to Hide regression`);
     }
     assert.ok(browserPresented>0,'no structured Enhancement effect reached active browser presentation');

@@ -9,7 +9,7 @@ import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const fixtureData=async(slug,key)=>{const scope=vm.createContext({window:{}});for(const file of [`books/${slug}/scripts/roster-data.js`,'roster-guides/points-data.js'])vm.runInContext(await readFile(path.join(root,file),'utf8'),scope,{filename:file});return{catalog:scope.window.WH_BOOK_ROSTER_CATALOG,points:scope.window.WH_POINTS_CATALOG[key]};};
-const {catalog:csmCatalog,points:csmPoints}=await fixtureData('chaos-space-marines','chaos space marines'),{catalog:ecCatalog,points:ecPoints}=await fixtureData('emperors-children','emperor s children');
+const {catalog:csmCatalog,points:csmPoints}=await fixtureData('chaos-space-marines','chaos space marines'),{catalog:ecCatalog,points:ecPoints}=await fixtureData('emperors-children','emperor s children'),{catalog:tyrCatalog,points:tyrPoints}=await fixtureData('tyranids','tyranids');
 const runtimeVersions=JSON.parse(await readFile(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
 const server=createServer(async(request,response)=>{
@@ -306,12 +306,13 @@ try{
     assert.ok(!oneDetachmentHeadings.some(title=>title.startsWith("Mont'ka")),'One-Detachment roster included a foreign Detachment');
     await page.locator('.related-rules-close').click();
 
+    const wrongFactionFixture=createRosterFixture({catalog:tyrCatalog,pointsCatalog:tyrPoints,id:'smoke-wrong-faction',name:'Wrong faction smoke fixture',detachmentId:'invasion-fleet',units:[{datasheetId:'unit-hive-tyrant',instanceId:'parsed-unit-1',selectionIds:['unit-hive-tyrant-selection-monstrous-bonesword-and-lash-whip','unit-hive-tyrant-selection-heavy-venom-cannon']}]});
     await page.goto(`${origin}/index.html?roster-smoke-control=1`);
     await page.evaluate(record=>{
       const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]');
       localStorage.setItem('wh40k-rosters-v1',JSON.stringify([...records,record]));
-    },{id:'smoke-wrong-faction',name:'Wrong faction smoke fixture',roster:{faction:'Tyranids',detachment:'Invasion Fleet',detachments:[{label:'Invasion Fleet'}],units:[{id:'smoke-hive-tyrant',name:'Hive Tyrant',quantity:1,points:0}],enhancements:[]}});
-    await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=smoke-wrong-faction`);
+    },wrongFactionFixture.record);
+    await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=${wrongFactionFixture.record.id}`);
     await page.waitForURL('**/roster-guides/index.html*');
     assert.equal(await page.locator('#relatedRules').count(),0,'Invalid roster must not expose Related Rules');
     assert.equal(await page.locator('.unit-card').count(),0,'Invalid roster must not leave an Army Book active');

@@ -50,6 +50,31 @@ const multiEnhancement=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPo
 assert.deepEqual(Array.from(multiParsed.enhancements,item=>item.name),['Dark Blessings','Euphoric Crown']);
 assert.equal(multiEnhancement.totalPoints,120,'multiple Enhancement costs must come from canonical identities');
 
+const tyrSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});tyrSandbox.globalThis=tyrSandbox;tyrSandbox.window=tyrSandbox;
+for(const file of ['books/tyranids/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/tyranids/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),tyrSandbox,{filename:file});
+const tyrCatalog=tyrSandbox.WH_BOOK_ROSTER_CATALOG,tyrPoints=tyrSandbox.WH_POINTS_CATALOG.tyranids,renamedTyr=JSON.parse(JSON.stringify(tyrCatalog));
+renamedTyr.detachments.find(item=>item.id==='invasion-fleet').title='Renamed Tyranids Detachment';
+renamedTyr.enhancements.find(item=>item.id==='enhancement-adaptive-biology').title='Renamed Adaptive Biology';
+renamedTyr.units.find(item=>item.id==='unit-neurotyrant').title='Renamed Neurotyrant';
+const renamedTyrFixture=createRosterFixture({catalog:renamedTyr,pointsCatalog:tyrPoints,id:'tyr-helper-rename',detachmentId:'invasion-fleet',units:[
+  {datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-1',selectionIds:['unit-neurotyrant-selection-neurotyrant-claws-and-lashes','unit-neurotyrant-selection-psychic-scream'],enhancementId:'enhancement-adaptive-biology'},
+  {datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-2',selectionIds:['unit-neurotyrant-selection-neurotyrant-claws-and-lashes','unit-neurotyrant-selection-psychic-scream']},
+]});
+assert.match(renamedTyrFixture.record.sourceText,/DETACHMENT: Renamed Tyranids Detachment/);
+assert.match(renamedTyrFixture.record.sourceText,/Enhancement: Renamed Adaptive Biology/);
+assert.equal(renamedTyrFixture.record.sourceText.match(/1x Renamed Neurotyrant/g)?.length,2);
+assert.deepEqual(renamedTyrFixture.units.map(item=>[item.instanceId,item.datasheetId]),[['parsed-unit-1','unit-neurotyrant'],['parsed-unit-2','unit-neurotyrant']]);
+const renamedTyrRoster=tyrSandbox.WHRosterParser.parse(renamedTyrFixture.record.sourceText),renamedTyrOwner=createCatalogGameUnit({catalog:renamedTyr,datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-adaptive-biology']}),renamedTyrPeer=createCatalogGameUnit({catalog:renamedTyr,datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-2'}),tyrByInstance=new Map([[renamedTyrOwner.identity.instanceId,renamedTyrOwner],[renamedTyrPeer.identity.instanceId,renamedTyrPeer]]),renamedAdaptive=renamedTyr.enhancements.find(item=>item.id==='enhancement-adaptive-biology'),renamedTyrEnhancements=[{catalog:renamedAdaptive,input:{ownerStatus:'resolved',ownerUnitId:renamedTyrOwner.identity.instanceId}}],tyrDetachments=[{id:'invasion-fleet'}];
+const renamedTyrBehavior=tyrSandbox.TYRANIDS_ROSTER_SEMANTICS.gameEffects({gameUnit:renamedTyrOwner,byInstance:tyrByInstance,enhancements:renamedTyrEnhancements,detachments:tyrDetachments}),renamedTyrPeerBehavior=tyrSandbox.TYRANIDS_ROSTER_SEMANTICS.gameEffects({gameUnit:renamedTyrPeer,byInstance:tyrByInstance,enhancements:renamedTyrEnhancements,detachments:tyrDetachments});
+assert.equal(renamedTyrRoster.detachments[0].name,'Renamed Tyranids Detachment');
+assert.equal(renamedTyrRoster.enhancements[0].name,'Renamed Adaptive Biology');
+assert.deepEqual(Array.from(renamedTyrRoster.units,item=>[item.id,item.name]),[['parsed-unit-1','Renamed Neurotyrant'],['parsed-unit-2','Renamed Neurotyrant']]);
+assert.ok(renamedTyrBehavior.some(effect=>effect.id==='enhancement-adaptive-biology:feel-no-pain'),'Tyranids Enhancement behavior must remain keyed by canonical identity');
+assert.ok(renamedTyrBehavior.some(effect=>effect.source?.id==='invasion-fleet'),'Tyranids Detachment behavior must remain keyed by canonical identity');
+assert.equal(renamedTyrPeerBehavior.some(effect=>effect.source?.id==='enhancement-adaptive-biology'),false,'Enhancement must not leak to a second physical Datasheet instance');
+assert.throws(()=>createRosterFixture({catalog:tyrCatalog,pointsCatalog:tyrPoints,id:'tyr-helper-wrong-enhancement',detachmentId:'invasion-fleet',units:[{datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-1',enhancementId:'adaptive-biology'}]}),/Enhancement canonical ID/);
+assert.throws(()=>createRosterFixture({catalog:tyrCatalog,pointsCatalog:tyrPoints,id:'tyr-helper-wrong-detachment',detachmentId:'synaptic-nexus',units:[{datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-1',enhancementId:'enhancement-adaptive-biology'}]}),/is not owned by a selected Detachment/);
+
 for(const [label,change] of [
   ['Datasheet',input=>input.units[0].datasheetId='Chosen'],
   ['Detachment',input=>input.detachmentId='Renegade Warband'],

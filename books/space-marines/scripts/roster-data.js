@@ -28915,7 +28915,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         6
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           6
         ]
@@ -28979,7 +28979,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         6
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           6
         ]
@@ -29026,7 +29026,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         6
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           6
         ]
@@ -29090,7 +29090,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         6
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           6
         ]
@@ -29154,7 +29154,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         24
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           24
         ]
@@ -29218,7 +29218,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         24
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           24
         ]
@@ -29282,7 +29282,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         24
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           24
         ]
@@ -29346,7 +29346,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         24
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           24
         ]
@@ -29386,7 +29386,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         12
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           12
         ]
@@ -29426,7 +29426,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         12
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           12
         ]
@@ -29466,7 +29466,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         12
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           12
         ]
@@ -29506,7 +29506,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         12
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           12
         ]
@@ -29570,7 +29570,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         10
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           10
         ]
@@ -29634,7 +29634,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         10
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           10
         ]
@@ -29677,7 +29677,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         10
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           10
         ]
@@ -29717,7 +29717,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         10
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           10
         ]
@@ -29757,7 +29757,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         20
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -29797,7 +29797,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         20
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -29837,7 +29837,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         20
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -29877,7 +29877,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         20
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           20
         ]
@@ -30143,7 +30143,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         18
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           18
         ]
@@ -30202,7 +30202,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         18
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           18
         ]
@@ -30237,7 +30237,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         18
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           18
         ]
@@ -30300,7 +30300,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         18
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           18
         ]
@@ -30340,7 +30340,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -30385,7 +30385,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -30623,7 +30623,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         14
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           14
         ]
@@ -30663,7 +30663,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         14
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           14
         ]
@@ -30703,7 +30703,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         14
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           14
         ]
@@ -30743,7 +30743,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         14
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           14
         ]
@@ -30800,7 +30800,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         8
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           8
         ]
@@ -30857,7 +30857,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         8
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           8
         ]
@@ -30914,7 +30914,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         8
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           8
         ]
@@ -30971,7 +30971,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         8
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           8
         ]
@@ -31187,7 +31187,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -31231,7 +31231,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -31275,7 +31275,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -31318,7 +31318,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -31362,7 +31362,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -31407,7 +31407,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         26
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           26
         ]
@@ -31471,7 +31471,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         26
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           26
         ]
@@ -31535,7 +31535,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         26
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           26
         ]
@@ -31599,7 +31599,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         26
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           26
         ]
@@ -31639,7 +31639,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         28
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           28
         ]
@@ -31679,7 +31679,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         28
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           28
         ]
@@ -31719,7 +31719,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         28
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           28
         ]
@@ -31759,7 +31759,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         28
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           28
         ]
@@ -31799,7 +31799,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         16
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           16
         ]
@@ -31839,7 +31839,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         16
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           16
         ]
@@ -31879,7 +31879,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         16
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           16
         ]
@@ -31919,7 +31919,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         16
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           16
         ]
@@ -32131,7 +32131,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         22
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           22
         ]
@@ -32171,7 +32171,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         22
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           22
         ]
@@ -32213,7 +32213,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         22
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           22
         ]
@@ -32248,7 +32248,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         22
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           22
         ]
@@ -32298,7 +32298,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -32344,7 +32344,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -32566,7 +32566,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
@@ -32622,7 +32622,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           2
         ]

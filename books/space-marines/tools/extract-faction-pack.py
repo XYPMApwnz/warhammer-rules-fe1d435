@@ -20,6 +20,11 @@ CODEX = ROOT / "content" / "space-marines-codex-datasheets.en.json"
 BSDATA = ROOT.parents[1] / "tmp" / "bsdata-wh40k-11e" / "Imperium - Space Marines.json"
 BSDATA_LIBRARY = ROOT.parents[1] / "tmp" / "bsdata-wh40k-11e" / "Library - Astartes Heresy Legends.json"
 SOURCE_ID = "space-marines-faction-pack-v1.2"
+RULE_TITLE_OVERRIDES = {
+    # The pinned BSData record uses the placeholder "New Rule"; the frozen
+    # Faction Pack page provides the exact published identity.
+    "Subversion Assets": "Nowhere to Hide",
+}
 
 DETACHMENTS = [
     ("Fulguris Task Force", 2, 2),
@@ -261,6 +266,19 @@ def exact_rule_text(page_text: str, detachment: str) -> str:
     raise ValueError(f"Could not locate exact detachment rule text for {detachment}")
 
 
+def exact_rule_title(page_text: str, detachment: str, bsdata_title: str) -> str:
+    if bsdata_title != "New Rule":
+        return bsdata_title
+    match = re.search(r"(?m)^DETACHMENT RULES?\s*\n([^\n]+)$", page_text)
+    if not match:
+        raise ValueError(f"Could not locate exact detachment rule title for {detachment}")
+    source_title = clean(match.group(1))
+    configured_title = RULE_TITLE_OVERRIDES.get(detachment)
+    if not configured_title or comparable(source_title) != comparable(configured_title):
+        raise ValueError(f"No exact configured title for placeholder BSData rule in {detachment}")
+    return configured_title
+
+
 def enhancement_key(value: str) -> str:
     return slug(value).removesuffix("-upgrade").removesuffix("-aura").replace("-data-link", "-datalink").replace("stormseer-s-wisdom", "stormseers-wisdom")
 
@@ -456,9 +474,10 @@ def build() -> tuple[dict, dict]:
         det_id = slug(title)
         detachment_enhancements = enhancements.get(slug(title), [])
         exact_enhancement_text = exact_enhancements(page_text, [entry["title"] for entry in detachment_enhancements])
+        rule_title = exact_rule_title(page_text, title, rules[title]["title"])
         rule = {
-            "id": f"{det_id}-{slug(rules[title]['title'])}",
-            "title": rules[title]["title"],
+            "id": f"{det_id}-{slug(rule_title)}",
+            "title": rule_title,
             "text": exact_rule_text(page_text, title),
             "sourcePages": [rule_page],
             "provenance": provenance([rule_page]),

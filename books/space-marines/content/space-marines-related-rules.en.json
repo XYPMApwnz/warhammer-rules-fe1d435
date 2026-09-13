@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "faction": "Space Marines",
-  "sourceId": "space-marines-faction-pack-v1.1",
+  "sourceId": "space-marines-faction-pack-v1.2",
   "stratagems": {
     "fulguris-task-force-data-link-augury": {
       "v": 1,

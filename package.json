@@ -38,7 +38,7 @@
     "glossary:check": "node glossary/tools/check-glossary.mjs",
     "cache:check": "node tools/cache-revision.mjs --check",
     "wiring:check": "node tests/repository-wiring-consistency-qa.mjs",
-    "publication:check": "node books/shared/tools/publication-inventory.mjs --check && node tests/publication-inventory-qa.mjs",
+    "publication:check": "node books/shared/tools/publication-inventory.mjs --check && node tools/build-offline-mobile-routes.mjs --check && node tests/publication-inventory-qa.mjs && node tests/offline-mobile-routes-qa.mjs",
     "test:cold-offline": "node tests/browser/cold-offline.mjs",
     "test:pwa-update": "node tests/browser/pwa-update-flow.mjs",
     "test:browser": "npm run test:pwa-update && npm run test:cold-offline",

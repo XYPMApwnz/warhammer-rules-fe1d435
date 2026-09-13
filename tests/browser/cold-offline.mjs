@@ -6,11 +6,13 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
+import {collectOfflineMobileRoutes} from '../../tools/build-offline-mobile-routes.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const fixtureData=async(slug,key)=>{const scope=vm.createContext({window:{}});for(const file of [`books/${slug}/scripts/roster-data.js`,'roster-guides/points-data.js'])vm.runInContext(await readFile(path.join(root,file),'utf8'),scope,{filename:file});return{catalog:scope.window.WH_BOOK_ROSTER_CATALOG,points:scope.window.WH_POINTS_CATALOG[key]};};
 const {catalog:csmCatalog,points:csmPoints}=await fixtureData('chaos-space-marines','chaos space marines'),{catalog:ecCatalog,points:ecPoints}=await fixtureData('emperors-children','emperor s children'),{catalog:tyrCatalog,points:tyrPoints}=await fixtureData('tyranids','tyranids'),{catalog:tauCatalog,points:tauPoints}=await fixtureData('tau-empire','t au empire');
 const runtimeVersions=JSON.parse(await readFile(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
+const offlineMobileRoutes=collectOfflineMobileRoutes({root});
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
 const server=createServer(async(request,response)=>{
   try{
@@ -395,10 +397,28 @@ try{
     assert.equal(install.keys.length,1,'Fresh install must create exactly one current application cache');
     assert.ok(install.urls.includes('/glossary/generated/glossary.en.js?v=tyranids-1'),'Fresh install omitted the active standalone Glossary script');
     assert.ok(install.urls.includes('/books/shared/rule-facts.js?v=5'),'Fresh install omitted the active Roster Guides Rule Facts script');
+    for(const route of offlineMobileRoutes)assert.ok(install.urls.includes(route.url.slice(1)),`Fresh install omitted physical mobile route ${route.url}`);
     const diagramUrls=install.urls.filter(url=>url.startsWith('/books/core-rules/assets/diagrams/'));
     assert.equal(new Set(diagramUrls).size,39,'Fresh install did not cache all required Core Rules diagrams');
     errors.length=0;
     await new Promise((resolve,reject)=>server.close(error=>error?reject(error):resolve()));
+    for(let offset=0;offset<offlineMobileRoutes.length;offset+=50){
+      const batch=offlineMobileRoutes.slice(offset,offset+50);
+      const fetched=await page.evaluate(async routes=>Promise.all(routes.map(async route=>{
+        try{const response=await fetch(route.url);return{url:route.url,ok:response.ok,text:await response.text()};}
+        catch(error){return{url:route.url,ok:false,error:String(error)}}
+      })),batch);
+      for(let index=0;index<batch.length;index++){
+        assert.equal(fetched[index].ok,true,`Physical mobile route failed offline: ${batch[index].url}`);
+        assert.match(fetched[index].text,new RegExp(`data-canonical-target=["']${batch[index].target.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}["']`),`Physical mobile route lost canonical target offline: ${batch[index].url}`);
+      }
+    }
+    for(const book of [...new Set(offlineMobileRoutes.map(route=>route.book))]){
+      const route=offlineMobileRoutes.find(item=>item.book===book&&!['index.html','army-rules.html','updates.html'].includes(item.file));
+      await page.goto(origin+route.url.slice(1),{waitUntil:'domcontentloaded'});
+      await page.waitForURL(url=>url.pathname===`/books/${book}/reader.html`&&url.hash===`#${route.target}`);
+      await page.locator(`#${route.target}`).waitFor({state:'visible'});
+    }
     await page.goto(`${origin}/glossary/index.html`,{waitUntil:'domcontentloaded'});
     await page.waitForFunction(()=>Number(document.getElementById('termCount')?.textContent)>100&&document.querySelectorAll('.term-button').length>0);
     assert.ok(Number(await page.locator('#termCount').textContent())>100,'Standalone Glossary did not initialize from the install cache');
@@ -430,7 +450,7 @@ try{
     assert.ok((await detachment.textContent()).trim().length>100,'Adeptus Mechanicus Detachment is unavailable after physical origin shutdown');
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
     assert.deepEqual(failedRequired,[],'Fresh-install offline flow emitted failed required same-origin requests');
-    console.log(`PASS full application works offline after Library-only install (${install.urls.length} cached URLs; ${diagramUrls.length} Core Rules diagrams)`);
+    console.log(`PASS full application works offline after Library-only install (${install.urls.length} cached URLs; ${diagramUrls.length} Core Rules diagrams; ${offlineMobileRoutes.length} physical mobile routes across 9 books)`);
   }finally{
     await offlineContext.close();
   }

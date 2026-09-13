@@ -23,7 +23,7 @@ const record=(id,sourceText,attachments={})=>({id,sourceText,attachments});
 const fixtures={
   dg:record('gw-dg',"FACTION KEYWORD: Chaos - Death Guard\nDETACHMENT: Mortarion's Hammer\n1x Mortarion (375 pts)\n5x Blightlord Terminators (180 pts)"),
   am:record('gw-am',"FACTION KEYWORD: Imperium - Adeptus Mechanicus\nDETACHMENT: Cohort Cybernetica\n2x Kastelan Robots (180 pts): Incendine combustor, Twin Kastelan fist\n1x Cybernetica Datasmith (35 pts): Mechanicus pistol, Power fist\n1x Cybernetica Datasmith (35 pts): Mechanicus pistol, Power fist",{'parsed-unit-1':['parsed-unit-2']}),
-  ec:record('gw-ec',"FACTION KEYWORD: Chaos - Emperor's Children\n1x Heldrake (0 pts)\n1x Lord Exultant (0 pts)\nEnhancement: Possessed Blade (+35 pts)\n1x Lord Exultant (0 pts)\nEnhancement: Warp Walker (+35 pts)"),
+  ec:record('gw-ec',"FACTION KEYWORD: Chaos - Emperor's Children\nDETACHMENT: Carnival of Excess\n1x Heldrake (0 pts)\n1x Lord Exultant (0 pts)\nEnhancement: Possessed Blade (+35 pts)\n1x Lord Exultant (0 pts)\nEnhancement: Warp Walker (+35 pts)"),
   tyr:record('gw-tyr',"FACTION KEYWORD: Xenos - Tyranids\n1x Norn Assimilator (0 pts): Toxinjector harpoon"),
   csm:record('gw-csm',"FACTION KEYWORD: Chaos - Chaos Space Marines\n1x Masters of the Maelstrom (0 pts)\n1x Heldrake (0 pts)"),
   sm:record('gw-sm',"FACTION KEYWORD: Imperium - Space Marines\n1x Wardens of Ultramar (0 pts)"),

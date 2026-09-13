@@ -331,7 +331,7 @@ try{
   const compatibleRosterContext=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
   try{
     const {page,errors}=await observedPage(compatibleRosterContext);
-    const ecFixture=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'multi-detachment-compatible',name:'Multi-detachment Compatible Rules fixture',detachmentIds:['carnival-of-excess','frenzied-host'],factionPrefix:'Chaos - ',units:[{datasheetId:'unit-lord-exultant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-dark-blessings','euphoric-crown']}]}),rosterRecord=ecFixture.record,[carnival,frenzied]=ecFixture.detachments,foreign=ecCatalog.detachments.find(item=>item.id==='court-of-the-phoenician');
+    const ecFixture=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'multi-detachment-compatible',name:'Multi-detachment Compatible Rules fixture',detachmentIds:['carnival-of-excess','frenzied-host'],factionPrefix:'Chaos - ',units:[{datasheetId:'unit-lord-exultant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-dark-blessings','enhancement-euphoric-crown']}]}),rosterRecord=ecFixture.record,[carnival,frenzied]=ecFixture.detachments,foreign=ecCatalog.detachments.find(item=>item.id==='court-of-the-phoenician');
     assert.ok(foreign,'canonical foreign Detachment control');
     await page.goto(`${origin}/books/emperors-children/reader.html#unit-lord-exultant`);
     await page.locator('#unit-lord-exultant .related-rules-trigger').click();

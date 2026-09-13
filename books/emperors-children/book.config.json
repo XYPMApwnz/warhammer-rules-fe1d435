@@ -15,7 +15,8 @@
   "rosterSupport": true,
   "rosterCatalog": {
     "inferCanonicalDetachmentRuleIds": true,
-    "inferExactWargearAbilitySelections": true
+    "inferExactWargearAbilitySelections": true,
+    "exactEnhancementIds": true
   },
   "compatibleRulesMatrix": true,
   "customApp": true,

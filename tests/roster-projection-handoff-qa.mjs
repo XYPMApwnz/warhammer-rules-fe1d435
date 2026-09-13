@@ -111,7 +111,7 @@ export function runHandoffQa(overrides={}){
   assert.deepEqual([...rawSourceUnverifiedEntry.owner.selector.unitIds],['unit-lord-exultant'],'raw fixture uses the resolved canonical bearer contract');
   rawSourceUnverifiedEntry.sourceLimited=true; // TEMP VM coverage warning, not a legality decision.
   assert.equal(rawSourceUnverifiedEntry.sourceLimited,true,'raw fixture carries an independent source-coverage warning');
-  assert.equal(ec.catalog.enhancements.some(item=>item.id==='enhancement-exalted-patron'),false,'points identity must not be fabricated in the book catalog');
+  assert.equal(ec.catalog.enhancements.filter(item=>item.id==='enhancement-exalted-patron').length,1,'exact EC Enhancement owner identity must be unique in the book catalog');
   const sourceLimited={faction:ec.catalog.book.title,units:[rawUnit(ec.catalog,'unit-daemon-prince-of-slaanesh')],detachments:[{name:rawSourceUnverifiedEntry.detachment}],enhancements:[{name:rawSourceUnverifiedEntry.title,ownerUnitId:'physical-1',ownerStatus:'resolved',source:'inline'}],warnings:[]};
   assert.equal(Object.hasOwn(sourceLimited.enhancements[0],'id'),false,'raw/source-unverified assignment has no fabricated canonical id');
   inactive(ec,sourceLimited,'source-limited wrong bearer','invalid');

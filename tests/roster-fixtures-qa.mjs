@@ -87,34 +87,34 @@ const ecSandbox=vm.createContext({console,window:{},globalThis:null,addEventList
 for(const file of ['books/emperors-children/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/emperors-children/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ecSandbox,{filename:file});
 const ecCatalog=ecSandbox.WH_BOOK_ROSTER_CATALOG,ecPoints=ecSandbox.WH_POINTS_CATALOG['emperor s children'],renamedEc=JSON.parse(JSON.stringify(ecCatalog));
 renamedEc.detachments.find(item=>item.id==='spectacle-of-slaughter').title='Renamed EC Detachment';
-renamedEc.enhancements.find(item=>item.id==='eager-patrons').title='Renamed Eager Patrons';
+renamedEc.enhancements.find(item=>item.id==='enhancement-eager-patrons').title='Renamed Eager Patrons';
 renamedEc.units.find(item=>item.id==='unit-flawless-blades').title='Renamed Flawless Blades';
 const renamedEcFixture=createRosterFixture({catalog:renamedEc,pointsCatalog:ecPoints,id:'ec-helper-rename',detachmentId:'spectacle-of-slaughter',factionPrefix:'Chaos - ',units:[
-  {datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',quantity:3,enhancementId:'eager-patrons'},
+  {datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',quantity:3,enhancementId:'enhancement-eager-patrons'},
   {datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-2',quantity:3},
 ]});
 assert.match(renamedEcFixture.record.sourceText,/DETACHMENT: Renamed EC Detachment/);
 assert.match(renamedEcFixture.record.sourceText,/Enhancement: Renamed Eager Patrons \(\+20 pts\)/);
 assert.equal(renamedEcFixture.record.sourceText.match(/3x Renamed Flawless Blades/g)?.length,2);
-assert.deepEqual({detachmentId:renamedEcFixture.detachments[0].id,enhancementId:renamedEcFixture.units[0].enhancement.id},{detachmentId:'spectacle-of-slaughter',enhancementId:'eager-patrons'});
-const renamedEcRoster=ecSandbox.WHRosterParser.parse(renamedEcFixture.record.sourceText),renamedEcUnit=createCatalogGameUnit({catalog:renamedEc,datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',enhancementIds:['eager-patrons']}),renamedEcPeer=createCatalogGameUnit({catalog:renamedEc,datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-2'}),ecByInstance=new Map([[renamedEcUnit.identity.instanceId,renamedEcUnit],[renamedEcPeer.identity.instanceId,renamedEcPeer]]);
+assert.deepEqual({detachmentId:renamedEcFixture.detachments[0].id,enhancementId:renamedEcFixture.units[0].enhancement.id},{detachmentId:'spectacle-of-slaughter',enhancementId:'enhancement-eager-patrons'});
+const renamedEcRoster=ecSandbox.WHRosterParser.parse(renamedEcFixture.record.sourceText),renamedEcUnit=createCatalogGameUnit({catalog:renamedEc,datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',enhancementIds:['enhancement-eager-patrons']}),renamedEcPeer=createCatalogGameUnit({catalog:renamedEc,datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-2'}),ecByInstance=new Map([[renamedEcUnit.identity.instanceId,renamedEcUnit],[renamedEcPeer.identity.instanceId,renamedEcPeer]]);
 renamedEcUnit.rosterState.detachments=['spectacle-of-slaughter'];renamedEcPeer.rosterState.detachments=['spectacle-of-slaughter'];
-const renamedEnhancement=renamedEc.enhancements.find(item=>item.id==='eager-patrons'),ecEnhancements=[{catalog:renamedEnhancement,input:{ownerStatus:'resolved',ownerUnitId:renamedEcUnit.identity.instanceId}}],renamedEcBehavior=ecSandbox.ECRosterSemantics.projectEffects({gameUnit:renamedEcUnit,byInstance:ecByInstance,enhancements:ecEnhancements}),renamedEcPeerBehavior=ecSandbox.ECRosterSemantics.projectEffects({gameUnit:renamedEcPeer,byInstance:ecByInstance,enhancements:ecEnhancements});
+const renamedEnhancement=renamedEc.enhancements.find(item=>item.id==='enhancement-eager-patrons'),ecEnhancements=[{catalog:renamedEnhancement,input:{ownerStatus:'resolved',ownerUnitId:renamedEcUnit.identity.instanceId}}],renamedEcBehavior=ecSandbox.ECRosterSemantics.projectEffects({gameUnit:renamedEcUnit,byInstance:ecByInstance,enhancements:ecEnhancements}),renamedEcPeerBehavior=ecSandbox.ECRosterSemantics.projectEffects({gameUnit:renamedEcPeer,byInstance:ecByInstance,enhancements:ecEnhancements});
 assert.equal(renamedEcRoster.detachments[0].name,'Renamed EC Detachment');
 assert.equal(renamedEcRoster.enhancements[0].name,'Renamed Eager Patrons');
 assert.deepEqual(Array.from(renamedEcRoster.units,item=>[item.id,item.name]),[['parsed-unit-1','Renamed Flawless Blades'],['parsed-unit-2','Renamed Flawless Blades']]);
 assert.ok(renamedEcBehavior.some(effect=>effect.id==='eager-patrons-move'&&effect.operation==='add'&&effect.targetId==='M'&&effect.delta===2),'EC behavior must remain keyed by canonical identities');
-assert.equal(renamedEcPeerBehavior.some(effect=>effect.source?.id==='eager-patrons'),false,'Eager Patrons must not leak to a second physical Datasheet instance');
-assert.throws(()=>createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-wrong-detachment',detachmentId:'peerless-bladesmen',units:[{datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',quantity:3,enhancementId:'eager-patrons'}]}),/is not owned by a selected Detachment/);
+assert.equal(renamedEcPeerBehavior.some(effect=>effect.source?.id==='enhancement-eager-patrons'),false,'Eager Patrons must not leak to a second physical Datasheet instance');
+assert.throws(()=>createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-wrong-detachment',detachmentId:'peerless-bladesmen',units:[{datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',quantity:3,enhancementId:'enhancement-eager-patrons'}]}),/is not owned by a selected Detachment/);
 for(const [label,change] of [
   ['Datasheet',input=>input.units[0].datasheetId='Flawless Blades'],
   ['Detachment',input=>input.detachmentId='Spectacle of Slaughter'],
   ['Enhancement',input=>input.units[0].enhancementId='Eager Patrons'],
 ]){
-  const input={catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-invalid',detachmentId:'spectacle-of-slaughter',units:[{datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',quantity:3,enhancementId:'eager-patrons'}]};
+  const input={catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-invalid',detachmentId:'spectacle-of-slaughter',units:[{datasheetId:'unit-flawless-blades',instanceId:'parsed-unit-1',quantity:3,enhancementId:'enhancement-eager-patrons'}]};
   change(input);assert.throws(()=>createRosterFixture(input),new RegExp(`${label} canonical ID`));
 }
-const multiEnhancement=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-multiple-enhancements',detachmentIds:['carnival-of-excess','frenzied-host'],factionPrefix:'Chaos - ',units:[{datasheetId:'unit-lord-exultant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-dark-blessings','euphoric-crown']}]}),multiParsed=ecSandbox.WHRosterParser.parse(multiEnhancement.record.sourceText);
+const multiEnhancement=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-multiple-enhancements',detachmentIds:['carnival-of-excess','frenzied-host'],factionPrefix:'Chaos - ',units:[{datasheetId:'unit-lord-exultant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-dark-blessings','enhancement-euphoric-crown']}]}),multiParsed=ecSandbox.WHRosterParser.parse(multiEnhancement.record.sourceText);
 assert.deepEqual(Array.from(multiParsed.enhancements,item=>item.name),['Dark Blessings','Euphoric Crown']);
 assert.equal(multiEnhancement.totalPoints,120,'multiple Enhancement costs must come from canonical identities');
 

@@ -46,9 +46,16 @@ function lookupChecks(resolve=resolveEnhancementOwner){
   const missingDetachment=resolve({...point,detachment:'Not a known Detachment'},sm,contracts);
   assert.equal(missingDetachment.owner,undefined,'unknown Detachment fails closed');
   const ec=bookCatalog('emperors-children'),ecContracts=json('books/emperors-children/content/emperors-children-related-rules.en.json').enhancements;
+  assert.equal(ec.enhancements.length,34,'EC roster catalog must publish one canonical record per Enhancement');
+  assert.equal(new Set(ec.enhancements.map(item=>normalize(item.title))).size,34,'EC legacy records must not duplicate scoped canonical Enhancements');
+  const empyric=ec.enhancements.filter(item=>normalize(item.title)==='empyric suffusion');
+  assert.equal(empyric.length,1,'Empyric Suffusion must have one canonical identity');
+  assert.equal(empyric[0].detachmentId,'carnival-of-excess','Empyric Suffusion must retain exact Detachment ownership');
+  assert.equal(empyric[0].id,'enhancement-empyric-suffusion','Empyric Suffusion must retain its exact canonical owner identity');
+  assert.equal(ec.enhancements.some(item=>item.id==='empyric-suffusion'),false,'unscoped legacy identity must not bypass Detachment ownership');
   const exalted=json('books/emperors-children/content/emperors-children-points.en.json').enhancements.find(e=>e.id==='enhancement-exalted-patron');
   const legacy=resolve(exalted,ec,ecContracts);
-  assert.equal(legacy.canonicalEnhancementId,'exalted-patron','existing prefixed/source identity');
+  assert.equal(legacy.canonicalEnhancementId,'enhancement-exalted-patron','exact EC owner identity');
   assert.deepEqual(local(legacy.owner.selector),local(ecContracts['exalted-patron'].roles[0].selector),'roles contract preserved');
   const csm=bookCatalog('chaos-space-marines'),csmContracts=json('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json').enhancements;
   const thrusters=json('books/chaos-space-marines/content/chaos-space-marines-points.en.json').enhancements.filter(e=>e.id.endsWith('-warp-fuelled-thrusters'));
@@ -126,8 +133,8 @@ function legalityChecks(overrides={}){
   const ec=loadBook('emperors-children',overrides),entry=ec.scope.WH_POINTS_CATALOG['emperor s children'].enhancements['exalted patron'];
   assert.deepEqual(local(entry.owner.selector.unitIds),['unit-lord-exultant'],'Exalted canonical owner is not fabricated');
   entry.sourceLimited=true;
-  const lord=fixture(ec,'unit-lord-exultant','exalted-patron','court-of-the-phoenician',true);
-  const prince=fixture(ec,'unit-daemon-prince-of-slaanesh','exalted-patron','court-of-the-phoenician',true);
+  const lord=fixture(ec,'unit-lord-exultant','enhancement-exalted-patron','court-of-the-phoenician',true);
+  const prince=fixture(ec,'unit-daemon-prince-of-slaanesh','enhancement-exalted-patron','court-of-the-phoenician',true);
   assert.equal(Object.hasOwn(lord.enhancements[0],'id'),false,'raw fixture must remain raw');
   assert.equal(Object.hasOwn(prince.enhancements[0],'id'),false,'wrong-bearer fixture must remain raw');
   const legal=project(ec,lord),illegal=project(ec,prince);

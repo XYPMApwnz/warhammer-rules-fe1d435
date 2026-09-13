@@ -151,9 +151,11 @@ def extract_detachments(pages) -> list[dict]:
             item_id = f"{slug(spec['title'])}-{base_id}" if name_counts[base_id] > 1 else base_id
             stratagems.append(source({"id": item_id, "title": item["title"], "cp": item["cp"], **parsed, **stratagem_type(strat_blocks[item["title"]], spec["title"])}, [strat_page]))
         pages_used = [spec["page"]] if strat_page == spec["page"] else [spec["page"], strat_page]
+        detachment_rule = source({"title": spec["rule"], "text": rule_blocks[spec["rule"]]}, [spec["page"]])
+        detachment_rule["id"] = f"blood-angels-detachment-rule-{slug(spec['title'])}-{slug(spec['rule'])}"
         output.append(source({
             "id": slug(spec["title"]), "title": spec["title"],
-            "rule": source({"title": spec["rule"], "text": rule_blocks[spec["rule"]]}, [spec["page"]]),
+            "rule": detachment_rule,
             "enhancements": [source({"id": slug(item["title"]), "title": item["title"], "points": item["points"], "text": rule_blocks[item["title"]]}, [spec["page"]]) for item in spec["enhancements"]],
             "stratagems": stratagems,
         }, pages_used))

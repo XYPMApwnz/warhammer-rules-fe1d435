@@ -56,7 +56,7 @@ const navSnapshot=page=>page.evaluate(()=>{
     terminalOwners:[...document.querySelector('.document')?.children||[]].filter(node=>node.id).map(node=>node.id),
     navs:document.querySelectorAll('.document .unit-card > .local-nav').length,
     role:nav?.getAttribute('role')||'',label:nav?.getAttribute('aria-label')||'',position:nav?getComputedStyle(nav).position:'',
-    targets:buttons.map(button=>button.dataset.journeyTarget),
+    targets:buttons.map(button=>button.dataset.journeyTarget),sections:[...unit?.querySelectorAll('.unit-part[id]')||[]].filter(section=>section.closest('.unit-card')===unit).map(section=>section.id),
     mapped:buttons.every(button=>{const target=document.getElementById(button.dataset.journeyTarget);return target?.matches('section.unit-part')&&target.closest('.unit-card')===unit;}),
     commands:commands.map(button=>button.dataset.datasheetCommand),commandLast:commands.length===1&&nav.lastElementChild===commands[0],commandJourneyTargets:commands.filter(button=>button.hasAttribute('data-journey-target')).length,
     navBackground:navStyle?.backgroundColor||'',navOpacity:navStyle?.opacity||'',commandMinHeight:commandStyle?parseFloat(commandStyle.minHeight):0,commandWeight:commandStyle?Number(commandStyle.fontWeight):0,commandBorder:commandStyle?.borderTopStyle||'',
@@ -224,7 +224,7 @@ async function phoneBook(page,name,id){
   assert.equal(snapshot.active,0,`${name}: persistent active state exists`);
   assert.equal(snapshot.overflow,false,`${name}: page horizontal overflow`);
   assert.equal(snapshot.hiddenTerminalContent,0,`${name}: unrelated terminal content is hidden instead of absent`);
-  assert.ok(snapshot.targets.length>=2,`${name}: no useful section navigation`);
+  assert.deepEqual(snapshot.targets,snapshot.sections,`${name}: Datasheet navigation does not exactly represent its semantic sections`);
   await reloadContract(page,name,{unitId:first});
   const command=page.locator('[data-datasheet-command="stratagems"]');await command.scrollIntoViewIfNeeded();
   const commandBefore=await page.evaluate(()=>({scrollY,hash:location.hash,history:history.length,unitId:document.querySelector('.document .unit-card')?.id||''}));

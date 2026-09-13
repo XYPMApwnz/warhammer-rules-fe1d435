@@ -69,8 +69,8 @@ try{
     await page.waitForFunction(()=>document.querySelector('[data-offline-package-status]')?.dataset.state==='ready');
     const samples=await page.evaluate(()=>window.__offlineProgressSamples);
     const active=samples.filter(value=>value.state==='preparing');
-    assert.ok(active.length>1,'First install did not expose real preparation progress');
     assert.equal(active[0].completed,0,'First-install progress did not begin at zero');
+    assert.ok(active.some(value=>value.completed>0&&value.completed<value.total),'First install did not expose an intermediate preparation state');
     assert.ok(active.every((value,index)=>index===0||value.completed>=active[index-1].completed),'First-install progress was not monotonic');
     assert.ok(active.every(value=>value.completed<value.total),'Preparing state falsely reached 100%');
     const ready=await snapshot(page);
@@ -117,7 +117,9 @@ try{
     await page.waitForFunction(()=>Boolean(window.WHArmyBook));
 
     await page.goto(`${origin}/glossary/index.html`,{waitUntil:'domcontentloaded'});
-    await page.waitForFunction(()=>Number(document.getElementById('termCount')?.textContent)>100&&document.querySelectorAll('.term-button').length>0);
+    await page.waitForFunction(()=>window.WH40K_GLOSSARY?.get?.('core-characteristic-move')?.id==='core-characteristic-move'&&document.querySelector('.term-button:not(.load-more) strong')&&document.getElementById('termCount')?.textContent===String(window.WH40K_GLOSSARY.counts.terms));
+    assert.equal(await page.evaluate(()=>window.WH40K_GLOSSARY.get('core-characteristic-move')?.id),'core-characteristic-move','Offline Glossary lost the canonical Move characteristic');
+    assert.equal(await page.locator('#termCount').textContent(),await page.evaluate(()=>String(window.WH40K_GLOSSARY.counts.terms)),'Offline Glossary count does not reflect its loaded registry');
     assert.deepEqual(errors,[],'Physical origin shutdown emitted a runtime error');
     assert.deepEqual(failedRequired,[],'Physical origin shutdown emitted failed required requests');
     await startOrigin();

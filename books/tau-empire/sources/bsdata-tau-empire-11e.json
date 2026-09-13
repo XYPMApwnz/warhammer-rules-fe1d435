@@ -8,7 +8,7 @@
     {
       "role": "faction",
       "file": "T'au Empire.json",
-      "sha256": "333F2F177BCE70BEA884DDC4C0A1DA032893038124DC9C9550E5247814A04497",
+      "sha256": "74E3A716B673328EC311B232547641CFFD42B32B4D61EACF15EF47321BD97DAA",
       "data": {
         "catalogue": {
           "rules": [
@@ -85235,7 +85235,7 @@
     {
       "role": "game-system",
       "file": "Warhammer 40,000.json",
-      "sha256": "018F2A4D70A3E6B3620901201106BEB5408A8CAA6500CB6AE282FFFDEE73195E",
+      "sha256": "F092789EE23AC230951F4C1BE555F186F1AC55FDAAB294D0F4E988C901109DD0",
       "data": {
         "gameSystem": {
           "publications": [

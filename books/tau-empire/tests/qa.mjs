@@ -114,7 +114,7 @@ assert.equal(points.units.length,39);
 assert.deepEqual([
   points.units.filter(unit=>unit.pointsSource?.label==='Official MFM v1.2').length,
   points.units.filter(unit=>unit.pointsSource?.label==='Official MFM v1.3').length
-],[37,2]);
+],[0,39]);
 assert.equal(Object.keys(relatedRules.stratagems).length,31);
 assert.equal(Object.keys(relatedRules.enhancements).length,23);
 assert.equal(new Set([...pack.detachments,...parity.detachments].map(item=>key(item.title))).size,7);

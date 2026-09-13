@@ -143,6 +143,31 @@
       "weaponNames": {
         "➤ Ion accelerator - overcharge": "➤ Ion accelerator - supercharge"
       }
+    },
+    "Stealth Battlesuits": {
+      "removeWeapons": [
+        "Missile pod"
+      ],
+      "removeAbilities": [
+        "Localised Stealth Projectors (Aura)"
+      ],
+      "removeWargearAbilities": [
+        "Shield Drone",
+        "Guardian Drone"
+      ],
+      "gameSelectionContracts": [
+        {
+          "title": "Gun Drone",
+          "kind": "wargear",
+          "profileTitles": [
+            "Twin pulse carbine"
+          ]
+        },
+        {
+          "title": "Fusion blaster",
+          "maxTotalQuantity": 2
+        }
+      ]
     }
   },
   "inputs": [
@@ -159,7 +184,7 @@
     "snapshot": "bsdata-tau-empire-11e.json",
     "datasheets": "../content/tau-empire-codex-datasheets.en.json",
     "points": "../content/tau-empire-points.en.json",
-    "officialPoints": "official-mfm-v1.2.json"
+    "officialPoints": "official-mfm-v1.3.json"
   },
   "filters": {
     "excludeNames": [

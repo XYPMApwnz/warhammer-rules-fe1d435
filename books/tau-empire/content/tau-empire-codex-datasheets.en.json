@@ -6,7 +6,7 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "2",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/T%27au%20Empire.json",
-    "snapshotSha256": "62B7E7256C013BD3707768246708A8CA5372FE4A4AF0B0731A4F35582FE7120A"
+    "snapshotSha256": "A864213D5354661E5913BD31051E4094848B0359EDBA2FC200ED2CB2C2589A8F"
   },
   "datasheets": [
     {
@@ -3152,19 +3152,6 @@
           "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
         }
       ],
-      "gameSelectionContracts": [
-        {
-          "title": "Gun Drone",
-          "kind": "wargear",
-          "profileTitles": [
-            "Twin pulse carbine"
-          ]
-        },
-        {
-          "title": "Fusion blaster",
-          "maxTotalQuantity": 2
-        }
-      ],
       "keywords": [
         "Infantry",
         "Fly",
@@ -3200,7 +3187,20 @@
         "support": [],
         "attachedUnit": [],
         "transport": []
-      }
+      },
+      "gameSelectionContracts": [
+        {
+          "title": "Gun Drone",
+          "kind": "wargear",
+          "profileTitles": [
+            "Twin pulse carbine"
+          ]
+        },
+        {
+          "title": "Fusion blaster",
+          "maxTotalQuantity": 2
+        }
+      ]
     },
     {
       "id": "unit-vespid-stingwings",

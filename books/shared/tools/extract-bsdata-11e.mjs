@@ -416,6 +416,10 @@ for(const unit of parsed){
     const removed=new Set(correction.removeAbilities.map(key));
     unit.abilities=unit.abilities.filter(ability=>!removed.has(key(ability.title)));
   }
+  if(correction.removeWargearAbilities){
+    const removed=new Set(correction.removeWargearAbilities.map(key));
+    unit.wargearAbilities=unit.wargearAbilities.filter(ability=>!removed.has(key(ability.title)));
+  }
   if(correction.leaderRelations){
     unit.relations.leader=unique(correction.leaderRelations.map(clean).filter(Boolean),key);
     unit.abilities=unit.abilities.filter(ability=>key(ability.title)!=='leader'||!/^this (?:model|unit) can be attached to/i.test(ability.text));
@@ -449,8 +453,13 @@ for(const unit of parsed){
     const name=correction.weaponNames?.[weapon.name];
     if(name)weapon.name=name;
   }
+  if(correction.removeWeapons){
+    const removed=new Set(correction.removeWeapons.map(key));
+    unit.weapons=unit.weapons.filter(weapon=>!removed.has(key(weapon.name)));
+  }
   for(const name of Object.keys(correction.weaponProfiles||{}))if(!unit.weapons.some(weapon=>weapon.name===name))throw new Error(`${unit.title}: weapon profile correction target not found: ${name}`);
   unit.weapons=unique(unit.weapons,weapon=>[weapon.name,weapon.mode,weapon.range,weapon.a,weapon.skill,weapon.s,weapon.ap,weapon.d,weapon.abilities].map(key).join('|'));
+  if(correction.gameSelectionContracts)unit.gameSelectionContracts=structuredClone(correction.gameSelectionContracts);
 }
 const duplicates=parsed.filter((item,index)=>parsed.findIndex(other=>other.id===item.id)!==index);
 if(duplicates.length)throw new Error(`Duplicate datasheet ids: ${duplicates.map(item=>item.id).join(', ')}`);

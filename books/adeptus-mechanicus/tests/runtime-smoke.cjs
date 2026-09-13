@@ -55,7 +55,8 @@ for(const actual of generatedWargear){
 await desktop.locator('[data-nav-target="unit-skitarii-rangers"]').click();
 await desktop.waitForFunction(() => document.querySelector('[data-nav-target="unit-skitarii-rangers"]')?.classList.contains('is-current'));
 console.log('desktop: navigation current');
-assert.ok(await desktop.locator('#skitarii-rangers-wargear-options li').count() >= 4, 'Rangers must show complete wargear choices');
+const rangerWargear=codexWargear.find(unit=>unit.title==='Skitarii Rangers').wargear.map(clean);
+assert.deepEqual(await desktop.locator('#skitarii-rangers-wargear-options li').allInnerTexts().then(items=>items.map(clean)),rangerWargear,'Rangers Wargear Options must exactly match the locked canonical snapshot after navigation');
 await desktop.locator('#unit-skitarii-rangers .related-rules-trigger').click();
 await desktop.locator('.related-rules-layer:not([hidden])').waitFor();
 await desktop.locator('.related-rules-layer:not([hidden]) .full-related-content').waitFor();

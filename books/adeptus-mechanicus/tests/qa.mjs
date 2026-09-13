@@ -224,7 +224,12 @@ for(const [title,expected] of Object.entries(attachmentTargets)){
   const actual=(relation?.text.match(/^■ (.+)$/gm)||[]).map(line=>line.slice(2));
   check(`${title} has the current official attachment targets`,JSON.stringify(actual)===JSON.stringify(expected),actual.join(', '));
 }
-check('every datasheet has stats, weapons, abilities and provenance',rules.datasheets.every(x=>Object.keys(x.stats).length>=6&&x.weapons.length&&x.abilities.length&&(x.sourcePages?.length||x.source?.url)));
+const canonicalStatFields=['Ld','M','OC','Sv','T','W'];
+const canonicalStats=stats=>Object.fromEntries(Object.entries(stats||{}).map(([key,value])=>[key==='SV'?'Sv':key==='LD'?'Ld':key,value]));
+check('every datasheet has the exact canonical stat schema, weapons, abilities and provenance',rules.datasheets.every(unit=>{
+  const stats=canonicalStats(unit.stats),fields=Object.keys(stats).sort();
+  return Object.keys(unit.stats||{}).length===canonicalStatFields.length&&JSON.stringify(fields)===JSON.stringify(canonicalStatFields)&&canonicalStatFields.every(field=>String(stats[field]??'').trim())&&unit.weapons.length&&unit.abilities.length&&(unit.sourcePages?.length||unit.source?.url);
+}));
 check('official multi-profile datasheet is preserved',factionRules.datasheets.find(unit=>unit.title==='Servitor Battleclade')?.profiles?.length===2);
 check('official Legends and Faction Pack clarifications are complete',[
   'for a final result of 2+',

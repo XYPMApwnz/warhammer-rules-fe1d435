@@ -17,7 +17,7 @@ assert.equal(new Set(Object.values(WH_POINTS_CATALOG['t au empire'].enhancements
 assert.equal(Object.keys(WH_POINTS_CATALOG['emperor s children'].units).length,23);
 assert.equal(Object.keys(WH_POINTS_CATALOG['emperor s children'].detachments).length,10);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['emperor s children'].enhancements).map(item=>item.title)).size,34);
-assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].units).length,101);
+assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].units).length,103);
 assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].detachments).length,23);
 
 const catalogUnitsById=faction=>new Map(Object.values(WH_POINTS_CATALOG[faction].units).map(unit=>[unit.id,unit]));

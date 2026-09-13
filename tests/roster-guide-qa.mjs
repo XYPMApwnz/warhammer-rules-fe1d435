@@ -144,32 +144,32 @@ for(const bookId of supported){
   if(bookId==='space-marines'){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),mobile=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','space-marines-points.en.json'),'utf8'));
     const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
-    assert(points.units.filter(unit=>unit.status==='Current').length===101,'space-marines: current Datasheet catalog is incomplete');
-    assert(unitTitles.size===101,'space-marines: roster must expose the existing 101 current Datasheets');
+    assert(points.units.filter(unit=>unit.status==='Current').length===103,'space-marines: current Datasheet catalog is incomplete');
+    assert(unitTitles.size===103,'space-marines: roster must expose the existing 103 current Datasheets');
     assert((content.match(/<section class="content-group detachment"/g)||[]).length===23,'space-marines: roster must expose the existing 23 Detachments');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader),'space-marines: Desktop roster filter is absent');
     assert(mobile.includes(`mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`)&&mobile.includes('data-canonical-reader="../reader.html"'),'space-marines: legacy Phone route does not hand roster state to the canonical reader');
-    console.log('PASS  space-marines: 101 current units, 23 Detachments, desktop/iPad + Phone routes');continue;
+    console.log('PASS  space-marines: 103 current units, 23 Detachments, desktop/iPad + Phone routes');continue;
   }
   if(bookId==='blood-angels'){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8');
     const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','blood-angels-codex-datasheets.en.json'),'utf8'));
     const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),localTitles=new Set(codex.datasheets.map(unit=>entities.normalize(unit.title)));
     assert(codex.datasheets.length===15,'blood-angels: local Datasheet catalog is incomplete');
-    assert(unitTitles.size===97,'blood-angels: expected 15 local + 82 shared Datasheets');
+    assert(unitTitles.size===99,'blood-angels: expected 15 local + 84 shared Datasheets');
     codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`blood-angels: local unit ${unit.title} is absent from Roster Guide`));
-    assert([...unitTitles].filter(title=>!localTitles.has(title)).length===82,'blood-angels: shared Space Marines roster inventory changed');
+    assert([...unitTitles].filter(title=>!localTitles.has(title)).length===84,'blood-angels: shared Space Marines roster inventory changed');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'blood-angels: roster or matrix controller is absent');
     const app=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8');
     assert(/createCompatibleRulesLoader/.test(app)&&/WHArmyBook\.install/.test(app)&&!fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&related.includes('core-stratagem-'),'blood-angels: shared Compatible Rules runtime or Core Stratagems are absent');
-    console.log('PASS  blood-angels: 15 local + 82 shared units, desktop/iPad + Phone routes');
+    console.log('PASS  blood-angels: 15 local + 84 shared units, desktop/iPad + Phone routes');
     continue;
   }
   if(bookId==='dark-angels'){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','dark-angels-codex-datasheets.en.json'),'utf8'));
     const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),localTitles=new Set(codex.datasheets.map(unit=>entities.normalize(unit.title)));
-    assert(codex.datasheets.length===16,'dark-angels: local Datasheet catalog is incomplete');assert(unitTitles.size===98,'dark-angels: expected 16 local + 82 shared Datasheets');assert([...unitTitles].filter(title=>!localTitles.has(title)).length===82,'dark-angels: shared Space Marines roster inventory changed');assert((content.match(/<section class="content-group detachment"/g)||[]).length===24,'dark-angels: roster must expose 8 local + 16 shared Detachments');assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&related.includes('1st-company-task-force-armour-of-contempt'),'dark-angels: roster or shared Compatible Rules inventory is absent');
-    console.log('PASS  dark-angels: 16 local + 82 shared units, 8 local + 16 shared Detachments');continue;
+    assert(codex.datasheets.length===16,'dark-angels: local Datasheet catalog is incomplete');assert(unitTitles.size===100,'dark-angels: expected 16 local + 84 shared Datasheets');assert([...unitTitles].filter(title=>!localTitles.has(title)).length===84,'dark-angels: shared Space Marines roster inventory changed');assert((content.match(/<section class="content-group detachment"/g)||[]).length===24,'dark-angels: roster must expose 8 local + 16 shared Detachments');assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&related.includes('1st-company-task-force-armour-of-contempt'),'dark-angels: roster or shared Compatible Rules inventory is absent');
+    console.log('PASS  dark-angels: 16 local + 84 shared units, 8 local + 16 shared Detachments');continue;
   }
   const dataPath=path.join(bookRoot,'content',`${bookId}-rules.en.json`);
   const readerPath=path.join(bookRoot,'reader.html');

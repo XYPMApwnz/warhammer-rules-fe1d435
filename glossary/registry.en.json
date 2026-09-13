@@ -71710,6 +71710,37 @@
       "presentation": "atomic",
       "matchLabels": []
     },
+    "space-marines-ability-aerial-assault": {
+      "id": "space-marines-ability-aerial-assault",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Aerial Assault"
+      },
+      "summary": {
+        "en": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+      },
+      "definition": {
+        "en": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-thunderhawk-gunship"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-thunderhawk-gunship",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-ability-ancient-banner": {
       "id": "space-marines-ability-ancient-banner",
       "kind": "datasheet-ability",
@@ -72609,6 +72640,37 @@
       ],
       "mentions": []
     },
+    "space-marines-ability-damaged-1-10-wounds-remaining": {
+      "id": "space-marines-ability-damaged-1-10-wounds-remaining",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Damaged: 1-10 wounds remaining"
+      },
+      "summary": {
+        "en": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "definition": {
+        "en": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-thunderhawk-gunship"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-thunderhawk-gunship",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-ability-damaged-1-4-wounds-remaining": {
       "id": "space-marines-ability-damaged-1-4-wounds-remaining",
       "kind": "datasheet-ability",
@@ -72665,6 +72727,68 @@
         "locator": "unit-land-raider"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-land-raider",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-ability-damaged-1-8-wounds-remaining": {
+      "id": "space-marines-ability-damaged-1-8-wounds-remaining",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Damaged: 1-8 wounds remaining"
+      },
+      "summary": {
+        "en": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "definition": {
+        "en": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-ability-deadly-demise-d6-2": {
+      "id": "space-marines-ability-deadly-demise-d6-2",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Deadly Demise D6+2"
+      },
+      "summary": {
+        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
+      },
+      "definition": {
+        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
       "status": "provisional",
       "sourceRefs": [
         "space-marines"
@@ -74128,6 +74252,37 @@
       ],
       "mentions": []
     },
+    "space-marines-ability-invulnerable-save-3": {
+      "id": "space-marines-ability-invulnerable-save-3",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "*Invulnerable Save"
+      },
+      "summary": {
+        "en": "This model has a 5+ invulnerable save against ranged attacks."
+      },
+      "definition": {
+        "en": "This model has a 5+ invulnerable save against ranged attacks."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-ability-iron-father": {
       "id": "space-marines-ability-iron-father",
       "kind": "datasheet-ability",
@@ -74680,6 +74835,37 @@
         "locator": "unit-assault-intercessor-squad"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-assault-intercessor-squad",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-ability-oath-of-moment-2": {
+      "id": "space-marines-ability-oath-of-moment-2",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Oath of Moment"
+      },
+      "summary": {
+        "en": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target.…"
+      },
+      "definition": {
+        "en": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ■ You can reroll the Hit roll ■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
       "status": "provisional",
       "sourceRefs": [
         "space-marines"
@@ -76081,6 +76267,37 @@
       ],
       "mentions": []
     },
+    "space-marines-ability-suppression-fire-2": {
+      "id": "space-marines-ability-suppression-fire-2",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Suppression Fire"
+      },
+      "summary": {
+        "en": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed.…"
+      },
+      "definition": {
+        "en": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-ability-supreme-commander": {
       "id": "space-marines-ability-supreme-commander",
       "kind": "datasheet-ability",
@@ -76298,6 +76515,37 @@
       ],
       "mentions": []
     },
+    "space-marines-ability-templar-vows": {
+      "id": "space-marines-ability-templar-vows",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Templar Vows"
+      },
+      "summary": {
+        "en": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below.…"
+      },
+      "definition": {
+        "en": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. Abhor the Witch, Destroy the Witch ■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. Accept Any Challenge, No Matter the Odds ■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll Suffer Not the Unclean to Live ■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. Uphold the Honour of the Emperor If this unit has the Infantry keyword: ■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. ■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-ability-tempormortis": {
       "id": "space-marines-ability-tempormortis",
       "kind": "datasheet-ability",
@@ -76416,6 +76664,37 @@
         "locator": "unit-reiver-squad"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-reiver-squad",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-ability-thunderhawk-cluster-bombs": {
+      "id": "space-marines-ability-thunderhawk-cluster-bombs",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Thunderhawk Cluster Bombs"
+      },
+      "summary": {
+        "en": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound."
+      },
+      "definition": {
+        "en": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-thunderhawk-gunship"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-thunderhawk-gunship",
       "status": "provisional",
       "sourceRefs": [
         "space-marines"
@@ -84848,6 +85127,46 @@
       ],
       "mentions": []
     },
+    "space-marines-weapon-astraeus-las-ripper": {
+      "id": "space-marines-weapon-astraeus-las-ripper",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Astraeus las-ripper"
+      },
+      "summary": {
+        "en": "Ranged · 36\" · A 2 · BS 3+ · S 12 · AP -3 · D D6+1"
+      },
+      "definition": {
+        "en": "Ranged · 36\" · A 2 · BS 3+ · S 12 · AP -3 · D D6+1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "36\"",
+          "A": "2",
+          "BS": "3+",
+          "S": "12",
+          "AP": "-3",
+          "D": "D6+1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-weapon-astropathic-blast": {
       "id": "space-marines-weapon-astropathic-blast",
       "kind": "weapon",
@@ -88676,6 +88995,47 @@
       ],
       "mentions": []
     },
+    "space-marines-weapon-hellstrike-missile-battery": {
+      "id": "space-marines-weapon-hellstrike-missile-battery",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Hellstrike missile battery"
+      },
+      "summary": {
+        "en": "Ranged · 72\" · A 4 · BS 3+ · S 8 · AP -2 · D 3 · Anti-FLY 4+"
+      },
+      "definition": {
+        "en": "Ranged · 72\" · A 4 · BS 3+ · S 8 · AP -2 · D 3 · Anti-FLY 4+"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "72\"",
+          "A": "4",
+          "BS": "3+",
+          "S": "8",
+          "AP": "-2",
+          "D": "3",
+          "Abilities": "Anti-FLY 4+"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-thunderhawk-gunship"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-thunderhawk-gunship",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-weapon-hunter-killer-missile": {
       "id": "space-marines-weapon-hunter-killer-missile",
       "kind": "weapon",
@@ -91074,6 +91434,88 @@
         "locator": "unit-tactical-squad"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-tactical-squad",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-weapon-plasma-eradicator-standard": {
+      "id": "space-marines-weapon-plasma-eradicator-standard",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Plasma eradicator - standard"
+      },
+      "summary": {
+        "en": "Ranged · 36\" · A D6 · BS 3+ · S 7 · AP -2 · D 2 · Blast"
+      },
+      "definition": {
+        "en": "Ranged · 36\" · A D6 · BS 3+ · S 7 · AP -2 · D 2 · Blast"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "36\"",
+          "A": "D6",
+          "BS": "3+",
+          "S": "7",
+          "AP": "-2",
+          "D": "2",
+          "Abilities": "Blast"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-weapon-plasma-eradicator-supercharge": {
+      "id": "space-marines-weapon-plasma-eradicator-supercharge",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Plasma eradicator - supercharge"
+      },
+      "summary": {
+        "en": "Ranged · 36\" · A D6 · BS 3+ · S 8 · AP -3 · D 3 · Blast, Hazardous"
+      },
+      "definition": {
+        "en": "Ranged · 36\" · A D6 · BS 3+ · S 8 · AP -3 · D 3 · Blast, Hazardous"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "36\"",
+          "A": "D6",
+          "BS": "3+",
+          "S": "8",
+          "AP": "-3",
+          "D": "3",
+          "Abilities": "Blast, Hazardous"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
       "status": "provisional",
       "sourceRefs": [
         "space-marines"
@@ -93808,6 +94250,47 @@
       ],
       "mentions": []
     },
+    "space-marines-weapon-thunderhawk-heavy-cannon": {
+      "id": "space-marines-weapon-thunderhawk-heavy-cannon",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Thunderhawk heavy cannon"
+      },
+      "summary": {
+        "en": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -2 · D 3 · Blast"
+      },
+      "definition": {
+        "en": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -2 · D 3 · Blast"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "48\"",
+          "A": "D6+6",
+          "BS": "3+",
+          "S": "10",
+          "AP": "-2",
+          "D": "3",
+          "Abilities": "Blast"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-thunderhawk-gunship"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-thunderhawk-gunship",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-weapon-thunderstrike-las-talon": {
       "id": "space-marines-weapon-thunderstrike-las-talon",
       "kind": "weapon",
@@ -93842,6 +94325,47 @@
         "locator": "unit-storm-speeder-thunderstrike"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-storm-speeder-thunderstrike",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-weapon-turbo-laser-destructor": {
+      "id": "space-marines-weapon-turbo-laser-destructor",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Turbo-laser destructor"
+      },
+      "summary": {
+        "en": "Ranged · 96\" · A D3+1 · BS 3+ · S 20 · AP -4 · D D6+6 · Blast"
+      },
+      "definition": {
+        "en": "Ranged · 96\" · A D3+1 · BS 3+ · S 20 · AP -4 · D D6+6 · Blast"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "96\"",
+          "A": "D3+1",
+          "BS": "3+",
+          "S": "20",
+          "AP": "-4",
+          "D": "D6+6",
+          "Abilities": "Blast"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-thunderhawk-gunship"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-thunderhawk-gunship",
       "status": "provisional",
       "sourceRefs": [
         "space-marines"
@@ -94621,6 +95145,47 @@
         "locator": "unit-terminator-assault-squad"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-terminator-assault-squad",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-weapon-twin-macro-accelerator-cannon": {
+      "id": "space-marines-weapon-twin-macro-accelerator-cannon",
+      "kind": "weapon",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Twin macro-accelerator cannon"
+      },
+      "summary": {
+        "en": "Ranged · 72\" · A 12 · BS 3+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked"
+      },
+      "definition": {
+        "en": "Ranged · 72\" · A 12 · BS 3+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "72\"",
+          "A": "12",
+          "BS": "3+",
+          "S": "9",
+          "AP": "-1",
+          "D": "3",
+          "Abilities": "Sustained Hits 1, Twin-linked"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astraeus"
+      },
+      "fullRulePath": "books/space-marines/reader.html#unit-astraeus",
       "status": "provisional",
       "sourceRefs": [
         "space-marines"

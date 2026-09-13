@@ -2019,7 +2019,8 @@
           "unit-predator-annihilator",
           "unit-predator-destructor",
           "unit-vindicator",
-          "unit-whirlwind"
+          "unit-whirlwind",
+          "unit-astraeus"
         ]
       }
     },
@@ -3473,7 +3474,8 @@
           "unit-gladiator-lancer",
           "unit-gladiator-reaper",
           "unit-gladiator-valiant",
-          "unit-repulsor-executioner"
+          "unit-repulsor-executioner",
+          "unit-astraeus"
         ]
       }
     },
@@ -3517,7 +3519,9 @@
           "unit-repulsor-executioner",
           "unit-stormhawk-interceptor",
           "unit-stormraven-gunship",
-          "unit-stormtalon-gunship"
+          "unit-stormtalon-gunship",
+          "unit-astraeus",
+          "unit-thunderhawk-gunship"
         ]
       }
     },
@@ -3534,7 +3538,8 @@
           "unit-dreadnought",
           "unit-repulsor",
           "unit-stormraven-gunship",
-          "unit-stormtalon-gunship"
+          "unit-stormtalon-gunship",
+          "unit-astraeus"
         ]
       }
     },
@@ -5557,7 +5562,8 @@
         "statline": "predator-annihilator-profile",
         "units": [
           "unit-predator-annihilator",
-          "unit-predator-destructor"
+          "unit-predator-destructor",
+          "unit-thunderhawk-gunship"
         ]
       }
     },
@@ -5708,7 +5714,9 @@
         "units": [
           "unit-repulsor",
           "unit-repulsor-executioner",
-          "unit-stormraven-gunship"
+          "unit-stormraven-gunship",
+          "unit-astraeus",
+          "unit-thunderhawk-gunship"
         ]
       }
     },
@@ -6085,6 +6093,201 @@
         "statline": "whirlwind-profile",
         "units": [
           "unit-whirlwind"
+        ]
+      }
+    },
+    "space-marines-ability-suppression-fire-2": {
+      "termId": "space-marines-ability-suppression-fire-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-suppression-fire-2",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus"
+        ]
+      }
+    },
+    "space-marines-ability-invulnerable-save-3": {
+      "termId": "space-marines-ability-invulnerable-save-3",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-invulnerable-save-3",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus"
+        ]
+      }
+    },
+    "space-marines-ability-damaged-1-8-wounds-remaining": {
+      "termId": "space-marines-ability-damaged-1-8-wounds-remaining",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-damaged-1-8-wounds-remaining",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus"
+        ]
+      }
+    },
+    "space-marines-ability-deadly-demise-d6-2": {
+      "termId": "space-marines-ability-deadly-demise-d6-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-deadly-demise-d6-2",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus",
+          "unit-thunderhawk-gunship"
+        ]
+      }
+    },
+    "space-marines-ability-oath-of-moment-2": {
+      "termId": "space-marines-ability-oath-of-moment-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-oath-of-moment-2",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus",
+          "unit-thunderhawk-gunship"
+        ]
+      }
+    },
+    "space-marines-ability-templar-vows": {
+      "termId": "space-marines-ability-templar-vows",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-templar-vows",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus",
+          "unit-thunderhawk-gunship"
+        ]
+      }
+    },
+    "space-marines-weapon-twin-macro-accelerator-cannon": {
+      "termId": "space-marines-weapon-twin-macro-accelerator-cannon",
+      "navigation": {
+        "glossary": "glossary-space-marines-weapon-twin-macro-accelerator-cannon",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus"
+        ]
+      }
+    },
+    "space-marines-weapon-astraeus-las-ripper": {
+      "termId": "space-marines-weapon-astraeus-las-ripper",
+      "navigation": {
+        "glossary": "glossary-space-marines-weapon-astraeus-las-ripper",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus"
+        ]
+      }
+    },
+    "space-marines-weapon-plasma-eradicator-standard": {
+      "termId": "space-marines-weapon-plasma-eradicator-standard",
+      "navigation": {
+        "glossary": "glossary-space-marines-weapon-plasma-eradicator-standard",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus"
+        ]
+      }
+    },
+    "space-marines-weapon-plasma-eradicator-supercharge": {
+      "termId": "space-marines-weapon-plasma-eradicator-supercharge",
+      "navigation": {
+        "glossary": "glossary-space-marines-weapon-plasma-eradicator-supercharge",
+        "rule": "unit-astraeus",
+        "datasheet": "unit-astraeus",
+        "statline": "astraeus-profile",
+        "units": [
+          "unit-astraeus"
+        ]
+      }
+    },
+    "space-marines-ability-aerial-assault": {
+      "termId": "space-marines-ability-aerial-assault",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-aerial-assault",
+        "rule": "unit-thunderhawk-gunship",
+        "datasheet": "unit-thunderhawk-gunship",
+        "statline": "thunderhawk-gunship-profile",
+        "units": [
+          "unit-thunderhawk-gunship"
+        ]
+      }
+    },
+    "space-marines-ability-damaged-1-10-wounds-remaining": {
+      "termId": "space-marines-ability-damaged-1-10-wounds-remaining",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-damaged-1-10-wounds-remaining",
+        "rule": "unit-thunderhawk-gunship",
+        "datasheet": "unit-thunderhawk-gunship",
+        "statline": "thunderhawk-gunship-profile",
+        "units": [
+          "unit-thunderhawk-gunship"
+        ]
+      }
+    },
+    "space-marines-ability-thunderhawk-cluster-bombs": {
+      "termId": "space-marines-ability-thunderhawk-cluster-bombs",
+      "navigation": {
+        "glossary": "glossary-space-marines-ability-thunderhawk-cluster-bombs",
+        "rule": "unit-thunderhawk-gunship",
+        "datasheet": "unit-thunderhawk-gunship",
+        "statline": "thunderhawk-gunship-profile",
+        "units": [
+          "unit-thunderhawk-gunship"
+        ]
+      }
+    },
+    "space-marines-weapon-hellstrike-missile-battery": {
+      "termId": "space-marines-weapon-hellstrike-missile-battery",
+      "navigation": {
+        "glossary": "glossary-space-marines-weapon-hellstrike-missile-battery",
+        "rule": "unit-thunderhawk-gunship",
+        "datasheet": "unit-thunderhawk-gunship",
+        "statline": "thunderhawk-gunship-profile",
+        "units": [
+          "unit-thunderhawk-gunship"
+        ]
+      }
+    },
+    "space-marines-weapon-thunderhawk-heavy-cannon": {
+      "termId": "space-marines-weapon-thunderhawk-heavy-cannon",
+      "navigation": {
+        "glossary": "glossary-space-marines-weapon-thunderhawk-heavy-cannon",
+        "rule": "unit-thunderhawk-gunship",
+        "datasheet": "unit-thunderhawk-gunship",
+        "statline": "thunderhawk-gunship-profile",
+        "units": [
+          "unit-thunderhawk-gunship"
+        ]
+      }
+    },
+    "space-marines-weapon-turbo-laser-destructor": {
+      "termId": "space-marines-weapon-turbo-laser-destructor",
+      "navigation": {
+        "glossary": "glossary-space-marines-weapon-turbo-laser-destructor",
+        "rule": "unit-thunderhawk-gunship",
+        "datasheet": "unit-thunderhawk-gunship",
+        "statline": "thunderhawk-gunship-profile",
+        "units": [
+          "unit-thunderhawk-gunship"
         ]
       }
     },

@@ -144,7 +144,7 @@ try{
       darkAngelsCard.click()
     ]);
     assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels Desktop Start lost its artwork');
-    assert.equal(await page.locator('.unit-card').count(),98,'Dark Angels reader must expose 16 local and 82 shared datasheets');
+    assert.equal(await page.locator('.unit-card').count(),100,'Dark Angels reader must expose 16 local and 84 shared datasheets');
     assert.equal(await page.locator('#tocTree [data-nav-id="datasheets-dark-angels"], #tocTree [data-nav-id="datasheets-space-marines"]').count(),0,'Dark Angels reader restored obsolete ownership branches');
     assert.equal(await page.locator('#tocTree [data-nav-target="unit-belial"]').count(),1,'Dark Angels unified navigation lost a local Datasheet');
     assert.equal(await page.locator('#tocTree [data-nav-target="unit-hellblaster-squad"]').count(),1,'Dark Angels unified navigation lost a shared Datasheet');

@@ -4,7 +4,7 @@ import vm from 'node:vm';
 
 const load=book=>{const context={window:{}};vm.createContext(context);vm.runInContext(fs.readFileSync(new URL(`../../${book}/scripts/roster-data.js`,import.meta.url),'utf8'),context);return context.window;};
 const books={sm:load('space-marines'),da:load('dark-angels'),ba:load('blood-angels')},catalog=books.ba.WH_BOOK_ROSTER_CATALOG,local=catalog.units.filter(item=>item.sourceBookId==='blood-angels'),inherited=catalog.units.filter(item=>item.sourceBookId==='space-marines');
-assert.equal(catalog.units.length,97);assert.equal(local.length,15);assert.equal(inherited.length,82);assert.equal(catalog.detachments.length,24);
+assert.equal(catalog.units.length,99);assert.equal(local.length,15);assert.equal(inherited.length,84);assert.equal(catalog.detachments.length,24);
 const abilityIds=new Set(local.flatMap(unit=>(unit.gameSelections?.abilities||[]).map(item=>item.id)).filter(id=>id.startsWith('blood-angels-ability-'))),wargearIds=new Set(local.flatMap(unit=>(unit.gameSelections?.wargearAbilities||[]).map(item=>item.id)));
 assert.equal(abilityIds.size,26);assert.deepEqual([...wargearIds],['unit-sanguinary-guard-wargear-ability-sanguinary-banner']);
 const localDetachments=catalog.detachments.filter(item=>item.sourceBookId==='blood-angels');assert.equal(localDetachments.length,8);assert.equal(new Set(localDetachments.flatMap(item=>item.detachmentRuleIds||[])).size,8);assert.ok(localDetachments.every(item=>(item.detachmentRuleIds||[]).length===1));
@@ -15,4 +15,4 @@ const unitById=new Map(catalog.units.map(unit=>[unit.id,unit])),classes={generic
 const excluded=new Set(books.sm.WH_BOOK_ROSTER_CATALOG.units.map(unit=>unit.id));for(const unit of inherited)excluded.delete(unit.id);assert.equal(excluded.size,19);
 const storm=book=>{const context={window:{}};vm.createContext(context);vm.runInContext(fs.readFileSync(new URL(`../../${book}/scripts/target-data.js`,import.meta.url),'utf8'),context);const html=JSON.stringify(context.window.WH_ARMY_BOOK_TARGETS.html);return Number(html.match(/Stormlance Task Force<span class=\\"detachment-dp\\">(\d+)DP/)?.[1]);};assert.notEqual(storm('space-marines'),2);assert.notEqual(storm('dark-angels'),2);assert.equal(storm('blood-angels'),2);
 const provider=fs.readFileSync(new URL('../../extensions/book-roster-enhancement-providers.js',import.meta.url),'utf8');assert.doesNotMatch(provider,/const baEffects|applyBaEffect/);assert.match(provider,/baBodyguardAbilitySemantics/);assert.match(provider,/baAttachedWargearSemantics/);
-console.log('Blood Angels overlay conformance QA passed: 97=82+15, 27 Ability/wargear identities, 27 relation additions, 26 Enhancements, 8 Detachment Rules and Stormlance override.');
+console.log('Blood Angels overlay conformance QA passed: 99=84+15, 27 Ability/wargear identities, 27 relation additions, 26 Enhancements, 8 Detachment Rules and Stormlance override.');

@@ -14735,17 +14735,360 @@
       }
     }
   ],
-  "imperialArmour": [],
+  "imperialArmour": [
+    {
+      "id": "unit-astraeus",
+      "title": "Astraeus",
+      "status": "Current",
+      "sourceLayer": "imperial-armour",
+      "category": "Vehicle",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 525,
+          "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2+ unit: 1 models",
+          "value": 575
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Astraeus",
+          "stats": {
+            "M": "10\"",
+            "T": "12",
+            "Sv": "2+",
+            "W": "24",
+            "Ld": "6+",
+            "OC": "8",
+            "Invulnerable": "5+*"
+          }
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Twin macro-accelerator cannon",
+          "mode": "ranged",
+          "range": "72\"",
+          "a": "12",
+          "skill": "3+",
+          "s": "9",
+          "ap": "-1",
+          "d": "3",
+          "abilities": "Sustained Hits 1, Twin-linked"
+        },
+        {
+          "name": "Twin heavy bolter",
+          "mode": "ranged",
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "abilities": "Sustained Hits 1, Twin-linked"
+        },
+        {
+          "name": "Twin lascannon",
+          "mode": "ranged",
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "abilities": "Twin-linked"
+        },
+        {
+          "name": "Astraeus las-ripper",
+          "mode": "ranged",
+          "range": "36\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "abilities": ""
+        },
+        {
+          "name": "➤ Plasma eradicator - standard",
+          "mode": "ranged",
+          "range": "36\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "7",
+          "ap": "-2",
+          "d": "2",
+          "abilities": "Blast"
+        },
+        {
+          "name": "➤ Plasma eradicator - supercharge",
+          "mode": "ranged",
+          "range": "36\"",
+          "a": "D6",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-3",
+          "d": "3",
+          "abilities": "Blast, Hazardous"
+        },
+        {
+          "name": "Armoured hull",
+          "mode": "melee",
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "8",
+          "ap": "0",
+          "d": "1",
+          "abilities": ""
+        },
+        {
+          "name": "Ironhail Heavy Stubber",
+          "mode": "ranged",
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "abilities": "Rapid Fire 3"
+        },
+        {
+          "name": "Storm bolter",
+          "mode": "ranged",
+          "range": "24\"",
+          "a": "2",
+          "skill": "3+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "abilities": "Rapid Fire 2"
+        }
+      ],
+      "abilities": [
+        {
+          "title": "Suppression Fire",
+          "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "title": "*Invulnerable Save",
+          "text": "This model has a 5+ invulnerable save against ranged attacks."
+        },
+        {
+          "title": "Damaged: 1-8 wounds remaining",
+          "text": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "title": "Deadly Demise D6+2",
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "title": "Oath of Moment",
+          "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well."
+        },
+        {
+          "title": "Templar Vows",
+          "text": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. \n\n Abhor the Witch, Destroy the Witch \n■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. \n\n Accept Any Challenge, No Matter the Odds \n■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll\n\n Suffer Not the Unclean to Live \n■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. \n\n Uphold the Honour of the Emperor \nIf this unit has the Infantry keyword:\n■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. \n■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced."
+        }
+      ],
+      "wargearAbilities": [],
+      "keywords": [
+        "Adeptus Astartes",
+        "Vehicle",
+        "Titanic",
+        "Imperium",
+        "Astraeus"
+      ],
+      "composition": [
+        {
+          "name": "Astraeus",
+          "min": 1,
+          "max": 1,
+          "models": [
+            "Astraeus"
+          ]
+        }
+      ],
+      "paidWargear": [],
+      "relations": {
+        "leader": [],
+        "support": [],
+        "attachedUnit": [],
+        "transport": []
+      }
+    },
+    {
+      "id": "unit-thunderhawk-gunship",
+      "title": "Thunderhawk Gunship",
+      "status": "Current",
+      "sourceLayer": "imperial-armour",
+      "category": "Vehicle",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 840,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Thunderhawk Gunship",
+          "stats": {
+            "M": "20+\"",
+            "T": "12",
+            "Sv": "2+",
+            "W": "30",
+            "Ld": "6+",
+            "OC": "0",
+            "Invulnerable": ""
+          }
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Hellstrike missile battery",
+          "mode": "ranged",
+          "range": "72\"",
+          "a": "4",
+          "skill": "3+",
+          "s": "8",
+          "ap": "-2",
+          "d": "3",
+          "abilities": "Anti-FLY 4+"
+        },
+        {
+          "name": "Thunderhawk heavy cannon",
+          "mode": "ranged",
+          "range": "48\"",
+          "a": "D6+6",
+          "skill": "3+",
+          "s": "10",
+          "ap": "-2",
+          "d": "3",
+          "abilities": "Blast"
+        },
+        {
+          "name": "Turbo-laser destructor",
+          "mode": "ranged",
+          "range": "96\"",
+          "a": "D3+1",
+          "skill": "3+",
+          "s": "20",
+          "ap": "-4",
+          "d": "D6+6",
+          "abilities": "Blast"
+        },
+        {
+          "name": "Armoured hull",
+          "mode": "melee",
+          "range": "Melee",
+          "a": "6",
+          "skill": "4+",
+          "s": "8",
+          "ap": "0",
+          "d": "1",
+          "abilities": ""
+        },
+        {
+          "name": "Lascannon",
+          "mode": "ranged",
+          "range": "48\"",
+          "a": "1",
+          "skill": "3+",
+          "s": "12",
+          "ap": "-3",
+          "d": "D6+1",
+          "abilities": ""
+        },
+        {
+          "name": "Twin heavy bolter",
+          "mode": "ranged",
+          "range": "36\"",
+          "a": "3",
+          "skill": "3+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "abilities": "Sustained Hits 1, Twin-linked"
+        }
+      ],
+      "abilities": [
+        {
+          "title": "Aerial Assault",
+          "text": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+        },
+        {
+          "title": "Damaged: 1-10 wounds remaining",
+          "text": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        {
+          "title": "Deadly Demise D6+2",
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+        },
+        {
+          "title": "Hover",
+          "text": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance."
+        },
+        {
+          "title": "Oath of Moment",
+          "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well."
+        },
+        {
+          "title": "Templar Vows",
+          "text": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. \n\n Abhor the Witch, Destroy the Witch \n■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. \n\n Accept Any Challenge, No Matter the Odds \n■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll\n\n Suffer Not the Unclean to Live \n■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. \n\n Uphold the Honour of the Emperor \nIf this unit has the Infantry keyword:\n■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. \n■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced."
+        }
+      ],
+      "wargearAbilities": [
+        {
+          "title": "Thunderhawk Cluster Bombs",
+          "text": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound."
+        }
+      ],
+      "keywords": [
+        "Adeptus Astartes",
+        "Vehicle",
+        "Titanic",
+        "Fly",
+        "Transport",
+        "Imperium",
+        "Thunderhawk Gunship"
+      ],
+      "composition": [
+        {
+          "name": "Thunderhawk Gunship",
+          "min": 1,
+          "max": 1,
+          "models": [
+            "Thunderhawk Gunship"
+          ]
+        }
+      ],
+      "paidWargear": [],
+      "relations": {
+        "leader": [],
+        "support": [],
+        "attachedUnit": [],
+        "transport": [
+          "This model has a transport capacity of 30 ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED models. Each JUMP PACK, WULFEN, GRAVIS or TERMINATOR model takes up the space of 2 models. Each CENTURION model takes up the space of 3 models. Each MOUNTED model takes up the space of 4 models."
+        ]
+      }
+    }
+  ],
   "legends": [],
   "audit": {
     "rootEntries": 162,
     "excludedEntries": 6,
     "datasheets": 101,
-    "imperialArmour": 0,
+    "imperialArmour": 2,
     "imperialArmourLegends": 0,
     "currentImperialArmour": 2,
     "legends": 0,
-    "excludedImperialArmour": 2,
+    "excludedImperialArmour": 0,
     "excludedLegends": 72
   }
 }

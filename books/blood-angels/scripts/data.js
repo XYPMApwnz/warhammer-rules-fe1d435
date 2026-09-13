@@ -2320,7 +2320,8 @@ window.DG_TERMS={
       "unit-predator-annihilator",
       "unit-predator-destructor",
       "unit-vindicator",
-      "unit-whirlwind"
+      "unit-whirlwind",
+      "unit-astraeus"
     ],
     "datasheet": "unit-tactical-squad",
     "statline": "tactical-squad-profile"
@@ -3888,7 +3889,8 @@ window.DG_TERMS={
       "unit-gladiator-lancer",
       "unit-gladiator-reaper",
       "unit-gladiator-valiant",
-      "unit-repulsor-executioner"
+      "unit-repulsor-executioner",
+      "unit-astraeus"
     ],
     "datasheet": "unit-impulsor",
     "statline": "impulsor-profile"
@@ -3935,7 +3937,9 @@ window.DG_TERMS={
       "unit-repulsor-executioner",
       "unit-stormhawk-interceptor",
       "unit-stormraven-gunship",
-      "unit-stormtalon-gunship"
+      "unit-stormtalon-gunship",
+      "unit-astraeus",
+      "unit-thunderhawk-gunship"
     ],
     "datasheet": "unit-razorback",
     "statline": "razorback-profile"
@@ -3953,7 +3957,8 @@ window.DG_TERMS={
       "unit-dreadnought",
       "unit-repulsor",
       "unit-stormraven-gunship",
-      "unit-stormtalon-gunship"
+      "unit-stormtalon-gunship",
+      "unit-astraeus"
     ],
     "datasheet": "unit-razorback",
     "statline": "razorback-profile"
@@ -6139,7 +6144,8 @@ window.DG_TERMS={
     "rule": "unit-predator-annihilator",
     "units": [
       "unit-predator-annihilator",
-      "unit-predator-destructor"
+      "unit-predator-destructor",
+      "unit-thunderhawk-gunship"
     ],
     "datasheet": "unit-predator-annihilator",
     "statline": "predator-annihilator-profile"
@@ -6302,7 +6308,9 @@ window.DG_TERMS={
     "units": [
       "unit-repulsor",
       "unit-repulsor-executioner",
-      "unit-stormraven-gunship"
+      "unit-stormraven-gunship",
+      "unit-astraeus",
+      "unit-thunderhawk-gunship"
     ],
     "datasheet": "unit-repulsor",
     "statline": "repulsor-profile"
@@ -6713,6 +6721,217 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-whirlwind",
     "statline": "whirlwind-profile"
+  },
+  "space-marines-ability-suppression-fire-2": {
+    "id": "space-marines-ability-suppression-fire-2",
+    "title": "Suppression Fire",
+    "summary": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+    "full": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-space-marines-ability-suppression-fire-2",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-ability-invulnerable-save-3": {
+    "id": "space-marines-ability-invulnerable-save-3",
+    "title": "*Invulnerable Save",
+    "summary": "This model has a 5+ invulnerable save against ranged attacks.",
+    "full": "This model has a 5+ invulnerable save against ranged attacks.",
+    "glossary": "glossary-space-marines-ability-invulnerable-save-3",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-ability-damaged-1-8-wounds-remaining": {
+    "id": "space-marines-ability-damaged-1-8-wounds-remaining",
+    "title": "Damaged: 1-8 wounds remaining",
+    "summary": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+    "full": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-space-marines-ability-damaged-1-8-wounds-remaining",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-ability-deadly-demise-d6-2": {
+    "id": "space-marines-ability-deadly-demise-d6-2",
+    "title": "Deadly Demise D6+2",
+    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+    "glossary": "glossary-space-marines-ability-deadly-demise-d6-2",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus",
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-ability-oath-of-moment-2": {
+    "id": "space-marines-ability-oath-of-moment-2",
+    "title": "Oath of Moment",
+    "summary": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ■ You can reroll the Hit roll ■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+    "full": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ■ You can reroll the Hit roll ■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+    "glossary": "glossary-space-marines-ability-oath-of-moment-2",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus",
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-ability-templar-vows": {
+    "id": "space-marines-ability-templar-vows",
+    "title": "Templar Vows",
+    "summary": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. Abhor the Witch, Destroy the Witch ■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. Accept Any Challenge, No Matter the Odds ■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll Suffer Not the Unclean to Live ■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. Uphold the Honour of the Emperor If this unit has the Infantry keyword: ■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. ■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced.",
+    "full": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. Abhor the Witch, Destroy the Witch ■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. Accept Any Challenge, No Matter the Odds ■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll Suffer Not the Unclean to Live ■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. Uphold the Honour of the Emperor If this unit has the Infantry keyword: ■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. ■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced.",
+    "glossary": "glossary-space-marines-ability-templar-vows",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus",
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-weapon-twin-macro-accelerator-cannon": {
+    "id": "space-marines-weapon-twin-macro-accelerator-cannon",
+    "title": "Twin macro-accelerator cannon",
+    "summary": "Ranged · 72\" · A 12 · BS 3+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked",
+    "full": "Ranged · 72\" · A 12 · BS 3+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked",
+    "glossary": "glossary-space-marines-weapon-twin-macro-accelerator-cannon",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-weapon-astraeus-las-ripper": {
+    "id": "space-marines-weapon-astraeus-las-ripper",
+    "title": "Astraeus las-ripper",
+    "summary": "Ranged · 36\" · A 2 · BS 3+ · S 12 · AP -3 · D D6+1",
+    "full": "Ranged · 36\" · A 2 · BS 3+ · S 12 · AP -3 · D D6+1",
+    "glossary": "glossary-space-marines-weapon-astraeus-las-ripper",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-weapon-plasma-eradicator-standard": {
+    "id": "space-marines-weapon-plasma-eradicator-standard",
+    "title": "➤ Plasma eradicator - standard",
+    "summary": "Ranged · 36\" · A D6 · BS 3+ · S 7 · AP -2 · D 2 · Blast",
+    "full": "Ranged · 36\" · A D6 · BS 3+ · S 7 · AP -2 · D 2 · Blast",
+    "glossary": "glossary-space-marines-weapon-plasma-eradicator-standard",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-weapon-plasma-eradicator-supercharge": {
+    "id": "space-marines-weapon-plasma-eradicator-supercharge",
+    "title": "➤ Plasma eradicator - supercharge",
+    "summary": "Ranged · 36\" · A D6 · BS 3+ · S 8 · AP -3 · D 3 · Blast, Hazardous",
+    "full": "Ranged · 36\" · A D6 · BS 3+ · S 8 · AP -3 · D 3 · Blast, Hazardous",
+    "glossary": "glossary-space-marines-weapon-plasma-eradicator-supercharge",
+    "rule": "unit-astraeus",
+    "units": [
+      "unit-astraeus"
+    ],
+    "datasheet": "unit-astraeus",
+    "statline": "astraeus-profile"
+  },
+  "space-marines-ability-aerial-assault": {
+    "id": "space-marines-ability-aerial-assault",
+    "title": "Aerial Assault",
+    "summary": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+    "full": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+    "glossary": "glossary-space-marines-ability-aerial-assault",
+    "rule": "unit-thunderhawk-gunship",
+    "units": [
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-thunderhawk-gunship",
+    "statline": "thunderhawk-gunship-profile"
+  },
+  "space-marines-ability-damaged-1-10-wounds-remaining": {
+    "id": "space-marines-ability-damaged-1-10-wounds-remaining",
+    "title": "Damaged: 1-10 wounds remaining",
+    "summary": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "full": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-space-marines-ability-damaged-1-10-wounds-remaining",
+    "rule": "unit-thunderhawk-gunship",
+    "units": [
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-thunderhawk-gunship",
+    "statline": "thunderhawk-gunship-profile"
+  },
+  "space-marines-ability-thunderhawk-cluster-bombs": {
+    "id": "space-marines-ability-thunderhawk-cluster-bombs",
+    "title": "Thunderhawk Cluster Bombs",
+    "summary": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
+    "full": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
+    "glossary": "glossary-space-marines-ability-thunderhawk-cluster-bombs",
+    "rule": "unit-thunderhawk-gunship",
+    "units": [
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-thunderhawk-gunship",
+    "statline": "thunderhawk-gunship-profile"
+  },
+  "space-marines-weapon-hellstrike-missile-battery": {
+    "id": "space-marines-weapon-hellstrike-missile-battery",
+    "title": "Hellstrike missile battery",
+    "summary": "Ranged · 72\" · A 4 · BS 3+ · S 8 · AP -2 · D 3 · Anti-FLY 4+",
+    "full": "Ranged · 72\" · A 4 · BS 3+ · S 8 · AP -2 · D 3 · Anti-FLY 4+",
+    "glossary": "glossary-space-marines-weapon-hellstrike-missile-battery",
+    "rule": "unit-thunderhawk-gunship",
+    "units": [
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-thunderhawk-gunship",
+    "statline": "thunderhawk-gunship-profile"
+  },
+  "space-marines-weapon-thunderhawk-heavy-cannon": {
+    "id": "space-marines-weapon-thunderhawk-heavy-cannon",
+    "title": "Thunderhawk heavy cannon",
+    "summary": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -2 · D 3 · Blast",
+    "full": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -2 · D 3 · Blast",
+    "glossary": "glossary-space-marines-weapon-thunderhawk-heavy-cannon",
+    "rule": "unit-thunderhawk-gunship",
+    "units": [
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-thunderhawk-gunship",
+    "statline": "thunderhawk-gunship-profile"
+  },
+  "space-marines-weapon-turbo-laser-destructor": {
+    "id": "space-marines-weapon-turbo-laser-destructor",
+    "title": "Turbo-laser destructor",
+    "summary": "Ranged · 96\" · A D3+1 · BS 3+ · S 20 · AP -4 · D D6+6 · Blast",
+    "full": "Ranged · 96\" · A D3+1 · BS 3+ · S 20 · AP -4 · D D6+6 · Blast",
+    "glossary": "glossary-space-marines-weapon-turbo-laser-destructor",
+    "rule": "unit-thunderhawk-gunship",
+    "units": [
+      "unit-thunderhawk-gunship"
+    ],
+    "datasheet": "unit-thunderhawk-gunship",
+    "statline": "thunderhawk-gunship-profile"
   },
   "blood-angels-ability-rites-of-battle": {
     "id": "blood-angels-ability-rites-of-battle",

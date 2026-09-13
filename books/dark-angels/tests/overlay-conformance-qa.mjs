@@ -15,9 +15,9 @@ const codex=readJson('content/dark-angels-codex-datasheets.en.json');
 const related=readJson('content/dark-angels-related-rules.en.json');
 const provider=fs.readFileSync(path.join(repo,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
 
-assert.equal(catalog.units.length,98,'effective DA Datasheet count');
+assert.equal(catalog.units.length,100,'effective DA Datasheet count');
 const localUnitIds=new Set(codex.datasheets.map(unit=>unit.id));
-assert.equal(catalog.units.filter(unit=>!localUnitIds.has(unit.id)).length,82,'inherited SM Datasheet count');
+assert.equal(catalog.units.filter(unit=>!localUnitIds.has(unit.id)).length,84,'inherited SM Datasheet count');
 assert.equal(catalog.units.filter(unit=>localUnitIds.has(unit.id)).length,16,'DA-local Datasheet count');
 assert.equal(catalog.detachments.length,24,'effective Detachment count');
 assert.equal(catalog.detachmentRules.length,24,'all local and inherited Detachment Rules must be canonical');
@@ -62,4 +62,4 @@ assert.equal(localWeaponIds.size,68,'current generated DA-local unit-qualified w
 const localWargearIds=new Set(catalog.units.filter(unit=>localUnitIds.has(unit.id)).flatMap(unit=>unit.gameSelections.wargearAbilities.map(ability=>ability.id)));
 assert.equal(localWargearIds.size,3,'current generated DA-local selected-wargear identity surface');
 
-console.log('Dark Angels overlay conformance QA passed: 98=82+16, 26 local Enhancements, 24 Detachment Rules, exact Ezekiel and chapter keyword overlays.');
+console.log('Dark Angels overlay conformance QA passed: 100=84+16, 26 local Enhancements, 24 Detachment Rules, exact Ezekiel and chapter keyword overlays.');

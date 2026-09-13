@@ -12,7 +12,7 @@ const books={
   'chaos-space-marines':{pages:102,detachments:17,updates:4,faqs:15,datasheets:54,imperialArmour:0,legends:53,units:107,enhancements:62,flagship:'Abaddon the Despoiler'},
   orks:{pages:87,detachments:7,updates:42,faqs:5,datasheets:57,imperialArmour:1,legends:30,units:88,enhancements:44,flagship:'Ghazghkull Thraka'},
   'emperors-children':{pages:10,detachments:4,updates:17,faqs:3,datasheets:23,imperialArmour:0,legends:0,units:23,enhancements:34,flagship:'Fulgrim'},
-  'space-marines':{pages:219,detachments:16,updates:5,faqs:14,datasheets:101,imperialArmour:0,legends:0,units:101,enhancements:87,flagship:'Intercessor Squad'},
+  'space-marines':{pages:219,detachments:16,updates:5,faqs:14,datasheets:101,imperialArmour:2,legends:0,units:103,enhancements:87,flagship:'Intercessor Squad'},
   'dark-angels':{pages:17,detachments:5,updates:4,faqs:1,datasheets:16,imperialArmour:0,legends:3,units:19,enhancements:26,flagship:"Lion El'Jonson"}
 };
 
@@ -240,7 +240,8 @@ const smCodex=read('books/space-marines/content/space-marines-codex-datasheets.e
 const compatibilityKeywords=unit=>smConfig.unitCompatibleChapterKeywords?.[unit.id]||[];
 const inclusionKeywords=unit=>[...(unit.keywords||[]),...compatibilityKeywords(unit)];
 const intrinsicKeywordMatches=(unit,keyword)=>(unit.keywords||[]).some(value=>value.toUpperCase()===keyword);
-const smGeneric=smCodex.datasheets.filter(unit=>!inclusionKeywords(unit).some(keyword=>chapterKeywords.has(keyword.toUpperCase())));
+const smCurrent=[...smCodex.datasheets,...smCodex.imperialArmour];
+const smGeneric=smCurrent.filter(unit=>!inclusionKeywords(unit).some(keyword=>chapterKeywords.has(keyword.toUpperCase())));
 const pedro=smCodex.datasheets.find(unit=>unit.id==='unit-pedro-kantor');
 expect(Boolean(pedro),'space-marines: Pedro Kantor source datasheet missing');
 expect(!intrinsicKeywordMatches(pedro,'IMPERIAL FISTS'),'space-marines: Pedro Kantor must not have intrinsic IMPERIAL FISTS');
@@ -253,17 +254,17 @@ expect(intrinsicKeywordMatches(lysander,'IMPERIAL FISTS'),'space-marines: Darnat
 expect(compatibilityKeywords(lysander).length===0,'space-marines: Darnath Lysander must not require compatibility metadata');
 expect(!smGeneric.includes(lysander),'dark-angels: intrinsic IMPERIAL FISTS units must remain excluded');
 expect(smCodex.datasheets.filter(unit=>intrinsicKeywordMatches(unit,'CRIMSON FISTS')).every(unit=>unit.id==='unit-pedro-kantor'),'space-marines: CRIMSON FISTS leaked beyond Pedro Kantor');
-expect(smCodex.datasheets.length-smGeneric.length===19,'dark-angels: expected 19 source-keyworded other-Chapter Space Marines exclusions');
-expect(smGeneric.length===82,'dark-angels: expected 82 generic Space Marines dependency candidates');
+expect(smCurrent.length-smGeneric.length===19,'dark-angels: expected 19 source-keyworded other-Chapter Space Marines exclusions');
+expect(smGeneric.length===84,'dark-angels: expected 84 generic Space Marines dependency candidates');
 const daReaderUnitIds=[...daReader.matchAll(/<article class="unit-card[^>]* id="([^"]+)"/g)].map(match=>match[1]);
-expect(daReaderUnitIds.length===98,'dark-angels: reader must render 16 local and 82 shared datasheets');
-expect(new Set(daReaderUnitIds).size===98,'dark-angels: reader contains duplicate canonical datasheet IDs');
+expect(daReaderUnitIds.length===100,'dark-angels: reader must render 16 local and 84 shared datasheets');
+expect(new Set(daReaderUnitIds).size===100,'dark-angels: reader contains duplicate canonical datasheet IDs');
 for(const unit of daCurrent)expect(daReaderUnitIds.includes(unit.id),`dark-angels: reader lost local datasheet ${unit.title}`);
 for(const unit of smGeneric)expect(daReaderUnitIds.includes(unit.id),`dark-angels: reader lost shared Space Marines datasheet ${unit.title}`);
 for(const unit of daLegends)expect(!daReader.includes(`id="${unit.id}"`),`dark-angels: reader leaks Legends ${unit.title}`);
-for(const unit of smCodex.datasheets.filter(unit=>!smGeneric.includes(unit)))expect(!daReaderUnitIds.includes(unit.id),`dark-angels: reader leaks other-Chapter Space Marines datasheet ${unit.title}`);
+for(const unit of smCurrent.filter(unit=>!smGeneric.includes(unit)))expect(!daReaderUnitIds.includes(unit.id),`dark-angels: reader leaks other-Chapter Space Marines datasheet ${unit.title}`);
 const sharedCategoryCounts=Object.groupBy(smGeneric,unit=>unit.category);
-for(const [category,count] of Object.entries({'Battleline':4,'Characters':23,'Dedicated Transports':4,'Fortification':1,'Infantry':23,'Mounted':2,'Vehicle':25}))expect((sharedCategoryCounts[category]||[]).length===count,`dark-angels: expected ${count} shared Space Marines ${category}`);
+for(const [category,count] of Object.entries({'Battleline':4,'Characters':23,'Dedicated Transports':4,'Fortification':1,'Infantry':23,'Mounted':2,'Vehicle':27}))expect((sharedCategoryCounts[category]||[]).length===count,`dark-angels: expected ${count} shared Space Marines ${category}`);
 for(const title of ['Hellblaster Squad','Intercessor Squad','Bladeguard Veteran Squad','Terminator Squad','Terminator Assault Squad','Outrider Squad','Land Raider','Redemptor Dreadnought'])expect(daReaderUnitIds.includes(smGeneric.find(unit=>unit.title===title)?.id),`dark-angels: representative shared datasheet missing ${title}`);
 expect(!daReader.includes('data-nav-id="datasheets-dark-angels"')&&!daReader.includes('data-nav-id="datasheets-space-marines"'),'dark-angels: Datasheets navigation must remain unified');
 expect(daReader.includes('data-term="space-marines-weapon-'),'dark-angels: shared datasheets must preserve canonical Space Marines term identity');
@@ -293,7 +294,7 @@ expect(daMfm.counts.nativeUnits===16&&daMfm.counts.canonicalSharedUnits===82&&da
 expect(daMfm.counts.localDetachments===8&&daMfm.counts.localEnhancements===26&&daMfm.counts.unresolved===0,'dark-angels: MFM local inventory must be fully resolved');
 expect(daMfm.dependencyInventory.specialScope.map(item=>item.title).join('|')==='Astraeus|Thunderhawk Gunship','dark-angels: MFM special/Imperial Armour classification changed');
 expect(daMfm.dependencyInventory.specialScope.every(item=>item.includedInCurrentDatasheets===false),'dark-angels: MFM-only special-scope records must not enter current Datasheets');
-expect(!daReader.includes('unit-astraeus')&&!daReader.includes('unit-thunderhawk-gunship'),'dark-angels: special/Imperial Armour records leaked into current navigation');
+expect(daReader.includes('unit-astraeus')&&daReader.includes('unit-thunderhawk-gunship'),'dark-angels: current Space Marines Imperial Armour dependency is absent from navigation');
 const daBlackKnights=daPoints.units.find(item=>item.title==='Ravenwing Black Knights');
 expect(daBlackKnights?.points.length===4&&daBlackKnights.points.map(item=>item.value).join('|')==='75|150|85|160','dark-angels: Ravenwing Black Knights must use the current MFM copy-tier schedule');
 expect(daPoints.enhancements.find(item=>item.title==='Stalwart Champion')?.value===15,'dark-angels: Stalwart Champion must use current MFM points');
@@ -306,7 +307,7 @@ expect(!daReader.includes('data-term="dark-angels-army-rule-oath-of-moment"'),'d
 const ownershipFixture=read('tests/fixtures/army-book-owned-datasheets.json');
 const ownershipSources=[
   ['death-guard',read('books/death-guard/content/death-guard-rules.en.json').sections.filter(item=>item.kind==='unit').map(item=>item.id)],
-  ...['adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines'].map(id=>[id,read(`books/${id}/content/${id}-codex-datasheets.en.json`).datasheets.map(item=>item.id)])
+  ...['adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines'].map(id=>{const codex=read(`books/${id}/content/${id}-codex-datasheets.en.json`);return[id,[...(codex.datasheets||[]),...(codex.imperialArmour||[])].map(item=>item.id)];})
 ];
 const sortedIds=items=>[...new Set(items)].sort();
 const compareOwnershipLayer=(bookId,layer,expectedIds,actualIds)=>{

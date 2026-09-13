@@ -43,7 +43,7 @@ const daEntry=text('books/dark-angels/index.html'),daReader=text('books/dark-ang
 assert.ok(library.includes('books/dark-angels/index.html')&&library.includes('source-limited preview'),'Library must expose the Dark Angels source-limited preview');
 assert.ok(daEntry.includes('dark-angels-cover-480.webp')&&!daEntry.includes('class="entry-mark"'),'Dark Angels entry must use cover art instead of a text placeholder');
 assert.ok(daReader.includes('faction-hero-cover')&&daPhone.includes('data-canonical-target="start"')&&daCss.includes('dark-angels-cover-800.webp'),'Dark Angels generated Start content and compatibility route must preserve the cover hero contract');
-assert.equal((daReader.match(/<article class="unit-card/g)||[]).length,98,'Dark Angels review must expose 16 local and 82 shared datasheets');
+assert.equal((daReader.match(/<article class="unit-card/g)||[]).length,100,'Dark Angels review must expose 16 local and 84 shared datasheets');
 assert.equal((daReader.match(/Codex source required/g)||[]).length,0,'Dark Angels generated content must not retain pre-freeze source placeholders');
 assert.equal(daManifest.gates.publishAsComplete,false,'Dark Angels review must not be marked complete');
 assert.ok(!unitCard('dark-angels','unit-belial').includes('dark-angels-cover'),'Dark Angels cover art must not repeat inside Datasheets');

@@ -244,6 +244,35 @@
       }
     },
     {
+      "id": "unit-astraeus",
+      "title": "Astraeus",
+      "status": "Current",
+      "sourceLayer": "imperial-armour",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 525,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 575,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
       "id": "unit-ballistus-dreadnought",
       "title": "Ballistus Dreadnought",
       "status": "Current",
@@ -454,6 +483,26 @@
         {
           "label": "1 model",
           "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "unit-captain-titus",
+      "title": "Captain Titus",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 100,
           "minModels": 1,
           "maxModels": 1
         }
@@ -1601,26 +1650,6 @@
       }
     },
     {
-      "id": "unit-captain-titus",
-      "title": "Captain Titus",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 100,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": [],
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
-      }
-    },
-    {
       "id": "unit-lieutenant-in-phobos-armour",
       "title": "Lieutenant in Phobos Armour",
       "status": "Current",
@@ -2368,6 +2397,26 @@
           "value": 320,
           "minModels": 10,
           "maxModels": 10
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "unit-thunderhawk-gunship",
+      "title": "Thunderhawk Gunship",
+      "status": "Current",
+      "sourceLayer": "imperial-armour",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 840,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
@@ -3736,7 +3785,7 @@
     }
   ],
   "audit": {
-    "units": 101,
+    "units": 103,
     "enhancements": 87
   },
   "detachments": [

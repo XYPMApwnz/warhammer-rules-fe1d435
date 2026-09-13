@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 3234,
+    "terms": 3250,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 224,
-    "duplicateCandidates": 114,
+    "aliasCandidates": 226,
+    "duplicateCandidates": 116,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -2040,9 +2040,18 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "damaged-1-8-wounds-remaining",
+      "termIds": [
+        "chaos-space-marines-ability-damaged-1-8-wounds-remaining",
+        "space-marines-ability-damaged-1-8-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "deadly-demise-d6-2",
       "termIds": [
         "chaos-space-marines-ability-deadly-demise-d6-2",
+        "space-marines-ability-deadly-demise-d6-2",
         "tau-empire-ability-deadly-demise-d6-2"
       ],
       "status": "review-required"
@@ -2241,6 +2250,7 @@
       "normalizedTitle": "oath-of-moment",
       "termIds": [
         "space-marines-ability-oath-of-moment",
+        "space-marines-ability-oath-of-moment-2",
         "space-marines-army-rule-oath-of-moment"
       ],
       "status": "review-required"
@@ -2437,6 +2447,7 @@
       "termIds": [
         "space-marines-ability-invulnerable-save",
         "space-marines-ability-invulnerable-save-2",
+        "space-marines-ability-invulnerable-save-3",
         "dark-angels-ability-invulnerable-save"
       ],
       "status": "review-required"
@@ -2546,6 +2557,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "suppression-fire",
+      "termIds": [
+        "space-marines-ability-suppression-fire",
+        "space-marines-ability-suppression-fire-2"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "teleport-homer",
       "termIds": [
         "space-marines-ability-teleport-homer",
@@ -2622,6 +2641,15 @@
       "termIds": [
         "space-marines-weapon-skyhammer-missile-launcher",
         "space-marines-weapon-skyhammer-missile-launcher-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-10-wounds-remaining",
+      "termIds": [
+        "space-marines-ability-damaged-1-10-wounds-remaining",
+        "tyranids-ability-damaged-1-10-wounds-remaining",
+        "tyranids-ability-damaged-1-10-wounds-remaining-2"
       ],
       "status": "review-required"
     },
@@ -2911,14 +2939,6 @@
       "termIds": [
         "tyranids-ability-floating-death",
         "tyranids-ability-floating-death-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "damaged-1-10-wounds-remaining",
-      "termIds": [
-        "tyranids-ability-damaged-1-10-wounds-remaining",
-        "tyranids-ability-damaged-1-10-wounds-remaining-2"
       ],
       "status": "review-required"
     },
@@ -3544,7 +3564,15 @@
     },
     {
       "termIds": [
+        "chaos-space-marines-ability-damaged-1-8-wounds-remaining",
+        "space-marines-ability-damaged-1-8-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "chaos-space-marines-ability-deadly-demise-d6-2",
+        "space-marines-ability-deadly-demise-d6-2",
         "tau-empire-ability-deadly-demise-d6-2"
       ],
       "status": "review-required"
@@ -3819,6 +3847,13 @@
       "termIds": [
         "space-marines-ability-transport-7",
         "space-marines-ability-transport-8"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-ability-damaged-1-10-wounds-remaining",
+        "tyranids-ability-damaged-1-10-wounds-remaining"
       ],
       "status": "review-required"
     }

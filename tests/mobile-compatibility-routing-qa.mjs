@@ -10,11 +10,11 @@ const books={
   'adeptus-mechanicus':{routes:47,armyRules:'core-rules'},
   'tau-empire':{routes:49,armyRules:'army-rules'},
   'emperors-children':{routes:36,armyRules:'army-rules'},
-  tyranids:{routes:63,armyRules:'army-rules'},
+  tyranids:{routes:65,armyRules:'army-rules'},
   'chaos-space-marines':{routes:74,armyRules:'army-rules'},
-  'space-marines':{routes:127,armyRules:'army-rules'},
-  'dark-angels':{routes:125,armyRules:'army-rules'},
-  'blood-angels':{routes:124,armyRules:'army-rules'}
+  'space-marines':{routes:129,armyRules:'army-rules'},
+  'dark-angels':{routes:127,armyRules:'army-rules'},
+  'blood-angels':{routes:126,armyRules:'army-rules'}
 };
 const publicRoutes=new Set();
 let total=0;

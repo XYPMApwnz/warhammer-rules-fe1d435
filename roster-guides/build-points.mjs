@@ -206,7 +206,7 @@ const bloodAngelsProfile=unit=>bloodAngelsProfiles[unit.id]||bloodAngelsProfiles
 const bloodAngelsLocal=bloodAngels.units.filter(unit=>unit.status==='Current'&&bloodAngelsProfile(unit));
 const bloodAngelsLocalTitles=new Set(bloodAngelsLocal.map(unit=>normalize(unit.title)));
 const bloodAngelsShared=spaceMarines.units.filter(unit=>unit.status==='Current'&&!bloodAngelsLocalTitles.has(normalize(unit.title))&&bloodAngelsProfile(unit));
-if(bloodAngelsLocal.length!==15||bloodAngelsShared.length!==82)throw new Error(`Blood Angels roster inventory: expected 15 local + 82 shared, got ${bloodAngelsLocal.length} + ${bloodAngelsShared.length}`);
+if(bloodAngelsLocal.length!==15||bloodAngelsShared.length!==84)throw new Error(`Blood Angels roster inventory: expected 15 local + 84 shared, got ${bloodAngelsLocal.length} + ${bloodAngelsShared.length}`);
 const bloodAngelsUnits=Object.fromEntries([...bloodAngelsLocal.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,bloodAngelsConfig,bloodAngelsProfiles)]),...bloodAngelsShared.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,bloodAngelsConfig,bloodAngelsProfiles,true)])]);
 const bloodAngelsEnhancementGroups=new Map();
 for(const enhancement of [...bloodAngels.enhancements,...spaceMarines.enhancements.filter(item=>bloodAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){
@@ -217,7 +217,7 @@ for(const enhancement of [...bloodAngels.enhancements,...spaceMarines.enhancemen
 const bloodAngelsEnhancements=Object.fromEntries([...bloodAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 const darkAngelsProfile=unit=>darkAngelsProfiles[unit.id]||darkAngelsProfiles[normalize(unit.title)];
 const darkAngelsLocal=darkAngels.units.filter(unit=>unit.status==='Current'&&darkAngelsProfile(unit)),darkAngelsLocalTitles=new Set(darkAngelsLocal.map(unit=>normalize(unit.title))),darkAngelsShared=spaceMarines.units.filter(unit=>unit.status==='Current'&&!darkAngelsLocalTitles.has(normalize(unit.title))&&darkAngelsProfile(unit));
-if(darkAngelsLocal.length!==16||darkAngelsShared.length!==82)throw new Error(`Dark Angels roster inventory: expected 16 local + 82 shared, got ${darkAngelsLocal.length} + ${darkAngelsShared.length}`);
+if(darkAngelsLocal.length!==16||darkAngelsShared.length!==84)throw new Error(`Dark Angels roster inventory: expected 16 local + 84 shared, got ${darkAngelsLocal.length} + ${darkAngelsShared.length}`);
 const darkAngelsUnits=Object.fromEntries([...darkAngelsLocal.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,darkAngelsConfig,darkAngelsProfiles)]),...darkAngelsShared.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,darkAngelsConfig,darkAngelsProfiles,true)])]),darkAngelsEnhancementGroups=new Map();
 for(const enhancement of [...darkAngels.enhancements,...spaceMarines.enhancements.filter(item=>darkAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){const shared=darkAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment)),record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog(shared?'space-marines':'dark-angels'),shared?spaceMarinesContracts:darkAngelsContracts)},key=normalize(enhancement.title),group=darkAngelsEnhancementGroups.get(key)||[];group.push(record);darkAngelsEnhancementGroups.set(key,group);}
 const darkAngelsEnhancements=Object.fromEntries([...darkAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));

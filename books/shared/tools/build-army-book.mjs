@@ -77,7 +77,7 @@ const validateDependencyPointOverride=(unitId,override)=>{
     if(typeof row?.value!=='number'||!Number.isFinite(row.value))throw new Error(`${config.id}: dependency point override ${unitId} row ${index+1} requires a finite numeric value`);
   }
 };
-const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.currentOnly?dependency.codex.datasheets||[]:unitInventory(dependency.codex))
+const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.currentOnly?[...(dependency.codex.datasheets||[]),...(dependency.codex.imperialArmour||[])]:unitInventory(dependency.codex))
   .filter(unit=>![...(unit.keywords||[]),...dependencyCompatibilityKeywords(dependency,unit)].some(keyword=>excludedDependencyKeywords.has(clean(keyword).toUpperCase())))
   .map(unit=>{
     const inheritedPoint=dependency.pointsByTitle.get(titleKey(unit.title)),pointOverride=dependencyPointOverrides[unit.id],exact=dependency.wargearByTitle.get(titleKey(unit.title)),official=dependency.officialByTitle.get(titleKey(unit.title));

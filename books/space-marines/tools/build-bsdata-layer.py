@@ -133,7 +133,7 @@ def apply_faction_pack_facts(datasheets: dict) -> None:
 def build() -> tuple[dict, dict, dict]:
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     official = json.loads(OFFICIAL_MFM.read_text(encoding="utf-8"))
-    expected_titles = {key(title) for title in official["verifiedUnits"]} - IMPERIAL_ARMOUR
+    expected_titles = {key(title) for title in official["verifiedUnits"]}
     expected_titles.discard("captain titus")
     expected_titles.add("lieutenant titus")
     with tempfile.TemporaryDirectory(prefix="space-marines-bsdata-", dir=ROOT / "sources") as temp:
@@ -188,17 +188,20 @@ def build() -> tuple[dict, dict, dict]:
     ]}
     titus["keywords"] = ["Infantry", "Character", "Imperium", "Grenades", "Epic Hero", "Tacticus", "Lieutenant", "Titus", "Adeptus Astartes", "Ultramarines"]
 
-    codex_ids = {item["id"] for item in datasheets["datasheets"]}
-    datasheets["audit"]["excludedImperialArmour"] = len(datasheets["imperialArmour"])
+    datasheets["imperialArmour"] = sorted(
+        (item for item in datasheets["imperialArmour"] if key(item["title"]) in IMPERIAL_ARMOUR),
+        key=lambda item: (item["category"], item["title"]),
+    )
+    current_ids = {item["id"] for item in [*datasheets["datasheets"], *datasheets["imperialArmour"]]}
+    datasheets["audit"]["excludedImperialArmour"] = 0
     datasheets["audit"]["excludedLegends"] = len(datasheets["legends"])
-    datasheets["imperialArmour"] = []
     datasheets["legends"] = []
-    datasheets["audit"]["imperialArmour"] = 0
+    datasheets["audit"]["imperialArmour"] = len(datasheets["imperialArmour"])
     datasheets["audit"]["legends"] = 0
     datasheets["datasheets"] = sorted(datasheets["datasheets"], key=lambda item: (item["category"], item["title"]))
     datasheets["audit"]["datasheets"] = len(datasheets["datasheets"])
 
-    points["units"] = sorted((item for item in points["units"] if item["id"] in codex_ids), key=lambda item: item["title"])
+    points["units"] = sorted((item for item in points["units"] if item["id"] in current_ids), key=lambda item: item["title"])
     current_enhancements = {(key(item["detachment"]), key(item["title"]).removesuffix(" upgrade")) for item in official["enhancements"]}
     enhancement_by_key = {}
     for item in points["enhancements"]:
@@ -231,12 +234,12 @@ def main() -> int:
     errors = []
     if len(datasheets["datasheets"]) != 101:
         errors.append("expected 101 current owned datasheets")
-    if datasheets["imperialArmour"]:
-        errors.append("expected no Imperial Armour datasheets in the Codex-native Preview inventory")
+    if len(datasheets["imperialArmour"]) != 2:
+        errors.append(f"expected 2 current Imperial Armour datasheets, found {len(datasheets['imperialArmour'])}")
     if datasheets["legends"]:
         errors.append("expected no Legends datasheets in the Codex-native Preview inventory")
-    if len(points["units"]) != 101:
-        errors.append(f"expected points for 101 current owned datasheets, found {len(points['units'])}")
+    if len(points["units"]) != 103:
+        errors.append(f"expected points for 103 current owned datasheets, found {len(points['units'])}")
     if len(points["enhancements"]) != 87:
         errors.append(f"expected 87 enhancements across 23 detachments, found {len(points['enhancements'])}")
     if args.check:

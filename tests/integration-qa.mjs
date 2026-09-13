@@ -66,13 +66,13 @@ for(const book of books){
     check('blood-angels entry exposes source-limited status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('blood-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('blood-angels reader exposes cover artwork',contentHtml.includes('faction-hero-cover')&&fs.readFileSync(path.join(root,'books/blood-angels/styles/book.css'),'utf8').includes('blood-angels-cover-800.webp'));
     const phoneRoutes=fs.readdirSync(path.join(root,'books/blood-angels/mobile')).filter(file=>file.endsWith('.html'));
-    check('blood-angels exposes 124 content-free compatibility routes',phoneRoutes.length===124&&phoneHtml.includes('data-canonical-target="unit-commander-dante"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
+    check('blood-angels exposes 126 content-free compatibility routes',phoneRoutes.length===126&&phoneHtml.includes('data-canonical-target="unit-commander-dante"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
   }
   if(book.id==='dark-angels'){
     check('dark-angels entry exposes source-limited review status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('dark-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
-    check('dark-angels reader exposes one categorized inventory with complete canonical source coverage',(canonicalHtml.match(/<article class="unit-card/g)||[]).length===98&&(canonicalHtml.match(/Space Marines shared datasheet/g)||[]).length===82&&!canonicalHtml.includes('data-nav-id="datasheets-dark-angels"')&&!canonicalHtml.includes('data-nav-id="datasheets-space-marines"')&&canonicalHtml.includes('data-nav-id="datasheets-epic-heroes"')&&canonicalHtml.includes('data-nav-id="datasheets-vehicle"')&&(canonicalHtml.match(/Codex source required/g)||[]).length===0);
+    check('dark-angels reader exposes one categorized inventory with complete canonical source coverage',(canonicalHtml.match(/<article class="unit-card/g)||[]).length===100&&(canonicalHtml.match(/Space Marines shared datasheet/g)||[]).length===84&&!canonicalHtml.includes('data-nav-id="datasheets-dark-angels"')&&!canonicalHtml.includes('data-nav-id="datasheets-space-marines"')&&canonicalHtml.includes('data-nav-id="datasheets-epic-heroes"')&&canonicalHtml.includes('data-nav-id="datasheets-vehicle"')&&(canonicalHtml.match(/Codex source required/g)||[]).length===0);
     const phoneRoutes=fs.readdirSync(path.join(root,'books/dark-angels/mobile')).filter(file=>file.endsWith('.html'));
-    check('dark-angels exposes 125 content-free compatibility routes',phoneRoutes.length===125&&phoneHtml.includes('data-canonical-target="unit-belial"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
+    check('dark-angels exposes 127 content-free compatibility routes',phoneRoutes.length===127&&phoneHtml.includes('data-canonical-target="unit-belial"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
   }
 }
 

@@ -23066,6 +23066,659 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
+      "id": "unit-astraeus",
+      "title": "Astraeus",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-imperial-armour",
+      "intrinsicKeywords": [
+        "Adeptus Astartes",
+        "Vehicle",
+        "Titanic",
+        "Imperium",
+        "Astraeus"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      },
+      "gameSelections": {
+        "stats": {
+          "M": "10\"",
+          "T": "12",
+          "Sv": "2+",
+          "W": "24",
+          "Ld": "6+",
+          "OC": "8",
+          "Invulnerable": "5+*"
+        },
+        "abilities": [
+          {
+            "id": "space-marines-ability-suppression-fire-2",
+            "sectionId": "space-marines-ability-suppression-fire-2",
+            "title": "Suppression Fire",
+            "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-astraeus"
+          },
+          {
+            "id": "space-marines-ability-invulnerable-save-3",
+            "sectionId": "space-marines-ability-invulnerable-save-3",
+            "title": "*Invulnerable Save",
+            "text": "This model has a 5+ invulnerable save against ranged attacks.",
+            "sourceUnitId": "unit-astraeus"
+          },
+          {
+            "id": "space-marines-ability-damaged-1-8-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-8-wounds-remaining",
+            "title": "Damaged: 1-8 wounds remaining",
+            "text": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-astraeus"
+          },
+          {
+            "id": "space-marines-ability-deadly-demise-d6-2",
+            "sectionId": "space-marines-ability-deadly-demise-d6-2",
+            "title": "Deadly Demise D6+2",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-astraeus"
+          },
+          {
+            "id": "space-marines-army-rule-oath-of-moment",
+            "sectionId": "space-marines-army-rule-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-astraeus"
+          },
+          {
+            "id": "space-marines-ability-templar-vows",
+            "sectionId": "space-marines-ability-templar-vows",
+            "title": "Templar Vows",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. \n\n Abhor the Witch, Destroy the Witch \n■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. \n\n Accept Any Challenge, No Matter the Odds \n■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll\n\n Suffer Not the Unclean to Live \n■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. \n\n Uphold the Honour of the Emperor \nIf this unit has the Infantry keyword:\n■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. \n■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced.",
+            "sourceUnitId": "unit-astraeus"
+          }
+        ],
+        "models": [
+          {
+            "id": "unit-astraeus-model-astraeus",
+            "title": "Astraeus",
+            "aliases": [
+              "Astraeus"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-astraeus-selection-twin-macro-accelerator-cannon",
+            "title": "Twin macro-accelerator cannon",
+            "aliases": [
+              "Twin macro-accelerator cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-twin-macro-accelerator-cannon-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-selection-twin-heavy-bolter",
+            "title": "Twin heavy bolter",
+            "aliases": [
+              "Twin heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-twin-heavy-bolter-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-selection-twin-lascannon",
+            "title": "Twin lascannon",
+            "aliases": [
+              "Twin lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-twin-lascannon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-selection-astraeus-las-ripper",
+            "title": "Astraeus las-ripper",
+            "aliases": [
+              "Astraeus las-ripper"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-astraeus-las-ripper-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-selection-plasma-eradicator-standard",
+            "title": "➤ Plasma eradicator - standard",
+            "aliases": [
+              "➤ Plasma eradicator - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-plasma-eradicator-standard-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-selection-plasma-eradicator-supercharge",
+            "title": "➤ Plasma eradicator - supercharge",
+            "aliases": [
+              "➤ Plasma eradicator - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-plasma-eradicator-supercharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-selection-armoured-hull",
+            "title": "Armoured hull",
+            "aliases": [
+              "Armoured hull"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-armoured-hull-melee-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-selection-ironhail-heavy-stubber",
+            "title": "Ironhail Heavy Stubber",
+            "aliases": [
+              "Ironhail Heavy Stubber"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-ironhail-heavy-stubber-ranged-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-selection-storm-bolter",
+            "title": "Storm bolter",
+            "aliases": [
+              "Storm bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-astraeus-profile-storm-bolter-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-astraeus-weapon-family-plasma-eradicator-selection",
+            "title": "➤ Plasma eradicator",
+            "aliases": [
+              "➤ Plasma eradicator"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-astraeus-weapon-family-plasma-eradicator",
+            "profileIds": [
+              "unit-astraeus-profile-plasma-eradicator-standard-ranged-5",
+              "unit-astraeus-profile-plasma-eradicator-supercharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-astraeus-weapon-family-plasma-eradicator",
+            "title": "➤ Plasma eradicator",
+            "aliases": [
+              "➤ Plasma eradicator"
+            ],
+            "profileIds": [
+              "unit-astraeus-profile-plasma-eradicator-standard-ranged-5",
+              "unit-astraeus-profile-plasma-eradicator-supercharge-ranged-6"
+            ],
+            "ambiguousAlias": false
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-astraeus-profile-twin-macro-accelerator-cannon-ranged",
+            "title": "Twin macro-accelerator cannon",
+            "mode": "ranged",
+            "range": "72\"",
+            "a": "12",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "Sustained Hits 1, Twin-linked",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-twin-macro-accelerator-cannon"
+            ]
+          },
+          {
+            "id": "unit-astraeus-profile-twin-heavy-bolter-ranged-2",
+            "title": "Twin heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Sustained Hits 1, Twin-linked",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-twin-heavy-bolter"
+            ]
+          },
+          {
+            "id": "unit-astraeus-profile-twin-lascannon-ranged-3",
+            "title": "Twin lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-twin-lascannon"
+            ]
+          },
+          {
+            "id": "unit-astraeus-profile-astraeus-las-ripper-ranged-4",
+            "title": "Astraeus las-ripper",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-astraeus-las-ripper"
+            ]
+          },
+          {
+            "id": "unit-astraeus-profile-plasma-eradicator-standard-ranged-5",
+            "title": "➤ Plasma eradicator - standard",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-plasma-eradicator-standard",
+              "unit-astraeus-weapon-family-plasma-eradicator-selection"
+            ]
+          },
+          {
+            "id": "unit-astraeus-profile-plasma-eradicator-supercharge-ranged-6",
+            "title": "➤ Plasma eradicator - supercharge",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Blast, Hazardous",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-plasma-eradicator-supercharge",
+              "unit-astraeus-weapon-family-plasma-eradicator-selection"
+            ]
+          },
+          {
+            "id": "unit-astraeus-profile-armoured-hull-melee-7",
+            "title": "Armoured hull",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "4+",
+            "s": "8",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-armoured-hull"
+            ]
+          },
+          {
+            "id": "unit-astraeus-profile-ironhail-heavy-stubber-ranged-8",
+            "title": "Ironhail Heavy Stubber",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 3",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-ironhail-heavy-stubber"
+            ]
+          },
+          {
+            "id": "unit-astraeus-profile-storm-bolter-ranged-9",
+            "title": "Storm bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-astraeus-selection-storm-bolter"
+            ]
+          }
+        ],
+        "wargearAbilities": []
+      }
+    },
+    {
+      "id": "unit-thunderhawk-gunship",
+      "title": "Thunderhawk Gunship",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-imperial-armour",
+      "intrinsicKeywords": [
+        "Adeptus Astartes",
+        "Vehicle",
+        "Titanic",
+        "Fly",
+        "Transport",
+        "Imperium",
+        "Thunderhawk Gunship"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      },
+      "gameSelections": {
+        "stats": {
+          "M": "20+\"",
+          "T": "12",
+          "Sv": "2+",
+          "W": "30",
+          "Ld": "6+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
+        "abilities": [
+          {
+            "id": "space-marines-ability-aerial-assault",
+            "sectionId": "space-marines-ability-aerial-assault",
+            "title": "Aerial Assault",
+            "text": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+            "sourceUnitId": "unit-thunderhawk-gunship"
+          },
+          {
+            "id": "space-marines-ability-damaged-1-10-wounds-remaining",
+            "sectionId": "space-marines-ability-damaged-1-10-wounds-remaining",
+            "title": "Damaged: 1-10 wounds remaining",
+            "text": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-thunderhawk-gunship"
+          },
+          {
+            "id": "space-marines-ability-deadly-demise-d6-2",
+            "sectionId": "space-marines-ability-deadly-demise-d6-2",
+            "title": "Deadly Demise D6+2",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-thunderhawk-gunship"
+          },
+          {
+            "id": "core-hover",
+            "sectionId": "core-hover",
+            "title": "Hover",
+            "text": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
+            "sourceUnitId": "unit-thunderhawk-gunship"
+          },
+          {
+            "id": "space-marines-army-rule-oath-of-moment",
+            "sectionId": "space-marines-army-rule-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n■ You can reroll the Hit roll\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
+            "sourceUnitId": "unit-thunderhawk-gunship"
+          },
+          {
+            "id": "space-marines-ability-templar-vows",
+            "sectionId": "space-marines-ability-templar-vows",
+            "title": "Templar Vows",
+            "text": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. \n\n Abhor the Witch, Destroy the Witch \n■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. \n\n Accept Any Challenge, No Matter the Odds \n■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll\n\n Suffer Not the Unclean to Live \n■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. \n\n Uphold the Honour of the Emperor \nIf this unit has the Infantry keyword:\n■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. \n■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced.",
+            "sourceUnitId": "unit-thunderhawk-gunship"
+          }
+        ],
+        "models": [
+          {
+            "id": "unit-thunderhawk-gunship-model-thunderhawk-gunship",
+            "title": "Thunderhawk Gunship",
+            "aliases": [
+              "Thunderhawk Gunship"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-thunderhawk-gunship-selection-hellstrike-missile-battery",
+            "title": "Hellstrike missile battery",
+            "aliases": [
+              "Hellstrike missile battery"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-thunderhawk-gunship-profile-hellstrike-missile-battery-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-thunderhawk-gunship-selection-thunderhawk-heavy-cannon",
+            "title": "Thunderhawk heavy cannon",
+            "aliases": [
+              "Thunderhawk heavy cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-thunderhawk-gunship-profile-thunderhawk-heavy-cannon-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-thunderhawk-gunship-selection-turbo-laser-destructor",
+            "title": "Turbo-laser destructor",
+            "aliases": [
+              "Turbo-laser destructor"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-thunderhawk-gunship-profile-turbo-laser-destructor-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-thunderhawk-gunship-selection-armoured-hull",
+            "title": "Armoured hull",
+            "aliases": [
+              "Armoured hull"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-thunderhawk-gunship-profile-armoured-hull-melee-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-thunderhawk-gunship-selection-lascannon",
+            "title": "Lascannon",
+            "aliases": [
+              "Lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-thunderhawk-gunship-profile-lascannon-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-thunderhawk-gunship-selection-twin-heavy-bolter",
+            "title": "Twin heavy bolter",
+            "aliases": [
+              "Twin heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-thunderhawk-gunship-profile-twin-heavy-bolter-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-thunderhawk-gunship-selection-thunderhawk-cluster-bombs",
+            "title": "Thunderhawk Cluster Bombs",
+            "aliases": [
+              "Thunderhawk Cluster Bombs"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [
+              "unit-thunderhawk-gunship-wargear-ability-thunderhawk-cluster-bombs"
+            ]
+          }
+        ],
+        "weaponFamilies": [],
+        "weaponProfiles": [
+          {
+            "id": "unit-thunderhawk-gunship-profile-hellstrike-missile-battery-ranged",
+            "title": "Hellstrike missile battery",
+            "mode": "ranged",
+            "range": "72\"",
+            "a": "4",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "Anti-FLY 4+",
+            "sourceSelectionIds": [
+              "unit-thunderhawk-gunship-selection-hellstrike-missile-battery"
+            ]
+          },
+          {
+            "id": "unit-thunderhawk-gunship-profile-thunderhawk-heavy-cannon-ranged-2",
+            "title": "Thunderhawk heavy cannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6+6",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-thunderhawk-gunship-selection-thunderhawk-heavy-cannon"
+            ]
+          },
+          {
+            "id": "unit-thunderhawk-gunship-profile-turbo-laser-destructor-ranged-3",
+            "title": "Turbo-laser destructor",
+            "mode": "ranged",
+            "range": "96\"",
+            "a": "D3+1",
+            "skill": "3+",
+            "s": "20",
+            "ap": "-4",
+            "d": "D6+6",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-thunderhawk-gunship-selection-turbo-laser-destructor"
+            ]
+          },
+          {
+            "id": "unit-thunderhawk-gunship-profile-armoured-hull-melee-4",
+            "title": "Armoured hull",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "4+",
+            "s": "8",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-thunderhawk-gunship-selection-armoured-hull"
+            ]
+          },
+          {
+            "id": "unit-thunderhawk-gunship-profile-lascannon-ranged-5",
+            "title": "Lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-thunderhawk-gunship-selection-lascannon"
+            ]
+          },
+          {
+            "id": "unit-thunderhawk-gunship-profile-twin-heavy-bolter-ranged-6",
+            "title": "Twin heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Sustained Hits 1, Twin-linked",
+            "sourceSelectionIds": [
+              "unit-thunderhawk-gunship-selection-twin-heavy-bolter"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "unit-thunderhawk-gunship-wargear-ability-thunderhawk-cluster-bombs",
+            "sectionId": "unit-thunderhawk-gunship-wargear-ability-thunderhawk-cluster-bombs",
+            "title": "Thunderhawk Cluster Bombs",
+            "text": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
+            "sourceUnitId": "unit-thunderhawk-gunship",
+            "requiredSelectionIds": [
+              "unit-thunderhawk-gunship-selection-thunderhawk-cluster-bombs"
+            ]
+          }
+        ]
+      }
+    },
+    {
       "id": "unit-ravenwing-command-squad",
       "title": "Ravenwing Command Squad",
       "sourceBookId": "dark-angels",

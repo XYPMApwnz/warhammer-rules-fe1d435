@@ -16,10 +16,10 @@ const maps=Object.fromEntries(books.map(book=>[book,new Map(enhancements[book].m
 const shared=[...maps['space-marines'].keys()].filter(id=>maps['dark-angels'].has(id)&&maps['blood-angels'].has(id));
 assert.equal(shared.length,59,'SM-family shared Enhancement set');
 
-assert.deepEqual(books.map(book=>catalogs[book].units.length),[101,98,97],'effective SM/DA/BA Datasheet counts');
+assert.deepEqual(books.map(book=>catalogs[book].units.length),[103,100,99],'effective SM/DA/BA Datasheet counts');
 const smUnitIds=new Set(catalogs['space-marines'].units.map(unit=>unit.id));
 const dependencyUnits=book=>catalogs[book].units.filter(unit=>unit.sourceBookId==='space-marines');
-assert.deepEqual(['dark-angels','blood-angels'].map(book=>dependencyUnits(book).length),[82,82],'common inherited unit count');
+assert.deepEqual(['dark-angels','blood-angels'].map(book=>dependencyUnits(book).length),[84,84],'common inherited unit count');
 const excluded=book=>[...smUnitIds].filter(id=>!dependencyUnits(book).some(unit=>unit.id===id)).sort();
 assert.equal(excluded('dark-angels').length,19,'DA incompatible SM exclusions');
 assert.equal(excluded('blood-angels').length,19,'BA incompatible SM exclusions');

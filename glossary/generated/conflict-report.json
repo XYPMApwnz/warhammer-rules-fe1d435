@@ -2505,6 +2505,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "master-crafted-chainsword",
+      "termIds": [
+        "space-marines-weapon-master-crafted-chainsword",
+        "blood-angels-weapon-master-crafted-chainsword"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "honour-or-death",
       "termIds": [
         "space-marines-ability-honour-or-death",
@@ -2521,14 +2529,6 @@
         "space-marines-ability-inspiring-commander-4",
         "space-marines-ability-inspiring-commander-5",
         "space-marines-ability-inspiring-commander-6"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "master-crafted-chainsword",
-      "termIds": [
-        "space-marines-weapon-master-crafted-chainsword",
-        "blood-angels-weapon-master-crafted-chainsword"
       ],
       "status": "review-required"
     },

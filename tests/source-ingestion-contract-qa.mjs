@@ -34,6 +34,34 @@ const active=[
   ['books/tau-empire/tools/extract-codex-parity.cjs','tau-codex-parity']
 ];
 
+const walk=directory=>fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?walk(path.join(directory,entry.name)):[path.join(directory,entry.name)]);
+const networkSourceTools=walk(path.join(root,'books')).filter(file=>/[\\/]tools[\\/]/.test(file)&&/\.(?:mjs|cjs|js|py)$/.test(file)&&/page\.goto\(|\bfetch\s*\(|https?\.get\(|chromium\.launch\(|urlopen\(|requests\.(?:get|post)\(/.test(fs.readFileSync(file,'utf8'))).map(file=>path.relative(root,file).replaceAll(path.sep,'/')).sort();
+assert.deepEqual(networkSourceTools,[...active.map(([tool])=>tool),...registry.dormantLiveTools].sort(),'Every network-capable source tool must be enrolled as frozen-capture or guarded legacy workflow');
+
+const acceptedBefore=new Map(registry.sources.flatMap(source=>source.artifacts.map(artifact=>[artifact.path,sha256(fs.readFileSync(path.join(root,artifact.path)))])));
+for(const [tool] of active){
+  const executable=path.join(root,tool);
+  for(const [args,message] of [
+    [[],/choose exactly one mode/],
+    [['--capture-update'],/candidate-dir/],
+    [['--check','--capture-update','--candidate-dir',root],/choose exactly one mode/],
+    [['--capture-update','--candidate-dir',root],/repository root/]
+  ]){
+    const result=spawnSync(process.execPath,[executable,...args],{cwd:root,encoding:'utf8'});
+    assert.notEqual(result.status,0,`${tool}: unsafe source mode unexpectedly succeeded`);
+    assert.match(`${result.stdout}${result.stderr}`,message,`${tool}: unsafe source mode did not fail at the expected boundary`);
+  }
+  const checked=spawnSync(process.execPath,[executable,'--check'],{cwd:root,encoding:'utf8'});
+  assert.equal(checked.status,0,`${tool}: frozen --check failed: ${checked.stderr||checked.stdout}`);
+}
+for(const [artifact,before] of acceptedBefore)assert.equal(sha256(fs.readFileSync(path.join(root,artifact))),before,`${artifact}: frozen verification mutated an accepted artifact`);
+
+for(const tool of ['books/adeptus-mechanicus/tests/codex-parity.cjs','books/adeptus-mechanicus/tests/datasheet-parity.cjs']){
+  const result=spawnSync(process.execPath,[path.join(root,tool)],{cwd:root,encoding:'utf8'});
+  assert.notEqual(result.status,0,`${tool}: mutable live diagnostic ran without explicit mode`);
+  assert.match(`${result.stdout}${result.stderr}`,/--live-diagnostic/,`${tool}: missing explicit live-diagnostic guard`);
+}
+
 for(const [tool,sourceId] of active){
   const source=read(tool),modeIndex=source.indexOf('requireSourceToolMode'),returnIndex=source.indexOf("mode.kind==='verify'");
   assert(modeIndex>=0&&returnIndex>modeIndex,`${tool}: frozen verification mode must be selected before live work`);

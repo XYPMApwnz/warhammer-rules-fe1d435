@@ -4,7 +4,7 @@
   if(!swUrl||!('serviceWorker' in navigator)||!location.protocol.startsWith('http'))return;
   const MESSAGE='WH_OFFLINE_PACKAGE_STATUS',QUERY='WH_OFFLINE_PACKAGE_STATUS_QUERY',VERSION_QUERY='GET_VERSION',ACTIVATE_UPDATE='SKIP_WAITING';
   const updater=document.querySelector('[data-pwa-updater]'),updateStatus=updater?.querySelector('[data-pwa-update-status]'),updateAction=updater?.querySelector('[data-pwa-update-action]'),installedVersion=updater?.querySelector('[data-pwa-installed-version]'),availableRow=updater?.querySelector('[data-pwa-available-row]'),availableVersion=updater?.querySelector('[data-pwa-available-version]');
-  let node,label,meter,bar,announcement,activeSeen=false,readyTimer=0,lastAnnouncement='',failedRevision='',registration,checkPromise=null,autoChecked=false,activationRequested=false,reloaded=false;
+  let node,label,meter,bar,announcement,activeSeen=false,readyTimer=0,lastAnnouncement='',failedRevision='',registration,checkPromise=null,autoChecked=false,activationRequested=false,reloaded=false,controlledWorker=navigator.serviceWorker.controller;
   const watchedWorkers=new WeakSet(),workerSequences=new WeakMap();
   const updateStates={
     idle:['Check for updates','Check for updates',false],
@@ -117,7 +117,7 @@
   }
   updateAction?.addEventListener('click',()=>{if(updater.dataset.state==='ready')installUpdate();else checkForUpdate().catch(()=>{});});
   navigator.serviceWorker.addEventListener('message',event=>apply(event.data,event.source));
-  navigator.serviceWorker.addEventListener('controllerchange',()=>{if(activationRequested&&!reloaded){reloaded=true;location.reload();return;}syncInstalled();});
+  navigator.serviceWorker.addEventListener('controllerchange',()=>{const next=navigator.serviceWorker.controller,replaced=Boolean(controlledWorker&&next&&controlledWorker!==next);controlledWorker=next;if((replaced||activationRequested)&&next&&!reloaded){reloaded=true;location.reload();return;}syncInstalled();});
   if(document.readyState==='complete')start();else addEventListener('load',start,{once:true});
   root.WHOfflineStatus=Object.freeze({query:()=>navigator.serviceWorker.getRegistration().then(value=>value&&query(value.installing||value.waiting||value.active)),check:()=>checkForUpdate()});
 })(window);

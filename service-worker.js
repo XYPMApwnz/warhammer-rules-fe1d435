@@ -369,7 +369,7 @@ const APP_SHELL = [
   ,"./books/shared/roster-context.js?v=19"
   ,"./books/shared/roster-game-presentation.js?v=21"
 ,"./books/shared/army-book-app.js?v=19"
-  ,"./books/shared/offline-status.js?v=3"
+  ,"./books/shared/offline-status.js?v=4"
   ,"./books/shared/styles/offline-status.css?v=2"
   // BEGIN GENERATED OFFLINE MOBILE ROUTES
   ,"./books/death-guard/mobile/army-rules.html"

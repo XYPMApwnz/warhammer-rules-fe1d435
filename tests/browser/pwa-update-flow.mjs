@@ -11,7 +11,7 @@ assert.ok(updaterMarkup,'Root Library updater markup was not found');
 const clientSource=fs.readFileSync(path.join(root,'books/shared/offline-status.js'),'utf8');
 const clientCss=fs.readFileSync(path.join(root,'books/shared/styles/offline-status.css'),'utf8');
 const productionWorker=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
-const appShell=['./','./index.html','./books/shared/offline-status.js?v=3','./books/shared/styles/offline-status.css?v=2','./death-approaches.html','./required-b.js'];
+const appShell=['./','./index.html','./books/shared/offline-status.js?v=4','./books/shared/styles/offline-status.css?v=2','./death-approaches.html','./required-b.js'];
 const workerTemplate=productionWorker.replace(/const APP_SHELL = \[[\s\S]*?\n\];/,`const APP_SHELL = ${JSON.stringify(appShell,null,2)};`);
 assert.notEqual(workerTemplate,productionWorker,'Fixture could not replace APP_SHELL deterministically');
 
@@ -23,7 +23,7 @@ function signal(waiters){for(const resolve of waiters.splice(0))resolve();}
 function nextRequest(count,previous,waiters){return count()>previous?Promise.resolve():new Promise(resolve=>waiters.push(resolve));}
 function fixtureHtml(){
   if(legacyRoot&&generation==='A')return '<!doctype html><html><body><header></header><main><h1>Legacy Library generation A</h1></main><script>navigator.serviceWorker.register("/service-worker.js")</script></body></html>';
-  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/books/shared/styles/offline-status.css?v=2"></head><body><header class="topbar"></header>${updaterMarkup}<main><h1>Library generation ${generation}</h1></main><script>sessionStorage.pwaLoads=String(Number(sessionStorage.pwaLoads||0)+1)</script><script src="/books/shared/offline-status.js?v=3" data-service-worker="/service-worker.js"></script></body></html>`;
+  return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/books/shared/styles/offline-status.css?v=2"></head><body><header class="topbar"></header>${updaterMarkup}<main><h1>Library generation ${generation}</h1></main><script>sessionStorage.pwaLoads=String(Number(sessionStorage.pwaLoads||0)+1)</script><script src="/books/shared/offline-status.js?v=4" data-service-worker="/service-worker.js"></script></body></html>`;
 }
 function send(response,status,type,body){response.writeHead(status,{'content-type':type,'cache-control':'no-store'});response.end(body);}
 const server=http.createServer(async(request,response)=>{
@@ -120,6 +120,9 @@ try{
   const successContext=await browser.newContext({serviceWorkers:'allow',viewport:{width:320,height:800}});
   try{
     const page=await installA(successContext),loads=Number(await page.evaluate(()=>sessionStorage.pwaLoads));
+    const sibling=await successContext.newPage();await sibling.goto(`${origin}/index.html`);await sibling.waitForFunction(()=>Boolean(navigator.serviceWorker.controller));
+    await sibling.waitForFunction(revision=>document.querySelector('[data-pwa-installed-version]')?.textContent===revision,revisions.A);
+    const siblingLoads=Number(await sibling.evaluate(()=>sessionStorage.pwaLoads));
     generation='B';requiredGate=gate();const requiredBefore=requiredRequests;
     await page.locator('[data-pwa-update-action]').click();
     await page.waitForFunction(()=>document.querySelector('[data-pwa-updater]')?.dataset.state==='downloading');
@@ -136,13 +139,16 @@ try{
     assert.equal(await page.evaluate(async name=>(await (await caches.open(name)).keys()).length,`warhammer-rules-fe1d435-${revisions.B}`),appShell.length,'READY was shown before every generation B asset was cached');
     await page.getByRole('button',{name:'Install and restart'}).click();
     await page.waitForFunction(({revision,loads})=>document.querySelector('[data-pwa-installed-version]')?.textContent===revision&&Number(sessionStorage.pwaLoads)===loads+1,{revision:revisions.B,loads});
+    await sibling.waitForFunction(({revision,loads})=>document.querySelector('[data-pwa-installed-version]')?.textContent===revision&&Number(sessionStorage.pwaLoads)===loads+1&&document.querySelector('h1')?.textContent===`Library generation B`,{revision:revisions.B,loads:siblingLoads});
     assert.equal(await workerRevision(page),revisions.B,'Generation B did not control the restarted page');
+    assert.equal(await workerRevision(sibling),revisions.B,'Generation B did not control the restarted sibling page');
     await page.waitForFunction(revision=>caches.keys().then(keys=>keys.length===1&&keys[0]===`warhammer-rules-fe1d435-${revision}`),revisions.B);
     assert.equal(Number(await page.evaluate(()=>sessionStorage.pwaLoads)),loads+1,'Confirmed update did not reload exactly once');
+    assert.equal(Number(await sibling.evaluate(()=>sessionStorage.pwaLoads)),siblingLoads+1,'Sibling update did not reload exactly once');
     await successContext.setOffline(true);
     await page.goto(`${origin}/death-approaches.html`);
     await page.getByText('In your Movement phase, spread the sickness.').waitFor();
-    console.log('PWA UPDATE QA: successful two-generation update and Death Approaches PASS');
+    console.log('PWA UPDATE QA: successful two-generation update, sibling-tab convergence and Death Approaches PASS');
   }finally{await successContext.close();await resetScenario();}
 
   const failedContext=await browser.newContext({serviceWorkers:'allow',viewport:{width:320,height:800}});

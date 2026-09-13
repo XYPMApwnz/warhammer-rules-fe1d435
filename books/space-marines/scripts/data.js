@@ -1798,13 +1798,13 @@ window.DG_TERMS={
       "unit-adrax-agatone",
       "unit-aethon-shaan",
       "unit-caanok-var",
+      "unit-captain-titus",
       "unit-cato-sicarius",
       "unit-chief-librarian-tigurius",
       "unit-darnath-lysander",
       "unit-iron-father-feirros",
       "unit-kayvaan-shrike",
       "unit-korsarro-khan",
-      "unit-captain-titus",
       "unit-marneus-calgar-in-armour-of-antilochus",
       "unit-pedro-kantor",
       "unit-roboute-guilliman",
@@ -2896,10 +2896,10 @@ window.DG_TERMS={
       "unit-captain-in-phobos-armour",
       "unit-lieutenant",
       "unit-lieutenant-in-phobos-armour",
+      "unit-captain-titus",
       "unit-chief-librarian-tigurius",
       "unit-iron-father-feirros",
       "unit-korsarro-khan",
-      "unit-captain-titus",
       "unit-uriel-ventris",
       "unit-vulkan-hestan"
     ],
@@ -4212,6 +4212,58 @@ window.DG_TERMS={
     "datasheet": "unit-caanok-var",
     "statline": "caanok-var-profile"
   },
+  "space-marines-ability-honour-of-ultramar": {
+    "id": "space-marines-ability-honour-of-ultramar",
+    "title": "Honour of Ultramar",
+    "summary": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
+    "full": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
+    "glossary": "glossary-space-marines-ability-honour-of-ultramar",
+    "rule": "unit-captain-titus",
+    "units": [
+      "unit-captain-titus"
+    ],
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
+  },
+  "space-marines-ability-press-the-attack": {
+    "id": "space-marines-ability-press-the-attack",
+    "title": "Press the Attack",
+    "summary": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
+    "full": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
+    "glossary": "glossary-space-marines-ability-press-the-attack",
+    "rule": "unit-captain-titus",
+    "units": [
+      "unit-captain-titus"
+    ],
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
+  },
+  "space-marines-weapon-master-crafted-bolter-2": {
+    "id": "space-marines-weapon-master-crafted-bolter-2",
+    "title": "Master-crafted bolter",
+    "summary": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2 · Assault, Heavy",
+    "full": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2 · Assault, Heavy",
+    "glossary": "glossary-space-marines-weapon-master-crafted-bolter-2",
+    "rule": "unit-captain-titus",
+    "units": [
+      "unit-captain-titus"
+    ],
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
+  },
+  "space-marines-weapon-master-crafted-chainsword": {
+    "id": "space-marines-weapon-master-crafted-chainsword",
+    "title": "Master-crafted chainsword",
+    "summary": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -1 · D 2 · Anti-Infantry 2+",
+    "full": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -1 · D 2 · Anti-Infantry 2+",
+    "glossary": "glossary-space-marines-weapon-master-crafted-chainsword",
+    "rule": "unit-captain-titus",
+    "units": [
+      "unit-captain-titus"
+    ],
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
+  },
   "space-marines-ability-knight-champion-of-macragge": {
     "id": "space-marines-ability-knight-champion-of-macragge",
     "title": "Knight Champion of Macragge",
@@ -4614,58 +4666,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-korsarro-khan",
     "statline": "korsarro-khan-profile"
-  },
-  "space-marines-ability-honour-of-ultramar": {
-    "id": "space-marines-ability-honour-of-ultramar",
-    "title": "Honour of Ultramar",
-    "summary": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
-    "full": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
-    "glossary": "glossary-space-marines-ability-honour-of-ultramar",
-    "rule": "unit-captain-titus",
-    "units": [
-      "unit-captain-titus"
-    ],
-    "datasheet": "unit-captain-titus",
-    "statline": "captain-titus-profile"
-  },
-  "space-marines-ability-press-the-attack": {
-    "id": "space-marines-ability-press-the-attack",
-    "title": "Press the Attack",
-    "summary": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
-    "full": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
-    "glossary": "glossary-space-marines-ability-press-the-attack",
-    "rule": "unit-captain-titus",
-    "units": [
-      "unit-captain-titus"
-    ],
-    "datasheet": "unit-captain-titus",
-    "statline": "captain-titus-profile"
-  },
-  "space-marines-weapon-master-crafted-bolter-2": {
-    "id": "space-marines-weapon-master-crafted-bolter-2",
-    "title": "Master-crafted bolter",
-    "summary": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2 · Assault, Heavy",
-    "full": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2 · Assault, Heavy",
-    "glossary": "glossary-space-marines-weapon-master-crafted-bolter-2",
-    "rule": "unit-captain-titus",
-    "units": [
-      "unit-captain-titus"
-    ],
-    "datasheet": "unit-captain-titus",
-    "statline": "captain-titus-profile"
-  },
-  "space-marines-weapon-master-crafted-chainsword": {
-    "id": "space-marines-weapon-master-crafted-chainsword",
-    "title": "Master-crafted chainsword",
-    "summary": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -1 · D 2 · Anti-Infantry 2+",
-    "full": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -1 · D 2 · Anti-Infantry 2+",
-    "glossary": "glossary-space-marines-weapon-master-crafted-chainsword",
-    "rule": "unit-captain-titus",
-    "units": [
-      "unit-captain-titus"
-    ],
-    "datasheet": "unit-captain-titus",
-    "statline": "captain-titus-profile"
   },
   "space-marines-ability-inspiring-leader": {
     "id": "space-marines-ability-inspiring-leader",

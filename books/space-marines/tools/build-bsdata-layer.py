@@ -17,7 +17,7 @@ NODE = shutil.which("node")
 SNAPSHOT = ROOT / "sources" / "bsdata-space-marines-11e.json"
 DATASHEETS = ROOT / "content" / "space-marines-codex-datasheets.en.json"
 POINTS = ROOT / "content" / "space-marines-points.en.json"
-OFFICIAL_MFM = ROOT / "sources" / "official-mfm-v1.2.json"
+OFFICIAL_MFM = ROOT / "sources" / "official-mfm-v1.3.json"
 FACTION_PACK = ROOT / "content" / "space-marines-faction-pack.en.json"
 SUPPLEMENTAL_CATALOGUES = (
     "Imperium - Imperial Fists.json",
@@ -132,12 +132,69 @@ def apply_faction_pack_facts(datasheets: dict) -> None:
     heavy_flamers[0]["abilities"] = "Torrent"
 
 
+def apply_accepted_codex_facts(datasheets: dict) -> None:
+    units = {item["id"]: item for item in datasheets["datasheets"]}
+
+    support_overrides = {
+        "unit-ancient": ["ASSAULT INTERCESSOR SQUAD", "DESOLATION SQUAD", "DEVASTATOR SQUAD", "HELLBLASTER SQUAD", "INFERNUS SQUAD", "INTERCESSOR SQUAD", "STERNGUARD VETERAN SQUAD", "TACTICAL SQUAD"],
+        "unit-ancient-in-terminator-armor": ["TERMINATOR ASSAULT SQUAD", "TERMINATOR SQUAD"],
+        "unit-apothecary": ["ASSAULT INTERCESSOR SQUAD", "BLADEGUARD VETERAN SQUAD", "DESOLATION SQUAD", "DEVASTATOR SQUAD", "HELLBLASTER SQUAD", "INFERNUS SQUAD", "INTERCESSOR SQUAD", "STERNGUARD VETERAN SQUAD", "TACTICAL SQUAD"],
+        "unit-bladeguard-ancient": ["BLADEGUARD VETERAN SQUAD"],
+        "unit-lieutenant": ["ASSAULT INTERCESSOR SQUAD", "BLADEGUARD VETERAN SQUAD", "COMPANY HEROES", "HELLBLASTER SQUAD", "INFERNUS SQUAD", "INTERCESSOR SQUAD", "STERNGUARD VETERAN SQUAD", "TACTICAL SQUAD"],
+        "unit-lieutenant-in-reiver-armour": ["REIVER SQUAD"],
+        "unit-cato-sicarius": ["VICTRIX HONOUR GUARD"],
+    }
+    for unit_id, titles in support_overrides.items():
+        units[unit_id]["relations"]["support"] = titles
+
+    apothecary_support = next(
+        ability for ability in units["unit-apothecary"]["abilities"]
+        if key(ability["title"]) == "support" and ability["text"]
+    )
+    apothecary_support["text"] = apothecary_support["text"].replace(
+        "■ ASSAULT INTERCESSOR SQUAD \n■ CRUSADER SQUAD",
+        "■ ASSAULT INTERCESSOR SQUAD \n■ BLADEGUARD VETERAN SQUAD \n■ CRUSADER SQUAD",
+    )
+
+    relation_overrides = {
+        "unit-korsarro-khan": [
+            "ASSAULT INTERCESSOR SQUAD", "BLADEGUARD VETERAN SQUAD", "COMPANY HEROES",
+            "INTERCESSOR SQUAD", "STERNGUARD VETERAN SQUAD", "TACTICAL SQUAD",
+        ],
+        "unit-vulkan-hestan": [
+            "ASSAULT INTERCESSOR SQUAD", "COMPANY HEROES", "INFERNUS SQUAD", "TACTICAL SQUAD",
+        ],
+    }
+    for unit_id, titles in relation_overrides.items():
+        units[unit_id]["relations"]["leader"] = titles
+
+    pedro = units["unit-pedro-kantor"]
+    pedro["keywords"] = ["Crimson Fists" if value == "Imperial Fists" else value for value in pedro["keywords"]]
+
+    wardens = units["unit-wardens-of-ultramar"]
+    wardens["abilities"] = [ability for ability in wardens["abilities"] if key(ability["title"]) != "heroes of ultramar"]
+    wardens["relations"]["support"] = [
+        "Assault Intercessor Squad", "Bladeguard Veteran Squad", "Intercessor Squad", "Sternguard Veteran Squad",
+    ]
+
+    hammerfall = units["unit-hammerfall-bunker"]
+    if not any(key(ability["title"]) == "defensive array" for ability in hammerfall["abilities"]):
+        hammerfall["abilities"].insert(2, {
+            "title": "Defensive Array",
+            "text": "You can target this Fortification with the Fire Overwatch Strategem for 0CP, and can do so even if you have already targeted another unit with that Stratagem this turn. This Fortification can only be targeted with that Stratagem once per turn.",
+        })
+
+    for unit in datasheets["datasheets"]:
+        leaders = unit.get("relations", {}).get("leader", [])
+        leader = next((ability for ability in unit.get("abilities", []) if key(ability["title"]) == "leader"), None)
+        if leader and leaders and unit["id"] not in relation_overrides:
+            leader["text"] = f"This model can be attached to the following units: {', '.join(leaders)}."
+
+
 def build() -> tuple[dict, dict, dict]:
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     official = json.loads(OFFICIAL_MFM.read_text(encoding="utf-8"))
     expected_titles = {key(title) for title in official["verifiedUnits"]}
-    expected_titles.discard("captain titus")
-    expected_titles.add("lieutenant titus")
     with tempfile.TemporaryDirectory(prefix="space-marines-bsdata-", dir=ROOT / "sources") as temp:
         temp = Path(temp)
         snapshot, datasheets, points = extract(json.loads(json.dumps(config)), temp / "space-marines", "Imperium - Space Marines.json")
@@ -150,21 +207,15 @@ def build() -> tuple[dict, dict, dict]:
             if document not in snapshot.setdefault("documents", []):
                 snapshot["documents"].append(document)
         for unit in extra_datasheets["datasheets"]:
-            title_key = "lieutenant titus" if key(unit["title"]) == "captain titus" else key(unit["title"])
+            title_key = key(unit["title"])
             if title_key not in expected_titles or title_key in existing:
                 continue
-            if title_key == "lieutenant titus":
-                unit["title"] = "Lieutenant Titus"
-                unit["id"] = "unit-lieutenant-titus"
             datasheets["datasheets"].append(unit)
             existing.add(title_key)
         for item in extra_points["units"]:
-            title_key = "lieutenant titus" if key(item["title"]) == "captain titus" else key(item["title"])
+            title_key = key(item["title"])
             if title_key not in expected_titles or item["id"] in point_ids:
                 continue
-            if title_key == "lieutenant titus":
-                item["title"] = "Lieutenant Titus"
-                item["id"] = "unit-lieutenant-titus"
             points["units"].append(item)
             point_ids.add(item["id"])
 
@@ -173,22 +224,25 @@ def build() -> tuple[dict, dict, dict]:
         if key(unit["title"]) in CURRENT_FACTION_PACK:
             unit["sourceLayer"] = "faction-pack"
     apply_faction_pack_facts(datasheets)
-    titus = next(item for item in datasheets["datasheets"] if item["title"] == "Lieutenant Titus")
-    titus["profiles"] = [{"name": "Lieutenant Titus", "stats": {"M": '6"', "T": "4", "Sv": "3+", "W": "5", "Ld": "6+", "OC": "1"}}]
-    titus["weapons"] = [
-        {"name": "Heavy bolt pistol", "mode": "ranged", "range": '18"', "a": "1", "skill": "2+", "s": "4", "ap": "-1", "d": "1", "abilities": "Pistol"},
-        {"name": "Astartes chainsword", "mode": "melee", "range": "Melee", "a": "8", "skill": "2+", "s": "4", "ap": "-1", "d": "1", "abilities": "Anti-Infantry 2+"},
+    apply_accepted_codex_facts(datasheets)
+    titus = next(item for item in datasheets["datasheets"] if item["title"] == "Captain Titus")
+    titus["sourceLayer"] = "codex"
+    weapon_order = ["Bolt pistol", "Master-crafted bolter", "Master-crafted chainsword"]
+    weapon_names = {key(name): name for name in weapon_order}
+    for weapon in titus["weapons"]:
+        weapon["name"] = weapon_names[key(weapon["name"])]
+        if key(weapon["abilities"]) == key("Anti-Infantry 2+"):
+            weapon["abilities"] = "Anti-Infantry 2+"
+    titus["weapons"].sort(key=lambda weapon: weapon_order.index(weapon["name"]))
+    press = next(ability for ability in titus["abilities"] if key(ability["title"]) == "press the attack")
+    press["text"] = press["text"].rstrip(".") + "."
+    ability_order = ["Honour of Ultramar", "Leader", "Oath of Moment", "Feel No Pain 5+", "Press the Attack"]
+    titus["abilities"].sort(key=lambda ability: ability_order.index(ability["title"]))
+    titus["keywords"] = ["Infantry", "Character", "Imperium", "Grenades", "Epic Hero", "Tacticus", "Captain", "Titus", "Adeptus Astartes", "Ultramarines"]
+    titus["relations"]["leader"] = [
+        "Assault Intercessor Squad", "Bladeguard Veteran Squad", "Company Heroes", "Hellblaster Squad",
+        "Infernus Squad", "Intercessor Squad", "Sternguard Veteran Squad", "Victrix Honour Guard", "Wardens of Ultramar",
     ]
-    titus["abilities"] = [ability for ability in titus.get("abilities", []) if key(ability["title"]) not in {"press the attack", "honour of the chapter"}]
-    titus["abilities"].extend([
-        {"title": "Press the Attack", "text": "Weapons equipped by models in this unit have the Sustained Hits 1 ability."},
-        {"title": "Honour of the Chapter", "text": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play."},
-    ])
-    titus["relations"] = {**titus.get("relations", {}), "leader": [
-        "Assault Intercessor Squad", "Bladeguard Veteran Squad", "Hellblaster Squad", "Infernus Squad",
-        "Intercessor Squad", "Sternguard Veteran Squad", "Wardens of Ultramar",
-    ]}
-    titus["keywords"] = ["Infantry", "Character", "Imperium", "Grenades", "Epic Hero", "Tacticus", "Lieutenant", "Titus", "Adeptus Astartes", "Ultramarines"]
 
     datasheets["imperialArmour"] = sorted(
         (item for item in datasheets["imperialArmour"] if key(item["title"]) in IMPERIAL_ARMOUR),
@@ -204,6 +258,9 @@ def build() -> tuple[dict, dict, dict]:
     datasheets["audit"]["datasheets"] = len(datasheets["datasheets"])
 
     points["units"] = sorted((item for item in points["units"] if item["id"] in current_ids), key=lambda item: item["title"])
+    official_units = {key(item["title"]): item for item in official["unitOverrides"]}
+    vulkan_points = official_units[key("Vulkan He'stan")]["points"]
+    next(item for item in points["units"] if item["id"] == "unit-vulkan-hestan")["points"] = vulkan_points
     current_enhancements = {(key(item["detachment"]), key(item["title"]).removesuffix(" upgrade")) for item in official["enhancements"]}
     enhancement_by_key = {}
     for item in points["enhancements"]:

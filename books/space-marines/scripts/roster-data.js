@@ -9723,6 +9723,256 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
+      "id": "unit-captain-titus",
+      "title": "Captain Titus",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "faction-pack",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Character",
+        "Imperium",
+        "Grenades",
+        "Epic Hero",
+        "Tacticus",
+        "Captain",
+        "Titus",
+        "Adeptus Astartes",
+        "Ultramarines"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-company-heroes",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-hellblaster-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-infernus-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-victrix-honour-guard",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-wardens-of-ultramar",
+            "maxCharacters": 1
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-company-heroes",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-hellblaster-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-infernus-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-victrix-honour-guard",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-wardens-of-ultramar",
+              "maxCharacters": 1
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      },
+      "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "6",
+          "Ld": "6+",
+          "OC": "1",
+          "Invulnerable": "4+"
+        },
+        "abilities": [
+          {
+            "id": "space-marines-ability-honour-of-ultramar",
+            "sectionId": "space-marines-ability-honour-of-ultramar",
+            "title": "Honour of Ultramar",
+            "text": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+,\ndo not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
+            "sourceUnitId": "unit-captain-titus"
+          },
+          {
+            "id": "core-leader",
+            "sectionId": "core-leader",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR.",
+            "sourceUnitId": "unit-captain-titus"
+          },
+          {
+            "id": "space-marines-army-rule-oath-of-moment",
+            "sectionId": "space-marines-army-rule-oath-of-moment",
+            "title": "Oath of Moment",
+            "text": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’",
+            "sourceUnitId": "unit-captain-titus"
+          },
+          {
+            "id": "core-feel-no-pain",
+            "sectionId": "core-feel-no-pain",
+            "title": "Feel No Pain 5+",
+            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+            "sourceUnitId": "unit-captain-titus"
+          },
+          {
+            "id": "space-marines-ability-press-the-attack",
+            "sectionId": "space-marines-ability-press-the-attack",
+            "title": "Press the Attack",
+            "text": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
+            "sourceUnitId": "unit-captain-titus"
+          }
+        ],
+        "models": [
+          {
+            "id": "unit-captain-titus-model-captain-titus",
+            "title": "Captain Titus",
+            "aliases": [
+              "Captain Titus"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-captain-titus-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-captain-titus-profile-bolt-pistol-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-captain-titus-selection-master-crafted-bolter",
+            "title": "Master-crafted bolter",
+            "aliases": [
+              "Master-crafted bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-captain-titus-profile-master-crafted-bolter-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-captain-titus-selection-master-crafted-chainsword",
+            "title": "Master-crafted chainsword",
+            "aliases": [
+              "Master-crafted chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-captain-titus-profile-master-crafted-chainsword-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [],
+        "weaponProfiles": [
+          {
+            "id": "unit-captain-titus-profile-bolt-pistol-ranged",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-captain-titus-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-captain-titus-profile-master-crafted-bolter-ranged-2",
+            "title": "Master-crafted bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "2+",
+            "s": "4",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Assault, Heavy",
+            "sourceSelectionIds": [
+              "unit-captain-titus-selection-master-crafted-bolter"
+            ]
+          },
+          {
+            "id": "unit-captain-titus-profile-master-crafted-chainsword-melee-3",
+            "title": "Master-crafted chainsword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "8",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Anti-Infantry 2+",
+            "sourceSelectionIds": [
+              "unit-captain-titus-selection-master-crafted-chainsword"
+            ]
+          }
+        ],
+        "wargearAbilities": []
+      }
+    },
+    {
       "id": "unit-cato-sicarius",
       "title": "Cato Sicarius",
       "sourceBookId": "space-marines",
@@ -11002,256 +11252,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "abilities": "Pistol",
             "sourceSelectionIds": [
               "unit-korsarro-khan-selection-bolt-pistol"
-            ]
-          }
-        ],
-        "wargearAbilities": []
-      }
-    },
-    {
-      "id": "unit-captain-titus",
-      "title": "Captain Titus",
-      "sourceBookId": "space-marines",
-      "sourceLayer": "faction-pack",
-      "intrinsicKeywords": [
-        "Infantry",
-        "Character",
-        "Imperium",
-        "Grenades",
-        "Epic Hero",
-        "Tacticus",
-        "Captain",
-        "Titus",
-        "Adeptus Astartes",
-        "Ultramarines"
-      ],
-      "relations": {
-        "canLead": [
-          {
-            "unitId": "unit-assault-intercessor-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-bladeguard-veteran-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-company-heroes",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-hellblaster-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-infernus-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-intercessor-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-sternguard-veteran-squad",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-victrix-honour-guard",
-            "maxCharacters": 2
-          },
-          {
-            "unitId": "unit-wardens-of-ultramar",
-            "maxCharacters": 1
-          }
-        ],
-        "canSupport": [],
-        "canBeLedBy": [],
-        "canBeSupportedBy": []
-      },
-      "ruleFacts": {
-        "relations": {
-          "canLead": [
-            {
-              "unitId": "unit-assault-intercessor-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-bladeguard-veteran-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-company-heroes",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-hellblaster-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-infernus-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-intercessor-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-sternguard-veteran-squad",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-victrix-honour-guard",
-              "maxCharacters": 2
-            },
-            {
-              "unitId": "unit-wardens-of-ultramar",
-              "maxCharacters": 1
-            }
-          ],
-          "canSupport": [],
-          "canBeLedBy": [],
-          "canBeSupportedBy": []
-        }
-      },
-      "gameSelections": {
-        "stats": {
-          "M": "6\"",
-          "T": "4",
-          "Sv": "3+",
-          "W": "6",
-          "Ld": "6+",
-          "OC": "1",
-          "Invulnerable": "4+"
-        },
-        "abilities": [
-          {
-            "id": "space-marines-ability-honour-of-ultramar",
-            "sectionId": "space-marines-ability-honour-of-ultramar",
-            "title": "Honour of Ultramar",
-            "text": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+,\ndo not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
-            "sourceUnitId": "unit-captain-titus"
-          },
-          {
-            "id": "core-leader",
-            "sectionId": "core-leader",
-            "title": "Leader",
-            "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR.",
-            "sourceUnitId": "unit-captain-titus"
-          },
-          {
-            "id": "space-marines-army-rule-oath-of-moment",
-            "sectionId": "space-marines-army-rule-oath-of-moment",
-            "title": "Oath of Moment",
-            "text": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’",
-            "sourceUnitId": "unit-captain-titus"
-          },
-          {
-            "id": "core-feel-no-pain",
-            "sectionId": "core-feel-no-pain",
-            "title": "Feel No Pain 5+",
-            "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-            "sourceUnitId": "unit-captain-titus"
-          },
-          {
-            "id": "space-marines-ability-press-the-attack",
-            "sectionId": "space-marines-ability-press-the-attack",
-            "title": "Press the Attack",
-            "text": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability.",
-            "sourceUnitId": "unit-captain-titus"
-          }
-        ],
-        "models": [
-          {
-            "id": "unit-captain-titus-model-captain-titus",
-            "title": "Captain Titus",
-            "aliases": [
-              "Captain Titus"
-            ]
-          }
-        ],
-        "selections": [
-          {
-            "id": "unit-captain-titus-selection-bolt-pistol",
-            "title": "Bolt pistol",
-            "aliases": [
-              "Bolt pistol"
-            ],
-            "kind": "weapon",
-            "profileIds": [
-              "unit-captain-titus-profile-bolt-pistol-ranged"
-            ],
-            "wargearAbilityIds": []
-          },
-          {
-            "id": "unit-captain-titus-selection-master-crafted-bolter",
-            "title": "Master-crafted bolter",
-            "aliases": [
-              "Master-crafted bolter"
-            ],
-            "kind": "weapon",
-            "profileIds": [
-              "unit-captain-titus-profile-master-crafted-bolter-ranged-2"
-            ],
-            "wargearAbilityIds": []
-          },
-          {
-            "id": "unit-captain-titus-selection-master-crafted-chainsword",
-            "title": "Master-crafted chainsword",
-            "aliases": [
-              "Master-crafted chainsword"
-            ],
-            "kind": "weapon",
-            "profileIds": [
-              "unit-captain-titus-profile-master-crafted-chainsword-melee-3"
-            ],
-            "wargearAbilityIds": []
-          }
-        ],
-        "weaponFamilies": [],
-        "weaponProfiles": [
-          {
-            "id": "unit-captain-titus-profile-bolt-pistol-ranged",
-            "title": "Bolt pistol",
-            "mode": "ranged",
-            "range": "12\"",
-            "a": "1",
-            "skill": "2+",
-            "s": "4",
-            "ap": "0",
-            "d": "1",
-            "abilities": "Pistol",
-            "sourceSelectionIds": [
-              "unit-captain-titus-selection-bolt-pistol"
-            ]
-          },
-          {
-            "id": "unit-captain-titus-profile-master-crafted-bolter-ranged-2",
-            "title": "Master-crafted bolter",
-            "mode": "ranged",
-            "range": "24\"",
-            "a": "2",
-            "skill": "2+",
-            "s": "4",
-            "ap": "-1",
-            "d": "2",
-            "abilities": "Assault, Heavy",
-            "sourceSelectionIds": [
-              "unit-captain-titus-selection-master-crafted-bolter"
-            ]
-          },
-          {
-            "id": "unit-captain-titus-profile-master-crafted-chainsword-melee-3",
-            "title": "Master-crafted chainsword",
-            "mode": "melee",
-            "range": "Melee",
-            "a": "8",
-            "skill": "2+",
-            "s": "5",
-            "ap": "-1",
-            "d": "2",
-            "abilities": "Anti-Infantry 2+",
-            "sourceSelectionIds": [
-              "unit-captain-titus-selection-master-crafted-chainsword"
             ]
           }
         ],
@@ -28563,9 +28563,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "1st-company-task-force-the-imperiums-sword",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -28646,9 +28646,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "1st-company-task-force-rites-of-war",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -28681,9 +28681,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "1st-company-task-force-iron-resolve",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -28714,9 +28714,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "anvil-siege-force-indomitable-fury",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -28750,9 +28750,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "anvil-siege-force-fleet-commander",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -28804,9 +28804,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "anvil-siege-force-stoic-defender",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -28858,9 +28858,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "anvil-siege-force-architect-of-war",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -28922,9 +28922,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "armoured-commander",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -28986,9 +28986,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "liberator",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29033,9 +29033,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "shock-deployment",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29097,9 +29097,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "tip-of-the-spear",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29161,9 +29161,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "blades-of-valour",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29225,9 +29225,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "bombast-omnivox",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29289,9 +29289,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "eye-of-the-primarch",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29353,9 +29353,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "hero-of-the-chapter",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29393,9 +29393,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "armour-of-antoninus",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29433,9 +29433,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "oath-of-macragge",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29473,9 +29473,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "student-of-the-codex",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29513,9 +29513,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "veteran-of-behemoth",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29577,9 +29577,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "castellum-omnivox",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29641,9 +29641,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "defensive-mastery",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29684,9 +29684,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "honour-indefatigable",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29724,9 +29724,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "spy-skull-data-link",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29764,9 +29764,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "champion-of-the-feast",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29804,9 +29804,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "disciple-of-rhetoricus",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29844,9 +29844,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "indomitable-champion",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29884,9 +29884,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "malodraxian-standard",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29925,9 +29925,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "firestorm-assault-force-champion-of-humanity",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -29978,9 +29978,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "firestorm-assault-force-war-tempered-artifice",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30032,9 +30032,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "firestorm-assault-force-forged-in-battle",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30086,9 +30086,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "firestorm-assault-force-adamantine-mantle",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30244,9 +30244,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "immolator",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30347,9 +30347,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "bellicose-weapon-spirits",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30392,9 +30392,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "raptorial-cogitator-core",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30446,9 +30446,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "gladius-task-force-artificer-armour",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30500,9 +30500,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "gladius-task-force-the-honour-vehement",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30536,9 +30536,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "gladius-task-force-adept-of-the-codex",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30590,9 +30590,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "gladius-task-force-fire-discipline",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30630,9 +30630,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "iron-laurel",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30670,9 +30670,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "medusan-roar-aura",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30710,9 +30710,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "spiritus-ferrum",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30750,9 +30750,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "steel-font",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30807,9 +30807,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "astartes-tank-ace-aura",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30864,9 +30864,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "firestorm-coordinators",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30921,9 +30921,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "gunnery-honours",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -30978,9 +30978,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "redoubtable-machine-spirit",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31010,9 +31010,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "ironstorm-spearhead-target-augury-web",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31064,9 +31064,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31096,9 +31096,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31150,9 +31150,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "ironstorm-spearhead-master-of-machine-war",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31194,9 +31194,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "celerity",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31238,9 +31238,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "fusillade",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31282,9 +31282,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "obfuscation",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31325,9 +31325,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "prescience",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31369,9 +31369,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "temporal-corridor",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31414,9 +31414,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "dedicated-gunship",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31478,9 +31478,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "laurels-of-thunder",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31542,9 +31542,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "orbital-uplink-reliquary",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31606,9 +31606,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "veteran-of-the-vanguard",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31646,9 +31646,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "avenging-avatar-aura",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31686,9 +31686,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "liberatum",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31726,9 +31726,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "scroll-of-proclamation",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31766,9 +31766,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "seals-of-reconquest",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31806,9 +31806,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "chogorian-huntmaster",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31846,9 +31846,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "hunter-s-eye",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31886,9 +31886,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "spearpoint-paragon",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31926,9 +31926,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "stormseers-wisdom",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -31958,9 +31958,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "stormlance-task-force-fury-of-the-storm",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32012,9 +32012,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "stormlance-task-force-portents-of-wisdom",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32066,9 +32066,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "stormlance-task-force-feinting-withdrawal",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32098,9 +32098,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "stormlance-task-force-hunters-instincts",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32138,9 +32138,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "blackwing-shroud",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32178,9 +32178,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "coronal-susurrant",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32255,9 +32255,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "umbral-raptor",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32305,9 +32305,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "death-in-the-dark",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32351,9 +32351,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "shroud-field",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32404,9 +32404,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "vanguard-spearhead-the-blade-driven-deep",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32458,9 +32458,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "vanguard-spearhead-ghostweave-cloak",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32494,9 +32494,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "vanguard-spearhead-execute-and-redeploy",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32530,9 +32530,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "sourceId": "vanguard-spearhead-shadow-war-veteran",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32573,9 +32573,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-avenging-angel",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     },
@@ -32629,9 +32629,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-orksbane",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "space-marines"
     }

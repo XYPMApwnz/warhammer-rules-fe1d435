@@ -6,7 +6,7 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "5",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Imperium%20-%20Space%20Marines.json",
-    "snapshotSha256": "D37086F5E65CAAF84EE8DDA92F148312E064B0F47CCF6DC43F196DDA9D67E691"
+    "snapshotSha256": "2C3427A887B90BEBD652A37CC5FC0DEAAB4DE000D15AE1E73EDAF024AE0D4163"
   },
   "datasheets": [
     {
@@ -4962,6 +4962,132 @@
       }
     },
     {
+      "id": "unit-captain-titus",
+      "title": "Captain Titus",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "category": "Epic Heroes",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "profiles": [
+        {
+          "name": "Captain Titus",
+          "stats": {
+            "M": "6\"",
+            "T": "4",
+            "Sv": "3+",
+            "W": "6",
+            "Ld": "6+",
+            "OC": "1",
+            "Invulnerable": "4+"
+          }
+        }
+      ],
+      "weapons": [
+        {
+          "name": "Bolt pistol",
+          "mode": "ranged",
+          "range": "12\"",
+          "a": "1",
+          "skill": "2+",
+          "s": "4",
+          "ap": "0",
+          "d": "1",
+          "abilities": "Pistol"
+        },
+        {
+          "name": "Master-crafted bolter",
+          "mode": "ranged",
+          "range": "24\"",
+          "a": "2",
+          "skill": "2+",
+          "s": "4",
+          "ap": "-1",
+          "d": "2",
+          "abilities": "Assault, Heavy"
+        },
+        {
+          "name": "Master-crafted chainsword",
+          "mode": "melee",
+          "range": "Melee",
+          "a": "8",
+          "skill": "2+",
+          "s": "5",
+          "ap": "-1",
+          "d": "2",
+          "abilities": "Anti-Infantry 2+"
+        }
+      ],
+      "abilities": [
+        {
+          "title": "Honour of Ultramar",
+          "text": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+,\ndo not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play."
+        },
+        {
+          "title": "Leader",
+          "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR."
+        },
+        {
+          "title": "Oath of Moment",
+          "text": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’"
+        },
+        {
+          "title": "Feel No Pain 5+",
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+        },
+        {
+          "title": "Press the Attack",
+          "text": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
+        }
+      ],
+      "wargearAbilities": [],
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Imperium",
+        "Grenades",
+        "Epic Hero",
+        "Tacticus",
+        "Captain",
+        "Titus",
+        "Adeptus Astartes",
+        "Ultramarines"
+      ],
+      "composition": [
+        {
+          "name": "Captain Titus",
+          "min": 1,
+          "max": 1,
+          "models": [
+            "Captain Titus"
+          ]
+        }
+      ],
+      "paidWargear": [],
+      "relations": {
+        "leader": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Company Heroes",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad",
+          "Victrix Honour Guard",
+          "Wardens of Ultramar"
+        ],
+        "support": [],
+        "attachedUnit": [],
+        "transport": []
+      }
+    },
+    {
       "id": "unit-cato-sicarius",
       "title": "Cato Sicarius",
       "status": "Current",
@@ -5678,132 +5804,6 @@
           "INTERCESSOR SQUAD",
           "STERNGUARD VETERAN SQUAD",
           "TACTICAL SQUAD"
-        ],
-        "support": [],
-        "attachedUnit": [],
-        "transport": []
-      }
-    },
-    {
-      "id": "unit-captain-titus",
-      "title": "Captain Titus",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "category": "Epic Heroes",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 100,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "profiles": [
-        {
-          "name": "Captain Titus",
-          "stats": {
-            "M": "6\"",
-            "T": "4",
-            "Sv": "3+",
-            "W": "6",
-            "Ld": "6+",
-            "OC": "1",
-            "Invulnerable": "4+"
-          }
-        }
-      ],
-      "weapons": [
-        {
-          "name": "Bolt pistol",
-          "mode": "ranged",
-          "range": "12\"",
-          "a": "1",
-          "skill": "2+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "abilities": "Pistol"
-        },
-        {
-          "name": "Master-crafted bolter",
-          "mode": "ranged",
-          "range": "24\"",
-          "a": "2",
-          "skill": "2+",
-          "s": "4",
-          "ap": "-1",
-          "d": "2",
-          "abilities": "Assault, Heavy"
-        },
-        {
-          "name": "Master-crafted chainsword",
-          "mode": "melee",
-          "range": "Melee",
-          "a": "8",
-          "skill": "2+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "abilities": "Anti-Infantry 2+"
-        }
-      ],
-      "abilities": [
-        {
-          "title": "Honour of Ultramar",
-          "text": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+,\ndo not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play."
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR."
-        },
-        {
-          "title": "Oath of Moment",
-          "text": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’"
-        },
-        {
-          "title": "Feel No Pain 5+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
-        },
-        {
-          "title": "Press the Attack",
-          "text": "Weapons equipped by models in this model’s unit have the [SUSTAINED HITS 1] ability."
-        }
-      ],
-      "wargearAbilities": [],
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Imperium",
-        "Grenades",
-        "Epic Hero",
-        "Tacticus",
-        "Captain",
-        "Titus",
-        "Adeptus Astartes",
-        "Ultramarines"
-      ],
-      "composition": [
-        {
-          "name": "Captain Titus",
-          "min": 1,
-          "max": 1,
-          "models": [
-            "Captain Titus"
-          ]
-        }
-      ],
-      "paidWargear": [],
-      "relations": {
-        "leader": [
-          "Assault Intercessor Squad",
-          "Bladeguard Veteran Squad",
-          "Company Heroes",
-          "Hellblaster Squad",
-          "Infernus Squad",
-          "Intercessor Squad",
-          "Sternguard Veteran Squad",
-          "Victrix Honour Guard",
-          "Wardens of Ultramar"
         ],
         "support": [],
         "attachedUnit": [],

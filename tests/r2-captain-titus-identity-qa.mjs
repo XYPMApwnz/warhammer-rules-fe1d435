@@ -44,7 +44,7 @@ const pointRecords=objects(json('books/space-marines/content/space-marines-point
 assert.equal(pointRecords.length,1,'Captain Titus point owner identity');
 assert.equal(objects(json('books/space-marines/content/space-marines-points.en.json'),item=>item.id===oldId).length,0,'Old Titus point identity');
 assert.equal(pointRecords[0].title,newTitle,'Captain Titus point owner title');
-assert.equal(fingerprint(pointRecords[0]),'9dee6d7e4e5a4e32acc88271fcb90882868f08d594ea923b020fc8fd9d369693','Titus point factual fingerprint');
+assert.equal(fingerprint(pointRecords[0]),'4eacd64bc2fcfc32999a7c6d49bab0e5ae5525374a2fb835f5b6a17670d6f290','Titus point factual fingerprint');
 
 const wargearRoot=json('books/space-marines/content/space-marines-codex-wargear.en.json');
 const wargearRecords=objects(wargearRoot,item=>item.title===newTitle);

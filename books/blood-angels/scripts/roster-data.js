@@ -29104,16 +29104,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29162,15 +29162,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
       },
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29208,16 +29208,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29255,16 +29255,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29301,16 +29301,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29347,16 +29347,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29393,16 +29393,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29438,16 +29438,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29484,16 +29484,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29536,16 +29536,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29584,16 +29584,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29650,16 +29650,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         6
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           6
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29716,16 +29716,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         6
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           6
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29765,16 +29765,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         6
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           6
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29831,16 +29831,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         6
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           6
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29890,16 +29890,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         8
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           8
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -29949,16 +29949,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         8
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           8
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30008,16 +30008,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         8
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           8
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30067,16 +30067,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         8
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           8
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30133,16 +30133,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         10
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           10
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30199,16 +30199,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         10
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           10
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30244,16 +30244,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         10
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           10
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30286,16 +30286,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         10
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           10
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30352,16 +30352,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         24
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           24
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30418,16 +30418,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         24
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           24
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30484,16 +30484,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         24
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           24
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30550,16 +30550,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         24
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           24
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30597,16 +30597,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         26
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           26
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30663,16 +30663,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         26
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           26
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30729,16 +30729,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         26
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           26
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30795,16 +30795,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         26
       ],
       "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
           26
         ]
       },
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30858,9 +30858,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30945,9 +30945,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -30982,9 +30982,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31017,9 +31017,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31055,9 +31055,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31111,9 +31111,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31167,9 +31167,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31210,9 +31210,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31265,9 +31265,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31321,9 +31321,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31377,9 +31377,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31433,9 +31433,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31489,9 +31489,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31527,9 +31527,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31583,9 +31583,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31617,9 +31617,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31673,9 +31673,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31707,9 +31707,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31763,9 +31763,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31797,9 +31797,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31853,9 +31853,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31909,9 +31909,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31943,9 +31943,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -31998,9 +31998,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -32054,9 +32054,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -32092,9 +32092,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"
@@ -32130,9 +32130,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceAuthority": "secondary",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "dependencyBook": "space-marines",
       "sourceBookId": "space-marines"

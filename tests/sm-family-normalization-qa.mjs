@@ -75,6 +75,11 @@ const orksbane=book=>enhancements[book].find(item=>normalize(item.title)==='orks
 for(const book of books){assert.ok(orksbane(book)?.profile,`${book} Orksbane profile`);assert.equal(canonicalSourceId(orksbane(book),book),canonicalSourceId(orksbane('space-marines'),'space-marines'),`${book} Orksbane identity`);}
 assert.deepEqual(fact(orksbane('dark-angels').profile),fact(orksbane('space-marines').profile),'DA Orksbane profile parity');
 assert.deepEqual(fact(orksbane('blood-angels').profile),fact(orksbane('space-marines').profile),'BA Orksbane profile parity');
+for(const book of books){
+  assert.equal(orksbane(book).profile.characteristics.D,'3',`${book} Orksbane structured Damage`);
+  const html=data[book].WH_ARMY_BOOK_TARGETS.html,start=html.indexOf('data-rule-id="enhancement-orksbane"'),surface=html.slice(start,html.indexOf('</article>',start));
+  assert.match(surface,/Melee 4 2\+ 8 -2 3/,`${book} Orksbane visible row must retain Damage 3`);
+}
 
 const provider=fs.readFileSync(path.join(root,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
 const builder=fs.readFileSync(path.join(root,'books/shared/tools/build-army-book.mjs'),'utf8');

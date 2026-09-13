@@ -32582,7 +32582,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "legacyKey": "enhancement-orksbane",
       "title": "Orksbane",
-      "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2",
+      "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2 3",
       "value": 20,
       "detachment": "Vengeful Hosts",
       "tags": [],
@@ -35290,7 +35290,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   },
   "enhancement-orksbane": {
     "title": "Orksbane",
-    "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2",
+    "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2 3",
     "value": 20,
     "detachment": "Vengeful Hosts",
     "tags": [],

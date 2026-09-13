@@ -1714,8 +1714,8 @@ window.DG_TERMS={
   "space-marines-enhancement-orksbane": {
     "id": "space-marines-enhancement-orksbane",
     "title": "Orksbane",
-    "summary": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2",
-    "full": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2",
+    "summary": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2 3",
+    "full": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2 3",
     "glossary": "glossary-space-marines-enhancement-orksbane",
     "rule": "detachment-vengeful-hosts"
   },

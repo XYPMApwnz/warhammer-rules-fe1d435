@@ -10,11 +10,22 @@ import {
   verifyCaptureManifest,verifyFrozenSource
 } from '../books/shared/tools/source-ingestion-contract.mjs';
 import {verifyBsdataSource} from '../books/shared/tools/verify-bsdata-source.mjs';
+import {buildSourceStatus} from '../books/shared/tools/source-freshness.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=relative=>fs.readFileSync(path.join(root,relative),'utf8');
 const packageJson=JSON.parse(read('package.json'));
 const registry=readSourceRegistry();
+const freshness=buildSourceStatus();
+assert.equal(freshness.summary.REGISTERED_SOURCE_COUNT,5);
+assert.equal(freshness.summary.DECLARED_SOURCE_COUNT,32);
+assert.equal(freshness.summary.CLASSIFIED_DECLARED_SOURCE_COUNT,4);
+assert.equal(freshness.summary.UNCLASSIFIED_SOURCE_COUNT,28);
+assert.equal(freshness.summary.REGISTERED_WITHOUT_MANIFEST_DECLARATION_COUNT,1);
+assert.deepEqual(freshness.summary.BOOKS_WITH_COMPLETE_SOURCE_ENROLLMENT,[]);
+assert.deepEqual(freshness.summary.BOOKS_WITH_PARTIAL_SOURCE_ENROLLMENT,['tau-empire','chaos-space-marines','space-marines']);
+assert.deepEqual(freshness.summary.BOOKS_WITH_NO_SOURCE_ENROLLMENT,['death-guard','adeptus-mechanicus','tyranids','emperors-children','dark-angels','blood-angels','orks']);
+assert(freshness.sources.every(source=>source.UPSTREAM_OBSERVATION.status==='UNKNOWN'),'Missing retained upstream observations must remain UNKNOWN');
 const active=[
   ['books/space-marines/tools/extract-codex-details.cjs','space-marines-codex-details'],
   ['books/chaos-space-marines/tools/extract-mfm.cjs','csm-mfm-v1.3'],

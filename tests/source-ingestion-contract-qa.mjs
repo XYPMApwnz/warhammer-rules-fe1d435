@@ -174,7 +174,7 @@ for(const name of normalSourceCommands){
 const normalGraph=Object.entries(packageJson.scripts).filter(([name])=>name==='test'||name.startsWith('test:')||name.endsWith(':build')||name.endsWith(':check')||name==='army-books:sources:check').map(([,command])=>command).join('\n');
 for(const dormant of registry.dormantLiveTools){
   const source=read(dormant);
-  assert(source.includes('--capture-update'),`${dormant}: live mode lacks an explicit update guard`);
+  assert(source.includes('--capture-update')||source.includes('beginLegacyCaptureTool'),`${dormant}: live mode lacks an explicit update guard`);
   if(normalGraph.includes(dormant))assert(normalGraph.includes(`${dormant} --check`),`${dormant}: dormant live branch is reachable from normal scripts`);
 }
 

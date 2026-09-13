@@ -71,6 +71,11 @@ export function requireSourceToolMode(argv,{toolName}){
   return{kind:'capture',candidateDir:path.resolve(candidateDir)};
 }
 
+export function beginLegacyCaptureTool({argv,toolName,...captureOptions}){
+  const mode=requireSourceToolMode(argv,{toolName});
+  return{mode,session:mode.kind==='capture'?createCaptureSession({...captureOptions,candidateDir:mode.candidateDir}):null};
+}
+
 const safeName=value=>String(value).normalize('NFKD').replace(/[^a-zA-Z0-9._-]+/g,'-').replace(/^-+|-+$/g,'').slice(0,120)||'artifact';
 
 export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authority,sourceType,candidateDir,extractorPath,localInputs=[],upstreamVersion=null,upstreamCommit=null,notes='',confidence='unreviewed'}){

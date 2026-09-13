@@ -24,7 +24,7 @@ function putSavedRosters(records){
   }
   localStorage.setItem(STORAGE_KEY,JSON.stringify(records));
 }
-function isDisplayable(record){return Boolean(record?.id&&record?.name&&Array.isArray(record?.roster?.units));}
+function isDisplayable(record){return Boolean(record?.id&&record?.name);}
 function isImportableRecord(record){
   return Boolean(
     typeof record?.id==='string'&&record.id.trim()&&
@@ -120,12 +120,12 @@ function exportRoster(id){
 
 function renderSavedRosters(){
   let stored=getSavedRosters(),changed=false;
-  stored=stored.map(record=>{if(!isDisplayable(record))return record;let fresh;try{fresh=freshRoster(record);}catch{return record;}const byInstance=new Map((fresh?.units||[]).map(unit=>[unit.id,unit]));let recordChanged=false;const units=record.roster.units.map(unit=>{const canonicalUnitId=byInstance.get(unit?.id)?.canonicalUnitId;if(!canonicalUnitId||unit.canonicalUnitId===canonicalUnitId)return unit;recordChanged=true;return {...unit,canonicalUnitId};});if(!recordChanged)return record;changed=true;return {...record,roster:{...record.roster,units}};});
+  stored=stored.map(record=>{if(!isDisplayable(record))return record;try{const fresh=freshRoster(record),byInstance=new Map((fresh?.units||[]).map(unit=>[unit.id,unit]));let recordChanged=false;const units=record.roster.units.map(unit=>{const canonicalUnitId=byInstance.get(unit?.id)?.canonicalUnitId;if(!canonicalUnitId||unit.canonicalUnitId===canonicalUnitId)return unit;recordChanged=true;return {...unit,canonicalUnitId};});if(!recordChanged)return record;changed=true;return {...record,roster:{...record.roster,units}};}catch{return record;}});
   if(changed)putSavedRosters(stored);
-  const records=stored.filter(isDisplayable);
+  const records=stored.filter(isDisplayable).map(record=>{try{const roster=freshRoster(record);if(!roster||!Array.isArray(roster.units)||roster.units.some(unit=>!unit||typeof unit!=='object'))throw new Error('Malformed saved roster');return{record,roster};}catch{return{record,roster:null};}});
   if(!records.length){savedHost.innerHTML='<div class="empty">No saved rosters yet. Create a guide below or import a backup.</div>';return;}
   const grid=document.createElement('div');grid.className='saved-grid';
-  for(const record of records){const roster=freshRoster(record)||record.roster,card=document.createElement('article'),actions=document.createElement('div');card.className='saved-card';card.innerHTML=`<p class="eyebrow">${escapeHtml(recordDetachments({...record,roster}))}</p><h3>${escapeHtml(record.name)}</h3><p>${roster.units.length} units · updated ${updatedLabel(record.updatedAt)}</p>`;actions.className='actions';actions.append(readerAction({...record,roster}));const attachments=attachmentAction({...record,roster});if(attachments)actions.append(attachments);actions.append(actionButton('Export','exportRoster',record.id),actionButton('Delete','deleteRoster',record.id));card.append(actions);grid.append(card);}
+  for(const view of records){const{record,roster}=view,card=document.createElement('article'),actions=document.createElement('div');card.className='saved-card';actions.className='actions';if(!roster){card.dataset.rosterRecovery='required';card.innerHTML=`<p class="eyebrow">Recovery needed</p><h3>${escapeHtml(record.name)}</h3><p>This saved roster could not be read. Export its original backup for recovery, or delete it from this device.</p>`;actions.append(actionButton('Export','exportRoster',record.id),actionButton('Delete','deleteRoster',record.id));}else{card.innerHTML=`<p class="eyebrow">${escapeHtml(recordDetachments({...record,roster}))}</p><h3>${escapeHtml(record.name)}</h3><p>${roster.units.length} units · updated ${updatedLabel(record.updatedAt)}</p>`;actions.append(readerAction({...record,roster}));const attachments=attachmentAction({...record,roster});if(attachments)actions.append(attachments);actions.append(actionButton('Export','exportRoster',record.id),actionButton('Delete','deleteRoster',record.id));}card.append(actions);grid.append(card);}
   savedHost.replaceChildren(grid);
 }
 

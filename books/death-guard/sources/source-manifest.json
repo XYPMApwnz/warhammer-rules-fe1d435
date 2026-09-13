@@ -27,7 +27,8 @@
       "localPath": "sources/official-mfm-v1.3.json",
       "sourceUpdatedAt": "2026-08-26",
       "capturedAt": "2026-08-27",
-      "captureSha256": "6AD17A84133D348DC782A39AC73EFBFA223E906F52AD0471EE81C27A40EA1FD6"
+      "captureSha256": "6AD17A84133D348DC782A39AC73EFBFA223E906F52AD0471EE81C27A40EA1FD6",
+      "localSha256": "133142DA78862684FBA85C1DF534593D6EAF382146B6175C037FF2E8BC6D7F1F"
     },
     {
       "id": "death-guard-codex-transcription",

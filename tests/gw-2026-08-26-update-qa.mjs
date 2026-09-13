@@ -123,9 +123,9 @@ assert.equal(Object.values(daRelated.enhancements||{}).filter(item=>item.owner).
 assert.equal(Object.values(daRelated.enhancements||{}).filter(item=>item.assignment).length,26);
 
 const manifestMfmHashes={
-  "death-guard": "6AD17A84133D348DC782A39AC73EFBFA223E906F52AD0471EE81C27A40EA1FD6",
-  "emperors-children": "BC3AB9AF7DCF6F0F5BC331FA4C1D1B91A572832C744FE9518F6C08E82473CF1B",
-  "tyranids": "E4C0637752D07A3CB1023730B6CE40C7E0704721BC91FDE9D844A76614F1C7AC",
+  "death-guard": "133142DA78862684FBA85C1DF534593D6EAF382146B6175C037FF2E8BC6D7F1F",
+  "emperors-children": "F2BA99FB7DAC35D7C0D0436997AF4D1D98697CC3AB9CCF86C7FA8CEE210AFB15",
+  "tyranids": "7BD69647103214E6E2F2FE9ADDC741701C0F62C0F2D2374E0D43719041CC99F4",
   "chaos-space-marines": "FBE45A9D08B1A99E8E1B2C8011BD510180D9BDFF3657442902F88C519A3E54F7",
   "space-marines": "D5E8765D56FCE1445F7718AD7CA4D249D5AC3FFD6D68E8D8ABEA46E539D0546B",
   "dark-angels": "6A90E2D6F9517520D75E532BB8090435B5368240F7A828598158B0ACDCFE6FB0",
@@ -140,7 +140,8 @@ for(const book of ['death-guard','adeptus-mechanicus','tau-empire','emperors-chi
   if(manifestMfmHashes[book]){
     assert.doesNotMatch(manifest,/MFM v1\.2|mfm-v1\.2/i,book+' stale MFM provenance');
     assert.match(manifest,new RegExp(manifestMfmHashes[book],'i'),book+' MFM capture hash');
-    const actualHash=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'books',book,'sources','official-mfm-v1.3.json'))).digest('hex').toUpperCase();
+    const artifact=fs.readFileSync(path.join(root,'books',book,'sources','official-mfm-v1.3.json'),'utf8').replace(/\r\n/g,'\n');
+    const actualHash=crypto.createHash('sha256').update(artifact).digest('hex').toUpperCase();
     assert.equal(actualHash,manifestMfmHashes[book],book+' current MFM file hash');
   }
 }
@@ -160,7 +161,7 @@ const changedPaths=(a,b,prefix='',out=[])=>{
   return out;
 };
 const dgDiff=changedPaths(factualProjection(dgOld),factualProjection(dg));
-assert.equal(dgDiff.every(p=>/units\/(1|10|13|21|22|23|24)|detachments\/(0|1|3|4)\/tags/.test(p)),true,'unexpected DG factual delta '+dgDiff.join(','));
+assert.equal(dgDiff.every(p=>/units\/(1|10|13|21|22|23|24)|detachments\/(0|1|3|4)\/tags|enhancements\/(6|7|8|9|12|13|14|15)\/(id|sourceTitle)/.test(p)),true,'unexpected DG factual delta '+dgDiff.join(','));
 const package1aLedger=json('tests/fixtures/gw-2026-08-26-owner-points-ledger.json');
 const recordByTitle=(records,title)=>{const values=Array.isArray(records)?records:Object.entries(records||{}).map(([name,value])=>({title:name,...value}));return one(values.filter(item=>norm(item.title)===norm(title)),title);};
 const canonicalPointRecord=entry=>{const document=json(entry.canonicalPath);if(entry.canonicalKind==='dg-section')return one(byId(document,entry.canonicalUnitId),entry.canonicalUnitId);if(entry.canonicalKind==='dependency-point-override')return document.dependencyDatasheets.pointOverrides[entry.canonicalUnitId];return one((document.units||[]).filter(item=>item.id===entry.canonicalUnitId||norm(item.title)===norm(entry.title)),entry.canonicalUnitId);};

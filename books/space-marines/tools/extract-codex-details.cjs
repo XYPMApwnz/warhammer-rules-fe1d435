@@ -1,4 +1,3 @@
-const {chromium}=require('playwright');
 const fs=require('node:fs');
 const path=require('node:path');
 
@@ -23,7 +22,7 @@ const routeAliases=new Map([
 const clean=value=>String(value||'').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ').replace(/\n[ \t]+/g,'\n').trim();
 const key=value=>clean(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,' ').trim();
 const stable=value=>`${JSON.stringify(value,null,2)}\n`;
-const checkedAt=file=>process.argv.includes('--check')&&fs.existsSync(file)?JSON.parse(fs.readFileSync(file,'utf8')).source?.checkedAt||'2026-08-09':'2026-08-09';
+const checkedAt=()=>new Date().toISOString().slice(0,10);
 const officialDetails=new Map([
   ['Caanok Var',{pages:[14,15],composition:'1 Caanok Var – Epic Hero\nThis model is equipped with: 1 storm bolter; 1 Axiom.'}],
   ['Suboden Khan',{pages:[16,17],composition:'1 Suboden Khan – Epic Hero\nThis model is equipped with: 1 heavy bolt pistol; 1 onslaught gatling cannon; Stormtooth; power sword.'}],
@@ -41,9 +40,19 @@ function coreRuleMap(){
 }
 
 async function main(){
+  const contract=await import('../../shared/tools/source-ingestion-contract.mjs');
+  const mode=contract.requireSourceToolMode(process.argv.slice(2),{toolName:'extract-codex-details.cjs'});
+  if(mode.kind==='verify'){
+    const verified=contract.verifyFrozenSource('space-marines-codex-details');
+    console.log(`Space Marines frozen source details verified: ${verified.artifacts.length} artifacts, ${verified.status}`);
+    return;
+  }
+  const session=contract.createCaptureSession({sourceId:'space-marines-codex-details',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/space-marines/tools/extract-codex-details.cjs',notes:'Candidate only; accepted normalized legacy state is not mutated.'});
+  const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const indexPage=await browser.newPage();
   await indexPage.goto(sourceUrl,{waitUntil:'domcontentloaded',timeout:90_000});
+  await session.capturePage(indexPage,sourceUrl,'space-marines-index');
   const links=await indexPage.locator('a').evaluateAll(nodes=>Object.fromEntries(nodes.filter(node=>node.href.includes('/wh40k11ed/factions/space-marines/')).map(node=>[node.textContent.trim().toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,' ').trim(),node.href])));
   const codexDetachments=await indexPage.evaluate(titles=>{
     const clean=value=>String(value||'').replace(/\u00a0/g,' ').replace(/\s+/g,' ').trim(),slug=value=>clean(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -70,6 +79,7 @@ async function main(){
     const page=await browser.newPage();
     while(cursor<datasheets.length){
       const unit=datasheets[cursor++],routeTitle=routeAliases.get(unit.title)||unit.title.replace(/\bArmor\b/g,'Armour').replace(/[’']/g,'').replace(/[^A-Za-z0-9]+/g,'-').replace(/^-|-$/g,''),url=links[key(unit.title)]||`${sourceUrl}${routeTitle}`;await page.goto(url,{waitUntil:'domcontentloaded',timeout:90_000});
+      await session.capturePage(page,url,unit.id||unit.title);
       const record=await page.evaluate(()=>{const clean=value=>String(value||'').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ').replace(/\n[ \t]+/g,'\n').trim(),header=label=>[...document.querySelectorAll('.dsHeader')].find(node=>node.textContent.trim()===label),wargearHeader=header('WARGEAR OPTIONS'),list=wargearHeader?.nextElementSibling?.tagName==='UL'?wargearHeader.nextElementSibling:null,wargear=list?[...list.children].map(item=>clean(item.innerText)).filter(Boolean):[];for(let sibling=list?.nextElementSibling;sibling;sibling=sibling.nextElementSibling)if(sibling.classList?.contains('dsOptionsComment'))wargear.push(clean(sibling.innerText));const composition=clean(header('UNIT COMPOSITION')?.nextElementSibling?.innerText),stratagems=[...document.querySelectorAll('.str11Wrap')].map(node=>({title:clean(node.querySelector('.str11Name')?.innerText).replace(/\d+\.\d+$/,''),type:clean(node.querySelector('.str11Type')?.innerText)})).filter(item=>/Stratagem/i.test(item.type)),enhancements=[...document.querySelectorAll('.s10EnhWrap')].filter(node=>getComputedStyle(node).display!=='none').map(node=>clean(node.firstElementChild?.innerText));return{wargear,composition,stratagems,enhancements};});
       if(!record.composition)throw new Error(`Current 11E Datasheet detail not found for ${unit.title}: ${url}`);const official=officialDetails.get(unit.title),source=official?{authority:'official',sourceId:'space-marines-faction-pack-v1.1',localFile:'../sources/space-marines-faction-pack-v1.1.pdf',pages:official.pages}:{authority:'secondary',sourceId:'wahapedia-space-marines-11e',url};
       details.push({title:unit.title,url,source,wargear:record.wargear.map(clean),composition:official?.composition||clean(record.composition)});
@@ -80,7 +90,10 @@ async function main(){
   await Promise.all(Array.from({length:6},worker));await browser.close();details.sort((a,b)=>a.title.localeCompare(b.title,'en'));
   const source={title:'Wahapedia Warhammer 40,000 11th Edition · Space Marines',url:sourceUrl,authority:'secondary',checkedAt:checkedAt(detailsPath)},overlay={schema:1,source:{id:'space-marines-current-parity-2026',authority:'mixed',title:source.title,url:sourceUrl,checkedAt:checkedAt(overlayPath),knownGaps:['Codex rule-bearing text is secondary parity evidence.','Vengeful Hosts exact detail retains its existing mixed provenance.']},detachments:[...codexDetachments,vengeful]},detailsOutput={schema:1,source,units:details},snapshot={schema:1,source:{...source,checkedAt:checkedAt(snapshotPath)},units:Object.fromEntries(Object.entries(snapshotUnits).sort(([a],[b])=>a.localeCompare(b,'en')))};
   const related=structuredClone(previousRelated);related.sourceId='space-marines-current-sources';related.enhancements={};const unitsForRule=new Map();for(const [unitId,rows] of Object.entries(snapshot.units))for(const row of rows){const list=unitsForRule.get(row.ruleId)||[];list.push(unitId);unitsForRule.set(row.ruleId,list);}for(const detachment of codexDetachments)for(const item of detachment.stratagems){const unitIds=unitsForRule.get(item.id)||[];if(!unitIds.length)throw new Error(`No compatible Datasheet for ${item.id}`);related.stratagems[item.id]={v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{unitIds}}],conditions:[]};}for(const detachment of allDetachments)for(const item of detachment.enhancements||[]){const unitIds=unitsForRule.get(item.id)||[];related.enhancements[item.id]={tags:[],owner:{subject:'model',selector:{unitIds}},assignment:{maxOwners:1,enhancementChoices:1,payPointsPerOwner:true}};}
-  const outputs=[[detailsPath,detailsOutput],[overlayPath,overlay],[snapshotPath,snapshot],[relatedPath,related]];if(process.argv.includes('--check')){for(const [file,value] of outputs)if(!fs.existsSync(file)||fs.readFileSync(file,'utf8')!==stable(value))throw new Error(`${path.basename(file)} is stale; run extract-codex-details.cjs`);console.log(`Space Marines source details current: ${details.length} Datasheets, ${codexDetachments.length} Codex Detachments`);}else{for(const [file,value] of outputs){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,stable(value),'utf8');}console.log(`Extracted Space Marines details: ${details.length} Datasheets, ${codexDetachments.length} Codex Detachments`);}
+  const outputs=[[detailsPath,detailsOutput],[overlayPath,overlay],[snapshotPath,snapshot],[relatedPath,related]];
+  for(const [file,value] of outputs)session.writeCandidate(path.relative(root,file),stable(value));
+  session.finalize();
+  console.log(`Captured Space Marines source-details candidate: ${details.length} Datasheets, ${codexDetachments.length} Codex Detachments`);
 }
 
 main().catch(error=>{console.error(error);process.exit(1)});

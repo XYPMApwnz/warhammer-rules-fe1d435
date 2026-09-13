@@ -1,0 +1,128 @@
+{
+  "schema": "warhammer-source-ingestion/v1",
+  "statuses": [
+    "VERIFIED_FROZEN",
+    "VERIFIED_CURRENT",
+    "UPDATE_AVAILABLE",
+    "REVIEW_REQUIRED",
+    "SOURCE_LIMITED",
+    "LEGACY_UNVERIFIABLE"
+  ],
+  "sources": [
+    {
+      "book": "space-marines",
+      "sourceId": "space-marines-codex-details",
+      "authority": "secondary",
+      "sourceType": "wahapedia-html",
+      "acceptedRevision": "legacy-normalized-2026-08-09",
+      "acceptedHash": "c998f4ad426045eab82ccded75deff0cd0977671327e3067c83543db46ae2696",
+      "lastChecked": "2026-08-09",
+      "upstreamUpdateKnown": true,
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "extractor": "books/space-marines/tools/extract-codex-details.cjs",
+      "artifacts": [
+        {
+          "path": "books/space-marines/content/space-marines-codex-wargear.en.json",
+          "normalization": "lf",
+          "sha256": "610bffd8556bceef53588e5f0c24c1aa390948724559fdf21bba5a41386b95d2"
+        },
+        {
+          "path": "books/space-marines/content/space-marines-current-overlay.en.json",
+          "normalization": "lf",
+          "sha256": "96bdf6780b227875dc1d3337a37a5104e16f866c9f7d65d8e584803934244907"
+        },
+        {
+          "path": "books/space-marines/sources/wahapedia-compatible-rules.snapshot.json",
+          "normalization": "lf",
+          "sha256": "32dee7a9bb9c21290ae4817f6a4563e69c10021ec63175d9ae3d6fe14d748aa1"
+        },
+        {
+          "path": "books/space-marines/content/space-marines-related-rules.en.json",
+          "normalization": "lf",
+          "sha256": "c1cf29b4827f2dc8acfb3822d39a41fa40ca774330d1b7033a2e7c2ed28aafaf"
+        }
+      ],
+      "notes": "Historical raw Wahapedia pages are unavailable. Accepted normalized artifacts are frozen and hash verified; current live pages are update candidates only."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-mfm-v1.3",
+      "authority": "official",
+      "sourceType": "warhammer-community-web-app",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "4530dbc81b604766c4182ea4aaf7bf01f5dce6cd37f208373e73f01724a05589",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": true,
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "extractor": "books/tau-empire/tools/extract-mfm.cjs",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "4530dbc81b604766c4182ea4aaf7bf01f5dce6cd37f208373e73f01724a05589"
+        }
+      ],
+      "notes": "The accepted v1.3 normalized snapshot is retained; its historical response bytes are unavailable. Observed v1.4 is not accepted automatically."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-codex-wargear",
+      "authority": "secondary",
+      "sourceType": "wahapedia-html",
+      "acceptedRevision": "legacy-normalized-2026-07-30",
+      "acceptedHash": "f85515eeb6debb29176a273a781484e9e9741603c9d11375bf1a4bc4e7c1f63b",
+      "lastChecked": "2026-07-30",
+      "upstreamUpdateKnown": false,
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "extractor": "books/tau-empire/tools/extract-wargear.cjs",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/content/tau-empire-codex-wargear.en.json",
+          "normalization": "lf",
+          "sha256": "f85515eeb6debb29176a273a781484e9e9741603c9d11375bf1a4bc4e7c1f63b"
+        }
+      ],
+      "notes": "Historical raw Wahapedia pages are unavailable; accepted normalized output is frozen."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-codex-parity",
+      "authority": "secondary",
+      "sourceType": "wahapedia-html",
+      "acceptedRevision": "legacy-normalized-2026-07-30",
+      "acceptedHash": "83089a0e35cfb341e6748e0dd4ec34bc8dbb333057eb9ef218e557d945963571",
+      "lastChecked": "2026-07-30",
+      "upstreamUpdateKnown": false,
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "extractor": "books/tau-empire/tools/extract-codex-parity.cjs",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/content/tau-empire-codex-parity.en.json",
+          "normalization": "lf",
+          "sha256": "83089a0e35cfb341e6748e0dd4ec34bc8dbb333057eb9ef218e557d945963571"
+        }
+      ],
+      "notes": "Historical raw Wahapedia page bytes are unavailable; accepted normalized output is frozen."
+    }
+  ],
+  "dormantLiveTools": [
+    "books/adeptus-mechanicus/tools/extract-codex-rules.cjs",
+    "books/adeptus-mechanicus/tools/extract-wargear.cjs",
+    "books/adeptus-mechanicus/tools/import-wahapedia-compatible-rules.mjs",
+    "books/chaos-space-marines/tools/extract-mfm.cjs",
+    "books/death-guard/tools/import-wahapedia-compatible-rules.mjs",
+    "books/emperors-children/tools/import-wahapedia-compatible-rules.mjs",
+    "books/tyranids/tools/extract-codex-parity.cjs",
+    "books/tyranids/tools/extract-wargear.cjs",
+    "books/tyranids/tools/import-wahapedia-compatible-rules.mjs",
+    "books/tau-empire/tools/import-wahapedia-compatible-rules.mjs"
+  ]
+}

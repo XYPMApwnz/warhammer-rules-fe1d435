@@ -10,6 +10,7 @@ const units=codex.filter(unit=>unit.status==='Codex transcription'&&!packIds.has
 const clean=value=>String(value||'').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ').replace(/\n[ \t]+/g,'\n').trim();
 
 async function main(){
+  if(!process.argv.includes('--capture-update'))throw new Error('extract-wargear.cjs is a live SOURCE UPDATE tool; pass --capture-update explicitly. It is not a deterministic --check path.');
   const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTABLE,headless:true});
   const indexPage=await browser.newPage();
   await indexPage.goto('https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/',{waitUntil:'domcontentloaded',timeout:60000});

@@ -130,6 +130,7 @@ function manifestFor(capture,existing){
 }
 
 async function main(){
+  if(!process.argv.includes('--capture-update'))throw new Error('extract-mfm.cjs is a live SOURCE UPDATE tool; pass --capture-update explicitly. It is not a deterministic --check path.');
   const previous=fs.existsSync(outputPath)?JSON.parse(fs.readFileSync(outputPath,'utf8')):null;
   const capturedAt=process.argv.includes('--check')&&previous?.capturedAt?previous.capturedAt:new Date().toISOString().slice(0,10);
   const capture=buildCapture(await readLive(),capturedAt);

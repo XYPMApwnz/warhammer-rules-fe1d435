@@ -1,4 +1,3 @@
-const {chromium}=require('playwright');
 const fs=require('node:fs');
 const path=require('node:path');
 
@@ -11,9 +10,19 @@ const clean=value=>String(value||'').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' 
 const key=value=>clean(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,' ').trim();
 
 async function main(){
+  const contract=await import('../../shared/tools/source-ingestion-contract.mjs');
+  const mode=contract.requireSourceToolMode(process.argv.slice(2),{toolName:'extract-wargear.cjs'});
+  if(mode.kind==='verify'){
+    const verified=contract.verifyFrozenSource('tau-codex-wargear');
+    console.log(`Codex Wargear frozen source verified: ${verified.artifacts.length} artifact, ${verified.status}`);
+    return;
+  }
+  const session=contract.createCaptureSession({sourceId:'tau-codex-wargear',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/tau-empire/tools/extract-wargear.cjs',notes:'Candidate only; acceptance requires semantic review.'});
+  const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const indexPage=await browser.newPage();
   await indexPage.goto(sourceUrl,{waitUntil:'domcontentloaded',timeout:90_000});
+  await session.capturePage(indexPage,sourceUrl,'tau-empire-index');
   const links=await indexPage.locator('a').evaluateAll(nodes=>Object.fromEntries(nodes
     .filter(node=>node.href.includes('/wh40k11ed/factions/t-au-empire/'))
     .map(node=>[node.textContent.trim().toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,' ').trim(),node.href])));
@@ -26,6 +35,7 @@ async function main(){
       const unit=units[cursor++],url=links[key(unit.title)];
       if(!url)throw new Error(`Current 11E page not found for ${unit.title}`);
       await page.goto(url,{waitUntil:'domcontentloaded',timeout:90_000});
+      await session.capturePage(page,url,unit.id||unit.title);
       const record=await page.evaluate(()=>{
         const header=label=>[...document.querySelectorAll('.dsHeader')].find(node=>node.textContent.trim()===label);
         const wargearHeader=header('WARGEAR OPTIONS');
@@ -45,16 +55,11 @@ async function main(){
   await browser.close();
 
   extracted.sort((a,b)=>a.title.localeCompare(b.title));
-  const previous=fs.existsSync(outputPath)?JSON.parse(fs.readFileSync(outputPath,'utf8')):null;
-  const checkedAt=process.argv.includes('--check')&&previous?.source?.checkedAt?previous.source.checkedAt:new Date().toISOString().slice(0,10);
+  const checkedAt=new Date().toISOString().slice(0,10);
   const output=`${JSON.stringify({schema:1,source:{title:'Wahapedia Warhammer 40,000 11th Edition · T’au Empire',url:sourceUrl,checkedAt},units:extracted},null,2)}\n`;
-  if(process.argv.includes('--check')){
-    if(!previous||fs.readFileSync(outputPath,'utf8')!==output)throw new Error('Codex Wargear snapshot is stale; run extract-wargear.cjs');
-    console.log(`Codex Wargear current: ${extracted.length}`);
-  }else{
-    fs.writeFileSync(outputPath,output,'utf8');
-    console.log(`Extracted exact Wargear for ${extracted.length} T’au Empire datasheets`);
-  }
+  session.writeCandidate('content/tau-empire-codex-wargear.en.json',output);
+  session.finalize();
+  console.log(`Captured exact Wargear candidate for ${extracted.length} T’au Empire datasheets`);
 }
 
 main().catch(error=>{console.error(error);process.exit(1)});

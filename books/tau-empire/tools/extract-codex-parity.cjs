@@ -1,4 +1,3 @@
-const {chromium}=require('playwright');
 const fs=require('node:fs');
 const path=require('node:path');
 
@@ -28,9 +27,19 @@ const officialUpdate=id=>{
 };
 
 async function main(){
+  const contract=await import('../../shared/tools/source-ingestion-contract.mjs');
+  const mode=contract.requireSourceToolMode(process.argv.slice(2),{toolName:'extract-codex-parity.cjs'});
+  if(mode.kind==='verify'){
+    const verified=contract.verifyFrozenSource('tau-codex-parity');
+    console.log(`Codex parity frozen source verified: ${verified.artifacts.length} artifact, ${verified.status}`);
+    return;
+  }
+  const session=contract.createCaptureSession({sourceId:'tau-codex-parity',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/tau-empire/tools/extract-codex-parity.cjs',notes:'Candidate only; acceptance requires semantic review.'});
+  const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const page=await browser.newPage();
   await page.goto(sourceUrl,{waitUntil:'domcontentloaded',timeout:90_000});
+  await session.capturePage(page,sourceUrl,'tau-empire-codex-parity');
   const remote=await page.evaluate(detachments=>{
     const rules={};
     for(const detachment of detachments){
@@ -92,16 +101,11 @@ async function main(){
   const shortened=byId.get('retaliation-cadre').stratagems.find(item=>item.id==='stratagem-the-shortened-blade');
   shortened.effect=shortened.effect.replace('3"','6"');
   if(result.some(item=>item.enhancements.length!==4||item.stratagems.length!==6))throw new Error(`Expected four complete Codex Detachments with four Enhancements and six Stratagems each; found ${result.map(item=>`${item.title}:${item.enhancements.length}/${item.stratagems.length}`).join(', ')}`);
-  const previous=fs.existsSync(outputPath)?JSON.parse(fs.readFileSync(outputPath,'utf8')):null;
-  const checkedAt=process.argv.includes('--check')&&previous?.source?.checkedAt?previous.source.checkedAt:new Date().toISOString().slice(0,10);
+  const checkedAt=new Date().toISOString().slice(0,10);
   const output=`${JSON.stringify({schema:1,source:{title:'Wahapedia Warhammer 40,000 11th Edition · T’au Empire',url:sourceUrl,checkedAt},detachments:result},null,2)}\n`;
-  if(process.argv.includes('--check')){
-    if(!previous||fs.readFileSync(outputPath,'utf8')!==output)throw new Error('Codex parity snapshot is stale; run extract-codex-parity.cjs');
-    console.log(`Codex parity current: ${result.length} Detachments, 16 Enhancements, 24 Stratagems`);
-  }else{
-    fs.writeFileSync(outputPath,output,'utf8');
-    console.log(`Extracted exact Codex parity for ${result.length} T’au Empire Detachments`);
-  }
+  session.writeCandidate('content/tau-empire-codex-parity.en.json',output);
+  session.finalize();
+  console.log(`Captured exact Codex parity candidate for ${result.length} T’au Empire Detachments`);
 }
 
 main().catch(error=>{console.error(error);process.exit(1)});

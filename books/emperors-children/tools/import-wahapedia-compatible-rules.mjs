@@ -51,6 +51,7 @@ export function buildImport({pages,retrievedAt}){
 }
 async function fetchText(url){const response=await fetch(url,{headers:{'user-agent':'warhammer-rules-compatible-rules-importer/1.0'}});if(!response.ok)throw new Error(`${url}: HTTP ${response.status}`);return response.text();}
 async function main(){
+  if(!process.argv.includes('--capture-update'))throw new Error('This is a live SOURCE UPDATE tool; pass --capture-update explicitly.');
   const at=process.argv.indexOf('--retrieved-at'),retrievedAt=process.argv[at+1];if(!/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt||''))throw new Error('Pass --retrieved-at YYYY-MM-DD.');
   const source=inventory(),index=await fetchText(sourceUrl),urls=new Map();
   for(const match of index.matchAll(/href="\/wh40k11ed\/factions\/emperor-s-children\/([^"#?]+)"/gi)){const units=source.unitByName.get(key(decodeURIComponent(match[1]).replaceAll('-',' ')))||[];if(units.length===1&&!urls.has(units[0].unitId))urls.set(units[0].unitId,`${sourceUrl}${match[1]}`);}

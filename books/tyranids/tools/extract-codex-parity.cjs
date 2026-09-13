@@ -38,6 +38,7 @@ function fields(text){
 }
 
 async function main(){
+  if(!process.argv.includes('--capture-update'))throw new Error('extract-codex-parity.cjs is a live SOURCE UPDATE tool; pass --capture-update explicitly. It is not a deterministic --check path.');
   const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTABLE,headless:true});
   const page=await browser.newPage();
   await page.goto(sourceUrl,{waitUntil:'domcontentloaded',timeout:60000});

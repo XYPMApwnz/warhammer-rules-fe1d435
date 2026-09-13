@@ -1,9 +1,8 @@
-const {chromium}=require('playwright');
 const fs=require('node:fs');
 const path=require('node:path');
 
 const root=path.resolve(__dirname,'..');
-const outputPath=path.join(root,'sources','official-mfm-v1.2.json');
+const outputPath=path.join(root,'sources','official-mfm-v1.3.json');
 const datasheets=require(path.join(root,'content','tau-empire-codex-datasheets.en.json'));
 const currentUnits=[...datasheets.datasheets,...datasheets.imperialArmour].filter(unit=>unit.status==='Current');
 const sourceUrl='https://mfm.warhammer-community.com/en/tau-empire';
@@ -34,9 +33,19 @@ function modelRange(label){
 }
 
 async function main(){
+  const contract=await import('../../shared/tools/source-ingestion-contract.mjs');
+  const mode=contract.requireSourceToolMode(process.argv.slice(2),{toolName:'extract-mfm.cjs'});
+  if(mode.kind==='verify'){
+    const verified=contract.verifyFrozenSource('tau-mfm-v1.3');
+    console.log(`Official MFM frozen source verified: ${verified.artifacts.length} artifact, ${verified.status}`);
+    return;
+  }
+  const session=contract.createCaptureSession({sourceId:'tau-mfm',authority:'official',sourceType:'warhammer-community-web-app',candidateDir:mode.candidateDir,extractorPath:'books/tau-empire/tools/extract-mfm.cjs',notes:'Candidate only; acceptance requires semantic review.'});
+  const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const page=await browser.newPage();
   await page.goto(sourceUrl,{waitUntil:'networkidle',timeout:90_000});
+  await session.capturePage(page,sourceUrl,'tau-empire-mfm');
   const remote=await page.evaluate(()=>{
     const cards=[...document.querySelectorAll('div.flex.flex-col.space-y-1.m-1')];
     const groups=card=>[...card.children].slice(1).map(group=>({
@@ -55,7 +64,7 @@ async function main(){
   });
   await browser.close();
 
-  if(remote.version!=='v1.2')throw new Error(`Expected current MFM v1.2, found ${remote.version||'unknown'}`);
+  if(!/^v\d+\.\d+$/.test(remote.version))throw new Error(`Current MFM version is missing or invalid: ${remote.version||'unknown'}`);
   const byTitle=new Map(remote.units.map(unit=>[key(unit.title),unit]));
   const verifiedUnits=[],unitOverrides=[];
   for(const unit of currentUnits){
@@ -88,17 +97,12 @@ async function main(){
     const sourceTitle=title.endsWith(' (Upgrade)')?title.replace(/ \(Upgrade\)$/,''):title.includes('Mont’ka')?title.replace('Mont’ka',"Mont'ka"):null;
     return{title,detachment:detachment.title.replace(/’/g,"'"),value:number(row.at(-1)),...(sourceTitle?{sourceTitle}: {})};
   }));
-  const previous=fs.existsSync(outputPath)?JSON.parse(fs.readFileSync(outputPath,'utf8')):null;
-  const verifiedAt=process.argv.includes('--check')&&previous?.verifiedAt?previous.verifiedAt:new Date().toISOString().slice(0,10);
+  const verifiedAt=new Date().toISOString().slice(0,10);
   const result={schema:1,title:'Munitorum Field Manual',version:remote.version,verifiedAt,url:sourceUrl,detachments,verifiedUnits,unitOverrides,enhancements};
   const output=`${JSON.stringify(result,null,2)}\n`;
-  if(process.argv.includes('--check')){
-    if(!previous||fs.readFileSync(outputPath,'utf8')!==output)throw new Error('Official MFM snapshot is stale; run extract-mfm.cjs');
-    console.log(`Official MFM current: ${verifiedUnits.length} units, ${detachments.length} Detachments, ${enhancements.length} Enhancements`);
-  }else{
-    fs.writeFileSync(outputPath,output,'utf8');
-    console.log(`Extracted official MFM: ${verifiedUnits.length} units, ${detachments.length} Detachments, ${enhancements.length} Enhancements`);
-  }
+  session.writeCandidate(`sources/official-mfm-${remote.version}.json`,output);
+  session.finalize();
+  console.log(`Captured official MFM candidate: ${verifiedUnits.length} units, ${detachments.length} Detachments, ${enhancements.length} Enhancements`);
 }
 
 main().catch(error=>{console.error(error);process.exit(1)});

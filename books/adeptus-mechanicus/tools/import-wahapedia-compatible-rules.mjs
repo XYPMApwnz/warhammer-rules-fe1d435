@@ -111,6 +111,7 @@ const writeJson=(file,value)=>{fs.mkdirSync(path.dirname(file),{recursive:true})
 async function fetchText(url){const response=await fetch(url,{headers:{'user-agent':'warhammer-rules-compatible-rules-importer/1.0'}});if(!response.ok)throw new Error(`${url}: HTTP ${response.status}`);return response.text();}
 
 async function main(){
+  if(!process.argv.includes('--capture-update'))throw new Error('This is a live SOURCE UPDATE tool; pass --capture-update explicitly.');
   const dateIndex=process.argv.indexOf('--retrieved-at'),retrievedAt=dateIndex<0?'':process.argv[dateIndex+1];
   if(!/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt))throw new Error('Pass an explicit --retrieved-at YYYY-MM-DD for deterministic output.');
   const datasheets=readJson(datasheetsFile).datasheets;

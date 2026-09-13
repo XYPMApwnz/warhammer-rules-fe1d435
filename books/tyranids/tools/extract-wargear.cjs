@@ -11,6 +11,7 @@ const clean=value=>String(value||'').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' 
 const key=value=>clean(value).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 
 async function main(){
+  if(!process.argv.includes('--capture-update'))throw new Error('extract-wargear.cjs is a live SOURCE UPDATE tool; pass --capture-update explicitly. It is not a deterministic --check path.');
   const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTABLE,headless:true});
   const indexPage=await browser.newPage();
   await indexPage.goto(sourceUrl,{waitUntil:'domcontentloaded',timeout:60000});

@@ -57,6 +57,7 @@ async function main(){
     if(Object.keys(snapshot.units||{}).length!==39||Object.keys(snapshot.coreUnits||{}).length!==39||summary.datasheets.imported!==39||summary.associations.faction!==505||summary.associations.core!==265||summary.unresolved!==0)throw new Error("T'au compatible-rules import inventory mismatch.");
     console.log("T'au Wahapedia snapshot is current: 39 Codex datasheets, 505 faction + 265 Core associations.");return;
   }
+  if(!process.argv.includes('--capture-update'))throw new Error('This is a live SOURCE UPDATE tool; pass --capture-update explicitly.');
   const at=process.argv.indexOf('--retrieved-at'),retrievedAt=process.argv[at+1];if(!/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt||''))throw new Error('Pass --retrieved-at YYYY-MM-DD.');
   const source=inventory(),index=await fetchText(sourceUrl),urls=new Map();
   for(const match of index.matchAll(/href="\/wh40k11ed\/factions\/t-au-empire\/([^"#?]+)"/gi)){const units=source.unitByName.get(key(decodeURIComponent(match[1]).replaceAll('-',' ')))||[];if(units.length===1&&!urls.has(units[0].unitId))urls.set(units[0].unitId,`${sourceUrl}${match[1]}`);}

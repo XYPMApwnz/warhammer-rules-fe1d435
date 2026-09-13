@@ -77,6 +77,9 @@ assert.equal(ecOwners.enhancements['enhancement-warp-walker'].points,35);
 const ecCodex=json('books/emperors-children/content/emperors-children-codex-datasheets.en.json');
 assert.match(text(one(exact(ecCodex,'Heldrake'),'EC Heldrake')),/\"oc\":\"0\"/i);
 const ecPack=json('books/emperors-children/content/emperors-children-faction-pack.en.json');
+const ecHeldrakeProfile=one(byId(ecPack,'heldrake-profile'),'EC Heldrake profile update');
+assert.match(ecHeldrakeProfile.change,/OC to 0\./,'EC Heldrake update must publish the official numeric OC value');
+assert.doesNotMatch(ecHeldrakeProfile.change,/OC to -/,'EC Heldrake update must not replace numeric OC 0 with a dash');
 assert.match(text(one(byId(ecPack,'rapid-on-to-the-next'),'On to the Next')),/turn it disembarked from a TRANSPORT/);
 
 const tyr=json('books/tyranids/content/tyranids-codex-datasheets.en.json');

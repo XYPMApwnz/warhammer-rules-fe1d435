@@ -849,7 +849,7 @@
       "id": "heldrake-profile",
       "section": "Datasheets",
       "subject": "Heldrake – Profile",
-      "change": "Change M to 12\", Sv to 3+ and OC to -.",
+      "change": "Change M to 12\", Sv to 3+ and OC to 0.",
       "sourcePages": [
         9
       ],

@@ -1,8 +1,12 @@
 import assert from 'node:assert/strict';
 import {readdir,readFile,stat} from 'node:fs/promises';
 import vm from 'node:vm';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {assertOwnedMobileRouteInventory} from '../../../tests/helpers/mobile-route-inventory.mjs';
 
 const root=new URL('./',import.meta.url);
+assertOwnedMobileRouteInventory({root:path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..'),bookId:'tyranids'});
 const files=(await readdir(root)).filter(name=>name.endsWith('.html'));
 const reader=await readFile(new URL('../reader.html',root),'utf8');
 const rosterFilter=await readFile(new URL('../scripts/roster-filter.js',root),'utf8');
@@ -12,7 +16,6 @@ const rosterScope={console,URL,URLSearchParams};rosterScope.window=rosterScope;r
 vm.runInNewContext(rosterContext,rosterScope,{filename:'books/shared/roster-context.js'});
 vm.runInNewContext(rosterData,rosterScope,{filename:'books/tyranids/scripts/roster-data.js'});
 const rosterApi=rosterScope.WHArmyRosterContext,rosterCatalog=rosterScope.WH_BOOK_ROSTER_CATALOG;
-assert.equal(files.length,65,'legacy routes must contain start, updates, army rules, 10 detachments and 52 datasheets');
 for(const file of files){
   const html=await readFile(new URL(file,root),'utf8');
   assert.match(html,/data-canonical-reader="\.\.\/reader\.html"/,`${file}: canonical reader target is absent`);

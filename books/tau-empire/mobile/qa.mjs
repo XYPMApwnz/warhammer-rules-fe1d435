@@ -1,10 +1,13 @@
 import assert from 'node:assert/strict';
 import {readdir,readFile,stat} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {assertOwnedMobileRouteInventory} from '../../../tests/helpers/mobile-route-inventory.mjs';
 
 const root=new URL('./',import.meta.url);
+assertOwnedMobileRouteInventory({root:path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..'),bookId:'tau-empire'});
 const files=(await readdir(root)).filter(name=>name.endsWith('.html'));
 const app=await readFile(new URL('../scripts/app.js',root),'utf8');
-assert.equal(files.length,49,'legacy routes must contain start, updates, army rules, 7 detachments and 39 datasheets');
 for(const file of files){
   const html=await readFile(new URL(file,root),'utf8');
   assert.match(html,/data-canonical-reader="\.\.\/reader\.html"/,`${file}: canonical reader target is absent`);

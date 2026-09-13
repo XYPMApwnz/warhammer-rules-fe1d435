@@ -5,6 +5,7 @@ import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {runHelbruteProviderQa} from './helpers/death-guard-helbrute.mjs';
 import {extractControllerClass} from './helpers/controller-source-extraction.mjs';
+import {assertOwnedMobileRouteInventory} from './helpers/mobile-route-inventory.mjs';
 
 const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const helbruteQa=runHelbruteProviderQa({root:projectRoot});
@@ -313,6 +314,7 @@ const sharedMobileBuilder=readProject('books/shared/tools/build-mobile-stubs.mjs
 const mobileHtmlFiles=fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).sort();
 const mobileOutputs=mobileHtmlFiles.map(file=>({file,html:read(path.join('mobile',file))}));
 const mobileTargets=mobileOutputs.map(({html:output})=>output.match(/data-canonical-target="([^"]+)"/)?.[1]);
+const mobileRouteInventory=assertOwnedMobileRouteInventory({root:projectRoot,bookId:'death-guard'});
 const mobileFreshness=spawnSync(process.execPath,[path.join(root,'mobile','build.mjs'),'--check'],{cwd:projectRoot,encoding:'utf8'});
 const rosterFilterRuntime=read('scripts/roster-filter.js');
 const rosterSemanticRuntime=read('scripts/roster-semantics.js');
@@ -347,7 +349,7 @@ check('no-roster All Detachments behavior remains presentation-only outside rost
 check('mobile generator delegates canonical content-free compatibility routes to the shared builder',
   mobileBuild.includes("from '../../shared/tools/build-mobile-stubs.mjs'")&&
   mobileBuild.includes('runMobileStubBuilder(import.meta.url')&&
-  mobileHtmlFiles.length===48&&new Set(mobileTargets).size===48&&
+  Boolean(mobileRouteInventory)&&
   mobileOutputs.every(({html:output},index)=>output.includes('data-canonical-reader="../reader.html"')&&(output.match(/mobile-route-redirect\.js\?v=2/g)||[]).length===1&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(output)&&html.includes(`id="${mobileTargets[index]}"`)),
   `${mobileHtmlFiles.length} routes; targets ${new Set(mobileTargets).size}`);
 check('mobile route redirects preserve the complete current query and canonical hash',mobileRouteRedirect.includes('destination.search=location.search')&&mobileRouteRedirect.includes("destination.hash=location.hash||root.dataset.canonicalTarget||''")&&mobileRouteRedirect.includes('location.replace(destination.href)'));

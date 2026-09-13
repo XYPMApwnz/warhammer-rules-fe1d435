@@ -4,6 +4,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {parseArmyBookTargetCatalog} from '../books/shared/tools/build-army-book-targets.mjs';
 import {loadPublicationInventory,selectPublicationBooks} from '../books/shared/tools/publication-inventory.mjs';
+import {assertOwnedMobileRouteInventory} from './helpers/mobile-route-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
@@ -61,20 +62,20 @@ for(const book of books){
   if(book.id==='chaos-space-marines'){
     check('chaos-space-marines entry exposes verification status and artwork',entryHtml.includes('Verification build')&&entryHtml.includes('chaos-space-marines-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('chaos-space-marines reader preserves current publication inventory',(canonicalHtml.match(/<article class="unit-card/g)||[]).length===54&&(canonicalHtml.match(/data-nav-id="detachment-[^"]+"/g)||[]).length===17&&canonicalHtml.includes('faction-hero-cover'));
-    const phoneRoutes=fs.readdirSync(path.join(root,'books/chaos-space-marines/mobile')).filter(file=>file.endsWith('.html'));
-    check('chaos-space-marines exposes 74 content-free compatibility routes',phoneRoutes.length===74&&phoneHtml.includes('data-canonical-target="unit-abaddon-the-despoiler"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
+    assertOwnedMobileRouteInventory({root,bookId:book.id});
+    check('chaos-space-marines exposes its exact owned compatibility routes',!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
   }
   if(book.id==='blood-angels'){
     check('blood-angels entry exposes source-limited status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('blood-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('blood-angels reader exposes cover artwork',contentHtml.includes('faction-hero-cover')&&fs.readFileSync(path.join(root,'books/blood-angels/styles/book.css'),'utf8').includes('blood-angels-cover-800.webp'));
-    const phoneRoutes=fs.readdirSync(path.join(root,'books/blood-angels/mobile')).filter(file=>file.endsWith('.html'));
-    check('blood-angels exposes 126 content-free compatibility routes',phoneRoutes.length===126&&phoneHtml.includes('data-canonical-target="unit-commander-dante"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
+    assertOwnedMobileRouteInventory({root,bookId:book.id});
+    check('blood-angels exposes its exact owned compatibility routes',!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
   }
   if(book.id==='dark-angels'){
     check('dark-angels entry exposes source-limited review status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('dark-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('dark-angels reader exposes one categorized inventory with complete canonical source coverage',(canonicalHtml.match(/<article class="unit-card/g)||[]).length===100&&(canonicalHtml.match(/Space Marines shared datasheet/g)||[]).length===84&&!canonicalHtml.includes('data-nav-id="datasheets-dark-angels"')&&!canonicalHtml.includes('data-nav-id="datasheets-space-marines"')&&canonicalHtml.includes('data-nav-id="datasheets-epic-heroes"')&&canonicalHtml.includes('data-nav-id="datasheets-vehicle"')&&(canonicalHtml.match(/Codex source required/g)||[]).length===0);
-    const phoneRoutes=fs.readdirSync(path.join(root,'books/dark-angels/mobile')).filter(file=>file.endsWith('.html'));
-    check('dark-angels exposes 127 content-free compatibility routes',phoneRoutes.length===127&&phoneHtml.includes('data-canonical-target="unit-belial"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
+    assertOwnedMobileRouteInventory({root,bookId:book.id});
+    check('dark-angels exposes its exact owned compatibility routes',!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
   }
 }
 

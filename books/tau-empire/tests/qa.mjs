@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {assertOwnedMobileRouteInventory} from '../../../tests/helpers/mobile-route-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const repo=path.resolve(root,'../..');
@@ -56,7 +57,7 @@ for(const token of responsiveWeaponTokens){const expected=expectedWeaponTerm(tok
 assert.deepEqual(unknownWeaponLabels,[]);
 assert.doesNotMatch(reader,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
 assert.doesNotMatch(reader,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
-assert.equal(mobileRouteFiles.length,49);
+assertOwnedMobileRouteInventory({root:repo,bookId:'tau-empire'});
 for(const output of mobileRoutes){assert.match(output,/data-canonical-reader="\.\.\/reader\.html"/);assert.match(output,/mobile-route-redirect\.js\?v=2/);assert.doesNotMatch(output,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/);}
 assert.match(reader,/shared\/styles\/content\.css\?v=\d+/);assert.match(reader,/shared\/styles\/popups\.css\?v=\d+/);assert.match(reader,/shared\/datasheet-system\.css\?v=\d+/);
 const sourceWargearAbilities=allUnits.flatMap(unit=>(unit.wargearAbilities||[]).map(ability=>({unit,ability})));

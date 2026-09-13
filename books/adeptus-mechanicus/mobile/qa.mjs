@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {assertOwnedMobileRouteInventory} from '../../../tests/helpers/mobile-route-inventory.mjs';
 
 const root=path.dirname(fileURLToPath(import.meta.url));
 const routes=fs.readdirSync(root).filter(name=>name.endsWith('.html'));
@@ -15,7 +16,7 @@ const build=fs.readFileSync(path.join(root,'build.mjs'),'utf8');
 const sharedBuild=fs.readFileSync(path.join(root,'..','..','shared','tools','build-mobile-stubs.mjs'),'utf8');
 const redirect=fs.readFileSync(path.join(root,'..','..','shared','mobile-route-redirect.js'),'utf8');
 
-assert.equal(routes.length,47,'Compatibility route inventory changed');
+assertOwnedMobileRouteInventory({root:path.resolve(root,'../../..'),bookId:'adeptus-mechanicus'});
 assert.ok(pages.every(page=>page.includes('data-canonical-reader="../reader.html"')),'A route does not target the canonical reader');
 assert.ok(pages.every(page=>page.includes(`../../shared/mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`)),'A route does not load the versioned redirect helper');
 assert.ok(pages.every(page=>!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(page)),'A compatibility route embeds book content');

@@ -1854,90 +1854,6 @@
         "payPointsPerOwner": true
       }
     },
-    "enhancement-blood-shard": {
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "DEATH COMPANY",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    "enhancement-sanguinius-grace": {
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "DEATH COMPANY",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    "enhancement-to-slay-the-warmaster": {
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "DEATH COMPANY",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    "enhancement-vengeful-onslaught": {
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "DEATH COMPANY",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
     "enhancement-archangels-shard": {
       "tags": [],
       "owner": {
@@ -2009,6 +1925,90 @@
           "allKeywords": [
             "ADEPTUS ASTARTES",
             "JUMP PACK",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    "enhancement-blood-shard": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    "enhancement-sanguinius-grace": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    "enhancement-to-slay-the-warmaster": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    "enhancement-vengeful-onslaught": {
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "DEATH COMPANY",
             "CHARACTER"
           ],
           "noneKeywords": [

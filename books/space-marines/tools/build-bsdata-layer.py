@@ -65,13 +65,15 @@ def key(value: str) -> str:
 
 def absolute_config(config: dict, folder: Path, faction: str) -> Path:
     source_dir = CONFIG.parent
+    checkout = (source_dir / config["source"]["checkout"]).resolve()
+    config["source"]["checkout"] = str(checkout)
     inputs = []
     for item in config["inputs"]:
         copied = dict(item)
         copied["path"] = str((source_dir / item["path"]).resolve())
         copied["role"] = "library"
         inputs.append(copied)
-    faction_path = (REPO / "tmp" / "bsdata-wh40k-11e" / faction).resolve()
+    faction_path = (checkout / faction).resolve()
     inputs.insert(0, {"role": "faction", "path": str(faction_path)})
     seen = set()
     config["inputs"] = [item for item in inputs if not (item["path"] in seen or seen.add(item["path"]))]

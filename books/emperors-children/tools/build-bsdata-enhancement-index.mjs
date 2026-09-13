@@ -2,9 +2,17 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {verifyBsdataSource} from '../../shared/tools/verify-bsdata-source.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const input=path.resolve(root,'../../tmp/bsdata-wh40k-11e/Chaos - Emperor\'s Children.json');
+const configPath=path.join(root,'sources','bsdata-extract.config.json');
+const config=JSON.parse(fs.readFileSync(configPath,'utf8'));
+const configDir=path.dirname(configPath);
+const factionInput=config.inputs.find(item=>item.role==='faction');
+if(!factionInput)throw new Error('Emperor\'s Children BSData faction input is not configured');
+const input=path.resolve(configDir,factionInput.path);
+const checkout=path.resolve(configDir,config.source.checkout);
+verifyBsdataSource({checkout,expectedCommit:config.source.commit,inputFiles:[input]});
 const output=path.join(root,'sources/bsdata-enhancement-index.json');
 const check=process.argv.includes('--check');
 const raw=fs.readFileSync(input);

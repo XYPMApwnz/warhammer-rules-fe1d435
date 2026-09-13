@@ -59,6 +59,12 @@ try{
 
 assert.throws(()=>verifyBsdataSource({checkout:root,expectedCommit:'0'.repeat(40),inputFiles:[path.join(root,'package.json')]}),/does not match checkout HEAD/,'BSData commit mismatch must fail closed');
 
+const smWrapper=read('books/space-marines/tools/build-bsdata-layer.py');
+assert(smWrapper.includes('config["source"]["checkout"] = str(checkout)'),'Space Marines wrapper must preserve an absolute authenticated checkout in its temporary config');
+assert(smWrapper.includes('faction_path = (checkout / faction).resolve()'),'Space Marines wrapper must resolve faction inputs from the configured checkout');
+const ecIndex=read('books/emperors-children/tools/build-bsdata-enhancement-index.mjs');
+assert(ecIndex.indexOf('verifyBsdataSource({checkout')<ecIndex.indexOf('const raw=fs.readFileSync(input)'),'Emperor\'s Children index must authenticate its ambient BSData input before reading it');
+
 const normalSourceCommands=['army-books:sources:check','tau:sources:check'];
 for(const name of normalSourceCommands){
   const command=packageJson.scripts[name];

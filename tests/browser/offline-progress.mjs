@@ -7,7 +7,13 @@ import {fileURLToPath} from 'node:url';
 import {calculateCacheRevision} from '../../tools/cache-revision.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const expectedAppShellTotal=calculateCacheRevision({root}).assets.length;
+const cacheContract=calculateCacheRevision({root}),expectedAppShellTotal=cacheContract.assets.length;
+const coreReaderMarkup=await readFile(path.join(root,'books/core-rules/reader/index.html'),'utf8');
+const requiredCoreAsset=(pattern,label)=>{const match=coreReaderMarkup.match(pattern);assert.ok(match,`Core Rules reader does not declare its ${label}`);return match[1];};
+const coreStylesheet=requiredCoreAsset(/<link\b[^>]*rel="stylesheet"[^>]*href="([^"]+)"/i,'stylesheet');
+const coreApplication=requiredCoreAsset(/<script\b[^>]*src="(app\.js\?v=[^"]+)"/i,'application script');
+const coreAssetUrl=source=>new URL(source,'https://local/books/core-rules/reader/index.html').pathname+new URL(source,'https://local/books/core-rules/reader/index.html').search;
+for(const source of [coreStylesheet,coreApplication])assert.ok(cacheContract.urls.includes(`.${coreAssetUrl(source)}`),`Core Rules reader dependency is absent from APP_SHELL: ${source}`);
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.webmanifest':'application/manifest+json'};
 let delayMs=12,failedPath='',swVariant=1;
 const server=createServer(async(request,response)=>{
@@ -46,7 +52,7 @@ async function snapshot(page){
 
 async function assertCorePresentation(page,label){
   const stylesheet=page.locator('link[rel="stylesheet"]');
-  assert.equal(await stylesheet.getAttribute('href'),'styles.css?v=14',`${label} changed the Core Rules stylesheet contract`);
+  assert.equal(await stylesheet.getAttribute('href'),coreStylesheet,`${label} changed the Core Rules stylesheet contract`);
   assert.equal(new URL(await stylesheet.getAttribute('href'),page.url()).pathname,'/books/core-rules/reader/styles.css',`${label} resolved Core Rules CSS outside the canonical reader directory`);
   assert.notEqual(await page.locator('body').evaluate(node=>getComputedStyle(node).backgroundImage),'none',`${label} rendered browser-default presentation`);
   await page.getByRole('button',{name:'Search Core Rules'}).click();
@@ -99,8 +105,8 @@ try{
     await page.goto(`${origin}/books/core-rules/index.html`,{waitUntil:'domcontentloaded'});
     await page.waitForURL(url=>url.pathname==='/books/core-rules/reader/index.html');
     await assertCorePresentation(page,'Compatibility Core Rules offline');
-    assert.ok(offlineResponses.some(item=>item.url==='/books/core-rules/reader/styles.css?v=14'&&item.type.startsWith('text/css')),'Core Rules CSS did not return the cached CSS MIME type');
-    assert.ok(offlineResponses.some(item=>item.url==='/books/core-rules/reader/app.js?v=15'&&item.type.startsWith('text/javascript')),'Core Rules app.js did not return the cached JavaScript MIME type');
+    assert.ok(offlineResponses.some(item=>item.url===coreAssetUrl(coreStylesheet)&&item.type.startsWith('text/css')),'Core Rules CSS did not return the cached CSS MIME type');
+    assert.ok(offlineResponses.some(item=>item.url===coreAssetUrl(coreApplication)&&item.type.startsWith('text/javascript')),'Core Rules app.js did not return the cached JavaScript MIME type');
     assert.ok(!offlineResponses.some(item=>item.url.startsWith('/books/core-rules/styles.css')||item.url.startsWith('/books/core-rules/app.js')),'Core Rules requested assets from the compatibility directory');
 
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-tech-priest-manipulus`,{waitUntil:'domcontentloaded'});

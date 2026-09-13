@@ -16,6 +16,19 @@ const stable=value=>{
 };
 export const stableJson=value=>`${JSON.stringify(stable(value),null,2)}\n`;
 
+const samePath=(left,right)=>process.platform==='win32'
+  ?path.resolve(left).toLowerCase()===path.resolve(right).toLowerCase()
+  :path.resolve(left)===path.resolve(right);
+const within=(file,root)=>{
+  const relative=path.relative(root,file);
+  return relative===''||(!relative.startsWith(`..${path.sep}`)&&relative!=='..'&&!path.isAbsolute(relative));
+};
+const bundlePath=(root,relative,label)=>{
+  const file=path.resolve(root,...String(relative).replaceAll('\\','/').split('/'));
+  if(!within(file,root))throw new Error(`Source capture ${label} escapes bundle: ${relative}`);
+  return file;
+};
+
 export function readSourceRegistry(registryPath=defaultRegistryPath){
   const registry=JSON.parse(fs.readFileSync(registryPath,'utf8'));
   if(registry.schema!=='warhammer-source-ingestion/v1')throw new Error(`Unsupported source-ingestion registry schema: ${registry.schema}`);
@@ -61,17 +74,23 @@ const safeName=value=>String(value).normalize('NFKD').replace(/[^a-zA-Z0-9._-]+/
 
 export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authority,sourceType,candidateDir,extractorPath,upstreamVersion=null,upstreamCommit=null,notes='',confidence='unreviewed'}){
   const root=path.resolve(candidateDir);
+  if(samePath(root,path.resolve(repoRoot))||within(path.resolve(repoRoot),root))throw new Error(`${sourceId}: candidate directory cannot be the repository root or contain accepted production paths`);
   const insideRepo=path.relative(path.resolve(repoRoot),root);
   const approvedRepoRoot=path.resolve(repoRoot,'tmp','source-candidates');
   if(insideRepo!==''&&!insideRepo.startsWith(`..${path.sep}`)&&insideRepo!=='..'&&!path.isAbsolute(insideRepo)){
     const approvedRelative=path.relative(approvedRepoRoot,root);
     if(approvedRelative.startsWith(`..${path.sep}`)||approvedRelative==='..'||path.isAbsolute(approvedRelative))throw new Error(`${sourceId}: candidate directory inside the repository must be under tmp/source-candidates`);
   }
+  if(fs.existsSync(root))throw new Error(`${sourceId}: candidate directory already exists; each capture requires a fresh isolated destination`);
+  fs.mkdirSync(path.dirname(root),{recursive:true});
+  fs.mkdirSync(root);
   const rawDir=path.join(root,'raw');
   const normalizedDir=path.join(root,'normalized');
-  fs.mkdirSync(rawDir,{recursive:true});
-  fs.mkdirSync(normalizedDir,{recursive:true});
-  const captureId=`${sourceId}-${new Date().toISOString().replace(/[:.]/g,'-')}`;
+  fs.mkdirSync(rawDir);
+  fs.mkdirSync(normalizedDir);
+  const captureId=`${sourceId}-${new Date().toISOString().replace(/[:.]/g,'-')}-${crypto.randomUUID()}`;
+  const statePath=path.join(root,'capture-state.json');
+  fs.writeFileSync(statePath,stableJson({schema:'warhammer-source-capture-state/v1',captureId,status:'INCOMPLETE'}),'utf8');
   const rawArtifacts=[];
   const requestedUrls=[];
   const finalUrls=[];
@@ -112,6 +131,7 @@ export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authorit
       };
       manifest.aggregateManifestHash=sha256(stableJson(manifest));
       fs.writeFileSync(path.join(root,'capture-manifest.json'),stableJson(manifest),'utf8');
+      fs.writeFileSync(statePath,stableJson({schema:'warhammer-source-capture-state/v1',captureId,status:'COMPLETE',manifestSha256:sha256(stableJson(manifest))}),'utf8');
       return manifest;
     }
   };
@@ -126,6 +146,10 @@ export function verifyCaptureManifest(manifestPath){
   const expected=manifest.aggregateManifestHash;
   const withoutHash={...manifest};delete withoutHash.aggregateManifestHash;
   if(sha256(stableJson(withoutHash))!==expected)throw new Error('Source capture aggregate manifest hash mismatch');
+  const statePath=path.join(root,'capture-state.json');
+  if(!fs.existsSync(statePath))throw new Error('Source capture completion state is missing');
+  const state=JSON.parse(fs.readFileSync(statePath,'utf8'));
+  if(state.schema!=='warhammer-source-capture-state/v1'||state.captureId!==manifest.captureId||state.status!=='COMPLETE'||state.manifestSha256!==sha256(stableJson(manifest)))throw new Error('Source capture completion state does not match the manifest');
   for(const artifact of manifest.rawArtifacts){
     const artifactPath=path.resolve(root,artifact.path),relative=path.relative(root,artifactPath);
     if(relative.startsWith('..')||path.isAbsolute(relative))throw new Error(`Source capture artifact escapes bundle: ${artifact.path}`);

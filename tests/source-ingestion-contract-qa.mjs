@@ -6,7 +6,7 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {
-  aggregateArtifactHash,createCaptureSession,readSourceRegistry,requireSourceToolMode,sha256,
+  aggregateArtifactHash,createCaptureSession,readSourceRegistry,requireSourceToolMode,sha256,stableJson,
   verifyCaptureManifest,verifyFrozenSource
 } from '../books/shared/tools/source-ingestion-contract.mjs';
 import {verifyBsdataSource} from '../books/shared/tools/verify-bsdata-source.mjs';
@@ -49,12 +49,20 @@ try{
   assert.throws(()=>verifyFrozenSource('probe',{repoRoot:temp,registryPath}),/missing/);
 
   assert.throws(()=>createCaptureSession({repoRoot:root,sourceId:'unsafe',authority:'official',sourceType:'html',candidateDir:path.join(root,'books','unsafe-candidate'),extractorPath:'tests/source-ingestion-contract-qa.mjs'}),/tmp\/source-candidates/);
+  assert.throws(()=>createCaptureSession({repoRoot:root,sourceId:'repo-root',authority:'official',sourceType:'html',candidateDir:root,extractorPath:'tests/source-ingestion-contract-qa.mjs'}),/repository root/);
+  assert.throws(()=>createCaptureSession({repoRoot:root,sourceId:'repo-parent',authority:'official',sourceType:'html',candidateDir:path.dirname(root),extractorPath:'tests/source-ingestion-contract-qa.mjs'}),/contain accepted production paths/);
 
   const capture=createCaptureSession({repoRoot:root,sourceId:'probe-live',authority:'official',sourceType:'html',candidateDir:path.join(temp,'capture'),extractorPath:'tests/source-ingestion-contract-qa.mjs'});
+  assert.equal(JSON.parse(fs.readFileSync(path.join(capture.root,'capture-state.json'),'utf8')).status,'INCOMPLETE');
   capture.captureText({requestedUrl:'https://example.invalid/requested',finalUrl:'https://example.invalid/final',content:'<html>retained</html>',name:'index'});
   capture.writeCandidate('candidate.json','{"candidate":true}\n');
   const manifest=capture.finalize(),manifestPath=path.join(capture.root,'capture-manifest.json');
+  assert.equal(JSON.parse(fs.readFileSync(path.join(capture.root,'capture-state.json'),'utf8')).status,'COMPLETE');
   assert.equal(verifyCaptureManifest(manifestPath).aggregateManifestHash,manifest.aggregateManifestHash);
+  assert.throws(()=>createCaptureSession({repoRoot:root,sourceId:'reused',authority:'official',sourceType:'html',candidateDir:path.join(temp,'capture'),extractorPath:'tests/source-ingestion-contract-qa.mjs'}),/fresh isolated destination/);
+  fs.writeFileSync(path.join(capture.root,'capture-state.json'),stableJson({schema:'warhammer-source-capture-state/v1',captureId:manifest.captureId,status:'INCOMPLETE'}));
+  assert.throws(()=>verifyCaptureManifest(manifestPath),/completion state/);
+  fs.writeFileSync(path.join(capture.root,'capture-state.json'),stableJson({schema:'warhammer-source-capture-state/v1',captureId:manifest.captureId,status:'COMPLETE',manifestSha256:sha256(stableJson(manifest))}));
   fs.appendFileSync(path.join(capture.root,manifest.rawArtifacts[0].path),'tampered');
   assert.throws(()=>verifyCaptureManifest(manifestPath),/artifact hash mismatch/);
 }finally{fs.rmSync(temp,{recursive:true,force:true});}

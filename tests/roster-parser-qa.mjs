@@ -92,6 +92,12 @@ assert.equal(standaloneWarlord.units[0].warlord,true,'standalone Warlord marker 
 const parentheticalUnit=parse('1x Captain (Terminator Armour) (95 pts)');
 assert.equal(parentheticalUnit.units[0].name,'Captain (Terminator Armour)','parentheses inside valid unit names remain supported');
 
+const identitySource='1x Poxwalkers (80 pts)';
+const identified=parse(identitySource,{identityHints:{units:[{id:'parsed-unit-1',canonicalUnitId:'unit-poxwalkers',name:'Poxwalkers'}]}});
+assert.equal(identified.units[0].canonicalUnitId,'unit-poxwalkers','stored canonical Datasheet identity was not restored after parsing');
+const ambiguousHints=parse(identitySource,{identityHints:{units:[{id:'parsed-unit-1',canonicalUnitId:'unit-poxwalkers'},{id:'parsed-unit-1',canonicalUnitId:'unit-other'}]}});
+assert.equal(ambiguousHints.units[0].canonicalUnitId,undefined,'ambiguous physical identity hints must fail closed');
+
 const whitespaceHeavyNearMatch=parse(`1x ${' '.repeat(8192)}X`);
 assert.equal(whitespaceHeavyNearMatch.units.length,0,'whitespace-heavy unit near-match is rejected without ambiguous name/separator work');
 

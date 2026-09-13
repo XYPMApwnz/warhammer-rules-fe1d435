@@ -10,6 +10,12 @@
   const safeInteger=(value,minimum=0)=>typeof value==='number'&&Number.isSafeInteger(value)&&value>=minimum;
   const safeAdd=(left,right)=>{if(!safeInteger(left)||!safeInteger(right))return null;const value=left+right;return Number.isSafeInteger(value)?value:null;};
   const catalogFor=faction=>own(root.WH_POINTS_CATALOG,faction);
+  const canonicalUnitId=unit=>typeof unit?.canonicalUnitId==='string'?unit.canonicalUnitId:typeof unit?.canonicalDatasheetId==='string'?unit.canonicalDatasheetId:'';
+  const unitsByCanonicalId=catalog=>new Map(Object.values(own(catalog,'units')||{}).filter(record).map(unit=>[unit.unitId||unit.id,unit]).filter(([id])=>typeof id==='string'&&id));
+  const unitDefinition=(catalog,unit)=>{
+    const explicitId=canonicalUnitId(unit);
+    return explicitId?unitsByCanonicalId(catalog).get(explicitId):own(own(catalog,'units'),normalize(unit?.name));
+  };
   const validAssignment=value=>value==null||record(value)&&(own(value,'maxOwners')===undefined||safeInteger(own(value,'maxOwners'),1))&&(own(value,'enhancementChoices')===undefined||safeInteger(own(value,'enhancementChoices'),1));
   const parseTierLabel=label=>{
     const text=String(label||'').trim(),lower=text.toLowerCase(),bounds={};
@@ -124,7 +130,7 @@ function assessEnhancements(roster, faction, catalog=catalogFor(faction)) {
     const records=own(catalog,'enhancements'),entry=own(records,normalize(name)),explicitId=normalize(raw.ruleId||raw.id),identities=item=>[item.id,item.canonicalEnhancementId,item.ruleId,item.sourceId,item.legacyKey].map(normalize).filter(Boolean);let candidates=explicitId?Object.values(records||{}).flat().filter(record).filter(item=>identities(item).includes(explicitId)):(Array.isArray(entry)?entry:[entry]).filter(record);if(explicitId&&!candidates.length){const aliasId=explicitId.replace(/^enhancement /,'');candidates=Object.values(records||{}).flat().filter(record).filter(item=>identities(item).some(id=>id.replace(/^enhancement /,'')===aliasId));}candidates=[...new Map(candidates.map(item=>[JSON.stringify(item),item])).values()];const selected=candidates.filter(item=>(!item.detachment&&!item.canonicalDetachmentId)||selectedDetachments.has(normalize(item.detachment))||selectedDetachments.has(normalize(item.canonicalDetachmentId)));
     const enhancement = selected.length === 1 ? selected[0] : candidates.length === 1 ? candidates[0] : null;
     if (!record(enhancement)||!safeInteger(own(enhancement,'value'))||typeof own(enhancement,'title')!=='string'||own(enhancement,'id')!=null&&typeof own(enhancement,'id')!=='string'||!validAssignment(own(enhancement,'assignment'))) { unresolved.push(`Enhancement Detachment: ${name}`); continue; }
-    const rosterUnit = (roster.units || []).find(unit => unit.id === raw.ownerUnitId), owner = own(own(catalog,'units'),normalize(rosterUnit?.name));
+    const rosterUnit = (roster.units || []).find(unit => unit.id === raw.ownerUnitId), owner = unitDefinition(catalog,rosterUnit);
     const sourceCoverage=enhancement.sourceLimited||!enhancement.owner?.selector?'sourceLimited':'verified';
     const sourceMessage=sourceCoverage==='sourceLimited'?'Enhancement source/contract coverage is limited':'';
     let ownerEligibility = 'valid', ownerMessage = '';
@@ -174,7 +180,7 @@ function assessEnhancements(roster, faction, catalog=catalogFor(faction)) {
     if(!record(catalog)||!record(own(catalog,'units'))||own(catalog,'enhancements')!==undefined&&!record(own(catalog,'enhancements'))||own(catalog,'detachments')!==undefined&&!record(own(catalog,'detachments')))return{total:null,unresolved:['Army Book point data is unavailable.'],enhancementWarnings,detachmentWarnings};
     if(!record(roster)||!Array.isArray(roster.units)||roster.enhancements!=null&&!Array.isArray(roster.enhancements)||roster.detachments!=null&&!Array.isArray(roster.detachments))return{total:null,unresolved:['Roster point structure is invalid.'],enhancementWarnings,detachmentWarnings};
     for(const unit of roster.units){
-      const key=normalize(unit?.name),definition=own(catalog.units,key),index=(occurrences.get(key)||0)+1;occurrences.set(key,index);
+      const key=canonicalUnitId(unit)||normalize(unit?.name),definition=unitDefinition(catalog,unit),index=(occurrences.get(key)||0)+1;occurrences.set(key,index);
       if(!record(unit)||typeof unit.name!=='string'||!safeInteger(unit.quantity,1)||!record(definition)||!Array.isArray(own(definition,'points'))){unresolved.push(`Unit: ${unit?.name||'unknown'}`);continue;}
       const modelCount=physicalModelCount(unit);
       const selectedLoadouts=loadouts(unit),pointRows=definition.points;

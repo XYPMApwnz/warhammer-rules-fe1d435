@@ -101,7 +101,7 @@
     return entries;
   }
 
-  function parse(text) {
+  function parse(text, options = {}) {
     const lines = String(text || '').replace(/\u00a0/g, ' ').split(/\r?\n/).map(line => line.trim()).filter(Boolean);
     const firstUnit = lines.findIndex(line => /^(?:(?:Char\d+):\s*)?\d+x\s+\S(?:.*?\S)?\s+\((?:\d+|\d{1,3}(?:,\d{3})+)\s*pts?\)/i.test(line));
     const metadataLines = firstUnit < 0 ? lines : lines.slice(0, firstUnit);
@@ -201,6 +201,19 @@
       rule:label.match(/\(([^)]*)\)/)?.[1] || '',
       disposition:dispositions[index] || dispositions[0] || '—'
     }));
+    const identityHints = Array.isArray(options.identityHints?.units) ? options.identityHints.units : [];
+    const hintsByInstance = new Map();
+    for (const hint of identityHints) {
+      if (!hint?.id) continue;
+      const group = hintsByInstance.get(hint.id) || [];
+      group.push(hint);
+      hintsByInstance.set(hint.id, group);
+    }
+    for (const unit of units) {
+      const hints = hintsByInstance.get(unit.id) || [], hint = hints.length === 1 ? hints[0] : null;
+      const canonicalUnitId = hint?.canonicalUnitId || hint?.canonicalDatasheetId || '';
+      if (typeof canonicalUnitId === 'string' && canonicalUnitId.trim()) unit.canonicalUnitId = canonicalUnitId.trim();
+    }
     return {
       faction:value('FACTION KEYWORD'),
       detachment:detachments[0]?.label || '—',

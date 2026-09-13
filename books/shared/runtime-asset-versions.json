@@ -7,8 +7,8 @@
     "glossaryReturn": 5,
     "navigationTargets": 4,
     "relatedRules": 18,
-    "rosterParser": 3,
-    "rosterContext": 19,
+    "rosterParser": 4,
+    "rosterContext": 20,
     "rosterCatalog": 13,
     "rosterGamePresentation": 21,
     "ruleFacts": 5,
@@ -34,6 +34,6 @@
   },
   "points": {
     "data": 10,
-    "validator": 6
+    "validator": 7
   }
 }

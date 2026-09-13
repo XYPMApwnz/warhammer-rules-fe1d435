@@ -158,6 +158,8 @@ try{
   for(const [label,id]of definitions){
     const record=await fixture(id,label,label!=='ascii');records.push(record);
     await importRecord(record);
+    const imported=(await stored()).find(item=>item.id===record.id);
+    assert.ok(imported.roster.units.every(unit=>/^unit-/.test(unit.canonicalUnitId||'')),'safe legacy import must persist exact canonical Datasheet identities');
     assert.deepEqual((await stored()).map(item=>item.id),records.map(item=>item.id).reverse(),'unchanged import/storage IDs');
     await safeActions(record);
     await safeState(records.length);

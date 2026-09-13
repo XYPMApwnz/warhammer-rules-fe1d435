@@ -20,6 +20,15 @@ assert.equal(new Set(Object.values(WH_POINTS_CATALOG['emperor s children'].enhan
 assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].units).length,103);
 assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].detachments).length,23);
 
+const poxwalkersById=Object.values(WH_POINTS_CATALOG['death guard'].units).find(unit=>unit.unitId==='unit-poxwalkers');
+assert.ok(poxwalkersById,'canonical points fixture requires Poxwalkers');
+const renamedCanonicalUnit={id:'physical-poxwalkers',canonicalUnitId:'unit-poxwalkers',quantity:10,name:'Renamed Poxwalkers',models:[]};
+const renamedCanonicalCheck=WHRosterPoints.check({units:[renamedCanonicalUnit],detachments:[],enhancements:[],declared:0,unitLineTotal:0},'death guard');
+assert.equal(renamedCanonicalCheck.unresolved.length,0,'canonical Datasheet ID must survive a display-title rename');
+assert.equal(renamedCanonicalCheck.total,poxwalkersById.points.find(row=>row.minModels===10&&row.maxModels===10).value);
+const wrongCanonicalCheck=WHRosterPoints.check({units:[{...renamedCanonicalUnit,canonicalUnitId:'unit-not-real',name:'Poxwalkers'}],detachments:[],enhancements:[],declared:0,unitLineTotal:0},'death guard');
+assert.deepEqual([...wrongCanonicalCheck.unresolved],['Unit: Poxwalkers'],'an explicit unknown canonical Datasheet ID must fail closed without title fallback');
+
 const catalogUnitsById=faction=>new Map(Object.values(WH_POINTS_CATALOG[faction].units).map(unit=>[unit.id,unit]));
 const catalogRelation=(faction,sourceId,kind,targetId)=>{
   const source=catalogUnitsById(faction).get(sourceId);

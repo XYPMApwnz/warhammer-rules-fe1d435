@@ -32,8 +32,8 @@ const APP_SHELL = [
   "./roster-guides/",
   ROSTER_GUIDES_FALLBACK,
   "./roster-guides/points-data.js?v=10",
-  "./roster-guides/points-validator.js?v=6",
-  "./roster-guides/app.js?v=20",
+  "./roster-guides/points-validator.js?v=7",
+  "./roster-guides/app.js?v=21",
   "./manifest.webmanifest",
   "./assets/apple-touch-icon.png",
   "./assets/icon-192.png",
@@ -127,7 +127,7 @@ const APP_SHELL = [
   "./books/shared/compatible-rules-matrix.mjs?v=2",
   "./books/shared/stratagem-presentation.mjs?v=1",
   "./books/shared/roster-entities.js?v=1",
-  "./books/shared/roster-parser.js?v=3",
+  "./books/shared/roster-parser.js?v=4",
   "./books/shared/roster-enhancements.js?v=4",
   "./books/death-guard/assets/icon-v4.svg",
   "./books/shared/styles/tokens.css?v=11",
@@ -366,7 +366,7 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/app.js?v=8"
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=18"
-  ,"./books/shared/roster-context.js?v=19"
+  ,"./books/shared/roster-context.js?v=20"
   ,"./books/shared/roster-game-presentation.js?v=21"
 ,"./books/shared/army-book-app.js?v=19"
   ,"./books/shared/offline-status.js?v=4"

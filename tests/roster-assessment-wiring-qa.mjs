@@ -7,8 +7,8 @@ import {finishCanonicalBuild} from '../books/shared/tools/canonical-build-contra
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const temp=fs.mkdtempSync(path.join(os.tmpdir(),'ra02-wiring-'));
-const versions={points:{data:9,validator:6}};
-const validator='../../roster-guides/points-validator.js?v=6';
+const versions={points:{data:9,validator:7}};
+const validator='../../roster-guides/points-validator.js?v=7';
 const anchor='../shared/roster-context.js?v=17';
 const prefix='<script src="../../roster-guides/points-data.js?v=9"></script><script src="./unrelated.js?v=1"></script>';
 const suffix='<script src="./after.js?v=1"></script>';

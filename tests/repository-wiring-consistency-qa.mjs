@@ -1,9 +1,10 @@
 import fs from 'node:fs';
+import strictAssert from 'node:assert/strict';
 import path from 'node:path';
 import os from 'node:os';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
-import {calculateCacheRevision,readAppShell,resolveAppShellUrl,verifyCacheRevision} from '../tools/cache-revision.mjs';
+import {calculateCacheRevision,readAppShell,resolveAppShellUrl} from '../tools/cache-revision.mjs';
 import {loadPublicationInventory,selectPublicationBooks} from '../books/shared/tools/publication-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -56,12 +57,12 @@ const versionedDynamic=dynamic.find(item=>item.version);
 assert(versionedDynamic,'No versioned dynamic dependency was discovered');
 if(versionedDynamic){const staleUrl=new URL(versionedDynamic.exact.slice(1),'https://local/');staleUrl.searchParams.set('v','stale');const staleExact='.'+staleUrl.pathname+staleUrl.search,fixtureUrls=new Set(urls);fixtureUrls.delete(versionedDynamic.exact);fixtureUrls.add(staleExact);assert(missingDynamicAssets([versionedDynamic],fixtureUrls,dynamicNetworkOnly).some(item=>item.exact===versionedDynamic.exact),'Dynamic exact-query sensitivity fixture did not detect a stale cached version');}
 for(const url of shell.urls)resolveAppShellUrl(root,url);
-const revision=verifyCacheRevision({root});assert(revision.assets.length===shell.urls.length,'cache coverage mismatch');
+const revision=calculateCacheRevision({root});assert(revision.assets.length===shell.urls.length,'cache coverage mismatch');
 const sharedBuildBooks=selectPublicationBooks(publication,'freshness').map(book=>book.id);
 const mechanicusConfig=JSON.parse(read('books/adeptus-mechanicus/book.config.json')),mechanicusWrapper=read('books/adeptus-mechanicus/tools/build-full-content.mjs');
 assert(mechanicusConfig.buildExtension==='tools/canonical-build-extension.mjs','Adeptus Mechanicus shared build extension is not configured');
 const mechanicusImports=[...mechanicusWrapper.matchAll(/^import\s+(.+?)\s+from\s+['"]([^'"]+)['"];?$/gm)].map(([,bindings,source])=>({bindings:bindings.replace(/\s+/g,' '),source}));
-assert.deepStrictEqual(mechanicusImports,[
+strictAssert.deepStrictEqual(mechanicusImports,[
   {bindings:'path',source:'node:path'},
   {bindings:'{fileURLToPath}',source:'node:url'},
   {bindings:'{createCanonicalBuildContext,runCanonicalBuildExtension}',source:'../../shared/tools/canonical-build-contract.mjs'}

@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {recordText} from '../books/core-rules/content/record-content.mjs';
 import {createArmyBookTargetCatalog,parseArmyBookTargetCatalog} from '../books/shared/tools/build-army-book-targets.mjs';
 import {collectMobileStubRoutes} from '../books/shared/tools/build-mobile-stubs.mjs';
+import {loadPublicationInventory,selectPublicationBooks} from '../books/shared/tools/publication-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const glossary=JSON.parse(fs.readFileSync(path.join(root,'glossary','registry.en.json'),'utf8')).terms;
@@ -21,22 +22,25 @@ function walk(directory){
   });
 }
 
-// Library cards are the publication boundary; a book directory alone is not support.
+// The inventory is the publication boundary; Library cards are independently checked against it.
 const library=fs.readFileSync(path.join(root,'index.html'),'utf8');
-const publishedBooks=[];
+const libraryBooks=[];
 for(const match of library.replace(/<!--[\s\S]*?-->/g,'').matchAll(/<a\b[^>]*>/gi)){
   const classes=/\bclass=["']([^"']*)["']/.exec(match[0])?.[1].split(/\s+/)||[];
   if(!classes.includes('book'))continue;
   const href=/\bhref=["']([^"']+)["']/.exec(match[0])?.[1];
   assert.ok(href,'Library book card is missing href');
-  const book=/^books\/([^/]+)\//.exec(href)?.[1];
+  const book=/^(?:\.\/)?books\/([^/]+)\//.exec(href)?.[1];
   if(!book)continue; // Roster Guides is a Library tool card, checked below.
-  assert.ok(!publishedBooks.includes(book),`Library repeats book ${book}`);
-  publishedBooks.push(book);
+  assert.ok(!libraryBooks.includes(book),`Library repeats book ${book}`);
+  libraryBooks.push(book);
 }
+const publishedBooks=selectPublicationBooks(loadPublicationInventory({root}),'library').map(book=>book.id);
 assert.ok(publishedBooks.length,'Library has no published books');
+assert.deepEqual(libraryBooks.filter(book=>publishedBooks.includes(book)).slice().sort(),publishedBooks.slice().sort(),'Library cards diverge from publication inventory');
 const htmlFiles=[
   path.join(root,'index.html'),
+  ...walk(path.join(root,'books','core-rules')),
   ...publishedBooks.flatMap(book=>walk(path.join(root,'books',book))),
   ...walk(path.join(root,'glossary')),
   ...walk(path.join(root,'roster-guides'))
@@ -44,7 +48,6 @@ const htmlFiles=[
 const required=new Set(htmlFiles),surfaces=htmlFiles.map(file=>({key:file,file,html:fs.readFileSync(file,'utf8'),page:true}));
 const renderedReaders=new Map(),coverage=[];
 for(const book of publishedBooks){
-  if(book==='core-rules')continue; // Core Rules publishes static reader pages, already enumerated.
   const relative=`books/${book}/reader.html`,file=path.join(root,relative),reader=fs.readFileSync(file,'utf8');
   const requirePage=relative=>{const expected=path.join(root,relative);assert.ok(fs.existsSync(expected),`Missing supported target: ${relative}`);required.add(expected);};
   requirePage(`books/${book}/index.html`);requirePage(relative);

@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {parseArmyBookTargetCatalog} from '../books/shared/tools/build-army-book-targets.mjs';
+import {loadPublicationInventory,selectPublicationBooks} from '../books/shared/tools/publication-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
@@ -39,6 +40,7 @@ const books=[
   {id:'dark-angels',phone:'belial.html',matrix:null,singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
   {id:'blood-angels',phone:'commander-dante.html',matrix:'books/blood-angels/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'}
 ];
+check('integration metadata covers the publication inventory',JSON.stringify(books.map(book=>book.id))===JSON.stringify(selectPublicationBooks(loadPublicationInventory({root}),'library').map(book=>book.id)));
 
 for(const book of books){
   const entry=`books/${book.id}/index.html`;

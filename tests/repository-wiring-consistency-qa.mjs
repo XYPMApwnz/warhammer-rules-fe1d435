@@ -4,9 +4,11 @@ import os from 'node:os';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {calculateCacheRevision,readAppShell,resolveAppShellUrl,verifyCacheRevision} from '../tools/cache-revision.mjs';
+import {loadPublicationInventory,selectPublicationBooks} from '../books/shared/tools/publication-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const books=['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
+const publication=loadPublicationInventory({root});
+const books=selectPublicationBooks(publication,'offline').map(book=>book.id);
 const versions=JSON.parse(fs.readFileSync(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8')),failures=[];
 const assert=(ok,message)=>{if(!ok)failures.push(message);},read=relative=>fs.readFileSync(path.join(root,relative),'utf8');
 const assets=(book,html)=>[...html.matchAll(/<(?:script|link)\b[^>]*(?:src|href)="([^"]+)"/gi)].map(match=>match[1]).filter(x=>!x.match(/^(?:https?:|data:|#)/)).map(source=>{const u=new URL(source,'https://local/books/'+book+'/reader.html');return {source,relative:decodeURIComponent(u.pathname.slice(1)),exact:'./'+decodeURIComponent(u.pathname.slice(1))+u.search,version:u.searchParams.get('v')};}).filter(x=>/\.(?:js|css)$/.test(x.relative));
@@ -55,11 +57,11 @@ assert(versionedDynamic,'No versioned dynamic dependency was discovered');
 if(versionedDynamic){const staleUrl=new URL(versionedDynamic.exact.slice(1),'https://local/');staleUrl.searchParams.set('v','stale');const staleExact='.'+staleUrl.pathname+staleUrl.search,fixtureUrls=new Set(urls);fixtureUrls.delete(versionedDynamic.exact);fixtureUrls.add(staleExact);assert(missingDynamicAssets([versionedDynamic],fixtureUrls,dynamicNetworkOnly).some(item=>item.exact===versionedDynamic.exact),'Dynamic exact-query sensitivity fixture did not detect a stale cached version');}
 for(const url of shell.urls)resolveAppShellUrl(root,url);
 const revision=verifyCacheRevision({root});assert(revision.assets.length===shell.urls.length,'cache coverage mismatch');
-const sharedBuildBooks=['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
+const sharedBuildBooks=selectPublicationBooks(publication,'freshness').map(book=>book.id);
 const mechanicusConfig=JSON.parse(read('books/adeptus-mechanicus/book.config.json')),mechanicusWrapper=read('books/adeptus-mechanicus/tools/build-full-content.mjs');
 assert(mechanicusConfig.buildExtension==='tools/canonical-build-extension.mjs','Adeptus Mechanicus shared build extension is not configured');
 assert(mechanicusWrapper.split(/\r?\n/).filter(Boolean).length<=8&&mechanicusWrapper.includes('runCanonicalBuildExtension'),'Adeptus Mechanicus legacy build entry is not a thin shared-contract wrapper');
-const checks=[...sharedBuildBooks.map(id=>['books/shared/tools/build-army-book.mjs',['books/'+id+'/book.config.json','--check']]),...books.map(id=>['books/'+id+'/mobile/build.mjs',['--check']])];
+const checks=[...sharedBuildBooks.map(id=>['books/shared/tools/build-army-book.mjs',['books/'+id+'/book.config.json','--check']]),...selectPublicationBooks(publication,'mobile').map(book=>['books/'+book.id+'/mobile/build.mjs',['--check']])];
 for(const [script,args] of checks){const result=spawnSync(process.execPath,[script,...args],{cwd:root,encoding:'utf8',maxBuffer:16*1024*1024});assert(result.status===0,'Generated check failed: '+script+' '+args.join(' ')+'\n'+(result.stderr||result.stdout));}
 assert(status()===before,'Wiring checks changed working tree');
 const resolveConsumerAsset=(consumer,asset)=>{const resolved=new URL(asset,`https://offline.local/${consumer}`);return `.${resolved.pathname}${resolved.search}`;};

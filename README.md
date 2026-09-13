@@ -23,7 +23,7 @@ Books can be listed as `PREVIEW`, `FUNCTIONAL` or `PUBLICATION-READY`. Preview r
 npm.cmd test
 ```
 
-`npm test` runs the normal Preview gate: generated freshness, basic rule data, shared integration and fatal runtime contracts.
+`npm test` runs the normal Preview gate: the authoritative publication inventory, generated Army Book and mobile freshness, repository wiring, cache revision, basic rule data, shared integration and fatal runtime contracts. `books/publication-inventory.json` is the owner for Library, offline and freshness enrollment; Orks is explicitly freshness-checked without being promoted into the supported public nine.
 
 Run the extended source, parity, publication and browser checks separately:
 

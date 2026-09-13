@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {createRosterCatalog} from '../books/shared/tools/build-roster-catalog.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const source=fs.readFileSync(path.join(root,'books/shared/roster-context.js'),'utf8');
@@ -58,6 +59,10 @@ assert.equal(unknown.units[0].keywords.state,'unknown');
 assert.equal(unknown.relations.attachments.state,'unknown');
 
 const catalog={schema:api.CATALOG_SCHEMA,book:{id:'fixture',title:'Fixture Book',factionKeyword:'FIXTURE FACTION',parentBookId:null,dependencies:[]},units:[{id:'unit-example',title:'Example Unit',sourceBookId:'fixture',intrinsicKeywords:['INFANTRY']}],detachments:[{id:'detachment-alpha',title:'Alpha'},{id:'detachment-beta',title:'Beta'}],enhancements:[]};
+const supplementCatalog=createRosterCatalog({config:{id:'fixture-supplement',title:'Fixture Supplement',dependencies:['fixture-parent']}});
+assert.deepEqual(supplementCatalog.book,{id:'fixture-supplement',title:'Fixture Supplement',factionKeyword:null,parentBookId:'fixture-parent',dependencies:[{bookId:'fixture-parent',title:null}]},'string dependency shorthand lost its canonical identity');
+assert.throws(()=>createRosterCatalog({config:{id:'fixture-supplement',dependencies:['fixture-parent','fixture-parent']}}),/duplicate dependency ID/,'duplicate dependency did not fail closed');
+assert.throws(()=>createRosterCatalog({config:{id:'fixture-supplement',dependencies:[null]}}),/exact canonical book ID/,'unknown dependency identity did not fail closed');
 const validRoster={faction:'Fixture Faction',units:[{id:'physical-1',name:'Example Unit'}],detachments:[{name:'Alpha'}],enhancements:[]};
 assert.equal(api.project({catalog,roster:validRoster,record:{id:'valid-roster'}}).context.status,'ready','valid complete projection did not restore the v1 ready status');
 const enhancementCatalog={...catalog,enhancements:[{id:'enhancement-example',title:'Example Enhancement - 25 pts',detachmentId:'detachment-alpha'}]};
@@ -111,6 +116,17 @@ assert.doesNotMatch(projectionSource,/document|querySelectorAll|data-rule-facts|
 for(const id of ['dark-angels','blood-angels']){
   const app=fs.readFileSync(path.join(root,'books',id,'scripts/app.js'),'utf8');
   assert.match(app,/parentBookId["']?:["']space-marines["']/,`${id} supplement parent identity is absent`);
+  const generated={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'books',id,'scripts/roster-data.js'),'utf8'),generated,{filename:`${id}/roster-data.js`});
+  const supplement=generated.window.WH_BOOK_ROSTER_CATALOG,inherited=supplement.units.find(unit=>unit.sourceBookId==='space-marines');
+  assert.equal(supplement.book.parentBookId,'space-marines',`${id} generated parent identity changed`);
+  assert.equal(supplement.book.dependencies.length,1,`${id} generated dependency cardinality changed`);
+  assert.equal(supplement.book.dependencies[0].bookId,'space-marines',`${id} generated dependency identity changed`);
+  assert.ok(inherited,`${id} lost representative Space Marines inheritance`);
+  const projected=api.project({catalog:supplement,roster:{faction:supplement.book.title,detachments:[],enhancements:[],units:[{id:`${id}-physical`,canonicalUnitId:inherited.id,name:inherited.title}]},record:{id:`${id}-roster`,attachments:{}}});
+  assert.equal(projected.context.book.parentBookId,'space-marines',`${id} context parent identity changed`);
+  assert.equal(projected.context.units[0].supplementParent,'space-marines',`${id} unit parent identity changed`);
+  assert.equal(projected.game.book.parentBookId,'space-marines',`${id} game parent identity changed`);
+  assert.equal(projected.game.units[0].identity.supplementParent,'space-marines',`${id} game-unit parent identity changed`);
 }
 
 console.log('Shared roster context QA: 9/9 PASS');

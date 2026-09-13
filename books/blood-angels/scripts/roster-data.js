@@ -4,9 +4,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     "id": "blood-angels",
     "title": "Blood Angels",
     "factionKeyword": "BLOOD ANGELS",
-    "parentBookId": null,
+    "parentBookId": "space-marines",
     "dependencies": [
       {
+        "bookId": "space-marines",
         "title": null
       }
     ]

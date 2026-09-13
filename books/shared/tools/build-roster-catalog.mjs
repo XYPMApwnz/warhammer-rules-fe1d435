@@ -16,7 +16,13 @@ export const canonicalWargearAbilityId=(unit,ability,index=0)=>ability.id||`${un
 const relationRecord=record=>({unitId:record?.unitId||record?.id||'',...(Number.isFinite(Number(record?.maxCharacters))?{maxCharacters:Number(record.maxCharacters)}:{}),...(record?.mandatory?{mandatory:true}:{}),...(values(record?.removeKeywords).length?{removeKeywords:[...record.removeKeywords]}:{})});
 const relationsFor=(relations,id)=>{const source=relations instanceof Map?relations.get(id):relations?.[id];return Object.fromEntries(['canLead','canSupport','canBeLedBy','canBeSupportedBy'].map(key=>[key,values(source?.[key]).map(relationRecord)]));};
 const blockEnhancements=detachment=>[...values(detachment?.enhancements),...values(detachment?.blocks).filter(block=>block?.type==='enhancement'),...values(detachment?.subsections).flatMap(section=>values(section?.blocks).filter(block=>block?.type==='enhancement'))];
-const dependencyRecords=config=>{const source=config?.dependencies;if(Array.isArray(source))return source;if(source&&typeof source==='object')return Object.entries(source).map(([bookId,value])=>({bookId,...(value||{})}));return [];};
+const dependencyRecords=config=>{
+  const source=config?.dependencies,records=Array.isArray(source)?source.map(item=>typeof item==='string'?{bookId:item}:item):source&&typeof source==='object'?Object.entries(source).map(([bookId,value])=>({bookId,...(value||{})})):[];
+  const normalized=records.map(item=>({...(item||{}),bookId:item?.bookId||item?.id||''}));
+  if(normalized.some(item=>typeof item.bookId!=='string'||!item.bookId.trim()))throw new Error(`${config?.id||'book'}: dependency requires an exact canonical book ID`);
+  if(new Set(normalized.map(item=>item.bookId)).size!==normalized.length)throw new Error(`${config?.id||'book'}: duplicate dependency ID`);
+  return normalized;
+};
 const singularModelTitle=(value,max)=>{const title=String(value||'').replace(/\s+[\u2013\u2014-]\s+EPIC HERO\s*$/i,'').trim();return Number(max)>1&&/s$/i.test(title)&&!/(ss|us)$/i.test(title)?title.slice(0,-1):title;};
 const canonicalCompositionModelsFor=unit=>{
   const structured=values(unit.composition);

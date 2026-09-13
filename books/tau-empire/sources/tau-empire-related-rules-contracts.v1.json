@@ -1,0 +1,1339 @@
+{
+  "schema": "tau-related-rules-contracts/v1",
+  "bookId": "tau-empire",
+  "sourceBindings": {
+    "faction-pack-v1.1": {
+      "authority": "official",
+      "role": "current-faction-pack",
+      "path": "sources/tau-empire-faction-pack-v1.1.pdf",
+      "sha256": "32b985646baa02a3b505ff3404e91d374a5f53c1d3b8000d7166ca94d1b52675"
+    },
+    "faction-pack-v1.0": {
+      "authority": "official",
+      "role": "historical-update-context",
+      "path": "sources/tau-empire-faction-pack-v1.0.pdf",
+      "sha256": "da70143aea942aa016f760287bb389f66d10f9e3de3449a2263a0c04f009a6f0"
+    },
+    "pinned-bsdata": {
+      "authority": "community",
+      "role": "source-limited-structured-owner-evidence",
+      "path": "sources/bsdata-tau-empire-11e.json",
+      "sha256": "a864213d5354661e5913bd31051e4094848b0359edba2fc200ed2cb2c2589a8f",
+      "repositoryCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "documentHashes": {
+        "faction": "74E3A716B673328EC311B232547641CFFD42B32B4D61EACF15EF47321BD97DAA",
+        "gameSystem": "F092789EE23AC230951F4C1BE555F186F1AC55FDAAB294D0F4E988C901109DD0"
+      }
+    },
+    "codex-parity": {
+      "authority": "secondary",
+      "role": "codex-wording-evidence",
+      "path": "content/tau-empire-codex-parity.en.json",
+      "sha256": "83089a0e35cfb341e6748e0dd4ec34bc8dbb333057eb9ef218e557d945963571"
+    },
+    "faction-pack-canonical": {
+      "authority": "derived-from-authenticated-official",
+      "role": "canonical-record-input",
+      "path": "content/tau-empire-faction-pack.en.json",
+      "sha256": "e05b79562789e30da66bf1cd4751a98311edef9a2e14dca1af7cfe54f0aa5663"
+    },
+    "codex-datasheets": {
+      "authority": "derived-from-pinned-bsdata",
+      "role": "canonical-owner-input",
+      "path": "content/tau-empire-codex-datasheets.en.json",
+      "sha256": "3028ba89f10a1e5bb5515d44ac81971cbeffd6c85926838a48404d5fd70a463e"
+    }
+  },
+  "stratagems": [
+    {
+      "id": "marker-beacon",
+      "detachmentId": "advanced-acquisition-cadre",
+      "contract": {
+        "v": 1,
+        "roles": [
+          {
+            "id": "friendly-target",
+            "side": "friendly",
+            "subject": "unit",
+            "count": 1,
+            "selector": {
+              "unitIds": [
+                "unit-pathfinder-team",
+                "unit-stealth-battlesuits"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          "controls-objective"
+        ]
+      },
+      "timingScope": {
+        "turn": "own",
+        "phases": [
+          "movement"
+        ],
+        "window": "end"
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 2,
+            "detachmentId": "advanced-acquisition-cadre",
+            "recordId": "marker-beacon"
+          }
+        }
+      ],
+      "confidence": "accepted-primary"
+    },
+    {
+      "id": "microdrone-support",
+      "detachmentId": "advanced-acquisition-cadre",
+      "contract": {
+        "v": 1,
+        "roles": [
+          {
+            "id": "friendly-target",
+            "side": "friendly",
+            "subject": "unit",
+            "count": 1,
+            "selector": {
+              "unitIds": [
+                "unit-pathfinder-team",
+                "unit-stealth-battlesuits"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          "started-action"
+        ]
+      },
+      "timingScope": {
+        "turn": "own",
+        "phases": [
+          "shooting"
+        ],
+        "window": "trigger"
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 2,
+            "detachmentId": "advanced-acquisition-cadre",
+            "recordId": "microdrone-support"
+          }
+        }
+      ],
+      "confidence": "accepted-primary"
+    },
+    {
+      "id": "autoreactive-camouflage",
+      "detachmentId": "advanced-acquisition-cadre",
+      "contract": {
+        "v": 1,
+        "roles": [
+          {
+            "id": "friendly-target",
+            "side": "friendly",
+            "subject": "unit",
+            "count": 1,
+            "selector": {
+              "unitIds": [
+                "unit-pathfinder-team",
+                "unit-stealth-battlesuits"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          "hidden",
+          "targeted-by-enemy-attack"
+        ]
+      },
+      "timingScope": {
+        "turn": "opponent",
+        "phases": [
+          "shooting"
+        ],
+        "window": "trigger"
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 2,
+            "detachmentId": "advanced-acquisition-cadre",
+            "recordId": "autoreactive-camouflage"
+          }
+        }
+      ],
+      "confidence": "accepted-primary"
+    },
+    {
+      "id": "experimental-modifications",
+      "detachmentId": "auxiliary-cadre",
+      "contract": {
+        "v": 1,
+        "roles": [
+          {
+            "id": "friendly-target",
+            "side": "friendly",
+            "subject": "unit",
+            "count": 1,
+            "selector": {
+              "anyKeywords": [
+                "KROOT",
+                "VESPID STINGWINGS"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          "selected-to-attack"
+        ]
+      },
+      "timingScope": {
+        "turn": "own",
+        "phases": [
+          "shooting",
+          "fight"
+        ],
+        "window": "trigger"
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 3,
+            "detachmentId": "auxiliary-cadre",
+            "recordId": "experimental-modifications"
+          }
+        }
+      ],
+      "confidence": "accepted-primary"
+    },
+    {
+      "id": "alien-expertise",
+      "detachmentId": "auxiliary-cadre",
+      "contract": {
+        "v": 1,
+        "roles": [
+          {
+            "id": "friendly-target",
+            "side": "friendly",
+            "subject": "unit",
+            "count": 1,
+            "selector": {
+              "anyKeywords": [
+                "KROOT",
+                "VESPID STINGWINGS"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          "selected-to-advance"
+        ]
+      },
+      "timingScope": {
+        "turn": "own",
+        "phases": [
+          "movement"
+        ],
+        "window": "trigger"
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 3,
+            "detachmentId": "auxiliary-cadre",
+            "recordId": "alien-expertise"
+          }
+        }
+      ],
+      "confidence": "accepted-primary"
+    },
+    {
+      "id": "guided-by-unity",
+      "detachmentId": "auxiliary-cadre",
+      "contract": {
+        "v": 1,
+        "roles": [
+          {
+            "id": "friendly-target",
+            "side": "friendly",
+            "subject": "unit",
+            "count": 1,
+            "selector": {
+              "allKeywords": [
+                "T'AU EMPIRE"
+              ],
+              "noneKeywords": [
+                "KROOT",
+                "VESPID STINGWINGS"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          "selected-to-shoot"
+        ]
+      },
+      "timingScope": {
+        "turn": "own",
+        "phases": [
+          "shooting"
+        ],
+        "window": "trigger"
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 3,
+            "detachmentId": "auxiliary-cadre",
+            "recordId": "guided-by-unity"
+          }
+        }
+      ],
+      "confidence": "accepted-primary"
+    },
+    {
+      "id": "experimental-ammunition",
+      "detachmentId": "experimental-prototype-cadre",
+      "contract": {
+        "v": 1,
+        "roles": [
+          {
+            "id": "friendly-target",
+            "side": "friendly",
+            "subject": "unit",
+            "count": 1,
+            "selector": {
+              "allKeywords": [
+                "BATTLESUIT",
+                "CHARACTER"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          "selected-to-shoot"
+        ]
+      },
+      "timingScope": {
+        "turn": "own",
+        "phases": [
+          "shooting"
+        ],
+        "window": "trigger"
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 4,
+            "detachmentId": "experimental-prototype-cadre",
+            "recordId": "experimental-ammunition"
+          }
+        }
+      ],
+      "confidence": "accepted-primary"
+    }
+  ],
+  "enhancements": [
+    {
+      "id": "negation-emitters-upgrade",
+      "detachmentId": "advanced-acquisition-cadre",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-stealth-battlesuits"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [
+        "UPGRADE"
+      ],
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 2,
+            "detachmentId": "advanced-acquisition-cadre",
+            "recordId": "negation-emitters-upgrade"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "9ceb-d88d-2e9c-d52a"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "unmasking-suite-upgrade",
+      "detachmentId": "advanced-acquisition-cadre",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-pathfinder-team",
+            "unit-stealth-battlesuits",
+            "unit-ghostkeel-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [
+        "UPGRADE"
+      ],
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 2,
+            "detachmentId": "advanced-acquisition-cadre",
+            "recordId": "unmasking-suite-upgrade"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "ea6f-2de1-8db9-9a62"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "student-of-kauyon",
+      "detachmentId": "auxiliary-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 3,
+            "detachmentId": "auxiliary-cadre",
+            "recordId": "student-of-kauyon"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "ded3-abf8-bdeb-fd8d"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "admired-leader",
+      "detachmentId": "auxiliary-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 3,
+            "detachmentId": "auxiliary-cadre",
+            "recordId": "admired-leader"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "b7cd-d78c-d062-64f0"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "thermoneutronic-projector",
+      "detachmentId": "experimental-prototype-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 4,
+            "detachmentId": "experimental-prototype-cadre",
+            "recordId": "thermoneutronic-projector"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "1184-c004-494b-642e"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "plasma-accelerator-rifle",
+      "detachmentId": "experimental-prototype-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 4,
+            "detachmentId": "experimental-prototype-cadre",
+            "recordId": "plasma-accelerator-rifle"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "bc44-f33b-73bc-5ae5"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "supernova-launcher",
+      "detachmentId": "experimental-prototype-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 4,
+            "detachmentId": "experimental-prototype-cadre",
+            "recordId": "supernova-launcher"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "8588-2b55-0468-0a97"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-exemplar-of-the-kauyon",
+      "detachmentId": "kauyon",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "kauyon",
+            "recordId": "enhancement-exemplar-of-the-kauyon"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "6588-706c-183-89b6"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-precision-of-the-patient-hunter",
+      "detachmentId": "kauyon",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "kauyon",
+            "recordId": "enhancement-precision-of-the-patient-hunter"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "8890-1932-b85c-f7de"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-solid-image-projection-unit",
+      "detachmentId": "kauyon",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "kauyon",
+            "recordId": "enhancement-solid-image-projection-unit"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "a4bd-c0a7-e26e-ece8"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-through-unity-devastation",
+      "detachmentId": "kauyon",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "kauyon",
+            "recordId": "enhancement-through-unity-devastation"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "f835-9b5b-d767-7447"
+          }
+        },
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 19,
+            "recordId": "enhancement-through-unity-devastation",
+            "role": "official-update"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-borthrod-gland",
+      "detachmentId": "kroot-hunting-pack",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-flesh-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "kroot-hunting-pack",
+            "recordId": "enhancement-borthrod-gland"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "26d2-5d6-3735-e50d"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-kroothawk-flock",
+      "detachmentId": "kroot-hunting-pack",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "kroot-hunting-pack",
+            "recordId": "enhancement-kroothawk-flock"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "56d3-d687-ee98-2b7"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-nomadic-hunter",
+      "detachmentId": "kroot-hunting-pack",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-trail-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "kroot-hunting-pack",
+            "recordId": "enhancement-nomadic-hunter"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "e72b-61f3-5e33-983f"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-root-carved-weapons",
+      "detachmentId": "kroot-hunting-pack",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-war-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "kroot-hunting-pack",
+            "recordId": "enhancement-root-carved-weapons"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "9a57-b814-5b96-54f9"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-coordinated-exploitation",
+      "detachmentId": "montka",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "montka",
+            "recordId": "enhancement-coordinated-exploitation"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "d798-dc1e-5f03-a187"
+          }
+        },
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 19,
+            "recordId": "enhancement-coordinated-exploitation",
+            "role": "official-update"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-exemplar-of-the-montka",
+      "detachmentId": "montka",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "montka",
+            "recordId": "enhancement-exemplar-of-the-montka"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "b51b-cac6-a8ec-39da"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-strategic-conqueror",
+      "detachmentId": "montka",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "montka",
+            "recordId": "enhancement-strategic-conqueror"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "2dfa-595c-d3ff-b712"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-strike-swiftly",
+      "detachmentId": "montka",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "montka",
+            "recordId": "enhancement-strike-swiftly"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "34f8-64e7-2649-37c1"
+          }
+        },
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 19,
+            "recordId": "enhancement-strike-swiftly",
+            "role": "official-update"
+          }
+        },
+        {
+          "sourceId": "faction-pack-v1.0",
+          "locator": {
+            "page": 19,
+            "recordId": "enhancement-strike-swiftly",
+            "role": "historical-second-sentence-update"
+          }
+        }
+      ],
+      "confidence": "source-limited",
+      "confidenceDetail": "SOURCE_LIMITED_MEDIUM"
+    },
+    {
+      "id": "enhancement-internal-grenade-racks",
+      "detachmentId": "retaliation-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "retaliation-cadre",
+            "recordId": "enhancement-internal-grenade-racks"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "b68d-712a-3f6a-d0b0"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-prototype-weapon-system",
+      "detachmentId": "retaliation-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "retaliation-cadre",
+            "recordId": "enhancement-prototype-weapon-system"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "475a-416d-c4ff-9511"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-puretide-engram-neurochip",
+      "detachmentId": "retaliation-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "retaliation-cadre",
+            "recordId": "enhancement-puretide-engram-neurochip"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "2aac-953c-80af-2edb"
+          }
+        },
+        {
+          "sourceId": "faction-pack-v1.1",
+          "locator": {
+            "page": 19,
+            "recordId": "enhancement-puretide-engram-neurochip",
+            "role": "official-update"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    },
+    {
+      "id": "enhancement-starflare-ignition-system",
+      "detachmentId": "retaliation-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "tags": [],
+      "sourceRefs": [
+        {
+          "sourceId": "codex-parity",
+          "locator": {
+            "detachmentId": "retaliation-cadre",
+            "recordId": "enhancement-starflare-ignition-system"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "31f7-e121-c586-2db7"
+          }
+        }
+      ],
+      "confidence": "source-limited"
+    }
+  ]
+}

@@ -11,6 +11,7 @@ html:has(dialog[open]),body:has(dialog[open]){overflow:hidden;overscroll-behavio
 *::-webkit-scrollbar-thumb:hover{background:var(--amber)}
 html{scroll-behavior:auto;background:var(--void)}
 body{margin:0;min-width:320px;color:var(--ink);background:linear-gradient(rgba(210,150,62,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(210,150,62,.018) 1px,transparent 1px),radial-gradient(circle at 72% 0%,rgba(158,61,48,.13),transparent 34rem),radial-gradient(circle at 8% 30%,rgba(113,129,83,.08),transparent 28rem),#121512;background-size:42px 42px,42px 42px,auto,auto,auto;font:16px/1.55 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.nav-open{overflow:hidden;overscroll-behavior:none}
 button,a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 a{color:inherit}
 .topbar{position:fixed;z-index:80;inset:0 0 auto;height:calc(var(--header) + env(safe-area-inset-top));padding:env(safe-area-inset-top) 18px 0;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--line);background:rgba(13,15,13,.97)}

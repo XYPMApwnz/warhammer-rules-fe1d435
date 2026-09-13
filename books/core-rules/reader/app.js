@@ -4,6 +4,10 @@
   const body = document.body;
   const menu = document.getElementById('navButton');
   const scrim = document.getElementById('navScrim');
+  const sidebar = document.getElementById('sidebar');
+  const main = document.querySelector('main.main');
+  const topbar = document.querySelector('.topbar');
+  const mobileDrawer = matchMedia('(max-width: 1100px)');
   const dialog = document.getElementById('termDialog');
   const close = document.getElementById('termClose');
   const title = document.getElementById('termTitle');
@@ -23,6 +27,7 @@
   let searchIndex;
   let searchIndexPromise;
   let termOpener;
+  let drawerScrollY = 0;
 
   function showTerm(trigger) {
     termOpener = trigger;
@@ -40,10 +45,28 @@
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 
-  function drawer(open) {
-    body.classList.toggle('nav-open', open);
-    menu.setAttribute('aria-expanded', String(open));
-    scrim.hidden = !open;
+  const drawerControls = () => [...sidebar.querySelectorAll('a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])')].filter(node => !node.hidden);
+  function isolateDrawerBackground(value) {
+    main.inert = value;
+    for (const node of topbar.children) if (node !== menu) node.inert = value;
+  }
+  function drawer(open, { restoreFocus = true } = {}) {
+    const wasOpen = body.classList.contains('nav-open');
+    const next = Boolean(open && mobileDrawer.matches);
+    if (next && !wasOpen) drawerScrollY = scrollY;
+    body.classList.toggle('nav-open', next);
+    menu.setAttribute('aria-expanded', String(next));
+    menu.setAttribute('aria-label', next ? 'Close navigation' : 'Open navigation');
+    scrim.hidden = !next;
+    scrim.setAttribute('aria-hidden', String(!next));
+    sidebar.inert = mobileDrawer.matches && !next;
+    sidebar.setAttribute('aria-hidden', String(mobileDrawer.matches && !next));
+    isolateDrawerBackground(next);
+    if (next) requestAnimationFrame(() => drawerControls()[0]?.focus());
+    else if (wasOpen) {
+      scrollTo(0, drawerScrollY);
+      if (restoreFocus) menu.focus();
+    }
   }
 
   document.addEventListener('click', event => {
@@ -82,6 +105,7 @@
 
   menu.addEventListener('click', () => drawer(!body.classList.contains('nav-open')));
   scrim.addEventListener('click', () => drawer(false));
+  mobileDrawer.addEventListener('change', () => drawer(false, { restoreFocus: false }));
   close.addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
   imageClose.addEventListener('click', () => imageDialog.close());
@@ -124,11 +148,36 @@
     searchResults.innerHTML = matches.map(item => `<a href="${item.url}"><small>${item.chapter}</small><strong>${item.title}</strong><span>${item.text.slice(0, 180)}</span></a>`).join('');
   });
   addEventListener('keydown', event => {
+    if (event.key === 'Escape' && body.classList.contains('nav-open')) {
+      event.preventDefault();
+      drawer(false);
+      return;
+    }
+    if (event.key === 'Tab' && body.classList.contains('nav-open')) {
+      const controls = drawerControls();
+      const first = controls[0];
+      const last = controls.at(-1);
+      if (!event.shiftKey && document.activeElement === menu) {
+        event.preventDefault();
+        first?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        menu.focus();
+      } else if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        menu.focus();
+      } else if (event.shiftKey && document.activeElement === menu) {
+        event.preventDefault();
+        last?.focus();
+      }
+    }
     if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
       event.preventDefault();
       openSearch();
     }
   });
+
+  drawer(false, { restoreFocus: false });
 
   const pageLinks=[...document.querySelectorAll('.on-page a')];
   const pageTargets=pageLinks.map(link=>document.getElementById(link.hash.slice(1))).filter(Boolean);

@@ -6,10 +6,10 @@ const detailsPath=path.join(root,'content','space-marines-codex-wargear.en.json'
 const overlayPath=path.join(root,'content','space-marines-current-overlay.en.json');
 const relatedPath=path.join(root,'content','space-marines-related-rules.en.json');
 const snapshotPath=path.join(root,'sources','wahapedia-compatible-rules.snapshot.json');
-const datasheets=require(path.join(root,'content','space-marines-codex-datasheets.en.json')).datasheets;
-const pack=require(path.join(root,'content','space-marines-faction-pack.en.json'));
-const previousOverlay=require(overlayPath);
-const previousRelated=require(relatedPath);
+const datasheetsPath=path.join(root,'content','space-marines-codex-datasheets.en.json');
+const packPath=path.join(root,'content','space-marines-faction-pack.en.json');
+const mechanicusConfigPath=path.join(root,'..','adeptus-mechanicus','book.config.json');
+const mechanicusRelatedPath=path.join(root,'..','adeptus-mechanicus','mobile','related-rules.inc');
 const sourceUrl='https://wahapedia.ru/wh40k11ed/factions/space-marines/';
 const codexDetachmentTitles=['1st Company Task Force','Anvil Siege Force','Firestorm Assault Force','Gladius Task Force','Ironstorm Spearhead','Stormlance Task Force','Vanguard Spearhead'];
 const routeAliases=new Map([
@@ -34,7 +34,7 @@ const officialDetails=new Map([
 ]);
 
 function coreRuleMap(){
-  const html=fs.readFileSync(path.join(root,'..','adeptus-mechanicus','mobile','related-rules.inc'),'utf8');
+  const html=fs.readFileSync(mechanicusRelatedPath,'utf8');
   const section=html.slice(html.indexOf('<section class="related-detachment related-core"'));
   return new Map([...section.matchAll(/<article[^>]+(?:data-rule-id|id)="([^"]+)"[\s\S]*?<h3[^>]*>[\s\S]*?>([^<]+)<\/button>/g)].map(([,id,title])=>[key(title.replace(/\d+\.\d+$/,'')),id]));
 }
@@ -47,7 +47,20 @@ async function main(){
     console.log(`Space Marines frozen source details verified: ${verified.artifacts.length} artifacts, ${verified.status}`);
     return;
   }
-  const session=contract.createCaptureSession({sourceId:'space-marines-codex-details',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/space-marines/tools/extract-codex-details.cjs',notes:'Candidate only; accepted normalized legacy state is not mutated.'});
+  const session=contract.createCaptureSession({sourceId:'space-marines-codex-details',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/space-marines/tools/extract-codex-details.cjs',localInputs:[
+    {path:path.relative(path.resolve(root,'../..'),datasheetsPath),kind:'generated-repository-input',owner:'books/space-marines/sources/bsdata-extract.config.json'},
+    {path:path.relative(path.resolve(root,'../..'),packPath),kind:'generated-repository-input',owner:'books/space-marines/tools/extract-faction-pack.mjs'},
+    {path:path.relative(path.resolve(root,'../..'),overlayPath),kind:'generated-repository-input',owner:'books/space-marines/tools/extract-codex-details.cjs'},
+    {path:path.relative(path.resolve(root,'../..'),relatedPath),kind:'generated-repository-input',owner:'books/space-marines/tools/extract-codex-details.cjs'},
+    {path:path.relative(path.resolve(root,'../..'),mechanicusConfigPath),kind:'config-input',owner:'books/adeptus-mechanicus/book.config.json'},
+    {path:path.relative(path.resolve(root,'../..'),mechanicusRelatedPath),kind:'generated-repository-input',owner:'books/adeptus-mechanicus/book.config.json#relatedRulesOwnership'}
+  ],notes:'Candidate only; accepted normalized legacy state is not mutated.'});
+  const datasheets=JSON.parse(fs.readFileSync(datasheetsPath,'utf8')).datasheets;
+  const pack=JSON.parse(fs.readFileSync(packPath,'utf8'));
+  const previousOverlay=JSON.parse(fs.readFileSync(overlayPath,'utf8'));
+  const previousRelated=JSON.parse(fs.readFileSync(relatedPath,'utf8'));
+  const mechanicusConfig=JSON.parse(fs.readFileSync(mechanicusConfigPath,'utf8'));
+  if(mechanicusConfig.relatedRulesOwnership?.mode!=='authoritative-runtime-source'||mechanicusConfig.relatedRulesOwnership?.path!=='mobile/related-rules.inc')throw new Error('Adeptus Mechanicus Related Rules ownership no longer matches the authenticated Space Marines normalization input');
   const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const indexPage=await browser.newPage();

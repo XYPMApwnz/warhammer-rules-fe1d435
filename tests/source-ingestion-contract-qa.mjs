@@ -52,14 +52,15 @@ try{
   assert.throws(()=>createCaptureSession({repoRoot:root,sourceId:'repo-root',authority:'official',sourceType:'html',candidateDir:root,extractorPath:'tests/source-ingestion-contract-qa.mjs'}),/repository root/);
   assert.throws(()=>createCaptureSession({repoRoot:root,sourceId:'repo-parent',authority:'official',sourceType:'html',candidateDir:path.dirname(root),extractorPath:'tests/source-ingestion-contract-qa.mjs'}),/contain accepted production paths/);
 
-  const capture=createCaptureSession({repoRoot:root,sourceId:'probe-live',authority:'official',sourceType:'html',candidateDir:path.join(temp,'capture'),extractorPath:'tests/source-ingestion-contract-qa.mjs'});
+  const capture=createCaptureSession({repoRoot:root,sourceId:'probe-live',authority:'official',sourceType:'html',candidateDir:path.join(temp,'capture'),extractorPath:'package.json',localInputs:[{path:'books/source-ingestion-contract.json',kind:'config-input',owner:'source registry'}]});
   assert.equal(JSON.parse(fs.readFileSync(path.join(capture.root,'capture-state.json'),'utf8')).status,'INCOMPLETE');
   capture.captureText({requestedUrl:'https://example.invalid/requested',finalUrl:'https://example.invalid/final',content:'<html>retained</html>',name:'index'});
   capture.writeCandidate('candidate.json','{"candidate":true}\n');
   const manifest=capture.finalize(),manifestPath=path.join(capture.root,'capture-manifest.json');
+  assert.deepEqual(manifest.normalizationInputs.map(input=>input.path),['books/source-ingestion-contract.json']);
   assert.equal(JSON.parse(fs.readFileSync(path.join(capture.root,'capture-state.json'),'utf8')).status,'COMPLETE');
   assert.equal(verifyCaptureManifest(manifestPath).aggregateManifestHash,manifest.aggregateManifestHash);
-  assert.throws(()=>createCaptureSession({repoRoot:root,sourceId:'reused',authority:'official',sourceType:'html',candidateDir:path.join(temp,'capture'),extractorPath:'tests/source-ingestion-contract-qa.mjs'}),/fresh isolated destination/);
+  assert.throws(()=>createCaptureSession({repoRoot:root,sourceId:'reused',authority:'official',sourceType:'html',candidateDir:path.join(temp,'capture'),extractorPath:'package.json'}),/fresh isolated destination/);
   fs.writeFileSync(path.join(capture.root,'capture-state.json'),stableJson({schema:'warhammer-source-capture-state/v1',captureId:manifest.captureId,status:'INCOMPLETE'}));
   assert.throws(()=>verifyCaptureManifest(manifestPath),/completion state/);
   fs.writeFileSync(path.join(capture.root,'capture-state.json'),stableJson({schema:'warhammer-source-capture-state/v1',captureId:manifest.captureId,status:'COMPLETE',manifestSha256:sha256(stableJson(manifest))}));
@@ -71,6 +72,20 @@ try{
   fs.writeFileSync(candidatePath,candidateBytes);
   fs.appendFileSync(path.join(capture.root,manifest.rawArtifacts[0].path),'tampered');
   assert.throws(()=>verifyCaptureManifest(manifestPath),/artifact hash mismatch/);
+
+  const trackedRoot=path.join(temp,'tracked-inputs');fs.mkdirSync(trackedRoot);
+  const git=(...args)=>{const result=spawnSync('git',args,{cwd:trackedRoot,encoding:'utf8'});assert.equal(result.status,0,result.stderr||result.stdout);};
+  git('init');git('config','user.name','Source Contract QA');git('config','user.email','source-contract@example.invalid');
+  fs.writeFileSync(path.join(trackedRoot,'extractor.mjs'),'export default true;\n');fs.writeFileSync(path.join(trackedRoot,'input.json'),'{"current":true}\n');
+  git('add','.');git('commit','-m','fixture');
+  const trackedCapture=createCaptureSession({repoRoot:trackedRoot,sourceId:'tracked-probe',authority:'official',sourceType:'html',candidateDir:path.join(temp,'tracked-capture'),extractorPath:'extractor.mjs',localInputs:['input.json']});
+  trackedCapture.captureText({requestedUrl:'https://example.invalid/input',finalUrl:'https://example.invalid/input',content:'<html>tracked</html>',name:'tracked'});trackedCapture.writeCandidate('candidate.json','{}\n');
+  const trackedManifest=trackedCapture.finalize(),trackedManifestPath=path.join(trackedCapture.root,'capture-manifest.json');
+  assert.equal(verifyCaptureManifest(trackedManifestPath,{repoRoot:trackedRoot}).normalizationInputs[0].sha256,trackedManifest.normalizationInputs[0].sha256);
+  fs.writeFileSync(path.join(trackedRoot,'input.json'),'{"current":false}\n');
+  assert.throws(()=>verifyCaptureManifest(trackedManifestPath,{repoRoot:trackedRoot}),/repository inputs differ from HEAD/);
+  fs.writeFileSync(path.join(trackedRoot,'untracked.json'),'{}\n');
+  assert.throws(()=>createCaptureSession({repoRoot:trackedRoot,sourceId:'untracked-probe',authority:'official',sourceType:'html',candidateDir:path.join(temp,'untracked-capture'),extractorPath:'extractor.mjs',localInputs:['untracked.json']}),/every repository input must be tracked/);
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
 
 assert.throws(()=>verifyBsdataSource({checkout:root,expectedCommit:'0'.repeat(40),inputFiles:[path.join(root,'package.json')]}),/does not match checkout HEAD/,'BSData commit mismatch must fail closed');
@@ -85,6 +100,15 @@ assert(smFactionPackWrapper.includes("configuredInput('Imperium - Space Marines.
 assert(!smFactionPackExtractor.includes('tmp" / "bsdata-wh40k-11e"'),'Space Marines Faction Pack extractor must not read an ambient mutable checkout');
 assert(smFactionPackExtractor.includes('parser.add_argument("--bsdata-faction", type=Path, required=True)')&&smFactionPackExtractor.includes('parser.add_argument("--bsdata-library", type=Path, required=True)'),'Space Marines Faction Pack extractor must require authenticated input paths');
 assert(packageJson.scripts['army-books:sources:check'].includes('node books/space-marines/tools/extract-faction-pack.mjs --check'),'Normal source checking must use the authenticated Space Marines Faction Pack wrapper');
+const smCodexDetails=read('books/space-marines/tools/extract-codex-details.cjs');
+const smSessionIndex=smCodexDetails.indexOf('contract.createCaptureSession({sourceId:');
+for(const input of ['datasheetsPath','packPath','overlayPath','relatedPath','mechanicusConfigPath']){
+  assert(smCodexDetails.indexOf(`path:path.relative(path.resolve(root,'../..'),${input})`,smSessionIndex)>smSessionIndex,`Space Marines codex-details must authenticate ${input}`);
+  assert(smCodexDetails.indexOf(`fs.readFileSync(${input}`,smSessionIndex)>smCodexDetails.indexOf(`path:path.relative(path.resolve(root,'../..'),${input})`,smSessionIndex),`Space Marines codex-details must authenticate ${input} before reading it`);
+}
+assert(smCodexDetails.indexOf("path:path.relative(path.resolve(root,'../..'),mechanicusRelatedPath)",smSessionIndex)>smSessionIndex,'Space Marines codex-details must authenticate mechanicusRelatedPath');
+assert(smCodexDetails.indexOf('coreRuleMap(),details=[]',smSessionIndex)>smCodexDetails.indexOf("path:path.relative(path.resolve(root,'../..'),mechanicusRelatedPath)",smSessionIndex),'Space Marines codex-details must authenticate mechanicusRelatedPath before using it');
+assert(smCodexDetails.includes("mechanicusConfig.relatedRulesOwnership?.mode!=='authoritative-runtime-source'"),'Space Marines codex-details must verify the declared owner of its cross-book generated input');
 const ecIndex=read('books/emperors-children/tools/build-bsdata-enhancement-index.mjs');
 assert(ecIndex.indexOf('verifyBsdataSource({checkout')<ecIndex.indexOf('const raw=fs.readFileSync(input)'),'Emperor\'s Children index must authenticate its ambient BSData input before reading it');
 

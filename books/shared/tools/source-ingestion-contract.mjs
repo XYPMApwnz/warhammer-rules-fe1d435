@@ -2,6 +2,7 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {verifyTrackedInputs} from './verify-bsdata-source.mjs';
 
 const moduleDir=path.dirname(fileURLToPath(import.meta.url));
 export const defaultRepoRoot=path.resolve(moduleDir,'../../..');
@@ -72,7 +73,7 @@ export function requireSourceToolMode(argv,{toolName}){
 
 const safeName=value=>String(value).normalize('NFKD').replace(/[^a-zA-Z0-9._-]+/g,'-').replace(/^-+|-+$/g,'').slice(0,120)||'artifact';
 
-export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authority,sourceType,candidateDir,extractorPath,upstreamVersion=null,upstreamCommit=null,notes='',confidence='unreviewed'}){
+export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authority,sourceType,candidateDir,extractorPath,localInputs=[],upstreamVersion=null,upstreamCommit=null,notes='',confidence='unreviewed'}){
   const root=path.resolve(candidateDir);
   if(samePath(root,path.resolve(repoRoot))||within(path.resolve(repoRoot),root))throw new Error(`${sourceId}: candidate directory cannot be the repository root or contain accepted production paths`);
   const insideRepo=path.relative(path.resolve(repoRoot),root);
@@ -81,6 +82,16 @@ export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authorit
     const approvedRelative=path.relative(approvedRepoRoot,root);
     if(approvedRelative.startsWith(`..${path.sep}`)||approvedRelative==='..'||path.isAbsolute(approvedRelative))throw new Error(`${sourceId}: candidate directory inside the repository must be under tmp/source-candidates`);
   }
+  const extractorFile=path.resolve(repoRoot,extractorPath);
+  const requestedInputs=localInputs.map(input=>typeof input==='string'?{path:input}:input);
+  const authenticated=verifyTrackedInputs({checkout:repoRoot,inputFiles:[extractorFile,...requestedInputs.map(input=>path.resolve(repoRoot,input.path))]});
+  const authenticatedExtractor=path.resolve(authenticated.checkout,...authenticated.inputFiles[0].split('/'));
+  const extractorIdentity={path:authenticated.inputFiles[0],sha256:sha256(fs.readFileSync(authenticatedExtractor))};
+  const normalizationInputs=authenticated.inputFiles.slice(1).map((relative,index)=>{
+    const bytes=fs.readFileSync(path.resolve(authenticated.checkout,...relative.split('/')));
+    const input=requestedInputs[index];
+    return{path:relative,kind:input.kind||'tracked-repository-input',owner:input.owner||null,sha256:sha256(bytes),bytes:bytes.length};
+  });
   if(fs.existsSync(root))throw new Error(`${sourceId}: candidate directory already exists; each capture requires a fresh isolated destination`);
   fs.mkdirSync(path.dirname(root),{recursive:true});
   fs.mkdirSync(root);
@@ -95,8 +106,6 @@ export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authorit
   const normalizedArtifacts=[];
   const requestedUrls=[];
   const finalUrls=[];
-  const extractorFile=path.resolve(repoRoot,extractorPath);
-  const extractorIdentity={path:extractorPath,sha256:sha256(fs.readFileSync(extractorFile))};
   return{
     root,
     captureText({requestedUrl,finalUrl,content,name}){
@@ -129,7 +138,7 @@ export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authorit
       if(!normalizedArtifacts.length)throw new Error(`${sourceId}: capture contains no normalized candidate outputs`);
       const manifest={
         schema:'warhammer-source-capture/v1',sourceId,authority,sourceType,captureId,capturedAt:new Date().toISOString(),
-        requestedUrls:[...new Set(requestedUrls)],finalUrls:[...new Set(finalUrls)],rawArtifacts,normalizedArtifacts,
+        requestedUrls:[...new Set(requestedUrls)],finalUrls:[...new Set(finalUrls)],rawArtifacts,normalizedArtifacts,normalizationInputs,
         upstreamVersion:overrides.upstreamVersion??upstreamVersion,upstreamCommit:overrides.upstreamCommit??upstreamCommit,extractorIdentity,notes,confidence
       };
       manifest.aggregateManifestHash=sha256(stableJson(manifest));
@@ -140,13 +149,15 @@ export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authorit
   };
 }
 
-export function verifyCaptureManifest(manifestPath){
+export function verifyCaptureManifest(manifestPath,{repoRoot=defaultRepoRoot}={}){
   const file=path.resolve(manifestPath),root=path.dirname(file),manifest=JSON.parse(fs.readFileSync(file,'utf8'));
   if(manifest.schema!=='warhammer-source-capture/v1')throw new Error('Unsupported source capture schema');
   if(!manifest.sourceId||!manifest.authority||!manifest.sourceType||!manifest.captureId||!manifest.capturedAt)throw new Error('Source capture identity is incomplete');
   if(!Array.isArray(manifest.requestedUrls)||!manifest.requestedUrls.length||!Array.isArray(manifest.finalUrls)||!manifest.finalUrls.length)throw new Error('Source capture URL identity is incomplete');
   if(!Array.isArray(manifest.rawArtifacts)||!manifest.rawArtifacts.length)throw new Error('Source capture retained no raw artifacts');
   if(!Array.isArray(manifest.normalizedArtifacts)||!manifest.normalizedArtifacts.length)throw new Error('Source capture retained no normalized artifacts');
+  if(!Array.isArray(manifest.normalizationInputs))throw new Error('Source capture local normalization input identity is missing');
+  if(!manifest.extractorIdentity?.path||!manifest.extractorIdentity?.sha256)throw new Error('Source capture extractor identity is missing');
   const expected=manifest.aggregateManifestHash;
   const withoutHash={...manifest};delete withoutHash.aggregateManifestHash;
   if(sha256(stableJson(withoutHash))!==expected)throw new Error('Source capture aggregate manifest hash mismatch');
@@ -165,6 +176,14 @@ export function verifyCaptureManifest(manifestPath){
     const artifactPath=bundlePath(root,artifact.path,'normalized artifact');
     if(!fs.existsSync(artifactPath))throw new Error(`Source capture normalized artifact is missing: ${artifact.path}`);
     if(sha256(fs.readFileSync(artifactPath))!==artifact.sha256)throw new Error(`Source capture normalized artifact hash mismatch: ${artifact.path}`);
+  }
+  const authenticated=verifyTrackedInputs({checkout:repoRoot,inputFiles:[path.resolve(repoRoot,...manifest.extractorIdentity.path.split('/')),...manifest.normalizationInputs.map(input=>path.resolve(repoRoot,...input.path.split('/')))]});
+  const extractorPath=path.resolve(authenticated.checkout,...authenticated.inputFiles[0].split('/'));
+  if(sha256(fs.readFileSync(extractorPath))!==manifest.extractorIdentity.sha256)throw new Error(`Source capture extractor hash mismatch: ${manifest.extractorIdentity.path}`);
+  for(const [index,input] of manifest.normalizationInputs.entries()){
+    const inputPath=path.resolve(authenticated.checkout,...authenticated.inputFiles[index+1].split('/'));
+    if(!fs.existsSync(inputPath))throw new Error(`Source capture normalization input is missing: ${input.path}`);
+    if(sha256(fs.readFileSync(inputPath))!==input.sha256)throw new Error(`Source capture normalization input hash mismatch: ${input.path}`);
   }
   return manifest;
 }

@@ -28451,7 +28451,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
@@ -28494,7 +28494,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
@@ -28538,7 +28538,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -28581,7 +28581,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -28768,7 +28768,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -28812,7 +28812,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -28856,7 +28856,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -28900,7 +28900,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -28946,7 +28946,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -28990,7 +28990,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -29174,7 +29174,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         7
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           7
         ]
@@ -29218,7 +29218,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         7
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           7
         ]
@@ -29265,7 +29265,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         7
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           7
         ]
@@ -29309,7 +29309,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         7
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
           7
         ]

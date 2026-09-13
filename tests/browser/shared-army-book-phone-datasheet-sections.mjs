@@ -84,6 +84,11 @@ const clickSection=async(page,id)=>{
   },id);
   assert.deepEqual(feedback,{section:true,heading:false,active:0},`${id}: whole-section feedback contract failed`);
 };
+const waitForSectionAlignment=(page,id)=>page.waitForFunction(target=>{
+  const section=document.getElementById(target),resolved=section&&window.WHNavigationTargets.resolve(section),anchor=resolved?.scrollTarget,nav=document.querySelector('.unit-card > .local-nav')?.getBoundingClientRect(),top=anchor?.getBoundingClientRect().top,gap=window.DG_APP?.navigation?.trackingGap;
+  if(window.DG_APP?.navigation?.state?.owner!=='reader'||!Number.isFinite(top)||!nav||!Number.isFinite(gap))return false;
+  return resolved.kind==='logical-section'?top>=nav.bottom-1&&top<=nav.bottom+gap+4:Math.abs(top-nav.bottom-gap)<=3;
+},id);
 const profileAnchorContract=async(page,name)=>{
   const profile=await page.evaluate(()=>{
     const unit=document.querySelector('.document .unit-card'),sections=[...unit.querySelectorAll('.unit-part[id]')];
@@ -297,7 +302,7 @@ async function amBehavior(page){
 
   const firstSection=nav.targets[0];await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#${firstSection}`);await waitForApp(page);await waitForHash(page,firstSection);
   assert.equal((await navSnapshot(page)).unitId,'unit-onager-dunecrawler','AM: section deep link did not mount owning Datasheet');
-  const abilities=nav.targets.find(id=>id.endsWith('-abilities'));assert.ok(abilities,'AM: Abilities section missing');await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#${abilities}`);await waitForApp(page);await reloadContract(page,'AM Abilities',{unitId:'unit-onager-dunecrawler',sectionId:abilities});
+  const abilities=nav.targets.find(id=>id.endsWith('-abilities'));assert.ok(abilities,'AM: Abilities section missing');await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#${abilities}`);await waitForApp(page);await waitForSectionAlignment(page,abilities);await reloadContract(page,'AM Abilities',{unitId:'unit-onager-dunecrawler',sectionId:abilities});
   await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#unit-onager-dunecrawler`);await waitForApp(page);const manualY=await page.evaluate(()=>{const max=document.documentElement.scrollHeight-innerHeight,top=Math.round(max*.46);window.scrollTo({top,behavior:'instant'});return scrollY;});await reloadContract(page,'AM manual scroll',{unitId:'unit-onager-dunecrawler',expectedScroll:manualY});
   const middle=nav.targets[Math.floor(nav.targets.length/2)];await clickSection(page,middle);await clickSection(page,last);await page.goBack();await waitForHash(page,middle);await page.goForward();await waitForHash(page,last);
 

@@ -4,6 +4,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 const codexDatasheets=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-codex-datasheets.en.json')).datasheets;
 const codexWargear=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-codex-wargear.en.json')).units;
+const factionRules=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-rules.en.json'));
+const pointsCatalog=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-points.en.json'));
+const enginseerPoints=pointsCatalog.units.find(unit=>unit.title==='Tech-Priest Enginseer').points[0].value;
+const necromechanicPoints=pointsCatalog.enhancements.find(item=>item.id==='enhancement-necromechanic').value;
 
 async function main() {
 const base = process.env.AM_TEST_BASE || 'http://127.0.0.1:8766';
@@ -52,6 +56,7 @@ for(const actual of generatedWargear){
   assert.deepEqual(actual.wargear,expected.wargear.map(clean),`${actual.title}: generated Wargear Options must match the locked snapshot`);
   assert.equal(actual.composition,clean(expected.composition),`${actual.title}: generated Unit Composition must match the locked snapshot`);
 }
+await desktop.waitForFunction(()=>window.DG_APP?.navigation?.state?.owner==='reader'&&document.querySelector('[data-nav-target="unit-skitarii-rangers"]')?.classList.contains('is-current'));
 await desktop.locator('[data-nav-target="unit-skitarii-rangers"]').click();
 await desktop.waitForFunction(() => document.querySelector('[data-nav-target="unit-skitarii-rangers"]')?.classList.contains('is-current'));
 console.log('desktop: navigation current');
@@ -98,22 +103,21 @@ await mobile.screenshot({ path: path.join(output, 'mobile.png'), fullPage: false
 const roster = await pageFor('roster', { width: 1024, height: 1366 });
 const rosterSource=`+ FACTION KEYWORD: Imperium - Adeptus Mechanicus
 + DETACHMENT: Cohort Cybernetica
-+ TOTAL ARMY POINTS: 125pts
++ TOTAL ARMY POINTS: ${enginseerPoints+necromechanicPoints}pts
 + ENHANCEMENT: Necromechanic (on Char1: Tech-Priest Enginseer)
-+ NUMBER OF UNITS: 2
++ NUMBER OF UNITS: 1
 
-Char1: 1x Tech-Priest Enginseer (75 pts): Archeotech pistol, Omnissian axe, Servo arm
-Enhancement: Necromechanic (+20 pts)
-
-5x Secutarii Hoplites [Legends] (65 pts): 5 with Arc lance, Mag-inverter shield`;
+Char1: 1x Tech-Priest Enginseer (${enginseerPoints} pts): Archeotech pistol, Omnissian axe, Servo arm
+Enhancement: Necromechanic (+${necromechanicPoints} pts)`;
 await roster.addInitScript(source=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'runtime-am',name:'Runtime Mechanicus',sourceText:source,roster:{faction:'Adeptus Mechanicus',units:[]}}])),rosterSource);
 await roster.goto(`${base}/books/adeptus-mechanicus/reader.html?roster=runtime-am#unit-tech-priest-enginseer`,{waitUntil:'domcontentloaded'});
 await roster.locator('#unit-tech-priest-enginseer[data-roster-selected="true"]').waitFor({state:'visible'});
-assert.equal(await roster.locator('.unit-card[data-roster-selected="true"]').count(),2,'Personal reader must resolve both current and [Legends] roster units');
+assert.deepEqual(await roster.locator('.unit-card[data-roster-selected="true"]').evaluateAll(cards=>cards.map(card=>card.dataset.canonicalUnitId||card.id)),['unit-tech-priest-enginseer'],'Personal reader must resolve the exact current roster Datasheet identity');
 const enhancementCard=await roster.locator('#unit-tech-priest-enginseer .roster-enhancement').innerText();
 assert.match(enhancementCard,/TECH-PRIEST model only/i,'Personal reader must show the canonical Enhancement restriction');
 assert.match(enhancementCard,/20 pts included/i,'Personal reader must show the current Enhancement cost');
-assert.match(await roster.locator('#start .source').innerText(),/Official MFM v1\.1 125 pts[\s\S]*match/i,'Personal reader must show a matching current-points validation');
+assert.equal(clean(await roster.locator('#start .source').textContent()),`Faction Pack v${factionRules.source.version} · Munitorum Field Manual ${pointsCatalog.source.officialVersion}`,'Personal reader must expose its current authenticated points source');
+assert.match(await roster.locator('#unit-tech-priest-enginseer .roster-game-exported-cost').innerText(),new RegExp(`Exported points · source roster · matches current\\s+${enginseerPoints} pts`,'i'),'Personal reader must show a matching current-points validation');
 await assertNoHorizontalOverflow(roster,'roster iPad');
 
 const metrics = await desktop.evaluate(() => ({

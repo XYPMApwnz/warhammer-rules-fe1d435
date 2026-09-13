@@ -7,7 +7,7 @@
   "documents": [
     {
       "role": "faction",
-      "file": "bsdata-current-blood-angels.json",
+      "file": "Imperium - Blood Angels.json",
       "sha256": "50B5235EADE3FFB81D4D7F559856C2D2929EAB2B659A8F055A85FCD77ECD599F",
       "data": {
         "catalogue": {
@@ -21248,7 +21248,7 @@
     {
       "role": "space-marines-supplement-base",
       "file": "Imperium - Space Marines.json",
-      "sha256": "174212728824586DD5CB9B858E3EEE2781F05D483C55A86B93C4C26B18B29915",
+      "sha256": "4CC22EDA27FDE0274E835291393D9CCDBC399DF6F5D4E78FB6C970E032D96DCC",
       "data": {
         "catalogue": {
           "categoryEntries": [
@@ -221390,12 +221390,16 @@
           "type": "catalogue",
           "authorName": "Acebaur"
         }
+      },
+      "provenance": {
+        "repository": "https://github.com/BSData/wh40k-11e",
+        "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
       }
     },
     {
       "role": "imperial-knights-library",
       "file": "Imperium - Imperial Knights - Library.json",
-      "sha256": "64E2A5D78FA0BE4EF48D5CFEC1C609DA3F2E4322B4FF0B64D25549AB9813D9A2",
+      "sha256": "C04156FBFE8351BF18C559D2F48C75E30F5EC81CFDA3C65EEDF15A131C94DD54",
       "data": {
         "catalogue": {
           "rules": [
@@ -254423,12 +254427,16 @@
           "type": "catalogue",
           "authorContact": "Dunamis55 & AbonShell"
         }
+      },
+      "provenance": {
+        "repository": "https://github.com/BSData/wh40k-11e",
+        "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
       }
     },
     {
       "role": "agents-of-the-imperium",
       "file": "Imperium - Agents of the Imperium.json",
-      "sha256": "6594B2E6162367C4997F15B7A1FDB7D7D3165C418DC24B62437A405508332DDE",
+      "sha256": "E15E96D2068ABAFF1062B7C9FE11FAF6E9695641461822F2627C457AC361A4D7",
       "data": {
         "catalogue": {
           "sharedSelectionEntries": [
@@ -333093,6 +333101,10 @@
           "battleScribeVersion": 2.03,
           "type": "catalogue"
         }
+      },
+      "provenance": {
+        "repository": "https://github.com/BSData/wh40k-11e",
+        "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
       }
     },
     {
@@ -366117,6 +366129,10 @@
           "type": "gameSystem",
           "readme": ""
         }
+      },
+      "provenance": {
+        "repository": "https://github.com/BSData/wh40k-11e",
+        "commit": "72620bee0d1d05fff6692c6db572684c211d7f87"
       }
     }
   ]

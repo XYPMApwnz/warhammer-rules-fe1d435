@@ -67,7 +67,7 @@
     "snapshot": "bsdata-blood-angels-11e.json",
     "datasheets": "../content/blood-angels-codex-datasheets.en.json",
     "points": "../content/blood-angels-points.en.json",
-    "officialPoints": "official-mfm-v1.2.json"
+    "officialPoints": "official-mfm-v1.3.json"
   },
   "filters": {
     "excludeNames": [

@@ -28054,9 +28054,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "prescient-flash",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28099,9 +28099,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "troubling-visions",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28145,9 +28145,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "blazing-icon",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28190,9 +28190,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "ordained-sacrifice",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28236,9 +28236,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "angelic-executioner",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28282,9 +28282,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "shadow-of-abomination",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28328,9 +28328,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "blood-boil",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28373,9 +28373,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "aureole-of-the-angel",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28408,9 +28408,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-gift-of-foresight",
       "sourceId": "gift-of-foresight",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28443,9 +28443,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-icon-of-the-angel",
       "sourceId": "icon-of-the-angel",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28478,9 +28478,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-rage-fuelled-warrior",
       "sourceId": "rage-fuelled-warrior",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28513,9 +28513,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-speed-of-the-primarch",
       "sourceId": "speed-of-the-primarch",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28559,9 +28559,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "carmine-reliquary",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28604,9 +28604,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "master-of-the-red-thirst",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28687,9 +28687,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "angel-s-fang",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28723,9 +28723,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-archangels-shard",
       "sourceId": "archangels-shard",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28759,9 +28759,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-artisan-of-war",
       "sourceId": "artisan-of-war",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28795,9 +28795,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-gleaming-pinions",
       "sourceId": "gleaming-pinions",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28831,9 +28831,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-visage-of-death",
       "sourceId": "visage-of-death",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28867,9 +28867,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-blood-shard",
       "sourceId": "blood-shard",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28903,9 +28903,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-sanguinius-grace",
       "sourceId": "sanguinius-grace",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28939,9 +28939,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-to-slay-the-warmaster",
       "sourceId": "to-slay-the-warmaster",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -28975,9 +28975,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "id": "enhancement-vengeful-onslaught",
       "sourceId": "vengeful-onslaught",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -29021,9 +29021,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "instinctive-interception",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },
@@ -29067,9 +29067,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "on-the-archtraitor-s-bridge",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "blood-angels"
     },

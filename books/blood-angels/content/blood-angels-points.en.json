@@ -6,11 +6,11 @@
     "commit": "d5af57cf1e79b0b038133e84e58de334fea852d0",
     "revision": "1",
     "url": "https://github.com/BSData/wh40k-11e/blob/d5af57cf1e79b0b038133e84e58de334fea852d0/Imperium%20-%20Blood%20Angels.json",
-    "snapshotSha256": "EE1134C6C261527195B42F38A38AB1665743483DA140B4C42DDB6D193F9E11D0",
+    "snapshotSha256": "D527A01BE9688A08CD938CBB6C2D078AC3317B26BB6E778DE47BDFD1F91FEF08",
     "officialMfm": {
-      "version": "v1.2",
+      "version": "v1.3",
       "url": "https://mfm.warhammer-community.com/en/blood-angels",
-      "verifiedAt": "2026-08-12"
+      "verifiedAt": "2026-08-27"
     }
   },
   "units": [
@@ -29,9 +29,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -58,9 +58,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -78,9 +78,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -128,9 +128,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -148,9 +148,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -168,9 +168,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -188,9 +188,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -217,9 +217,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -276,9 +276,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -320,9 +320,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -456,9 +456,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -544,9 +544,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -624,9 +624,9 @@
       "text": "Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -637,9 +637,9 @@
       "text": "Adeptus Astartes model only. The first time the bearer is destroyed, roll one D6 at the end of the phase: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -650,9 +650,9 @@
       "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -663,9 +663,9 @@
       "text": "Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this\nEnhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities\n(see left) are active for the bearer’s unit, instead of only two of them.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -676,9 +676,9 @@
       "text": "ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have:\n\n\n▪ [LETHAL HITS].\n▪ Or: [SUSTAINED HITS 1].",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -689,9 +689,9 @@
       "text": "ADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -702,9 +702,9 @@
       "text": "ADEPTUS ASTARTES model only. This unit has -3\" detection range",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -715,9 +715,9 @@
       "text": "ADEPTUS ASTARTES PSYKER model only. This model’s [PSYCHIC] attacks:\n\n\n▪ Have [ANTI: non-MONSTER/VEHICLE 5+].\n▪ Can re-roll damage rolls.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -728,9 +728,9 @@
       "text": "Adeptus Astartes model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as a unmodified 6 instead.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -741,9 +741,9 @@
       "text": "Adeptus Astartes model only. Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of the bearer’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -754,9 +754,9 @@
       "text": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's melee weapons have the [SUSTAINED HITS 3] ability.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -767,9 +767,9 @@
       "text": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -780,9 +780,9 @@
       "text": "Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character,\nMonster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -793,9 +793,9 @@
       "text": "Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a\nBattle-shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re-roll the result",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -806,9 +806,9 @@
       "text": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use\nthis Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights\nFirst ability.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -819,9 +819,9 @@
       "text": "Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to\nthe Strength characteristic of weapons equipped by models in that unit.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -832,9 +832,9 @@
       "text": "Adeptus Astartes model only. The bearer’s melee weapons have the [ANTI-CHAOS 5+] and [LANCE] abilities.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -845,9 +845,9 @@
       "text": "Adeptus Astartes Jump Pack model only. Improve the Armour Penetration characteristic of the bearer’s weapons by 1, and the bearer has a Save characteristic of 2+.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -858,9 +858,9 @@
       "text": "ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6\"",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -871,9 +871,9 @@
       "text": "Adeptus Astartes Jump Pack model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding Monsters and Vehicles) within Engagement Range of the bearer must take a Battle-shock test.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -884,9 +884,9 @@
       "text": "Death Company model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -897,9 +897,9 @@
       "text": "Death Company model only. Once per battle at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models. the bearer can fight one additional time.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -910,9 +910,9 @@
       "text": "Death Company Model only. Once per battle, at the start of the Fight Phase, if the bearer is within Engagement Range of one or more enemy Character units, you can select one of those Character units and roll six D6: for each 4+, one Character model in that unit suffers 1 mortal wound.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -923,9 +923,9 @@
       "text": "Death Company model only. If the bearer is destroyed, until the end of your next turn, each time a friendly Death Company model make an attack, add 1 to the Hit roll.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -936,9 +936,9 @@
       "text": "DEATH COMPANY model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -949,9 +949,9 @@
       "text": "DEATH COMPANY model only. This model’s melee attacks have +2 A",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/blood-angels",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       }
     }
   ],

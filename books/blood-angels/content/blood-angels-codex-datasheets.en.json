@@ -6,7 +6,7 @@
     "commit": "d5af57cf1e79b0b038133e84e58de334fea852d0",
     "revision": "1",
     "url": "https://github.com/BSData/wh40k-11e/blob/d5af57cf1e79b0b038133e84e58de334fea852d0/Imperium%20-%20Blood%20Angels.json",
-    "snapshotSha256": "EE1134C6C261527195B42F38A38AB1665743483DA140B4C42DDB6D193F9E11D0"
+    "snapshotSha256": "D527A01BE9688A08CD938CBB6C2D078AC3317B26BB6E778DE47BDFD1F91FEF08"
   },
   "datasheets": [
     {
@@ -1584,7 +1584,7 @@
       "points": [
         {
           "label": "1st to 2nd · 5 models",
-          "value": 120,
+          "value": 115,
           "minModels": 5,
           "maxModels": 5,
           "minCopies": 1,
@@ -1600,7 +1600,7 @@
         },
         {
           "label": "3rd + · 5 models",
-          "value": 135,
+          "value": 130,
           "minModels": 5,
           "maxModels": 5,
           "minCopies": 3
@@ -1792,7 +1792,7 @@
       "points": [
         {
           "label": "1st to 2nd · 3 models",
-          "value": 125,
+          "value": 120,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 1,
@@ -1808,7 +1808,7 @@
         },
         {
           "label": "3rd + · 3 models",
-          "value": 145,
+          "value": 140,
           "minModels": 3,
           "maxModels": 3,
           "minCopies": 3

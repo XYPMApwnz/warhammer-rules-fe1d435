@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {verifyBsdataSource} from './verify-bsdata-source.mjs';
 
 const args=process.argv.slice(2);
 const check=args.includes('--check');
@@ -61,11 +62,14 @@ const unique=(items,marker)=>{
   return items.filter(item=>{const id=marker(item);if(seen.has(id))return false;seen.add(id);return true;});
 };
 
-const inputs=config.inputs.map(input=>{
-  const file=resolvePath(input.path);
+const configuredInputs=config.inputs.map(input=>({...input,file:resolvePath(input.path)}));
+const inputs=configuredInputs.map(input=>{
+  const file=input.file;
   const raw=fs.readFileSync(file);
   return {role:input.role,file:path.basename(file),sha256:sha256(raw),data:JSON.parse(raw.toString('utf8'))};
 });
+const sourceCheckout=resolvePath(config.source.checkout||path.dirname(config.inputs.find(input=>input.role==='faction')?.path||config.inputs[0].path));
+verifyBsdataSource({checkout:sourceCheckout,expectedCommit:config.source.commit,inputFiles:configuredInputs.map(input=>input.file)});
 const snapshot={
   schema:1,
   source:{repository:config.source.repository,commit:config.source.commit},

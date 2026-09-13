@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
+import {beginLegacyCaptureTool,captureFetchText} from '../../shared/tools/source-ingestion-contract.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..','..');
 const bookRoot=path.join(root,'books','death-guard');
@@ -81,20 +82,23 @@ export function buildImport({book,datasheetHtmlByUnit,retrievedAt}){
 
 export function applyImportResult({result,snapshotPath=snapshotFile,reportPath=reportFile}){writeJson(reportPath,result.report);if(!result.ok)return false;replaceSnapshot(snapshotPath,result.snapshot);return true;}
 
-async function fetchText(url){const response=await fetch(url,{headers:{'user-agent':'warhammer-rules-compatible-rules-importer/2.0'}});if(!response.ok)throw new Error(`${url}: HTTP ${response.status}`);return response.text();}
-
 async function main(){
-  if(!process.argv.includes('--capture-update'))throw new Error('This is a live SOURCE UPDATE tool; pass --capture-update explicitly.');
+  const {mode,session}=beginLegacyCaptureTool({argv:process.argv.slice(2),toolName:'import-wahapedia-compatible-rules.mjs',sourceId:'death-guard-compatible-rules-live',authority:'secondary',sourceType:'wahapedia-html',extractorPath:'books/death-guard/tools/import-wahapedia-compatible-rules.mjs',localInputs:[{path:'books/death-guard/content/death-guard-rules.en.json',kind:'canonical-source-input',owner:'Death Guard canonical rules'}]});
+  if(mode.kind==='verify')throw new Error('import-wahapedia-compatible-rules.mjs: no retained raw capture is registered for offline --check');
   const dateIndex=process.argv.indexOf('--retrieved-at'),retrievedAt=dateIndex<0?'':process.argv[dateIndex+1];
   if(!/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt))throw new Error('Pass an explicit --retrieved-at YYYY-MM-DD for deterministic output.');
   const book=readJson(sourceFile),indexes=buildCanonicalIndexes(book);
   if(indexes.units.length!==41||indexes.rules.length!==45)throw new Error(`Canonical scope changed: ${indexes.units.length} datasheets, ${indexes.rules.length} faction Stratagems.`);
-  const factionHtml=await fetchText(factionUrl),sourceUrlByUnit=new Map();
+  const headers={'user-agent':'warhammer-rules-compatible-rules-importer/2.0'};
+  const factionHtml=await captureFetchText(session,factionUrl,{name:'death-guard-index',headers}),sourceUrlByUnit=new Map();
   for(const match of factionHtml.matchAll(/href="\/wh40k11ed\/factions\/death-guard\/([^"#?]+)"/gi)){const units=indexes.unitByName.get(normalized(decodeURIComponent(match[1]).replaceAll('-',' ')))||[];if(units.length===1&&!sourceUrlByUnit.has(units[0].unitId))sourceUrlByUnit.set(units[0].unitId,`${factionUrl}${match[1]}`);}
   const missing=indexes.units.filter(unit=>!sourceUrlByUnit.has(unit.unitId));if(missing.length)throw new Error(`Missing Wahapedia datasheet URLs: ${missing.map(unit=>unit.unitId).join(', ')}`);
-  const pages=await Promise.all(indexes.units.map(async unit=>[unit.unitId,await fetchText(sourceUrlByUnit.get(unit.unitId))]));
+  const pages=await Promise.all(indexes.units.map(async unit=>[unit.unitId,await captureFetchText(session,sourceUrlByUnit.get(unit.unitId),{name:unit.unitId,headers})]));
   const result=buildImport({book,datasheetHtmlByUnit:new Map(pages),retrievedAt});
-  if(!applyImportResult({result}))throw new Error(`Import has ${result.report.summary.unresolved} unresolved entries; snapshot was not written.`);
+  session.writeCandidate(path.relative(root,reportFile),stableStringify(result.report));
+  if(!result.ok)throw new Error(`Import has ${result.report.summary.unresolved} unresolved entries; snapshot was not written.`);
+  session.writeCandidate(path.relative(root,snapshotFile),stableStringify(result.snapshot));
+  session.finalize();
   process.stdout.write(`Imported ${Object.keys(result.snapshot.units).length} datasheets, ${result.report.summary.stratagems.observed} faction and ${result.report.summary.coreStratagems.observed} Core Stratagems.\n`);
 }
 

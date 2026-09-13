@@ -76,6 +76,14 @@ export function beginLegacyCaptureTool({argv,toolName,...captureOptions}){
   return{mode,session:mode.kind==='capture'?createCaptureSession({...captureOptions,candidateDir:mode.candidateDir}):null};
 }
 
+export async function captureFetchText(session,url,{name,headers={}}={}){
+  const response=await fetch(url,{headers});
+  if(!response.ok)throw new Error(`${url}: HTTP ${response.status}`);
+  const content=await response.text();
+  session.captureText({requestedUrl:url,finalUrl:response.url||url,content,name:name||url});
+  return content;
+}
+
 const safeName=value=>String(value).normalize('NFKD').replace(/[^a-zA-Z0-9._-]+/g,'-').replace(/^-+|-+$/g,'').slice(0,120)||'artifact';
 
 export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authority,sourceType,candidateDir,extractorPath,localInputs=[],upstreamVersion=null,upstreamCommit=null,notes='',confidence='unreviewed'}){

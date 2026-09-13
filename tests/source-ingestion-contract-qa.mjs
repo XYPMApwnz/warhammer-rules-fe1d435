@@ -33,12 +33,24 @@ const active=[
   ['books/tau-empire/tools/extract-wargear.cjs','tau-codex-wargear'],
   ['books/tau-empire/tools/extract-codex-parity.cjs','tau-codex-parity']
 ];
+const legacy=[
+  {tool:'books/adeptus-mechanicus/tools/extract-codex-rules.cjs',inputs:['books/adeptus-mechanicus/content/adeptus-mechanicus-codex-detachments.en.json'],outputs:['books/adeptus-mechanicus/content/adeptus-mechanicus-codex-parity.en.json']},
+  {tool:'books/adeptus-mechanicus/tools/extract-wargear.cjs',inputs:['books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json','books/adeptus-mechanicus/content/adeptus-mechanicus-rules.en.json'],outputs:['books/adeptus-mechanicus/content/adeptus-mechanicus-codex-wargear.en.json']},
+  {tool:'books/adeptus-mechanicus/tools/import-wahapedia-compatible-rules.mjs',inputs:['books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json','books/adeptus-mechanicus/content/adeptus-mechanicus-rules.en.json','books/adeptus-mechanicus/content/adeptus-mechanicus-codex-detachments.en.json'],outputs:['books/adeptus-mechanicus/sources/wahapedia-compatible-rules.snapshot.json','books/adeptus-mechanicus/reports/compatible-rules-import-report.json']},
+  {tool:'books/death-guard/tools/import-wahapedia-compatible-rules.mjs',inputs:['books/death-guard/content/death-guard-rules.en.json'],outputs:['books/death-guard/sources/wahapedia-compatible-rules.snapshot.json','books/death-guard/reports/compatible-rules-import-report.json']},
+  {tool:'books/emperors-children/tools/import-wahapedia-compatible-rules.mjs',inputs:['books/emperors-children/content/emperors-children-codex-datasheets.en.json','books/emperors-children/content/emperors-children-faction-pack.en.json','books/emperors-children/content/emperors-children-codex-parity.en.json'],outputs:['books/emperors-children/sources/wahapedia-compatible-rules.snapshot.json','books/emperors-children/reports/compatible-rules-import-report.json']},
+  {tool:'books/tyranids/tools/extract-codex-parity.cjs',inputs:['books/tyranids/content/tyranids-points.en.json'],outputs:['books/tyranids/content/tyranids-codex-parity.en.json']},
+  {tool:'books/tyranids/tools/extract-wargear.cjs',inputs:['books/tyranids/content/tyranids-codex-datasheets.en.json'],outputs:['books/tyranids/content/tyranids-codex-wargear.en.json']},
+  {tool:'books/tyranids/tools/import-wahapedia-compatible-rules.mjs',inputs:['books/tyranids/content/tyranids-codex-datasheets.en.json','books/tyranids/content/tyranids-faction-pack.en.json','books/tyranids/content/tyranids-codex-parity.en.json'],outputs:['books/tyranids/sources/wahapedia-compatible-rules.snapshot.json','books/tyranids/reports/compatible-rules-import-report.json']},
+  {tool:'books/tau-empire/tools/import-wahapedia-compatible-rules.mjs',inputs:['books/tau-empire/content/tau-empire-codex-datasheets.en.json','books/tau-empire/content/tau-empire-faction-pack.en.json','books/tau-empire/content/tau-empire-codex-parity.en.json'],outputs:['books/tau-empire/sources/wahapedia-compatible-rules.snapshot.json','books/tau-empire/reports/compatible-rules-import-report.json'],verify:true}
+];
 
 const walk=directory=>fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry=>entry.isDirectory()?walk(path.join(directory,entry.name)):[path.join(directory,entry.name)]);
-const networkSourceTools=walk(path.join(root,'books')).filter(file=>/[\\/]tools[\\/]/.test(file)&&/\.(?:mjs|cjs|js|py)$/.test(file)&&/page\.goto\(|\bfetch\s*\(|https?\.get\(|chromium\.launch\(|urlopen\(|requests\.(?:get|post)\(/.test(fs.readFileSync(file,'utf8'))).map(file=>path.relative(root,file).replaceAll(path.sep,'/')).sort();
+const networkSourceTools=walk(path.join(root,'books')).filter(file=>/[\\/]tools[\\/]/.test(file)&&!/[\\/]shared[\\/]tools[\\/]/.test(file)&&/\.(?:mjs|cjs|js|py)$/.test(file)&&/page\.goto\(|\bfetch\s*\(|https?\.get\(|chromium\.launch\(|urlopen\(|requests\.(?:get|post)\(|captureFetchText\(|capturePage\(/.test(fs.readFileSync(file,'utf8'))).map(file=>path.relative(root,file).replaceAll(path.sep,'/')).sort();
 assert.deepEqual(networkSourceTools,[...active.map(([tool])=>tool),...registry.dormantLiveTools].sort(),'Every network-capable source tool must be enrolled as frozen-capture or guarded legacy workflow');
+assert.deepEqual(legacy.map(item=>item.tool).sort(),[...registry.dormantLiveTools].sort(),'Every guarded legacy workflow must have an executable safety contract');
 
-const acceptedBefore=new Map(registry.sources.flatMap(source=>source.artifacts.map(artifact=>[artifact.path,sha256(fs.readFileSync(path.join(root,artifact.path)))])));
+const acceptedBefore=new Map([...registry.sources.flatMap(source=>source.artifacts.map(artifact=>artifact.path)),...legacy.flatMap(item=>item.outputs)].map(artifact=>[artifact,sha256(fs.readFileSync(path.join(root,artifact)))]));
 for(const [tool] of active){
   const executable=path.join(root,tool);
   for(const [args,message] of [
@@ -53,6 +65,27 @@ for(const [tool] of active){
   }
   const checked=spawnSync(process.execPath,[executable,'--check'],{cwd:root,encoding:'utf8'});
   assert.equal(checked.status,0,`${tool}: frozen --check failed: ${checked.stderr||checked.stdout}`);
+}
+for(const item of legacy){
+  const executable=path.join(root,item.tool),source=read(item.tool),main=source.slice(source.indexOf('async function main'));
+  assert(source.includes('beginLegacyCaptureTool'),`${item.tool}: legacy live lifecycle does not use the shared capture adapter`);
+  assert(source.includes('captureFetchText')||source.includes('capturePage'),`${item.tool}: live input is not retained in the capture bundle`);
+  assert(main.includes('session.writeCandidate')&&main.includes('session.finalize'),`${item.tool}: candidate output is not bound and finalized`);
+  assert(!/fs\.writeFileSync\s*\(/.test(main),`${item.tool}: live CLI still writes accepted files directly`);
+  for(const input of item.inputs)assert(source.includes(input),`${item.tool}: normalization input is not authenticated: ${input}`);
+  for(const [args,message] of [
+    [[],/choose exactly one mode/],
+    [['--capture-update'],/candidate-dir/],
+    [['--check','--capture-update','--candidate-dir',root],/choose exactly one mode/],
+    [['--capture-update','--candidate-dir',root],/repository root/]
+  ]){
+    const result=spawnSync(process.execPath,[executable,...args],{cwd:root,encoding:'utf8'});
+    assert.notEqual(result.status,0,`${item.tool}: unsafe legacy source mode unexpectedly succeeded`);
+    assert.match(`${result.stdout}${result.stderr}`,message,`${item.tool}: unsafe legacy source mode did not fail at the expected boundary`);
+  }
+  const checked=spawnSync(process.execPath,[executable,'--check'],{cwd:root,encoding:'utf8'});
+  if(item.verify)assert.equal(checked.status,0,`${item.tool}: offline --check failed: ${checked.stderr||checked.stdout}`);
+  else{assert.notEqual(checked.status,0,`${item.tool}: legacy --check claimed freshness without retained raw evidence`);assert.match(`${checked.stdout}${checked.stderr}`,/no retained raw capture/);}
 }
 for(const [artifact,before] of acceptedBefore)assert.equal(sha256(fs.readFileSync(path.join(root,artifact))),before,`${artifact}: frozen verification mutated an accepted artifact`);
 

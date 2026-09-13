@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
+import {beginLegacyCaptureTool,captureFetchText} from '../../shared/tools/source-ingestion-contract.mjs';
 
 const bookRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const datasheetsFile=path.join(bookRoot,'content','adeptus-mechanicus-codex-datasheets.en.json');
@@ -107,27 +108,31 @@ export function buildImport({datasheets,detachments,datasheetHtmlByUnit,retrieve
   return {snapshot,report,ok};
 }
 
-const writeJson=(file,value)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,stableStringify(value));};
-async function fetchText(url){const response=await fetch(url,{headers:{'user-agent':'warhammer-rules-compatible-rules-importer/1.0'}});if(!response.ok)throw new Error(`${url}: HTTP ${response.status}`);return response.text();}
-
 async function main(){
-  if(!process.argv.includes('--capture-update'))throw new Error('This is a live SOURCE UPDATE tool; pass --capture-update explicitly.');
+  const {mode,session}=beginLegacyCaptureTool({argv:process.argv.slice(2),toolName:'import-wahapedia-compatible-rules.mjs',sourceId:'adeptus-mechanicus-compatible-rules-live',authority:'secondary',sourceType:'wahapedia-html',extractorPath:'books/adeptus-mechanicus/tools/import-wahapedia-compatible-rules.mjs',localInputs:[
+    {path:'books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json',kind:'canonical-source-input',owner:'Adeptus Mechanicus codex datasheets'},
+    {path:'books/adeptus-mechanicus/content/adeptus-mechanicus-rules.en.json',kind:'canonical-source-input',owner:'Adeptus Mechanicus Faction Pack'},
+    {path:'books/adeptus-mechanicus/content/adeptus-mechanicus-codex-detachments.en.json',kind:'canonical-source-input',owner:'Adeptus Mechanicus codex Detachments'}
+  ]});
+  if(mode.kind==='verify')throw new Error('import-wahapedia-compatible-rules.mjs: no retained raw capture is registered for offline --check');
   const dateIndex=process.argv.indexOf('--retrieved-at'),retrievedAt=dateIndex<0?'':process.argv[dateIndex+1];
   if(!/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt))throw new Error('Pass an explicit --retrieved-at YYYY-MM-DD for deterministic output.');
   const datasheets=readJson(datasheetsFile).datasheets;
   const detachments=detachmentFiles.flatMap(file=>readJson(file).detachments||[]);
   const indexes=canonicalIndexes({datasheets,detachments});
-  const factionHtml=await fetchText(factionUrl),sourceUrlByUnit=new Map();
+  const headers={'user-agent':'warhammer-rules-compatible-rules-importer/1.0'};
+  const factionHtml=await captureFetchText(session,factionUrl,{name:'adeptus-mechanicus-index',headers}),sourceUrlByUnit=new Map();
   for(const match of factionHtml.matchAll(/href="\/wh40k11ed\/factions\/adeptus-mechanicus\/([^"#?]+)"/gi)){
     const candidates=indexes.unitByName.get(normalize(decodeURIComponent(match[1]).replaceAll('-',' ')))||[];
     if(candidates.length===1&&!sourceUrlByUnit.has(candidates[0].unitId))sourceUrlByUnit.set(candidates[0].unitId,`${factionUrl}${match[1]}`);
   }
   const missing=indexes.units.filter(unit=>!sourceUrlByUnit.has(unit.unitId));if(missing.length)throw new Error(`Missing Wahapedia datasheet URLs: ${missing.map(unit=>unit.unitId).join(', ')}`);
-  const pages=await Promise.all(indexes.units.map(async unit=>[unit.unitId,await fetchText(sourceUrlByUnit.get(unit.unitId))]));
+  const pages=await Promise.all(indexes.units.map(async unit=>[unit.unitId,await captureFetchText(session,sourceUrlByUnit.get(unit.unitId),{name:unit.unitId,headers})]));
   const result=buildImport({datasheets,detachments,datasheetHtmlByUnit:new Map(pages),retrievedAt});
-  writeJson(reportFile,result.report);
+  session.writeCandidate(path.relative(path.resolve(bookRoot,'../..'),reportFile),stableStringify(result.report));
   if(!result.ok)throw new Error(`Import failed expected inventory: ${JSON.stringify(result.report.summary)}`);
-  writeJson(snapshotFile,result.snapshot);
+  session.writeCandidate(path.relative(path.resolve(bookRoot,'../..'),snapshotFile),stableStringify(result.snapshot));
+  session.finalize();
   process.stdout.write(`Imported 34 datasheets, 51 faction and 10 Core Stratagems; 816 faction and 225 Core associations.\n`);
 }
 

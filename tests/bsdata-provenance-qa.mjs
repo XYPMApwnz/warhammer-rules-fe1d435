@@ -25,6 +25,12 @@ try{
   const good=run(process.execPath,[extractor,configPath]);
   assert.equal(good.status,0,output(good));
   assert.equal(JSON.parse(fs.readFileSync(path.join(root,'snapshot.json'),'utf8')).source.commit,head);
+  for(const file of ['snapshot.json','datasheets.json','points.json']){
+    const outputPath=path.join(root,file);
+    fs.writeFileSync(outputPath,fs.readFileSync(outputPath,'utf8').replace(/\n/g,'\r\n'));
+  }
+  const crlfCheck=run(process.execPath,[extractor,configPath,'--check']);
+  assert.equal(crlfCheck.status,0,output(crlfCheck));
 
   config.source.commit='0'.repeat(40);fs.writeFileSync(configPath,JSON.stringify(config,null,2));
   const mismatch=run(process.execPath,[extractor,configPath]);

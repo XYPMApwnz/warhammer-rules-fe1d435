@@ -579,6 +579,7 @@ if(config.outputs.officialPoints){
 }
 
 const outputPath=value=>candidateDir?path.join(candidateDir,path.basename(resolvePath(value))):resolvePath(value);
+const normalizeEol=value=>value.replace(/\r\n/g,'\n');
 const outputs=[
   [outputPath(config.outputs.snapshot),json(snapshot)],
   [outputPath(config.outputs.datasheets),json(datasheets)],
@@ -586,7 +587,7 @@ const outputs=[
 ];
 for(const [file,content] of outputs){
   if(check){
-    if(!fs.existsSync(file)||fs.readFileSync(file,'utf8')!==content)throw new Error(`${path.basename(file)} is stale; rerun extractor`);
+    if(!fs.existsSync(file)||normalizeEol(fs.readFileSync(file,'utf8'))!==content)throw new Error(`${path.basename(file)} is stale; rerun extractor`);
   }else{
     fs.mkdirSync(path.dirname(file),{recursive:true});
     fs.writeFileSync(file,content);

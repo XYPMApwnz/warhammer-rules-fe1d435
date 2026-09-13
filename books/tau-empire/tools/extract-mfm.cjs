@@ -101,7 +101,7 @@ async function main(){
   const result={schema:1,title:'Munitorum Field Manual',version:remote.version,verifiedAt,url:sourceUrl,detachments,verifiedUnits,unitOverrides,enhancements};
   const output=`${JSON.stringify(result,null,2)}\n`;
   session.writeCandidate(`sources/official-mfm-${remote.version}.json`,output);
-  session.finalize();
+  session.finalize({upstreamVersion:remote.version});
   console.log(`Captured official MFM candidate: ${verifiedUnits.length} units, ${detachments.length} Detachments, ${enhancements.length} Enhancements`);
 }
 

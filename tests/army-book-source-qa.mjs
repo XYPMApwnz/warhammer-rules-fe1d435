@@ -140,7 +140,7 @@ const csmPack=read('books/chaos-space-marines/content/chaos-space-marines-factio
 const csmCodex=read('books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json');
 const csmPoints=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
 const csmRelated=read('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json');
-const csmMfm=read('books/chaos-space-marines/sources/official-mfm-v1.2.json');
+const csmMfm=read('books/chaos-space-marines/sources/official-mfm-v1.3.json');
 const csmReader=renderedBook('chaos-space-marines');
 expect(csmPack.meta?.version==='1.2'&&csmPack.meta?.sha256==='F3A8D05ED88BAD5085D014BF76FAD684B60336F92CF75CF3AED30B989A33A495','chaos-space-marines: current official Faction Pack v1.2 provenance mismatch');
 const normalizeHashPayload=value=>Array.isArray(value)?value.map(normalizeHashPayload):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,normalizeHashPayload(value[key])])):value;
@@ -151,7 +151,7 @@ expect(bloodAngelsMfm.captureSha256===bloodAngelsMfmDigest&&bloodAngelsMfm.hashM
 expect(!JSON.stringify(bloodAngelsMfm).includes(' ? '),'blood-angels: MFM capture contains a damaged separator');
 const csmMfmPayload=Object.fromEntries(csmMfm.hashModel.fields.map(field=>[field,csmMfm[field]]));
 const csmMfmDigest=crypto.createHash('sha256').update(JSON.stringify(normalizeHashPayload(csmMfmPayload)),'utf8').digest('hex').toUpperCase();
-expect(csmMfm.version==='v1.2'&&csmMfm.counts?.units===54&&csmMfm.counts?.unitPointSchedules===91&&csmMfm.counts?.pricedOptions===3&&csmMfm.counts?.detachments===17&&csmMfm.counts?.enhancements===62,'chaos-space-marines: official MFM v1.2 capture inventory mismatch');
+expect(csmMfm.version==='v1.3'&&csmMfm.counts?.units===54&&csmMfm.counts?.unitPointSchedules===91&&csmMfm.counts?.pricedOptions===3&&csmMfm.counts?.detachments===17&&csmMfm.counts?.enhancements===62,'chaos-space-marines: official MFM v1.3 capture inventory mismatch');
 expect(csmMfm.captureSha256===csmMfmDigest&&csmMfm.hashModel?.scope==='normalizedPayload','chaos-space-marines: MFM normalized payload hash mismatch');
 expect(csmMfm.unitOverrides.length===54&&csmMfm.unitOverrides.every(item=>item.points.length),'chaos-space-marines: current unit schedules are not fully represented');
 expect(csmMfm.unitOverrides.reduce((sum,item)=>sum+item.points.length,0)===91,'chaos-space-marines: expected all 91 current MFM unit schedule rows');
@@ -194,7 +194,7 @@ const csmTransports=csmCodex.datasheets.filter(unit=>unit.relations?.transport?.
 expect(csmTransports.length===2&&csmReader.includes('<h4>Transport</h4>'),'chaos-space-marines: expected two rendered source-backed Transport relations');
 for(const [title,options] of [['Defiler',[['Heavy reaper autocannon',15],['Hades lascannon',15]]],['Forgefiend',[['Ectoplasma cannon',5]]]]){
   const actual=(csmByTitle.get(title)?.paidWargear||[]).map(item=>[item.name,item.value]).sort(([a],[b])=>a.localeCompare(b));
-  expect(JSON.stringify(actual)===JSON.stringify([...options].sort(([a],[b])=>a.localeCompare(b))),`chaos-space-marines: ${title} paid options do not match MFM v1.2`);
+  expect(JSON.stringify(actual)===JSON.stringify([...options].sort(([a],[b])=>a.localeCompare(b))),`chaos-space-marines: ${title} paid options do not match MFM v1.3`);
   for(const [name,value] of options)expect(csmReader.includes(`${name} · +${value} pts`),`chaos-space-marines: ${title} paid option ${name} is not rendered`);
 }
 

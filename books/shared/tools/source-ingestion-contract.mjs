@@ -102,12 +102,12 @@ export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authorit
       fs.writeFileSync(file,content,'utf8');
       return file;
     },
-    finalize(){
+    finalize(overrides={}){
       if(!rawArtifacts.length)throw new Error(`${sourceId}: capture contains no retained raw artifacts`);
       const manifest={
         schema:'warhammer-source-capture/v1',sourceId,authority,sourceType,captureId,capturedAt:new Date().toISOString(),
         requestedUrls:[...new Set(requestedUrls)],finalUrls:[...new Set(finalUrls)],rawArtifacts,
-        upstreamVersion,upstreamCommit,extractorIdentity,notes,confidence
+        upstreamVersion:overrides.upstreamVersion??upstreamVersion,upstreamCommit:overrides.upstreamCommit??upstreamCommit,extractorIdentity,notes,confidence
       };
       manifest.aggregateManifestHash=sha256(stableJson(manifest));
       fs.writeFileSync(path.join(root,'capture-manifest.json'),stableJson(manifest),'utf8');

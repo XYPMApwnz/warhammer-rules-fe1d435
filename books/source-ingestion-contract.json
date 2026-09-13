@@ -47,6 +47,28 @@
       "notes": "Historical raw Wahapedia pages are unavailable. Accepted normalized artifacts are frozen and hash verified; current live pages are update candidates only."
     },
     {
+      "book": "chaos-space-marines",
+      "sourceId": "csm-mfm-v1.3",
+      "authority": "official",
+      "sourceType": "warhammer-community-web-app",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "fbe45a9d08b1a99e8e1b2c8011bd510180d9bdff3657442902f88c519a3e54f7",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "extractor": "books/chaos-space-marines/tools/extract-mfm.cjs",
+      "artifacts": [
+        {
+          "path": "books/chaos-space-marines/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "fbe45a9d08b1a99e8e1b2c8011bd510180d9bdff3657442902f88c519a3e54f7"
+        }
+      ],
+      "notes": "The accepted v1.3 normalized MFM payload is hash verified; historical HTTP response bytes are unavailable."
+    },
+    {
       "book": "tau-empire",
       "sourceId": "tau-mfm-v1.3",
       "authority": "official",
@@ -117,7 +139,6 @@
     "books/adeptus-mechanicus/tools/extract-codex-rules.cjs",
     "books/adeptus-mechanicus/tools/extract-wargear.cjs",
     "books/adeptus-mechanicus/tools/import-wahapedia-compatible-rules.mjs",
-    "books/chaos-space-marines/tools/extract-mfm.cjs",
     "books/death-guard/tools/import-wahapedia-compatible-rules.mjs",
     "books/emperors-children/tools/import-wahapedia-compatible-rules.mjs",
     "books/tyranids/tools/extract-codex-parity.cjs",

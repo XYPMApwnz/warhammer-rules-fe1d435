@@ -56,7 +56,7 @@
   ],
   "outputs": {
     "snapshot": "bsdata-chaos-space-marines-11e.json",
-    "officialPoints": "official-mfm-v1.2.json",
+    "officialPoints": "official-mfm-v1.3.json",
     "datasheets": "../content/chaos-space-marines-codex-datasheets.en.json",
     "points": "../content/chaos-space-marines-points.en.json"
   },
@@ -109,7 +109,8 @@
       "profileStats": {
         "Heldrake": {
           "M": "12\"",
-          "Base": "120x92mm Oval Base"
+          "Base": "120x92mm Oval Base",
+          "OC": "0"
         }
       }
     },
@@ -272,7 +273,32 @@
         "Abaddon the Despoiler": {
           "Base": "60mm"
         }
-      }
+      },
+      "abilities": {
+        "The Warmaster": {
+          "sourceAvailability": {
+            "status": "unavailable",
+            "missing": "verified-option-definitions"
+          }
+        },
+        "Dark Destiny": {
+          "text": "Each time this model’s unit makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP."
+        }
+      },
+      "addAbilities": [
+        {
+          "title": "Supreme Commander",
+          "text": "If this model is in your army, it must be your WARLORD.",
+          "abilityClass": "datasheet"
+        }
+      ],
+      "abilityOrder": [
+        "Supreme Commander",
+        "The Warmaster",
+        "Dark Destiny",
+        "Deep Strike",
+        "Dark Pacts"
+      ]
     },
     "Cypher": {
       "profileStats": {
@@ -322,6 +348,32 @@
         "The Enforcer": {
           "Base": "32mm"
         }
+      },
+      "removeAbilities": [
+        "Masters of the Maelstrom"
+      ],
+      "addAbilities": [
+        {
+          "title": "Choice Samples",
+          "text": "While this unit’s Garreon the Corpsemaster is on the battlefield, in your Command phase, select one of the following: you can return 1 destroyed model (excluding Character models) to this unit, or, if one or more Heretic Astartes Infantry units from your army are below Starting Strength and within 3\" of this unit, you gain 1CP.",
+          "abilityClass": "datasheet"
+        },
+        {
+          "title": "Support",
+          "text": ""
+        }
+      ],
+      "abilityOrder": [
+        "Choice Samples",
+        "Fleet Command",
+        "Plunder",
+        "Dark Pacts",
+        "Support"
+      ],
+      "compositionIntrinsicKeywords": {
+        "Garlon Souleater": [
+          "PSYKER"
+        ]
       }
     },
     "Vashtorr the Arkifane": {
@@ -389,6 +441,11 @@
       "profileStats": {
         "Nemesis Claw": {
           "Base": "32mm"
+        }
+      },
+      "weaponProfiles": {
+        "Paired accursed weapons": {
+          "a": "4"
         }
       }
     },

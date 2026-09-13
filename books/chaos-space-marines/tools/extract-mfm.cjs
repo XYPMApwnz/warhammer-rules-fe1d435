@@ -1,10 +1,9 @@
 const crypto=require('node:crypto');
 const fs=require('node:fs');
 const path=require('node:path');
-const {chromium}=require('playwright');
 
 const root=path.resolve(__dirname,'..');
-const outputPath=path.join(root,'sources','official-mfm-v1.2.json');
+const outputPath=path.join(root,'sources','official-mfm-v1.3.json');
 const manifestPath=path.join(root,'sources','source-manifest.json');
 const datasheets=require(path.join(root,'content','chaos-space-marines-codex-datasheets.en.json'));
 const currentUnits=datasheets.datasheets;
@@ -42,10 +41,12 @@ function modelRange(label){
   throw new Error(`Unsupported MFM model range: ${label}`);
 }
 
-async function readLive(){
+async function readLive(session){
+  const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const page=await browser.newPage();
   await page.goto(sourceUrl,{waitUntil:'networkidle',timeout:90_000});
+  await session.capturePage(page,sourceUrl,'chaos-space-marines-mfm');
   const remote=await page.evaluate(()=>{
     const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
     const headings=[...document.querySelectorAll('main h3')];
@@ -71,7 +72,7 @@ async function readLive(){
 }
 
 function buildCapture(remote,capturedAt){
-  if(remote.version!=='v1.2')throw new Error(`Expected current MFM v1.2, found ${remote.version||'unknown'}`);
+  if(!/^v\d+\.\d+$/.test(remote.version))throw new Error(`Current MFM version is missing or invalid: ${remote.version||'unknown'}`);
   const liveUnits=remote.units.filter(unit=>unit.groups.some(group=>/^YOUR .*UNIT.* COSTS?$/.test(group.title)));
   const byTitle=new Map(liveUnits.map(unit=>[key(unit.title),unit]));
   if(liveUnits.length!==currentUnits.length)throw new Error(`Expected ${currentUnits.length} current MFM units, found ${liveUnits.length}`);
@@ -124,29 +125,28 @@ function manifestFor(capture,existing){
   const next=structuredClone(existing),layer=next.layers.find(item=>item.id==='mfm');
   if(!layer)throw new Error('CSM MFM manifest layer is missing.');
   next.verifiedAt=capture.capturedAt;
-  Object.assign(layer,{title:'Munitorum Field Manual v1.2 dated capture',version:capture.version,updated:capture.sourceUpdatedAt,retrievedAt:capture.capturedAt,frozenAt:capture.capturedAt,captureSha256:capture.captureSha256,captureHashScope:'normalizedPayload',url:capture.url,localFile:'official-mfm-v1.2.json',status:'dated-live-capture'});
-  next.gates.reason=`Official Faction Pack v1.1 is frozen; official live MFM v1.2 is preserved as a dated repository capture verified ${new Date(`${capture.capturedAt}T00:00:00Z`).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'})}. Codex text must still be verified before this book can be labelled complete.`;
+  Object.assign(layer,{title:`Munitorum Field Manual ${capture.version} dated capture`,version:capture.version,updated:capture.sourceUpdatedAt,retrievedAt:capture.capturedAt,frozenAt:capture.capturedAt,captureSha256:capture.captureSha256,captureHashScope:'normalizedPayload',url:capture.url,localFile:`official-mfm-${capture.version}.json`,status:'dated-live-capture'});
+  next.gates.reason=`Official Faction Pack v1.2 is frozen; official live MFM ${capture.version} is preserved as a dated repository capture verified ${new Date(`${capture.capturedAt}T00:00:00Z`).toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'})}. Codex text must still be verified before this book can be labelled complete.`;
   return next;
 }
 
 async function main(){
-  if(!process.argv.includes('--capture-update'))throw new Error('extract-mfm.cjs is a live SOURCE UPDATE tool; pass --capture-update explicitly. It is not a deterministic --check path.');
-  const previous=fs.existsSync(outputPath)?JSON.parse(fs.readFileSync(outputPath,'utf8')):null;
-  const capturedAt=process.argv.includes('--check')&&previous?.capturedAt?previous.capturedAt:new Date().toISOString().slice(0,10);
-  const capture=buildCapture(await readLive(),capturedAt);
+  const contract=await import('../../shared/tools/source-ingestion-contract.mjs');
+  const mode=contract.requireSourceToolMode(process.argv.slice(2),{toolName:'extract-mfm.cjs'});
+  if(mode.kind==='verify'){
+    const verified=contract.verifyFrozenSource('csm-mfm-v1.3');
+    console.log(`CSM MFM frozen source verified: ${verified.artifacts.length} artifact, ${verified.status}`);
+    return;
+  }
+  const session=contract.createCaptureSession({sourceId:'csm-mfm',authority:'official',sourceType:'warhammer-community-web-app',candidateDir:mode.candidateDir,extractorPath:'books/chaos-space-marines/tools/extract-mfm.cjs',notes:'Candidate only; acceptance requires semantic review.'});
+  const capturedAt=new Date().toISOString().slice(0,10);
+  const capture=buildCapture(await readLive(session),capturedAt);
   const manifest=manifestFor(capture,JSON.parse(fs.readFileSync(manifestPath,'utf8')));
   const output=`${JSON.stringify(capture,null,2)}\n`,manifestOutput=`${JSON.stringify(manifest,null,2)}\n`;
-  if(process.argv.includes('--check')){
-    const errors=[];
-    if(!previous||fs.readFileSync(outputPath,'utf8')!==output)errors.push('Official CSM MFM dated capture is stale.');
-    if(fs.readFileSync(manifestPath,'utf8')!==manifestOutput)errors.push('CSM MFM manifest metadata is stale.');
-    if(errors.length)throw new Error(errors.join('\n'));
-    console.log(`Official CSM MFM parity passed: ${capture.counts.units} units, ${capture.counts.unitPointSchedules} schedules, ${capture.counts.pricedOptions} priced options, ${capture.counts.detachments} Detachments and ${capture.counts.enhancements} Enhancements.`);
-  }else{
-    fs.writeFileSync(outputPath,output,'utf8');
-    fs.writeFileSync(manifestPath,manifestOutput,'utf8');
-    console.log(`Captured official CSM MFM: ${capture.counts.units} units, ${capture.counts.unitPointSchedules} schedules, ${capture.counts.pricedOptions} priced options, ${capture.counts.detachments} Detachments and ${capture.counts.enhancements} Enhancements.`);
-  }
+  session.writeCandidate(`sources/official-mfm-${capture.version}.json`,output);
+  session.writeCandidate('sources/source-manifest.json',manifestOutput);
+  session.finalize({upstreamVersion:capture.version});
+  console.log(`Captured official CSM MFM candidate: ${capture.counts.units} units, ${capture.counts.unitPointSchedules} schedules, ${capture.counts.pricedOptions} priced options, ${capture.counts.detachments} Detachments and ${capture.counts.enhancements} Enhancements.`);
 }
 
 main().catch(error=>{console.error(error);process.exit(1)});

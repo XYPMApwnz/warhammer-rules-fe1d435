@@ -460,6 +460,11 @@ for(const unit of parsed){
   for(const name of Object.keys(correction.weaponProfiles||{}))if(!unit.weapons.some(weapon=>weapon.name===name))throw new Error(`${unit.title}: weapon profile correction target not found: ${name}`);
   unit.weapons=unique(unit.weapons,weapon=>[weapon.name,weapon.mode,weapon.range,weapon.a,weapon.skill,weapon.s,weapon.ap,weapon.d,weapon.abilities].map(key).join('|'));
   if(correction.gameSelectionContracts)unit.gameSelectionContracts=structuredClone(correction.gameSelectionContracts);
+  for(const [name,keywords] of Object.entries(correction.compositionIntrinsicKeywords||{})){
+    const item=unit.composition.find(candidate=>key(candidate.name)===key(name));
+    if(!item)throw new Error(`${unit.title}: composition correction target not found: ${name}`);
+    item.intrinsicKeywords=unique(keywords.map(clean).filter(Boolean),key);
+  }
 }
 const duplicates=parsed.filter((item,index)=>parsed.findIndex(other=>other.id===item.id)!==index);
 if(duplicates.length)throw new Error(`Duplicate datasheet ids: ${duplicates.map(item=>item.id).join(', ')}`);

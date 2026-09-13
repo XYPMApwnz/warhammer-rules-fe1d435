@@ -17,14 +17,16 @@ const packageJson=JSON.parse(read('package.json'));
 const registry=readSourceRegistry();
 const active=[
   ['books/space-marines/tools/extract-codex-details.cjs','space-marines-codex-details'],
+  ['books/chaos-space-marines/tools/extract-mfm.cjs','csm-mfm-v1.3'],
   ['books/tau-empire/tools/extract-mfm.cjs','tau-mfm-v1.3'],
   ['books/tau-empire/tools/extract-wargear.cjs','tau-codex-wargear'],
   ['books/tau-empire/tools/extract-codex-parity.cjs','tau-codex-parity']
 ];
 
 for(const [tool,sourceId] of active){
-  const source=read(tool),modeIndex=source.indexOf('requireSourceToolMode'),returnIndex=source.indexOf("mode.kind==='verify'"),playwrightIndex=source.indexOf("require('playwright')");
-  assert(modeIndex>=0&&returnIndex>modeIndex&&playwrightIndex>returnIndex,`${tool}: frozen verification must return before Playwright is loaded`);
+  const source=read(tool),modeIndex=source.indexOf('requireSourceToolMode'),returnIndex=source.indexOf("mode.kind==='verify'");
+  assert(modeIndex>=0&&returnIndex>modeIndex,`${tool}: frozen verification mode must be selected before live work`);
+  assert(!/^const .*require\(['"]playwright['"]\)/m.test(source),`${tool}: Playwright must not be loaded at module scope`);
   assert(source.includes('requireSourceToolMode')&&source.includes('candidateDir'),`${tool}: live source access must require explicit candidate capture mode`);
   const verified=verifyFrozenSource(sourceId);
   assert(verified.artifacts.length>0,`${sourceId}: no frozen artifacts verified`);

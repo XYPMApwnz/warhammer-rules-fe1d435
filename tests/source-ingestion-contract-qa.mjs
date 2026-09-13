@@ -6,7 +6,7 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {
-  aggregateArtifactHash,createCaptureSession,readSourceRegistry,requireSourceToolMode,sha256,stableJson,
+  aggregateArtifactHash,captureFetchText,createCaptureSession,readSourceRegistry,requireSourceToolMode,sha256,stableJson,
   verifyCaptureManifest,verifyFrozenSource
 } from '../books/shared/tools/source-ingestion-contract.mjs';
 import {verifyBsdataSource} from '../books/shared/tools/verify-bsdata-source.mjs';
@@ -77,7 +77,8 @@ for(const item of legacy){
     [[],/choose exactly one mode/],
     [['--capture-update'],/candidate-dir/],
     [['--check','--capture-update','--candidate-dir',root],/choose exactly one mode/],
-    [['--capture-update','--candidate-dir',root],/repository root/]
+    [['--capture-update','--candidate-dir',root],/repository root/],
+    [['--capture-update','--candidate-dir',path.dirname(path.join(root,item.outputs[0]))],/tmp\/source-candidates/]
   ]){
     const result=spawnSync(process.execPath,[executable,...args],{cwd:root,encoding:'utf8'});
     assert.notEqual(result.status,0,`${item.tool}: unsafe legacy source mode unexpectedly succeeded`);
@@ -144,6 +145,15 @@ try{
   fs.writeFileSync(candidatePath,candidateBytes);
   fs.appendFileSync(path.join(capture.root,manifest.rawArtifacts[0].path),'tampered');
   assert.throws(()=>verifyCaptureManifest(manifestPath),/artifact hash mismatch/);
+
+  const fetchCapture=createCaptureSession({repoRoot:root,sourceId:'fetch-probe',authority:'secondary',sourceType:'html',candidateDir:path.join(temp,'fetch-capture'),extractorPath:'package.json'});
+  const fetched=await captureFetchText(fetchCapture,'data:text/html,%3Cmain%3Eretained%3C%2Fmain%3E',{name:'local-data-input'});
+  assert.equal(fetched,'<main>retained</main>');
+  fetchCapture.writeCandidate('candidate.json','{"candidate":true}\n');
+  const fetchManifest=fetchCapture.finalize();
+  assert.equal(fetchManifest.rawArtifacts.length,1);
+  assert.equal(fetchManifest.normalizedArtifacts.length,1);
+  assert.equal(verifyCaptureManifest(path.join(fetchCapture.root,'capture-manifest.json')).aggregateManifestHash,fetchManifest.aggregateManifestHash);
 
   const trackedRoot=path.join(temp,'tracked-inputs');fs.mkdirSync(trackedRoot);
   const git=(...args)=>{const result=spawnSync('git',args,{cwd:trackedRoot,encoding:'utf8'});assert.equal(result.status,0,result.stderr||result.stdout);};
@@ -225,4 +235,4 @@ for(const source of registry.sources){
   assert.equal(source.acceptedHash.toLowerCase(),expectedHash.toLowerCase(),`${source.sourceId}: accepted hash must identify its complete frozen artifact set`);
 }
 
-console.log(`Source ingestion contract QA passed: ${active.length} frozen live-derived sources, ${registry.dormantLiveTools.length} guarded update tools.`);
+console.log(`Source ingestion contract QA passed: ${active.length} frozen live-derived sources, ${legacy.length} candidate-only legacy update tools; 0 direct accepted writers.`);

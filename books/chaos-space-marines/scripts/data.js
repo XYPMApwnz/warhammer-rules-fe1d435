@@ -34,8 +34,8 @@ window.DG_TERMS={
   "chaos-space-marines-stratagem-fleshy-curse": {
     "id": "chaos-space-marines-stratagem-fleshy-curse",
     "title": "Fleshy Curse",
-    "summary": "Start of your Shooting phase. One friendly HERETIC ASTARTES PSYKER unit. Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2-4, that enemy unit suffers D3 mortal wounds. ▪ On a 5-6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
-    "full": "Start of your Shooting phase. One friendly HERETIC ASTARTES PSYKER unit. Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2-4, that enemy unit suffers D3 mortal wounds. ▪ On a 5-6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
+    "summary": "Start of your Shooting phase. One friendly HERETIC ASTARTES PSYKER unit. Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2‑4, that enemy unit suffers D3 mortal wounds. ▪ On a 5‑6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
+    "full": "Start of your Shooting phase. One friendly HERETIC ASTARTES PSYKER unit. Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2‑4, that enemy unit suffers D3 mortal wounds. ▪ On a 5‑6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
     "glossary": "glossary-chaos-space-marines-stratagem-fleshy-curse",
     "rule": "detachment-cabal-of-chaos"
   },
@@ -410,8 +410,8 @@ window.DG_TERMS={
   "chaos-space-marines-enhancement-pact-of-destruction": {
     "id": "chaos-space-marines-enhancement-pact-of-destruction",
     "title": "Pact of Destruction",
-    "summary": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
-    "full": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+    "summary": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re‑roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+    "full": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re‑roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
     "glossary": "glossary-chaos-space-marines-enhancement-pact-of-destruction",
     "rule": "detachment-devotees-of-destruction"
   },
@@ -442,8 +442,8 @@ window.DG_TERMS={
   "chaos-space-marines-stratagem-undying-hatred": {
     "id": "chaos-space-marines-stratagem-undying-hatred",
     "title": "Undying Hatred",
-    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
-    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
+    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have ‑1 to wound rolls.",
+    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have ‑1 to wound rolls.",
     "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred",
     "rule": "detachment-devotees-of-destruction"
   },
@@ -714,8 +714,8 @@ window.DG_TERMS={
   "chaos-space-marines-detachment-rule-prey-on-the-weak": {
     "id": "chaos-space-marines-detachment-rule-prey-on-the-weak",
     "title": "Prey on the Weak",
-    "summary": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
-    "full": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+    "summary": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re‑roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have ‑1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+    "full": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re‑roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have ‑1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
     "glossary": "glossary-chaos-space-marines-detachment-rule-prey-on-the-weak",
     "rule": "detachment-murdertalon-raiders"
   },
@@ -754,8 +754,8 @@ window.DG_TERMS={
   "chaos-space-marines-stratagem-warp-twisted-terrors": {
     "id": "chaos-space-marines-stratagem-warp-twisted-terrors",
     "title": "Warp-twisted Terrors",
-    "summary": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
-    "full": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+    "summary": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with ‑1 to that battle-shock roll.",
+    "full": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with ‑1 to that battle-shock roll.",
     "glossary": "glossary-chaos-space-marines-stratagem-warp-twisted-terrors",
     "rule": "detachment-murdertalon-raiders"
   },

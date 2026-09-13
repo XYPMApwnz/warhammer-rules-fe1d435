@@ -15424,7 +15424,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "id": "chaos-space-marines-detachment-rule-prey-on-the-weak",
       "title": "Prey on the Weak",
-      "text": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+      "text": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re‑roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have ‑1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
       "sectionId": "murdertalon-raiders-rule",
       "detachmentId": "murdertalon-raiders",
       "detachmentTitle": "Murdertalon Raiders",
@@ -15512,7 +15512,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
@@ -15542,7 +15542,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         2
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           2
         ]
@@ -15748,7 +15748,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         9
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           9
         ]
@@ -15778,7 +15778,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         9
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           9
         ]
@@ -15808,7 +15808,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         9
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           9
         ]
@@ -15838,7 +15838,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         9
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           9
         ]
@@ -15868,7 +15868,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         7
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           7
         ]
@@ -15898,7 +15898,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         7
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           7
         ]
@@ -15928,7 +15928,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         7
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           7
         ]
@@ -15958,7 +15958,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         7
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           7
         ]
@@ -16150,7 +16150,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "legacyKey": "enhancement-pact-of-destruction",
       "title": "Pact of Destruction",
-      "text": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+      "text": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re‑roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
       "value": 15,
       "detachment": "Devotees of Destruction",
       "tags": [],
@@ -16164,7 +16164,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -16194,7 +16194,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         3
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           3
         ]
@@ -16578,7 +16578,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         13
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           13
         ]
@@ -16608,7 +16608,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         13
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           13
         ]
@@ -16638,7 +16638,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         13
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           13
         ]
@@ -16668,7 +16668,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         13
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           13
         ]
@@ -16698,7 +16698,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -16728,7 +16728,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         4
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           4
         ]
@@ -16758,7 +16758,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         11
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           11
         ]
@@ -16788,7 +16788,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         11
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           11
         ]
@@ -16818,7 +16818,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         11
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           11
         ]
@@ -16848,7 +16848,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         11
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           11
         ]
@@ -17230,7 +17230,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         15
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           15
         ]
@@ -17260,7 +17260,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         15
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           15
         ]
@@ -17290,7 +17290,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         15
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           15
         ]
@@ -17320,7 +17320,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         15
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           15
         ]
@@ -17705,7 +17705,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -17735,7 +17735,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -17765,7 +17765,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -17795,7 +17795,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         5
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.1",
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
         "sourcePages": [
           5
         ]
@@ -18011,7 +18011,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   },
   "enhancement-pact-of-destruction": {
     "title": "Pact of Destruction",
-    "text": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+    "text": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re‑roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
     "value": 15,
     "detachment": "Devotees of Destruction",
     "tags": [],

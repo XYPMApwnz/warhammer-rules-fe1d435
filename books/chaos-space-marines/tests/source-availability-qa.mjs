@@ -20,6 +20,14 @@ const deceptors=pack.detachments.find(item=>item.id==='deceptors');
 const ledgerDeceptors=ledger.imports.detachments.find(item=>item.id==='deceptors');
 const abaddon=codex.datasheets.find(item=>item.id==='unit-abaddon-the-despoiler');
 const warmaster=abaddon.abilities.find(item=>item.title==='The Warmaster');
+const missingRecords=ledger.records.filter(item=>item.status==='SOURCE MISSING');
+
+assert.deepEqual(missingRecords.map(item=>item.id),[
+  'detachment-rule-body-deceptors-masters-of-misdirection',
+  'datasheet-ability-options-abaddon-the-despoiler-warmaster',
+]);
+assert.equal(ledger.summary.byStatus['SOURCE MISSING'],2);
+assert.equal(ledger.summary.unresolved,2);
 
 assert.equal(deceptors.rule.text,'','Masters of Misdirection must not gain an invented body');
 assert.deepEqual(deceptors.rule.sourceAvailability,{status:'unavailable',missing:'verified-rule-body'});

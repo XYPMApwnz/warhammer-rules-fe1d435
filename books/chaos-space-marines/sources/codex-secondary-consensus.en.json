@@ -28,19 +28,21 @@
     "guessed": 0
   },
   "summary": {
-    "evaluated": 89,
+    "evaluated": 91,
     "byStatus": {
       "SECONDARY CONSENSUS": 89,
-      "SOURCE MISSING": 0,
+      "SOURCE MISSING": 2,
       "SECONDARY CONFLICT": 0
     },
     "imported": 89,
-    "unresolved": 0,
+    "unresolved": 2,
     "byType": {
       "army-rule": 1,
       "detachment-rule": 8,
       "stratagem": 48,
-      "enhancement": 32
+      "enhancement": 32,
+      "detachment-rule-body": 1,
+      "datasheet-ability-options": 1
     }
   },
   "records": [
@@ -1012,6 +1014,32 @@
       "status": "SECONDARY CONSENSUS",
       "imported": true,
       "note": "Current BSData revision 6 has no rule-bearing Stratagem record; current 40k.app and Wahapedia agree on the complete Codex card semantics, with current official Faction Pack v1.1 updates applied where present."
+    },
+    {
+      "id": "detachment-rule-body-deceptors-masters-of-misdirection",
+      "type": "detachment-rule-body",
+      "scope": "Deceptors",
+      "canonicalId": "detachment-rule-deceptors-masters-of-misdirection",
+      "status": "SOURCE MISSING",
+      "imported": false,
+      "sourceAvailability": {
+        "status": "unavailable",
+        "missing": "verified-rule-body"
+      },
+      "note": "The operative rule identity is confirmed, but no frozen authoritative Codex source for the complete rule body exists in the accepted evidence corpus."
+    },
+    {
+      "id": "datasheet-ability-options-abaddon-the-despoiler-warmaster",
+      "type": "datasheet-ability-options",
+      "scope": "Abaddon the Despoiler",
+      "canonicalId": "csm-ability-the-warmaster",
+      "status": "SOURCE MISSING",
+      "imported": false,
+      "sourceAvailability": {
+        "status": "unavailable",
+        "missing": "verified-option-definitions"
+      },
+      "note": "The Warmaster choice instruction is confirmed, but no frozen authoritative Codex source for the named option definitions exists in the accepted evidence corpus."
     }
   ],
   "imports": {

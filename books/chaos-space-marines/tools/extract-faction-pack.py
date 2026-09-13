@@ -417,9 +417,11 @@ def main() -> int:
     data.setdefault("provenance", {})["secondaryConsensus"] = {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",
+        "status": "source-limited" if consensus["summary"]["unresolved"] else "complete",
         "checkedAt": consensus["checkedAt"],
         "evaluated": consensus["summary"]["evaluated"],
         "imported": consensus["summary"]["imported"],
+        "sourceMissing": consensus["summary"]["byStatus"]["SOURCE MISSING"],
     }
     content = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
     related_base = json.loads(RELATED_BASE.read_text(encoding="utf-8"))

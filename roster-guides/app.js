@@ -51,7 +51,18 @@ function hasSafePhysicalUnitIds(roster){
   });
 }
 function escapeHtml(value){const node=document.createElement('span');node.textContent=String(value??'');return node.innerHTML;}
-function rosterId(text){let hash=2166136261;for(const char of text)hash=Math.imul(hash^char.charCodeAt(0),16777619);return `roster-${(hash>>>0).toString(36)}`;}
+function randomRosterId(records){
+  const used=new Set(records.map(record=>record?.id).filter(Boolean));let id;
+  do{const bytes=crypto.getRandomValues(new Uint8Array(16));bytes[6]=(bytes[6]&15)|64;bytes[8]=(bytes[8]&63)|128;const hex=[...bytes].map(value=>value.toString(16).padStart(2,'0')).join('');id=`roster-${hex.slice(0,8)}-${hex.slice(8,12)}-${hex.slice(12,16)}-${hex.slice(16,20)}-${hex.slice(20)}`;}while(used.has(id));
+  return id;
+}
+function rosterId(text,records,requestedId=''){
+  const identical=text?records.find(record=>record?.sourceText===text&&typeof record?.id==='string'&&record.id):null;
+  if(identical)return identical.id;
+  const occupied=requestedId?records.find(record=>record?.id===requestedId):null;
+  if(requestedId&&(!occupied||occupied.sourceText===text))return requestedId;
+  return randomRosterId(records);
+}
 function recordDetachments(record){const items=Array.isArray(record.roster.detachments)?record.roster.detachments:[{label:record.roster.detachment}];return items.map(item=>item?.label).filter(Boolean).join(' + ');}
 function updatedLabel(value){const date=new Date(value);return Number.isFinite(date.getTime())?new Intl.DateTimeFormat('en-GB').format(date):'date unknown';}
 function actionButton(label,action,id,primary=false){const button=document.createElement('button');button.className=primary?'action primary':'action';button.type='button';button.textContent=label;if(action)button.dataset[action]=id;return button;}
@@ -69,7 +80,7 @@ function freshRoster(record){
 
 function saveRoster(roster,sourceText){
   roster=canonicalizeRoster(roster);
-  const records=getSavedRosters(),id=rosterId(sourceText),previous=records.find(record=>record?.id===id);
+  const records=getSavedRosters(),id=rosterId(sourceText,records),previous=records.find(record=>record?.id===id);
   let record={id,name:`${roster.faction} · ${roster.declared||roster.calculated} pts`,createdAt:previous?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString(),sourceText,roster,attachments:previous?.attachments||{}};record=validatedAttachmentRecord(record,roster);
   putSavedRosters([record,...records.filter(item=>item?.id!==id)]);
   try{navigator.storage?.persist?.().catch(()=>{});}catch{}
@@ -184,7 +195,7 @@ document.querySelector('#roster-clear').addEventListener('click',()=>{document.q
 document.querySelector('#roster-result').addEventListener('change',event=>{const select=event.target.closest('[data-attachment-bodyguard]');if(select)updateAttachment(select.dataset.rosterId,select.dataset.attachmentBodyguard,select.value);});
 savedHost.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.openRoster)openSavedRoster(button.dataset.openRoster);if(button.dataset.editAttachments)editAttachments(button.dataset.editAttachments);if(button.dataset.exportRoster)exportRoster(button.dataset.exportRoster);if(button.dataset.deleteRoster&&confirm('Delete this roster from this device?')){const id=button.dataset.deleteRoster;putSavedRosters(getSavedRosters().filter(record=>record?.id!==id));renderSavedRosters();if(rosterResult.dataset.rosterId===id)clearRosterPreview();}});
 document.querySelector('#import-roster').addEventListener('click',()=>document.querySelector('#import-roster-file').click());
-document.querySelector('#import-roster-file').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{const record=JSON.parse(await file.text());if(!isImportableRecord(record))throw new Error();const parsed=window.WHRosterParser.parse(record.sourceText,{identityHints:record.roster});if(parsed.units.length)record.roster=parsed;const faction=knownFaction(record.roster.faction);if(!faction)throw new Error();record.roster=canonicalizeRoster(record.roster,faction);if(!hasSafePhysicalUnitIds(record.roster))throw new Error();const records=getSavedRosters();record.roster.faction=FACTION_LABELS[faction];record.roster.pointsCheck=window.WHRosterPoints.check(record.roster,faction);putSavedRosters([{...record,updatedAt:new Date().toISOString()},...records.filter(item=>item?.id!==record.id)]);renderSavedRosters();if(!FACTION_READERS[faction])alert(`${FACTION_LABELS[faction]} was imported, but a personal reader is not available yet.`);}catch{alert('Could not import the roster backup.');}event.target.value='';});
+document.querySelector('#import-roster-file').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{const record=JSON.parse(await file.text());if(!isImportableRecord(record))throw new Error();const parsed=window.WHRosterParser.parse(record.sourceText,{identityHints:record.roster});if(parsed.units.length)record.roster=parsed;const faction=knownFaction(record.roster.faction);if(!faction)throw new Error();record.roster=canonicalizeRoster(record.roster,faction);if(!hasSafePhysicalUnitIds(record.roster))throw new Error();const records=getSavedRosters(),id=rosterId(record.sourceText,records,record.id);record.roster.faction=FACTION_LABELS[faction];record.roster.pointsCheck=window.WHRosterPoints.check(record.roster,faction);putSavedRosters([{...record,id,updatedAt:new Date().toISOString()},...records.filter(item=>item?.id!==id)]);renderSavedRosters();if(!FACTION_READERS[faction])alert(`${FACTION_LABELS[faction]} was imported, but a personal reader is not available yet.`);}catch{alert('Could not import the roster backup.');}event.target.value='';});
 
 renderSavedRosters();
 const requestedRoster=new URLSearchParams(location.search).get('roster');

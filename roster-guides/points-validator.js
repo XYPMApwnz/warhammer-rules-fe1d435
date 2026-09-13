@@ -117,11 +117,11 @@ function assessEnhancements(roster, faction, catalog=catalogFor(faction)) {
     unresolved: ['Army Book point data is unavailable.'],
     enhancementChoices: 0, enhancementAssignments: 0
   };
-  const selectedDetachments = new Set((roster.detachments || [{name: roster.detachment, label: roster.detachment}]).map(item => normalize(item.name || item.label)).filter(Boolean));
+  const selectedDetachments = new Set((roster.detachments || [{name: roster.detachment, label: roster.detachment}]).flatMap(item => record(item) ? [item.id, item.name, item.label] : [item]).map(normalize).filter(Boolean));
   for (const assignment of assignments) {
     const raw = assignment.input, name = enhancementName(raw);
     if (!name) { assignment.status = 'empty'; continue; }
-    const entry = own(own(catalog,'enhancements'),normalize(name)), candidates = (Array.isArray(entry) ? entry : [entry]).filter(record), selected = candidates.filter(item => !item.detachment || selectedDetachments.has(normalize(item.detachment)));
+    const records=own(catalog,'enhancements'),entry=own(records,normalize(name)),explicitId=normalize(raw.ruleId||raw.id),identities=item=>[item.id,item.canonicalEnhancementId,item.ruleId,item.sourceId,item.legacyKey].map(normalize).filter(Boolean);let candidates=explicitId?Object.values(records||{}).flat().filter(record).filter(item=>identities(item).includes(explicitId)):(Array.isArray(entry)?entry:[entry]).filter(record);if(explicitId&&!candidates.length){const aliasId=explicitId.replace(/^enhancement /,'');candidates=Object.values(records||{}).flat().filter(record).filter(item=>identities(item).some(id=>id.replace(/^enhancement /,'')===aliasId));}candidates=[...new Map(candidates.map(item=>[JSON.stringify(item),item])).values()];const selected=candidates.filter(item=>(!item.detachment&&!item.canonicalDetachmentId)||selectedDetachments.has(normalize(item.detachment))||selectedDetachments.has(normalize(item.canonicalDetachmentId)));
     const enhancement = selected.length === 1 ? selected[0] : candidates.length === 1 ? candidates[0] : null;
     if (!record(enhancement)||!safeInteger(own(enhancement,'value'))||typeof own(enhancement,'title')!=='string'||own(enhancement,'id')!=null&&typeof own(enhancement,'id')!=='string'||!validAssignment(own(enhancement,'assignment'))) { unresolved.push(`Enhancement Detachment: ${name}`); continue; }
     const rosterUnit = (roster.units || []).find(unit => unit.id === raw.ownerUnitId), owner = own(own(catalog,'units'),normalize(rosterUnit?.name));

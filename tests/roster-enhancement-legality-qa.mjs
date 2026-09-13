@@ -140,15 +140,33 @@ function legalityChecks(overrides={}){
   const unknown=project(ec,lord);
   assert.equal(unknown.context.enhancements[0].ownerEligibility,'unresolved','missing owner contract is not invented');
   assert.equal(effects(unknown).length,0,'genuinely unknown legality remains inactive');
+
+  const csm=loadBook('chaos-space-marines',overrides),nightmare=fixture(csm,'unit-chaos-lord-with-jump-pack','enhancement-nightmare-hunt-warp-fuelled-thrusters','nightmare-hunt'),accepted=project(csm,nightmare);
+  assert.equal(accepted.enhancementAssessment.assignments[0].catalog?.id,'enhancement-nightmare-hunt-warp-fuelled-thrusters','matching explicit Enhancement identity is assessed');
+  assert.equal(accepted.context.enhancements[0].status,'resolved','matching explicit Enhancement identity resolves at runtime');
+  assert.equal(accepted.context.enhancements[0].active,true,'matching explicit Enhancement identity remains active');
+  const mismatched={...nightmare,enhancements:nightmare.enhancements.map(item=>({...item,id:'enhancement-dread-talons-warp-fuelled-thrusters'}))},rejected=project(csm,mismatched);
+  assert.equal(rejected.enhancementAssessment.assignments[0].catalog?.id,'enhancement-dread-talons-warp-fuelled-thrusters','explicit Enhancement ID cannot validate through a same-title Detachment sibling');
+  assert.equal(rejected.enhancementAssessment.assignments[0].assessment?.ownerEligibility,'invalid','explicit cross-Detachment Enhancement identity fails eligibility');
+  assert.equal(rejected.context.enhancements[0].status,'unresolved','runtime cannot resolve an explicit Enhancement ID outside the selected Detachment');
+  assert.equal(rejected.context.enhancements[0].active,false,'cross-Detachment Enhancement identity remains inactive');
+  assert.equal(effects(rejected).length,0,'cross-Detachment Enhancement identity has no active effects');
+  const unknownId={...nightmare,enhancements:nightmare.enhancements.map(item=>({...item,id:'enhancement-not-a-canonical-id'}))},unknownIdResult=project(csm,unknownId);
+  assert.equal(unknownIdResult.enhancementAssessment.assignments[0].catalog,null,'unknown explicit Enhancement ID cannot fall back to its display title');
+  assert.equal(unknownIdResult.context.enhancements[0].status,'unresolved','unknown explicit Enhancement ID remains unresolved at runtime');
 }
 function mutations(){
-  const validator=read('roster-guides/points-validator.js'),marker="    else if (!enhancement.owner?.selector)";
+  const validator=read('roster-guides/points-validator.js'),context=read('books/shared/roster-context.js'),marker="    else if (!enhancement.owner?.selector)",identityFilter="candidates=explicitId?Object.values(records||{}).flat().filter(record).filter(item=>identities(item).includes(explicitId)):(Array.isArray(entry)?entry:[entry]).filter(record)",scopedResolver="if(explicitId)return byId&&(!byId.detachmentId||detachmentIds.has(byId.detachmentId))?byId:null;";
   assert.ok(validator.includes(marker),'status mutation anchor');
+  assert.ok(validator.includes(identityFilter),'points identity mutation anchor');
+  assert.ok(context.includes(scopedResolver),'runtime identity mutation anchor');
   const scenarios=[
     ['M6_SOURCE_LIMITED_AUTO_INVALID',()=>legalityChecks({'roster-guides/points-validator.js':validator.replace(marker,"    else if (enhancement.sourceLimited) { ownerEligibility = 'invalid'; }\n"+marker)}),/sourceLimited legal owner remains valid/],
     ['M7_SOURCE_LIMITED_AUTO_VALID',()=>legalityChecks({'roster-guides/points-validator.js':validator.replace(marker,"    else if (enhancement.sourceLimited) { ownerEligibility = 'valid'; }\n"+marker)}),/sourceLimited Daemon Prince legality/],
     ['M8_ROLES_ONLY_LOOKUP',()=>lookupChecks(vm.runInNewContext('('+resolveEnhancementOwner.toString().replace('const owned=canonical.owner||contract?.owner;','const owned=null;')+')')),/owner form preserved/],
-    ['M9_FIRST_MATCH_IDENTITY',()=>lookupChecks(vm.runInNewContext('('+resolveEnhancementOwner.toString().replace('const candidates=catalog.enhancements.filter(item=>item.detachmentId===detachment.id&&matches(item,detachment.id));','const candidates=catalog.enhancements.filter(item=>matches(item,item.detachmentId)).slice(0,1);')+')')),/collision must use selected Detachment|exact canonical identity/]
+    ['M9_FIRST_MATCH_IDENTITY',()=>lookupChecks(vm.runInNewContext('('+resolveEnhancementOwner.toString().replace('const candidates=catalog.enhancements.filter(item=>item.detachmentId===detachment.id&&matches(item,detachment.id));','const candidates=catalog.enhancements.filter(item=>matches(item,item.detachmentId)).slice(0,1);')+')')),/collision must use selected Detachment|exact canonical identity/],
+    ['M10_EXPLICIT_ID_IGNORED',()=>legalityChecks({'roster-guides/points-validator.js':validator.replace(identityFilter,"candidates=(Array.isArray(entry)?entry:[entry]).filter(record)")}),/explicit Enhancement ID cannot validate through a same-title Detachment sibling/],
+    ['M11_CROSS_DETACHMENT_ID_TRUSTED',()=>legalityChecks({'books/shared/roster-context.js':context.replace(scopedResolver,'if(explicitId)return byId;')}),/runtime cannot resolve an explicit Enhancement ID outside the selected Detachment/]
   ];
   for(const [name,run,intended] of scenarios){
     let killed=false;

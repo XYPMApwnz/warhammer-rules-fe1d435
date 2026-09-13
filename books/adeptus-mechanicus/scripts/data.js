@@ -338,20 +338,14 @@ window.DG_TERMS={
     "glossary": "glossary-core-stealth",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-33",
     "units": [
-      "unit-skitarii-rangers",
-      "unit-skitarii-vanguard",
-      "unit-skitarii-marshal",
       "unit-sydonian-skatros",
       "unit-sicarian-infiltrators",
       "unit-sicarian-ruststalkers",
-      "unit-serberys-raiders",
-      "unit-serberys-sulphurhounds",
-      "unit-ironstrider-ballistarii",
       "unit-sydonian-dragoons-with-radium-jezzails",
       "unit-sydonian-dragoons-with-taser-lances"
     ],
-    "datasheet": "unit-skitarii-rangers",
-    "statline": "skitarii-rangers-profile"
+    "datasheet": "unit-sydonian-skatros",
+    "statline": "sydonian-skatros-profile"
   },
   "core-super-heavy-walker": {
     "title": "SUPER-HEAVY WALKER",

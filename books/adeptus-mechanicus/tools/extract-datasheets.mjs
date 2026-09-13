@@ -104,7 +104,8 @@ const profilesFor=entry=>{
   walk(entry);
   return unique(output,item=>item.profile.id||`${item.profile.typeName}:${item.profile.name}:${JSON.stringify(item.profile.characteristics)}`);
 };
-const rulesFor=entry=>(entry.infoLinks||[]).filter(link=>link.type==='rule'&&link.hidden!==true).map(link=>{
+const hunterCohortOnly=link=>(link.modifiers||[]).some(modifier=>modifier.type==='set'&&modifier.field==='hidden'&&modifier.value===true&&(modifier.conditions||[]).some(condition=>condition.scope==='force'&&condition.childName==='Skitarii Hunter Cohort'));
+const rulesFor=entry=>(entry.infoLinks||[]).filter(link=>link.type==='rule'&&link.hidden!==true&&!hunterCohortOnly(link)).map(link=>{
   const target=index.get(link.targetId)||{};
   const suffix=(link.modifiers||[]).filter(mod=>mod.type==='append'&&mod.field==='name').map(mod=>clean(mod.value)).join(' ');
   return {title:clean(`${link.name||target.name||''} ${suffix}`),text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text),origin:'rule'};

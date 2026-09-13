@@ -300,18 +300,12 @@
       "termId": "core-stealth",
       "navigation": {
         "glossary": "glossary-core-stealth",
-        "datasheet": "unit-skitarii-rangers",
-        "statline": "skitarii-rangers-profile",
+        "datasheet": "unit-sydonian-skatros",
+        "statline": "sydonian-skatros-profile",
         "units": [
-          "unit-skitarii-rangers",
-          "unit-skitarii-vanguard",
-          "unit-skitarii-marshal",
           "unit-sydonian-skatros",
           "unit-sicarian-infiltrators",
           "unit-sicarian-ruststalkers",
-          "unit-serberys-raiders",
-          "unit-serberys-sulphurhounds",
-          "unit-ironstrider-ballistarii",
           "unit-sydonian-dragoons-with-radium-jezzails",
           "unit-sydonian-dragoons-with-taser-lances"
         ]

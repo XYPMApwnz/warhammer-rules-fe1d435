@@ -236,6 +236,7 @@ const onager=codexDatasheets.datasheets.find(unit=>unit.title==='Onager Dunecraw
 check('July v1.1 Thulia replacement is exact',thulia?.keywords.includes('MOBILE')&&!thulia?.abilities.some(item=>item.title==='Cybernetic Augmentation'));
 check('July v1.1 Onager dissipated profile is S9',onager?.weapons.find(item=>/eradication beamer - dissipated/i.test(item.name))?.s==='9');
 check('July v1.1 Hunter rule has no obsolete cover clause',codex.detachments.find(item=>item.title==='Skitarii Hunter Cohort')?.rule.text==='Friendly SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units have Stealth.');
+check('Hunter Cohort conditional Stealth stays on its Detachment rule instead of permanent datasheet abilities',['Skitarii Rangers','Skitarii Vanguard','Skitarii Marshal','Serberys Raiders','Serberys Sulphurhounds','Ironstrider Ballistarii'].every(title=>!codexDatasheets.datasheets.find(unit=>unit.title===title)?.abilities.some(ability=>ability.title==='Stealth')));
 check('July v1.1 FAQ explains the final BS2 result',factionRules.updates.find(item=>item.id==='faction-faq')?.summary.includes('for a final result of 2+'));
 check('Legends page ranges follow the 27-page pack',JSON.stringify(factionRules.datasheets.filter(unit=>unit.status==='Warhammer Legends').map(unit=>unit.sourcePages))===JSON.stringify([[20,21],[22,23],[24,25],[26,27]]));
 check('known catalogue text corruption is removed',!JSON.stringify(codexDatasheets).match(/havealready|Conflagaration|Pteraxii Sterylizors[\s\S]{0,1200}Pteraxii Skystalker Alpha/));

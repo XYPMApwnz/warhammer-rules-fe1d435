@@ -45,8 +45,16 @@ const abaddonHtml=target('unit-abaddon-the-despoiler');
 assert.match(abaddonHtml,/In your Command phase, select one Warmaster ability\. Until the start of your next Command phase, this model has that ability\./,'Warmaster instruction changed');
 assert.match(abaddonHtml,/data-source-availability="verified-option-definitions">Known choice instruction\. Verified option definitions are unavailable in this publication\.<\/p>/);
 
-const completeRule=pack.detachments.find(item=>item.id==='chaos-cult').rule;
-assert.ok(completeRule.text.trim().length>100,'ordinary complete rule fixture is incomplete');
+const completeDetachment=pack.detachments.find(item=>item.id==='chaos-cult');
+const ledgerCompleteDetachment=ledger.imports.detachments.find(item=>item.id==='chaos-cult');
+const completeRule=completeDetachment?.rule,ledgerCompleteRule=ledgerCompleteDetachment?.rule;
+const completeAudit=ledger.records.find(item=>item.id==='detachment-rule-chaos-cult-desperate-devotion');
+assert.ok(completeDetachment&&ledgerCompleteDetachment&&completeRule&&ledgerCompleteRule,'Chaos Cult accepted source record is missing');
+for(const field of ['id','title','text','provenance'])assert.ok(Object.hasOwn(ledgerCompleteRule,field),`Chaos Cult source rule missing ${field}`);
+assert.deepEqual({id:completeAudit?.id,type:completeAudit?.type,scope:completeAudit?.scope,bsdataIdentity:completeAudit?.bsdataIdentity,wahapediaIdentity:completeAudit?.wahapediaIdentity,status:completeAudit?.status,imported:completeAudit?.imported},{id:'detachment-rule-chaos-cult-desperate-devotion',type:'detachment-rule',scope:'Chaos Cult',bsdataIdentity:{id:'bb86-b97c-b67c-a1b9',jsonPath:'$.catalogue.sharedSelectionEntries[0].selectionEntryGroups[0].selectionEntries[6].rules[0]'},wahapediaIdentity:'Chaos Space Marines > Chaos Cult > Detachment Rule > Desperate Devotion',status:'SECONDARY CONSENSUS',imported:true},'Chaos Cult accepted source identity/provenance drift');
+assert.equal(completeDetachment.sourceLayer,'codex-secondary-consensus');
+assert.equal(completeDetachment.provenance.sourceId,'csm-codex-secondary-consensus');
+assert.deepEqual(completeRule,ledgerCompleteRule,'Chaos Cult source record binding drift');
 assert.ok(target('detachment-chaos-cult').includes(escaped(completeRule.text)),'ordinary complete rule body changed');
 assert.doesNotMatch(target('detachment-chaos-cult'),/data-source-availability=/,'availability warning leaked to a complete rule');
 const darkPacts=abaddon.abilities.find(item=>item.title==='Dark Pacts');

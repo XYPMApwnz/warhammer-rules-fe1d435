@@ -36,6 +36,16 @@ const control=async page=>{
   assert.equal(await page.evaluate(()=>Boolean(navigator.serviceWorker.controller)),true,'Page must be controlled by the Service Worker');
 };
 
+const assertRelatedRulesContract=async(content,unitId,name)=>{
+  const layer=content.locator('xpath=ancestor::*[contains(concat(" ", normalize-space(@class), " "), " related-rules-layer ")]');
+  assert.equal(await layer.getAttribute('data-unit-id'),unitId,`${name} Related Rules lost its canonical Datasheet identity`);
+  const card=content.locator('.related-detachment:not([hidden]) [data-related-kind="stratagems"]:not([hidden]) .stratagem:not([hidden])[data-rule-id]').first();
+  await card.waitFor({state:'visible'});
+  assert.ok(await card.getAttribute('data-rule-id'),`${name} Related Rules lost its canonical rule identity`);
+  const fields=new Set(await card.locator(':scope > .field').evaluateAll(nodes=>nodes.map(node=>(node.dataset.sourceField||node.querySelector('b')?.textContent||'').trim().toLowerCase())));
+  for(const field of ['when','target','effect'])assert.equal(fields.has(field),true,`${name} Related Rules lost its ${field} field`);
+};
+
 try{
   for(const book of books){
     const context=await browser.newContext({serviceWorkers:'allow',viewport:{width:390,height:844}});
@@ -59,7 +69,7 @@ try{
       await page.locator(`#${book.unit} .related-rules-trigger`).click();
       const content=page.locator('.full-related-content');
       await content.waitFor({state:'visible'});
-      assert.ok((await content.textContent()).trim().length>100,`${book.name} Related Rules content did not render offline`);
+      await assertRelatedRulesContract(content,book.unit,book.name);
       assert.deepEqual(templateRequests,[current],`${book.name} did not request the exact current Related Rules URL once`);
       assert.deepEqual(templateResponses,[{url:current,fromServiceWorker:true,status:200}],`${book.name} Related Rules template was not served exactly from the Service Worker cache`);
       assert.deepEqual(failed,[],`${book.name} emitted a relevant failed request`);

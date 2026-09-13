@@ -69,13 +69,44 @@ const books=[
 async function openPhonePopup(page,name){
   const trigger=page.locator('main button[data-term]:visible').first();
   await trigger.waitFor({state:'visible'});
+  const termId=await trigger.getAttribute('data-term');
   await trigger.click();
   const card=page.locator('#popupLayer .term-popup').last();
   await card.waitFor({state:'visible'});
-  assert.ok((await card.textContent()).trim().length>10,`${name} popup lost its rule content`);
+  assert.equal(await card.getAttribute('data-popup-term'),termId,`${name} popup lost its canonical term identity`);
+  const labelledBy=await card.getAttribute('aria-labelledby');
+  assert.ok(labelledBy,`${name} popup lost its accessible title binding`);
+  assert.equal(await card.locator(`:scope > h3#${labelledBy}`).count(),1,`${name} popup title binding does not resolve`);
+  assert.equal(await card.locator(':scope > h3 + :is(p, div, dl)').count(),1,`${name} popup lost its structured rule content`);
   await card.locator('[data-popup-close]').click();
   await card.waitFor({state:'hidden'});
   assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} popup must restore focus`);
+}
+
+async function assertDatasheetContract(unit,unitId,name){
+  const contract=await unit.evaluate((node,expectedId)=>{
+    let facts=null;
+    try{facts=JSON.parse(node.dataset.ruleFacts||'null');}catch{}
+    return{
+      id:node.id,
+      track:node.dataset.track||'',
+      factsId:facts?.id||'',
+      factsUnitId:facts?.unitId||'',
+      hasHeading:Boolean(node.querySelector(':scope > .unit-header h3')),
+      hasSection:Boolean(node.querySelector(':scope > .unit-part[id]')),
+      expectedId
+    };
+  },unitId);
+  assert.deepEqual(contract,{id:unitId,track:unitId,factsId:unitId,factsUnitId:unitId,hasHeading:true,hasSection:true,expectedId:unitId},`${name} datasheet lost its canonical content contract`);
+}
+
+async function assertRelatedRulesContract(layer,unitId,name){
+  assert.equal(await layer.getAttribute('data-unit-id'),unitId,`${name} Related Rules lost its canonical Datasheet identity`);
+  const card=layer.locator('.full-related-content .related-detachment:not([hidden]) [data-related-kind="stratagems"]:not([hidden]) .stratagem:not([hidden])[data-rule-id]').first();
+  await card.waitFor({state:'visible'});
+  assert.ok(await card.getAttribute('data-rule-id'),`${name} Related Rules lost its canonical rule identity`);
+  const fields=new Set(await card.locator(':scope > .field').evaluateAll(nodes=>nodes.map(node=>(node.dataset.sourceField||node.querySelector('b')?.textContent||'').trim().toLowerCase())));
+  for(const field of ['when','target','effect'])assert.equal(fields.has(field),true,`${name} Related Rules lost its ${field} field`);
 }
 
 async function openOfflineStratagemsCommand(page,unitId){
@@ -158,7 +189,7 @@ try{
       await page.goto(origin+book.desktop);
       const unit=page.locator(`#${book.unit}`);
       await unit.waitFor({state:'visible'});
-      assert.ok((await unit.textContent()).trim().length>100,`${book.name} datasheet content is missing`);
+      await assertDatasheetContract(unit,book.unit,book.name);
       if(book.name==='Space Marines'){assert.match(await unit.textContent(),/Every model is equipped with:/);assert.match(await unit.textContent(),/Wargear Options/);}
 
       if(book.related!==false){
@@ -167,7 +198,7 @@ try{
         await related.click();
         const relatedLayer=page.locator('.related-rules-layer');
         await relatedLayer.waitFor({state:'visible'});
-        assert.ok((await relatedLayer.textContent()).trim().length>20,`${book.name} Related Rules did not open`);
+        await assertRelatedRulesContract(relatedLayer,book.unit,book.name);
         await page.locator('.related-rules-close').click();
         await relatedLayer.waitFor({state:'hidden'});
       }
@@ -187,7 +218,7 @@ try{
       await page.waitForURL(url=>url.pathname===readerPath&&url.hash===`#${book.unit}`);
       const phoneUnit=page.locator(`#${book.unit}`);
       await phoneUnit.waitFor({state:'visible'});
-      assert.ok((await phoneUnit.textContent()).trim().length>100,`${book.name} responsive content is missing`);
+      await assertDatasheetContract(phoneUnit,book.unit,`${book.name} responsive`);
       if(book.name==='Space Marines')assert.match(await phoneUnit.textContent(),/Wargear Options/);
       if(book.name==='Adeptus Mechanicus')await openOfflineStratagemsCommand(page,book.unit);
       await openPhonePopup(page,book.name);
@@ -420,8 +451,9 @@ try{
       await page.locator(`#${route.target}`).waitFor({state:'visible'});
     }
     await page.goto(`${origin}/glossary/index.html`,{waitUntil:'domcontentloaded'});
-    await page.waitForFunction(()=>Number(document.getElementById('termCount')?.textContent)>100&&document.querySelectorAll('.term-button').length>0);
-    assert.ok(Number(await page.locator('#termCount').textContent())>100,'Standalone Glossary did not initialize from the install cache');
+    await page.waitForFunction(()=>window.WH40K_GLOSSARY?.get?.('core-characteristic-move')?.id==='core-characteristic-move'&&document.querySelector('.term-button:not(.load-more) strong')&&document.getElementById('termCount')?.textContent===String(window.WH40K_GLOSSARY.counts.terms));
+    assert.equal(await page.evaluate(()=>window.WH40K_GLOSSARY.get('core-characteristic-move')?.id),'core-characteristic-move','Standalone Glossary lost the canonical Move characteristic offline');
+    assert.equal(await page.locator('#termCount').textContent(),await page.evaluate(()=>String(window.WH40K_GLOSSARY.counts.terms)),'Standalone Glossary count does not reflect its loaded registry');
     await page.goto(`${origin}/books/core-rules/reader/datasheets.html`,{waitUntil:'domcontentloaded'});
     await page.locator('main').waitFor({state:'visible'});
     assert.match(await page.locator('main').textContent(),/Datasheet/i,'Core Rules text is unavailable on first offline use');
@@ -436,7 +468,7 @@ try{
       await page.goto(origin+book.desktop,{waitUntil:'domcontentloaded'});
       const content=page.locator(`#${book.unit}`);
       await content.waitFor({state:'visible'});
-      assert.ok((await content.textContent()).trim().length>100,`${book.name} is unusable on cold first offline use`);
+      await assertDatasheetContract(content,book.unit,`${book.name} cold first offline`);
     }
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-tech-priest-manipulus`,{waitUntil:'domcontentloaded'});
     const unitImage=page.locator('#unit-tech-priest-manipulus img').first();
@@ -447,7 +479,9 @@ try{
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#detachment-rad-zone-corps`,{waitUntil:'domcontentloaded'});
     const detachment=page.locator('#detachment-rad-zone-corps');
     await detachment.waitFor({state:'visible'});
-    assert.ok((await detachment.textContent()).trim().length>100,'Adeptus Mechanicus Detachment is unavailable after physical origin shutdown');
+    assert.equal(await detachment.getAttribute('data-track'),'detachment-rad-zone-corps','Adeptus Mechanicus Detachment lost its canonical navigation identity after physical origin shutdown');
+    assert.equal(await detachment.getAttribute('data-detachment'),'rad-zone-corps','Adeptus Mechanicus Detachment lost its canonical owner after physical origin shutdown');
+    assert.equal(await detachment.locator('#rad-zone-corps-rule .rule-card [data-source-field="text"]').count(),1,'Adeptus Mechanicus Detachment rule content is unavailable after physical origin shutdown');
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
     assert.deepEqual(failedRequired,[],'Fresh-install offline flow emitted failed required same-origin requests');
     console.log(`PASS full application works offline after Library-only install (${install.urls.length} cached URLs; ${diagramUrls.length} Core Rules diagrams; ${offlineMobileRoutes.length} physical mobile routes across 9 books)`);

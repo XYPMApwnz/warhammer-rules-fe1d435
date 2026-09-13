@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {normalizedTextSha256} from '../tools/source-hash.mjs';
+import {createAdeptusMechanicusCanonicalModel} from '../tools/canonical-source-adapter.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
@@ -55,6 +56,7 @@ const codexWargear=json('content/adeptus-mechanicus-codex-wargear.en.json');
 const currentPoints=json('content/adeptus-mechanicus-points.en.json');
 const officialMfm=json('sources/official-mfm-v1.3.json');
 const relatedRulesConfig=json('content/adeptus-mechanicus-related-rules.en.json');
+const canonicalModel=createAdeptusMechanicusCanonicalModel({config:json('book.config.json'),readJson:json});
 const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
 const mergedDatasheets=codexDatasheets.datasheets.map(unit=>factionDatasheets.has(unit.id)?{...unit,...factionDatasheets.get(unit.id),category:unit.category}:unit);
 const rules={...factionRules,datasheets:mergedDatasheets};
@@ -62,6 +64,10 @@ const allDetachments=[...rules.detachments,...codex.detachments];
 const node=process.execPath;
 const results=[];
 const check=(name,ok,detail='')=>results.push({name,ok,detail});
+const textIdentity=value=>String(value??'').replace(/<[^>]+>/g,'').replaceAll('&nbsp;',' ').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','&').replace(/\s+/g,' ').trim();
+const identityDelta=(expected,actual)=>{const duplicates=actual.filter((id,index)=>actual.indexOf(id)!==index),expectedSet=new Set(expected),actualSet=new Set(actual);return{missing:[...expectedSet].filter(id=>!actualSet.has(id)).sort(),unexpected:[...actualSet].filter(id=>!expectedSet.has(id)).sort(),duplicates:[...new Set(duplicates)].sort()};};
+const deltaDetail=delta=>[delta.missing.length&&`missing: ${delta.missing.join(', ')}`,delta.unexpected.length&&`unexpected: ${delta.unexpected.join(', ')}`,delta.duplicates.length&&`duplicates: ${delta.duplicates.join(', ')}`].filter(Boolean).join('; ');
+const publishedFieldText=(marker,boundaryTag)=>{const start=html.indexOf(marker);if(start<0)return'';const boundary=html.indexOf(`</${boundaryTag}>`,start),prefix='<p data-source-field="text">',open=html.indexOf(prefix,start),content=open+prefix.length,end=html.indexOf('</p>',content);return open>=0&&open<boundary&&end>=0&&end<boundary?textIdentity(html.slice(content,end)):'';};
 
 const servitorId='unit-servitor-battleclade';
 const canonicalServitors=factionRules.datasheets.find(unit=>unit.id===servitorId);
@@ -194,7 +200,12 @@ check('official MFM has DP and disposition for every detachment',Object.keys(off
   return Number.isInteger(record?.dp)&&record.dp>0&&Boolean(record.disposition);
 }));
 check('five Codex detachments are restored',codex.detachments.length===5);
-check('Codex parity layer contains full Detachment rules and Enhancements',codexParity.detachments.length===5&&codexParity.detachments.every(detachment=>detachment.rule.text.length>80&&detachment.enhancements.length===4&&detachment.enhancements.every(item=>item.text.length>60)));
+const parityContracts=codexParity.detachments.map(parity=>{const owner=codex.detachments.find(item=>item.title===parity.title);return{id:owner?.id,title:parity.title,rule:{id:owner?.rule?.id,title:parity.rule.title,text:parity.rule.text},enhancements:parity.enhancements.map(item=>{const owned=owner?.enhancements.find(candidate=>candidate.title===item.title);return{id:owned?.id,title:item.title,text:item.text};})};});
+const canonicalParityContracts=canonicalModel.codex.detachments.map(detachment=>({id:detachment.id,title:detachment.title,rule:{id:detachment.rule.id,title:detachment.rule.title,text:detachment.rule.text},enhancements:detachment.enhancements.map(item=>({id:item.id,title:item.title,text:item.text}))}));
+const parityDetachmentDelta=identityDelta(codex.detachments.map(item=>item.title),codexParity.detachments.map(item=>item.title)),parityIdentityIssues=[],parityTextBindings=[];
+for(const parity of codexParity.detachments){const owner=codex.detachments.find(item=>item.title===parity.title);if(!owner)continue;if(parity.rule?.title!==owner.rule?.title)parityIdentityIssues.push(`${owner.id}: rule title`);const enhancementDelta=identityDelta(owner.enhancements.map(item=>item.title),(parity.enhancements||[]).map(item=>item.title));if(enhancementDelta.missing.length||enhancementDelta.unexpected.length||enhancementDelta.duplicates.length)parityIdentityIssues.push(`${owner.id}: ${deltaDetail(enhancementDelta)}`);parityTextBindings.push({id:owner.rule.id,source:parity.rule?.text,published:publishedFieldText(`<section class="detachment-part" id="${owner.rule.id}"`,'section')});for(const sourceEnhancement of parity.enhancements||[]){const canonicalEnhancement=owner.enhancements.find(item=>item.title===sourceEnhancement.title);if(canonicalEnhancement)parityTextBindings.push({id:canonicalEnhancement.id,source:sourceEnhancement.text,published:publishedFieldText(`data-rule-id="${canonicalEnhancement.id}"`,'article')});}}
+const parityTextMismatches=parityTextBindings.filter(item=>!textIdentity(item.source)||textIdentity(item.source)!==item.published).map(item=>item.id);
+check('Codex parity layer maps every source-bound rule and Enhancement to its canonical identity',codexParity.schema===1&&codexParity.source.url===codex.source.referenceUrl&&/^\d{4}-\d{2}-\d{2}$/.test(codexParity.source.checkedAt||'')&&new Set(canonicalParityContracts.map(item=>item.id)).size===canonicalParityContracts.length&&canonicalParityContracts.every(detachment=>new Set(detachment.enhancements.map(item=>item.id)).size===detachment.enhancements.length)&&JSON.stringify(canonicalParityContracts)===JSON.stringify(parityContracts)&&!parityDetachmentDelta.missing.length&&!parityDetachmentDelta.unexpected.length&&!parityDetachmentDelta.duplicates.length&&!parityIdentityIssues.length&&!parityTextMismatches.length,[deltaDetail(parityDetachmentDelta),...parityIdentityIssues,parityTextMismatches.length&&`text mismatch: ${parityTextMismatches.join(', ')}`].filter(Boolean).join('; '));
 check('every Codex detachment has four enhancements and six stratagems',codex.detachments.every(x=>x.enhancements.length===4&&x.stratagems.length===6));
 check('detachment card counts are complete',JSON.stringify(rules.detachments.map(x=>[x.enhancements.length,x.stratagems.length]))===JSON.stringify([[2,3],[2,3],[2,3],[4,6],[4,6]]));
 check('codex layer has 34 current 11e datasheets',rules.datasheets.length===34&&rules.datasheets.length===codexDatasheets.audit.datasheets);
@@ -288,7 +299,8 @@ check('conditional Skitarii wargear limits remain visible',rangerWargear.include
 check('removed army points section stays removed',!markup.includes('My Army · 995')&&!markup.includes('army-roster-995'));
 check('no replacement characters in generated/runtime files',!['index.html','reader.html',...scripts,'styles/mechanicus.css'].map(read).join('').includes('\uFFFD'));
 check('known BSData spelling errors stay normalised',!html.includes(' mdel ')&&!glossaryRegistryText.includes(' mdel '));
-check('Mechanicus glossary definitions preserve full rules text',glossaryRegistry.terms?.['adeptus-mechanicus-datasheet-data-spike']?.definition?.en?.length>300);
+const dataSpikeUnit=codexDatasheets.datasheets.find(unit=>unit.id==='unit-tech-priest-dominus'),dataSpikeAbility=dataSpikeUnit?.abilities.find(ability=>ability.title==='Data-spike'),dataSpikeTerm=glossaryRegistry.terms?.['adeptus-mechanicus-datasheet-data-spike'];
+check('Mechanicus glossary Data-spike definition preserves its canonical source identity and text',dataSpikeTerm?.id==='adeptus-mechanicus-datasheet-data-spike'&&dataSpikeTerm?.title?.en===dataSpikeAbility?.title&&dataSpikeTerm?.scope==='adeptus-mechanicus'&&dataSpikeTerm?.canonicalSource?.documentId==='adeptus-mechanicus'&&dataSpikeTerm?.canonicalSource?.locator===dataSpikeUnit?.id&&JSON.stringify(dataSpikeTerm?.sourceRefs)===JSON.stringify(['adeptus-mechanicus'])&&codexDatasheets.source?.sha256===normalizedTextSha256(read('sources/bsdata-adeptus-mechanicus-11e.json'))&&codexDatasheets.source?.url===dataSpikeUnit?.source?.url&&textIdentity(dataSpikeTerm?.definition?.en)===textIdentity(dataSpikeAbility?.text));
 check('no inline script or style',!/<style|<script(?![^>]*src=)/i.test(html));
 check('all stylesheet and script assets resolve',[...markup.matchAll(/(?:href|src)="([^"?#]+)"/g)].map(x=>x[1]).filter(file=>!file.endsWith('.pdf')&&!/^(?:https?:|data:)/.test(file)).every(file=>fs.existsSync(path.resolve(root,file))));
 
@@ -305,7 +317,10 @@ check('transparent unit image derivatives are current',unitImageBuild.status===0
 
 const context={window:{},Object};vm.runInNewContext(read('scripts/data.js'),context);
 const terms=context.window.DG_TERMS||{};
-check('term registry expands the canonical glossary',Object.keys(terms).length>=rules.glossary.length+150,`${Object.keys(terms).length} terms`);
+const expectedTermRecords=canonicalModel.rules.glossary,expectedTermIds=expectedTermRecords.map(term=>term.id),serializedTermIds=[...read('scripts/data.js').matchAll(/^  "([^"]+)": \{$/gm)].map(match=>match[1]),termIdentityDiff=identityDelta(expectedTermIds,serializedTermIds),expectedTermGroups=new Map();
+for(const term of expectedTermRecords){if(!expectedTermGroups.has(term.group))expectedTermGroups.set(term.group,[]);expectedTermGroups.get(term.group).push(term.id);}
+const missingTermsByGroup=[...expectedTermGroups].map(([group,ids])=>[group,ids.filter(id=>termIdentityDiff.missing.includes(id))]).filter(([,ids])=>ids.length).map(([group,ids])=>`${group}: ${ids.join(', ')}`);
+check('term registry exactly publishes every source-owned semantic category',expectedTermIds.length===new Set(expectedTermIds).size&&serializedTermIds.length===Object.keys(terms).length&&!termIdentityDiff.missing.length&&!termIdentityDiff.unexpected.length&&!termIdentityDiff.duplicates.length,[...missingTermsByGroup,termIdentityDiff.unexpected.length&&`unexpected: ${termIdentityDiff.unexpected.join(', ')}`,termIdentityDiff.duplicates.length&&`duplicates: ${termIdentityDiff.duplicates.join(', ')}`].filter(Boolean).join('; '));
 check('term rule and unit destinations resolve',Object.values(terms).every(term=>(!term.rule||idSet.has(term.rule))&&(!term.units||term.units.every(id=>idSet.has(id)))));
 const abilityCards=(markup.match(/<article class="ability"[^>]*>/g)||[]).length;
 const interactiveAbilityCards=(markup.match(/<article class="ability"[^>]*><h5[^>]*><button class="term-button" data-term="[^"]+"/g)||[]).length;

@@ -25,6 +25,12 @@ RULE_TITLE_OVERRIDES = {
     # Faction Pack page provides the exact published identity.
     "Subversion Assets": "Nowhere to Hide",
 }
+TEXT_CORRECTIONS = {
+    # pypdf does not preserve the small-caps glyph styling used for these
+    # canonical keywords in the frozen PDF.
+    'If your Adeptus Astartes Infantry unit is wholly within 6" of that Heavy Transport , it can embark within it. Your unit can embark within that Transport in a turn it disembarked from a Transport .':
+        'If your ADEPTUS ASTARTES INFANTRY unit is wholly within 6" of that HEAVY TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.',
+}
 
 DETACHMENTS = [
     ("Fulguris Task Force", 2, 2),
@@ -126,7 +132,8 @@ def clean(value: str) -> str:
     value = re.sub(r"\s*\n\s*", " ", value)
     value = value.replace("Y ou", "You")
     value = value.replace("ADEPTUS ASTARTES INFANTRYmodels", "ADEPTUS ASTARTES INFANTRY models")
-    return value.strip()
+    value = value.strip()
+    return TEXT_CORRECTIONS.get(value, value)
 
 
 def provenance(pages: list[int]) -> dict:

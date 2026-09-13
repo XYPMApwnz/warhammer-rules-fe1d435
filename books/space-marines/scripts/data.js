@@ -226,8 +226,8 @@ window.DG_TERMS={
   "space-marines-stratagem-rapid-embarkation": {
     "id": "space-marines-stratagem-rapid-embarkation",
     "title": "RAPID EMBARKATION",
-    "summary": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your Adeptus Astartes Infantry unit is wholly within 6\" of that Heavy Transport , it can embark within it. Your unit can embark within that Transport in a turn it disembarked from a Transport .",
-    "full": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your Adeptus Astartes Infantry unit is wholly within 6\" of that Heavy Transport , it can embark within it. Your unit can embark within that Transport in a turn it disembarked from a Transport .",
+    "summary": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your ADEPTUS ASTARTES INFANTRY unit is wholly within 6\" of that HEAVY TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.",
+    "full": "End of the Fight phase. One Adeptus Astartes Infantry unit from your army that is not within Engagement Range of one or more enemy units, and one friendly Heavy Transport it is able to embark within. If your ADEPTUS ASTARTES INFANTRY unit is wholly within 6\" of that HEAVY TRANSPORT, it can embark within it. Your unit can embark within that TRANSPORT in a turn it disembarked from a TRANSPORT.",
     "glossary": "glossary-space-marines-stratagem-rapid-embarkation",
     "rule": "detachment-armoured-speartip"
   },

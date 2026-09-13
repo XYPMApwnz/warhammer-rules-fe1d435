@@ -17,8 +17,6 @@ OUTPUT = ROOT / "content" / "space-marines-faction-pack.en.json"
 RELATED = ROOT / "content" / "space-marines-related-rules.en.json"
 POINTS = ROOT / "content" / "space-marines-points.en.json"
 CODEX = ROOT / "content" / "space-marines-codex-datasheets.en.json"
-BSDATA = ROOT.parents[1] / "tmp" / "bsdata-wh40k-11e" / "Imperium - Space Marines.json"
-BSDATA_LIBRARY = ROOT.parents[1] / "tmp" / "bsdata-wh40k-11e" / "Library - Astartes Heresy Legends.json"
 SOURCE_ID = "space-marines-faction-pack-v1.2"
 RULE_TITLE_OVERRIDES = {
     # The pinned BSData record uses the placeholder "New Rule"; the frozen
@@ -168,7 +166,7 @@ def pdf_source() -> tuple[dict, dict[str, dict], list[str]]:
     return meta, pages, texts
 
 
-def bsdata_rules() -> dict[str, dict]:
+def bsdata_rules(bsdata: Path, bsdata_library: Path) -> dict[str, dict]:
     by_id: dict[str, dict] = {}
     named: dict[str, list[dict]] = {}
 
@@ -184,8 +182,8 @@ def bsdata_rules() -> dict[str, dict]:
             for child in value:
                 visit(child)
 
-    visit(json.loads(BSDATA.read_text(encoding="utf-8")))
-    visit(json.loads(BSDATA_LIBRARY.read_text(encoding="utf-8")))
+    visit(json.loads(bsdata.read_text(encoding="utf-8")))
+    visit(json.loads(bsdata_library.read_text(encoding="utf-8")))
     result = {}
     for title, _, _ in DETACHMENTS:
         candidates = named.get(title, [])
@@ -465,10 +463,10 @@ def eligibility(detachment: str, title: str) -> dict:
     return {"v": 1, "roles": roles, "conditions": conditions}
 
 
-def build() -> tuple[dict, dict]:
+def build(bsdata: Path, bsdata_library: Path) -> tuple[dict, dict]:
     meta, pages, source_texts = pdf_source()
     pypdf_texts = [page.extract_text() or "" for page in PdfReader(str(PDF)).pages]
-    rules = bsdata_rules()
+    rules = bsdata_rules(bsdata, bsdata_library)
     points = json.loads(POINTS.read_text(encoding="utf-8"))
     enhancements = {}
     for item in points["enhancements"]:
@@ -673,8 +671,10 @@ def validate(data: dict, related: dict) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
+    parser.add_argument("--bsdata-faction", type=Path, required=True)
+    parser.add_argument("--bsdata-library", type=Path, required=True)
     args = parser.parse_args()
-    data, related = build()
+    data, related = build(args.bsdata_faction.resolve(strict=True), args.bsdata_library.resolve(strict=True))
     errors = validate(data, related)
     existing_related = json.loads(RELATED.read_text(encoding="utf-8")) if RELATED.exists() else {"schema": 1, "faction": "Space Marines", "stratagems": {}}
     combined_related = existing_related | {"schema": 1, "faction": "Space Marines", "sourceId": SOURCE_ID, "stratagems": existing_related.get("stratagems", {}) | related["stratagems"]}

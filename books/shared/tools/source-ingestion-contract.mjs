@@ -92,6 +92,7 @@ export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authorit
   const statePath=path.join(root,'capture-state.json');
   fs.writeFileSync(statePath,stableJson({schema:'warhammer-source-capture-state/v1',captureId,status:'INCOMPLETE'}),'utf8');
   const rawArtifacts=[];
+  const normalizedArtifacts=[];
   const requestedUrls=[];
   const finalUrls=[];
   const extractorFile=path.resolve(repoRoot,extractorPath);
@@ -115,18 +116,20 @@ export function createCaptureSession({repoRoot=defaultRepoRoot,sourceId,authorit
       return content;
     },
     writeCandidate(relativePath,content){
-      const file=path.join(normalizedDir,...relativePath.replaceAll('\\','/').split('/'));
-      const relative=path.relative(normalizedDir,file);
-      if(relative.startsWith(`..${path.sep}`)||relative==='..'||path.isAbsolute(relative))throw new Error(`${sourceId}: candidate output escapes the normalized bundle`);
+      const relative=path.posix.join('normalized',String(relativePath).replaceAll('\\','/'));
+      if(normalizedArtifacts.some(item=>item.path===relative))throw new Error(`${sourceId}: duplicate candidate output: ${relativePath}`);
+      const file=bundlePath(root,relative,'normalized artifact'),bytes=Buffer.from(content,'utf8');
       fs.mkdirSync(path.dirname(file),{recursive:true});
-      fs.writeFileSync(file,content,'utf8');
+      fs.writeFileSync(file,bytes);
+      normalizedArtifacts.push({path:relative,sha256:sha256(bytes),bytes:bytes.length});
       return file;
     },
     finalize(overrides={}){
       if(!rawArtifacts.length)throw new Error(`${sourceId}: capture contains no retained raw artifacts`);
+      if(!normalizedArtifacts.length)throw new Error(`${sourceId}: capture contains no normalized candidate outputs`);
       const manifest={
         schema:'warhammer-source-capture/v1',sourceId,authority,sourceType,captureId,capturedAt:new Date().toISOString(),
-        requestedUrls:[...new Set(requestedUrls)],finalUrls:[...new Set(finalUrls)],rawArtifacts,
+        requestedUrls:[...new Set(requestedUrls)],finalUrls:[...new Set(finalUrls)],rawArtifacts,normalizedArtifacts,
         upstreamVersion:overrides.upstreamVersion??upstreamVersion,upstreamCommit:overrides.upstreamCommit??upstreamCommit,extractorIdentity,notes,confidence
       };
       manifest.aggregateManifestHash=sha256(stableJson(manifest));
@@ -143,6 +146,7 @@ export function verifyCaptureManifest(manifestPath){
   if(!manifest.sourceId||!manifest.authority||!manifest.sourceType||!manifest.captureId||!manifest.capturedAt)throw new Error('Source capture identity is incomplete');
   if(!Array.isArray(manifest.requestedUrls)||!manifest.requestedUrls.length||!Array.isArray(manifest.finalUrls)||!manifest.finalUrls.length)throw new Error('Source capture URL identity is incomplete');
   if(!Array.isArray(manifest.rawArtifacts)||!manifest.rawArtifacts.length)throw new Error('Source capture retained no raw artifacts');
+  if(!Array.isArray(manifest.normalizedArtifacts)||!manifest.normalizedArtifacts.length)throw new Error('Source capture retained no normalized artifacts');
   const expected=manifest.aggregateManifestHash;
   const withoutHash={...manifest};delete withoutHash.aggregateManifestHash;
   if(sha256(stableJson(withoutHash))!==expected)throw new Error('Source capture aggregate manifest hash mismatch');
@@ -156,6 +160,11 @@ export function verifyCaptureManifest(manifestPath){
     if(!fs.existsSync(artifactPath))throw new Error(`Source capture artifact is missing: ${artifact.path}`);
     const actual=sha256(fs.readFileSync(artifactPath));
     if(actual!==artifact.sha256)throw new Error(`Source capture artifact hash mismatch: ${artifact.path}`);
+  }
+  for(const artifact of manifest.normalizedArtifacts){
+    const artifactPath=bundlePath(root,artifact.path,'normalized artifact');
+    if(!fs.existsSync(artifactPath))throw new Error(`Source capture normalized artifact is missing: ${artifact.path}`);
+    if(sha256(fs.readFileSync(artifactPath))!==artifact.sha256)throw new Error(`Source capture normalized artifact hash mismatch: ${artifact.path}`);
   }
   return manifest;
 }

@@ -63,6 +63,12 @@ try{
   fs.writeFileSync(path.join(capture.root,'capture-state.json'),stableJson({schema:'warhammer-source-capture-state/v1',captureId:manifest.captureId,status:'INCOMPLETE'}));
   assert.throws(()=>verifyCaptureManifest(manifestPath),/completion state/);
   fs.writeFileSync(path.join(capture.root,'capture-state.json'),stableJson({schema:'warhammer-source-capture-state/v1',captureId:manifest.captureId,status:'COMPLETE',manifestSha256:sha256(stableJson(manifest))}));
+  const candidatePath=path.join(capture.root,manifest.normalizedArtifacts[0].path),candidateBytes=fs.readFileSync(candidatePath);
+  fs.appendFileSync(candidatePath,'tampered');
+  assert.throws(()=>verifyCaptureManifest(manifestPath),/normalized artifact hash mismatch/);
+  fs.writeFileSync(candidatePath,candidateBytes);fs.rmSync(candidatePath);
+  assert.throws(()=>verifyCaptureManifest(manifestPath),/normalized artifact is missing/);
+  fs.writeFileSync(candidatePath,candidateBytes);
   fs.appendFileSync(path.join(capture.root,manifest.rawArtifacts[0].path),'tampered');
   assert.throws(()=>verifyCaptureManifest(manifestPath),/artifact hash mismatch/);
 }finally{fs.rmSync(temp,{recursive:true,force:true});}

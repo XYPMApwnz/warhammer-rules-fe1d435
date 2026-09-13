@@ -15,7 +15,7 @@
       "authority": "secondary",
       "sourceType": "wahapedia-html",
       "acceptedRevision": "legacy-normalized-2026-08-09",
-      "acceptedHash": "c998f4ad426045eab82ccded75deff0cd0977671327e3067c83543db46ae2696",
+      "acceptedHash": "d62a7779a40b7c720155773a0042f5faeb045b3d05409850c0d60e92061d006a",
       "lastChecked": "2026-08-09",
       "upstreamUpdateKnown": true,
       "status": "LEGACY_UNVERIFIABLE",
@@ -37,14 +37,9 @@
           "path": "books/space-marines/sources/wahapedia-compatible-rules.snapshot.json",
           "normalization": "lf",
           "sha256": "32dee7a9bb9c21290ae4817f6a4563e69c10021ec63175d9ae3d6fe14d748aa1"
-        },
-        {
-          "path": "books/space-marines/content/space-marines-related-rules.en.json",
-          "normalization": "lf",
-          "sha256": "c1cf29b4827f2dc8acfb3822d39a41fa40ca774330d1b7033a2e7c2ed28aafaf"
         }
       ],
-      "notes": "Historical raw Wahapedia pages are unavailable. Accepted normalized artifacts are frozen and hash verified; current live pages are update candidates only."
+      "notes": "Historical raw Wahapedia pages are unavailable. The three normalized artifacts exclusively owned by this source are frozen and hash verified; the shared related-rules aggregate is verified by its contributing local producers. Current live pages are update candidates only."
     },
     {
       "book": "chaos-space-marines",

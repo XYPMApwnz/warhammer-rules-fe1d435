@@ -41,7 +41,8 @@ export function verifyFrozenSource(sourceId,{repoRoot=defaultRepoRoot,registryPa
     return{path:artifact.path,sha256:actual};
   });
   const aggregate=aggregateArtifactHash(verified);
-  if(source.acceptedHash&&source.artifacts.length===1&&source.acceptedHash.toLowerCase()!==verified[0].sha256.toLowerCase())throw new Error(`${sourceId}: acceptedHash does not match its frozen artifact`);
+  const accepted=source.artifacts.length===1?verified[0].sha256:aggregate;
+  if(source.acceptedHash&&source.acceptedHash.toLowerCase()!==accepted.toLowerCase())throw new Error(`${sourceId}: acceptedHash does not match its frozen artifact set`);
   return{sourceId,status:source.status,rawOrigin:source.rawOrigin,artifacts:verified,aggregateArtifactHash:aggregate};
 }
 

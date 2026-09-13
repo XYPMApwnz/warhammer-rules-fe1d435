@@ -6,7 +6,7 @@ import path from 'node:path';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {
-  createCaptureSession,readSourceRegistry,requireSourceToolMode,sha256,
+  aggregateArtifactHash,createCaptureSession,readSourceRegistry,requireSourceToolMode,sha256,
   verifyCaptureManifest,verifyFrozenSource
 } from '../books/shared/tools/source-ingestion-contract.mjs';
 import {verifyBsdataSource} from '../books/shared/tools/verify-bsdata-source.mjs';
@@ -91,6 +91,8 @@ for(const source of registry.sources){
   assert(statusSet.has(source.status),`${source.sourceId}: unknown status ${source.status}`);
   assert(source.acceptedRevision&&source.lastChecked&&source.acceptedHash,`${source.sourceId}: freshness identity is incomplete`);
   assert(source.status!=='LEGACY_UNVERIFIABLE'||source.rawOrigin==='UNAVAILABLE',`${source.sourceId}: legacy status must disclose unavailable raw origin`);
+  const expectedHash=source.artifacts.length===1?source.artifacts[0].sha256:aggregateArtifactHash(source.artifacts);
+  assert.equal(source.acceptedHash.toLowerCase(),expectedHash.toLowerCase(),`${source.sourceId}: accepted hash must identify its complete frozen artifact set`);
 }
 
 console.log(`Source ingestion contract QA passed: ${active.length} frozen live-derived sources, ${registry.dormantLiveTools.length} guarded update tools.`);

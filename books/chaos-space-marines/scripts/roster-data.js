@@ -15519,9 +15519,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "touched-by-the-warp",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15549,9 +15549,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "conduit-of-chaos",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15593,9 +15593,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-chaos-cult-amulet-of-tainted-vigour",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15637,9 +15637,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-chaos-cult-cultists-brand",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15681,9 +15681,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-chaos-cult-incendiary-goad",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15725,9 +15725,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-chaos-cult-warped-foresight",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15755,9 +15755,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "surgical-precision",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15785,9 +15785,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "living-carapace",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15815,9 +15815,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "helm-of-all-seeing",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15845,9 +15845,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "prime-test-subject",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15875,9 +15875,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "wyredjinn",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15905,9 +15905,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "cybinfernal-font",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15935,9 +15935,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "mark-of-the-soul-forges",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -15965,9 +15965,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "crown-of-worms",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16009,9 +16009,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-deceptors-cursed-fang",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16053,9 +16053,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-deceptors-falsehood",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16097,9 +16097,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-deceptors-shroud-of-obfuscation",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16141,9 +16141,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-deceptors-soul-link",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16171,9 +16171,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "pact-of-destruction",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16201,9 +16201,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "eye-of-oblivion",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16245,9 +16245,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-dread-talons-eater-of-dread",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16290,9 +16290,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-dread-talons-nights-shroud",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16334,9 +16334,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-dread-talons-warp-fuelled-thrusters",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16378,9 +16378,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-dread-talons-willbreaker",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16423,9 +16423,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-fellhammer-siege-host-bastion-plate",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16467,9 +16467,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-fellhammer-siege-host-iron-artifice",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16511,9 +16511,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-fellhammer-siege-host-ironbound-enmity",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16555,9 +16555,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-fellhammer-siege-host-warp-tracer",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16585,9 +16585,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "voice-of-the-tyrant",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16615,9 +16615,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "raid-leader",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16645,9 +16645,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "dread-reputation",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16675,9 +16675,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "eager-for-bloodshed",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16705,9 +16705,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "shadowcowl-talisman",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16735,9 +16735,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "pact-of-cursed-pinions",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16765,9 +16765,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "greyveil-hex",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16795,9 +16795,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "warp-fuelled-thrusters",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16825,9 +16825,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "terrorglut-parasite",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16855,9 +16855,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "sorrowscent-vulture",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16899,9 +16899,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-pactbound-zealots-eye-of-tzeentch",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16943,9 +16943,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-pactbound-zealots-intoxicating-elixir",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -16987,9 +16987,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-pactbound-zealots-orbs-of-unlife",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17031,9 +17031,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-pactbound-zealots-talisman-of-burning-blood",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17075,9 +17075,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-renegade-raiders-despots-claim",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17119,9 +17119,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-renegade-raiders-dread-reaver",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17163,9 +17163,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-renegade-raiders-mark-of-the-hound",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17207,9 +17207,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-renegade-raiders-tyrants-lash",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17237,9 +17237,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "weaponised-hatred",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17267,9 +17267,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "eyes-of-the-hunter",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17297,9 +17297,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "fratricidal-trophies",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17327,9 +17327,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "empyric-symbiote",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17371,9 +17371,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-soulforged-warpack-forges-blessing",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17415,9 +17415,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-soulforged-warpack-invigorated-mechatendrils",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17459,9 +17459,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-soulforged-warpack-tempting-addendum",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17503,9 +17503,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-soulforged-warpack-soul-harvester",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17548,9 +17548,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-veterans-of-the-long-war-eager-for-vengeance",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17593,9 +17593,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-veterans-of-the-long-war-eye-of-abaddon",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17638,9 +17638,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-veterans-of-the-long-war-mark-of-legend",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17682,9 +17682,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "enhancement-veterans-of-the-long-war-warmasters-gift",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17712,9 +17712,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "infernal-fulgurite",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17742,9 +17742,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "eye-of-the-warp",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17772,9 +17772,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "akshur-s-binding-runes",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     },
@@ -17802,9 +17802,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "sourceId": "tzagulla",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-12"
+        "verifiedAt": "2026-08-27"
       },
       "sourceBookId": "chaos-space-marines"
     }

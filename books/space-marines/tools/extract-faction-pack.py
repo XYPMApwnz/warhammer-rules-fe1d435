@@ -288,7 +288,7 @@ def enhancement_key(value: str) -> str:
     return slug(value).removesuffix("-upgrade").removesuffix("-aura").replace("-data-link", "-datalink").replace("stormseer-s-wisdom", "stormseers-wisdom")
 
 
-def exact_enhancements(page_text: str, titles: list[str]) -> dict[str, str]:
+def exact_enhancements(page_text: str, titles: list[str], page_number: int) -> dict[str, str]:
     section = page_text.split("ENHANCEMENTS", 1)[1]
     taglines = {
         "ANTI-GRAV SPEEDERS HIT THE FOE WITH THUNDEROUS FIREPOWER AT DEADLY VELOCITIES",
@@ -317,7 +317,7 @@ def exact_enhancements(page_text: str, titles: list[str]) -> dict[str, str]:
         first = next((index for index, line in enumerate(block) if effect_start.match(line.strip())), None)
         if first is None:
             raise ValueError(f"Could not locate rules text for enhancement {title}")
-        value = re.sub(r"\s+\d+$", "", clean("\n".join(block[first:])))
+        value = re.sub(rf"\s+{page_number}$", "", clean("\n".join(block[first:])))
         result[title] = value
     return result
 
@@ -478,7 +478,7 @@ def build(bsdata: Path, bsdata_library: Path) -> tuple[dict, dict]:
         restriction = re.search(r"RESTRICTIONS\s+(.*?)\nENHANCEMENTS", page_text, re.S)
         det_id = slug(title)
         detachment_enhancements = enhancements.get(slug(title), [])
-        exact_enhancement_text = exact_enhancements(page_text, [entry["title"] for entry in detachment_enhancements])
+        exact_enhancement_text = exact_enhancements(page_text, [entry["title"] for entry in detachment_enhancements], rule_page)
         rule_title = exact_rule_title(page_text, title, rules[title]["title"])
         rule = {
             "id": f"{det_id}-{slug(rule_title)}",

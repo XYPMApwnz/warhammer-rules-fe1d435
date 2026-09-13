@@ -1,10 +1,9 @@
-const {chromium}=require('playwright');
 const fs=require('node:fs');
 const path=require('node:path');
 
 const root=path.resolve(__dirname,'..');
 const outputPath=path.join(root,'content','tyranids-codex-parity.en.json');
-const points=require(path.join(root,'content','tyranids-points.en.json'));
+const pointsPath=path.join(root,'content','tyranids-points.en.json');
 const sourceUrl='https://wahapedia.ru/wh40k11ed/factions/tyranids/';
 const detachments=[
   {id:'invasion-fleet',title:'Invasion Fleet',ruleTitle:'Hyper-adaptations',anchor:'Hyper-adaptations'},
@@ -38,10 +37,15 @@ function fields(text){
 }
 
 async function main(){
-  if(!process.argv.includes('--capture-update'))throw new Error('extract-codex-parity.cjs is a live SOURCE UPDATE tool; pass --capture-update explicitly. It is not a deterministic --check path.');
+  const contract=await import('../../shared/tools/source-ingestion-contract.mjs');
+  const {mode,session}=contract.beginLegacyCaptureTool({argv:process.argv.slice(2),toolName:'extract-codex-parity.cjs',sourceId:'tyranids-codex-parity-live',authority:'secondary',sourceType:'wahapedia-html',extractorPath:'books/tyranids/tools/extract-codex-parity.cjs',localInputs:[{path:'books/tyranids/content/tyranids-points.en.json',kind:'canonical-source-input',owner:'Tyranids points'}]});
+  if(mode.kind==='verify')throw new Error('extract-codex-parity.cjs: no retained raw capture is registered for offline --check');
+  const points=JSON.parse(fs.readFileSync(pointsPath,'utf8'));
+  const {chromium}=require('playwright');
   const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTABLE,headless:true});
   const page=await browser.newPage();
   await page.goto(sourceUrl,{waitUntil:'domcontentloaded',timeout:60000});
+  await session.capturePage(page,sourceUrl,'tyranids-codex-parity');
   const remote=await page.evaluate(detachments=>{
     const rules={};
     for(const detachment of detachments){
@@ -93,16 +97,11 @@ async function main(){
   });
   if(result.some(item=>!item.rule.text||item.enhancements.length!==4||item.stratagems.length!==6))throw new Error('Expected six complete Codex Detachments with four Enhancements and six Stratagems each');
 
-  const previous=fs.existsSync(outputPath)?JSON.parse(fs.readFileSync(outputPath,'utf8')):null;
-  const checkedAt=process.argv.includes('--check')&&previous?.source?.checkedAt?previous.source.checkedAt:new Date().toISOString().slice(0,10);
+  const checkedAt=new Date().toISOString().slice(0,10);
   const output=`${JSON.stringify({schema:1,source:{title:'Wahapedia Warhammer 40,000 11th Edition · Tyranids',url:sourceUrl,checkedAt},detachments:result},null,2)}\n`;
-  if(process.argv.includes('--check')){
-    if(!previous||fs.readFileSync(outputPath,'utf8')!==output)throw new Error('Codex parity snapshot is stale; run extract-codex-parity.cjs');
-    console.log(`Codex parity current: ${result.length} Detachments, ${result.reduce((sum,item)=>sum+item.enhancements.length,0)} Enhancements, ${result.reduce((sum,item)=>sum+item.stratagems.length,0)} Stratagems`);
-  }else{
-    fs.writeFileSync(outputPath,output,'utf8');
-    console.log(`Extracted exact Codex parity for ${result.length} Detachments`);
-  }
+  session.writeCandidate(path.relative(path.resolve(root,'../..'),outputPath),output);
+  session.finalize();
+  console.log(`Captured exact Codex parity candidate for ${result.length} Detachments`);
 }
 
 main().catch(error=>{console.error(error);process.exit(1)});

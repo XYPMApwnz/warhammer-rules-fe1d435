@@ -1,8 +1,9 @@
-const { chromium } = require('playwright');
 const assert = require('node:assert/strict');
 const path = require('node:path');
 
 async function main() {
+if (!process.argv.includes('--live-diagnostic')) throw new Error('codex-parity.cjs queries mutable live source data; pass --live-diagnostic explicitly. Normal source verification is local and frozen.');
+const { chromium } = require('playwright');
 const source = require(path.resolve(__dirname, '..', 'content', 'adeptus-mechanicus-codex-detachments.en.json'));
 const parity = require(path.resolve(__dirname, '..', 'content', 'adeptus-mechanicus-codex-parity.en.json'));
 const prefixes = ['Cohort Cybernetica', 'Data-Psalm Conclave', 'Explorator Maniple', 'Rad-Zone Corps', 'Skitarii Hunter Cohort'];

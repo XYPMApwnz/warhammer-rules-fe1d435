@@ -1,4 +1,3 @@
-const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const path=require('node:path');
 
@@ -13,6 +12,8 @@ const normalize=value=>String(value||'')
   .toLowerCase();
 
 async function main(){
+  if(!process.argv.includes('--live-diagnostic'))throw new Error('datasheet-parity.cjs queries mutable live source data; pass --live-diagnostic explicitly. Normal source verification is local and frozen.');
+  const {chromium}=require('playwright');
   const codex=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-codex-datasheets.en.json')).datasheets;
   const wargearSnapshot=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-codex-wargear.en.json')).units;
   const wargearByTitle=new Map(wargearSnapshot.map(unit=>[unit.title.toLowerCase(),unit]));

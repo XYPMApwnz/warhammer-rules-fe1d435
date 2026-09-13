@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {verifyBsdataSource} from './verify-bsdata-source.mjs';
+import {verifyBsdataSource,verifyTrackedInputs} from './verify-bsdata-source.mjs';
 
 const args=process.argv.slice(2);
 const check=args.includes('--check');
@@ -16,6 +16,7 @@ if(!configArg)throw new Error('Usage: node extract-bsdata-11e.mjs <config.json> 
 const configPath=path.resolve(configArg);
 const configDir=path.dirname(configPath);
 const config=JSON.parse(fs.readFileSync(configPath,'utf8'));
+const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
 const resolvePath=value=>path.resolve(configDir,value);
 const pathKey=value=>process.platform==='win32'?value.toLowerCase():value;
 const resolvedPath=value=>{
@@ -37,7 +38,6 @@ let candidateDir=null;
 if(!check&&candidateOnly){
   if(!candidateDirArg)throw new Error(`${config.faction?.id||'book'}: write-run requires --candidate-dir`);
   candidateDir=resolvedPath(candidateDirArg);
-  const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
   const allowedRoots=[resolvedPath(os.tmpdir()),resolvedPath(path.join(repo,'tmp','candidates',config.faction.id))];
   if(!allowedRoots.some(root=>pathWithin(candidateDir,root)))throw new Error(`${config.faction?.id||'book'}: candidate destination is outside approved roots`);
 }else if(candidateDirArg&&!candidateOnly){
@@ -65,11 +65,29 @@ const unique=(items,marker)=>{
 const configuredInputs=config.inputs.map(input=>({...input,file:resolvePath(input.path)}));
 const inputs=configuredInputs.map(input=>{
   const file=input.file;
-  const raw=fs.readFileSync(file);
-  return {role:input.role,file:path.basename(file),sha256:sha256(raw),data:JSON.parse(raw.toString('utf8'))};
+  const sourceText=fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n');
+  const item={role:input.role,file:path.basename(file),sha256:sha256(Buffer.from(sourceText,'utf8')),data:JSON.parse(sourceText)};
+  if(input.provenance){
+    item.provenance=input.provenance.kind==='repository-generated'
+      ?{kind:'repository-generated',producer:input.provenance.producer}
+      :{repository:config.source.repository,commit:input.provenance.commit||config.source.commit};
+  }
+  return item;
 });
-const sourceCheckout=resolvePath(config.source.checkout||path.dirname(config.inputs.find(input=>input.role==='faction')?.path||config.inputs[0].path));
-verifyBsdataSource({checkout:sourceCheckout,expectedCommit:config.source.commit,inputFiles:configuredInputs.map(input=>input.file)});
+const defaultCheckout=resolvePath(config.source.checkout||path.dirname(config.inputs.find(input=>input.role==='faction')?.path||config.inputs[0].path));
+const sourceGroups=new Map(),repositoryGroups=new Map();
+for(const input of configuredInputs){
+  if(input.provenance?.kind==='repository-generated'){
+    const checkout=resolvePath(input.provenance.checkout||repo),marker=pathKey(checkout),group=repositoryGroups.get(marker)||{checkout,inputFiles:[]};
+    group.inputFiles.push(input.file);repositoryGroups.set(marker,group);
+    continue;
+  }
+  const checkout=resolvePath(input.provenance?.checkout||defaultCheckout),commit=input.provenance?.commit||config.source.commit;
+  const marker=`${pathKey(checkout)}\0${String(commit).toLowerCase()}`,group=sourceGroups.get(marker)||{checkout,commit,inputFiles:[]};
+  group.inputFiles.push(input.file);sourceGroups.set(marker,group);
+}
+for(const group of sourceGroups.values())verifyBsdataSource({checkout:group.checkout,expectedCommit:group.commit,inputFiles:group.inputFiles});
+for(const group of repositoryGroups.values())verifyTrackedInputs(group);
 const snapshot={
   schema:1,
   source:{repository:config.source.repository,commit:config.source.commit},

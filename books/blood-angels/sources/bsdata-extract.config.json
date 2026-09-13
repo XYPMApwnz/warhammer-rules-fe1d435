@@ -20,6 +20,7 @@
   },
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",
+    "checkout": "../../../tmp/bsdata-wh40k-11e-d5af57",
     "commit": "d5af57cf1e79b0b038133e84e58de334fea852d0",
     "revision": "1",
     "url": "https://github.com/BSData/wh40k-11e/blob/d5af57cf1e79b0b038133e84e58de334fea852d0/Imperium%20-%20Blood%20Angels.json"
@@ -27,23 +28,39 @@
   "inputs": [
     {
       "role": "faction",
-      "path": "bsdata-current-blood-angels.json"
+      "path": "../../../tmp/bsdata-wh40k-11e-d5af57/Imperium - Blood Angels.json"
     },
     {
       "role": "space-marines-supplement-base",
-      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Space Marines.json"
+      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Space Marines.json",
+      "provenance": {
+        "checkout": "../../../tmp/bsdata-wh40k-11e",
+        "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
+      }
     },
     {
       "role": "imperial-knights-library",
-      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Imperial Knights - Library.json"
+      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Imperial Knights - Library.json",
+      "provenance": {
+        "checkout": "../../../tmp/bsdata-wh40k-11e",
+        "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
+      }
     },
     {
       "role": "agents-of-the-imperium",
-      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Agents of the Imperium.json"
+      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Agents of the Imperium.json",
+      "provenance": {
+        "checkout": "../../../tmp/bsdata-wh40k-11e",
+        "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
+      }
     },
     {
       "role": "game-system",
-      "path": "../../../tmp/bsdata-wh40k-11e/Warhammer 40,000.json"
+      "path": "../../../tmp/bsdata-wh40k-11e-72620b/Warhammer 40,000.json",
+      "provenance": {
+        "checkout": "../../../tmp/bsdata-wh40k-11e-72620b",
+        "commit": "72620bee0d1d05fff6692c6db572684c211d7f87"
+      }
     }
   ],
   "outputs": {

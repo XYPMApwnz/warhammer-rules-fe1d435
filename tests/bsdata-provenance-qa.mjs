@@ -36,11 +36,47 @@ try{
   const dirty=run(process.execPath,[extractor,configPath]);
   assert.notEqual(dirty.status,0,output(dirty));
   assert.match(output(dirty),/configured inputs differ from HEAD/);
+  assert.equal(run('git',['checkout','--','Faction.json']).status,0);
+
+  const external=fs.mkdtempSync(path.join(os.tmpdir(),'bsdata-external-'));
+  const secondary=fs.mkdtempSync(path.join(os.tmpdir(),'bsdata-secondary-'));
+  try{
+    for(const checkout of [external,secondary]){
+      assert.equal(run('git',['init','-q'],checkout).status,0);
+      assert.equal(run('git',['config','user.email','qa@example.invalid'],checkout).status,0);
+      assert.equal(run('git',['config','user.name','QA'],checkout).status,0);
+    }
+    fs.copyFileSync(path.join(root,'Faction.json'),path.join(external,'Faction.json'));
+    fs.copyFileSync(path.join(root,'Faction.json'),path.join(secondary,'Library.json'));
+    assert.equal(run('git',['add','Faction.json'],external).status,0);assert.equal(run('git',['commit','-qm','external'],external).status,0);
+    assert.equal(run('git',['add','Library.json'],secondary).status,0);assert.equal(run('git',['commit','-qm','secondary'],secondary).status,0);
+    const externalHead=run('git',['rev-parse','HEAD'],external).stdout.trim(),secondaryHead=run('git',['rev-parse','HEAD'],secondary).stdout.trim();
+    fs.copyFileSync(path.join(root,'Faction.json'),path.join(root,'Derived.json'));
+    assert.equal(run('git',['add','Derived.json']).status,0);assert.equal(run('git',['commit','-qm','derived input']).status,0);
+    config.source={repository:'fixture',checkout:external,commit:externalHead};
+    config.inputs=[
+      {role:'faction',path:path.join(external,'Faction.json')},
+      {role:'library',path:path.join(secondary,'Library.json'),provenance:{checkout:secondary,commit:secondaryHead}},
+      {role:'enhancement-index',path:'Derived.json',provenance:{kind:'repository-generated',checkout:root,producer:'fixture-builder'}}
+    ];
+    fs.writeFileSync(configPath,JSON.stringify(config,null,2));
+    const grouped=run(process.execPath,[extractor,configPath]);
+    assert.equal(grouped.status,0,output(grouped));
+    const documents=JSON.parse(fs.readFileSync(path.join(root,'snapshot.json'),'utf8')).documents;
+    assert.deepEqual(documents[1].provenance,{repository:'fixture',commit:secondaryHead});
+    assert.deepEqual(documents[2].provenance,{kind:'repository-generated',producer:'fixture-builder'});
+    fs.appendFileSync(path.join(root,'Derived.json'),'\n');
+    const dirtyDerived=run(process.execPath,[extractor,configPath]);
+    assert.notEqual(dirtyDerived.status,0,output(dirtyDerived));
+    assert.match(output(dirtyDerived),/repository inputs differ from HEAD/);
+  }finally{
+    fs.rmSync(external,{recursive:true,force:true});fs.rmSync(secondary,{recursive:true,force:true});
+  }
 
   const nongit=fs.mkdtempSync(path.join(os.tmpdir(),'bsdata-nongit-'));
   try{
     fs.writeFileSync(path.join(nongit,'Faction.json'),'{}');
-    config.source.checkout=nongit;config.inputs[0].path=path.join(nongit,'Faction.json');fs.writeFileSync(configPath,JSON.stringify(config,null,2));
+    config.source.checkout=nongit;config.inputs=[{role:'faction',path:path.join(nongit,'Faction.json')}];fs.writeFileSync(configPath,JSON.stringify(config,null,2));
     const invalid=run(process.execPath,[extractor,configPath]);
     assert.notEqual(invalid.status,0,output(invalid));
     assert.match(output(invalid),/BSData source verification failed/);

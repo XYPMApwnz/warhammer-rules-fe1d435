@@ -24,33 +24,34 @@
   },
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",
+    "checkout": "../../../tmp/bsdata-wh40k-11e-b6d179",
     "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
     "url": "https://github.com/BSData/wh40k-11e/blob/b6d17952f74814528b4c70ef5016c86b922d5257/Chaos%20-%20Chaos%20Space%20Marines.json"
   },
   "inputs": [
     {
       "role": "faction",
-      "path": "../../../tmp/bsdata-wh40k-11e/Chaos - Chaos Space Marines.json"
+      "path": "../../../tmp/bsdata-wh40k-11e-b6d179/Chaos - Chaos Space Marines.json"
     },
     {
       "role": "chaos-knights-library",
-      "path": "../../../tmp/bsdata-wh40k-11e/Chaos - Chaos Knights Library.json"
+      "path": "../../../tmp/bsdata-wh40k-11e-b6d179/Chaos - Chaos Knights Library.json"
     },
     {
       "role": "chaos-daemons-library",
-      "path": "../../../tmp/bsdata-wh40k-11e/Chaos - Chaos Daemons Library.json"
+      "path": "../../../tmp/bsdata-wh40k-11e-b6d179/Chaos - Chaos Daemons Library.json"
     },
     {
       "role": "heresy-legends-library",
-      "path": "../../../tmp/bsdata-wh40k-11e/Library - Astartes Heresy Legends.json"
+      "path": "../../../tmp/bsdata-wh40k-11e-b6d179/Library - Astartes Heresy Legends.json"
     },
     {
       "role": "titans-library",
-      "path": "../../../tmp/bsdata-wh40k-11e/Library - Titans.json"
+      "path": "../../../tmp/bsdata-wh40k-11e-b6d179/Library - Titans.json"
     },
     {
       "role": "game-system",
-      "path": "../../../tmp/bsdata-wh40k-11e/Warhammer 40,000.json"
+      "path": "../../../tmp/bsdata-wh40k-11e-b6d179/Warhammer 40,000.json"
     }
   ],
   "outputs": {

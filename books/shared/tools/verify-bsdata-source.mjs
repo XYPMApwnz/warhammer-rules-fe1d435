@@ -35,3 +35,18 @@ export function verifyBsdataSource({checkout,expectedCommit,inputFiles}){
   if(dirty.status!==0||dirty.stdout.trim())throw new Error(`BSData source verification failed: configured inputs differ from HEAD${dirty.stdout.trim()?`: ${dirty.stdout.trim()}`:''}`);
   return {checkout:sourceRoot,commit:actualCommit,inputFiles:relatives};
 }
+
+export function verifyTrackedInputs({checkout,inputFiles}){
+  const sourceRoot=fs.realpathSync.native(checkout);
+  const gitRoot=fs.realpathSync.native(runGit(sourceRoot,['rev-parse','--show-toplevel']));
+  const relatives=inputFiles.map(file=>{
+    const resolved=fs.realpathSync.native(file);
+    if(!within(resolved,gitRoot))throw new Error(`BSData source verification failed: repository input is outside its checkout: ${resolved}`);
+    return path.relative(gitRoot,resolved).replaceAll(path.sep,'/');
+  });
+  const tracked=spawnSync('git',['-C',gitRoot,'ls-files','--error-unmatch','--',...relatives],{encoding:'utf8'});
+  if(tracked.status!==0)throw new Error(`BSData source verification failed: every repository input must be tracked: ${(tracked.stderr||tracked.stdout).trim()}`);
+  const dirty=spawnSync('git',['-C',gitRoot,'status','--porcelain=v1','--untracked-files=no','--',...relatives],{encoding:'utf8'});
+  if(dirty.status!==0||dirty.stdout.trim())throw new Error(`BSData source verification failed: repository inputs differ from HEAD${dirty.stdout.trim()?`: ${dirty.stdout.trim()}`:''}`);
+  return {checkout:gitRoot,inputFiles:relatives};
+}

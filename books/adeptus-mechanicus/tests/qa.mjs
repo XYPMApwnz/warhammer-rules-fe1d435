@@ -388,6 +388,8 @@ const extractor=spawnSync('C:\\Users\\denis\\.cache\\codex-runtimes\\codex-prima
 check('PDF extraction snapshot is current',extractor.status===0,(extractor.stderr||extractor.stdout).trim());
 const codexExtractor=spawnSync(node,[path.join(root,'tools','extract-datasheets.mjs'),'--check'],{encoding:'utf8'});
 check('Codex datasheet snapshot is current',codexExtractor.status===0,(codexExtractor.stderr||codexExtractor.stdout).trim());
+const codexOwnership=spawnSync(node,[path.resolve(root,'..','..','tests','am-datasheet-source-ownership-qa.mjs')],{encoding:'utf8'});
+check('Codex datasheet producer ignores absent or poisoned previous output',codexOwnership.status===0,(codexOwnership.stderr||codexOwnership.stdout).trim());
 const pointsExtractor=spawnSync(node,[path.join(root,'tools','extract-points.mjs'),'--check'],{encoding:'utf8'});
 check('current points and Enhancements snapshot is current',pointsExtractor.status===0,(pointsExtractor.stderr||pointsExtractor.stdout).trim());
 const compatibleRulesSnapshot=spawnSync(node,[path.join(root,'tests','compatible-rules-import-qa.mjs')],{encoding:'utf8'});

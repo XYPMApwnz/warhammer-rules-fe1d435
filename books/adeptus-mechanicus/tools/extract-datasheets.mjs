@@ -8,8 +8,6 @@ const sourcePath=path.join(root,'sources','bsdata-adeptus-mechanicus-11e.json');
 const outputPath=path.join(root,'content','adeptus-mechanicus-codex-datasheets.en.json');
 const points=JSON.parse(fs.readFileSync(path.join(root,'content','adeptus-mechanicus-points.en.json'),'utf8'));
 const source=JSON.parse(fs.readFileSync(sourcePath,'utf8')).catalogue;
-const previous=JSON.parse(fs.readFileSync(outputPath,'utf8'));
-const previousByTitle=new Map(previous.datasheets.map(unit=>[unit.title.toLowerCase(),unit]));
 const SOURCE_URL='https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json';
 const attachmentTargets={
   'Skitarii Marshal':['Hastarii Exterminators','Hastarii Fusiliers','Skitarii Rangers','Skitarii Vanguard'],
@@ -203,7 +201,6 @@ const datasheets=points.units.map(pointUnit=>{
   if(!link)throw new Error(`Current catalogue has no datasheet entry for ${pointUnit.title}`);
   const entry=index.get(link.targetId);
   if(!entry)throw new Error(`Missing target ${link.targetId} for ${pointUnit.title}`);
-  const old=previousByTitle.get(key(pointUnit.title))||{};
   const categoryLinks=entry.categoryLinks||[];
   const categoryIds=new Set(categoryLinks.map(item=>item.targetId).filter(Boolean));
   const profileRecords=profilesFor(entry);
@@ -231,11 +228,10 @@ const datasheets=points.units.map(pointUnit=>{
     const infantry=categories.findIndex(item=>key(item)==='infantry');
     if(infantry!==-1)categories.splice(infantry,1,'Vehicle'); // Faction Pack v1.2, p. 18; Data-severed owns the conditional return to INFANTRY.
   }
-  const invulnerable=profiles.filter(item=>item.typeName==='Unit').map(item=>characteristics(item,categoryIds).InSv).find(Boolean)||old.invulnerable||'';
+  const invulnerable=profiles.filter(item=>item.typeName==='Unit').map(item=>characteristics(item,categoryIds).InSv).find(Boolean)||'';
   const status=/\[Legends]/i.test(link.name)?'Warhammer Legends':'Codex transcription';
   const result={
-    ...old,
-    id:old.id||`unit-${key(pointUnit.title).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`,
+    id:`unit-${key(pointUnit.title).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`,
     title:pointUnit.title,
     status,
     category:categoryFor(link.name,categoryLinks),
@@ -246,7 +242,7 @@ const datasheets=points.units.map(pointUnit=>{
     weapons:unique(weapons,item=>JSON.stringify(item)),
     abilities:unique(abilities.filter(item=>item.title),item=>item.title.toLowerCase()).map(publicAbility),
     wargearAbilities:unique(wargearAbilities.filter(item=>item.title),item=>item.title.toLowerCase()).map(publicAbility),
-    composition:datasheetText(pointUnit.title,compositionFor(entry,old.composition,pointUnit.title)),
+    composition:datasheetText(pointUnit.title,compositionFor(entry,'',pointUnit.title)),
     wargear:wargearFor(entry,pointUnit.title),
     availableProfiles:[...new Set(weapons.map(item=>item.name))],
     keywords:categories,

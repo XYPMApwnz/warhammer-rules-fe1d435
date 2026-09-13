@@ -8,6 +8,9 @@ const moduleFile=fileURLToPath(import.meta.url);
 export const CACHE_REVISION_RELATIVE_PATH='glossary/generated/cache-revision.js';
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const defaultRoot=()=>path.resolve(path.dirname(moduleFile),'..');
+const TEXT_EXTENSIONS=new Set(['.css','.html','.inc','.js','.json','.mjs','.svg','.txt','.webmanifest']);
+export const normalizeCacheText=value=>String(value).replace(/\r\n?/g,'\n');
+const canonicalAssetContent=file=>TEXT_EXTENSIONS.has(path.extname(file).toLowerCase())?normalizeCacheText(fs.readFileSync(file,'utf8')):fs.readFileSync(file);
 
 export function readAppShell(root=defaultRoot()){
   const serviceWorkerFile=path.join(root,'service-worker.js'),source=fs.readFileSync(serviceWorkerFile,'utf8');
@@ -35,8 +38,8 @@ export function resolveAppShellUrl(root,url){
 
 export function calculateCacheRevision({root=defaultRoot()}={}){
   const {source,urls}=readAppShell(root);
-  const assets=urls.slice().sort().map(url=>{const item=resolveAppShellUrl(root,url);return [url,item.relative,item.relative===CACHE_REVISION_RELATIVE_PATH?'self-reference':sha(fs.readFileSync(item.absolute))];});
-  return {revision:sha(JSON.stringify({schema:1,serviceWorker:sha(source),assets})).slice(0,16),assets,urls};
+  const assets=urls.slice().sort().map(url=>{const item=resolveAppShellUrl(root,url);return [url,item.relative,item.relative===CACHE_REVISION_RELATIVE_PATH?'self-reference':sha(canonicalAssetContent(item.absolute))];});
+  return {revision:sha(JSON.stringify({schema:1,serviceWorker:sha(normalizeCacheText(source)),assets})).slice(0,16),assets,urls};
 }
 export function readCacheRevision({root=defaultRoot()}={}){
   const match=/self\.WH40K_CACHE_REVISION='([a-f0-9]{16})';/.exec(fs.readFileSync(path.join(root,CACHE_REVISION_RELATIVE_PATH),'utf8'));

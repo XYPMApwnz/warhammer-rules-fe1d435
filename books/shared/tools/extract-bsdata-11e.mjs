@@ -420,6 +420,7 @@ for(const unit of parsed){
     unit.relations.leader=unique(correction.leaderRelations.map(clean).filter(Boolean),key);
     unit.abilities=unit.abilities.filter(ability=>key(ability.title)!=='leader'||!/^this (?:model|unit) can be attached to/i.test(ability.text));
   }
+  if(correction.addLeaderRelations)unit.relations.leader=unique([...unit.relations.leader,...correction.addLeaderRelations.map(clean).filter(Boolean)],key);
   for(const [title,replacement] of Object.entries(correction.abilities||{})){
     const ability=unit.abilities.find(item=>key(item.title)===key(title));
     if(!ability)throw new Error(`${unit.title}: ability correction target not found: ${title}`);
@@ -433,7 +434,14 @@ for(const unit of parsed){
   for(const ability of correction.addAbilities||[]){
     if(!unit.abilities.some(item=>key(item.title)===key(ability.title)))unit.abilities.push(ability);
   }
+  if(correction.abilityOrder){
+    const order=new Map(correction.abilityOrder.map((title,index)=>[key(title),index]));
+    if(order.size!==unit.abilities.length||unit.abilities.some(ability=>!order.has(key(ability.title))))throw new Error(`${unit.title}: ability order does not match the complete canonical ability set`);
+    unit.abilities.sort((a,b)=>order.get(key(a.title))-order.get(key(b.title)));
+  }
   for(const weapon of unit.weapons){
+    const profile=correction.weaponProfiles?.[weapon.name];
+    if(profile)Object.assign(weapon,profile);
     const skill=correction.weaponSkills?.[weapon.name];
     if(skill)weapon.skill=skill;
     const abilities=correction.weaponAbilities?.[weapon.name];
@@ -441,6 +449,7 @@ for(const unit of parsed){
     const name=correction.weaponNames?.[weapon.name];
     if(name)weapon.name=name;
   }
+  for(const name of Object.keys(correction.weaponProfiles||{}))if(!unit.weapons.some(weapon=>weapon.name===name))throw new Error(`${unit.title}: weapon profile correction target not found: ${name}`);
   unit.weapons=unique(unit.weapons,weapon=>[weapon.name,weapon.mode,weapon.range,weapon.a,weapon.skill,weapon.s,weapon.ap,weapon.d,weapon.abilities].map(key).join('|'));
 }
 const duplicates=parsed.filter((item,index)=>parsed.findIndex(other=>other.id===item.id)!==index);

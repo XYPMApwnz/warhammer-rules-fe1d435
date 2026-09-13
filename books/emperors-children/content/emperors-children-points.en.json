@@ -6,9 +6,9 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "4",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Chaos%20-%20Emperor%27s%20Children.json",
-    "snapshotSha256": "C2126FF24A36B74B8E7EE87E5E24C6B4773D48073F3C7BF916D8D38D38816C48",
+    "snapshotSha256": "EA84E5F66B27AA462E08C6ED230B31B7700A47D8518E6F77889244D8CE84100A",
     "officialMfm": {
-      "version": "v1.2",
+      "version": "v1.3",
       "url": "https://mfm.warhammer-community.com/en/emperors-children",
       "verifiedAt": "2026-08-27"
     }
@@ -1028,7 +1028,7 @@
       }
     },
     {
-      "id": "enhancement-eager-patrons-upgrade",
+      "id": "enhancement-eager-patrons",
       "title": "Eager Patrons (Upgrade)",
       "detachment": "SPECTACLE OF SLAUGHTER",
       "value": 20,

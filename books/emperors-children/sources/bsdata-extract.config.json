@@ -15,6 +15,73 @@
     "mode": "candidate-only"
   },
   "unitCorrections": {
+    "Tormentors": {
+      "weaponAbilities": {
+        "Bolt pistol": "Pistol, Precision",
+        "➤ Plasma pistol - standard": "Pistol, Precision",
+        "➤ Plasma pistol - supercharge": "Hazardous, Pistol, Precision"
+      }
+    },
+    "Lord Exultant": {
+      "weaponProfiles": {
+        "Power fist": {
+          "a": "5",
+          "skill": "2+"
+        }
+      }
+    },
+    "Lord Kakophonist": {
+      "addLeaderRelations": [
+        "Chaos Terminators"
+      ]
+    },
+    "Fulgrim": {
+      "abilities": {
+        "Daemon Prince of Slaanesh": {
+          "title": "Daemon Primarch of Slaanesh",
+          "text": "At the start of your opponent’s Command phase, select one of the abilities in the Daemon Primarch of Slaanesh section (see below). Until the start of your opponent’s next Command phase, this model has that ability."
+        }
+      },
+      "addAbilities": [
+        {
+          "title": "Beguiling Form",
+          "text": "Each time a model makes an attack that targets this model, subtract 1 from the Hit roll."
+        },
+        {
+          "title": "Daemonic Speed",
+          "text": "This model has the Fights First ability."
+        },
+        {
+          "title": "Enthralling Hypnosis (Aura)",
+          "text": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+        }
+      ],
+      "abilityOrder": [
+        "Daemonic Poisons",
+        "Daemon Primarch of Slaanesh",
+        "Beguiling Form",
+        "Daemonic Speed",
+        "Enthralling Hypnosis (Aura)",
+        "Damaged: 1-6 Wounds Remaining",
+        "Supreme Commander",
+        "Serpentine",
+        "Thrill Seekers",
+        "Deep Strike",
+        "Deadly Demise D6"
+      ]
+    },
+    "Seekers": {
+      "weaponNames": {
+        "Lashing tongues": "Lashing tongue"
+      }
+    },
+    "Heldrake": {
+      "profileStats": {
+        "Heldrake": {
+          "OC": "0"
+        }
+      }
+    },
     "Defiler": {
       "addAbilities": [
         {
@@ -53,7 +120,7 @@
     "snapshot": "bsdata-emperors-children-11e.json",
     "datasheets": "../content/emperors-children-codex-datasheets.en.json",
     "points": "../content/emperors-children-points.en.json",
-    "officialPoints": "official-mfm-v1.2.json"
+    "officialPoints": "official-mfm-v1.3.json"
   },
   "transforms": {
     "stripCompositionCountPrefixes": true

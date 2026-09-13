@@ -138,6 +138,7 @@ expect(bloodAngelsManifest.gates?.publishAsComplete===false,'blood-angels: verif
 
 const csmPack=read('books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json');
 const csmCodex=read('books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json');
+const csmBsdata=read('books/chaos-space-marines/sources/bsdata-chaos-space-marines-11e.json');
 const csmPoints=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
 const csmRelated=read('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json');
 const csmMfm=read('books/chaos-space-marines/sources/official-mfm-v1.3.json');
@@ -178,6 +179,19 @@ const csmRelatedIds=[];
 (function collectUnitIds(value){if(Array.isArray(value))value.forEach(collectUnitIds);else if(value&&typeof value==='object')for(const [key,item] of Object.entries(value))key==='unitIds'&&Array.isArray(item)?csmRelatedIds.push(...item):collectUnitIds(item);})(csmRelated);
 expect(csmRelatedIds.every(id=>csmCurrentIds.has(id)),'chaos-space-marines: Compatible Rules reference a non-current Datasheet');
 const csmByTitle=new Map(csmCodex.datasheets.map(item=>[item.title,item]));
+const sourceObjects=[];
+(function collectSourceObjects(value){if(Array.isArray(value))value.forEach(collectSourceObjects);else if(value&&typeof value==='object'){sourceObjects.push(value);Object.values(value).forEach(collectSourceObjects);}})(csmBsdata);
+const sourceTraitor=sourceObjects.find(item=>item.type==='unit'&&item.name==='Traitor Enforcer'&&item.selectionEntries?.filter(child=>child.type==='model').length===2);
+const sourceModelKeywords=Object.fromEntries(sourceTraitor?.selectionEntries?.filter(item=>item.type==='model').map(item=>[item.name,(item.categoryLinks||[]).map(link=>link.name.replace(/^Faction:\s*/i,''))])||[]);
+const canonicalTraitor=csmByTitle.get('Traitor Enforcer');
+expect(Boolean(sourceTraitor)&&Object.keys(sourceModelKeywords).length===2,'chaos-space-marines: Traitor Enforcer child-model BSData evidence missing');
+expect(canonicalTraitor?.composition?.length===2,'chaos-space-marines: Traitor Enforcer canonical model composition missing');
+for(const model of canonicalTraitor?.composition||[]){
+  expect(JSON.stringify(model.intrinsicKeywords)===JSON.stringify(sourceModelKeywords[model.name]),`chaos-space-marines: Traitor Enforcer ${model.name} model-scoped keywords lost during BSData extraction`);
+  const modelId=`unit-traitor-enforcer-model-${model.name==='Traitor Enforcer'?'traitor-enforcer':'traitor-ogryn-2'}`;
+  const row=csmReader.match(new RegExp(`<p class="model-keywords" data-roster-model-id="${modelId}">[\\s\\S]*?</p>`))?.[0]||'';
+  for(const keyword of sourceModelKeywords[model.name]||[])expect(row.includes(`data-model-keyword="${keyword}"`),`chaos-space-marines: Traitor Enforcer ${model.name} model-scoped keyword ${keyword} is not published`);
+}
 expect(csmCodex.datasheets.some(unit=>unit.abilities?.some(item=>item.title==='Dark Pacts'&&item.text.includes('make a Dark Pact'))),'chaos-space-marines: frozen Datasheet evidence is missing Dark Pacts');
 expect(csmReader.includes('<section class="content-group" id="army-rule-dark-pacts"'),'chaos-space-marines: Dark Pacts is absent from the rendered Army Rules section');
 for(const [leader,role,targets] of [['Traitor Enforcer','leader',['TRAITOR GUARDSMEN SQUAD']],['Masters of the Maelstrom','support',['CHOSEN','LEGIONARIES','RED CORSAIRS RAIDERS']]]){

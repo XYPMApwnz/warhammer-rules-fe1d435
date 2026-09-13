@@ -12,6 +12,11 @@ const canonical='books/chaos-space-marines/content/chaos-space-marines-codex-dat
 const builder='books/shared/tools/build-army-book.mjs';
 const masterId='unit-masters-of-the-maelstrom';
 const garlonId=masterId+'-model-garlon-souleater-2';
+const traitorId='unit-traitor-enforcer';
+const traitorKeywords={
+  'Traitor Enforcer':['Heretic Astartes','Infantry','Character','Grenades','Chaos','Traitor Enforcer'],
+  'Traitor Ogryn':['Heretic Astartes','Infantry','Grenades','Chaos']
+};
 const masterRuleId='emperors-children-detachment-rule-master-of-the-pageant';
 // Frozen CSM Faction Pack v1.2, p.25, SHA-256 f3a8d05e...b989a33a495.
 // Scope is model-specific; the two Choice Samples options are mutually exclusive.
@@ -31,6 +36,11 @@ function modelOracle(models,label){
   assert.deepEqual(models.map(m=>m.title),names,`${label}: exactly five named models`);
   assert.equal(models.filter(m=>m.id===garlonId).length,1,`${label}: stable Garlon model identity`);
   for(const model of models)assert.deepEqual(model.intrinsicKeywords||[],model.id===garlonId?['PSYKER']:[],`${label}: only Garlon model-scoped PSYKER`);
+}
+
+function traitorModelOracle(models,label){
+  assert.deepEqual(models.map(model=>model.title),Object.keys(traitorKeywords),`${label}: both Traitor Enforcer models`);
+  for(const model of models)assert.deepEqual(model.intrinsicKeywords,traitorKeywords[model.title],`${label}: ${model.title} source-scoped keywords`);
 }
 
 // Exercise actual builder functions on synthetic input without importing its CLI entry point.
@@ -80,7 +90,7 @@ function providerOracle(mutate){
 
 export function runQa(overrides={}){
   const source=p=>overrides[p]??read(p),json=p=>JSON.parse(source(p));
-  const units=json(canonical).datasheets,masters=units.find(x=>x.id===masterId);
+  const units=json(canonical).datasheets,masters=units.find(x=>x.id===masterId),traitor=units.find(x=>x.id===traitorId);
   assert.equal(units.filter(x=>x.id===masterId).length,1);
   assert.deepEqual(masters.profiles.map(x=>x.name),names,'five unchanged profile identities');
   assert.deepEqual(masters.keywords,['Epic Hero','Infantry','Grenades','Chaos','Chaos Undivided','Masters of the Maelstrom','Heretic Astartes'],'unit-wide keywords unchanged; PSYKER is not flattened');
@@ -90,6 +100,7 @@ export function runQa(overrides={}){
   assert.deepEqual(masters.points,[{label:'5 models',value:145,minModels:5,maxModels:5}],'unchanged points');
   const config=json('books/chaos-space-marines/book.config.json');
   modelOracle(createRosterCatalog({config,units:[masters]}).units[0].gameSelections.models,'fresh canonical serializer');
+  traitorModelOracle(createRosterCatalog({config,units:[traitor]}).units[0].gameSelections.models,'fresh Traitor Enforcer serializer');
   const catalogs={},targets={};
   for(const book of ['chaos-space-marines','emperors-children']){
     catalogs[book]=script(source(`books/${book}/scripts/roster-data.js`),'WH_BOOK_ROSTER_CATALOG');
@@ -97,6 +108,12 @@ export function runQa(overrides={}){
   }
   const csm=catalogs['chaos-space-marines'],unit=csm.units.find(x=>x.id===masterId),html=slice(targets['chaos-space-marines'],masterId);
   modelOracle(unit.gameSelections.models,'generated roster');
+  const traitorGenerated=csm.units.find(x=>x.id===traitorId),traitorHtml=slice(targets['chaos-space-marines'],traitorId);
+  traitorModelOracle(traitorGenerated.gameSelections.models,'generated Traitor Enforcer roster');
+  for(const [index,[title,keywords]] of Object.entries(traitorKeywords).entries()){
+    const modelId=`${traitorId}-model-${slug(title)}${index?'-'+(index+1):''}`,row=traitorHtml.match(new RegExp(`<p class="model-keywords" data-roster-model-id="${modelId}">[\\s\\S]*?</p>`))?.[0]||'';
+    for(const keyword of keywords)assert.ok(row.includes(`data-model-keyword="${keyword}"`),`published ${title} scoped keyword ${keyword}`);
+  }
   assert.deepEqual(unit.intrinsicKeywords,masters.keywords,'generated unit keywords not flattened');
   assert.equal(unit.gameSelections.abilities.filter(a=>a.title==='Choice Samples'&&a.text===choice).length,1,'generated complete Choice Samples');
   assert.deepEqual(unit.relations.canSupport.map(x=>x.unitId).sort(),[...support].sort());
@@ -139,7 +156,9 @@ function mutations(){
   const m5=read(builder).replace('id="${esc(anchor)}" data-track="${esc(anchor)}"','id="${esc(det.id)}-rule" data-track="${esc(det.id)}-rule"');
   assert.notEqual(m5,read(builder));kill('M5',()=>genericPublication(m5),/distinct rendered additional anchor/);
   kill('M6',()=>providerOracle(effects=>[...effects,...effects.filter(e=>e.canonicalReference?.id===masterRuleId)]),/must emit exactly once/);
-  console.log('RA07 mutations: 6/6 killed; in-memory isolated source/output copies, no tracked mutations');
+  const m7=JSON.parse(read(canonical));delete m7.datasheets.find(x=>x.id===traitorId).composition[0].intrinsicKeywords;
+  kill('M7',()=>runQa({[canonical]:JSON.stringify(m7)}),/Traitor Enforcer source-scoped keywords/);
+  console.log('RA07/source-scope mutations: 7/7 killed; in-memory isolated source/output copies, no tracked mutations');
 }
 
 async function browserChecks(state){

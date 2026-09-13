@@ -196,11 +196,16 @@ const categoryFor=(title,primary)=>{
 };
 
 function compositionFor(entry,title){
+  const compositionModel=(model,name,min,max)=>{
+    const intrinsicKeywords=categoriesFor(model);
+    return{name,min,max,models:[name],...(intrinsicKeywords.length?{intrinsicKeywords}:{})};
+  };
   if(entry.type==='model')return[{name:title,min:1,max:1,models:[title]}];
   const output=[];
   for(const model of (entry.selectionEntries||[]).filter(item=>item.type==='model')){
     const range=constraints(model);
-    output.push({name:clean(model.name),min:range.min??0,max:range.max??range.min??0,models:[clean(model.name)]});
+    const name=clean(model.name);
+    output.push(compositionModel(model,name,range.min??0,range.max??range.min??0));
   }
   for(const group of entry.selectionEntryGroups||[]){
     const models=(group.selectionEntries||[]).filter(item=>item.type==='model');

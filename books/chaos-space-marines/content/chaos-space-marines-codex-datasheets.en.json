@@ -121,6 +121,9 @@
           "max": 1,
           "models": [
             "Cultist Champion"
+          ],
+          "intrinsicKeywords": [
+            "Unit Champion"
           ]
         },
         {
@@ -1119,6 +1122,10 @@
           "max": 1,
           "models": [
             "Dark Apostle"
+          ],
+          "intrinsicKeywords": [
+            "Dark Apostle",
+            "Character"
           ]
         },
         {
@@ -2478,6 +2485,14 @@
           "max": 1,
           "models": [
             "Traitor Enforcer"
+          ],
+          "intrinsicKeywords": [
+            "Heretic Astartes",
+            "Infantry",
+            "Character",
+            "Grenades",
+            "Chaos",
+            "Traitor Enforcer"
           ]
         },
         {
@@ -2486,6 +2501,12 @@
           "max": 1,
           "models": [
             "Traitor Ogryn"
+          ],
+          "intrinsicKeywords": [
+            "Heretic Astartes",
+            "Infantry",
+            "Grenades",
+            "Chaos"
           ]
         }
       ],
@@ -3149,6 +3170,14 @@
           "max": 1,
           "models": [
             "Fabius Bile"
+          ],
+          "intrinsicKeywords": [
+            "Infantry",
+            "Character",
+            "Epic Hero",
+            "Chaos",
+            "Chaos Undivided",
+            "Fabius Bile"
           ]
         },
         {
@@ -3157,6 +3186,11 @@
           "max": 1,
           "models": [
             "Surgeon Acolyte"
+          ],
+          "intrinsicKeywords": [
+            "Infantry",
+            "Chaos",
+            "Chaos Undivided"
           ]
         }
       ],
@@ -6638,6 +6672,9 @@
           "max": 1,
           "models": [
             "Biker Champion"
+          ],
+          "intrinsicKeywords": [
+            "Unit Champion"
           ]
         },
         {

@@ -1,12 +1,12 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 3250,
+    "terms": 3257,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 226,
+    "aliasCandidates": 227,
     "duplicateCandidates": 116,
     "keywordCandidates": 16
   },
@@ -1918,6 +1918,14 @@
       "termIds": [
         "chaos-space-marines-weapon-cyphers-plasma-pistol",
         "chaos-space-marines-weapon-cyphers-plasma-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "surgeon-acolyte",
+      "termIds": [
+        "chaos-space-marines-ability-surgeon-acolyte",
+        "chaos-space-marines-model-keywords-surgeon-acolyte"
       ],
       "status": "review-required"
     },

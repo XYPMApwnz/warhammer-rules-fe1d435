@@ -103,6 +103,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Cultist Champion",
             "aliases": [
               "Cultist Champion"
+            ],
+            "intrinsicKeywords": [
+              "Unit Champion"
             ]
           },
           {
@@ -2104,6 +2107,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Dark Apostle",
             "aliases": [
               "Dark Apostle"
+            ],
+            "intrinsicKeywords": [
+              "Dark Apostle",
+              "Character"
             ]
           },
           {
@@ -4497,6 +4504,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Traitor Enforcer",
             "aliases": [
               "Traitor Enforcer"
+            ],
+            "intrinsicKeywords": [
+              "Heretic Astartes",
+              "Infantry",
+              "Character",
+              "Grenades",
+              "Chaos",
+              "Traitor Enforcer"
             ]
           },
           {
@@ -4504,6 +4519,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Traitor Ogryn",
             "aliases": [
               "Traitor Ogryn"
+            ],
+            "intrinsicKeywords": [
+              "Heretic Astartes",
+              "Infantry",
+              "Grenades",
+              "Chaos"
             ]
           }
         ],
@@ -5549,6 +5570,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Fabius Bile",
             "aliases": [
               "Fabius Bile"
+            ],
+            "intrinsicKeywords": [
+              "Infantry",
+              "Character",
+              "Epic Hero",
+              "Chaos",
+              "Chaos Undivided",
+              "Fabius Bile"
             ]
           },
           {
@@ -5556,6 +5585,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Surgeon Acolyte",
             "aliases": [
               "Surgeon Acolyte"
+            ],
+            "intrinsicKeywords": [
+              "Infantry",
+              "Chaos",
+              "Chaos Undivided"
             ]
           }
         ],
@@ -11573,6 +11607,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Biker Champion",
             "aliases": [
               "Biker Champion"
+            ],
+            "intrinsicKeywords": [
+              "Unit Champion"
             ]
           },
           {

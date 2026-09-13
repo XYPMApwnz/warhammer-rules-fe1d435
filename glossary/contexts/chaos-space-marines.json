@@ -4884,6 +4884,30 @@
         ]
       }
     },
+    "chaos-space-marines-model-keywords-fabius-bile": {
+      "termId": "chaos-space-marines-model-keywords-fabius-bile",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-model-keywords-fabius-bile",
+        "rule": "fabius-bile-keywords",
+        "datasheet": "unit-fabius-bile",
+        "statline": "fabius-bile-profile",
+        "units": [
+          "unit-fabius-bile"
+        ]
+      }
+    },
+    "chaos-space-marines-model-keywords-surgeon-acolyte": {
+      "termId": "chaos-space-marines-model-keywords-surgeon-acolyte",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-model-keywords-surgeon-acolyte",
+        "rule": "fabius-bile-keywords",
+        "datasheet": "unit-fabius-bile",
+        "statline": "fabius-bile-profile",
+        "units": [
+          "unit-fabius-bile"
+        ]
+      }
+    },
     "chaos-space-marines-model-keywords-garlon-souleater": {
       "termId": "chaos-space-marines-model-keywords-garlon-souleater",
       "navigation": {
@@ -4893,6 +4917,66 @@
         "statline": "masters-of-the-maelstrom-profile",
         "units": [
           "unit-masters-of-the-maelstrom"
+        ]
+      }
+    },
+    "chaos-space-marines-model-keywords-dark-apostle": {
+      "termId": "chaos-space-marines-model-keywords-dark-apostle",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-model-keywords-dark-apostle",
+        "rule": "dark-apostle-keywords",
+        "datasheet": "unit-dark-apostle",
+        "statline": "dark-apostle-profile",
+        "units": [
+          "unit-dark-apostle"
+        ]
+      }
+    },
+    "chaos-space-marines-model-keywords-traitor-enforcer": {
+      "termId": "chaos-space-marines-model-keywords-traitor-enforcer",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-model-keywords-traitor-enforcer",
+        "rule": "traitor-enforcer-keywords",
+        "datasheet": "unit-traitor-enforcer",
+        "statline": "traitor-enforcer-profile",
+        "units": [
+          "unit-traitor-enforcer"
+        ]
+      }
+    },
+    "chaos-space-marines-model-keywords-traitor-ogryn": {
+      "termId": "chaos-space-marines-model-keywords-traitor-ogryn",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-model-keywords-traitor-ogryn",
+        "rule": "traitor-enforcer-keywords",
+        "datasheet": "unit-traitor-enforcer",
+        "statline": "traitor-enforcer-profile",
+        "units": [
+          "unit-traitor-enforcer"
+        ]
+      }
+    },
+    "chaos-space-marines-model-keywords-cultist-champion": {
+      "termId": "chaos-space-marines-model-keywords-cultist-champion",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-model-keywords-cultist-champion",
+        "rule": "cultist-mob-keywords",
+        "datasheet": "unit-cultist-mob",
+        "statline": "cultist-mob-profile",
+        "units": [
+          "unit-cultist-mob"
+        ]
+      }
+    },
+    "chaos-space-marines-model-keywords-biker-champion": {
+      "termId": "chaos-space-marines-model-keywords-biker-champion",
+      "navigation": {
+        "glossary": "glossary-chaos-space-marines-model-keywords-biker-champion",
+        "rule": "chaos-bikers-keywords",
+        "datasheet": "unit-chaos-bikers",
+        "statline": "chaos-bikers-profile",
+        "units": [
+          "unit-chaos-bikers"
         ]
       }
     },

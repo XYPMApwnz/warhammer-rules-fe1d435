@@ -22014,6 +22014,130 @@
       ],
       "mentions": []
     },
+    "chaos-space-marines-model-keywords-biker-champion": {
+      "id": "chaos-space-marines-model-keywords-biker-champion",
+      "kind": "datasheet-ability",
+      "scope": "chaos-space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Biker Champion"
+      },
+      "summary": {
+        "en": "Biker Champion only: Unit Champion."
+      },
+      "definition": {
+        "en": "Biker Champion only: Unit Champion."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "chaos-space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "chaos-bikers-keywords"
+      },
+      "fullRulePath": "books/chaos-space-marines/reader.html#chaos-bikers-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "chaos-space-marines"
+      ],
+      "mentions": []
+    },
+    "chaos-space-marines-model-keywords-cultist-champion": {
+      "id": "chaos-space-marines-model-keywords-cultist-champion",
+      "kind": "datasheet-ability",
+      "scope": "chaos-space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Cultist Champion"
+      },
+      "summary": {
+        "en": "Cultist Champion only: Unit Champion."
+      },
+      "definition": {
+        "en": "Cultist Champion only: Unit Champion."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "chaos-space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "cultist-mob-keywords"
+      },
+      "fullRulePath": "books/chaos-space-marines/reader.html#cultist-mob-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "chaos-space-marines"
+      ],
+      "mentions": []
+    },
+    "chaos-space-marines-model-keywords-dark-apostle": {
+      "id": "chaos-space-marines-model-keywords-dark-apostle",
+      "kind": "datasheet-ability",
+      "scope": "chaos-space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Dark Apostle"
+      },
+      "summary": {
+        "en": "Dark Apostle only: Dark Apostle, Character."
+      },
+      "definition": {
+        "en": "Dark Apostle only: Dark Apostle, Character."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "chaos-space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "dark-apostle-keywords"
+      },
+      "fullRulePath": "books/chaos-space-marines/reader.html#dark-apostle-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "chaos-space-marines"
+      ],
+      "mentions": []
+    },
+    "chaos-space-marines-model-keywords-fabius-bile": {
+      "id": "chaos-space-marines-model-keywords-fabius-bile",
+      "kind": "datasheet-ability",
+      "scope": "chaos-space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Fabius Bile"
+      },
+      "summary": {
+        "en": "Fabius Bile only: Infantry, Character, Epic Hero, Chaos, Chaos Undivided, Fabius Bile."
+      },
+      "definition": {
+        "en": "Fabius Bile only: Infantry, Character, Epic Hero, Chaos, Chaos Undivided, Fabius Bile."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "chaos-space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "fabius-bile-keywords"
+      },
+      "fullRulePath": "books/chaos-space-marines/reader.html#fabius-bile-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "chaos-space-marines"
+      ],
+      "mentions": []
+    },
     "chaos-space-marines-model-keywords-garlon-souleater": {
       "id": "chaos-space-marines-model-keywords-garlon-souleater",
       "kind": "datasheet-ability",
@@ -22039,6 +22163,99 @@
         "locator": "masters-of-the-maelstrom-keywords"
       },
       "fullRulePath": "books/chaos-space-marines/reader.html#masters-of-the-maelstrom-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "chaos-space-marines"
+      ],
+      "mentions": []
+    },
+    "chaos-space-marines-model-keywords-surgeon-acolyte": {
+      "id": "chaos-space-marines-model-keywords-surgeon-acolyte",
+      "kind": "datasheet-ability",
+      "scope": "chaos-space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Surgeon Acolyte"
+      },
+      "summary": {
+        "en": "Surgeon Acolyte only: Infantry, Chaos, Chaos Undivided."
+      },
+      "definition": {
+        "en": "Surgeon Acolyte only: Infantry, Chaos, Chaos Undivided."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "chaos-space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "fabius-bile-keywords"
+      },
+      "fullRulePath": "books/chaos-space-marines/reader.html#fabius-bile-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "chaos-space-marines"
+      ],
+      "mentions": []
+    },
+    "chaos-space-marines-model-keywords-traitor-enforcer": {
+      "id": "chaos-space-marines-model-keywords-traitor-enforcer",
+      "kind": "datasheet-ability",
+      "scope": "chaos-space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Traitor Enforcer"
+      },
+      "summary": {
+        "en": "Traitor Enforcer only: Heretic Astartes, Infantry, Character, Grenades, Chaos, Traitor Enforcer."
+      },
+      "definition": {
+        "en": "Traitor Enforcer only: Heretic Astartes, Infantry, Character, Grenades, Chaos, Traitor Enforcer."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "chaos-space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "traitor-enforcer-keywords"
+      },
+      "fullRulePath": "books/chaos-space-marines/reader.html#traitor-enforcer-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "chaos-space-marines"
+      ],
+      "mentions": []
+    },
+    "chaos-space-marines-model-keywords-traitor-ogryn": {
+      "id": "chaos-space-marines-model-keywords-traitor-ogryn",
+      "kind": "datasheet-ability",
+      "scope": "chaos-space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Traitor Ogryn"
+      },
+      "summary": {
+        "en": "Traitor Ogryn only: Heretic Astartes, Infantry, Grenades, Chaos."
+      },
+      "definition": {
+        "en": "Traitor Ogryn only: Heretic Astartes, Infantry, Grenades, Chaos."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "chaos-space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "traitor-enforcer-keywords"
+      },
+      "fullRulePath": "books/chaos-space-marines/reader.html#traitor-enforcer-keywords",
       "status": "provisional",
       "sourceRefs": [
         "chaos-space-marines"

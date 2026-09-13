@@ -5344,6 +5344,32 @@ window.DG_TERMS={
     "datasheet": "unit-venomcrawler",
     "statline": "venomcrawler-profile"
   },
+  "chaos-space-marines-model-keywords-fabius-bile": {
+    "id": "chaos-space-marines-model-keywords-fabius-bile",
+    "title": "Fabius Bile",
+    "summary": "Fabius Bile only: Infantry, Character, Epic Hero, Chaos, Chaos Undivided, Fabius Bile.",
+    "full": "Fabius Bile only: Infantry, Character, Epic Hero, Chaos, Chaos Undivided, Fabius Bile.",
+    "glossary": "glossary-chaos-space-marines-model-keywords-fabius-bile",
+    "rule": "fabius-bile-keywords",
+    "units": [
+      "unit-fabius-bile"
+    ],
+    "datasheet": "unit-fabius-bile",
+    "statline": "fabius-bile-profile"
+  },
+  "chaos-space-marines-model-keywords-surgeon-acolyte": {
+    "id": "chaos-space-marines-model-keywords-surgeon-acolyte",
+    "title": "Surgeon Acolyte",
+    "summary": "Surgeon Acolyte only: Infantry, Chaos, Chaos Undivided.",
+    "full": "Surgeon Acolyte only: Infantry, Chaos, Chaos Undivided.",
+    "glossary": "glossary-chaos-space-marines-model-keywords-surgeon-acolyte",
+    "rule": "fabius-bile-keywords",
+    "units": [
+      "unit-fabius-bile"
+    ],
+    "datasheet": "unit-fabius-bile",
+    "statline": "fabius-bile-profile"
+  },
   "chaos-space-marines-model-keywords-garlon-souleater": {
     "id": "chaos-space-marines-model-keywords-garlon-souleater",
     "title": "Garlon Souleater",
@@ -5356,6 +5382,71 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-masters-of-the-maelstrom",
     "statline": "masters-of-the-maelstrom-profile"
+  },
+  "chaos-space-marines-model-keywords-dark-apostle": {
+    "id": "chaos-space-marines-model-keywords-dark-apostle",
+    "title": "Dark Apostle",
+    "summary": "Dark Apostle only: Dark Apostle, Character.",
+    "full": "Dark Apostle only: Dark Apostle, Character.",
+    "glossary": "glossary-chaos-space-marines-model-keywords-dark-apostle",
+    "rule": "dark-apostle-keywords",
+    "units": [
+      "unit-dark-apostle"
+    ],
+    "datasheet": "unit-dark-apostle",
+    "statline": "dark-apostle-profile"
+  },
+  "chaos-space-marines-model-keywords-traitor-enforcer": {
+    "id": "chaos-space-marines-model-keywords-traitor-enforcer",
+    "title": "Traitor Enforcer",
+    "summary": "Traitor Enforcer only: Heretic Astartes, Infantry, Character, Grenades, Chaos, Traitor Enforcer.",
+    "full": "Traitor Enforcer only: Heretic Astartes, Infantry, Character, Grenades, Chaos, Traitor Enforcer.",
+    "glossary": "glossary-chaos-space-marines-model-keywords-traitor-enforcer",
+    "rule": "traitor-enforcer-keywords",
+    "units": [
+      "unit-traitor-enforcer"
+    ],
+    "datasheet": "unit-traitor-enforcer",
+    "statline": "traitor-enforcer-profile"
+  },
+  "chaos-space-marines-model-keywords-traitor-ogryn": {
+    "id": "chaos-space-marines-model-keywords-traitor-ogryn",
+    "title": "Traitor Ogryn",
+    "summary": "Traitor Ogryn only: Heretic Astartes, Infantry, Grenades, Chaos.",
+    "full": "Traitor Ogryn only: Heretic Astartes, Infantry, Grenades, Chaos.",
+    "glossary": "glossary-chaos-space-marines-model-keywords-traitor-ogryn",
+    "rule": "traitor-enforcer-keywords",
+    "units": [
+      "unit-traitor-enforcer"
+    ],
+    "datasheet": "unit-traitor-enforcer",
+    "statline": "traitor-enforcer-profile"
+  },
+  "chaos-space-marines-model-keywords-cultist-champion": {
+    "id": "chaos-space-marines-model-keywords-cultist-champion",
+    "title": "Cultist Champion",
+    "summary": "Cultist Champion only: Unit Champion.",
+    "full": "Cultist Champion only: Unit Champion.",
+    "glossary": "glossary-chaos-space-marines-model-keywords-cultist-champion",
+    "rule": "cultist-mob-keywords",
+    "units": [
+      "unit-cultist-mob"
+    ],
+    "datasheet": "unit-cultist-mob",
+    "statline": "cultist-mob-profile"
+  },
+  "chaos-space-marines-model-keywords-biker-champion": {
+    "id": "chaos-space-marines-model-keywords-biker-champion",
+    "title": "Biker Champion",
+    "summary": "Biker Champion only: Unit Champion.",
+    "full": "Biker Champion only: Unit Champion.",
+    "glossary": "glossary-chaos-space-marines-model-keywords-biker-champion",
+    "rule": "chaos-bikers-keywords",
+    "units": [
+      "unit-chaos-bikers"
+    ],
+    "datasheet": "unit-chaos-bikers",
+    "statline": "chaos-bikers-profile"
   },
   "chaos-space-marines-army-rule-dark-pacts": {
     "id": "chaos-space-marines-army-rule-dark-pacts",

@@ -8,7 +8,7 @@ const scope={window:{addEventListener(){}}};scope.window.window=scope.window;
 vm.runInNewContext(read('../scripts/roster-data.js'),scope);
 vm.runInNewContext(read('../scripts/roster-filter.js'),scope);
 const catalog=scope.window.WH_BOOK_ROSTER_CATALOG,semantics=scope.window.TYRANIDS_ROSTER_SEMANTICS,provider=read('../scripts/roster-filter.js');
-assert.equal(catalog.units.length,50);
+assert.equal(catalog.units.length,52);
 assert.equal(catalog.enhancements.length,34,'canonical Enhancement catalog must not retain legacy title duplicates');
 assert.equal(catalog.detachmentRules.length,10);
 assert.deepEqual(new Set(catalog.detachmentRules.map(rule=>rule.id)),new Set(Object.values(semantics.detachmentRuleIds)));

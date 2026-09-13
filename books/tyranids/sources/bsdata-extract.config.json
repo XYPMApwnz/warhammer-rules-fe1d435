@@ -82,6 +82,13 @@
       "removeAbilities": [
         "Protean Purpose"
       ],
+      "addAbilities": [
+        {
+          "id": "62c7-3cb5-45c-cc3b",
+          "title": "Harpooned",
+          "text": "When this unit declares a charge, if an enemy MONSTER or VEHICLE unit is within 12\" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:\n- This unit has +2 to charge rolls until the end of the phase.\n- This unit must end that charge move engaged with that MONSTER or VEHICLE unit."
+        }
+      ],
       "abilities": {
         "Harpoon Barbs": {
           "text": "Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds."
@@ -229,7 +236,7 @@
     "snapshot": "bsdata-tyranids-11e.json",
     "datasheets": "../content/tyranids-codex-datasheets.en.json",
     "points": "../content/tyranids-points.en.json",
-    "officialPoints": "official-mfm-v1.2.json"
+    "officialPoints": "official-mfm-v1.3.json"
   },
   "filters": {
     "excludeNames": [
@@ -238,8 +245,6 @@
       "Order of Battle",
       "Barbed Hierodule",
       "Dimachaeron",
-      "Harridan",
-      "Hierophant",
       "Malanthrope",
       "Scythed Hierodule",
       "Sky-slasher Swarms"

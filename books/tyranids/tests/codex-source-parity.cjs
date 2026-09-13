@@ -3,7 +3,7 @@ const path=require('node:path');
 
 const root=path.resolve(__dirname,'..');
 const datasheetLayer=require(path.join(root,'content','tyranids-codex-datasheets.en.json'));
-const datasheets=[...datasheetLayer.datasheets,...(datasheetLayer.imperialArmour||[]),...(datasheetLayer.legends||[])];
+const datasheets=datasheetLayer.datasheets;
 const pack=require(path.join(root,'content','tyranids-faction-pack.en.json'));
 const points=require(path.join(root,'content','tyranids-points.en.json'));
 const wargear=require(path.join(root,'content','tyranids-codex-wargear.en.json'));

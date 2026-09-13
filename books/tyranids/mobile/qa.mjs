@@ -12,7 +12,7 @@ const rosterScope={console,URL,URLSearchParams};rosterScope.window=rosterScope;r
 vm.runInNewContext(rosterContext,rosterScope,{filename:'books/shared/roster-context.js'});
 vm.runInNewContext(rosterData,rosterScope,{filename:'books/tyranids/scripts/roster-data.js'});
 const rosterApi=rosterScope.WHArmyRosterContext,rosterCatalog=rosterScope.WH_BOOK_ROSTER_CATALOG;
-assert.equal(files.length,63,'legacy routes must contain start, updates, army rules, 10 detachments and 50 datasheets');
+assert.equal(files.length,65,'legacy routes must contain start, updates, army rules, 10 detachments and 52 datasheets');
 for(const file of files){
   const html=await readFile(new URL(file,root),'utf8');
   assert.match(html,/data-canonical-reader="\.\.\/reader\.html"/,`${file}: canonical reader target is absent`);

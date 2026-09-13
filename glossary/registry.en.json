@@ -104993,6 +104993,37 @@
       ],
       "mentions": []
     },
+    "tyranids-ability-apex-beast": {
+      "id": "tyranids-ability-apex-beast",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Apex-beast"
+      },
+      "summary": {
+        "en": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll."
+      },
+      "definition": {
+        "en": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hierophant"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hierophant",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
     "tyranids-ability-bio-minefield": {
       "id": "tyranids-ability-bio-minefield",
       "kind": "datasheet-ability",
@@ -105210,6 +105241,68 @@
       ],
       "mentions": []
     },
+    "tyranids-ability-damaged-1-10-wounds-remaining": {
+      "id": "tyranids-ability-damaged-1-10-wounds-remaining",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Damaged: 1-10 wounds remaining"
+      },
+      "summary": {
+        "en": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "definition": {
+        "en": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-harridan"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-harridan",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-ability-damaged-1-10-wounds-remaining-2": {
+      "id": "tyranids-ability-damaged-1-10-wounds-remaining-2",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Damaged: 1-10 wounds remaining"
+      },
+      "summary": {
+        "en": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "definition": {
+        "en": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hierophant"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hierophant",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
     "tyranids-ability-damaged-1-4-wounds-remaining": {
       "id": "tyranids-ability-damaged-1-4-wounds-remaining",
       "kind": "datasheet-ability",
@@ -105266,6 +105359,37 @@
         "locator": "unit-tervigon"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-tervigon",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-ability-deadly-demise-2d6": {
+      "id": "tyranids-ability-deadly-demise-2d6",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Deadly Demise 2D6"
+      },
+      "summary": {
+        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
+      },
+      "definition": {
+        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-harridan"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-harridan",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -105700,6 +105824,37 @@
         "locator": "unit-venomthropes"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-venomthropes",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-ability-frenzied-metabolism": {
+      "id": "tyranids-ability-frenzied-metabolism",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Frenzied Metabolism"
+      },
+      "summary": {
+        "en": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds."
+      },
+      "definition": {
+        "en": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-harridan"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-harridan",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -106692,6 +106847,37 @@
         "locator": "unit-harpy"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-harpy",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-ability-stalking-forward": {
+      "id": "tyranids-ability-stalking-forward",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Stalking Forward"
+      },
+      "summary": {
+        "en": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there."
+      },
+      "definition": {
+        "en": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hierophant"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hierophant",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -110496,6 +110682,47 @@
       ],
       "mentions": []
     },
+    "tyranids-weapon-bio-plasma-torrent": {
+      "id": "tyranids-weapon-bio-plasma-torrent",
+      "kind": "weapon",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Bio-plasma torrent"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 3D6 · BS N/A · S 7 · AP -2 · D 1 · Assault, Torrent"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 3D6 · BS N/A · S 7 · AP -2 · D 1 · Assault, Torrent"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "3D6",
+          "BS": "N/A",
+          "S": "7",
+          "AP": "-2",
+          "D": "1",
+          "Abilities": "Assault, Torrent"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hierophant"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hierophant",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
     "tyranids-weapon-bio-plasmic-cannon": {
       "id": "tyranids-weapon-bio-plasmic-cannon",
       "kind": "weapon",
@@ -111383,6 +111610,47 @@
       ],
       "mentions": []
     },
+    "tyranids-weapon-dire-bio-cannon": {
+      "id": "tyranids-weapon-dire-bio-cannon",
+      "kind": "weapon",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Dire bio-cannon"
+      },
+      "summary": {
+        "en": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -3 · D 3 · Blast"
+      },
+      "definition": {
+        "en": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -3 · D 3 · Blast"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "48\"",
+          "A": "D6+6",
+          "BS": "3+",
+          "S": "10",
+          "AP": "-3",
+          "D": "3",
+          "Abilities": "Blast"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-harridan"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-harridan",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
     "tyranids-weapon-distensible-jaw": {
       "id": "tyranids-weapon-distensible-jaw",
       "kind": "weapon",
@@ -111669,6 +111937,46 @@
       ],
       "mentions": []
     },
+    "tyranids-weapon-gargantuan-scything-talons": {
+      "id": "tyranids-weapon-gargantuan-scything-talons",
+      "kind": "weapon",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Gargantuan scything talons"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 3+ · S 14 · AP -2 · D D6"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 3+ · S 14 · AP -2 · D D6"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "3+",
+          "S": "14",
+          "AP": "-2",
+          "D": "D6"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-harridan"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-harridan",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
     "tyranids-weapon-genestealer-claws-and-talons": {
       "id": "tyranids-weapon-genestealer-claws-and-talons",
       "kind": "weapon",
@@ -111948,6 +112256,47 @@
         "locator": "unit-tyranid-prime-with-lash-whip"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-tyranid-prime-with-lash-whip",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-weapon-lashwhip-pods": {
+      "id": "tyranids-weapon-lashwhip-pods",
+      "kind": "weapon",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Lashwhip pods"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 10 · WS 3+ · S 5 · AP -1 · D 1 · Extra Attacks"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 10 · WS 3+ · S 5 · AP -1 · D 1 · Extra Attacks"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "10",
+          "WS": "3+",
+          "S": "5",
+          "AP": "-1",
+          "D": "1",
+          "Abilities": "Extra Attacks"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hierophant"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hierophant",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -114261,6 +114610,46 @@
         "locator": "unit-hive-crone"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-hive-crone",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-weapon-titanic-scything-talons": {
+      "id": "tyranids-weapon-titanic-scything-talons",
+      "kind": "weapon",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Titanic scything talons"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 8 · WS 3+ · S 20 · AP -2 · D D6+1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 8 · WS 3+ · S 20 · AP -2 · D D6+1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "8",
+          "WS": "3+",
+          "S": "20",
+          "AP": "-2",
+          "D": "D6+1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hierophant"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hierophant",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"

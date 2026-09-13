@@ -829,7 +829,9 @@ window.DG_TERMS={
       "unit-tyrannofex",
       "unit-mucolid-spores",
       "unit-ripper-swarms",
-      "unit-spore-mines"
+      "unit-spore-mines",
+      "unit-harridan",
+      "unit-hierophant"
     ],
     "datasheet": "unit-gargoyles",
     "statline": "gargoyles-profile"
@@ -3334,6 +3336,151 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-spore-mines",
     "statline": "spore-mines-profile"
+  },
+  "tyranids-ability-damaged-1-10-wounds-remaining": {
+    "id": "tyranids-ability-damaged-1-10-wounds-remaining",
+    "title": "Damaged: 1-10 wounds remaining",
+    "summary": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "full": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-tyranids-ability-damaged-1-10-wounds-remaining",
+    "rule": "unit-harridan",
+    "units": [
+      "unit-harridan"
+    ],
+    "datasheet": "unit-harridan",
+    "statline": "harridan-profile"
+  },
+  "tyranids-ability-frenzied-metabolism": {
+    "id": "tyranids-ability-frenzied-metabolism",
+    "title": "Frenzied Metabolism",
+    "summary": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds.",
+    "full": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds.",
+    "glossary": "glossary-tyranids-ability-frenzied-metabolism",
+    "rule": "unit-harridan",
+    "units": [
+      "unit-harridan"
+    ],
+    "datasheet": "unit-harridan",
+    "statline": "harridan-profile"
+  },
+  "tyranids-ability-deadly-demise-2d6": {
+    "id": "tyranids-ability-deadly-demise-2d6",
+    "title": "Deadly Demise 2D6",
+    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+    "glossary": "glossary-tyranids-ability-deadly-demise-2d6",
+    "rule": "unit-harridan",
+    "units": [
+      "unit-harridan",
+      "unit-hierophant"
+    ],
+    "datasheet": "unit-harridan",
+    "statline": "harridan-profile"
+  },
+  "tyranids-weapon-dire-bio-cannon": {
+    "id": "tyranids-weapon-dire-bio-cannon",
+    "title": "Dire bio-cannon",
+    "summary": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -3 · D 3 · Blast",
+    "full": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -3 · D 3 · Blast",
+    "glossary": "glossary-tyranids-weapon-dire-bio-cannon",
+    "rule": "unit-harridan",
+    "units": [
+      "unit-harridan",
+      "unit-hierophant"
+    ],
+    "datasheet": "unit-harridan",
+    "statline": "harridan-profile"
+  },
+  "tyranids-weapon-gargantuan-scything-talons": {
+    "id": "tyranids-weapon-gargantuan-scything-talons",
+    "title": "Gargantuan scything talons",
+    "summary": "Melee · Melee · A 6 · WS 3+ · S 14 · AP -2 · D D6",
+    "full": "Melee · Melee · A 6 · WS 3+ · S 14 · AP -2 · D D6",
+    "glossary": "glossary-tyranids-weapon-gargantuan-scything-talons",
+    "rule": "unit-harridan",
+    "units": [
+      "unit-harridan"
+    ],
+    "datasheet": "unit-harridan",
+    "statline": "harridan-profile"
+  },
+  "tyranids-ability-damaged-1-10-wounds-remaining-2": {
+    "id": "tyranids-ability-damaged-1-10-wounds-remaining-2",
+    "title": "Damaged: 1-10 wounds remaining",
+    "summary": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+    "full": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-tyranids-ability-damaged-1-10-wounds-remaining-2",
+    "rule": "unit-hierophant",
+    "units": [
+      "unit-hierophant"
+    ],
+    "datasheet": "unit-hierophant",
+    "statline": "hierophant-profile"
+  },
+  "tyranids-ability-apex-beast": {
+    "id": "tyranids-ability-apex-beast",
+    "title": "Apex-beast",
+    "summary": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll.",
+    "full": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll.",
+    "glossary": "glossary-tyranids-ability-apex-beast",
+    "rule": "unit-hierophant",
+    "units": [
+      "unit-hierophant"
+    ],
+    "datasheet": "unit-hierophant",
+    "statline": "hierophant-profile"
+  },
+  "tyranids-ability-stalking-forward": {
+    "id": "tyranids-ability-stalking-forward",
+    "title": "Stalking Forward",
+    "summary": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there.",
+    "full": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there.",
+    "glossary": "glossary-tyranids-ability-stalking-forward",
+    "rule": "unit-hierophant",
+    "units": [
+      "unit-hierophant"
+    ],
+    "datasheet": "unit-hierophant",
+    "statline": "hierophant-profile"
+  },
+  "tyranids-weapon-bio-plasma-torrent": {
+    "id": "tyranids-weapon-bio-plasma-torrent",
+    "title": "Bio-plasma torrent",
+    "summary": "Ranged · 12\" · A 3D6 · BS N/A · S 7 · AP -2 · D 1 · Assault, Torrent",
+    "full": "Ranged · 12\" · A 3D6 · BS N/A · S 7 · AP -2 · D 1 · Assault, Torrent",
+    "glossary": "glossary-tyranids-weapon-bio-plasma-torrent",
+    "rule": "unit-hierophant",
+    "units": [
+      "unit-hierophant"
+    ],
+    "datasheet": "unit-hierophant",
+    "statline": "hierophant-profile"
+  },
+  "tyranids-weapon-lashwhip-pods": {
+    "id": "tyranids-weapon-lashwhip-pods",
+    "title": "Lashwhip pods",
+    "summary": "Melee · Melee · A 10 · WS 3+ · S 5 · AP -1 · D 1 · Extra Attacks",
+    "full": "Melee · Melee · A 10 · WS 3+ · S 5 · AP -1 · D 1 · Extra Attacks",
+    "glossary": "glossary-tyranids-weapon-lashwhip-pods",
+    "rule": "unit-hierophant",
+    "units": [
+      "unit-hierophant"
+    ],
+    "datasheet": "unit-hierophant",
+    "statline": "hierophant-profile"
+  },
+  "tyranids-weapon-titanic-scything-talons": {
+    "id": "tyranids-weapon-titanic-scything-talons",
+    "title": "Titanic scything talons",
+    "summary": "Melee · Melee · A 8 · WS 3+ · S 20 · AP -2 · D D6+1",
+    "full": "Melee · Melee · A 8 · WS 3+ · S 20 · AP -2 · D D6+1",
+    "glossary": "glossary-tyranids-weapon-titanic-scything-talons",
+    "rule": "unit-hierophant",
+    "units": [
+      "unit-hierophant"
+    ],
+    "datasheet": "unit-hierophant",
+    "statline": "hierophant-profile"
   },
   "tyranids-enhancement-encircling-horrors-2": {
     "id": "tyranids-enhancement-encircling-horrors-2",

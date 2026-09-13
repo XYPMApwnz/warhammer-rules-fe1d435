@@ -1,12 +1,12 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 3223,
+    "terms": 3234,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 223,
+    "aliasCandidates": 224,
     "duplicateCandidates": 114,
     "keywordCandidates": 16
   },
@@ -2911,6 +2911,14 @@
       "termIds": [
         "tyranids-ability-floating-death",
         "tyranids-ability-floating-death-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-10-wounds-remaining",
+      "termIds": [
+        "tyranids-ability-damaged-1-10-wounds-remaining",
+        "tyranids-ability-damaged-1-10-wounds-remaining-2"
       ],
       "status": "review-required"
     },

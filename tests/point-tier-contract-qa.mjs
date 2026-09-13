@@ -35,9 +35,9 @@ for(const [book,records] of Object.entries(rawCatalog))for(const [key,unit] of O
   assert.equal(published.points.filter(row=>tiers.structuredTierMatches(row,modelLimit,1)).length,0,`${book} ${unit.id}: impossible model quantity must resolve zero tiers`);
 }
 
-assert.equal(multiUnits.length,280,'multi-tier unit inventory');
-assert.equal(tierCount,681,'multi-tier row inventory');
-assert.equal(structuredBefore,245,'pre-normalization structured unit inventory');
+assert.equal(multiUnits.length,282,'multi-tier unit inventory');
+assert.equal(tierCount,685,'multi-tier row inventory');
+assert.equal(structuredBefore,247,'pre-normalization structured unit inventory');
 assert.deepEqual(plain(Object.fromEntries(normalizedByBook)),{
   'death guard':{units:17,tiers:38},
   'adeptus mechanicus':{units:18,tiers:52},
@@ -94,4 +94,4 @@ console.log('MISSING_STRUCTURED_BOUND_MUTATION: KILLED');
 console.log('WRONG_MODEL_BOUND_MUTATION: KILLED');
 console.log('WRONG_COPY_BOUND_MUTATION: KILLED');
 console.log('LABEL_STRUCTURED_DISAGREEMENT_MUTATION: KILLED');
-console.log('Point-tier contract QA: 280/280 units, 681/681 tiers PASS; 245 -> 280 structured units; DG 17/38 and AM 18/52 normalized.');
+console.log('Point-tier contract QA: 282/282 units, 685/685 tiers PASS; 247 -> 282 structured units; DG 17/38 and AM 18/52 normalized.');

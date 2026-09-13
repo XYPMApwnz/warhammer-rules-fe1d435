@@ -8,9 +8,9 @@
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Tyranids.json",
     "snapshotSha256": "41CB0268C69B36B81D4F8D5956F04A2E946866E7CF7DA65F2B5B1ABD4E43CD34",
     "officialMfm": {
-      "version": "v1.2",
+      "version": "v1.3",
       "url": "https://mfm.warhammer-community.com/en/tyranids",
-      "verifiedAt": "2026-08-09"
+      "verifiedAt": "2026-08-27"
     }
   },
   "units": [
@@ -35,9 +35,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -67,9 +67,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -87,9 +87,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -113,9 +113,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -133,9 +133,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -188,9 +188,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -232,9 +232,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -252,9 +252,38 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
+      }
+    },
+    {
+      "id": "unit-harridan",
+      "title": "Harridan",
+      "status": "Current",
+      "sourceLayer": "imperial-armour",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 610,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 660,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.3",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -281,9 +310,38 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
+      }
+    },
+    {
+      "id": "unit-hierophant",
+      "title": "Hierophant",
+      "status": "Current",
+      "sourceLayer": "imperial-armour",
+      "points": [
+        {
+          "label": "1st unit · 1 model",
+          "value": 810,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 1 model",
+          "value": 910,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.3",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -301,9 +359,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -345,9 +403,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -365,9 +423,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -391,9 +449,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -420,9 +478,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -440,9 +498,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -489,9 +547,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -515,9 +573,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -541,9 +599,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -570,9 +628,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -590,9 +648,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -619,9 +677,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -648,9 +706,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -668,9 +726,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -688,9 +746,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -708,9 +766,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -796,9 +854,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -828,9 +886,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -857,9 +915,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -883,9 +941,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -903,9 +961,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -929,9 +987,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -949,9 +1007,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -969,9 +1027,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -989,9 +1047,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1009,9 +1067,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1029,9 +1087,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1049,9 +1107,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1075,9 +1133,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1101,9 +1159,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1130,9 +1188,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1222,9 +1280,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1263,9 +1321,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1283,9 +1341,9 @@
       ],
       "paidWargear": [],
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1324,9 +1382,9 @@
       "text": "VON RYAN’S LEAPERS unit only. This unit has -3\" detection range.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1337,9 +1395,9 @@
       "text": "NEUROLICTOR/LICTOR/VON RYAN’S LEAPERS unit only. In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, this unit can make a normal move of up to D3+3\".",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1350,9 +1408,9 @@
       "text": "Tyranids model only. While a friendly Harvester model is within 12\" of the bearer, when using the Feed the Swarm ability, that Harvester model can Regenerate one friendly Tyranids unit that is within 9\" instead of one within 6\".",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1363,9 +1421,9 @@
       "text": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer's unit have the Fights First ability.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1376,9 +1434,9 @@
       "text": "Tyranids model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer's unit. The first time the bearer's unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more Harvester units, until the end of battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer's unit.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1389,9 +1447,9 @@
       "text": "Tyranids model only (excluding Monster models). The bearer's unit can be regenerated up to twice per phase, instead of once.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1402,9 +1460,9 @@
       "text": "Tyranids Monster only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1415,9 +1473,9 @@
       "text": "Tyranids Monster only. Each time the bearer makes a melee attack that targets a Monster or Vehicle unit, add 1 to the Wound roll.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1428,9 +1486,9 @@
       "text": "Tyranids Monster only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1441,9 +1499,9 @@
       "text": "Tyranids Monster only. Add 3 to the bearer's Objective Control characteristic.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1454,9 +1512,9 @@
       "text": "Tyranids model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1467,9 +1525,9 @@
       "text": "Tyranids model only. After both players have deployed their armies, select up to three Tyranids units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1480,9 +1538,9 @@
       "text": "Tyranids model only. Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll, one Advance roll, one Charge roll or one saving throw made for the bearer",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1493,9 +1551,9 @@
       "text": "Tyranids model only. While a friendly Tyranids unit is within 9\" of the bearer, that unit is within Synapse Range of your army.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1505,12 +1563,12 @@
       "value": 15,
       "text": "Tyranids model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
       "profile": null,
+      "sourceId": "enhancement-synaptic-synergy",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
-      },
-      "sourceId": "enhancement-synaptic-synergy"
+        "verifiedAt": "2026-08-27"
+      }
     },
     {
       "id": "enhancement-tremor-senses",
@@ -1520,9 +1578,9 @@
       "text": "Tyranids model only. After both players have deployed their armies, select up to three friendly Tyranids units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1533,9 +1591,9 @@
       "text": "Trygon model only. The bearer gains the Synapse keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1546,9 +1604,9 @@
       "text": "Tyranids model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1559,9 +1617,9 @@
       "text": "Tyranids Psyker model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1572,9 +1630,9 @@
       "text": "Tyranids Synapse model only. Enemy units that arrive on the battlefield from Reserves cannot be set up with 12\" of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from Strategic Reserves, the bearer can use this enhancement. If it does, roll one D6: on a 4+, that enemy cannot arrive on the battlefield this turn.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1585,9 +1643,9 @@
       "text": "Tyranids Synapse model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of the attack.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1598,9 +1656,9 @@
       "text": "Tyranids Synapse model only. While an enemy unit is within 9\" of the bearer, worsen that unit's Leadership characteristic by 1.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1611,9 +1669,9 @@
       "text": "NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1637,9 +1695,9 @@
       "text": "Tyranids model only. Each time the bearer's unit makes a Pile In or Consolidation, models in this unit can move an additional 3\"",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1650,9 +1708,9 @@
       "text": "Tyranids model only. At the start of the first battle round, select up to three friendly Endless Multitude units within 9\" of the bearer. Until the end of the battle round, each time a ranged attack targets one of those units, models in that unit have the Benefit of Cover against that attack.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1663,9 +1721,9 @@
       "text": "Tyranids model only. Each time a model in the Bearer's unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1676,9 +1734,9 @@
       "text": "Tyranids model only. Add 2\" to the Move characteristic of models in the bearer's unit.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1689,9 +1747,9 @@
       "text": "VANGUARD INVADER model only. This unit has Stealth.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1702,9 +1760,9 @@
       "text": "Tyranids model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+ that unit must make a Battle-shock test.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1715,9 +1773,9 @@
       "text": "TYRANIDS model only. After both players have deployed their armies, you can select up to three VANGUARD INVADER units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1728,9 +1786,9 @@
       "text": "Vanguard Invader model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and Wound roll.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1741,9 +1799,9 @@
       "text": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This model’s melee attacks:\n- Can re-roll wound rolls.\n- Have +1 AP.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     },
     {
@@ -1754,14 +1812,14 @@
       "text": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls.",
       "profile": null,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       }
     }
   ],
   "audit": {
-    "units": 50,
+    "units": 52,
     "enhancements": 34
   },
   "detachments": [

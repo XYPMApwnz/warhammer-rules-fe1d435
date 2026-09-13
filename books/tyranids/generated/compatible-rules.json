@@ -1458,6 +1458,7 @@
         "state": "match"
       }
     ],
+    "unit-harridan": [],
     "unit-haruspex": [
       {
         "ruleId": "core-stratagem-command-re-roll",
@@ -1620,6 +1621,7 @@
         "state": "match"
       }
     ],
+    "unit-hierophant": [],
     "unit-hive-crone": [
       {
         "ruleId": "core-stratagem-command-re-roll",

@@ -8209,6 +8209,354 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponProfiles": [],
         "wargearAbilities": []
       }
+    },
+    {
+      "id": "unit-harridan",
+      "title": "Harridan",
+      "sourceBookId": "tyranids",
+      "sourceLayer": "imperial-armour",
+      "intrinsicKeywords": [
+        "Tyranids",
+        "Monster",
+        "Titanic",
+        "Fly",
+        "Transport",
+        "Great Devourer",
+        "Harridan",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      },
+      "gameSelections": {
+        "stats": {
+          "M": "14\"",
+          "T": "10",
+          "Sv": "3+",
+          "W": "30",
+          "Ld": "8+",
+          "OC": "0",
+          "Invulnerable": ""
+        },
+        "abilities": [
+          {
+            "id": "tyranids-ability-damaged-1-10-wounds-remaining",
+            "sectionId": "tyranids-ability-damaged-1-10-wounds-remaining",
+            "title": "Damaged: 1-10 wounds remaining",
+            "text": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-harridan"
+          },
+          {
+            "id": "tyranids-ability-frenzied-metabolism",
+            "sectionId": "tyranids-ability-frenzied-metabolism",
+            "title": "Frenzied Metabolism",
+            "text": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds.",
+            "sourceUnitId": "unit-harridan"
+          },
+          {
+            "id": "tyranids-ability-deadly-demise-2d6",
+            "sectionId": "tyranids-ability-deadly-demise-2d6",
+            "title": "Deadly Demise 2D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-harridan"
+          },
+          {
+            "id": "core-hover",
+            "sectionId": "core-hover",
+            "title": "Hover",
+            "text": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
+            "sourceUnitId": "unit-harridan"
+          },
+          {
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-harridan"
+          }
+        ],
+        "models": [
+          {
+            "id": "unit-harridan-model-harridan",
+            "title": "Harridan",
+            "aliases": [
+              "Harridan"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-harridan-selection-dire-bio-cannon",
+            "title": "Dire bio-cannon",
+            "aliases": [
+              "Dire bio-cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-harridan-profile-dire-bio-cannon-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-harridan-selection-gargantuan-scything-talons",
+            "title": "Gargantuan scything talons",
+            "aliases": [
+              "Gargantuan scything talons"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-harridan-profile-gargantuan-scything-talons-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [],
+        "weaponProfiles": [
+          {
+            "id": "unit-harridan-profile-dire-bio-cannon-ranged",
+            "title": "Dire bio-cannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6+6",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-harridan-selection-dire-bio-cannon"
+            ]
+          },
+          {
+            "id": "unit-harridan-profile-gargantuan-scything-talons-melee-2",
+            "title": "Gargantuan scything talons",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "3+",
+            "s": "14",
+            "ap": "-2",
+            "d": "D6",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-harridan-selection-gargantuan-scything-talons"
+            ]
+          }
+        ],
+        "wargearAbilities": []
+      }
+    },
+    {
+      "id": "unit-hierophant",
+      "title": "Hierophant",
+      "sourceBookId": "tyranids",
+      "sourceLayer": "imperial-armour",
+      "intrinsicKeywords": [
+        "Tyranids",
+        "Monster",
+        "Titanic",
+        "Towering",
+        "Transport",
+        "Great Devourer",
+        "Hierophant",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      },
+      "gameSelections": {
+        "stats": {
+          "M": "12\"",
+          "T": "14",
+          "Sv": "2+",
+          "W": "30",
+          "Ld": "8+",
+          "OC": "12",
+          "Invulnerable": "5+"
+        },
+        "abilities": [
+          {
+            "id": "tyranids-ability-damaged-1-10-wounds-remaining-2",
+            "sectionId": "tyranids-ability-damaged-1-10-wounds-remaining-2",
+            "title": "Damaged: 1-10 wounds remaining",
+            "text": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+            "sourceUnitId": "unit-hierophant"
+          },
+          {
+            "id": "tyranids-ability-apex-beast",
+            "sectionId": "tyranids-ability-apex-beast",
+            "title": "Apex-beast",
+            "text": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll.",
+            "sourceUnitId": "unit-hierophant"
+          },
+          {
+            "id": "tyranids-ability-stalking-forward",
+            "sectionId": "tyranids-ability-stalking-forward",
+            "title": "Stalking Forward",
+            "text": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there.",
+            "sourceUnitId": "unit-hierophant"
+          },
+          {
+            "id": "tyranids-ability-deadly-demise-2d6",
+            "sectionId": "tyranids-ability-deadly-demise-2d6",
+            "title": "Deadly Demise 2D6",
+            "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+            "sourceUnitId": "unit-hierophant"
+          },
+          {
+            "id": "tyranids-ability-synapse",
+            "sectionId": "tyranids-ability-synapse",
+            "title": "Synapse",
+            "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "sourceUnitId": "unit-hierophant"
+          }
+        ],
+        "models": [
+          {
+            "id": "unit-hierophant-model-hierophant",
+            "title": "Hierophant",
+            "aliases": [
+              "Hierophant"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-hierophant-selection-bio-plasma-torrent",
+            "title": "Bio-plasma torrent",
+            "aliases": [
+              "Bio-plasma torrent"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-hierophant-profile-bio-plasma-torrent-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-hierophant-selection-dire-bio-cannon",
+            "title": "Dire bio-cannon",
+            "aliases": [
+              "Dire bio-cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-hierophant-profile-dire-bio-cannon-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-hierophant-selection-lashwhip-pods",
+            "title": "Lashwhip pods",
+            "aliases": [
+              "Lashwhip pods"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-hierophant-profile-lashwhip-pods-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-hierophant-selection-titanic-scything-talons",
+            "title": "Titanic scything talons",
+            "aliases": [
+              "Titanic scything talons"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-hierophant-profile-titanic-scything-talons-melee-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [],
+        "weaponProfiles": [
+          {
+            "id": "unit-hierophant-profile-bio-plasma-torrent-ranged",
+            "title": "Bio-plasma torrent",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "3D6",
+            "skill": "N/A",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Assault, Torrent",
+            "sourceSelectionIds": [
+              "unit-hierophant-selection-bio-plasma-torrent"
+            ]
+          },
+          {
+            "id": "unit-hierophant-profile-dire-bio-cannon-ranged-2",
+            "title": "Dire bio-cannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6+6",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-hierophant-selection-dire-bio-cannon"
+            ]
+          },
+          {
+            "id": "unit-hierophant-profile-lashwhip-pods-melee-3",
+            "title": "Lashwhip pods",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "10",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Extra Attacks",
+            "sourceSelectionIds": [
+              "unit-hierophant-selection-lashwhip-pods"
+            ]
+          },
+          {
+            "id": "unit-hierophant-profile-titanic-scything-talons-melee-4",
+            "title": "Titanic scything talons",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "8",
+            "skill": "3+",
+            "s": "20",
+            "ap": "-2",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-hierophant-selection-titanic-scything-talons"
+            ]
+          }
+        ],
+        "wargearAbilities": []
+      }
     }
   ],
   "detachments": [
@@ -8424,9 +8772,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "ambush-predators",
       "sourceBookId": "tyranids",
@@ -8450,9 +8798,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "ambush-predators",
       "sourceBookId": "tyranids",
@@ -8473,9 +8821,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "assimilation-swarm",
       "sourceBookId": "tyranids",
@@ -8487,9 +8835,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "assimilation-swarm",
       "sourceBookId": "tyranids",
@@ -8501,9 +8849,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "TYRANIDS model only (excluding MONSTER models). The bearer’s unit can be regenerated up to twice per phase, instead of once.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "assimilation-swarm",
       "sourceBookId": "tyranids",
@@ -8515,9 +8863,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "TYRANIDS MONSTER model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "crusher-stampede",
       "sourceBookId": "tyranids",
@@ -8529,9 +8877,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "crusher-stampede",
       "sourceBookId": "tyranids",
@@ -8543,9 +8891,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "text": "TYRANIDS MONSTER model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "crusher-stampede",
       "sourceBookId": "tyranids",
@@ -8557,9 +8905,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "TYRANIDS MONSTER model only. Add 3 to the bearer’s Objective Control characteristic.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "crusher-stampede",
       "sourceBookId": "tyranids",
@@ -8571,9 +8919,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "TYRANIDS model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "invasion-fleet",
       "sourceBookId": "tyranids",
@@ -8585,9 +8933,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "text": "TYRANIDS model only. After both players have deployed their armies, select up to three TYRANIDS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "invasion-fleet",
       "sourceBookId": "tyranids",
@@ -8599,9 +8947,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "TYRANIDS model only. Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll, one Advance roll, one Charge roll or one saving throw made for the bearer.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "invasion-fleet",
       "sourceBookId": "tyranids",
@@ -8613,9 +8961,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "TYRANIDS model only. While a friendly TYRANIDS unit is within 9\" of the bearer, that unit is within Synapse Range of your army.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "invasion-fleet",
       "sourceBookId": "tyranids",
@@ -8638,9 +8986,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceId": "enhancement-synaptic-synergy",
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "subterranean-assault",
       "sourceBookId": "tyranids",
@@ -8662,9 +9010,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "subterranean-assault",
       "sourceBookId": "tyranids",
@@ -8686,9 +9034,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "subterranean-assault",
       "sourceBookId": "tyranids",
@@ -8710,9 +9058,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "subterranean-assault",
       "sourceBookId": "tyranids",
@@ -8724,9 +9072,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "text": "TYRANIDS PSYKER model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "synaptic-nexus",
       "sourceBookId": "tyranids",
@@ -8747,9 +9095,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "TYRANIDS SYNAPSE model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "synaptic-nexus",
       "sourceBookId": "tyranids",
@@ -8782,9 +9130,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "talons-of-the-norn-queen",
       "sourceBookId": "tyranids",
@@ -8822,9 +9170,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "TYRANIDS model only. Each time the bearer’s unit Piles In or Consolidates, models in this unit can move an additional 3\".",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "unending-swarm",
       "sourceBookId": "tyranids",
@@ -8836,9 +9184,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "text": "TYRANIDS model only. At the start of the first battle round, select up to three friendly ENDLESS MULTITUDE units within 9\" of the bearer. Until the end of the battle round, each time a ranged attack targets one of those units, models in that unit have the Benefit of Cover against that attack.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "unending-swarm",
       "sourceBookId": "tyranids",
@@ -8850,9 +9198,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "text": "TYRANIDS model only. Each time a model in the bearer’s unit makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "unending-swarm",
       "sourceBookId": "tyranids",
@@ -8864,9 +9212,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "TYRANIDS model only. Add 2\" to the Move characteristic of models in the bearer’s unit.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "unending-swarm",
       "sourceBookId": "tyranids",
@@ -8878,9 +9226,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "VANGUARD INVADER model only. This unit has Stealth.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "vanguard-onslaught",
       "sourceBookId": "tyranids",
@@ -8892,9 +9240,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "text": "TYRANIDS model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "vanguard-onslaught",
       "sourceBookId": "tyranids",
@@ -8906,9 +9254,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "TYRANIDS model only. After both players have deployed their armies, you can select up to three VANGUARD INVADER units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "vanguard-onslaught",
       "sourceBookId": "tyranids",
@@ -8920,9 +9268,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "text": "VANGUARD INVADER model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "vanguard-onslaught",
       "sourceBookId": "tyranids",
@@ -8944,9 +9292,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 30,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "warrior-bioform-onslaught",
       "sourceBookId": "tyranids",
@@ -8968,9 +9316,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "warrior-bioform-onslaught",
       "sourceBookId": "tyranids",

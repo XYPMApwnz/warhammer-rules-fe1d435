@@ -11075,9 +11075,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "advanced-acquisition-cadre",
       "sourceBookId": "tau-empire",
@@ -11101,9 +11101,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ],
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "advanced-acquisition-cadre",
       "sourceBookId": "tau-empire",
@@ -11125,9 +11125,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "auxiliary-cadre",
       "sourceBookId": "tau-empire",
@@ -11149,9 +11149,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "auxiliary-cadre",
       "sourceBookId": "tau-empire",
@@ -11173,9 +11173,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "experimental-prototype-cadre",
       "sourceBookId": "tau-empire",
@@ -11197,9 +11197,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 20,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "experimental-prototype-cadre",
       "sourceBookId": "tau-empire",
@@ -11221,9 +11221,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "tags": [],
       "value": 15,
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "experimental-prototype-cadre",
       "sourceBookId": "tau-empire",
@@ -11235,9 +11235,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of from the third.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "kauyon",
       "sourceBookId": "tau-empire",
@@ -11249,9 +11249,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "T’AU EMPIRE model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "kauyon",
       "sourceBookId": "tau-empire",
@@ -11263,9 +11263,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "T’AU EMPIRE model only. After both players have deployed their armies, select up to three T’AU EMPIRE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "kauyon",
       "sourceBookId": "tau-empire",
@@ -11277,9 +11277,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "kauyon",
       "sourceBookId": "tau-empire",
@@ -11291,9 +11291,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "kroot-hunting-pack",
       "sourceBookId": "tau-empire",
@@ -11305,9 +11305,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "text": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "kroot-hunting-pack",
       "sourceBookId": "tau-empire",
@@ -11319,9 +11319,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "kroot-hunting-pack",
       "sourceBookId": "tau-empire",
@@ -11333,9 +11333,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "text": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "kroot-hunting-pack",
       "sourceBookId": "tau-empire",
@@ -11347,9 +11347,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [SUSTAINED HITS 1] ability while targeting their Spotted unit.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "montka",
       "sourceBookId": "tau-empire",
@@ -11361,9 +11361,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Killing Blow Detachment rule applies to that unit during the fourth battle round as well.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "montka",
       "sourceBookId": "tau-empire",
@@ -11375,9 +11375,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "T’AU EMPIRE model only. At the start of the first battle round, before the first turn begins, select one objective marker on the battlefield. While a friendly T’AU EMPIRE model is within range of that objective marker and the bearer is on the battlefield, add 1 to that friendly model’s Objective Control characteristic.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "montka",
       "sourceBookId": "tau-empire",
@@ -11403,9 +11403,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "retaliation-cadre",
       "sourceBookId": "tau-empire",
@@ -11417,9 +11417,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "retaliation-cadre",
       "sourceBookId": "tau-empire",
@@ -11431,9 +11431,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "text": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "retaliation-cadre",
       "sourceBookId": "tau-empire",
@@ -11445,9 +11445,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "text": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
       "pointsSource": {
-        "label": "Official MFM v1.2",
+        "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-27"
       },
       "detachmentId": "retaliation-cadre",
       "sourceBookId": "tau-empire",

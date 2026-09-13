@@ -3,8 +3,9 @@ const path=require('node:path');
 
 const root=path.resolve(__dirname,'..');
 const outputPath=path.join(root,'content','tau-empire-codex-parity.en.json');
-const points=require(path.join(root,'content','tau-empire-points.en.json'));
-const factionPack=require(path.join(root,'content','tau-empire-faction-pack.en.json'));
+const pointsPath=path.join(root,'content','tau-empire-points.en.json');
+const factionPackPath=path.join(root,'content','tau-empire-faction-pack.en.json');
+let factionPack;
 const sourceUrl='https://wahapedia.ru/wh40k11ed/factions/t-au-empire/';
 const detachments=[
   {id:'kauyon',title:'Kauyon',rules:[['Patient Hunter','Patient-Hunter']]},
@@ -34,7 +35,12 @@ async function main(){
     console.log(`Codex parity frozen source verified: ${verified.artifacts.length} artifact, ${verified.status}`);
     return;
   }
-  const session=contract.createCaptureSession({sourceId:'tau-codex-parity',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/tau-empire/tools/extract-codex-parity.cjs',notes:'Candidate only; acceptance requires semantic review.'});
+  const session=contract.createCaptureSession({sourceId:'tau-codex-parity',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/tau-empire/tools/extract-codex-parity.cjs',localInputs:[
+    {path:path.relative(path.resolve(root,'../..'),pointsPath),kind:'generated-repository-input',owner:'books/tau-empire/sources/official-mfm-v1.3.json'},
+    {path:path.relative(path.resolve(root,'../..'),factionPackPath),kind:'generated-repository-input',owner:'books/tau-empire/sources/source-manifest.json#faction-pack-v1.1'}
+  ],notes:'Candidate only; acceptance requires semantic review.'});
+  const points=JSON.parse(fs.readFileSync(pointsPath,'utf8'));
+  factionPack=JSON.parse(fs.readFileSync(factionPackPath,'utf8'));
   const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const page=await browser.newPage();

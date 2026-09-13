@@ -3,8 +3,7 @@ const path=require('node:path');
 
 const root=path.resolve(__dirname,'..');
 const outputPath=path.join(root,'content','tau-empire-codex-wargear.en.json');
-const datasheetLayer=require(path.join(root,'content','tau-empire-codex-datasheets.en.json'));
-const units=[...datasheetLayer.datasheets,...datasheetLayer.imperialArmour,...datasheetLayer.legends];
+const datasheetsPath=path.join(root,'content','tau-empire-codex-datasheets.en.json');
 const sourceUrl='https://wahapedia.ru/wh40k11ed/factions/t-au-empire/';
 const clean=value=>String(value||'').replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ').replace(/\n[ \t]+/g,'\n').trim();
 const key=value=>clean(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,' ').trim();
@@ -17,7 +16,11 @@ async function main(){
     console.log(`Codex Wargear frozen source verified: ${verified.artifacts.length} artifact, ${verified.status}`);
     return;
   }
-  const session=contract.createCaptureSession({sourceId:'tau-codex-wargear',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/tau-empire/tools/extract-wargear.cjs',notes:'Candidate only; acceptance requires semantic review.'});
+  const session=contract.createCaptureSession({sourceId:'tau-codex-wargear',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/tau-empire/tools/extract-wargear.cjs',localInputs:[
+    {path:path.relative(path.resolve(root,'../..'),datasheetsPath),kind:'generated-repository-input',owner:'books/tau-empire/sources/bsdata-extract.config.json'}
+  ],notes:'Candidate only; acceptance requires semantic review.'});
+  const datasheetLayer=JSON.parse(fs.readFileSync(datasheetsPath,'utf8'));
+  const units=[...datasheetLayer.datasheets,...datasheetLayer.imperialArmour,...datasheetLayer.legends];
   const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const indexPage=await browser.newPage();

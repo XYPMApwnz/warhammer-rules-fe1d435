@@ -5,8 +5,8 @@ const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const outputPath=path.join(root,'sources','official-mfm-v1.3.json');
 const manifestPath=path.join(root,'sources','source-manifest.json');
-const datasheets=require(path.join(root,'content','chaos-space-marines-codex-datasheets.en.json'));
-const currentUnits=datasheets.datasheets;
+const datasheetsPath=path.join(root,'content','chaos-space-marines-codex-datasheets.en.json');
+let currentUnits=[];
 const sourceUrl='https://mfm.warhammer-community.com/en/chaos-space-marines';
 const sourceUpdatedAt='2026-07-22';
 const replaceDatasheetPoints=new Set(['Accursed Cultists','Chosen','Obliterators','Possessed','Raptors','Red Corsairs Raiders','Warp Talons']);
@@ -138,7 +138,11 @@ async function main(){
     console.log(`CSM MFM frozen source verified: ${verified.artifacts.length} artifact, ${verified.status}`);
     return;
   }
-  const session=contract.createCaptureSession({sourceId:'csm-mfm',authority:'official',sourceType:'warhammer-community-web-app',candidateDir:mode.candidateDir,extractorPath:'books/chaos-space-marines/tools/extract-mfm.cjs',notes:'Candidate only; acceptance requires semantic review.'});
+  const session=contract.createCaptureSession({sourceId:'csm-mfm',authority:'official',sourceType:'warhammer-community-web-app',candidateDir:mode.candidateDir,extractorPath:'books/chaos-space-marines/tools/extract-mfm.cjs',localInputs:[
+    {path:path.relative(path.resolve(root,'../..'),datasheetsPath),kind:'generated-repository-input',owner:'books/chaos-space-marines/sources/bsdata-extract.config.json'},
+    {path:path.relative(path.resolve(root,'../..'),manifestPath),kind:'config-input',owner:'books/chaos-space-marines/sources/source-manifest.json'}
+  ],notes:'Candidate only; acceptance requires semantic review.'});
+  currentUnits=JSON.parse(fs.readFileSync(datasheetsPath,'utf8')).datasheets;
   const capturedAt=new Date().toISOString().slice(0,10);
   const capture=buildCapture(await readLive(session),capturedAt);
   const manifest=manifestFor(capture,JSON.parse(fs.readFileSync(manifestPath,'utf8')));

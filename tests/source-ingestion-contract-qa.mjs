@@ -120,6 +120,19 @@ for(const input of ['datasheetsPath','packPath','overlayPath','relatedPath','mec
 assert(smCodexDetails.indexOf("path:path.relative(path.resolve(root,'../..'),mechanicusRelatedPath)",smSessionIndex)>smSessionIndex,'Space Marines codex-details must authenticate mechanicusRelatedPath');
 assert(smCodexDetails.indexOf('coreRuleMap(),details=[]',smSessionIndex)>smCodexDetails.indexOf("path:path.relative(path.resolve(root,'../..'),mechanicusRelatedPath)",smSessionIndex),'Space Marines codex-details must authenticate mechanicusRelatedPath before using it');
 assert(smCodexDetails.includes("mechanicusConfig.relatedRulesOwnership?.mode!=='authoritative-runtime-source'"),'Space Marines codex-details must verify the declared owner of its cross-book generated input');
+for(const [tool,inputs] of [
+  ['books/chaos-space-marines/tools/extract-mfm.cjs',['datasheetsPath','manifestPath']],
+  ['books/tau-empire/tools/extract-mfm.cjs',['datasheetsPath']],
+  ['books/tau-empire/tools/extract-wargear.cjs',['datasheetsPath']],
+  ['books/tau-empire/tools/extract-codex-parity.cjs',['pointsPath','factionPackPath']]
+]){
+  const source=read(tool),sessionIndex=source.indexOf('contract.createCaptureSession({sourceId:');
+  for(const input of inputs){
+    const declaredIndex=source.indexOf(`path:path.relative(path.resolve(root,'../..'),${input})`,sessionIndex);
+    assert(declaredIndex>sessionIndex,`${tool}: ${input} is not declared as an authenticated normalization input`);
+    assert(source.indexOf(`fs.readFileSync(${input}`,sessionIndex)>declaredIndex,`${tool}: ${input} is read before authentication`);
+  }
+}
 const ecIndex=read('books/emperors-children/tools/build-bsdata-enhancement-index.mjs');
 assert(ecIndex.indexOf('verifyBsdataSource({checkout')<ecIndex.indexOf('const raw=fs.readFileSync(input)'),'Emperor\'s Children index must authenticate its ambient BSData input before reading it');
 

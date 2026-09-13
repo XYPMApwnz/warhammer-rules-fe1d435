@@ -3,10 +3,11 @@ import {readdir,readFile,stat} from 'node:fs/promises';
 import vm from 'node:vm';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {assertOwnedMobileRouteInventory} from '../../../tests/helpers/mobile-route-inventory.mjs';
+import {assertOwnedMobileRouteInventory,assertOwnedMobileStubOutputs} from '../../../tests/helpers/mobile-route-inventory.mjs';
 
 const root=new URL('./',import.meta.url);
 assertOwnedMobileRouteInventory({root:path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..'),bookId:'tyranids'});
+await assertOwnedMobileStubOutputs({root:path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..'),bookId:'tyranids'});
 const files=(await readdir(root)).filter(name=>name.endsWith('.html'));
 const reader=await readFile(new URL('../reader.html',root),'utf8');
 const rosterFilter=await readFile(new URL('../scripts/roster-filter.js',root),'utf8');
@@ -23,7 +24,6 @@ for(const file of files){
   assert.match(html,/mobile-route-redirect\.js\?v=2/,`${file}: shared redirect runtime is absent`);
   assert.doesNotMatch(html,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${file}: compatibility stub contains duplicated content`);
   assert.doesNotMatch(html,/mobile\.js|mobile\.css|phone-popup-controller|book-roster-enhancements/,`${file}: obsolete Phone runtime is present`);
-  assert.ok((await stat(new URL(file,root))).size<2_000,`${file}: compatibility stub is not content-free`);
 }
 assert.match(reader,/\.\.\/shared\/book-roster-enhancements\.js\?v=\d+/,'canonical reader does not load the shared Enhancement engine');
 assert.ok(rosterApi.install({catalog:rosterCatalog,roster:null})===null&&rosterFilter.includes('WHArmyRosterContext.install({')&&(rosterFilter.match(/WHArmyRosterContext\.install\(/g)||[]).length===1&&!rosterFilter.includes('location.replace('),'invalid Tyranids roster must fail closed through the shared roster projection');

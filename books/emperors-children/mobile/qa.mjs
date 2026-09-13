@@ -4,6 +4,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {stratagemTypes} from '../scripts/stratagem-types.mjs';
+import {assertOwnedMobileStubOutputs} from '../../../tests/helpers/mobile-route-inventory.mjs';
 
 const root=path.dirname(fileURLToPath(import.meta.url));
 const bookRoot=path.resolve(root,'..');
@@ -15,6 +16,7 @@ const content=targetData.html;
 const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','emperors-children-codex-datasheets.en.json'),'utf8'));
 const routeIds=Object.keys(targetData.targets).filter(id=>/^(?:detachment|unit)-/.test(id));
 const routes=['index.html','army-rules.html','updates.html',...routeIds.map(id=>id.replace(/^(?:detachment|unit)-/,'')+'.html')];
+await assertOwnedMobileStubOutputs({root:path.resolve(root,'../../..'),bookId:'emperors-children'});
 
 assert.equal(new Set(routeIds).size,33,'Expected 10 Detachments and 23 Datasheets');
 assert.equal(routes.length,36);
@@ -24,7 +26,6 @@ for(const route of routes){
   assert.match(html,/data-canonical-target="[^"]+"/,`${route}: canonical content target is absent`);
   assert.match(html,/mobile-route-redirect\.js\?v=\d+/,`${route}: shared redirect runtime is absent`);
   assert.doesNotMatch(html,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${route}: compatibility stub contains duplicated content`);
-  assert.ok(fs.statSync(path.join(root,route)).size<2_000,`${route}: compatibility stub is not content-free`);
 }
 for(const obsolete of ['mobile.js','mobile.css','phone-popup-controller.js'])assert.equal(fs.existsSync(path.join(root,obsolete)),false,`${obsolete} must not exist`);
 assert.equal(stratagemTypes.size,51);

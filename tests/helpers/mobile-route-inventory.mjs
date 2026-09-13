@@ -2,11 +2,20 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
-import {collectMobileStubRoutes} from '../../books/shared/tools/build-mobile-stubs.mjs';
+import {pathToFileURL} from 'node:url';
+import {collectMobileStubRoutes,createMobileStubPlan} from '../../books/shared/tools/build-mobile-stubs.mjs';
 import {parseArmyBookTargetCatalog} from '../../books/shared/tools/build-army-book-targets.mjs';
 
 const identity=route=>`${route.file}#${route.target}`;
 const duplicates=values=>[...new Set(values.filter((value,index)=>values.indexOf(value)!==index))].sort();
+
+function readMobileBuildContract({root,bookId}){
+  const bookRoot=path.join(root,'books',bookId),mobileRoot=path.join(bookRoot,'mobile'),buildPath=path.join(mobileRoot,'build.mjs');
+  const buildSource=fs.readFileSync(buildPath,'utf8');
+  const specMatch=/await runMobileStubBuilder\(import\.meta\.url,([\s\S]*)\);/.exec(buildSource);
+  if(!specMatch)throw new Error(`${bookId}: mobile route build contract is not discoverable`);
+  return{bookRoot,mobileRoot,buildPath,spec:vm.runInNewContext('('+specMatch[1]+')')};
+}
 
 export function compareMobileRouteInventories(expected,actual){
   const expectedIdentities=expected.map(identity),actualIdentities=actual.map(identity);
@@ -27,11 +36,7 @@ export function assertMobileRouteInventoriesEqual(expected,actual,label='mobile 
 }
 
 export function readOwnedMobileRouteInventory({root,bookId}){
-  const bookRoot=path.join(root,'books',bookId),mobileRoot=path.join(bookRoot,'mobile');
-  const buildSource=fs.readFileSync(path.join(mobileRoot,'build.mjs'),'utf8');
-  const specMatch=/await runMobileStubBuilder\(import\.meta\.url,([\s\S]*)\);/.exec(buildSource);
-  if(!specMatch)throw new Error(`${bookId}: mobile route build contract is not discoverable`);
-  const spec=vm.runInNewContext('('+specMatch[1]+')');
+  const {bookRoot,mobileRoot,spec}=readMobileBuildContract({root,bookId});
   const catalog=parseArmyBookTargetCatalog(fs.readFileSync(path.join(bookRoot,'scripts','target-data.js'),'utf8'));
   const expected=collectMobileStubRoutes(catalog,spec).map(route=>({file:route.file,target:route.target}));
   const actual=fs.readdirSync(mobileRoot).filter(file=>file.endsWith('.html')).sort().map(file=>{
@@ -45,4 +50,14 @@ export function assertOwnedMobileRouteInventory({root,bookId}){
   const inventory=readOwnedMobileRouteInventory({root,bookId});
   assertMobileRouteInventoriesEqual(inventory.expected,inventory.actual,bookId);
   return inventory;
+}
+
+export async function assertOwnedMobileStubOutputs({root,bookId}){
+  const {buildPath,spec}=readMobileBuildContract({root,bookId});
+  const plan=await createMobileStubPlan(pathToFileURL(buildPath),spec);
+  for(const [file,expected] of plan.outputs){
+    const actual=fs.readFileSync(path.join(root,'books',bookId,'mobile',file),'utf8');
+    assert.equal(actual,expected,`${bookId}/${file}: compatibility stub differs from its canonical producer output`);
+  }
+  return plan.outputs.size;
 }

@@ -60,7 +60,17 @@ const revision=verifyCacheRevision({root});assert(revision.assets.length===shell
 const sharedBuildBooks=selectPublicationBooks(publication,'freshness').map(book=>book.id);
 const mechanicusConfig=JSON.parse(read('books/adeptus-mechanicus/book.config.json')),mechanicusWrapper=read('books/adeptus-mechanicus/tools/build-full-content.mjs');
 assert(mechanicusConfig.buildExtension==='tools/canonical-build-extension.mjs','Adeptus Mechanicus shared build extension is not configured');
-assert(mechanicusWrapper.split(/\r?\n/).filter(Boolean).length<=8&&mechanicusWrapper.includes('runCanonicalBuildExtension'),'Adeptus Mechanicus legacy build entry is not a thin shared-contract wrapper');
+const mechanicusImports=[...mechanicusWrapper.matchAll(/^import\s+(.+?)\s+from\s+['"]([^'"]+)['"];?$/gm)].map(([,bindings,source])=>({bindings:bindings.replace(/\s+/g,' '),source}));
+assert.deepStrictEqual(mechanicusImports,[
+  {bindings:'path',source:'node:path'},
+  {bindings:'{fileURLToPath}',source:'node:url'},
+  {bindings:'{createCanonicalBuildContext,runCanonicalBuildExtension}',source:'../../shared/tools/canonical-build-contract.mjs'}
+],'Adeptus Mechanicus legacy build entry imports outside the shared build contract');
+assert(/const configPath=path\.resolve\(path\.dirname\(fileURLToPath\(import\.meta\.url\)\),'\.\.','book\.config\.json'\);/.test(mechanicusWrapper),'Adeptus Mechanicus wrapper lost its canonical book config identity');
+assert((mechanicusWrapper.match(/await runCanonicalBuildExtension\(createCanonicalBuildContext\(\{configPath,args:process\.argv\.slice\(2\)\}\)\);/g)||[]).length===1,'Adeptus Mechanicus wrapper must delegate exactly once to the canonical build extension');
+assert(!/\b(?:fetch|XMLHttpRequest|readFile|writeFile|appendFile|spawn|exec|mkdir|unlink|rename)\b/.test(mechanicusWrapper),'Adeptus Mechanicus wrapper owns file, network, or process work outside the canonical build contract');
+const mechanicusWrapperResidue=mechanicusWrapper.replace(/^import\s+.+?\s+from\s+['"][^'"]+['"];?$/gm,'').replace(/const configPath=path\.resolve\(path\.dirname\(fileURLToPath\(import\.meta\.url\)\),'\.\.','book\.config\.json'\);/,'').replace(/await runCanonicalBuildExtension\(createCanonicalBuildContext\(\{configPath,args:process\.argv\.slice\(2\)\}\)\);/,'').replace(/\/\*[\s\S]*?\*\/|\/\/[^\r\n]*/g,'').trim();
+assert(mechanicusWrapperResidue==='','Adeptus Mechanicus wrapper contains behavior outside its declared canonical delegation statements');
 const checks=[...sharedBuildBooks.map(id=>['books/shared/tools/build-army-book.mjs',['books/'+id+'/book.config.json','--check']]),...selectPublicationBooks(publication,'mobile').map(book=>['books/'+book.id+'/mobile/build.mjs',['--check']])];
 for(const [script,args] of checks){const result=spawnSync(process.execPath,[script,...args],{cwd:root,encoding:'utf8',maxBuffer:16*1024*1024});assert(result.status===0,'Generated check failed: '+script+' '+args.join(' ')+'\n'+(result.stderr||result.stdout));}
 assert(status()===before,'Wiring checks changed working tree');

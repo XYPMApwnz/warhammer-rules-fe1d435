@@ -2,10 +2,11 @@ import assert from 'node:assert/strict';
 import {readdir,readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {assertOwnedMobileRouteInventory} from '../../../tests/helpers/mobile-route-inventory.mjs';
+import {assertOwnedMobileRouteInventory,assertOwnedMobileStubOutputs} from '../../../tests/helpers/mobile-route-inventory.mjs';
 
 const root=new URL('./',import.meta.url);
 assertOwnedMobileRouteInventory({root:path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..'),bookId:'tau-empire'});
+await assertOwnedMobileStubOutputs({root:path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..'),bookId:'tau-empire'});
 const files=(await readdir(root)).filter(name=>name.endsWith('.html'));
 const app=await readFile(new URL('../scripts/app.js',root),'utf8');
 for(const file of files){
@@ -15,7 +16,6 @@ for(const file of files){
   assert.match(html,/mobile-route-redirect\.js\?v=2/,`${file}: shared redirect runtime is absent`);
   assert.doesNotMatch(html,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${file}: compatibility stub contains duplicated content`);
   assert.doesNotMatch(html,/mobile\.js|mobile\.css|phone-popup-controller|book-roster-enhancements/,`${file}: obsolete Phone runtime is present`);
-  assert.ok((await stat(new URL(file,root))).size<2_000,`${file} must stay a content-free compatibility stub`);
 }
 const related=await readFile(new URL('related-rules.inc',root),'utf8');
 assert.equal([...related.matchAll(/<section class="related-detachment(?: [^"]*)?" data-detachment=/g)].length,8,'Related Rules must contain Core plus 7 T’au detachments');

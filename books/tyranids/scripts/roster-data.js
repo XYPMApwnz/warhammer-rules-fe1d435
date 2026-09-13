@@ -985,6 +985,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Ravener Prime",
             "aliases": [
               "Ravener Prime"
+            ],
+            "intrinsicKeywords": [
+              "Character",
+              "Synapse"
             ]
           },
           {

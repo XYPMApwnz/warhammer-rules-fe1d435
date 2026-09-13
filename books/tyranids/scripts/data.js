@@ -3514,6 +3514,19 @@ window.DG_TERMS={
     "glossary": "glossary-tyranids-enhancement-synaptoprescience-2",
     "rule": "detachment-talons-of-the-norn-queen"
   },
+  "tyranids-model-keywords-ravener-prime": {
+    "id": "tyranids-model-keywords-ravener-prime",
+    "title": "Ravener Prime",
+    "summary": "Ravener Prime only: Character, Synapse.",
+    "full": "Ravener Prime only: Character, Synapse.",
+    "glossary": "glossary-tyranids-model-keywords-ravener-prime",
+    "rule": "hyperadapted-raveners-keywords",
+    "units": [
+      "unit-hyperadapted-raveners"
+    ],
+    "datasheet": "unit-hyperadapted-raveners",
+    "statline": "hyperadapted-raveners-profile"
+  },
   "tyranids-army-rule-shadow-in-the-warp": {
     "id": "tyranids-army-rule-shadow-in-the-warp",
     "title": "Shadow in the Warp",

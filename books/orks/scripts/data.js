@@ -4246,5 +4246,18 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-gargantuan-squiggoth",
     "statline": "gargantuan-squiggoth-profile"
+  },
+  "orks-model-keywords-ghazghkull-thraka": {
+    "id": "orks-model-keywords-ghazghkull-thraka",
+    "title": "Ghazghkull Thraka",
+    "summary": "Ghazghkull Thraka only: Ghazghkull Thraka, Warboss.",
+    "full": "Ghazghkull Thraka only: Ghazghkull Thraka, Warboss.",
+    "glossary": "glossary-orks-model-keywords-ghazghkull-thraka",
+    "rule": "ghazghkull-thraka-keywords",
+    "units": [
+      "unit-ghazghkull-thraka"
+    ],
+    "datasheet": "unit-ghazghkull-thraka",
+    "statline": "ghazghkull-thraka-profile"
   }
 };

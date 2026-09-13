@@ -109637,6 +109637,37 @@
       ],
       "mentions": []
     },
+    "tyranids-model-keywords-ravener-prime": {
+      "id": "tyranids-model-keywords-ravener-prime",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Ravener Prime"
+      },
+      "summary": {
+        "en": "Ravener Prime only: Character, Synapse."
+      },
+      "definition": {
+        "en": "Ravener Prime only: Character, Synapse."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "hyperadapted-raveners-keywords"
+      },
+      "fullRulePath": "books/tyranids/reader.html#hyperadapted-raveners-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
     "tyranids-stratagem-ablative-carapace": {
       "id": "tyranids-stratagem-ablative-carapace",
       "kind": "stratagem",

@@ -714,6 +714,10 @@
           "max": 1,
           "models": [
             "Ravener Prime"
+          ],
+          "intrinsicKeywords": [
+            "Character",
+            "Synapse"
           ]
         },
         {

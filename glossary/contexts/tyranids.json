@@ -3217,6 +3217,18 @@
         "rule": "detachment-talons-of-the-norn-queen"
       }
     },
+    "tyranids-model-keywords-ravener-prime": {
+      "termId": "tyranids-model-keywords-ravener-prime",
+      "navigation": {
+        "glossary": "glossary-tyranids-model-keywords-ravener-prime",
+        "rule": "hyperadapted-raveners-keywords",
+        "datasheet": "unit-hyperadapted-raveners",
+        "statline": "hyperadapted-raveners-profile",
+        "units": [
+          "unit-hyperadapted-raveners"
+        ]
+      }
+    },
     "tyranids-army-rule-shadow-in-the-warp": {
       "termId": "tyranids-army-rule-shadow-in-the-warp",
       "navigation": {

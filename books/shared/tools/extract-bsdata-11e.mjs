@@ -544,7 +544,7 @@ if(config.outputs.officialPoints){
   }
   for(const item of officialEnhancements.values()){
     const sourceItem=item.sourceTitle?points.enhancements.find(candidate=>(!useDetachmentEnhancementIdentity||key(candidate.detachment)===key(item.detachment))&&key(candidate.title)===key(item.sourceTitle)):null;
-    if(sourceItem){Object.assign(sourceItem,{title:item.title,value:item.value,text:item.text||sourceItem.text,pointsSource:{label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt}});continue;}
+    if(sourceItem){const sourceId=sourceItem.sourceId||sourceItem.id;Object.assign(sourceItem,{...(item.id&&item.id!==sourceItem.id?{id:item.id,sourceId}:{}),title:item.title,value:item.value,text:item.text||sourceItem.text,pointsSource:{label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt}});continue;}
     const generatedId=useDetachmentEnhancementIdentity&&officialEnhancementTitleCounts.get(key(item.title))>1?`enhancement-${slug(item.detachment)}-${slug(item.title)}`:`enhancement-${slug(item.title)}`;
     points.enhancements.push({...(sourceItem||{}),id:item.id||sourceItem?.id||generatedId,title:item.title,detachment:item.detachment||sourceItem?.detachment||'',value:item.value,text:item.text||sourceItem?.text||'',profile:sourceItem?.profile||null,pointsSource:{label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt}});
   }

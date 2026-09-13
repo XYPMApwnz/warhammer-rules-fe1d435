@@ -57,6 +57,11 @@ function lookupChecks(resolve=resolveEnhancementOwner){
     const result=resolve(point,csm,csmContracts),key=point.id.includes('dread-talons')?point.id:'warp-fuelled-thrusters';
     assert.deepEqual(local(result.owner.selector),local(csmContracts[key].roles[0].selector),'exact canonical/source ID precedes a different Detachment alias');
   }
+  const tyranids=bookCatalog('tyranids'),tyranidContracts=json('books/tyranids/content/tyranids-related-rules.en.json').enhancements,synapticPoint=json('books/tyranids/content/tyranids-points.en.json').enhancements.find(e=>normalize(e.title)==='synaptic strategy'),synaptic=resolve(synapticPoint,tyranids,tyranidContracts);
+  assert.equal(synapticPoint.id,'enhancement-synaptic-strategy','renamed MFM Enhancement receives its current identity');
+  assert.equal(synapticPoint.sourceId,'enhancement-synaptic-synergy','renamed MFM Enhancement retains its previous source identity');
+  assert.equal(synaptic.canonicalEnhancementId,'synaptic-strategy','renamed MFM Enhancement resolves its current canonical owner');
+  assert.deepEqual(local(synaptic.owner),local(tyranidContracts['synaptic-strategy'].owner),'renamed MFM Enhancement preserves its owner contract');
 }
 function loadBook(book,overrides={}){
   const scope={console,URL,URLSearchParams,location:{href:'http://localhost/books/'+book+'/reader.html',pathname:'/books/'+book+'/reader.html',search:''},
@@ -154,9 +159,15 @@ function legalityChecks(overrides={}){
   const unknownId={...nightmare,enhancements:nightmare.enhancements.map(item=>({...item,id:'enhancement-not-a-canonical-id'}))},unknownIdResult=project(csm,unknownId);
   assert.equal(unknownIdResult.enhancementAssessment.assignments[0].catalog,null,'unknown explicit Enhancement ID cannot fall back to its display title');
   assert.equal(unknownIdResult.context.enhancements[0].status,'unresolved','unknown explicit Enhancement ID remains unresolved at runtime');
+
+  const tyranids=loadBook('tyranids',overrides),strategy=fixture(tyranids,'unit-hive-tyrant','synaptic-strategy','subterranean-assault'),legacyStrategy={...strategy,enhancements:strategy.enhancements.map(item=>({...item,id:'enhancement-synaptic-synergy'}))},legacyStrategyResult=project(tyranids,legacyStrategy);
+  assert.equal(legacyStrategyResult.enhancementAssessment.assignments[0].catalog?.id,'enhancement-synaptic-strategy','legacy Synaptic Synergy identity resolves to current points owner');
+  assert.equal(legacyStrategyResult.enhancementAssessment.assignments[0].assessment?.ownerEligibility,'valid','legacy Synaptic Synergy identity retains canonical owner eligibility');
+  assert.equal(legacyStrategyResult.context.enhancements[0].id,'synaptic-strategy','legacy Synaptic Synergy identity resolves to current runtime owner');
+  assert.equal(legacyStrategyResult.context.enhancements[0].active,true,'renamed Synaptic Strategy remains active through its legacy identity');
 }
 function mutations(){
-  const validator=read('roster-guides/points-validator.js'),context=read('books/shared/roster-context.js'),marker="    else if (!enhancement.owner?.selector)",identityFilter="candidates=explicitId?Object.values(records||{}).flat().filter(record).filter(item=>identities(item).includes(explicitId)):(Array.isArray(entry)?entry:[entry]).filter(record)",scopedResolver="if(explicitId)return byId&&(!byId.detachmentId||detachmentIds.has(byId.detachmentId))?byId:null;";
+  const validator=read('roster-guides/points-validator.js'),context=read('books/shared/roster-context.js'),tyranidPoints=read('roster-guides/points-data.js'),tyranidRoster=read('books/tyranids/scripts/roster-data.js'),marker="    else if (!enhancement.owner?.selector)",identityFilter="candidates=explicitId?Object.values(records||{}).flat().filter(record).filter(item=>identities(item).includes(explicitId)):(Array.isArray(entry)?entry:[entry]).filter(record)",scopedResolver="if(explicitId)return byId&&(!byId.detachmentId||detachmentIds.has(byId.detachmentId))?byId:null;";
   assert.ok(validator.includes(marker),'status mutation anchor');
   assert.ok(validator.includes(identityFilter),'points identity mutation anchor');
   assert.ok(context.includes(scopedResolver),'runtime identity mutation anchor');
@@ -166,7 +177,9 @@ function mutations(){
     ['M8_ROLES_ONLY_LOOKUP',()=>lookupChecks(vm.runInNewContext('('+resolveEnhancementOwner.toString().replace('const owned=canonical.owner||contract?.owner;','const owned=null;')+')')),/owner form preserved/],
     ['M9_FIRST_MATCH_IDENTITY',()=>lookupChecks(vm.runInNewContext('('+resolveEnhancementOwner.toString().replace('const candidates=catalog.enhancements.filter(item=>item.detachmentId===detachment.id&&matches(item,detachment.id));','const candidates=catalog.enhancements.filter(item=>matches(item,item.detachmentId)).slice(0,1);')+')')),/collision must use selected Detachment|exact canonical identity/],
     ['M10_EXPLICIT_ID_IGNORED',()=>legalityChecks({'roster-guides/points-validator.js':validator.replace(identityFilter,"candidates=(Array.isArray(entry)?entry:[entry]).filter(record)")}),/explicit Enhancement ID cannot validate through a same-title Detachment sibling/],
-    ['M11_CROSS_DETACHMENT_ID_TRUSTED',()=>legalityChecks({'books/shared/roster-context.js':context.replace(scopedResolver,'if(explicitId)return byId;')}),/runtime cannot resolve an explicit Enhancement ID outside the selected Detachment/]
+    ['M11_CROSS_DETACHMENT_ID_TRUSTED',()=>legalityChecks({'books/shared/roster-context.js':context.replace(scopedResolver,'if(explicitId)return byId;')}),/runtime cannot resolve an explicit Enhancement ID outside the selected Detachment/],
+    ['M12_RENAMED_POINTS_ALIAS_DROPPED',()=>legalityChecks({'roster-guides/points-data.js':tyranidPoints.replaceAll(',"sourceId":"enhancement-synaptic-synergy"','')}),/legacy Synaptic Synergy identity resolves to current points owner/],
+    ['M13_RENAMED_RUNTIME_ALIAS_DROPPED',()=>legalityChecks({'books/tyranids/scripts/roster-data.js':tyranidRoster.replace('      "sourceId": "enhancement-synaptic-synergy",\n','')}),/legacy Synaptic Synergy identity resolves to current runtime owner/]
   ];
   for(const [name,run,intended] of scenarios){
     let killed=false;

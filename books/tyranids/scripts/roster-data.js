@@ -8635,6 +8635,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "tags": [],
+      "sourceId": "enhancement-synaptic-synergy",
       "value": 15,
       "pointsSource": {
         "label": "Official MFM v1.2",

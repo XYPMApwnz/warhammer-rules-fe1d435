@@ -1,6 +1,8 @@
 import {readdir,readFile,unlink,writeFile} from 'node:fs/promises';
 import {readFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
 import {parseArmyBookTargetCatalog} from './build-army-book-targets.mjs';
+import {assertGeneratedOutputPlan} from './generated-output-contract.mjs';
 
 const attribute=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
 const runtimeVersions=JSON.parse(readFileSync(new URL('../runtime-asset-versions.json',import.meta.url),'utf8'));
@@ -63,6 +65,14 @@ export async function createMobileStubPlan(builderUrl,spec){
 
 export async function runMobileStubBuilder(builderUrl,spec,{check=process.argv.includes('--check')}={}){
   const {mobileRoot,routes,outputs}=await createMobileStubPlan(builderUrl,spec),expectedFiles=new Set(outputs.keys()),existingHtml=(await readdir(mobileRoot)).filter(file=>file.endsWith('.html')),errors=[];
+  const configUrl=new URL('../book.config.json',builderUrl),config=JSON.parse(await readFile(configUrl,'utf8'));
+  if(Array.isArray(config.generatedOutputs))assertGeneratedOutputPlan({
+    repo:fileURLToPath(new URL('../../../',builderUrl)),
+    configPath:fileURLToPath(configUrl),
+    producer:fileURLToPath(builderUrl),
+    lifecycle:'NORMAL_BUILD_OUTPUT',
+    outputs:[...outputs.keys()].map(file=>`mobile/${file}`)
+  });
   for(const [file,expected] of outputs){
     const url=new URL(file,mobileRoot);
     if(check){let actual='';try{actual=await readFile(url,'utf8');}catch{}if(actual!==expected)errors.push(`${file}: stale or missing`);}

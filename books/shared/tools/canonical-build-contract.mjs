@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
+import {assertGeneratedOutputPlan} from './generated-output-contract.mjs';
 
 const sharedRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
 const normalizeEol=value=>String(value).replace(/\r\n?/g,'\n');
@@ -21,6 +22,13 @@ export function createCanonicalBuildContext({args=process.argv.slice(2),configPa
 
 export function finishCanonicalBuild(context,outputs,{normalizeLineEndings=false,summary}={}){
   if(!(outputs instanceof Map)||![...outputs].every(([relative,content])=>typeof relative==='string'&&typeof content==='string'))throw new Error(`${context.config.id}: build extension must return a Map of text outputs`);
+  if(Array.isArray(context.config.generatedOutputs))assertGeneratedOutputPlan({
+    repo:context.repo,
+    configPath:context.configPath,
+    producer:context.config.buildExtension?path.resolve(context.root,context.config.buildExtension):path.join(context.repo,'books/shared/tools/build-army-book.mjs'),
+    lifecycle:'NORMAL_BUILD_OUTPUT',
+    outputs:outputs.keys()
+  });
   const compare=normalizeLineEndings?normalizeEol:String;
   const stale=[];
   for(const [relative,rawContent] of outputs){

@@ -14,7 +14,7 @@
     "tau:sources:check": "node books/tau-empire/tools/extract-mfm.cjs --check && node books/tau-empire/tools/extract-wargear.cjs --check && node books/tau-empire/tools/extract-codex-parity.cjs --check && node books/shared/tools/extract-bsdata-11e.mjs books/tau-empire/sources/bsdata-extract.config.json --check && node books/tau-empire/tools/build-related-rules.mjs --check && node tests/tau-related-rules-owner-qa.mjs && node books/tau-empire/tools/import-wahapedia-compatible-rules.mjs --check && node books/tau-empire/tools/build-compatible-rules.mjs --check",
     "tau:enhancements:qa": "node books/tau-empire/tests/enhancement-runtime-qa.mjs",
     "tau:conformance:qa": "node tests/browser/tau-final-conformance.mjs",
-    "ec:enhancements:qa": "node books/emperors-children/tests/enhancement-runtime-qa.mjs",
+    "ec:enhancements:qa": "node books/emperors-children/tests/enhancement-runtime-qa.mjs && node tests/ec-pledge-dark-glory-condition-qa.mjs",
     "ec:conformance:qa": "node tests/browser/ec-final-conformance.mjs",
     "tyranids:enhancements:qa": "node books/tyranids/tests/enhancement-runtime-qa.mjs",
     "tyranids:conformance:qa": "node tests/browser/tyranids-final-conformance.mjs",

@@ -8,9 +8,9 @@
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Imperium%20-%20Dark%20Angels.json",
     "snapshotSha256": "6DFEE5B8C4B159FE401301999C215EEE242E71822A1C4C9B05D49B30714872D0",
     "officialMfm": {
-      "version": "v1.2",
+      "version": "v1.3",
       "url": "https://mfm.warhammer-community.com/en/dark-angels",
-      "verifiedAt": "2026-08-11"
+      "verifiedAt": "2026-08-27"
     }
   },
   "units": [

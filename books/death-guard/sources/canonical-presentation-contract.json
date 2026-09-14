@@ -6,19 +6,19 @@
     "kind": "production-contract-capture",
     "parentHead": "e49d3b3096f680aa631f54b07751e0530d88b516",
     "oracleHashes": {
-      "reader": "2d357fb551af380db045ed2b56fd4ac5e58869b2b4ec0976916d6ef07b1a4bd1",
-      "runtime": "d74d065af402cf81816a29b0b03168c0dbcb6a01b5fcb789ac6e3b0e6f72b385",
-      "relatedRules": "ee14fa9b3adadd88113254ffc2c18f717938dc4a28af190382467f63cef1e410"
+      "reader": "c2e8d39cb66569bac3b19ceb5fd3018ce2dd80c3fb2030904fb17dce276b360e",
+      "runtime": "17ce1ca8fc4c42dbb3feeee85b2615c1949831ade5be93b2d07cf9c09b4a5f79",
+      "relatedRules": "ad93b354f3ac2906a57074cfd1b39dcc8d3e7202958ae009271add8d5e83c72a"
     },
     "frozenSourceHashes": {
-      "canonical": "aee616becd2f827bf7f6703363d27303ec7b2e4fda61acd807a4f46302967c12",
+      "canonical": "49f71d4c0c079ae6bbafab9f8a7077fd958e663f1c05ee8cd95c8ba22f14dd66",
       "legends": "e5e077738660025f85b0a27ae6f838e5a3aa375d68aef4bd38091c0805e12e67",
-      "officialUpdates": "81e53858a52e357924f2a9f75c69f93e0c0c24e71292c99f8c4fd52a8145cc50",
-      "points": "6ad17a84133d348dc782a39ac73efbfa223e906f52ad0471ee81c27a40ea1fd6",
+      "officialUpdates": "371563c72d0d5f62a5b611156aebed8a7bc1d01a087e9169f9bb0421a352dd37",
+      "points": "548201db74fe75eeeada5980d790cfab495d42b41f53998c5e231bd515fcbc8f",
       "compatibleRules": "fd40ab11f5b1231bc5fad28420abe50f92d14f19d0656a29d3c9ba585440c72a",
       "runtimeRelatedTerms": "9149d084855014166ed8c7b17f252e513388dbd24c831219a4bda6705800fa32",
-      "rosterSemantics": "dfd2b5b6573b41f744a3e24706bdc7e2afd20dc543b42b478cb92adad7c1a08c",
-      "rosterFilter": "8390de43209c6eb217d3d0b5c8489e5f9c89111ef8c5f84703c6cbb69d0bcae2"
+      "rosterSemantics": "56dafc16b376e165dd5da188e37580896853f404af4081694227d8b1acb537ff",
+      "rosterFilter": "23005a0a866ed5b537dbb17c6266d2cb9a75bbb484d21e2bc6fa615ecd7f7e1c"
     },
     "captureOnly": true,
     "generatedOutputsAreBuildInputs": false,

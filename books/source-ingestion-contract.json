@@ -64,6 +64,28 @@
       "notes": "Accepted minimal owner for 25 Faction Pack Enhancement selectors, three unit Upgrade contracts, and the Spy-skull canonical identity. Display titles, rule text, points, Datasheet facts, and all independently reconstructable contracts remain owned by their existing authenticated sources."
     },
     {
+      "book": "shared",
+      "sourceId": "global-glossary-editorial-contracts",
+      "authority": "accepted-editorial-review",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "editorial-review-2026-09-14",
+      "acceptedHash": "522e18c6974dfffa4750802ff9cedb95f840b8c40f06bf7c28c3c33ce966a6f0",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "USER_ACCEPTED_EDITORIAL_DECISION",
+      "reproducible": "repository-artifact",
+      "extractor": "glossary/tools/editorial-contract.mjs",
+      "artifacts": [
+        {
+          "path": "glossary/editorial-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "522e18c6974dfffa4750802ff9cedb95f840b8c40f06bf7c28c3c33ce966a6f0"
+        }
+      ],
+      "notes": "Accepted owner for 24 project-authored concise glossary summaries. Canonical identities and gameplay semantics remain owned by their referenced Core Rules and Death Guard sources."
+    },
+    {
       "book": "chaos-space-marines",
       "sourceId": "csm-mfm-v1.3",
       "authority": "official",

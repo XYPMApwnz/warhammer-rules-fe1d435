@@ -18,6 +18,14 @@
     }
   ],
   "aliases": {
+    "core-anti-infantry": {
+      "target": "core-anti",
+      "parameters": {
+        "targetKeyword": "INFANTRY",
+        "threshold": "4+"
+      },
+      "reason": "Anti-Infantry 4+ is an instance of the parameterised Anti rule, not a separate rule."
+    },
     "core-anti-vehicle": {
       "target": "core-anti",
       "parameters": {

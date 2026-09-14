@@ -1,0 +1,299 @@
+{
+  "reviewBinding": {
+    "acceptedAt": "2026-09-14",
+    "contentHash": "b1fa3c9a65bbf58b90ee0cbff331938ecaaa99bb00ff59d047823f6fc67d32ed",
+    "decision": "GLOBAL_GLOSSARY_FINAL_EDITORIAL_DECISION_PACKET"
+  },
+  "revision": "editorial-review-2026-09-14",
+  "schema": "glossary-editorial-contracts/v1",
+  "summaries": [
+    {
+      "contentHash": "71cfcca14a98abd3c9cd4d2b7ba416f8f7b353b38de6ac1b043133e5568ef53f",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.01",
+        "revision": "11e"
+      },
+      "summary": "Starting Strength is a unit's initial model count. Half-strength and Below Half-strength are determined from that count, or from remaining wounds for a single-model unit.",
+      "termId": "core-rule-01-02-01-starting-strength-and-half-strength"
+    },
+    {
+      "contentHash": "8dc3caba94393fa0b470536b29c2596234cc8f538b7066bbe5f62ac26884db28",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.02",
+        "revision": "11e"
+      },
+      "summary": "An effect with a stated duration continues for that full duration, including through embarkation or Strategic Reserves. If no duration is stated, it lasts only for the specified period or the phase in which it was given.",
+      "termId": "core-rule-01-02-02-persisting-rules-effects"
+    },
+    {
+      "contentHash": "7f52da86cb0b17f560b05cb4647cce5c2cb5ab79037e57b3b325aeb3687a3209",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.03",
+        "revision": "11e"
+      },
+      "summary": "Revived, returned or added models cannot take a unit above Starting Strength and must follow the applicable placement, wargear, wounds and Transport restrictions. A revived Leader or Support model returns as a separate unit.",
+      "termId": "core-rule-01-02-03-revived-and-adding-models-to-a-unit"
+    },
+    {
+      "contentHash": "7123a09e7be4c2c61399ca58079e6d1d4e95ba0198ef18ccfdc6e879f8424a41",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.04",
+        "revision": "11e"
+      },
+      "summary": "Embarked units and units in Strategic Reserves are not on the battlefield, so visibility and distance normally cannot be measured to or from them.",
+      "termId": "core-rule-01-02-04-not-on-the-battlefield"
+    },
+    {
+      "contentHash": "e55c7b8e472aeb609155ee1edd7e110790e9c695a8957c9fb739beb14598e736",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.05",
+        "revision": "11e"
+      },
+      "summary": "?Other? means a different model or unit from the one already identified, including another instance of the same datasheet.",
+      "termId": "core-rule-01-02-05-other-model-unit"
+    },
+    {
+      "contentHash": "fd7f32138d122f4e9dc5bcf1d5f4b2fb19c7369c5171338161c786d85bdecc35",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.06",
+        "revision": "11e"
+      },
+      "summary": "A unit split before battle becomes separate smaller units, and each resulting unit uses its own model count as its Starting Strength.",
+      "termId": "core-rule-01-02-06-splitting-units"
+    },
+    {
+      "contentHash": "09920dbfc339dca6068f9e63b64c3bada70ded09df47499721c5262639bb0a7f",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.07",
+        "revision": "11e"
+      },
+      "summary": "A descriptor applies to a unit if at least one model in that unit meets it; it does not automatically give that descriptor to every model.",
+      "termId": "core-rule-01-02-07-describing-units"
+    },
+    {
+      "contentHash": "5fbddcdadac36fe38f11a733729d1ca436124af49430117815e597ba0c9bc704",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.08",
+        "revision": "11e"
+      },
+      "summary": "When a rule says ?a? unit, model or object without an exact number, it means one or more rather than exactly one.",
+      "termId": "core-rule-01-02-08-a-unit-model-object"
+    },
+    {
+      "contentHash": "a2872bc8a18154af4f77b8e1be11e0256f59a3f91531d99cdad620cad98ea49f",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.09",
+        "revision": "11e"
+      },
+      "summary": "Tokens are reminders for limited-use abilities or ongoing effects and have no rules effect unless a rule says otherwise.",
+      "termId": "core-rule-01-02-09-tokens"
+    },
+    {
+      "contentHash": "2efe7c9acab01118d83221ff3b48feeab0f1b3b2966d3c290b4992ba9f5c1e6b",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.10",
+        "revision": "11e"
+      },
+      "summary": "A unit added during battle receives a Starting Strength when it is added and then follows the normal rules for units in your army.",
+      "termId": "core-rule-01-02-10-adding-a-new-unit-to-your-army"
+    },
+    {
+      "contentHash": "2be5ce1e2dd56ddda54fea152e863c38abd673109f7fdf8587bbf2f537d83c2f",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "core-rules",
+        "locator": "01.02.11",
+        "revision": "11e"
+      },
+      "summary": "?All types of model? includes friendly and enemy models with any keywords.",
+      "termId": "core-rule-01-02-11-all-types-of-model"
+    },
+    {
+      "contentHash": "d1e81d1d87dff9e6894ac61ab351d1edf2b0ceb6da3576bf568073dcc927f4fd",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "lord-of-virulence-ability-blight-bombardment",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "At the start of your Shooting phase, select a visible enemy within 30\". Until phase end, DEATH GUARD ranged attacks against it re-roll Hit rolls of 1, or all Hit rolls for Blast attacks.",
+      "termId": "death-guard-ability-blight-bombardment-lord-of-virulence"
+    },
+    {
+      "contentHash": "333806bce39320db0256822605189911d2ade29004cd6fac2d1abc49c0ca1ac8",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "typhus-ability-eater-plague-psychic",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "In your Shooting phase, select a visible enemy within 18\" and roll D6: on 1 your PSYKER’s unit suffers D3 mortal wounds; on 2-5 the enemy suffers D6; on 6 it suffers D3+3. Lone Operative restrictions apply.",
+      "termId": "death-guard-ability-eater-plague-psychic-typhus"
+    },
+    {
+      "contentHash": "20b191a633d95a4b6eef51bee17dcfe8731af09682336dd30c6b42c37afff838",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "foetid-bloat-drone-with-heavy-blight-launcher-ability-explosive-blight",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "When this model’s shooting destroys a unit, roll D6 before removing its last model (+1 if Afflicted): on 5+, enemy units within 6\" of that model are Afflicted until your next turn.",
+      "termId": "death-guard-ability-explosive-blight-foetid-bloat-drone-with-heavy-blight-launcher"
+    },
+    {
+      "contentHash": "da86843f5eefa0ace76fecc814f16494dd92409e7d6887bd96286a0a5bedc371",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "chaos-rhino-ability-fire-support",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "After this TRANSPORT shoots, select an enemy it hit. Until phase end, friendly models that disembarked from it this turn can re-roll Wound rolls against that enemy.",
+      "termId": "death-guard-ability-fire-support-chaos-rhino"
+    },
+    {
+      "contentHash": "9c640bb10a855c3472f34bd6dbcb92a7d16008caab53c0d57d0a214ae4aa0a8e",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "shamblerot-vectorium-rule",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "In Command phases in rounds 2-3/2-4/2-5 for Incursion/Strike Force/Onslaught, add a new 10-model POXWALKERS unit to Strategic Reserves. Your POXWALKERS gain BATTLELINE.",
+      "termId": "death-guard-ability-numberless-horde"
+    },
+    {
+      "contentHash": "c13c5ba17238bc724840f5ac4ed9a96fa4489650543a958b2700d76110c62a88",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "tallyband-summoners-rule",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "Within 7\" of DEATH GUARD, PLAGUE LEGIONS gain Nurgle’s Gift; within 7\" of PLAGUE LEGIONS, DEATH GUARD units gain +3\" Contagion Range. The rule also permits PLAGUE LEGIONS allies up to 500/1000/1500 points in Incursion/Strike Force/Onslaught; they cannot be your WARLORD.",
+      "termId": "death-guard-ability-reverberant-rancidity"
+    },
+    {
+      "contentHash": "0c1bf2afeaade2c8729d7141b9afb5646919522b3485cd491fce27145b9e2bba",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "plagueburst-crawler-ability-spore-laced-shock-waves",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "When the Plagueburst mortar selects a target, roll D6 for it and each enemy within 3\" (+1 if Afflicted). On 6+, it is struck; after resolving the attacks, each struck unit suffers D3 mortal wounds.",
+      "termId": "death-guard-ability-spore-laced-shock-waves-plagueburst-crawler"
+    },
+    {
+      "contentHash": "226fbebaaa14aead188dd4487da9a07fa1c45721db1ac9aa3d286d042bed635e",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "rotigus-ability-virulent-blessing-psychic",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "At the start of the Fight phase, select a visible enemy within 24\". Until phase end, add 1 Damage when a PLAGUE LEGIONS model’s attack is allocated to a model in that unit.",
+      "termId": "death-guard-ability-virulent-blessing-psychic-rotigus"
+    },
+    {
+      "contentHash": "8f2285d46126fc3121d3e12453bcb33683ffc6d02bd96666e27d10466b973d50",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "Army Rules",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "While an enemy unit is Afflicted, subtract 1 from its models’ Toughness and apply the effect of your chosen Plague to that unit.",
+      "termId": "death-guard-army-rules-afflicted"
+    },
+    {
+      "contentHash": "c065c03f7ec6e82f3fc46658bf9a2f56f7014508aa9e88cbe870e82d6139a407",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "Army Rules",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "Contagion Range is 3\" in battle round 1, 6\" in round 2 and 9\" from round 3 onward; it cannot exceed 12\" after modifiers.",
+      "termId": "death-guard-army-rules-contagion-range"
+    },
+    {
+      "contentHash": "2deb0d02981e75fcc7363c116801359ff342a4be87a5b4220d2fdc360d972e3d",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "Plagues",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "Worsen the Save characteristic of models in an Afflicted unit by 1.",
+      "termId": "death-guard-plagues-rattlejoint-ague"
+    },
+    {
+      "contentHash": "cbc0b299a827486406d1e51af4e27a4f7af65303a0b5b2c686426e81a0c418f3",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "Plagues",
+        "revision": "death-guard-11ed-v1.1-working"
+      },
+      "summary": "Worsen the Move, Leadership and Objective Control of models in an Afflicted unit by 1; this rule cannot worsen Objective Control below 1.",
+      "termId": "death-guard-plagues-scabrous-soulrot"
+    },
+    {
+      "contentHash": "3acd5b5f8ebf8a397f53cce2385d82a4cec38f12d1f725cd676a8e969f555638",
+      "editorialRevision": "editorial-review-2026-09-14",
+      "field": "summary",
+      "semanticSource": {
+        "documentId": "death-guard",
+        "locator": "Rules Updates · Skullsquirm Blight",
+        "revision": "death-guard-faction-pack-v1.2"
+      },
+      "summary": "Enemy units have the Benefit of Cover against ranged attacks made by models in an Afflicted unit; subtract 1 from melee Hit rolls made by those models.",
+      "termId": "death-guard-plagues-skullsquirm-blight"
+    }
+  ]
+}

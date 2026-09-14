@@ -47,7 +47,7 @@
       "authority": "accepted-mixed-evidence",
       "sourceType": "structured-contract",
       "acceptedRevision": "v1",
-      "acceptedHash": "ac7ef5b6c7ad7bf2b31f8ddfddedd5eea347884021f06e59570e2db9452b3fec",
+      "acceptedHash": "eb4dfa4aab8a9aacaf73565d6fdd49d07e694a49bc37449dcdafab771ce37a56",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "status": "SOURCE_LIMITED",
@@ -58,7 +58,7 @@
         {
           "path": "books/space-marines/sources/space-marines-related-rules-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "ac7ef5b6c7ad7bf2b31f8ddfddedd5eea347884021f06e59570e2db9452b3fec"
+          "sha256": "eb4dfa4aab8a9aacaf73565d6fdd49d07e694a49bc37449dcdafab771ce37a56"
         }
       ],
       "notes": "Accepted minimal owner for 25 Faction Pack Enhancement selectors, three unit Upgrade contracts, and the Spy-skull canonical identity. Display titles, rule text, points, Datasheet facts, and all independently reconstructable contracts remain owned by their existing authenticated sources."

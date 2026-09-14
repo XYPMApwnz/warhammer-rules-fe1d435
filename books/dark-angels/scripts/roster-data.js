@@ -29431,10 +29431,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
       "value": 15,
       "detachment": "Fulguris Task Force",
-      "tags": [],
+      "tags": [
+        "UPGRADE"
+      ],
       "sourceId": "bellicose-weapon-spirits",
       "owner": {
-        "subject": "model",
+        "subject": "unit",
         "selector": {
           "unitIds": [
             "unit-land-speeder",
@@ -29445,7 +29447,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "assignment": {
-        "maxOwners": 1,
+        "maxOwners": 3,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
@@ -29478,10 +29480,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
       "value": 15,
       "detachment": "Fulguris Task Force",
-      "tags": [],
+      "tags": [
+        "UPGRADE"
+      ],
       "sourceId": "raptorial-cogitator-core",
       "owner": {
-        "subject": "model",
+        "subject": "unit",
         "selector": {
           "unitIds": [
             "unit-land-speeder",
@@ -29492,7 +29496,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "assignment": {
-        "maxOwners": 1,
+        "maxOwners": 3,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
@@ -29754,26 +29758,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
       "value": 15,
       "detachment": "Subversion Assets",
-      "tags": [],
+      "tags": [
+        "UPGRADE"
+      ],
       "sourceId": "death-in-the-dark",
       "owner": {
-        "subject": "model",
+        "subject": "unit",
         "selector": {
-          "unitIds": [
-            "unit-captain-in-phobos-armour",
-            "unit-eliminator-squad",
-            "unit-incursor-squad",
-            "unit-infiltrator-squad",
-            "unit-librarian-in-phobos-armour",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-reiver-squad"
+          "allKeywords": [
+            "INFANTRY",
+            "PHOBOS"
           ]
         }
       },
       "assignment": {
-        "maxOwners": 1,
+        "maxOwners": 3,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
@@ -30519,7 +30518,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "owner": {
         "subject": "model",
         "selector": {
-          "unitIds": []
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
       },
       "assignment": {
@@ -33111,10 +33116,12 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "text": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
     "value": 15,
     "detachment": "Fulguris Task Force",
-    "tags": [],
+    "tags": [
+      "UPGRADE"
+    ],
     "sourceId": "bellicose-weapon-spirits",
     "owner": {
-      "subject": "model",
+      "subject": "unit",
       "selector": {
         "unitIds": [
           "unit-land-speeder",
@@ -33125,7 +33132,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       }
     },
     "assignment": {
-      "maxOwners": 1,
+      "maxOwners": 3,
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
@@ -33137,10 +33144,12 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
     "value": 15,
     "detachment": "Fulguris Task Force",
-    "tags": [],
+    "tags": [
+      "UPGRADE"
+    ],
     "sourceId": "raptorial-cogitator-core",
     "owner": {
-      "subject": "model",
+      "subject": "unit",
       "selector": {
         "unitIds": [
           "unit-land-speeder",
@@ -33151,7 +33160,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       }
     },
     "assignment": {
-      "maxOwners": 1,
+      "maxOwners": 3,
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
@@ -33287,26 +33296,21 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
     "value": 15,
     "detachment": "Subversion Assets",
-    "tags": [],
+    "tags": [
+      "UPGRADE"
+    ],
     "sourceId": "death-in-the-dark",
     "owner": {
-      "subject": "model",
+      "subject": "unit",
       "selector": {
-        "unitIds": [
-          "unit-captain-in-phobos-armour",
-          "unit-eliminator-squad",
-          "unit-incursor-squad",
-          "unit-infiltrator-squad",
-          "unit-librarian-in-phobos-armour",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-reiver-squad"
+        "allKeywords": [
+          "INFANTRY",
+          "PHOBOS"
         ]
       }
     },
     "assignment": {
-      "maxOwners": 1,
+      "maxOwners": 3,
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
@@ -33779,7 +33783,13 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "owner": {
       "subject": "model",
       "selector": {
-        "unitIds": []
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
       }
     },
     "assignment": {

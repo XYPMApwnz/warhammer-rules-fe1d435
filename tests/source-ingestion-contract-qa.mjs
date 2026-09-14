@@ -182,6 +182,8 @@ assert(smFactionPackWrapper.includes("configuredInput('Imperium - Space Marines.
 assert(!smFactionPackExtractor.includes('tmp" / "bsdata-wh40k-11e"'),'Space Marines Faction Pack extractor must not read an ambient mutable checkout');
 assert(smFactionPackExtractor.includes('parser.add_argument("--bsdata-faction", type=Path, required=True)')&&smFactionPackExtractor.includes('parser.add_argument("--bsdata-library", type=Path, required=True)'),'Space Marines Faction Pack extractor must require authenticated input paths');
 assert(packageJson.scripts['army-books:sources:check'].includes('node books/space-marines/tools/extract-faction-pack.mjs --check'),'Normal source checking must use the authenticated Space Marines Faction Pack wrapper');
+assert(packageJson.scripts['army-books:sources:check'].includes('node books/space-marines/tools/build-related-rules.mjs --check'),'Normal source checking must verify the deterministic Space Marines Related Rules aggregate');
+assert(packageJson.scripts['space-marines:build'].startsWith('node books/space-marines/tools/build-related-rules.mjs'),'Normal Space Marines build must run the sole Related Rules aggregate writer');
 const smCodexDetails=read('books/space-marines/tools/extract-codex-details.cjs');
 const smSessionIndex=smCodexDetails.indexOf('contract.createCaptureSession({sourceId:');
 for(const input of ['datasheetsPath','packPath']){

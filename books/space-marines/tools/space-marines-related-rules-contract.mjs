@@ -62,8 +62,15 @@ export function validateAcceptedRelatedRulesContracts(inputs){
     const ids=unitsForRule.get(row.ruleId)||[];ids.push(unitId);unitsForRule.set(row.ruleId,ids);
   }
   const sourceLimitedIds=strings(inputs['pinned-bsdata']);
+  const titleKey=value=>String(value||'').toLowerCase().replace(/\s*\(upgrade\)$/i,'').replace(/[^a-z0-9]+/g,' ').trim();
+  const mfm=inputs['mfm-v1.3'];
+  const packDetachmentById=new Map(pack.detachments.map(item=>[item.id,item]));
   const knownUnits=new Set((inputs['codex-datasheets'].datasheets||[]).map(item=>item.id));
-  const expectedSupplemental=new Set(sourceEnhancements.filter(item=>!(unitsForRule.get(item.id)||[]).length||/\(Upgrade\)$/i.test(item.title)).map(item=>item.id));
+  const expectedUpgradeIds=new Set(['bellicose-weapon-spirits','raptorial-cogitator-core','death-in-the-dark']);
+  const expectedSupplemental=new Set([
+    ...sourceEnhancements.filter(item=>!(unitsForRule.get(item.id)||[]).length).map(item=>item.id),
+    ...expectedUpgradeIds
+  ]);
   assert(expectedSupplemental.size===28,'accepted source boundary no longer identifies 28 supplemental contracts');
   assert(contractIds.every(id=>expectedSupplemental.has(id))&&[...expectedSupplemental].every(id=>contractIds.includes(id)),'missing or unknown supplemental Enhancement contract');
   for(const record of accepted.enhancements){
@@ -92,6 +99,11 @@ export function validateAcceptedRelatedRulesContracts(inputs){
     }
     const packRef=record.sourceRefs.find(item=>item.sourceId==='faction-pack-v1.2');
     assert(source.sourcePages.includes(packRef?.locator?.page),`${record.id} Faction Pack locator does not match its source record`);
+    const mfmRef=record.sourceRefs.find(item=>item.sourceId==='mfm-v1.3');
+    const pointer=/^\/enhancements\/(\d+)$/.exec(mfmRef?.locator?.jsonPointer||'');
+    const mfmRecord=pointer?mfm.enhancements?.[Number(pointer[1])]:null;
+    const packRecord=packDetachmentById.get(record.detachmentId);
+    assert(mfmRecord&&titleKey(mfmRecord.title)===titleKey(source.title)&&titleKey(mfmRecord.detachment)===titleKey(packRecord?.title),`${record.id} MFM locator does not resolve its exact points identity`);
     const bsRef=record.sourceRefs.find(item=>item.sourceId==='pinned-bsdata');
     assert(bsRef?.locator?.selectionId&&sourceLimitedIds.has(bsRef.locator.selectionId),`${record.id} BSData locator does not resolve`);
   }

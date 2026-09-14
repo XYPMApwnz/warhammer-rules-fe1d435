@@ -1,12 +1,12 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 3258,
+    "terms": 3261,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 227,
+    "aliasCandidates": 230,
     "duplicateCandidates": 116,
     "keywordCandidates": 16
   },
@@ -2222,6 +2222,22 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "bellicose-weapon-spirits-upgrade",
+      "termIds": [
+        "space-marines-enhancement-bellicose-weapon-spirits-upgrade",
+        "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "raptorial-cogitator-core-upgrade",
+      "termIds": [
+        "space-marines-enhancement-raptorial-cogitator-core-upgrade",
+        "space-marines-enhancement-raptorial-cogitator-core-upgrade-2"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "hunters-instincts",
       "termIds": [
         "space-marines-stratagem-hunters-instincts",
@@ -2235,6 +2251,14 @@
       "termIds": [
         "space-marines-stratagem-shock-assault",
         "space-marines-ability-shock-assault"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "death-in-the-dark-upgrade",
+      "termIds": [
+        "space-marines-enhancement-death-in-the-dark-upgrade",
+        "space-marines-enhancement-death-in-the-dark-upgrade-2"
       ],
       "status": "review-required"
     },

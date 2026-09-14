@@ -20,8 +20,13 @@ for(const id of registryIds)assert.equal(registry[id].id,id,`${id}: registry key
 assert.equal(api.counts.terms,registryIds.length,'generated glossary term count differs from the canonical registry');
 assert.equal(api.counts.aliases,aliasIds.length,'generated glossary alias count differs from the canonical aliases');
 assert.match(api.contentHash,/^[a-f0-9]{64}$/,'generated glossary content hash is not deterministic');
-assert.equal(registryIds.length,3258,'current canonical glossary inventory changed unexpectedly');
-assert.equal(crypto.createHash('sha256').update([...registryIds].sort().join('\n')).digest('hex'),'2d6dd1e937c675931b05765fcb907d1d36dfc3cdf29c84ec9df0ed7d26a8e418','current canonical glossary identity set changed unexpectedly');
+assert.equal(registryIds.length,3261,'current canonical glossary inventory changed unexpectedly');
+assert.equal(crypto.createHash('sha256').update([...registryIds].sort().join('\n')).digest('hex'),'54a3d77b7f59fb42b9cf598664119399ac6500f2175d2617ae6f52fc7060a2db','current canonical glossary identity set changed unexpectedly');
+for(const id of [
+  'space-marines-enhancement-bellicose-weapon-spirits-upgrade-2',
+  'space-marines-enhancement-raptorial-cogitator-core-upgrade-2',
+  'space-marines-enhancement-death-in-the-dark-upgrade-2'
+])assert.ok(registry[id],`${id}: canonical unit Upgrade glossary identity is missing`);
 const pidbFulgrimIdentities=new Map([
   ['emperors-children-ability-daemon-primarch-of-slaanesh','Daemon Primarch of Slaanesh'],
   ['emperors-children-ability-beguiling-form','Beguiling Form'],

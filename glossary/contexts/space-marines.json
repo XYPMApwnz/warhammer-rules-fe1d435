@@ -7517,6 +7517,27 @@
         ]
       }
     },
+    "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2": {
+      "termId": "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-bellicose-weapon-spirits-upgrade-2",
+        "rule": "detachment-fulguris-task-force"
+      }
+    },
+    "space-marines-enhancement-raptorial-cogitator-core-upgrade-2": {
+      "termId": "space-marines-enhancement-raptorial-cogitator-core-upgrade-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-raptorial-cogitator-core-upgrade-2",
+        "rule": "detachment-fulguris-task-force"
+      }
+    },
+    "space-marines-enhancement-death-in-the-dark-upgrade-2": {
+      "termId": "space-marines-enhancement-death-in-the-dark-upgrade-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-death-in-the-dark-upgrade-2",
+        "rule": "detachment-subversion-assets"
+      }
+    },
     "space-marines-army-rule-oath-of-moment": {
       "termId": "space-marines-army-rule-oath-of-moment",
       "navigation": {

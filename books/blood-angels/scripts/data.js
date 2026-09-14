@@ -7984,6 +7984,30 @@ window.DG_TERMS={
     "datasheet": "unit-death-company-dreadnought",
     "statline": "death-company-dreadnought-profile"
   },
+  "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2": {
+    "id": "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2",
+    "title": "Bellicose Weapon Spirits (Upgrade)",
+    "summary": "UPGRADE. SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
+    "full": "UPGRADE. SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
+    "glossary": "glossary-space-marines-enhancement-bellicose-weapon-spirits-upgrade-2",
+    "rule": "detachment-fulguris-task-force"
+  },
+  "space-marines-enhancement-raptorial-cogitator-core-upgrade-2": {
+    "id": "space-marines-enhancement-raptorial-cogitator-core-upgrade-2",
+    "title": "Raptorial Cogitator Core (Upgrade)",
+    "summary": "UPGRADE. SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
+    "full": "UPGRADE. SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
+    "glossary": "glossary-space-marines-enhancement-raptorial-cogitator-core-upgrade-2",
+    "rule": "detachment-fulguris-task-force"
+  },
+  "space-marines-enhancement-death-in-the-dark-upgrade-2": {
+    "id": "space-marines-enhancement-death-in-the-dark-upgrade-2",
+    "title": "Death in the Dark (Upgrade)",
+    "summary": "UPGRADE. INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
+    "full": "UPGRADE. INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
+    "glossary": "glossary-space-marines-enhancement-death-in-the-dark-upgrade-2",
+    "rule": "detachment-subversion-assets"
+  },
   "space-marines-army-rule-oath-of-moment": {
     "id": "space-marines-army-rule-oath-of-moment",
     "title": "Oath of Moment",

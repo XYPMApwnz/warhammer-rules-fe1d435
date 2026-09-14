@@ -87,6 +87,11 @@ function rawResults(book){
     ?read('books/adeptus-mechanicus/tools/extract-datasheets.mjs').includes('previousByTitle')
     :id==='tau-empire'
       ?read('books/tau-empire/tools/build-related-rules.mjs').includes("fs.readFileSync(outputPath")
+      :id==='space-marines'
+        ?[
+          read('books/space-marines/tools/extract-codex-details.cjs'),
+          read('books/space-marines/tools/extract-faction-pack.py')
+        ].some(source=>source.includes('space-marines-related-rules.en.json'))
       :false;
   const effectSignal={
     'death-guard':'death-guard/scripts/roster-semantics.js','adeptus-mechanicus':'adeptus-mechanicus/scripts/roster-enhancements.js',

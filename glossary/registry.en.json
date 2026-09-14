@@ -78902,6 +78902,41 @@
       ],
       "mentions": []
     },
+    "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2": {
+      "id": "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2",
+      "kind": "enhancement",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Bellicose Weapon Spirits (Upgrade)"
+      },
+      "summary": {
+        "en": "UPGRADE. SPEEDER unit only. This unit can re-roll: • Damage rolls. • Rolls to determine the A of a weapon."
+      },
+      "definition": {
+        "en": "UPGRADE. SPEEDER unit only. This unit can re-roll: • Damage rolls. • Rolls to determine the A of a weapon."
+      },
+      "structured": {
+        "tags": [
+          "UPGRADE"
+        ]
+      },
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.2",
+        "locator": "detachment-fulguris-task-force"
+      },
+      "fullRulePath": "books/space-marines/reader.html#detachment-fulguris-task-force",
+      "status": "verified",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-enhancement-blackwing-shroud": {
       "id": "space-marines-enhancement-blackwing-shroud",
       "kind": "enhancement",
@@ -79197,6 +79232,41 @@
         "en": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls."
       },
       "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.2",
+        "locator": "detachment-subversion-assets"
+      },
+      "fullRulePath": "books/space-marines/reader.html#detachment-subversion-assets",
+      "status": "verified",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-enhancement-death-in-the-dark-upgrade-2": {
+      "id": "space-marines-enhancement-death-in-the-dark-upgrade-2",
+      "kind": "enhancement",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Death in the Dark (Upgrade)"
+      },
+      "summary": {
+        "en": "UPGRADE. INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls."
+      },
+      "definition": {
+        "en": "UPGRADE. INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls."
+      },
+      "structured": {
+        "tags": [
+          "UPGRADE"
+        ]
+      },
       "presentation": "atomic",
       "aliases": [],
       "related": [],
@@ -80406,6 +80476,41 @@
         "en": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER]."
       },
       "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.2",
+        "locator": "detachment-fulguris-task-force"
+      },
+      "fullRulePath": "books/space-marines/reader.html#detachment-fulguris-task-force",
+      "status": "verified",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-enhancement-raptorial-cogitator-core-upgrade-2": {
+      "id": "space-marines-enhancement-raptorial-cogitator-core-upgrade-2",
+      "kind": "enhancement",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Raptorial Cogitator Core (Upgrade)"
+      },
+      "summary": {
+        "en": "UPGRADE. SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER]."
+      },
+      "definition": {
+        "en": "UPGRADE. SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER]."
+      },
+      "structured": {
+        "tags": [
+          "UPGRADE"
+        ]
+      },
       "presentation": "atomic",
       "aliases": [],
       "related": [],

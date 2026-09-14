@@ -125,12 +125,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -4261,12 +4255,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -4850,12 +4838,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -5465,12 +5447,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -5933,12 +5909,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -6370,12 +6340,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -7799,12 +7763,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -8870,12 +8828,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -14043,12 +13995,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -14612,12 +14558,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -18751,12 +18691,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -19204,12 +19138,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -19734,12 +19662,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -21643,12 +21565,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -22104,12 +22020,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -22590,12 +22500,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -23086,12 +22990,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -23666,12 +23564,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -24251,12 +24143,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -24807,12 +24693,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -25344,12 +25224,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -25890,12 +25764,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -26499,12 +26367,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -27081,12 +26943,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -27624,12 +27480,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -28180,12 +28030,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -28755,12 +28599,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -29324,12 +29162,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -29899,12 +29731,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -30422,12 +30248,6 @@
         "ruleId": "bastion-task-force-shock-bombardment",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -31004,12 +30824,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -31592,12 +31406,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -32212,12 +32020,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -32839,12 +32641,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -33455,12 +33251,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -34034,12 +33824,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -34665,12 +34449,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -35221,12 +34999,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -35740,12 +35512,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -37165,12 +36931,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -37788,12 +37548,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -38427,12 +38181,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -39031,12 +38779,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -39560,12 +39302,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -46507,12 +46243,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -47026,12 +46756,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -47598,12 +47322,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -48205,12 +47923,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -48799,12 +48511,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -49320,12 +49026,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -49942,12 +49642,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -50571,12 +50265,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -51197,12 +50885,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -51782,12 +51464,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -52823,12 +52499,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -53457,12 +53127,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -54013,12 +53677,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -54544,12 +54202,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -55081,12 +54733,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -55615,12 +55261,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -56141,12 +55781,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -56664,12 +56298,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -57204,12 +56832,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -57860,12 +57482,6 @@
         "ruleId": "bastion-task-force-shock-bombardment",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -59365,12 +58981,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -59967,12 +59577,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -60514,12 +60118,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -61068,12 +60666,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {
@@ -61679,12 +61271,6 @@
         "state": "match"
       },
       {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
-        "state": "match"
-      },
-      {
         "ruleId": "ceramite-sentinels-armour-of-contempt",
         "kind": "stratagem",
         "detachmentId": "ceramite-sentinels",
@@ -62248,12 +61834,6 @@
         "ruleId": "bastion-task-force-light-of-vengeance",
         "kind": "stratagem",
         "detachmentId": "bastion-task-force",
-        "state": "match"
-      },
-      {
-        "ruleId": "enhancement-spy-skull-data-link",
-        "kind": "enhancement",
-        "detachmentId": "ceramite-sentinels",
         "state": "match"
       },
       {

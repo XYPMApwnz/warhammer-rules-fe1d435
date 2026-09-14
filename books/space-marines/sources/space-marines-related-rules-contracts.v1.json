@@ -4,39 +4,46 @@
   "sourceBindings": {
     "faction-pack-canonical": {
       "path": "content/space-marines-faction-pack.en.json",
-      "sha256": "229d784fcbe568fd380ce671c2f980ed0f4d8d875ca77fc3632e256a08932665",
-      "authority": "VERIFIED_FROZEN"
+      "sha256": "76f0e98649cc36a2fb26083abf9bcd211bca9aef1de368a0dfeed3e7dbe91958",
+      "authority": "VERIFIED_FROZEN",
+      "normalization": "lf"
     },
     "faction-pack-v1.2": {
       "path": "sources/space-marines-faction-pack-v1.2.pdf",
       "sha256": "f1f96c0a3dda8dfc2d5686b4aa60e7959697651edbc51f5a344439ff6ac1a1f9",
-      "authority": "VERIFIED_FROZEN"
+      "authority": "VERIFIED_FROZEN",
+      "normalization": "bytes"
     },
     "mfm-v1.3": {
       "path": "sources/official-mfm-v1.3.json",
       "sha256": "d5e8765d56fce1445f7718ad7ca4d249d5ac3ffd6d68e8d8abea46e539d0546b",
-      "authority": "VERIFIED_FROZEN"
+      "authority": "VERIFIED_FROZEN",
+      "normalization": "lf"
     },
     "pinned-bsdata": {
       "path": "sources/bsdata-space-marines-11e.json",
-      "sha256": "69ed569896f24bc5158820e0d0e5da6ffe4a9f97580891351fa9db3274fd678e",
+      "sha256": "2c3427a887b90bebd652a37cc5fc0deaab4de000d15ae1e73edaf024ae0d4163",
       "authority": "SOURCE_LIMITED",
-      "repositoryCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
+      "repositoryCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "normalization": "lf"
     },
     "codex-datasheets": {
       "path": "content/space-marines-codex-datasheets.en.json",
-      "sha256": "df7101146c380fd4052c0cf6500dcb20286c4c87b9e4da5a082df06a00bac6c3",
-      "authority": "SOURCE_LIMITED"
+      "sha256": "2893fd448af30270d7954fcbdda9f42a25cd419e1db7de1a6e34dce54966c4a3",
+      "authority": "SOURCE_LIMITED",
+      "normalization": "lf"
     },
     "codex-overlay": {
       "path": "content/space-marines-current-overlay.en.json",
       "sha256": "96bdf6780b227875dc1d3337a37a5104e16f866c9f7d65d8e584803934244907",
-      "authority": "SOURCE_LIMITED"
+      "authority": "SOURCE_LIMITED",
+      "normalization": "lf"
     },
     "codex-compatibility-snapshot": {
       "path": "sources/wahapedia-compatible-rules.snapshot.json",
       "sha256": "32dee7a9bb9c21290ae4817f6a4563e69c10021ec63175d9ae3d6fe14d748aa1",
-      "authority": "SOURCE_LIMITED"
+      "authority": "SOURCE_LIMITED",
+      "normalization": "lf"
     }
   },
   "enhancements": [

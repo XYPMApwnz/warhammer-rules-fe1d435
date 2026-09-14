@@ -31,13 +31,15 @@ export function loadAcceptedRelatedRulesInputs({bookRoot=defaultBookRoot,authent
   const inputs={accepted};
   const tracked=[artifactPath];
   for(const [sourceId,binding] of Object.entries(accepted.sourceBindings||{})){
-    exactKeys(binding,['path','sha256','authority','repositoryCommit'],`source ${sourceId}`);
+    exactKeys(binding,['path','sha256','authority','repositoryCommit','normalization'],`source ${sourceId}`);
     assert(binding.path&&binding.sha256&&binding.authority,`${sourceId} has incomplete authentication`);
     const file=path.resolve(root,...binding.path.replaceAll('\\','/').split('/'));
     assert(within(file,root),`${sourceId} path escapes the book root`);
     assert(fs.existsSync(file),`${sourceId} is missing: ${binding.path}`);
     const bytes=fs.readFileSync(file);
-    assert(hash(bytes)===binding.sha256.toLowerCase(),`${sourceId} hash mismatch`);
+    const authenticatedBytes=binding.normalization==='lf'?Buffer.from(bytes.toString('utf8').replace(/\r\n/g,'\n'),'utf8'):bytes;
+    assert(['lf','bytes'].includes(binding.normalization),`${sourceId} has an unsupported normalization`);
+    assert(hash(authenticatedBytes)===binding.sha256.toLowerCase(),`${sourceId} hash mismatch`);
     inputs[sourceId]=binding.path.endsWith('.json')?JSON.parse(bytes.toString('utf8')):bytes;
     tracked.push(file);
   }

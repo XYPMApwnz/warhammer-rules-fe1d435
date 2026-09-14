@@ -184,10 +184,12 @@ assert(smFactionPackExtractor.includes('parser.add_argument("--bsdata-faction", 
 assert(packageJson.scripts['army-books:sources:check'].includes('node books/space-marines/tools/extract-faction-pack.mjs --check'),'Normal source checking must use the authenticated Space Marines Faction Pack wrapper');
 const smCodexDetails=read('books/space-marines/tools/extract-codex-details.cjs');
 const smSessionIndex=smCodexDetails.indexOf('contract.createCaptureSession({sourceId:');
-for(const input of ['datasheetsPath','packPath','overlayPath','relatedPath']){
+for(const input of ['datasheetsPath','packPath','relatedPath']){
   assert(smCodexDetails.indexOf(`path:path.relative(path.resolve(root,'../..'),${input})`,smSessionIndex)>smSessionIndex,`Space Marines codex-details must authenticate ${input}`);
   assert(smCodexDetails.indexOf(`fs.readFileSync(${input}`,smSessionIndex)>smCodexDetails.indexOf(`path:path.relative(path.resolve(root,'../..'),${input})`,smSessionIndex),`Space Marines codex-details must authenticate ${input} before reading it`);
 }
+assert(!smCodexDetails.includes("fs.readFileSync(overlayPath"),'Space Marines codex-details must not read its previous overlay as factual input');
+assert(!smCodexDetails.includes("path:path.relative(path.resolve(root,'../..'),overlayPath),kind:'generated-repository-input'"),'Space Marines codex-details must not authenticate its own previous overlay as a normalization input');
 const coreInputDeclaration=smCodexDetails.indexOf("path:path.relative(path.resolve(root,'../..'),coreRelatedPath)",smSessionIndex);
 assert(coreInputDeclaration>smSessionIndex,'Space Marines codex-details must authenticate its Core-owned Related Rules input');
 assert(smCodexDetails.indexOf('coreRuleMap(),details=[]',smSessionIndex)>coreInputDeclaration,'Space Marines codex-details must authenticate the Core-owned input before using it');

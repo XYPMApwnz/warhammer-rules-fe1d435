@@ -24,9 +24,8 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'scripts','target-data.js'),'u
 const reader=readerShell+targetScope.window.WH_ARMY_BOOK_TARGETS.html;
 const serviceWorker=fs.readFileSync(path.join(repo,'service-worker.js'),'utf8');
 const codexParitySource=manifest.layers.find(layer=>layer.id==='codex-parity');
-assert.equal(config.assetVersions.rosterFilter,7);
 const rosterFilterUrl=reader.match(/\.\/scripts\/roster-filter\.js\?v=\d+/)?.[0];
-assert.ok(rosterFilterUrl);
+assert.equal(rosterFilterUrl,`./scripts/roster-filter.js?v=${config.assetVersions.rosterFilter}`);
 assert.ok(serviceWorker.includes(`./books/tau-empire/${rosterFilterUrl.slice(2)}`));
 assert.equal(codexParitySource?.title,'Wahapedia Warhammer 40,000 11th Edition · T’au Empire');
 const mobileStart=fs.readFileSync(path.join(root,'mobile','index.html'),'utf8');

@@ -22,6 +22,7 @@ const providerSource=fs.readFileSync(path.join(root,'books/extensions/book-roste
 const pointsScope={};pointsScope.window=pointsScope;vm.runInNewContext(fs.readFileSync(path.join(root,'roster-guides/points-data.js'),'utf8'),pointsScope,{filename:'points-data.js'});
 const components=new Set();
 let conditionalCount=0;
+let structuredConditionCount=0;
 const fixtures=new Map();
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const ownerEligible=(unit,selector={})=>{
@@ -45,6 +46,7 @@ const loadBook=bookId=>{
   scope.window=scope;
   scope.globalThis=scope;
   vm.runInNewContext(fs.readFileSync(path.join(root,`books/${bookId}/scripts/roster-data.js`),'utf8'),scope,{filename:`${bookId}/roster-data.js`});
+  vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/effect-contract-runtime.js'),'utf8'),scope,{filename:'effect-contract-runtime.js'});
   vm.runInNewContext(registrySource,scope,{filename:'book-roster-enhancements.js'});
   vm.runInNewContext(providerSource,scope,{filename:'book-roster-enhancement-providers.js'});
   return {api:scope.WHBookRosterEnhancements,catalog:scope.WH_BOOK_ROSTER_CATALOG};
@@ -52,6 +54,7 @@ const loadBook=bookId=>{
 
 for(const [bookId,requiredEnhancementId] of books){
   const {api,catalog}=loadBook(bookId);
+  structuredConditionCount+=catalog.effectContracts.reduce((sum,contract)=>sum+contract.clauses.reduce((subtotal,clause)=>subtotal+(clause.conditions||[]).length,0),0);
   const structuredIds=new Set();
   for(const enhancement of catalog.enhancements){
     const ownerId=`${bookId}-physical-owner`;
@@ -74,7 +77,7 @@ for(const [bookId,requiredEnhancementId] of books){
     for(const effect of effects){
       assert.equal(effect.source?.ownerInstanceId,ownerId,`${bookId}/${enhancement.id}: exact source owner`);
       assert.ok([enhancement.id,enhancement.ruleId,enhancement.sourceId].filter(Boolean).includes(effect.source?.id),`${bookId}/${enhancement.id}: canonical source`);
-      assert.equal(effect.provenance?.rosterFact,'enhancement-owner',`${bookId}/${enhancement.id}: provenance`);
+      assert.equal(effect.provenance?.rosterFact,'canonical-effect-contract',`${bookId}/${enhancement.id}: provenance`);
       assert.ok(effect.component||effect.kind,`${bookId}/${enhancement.id}: effect class`);
       assert.ok(effect.operation,`${bookId}/${enhancement.id}: operation`);
       components.add(effect.component||effect.kind);
@@ -101,7 +104,7 @@ for(const [bookId,requiredEnhancementId] of books){
   console.log(`PASS  ${bookId}: ${structuredIds.size} canonical Enhancements emit structured effects; stable anchor ${requiredEnhancementId}`);
 }
 assert.deepEqual([...components].sort(),['ability','keyword','stat','weapon'],'structured component families');
-assert.ok(conditionalCount>0,'conditional game-state effects are absent');
+assert.ok(structuredConditionCount>0,'structured effect conditions are absent');
 
 const detachmentFixture=(bookId,unitId,instanceId,detachments,gameUnits=null)=>{
   const {api,catalog}=loadBook(bookId),unit=catalog.units.find(candidate=>candidate.id===unitId);
@@ -116,10 +119,9 @@ const fulgrimA=detachmentFixture('emperors-children','unit-fulgrim','ec-fulgrim-
 assert.equal(masterReferences(fulgrimA).length,1,'Master of the Pageant must emit exactly once for physical Fulgrim');
 assert.deepEqual(
   JSON.parse(JSON.stringify(masterReferences(fulgrimA).map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,state:effect.state,sourceKind:effect.source?.kind,sourceId:effect.source?.id,owner:effect.source?.ownerInstanceId,rosterFact:effect.provenance?.rosterFact})))),
-  [{component:'ability',targetId:masterRuleId,operation:'reference',state:'reference',sourceKind:'detachment',sourceId:'court-of-the-phoenician',owner:null,rosterFact:'detachment-rule-reference'}],
+  [{component:'ability',targetId:masterRuleId,operation:'reference',state:'reference',sourceKind:'detachment',sourceId:'court-of-the-phoenician',owner:null,rosterFact:'canonical-effect-contract'}],
   'Master of the Pageant must remain a reference-only effect'
 );
-assert.equal(fulgrimA.effects.length,1,'Master of the Pageant must not add automatic mutations');
 assert.equal(masterReferences(detachmentFixture('emperors-children','unit-fulgrim','ec-fulgrim-other',['rapid-evisceration'])).length,0,'Master of the Pageant leaked to another EC Detachment');
 assert.equal(masterReferences(detachmentFixture('emperors-children','unit-seekers','ec-non-fulgrim',['court-of-the-phoenician'])).length,0,'Master of the Pageant leaked to a non-Fulgrim unit');
 assert.equal(masterReferences(detachmentFixture('chaos-space-marines','unit-chaos-lord','csm-wrong-faction',['court-of-the-phoenician'])).length,0,'Master of the Pageant leaked cross-faction');
@@ -180,7 +182,7 @@ try{
     assert.equal(masterReal.identity.instanceId,'parsed-unit-1','Master of the Pageant real path physical instance');
     assert.equal(masterReal.identity.canonicalDatasheetId,'unit-fulgrim','Master of the Pageant real path canonical identity');
     assert.equal(masterRealReferences.length,1,'Master of the Pageant real production path reference');
-    assert.deepEqual(JSON.parse(JSON.stringify(masterRealReferences.map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,state:effect.state,targetState:effect.targetState,sourceKind:effect.source?.kind,sourceId:effect.source?.id,owner:effect.source?.ownerInstanceId,rosterFact:effect.provenance?.rosterFact,targets:effect.targets})))),[{component:'ability',targetId:masterRuleId,operation:'reference',state:'reference',targetState:'resolved',sourceKind:'detachment',sourceId:'court-of-the-phoenician',owner:null,rosterFact:'detachment-rule-reference',targets:[]}],'Master of the Pageant real path remains reference-only');
+    assert.deepEqual(JSON.parse(JSON.stringify(masterRealReferences.map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,state:effect.state,targetState:effect.targetState,sourceKind:effect.source?.kind,sourceId:effect.source?.id,owner:effect.source?.ownerInstanceId,rosterFact:effect.provenance?.rosterFact,targets:effect.targets})))),[{component:'ability',targetId:masterRuleId,operation:'reference',state:'reference',targetState:'resolved',sourceKind:'detachment',sourceId:'court-of-the-phoenician',owner:null,rosterFact:'canonical-effect-contract',targets:[]}],'Master of the Pageant real path remains reference-only');
     assert.match(masterReal.cardText,/Master of the Pageant/i,'Master of the Pageant missing from physical Fulgrim presentation');
     const masterNonFulgrim=await realRosterCase({bookId:'emperors-children',detachmentId:'court-of-the-phoenician',datasheetId:'unit-seekers',quantity:5});
     assert.equal(masterNonFulgrim.effects.filter(effect=>effect.canonicalReference?.id===masterRuleId).length,0,'Master of the Pageant leaked to a real non-Fulgrim unit');

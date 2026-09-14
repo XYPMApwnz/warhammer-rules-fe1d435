@@ -220,6 +220,8 @@ assert(plasmaProfiles.length===2,'Plasma gun does not expose both standard and s
 
 const dgRosterFilter=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-filter.js'),'utf8');
 const dgRosterSemantics=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-semantics.js'),'utf8');
+const dgEffectContracts=JSON.parse(fs.readFileSync(path.join(root,'books/death-guard/sources/death-guard-effect-contracts.v1.json'),'utf8')).contracts;
+const sharedEffectRuntime=fs.readFileSync(path.join(root,'books/shared/effect-contract-runtime.js'),'utf8');
 const amRosterFilter=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/scripts/roster-filter.js'),'utf8');
 const rosterGuideApp=fs.readFileSync(path.join(root,'roster-guides/app.js'),'utf8');
 const mobileRouteRedirect=fs.readFileSync(path.join(root,'books/shared/mobile-route-redirect.js'),'utf8');
@@ -230,9 +232,11 @@ const dgFixtureUnit=dgCatalog.units.find(unit=>unit.id==='unit-poxwalkers')||dgC
 const dgProjection=sharedRosterApi.project({catalog:dgCatalog,roster:{detachments:[{id:'detachment-shamblerot-vectorium'}],enhancements:[{id:dgFixtureEnhancement.id,ownerUnitId:'dg-physical-1',ownerStatus:'resolved'}],units:[{id:'dg-physical-1',canonicalUnitId:dgFixtureUnit.id}]},record:{attachments:{},groups:{},formations:{}}});
 assert(rosterGuideApp.includes("'death guard':'../books/death-guard/index.html'"),'Death Guard personal guides bypass the responsive book entry');
 assert(dgProjection.context.units[0].instanceId==='dg-physical-1'&&dgProjection.context.enhancements[0].owner.instanceId==='dg-physical-1'&&mobileRouteRedirect.includes('destination.search=location.search')&&!dgRosterFilter.includes('history.replaceState')&&!dgRosterFilter.includes('querySelectorAll'),'Death Guard shared roster projection does not preserve physical-instance or responsive query identity');
-assert(dgRosterSemantics.includes("{detachment:'shamblerot-vectorium', units:['poxwalkers'], id:'keyword-battleline', title:'BATTLELINE'}"),'Shamblerot Vectorium grant is absent from the Death Guard semantic runtime');
-assert(dgRosterSemantics.includes("'foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'"),'Contagion Engines grant owners are incomplete');
-assert(dgRosterSemantics.includes('addKeywords(KEYWORD_GRANTS.filter')&&dgRosterFilter.includes('keywordProfile({unit},base)')&&dgRosterFilter.includes('semantics.decorate?.(')&&!dgRosterFilter.includes('WHArmyRosterContext.project(')&&!fs.existsSync(path.join(root,'books/death-guard/mobile/mobile.js'))&&dgPhoneStub.includes(`mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`),'Roster keyword rendering does not use the thin Death Guard provider over shared projection');
+const shamblerotEffect=dgEffectContracts.find(item=>item.canonicalRecordId==='detachment-rule-numberless-horde'),contagionEffect=dgEffectContracts.find(item=>item.canonicalRecordId==='detachment-rule-warped-and-rusted-animus');
+assert(shamblerotEffect?.clauses.some(clause=>clause.selector?.unitIds?.includes('unit-poxwalkers')&&clause.operations?.some(operation=>operation.type==='KEYWORD_GRANT'&&operation.canonicalTarget==='BATTLELINE')),'Shamblerot Vectorium grant is absent from the canonical effect contract');
+const contagionOwners=new Set(contagionEffect?.clauses.flatMap(clause=>clause.selector?.unitIds||[])),expectedContagionOwners=['unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler'];
+assert(contagionOwners.size===expectedContagionOwners.length&&expectedContagionOwners.every(id=>contagionOwners.has(id)),'Contagion Engines grant owners are incomplete');
+assert(sharedEffectRuntime.includes('function project(context)')&&!dgRosterSemantics.includes('detachment-shamblerot-vectorium')&&!dgRosterFilter.includes('detachment-shamblerot-vectorium')&&!fs.existsSync(path.join(root,'books/death-guard/mobile/mobile.js'))&&dgPhoneStub.includes(`mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`),'Roster keyword rendering does not use canonical contracts through the shared interpreter');
 
 assert(sharedRosterApi.install({catalog:amCatalog,roster:null})===null&&amRosterFilter.includes('WHArmyRosterContext.install({')&&!amRosterFilter.includes('location.replace(')&&!amRosterFilter.includes('querySelectorAll')&&!fs.existsSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'))&&amPhoneStub.includes('data-canonical-reader="../reader.html"')&&!amPhoneStub.includes('unit-card'),'Mechanicus no-roster shared projection or single-reader contract regressed');
 

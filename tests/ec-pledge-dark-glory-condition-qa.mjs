@@ -22,6 +22,8 @@ assert.equal(ownerContract.detachmentId,detachmentId,'Pledge of Dark Glory Detac
 assert.equal(ownerContract.ownerGroup,'emperors-children-character','Pledge of Dark Glory bearer selector changed');
 
 const scope={window:{addEventListener(){}}};
+vm.runInNewContext(read('books/emperors-children/scripts/roster-data.js'),scope,{filename:'emperors-children/roster-data.js'});
+vm.runInNewContext(read('books/shared/effect-contract-runtime.js'),scope,{filename:'effect-contract-runtime.js'});
 vm.runInNewContext(read('books/emperors-children/scripts/roster-filter.js'),scope,{filename:'emperors-children/roster-filter.js'});
 const api=scope.window.ECRosterSemantics;
 
@@ -29,7 +31,7 @@ const makeUnit=(instanceId,canonicalDatasheetId,keywords=["EMPEROR'S CHILDREN",'
   identity:{instanceId,canonicalDatasheetId},
   attachments:{leading:[],leaders:[]},
   rosterState:{keywordProfile:{effective:keywords,intrinsic:keywords},detachments:[detachmentId]},
-  item:{catalogUnit:{id:canonicalDatasheetId,gameSelections:{}}},
+  item:{catalogUnit:scope.window.WH_BOOK_ROSTER_CATALOG.units.find(item=>item.id===canonicalDatasheetId)},
   selection:{loadout:{selectedWargearAbilityIds:[]}},
 });
 const resolvedEnhancement=(id=enhancementId,ownerUnitId='ec-owner')=>({catalog:{id},input:{ownerStatus:'resolved',ownerUnitId}});
@@ -44,9 +46,9 @@ const owner=makeUnit('ec-owner','unit-lord-exultant');
 assertNoPledge(pledgeEffects(owner,new Map([[owner.identity.instanceId,owner]])),'unattached bearer received Pledge of Dark Glory modifiers');
 
 // Case B: every physical record representing models in the led unit receives the modifiers.
-const body=makeUnit('ec-body','unit-legionaries',["EMPEROR'S CHILDREN",'INFANTRY']);
-owner.attachments.leading=[{instanceId:body.identity.instanceId}];
-body.attachments.leaders=[{instanceId:owner.identity.instanceId}];
+const body=makeUnit('ec-body','unit-noise-marines',["EMPEROR'S CHILDREN",'INFANTRY']);
+owner.attachments.leading=[{instanceId:body.identity.instanceId,certainty:'current',provenance:{kind:'explicit-roster-attachment'}}];
+body.attachments.leaders=[{instanceId:owner.identity.instanceId,certainty:'current',provenance:{kind:'explicit-roster-attachment'}}];
 const attached=new Map([[owner.identity.instanceId,owner],[body.identity.instanceId,body]]);
 assertPledgePair(pledgeEffects(owner,attached),'attached bearer modifiers changed');
 assertPledgePair(pledgeEffects(body,attached),'attached body modifiers changed');
@@ -57,13 +59,14 @@ assertNoPledge(pledgeEffects(owner,attached,[]),'eligible Character without Pled
 // Case D: unrelated Enhancement behavior remains independent.
 const unrelatedId='enhancement-exalted-patron';
 const unrelatedOwner=makeUnit('ec-unrelated','unit-lord-exultant');
+unrelatedOwner.rosterState.detachments=['court-of-the-phoenician'];
 const unrelatedEffects=api.projectEffects({gameUnit:unrelatedOwner,byInstance:new Map([[unrelatedOwner.identity.instanceId,unrelatedOwner]]),enhancements:[resolvedEnhancement(unrelatedId,unrelatedOwner.identity.instanceId)]});
 assert.deepEqual(Array.from(unrelatedEffects.filter(effect=>effect.source?.id===unrelatedId),effect=>[effect.targetId,effect.operation,effect.delta]),[['M','add',1]],'unrelated EC Enhancement behavior changed');
 
 // Wrong attachment role, canonical identity, and Detachment scope must all fail closed.
 const bodyguardBearer=makeUnit('ec-owner','unit-lord-exultant'),otherLeader=makeUnit('ec-other-leader','unit-lord-kakophonist');
-bodyguardBearer.attachments.leaders=[{instanceId:otherLeader.identity.instanceId}];
-otherLeader.attachments.leading=[{instanceId:bodyguardBearer.identity.instanceId}];
+bodyguardBearer.attachments.leaders=[{instanceId:otherLeader.identity.instanceId,certainty:'current',provenance:{kind:'explicit-roster-attachment'}}];
+otherLeader.attachments.leading=[{instanceId:bodyguardBearer.identity.instanceId,certainty:'current',provenance:{kind:'explicit-roster-attachment'}}];
 const wrongRole=new Map([[bodyguardBearer.identity.instanceId,bodyguardBearer],[otherLeader.identity.instanceId,otherLeader]]);
 assertNoPledge(pledgeEffects(bodyguardBearer,wrongRole),'Pledge activated while its bearer was being led');
 assertNoPledge(pledgeEffects(otherLeader,wrongRole),'Pledge leaked from a bodyguard bearer into its leader');

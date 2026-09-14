@@ -6,7 +6,7 @@ import {createRosterFixture} from './helpers/roster-fixtures.mjs';
 const scope={console,WH40K_GLOSSARY:{forBook:()=>({})}};
 scope.window=scope;
 scope.globalThis=scope;
-for(const file of ['../books/adeptus-mechanicus/scripts/roster-data.js','../roster-guides/points-data.js']){
+for(const file of ['../books/adeptus-mechanicus/scripts/roster-data.js','../roster-guides/points-data.js','../books/shared/effect-contract-runtime.js','../books/shared/roster-parser.js','../books/shared/roster-context.js']){
   vm.runInNewContext(fs.readFileSync(new URL(file,import.meta.url),'utf8'),scope,{filename:file});
 }
 const catalog=scope.WH_BOOK_ROSTER_CATALOG,pointsCatalog=scope.WH_POINTS_CATALOG['adeptus mechanicus'];
@@ -16,18 +16,9 @@ vm.runInNewContext(providerSource,scope,{filename:'am-roster-enhancements.js'});
 
 const api=scope.AMRosterEnhancements;
 const fixture=(id,detachmentId,units,attachments={})=>createRosterFixture({catalog,pointsCatalog,id,detachmentId,units,attachments});
-const providerRoster=canonicalFixture=>({
-  units:canonicalFixture.units.map(unit=>({id:unit.instanceId,name:unit.title,points:unit.points})),
-  enhancements:canonicalFixture.units.flatMap(unit=>unit.enhancements.map(enhancement=>({
-    name:enhancement.title,
-    ruleId:enhancement.id,
-    ownerStatus:'resolved',
-    ownerUnitId:unit.instanceId,
-  }))),
-});
-const effects=(canonicalFixture,instanceId,{attachments=canonicalFixture.record.attachments,detachmentIds=canonicalFixture.detachments.map(item=>item.id)}={})=>{
-  const roster=providerRoster(canonicalFixture),unit=roster.units.find(item=>item.id===instanceId);
-  return api.projectGameEffects(roster,unit,{attachments,unitById:new Map(roster.units.map(item=>[item.id,item])),detachmentIds:new Set(detachmentIds)});
+const effects=(canonicalFixture,instanceId,{attachments=canonicalFixture.record.attachments}={})=>{
+  const roster=scope.WHRosterParser.parse(canonicalFixture.record.sourceText),projection=scope.WHArmyRosterContext.project({catalog,roster,record:{...canonicalFixture.record,attachments},provider:{gameEffects:()=>[]}}).game,byInstance=new Map(projection.units.map(item=>[item.identity.instanceId,item])),enhancements=canonicalFixture.units.flatMap(unit=>unit.enhancements.map(item=>({catalog:catalog.enhancements.find(candidate=>candidate.id===item.id),input:{ownerStatus:'resolved',ownerUnitId:unit.instanceId}})));
+  return scope.WHEffectContractRuntime.project({gameUnit:byInstance.get(instanceId),gameUnits:projection.units,byInstance,enhancements});
 };
 
 const group=fixture('am-semantic-attached','detachment-haloscreed-battle-clade',[
@@ -41,7 +32,7 @@ const rangerEffects=effects(group,'parsed-unit-2');
 assert(rangerEffects.some(effect=>effect.id==='galvanic-field'&&effect.tag==='LETHAL HITS'&&effect.source.ownerInstanceId==='parsed-unit-1'));
 assert(rangerEffects.some(effect=>effect.title==='Feel No Pain 5+'&&effect.source.ownerInstanceId==='parsed-unit-3'));
 assert(rangerEffects.some(effect=>effect.id==='technoarcheologist-oc'&&effect.delta===1&&effect.source.ownerInstanceId==='parsed-unit-4'));
-assert(rangerEffects.some(effect=>effect.canonicalReference?.id==='enhancement-sanctified-ordnance'&&effect.source.ownerInstanceId==='parsed-unit-1'));
+assert(rangerEffects.some(effect=>effect.canonicalReference?.id==='enhancement-sanctified-ordnance'&&effect.source.ownerInstanceId==='parsed-unit-1'),JSON.stringify(rangerEffects));
 assert.equal(effects(group,'parsed-unit-5').length,0,'attachment effects leaked to a duplicate physical unit');
 assert.equal(effects(group,'parsed-unit-2',{attachments:{}}).length,0,'potential attachment activated current effects');
 
@@ -96,8 +87,9 @@ for(const [enhancementId,detachmentId,bodyId,bodyQuantity,ownerId] of enhancemen
     {datasheetId:ownerId,instanceId:'parsed-unit-2',quantity:1,enhancementId},
   ],{'parsed-unit-1':['parsed-unit-2']});
   assert(current.units[1].enhancements.some(item=>item.id===enhancementId),`${enhancementId} exact canonical fixture identity missing`);
-  assert(effects(current,'parsed-unit-1').some(effect=>effect.canonicalReference?.id===enhancementId),`${enhancementId} canonical reference missing`);
-  assert.equal(effects(current,'parsed-unit-1',{attachments:{}}).some(effect=>effect.canonicalReference?.id===enhancementId),false,`${enhancementId} leaked without attachment`);
+  const hasEnhancementEffect=effect=>effect.source?.id===enhancementId||effect.canonicalReference?.id===enhancementId;
+  assert(effects(current,'parsed-unit-1').some(hasEnhancementEffect),`${enhancementId} structured effect missing`);
+  assert.equal(effects(current,'parsed-unit-1',{attachments:{}}).some(hasEnhancementEffect),false,`${enhancementId} leaked without attachment`);
 }
 
 const tl=fixture('am-semantic-tl409','detachment-lords-of-the-forge',[

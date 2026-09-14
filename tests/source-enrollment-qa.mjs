@@ -32,12 +32,18 @@ try{
   const run=()=>buildSourceEnrollment({repo:fixture,includeFreshnessOnly:true});
   const baseline=run();
   assert.equal(baseline.publicBooks.length,9);
-  assert.equal(baseline.publicBooks.reduce((sum,book)=>sum+book.active,0),65);
+  const declaredPublicActive=publication.books.filter(book=>book.library).reduce((sum,book)=>{
+    const manifestValue=json(`books/${book.id}/sources/source-manifest.json`),sources=manifestValue.sources||manifestValue.layers||[];
+    return sum+sources.filter(source=>source.active!==false).length;
+  },0);
+  assert.equal(baseline.publicBooks.reduce((sum,book)=>sum+book.active,0),declaredPublicActive);
   assert.deepEqual(baseline.freshnessOnlyBooks.map(book=>book.book),['orks']);
   assert.equal(baseline.freshnessOnlyBooks[0].active,3);
-  assert.equal(baseline.rows.length,68);
-  assert.equal(baseline.rows.filter(row=>row.status==='SOURCE_LIMITED'&&row.book!=='orks').length,16);
-  assert.equal(baseline.rows.filter(row=>row.status==='LEGACY_UNVERIFIABLE'&&row.book!=='orks').length,18);
+  assert.equal(baseline.rows.length,declaredPublicActive+baseline.freshnessOnlyBooks.reduce((sum,book)=>sum+book.active,0));
+  for(const status of ['SOURCE_LIMITED','LEGACY_UNVERIFIABLE']){
+    const expected=registry.sources.filter(source=>source.book!=='orks'&&source.book!=='shared'&&source.status===status).length;
+    assert.equal(baseline.rows.filter(row=>row.status===status&&row.book!=='orks').length,expected);
+  }
   assert(baseline.rows.filter(row=>row.status==='LEGACY_UNVERIFIABLE').every(row=>['UNKNOWN','UPDATE_AVAILABLE'].includes(row.upstreamCurrentness)));
   assert.equal(baseline.rows.find(row=>row.sourceId==='tau-mfm-v1.3').upstreamCurrentness,'UPDATE_AVAILABLE');
   assert(!baseline.rows.some(row=>row.upstreamCurrentness==='CURRENT'));
@@ -89,5 +95,5 @@ try{
   const csm=json(manifest('chaos-space-marines'));
   assert(csm.layers.some(source=>source.sourceId==='csm-codex-secondary-consensus'));
   assert.equal(csm.secondaryConsensus.sourceId,'csm-codex-secondary-consensus');
-  console.log('Source enrollment QA passed: 65 public owners, 3 Orks freshness owners, exact manifest/status/classification equality and 14 adversarial controls.');
+  console.log(`Source enrollment QA passed: ${declaredPublicActive} public owners, 3 Orks freshness owners, exact manifest/status/classification equality and 14 adversarial controls.`);
 }finally{fs.rmSync(fixture,{recursive:true,force:true});}

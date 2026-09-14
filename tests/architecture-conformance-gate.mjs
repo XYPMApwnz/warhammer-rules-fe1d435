@@ -6,6 +6,7 @@ import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {buildSourceStatus} from '../books/shared/tools/source-freshness.mjs';
 import {validateGeneratedOutputContract} from '../books/shared/tools/generated-output-contract.mjs';
+import {validateEffectContractsAgainstCatalog} from '../books/shared/tools/effect-contract.mjs';
 import {loadPublicationInventory,selectPublicationBooks,validatePublicationInventory} from '../books/shared/tools/publication-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -104,15 +105,10 @@ function rawResults(book){
           read('books/space-marines/tools/extract-faction-pack.py')
         ].some(source=>source.includes('space-marines-related-rules.en.json'))
       :false;
-  const effectSignal={
-    'death-guard':'death-guard/scripts/roster-semantics.js','adeptus-mechanicus':'adeptus-mechanicus/scripts/roster-enhancements.js',
-    'tau-empire':'tau-empire/scripts/roster-filter.js','emperors-children':'emperors-children/scripts/roster-filter.js',
-    'tyranids':'tyranids/scripts/roster-filter.js','chaos-space-marines':'chaos-space-marines/scripts/roster-filter.js',
-    'space-marines':'space-marines','dark-angels':'dark-angels','blood-angels':'blood-angels'
-  }[id];
-  const bookEffectFile=effectSignal?.includes('/')?read(`books/${effectSignal}`):'';
-  const providerOwnedEffects=(bookEffectFile&&/(?:delta|add|to|tag|attacks|strength|ap)\s*[:=]/i.test(bookEffectFile))
-    ||effectProviders.includes(effectSignal);
+  let effectContractError=null,effectContractCount=0;
+  try{const set=json(path.join('books',id,config.sources.effectContracts));validateEffectContractsAgainstCatalog(set,catalog);effectContractCount=set.contracts.length;}catch(error){effectContractError=error.message;}
+  const runtimeEffectFiles=['books/extensions/book-roster-enhancement-providers.js',`books/${id}/scripts/roster-filter.js`,...(id==='death-guard'?[`books/${id}/scripts/roster-semantics.js`]:id==='adeptus-mechanicus'?[`books/${id}/scripts/roster-enhancements.js`]:[])].filter(exists);
+  const providerOwnedEffects=Boolean(effectContractError)||runtimeEffectFiles.some(file=>/(?:smFamilyEffects|detachmentEffects|enhancementEffects|datasheetEffects|structuredRecords|effectCodeMap|legacyEffects)\s*=/.test(read(file)));
   const localRelationJoin=custom
     ?read(`books/${id}/tools/canonical-source-adapter.mjs`).match(/(?:ByTitle|titleKey|\.title\)|includes\([^\n]*\.title)/)
     :genericBuilder.includes('unitByTitle');
@@ -131,7 +127,7 @@ function rawResults(book){
     STRATAGEMS:evidence(stratagemOk?'PASS':'FAIL',`canonical roster Detachments=${(catalog.detachments||[]).length}`),
     RELATIONS:evidence(canonicalJoinPass&&(custom?customCanonicalJoin:!localRelationJoin)?'PASS':'FAIL',custom?'custom adapter canonicalizes source prose before graph construction':localRelationJoin?'relation ownership still resolves titles/prose below ingestion':'ID-keyed relation graph'),
     ROSTER:evidence(rosterOk?'PASS':'FAIL',catalog?.schema||'missing roster catalog'),
-    EFFECTS:evidence(providerOwnedEffects?'FAIL':'PASS',providerOwnedEffects?'fixed numeric/tag facts remain provider-owned':'canonical effect facts with shared interpreter'),
+    EFFECTS:evidence(providerOwnedEffects?'FAIL':'PASS',effectContractError||`source effect contracts=${effectContractCount}`,'canonical effect facts with shared interpreter'),
     GLOSSARY:evidence(glossarySelfSeeds?'FAIL':'PASS',glossarySelfSeeds?'previous generated glossary remains a factual/editorial input':'clean source-owned rebuild'),
     PUBLICATION_INVENTORY:evidence(inventoryErrors.length?'FAIL':'PASS',...(inventoryErrors.length?inventoryErrors:['publication inventory valid and book selected for library'])),
     GENERATED_OWNERSHIP:evidence(outputOwnership.ok&&!generatedPointInputs?'PASS':'FAIL',...(outputOwnership.ok?[`generated outputs declared and validated: ${outputOwnership.count}`]:[outputOwnership.error]),...(generatedPointInputs?['points consumer reads generated roster/reader target artifacts']:[]))

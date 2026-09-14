@@ -3,10 +3,16 @@ import fs from 'node:fs';
 import http from 'node:http';
 import os from 'node:os';
 import path from 'node:path';
+import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
+const catalogContext={window:{}};vm.createContext(catalogContext);vm.runInContext(fs.readFileSync(path.join(root,'books/dark-angels/scripts/roster-data.js'),'utf8'),catalogContext);
+const deathwingKnights=catalogContext.window.WH_BOOK_ROSTER_CATALOG.units.find(unit=>unit.id==='unit-deathwing-knights');
+const watcherSelection=deathwingKnights?.gameSelections?.selections?.find(selection=>selection.id==='unit-deathwing-knights-selection-watcher-in-the-dark');
+assert.equal(watcherSelection?.wargearAbilityIds?.length,1,'Watcher selection resolves one canonical wargear Ability');
+const watcherWargearAbilityId=watcherSelection.wargearAbilityIds[0];
 const mime={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
 const screenshotDir=path.join(os.tmpdir(),'da-overlay-real-front');fs.mkdirSync(screenshotDir,{recursive:true});
 const server=http.createServer((request,response)=>{const requested=decodeURIComponent(new URL(request.url,'http://localhost').pathname),file=path.resolve(root,`.${requested==='/'?'/index.html':requested}`);if(requested==='/favicon.ico'){response.writeHead(204).end();return;}if(!file.startsWith(root)||!fs.existsSync(file)||!fs.statSync(file).isFile()){response.writeHead(404).end('Not found');return;}response.setHeader('content-type',mime[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(response);});
@@ -37,7 +43,7 @@ try{
   id=await save(page,genericRaw);await attach(page,id,'parsed-unit-2','parsed-unit-1');state=await open(page,id,'parsed-unit-2','unit-inner-circle-companions');assert.match(state.summary,/Leader: Captain/);assert.equal(state.cards,1);evidence.push({case:'generic Captain to chapter Bodyguard',instance:'parsed-unit-2',screenshot:await screenshot(page,'05-generic-to-chapter'),status:'PASS'});
 
   const termRaw=raw('Inner Circle Task Force',['Char1: 1x Captain in Terminator Armour (85 pts): Relic Weapon, Storm bolter','Char2: 5x Deathwing Knights (250 pts): Mace of absolution, Watcher in the Dark']);
-  id=await save(page,termRaw);await attach(page,id,'parsed-unit-2','parsed-unit-1');state=await open(page,id,'parsed-unit-2','unit-deathwing-knights');assert.match(state.summary,/Leader: Captain in Terminator Armour/);assert.equal(state.unit.effects.some(effect=>effect.targetId==='Wound'&&effect.operation==='add'),false);assert.match(state.cardText,/Vowed Target/);assert.match(state.cardText,/Watcher in the Dark/);assert.ok(state.unit.selection.loadout.selectedWargearAbilityIds.some(ability=>ability.includes('watcher-in-the-dark')));assert.equal(state.visibleWeapons.some(title=>/Power Weapon|Great Weapon|Relic Weapon/i.test(title)),false);assert.ok(state.hiddenWeapons.length>0);evidence.push({case:'Deathwing selected wargear, loadout and live-state fail-closed',instance:'parsed-unit-2',visible:state.visibleWeapons,hidden:state.hiddenWeapons,screenshot:await screenshot(page,'06-deathwing-loadout-live-closed'),status:'PASS'});
+  id=await save(page,termRaw);await attach(page,id,'parsed-unit-2','parsed-unit-1');state=await open(page,id,'parsed-unit-2','unit-deathwing-knights');assert.match(state.summary,/Leader: Captain in Terminator Armour/);assert.equal(state.unit.effects.some(effect=>effect.targetId==='Wound'&&effect.operation==='add'),false);assert.match(state.cardText,/Vowed Target/);assert.match(state.cardText,/Watcher in the Dark/);assert.ok(state.unit.selection.loadout.selectedWargearAbilityIds.includes(watcherWargearAbilityId),'Watcher selection retains its exact canonical wargear Ability identity');assert.equal(state.visibleWeapons.some(title=>/Power Weapon|Great Weapon|Relic Weapon/i.test(title)),false);assert.ok(state.hiddenWeapons.length>0);evidence.push({case:'Deathwing selected wargear, loadout and live-state fail-closed',instance:'parsed-unit-2',visible:state.visibleWeapons,hidden:state.hiddenWeapons,screenshot:await screenshot(page,'06-deathwing-loadout-live-closed'),status:'PASS'});
   assert.deepEqual(errors,[],'real-front console errors');await context.close();
   console.log(JSON.stringify({engine:'Chromium',viewport:'390x844',screenshots:screenshotDir,evidence},null,2));
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

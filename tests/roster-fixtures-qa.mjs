@@ -7,7 +7,7 @@ import {createCatalogGameUnit,createRosterFixture} from './helpers/roster-fixtur
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});sandbox.globalThis=sandbox;sandbox.window=sandbox;
-for(const file of ['books/chaos-space-marines/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/chaos-space-marines/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),sandbox,{filename:file});
+for(const file of ['books/chaos-space-marines/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/shared/effect-contract-runtime.js','books/chaos-space-marines/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),sandbox,{filename:file});
 const catalog=sandbox.WH_BOOK_ROSTER_CATALOG,pointsCatalog=sandbox.WH_POINTS_CATALOG['chaos space marines'];
 const fixture=createRosterFixture({catalog,pointsCatalog,id:'helper-valid',detachmentId:'renegade-warband',units:[
   {datasheetId:'unit-chosen',instanceId:'parsed-unit-1',quantity:5},
@@ -84,7 +84,7 @@ assert.ok(renamedEnhancementBehavior.some(effect=>effect.source?.id==='enhanceme
 assert.equal(renamedEnhancementPeerBehavior.some(effect=>effect.source?.id==='enhancement-living-carapace'),false,'CSM Enhancement must not leak to a second physical Datasheet instance');
 
 const ecSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});ecSandbox.globalThis=ecSandbox;ecSandbox.window=ecSandbox;
-for(const file of ['books/emperors-children/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/emperors-children/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ecSandbox,{filename:file});
+for(const file of ['books/emperors-children/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/shared/effect-contract-runtime.js','books/emperors-children/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),ecSandbox,{filename:file});
 const ecCatalog=ecSandbox.WH_BOOK_ROSTER_CATALOG,ecPoints=ecSandbox.WH_POINTS_CATALOG['emperor s children'],renamedEc=JSON.parse(JSON.stringify(ecCatalog));
 renamedEc.detachments.find(item=>item.id==='spectacle-of-slaughter').title='Renamed EC Detachment';
 renamedEc.enhancements.find(item=>item.id==='enhancement-eager-patrons').title='Renamed Eager Patrons';
@@ -119,7 +119,7 @@ assert.deepEqual(Array.from(multiParsed.enhancements,item=>item.name),['Dark Ble
 assert.equal(multiEnhancement.totalPoints,120,'multiple Enhancement costs must come from canonical identities');
 
 const tyrSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});tyrSandbox.globalThis=tyrSandbox;tyrSandbox.window=tyrSandbox;
-for(const file of ['books/tyranids/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/tyranids/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),tyrSandbox,{filename:file});
+for(const file of ['books/tyranids/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/shared/effect-contract-runtime.js','books/tyranids/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),tyrSandbox,{filename:file});
 const tyrCatalog=tyrSandbox.WH_BOOK_ROSTER_CATALOG,tyrPoints=tyrSandbox.WH_POINTS_CATALOG.tyranids,renamedTyr=JSON.parse(JSON.stringify(tyrCatalog));
 renamedTyr.detachments.find(item=>item.id==='invasion-fleet').title='Renamed Tyranids Detachment';
 renamedTyr.enhancements.find(item=>item.id==='enhancement-adaptive-biology').title='Renamed Adaptive Biology';
@@ -144,7 +144,7 @@ assert.throws(()=>createRosterFixture({catalog:tyrCatalog,pointsCatalog:tyrPoint
 assert.throws(()=>createRosterFixture({catalog:tyrCatalog,pointsCatalog:tyrPoints,id:'tyr-helper-wrong-detachment',detachmentId:'synaptic-nexus',units:[{datasheetId:'unit-neurotyrant',instanceId:'parsed-unit-1',enhancementId:'enhancement-adaptive-biology'}]}),/is not owned by a selected Detachment/);
 
 const tauSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});tauSandbox.globalThis=tauSandbox;tauSandbox.window=tauSandbox;
-for(const file of ['books/tau-empire/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/tau-empire/scripts/roster-filter.js','books/shared/roster-context.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),tauSandbox,{filename:file});
+for(const file of ['books/tau-empire/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/shared/effect-contract-runtime.js','books/tau-empire/scripts/roster-filter.js','books/shared/roster-context.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),tauSandbox,{filename:file});
 const tauCatalog=tauSandbox.WH_BOOK_ROSTER_CATALOG,tauPoints=tauSandbox.WH_POINTS_CATALOG['t au empire'],renamedTau=JSON.parse(JSON.stringify(tauCatalog));
 renamedTau.detachments.find(item=>item.id==='kauyon').title='Renamed T\'au Detachment';
 renamedTau.enhancements.find(item=>item.id==='enhancement-precision-of-the-patient-hunter').title='Renamed T\'au Enhancement';
@@ -155,7 +155,7 @@ const renamedTauFixture=createRosterFixture({catalog:renamedTau,pointsCatalog:ta
   {datasheetId:'unit-breacher-team',instanceId:'parsed-unit-3',quantity:10,selectionIds:['unit-breacher-team-selection-close-combat-weapon','unit-breacher-team-selection-pulse-blaster','unit-breacher-team-selection-pulse-pistol']},
   {datasheetId:'unit-ethereal',instanceId:'parsed-unit-4',selectionIds:['unit-ethereal-selection-honour-stave'],enhancementId:'enhancement-precision-of-the-patient-hunter'},
 ]});
-const renamedTauRoster=tauSandbox.WHRosterParser.parse(renamedTauFixture.record.sourceText),renamedTauProjection=tauSandbox.WHArmyRosterContext.project({catalog:renamedTau,roster:renamedTauRoster,record:renamedTauFixture.record,provider:{gameEffects:tauSandbox.TAURosterSemantics.projectEffects}}).game,renamedTauBody=renamedTauProjection.units.find(item=>item.identity.instanceId==='parsed-unit-2'),renamedTauPeer=renamedTauProjection.units.find(item=>item.identity.instanceId==='parsed-unit-3'),renamedTauEnhancementOwner=createCatalogGameUnit({catalog:renamedTau,datasheetId:'unit-ethereal',instanceId:'parsed-unit-4'}),renamedTauEnhancement=renamedTau.enhancements.find(item=>item.id==='enhancement-precision-of-the-patient-hunter'),renamedTauEnhancementEffects=tauSandbox.TAURosterSemantics.projectEffects({gameUnit:renamedTauEnhancementOwner,byInstance:new Map([['parsed-unit-4',renamedTauEnhancementOwner]]),enhancements:[{catalog:renamedTauEnhancement,input:{ownerStatus:'resolved',ownerUnitId:'parsed-unit-4'}}]});
+const renamedTauRoster=tauSandbox.WHRosterParser.parse(renamedTauFixture.record.sourceText),renamedTauProjection=tauSandbox.WHArmyRosterContext.project({catalog:renamedTau,roster:renamedTauRoster,record:renamedTauFixture.record,provider:{gameEffects:tauSandbox.TAURosterSemantics.projectEffects}}).game,renamedTauBody=renamedTauProjection.units.find(item=>item.identity.instanceId==='parsed-unit-2'),renamedTauPeer=renamedTauProjection.units.find(item=>item.identity.instanceId==='parsed-unit-3'),renamedTauEnhancementOwner=createCatalogGameUnit({catalog:renamedTau,datasheetId:'unit-ethereal',instanceId:'parsed-unit-4'}),renamedTauEnhancement=renamedTau.enhancements.find(item=>item.id==='enhancement-precision-of-the-patient-hunter'),renamedTauEnhancementEffects=tauSandbox.TAURosterSemantics.projectEffects({gameUnit:renamedTauEnhancementOwner,byInstance:new Map([['parsed-unit-4',renamedTauEnhancementOwner]]),detachments:[{id:'kauyon'}],enhancements:[{catalog:renamedTauEnhancement,input:{ownerStatus:'resolved',ownerUnitId:'parsed-unit-4'}}]});
 assert.match(renamedTauFixture.record.sourceText,/DETACHMENT: Renamed T'au Detachment/);
 assert.match(renamedTauFixture.record.sourceText,/Enhancement: Renamed T'au Enhancement/);
 assert.equal(renamedTauRoster.detachments[0].name,"Renamed T'au Detachment");

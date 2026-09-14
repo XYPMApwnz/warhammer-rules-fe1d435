@@ -5,7 +5,7 @@ import vm from 'node:vm';
 
 const OWNER = 'books/death-guard/scripts/roster-semantics.js';
 const FRENZY = 'froth-spattered-frenzy';
-const RULE = 'ability-froth-spattered-frenzy-9a139e5';
+const RULE = 'helbrute-ability-froth-spattered-frenzy';
 const profileId = name => 'helbrute-weapon-' + name;
 const selectionId = name => 'unit-helbrute-selection-' + name;
 const plain = value => JSON.parse(JSON.stringify(value));
@@ -53,7 +53,7 @@ export function runHelbruteProviderQa({root, sourceOverrides={}}) {
   };
   const scope = {console,URL,URLSearchParams};
   scope.window=scope; scope.globalThis=scope;
-  for (const file of ['books/shared/roster-context.js','books/death-guard/scripts/roster-data.js',OWNER]) vm.runInNewContext(read(file),scope,{filename:file});
+  for (const file of ['books/shared/roster-context.js','books/death-guard/scripts/roster-data.js','books/shared/effect-contract-runtime.js',OWNER]) vm.runInNewContext(read(file),scope,{filename:file});
   const api=scope.WHArmyRosterContext;
   let installed;
   scope.WHArmyRosterContext={...api,install(options){installed=options;}};
@@ -163,13 +163,12 @@ export async function runHelbruteBrowserQa({openRecord}) {
           }
           const snapshots=[];
           for (let pass=0;pass<2;pass++) {
-            semantics.decorate(clone,[rawUnit],[],effects);
+            semantics.decorate(clone,[rawUnit],[],effects,Boolean(effects));
             snapshots.push(Object.fromEntries(expectedIds.map(profileId=>[profileId,clone.querySelector('[id="'+profileId+'"] [data-label="A"]')?.textContent.trim()])));
           }
           return snapshots;
         };
-        const unit=projection.units.find(u=>u.identity.instanceId===id);
-        return {units:projection.units,cells,legacy:decorateTwice(null),projected:decorateTwice(unit.effects)};
+        return {units:projection.units,cells,legacy:decorateTwice(null)};
       },{id:fixture.id,base:Object.fromEntries(Object.entries(BASE).map(([id,a])=>[profileId(id),a])),expectedIds:Object.keys(expectedAttacks(fixture))});
       const state=await read();
       for (const control of selected) {
@@ -178,7 +177,7 @@ export async function runHelbruteBrowserQa({openRecord}) {
         assert.deepEqual(unit.attachments,{leaders:[],leading:[]},'RA08 fixture has no physical attachment: '+control.id);
       }
       assert.deepEqual(state.cells,expectedAttacks(fixture),'RA08 '+fixture.id+': exact visible A cells');
-      for (const mode of ['legacy','projected']) for (const [pass,values] of state[mode].entries()) assert.deepEqual(values,expectedAttacks(fixture),'RA08 '+fixture.id+': '+mode+' decorator pass '+pass);
+      for (const [pass,values] of state.legacy.entries()) assert.deepEqual(values,Object.fromEntries(Object.keys(expectedAttacks(fixture)).map(id=>[id,BASE[id.replace('helbrute-weapon-','')]])),'RA08 '+fixture.id+': retired local decorator pass '+pass);
       if (fixture.id==='two-melee-bolter') {
         await page.reload();
         await page.waitForFunction(id=>document.querySelector('.unit-card.roster-game-view[data-roster-instance="'+id+'"]'),fixture.id);

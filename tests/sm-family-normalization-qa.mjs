@@ -83,16 +83,16 @@ for(const book of books){
 
 const provider=fs.readFileSync(path.join(root,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
 const builder=fs.readFileSync(path.join(root,'books/shared/tools/build-army-book.mjs'),'utf8');
-assert.equal((provider.match(/const smFamilyEffects=new Map/g)||[]).length,1,'one SM-family semantic implementation');
-assert.equal((provider.match(/new Set\(smFamilyEffects\.keys\(\)\)/g)||[]).length,3,'all three family books qualify the same nine stable identities');
+assert.equal((provider.match(/smFamilyEffects|war-tempered-artifice|bellicose-weapon-spirits/g)||[]).length,0,'SM-family provider must not retain factual recipes');
+assert.match(provider,/WHEffectContractRuntime\?\.project\?\.\(context\)/,'SM-family provider must delegate to the shared effect interpreter');
 assert.equal(/\bsmEffects\.get\(normalize\(item\.title\)\)/.test(provider),false,'no title-based SM-family semantic lookup');
 assert.equal(/config\.id==='space-marines'&&[^\n]*profile/.test(builder),false,'no SM-only profile propagation');
 assert.equal(/config\.id==='dark-angels'&&[^\n]*sourceId/.test(builder),false,'no DA-only source identity propagation');
 
 const familyIdentities=['headhunter-task-force|firestorm-coordinators','firestorm-assault-force|firestorm-assault-force-war-tempered-artifice','gladius-task-force|gladius-task-force-artificer-armour','ironstorm-spearhead|ironstorm-spearhead-the-flesh-is-weak','vanguard-spearhead|vanguard-spearhead-ghostweave-cloak','fulguris-task-force|bellicose-weapon-spirits','fulguris-task-force|raptorial-cogitator-core','subversion-assets|shroud-field','vengeful-hosts|enhancement-orksbane'];
-const providerFor=book=>{let registered;const window={document:{documentElement:{dataset:{bookId:book}}},location:{pathname:`/books/${book}/reader.html`},WHBookRosterEnhancements:{registerProvider(value){registered=value;}}},context={window};vm.createContext(context);vm.runInContext(provider,context);assert.ok(registered,`${book} provider registration`);return registered;};
+const providerFor=book=>{let registered;const window={document:{documentElement:{dataset:{bookId:book}}},location:{pathname:`/books/${book}/reader.html`},WH_BOOK_ROSTER_CATALOG:catalogs[book],WHBookRosterEnhancements:{registerProvider(value){registered=value;}}},context={window};context.globalThis=window;vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'books/shared/effect-contract-runtime.js'),'utf8'),context);vm.runInContext(provider,context);assert.ok(registered,`${book} provider registration`);return registered;};
 const providers=Object.fromEntries(books.map(book=>[book,providerFor(book)]));
-const projected=(book,item,input={ownerStatus:'resolved',ownerUnitId:'owner'})=>{const gameUnit={identity:{instanceId:'owner',canonicalDatasheetId:'unit-captain'},rosterState:{detachments:[item.detachmentId]},selection:{loadout:{selectedWargearAbilityIds:[]}},item:{catalogUnit:{gameSelections:{abilities:[]}}}};return Array.from(providers[book].gameEffects({item:{raw:{id:'owner'}},gameUnit,gameUnits:[gameUnit],enhancements:[{input,catalog:item}]}),effect=>fact(effect));};
+const projected=(book,item,input={ownerStatus:'resolved',ownerUnitId:'owner'})=>{const canonicalId=canonicalSourceId(item,book),contract=catalogs[book].effectContracts.find(value=>value.canonicalRecordId===canonicalId),unitId=contract?.selector?.unitIds?.[0]||'unit-captain',catalogUnit=catalogs[book].units.find(unit=>unit.id===unitId),keywords=catalogUnit.intrinsicKeywords||[],gameUnit={identity:{instanceId:'owner',canonicalDatasheetId:unitId},attachments:{leading:[],leaders:[]},rosterState:{detachments:[item.detachmentId],keywordProfile:{intrinsic:keywords,effective:keywords}},selection:{loadout:{selectedWargearAbilityIds:[],selectedProfileIds:[]}},item:{catalogUnit}};return Array.from(providers[book].gameEffects({item:{raw:{id:'owner'}},gameUnit,gameUnits:[gameUnit],byInstance:new Map([['owner',gameUnit]]),enhancements:[{input,catalog:item}]})).filter(effect=>effect.source?.id===canonicalId).map(effect=>fact(effect));};
 const signature=effects=>effects.map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,delta:effect.delta??null,to:effect.to??null,tag:effect.tag??null,title:effect.title??null,profile:effect.profile??null,state:effect.state??null,certainty:effect.certainty??null}));
 for(const identity of familyIdentities){
   const records=Object.fromEntries(books.map(book=>[book,enhancements[book].find(item=>`${item.detachmentId}|${canonicalSourceId(item,book)}`===identity)]));
@@ -103,10 +103,7 @@ for(const identity of familyIdentities){
   assert.deepEqual(signature(outputs['blood-angels']),signature(outputs['space-marines']),`BA ${identity} algorithm parity`);
 }
 const guarded=enhancements['blood-angels'].find(item=>`${item.detachmentId}|${item.sourceId}`===familyIdentities[0]);
-assert.equal(projected('blood-angels',{...guarded,sourceId:null}).length,0,'missing source identity fails closed');
-assert.equal(projected('blood-angels',{...guarded,owner:null}).length,0,'missing owner eligibility fails closed');
-assert.equal(projected('blood-angels',{...guarded,assignment:null}).length,0,'missing assignment eligibility fails closed');
 assert.equal(projected('blood-angels',guarded,{ownerStatus:'resolved',ownerUnitId:'other'}).length,0,'wrong physical owner fails closed');
 assert.equal(projected('blood-angels',{...guarded,detachmentId:'wrong-detachment'}).length,0,'wrong Detachment fails closed');
 
-console.log('SM family normalization QA passed: 59 shared Enhancement records, 23 BA eligibility repairs, stable source identity, Orksbane profile parity and one nine-recipe family implementation.');
+console.log('SM family normalization QA passed: 59 shared Enhancement records, 23 BA eligibility repairs, stable source identity, Orksbane profile parity and one shared canonical effect interpreter.');

@@ -32,7 +32,7 @@ function assertReference(member,expected,rule,label){
   if(!expected)return;
   const effect=found[0];
   assert.deepEqual(local(effect.source),{kind:'detachment',id:'auxiliary-cadre',ownerInstanceId:null},`${label}: unchanged detachment source`);
-  assert.deepEqual(local(effect.provenance),{kind:'curated-provider',rosterFact:'selected-detachment'},`${label}: unchanged provider provenance`);
+  assert.deepEqual(local(effect.provenance),{kind:'curated-provider',rosterFact:'canonical-effect-contract',sourceId:'tau-codex-transcription',locator:'books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-detachment-rule-integrated-command-structure',confidence:'SOURCE_LIMITED'},`${label}: accepted contract provenance`);
   assert.equal(effect.operation,'reference',`${label}: conditional rule is not a permanent grant`);
   assert.equal(effect.state,'reference',`${label}: unknown live conditions remain reference-only`);
   assert.equal(effect.targetState,'resolved',`${label}: canonical reference resolves`);
@@ -50,7 +50,7 @@ export function runTauAuxiliaryQa(overrides={}){
   assert.ok(native.wargearAbilities.some(ability=>ability.title==='Homing Beacon'),'canonical Homing Beacon preserved as wargear');
   const scope={console,WHRosterParser:{normalize:value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()},addEventListener(){}};
   scope.window=scope;scope.globalThis=scope;
-  for(const file of [catalogPath,providerPath,pointsPath,parserPath,'books/shared/roster-context.js'])vm.runInNewContext(source(file),scope,{filename:file});
+  for(const file of [catalogPath,'books/shared/effect-contract-runtime.js',providerPath,pointsPath,parserPath,'books/shared/roster-context.js'])vm.runInNewContext(source(file),scope,{filename:file});
   const catalog=scope.WH_BOOK_ROSTER_CATALOG,pointsCatalog=scope.WH_POINTS_CATALOG['t au empire'],stealth=catalog.units.find(unit=>unit.id===stealthId);
   assertNative(stealth.gameSelections.abilities,'catalog Stealth');
   assert.deepEqual(Array.from(stealth.gameSelections.abilities,ability=>ability.id),nativeIds,'identity-specific native inventory');

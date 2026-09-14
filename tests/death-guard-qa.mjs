@@ -23,6 +23,8 @@ const popupContent=readProject('books/shared/popup-content.js');
 const glossaryAutolink=readProject('books/shared/glossary-autolink.js');
 const sharedArmyBook=readProject('books/shared/army-book-app.js');
 const sharedRosterContext=readProject('books/shared/roster-context.js');
+const sharedEffectRuntime=readProject('books/shared/effect-contract-runtime.js');
+const dgEffectContracts=JSON.parse(read('sources/death-guard-effect-contracts.v1.json')).contracts;
 const sharedRelatedRules=readProject('books/shared/army-related-rules.js');
 const sharedCompatibleMatrix=readProject('books/shared/compatible-rules-matrix.mjs');
 const sharedStratagemPresentation=readProject('books/shared/stratagem-presentation.mjs');
@@ -329,16 +331,15 @@ let capturedProviderOptions=null,capturedSemanticOptions=null,projectEffectsArgs
 const providerProbeRoot={
   DG_TERMS:{probe:'term'},
   WHArmyRosterContext:{install(options){capturedProviderOptions=options;return true;}},
+  WHEffectContractRuntime:{project(options){projectEffectsArgs=options;return['effect'];}},
   DGRosterSemantics:{createContext(options){capturedSemanticOptions=options;return{
     stateKey(raw){return `state:${raw.id}`;},
-    projectEffects(...args){projectEffectsArgs=args;return['effect'];},
     decorate(...args){decorateArgs=args;}
   };}}
 };
 vm.runInNewContext(rosterFilterRuntime,{window:providerProbeRoot},{filename:'scripts/roster-filter.js'});
 const providerRaw={id:'raw-1'},providerCatalogUnit={id:'unit-poxwalkers',ruleFacts:{id:'facts'}},providerProjection={units:[{raw:providerRaw,catalogUnit:providerCatalogUnit}],roster:{id:'roster'},record:{attachments:{body:['leader']}},detachmentIds:new Set(['detachment-shamblerot-vectorium'])};
-const provider=capturedProviderOptions?.providerFactory(providerProjection),providerBaseKeywords={added:['INFANTRY']};
-const providerKeywords=provider?.keywordProfile({unit:providerCatalogUnit},providerBaseKeywords),providerEffects=provider?.gameEffects({item:{raw:providerRaw,catalogUnit:providerCatalogUnit},gameUnit:{id:'game-unit'},detachments:[{id:'detachment-shamblerot-vectorium'}]});
+const provider=capturedProviderOptions?.providerFactory(providerProjection),providerContext={item:{raw:providerRaw,catalogUnit:providerCatalogUnit},gameUnit:{id:'game-unit'},detachments:[{id:'detachment-shamblerot-vectorium'}]},providerEffects=provider?.gameEffects(providerContext);
 provider?.decorate({id:'card'},{detachmentIds:new Set(['detachment-shamblerot-vectorium'])},[{raw:providerRaw,game:{effects:['effect']}}]);
 const fixtureUnit=rosterCatalog.units.find(unit=>unit.id==='unit-poxwalkers')||rosterCatalog.units[0];
 const fixtureEnhancement=rosterCatalog.enhancements[0];
@@ -350,14 +351,15 @@ const twoDetachmentProjection=projectFixture(fixtureDetachmentIds);
 const unknownDetachmentProjection=projectFixture(['detachment-unknown']);
 const projectSource=sharedRosterContext.slice(sharedRosterContext.indexOf('function project('),sharedRosterContext.indexOf('function fromRuntime('));
 check('shared roster context owns installation and Death Guard remains a semantic provider',capturedProviderOptions?.bookId==='death-guard'&&capturedProviderOptions?.guideGlobal==='DG_ROSTER_GUIDE'&&(rosterFilterRuntime.match(/WHArmyRosterContext\.install\(/g)||[]).length===1&&!rosterFilterRuntime.includes('WHArmyRosterContext.create(')&&!rosterFilterRuntime.includes('WHArmyRosterContext.project(')&&!/(?:document|querySelector|createElement|DocumentFragment)/.test(rosterFilterRuntime)&&!rosterFilterRuntime.includes('const DG_RULE='));
-check('Death Guard provider exposes only the shared semantic extension surface',JSON.stringify(Object.keys(provider||{}).sort())===JSON.stringify(['decorate','gameEffects','keywordProfile','stateKey'])&&provider.stateKey(providerRaw)==='state:raw-1'&&JSON.stringify(providerKeywords)===JSON.stringify({added:['INFANTRY','BATTLELINE']})&&JSON.stringify(providerEffects)===JSON.stringify(['effect'])&&capturedSemanticOptions?.roster===providerProjection.roster&&capturedSemanticOptions?.attachments===providerProjection.record.attachments&&capturedSemanticOptions?.terms===providerProbeRoot.DG_TERMS&&capturedSemanticOptions.profileFor(providerRaw)===providerCatalogUnit.ruleFacts&&projectEffectsArgs?.[0]===providerRaw&&projectEffectsArgs?.[1]===providerCatalogUnit.id&&JSON.stringify(projectEffectsArgs?.[2])===JSON.stringify(['detachment-shamblerot-vectorium'])&&projectEffectsArgs?.[3]?.id==='game-unit'&&decorateArgs?.[0]?.id==='card'&&decorateArgs?.[1]?.[0]===providerRaw&&JSON.stringify(decorateArgs?.[2])===JSON.stringify(['detachment-shamblerot-vectorium'])&&JSON.stringify(decorateArgs?.[3])===JSON.stringify(['effect'])&&decorateArgs?.[4]===false);
+check('Death Guard provider exposes only the shared semantic extension surface',JSON.stringify(Object.keys(provider||{}).sort())===JSON.stringify(['decorate','gameEffects','stateKey'])&&provider.stateKey(providerRaw)==='state:raw-1'&&JSON.stringify(providerEffects)===JSON.stringify(['effect'])&&projectEffectsArgs===providerContext&&capturedSemanticOptions?.roster===providerProjection.roster&&capturedSemanticOptions?.attachments===providerProjection.record.attachments&&capturedSemanticOptions?.terms===providerProbeRoot.DG_TERMS&&capturedSemanticOptions.profileFor(providerRaw)===providerCatalogUnit.ruleFacts&&decorateArgs?.[0]?.id==='card'&&decorateArgs?.[1]?.[0]===providerRaw&&JSON.stringify(decorateArgs?.[2])===JSON.stringify(['detachment-shamblerot-vectorium'])&&JSON.stringify(decorateArgs?.[3])===JSON.stringify(['effect'])&&decorateArgs?.[4]===false);
 check('behavior: one known Death Guard Detachment resolves through shared projection',JSON.stringify(oneDetachmentProjection.context.detachments.map(item=>item.id))===JSON.stringify([fixtureDetachmentIds[0]]));
 check('behavior: two known Death Guard Detachments remain active through shared projection',JSON.stringify(twoDetachmentProjection.context.detachments.map(item=>item.id))===JSON.stringify(fixtureDetachmentIds));
 check('behavior: unknown Death Guard Detachments fail closed through shared projection',unknownDetachmentProjection.context.detachments.length===0&&unknownDetachmentProjection.context.detachment===null);
 check('canonical Detachment identity is unique without DOM option ambiguity',new Set(rosterCatalog.detachments.map(item=>item.id)).size===rosterCatalog.detachments.length);
 check('roster projection preserves physical instances and exact Enhancement owner without full-book DOM',twoDetachmentProjection.context.units.map(unit=>unit.instanceId).join('|')==='physical-1|physical-2'&&twoDetachmentProjection.context.enhancements[0].owner.instanceId==='physical-2'&&!projectSource.includes('document')&&!projectSource.includes('querySelectorAll'));
-check('exact Enhancement ownerUnitId filtering is unchanged',rosterSemanticRuntime.includes('item.ownerUnitId === unit.id')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
-check('phase-bound Bilemaw Blight does not persist while Sorrowsyphon Damage still derives',rosterSemanticRuntime.includes("bilemaw:'enhancement-bilemaw-blight'")&&rosterSemanticRuntime.includes('cell.textContent = cell.dataset.rosterBase')&&rosterSemanticRuntime.includes("card.querySelector('.roster-plague-wind-range')?.remove()")&&rosterSemanticRuntime.includes("modifyWeaponStat(row, 'D', 1, 'sorrowsyphon')"));
+check('exact Enhancement ownerUnitId filtering is unchanged',sharedEffectRuntime.includes("ownerStatus==='resolved'")&&sharedEffectRuntime.includes('input.ownerUnitId')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
+const bilemawContract=dgEffectContracts.find(item=>item.canonicalRecordId==='enhancement-bilemaw-blight'),sorrowsyphonContract=dgEffectContracts.find(item=>item.canonicalRecordId==='enhancement-sorrowsyphon');
+check('phase-bound Bilemaw Blight does not persist while Sorrowsyphon Damage still derives',bilemawContract?.clauses.some(clause=>clause.conditions?.some(condition=>condition.state==='unknown'))&&sorrowsyphonContract?.clauses.some(clause=>clause.operations?.some(operation=>operation.type==='WEAPON_CHARACTERISTIC_ADD'&&operation.parameters?.characteristic==='D'&&operation.parameters?.value===1)));
 check('Desktop and Phone load one book-local Death Guard semantic runtime',(html.match(/scripts\/roster-semantics\.js\?v=\d+/g)||[]).length===1&&mobileTyphus.includes('data-canonical-reader="../reader.html"')&&!mobileTyphus.includes('roster-semantics.js'));
 check('Desktop and Phone delegate gameplay decoration without local orchestration registries',rosterFilterRuntime.includes('semantics.decorate?.(')&&!rosterFilterRuntime.includes('const DG_RULE=')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 check('invalid or absent roster input does not construct a hidden full-book source index',rosterApi.install({catalog:rosterCatalog,roster:null})===null&&!rosterFilterRuntime.includes('DocumentFragment')&&!rosterFilterRuntime.includes('display:none')&&!rosterFilterRuntime.includes('offscreen'));

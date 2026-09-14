@@ -13,6 +13,7 @@ const catalog=context.WH_BOOK_ROSTER_CATALOG;
 const config=readJson('book.config.json');
 const codex=readJson('content/dark-angels-codex-datasheets.en.json');
 const related=readJson('content/dark-angels-related-rules.en.json');
+const sourceEffects=readJson('sources/dark-angels-effect-contracts.v1.json');
 const provider=fs.readFileSync(path.join(repo,'books/extensions/book-roster-enhancement-providers.js'),'utf8');
 
 assert.equal(catalog.units.length,100,'effective DA Datasheet count');
@@ -33,8 +34,8 @@ assert.equal(new Set(localEnhancements.filter(item=>item.title==='Deathwing Assa
 const byId=new Map(catalog.units.map(unit=>[unit.id,unit]));
 const relationEdges=catalog.units.flatMap(unit=>['canLead','canSupport'].flatMap(kind=>(unit.relations[kind]||[]).map(relation=>({source:unit.id,target:relation.unitId,kind}))));
 const overlayEdges=relationEdges.filter(edge=>localUnitIds.has(edge.source)||localUnitIds.has(edge.target));
-assert.equal(overlayEdges.length,50,'49 pre-existing DA overlay edges plus repaired Ezekiel relation');
-assert.equal(overlayEdges.filter(edge=>!localUnitIds.has(edge.source)&&localUnitIds.has(edge.target)).length,11,'generic to chapter relations');
+assert.equal(overlayEdges.length,55,'current accepted DA overlay relation identity set');
+assert.equal(overlayEdges.filter(edge=>!localUnitIds.has(edge.source)&&localUnitIds.has(edge.target)).length,16,'generic to chapter relations');
 assert.equal(overlayEdges.filter(edge=>localUnitIds.has(edge.source)&&!localUnitIds.has(edge.target)).length,31,'chapter to generic relations including Ezekiel repair');
 assert.equal(overlayEdges.filter(edge=>localUnitIds.has(edge.source)&&localUnitIds.has(edge.target)).length,8,'chapter to chapter relations');
 const ezekiel=byId.get('unit-ezekiel');
@@ -47,16 +48,25 @@ assert.equal(config.dependencyDatasheets.keywordOverlays[0].unitIds.length,19,'D
 assert.equal(config.dependencyDatasheets.keywordOverlays[1].unitIds.length,10,'RAVENWING overlay count');
 
 for(const keyword of config.dependencyDatasheets.excludeAnyKeywords)assert.ok(!catalog.units.some(unit=>(unit.intrinsicKeywords||[]).includes(keyword)),`${keyword} dependency units remain excluded`);
-assert.match(provider,/const daLocalConformanceEnhancements=new Map/);
-assert.match(provider,/const daAttachedAbilitySemantics=new Map/);
-assert.match(provider,/const daDetachmentSemantics=new Map/);
+assert.equal(sourceEffects.schema,'wh40k-effect-contracts/v1','DA effect owner schema');
+assert.equal(sourceEffects.bookId,'dark-angels','DA effect owner book identity');
+assert.equal(sourceEffects.contracts.length,46,'DA-local structured effect owners');
+assert.equal(new Set(sourceEffects.contracts.map(contract=>contract.canonicalRecordId)).size,46,'DA-local structured effect owner identities are unique');
+assert.ok(sourceEffects.contracts.every(contract=>contract.sourceBookId==='dark-angels'&&contract.effectiveBookIds.length===1&&contract.effectiveBookIds[0]==='dark-angels'),'DA-local facts retain local ownership and effective scope');
+assert.equal(catalog.effectContracts.length,159,'46 DA-local plus 113 inherited SM effective effect bindings');
+assert.equal(catalog.effectContracts.filter(contract=>contract.sourceBookId==='dark-angels').length,46,'all DA-local structured effects projected');
+assert.equal(catalog.effectContracts.filter(contract=>contract.sourceBookId==='space-marines').length,113,'all eligible SM structured effects inherited');
+assert.match(provider,/WHEffectContractRuntime\?\.project/,'shared provider delegates effect execution to structured contracts');
+assert.doesNotMatch(provider,/const daLocalConformanceEnhancements=new Map/);
+assert.doesNotMatch(provider,/const daAttachedAbilitySemantics=new Map/);
+assert.doesNotMatch(provider,/const daDetachmentSemantics=new Map/);
 assert.doesNotMatch(provider,/const daNotes=new Map/);
 assert.doesNotMatch(provider,/function applyDaEffect/);
 assert.doesNotMatch(provider,/const daEffects=new Map/);
 assert.doesNotMatch(provider,/if\s*\(.*bookId.*dark-angels/,'shared presentation must not branch on DA book ID');
 
 const localAbilityIds=new Set(catalog.units.filter(unit=>localUnitIds.has(unit.id)).flatMap(unit=>unit.gameSelections.abilities.map(ability=>ability.id)));
-assert.equal(localAbilityIds.size,39,'current generated DA-local Ability identity surface, including shared/core facts');
+assert.equal(localAbilityIds.size,40,'current generated DA-local Ability identity surface, including shared/core facts');
 const localWeaponIds=new Set(catalog.units.filter(unit=>localUnitIds.has(unit.id)).flatMap(unit=>unit.gameSelections.weaponProfiles.map(weapon=>weapon.id)));
 assert.equal(localWeaponIds.size,68,'current generated DA-local unit-qualified weapon profile surface');
 const localWargearIds=new Set(catalog.units.filter(unit=>localUnitIds.has(unit.id)).flatMap(unit=>unit.gameSelections.wargearAbilities.map(ability=>ability.id)));

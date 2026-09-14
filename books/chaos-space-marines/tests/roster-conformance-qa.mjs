@@ -18,6 +18,7 @@ sandbox.globalThis = sandbox;
 sandbox.window = sandbox;
 loadScript('books/chaos-space-marines/scripts/roster-data.js', sandbox);
 loadScript('books/chaos-space-marines/scripts/target-data.js', sandbox);
+loadScript('books/shared/effect-contract-runtime.js', sandbox);
 loadScript('books/chaos-space-marines/scripts/roster-filter.js', sandbox);
 
 const catalog = sandbox.WH_BOOK_ROSTER_CATALOG;
@@ -61,7 +62,8 @@ assert.doesNotMatch(rendered, /Each time this model makes a Dark Pact/,
   'rendered Dark Destiny must not retain the model-only subject');
 
 const providerSource = fs.readFileSync(path.join(root, 'books/chaos-space-marines/scripts/roster-filter.js'), 'utf8');
-assert.doesNotMatch(providerSource, /WHBookRosterEnhancements/, 'legacy synthetic provider must be removed');
+assert.match(providerSource, /WHEffectContractRuntime\?\.project/, 'provider must delegate effect execution to canonical contracts');
+assert.doesNotMatch(providerSource, /enhancement-crown-of-worms|chaos-space-marines-ability-enhanced-warriors/, 'provider must not retain factual effect records');
 assert.doesNotMatch(providerSource, /Ability ranges \+3/, 'Crown synthetic range summary must be removed');
 assert.doesNotMatch(providerSource, /summary\s*:/, 'provider must not own gameplay summaries');
 
@@ -73,7 +75,7 @@ function effects(units, options = {}) {
     byInstance.get(relation.targetPhysicalInstanceId).attachments.leaders.push({ ...facts, instanceId: relation.sourcePhysicalInstanceId });
   }
   const enhancements = units.flatMap((unit) => unit.enhancementIds.map((id) => ({
-    input: { ownerUnitId: unit.identity.instanceId },
+    input: { ownerStatus: 'resolved', ownerUnitId: unit.identity.instanceId },
     catalog: { id, ruleId: id }
   })));
   const detachments = options.detachmentId ? [{ id: options.detachmentId }] : [];
@@ -125,14 +127,14 @@ assert.equal(result.filter((effect) => effect.operation === 'set' && effect.comp
   'Faithful Flock deterministic Invulnerable Save must reach exact Attached Unit');
 
 const crown = gameUnit('warpsmith-crown', 'unit-warpsmith', ['enhancement-crown-of-worms']);
-result = effects([crown]);
+result = effects([crown], { detachmentId: 'cult-of-the-arkifane' });
 assert.equal(matching(result, 'reference', 'warpsmith-crown', 'enhancement-crown-of-worms').length, 1,
   'Crown of Worms must use its full canonical Enhancement reference');
 assert.equal(result.filter((effect) => effect.source?.id === 'enhancement-crown-of-worms' && effect.operation !== 'reference').length, 0,
   'Crown of Worms must not claim an unsupported structured prose mutation');
 
 const tzagulla = gameUnit('lord-tzagulla', 'unit-chaos-lord-in-terminator-armour', ['enhancement-tzagulla']);
-result = effects([tzagulla]);
+result = effects([tzagulla], { detachmentId: 'warpstrike-champions' });
 assert.equal(matching(result, 'reference', 'lord-tzagulla', 'enhancement-tzagulla').length, 1,
   'Tzagulla must retain full canonical Class C reference');
 for (const field of ['A', 'S', 'AP']) {

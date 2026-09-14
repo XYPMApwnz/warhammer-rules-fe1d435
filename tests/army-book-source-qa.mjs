@@ -39,7 +39,8 @@ function canonicalIdCompilerControls(){
     writeJson(path.join(base,'pack.json'),{meta:{file:'synthetic.pdf',version:'1'},datasheets:{},
       detachments:[{id:'synthetic-detachment',title:'Synthetic Detachment',stratagems:[],enhancements:[],rule:{title:'Synthetic Rule',text:'Synthetic rule text.'}}],
       updates:[{id:'synthetic-update',title:'Synthetic Update',text:'Synthetic update text.',sourcePages:[1]}],faqs:[]});
-    writeJson(path.join(base,'points.json'),{units:[],enhancements:[]});writeJson(path.join(base,'manifest.json'),{});
+    const pointUnits=inventory(codex).map(unit=>({id:unit.id,title:unit.title,points:[{id:`${unit.id}-1-model`,label:'1 model',value:1,minModels:1,maxModels:1}]}));
+    writeJson(path.join(base,'points.json'),{units:pointUnits,detachments:[{id:'synthetic-detachment',title:'Synthetic Detachment'}],enhancements:[]});writeJson(path.join(base,'manifest.json'),{});
     return base;
   };
   const compile=(base,...args)=>spawnSync(process.execPath,[builder,path.join(base,'book.config.json'),...args],{cwd:temp,encoding:'utf8'});
@@ -57,7 +58,8 @@ function canonicalIdCompilerControls(){
   };
   try{
     fs.mkdirSync(tools,{recursive:true});
-    for(const file of ['build-army-book.mjs','canonical-build-contract.mjs','build-relation-graph.mjs','build-roster-catalog.mjs','build-army-book-targets.mjs'])fs.copyFileSync(path.join(root,'books/shared/tools',file),path.join(tools,file));
+    for(const file of ['build-army-book.mjs','canonical-build-contract.mjs','build-relation-graph.mjs','build-roster-catalog.mjs','build-army-book-targets.mjs','effective-points-projection.mjs','generated-output-contract.mjs'])fs.copyFileSync(path.join(root,'books/shared/tools',file),path.join(tools,file));
+    fs.copyFileSync(path.join(root,'books/shared/rule-facts.js'),path.join(temp,'books/shared/rule-facts.js'));
     fs.copyFileSync(path.join(root,'books/shared/runtime-asset-versions.json'),path.join(temp,'books/shared/runtime-asset-versions.json'));
     writeJson(path.join(temp,'glossary/registry.en.json'),{terms:{}});
     const unique=fixture('unique',{datasheets:[first,second]});succeeds(unique);

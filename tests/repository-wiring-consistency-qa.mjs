@@ -59,7 +59,8 @@ assert(versionedDynamic,'No versioned dynamic dependency was discovered');
 if(versionedDynamic){const staleUrl=new URL(versionedDynamic.exact.slice(1),'https://local/');staleUrl.searchParams.set('v','stale');const staleExact='.'+staleUrl.pathname+staleUrl.search,fixtureUrls=new Set(urls);fixtureUrls.delete(versionedDynamic.exact);fixtureUrls.add(staleExact);assert(missingDynamicAssets([versionedDynamic],fixtureUrls,dynamicNetworkOnly).some(item=>item.exact===versionedDynamic.exact),'Dynamic exact-query sensitivity fixture did not detect a stale cached version');}
 for(const url of shell.urls)resolveAppShellUrl(root,url);
 const revision=calculateCacheRevision({root});assert(revision.assets.length===shell.urls.length,'cache coverage mismatch');
-const sharedBuildBooks=selectPublicationBooks(publication,'freshness').map(book=>book.id);
+const sharedBuildBooks=[...books];
+assert(!sharedBuildBooks.includes('orks'),'freshness-only Orks must not be required to produce an Army Book build');
 const mechanicusConfig=JSON.parse(read('books/adeptus-mechanicus/book.config.json')),mechanicusWrapper=read('books/adeptus-mechanicus/tools/build-full-content.mjs');
 assert(mechanicusConfig.buildExtension==='tools/canonical-build-extension.mjs','Adeptus Mechanicus shared build extension is not configured');
 const mechanicusImports=[...mechanicusWrapper.matchAll(/^import\s+(.+?)\s+from\s+['"]([^'"]+)['"];?$/gm)].map(([,bindings,source])=>({bindings:bindings.replace(/\s+/g,' '),source}));

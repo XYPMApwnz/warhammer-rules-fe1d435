@@ -4,7 +4,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {createCanonicalBuildContext} from '../books/shared/tools/canonical-build-contract.mjs';
+import {buildCanonicalBook} from '../books/shared/tools/build-army-book.mjs';
 import {runPresentationHook,validateEffectiveBookModel} from '../books/shared/tools/effective-book-model.mjs';
+import {renderDeathGuardReader} from '../books/death-guard/tools/presentation-hook.mjs';
+import {renderEffectiveBook as renderStructuredEffectiveBook} from '../books/shared/tools/render-structured-effective-book.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const stable=value=>value instanceof Map?['Map',[...value].sort(([a],[b])=>a.localeCompare(b)).map(([key,item])=>[key,stable(item)])]:Array.isArray(value)?value.map(stable):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,stable(value[key])])):value;
@@ -25,7 +28,7 @@ async function construct(id){
   assert.equal(typeof adapt,'function',`${id}: source adapter export is missing`);
   const model=validateEffectiveBookModel(await adapt(context));
   assert.equal(reads.some(file=>/(?:reader\.html|scripts\/(?:target|roster)-data\.js|mobile\/.*\.html)$/.test(file)),false,`${id}: source adapter read a generated effective output`);
-  return {config,model,reads};
+  return {config,context,model,reads};
 }
 
 const first={};
@@ -48,6 +51,67 @@ const secondAm=(await construct('adeptus-mechanicus')).model,secondDg=(await con
 assert.equal(digest(secondAm),digest(first['adeptus-mechanicus']),'adapter construction order changed AM');
 assert.equal(digest(secondDg),digest(first['death-guard']),'adapter construction order changed DG');
 
+const dgProbe=await construct('death-guard'),dgBaseline=renderDeathGuardReader(dgProbe.context,dgProbe.model),dgShadow=structuredClone(dgProbe.model);
+const mortarionSection=dgShadow.book.sections.find(item=>item.id==='unit-mortarion'),mortarionPoints=mortarionSection.blocks.find(item=>item.type==='points');
+mortarionPoints.values[0].value=987654;
+dgShadow.book.sections=dgShadow.book.sections.filter(item=>item.id!=='unit-mortarion');
+const nestedEnhancement=dgShadow.detachments.flatMap(item=>(item.subsections||[]).flatMap(part=>(part.blocks||[]).filter(block=>block.type==='enhancement')))[0];
+nestedEnhancement.text='D1_DG_PRESENTATION_TEXT_POISON';nestedEnhancement.owner={subject:'D1_DG_PRESENTATION_OWNER_POISON'};
+dgShadow.ruleFacts.get('unit-mortarion').abilities.push('D1_DG_RULE_FACT_POISON');
+assert.equal(renderDeathGuardReader(dgProbe.context,dgShadow),dgBaseline,'DG retained sections or ruleFacts changed canonical publication');
+const dgContradiction=structuredClone(dgProbe.model),dgDetachment=dgContradiction.detachments[0],dgMetadata=dgDetachment.blocks.find(block=>block.type==='p'&&/Force Disposition:/i.test(block.text||''));
+dgMetadata.text=dgMetadata.text.replace(/Detachment Points:\s*[^.]+/i,'Detachment Points: 987654');
+assert.throws(()=>renderDeathGuardReader(dgProbe.context,dgContradiction),/presentation metadata conflicts with effective Detachment facts/,'DG presentation contradiction must fail closed');
+const dgDispositionContradiction=structuredClone(dgProbe.model),dgDispositionDetachment=dgDispositionContradiction.detachments[0],dgDispositionMetadata=dgDispositionDetachment.blocks.find(block=>block.type==='p'&&/Force Disposition:/i.test(block.text||''));
+dgDispositionMetadata.text=dgDispositionMetadata.text.replace(/Force Disposition:\s*[^.]+/i,'Force Disposition: D1_DG_DISPOSITION_POISON');
+assert.throws(()=>renderDeathGuardReader(dgProbe.context,dgDispositionContradiction),/presentation metadata conflicts with effective Detachment facts/,'DG presentation force-Disposition contradiction must fail closed');
+
+const amProbe=await construct('adeptus-mechanicus'),amBaseline=(await renderStructuredEffectiveBook(amProbe.context,amProbe.model)).readerSource,amShadow=structuredClone(amProbe.model);
+amShadow.detachments[0].dp=987654;amShadow.detachments[0].disposition='D1_AM_DISPOSITION_POISON';
+assert.equal((await renderStructuredEffectiveBook(amProbe.context,amShadow)).readerSource,amBaseline,'AM compatibility aliases changed canonical publication');
+
+async function sharedAuthorityProbe(bookId,{dependency=false}={}){
+  const configPath=path.join(root,'books',bookId,'book.config.json'),context=createCanonicalBuildContext({configPath,args:[]}),temporaryBase=path.resolve(process.env.TEMP||process.env.TMP||root),temporary=fs.mkdtempSync(path.join(temporaryBase,`d1-${bookId}-`)),nativeClone=globalThis.structuredClone;
+  assert.ok(path.resolve(temporary).startsWith(`${temporaryBase}${path.sep}`),`${bookId}: temporary output escaped its declared root`);
+  context.root=temporary;
+  const modelPoint=123456,shadowPoint=987654,modelDetachmentPoints=234567,shadowDetachmentPoints=876543,modelRule='D1_MODEL_ARMY_RULE_MARKER',shadowRule='D1_SHADOW_ARMY_RULE_POISON',modelCatalog='D1 Model Roster Enhancement',shadowCatalog='D1 Shadow Roster Enhancement Poison';
+  let intercepted=false,targetUnitId='';
+  globalThis.structuredClone=value=>{
+    const cloned=nativeClone(value);
+    if(!intercepted&&value?.schema==='wh40k-effective-book-model/v1'&&value.book?.id===bookId){
+      intercepted=true;
+      const index=dependency?cloned.units.findIndex(item=>item.sourceBookId&&item.sourceBookId!==bookId):0;
+      assert.ok(index>=0,`${bookId}: dependency probe requires an inherited unit`);targetUnitId=cloned.units[index].id;
+      value.units[index].points[0].value=shadowPoint;
+      value.detachments[0].detachmentPoints=shadowDetachmentPoints;
+      value.rules.armyRules[0].text=shadowRule;
+      value.rosterCatalog.enhancements[0].title=shadowCatalog;
+      cloned.units[index].points[0].value=modelPoint;
+      cloned.effectivePointsProjection.units.find(item=>item.id===targetUnitId).points[0].value=modelPoint;
+      cloned.detachments[0].detachmentPoints=modelDetachmentPoints;
+      cloned.effectivePointsProjection.detachments.find(item=>item.id===cloned.detachments[0].id).detachmentPoints=modelDetachmentPoints;
+      cloned.rules.armyRules[0].text=modelRule;
+      cloned.rosterCatalog.enhancements[0].title=modelCatalog;
+    }
+    return cloned;
+  };
+  try{await buildCanonicalBook(context);}finally{globalThis.structuredClone=nativeClone;}
+  try{
+    assert.equal(intercepted,true,`${bookId}: effective model construction was not intercepted`);
+    const outputs=['scripts/target-data.js','scripts/roster-data.js','mobile/related-rules.inc','mobile/related-rules.source.inc'].map(file=>path.join(temporary,file)).filter(fs.existsSync).map(file=>fs.readFileSync(file,'utf8')).join('\n');
+    assert.match(outputs,new RegExp(String(modelPoint)),`${bookId}: model unit points were not published`);
+    assert.match(outputs,new RegExp(String(modelDetachmentPoints)),`${bookId}: model Detachment points were not published`);
+    assert.match(outputs,new RegExp(modelRule),`${bookId}: model army rule was not published`);
+    assert.match(outputs,new RegExp(modelCatalog),`${bookId}: model roster Enhancement was not published`);
+    for(const poison of [shadowPoint,shadowDetachmentPoints,shadowRule,shadowCatalog])assert.doesNotMatch(outputs,new RegExp(String(poison)),`${bookId}: pre-model shadow fact influenced publication`);
+    return {targetUnitId,digest:digest(outputs)};
+  }finally{fs.rmSync(temporary,{recursive:true,force:true});}
+}
+const tyranidsPublication=await sharedAuthorityProbe('tyranids'),tyranidsPublicationAgain=await sharedAuthorityProbe('tyranids');
+assert.equal(tyranidsPublicationAgain.digest,tyranidsPublication.digest,'shared effective publication is not deterministic');
+const daDependency=await sharedAuthorityProbe('dark-angels',{dependency:true});
+assert.ok(daDependency.targetUnitId.startsWith('unit-'),'dependency publication did not consume an effective canonical unit');
+
 const sharedBuilder=fs.readFileSync(path.join(root,'books/shared/tools/build-army-book.mjs'),'utf8');
 assert.match(sharedBuilder,/createEffectiveBookModel\(/,'shared seven-book path must validate the same effective model contract');
 const dgRenderer=fs.readFileSync(path.join(root,'books/death-guard/tools/presentation-hook.mjs'),'utf8');
@@ -55,4 +119,4 @@ assert.doesNotMatch(dgRenderer,/export\s+(?:async\s+)?function\s+buildCanonicalB
 const amRenderer=fs.readFileSync(path.join(root,'books/shared/tools/render-structured-effective-book.mjs'),'utf8');
 assert.doesNotMatch(amRenderer,/createAdeptusMechanicusCanonicalModel|buildAdeptusMechanicusEffectiveModelInput/,'shared structured renderer must consume the effective model');
 
-console.log('Effective model convergence QA: PASS (DG/AM shared schema, frozen inventories, generated-output independence, fail-closed mutations, presentation isolation, construction-order independence).');
+console.log('Effective model convergence QA: PASS (DG/AM shared schema, effective publication authority, shadow poison isolation, frozen inventories, generated-output independence, fail-closed mutations, presentation isolation, construction-order independence).');

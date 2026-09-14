@@ -7,7 +7,8 @@ export const PUBLICATION_STATES=new Set(['Current','Legends','Warhammer Legends'
 
 const SEMANTIC_PARTITIONS=new Set([
   'book','dependencies','sources','units','detachments','enhancements','rules','relations','relationGraphs',
-  'effectContracts','effectivePointsProjection','ruleProfiles','glossary','navigation','targets'
+  'effectContracts','effectivePointsProjection','ruleFacts','ruleProfiles','compiledRuleProfiles','rosterCatalog',
+  'rosterEnhancements','glossary','navigation','targets'
 ]);
 const record=value=>value!==null&&typeof value==='object'&&!Array.isArray(value)&&!(value instanceof Map);
 const list=(value,label)=>{if(!Array.isArray(value))throw new Error(`${label} must be an array`);return value;};
@@ -195,7 +196,11 @@ function validateProjection(model,dependencyIds,unitIds,detachmentIds,enhancemen
     if(item.publicationState!==unit.publicationState)throw new Error(`${item.id}: conflicting publication state partitions`);
   }
   const detachmentById=new Map(model.detachments.map(item=>[item.id,item]));
-  for(const item of projection.detachments){const modelItem=detachmentById.get(item.id);if(item.title!==modelItem.title||item.sourceBookId!==modelItem.sourceBookId)throw new Error(`${item.id}: conflicting Detachment identity partitions`);}
+  for(const item of projection.detachments){
+    const modelItem=detachmentById.get(item.id);
+    if(item.title!==modelItem.title||item.sourceBookId!==modelItem.sourceBookId)throw new Error(`${item.id}: conflicting Detachment identity partitions`);
+    if(item.detachmentPoints!==modelItem.detachmentPoints||item.forceDisposition!==modelItem.forceDisposition)throw new Error(`${item.id}: conflicting Detachment facts partitions`);
+  }
   const enhancementById=new Map(model.enhancements.map(item=>[`${item.detachmentId}\0${item.id}`,item]));
   for(const item of projection.enhancements){
     const modelItem=enhancementById.get(`${item.detachmentId}\0${item.id}`);
@@ -237,6 +242,8 @@ export function validateEffectiveBookModel(model){
   for(const detachment of detachments){
     text(detachment.title,`${detachment.id}.title`);canonicalId(detachment.sourceBookId,`${detachment.id}.sourceBookId`);
     if(!allowedOwners.has(detachment.sourceBookId))throw new Error(`${detachment.id}: unknown source owner ${detachment.sourceBookId}`);
+    finite(detachment.detachmentPoints,`${detachment.id}.detachmentPoints`);
+    if(detachment.forceDisposition!=null&&typeof detachment.forceDisposition!=='string')throw new Error(`${detachment.id}.forceDisposition must be a string`);
   }
   for(const enhancement of enhancements){
     text(enhancement.title,`${enhancement.id}.title`);canonicalId(enhancement.sourceBookId,`${enhancement.id}.sourceBookId`);

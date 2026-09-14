@@ -10,7 +10,7 @@ const unit={
   points:[{label:'1 model',value:90}],paidWargear:[{label:'Icon',value:5}],
   ruleProfile:{id:'unit-alpha',unitId:'unit-alpha',abilities:[]},publicationRecord:{id:'unit-alpha'}
 };
-const detachment={id:'detachment-test',title:'Test Detachment',sourceBookId:'death-guard'};
+const detachment={id:'detachment-test',title:'Test Detachment',sourceBookId:'death-guard',detachmentPoints:1,forceDisposition:'Take and Hold'};
 const enhancement={id:'enhancement-test',title:'Test Enhancement',detachmentId:'detachment-test',sourceBookId:'death-guard',value:15};
 const effectivePointsProjection=createEffectivePointsProjection({
   book:{id:'death-guard',title:'Death Guard',parentBookId:null},units:[unit],detachments:[detachment],enhancements:[enhancement]
@@ -50,6 +50,7 @@ mutation('UNKNOWN_SOURCE_PROVENANCE',model=>model.effectContracts[0].source.sour
 mutation('WRONG_SOURCE_PROVENANCE_OWNER',model=>model.sources[0].ownerBookId='adeptus-mechanicus',/unknown source owner/);
 mutation('CONFLICTING_UNIT_PARTITION',model=>model.effectivePointsProjection.units[0].id='unit-substitute',/conflicting unit partitions/);
 mutation('CONFLICTING_POINTS_PARTITION',model=>model.effectivePointsProjection.units[0].points[0].value=91,/conflicting points partitions/);
+mutation('CONFLICTING_DETACHMENT_FACT_PARTITION',model=>model.effectivePointsProjection.detachments[0].detachmentPoints=2,/conflicting Detachment facts partitions/);
 mutation('CONFLICTING_BOOK_PARTITION',model=>model.effectivePointsProjection.book.title='Other Book',/conflicting book identity partitions/);
 mutation('SEMANTIC_PRESENTATION_PARTITION',model=>model.presentation.units=[],/presentation cannot own semantic partition units/);
 

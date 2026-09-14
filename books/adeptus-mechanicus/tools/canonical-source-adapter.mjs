@@ -296,13 +296,13 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
     return {...unit,sourceBookId:config.id,publicationState:unit.status==='Warhammer Legends'?'Warhammer Legends':'Current',intrinsicKeywords:[...(unit.keywords||[])],points:publication?.points||[],paidWargear:publication?.wargear||[],ruleFacts,ruleProfile,publicationRecord:publication};
   });
   const detachmentOrder=new Map(Object.keys(officialMfm.detachments||{}).map((title,index)=>[`detachment-${slugKey(title)}`,index]));
-  const detachmentRecord=item=>({
-    ...item,
+  const detachmentRecord=item=>{const {dp,disposition,...canonical}=item;return {
+    ...canonical,
     sourceBookId:config.id,
-    detachmentPoints:Number(String(item.dp||0).match(/\d+/)?.[0]||0),
-    forceDisposition:item.disposition||'',
-    publicationRecord:{title:item.title,detachmentPoints:item.dp,forceDisposition:item.disposition}
-  });
+    detachmentPoints:Number(String(dp||0).match(/\d+/)?.[0]||0),
+    forceDisposition:disposition||'',
+    publicationRecord:{title:item.title,detachmentPoints:dp,forceDisposition:disposition}
+  };};
   const detachments=allDetachments.map(detachmentRecord);
   const effectContractSet=config.sources.effectContracts?validateEffectContractSet(context.readJson(config.sources.effectContracts),{expectedBookId:config.id}):{schema:'wh40k-effect-contracts/v1',bookId:config.id,contracts:[]};
   const effectContracts=effectiveEffectContracts([effectContractSet],config.id);

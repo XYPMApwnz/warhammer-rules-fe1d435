@@ -84,12 +84,12 @@ for(const [book,catalogKey] of [['tau-empire','t au empire'],['tyranids','tyrani
 }
 
 assert.deepEqual(plain(catalog['t au empire'].units['crisis starscythe battlesuits'].points.map(row=>row.value)),[100,110],'Starscythe factual catalog schedule remains 100/110; model-count resolution stays in Package 3');
-const producer=fs.readFileSync('roster-guides/build-points.mjs','utf8'),projectionProducer=fs.readFileSync('roster-guides/effective-points-catalog.mjs','utf8'),dgAdapter=fs.readFileSync('books/death-guard/tools/canonical-build-extension.mjs','utf8'),amAdapter=fs.readFileSync('books/adeptus-mechanicus/tools/canonical-build-extension.mjs','utf8');
+const producer=fs.readFileSync('roster-guides/build-points.mjs','utf8'),projectionProducer=fs.readFileSync('roster-guides/effective-points-catalog.mjs','utf8'),dgAdapter=fs.readFileSync('books/death-guard/tools/canonical-source-adapter.mjs','utf8'),amAdapter=fs.readFileSync('books/adeptus-mechanicus/tools/canonical-source-adapter.mjs','utf8');
 assert.match(producer,/createPointsCatalog/,'Roster Guides must consume the effective points projection');
-assert.match(projectionProducer,/buildEffectivePointsProjection/,'custom books must expose effective points through their canonical adapters');
+assert.match(projectionProducer,/buildSharedCanonicalBook\(context,\{projectionOnly:true\}\)/,'all books must expose effective points through the shared effective-model build');
 assert.match(dgAdapter,/buildDeathGuardCanonicalModel/,'Death Guard points must follow its configured canonical model');
 assert.match(amAdapter,/createAdeptusMechanicusCanonicalModel/,'Adeptus Mechanicus points must follow its configured canonical model');
-assert.match(amAdapter,/context\.readJson\(config\.sources\.officialMfm\)/,'Adeptus Mechanicus Detachment order must follow its configured MFM owner');
+assert.match(amAdapter,/readJson\(sourcePaths\.officialMfm\)/,'Adeptus Mechanicus Detachment order must follow its configured MFM owner');
 assert.doesNotMatch(`${producer}\n${projectionProducer}`,/scripts[\\/]roster-data\.js|scripts[\\/]target-data\.js|reader\.html|mobile[\\/](?:generated|scripts)[\\/]/i,'points generation must not read generated consumer artifacts');
 
 console.log('Package 2 points consumer convergence QA: PASS');

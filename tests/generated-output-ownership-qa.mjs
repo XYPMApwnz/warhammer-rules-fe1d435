@@ -55,7 +55,7 @@ for(const book of books){
 
 for(const book of books){
   const configPath=path.join(root,book.config),config=JSON.parse(fs.readFileSync(configPath,'utf8'));
-  const canonicalProducer=['death-guard','adeptus-mechanicus'].includes(book.id)?`books/${book.id}/tools/canonical-build-extension.mjs`:'books/shared/tools/build-army-book.mjs';
+  const canonicalProducer='books/shared/tools/build-army-book.mjs';
   assertGeneratedOutputPlan({repo:root,configPath,producer:canonicalProducer,lifecycle:'NORMAL_BUILD_OUTPUT',outputs:[
     'reader.html','index.html','scripts/data.js','scripts/target-data.js','scripts/roster-data.js',
     ...(['chaos-space-marines','dark-angels','blood-angels'].includes(book.id)?['styles/book.css','mobile/related-rules.inc']:[])

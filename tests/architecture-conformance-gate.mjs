@@ -34,6 +34,8 @@ const lifecycleProbe=runNode('tests/source-ingestion-contract-qa.mjs');
 const lifecyclePass=lifecycleProbe.status===0;
 const canonicalJoinProbe=runNode('tests/canonical-join-architecture-qa.mjs');
 const canonicalJoinPass=canonicalJoinProbe.status===0;
+const effectiveModelProbe=runNode('tests/effective-model-convergence-qa.mjs');
+const effectiveModelPass=effectiveModelProbe.status===0;
 const evidence=(status,...items)=>({status,evidence:items});
 const loadRosterCatalog=id=>{
   const sandbox={window:{}};
@@ -81,8 +83,8 @@ function generatedOutputOwnership(book){
 
 function rawResults(book){
   const id=book.id,config=json(book.config),source=sourceByBook.get(id),catalog=loadRosterCatalog(id),outputOwnership=generatedOutputOwnership(book);
-  const custom=Boolean(config.buildExtension);
-  const customAdapter=custom?read(`books/${id}/tools/canonical-source-adapter.mjs`):'';
+  const effectiveSpec=config.effectiveModel||null,custom=Boolean(config.buildExtension),adapted=Boolean(effectiveSpec);
+  const customAdapter=adapted?read(effectiveSpec.sourceAdapter):custom?read(`books/${id}/tools/canonical-source-adapter.mjs`):'';
   const customCanonicalJoin=customAdapter.includes("canonicalJoinContract:'v1'");
   const dependencies=config.dependencies||[];
   const projectedDependencies=(catalog.book?.dependencies||[]).map(item=>item.bookId);
@@ -109,23 +111,23 @@ function rawResults(book){
   try{const set=json(path.join('books',id,config.sources.effectContracts));validateEffectContractsAgainstCatalog(set,catalog);effectContractCount=set.contracts.length;}catch(error){effectContractError=error.message;}
   const runtimeEffectFiles=['books/extensions/book-roster-enhancement-providers.js',`books/${id}/scripts/roster-filter.js`,...(id==='death-guard'?[`books/${id}/scripts/roster-semantics.js`]:id==='adeptus-mechanicus'?[`books/${id}/scripts/roster-enhancements.js`]:[])].filter(exists);
   const providerOwnedEffects=Boolean(effectContractError)||runtimeEffectFiles.some(file=>/(?:smFamilyEffects|detachmentEffects|enhancementEffects|datasheetEffects|structuredRecords|effectCodeMap|legacyEffects)\s*=/.test(read(file)));
-  const localRelationJoin=custom
+  const localRelationJoin=custom||adapted
     ?read(`books/${id}/tools/canonical-source-adapter.mjs`).match(/(?:ByTitle|titleKey|\.title\)|includes\([^\n]*\.title)/)
     :genericBuilder.includes('unitByTitle');
-  const localEnhancementJoin=custom
+  const localEnhancementJoin=custom||adapted
     ?read(`books/${id}/tools/canonical-source-adapter.mjs`).match(/(?:enhancementByTitle|enhancementPoints|\.enhancements[^\n]*\.title|pointsByTitle)/i)
     :genericBuilder.includes('enhancementPointsByTitle');
   const results={
     SOURCE_LIFECYCLE:evidence(lifecyclePass?'PASS':'FAIL','tests/source-ingestion-contract-qa.mjs'),
     SOURCE_ENROLLMENT:evidence(source?.ENROLLMENT==='COMPLETE'?'PASS':'FAIL',`enrollment=${source?.ENROLLMENT||'UNKNOWN'}`,`declared=${source?.DECLARED_SOURCE_COUNT??0}`,`registered=${source?.REGISTERED_SOURCE_COUNT??0}`),
-    CANONICAL_IDENTITY:evidence(canonicalJoinPass&&(custom?customCanonicalJoin:genericTitleJoins.length===0)?'PASS':'FAIL',custom?`${id} canonical adapter contract=${customCanonicalJoin?'v1':'missing'}`:`generic builder title joins: ${genericTitleJoins.join(',')}`,'tests/canonical-join-architecture-qa.mjs'),
+    CANONICAL_IDENTITY:evidence(canonicalJoinPass&&((custom||adapted)?customCanonicalJoin:genericTitleJoins.length===0)?'PASS':'FAIL',(custom||adapted)?`${id} canonical adapter contract=${customCanonicalJoin?'v1':'missing'}`:`generic builder title joins: ${genericTitleJoins.join(',')}`,'tests/canonical-join-architecture-qa.mjs'),
     FACT_OWNERSHIP:evidence(selfInput||glossarySelfSeeds?'FAIL':'PASS',...(selfInput?[`${id} producer reads its previous output`]:[]),...(glossarySelfSeeds?[`glossary feedback reads remain: ${glossaryFeedbackReads.join(', ')}`]:[])),
-    EFFECTIVE_MODEL:evidence(custom?'FAIL':'PASS',custom?`buildExtension=${config.buildExtension}`:'shared effective assembly and renderer'),
+    EFFECTIVE_MODEL:evidence(!custom&&effectiveModelPass?'PASS':'FAIL',custom?`full semantic buildExtension=${config.buildExtension}`:adapted?`${effectiveSpec.schema}; adapter=${effectiveSpec.sourceAdapter}; renderer=${effectiveSpec.renderer}; mode=${effectiveSpec.presentationMode}`:'validated shared effective assembly and renderer','tests/effective-model-convergence-qa.mjs'),
     DEPENDENCY_PRECEDENCE:dependencies.length?evidence(dependencyOk?'PASS':'FAIL',`dependencies=${dependencies.join(',')}`):evidence('NOT_APPLICABLE','no book dependency'),
     POINTS:evidence(pointsRecomposes?'FAIL':'PASS',pointsRecomposes?'Roster Guides recomposes book/dependency points independently':'one effective points input'),
-    ENHANCEMENTS:evidence(canonicalJoinPass&&(custom?customCanonicalJoin:!localEnhancementJoin)?'PASS':'FAIL',custom?'custom adapter uses the shared scoped identity contract':localEnhancementJoin?'Enhancement ownership/points still uses title joins':'exact canonical Enhancement identities'),
+    ENHANCEMENTS:evidence(canonicalJoinPass&&((custom||adapted)?customCanonicalJoin:!localEnhancementJoin)?'PASS':'FAIL',(custom||adapted)?'source adapter uses the shared scoped identity contract':localEnhancementJoin?'Enhancement ownership/points still uses title joins':'exact canonical Enhancement identities'),
     STRATAGEMS:evidence(stratagemOk?'PASS':'FAIL',`canonical roster Detachments=${(catalog.detachments||[]).length}`),
-    RELATIONS:evidence(canonicalJoinPass&&(custom?customCanonicalJoin:!localRelationJoin)?'PASS':'FAIL',custom?'custom adapter canonicalizes source prose before graph construction':localRelationJoin?'relation ownership still resolves titles/prose below ingestion':'ID-keyed relation graph'),
+    RELATIONS:evidence(canonicalJoinPass&&((custom||adapted)?customCanonicalJoin:!localRelationJoin)?'PASS':'FAIL',(custom||adapted)?'source adapter canonicalizes source prose before graph construction':localRelationJoin?'relation ownership still resolves titles/prose below ingestion':'ID-keyed relation graph'),
     ROSTER:evidence(rosterOk?'PASS':'FAIL',catalog?.schema||'missing roster catalog'),
     EFFECTS:evidence(providerOwnedEffects?'FAIL':'PASS',effectContractError||`source effect contracts=${effectContractCount}`,'canonical effect facts with shared interpreter'),
     GLOSSARY:evidence(glossarySelfSeeds?'FAIL':'PASS',glossarySelfSeeds?'previous generated glossary remains a factual/editorial input':'clean source-owned rebuild'),

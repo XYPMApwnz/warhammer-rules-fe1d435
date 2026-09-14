@@ -12,6 +12,10 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const fixtureScope=vm.createContext({window:{}});
 for(const file of ['books/chaos-space-marines/scripts/roster-data.js','roster-guides/points-data.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),fixtureScope,{filename:file});
 const catalog=fixtureScope.window.WH_BOOK_ROSTER_CATALOG,pointsCatalog=fixtureScope.window.WH_POINTS_CATALOG['chaos space marines'];
+const legionaries=catalog.units.find(unit=>unit.id==='unit-legionaries'),chaosIconSelection=legionaries.gameSelections.selections.find(selection=>selection.id==='unit-legionaries-selection-chaos-icon'),chaosIconIds=chaosIconSelection?.wargearAbilityIds||[];
+assert.equal(chaosIconIds.length,1,'Chaos Icon selection must own exactly one canonical wargear ability');
+const chaosIconId=chaosIconIds[0],chaosIconAbility=legionaries.gameSelections.wargearAbilities.find(ability=>ability.id===chaosIconId);
+assert.ok(chaosIconAbility?.legacyIds?.includes('unit-legionaries-wargear-ability-chaos-icon'),'Chaos Icon canonical ability must preserve its historical compatibility identity');
 const fixture=(id,detachmentId,units,attachments={})=>createRosterFixture({catalog,pointsCatalog,id,detachmentId,units,attachments,factionPrefix:'Chaos - '}).record;
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.png':'image/png','.webp':'image/webp'};
 const screenshotDir=path.join(os.tmpdir(),`csm-real-front-${process.pid}`);
@@ -107,10 +111,10 @@ try {
   await shot(loadoutView.page,'08-selected-weapons');await loadoutView.context.close();
 
   const iconView=await open(attachedRecord,'parsed-unit-3','unit-legionaries'),icon=await state(iconView.page,'parsed-unit-3');
-  assert.ok(icon.unit.selection.loadout.selectedWargearAbilityIds.includes('unit-legionaries-wargear-ability-chaos-icon'));
+  assert.ok(icon.unit.selection.loadout.selectedWargearAbilityIds.includes(chaosIconId));
   assert.match(icon.text,/Chaos Icon/i);await iconView.context.close();
   const noIconView=await open(attachedRecord,'parsed-unit-4','unit-legionaries'),noIcon=await state(noIconView.page,'parsed-unit-4');
-  assert.equal(noIcon.unit.selection.loadout.selectedWargearAbilityIds.includes('unit-legionaries-wargear-ability-chaos-icon'),false);await noIconView.context.close();
+  assert.equal(noIcon.unit.selection.loadout.selectedWargearAbilityIds.includes(chaosIconId),false);await noIconView.context.close();
 
   const renegadeView=await open(renegadeRecord,'parsed-unit-1','unit-chosen'),renegade=await state(renegadeView.page,'parsed-unit-1');
   assert.ok(renegade.refs.some(ref=>ref.id==='chaos-space-marines-detachment-rule-slaves-to-none'));

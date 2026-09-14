@@ -11,6 +11,7 @@ import {
   indexCanonicalById,
   mergeCanonicalById,
   resolveDeclaredLegacyAlias,
+  resolvePointEnhancement,
   resolveScopedEnhancement
 } from '../books/shared/tools/canonical-join-contract.mjs';
 import {buildCompatibleRules as buildCsmCompatibleRules,inputs as csmCompatibleInputs} from '../books/chaos-space-marines/tools/build-compatible-rules.mjs';
@@ -35,6 +36,12 @@ const enhancements=[
 assert.equal(resolveScopedEnhancement({enhancementId:'enhancement-shared',detachmentId:'detachment-a'},enhancements).detachmentId,'detachment-a');
 throws(()=>resolveScopedEnhancement({enhancementId:'enhancement-shared',detachmentId:'detachment-c'},enhancements),/exactly once/);
 throws(()=>resolveScopedEnhancement({enhancementId:'enhancement-unknown',detachmentId:'detachment-a'},enhancements),/exactly once/);
+const pointRecords=[{id:'enhancement-power',detachmentId:'detachment-a',title:'Original title'}];
+assert.equal(resolvePointEnhancement({id:'detachment-a-power',title:'Renamed title'},'detachment-a',pointRecords).id,'enhancement-power');
+assert.equal(resolvePointEnhancement({id:'legacy-power'},'detachment-a',pointRecords,{aliases:{'detachment-a|legacy-power':'enhancement-power'}}).id,'enhancement-power');
+assert.equal(resolvePointEnhancement({id:'unknown',title:'Original title'},'detachment-a',pointRecords),null);
+throws(()=>resolvePointEnhancement({id:'legacy-power'},'detachment-b',pointRecords,{aliases:{'detachment-b|legacy-power':'enhancement-power'}}),/targets no exact point record/);
+throws(()=>resolvePointEnhancement({id:'detachment-a-power'},'detachment-a',[...pointRecords,{id:'power',detachmentId:'detachment-a'}]),/at most once/);
 assert.equal(resolveDeclaredLegacyAlias('old',[{canonicalId:'new',aliases:['old']}]),'new');
 throws(()=>resolveDeclaredLegacyAlias('old',[{canonicalId:'a',aliases:['old']},{canonicalId:'b',aliases:['old']}]),/exactly once/);
 
@@ -79,6 +86,7 @@ for(const fixture of [
 
 const sharedBuilder=read('books/shared/tools/build-army-book.mjs'),ecConfig=JSON.parse(read('books/emperors-children/book.config.json'));
 assert.doesNotMatch(sharedBuilder,/enhancementOwnerRecords\.filter\([^\n]*titleKey/);
+assert.doesNotMatch(sharedBuilder,/pointTitleKey\(record\.title\).*pointTitleKey\((?:item|enhancement)\.title\)/);
 assert.equal(Object.keys(ecConfig.enhancementOwnerAliases||{}).length,10);
 
 const csmInputs=csmCompatibleInputs();

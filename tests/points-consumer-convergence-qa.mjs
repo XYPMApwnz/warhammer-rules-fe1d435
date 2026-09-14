@@ -72,7 +72,7 @@ try{
   fs.rmSync(tempRoot,{recursive:true,force:true});
 }
 
-const bloodAngelsConfig=json('books/blood-angels/book.config.json'),stormlance=bloodAngelsConfig.dependencyDetachments.pointOverrides['Stormlance Task Force'];
+const bloodAngelsConfig=json('books/blood-angels/book.config.json'),stormlance=bloodAngelsConfig.dependencyDetachments.pointOverridesById['stormlance-task-force'];
 assert.equal(stormlance.detachmentPoints,2,'Blood Angels factual Stormlance override remains 2DP');
 assert.equal(catalog['blood angels'].detachments['stormlance task force'].detachmentPoints,2,'Blood Angels Roster Guides must consume the Stormlance override');
 assert.ok(visibleText(targetHtml('blood-angels')).includes(normalize('Stormlance Task Force 2DP')),'Blood Angels Army Book must retain Stormlance at 2DP');

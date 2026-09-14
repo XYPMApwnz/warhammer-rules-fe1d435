@@ -11,6 +11,8 @@ import {runTauAuxiliaryBrowser} from '../tau-auxiliary-provenance-qa.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..'),mime={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
 const fixtureScope=vm.createContext({window:{}});for(const file of ['books/tau-empire/scripts/roster-data.js','roster-guides/points-data.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),fixtureScope,{filename:file});
 const catalog=fixtureScope.window.WH_BOOK_ROSTER_CATALOG,pointsCatalog=fixtureScope.window.WH_POINTS_CATALOG['t au empire'];
+const canonicalProfileId=(unitId,legacyId)=>{const profiles=catalog.units.find(unit=>unit.id===unitId)?.gameSelections?.weaponProfiles||[],matches=profiles.filter(profile=>profile.id===legacyId||(profile.legacyIds||[]).includes(legacyId));assert.equal(matches.length,1,`${unitId}: legacy profile identity ${legacyId} resolves exactly once`);return matches[0].id;};
+const canonicalProfileMap=(unitId,values)=>Object.fromEntries(Object.entries(values).map(([legacyId,value])=>[canonicalProfileId(unitId,legacyId),value]));
 const server=http.createServer((request,response)=>{const pathname=decodeURIComponent(new URL(request.url,'http://localhost').pathname),file=path.resolve(root,`.${pathname==='/'?'/index.html':pathname}`);if(pathname==='/favicon.ico'){response.writeHead(204).end();return;}if(!file.startsWith(root)||!fs.existsSync(file)||!fs.statSync(file).isFile()){response.writeHead(404).end('Not found');return;}response.setHeader('content-type',mime[path.extname(file)]||'application/octet-stream');fs.createReadStream(file).pipe(response);});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const base=`http://127.0.0.1:${server.address().port}`,browser=await launchChromium();
 const fixture=createRosterFixture({catalog,pointsCatalog,id:'tau-final-conformance',detachmentId:'kauyon',attachments:{'parsed-unit-4':['parsed-unit-1']},units:[
@@ -21,24 +23,24 @@ const fixture=createRosterFixture({catalog,pointsCatalog,id:'tau-final-conforman
   {datasheetId:'unit-breacher-team',instanceId:'parsed-unit-5',quantity:10,selectionIds:['unit-breacher-team-selection-close-combat-weapon','unit-breacher-team-selection-pulse-blaster','unit-breacher-team-selection-pulse-pistol']},
 ]});
 // Independent base/effective expectations, never base + the actual effect.delta.
-const breacherBase={
+const breacherBase=canonicalProfileMap('unit-breacher-team',{
   'unit-breacher-team-profile-pulse-pistol-ranged':'1',
   'unit-breacher-team-profile-pulse-blaster-ranged-3':'2',
   'unit-breacher-team-profile-close-combat-weapon-melee-2':'1'
-};
-const breacherVolley={
+});
+const breacherVolley=canonicalProfileMap('unit-breacher-team',{
   'unit-breacher-team-profile-pulse-pistol-ranged':'2',
   'unit-breacher-team-profile-pulse-blaster-ranged-3':'3',
   'unit-breacher-team-profile-close-combat-weapon-melee-2':'1'
-};
-const firebladeBase={
+});
+const firebladeBase=canonicalProfileMap('unit-cadre-fireblade',{
   'unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged':'1',
   'unit-cadre-fireblade-profile-close-combat-weapon-melee-2':'3'
-};
-const firebladeVolley={
+});
+const firebladeVolley=canonicalProfileMap('unit-cadre-fireblade',{
   'unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged':'2',
   'unit-cadre-fireblade-profile-close-combat-weapon-melee-2':'3'
-};
+});
 const assertAttacks=(snapshot,instanceId,canonicalId,base,expected,owner=null)=>{
   const member=snapshot.gameUnit,profileIds=Object.keys(expected).sort();
   assert.equal(member.identity.instanceId,instanceId,'exact physical game unit');

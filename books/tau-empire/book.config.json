@@ -43,6 +43,10 @@
   "sharedArmyBookApp": true,
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,
+  "pointEnhancementAliases": {
+    "advanced-acquisition-cadre|negation-emitters-upgrade": "enhancement-negation-emitters",
+    "advanced-acquisition-cadre|unmasking-suite-upgrade": "enhancement-unmasking-suite"
+  },
   "rosterCatalog": {
     "inferExactWargearAbilitySelections": true,
     "inferCanonicalDetachmentRuleIds": true,

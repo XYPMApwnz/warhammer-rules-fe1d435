@@ -162,7 +162,13 @@ assert.equal(result.length, 0, 'empty canonical Deceptors rule must remain fail 
 const chaosIcon = catalog.units.find((unit) => unit.id === 'unit-legionaries')?.gameSelections.selections
   .find((entry) => entry.id === 'unit-legionaries-selection-chaos-icon');
 assert.ok(chaosIcon, 'Chaos icon selected-wargear record must exist');
-assert.deepEqual(Array.from(chaosIcon.wargearAbilityIds), ['unit-legionaries-wargear-ability-chaos-icon'],
-  'exact singleton Chaos icon selection must resolve during the CSM build');
+assert.equal(chaosIcon.wargearAbilityIds.length, 1, 'Chaos icon selection must resolve to one canonical Wargear Ability');
+const chaosIconAbility = catalog.units.find((unit) => unit.id === 'unit-legionaries')?.gameSelections.wargearAbilities
+  .find((entry) => entry.id === chaosIcon.wargearAbilityIds[0]);
+assert.equal(chaosIconAbility?.title, 'Chaos icon', 'Chaos icon selection must resolve to the exact semantic ability');
+assert.deepEqual(Array.from(chaosIconAbility.requiredSelectionIds), [chaosIcon.id],
+  'canonical Chaos icon ability must retain its reciprocal exact selection identity');
+assert.ok(chaosIconAbility.legacyIds.includes('unit-legionaries-wargear-ability-chaos-icon'),
+  'the prior Chaos icon identity must remain an explicit compatibility alias');
 
 console.log('CSM roster conformance QA: PASS');

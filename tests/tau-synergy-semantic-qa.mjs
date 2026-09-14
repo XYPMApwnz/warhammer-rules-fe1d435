@@ -35,24 +35,26 @@ assert.equal(has(effects(duplicate,[fireblade,breachers,duplicate]),'volley-fire
 const loneFireblade=draft('fireblade-lone','unit-cadre-fireblade');assert.equal(effects(loneFireblade,[loneFireblade]).length,0,'unattached Character does not lead itself');
 
 // Fixed numeric facts, independent of the provider recipe and its actual delta.
-const breacherBase={
-  'unit-breacher-team-profile-pulse-pistol-ranged':'1',
-  'unit-breacher-team-profile-pulse-blaster-ranged-3':'2',
-  'unit-breacher-team-profile-close-combat-weapon-melee-2':'1'
-};
-const breacherVolley={
-  'unit-breacher-team-profile-pulse-pistol-ranged':'2',
-  'unit-breacher-team-profile-pulse-blaster-ranged-3':'3',
-  'unit-breacher-team-profile-close-combat-weapon-melee-2':'1'
-};
-const firebladeBase={
-  'unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged':'1',
-  'unit-cadre-fireblade-profile-close-combat-weapon-melee-2':'3'
-};
-const firebladeVolley={
-  'unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged':'2',
-  'unit-cadre-fireblade-profile-close-combat-weapon-melee-2':'3'
-};
+const canonicalProfileId=(unitId,legacyId)=>{const matches=unit(unitId).gameSelections.weaponProfiles.filter(profile=>profile.id===legacyId||(profile.legacyIds||[]).includes(legacyId));assert.equal(matches.length,1,`${unitId}: legacy profile identity ${legacyId} resolves exactly once`);return matches[0].id;};
+const profileFacts=(unitId,records)=>Object.fromEntries(records.map(([legacyId,value])=>[canonicalProfileId(unitId,legacyId),value]));
+const breacherBase=profileFacts('unit-breacher-team',[
+  ['unit-breacher-team-profile-pulse-pistol-ranged','1'],
+  ['unit-breacher-team-profile-pulse-blaster-ranged-3','2'],
+  ['unit-breacher-team-profile-close-combat-weapon-melee-2','1']
+]);
+const breacherVolley=profileFacts('unit-breacher-team',[
+  ['unit-breacher-team-profile-pulse-pistol-ranged','2'],
+  ['unit-breacher-team-profile-pulse-blaster-ranged-3','3'],
+  ['unit-breacher-team-profile-close-combat-weapon-melee-2','1']
+]);
+const firebladeBase=profileFacts('unit-cadre-fireblade',[
+  ['unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged','1'],
+  ['unit-cadre-fireblade-profile-close-combat-weapon-melee-2','3']
+]);
+const firebladeVolley=profileFacts('unit-cadre-fireblade',[
+  ['unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged','2'],
+  ['unit-cadre-fireblade-profile-close-combat-weapon-melee-2','3']
+]);
 vm.runInNewContext(read('books/shared/roster-parser.js'),scope,{filename:'roster-parser.js'});
 vm.runInNewContext(read('books/shared/roster-context.js'),scope,{filename:'roster-context.js'});
 const volleyFixture=createRosterFixture({catalog,pointsCatalog,id:'tau-volley-semantic',detachmentId:'kauyon',attachments:{'parsed-unit-3':['parsed-unit-2']},units:[

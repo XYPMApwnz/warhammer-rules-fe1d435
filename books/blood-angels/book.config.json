@@ -13,6 +13,10 @@
   "mobileRelatedRulesSource": true,
   "includeCoreStratagems": true,
   "rosterSupport": true,
+  "pointEnhancementAliases": {
+    "wrath-of-the-doomed|on-the-archtraitor-s-bridge": "enhancement-on-the-archtraitors-bridge",
+    "rage-cursed-onslaught|angel-s-fang": "enhancement-angels-fang"
+  },
   "compatibleRulesEnhancementAliases": {
     "wrath-of-the-doomed|on-the-archtraitor-s-bridge": "enhancement-on-the-archtraitors-bridge",
     "rage-cursed-onslaught|angel-s-fang": "enhancement-angels-fang"

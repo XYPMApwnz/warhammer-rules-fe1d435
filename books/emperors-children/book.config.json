@@ -13,6 +13,10 @@
   ],
   "includeCoreStratagems": true,
   "rosterSupport": true,
+  "pointEnhancementAliases": {
+    "elegant-brutes|frenzied-ferocity": "enhancement-frenzied-ferocity-upgrade",
+    "spectacle-of-slaughter|beguiling-grotesquerie": "enhancement-beguiling-grotesquerie-upgrade"
+  },
   "enhancementOwnerAliases": {
     "elegant-brutes|cacophonic-accompaniment": "enhancement-cacophonic-accompaniment",
     "elegant-brutes|frenzied-ferocity": "enhancement-frenzied-ferocity",

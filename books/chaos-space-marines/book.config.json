@@ -13,6 +13,9 @@
   "mobileRelatedRulesSource": true,
   "includeCoreStratagems": true,
   "rosterSupport": true,
+  "pointEnhancementAliases": {
+    "warpstrike-champions|akshur-s-binding-runes": "enhancement-akshurs-binding-runes"
+  },
   "compatibleRulesEnhancementAliases": {
     "warpstrike-champions|akshur-s-binding-runes": "enhancement-akshurs-binding-runes"
   },

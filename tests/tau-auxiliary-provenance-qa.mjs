@@ -16,7 +16,7 @@ const canonicalPath='books/tau-empire/content/tau-empire-codex-datasheets.en.jso
 const catalogPath='books/tau-empire/scripts/roster-data.js',providerPath='books/tau-empire/scripts/roster-filter.js',pointsPath='roster-guides/points-data.js',parserPath='books/shared/roster-parser.js';
 const stealthId='unit-stealth-battlesuits',auraId='tau-empire-ability-localised-stealth-projectors-aura';
 const integratedId='tau-empire-detachment-rule-integrated-command-structure';
-const beaconId='unit-stealth-battlesuits-wargear-ability-homing-beacon';
+const beaconLegacyId='unit-stealth-battlesuits-wargear-ability-homing-beacon';
 const nativeIds=['tau-empire-ability-forward-observers','core-infiltrators','core-stealth','tau-empire-ability-for-the-greater-good'];
 const nativeTitles=['Forward Observers','Infiltrators','Stealth','For The Greater Good'];
 const local=value=>JSON.parse(JSON.stringify(value));
@@ -55,7 +55,9 @@ export function runTauAuxiliaryQa(overrides={}){
   assertNative(stealth.gameSelections.abilities,'catalog Stealth');
   assert.deepEqual(Array.from(stealth.gameSelections.abilities,ability=>ability.id),nativeIds,'identity-specific native inventory');
   assert.deepEqual(Array.from(stealth.gameSelections.abilities,ability=>({title:ability.title,text:ability.text})),native.abilities,'preserved native text flows unchanged into catalog');
-  const beacon=stealth.gameSelections.wargearAbilities.find(ability=>ability.id===beaconId);
+  const beaconMatches=stealth.gameSelections.wargearAbilities.filter(ability=>ability.id===beaconLegacyId||(ability.legacyIds||[]).includes(beaconLegacyId));
+  assert.equal(beaconMatches.length,1,'Homing Beacon compatibility identity resolves exactly once');
+  const beacon=beaconMatches[0],beaconId=beacon.id;
   assert.deepEqual(Array.from(beacon.requiredSelectionIds),['unit-stealth-battlesuits-selection-homing-beacon'],'Homing Beacon exact selection gate');
   const rule=catalog.detachmentRules.find(item=>item.id===integratedId);
   assert.equal(rule.detachmentId,'auxiliary-cadre','Auxiliary remains canonical owner');
@@ -122,6 +124,9 @@ function runMutations(){
 
 export async function runTauAuxiliaryBrowser(page,base){
   const fixtureScope={window:{}};fixtureScope.window=fixtureScope;vm.runInNewContext(read(catalogPath),fixtureScope,{filename:catalogPath});vm.runInNewContext(read(pointsPath),fixtureScope,{filename:pointsPath});const catalog=fixtureScope.WH_BOOK_ROSTER_CATALOG,pointsCatalog=fixtureScope.WH_POINTS_CATALOG['t au empire'];
+  const browserBeaconMatches=catalog.units.find(unit=>unit.id===stealthId).gameSelections.wargearAbilities.filter(ability=>ability.id===beaconLegacyId||(ability.legacyIds||[]).includes(beaconLegacyId));
+  assert.equal(browserBeaconMatches.length,1,'browser Homing Beacon compatibility identity resolves exactly once');
+  const beaconId=browserBeaconMatches[0].id;
   await page.goto(`${base}/books/tau-empire/reader.html?view=mobile#${stealthId}`);
   await page.waitForFunction(()=>document.querySelector('#unit-stealth-battlesuits')&&window.WHArmyBook);
   const standalone=await page.locator('#unit-stealth-battlesuits').innerText();

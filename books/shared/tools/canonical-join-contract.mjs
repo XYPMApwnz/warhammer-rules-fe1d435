@@ -69,6 +69,30 @@ export function resolveScopedEnhancement({enhancementId,detachmentId},records,{l
   return matches[0];
 }
 
+export function resolvePointEnhancement(record,detachmentId,pointRecords,{aliases={},label='Enhancement points'}={}){
+  if(!record||!detachmentId)throw new Error(`${label} lookup requires an Enhancement record and exact Detachment ID`);
+  const sourceIds=[record.canonicalId,record.id,record.sourceId,record.ruleId].filter(Boolean);
+  if(!sourceIds.length)throw new Error(`${label} lookup requires an exact source identity`);
+  const candidates=new Set();
+  const add=id=>{if(typeof id!=='string'||!id||id!==id.trim()||/\s/.test(id))throw new Error(`${label} contains an invalid identity`);candidates.add(id);};
+  for(const id of sourceIds){
+    const raw=id.replace(/^enhancement-/,'');
+    add(id);add(raw);add(`enhancement-${raw}`);
+    const scopePrefix=`${detachmentId}-`;
+    if(raw.startsWith(scopePrefix)){
+      const unscoped=raw.slice(scopePrefix.length);add(unscoped);add(`enhancement-${unscoped}`);
+    }else{
+      add(`${scopePrefix}${raw}`);add(`enhancement-${scopePrefix}${raw}`);
+    }
+  }
+  const aliasKey=`${detachmentId}|${record.id}`;
+  if(Object.hasOwn(aliases,aliasKey))add(aliases[aliasKey]);
+  const matches=values(pointRecords).filter(point=>(point.detachmentId||point.canonicalDetachmentId)===detachmentId&&candidates.has(point.canonicalId||point.id));
+  if(matches.length>1)throw new Error(`${label} ${aliasKey} must resolve at most once; got ${matches.length}`);
+  if(Object.hasOwn(aliases,aliasKey)&&matches.length!==1)throw new Error(`${label} alias ${aliasKey} targets no exact point record`);
+  return matches[0]||null;
+}
+
 export function resolveDeclaredLegacyAlias(alias,aliases,{label='legacy alias'}={}){
   const matches=values(aliases).filter(record=>values(record.aliases).includes(alias));
   if(matches.length!==1)throw new Error(`${label} ${alias} must resolve exactly once; got ${matches.length}`);

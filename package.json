@@ -35,6 +35,7 @@
     "blood-angels:build": "node books/shared/tools/build-army-book.mjs books/blood-angels/book.config.json && npm run blood-angels:compatible && node roster-guides/build-points.mjs && node glossary/tools/build-glossary.mjs && npm run blood-angels:mobile && node glossary/tools/build-glossary.mjs",
     "blood-angels:check": "node books/shared/tools/build-army-book.mjs books/blood-angels/book.config.json --check && npm run blood-angels:compatible:check && npm run blood-angels:mobile:check && npm run blood-angels:qa",
     "points:build": "node roster-guides/build-points.mjs",
+    "points:check": "node roster-guides/build-points.mjs --check && node tests/effective-points-projection-qa.mjs",
     "glossary:build": "node glossary/tools/build-glossary.mjs",
     "glossary:check": "node glossary/tools/check-glossary.mjs",
     "cache:check": "node tools/cache-revision.mjs --check",

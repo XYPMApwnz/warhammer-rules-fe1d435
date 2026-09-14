@@ -37,11 +37,14 @@ export function resolveEnhancementOwner(enhancement,catalog,contracts={}){
   };
 }
 
-const {catalog,projections}=await createPointsCatalog(root);
-export {catalog,catalog as rawCatalog,projections};
+const {catalog,rawCatalog,projections}=await createPointsCatalog(root);
+export {catalog,rawCatalog,projections};
 
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
-  fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
+  const outputPath=path.join(root,'roster-guides','points-data.js'),output=`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`,check=process.argv.includes('--check');
+  if(check){
+    if(!fs.existsSync(outputPath)||fs.readFileSync(outputPath,'utf8')!==output)throw new Error('points-data.js is stale');
+  }else fs.writeFileSync(outputPath,output);
   const unitCounts=[...projections.values()].map(projection=>`${projection.units.length} ${projection.book.title}`);
-  console.log(`Points catalog: ${unitCounts.join(', ')} units.`);
+  console.log(`Points catalog ${check?'verified':'written'}: ${unitCounts.join(', ')} units.`);
 }

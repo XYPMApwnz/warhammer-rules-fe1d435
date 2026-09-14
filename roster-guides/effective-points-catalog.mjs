@@ -34,10 +34,18 @@ const enhancementRecords=(bookId,items)=>{
   return groupedEnhancements(items,identityRecord);
 };
 const normalizePointUnits=units=>Object.fromEntries(units.map(unit=>[normalize(unit.title),unit.points?.length>1?{...unitRecord(unit),points:pointTierContract.normalizeTiers(unit.points)}:unitRecord(unit)]));
+const rawPointUnits=units=>Object.fromEntries(units.map(unit=>[normalize(unit.title),unitRecord(unit)]));
+
+export function createPointsCatalogFromProjections(projections){
+  if(!(projections instanceof Map))throw new Error('effective points projections must be provided as a Map');
+  for(const bookId of bookIds)assertEffectivePointsProjection(projections.get(bookId),bookId);
+  const rawCatalog=Object.fromEntries(bookIds.map(bookId=>{const projection=projections.get(bookId);return[catalogKeys[bookId],{units:rawPointUnits(projection.units),enhancements:enhancementRecords(bookId,projection.enhancements),detachments:Object.fromEntries(projection.detachments.map(item=>[normalize(item.title),detachmentRecord(item)]))}];}));
+  const catalog=Object.fromEntries(Object.entries(rawCatalog).map(([book,records])=>[book,{...records,units:normalizePointUnits(projections.get(bookIds.find(id=>catalogKeys[id]===book)).units)}]));
+  return {catalog,rawCatalog,projections};
+}
 
 export async function createPointsCatalog(root){
   const projections=new Map();
   for(const bookId of bookIds)projections.set(bookId,await loadEffectivePointsProjection(root,bookId));
-  const catalog=Object.fromEntries(bookIds.map(bookId=>{const projection=projections.get(bookId);return[catalogKeys[bookId],{units:normalizePointUnits(projection.units),enhancements:enhancementRecords(bookId,projection.enhancements),detachments:Object.fromEntries(projection.detachments.map(item=>[normalize(item.title),detachmentRecord(item)]))}];}));
-  return {catalog,projections};
+  return createPointsCatalogFromProjections(projections);
 }

@@ -13,12 +13,12 @@ export async function loadEffectivePointsProjection(root,bookId){
   return assertEffectivePointsProjection((await buildSharedCanonicalBook(context,{projectionOnly:true})).effectivePointsProjection,bookId);
 }
 
-const unitRecord=unit=>({...unit.publicationRecord,wargear:unit.paidWargear||[],...(unit.compatibleChapterKeywords?.length?{compatibleChapterKeywords:[...unit.compatibleChapterKeywords]}:{}),...unit.ruleProfile});
-const detachmentRecord=item=>{const source=item.publicationRecord||{};return{title:source.title||item.title,detachmentPoints:Number(String(source.detachmentPoints??source.dp??item.detachmentPoints??0).match(/\d+/)?.[0]||0),forceDisposition:source.forceDisposition||source.disposition||item.forceDisposition||''};};
+const unitRecord=unit=>({...unit.publicationRecord,wargear:unit.paidWargear||[],...(unit.compatibleChapterKeywords?.length?{compatibleChapterKeywords:[...unit.compatibleChapterKeywords]}:{}),...unit.ruleProfile,points:unit.points});
+const detachmentRecord=item=>{const source=item.publicationRecord||{};return{title:source.title||item.title,detachmentPoints:item.detachmentPoints,forceDisposition:source.forceDisposition||source.disposition||item.forceDisposition||''};};
 const identityRecord=item=>({...item.publicationRecord,...item.compatibilityIdentity});
 const groupedEnhancements=(items,recordOf,aliasesOf=()=>[])=>{
   const groups=new Map();
-  for(const item of items){const record=recordOf(item),keys=[...new Set([record.title,...aliasesOf(item,record)].map(normalize).filter(Boolean))];for(const key of keys){const group=groups.get(key)||[];group.push(record);groups.set(key,group);}}
+  for(const item of items){const record={...recordOf(item),value:item.value},keys=[...new Set([record.title,...aliasesOf(item,record)].map(normalize).filter(Boolean))];for(const key of keys){const group=groups.get(key)||[];group.push(record);groups.set(key,group);}}
   return Object.fromEntries([...groups].map(([key,records])=>[key,records.length===1?records[0]:records]));
 };
 const upgradeAliases=title=>{const base=String(title||'').replace(/\s*\(Upgrade\)\s*$/i,'').replace(/\s+Upgrade$/i,'');return[...new Set([base,`${base} Upgrade`,`${base} (Upgrade)`])].filter(value=>normalize(value)!==normalize(title));};

@@ -83,6 +83,43 @@ function assertSupplementControls(projections){
   assertInheritedEnhancementCoverage(da,sm);
 }
 
+function assertCanonicalPointAuthority(projections){
+  for(const [bookId,projection] of projections){
+    const single=projection.units.find(unit=>unit.points.length===1&&Array.isArray(unit.publicationRecord?.points));
+    assert(single,`${bookId}: requires a single-tier canonical authority probe`);
+    const mutated=projectionMapClone(projections),unit=mutated.get(bookId).units.find(item=>item.id===single.id),compatibilityValue=unit.publicationRecord.points[0].value;
+    unit.points=unit.points.map((tier,index)=>index?{...tier}:{...tier,value:tier.value+1});
+    assert.equal(unit.publicationRecord.points[0].value,compatibilityValue,`${bookId}: mutation must leave the compatibility price stale`);
+    const published=pointsApi.createPointsCatalogFromProjections(mutated).catalog[catalogKeys[bookId]].units[single.title.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()];
+    assert.equal(published.points[0].value,unit.points[0].value,`${bookId}: stale single-tier compatibility price overrode canonical authority`);
+
+    const multi=projection.units.find(unit=>unit.points.length>1&&Array.isArray(unit.publicationRecord?.points));
+    assert(multi,`${bookId}: requires a multi-tier canonical authority probe`);
+    const multiMutation=projectionMapClone(projections),multiUnit=multiMutation.get(bookId).units.find(item=>item.id===multi.id),multiCompatibilityValue=multiUnit.publicationRecord.points[0].value;
+    multiUnit.points=multiUnit.points.map((tier,index)=>index?{...tier}:{...tier,value:tier.value+1});
+    assert.equal(multiUnit.publicationRecord.points[0].value,multiCompatibilityValue,`${bookId}: multi-tier mutation must leave the compatibility price stale`);
+    const multiPublished=pointsApi.createPointsCatalogFromProjections(multiMutation).catalog[catalogKeys[bookId]].units[multi.title.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()];
+    assert.equal(multiPublished.points[0].value,multiUnit.points[0].value,`${bookId}: stale multi-tier compatibility price overrode canonical authority`);
+  }
+
+  const staleCompatibility=projectionMapClone(projections),canonical=staleCompatibility.get('death-guard').units.find(unit=>unit.points.length===1&&Array.isArray(unit.publicationRecord?.points));
+  canonical.publicationRecord.points=canonical.publicationRecord.points.map((tier,index)=>index?{...tier}:{...tier,value:tier.value+1000});
+  const stalePublished=pointsApi.createPointsCatalogFromProjections(staleCompatibility).catalog['death guard'].units[canonical.title.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()];
+  assert.equal(stalePublished.points[0].value,canonical.points[0].value,'compatibility-only price controlled emitted points');
+
+  const enhancementMutation=projectionMapClone(projections),enhancement=enhancementMutation.get('death-guard').enhancements.find(item=>item.id==='enhancement-daemon-weapon-of-nurgle'),compatibilityEnhancementValue=enhancement.publicationRecord.value;
+  enhancement.value+=1;
+  assert.equal(enhancement.publicationRecord.value,compatibilityEnhancementValue,'Enhancement mutation must leave the compatibility price stale');
+  const publishedEnhancement=pointsApi.createPointsCatalogFromProjections(enhancementMutation).catalog['death guard'].enhancements[enhancement.title.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()];
+  assert.equal(publishedEnhancement.value,enhancement.value,'compatibility-only Enhancement price overrode canonical authority');
+
+  const detachmentMutation=projectionMapClone(projections),detachment=detachmentMutation.get('blood-angels').detachments.find(item=>item.id==='angelic-inheritors'),compatibilityDetachmentValue=detachment.publicationRecord.detachmentPoints;
+  detachment.detachmentPoints+=1;
+  assert.equal(detachment.publicationRecord.detachmentPoints,compatibilityDetachmentValue,'Detachment mutation must leave the compatibility price stale');
+  const publishedDetachment=pointsApi.createPointsCatalogFromProjections(detachmentMutation).catalog['blood angels'].detachments[detachment.title.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()];
+  assert.equal(publishedDetachment.detachmentPoints,detachment.detachmentPoints,'compatibility-only Detachment price overrode canonical authority');
+}
+
 const {catalog,projections}=first,published=readPublishedCatalog();
 assert.equal(generatedReads.length,0,'points projection read a generated consumer artifact');
 assert.equal(JSON.stringify(first.catalog),JSON.stringify(second.catalog),'points catalog rebuild is not byte deterministic');
@@ -92,6 +129,7 @@ assert.equal(published.source,`window.WH_POINTS_CATALOG=Object.freeze(${JSON.str
 assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'57f7891dea828d010a15c2e9038890ba63065938ea79b31db0e3f7d5a18ae846');
 assertProjectionCatalogIdentity(projections,catalog);
 assertSupplementControls(projections);
+assertCanonicalPointAuthority(projections);
 
 const unitRecords=[...projections.values()].reduce((sum,item)=>sum+item.units.length,0);
 const pointTiers=[...projections.values()].reduce((sum,item)=>sum+item.units.reduce((bookSum,unit)=>bookSum+unit.points.length,0),0);
@@ -107,6 +145,7 @@ assert.throws(()=>recreate(value=>value.enhancements.push(clone(value.enhancemen
 assert.throws(()=>recreate(value=>{value.units[0].points=[];}),/missing a required point schedule/);
 assert.throws(()=>recreate(value=>{value.units[0].points[0].value=Number.NaN;}),/requires a finite value/);
 assert.throws(()=>recreate(value=>value.units[0].points.push(clone(value.units[0].points[0]))),/duplicate point tier/);
+assert.throws(()=>recreate(value=>{value.detachments[0].detachmentPoints=Number.NaN;}),/requires a finite Detachment point value/);
 
 const unknownIdentity=projectionMapClone(projections);
 unknownIdentity.get('space-marines').units[0].id='unit-unknown-canonical-identity';

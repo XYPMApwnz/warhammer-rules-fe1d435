@@ -37,7 +37,10 @@ export function createEffectivePointsProjection(input={}){
     validatePoints(book.id,unit);
     if(!unit.ruleProfile||unit.ruleProfile.id!==unit.id||unit.ruleProfile.unitId!==unit.id)throw new Error(`${book.id}: ${unit.id} requires its canonical rule profile`);
   }
-  for(const item of detachments)if(!item.title)throw new Error(`${book.id}: ${item.id} requires a title`);
+  for(const item of detachments){
+    if(!item.title)throw new Error(`${book.id}: ${item.id} requires a title`);
+    if(typeof item.detachmentPoints!=='number'||!Number.isFinite(item.detachmentPoints))throw new Error(`${book.id}: ${item.id} requires a finite Detachment point value`);
+  }
   for(const item of enhancements){
     if(!item.id)throw new Error(`${book.id}: Enhancement requires a canonical identity`);
     if(!item.title)throw new Error(`${book.id}: ${item.id} requires a title`);

@@ -1,7 +1,7 @@
 {
-  "schema": 1,
+  "schema": "warhammer-source-manifest/v2",
   "bookId": "death-guard",
-  "verifiedAt": "2026-08-27",
+  "verifiedAt": "2026-09-14",
   "publicationStatus": "source-limited",
   "sources": [
     {
@@ -16,7 +16,24 @@
       "effectiveDate": "2026-08-26",
       "retrievedAt": "2026-08-11",
       "frozenAt": "2026-08-11",
-      "previousFrozenOfficialBinary": "absent"
+      "previousFrozenOfficialBinary": "absent",
+      "sourceId": "death-guard-faction-pack-v1.2",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules",
+        "official-updates"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/death-guard/sources/death-guard-faction-pack-v1.2.pdf",
+        "books/death-guard/content/official-update-ledger.en.json"
+      ]
     },
     {
       "id": "death-guard-mfm-v1.3-capture-2026-08-27",
@@ -28,13 +45,150 @@
       "sourceUpdatedAt": "2026-08-26",
       "capturedAt": "2026-08-27",
       "captureSha256": "6AD17A84133D348DC782A39AC73EFBFA223E906F52AD0471EE81C27A40EA1FD6",
-      "localSha256": "133142DA78862684FBA85C1DF534593D6EAF382146B6175C037FF2E8BC6D7F1F"
+      "localSha256": "133142DA78862684FBA85C1DF534593D6EAF382146B6175C037FF2E8BC6D7F1F",
+      "sourceId": "death-guard-mfm-v1.3-capture-2026-08-27",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION"
+      ],
+      "paths": [
+        "books/death-guard/sources/official-mfm-v1.3.json"
+      ]
     },
     {
       "id": "death-guard-codex-transcription",
       "title": "Pinned Codex transcription",
       "authority": "community-secondary",
-      "frozenOfficial": false
+      "frozenOfficial": false,
+      "sourceId": "death-guard-codex-transcription",
+      "active": true,
+      "sourceType": "accepted-canonical-transcription",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "codex-rules",
+        "relations"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/death-guard/content/death-guard-rules.en.json",
+        "books/death-guard/content/death-guard-legends.en.json"
+      ]
+    },
+    {
+      "id": "death-guard-presentation-contract",
+      "sourceId": "death-guard-presentation-contract",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "presentation-policy",
+        "serialization-contract"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL"
+      ],
+      "paths": [
+        "books/death-guard/sources/canonical-presentation-contract.json"
+      ]
+    },
+    {
+      "id": "death-guard-runtime-related-terms",
+      "sourceId": "death-guard-runtime-related-terms",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "runtime-related-term-graph"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/death-guard/sources/runtime-related-terms.json"
+      ]
+    },
+    {
+      "id": "death-guard-runtime-related-rules",
+      "sourceId": "death-guard-runtime-related-rules",
+      "active": true,
+      "sourceType": "authoritative-runtime-source",
+      "lifecycle": "AUTHORITATIVE_RUNTIME_SOURCE",
+      "factsOwned": [
+        "related-rules-runtime-markup"
+      ],
+      "consumers": [
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/death-guard/mobile/related-rules.inc"
+      ]
+    },
+    {
+      "id": "death-guard-compatible-rules-snapshot",
+      "sourceId": "death-guard-compatible-rules-snapshot",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-associations"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/death-guard/sources/wahapedia-compatible-rules.snapshot.json"
+      ]
+    },
+    {
+      "id": "death-guard-compatible-rules-corrections",
+      "sourceId": "death-guard-compatible-rules-corrections",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-adjudication"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/death-guard/scripts/related-rules-correction-ledger.json"
+      ]
+    },
+    {
+      "id": "death-guard-enhancement-owner-matrix",
+      "sourceId": "death-guard-enhancement-owner-matrix",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "enhancement-owner-membership"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/death-guard/sources/enhancement-owner-matrix.json"
+      ]
     }
   ],
   "currentScope": {
@@ -48,5 +202,6 @@
   },
   "knownGaps": [
     "No frozen authoritative official Codex source is present; Codex-derived rules remain community/secondary transcription."
-  ]
+  ],
+  "enrollmentScope": "PUBLIC_BOOK"
 }

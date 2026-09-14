@@ -1,16 +1,7 @@
 {
-  "schema": 1,
-  "verifiedAt": "2026-08-27",
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-14",
   "layers": [
-    {
-      "id": "faction-pack-v1.0",
-      "authority": "official",
-      "role": "11e-overlay",
-      "title": "Space Marines Faction Pack v1.0",
-      "legalFrom": "2026-06-20",
-      "url": "https://assets.warhammer-community.com/eng_08-06_warhammer40000_faction_pack_space-marines-nd2ezs5yzn-wxe2nf2ckk.pdf",
-      "localFile": "space-marines-faction-pack-v1.0.pdf"
-    },
     {
       "id": "faction-pack-v1.2",
       "authority": "official",
@@ -24,7 +15,24 @@
       "sha256": "F1F96C0A3DDA8DFC2D5686B4AA60E7959697651EDBC51F5A344439FF6AC1A1F9",
       "coverage": "16 Detachments, 14 matched-play Space Marines datasheets, 2 Imperial Armour datasheets, 76 Legends datasheets, rules updates and FAQs",
       "legalFrom": "2026-08-26",
-      "pageCount": 219
+      "pageCount": 219,
+      "sourceId": "space-marines-faction-pack-v1.2",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/space-marines/sources/space-marines-faction-pack-v1.2.pdf",
+        "books/space-marines/content/space-marines-faction-pack.en.json"
+      ]
     },
     {
       "id": "codex-transcription",
@@ -44,7 +52,26 @@
         "Imperium - White Scars.json"
       ],
       "coverage": "101 current Space Marines-owned non-Legends/non-Imperial Armour datasheets",
-      "sha256": "391701EED6DD9621DE031D02DD84BE4587902BFFF18E5388DBB8DC61A1C4C9C6"
+      "sha256": "391701EED6DD9621DE031D02DD84BE4587902BFFF18E5388DBB8DC61A1C4C9C6",
+      "sourceId": "space-marines-codex-transcription",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/space-marines/sources/bsdata-space-marines-11e.json",
+        "books/space-marines/content/space-marines-codex-datasheets.en.json"
+      ]
     },
     {
       "id": "mfm-v1.3",
@@ -67,6 +94,24 @@
       },
       "knownGaps": [
         "Rule text and unit structure are outside the MFM scope."
+      ],
+      "sourceId": "space-marines-mfm-v1.3",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/space-marines/sources/official-mfm-v1.3.json",
+        "books/space-marines/content/space-marines-points.en.json"
       ]
     },
     {
@@ -85,11 +130,76 @@
       "coverage": "Exact composition and Wargear Options for 101 local Datasheets; full parity for 7 base Codex Detachments; source-defined Compatible Rules inputs",
       "knownGaps": [
         "This is secondary parity evidence and does not replace an authoritative official Codex source."
+      ],
+      "sourceId": "space-marines-codex-details",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "codex-rules",
+        "wargear",
+        "compatible-rule-associations"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/space-marines/content/space-marines-codex-wargear.en.json",
+        "books/space-marines/content/space-marines-current-overlay.en.json",
+        "books/space-marines/sources/wahapedia-compatible-rules.snapshot.json"
       ]
+    },
+    {
+      "id": "space-marines-related-rules-contracts",
+      "sourceId": "space-marines-related-rules-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "enhancement-owner-contracts",
+        "upgrade-contracts"
+      ],
+      "consumers": [
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/space-marines/sources/space-marines-related-rules-contracts.v1.json"
+      ]
+    },
+    {
+      "id": "space-marines-runtime-related-rules",
+      "sourceId": "space-marines-runtime-related-rules",
+      "active": true,
+      "sourceType": "authoritative-runtime-source",
+      "lifecycle": "AUTHORITATIVE_RUNTIME_SOURCE",
+      "factsOwned": [
+        "related-rules-runtime-markup"
+      ],
+      "consumers": [
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/space-marines/mobile/related-rules.inc"
+      ]
+    },
+    {
+      "id": "faction-pack-v1.0",
+      "authority": "official",
+      "role": "11e-overlay",
+      "title": "Space Marines Faction Pack v1.0",
+      "legalFrom": "2026-06-20",
+      "url": "https://assets.warhammer-community.com/eng_08-06_warhammer40000_faction_pack_space-marines-nd2ezs5yzn-wxe2nf2ckk.pdf",
+      "localFile": "space-marines-faction-pack-v1.0.pdf",
+      "active": false,
+      "lifecycle": "HISTORICAL_EVIDENCE"
     }
   ],
   "gates": {
     "publishAsComplete": false,
     "reason": "Official Faction Pack v1.2 is frozen; official live MFM v1.3 is preserved as a dated repository capture verified 27 August 2026. Codex rule-bearing text remains secondary parity evidence."
-  }
+  },
+  "enrollmentScope": "PUBLIC_BOOK"
 }

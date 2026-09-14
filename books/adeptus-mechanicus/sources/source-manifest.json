@@ -1,0 +1,172 @@
+{
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-14",
+  "layers": [
+    {
+      "id": "adeptus-mechanicus-faction-pack-v1.2",
+      "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules",
+        "faction-pack-datasheets"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/sources/adeptus-mechanicus-faction-pack-v1.2.pdf",
+        "books/adeptus-mechanicus/content/adeptus-mechanicus-source.en.json",
+        "books/adeptus-mechanicus/content/adeptus-mechanicus-rules.en.json"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-bsdata-codex",
+      "sourceId": "adeptus-mechanicus-bsdata-codex",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/sources/bsdata-adeptus-mechanicus-11e.json",
+        "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-mfm-v1.3",
+      "sourceId": "adeptus-mechanicus-mfm-v1.3",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/sources/official-mfm-v1.3.json",
+        "books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-codex-carry-forward",
+      "sourceId": "adeptus-mechanicus-codex-carry-forward",
+      "active": true,
+      "sourceType": "accepted-canonical-transcription",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "codex-detachments",
+        "owner-contracts"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-detachments.en.json"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-codex-parity",
+      "sourceId": "adeptus-mechanicus-codex-parity",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "codex-rule-parity"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-parity.en.json"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-codex-wargear",
+      "sourceId": "adeptus-mechanicus-codex-wargear",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "wargear",
+        "composition"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-wargear.en.json"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-runtime-related-rules",
+      "sourceId": "adeptus-mechanicus-runtime-related-rules",
+      "active": true,
+      "sourceType": "authoritative-runtime-source",
+      "lifecycle": "AUTHORITATIVE_RUNTIME_SOURCE",
+      "factsOwned": [
+        "related-rules-runtime-markup"
+      ],
+      "consumers": [
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/mobile/related-rules.inc"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-compatible-rules-snapshot",
+      "sourceId": "adeptus-mechanicus-compatible-rules-snapshot",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-associations"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/sources/wahapedia-compatible-rules.snapshot.json"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-compatible-rules-corrections",
+      "sourceId": "adeptus-mechanicus-compatible-rules-corrections",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-adjudication"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/sources/compatible-rules-correction-ledger.json"
+      ]
+    }
+  ],
+  "enrollmentScope": "PUBLIC_BOOK"
+}

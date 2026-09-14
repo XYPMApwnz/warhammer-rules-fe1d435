@@ -1,24 +1,14 @@
-import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import {readSourceRegistry,verifyFrozenSource} from './source-ingestion-contract.mjs';
+import {buildSourceEnrollment} from './source-enrollment-contract.mjs';
 
 const moduleDir=path.dirname(fileURLToPath(import.meta.url));
 const repoRoot=path.resolve(moduleDir,'../../..');
-const publicationPath=path.join(repoRoot,'books','publication-inventory.json');
-
-const sourceFiles=source=>[source.localFile,source.localPath,...(source.localFiles||[])]
-  .filter(Boolean).map(file=>path.basename(String(file).replaceAll('\\','/')));
-const declaredSources=manifest=>[...(manifest.layers||[]),...(manifest.sources||[])];
-const sameDeclaredSource=(registered,declared)=>{
-  if(registered.sourceId===declared.id||registered.sourceId.endsWith(`-${declared.id}`))return true;
-  const registeredFiles=new Set(registered.artifacts.map(artifact=>path.basename(artifact.path)));
-  return sourceFiles(declared).some(file=>registeredFiles.has(file));
-};
 
 export function buildSourceStatus(){
   const registry=readSourceRegistry();
-  const publication=JSON.parse(fs.readFileSync(publicationPath,'utf8'));
+  const enrollment=buildSourceEnrollment({repo:repoRoot,includeFreshnessOnly:true});
   const sources=registry.sources.map(source=>{
     const verified=verifyFrozenSource(source.sourceId);
     return{
@@ -26,26 +16,18 @@ export function buildSourceStatus(){
       ACCEPTED_IDENTITY:{revision:source.acceptedRevision,hash:source.acceptedHash||verified.aggregateArtifactHash,verified:true},
       REPRODUCIBILITY:{status:source.reproducible},
       PROVENANCE:{authority:source.authority,rawOrigin:source.rawOrigin||'UNKNOWN'},
-      UPSTREAM_OBSERVATION:{status:'UNKNOWN',lastObservationDate:source.lastChecked||null,legacyUpdateFlag:Boolean(source.upstreamUpdateKnown)},
+      UPSTREAM_OBSERVATION:{status:source.upstreamCurrentness,lastObservationDate:source.lastChecked||null,legacyUpdateFlag:Boolean(source.upstreamUpdateKnown)},
       NOTES:source.notes
     };
   });
-  const books=[];const unclassifiedSources=[];const registeredWithoutManifest=[];
-  for(const book of publication.books){
-    const manifestPath=path.join(repoRoot,'books',book.id,'sources','source-manifest.json');
-    const manifest=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath,'utf8')):null;
-    const declared=manifest?declaredSources(manifest):[];
-    const registered=registry.sources.filter(source=>source.book===book.id);
-    const matchedDeclared=declared.filter(source=>registered.some(item=>sameDeclaredSource(item,source)));
-    for(const source of declared)if(!matchedDeclared.includes(source))unclassifiedSources.push({BOOK:book.id,SOURCE_ID:source.id||null,MANIFEST:path.relative(repoRoot,manifestPath).replaceAll(path.sep,'/'),STATUS:'UNCLASSIFIED'});
-    for(const source of registered)if(!declared.some(item=>sameDeclaredSource(source,item)))registeredWithoutManifest.push({BOOK:book.id,SOURCE_ID:source.sourceId,STATUS:'REGISTERED_WITHOUT_MANIFEST_DECLARATION'});
-    const enrollment=registered.length===0?'NONE':(declared.length>0&&matchedDeclared.length===declared.length&&registeredWithoutManifest.every(item=>item.BOOK!==book.id)?'COMPLETE':'PARTIAL');
-    books.push({BOOK:book.id,DECLARED_SOURCE_COUNT:declared.length,REGISTERED_SOURCE_COUNT:registered.length,CLASSIFIED_DECLARED_SOURCE_COUNT:matchedDeclared.length,ENROLLMENT:enrollment});
-  }
+  const books=enrollment.books.map(book=>({BOOK:book.book,PUBLIC:book.public,DECLARED_SOURCE_COUNT:book.active,REGISTERED_SOURCE_COUNT:book.registered,CLASSIFIED_DECLARED_SOURCE_COUNT:book.classified,HISTORICAL_SOURCE_COUNT:book.historical,DEPENDENCY_SOURCE_REFERENCES:book.dependencies,ENROLLMENT:'COMPLETE'}));
+  const unclassifiedSources=[],registeredWithoutManifest=[];
   const summary={
     REGISTERED_SOURCE_COUNT:sources.length,
-    DECLARED_SOURCE_COUNT:books.reduce((sum,book)=>sum+book.DECLARED_SOURCE_COUNT,0),
-    CLASSIFIED_DECLARED_SOURCE_COUNT:books.reduce((sum,book)=>sum+book.CLASSIFIED_DECLARED_SOURCE_COUNT,0),
+    DECLARED_SOURCE_COUNT:enrollment.rows.length,
+    CLASSIFIED_DECLARED_SOURCE_COUNT:enrollment.rows.length,
+    PUBLIC_ACTIVE_SOURCE_COUNT:enrollment.publicBooks.reduce((sum,book)=>sum+book.active,0),
+    FRESHNESS_ONLY_ACTIVE_SOURCE_COUNT:enrollment.freshnessOnlyBooks.reduce((sum,book)=>sum+book.active,0),
     UNCLASSIFIED_SOURCE_COUNT:unclassifiedSources.length,
     REGISTERED_WITHOUT_MANIFEST_DECLARATION_COUNT:registeredWithoutManifest.length,
     BOOKS_WITH_COMPLETE_SOURCE_ENROLLMENT:books.filter(book=>book.ENROLLMENT==='COMPLETE').map(book=>book.BOOK),

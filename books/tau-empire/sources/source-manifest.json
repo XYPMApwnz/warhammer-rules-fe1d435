@@ -1,6 +1,6 @@
 {
-  "schema": 1,
-  "verifiedAt": "2026-08-11",
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-14",
   "layers": [
     {
       "id": "faction-pack-v1.1",
@@ -32,6 +32,39 @@
       "affectedOutputs": [
         "reader.html",
         "mobile routes"
+      ],
+      "sourceId": "tau-empire-faction-pack-v1.1",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tau-empire/sources/tau-empire-faction-pack-v1.1.pdf",
+        "books/tau-empire/content/tau-empire-faction-pack.en.json"
+      ]
+    },
+    {
+      "id": "tau-empire-faction-pack-v1.0",
+      "sourceId": "tau-empire-faction-pack-v1.0",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "historical-enhancement-evidence"
+      ],
+      "consumers": [
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/tau-empire/sources/tau-empire-faction-pack-v1.0.pdf"
       ]
     },
     {
@@ -62,6 +95,26 @@
         "reader.html",
         "mobile routes",
         "generated Compatible Rules"
+      ],
+      "sourceId": "tau-codex-transcription",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tau-empire/sources/bsdata-tau-empire-11e.json",
+        "books/tau-empire/content/tau-empire-codex-datasheets.en.json"
       ]
     },
     {
@@ -89,6 +142,22 @@
       "affectedOutputs": [
         "reader.html",
         "mobile related rules"
+      ],
+      "sourceId": "tau-codex-parity",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "codex-rule-parity"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tau-empire/content/tau-empire-codex-parity.en.json"
       ]
     },
     {
@@ -125,7 +194,109 @@
         "roster views"
       ],
       "sha256": "4530DBC81B604766C4182EA4AAF7BF01F5DCE6CD37F208373E73F01724A05589",
-      "localPath": "books/tau-empire/sources/official-mfm-v1.3.json"
+      "localPath": "books/tau-empire/sources/official-mfm-v1.3.json",
+      "sourceId": "tau-mfm-v1.3",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/tau-empire/sources/official-mfm-v1.3.json",
+        "books/tau-empire/content/tau-empire-points.en.json"
+      ]
+    },
+    {
+      "id": "tau-codex-wargear",
+      "sourceId": "tau-codex-wargear",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "wargear",
+        "composition"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL"
+      ],
+      "paths": [
+        "books/tau-empire/content/tau-empire-codex-wargear.en.json"
+      ]
+    },
+    {
+      "id": "tau-related-rules-contracts",
+      "sourceId": "tau-related-rules-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "related-rule-contracts",
+        "enhancement-ownership"
+      ],
+      "consumers": [
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tau-empire/sources/tau-empire-related-rules-contracts.v1.json"
+      ]
+    },
+    {
+      "id": "tau-compatible-rules-snapshot",
+      "sourceId": "tau-compatible-rules-snapshot",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-associations"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tau-empire/sources/wahapedia-compatible-rules.snapshot.json"
+      ]
+    },
+    {
+      "id": "tau-compatible-rules-corrections",
+      "sourceId": "tau-compatible-rules-corrections",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-adjudication"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tau-empire/sources/compatible-rules-correction-ledger.json"
+      ]
+    },
+    {
+      "id": "tau-runtime-related-rules",
+      "sourceId": "tau-runtime-related-rules",
+      "active": true,
+      "sourceType": "authoritative-runtime-source",
+      "lifecycle": "AUTHORITATIVE_RUNTIME_SOURCE",
+      "factsOwned": [
+        "related-rules-runtime-markup"
+      ],
+      "consumers": [
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/tau-empire/mobile/related-rules.inc"
+      ]
     }
   ],
   "gates": {
@@ -146,5 +317,6 @@
     "A complete authoritative official Codex source is not frozen in the repository.",
     "All-content Wahapedia parity is not complete; the frozen snapshot covers Compatible Rules associations.",
     "SHA-bound manual/public publication acceptance is not yet recorded."
-  ]
+  ],
+  "enrollmentScope": "PUBLIC_BOOK"
 }

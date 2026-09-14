@@ -1,9 +1,9 @@
 {
-  "schema": 1,
+  "schema": "warhammer-source-manifest/v2",
   "bookId": "tyranids",
   "edition": "11th Edition",
   "language": "en",
-  "verifiedAt": "2026-08-27",
+  "verifiedAt": "2026-09-14",
   "precedence": [
     "official-current-update",
     "official-base-publication",
@@ -56,6 +56,22 @@
       "affectedOutputs": [
         "reader.html",
         "mobile/*.html"
+      ],
+      "sourceId": "tyranids-faction-pack-v1.2",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tyranids/sources/tyranids-faction-pack-v1.2.pdf",
+        "books/tyranids/content/tyranids-faction-pack.en.json"
       ]
     },
     {
@@ -100,7 +116,26 @@
         "reader.html",
         "mobile/*.html"
       ],
-      "status": "requires-codex-verification"
+      "status": "requires-codex-verification",
+      "sourceId": "tyranids-codex-transcription",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tyranids/sources/bsdata-tyranids-11e.json",
+        "books/tyranids/content/tyranids-codex-datasheets.en.json"
+      ]
     },
     {
       "id": "mfm-v1.3",
@@ -141,7 +176,95 @@
         "roster-guides/points-data.js"
       ],
       "verifiedAt": "2026-08-27",
-      "localFile": "official-mfm-v1.3.json"
+      "localFile": "official-mfm-v1.3.json",
+      "sourceId": "tyranids-mfm-v1.3",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION"
+      ],
+      "paths": [
+        "books/tyranids/sources/official-mfm-v1.3.json",
+        "books/tyranids/content/tyranids-points.en.json"
+      ]
+    },
+    {
+      "id": "tyranids-codex-wargear",
+      "sourceId": "tyranids-codex-wargear",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "wargear",
+        "composition"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL"
+      ],
+      "paths": [
+        "books/tyranids/content/tyranids-codex-wargear.en.json"
+      ]
+    },
+    {
+      "id": "tyranids-codex-parity",
+      "sourceId": "tyranids-codex-parity",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "codex-rule-parity"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tyranids/content/tyranids-codex-parity.en.json"
+      ]
+    },
+    {
+      "id": "tyranids-related-rules-contract",
+      "sourceId": "tyranids-related-rules-contract",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "related-rule-selectors",
+        "enhancement-ownership"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tyranids/content/tyranids-related-rules.en.json"
+      ]
+    },
+    {
+      "id": "tyranids-runtime-related-rules",
+      "sourceId": "tyranids-runtime-related-rules",
+      "active": true,
+      "sourceType": "authoritative-runtime-source",
+      "lifecycle": "AUTHORITATIVE_RUNTIME_SOURCE",
+      "factsOwned": [
+        "related-rules-runtime-markup"
+      ],
+      "consumers": [
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/tyranids/mobile/related-rules.inc"
+      ]
     },
     {
       "id": "wahapedia-compatible-rules",
@@ -178,6 +301,35 @@
       "affectedOutputs": [
         "mobile/related-rules.inc",
         "reader.html"
+      ],
+      "sourceId": "tyranids-compatible-rules-snapshot",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-associations"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tyranids/sources/wahapedia-compatible-rules.snapshot.json"
+      ]
+    },
+    {
+      "id": "tyranids-compatible-rules-corrections",
+      "sourceId": "tyranids-compatible-rules-corrections",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-adjudication"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/tyranids/sources/compatible-rules-correction-ledger.json"
       ]
     }
   ],
@@ -189,5 +341,6 @@
   "gates": {
     "publishAsComplete": false,
     "reason": "Official Faction Pack v1.2 is frozen; official live MFM v1.3 is preserved as a dated repository capture verified 27 August 2026. Codex rule-bearing content remains a frozen community transcription and is explicitly identified as such."
-  }
+  },
+  "enrollmentScope": "PUBLIC_BOOK"
 }

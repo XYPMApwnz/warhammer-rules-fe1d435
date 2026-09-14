@@ -1,19 +1,7 @@
 {
-  "schema": 1,
-  "verifiedAt": "2026-08-27",
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-14",
   "layers": [
-    {
-      "id": "faction-pack-v1.0",
-      "authority": "official",
-      "role": "11e-overlay",
-      "title": "Dark Angels Faction Pack v1.0",
-      "legalFrom": "2026-06-20",
-      "url": "https://assets.warhammer-community.com/eng_08-06_warhammer40000_faction_pack_dark_angels-fw4ot2jwtw-hplla1qiky.pdf",
-      "localFile": "dark-angels-faction-pack-v1.0.pdf",
-      "status": "superseded",
-      "sha256": "7F1EFE2D62F57597D0949D62B8D9BF0675E0199A6E99A1EEF61BFA65DE76AA52",
-      "pageCount": 16
-    },
     {
       "id": "faction-pack-v1.2",
       "authority": "official",
@@ -26,7 +14,24 @@
       "localFile": "dark-angels-faction-pack-v1.2.pdf",
       "sha256": "B33B79C207D910A8E6AEC4ABFA8042507154E7FF17CB88D8E9A77D4C02C78BB1",
       "pageCount": 17,
-      "status": "current"
+      "status": "current",
+      "sourceId": "dark-angels-faction-pack-v1.2",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/dark-angels/sources/dark-angels-faction-pack-v1.2.pdf",
+        "books/dark-angels/content/dark-angels-faction-pack.en.json",
+        "books/dark-angels/content/dark-angels-related-rules.en.json"
+      ]
     },
     {
       "id": "codex-transcription",
@@ -36,7 +41,25 @@
       "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
       "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Imperium%20-%20Dark%20Angels.json",
       "localFile": "bsdata-dark-angels-11e.json",
-      "status": "requires-codex-verification"
+      "status": "requires-codex-verification",
+      "sourceId": "dark-angels-codex-transcription",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION"
+      ],
+      "paths": [
+        "books/dark-angels/sources/bsdata-dark-angels-11e.json",
+        "books/dark-angels/content/dark-angels-codex-datasheets.en.json"
+      ]
     },
     {
       "id": "mfm",
@@ -50,7 +73,56 @@
       "localFile": "official-mfm-v1.3.json",
       "captureSha256": "6A90E2D6F9517520D75E532BB8090435B5368240F7A828598158B0ACDCFE6FB0",
       "structuredCaptureSha256": "6A90E2D6F9517520D75E532BB8090435B5368240F7A828598158B0ACDCFE6FB0",
-      "status": "dated-capture"
+      "status": "dated-capture",
+      "sourceId": "dark-angels-mfm-v1.3",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION"
+      ],
+      "paths": [
+        "books/dark-angels/sources/official-mfm-v1.3.json",
+        "books/dark-angels/content/dark-angels-points.en.json"
+      ]
+    },
+    {
+      "id": "dark-angels-app-parity",
+      "sourceId": "dark-angels-app-parity",
+      "active": true,
+      "sourceType": "accepted-secondary-parity",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "army-rule",
+        "codex-detachments"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL"
+      ],
+      "paths": [
+        "books/dark-angels/content/dark-angels-codex-parity.en.json"
+      ]
+    },
+    {
+      "id": "faction-pack-v1.0",
+      "authority": "official",
+      "role": "11e-overlay",
+      "title": "Dark Angels Faction Pack v1.0",
+      "legalFrom": "2026-06-20",
+      "url": "https://assets.warhammer-community.com/eng_08-06_warhammer40000_faction_pack_dark_angels-fw4ot2jwtw-hplla1qiky.pdf",
+      "localFile": "dark-angels-faction-pack-v1.0.pdf",
+      "status": "superseded",
+      "sha256": "7F1EFE2D62F57597D0949D62B8D9BF0675E0199A6E99A1EEF61BFA65DE76AA52",
+      "pageCount": 16,
+      "active": false,
+      "lifecycle": "HISTORICAL_EVIDENCE"
     }
   ],
   "dependencies": {
@@ -87,5 +159,14 @@
     "publishAsComplete": false,
     "reviewLabel": "Source-limited preview",
     "reason": "Current official Dark Angels Faction Pack v1.2 is frozen. Official live MFM v1.3 points are preserved as a dated repository capture; both were verified 27 August 2026. Three Codex-derived Detachments remain source-limited because the complete frozen Codex source is not available in this repository."
-  }
+  },
+  "sourceDependencies": [
+    {
+      "bookId": "space-marines",
+      "ownerBookId": "space-marines",
+      "type": "CANONICAL_SOURCE_DEPENDENCY",
+      "active": true
+    }
+  ],
+  "enrollmentScope": "PUBLIC_BOOK"
 }

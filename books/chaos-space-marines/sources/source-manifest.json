@@ -1,6 +1,6 @@
 {
-  "schema": 1,
-  "verifiedAt": "2026-08-27",
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-14",
   "layers": [
     {
       "id": "faction-pack-v1.2",
@@ -13,7 +13,24 @@
       "pageCount": 102,
       "sha256": "F3A8D05ED88BAD5085D014BF76FAD684B60336F92CF75CF3AED30B989A33A495",
       "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
-      "localFile": "chaos-space-marines-faction-pack-v1.2.pdf"
+      "localFile": "chaos-space-marines-faction-pack-v1.2.pdf",
+      "sourceId": "chaos-space-marines-faction-pack-v1.2",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/chaos-space-marines/sources/chaos-space-marines-faction-pack-v1.2.pdf",
+        "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json"
+      ]
     },
     {
       "id": "codex-transcription",
@@ -23,7 +40,26 @@
       "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
       "url": "https://github.com/BSData/wh40k-11e/blob/b6d17952f74814528b4c70ef5016c86b922d5257/Chaos%20-%20Chaos%20Space%20Marines.json",
       "localFile": "bsdata-chaos-space-marines-11e.json",
-      "status": "requires-codex-verification"
+      "status": "requires-codex-verification",
+      "sourceId": "csm-codex-transcription",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/chaos-space-marines/sources/bsdata-chaos-space-marines-11e.json",
+        "books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json"
+      ]
     },
     {
       "id": "mfm",
@@ -38,7 +74,61 @@
       "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
       "localFile": "official-mfm-v1.3.json",
       "status": "dated-live-capture",
-      "captureHashScope": "normalizedPayload"
+      "captureHashScope": "normalizedPayload",
+      "sourceId": "csm-mfm-v1.3",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION"
+      ],
+      "paths": [
+        "books/chaos-space-marines/sources/official-mfm-v1.3.json",
+        "books/chaos-space-marines/content/chaos-space-marines-points.en.json"
+      ]
+    },
+    {
+      "id": "csm-codex-secondary-consensus",
+      "sourceId": "csm-codex-secondary-consensus",
+      "active": true,
+      "sourceType": "secondary-consensus-ledger",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "codex-rules",
+        "wargear"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/chaos-space-marines/sources/codex-secondary-consensus.en.json",
+        "books/chaos-space-marines/content/chaos-space-marines-codex-parity.en.json",
+        "books/chaos-space-marines/content/chaos-space-marines-codex-wargear.en.json"
+      ]
+    },
+    {
+      "id": "csm-related-rules-base",
+      "sourceId": "csm-related-rules-base",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "base-related-rule-contracts"
+      ],
+      "consumers": [
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/chaos-space-marines/sources/related-rules-base.en.json"
+      ]
     }
   ],
   "gates": {
@@ -63,6 +153,8 @@
     "sourceMissing": 2,
     "conflicts": 0,
     "guessed": 0,
-    "sourceFile": "codex-secondary-consensus.en.json"
-  }
+    "sourceFile": "codex-secondary-consensus.en.json",
+    "sourceId": "csm-codex-secondary-consensus"
+  },
+  "enrollmentScope": "PUBLIC_BOOK"
 }

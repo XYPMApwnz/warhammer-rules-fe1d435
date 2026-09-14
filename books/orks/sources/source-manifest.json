@@ -1,6 +1,6 @@
 {
-  "schema": 1,
-  "verifiedAt": "2026-08-11",
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-14",
   "layers": [
     {
       "id": "faction-pack-v1.1",
@@ -13,7 +13,20 @@
       "retrievedAt": "2026-08-11",
       "frozenAt": "2026-08-11",
       "sha256": "9966C75396F08C4A0D7E31F100A9FAB3CD9962D8BE15D2F12B08CADCC9027109",
-      "pageCount": 87
+      "pageCount": 87,
+      "sourceId": "orks-faction-pack-v1.1",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules"
+      ],
+      "consumers": [
+        "SOURCE_FRESHNESS"
+      ],
+      "paths": [
+        "books/orks/sources/orks-faction-pack-v1.1.pdf"
+      ]
     },
     {
       "id": "codex-transcription",
@@ -23,7 +36,22 @@
       "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
       "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Orks.json",
       "localFile": "bsdata-orks-11e.json",
-      "status": "requires-codex-verification"
+      "status": "requires-codex-verification",
+      "sourceId": "orks-codex-transcription",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "SOURCE_FRESHNESS"
+      ],
+      "paths": [
+        "books/orks/sources/bsdata-orks-11e.json"
+      ]
     },
     {
       "id": "mfm",
@@ -37,11 +65,26 @@
       "retrievedAt": "2026-08-11",
       "frozenAt": "2026-08-11",
       "captureSha256": "BC7375F169655CCFBAEEE0135BEFE840B94C1FB50067EECC6209376F2D95449E",
-      "localFile": "official-mfm-v1.2.json"
+      "localFile": "official-mfm-v1.2.json",
+      "sourceId": "orks-mfm-v1.2",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "SOURCE_FRESHNESS"
+      ],
+      "paths": [
+        "books/orks/sources/official-mfm-v1.2.json"
+      ]
     }
   ],
   "gates": {
     "publishAsComplete": false,
     "reason": "Official Faction Pack v1.1 is frozen; official live MFM v1.2 is preserved as a dated repository capture verified 11 August 2026. The community Codex transcription still requires authoritative Codex verification."
-  }
+  },
+  "enrollmentScope": "FRESHNESS_ONLY"
 }

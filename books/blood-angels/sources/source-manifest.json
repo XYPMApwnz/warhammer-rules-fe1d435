@@ -1,6 +1,6 @@
 {
-  "schema": 1,
-  "verifiedAt": "2026-08-27",
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-14",
   "layers": [
     {
       "id": "faction-pack-v1.1",
@@ -14,7 +14,46 @@
       "localFile": "blood-angels-faction-pack-v1.1.pdf",
       "sha256": "75AAD2A44B40DB3DBC6C0FA7786D1A7C76F878F34F15AA7E69B9B80D66CAEED1",
       "pageCount": 30,
-      "status": "current"
+      "status": "current",
+      "sourceId": "blood-angels-faction-pack-v1.1",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/blood-angels/sources/blood-angels-faction-pack-v1.1.pdf",
+        "books/blood-angels/content/blood-angels-faction-pack.en.json"
+      ]
+    },
+    {
+      "id": "blood-angels-codex-transcription",
+      "sourceId": "blood-angels-codex-transcription",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/blood-angels/sources/bsdata-blood-angels-11e.json",
+        "books/blood-angels/content/blood-angels-codex-datasheets.en.json"
+      ]
     },
     {
       "id": "mfm",
@@ -27,7 +66,46 @@
       "url": "https://mfm.warhammer-community.com/en/blood-angels",
       "localFile": "official-mfm-v1.3.json",
       "captureSha256": "57B72C15F5EB38737E2E39BE8DD5364C6C4F1A4F0D7D6657BE3B13C4309F3D7A",
-      "status": "dated-capture"
+      "status": "dated-capture",
+      "sourceId": "blood-angels-mfm-v1.3",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "RELATED_RULES"
+      ],
+      "paths": [
+        "books/blood-angels/sources/official-mfm-v1.3.json",
+        "books/blood-angels/content/blood-angels-points.en.json"
+      ]
+    },
+    {
+      "id": "blood-angels-codex-secondary-consensus",
+      "sourceId": "blood-angels-codex-secondary-consensus",
+      "active": true,
+      "sourceType": "accepted-secondary-parity",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "codex-rules",
+        "wargear"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "RELATED_RULES",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/blood-angels/content/blood-angels-codex-parity.en.json",
+        "books/blood-angels/content/blood-angels-codex-wargear.en.json"
+      ]
     }
   ],
   "dependencies": {
@@ -69,5 +147,14 @@
     "publishAsComplete": false,
     "reviewLabel": "Source-limited preview",
     "reason": "Current official Blood Angels Faction Pack v1.1 and official live MFM v1.3 dated capture was verified 27 August 2026. The complete frozen Codex Supplement source is not available in this repository."
-  }
+  },
+  "sourceDependencies": [
+    {
+      "bookId": "space-marines",
+      "ownerBookId": "space-marines",
+      "type": "CANONICAL_SOURCE_DEPENDENCY",
+      "active": true
+    }
+  ],
+  "enrollmentScope": "PUBLIC_BOOK"
 }

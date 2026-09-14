@@ -51,7 +51,8 @@
     "points": "content/adeptus-mechanicus-points.en.json",
     "officialMfm": "sources/official-mfm-v1.3.json",
     "unitImages": "presentation/unit-images.json",
-    "globalGlossary": "../../glossary/registry.en.json"
+    "globalGlossary": "../../glossary/registry.en.json",
+    "manifest": "sources/source-manifest.json"
   },
   "relatedRulesOwnership": {
     "mode": "authoritative-runtime-source",

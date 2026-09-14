@@ -1,6 +1,6 @@
 {
-  "schema": 1,
-  "verifiedAt": "2026-08-27",
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-14",
   "layers": [
     {
       "id": "faction-pack-v1.2",
@@ -13,7 +13,23 @@
       "version": "1.2",
       "retrievedAt": "2026-08-09",
       "frozenAt": "2026-08-09",
-      "sha256": "50F456E9F4A20889450093A9E6627AA1C1ED0AF66EFBC29C583C46D910295CA7"
+      "sha256": "50F456E9F4A20889450093A9E6627AA1C1ED0AF66EFBC29C583C46D910295CA7",
+      "sourceId": "emperors-children-faction-pack-v1.2",
+      "active": true,
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "faction-pack-rules"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/emperors-children/sources/emperors-children-faction-pack-v1.2.pdf",
+        "books/emperors-children/content/emperors-children-faction-pack.en.json"
+      ]
     },
     {
       "id": "codex-transcription",
@@ -23,7 +39,26 @@
       "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
       "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Chaos%20-%20Emperor%27s%20Children.json",
       "localFile": "bsdata-emperors-children-11e.json",
-      "status": "requires-codex-verification"
+      "status": "requires-codex-verification",
+      "sourceId": "emperors-children-codex-transcription",
+      "active": true,
+      "sourceType": "bsdata-snapshot",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "datasheets",
+        "profiles",
+        "points-structure"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/emperors-children/sources/bsdata-emperors-children-11e.json",
+        "books/emperors-children/content/emperors-children-codex-datasheets.en.json"
+      ]
     },
     {
       "id": "mfm-v1.3",
@@ -46,6 +81,23 @@
       },
       "knownGaps": [
         "Rule text and unit structure are outside the MFM scope."
+      ],
+      "sourceId": "emperors-children-mfm-v1.3",
+      "active": true,
+      "sourceType": "official-json-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "points",
+        "costs"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "POINTS_PROJECTION"
+      ],
+      "paths": [
+        "books/emperors-children/sources/official-mfm-v1.3.json",
+        "books/emperors-children/content/emperors-children-points.en.json"
       ]
     },
     {
@@ -57,11 +109,111 @@
       "retrievedAt": "2026-08-08",
       "url": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/",
       "localFile": "../content/emperors-children-codex-parity.en.json",
-      "coverage": "2 Army Rules, 6 Codex Detachments, 24 Enhancements and 36 canonically typed Stratagems"
+      "coverage": "2 Army Rules, 6 Codex Detachments, 24 Enhancements and 36 canonically typed Stratagems",
+      "sourceId": "emperors-children-codex-parity",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "codex-rule-parity"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/emperors-children/content/emperors-children-codex-parity.en.json"
+      ]
+    },
+    {
+      "id": "emperors-children-related-rules-contracts",
+      "sourceId": "emperors-children-related-rules-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "related-rule-contracts"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/emperors-children/content/emperors-children-related-rules.en.json"
+      ]
+    },
+    {
+      "id": "emperors-children-enhancement-owner-matrix",
+      "sourceId": "emperors-children-enhancement-owner-matrix",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "enhancement-owner-contracts"
+      ],
+      "consumers": [
+        "CANONICAL_BUILD",
+        "EFFECTIVE_MODEL",
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/emperors-children/sources/enhancement-owner-matrix.json"
+      ]
+    },
+    {
+      "id": "emperors-children-compatible-rules-snapshot",
+      "sourceId": "emperors-children-compatible-rules-snapshot",
+      "active": true,
+      "sourceType": "legacy-normalized-secondary",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-associations"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/emperors-children/sources/wahapedia-compatible-rules.snapshot.json"
+      ]
+    },
+    {
+      "id": "emperors-children-compatible-rules-corrections",
+      "sourceId": "emperors-children-compatible-rules-corrections",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "compatible-rule-adjudication"
+      ],
+      "consumers": [
+        "COMPATIBLE_RULES"
+      ],
+      "paths": [
+        "books/emperors-children/sources/compatible-rules-correction-ledger.json"
+      ]
+    },
+    {
+      "id": "emperors-children-runtime-related-rules",
+      "sourceId": "emperors-children-runtime-related-rules",
+      "active": true,
+      "sourceType": "authoritative-runtime-source",
+      "lifecycle": "AUTHORITATIVE_RUNTIME_SOURCE",
+      "factsOwned": [
+        "related-rules-runtime-markup"
+      ],
+      "consumers": [
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/emperors-children/mobile/related-rules.inc"
+      ]
     }
   ],
   "gates": {
     "publishAsComplete": false,
     "reason": "Official Faction Pack v1.2 is frozen; official live MFM v1.3 is preserved as a dated repository capture verified 27 August 2026. Codex rule-bearing text remains a fixed secondary parity source, so publication remains gated."
-  }
+  },
+  "enrollmentScope": "PUBLIC_BOOK"
 }

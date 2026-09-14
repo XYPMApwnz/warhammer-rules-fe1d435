@@ -10,58 +10,1060 @@
   ],
   "sources": [
     {
-      "book": "space-marines",
-      "sourceId": "space-marines-codex-details",
-      "authority": "secondary",
-      "sourceType": "wahapedia-html",
-      "acceptedRevision": "legacy-normalized-2026-08-09",
-      "acceptedHash": "d62a7779a40b7c720155773a0042f5faeb045b3d05409850c0d60e92061d006a",
-      "lastChecked": "2026-08-09",
-      "upstreamUpdateKnown": true,
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-bsdata-codex",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "acceptedHash": "db61b064a9e18c8f56d995a6792091432c15a4fd995774358512630e8277a68a",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/sources/bsdata-adeptus-mechanicus-11e.json",
+          "normalization": "lf",
+          "sha256": "0c473b0e8c94495414b43db8f7ae4ccd4623fca0faaa024ab27d12318044cd89"
+        },
+        {
+          "path": "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json",
+          "normalization": "lf",
+          "sha256": "50dc74bdbb7ff3ee890f27006f03f88b5b4e0c8e4e704b38912a3b173331d2e7"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-codex-carry-forward",
+      "authority": "accepted-canonical-transcription",
+      "sourceType": "accepted-canonical-transcription",
+      "acceptedRevision": "accepted-carry-forward-2026-09-14",
+      "acceptedHash": "80dfca1c3fd8da1a280c0f4ea4d9964e61921b0a8a328ea2f3eb3b3ff2a2a5a4",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "OFFICIAL_CODEX_UNAVAILABLE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-detachments.en.json",
+          "normalization": "lf",
+          "sha256": "80dfca1c3fd8da1a280c0f4ea4d9964e61921b0a8a328ea2f3eb3b3ff2a2a5a4"
+        }
+      ],
+      "notes": "Enrolled factual owner for codex-detachments, owner-contracts."
+    },
+    {
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-codex-parity",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-07-29",
+      "acceptedHash": "084fe83d6dd4bf973c0f87c5858c40c22939ad551b0274b104bd6e2aa7728418",
+      "lastChecked": "2026-07-29",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
       "status": "LEGACY_UNVERIFIABLE",
       "rawOrigin": "UNAVAILABLE",
       "reproducible": "normalized-artifacts-only",
-      "extractor": "books/space-marines/tools/extract-codex-details.cjs",
       "artifacts": [
         {
-          "path": "books/space-marines/content/space-marines-codex-wargear.en.json",
+          "path": "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-parity.en.json",
           "normalization": "lf",
-          "sha256": "610bffd8556bceef53588e5f0c24c1aa390948724559fdf21bba5a41386b95d2"
-        },
-        {
-          "path": "books/space-marines/content/space-marines-current-overlay.en.json",
-          "normalization": "lf",
-          "sha256": "96bdf6780b227875dc1d3337a37a5104e16f866c9f7d65d8e584803934244907"
-        },
-        {
-          "path": "books/space-marines/sources/wahapedia-compatible-rules.snapshot.json",
-          "normalization": "lf",
-          "sha256": "32dee7a9bb9c21290ae4817f6a4563e69c10021ec63175d9ae3d6fe14d748aa1"
+          "sha256": "084fe83d6dd4bf973c0f87c5858c40c22939ad551b0274b104bd6e2aa7728418"
         }
       ],
-      "notes": "Historical raw Wahapedia pages are unavailable. The three normalized artifacts exclusively owned by this source are frozen and hash verified; the shared related-rules aggregate is verified by its contributing local producers. Current live pages are update candidates only."
+      "notes": "Enrolled factual owner for codex-rule-parity."
     },
     {
-      "book": "space-marines",
-      "sourceId": "space-marines-related-rules-contracts",
-      "authority": "accepted-mixed-evidence",
-      "sourceType": "structured-contract",
-      "acceptedRevision": "v1",
-      "acceptedHash": "eb4dfa4aab8a9aacaf73565d6fdd49d07e694a49bc37449dcdafab771ce37a56",
-      "lastChecked": "2026-09-14",
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-codex-wargear",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-07-29",
+      "acceptedHash": "d1f311eaf8d0cdb5ec1981d6cecba2d55b0ebad4009bef54d5f8f1cd442463d1",
+      "lastChecked": "2026-07-29",
       "upstreamUpdateKnown": false,
-      "status": "SOURCE_LIMITED",
-      "rawOrigin": "RETAINED_AUTHENTICATED_INPUTS",
-      "reproducible": "repository-artifact",
-      "extractor": "books/space-marines/tools/space-marines-related-rules-contract.mjs",
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
       "artifacts": [
         {
-          "path": "books/space-marines/sources/space-marines-related-rules-contracts.v1.json",
+          "path": "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-wargear.en.json",
           "normalization": "lf",
-          "sha256": "eb4dfa4aab8a9aacaf73565d6fdd49d07e694a49bc37449dcdafab771ce37a56"
+          "sha256": "d1f311eaf8d0cdb5ec1981d6cecba2d55b0ebad4009bef54d5f8f1cd442463d1"
         }
       ],
-      "notes": "Accepted minimal owner for 25 Faction Pack Enhancement selectors, three unit Upgrade contracts, and the Spy-skull canonical identity. Display titles, rule text, points, Datasheet facts, and all independently reconstructable contracts remain owned by their existing authenticated sources."
+      "notes": "Enrolled factual owner for wargear, composition."
+    },
+    {
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-compatible-rules-corrections",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-09-14",
+      "acceptedHash": "9db49911faf2b1e9e9251ea90a21fb2e5a32105a9b635cb5d98cba4acc0bd044",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/sources/compatible-rules-correction-ledger.json",
+          "normalization": "lf",
+          "sha256": "9db49911faf2b1e9e9251ea90a21fb2e5a32105a9b635cb5d98cba4acc0bd044"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-adjudication."
+    },
+    {
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-compatible-rules-snapshot",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-08",
+      "acceptedHash": "a2ed9b5f1be1300ff6ae16eb6f20dd29560f22019b367e469dea25d1069dbd30",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/sources/wahapedia-compatible-rules.snapshot.json",
+          "normalization": "lf",
+          "sha256": "a2ed9b5f1be1300ff6ae16eb6f20dd29560f22019b367e469dea25d1069dbd30"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.2",
+      "acceptedHash": "b822f37d8c2d9e033b2c796240922728cedc002fca0f6d4ae9bccc16601e399d",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/sources/adeptus-mechanicus-faction-pack-v1.2.pdf",
+          "normalization": "bytes",
+          "sha256": "76819664005154632450e45677d609aa3934dee965317f74dfedc26efc3467ab"
+        },
+        {
+          "path": "books/adeptus-mechanicus/content/adeptus-mechanicus-source.en.json",
+          "normalization": "lf",
+          "sha256": "fff6e0e662a0bd8e0475ee7a80852a8c13e19429c5ea448dfeab82a3c9745a77"
+        },
+        {
+          "path": "books/adeptus-mechanicus/content/adeptus-mechanicus-rules.en.json",
+          "normalization": "lf",
+          "sha256": "8d7ea808c93c6b7793d85d82013d7a0d3505d254aec93faf386e269dd4ef493d"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules, faction-pack-datasheets."
+    },
+    {
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-mfm-v1.3",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "0dc97447d215380f23e7c59b58a514227c3f423269ae90aa9667e33cc211358f",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_CAPTURE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "ae23430b300d3ba53aafd9e32d6665597ac169cb5c1e812320c1a9f329cb3032"
+        },
+        {
+          "path": "books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json",
+          "normalization": "lf",
+          "sha256": "dd4698768f5d3a5f1a45519e45b4c5282736dcade0300eac8ea4c7b46f7cc105"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-runtime-related-rules",
+      "authority": "authoritative-runtime-source",
+      "sourceType": "authoritative-runtime-source",
+      "acceptedRevision": "accepted-runtime-2026-09-14",
+      "acceptedHash": "ba7fef5cb9cfe08c0beeee2acfe4b80018eca417d8e779cbc785081a5ae75490",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ACCEPTED_RUNTIME_SOURCE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/mobile/related-rules.inc",
+          "normalization": "lf",
+          "sha256": "ba7fef5cb9cfe08c0beeee2acfe4b80018eca417d8e779cbc785081a5ae75490"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rules-runtime-markup."
+    },
+    {
+      "book": "blood-angels",
+      "sourceId": "blood-angels-codex-secondary-consensus",
+      "authority": "accepted-secondary-parity",
+      "sourceType": "accepted-secondary-parity",
+      "acceptedRevision": "checked-2026-08-13",
+      "acceptedHash": "6cfd6fadf65048c3f3d841a836f11efca6b36ee4fdd6c8c9faf47c17670bb09b",
+      "lastChecked": "2026-08-13",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_SOURCE_LEDGER",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/blood-angels/content/blood-angels-codex-parity.en.json",
+          "normalization": "lf",
+          "sha256": "983881311927b5588c6e739e6f5e7cee324417353dd7920ca02a19a6c67e6db7"
+        },
+        {
+          "path": "books/blood-angels/content/blood-angels-codex-wargear.en.json",
+          "normalization": "lf",
+          "sha256": "5e91e668d13a4308f8b0103352dd1e145291bc61b1334fd9441c7762fe4db8e1"
+        }
+      ],
+      "notes": "Enrolled factual owner for codex-rules, wargear."
+    },
+    {
+      "book": "blood-angels",
+      "sourceId": "blood-angels-codex-transcription",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "d5af57cf1e79b0b038133e84e58de334fea852d0",
+      "acceptedHash": "35d9a309d0d350d702e37903c022131c02444f79461f4a3db46ae25916275319",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/blood-angels/sources/bsdata-blood-angels-11e.json",
+          "normalization": "lf",
+          "sha256": "d527a01be9688a08cd938cbb6c2d078ac3317b26bb6e778de47bdfd1f91fef08"
+        },
+        {
+          "path": "books/blood-angels/content/blood-angels-codex-datasheets.en.json",
+          "normalization": "lf",
+          "sha256": "1c7bb534f53e1b648b5787464a9fb15e733413763be38f6600416139fad149c8"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "blood-angels",
+      "sourceId": "blood-angels-faction-pack-v1.1",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.1",
+      "acceptedHash": "9cfd7031b1839c02d6113eeb240b3f18ee154c6e68ae146338d31e0c86feac23",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/blood-angels/sources/blood-angels-faction-pack-v1.1.pdf",
+          "normalization": "bytes",
+          "sha256": "75aad2a44b40db3dbc6c0fa7786d1a7c76f878f34f15aa7e69b9b80d66caeed1"
+        },
+        {
+          "path": "books/blood-angels/content/blood-angels-faction-pack.en.json",
+          "normalization": "lf",
+          "sha256": "7042e1ecb6dc9492149c4e437a8e45706a1c8d0525fcf195d250543fb1a1d932"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules."
+    },
+    {
+      "book": "blood-angels",
+      "sourceId": "blood-angels-mfm-v1.3",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "1a11a1b2b5e080ee60d00b116eb63a8a0f9dd890064f2fabb8d9dcb6b7d376de",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/blood-angels/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "57b72c15f5eb38737e2e39be8dd5364c6c4f1a4f0d7d6657be3b13c4309f3d7a"
+        },
+        {
+          "path": "books/blood-angels/content/blood-angels-points.en.json",
+          "normalization": "lf",
+          "sha256": "55f9423ce70598921c959b8e55c977a7b2674cee2bd56a7e6166cb07c66eadac"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "chaos-space-marines",
+      "sourceId": "chaos-space-marines-faction-pack-v1.2",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.2",
+      "acceptedHash": "ac1187f556f61a516fe51418796346d6722ddb93e5ec1695e9e9dba9c5e7467f",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/chaos-space-marines/sources/chaos-space-marines-faction-pack-v1.2.pdf",
+          "normalization": "bytes",
+          "sha256": "f3a8d05ed88bad5085d014bf76fad684b60336f92cf75cf3aed30b989a33a495"
+        },
+        {
+          "path": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json",
+          "normalization": "lf",
+          "sha256": "625d3d1b352cd9f3718820cca6dfb78ac2f57fb3ce98df9bb38b5be461f7eb49"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules."
+    },
+    {
+      "book": "chaos-space-marines",
+      "sourceId": "csm-codex-secondary-consensus",
+      "authority": "secondary-consensus-ledger",
+      "sourceType": "secondary-consensus-ledger",
+      "acceptedRevision": "checked-2026-08-12",
+      "acceptedHash": "534c037b501fc6e42705fee762ee92140a30470c48fc142f3f9edf362fe068f1",
+      "lastChecked": "2026-08-12",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_SOURCE_LEDGER",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json",
+          "normalization": "lf",
+          "sha256": "0335204f41ce68fce87c388154137e7d12f633cc85c40124d0b4e321d683ec8e"
+        },
+        {
+          "path": "books/chaos-space-marines/content/chaos-space-marines-codex-parity.en.json",
+          "normalization": "lf",
+          "sha256": "882a421fc1ffd2d40e3e5ef64d6f4ed562d04e70e477a9053ea60ee3d7556643"
+        },
+        {
+          "path": "books/chaos-space-marines/content/chaos-space-marines-codex-wargear.en.json",
+          "normalization": "lf",
+          "sha256": "9bb2706ed89be685e18356e66ef80c0ff6c53d74a2dd9b798b003abb7e96b1f0"
+        }
+      ],
+      "notes": "Enrolled factual owner for codex-rules, wargear."
+    },
+    {
+      "book": "chaos-space-marines",
+      "sourceId": "csm-codex-transcription",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "b6d17952f74814528b4c70ef5016c86b922d5257",
+      "acceptedHash": "2fc1c35874c0773e70857c5e31145cca645efbdc28e102e0b28018c21031cc5b",
+      "lastChecked": "2026-08-12",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/chaos-space-marines/sources/bsdata-chaos-space-marines-11e.json",
+          "normalization": "lf",
+          "sha256": "3a8eb9177a7f58154319b85346efd5b01066f9e793cc2af4578531d77b5289de"
+        },
+        {
+          "path": "books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json",
+          "normalization": "lf",
+          "sha256": "8b56e34fcfd702e2e7091a44c894596b92ca67e22c3a2c323ca921de3fd97e6c"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "chaos-space-marines",
+      "sourceId": "csm-mfm-v1.3",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "0a2e7310e62d2608e41c6569ceb8b4415f9d03822f3c5c14c27cbc625e0114e0",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/chaos-space-marines/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "fbe45a9d08b1a99e8e1b2c8011bd510180d9bdff3657442902f88c519a3e54f7"
+        },
+        {
+          "path": "books/chaos-space-marines/content/chaos-space-marines-points.en.json",
+          "normalization": "lf",
+          "sha256": "2330ab86bed8ad42e4a36e6b25f69beba8808ba393a688687786f249a65e6088"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "chaos-space-marines",
+      "sourceId": "csm-related-rules-base",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-08-11",
+      "acceptedHash": "fd5a7831f4dc530131747c94758c05cfe48fdc3a6eff7b26ecd6a36d3d4f9689",
+      "lastChecked": "2026-08-11",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "REVIEW_REQUIRED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/chaos-space-marines/sources/related-rules-base.en.json",
+          "normalization": "lf",
+          "sha256": "fd5a7831f4dc530131747c94758c05cfe48fdc3a6eff7b26ecd6a36d3d4f9689"
+        }
+      ],
+      "notes": "Enrolled factual owner for base-related-rule-contracts."
+    },
+    {
+      "book": "dark-angels",
+      "sourceId": "dark-angels-app-parity",
+      "authority": "accepted-secondary-parity",
+      "sourceType": "accepted-secondary-parity",
+      "acceptedRevision": "app-v2.6.0-data-946",
+      "acceptedHash": "405a7bc38ac071be0b1c48b8be403d29349b4efeb47885ad61e896f58f3ba20b",
+      "lastChecked": "2026-09-08",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_APP_OBSERVATION",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/dark-angels/content/dark-angels-codex-parity.en.json",
+          "normalization": "lf",
+          "sha256": "405a7bc38ac071be0b1c48b8be403d29349b4efeb47885ad61e896f58f3ba20b"
+        }
+      ],
+      "notes": "Enrolled factual owner for army-rule, codex-detachments."
+    },
+    {
+      "book": "dark-angels",
+      "sourceId": "dark-angels-codex-transcription",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "acceptedHash": "b9e4ea58f43bc55139cabfa0b571a036d2ee906273cf33be878f13bba671bae4",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/dark-angels/sources/bsdata-dark-angels-11e.json",
+          "normalization": "lf",
+          "sha256": "6dfee5b8c4b159fe401301999c215eee242e71822a1c4c9b05d49b30714872d0"
+        },
+        {
+          "path": "books/dark-angels/content/dark-angels-codex-datasheets.en.json",
+          "normalization": "lf",
+          "sha256": "8cb82a8dec3706a3f2ed33bb9a0343b9673dc8b04424fa9da8ea64f2216e423b"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "dark-angels",
+      "sourceId": "dark-angels-faction-pack-v1.2",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.2",
+      "acceptedHash": "86af87f88738a03890ae433cf094cd2daa6454d1705953d741ddf05648b1f9da",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/dark-angels/sources/dark-angels-faction-pack-v1.2.pdf",
+          "normalization": "bytes",
+          "sha256": "b33b79c207d910a8e6aec4abfa8042507154e7ff17cb88d8e9a77d4c02c78bb1"
+        },
+        {
+          "path": "books/dark-angels/content/dark-angels-faction-pack.en.json",
+          "normalization": "lf",
+          "sha256": "6f82c188ae0e421ba4cc8414b32bdd9b2f7b9d2929ce100e1e02ddcfc642bb09"
+        },
+        {
+          "path": "books/dark-angels/content/dark-angels-related-rules.en.json",
+          "normalization": "lf",
+          "sha256": "5a35298f728790716255b27931fef74a896555308436009e72c52a2cdc52cd1f"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules."
+    },
+    {
+      "book": "dark-angels",
+      "sourceId": "dark-angels-mfm-v1.3",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "a01d6a6a9a68265ff0a9c8190dc4628ed8a7c832f4f385a42324535d051659b4",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/dark-angels/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "6a90e2d6f9517520d75e532bb8090435b5368240f7a828598158b0acdcfe6fb0"
+        },
+        {
+          "path": "books/dark-angels/content/dark-angels-points.en.json",
+          "normalization": "lf",
+          "sha256": "44185d28afb643537405b241978383c8d71513cbaf700876cef096f9b3ef8f72"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-codex-transcription",
+      "authority": "accepted-canonical-transcription",
+      "sourceType": "accepted-canonical-transcription",
+      "acceptedRevision": "accepted-canonical-2026-09-14",
+      "acceptedHash": "edb2998a739b59c5c4bf644e45d232e43f96cf8c6e94daf38690031da5a3831b",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "OFFICIAL_CODEX_UNAVAILABLE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/content/death-guard-rules.en.json",
+          "normalization": "lf",
+          "sha256": "49f71d4c0c079ae6bbafab9f8a7077fd958e663f1c05ee8cd95c8ba22f14dd66"
+        },
+        {
+          "path": "books/death-guard/content/death-guard-legends.en.json",
+          "normalization": "lf",
+          "sha256": "e5e077738660025f85b0a27ae6f838e5a3aa375d68aef4bd38091c0805e12e67"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, codex-rules, relations."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-compatible-rules-corrections",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-09-14",
+      "acceptedHash": "a45758a5893ad3c3e83a5a9c62283c5e10a046083cf105b9478c9f89e5f2bf7b",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/scripts/related-rules-correction-ledger.json",
+          "normalization": "lf",
+          "sha256": "a45758a5893ad3c3e83a5a9c62283c5e10a046083cf105b9478c9f89e5f2bf7b"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-adjudication."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-compatible-rules-snapshot",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-08",
+      "acceptedHash": "4d8a9ec918f5c8dbe0ba99655fab17b1e5b6b92ff7a8220d0014b88cbd083af8",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/death-guard/sources/wahapedia-compatible-rules.snapshot.json",
+          "normalization": "lf",
+          "sha256": "4d8a9ec918f5c8dbe0ba99655fab17b1e5b6b92ff7a8220d0014b88cbd083af8"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-enhancement-owner-matrix",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-09-14",
+      "acceptedHash": "f29fc9f3cff6897655470720dc425f401c82f749fda5664dfd6b7ada468a3fe9",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/sources/enhancement-owner-matrix.json",
+          "normalization": "lf",
+          "sha256": "f29fc9f3cff6897655470720dc425f401c82f749fda5664dfd6b7ada468a3fe9"
+        }
+      ],
+      "notes": "Enrolled factual owner for enhancement-owner-membership."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-faction-pack-v1.2",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.2",
+      "acceptedHash": "cf90cb4b26ec31252374c1e9e8aaf60cdb08fe9fddaa80b9b0f17fc0c29c7dba",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/sources/death-guard-faction-pack-v1.2.pdf",
+          "normalization": "bytes",
+          "sha256": "3b446db7d7dc48fc19ee61b263ec672a88c129b61ca8cd0dfa644414a1fef7c6"
+        },
+        {
+          "path": "books/death-guard/content/official-update-ledger.en.json",
+          "normalization": "lf",
+          "sha256": "86cefc841b05852a150611cb327ebc07788b0714f1f652f8dc8af7316edafc9e"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules, official-updates."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-mfm-v1.3-capture-2026-08-27",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.3-capture-2026-08-27",
+      "acceptedHash": "133142da78862684fba85c1df534593d6eaf382146b6175c037ff2e8bc6d7f1f",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_CAPTURE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "133142da78862684fba85c1df534593d6eaf382146b6175c037ff2e8bc6d7f1f"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-presentation-contract",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "capture-v1",
+      "acceptedHash": "e9e5570a309cb3fa28b31dbc37411b076c3f640a72d1783e90175e32e4cbdbe5",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "REVIEW_REQUIRED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/sources/canonical-presentation-contract.json",
+          "normalization": "lf",
+          "sha256": "e9e5570a309cb3fa28b31dbc37411b076c3f640a72d1783e90175e32e4cbdbe5"
+        }
+      ],
+      "notes": "Enrolled factual owner for presentation-policy, serialization-contract."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-runtime-related-rules",
+      "authority": "authoritative-runtime-source",
+      "sourceType": "authoritative-runtime-source",
+      "acceptedRevision": "accepted-runtime-2026-09-14",
+      "acceptedHash": "ad93b354f3ac2906a57074cfd1b39dcc8d3e7202958ae009271add8d5e83c72a",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ACCEPTED_RUNTIME_SOURCE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/mobile/related-rules.inc",
+          "normalization": "lf",
+          "sha256": "ad93b354f3ac2906a57074cfd1b39dcc8d3e7202958ae009271add8d5e83c72a"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rules-runtime-markup."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-runtime-related-terms",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-09-14",
+      "acceptedHash": "9149d084855014166ed8c7b17f252e513388dbd24c831219a4bda6705800fa32",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/sources/runtime-related-terms.json",
+          "normalization": "lf",
+          "sha256": "9149d084855014166ed8c7b17f252e513388dbd24c831219a4bda6705800fa32"
+        }
+      ],
+      "notes": "Enrolled factual owner for runtime-related-term-graph."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-codex-parity",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-08-08",
+      "acceptedHash": "51bec45f16fe8c164913e0b46e69549c1b93ad5b9887b70dab60d3ff99a7cff1",
+      "lastChecked": "2026-08-08",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/content/emperors-children-codex-parity.en.json",
+          "normalization": "lf",
+          "sha256": "51bec45f16fe8c164913e0b46e69549c1b93ad5b9887b70dab60d3ff99a7cff1"
+        }
+      ],
+      "notes": "Enrolled factual owner for codex-rule-parity."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-codex-transcription",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "acceptedHash": "800655d211b2be2c79b9434698918b4ab83a57041a1aa7245692e27f6c37e9ee",
+      "lastChecked": "2026-08-08",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/sources/bsdata-emperors-children-11e.json",
+          "normalization": "lf",
+          "sha256": "ea84e5f66b27aa462e08c6ed230b31b7700a47d8518e6f77889244d8ce84100a"
+        },
+        {
+          "path": "books/emperors-children/content/emperors-children-codex-datasheets.en.json",
+          "normalization": "lf",
+          "sha256": "3b1560b091d8022e6f2bfa0fc225770dfade3663eb5664d72bcfbbaf74d70d6b"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-compatible-rules-corrections",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "editorial-review-2026-08-02",
+      "acceptedHash": "6ad3e75ec5712f876eacc15733d10cb14d4320a41078ad7fa239707f16676259",
+      "lastChecked": "2026-08-02",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "USER_ACCEPTED_EDITORIAL_DECISION",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/sources/compatible-rules-correction-ledger.json",
+          "normalization": "lf",
+          "sha256": "6ad3e75ec5712f876eacc15733d10cb14d4320a41078ad7fa239707f16676259"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-adjudication."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-compatible-rules-snapshot",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-08-09",
+      "acceptedHash": "dbb1551a036284f27f221bb10c2b62e7197293b327c66863df6cb977fd2d2802",
+      "lastChecked": "2026-08-09",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/sources/wahapedia-compatible-rules.snapshot.json",
+          "normalization": "lf",
+          "sha256": "dbb1551a036284f27f221bb10c2b62e7197293b327c66863df6cb977fd2d2802"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-enhancement-owner-matrix",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-08-27",
+      "acceptedHash": "678b9d9775d5dbb882532a0b0ad986aadf6a567a74fdc8bfcc50d56efeb8d4d1",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_MIXED_EVIDENCE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/sources/enhancement-owner-matrix.json",
+          "normalization": "lf",
+          "sha256": "678b9d9775d5dbb882532a0b0ad986aadf6a567a74fdc8bfcc50d56efeb8d4d1"
+        }
+      ],
+      "notes": "Enrolled factual owner for enhancement-owner-contracts."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-faction-pack-v1.2",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.2",
+      "acceptedHash": "f39a664dad2b0f30c0172e744d38cfff9609ba5bc8d09c44c28c1b9057f5c089",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/sources/emperors-children-faction-pack-v1.2.pdf",
+          "normalization": "bytes",
+          "sha256": "50f456e9f4a20889450093a9e6627aa1c1ed0af66efbc29c583c46d910295ca7"
+        },
+        {
+          "path": "books/emperors-children/content/emperors-children-faction-pack.en.json",
+          "normalization": "lf",
+          "sha256": "47bc3d6aeb87657aede0b0840509e19c770ff12375ed5a738010e6316853e1e8"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-mfm-v1.3",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "d0d3bdc50d120a4670e538098587dc28432d5e501fa7d603c9f0f139a5f9e6e0",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "f2ba99fb7dac35d7c0d0436997af4d1d98697cc3ab9ccf86c7fa8cee210afb15"
+        },
+        {
+          "path": "books/emperors-children/content/emperors-children-points.en.json",
+          "normalization": "lf",
+          "sha256": "40d7edb89744275a53c43eaba3b0fb098515eb661b5e01873963ef8652e41135"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-related-rules-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-08-08",
+      "acceptedHash": "b669643054b65f60f3ebd5bee430bd209c25c79df45941d442eebfdff6f73636",
+      "lastChecked": "2026-08-08",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "REVIEW_REQUIRED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/content/emperors-children-related-rules.en.json",
+          "normalization": "lf",
+          "sha256": "b669643054b65f60f3ebd5bee430bd209c25c79df45941d442eebfdff6f73636"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rule-contracts."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-runtime-related-rules",
+      "authority": "authoritative-runtime-source",
+      "sourceType": "authoritative-runtime-source",
+      "acceptedRevision": "accepted-runtime-2026-08-09",
+      "acceptedHash": "9060f1360545abc43717a0795e4823f495cfe5d9a5f4197d92016cc5c217cf25",
+      "lastChecked": "2026-08-09",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ACCEPTED_RUNTIME_SOURCE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/mobile/related-rules.inc",
+          "normalization": "lf",
+          "sha256": "9060f1360545abc43717a0795e4823f495cfe5d9a5f4197d92016cc5c217cf25"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rules-runtime-markup."
+    },
+    {
+      "book": "orks",
+      "sourceId": "orks-codex-transcription",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "acceptedHash": "1db96f789444e5134c10d54d1b6d84ce1bb88eb6f55ed57f59c948bcad48ef2b",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/orks/sources/bsdata-orks-11e.json",
+          "normalization": "lf",
+          "sha256": "1db96f789444e5134c10d54d1b6d84ce1bb88eb6f55ed57f59c948bcad48ef2b"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "orks",
+      "sourceId": "orks-faction-pack-v1.1",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.1",
+      "acceptedHash": "9966c75396f08c4a0d7e31f100a9fab3cd9962d8be15d2f12b08cadcc9027109",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/orks/sources/orks-faction-pack-v1.1.pdf",
+          "normalization": "bytes",
+          "sha256": "9966c75396f08c4a0d7e31f100a9fab3cd9962d8be15d2f12b08cadcc9027109"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules."
+    },
+    {
+      "book": "orks",
+      "sourceId": "orks-mfm-v1.2",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.2",
+      "acceptedHash": "8e5a7a05fb05a11e9ee807e4d8e4cc57f3dd121ccd882284f47b4a82b657113f",
+      "lastChecked": "2026-08-11",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/orks/sources/official-mfm-v1.2.json",
+          "normalization": "lf",
+          "sha256": "8e5a7a05fb05a11e9ee807e4d8e4cc57f3dd121ccd882284f47b4a82b657113f"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
     },
     {
       "book": "shared",
@@ -83,87 +1085,179 @@
           "sha256": "522e18c6974dfffa4750802ff9cedb95f840b8c40f06bf7c28c3c33ce966a6f0"
         }
       ],
-      "notes": "Accepted owner for 24 project-authored concise glossary summaries. Canonical identities and gameplay semantics remain owned by their referenced Core Rules and Death Guard sources."
+      "notes": "Accepted owner for 24 project-authored concise glossary summaries. Canonical identities and gameplay semantics remain owned by their referenced Core Rules and Death Guard sources.",
+      "upstreamCurrentness": "N/A"
     },
     {
-      "book": "chaos-space-marines",
-      "sourceId": "csm-mfm-v1.3",
-      "authority": "official",
-      "sourceType": "warhammer-community-web-app",
+      "book": "space-marines",
+      "sourceId": "space-marines-codex-details",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-08-09",
+      "acceptedHash": "d62a7779a40b7c720155773a0042f5faeb045b3d05409850c0d60e92061d006a",
+      "lastChecked": "2026-08-09",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/space-marines/content/space-marines-codex-wargear.en.json",
+          "normalization": "lf",
+          "sha256": "610bffd8556bceef53588e5f0c24c1aa390948724559fdf21bba5a41386b95d2"
+        },
+        {
+          "path": "books/space-marines/content/space-marines-current-overlay.en.json",
+          "normalization": "lf",
+          "sha256": "96bdf6780b227875dc1d3337a37a5104e16f866c9f7d65d8e584803934244907"
+        },
+        {
+          "path": "books/space-marines/sources/wahapedia-compatible-rules.snapshot.json",
+          "normalization": "lf",
+          "sha256": "32dee7a9bb9c21290ae4817f6a4563e69c10021ec63175d9ae3d6fe14d748aa1"
+        }
+      ],
+      "notes": "Enrolled factual owner for codex-rules, wargear, compatible-rule-associations."
+    },
+    {
+      "book": "space-marines",
+      "sourceId": "space-marines-codex-transcription",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "acceptedHash": "d324bf796dbebf1e87ffd67c27182c86a20a3caa0fd39ed62f1db1ea830f314c",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/space-marines/sources/bsdata-space-marines-11e.json",
+          "normalization": "lf",
+          "sha256": "2c3427a887b90bebd652a37cc5fc0deaab4de000d15ae1e73edaf024ae0d4163"
+        },
+        {
+          "path": "books/space-marines/content/space-marines-codex-datasheets.en.json",
+          "normalization": "lf",
+          "sha256": "2893fd448af30270d7954fcbdda9f42a25cd419e1db7de1a6e34dce54966c4a3"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "space-marines",
+      "sourceId": "space-marines-faction-pack-v1.2",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.2",
+      "acceptedHash": "bce0205807584357b5a7f8454028a12768d58f83b6f12624f63775660bc0f612",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/space-marines/sources/space-marines-faction-pack-v1.2.pdf",
+          "normalization": "bytes",
+          "sha256": "f1f96c0a3dda8dfc2d5686b4aa60e7959697651edbc51f5a344439ff6ac1a1f9"
+        },
+        {
+          "path": "books/space-marines/content/space-marines-faction-pack.en.json",
+          "normalization": "lf",
+          "sha256": "76f0e98649cc36a2fb26083abf9bcd211bca9aef1de368a0dfeed3e7dbe91958"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules."
+    },
+    {
+      "book": "space-marines",
+      "sourceId": "space-marines-mfm-v1.3",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
-      "acceptedHash": "fbe45a9d08b1a99e8e1b2c8011bd510180d9bdff3657442902f88c519a3e54f7",
+      "acceptedHash": "7a46ec945b302bed4aa8cb5e8f2dbfc49ce1897bf35b0c89faa9efdff09bcc8d",
       "lastChecked": "2026-08-27",
       "upstreamUpdateKnown": false,
-      "status": "LEGACY_UNVERIFIABLE",
-      "rawOrigin": "UNAVAILABLE",
-      "reproducible": "normalized-artifacts-only",
-      "extractor": "books/chaos-space-marines/tools/extract-mfm.cjs",
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_CAPTURE",
+      "reproducible": "repository-artifact",
       "artifacts": [
         {
-          "path": "books/chaos-space-marines/sources/official-mfm-v1.3.json",
+          "path": "books/space-marines/sources/official-mfm-v1.3.json",
           "normalization": "lf",
-          "sha256": "fbe45a9d08b1a99e8e1b2c8011bd510180d9bdff3657442902f88c519a3e54f7"
-        }
-      ],
-      "notes": "The accepted v1.3 normalized MFM payload is hash verified; historical HTTP response bytes are unavailable."
-    },
-    {
-      "book": "tau-empire",
-      "sourceId": "tau-mfm-v1.3",
-      "authority": "official",
-      "sourceType": "warhammer-community-web-app",
-      "acceptedRevision": "v1.3",
-      "acceptedHash": "4530dbc81b604766c4182ea4aaf7bf01f5dce6cd37f208373e73f01724a05589",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": true,
-      "status": "LEGACY_UNVERIFIABLE",
-      "rawOrigin": "UNAVAILABLE",
-      "reproducible": "normalized-artifacts-only",
-      "extractor": "books/tau-empire/tools/extract-mfm.cjs",
-      "artifacts": [
+          "sha256": "d5e8765d56fce1445f7718ad7ca4d249d5ac3ffd6d68e8d8abea46e539d0546b"
+        },
         {
-          "path": "books/tau-empire/sources/official-mfm-v1.3.json",
+          "path": "books/space-marines/content/space-marines-points.en.json",
           "normalization": "lf",
-          "sha256": "4530dbc81b604766c4182ea4aaf7bf01f5dce6cd37f208373e73f01724a05589"
+          "sha256": "2d97d4bbab67320677b0eef7c148c2fa74f912d7732f3985144273e96abee88a"
         }
       ],
-      "notes": "The accepted v1.3 normalized snapshot is retained; its historical response bytes are unavailable. Observed v1.4 is not accepted automatically."
+      "notes": "Enrolled factual owner for points, costs."
     },
     {
-      "book": "tau-empire",
-      "sourceId": "tau-codex-wargear",
-      "authority": "secondary",
-      "sourceType": "wahapedia-html",
-      "acceptedRevision": "legacy-normalized-2026-07-30",
-      "acceptedHash": "f85515eeb6debb29176a273a781484e9e9741603c9d11375bf1a4bc4e7c1f63b",
-      "lastChecked": "2026-07-30",
+      "book": "space-marines",
+      "sourceId": "space-marines-related-rules-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "v1",
+      "acceptedHash": "eb4dfa4aab8a9aacaf73565d6fdd49d07e694a49bc37449dcdafab771ce37a56",
+      "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
-      "status": "LEGACY_UNVERIFIABLE",
-      "rawOrigin": "UNAVAILABLE",
-      "reproducible": "normalized-artifacts-only",
-      "extractor": "books/tau-empire/tools/extract-wargear.cjs",
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_AUTHENTICATED_INPUTS",
+      "reproducible": "repository-artifact",
       "artifacts": [
         {
-          "path": "books/tau-empire/content/tau-empire-codex-wargear.en.json",
+          "path": "books/space-marines/sources/space-marines-related-rules-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "f85515eeb6debb29176a273a781484e9e9741603c9d11375bf1a4bc4e7c1f63b"
+          "sha256": "eb4dfa4aab8a9aacaf73565d6fdd49d07e694a49bc37449dcdafab771ce37a56"
         }
       ],
-      "notes": "Historical raw Wahapedia pages are unavailable; accepted normalized output is frozen."
+      "notes": "Enrolled factual owner for enhancement-owner-contracts, upgrade-contracts."
+    },
+    {
+      "book": "space-marines",
+      "sourceId": "space-marines-runtime-related-rules",
+      "authority": "authoritative-runtime-source",
+      "sourceType": "authoritative-runtime-source",
+      "acceptedRevision": "accepted-runtime-2026-09-14",
+      "acceptedHash": "d66c612404bf53c00ef9ec2c757ee0d02eef55ea1e443615c481c0ac6286d336",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ACCEPTED_RUNTIME_SOURCE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/space-marines/mobile/related-rules.inc",
+          "normalization": "lf",
+          "sha256": "d66c612404bf53c00ef9ec2c757ee0d02eef55ea1e443615c481c0ac6286d336"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rules-runtime-markup."
     },
     {
       "book": "tau-empire",
       "sourceId": "tau-codex-parity",
-      "authority": "secondary",
-      "sourceType": "wahapedia-html",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
       "acceptedRevision": "legacy-normalized-2026-07-30",
       "acceptedHash": "83089a0e35cfb341e6748e0dd4ec34bc8dbb333057eb9ef218e557d945963571",
       "lastChecked": "2026-07-30",
       "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
       "status": "LEGACY_UNVERIFIABLE",
       "rawOrigin": "UNAVAILABLE",
       "reproducible": "normalized-artifacts-only",
-      "extractor": "books/tau-empire/tools/extract-codex-parity.cjs",
       "artifacts": [
         {
           "path": "books/tau-empire/content/tau-empire-codex-parity.en.json",
@@ -171,7 +1265,433 @@
           "sha256": "83089a0e35cfb341e6748e0dd4ec34bc8dbb333057eb9ef218e557d945963571"
         }
       ],
-      "notes": "Historical raw Wahapedia page bytes are unavailable; accepted normalized output is frozen."
+      "notes": "Enrolled factual owner for codex-rule-parity."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-codex-transcription",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "acceptedHash": "00640d2611ba0ce807010cd85462f484e1cc487ea0a057506d649a87b90d2e73",
+      "lastChecked": "2026-07-30",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/bsdata-tau-empire-11e.json",
+          "normalization": "lf",
+          "sha256": "a864213d5354661e5913bd31051e4094848b0359edba2fc200ed2cb2c2589a8f"
+        },
+        {
+          "path": "books/tau-empire/content/tau-empire-codex-datasheets.en.json",
+          "normalization": "lf",
+          "sha256": "3028ba89f10a1e5bb5515d44ac81971cbeffd6c85926838a48404d5fd70a463e"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-codex-wargear",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-07-30",
+      "acceptedHash": "f85515eeb6debb29176a273a781484e9e9741603c9d11375bf1a4bc4e7c1f63b",
+      "lastChecked": "2026-07-30",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/content/tau-empire-codex-wargear.en.json",
+          "normalization": "lf",
+          "sha256": "f85515eeb6debb29176a273a781484e9e9741603c9d11375bf1a4bc4e7c1f63b"
+        }
+      ],
+      "notes": "Enrolled factual owner for wargear, composition."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-compatible-rules-corrections",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "editorial-review-2026-08-02",
+      "acceptedHash": "68153d9cfb0b9d92faaaa68e4ad76cac80c726eca5225e3e955a4c78a5f96f96",
+      "lastChecked": "2026-08-02",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "USER_ACCEPTED_EDITORIAL_DECISION",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/compatible-rules-correction-ledger.json",
+          "normalization": "lf",
+          "sha256": "68153d9cfb0b9d92faaaa68e4ad76cac80c726eca5225e3e955a4c78a5f96f96"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-adjudication."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-compatible-rules-snapshot",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-08-02",
+      "acceptedHash": "066e5fae0701f5fdec9c34d56864d333f48113e66bcb295079dfa95ec50f24ee",
+      "lastChecked": "2026-08-02",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/wahapedia-compatible-rules.snapshot.json",
+          "normalization": "lf",
+          "sha256": "066e5fae0701f5fdec9c34d56864d333f48113e66bcb295079dfa95ec50f24ee"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-empire-faction-pack-v1.0",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.0-historical",
+      "acceptedHash": "da70143aea942aa016f760287bb389f66d10f9e3de3449a2263a0c04f009a6f0",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/tau-empire-faction-pack-v1.0.pdf",
+          "normalization": "bytes",
+          "sha256": "da70143aea942aa016f760287bb389f66d10f9e3de3449a2263a0c04f009a6f0"
+        }
+      ],
+      "notes": "Enrolled factual owner for historical-enhancement-evidence."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-empire-faction-pack-v1.1",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.1",
+      "acceptedHash": "c9bef0ed0b26293e2a7ad0aa416320de67478406a4f7287b54ecd9d22fe9d2bf",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/tau-empire-faction-pack-v1.1.pdf",
+          "normalization": "bytes",
+          "sha256": "32b985646baa02a3b505ff3404e91d374a5f53c1d3b8000d7166ca94d1b52675"
+        },
+        {
+          "path": "books/tau-empire/content/tau-empire-faction-pack.en.json",
+          "normalization": "lf",
+          "sha256": "e05b79562789e30da66bf1cd4751a98311edef9a2e14dca1af7cfe54f0aa5663"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-mfm-v1.3",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "4115272bdeda16c59680ccafafdca868f7bde38a248439324935d7474f9567e6",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "4530dbc81b604766c4182ea4aaf7bf01f5dce6cd37f208373e73f01724a05589"
+        },
+        {
+          "path": "books/tau-empire/content/tau-empire-points.en.json",
+          "normalization": "lf",
+          "sha256": "a7b009c51c571b48a37038817ce3f84643733741672b7cf8913e19cac3ab2f89"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-related-rules-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "v1",
+      "acceptedHash": "f69186c60fdb330da810eb48a2c01c7d006bdb097fdf62ae48a6dbdd40fcb6a0",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_AUTHENTICATED_INPUTS",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/tau-empire-related-rules-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "f69186c60fdb330da810eb48a2c01c7d006bdb097fdf62ae48a6dbdd40fcb6a0"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rule-contracts, enhancement-ownership."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-runtime-related-rules",
+      "authority": "authoritative-runtime-source",
+      "sourceType": "authoritative-runtime-source",
+      "acceptedRevision": "accepted-runtime-2026-08-09",
+      "acceptedHash": "26d9df5e0f18f5f64ce9dc19eac194aabee06da7d23ec57b0f381c026435c369",
+      "lastChecked": "2026-08-09",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ACCEPTED_RUNTIME_SOURCE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/mobile/related-rules.inc",
+          "normalization": "lf",
+          "sha256": "26d9df5e0f18f5f64ce9dc19eac194aabee06da7d23ec57b0f381c026435c369"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rules-runtime-markup."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-codex-parity",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-07-29",
+      "acceptedHash": "965516dedd45839a713f472dfe141290f54c380b6e71e9d6b3049c2f054ccd55",
+      "lastChecked": "2026-07-29",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/tyranids/content/tyranids-codex-parity.en.json",
+          "normalization": "lf",
+          "sha256": "965516dedd45839a713f472dfe141290f54c380b6e71e9d6b3049c2f054ccd55"
+        }
+      ],
+      "notes": "Enrolled factual owner for codex-rule-parity."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-codex-transcription",
+      "authority": "bsdata-snapshot",
+      "sourceType": "bsdata-snapshot",
+      "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+      "acceptedHash": "4de60d380702626e7acd96a69b55f6424d9ce849eb7bff4eae7b36ef55d565b9",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "RETAINED_PINNED_SNAPSHOT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tyranids/sources/bsdata-tyranids-11e.json",
+          "normalization": "lf",
+          "sha256": "1b3bd7f1f5df6c0e6a62d2937c16cf9281050a04216f29b354754334ec0e8907"
+        },
+        {
+          "path": "books/tyranids/content/tyranids-codex-datasheets.en.json",
+          "normalization": "lf",
+          "sha256": "b3c64fb1d625a663f3efc05aa0c2ea6e15b770838c1fa8449623cf23cf868ad7"
+        }
+      ],
+      "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-codex-wargear",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-08-13",
+      "acceptedHash": "43b315930c8c03dcd5ae4fa757c9d04a69f086a79996311337dedb3aaa925485",
+      "lastChecked": "2026-08-13",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/tyranids/content/tyranids-codex-wargear.en.json",
+          "normalization": "lf",
+          "sha256": "43b315930c8c03dcd5ae4fa757c9d04a69f086a79996311337dedb3aaa925485"
+        }
+      ],
+      "notes": "Enrolled factual owner for wargear, composition."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-compatible-rules-corrections",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-09-14",
+      "acceptedHash": "f1cde8e14c35c5cfa7f0f9e35cbff7cd665ec1fe13f91b2f7847f1db9f3e9cb0",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tyranids/sources/compatible-rules-correction-ledger.json",
+          "normalization": "lf",
+          "sha256": "f1cde8e14c35c5cfa7f0f9e35cbff7cd665ec1fe13f91b2f7847f1db9f3e9cb0"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-adjudication."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-compatible-rules-snapshot",
+      "authority": "legacy-normalized-secondary",
+      "sourceType": "legacy-normalized-secondary",
+      "acceptedRevision": "legacy-normalized-2026-08-13",
+      "acceptedHash": "49e8915077224c22713afac75a183bed316e4115c158068382a658bd9a4bee25",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "LEGACY_UNVERIFIABLE",
+      "rawOrigin": "UNAVAILABLE",
+      "reproducible": "normalized-artifacts-only",
+      "artifacts": [
+        {
+          "path": "books/tyranids/sources/wahapedia-compatible-rules.snapshot.json",
+          "normalization": "lf",
+          "sha256": "49e8915077224c22713afac75a183bed316e4115c158068382a658bd9a4bee25"
+        }
+      ],
+      "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-faction-pack-v1.2",
+      "authority": "official-pdf",
+      "sourceType": "official-pdf",
+      "acceptedRevision": "v1.2",
+      "acceptedHash": "7fb402e067c16cac4552655cce0e83be7ceb2e03ebdcc0faeedcf0d411a07115",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_OFFICIAL_PDF",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tyranids/sources/tyranids-faction-pack-v1.2.pdf",
+          "normalization": "bytes",
+          "sha256": "d7531867ba2c0939c098dbd247e459e611b206fe009c1ba031c896bcbc541663"
+        },
+        {
+          "path": "books/tyranids/content/tyranids-faction-pack.en.json",
+          "normalization": "lf",
+          "sha256": "cc02490d1a5245c220cf6d5f690a7ffebd874e83bb86cd3a53e92ccaf108e0e5"
+        }
+      ],
+      "notes": "Enrolled factual owner for faction-pack-rules."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-mfm-v1.3",
+      "authority": "official-json-capture",
+      "sourceType": "official-json-capture",
+      "acceptedRevision": "v1.3",
+      "acceptedHash": "439abb1259844c67692987a13b83ae29f3e8786d1165185a9168b1a03970adc6",
+      "lastChecked": "2026-08-27",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "UNKNOWN",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "RETAINED_CAPTURE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tyranids/sources/official-mfm-v1.3.json",
+          "normalization": "lf",
+          "sha256": "7bd69647103214e6e2f2fe9addc741701c0f62c0f2d2374e0d43719041cc99f4"
+        },
+        {
+          "path": "books/tyranids/content/tyranids-points.en.json",
+          "normalization": "lf",
+          "sha256": "34200f76d442d40d475e3986d9fb6596a67de887d5c3b3fdc543b2b918eff427"
+        }
+      ],
+      "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-related-rules-contract",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "accepted-2026-09-14",
+      "acceptedHash": "136bfed588f8da7dfef5986df3caa7cf137905943e713c9670109578a2f4c63a",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tyranids/content/tyranids-related-rules.en.json",
+          "normalization": "lf",
+          "sha256": "136bfed588f8da7dfef5986df3caa7cf137905943e713c9670109578a2f4c63a"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rule-selectors, enhancement-ownership."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-runtime-related-rules",
+      "authority": "authoritative-runtime-source",
+      "sourceType": "authoritative-runtime-source",
+      "acceptedRevision": "accepted-runtime-2026-09-14",
+      "acceptedHash": "e7cfe5a9a427d5e62f6760e7aa5b60fbf3ac944bb05857d1c2a45972ef2053c8",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "VERIFIED_FROZEN",
+      "rawOrigin": "REPOSITORY_ACCEPTED_RUNTIME_SOURCE",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tyranids/mobile/related-rules.inc",
+          "normalization": "lf",
+          "sha256": "e7cfe5a9a427d5e62f6760e7aa5b60fbf3ac944bb05857d1c2a45972ef2053c8"
+        }
+      ],
+      "notes": "Enrolled factual owner for related-rules-runtime-markup."
     }
   ],
   "dormantLiveTools": [

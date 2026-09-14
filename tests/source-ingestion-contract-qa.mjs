@@ -18,14 +18,17 @@ const packageJson=JSON.parse(read('package.json'));
 const registry=readSourceRegistry();
 const freshness=buildSourceStatus();
 assert.equal(freshness.summary.REGISTERED_SOURCE_COUNT,registry.sources.length);
-assert.equal(freshness.summary.DECLARED_SOURCE_COUNT,32);
-assert.equal(freshness.summary.CLASSIFIED_DECLARED_SOURCE_COUNT,4);
-assert.equal(freshness.summary.UNCLASSIFIED_SOURCE_COUNT,28);
+assert.equal(freshness.summary.DECLARED_SOURCE_COUNT,68);
+assert.equal(freshness.summary.CLASSIFIED_DECLARED_SOURCE_COUNT,68);
+assert.equal(freshness.summary.PUBLIC_ACTIVE_SOURCE_COUNT,65);
+assert.equal(freshness.summary.FRESHNESS_ONLY_ACTIVE_SOURCE_COUNT,3);
+assert.equal(freshness.summary.UNCLASSIFIED_SOURCE_COUNT,0);
 assert.equal(freshness.summary.REGISTERED_WITHOUT_MANIFEST_DECLARATION_COUNT,freshness.registeredWithoutManifest.length);
-assert.deepEqual(freshness.summary.BOOKS_WITH_COMPLETE_SOURCE_ENROLLMENT,[]);
-assert.deepEqual(freshness.summary.BOOKS_WITH_PARTIAL_SOURCE_ENROLLMENT,['tau-empire','chaos-space-marines','space-marines']);
-assert.deepEqual(freshness.summary.BOOKS_WITH_NO_SOURCE_ENROLLMENT,['death-guard','adeptus-mechanicus','tyranids','emperors-children','dark-angels','blood-angels','orks']);
-assert(freshness.sources.every(source=>source.UPSTREAM_OBSERVATION.status==='UNKNOWN'),'Missing retained upstream observations must remain UNKNOWN');
+assert.deepEqual(freshness.summary.BOOKS_WITH_COMPLETE_SOURCE_ENROLLMENT,['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','dark-angels','blood-angels','orks']);
+assert.deepEqual(freshness.summary.BOOKS_WITH_PARTIAL_SOURCE_ENROLLMENT,[]);
+assert.deepEqual(freshness.summary.BOOKS_WITH_NO_SOURCE_ENROLLMENT,[]);
+assert.equal(freshness.sources.find(source=>source.SOURCE_ID==='tau-mfm-v1.3').UPSTREAM_OBSERVATION.status,'UPDATE_AVAILABLE');
+assert(freshness.sources.filter(source=>source.BOOK!=='shared').every(source=>source.UPSTREAM_OBSERVATION.status!=='CURRENT'),'Unknown currentness must not be promoted to CURRENT');
 const active=[
   ['books/space-marines/tools/extract-codex-details.cjs','space-marines-codex-details'],
   ['books/chaos-space-marines/tools/extract-mfm.cjs','csm-mfm-v1.3'],

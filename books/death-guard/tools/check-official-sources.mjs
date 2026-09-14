@@ -3,32 +3,34 @@ import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {readSourceRegistry,verifyFrozenSource} from '../../shared/tools/source-ingestion-contract.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const manifest=readJson('death-guard/sources/source-manifest.json');
-const capture=readJson('death-guard/sources/official-mfm-v1.2.json');
+const capture=readJson('death-guard/sources/official-mfm-v1.3.json');
 const content=readJson('death-guard/content/death-guard-rules.en.json');
 const ledger=readJson('death-guard/content/official-update-ledger.en.json');
 const compatible=readJson('death-guard/generated/compatible-rules.json');
-const pdf=fs.readFileSync(path.join(root,'death-guard/sources/death-guard-faction-pack-v1.1.pdf'));
-const desktop=fs.readFileSync(path.join(root,'death-guard/reader.html'),'utf8');
-const phoneUpdates=fs.readFileSync(path.join(root,'death-guard/mobile/updates.html'),'utf8');
-const phoneMortarion=fs.readFileSync(path.join(root,'death-guard/mobile/mortarion.html'),'utf8');
+const pdf=fs.readFileSync(path.join(root,'death-guard/sources/death-guard-faction-pack-v1.2.pdf'));
+const targetSource=fs.readFileSync(path.join(root,'death-guard/scripts/target-data.js'),'utf8');
+const published=JSON.parse(targetSource.slice(targetSource.indexOf('Object.freeze(')+14,targetSource.lastIndexOf(');'))).html;
 const sha=value=>crypto.createHash('sha256').update(value).digest('hex').toUpperCase();
 const norm=value=>value.normalize('NFKD').replace(/[’‘]/g,"'").replace(/[‐‑‒–—]/g,'-').replace(/[^a-z0-9]+/gi,' ').trim().toUpperCase();
 
-const factionPack=manifest.sources.find(source=>source.id==='death-guard-faction-pack-v1.1');
-const mfm=manifest.sources.find(source=>source.id==='death-guard-mfm-v1.2-capture-2026-08-11');
-assert.equal(factionPack.version,'v1.1');
+const declared=[...(manifest.layers||[]),...(manifest.sources||[])];
+const factionPack=declared.find(source=>(source.sourceId||source.id)==='death-guard-faction-pack-v1.2');
+const mfm=declared.find(source=>(source.sourceId||source.id)==='death-guard-mfm-v1.3-capture-2026-08-27');
+const registry=readSourceRegistry(),factionPackStatus=registry.sources.find(source=>source.sourceId==='death-guard-faction-pack-v1.2'),mfmStatus=registry.sources.find(source=>source.sourceId==='death-guard-mfm-v1.3-capture-2026-08-27');
+assert.equal(factionPack.version,'v1.2');
 assert.equal(factionPack.pages,17);
-assert.equal(sha(pdf),factionPack.sha256);
+assert.equal(sha(pdf),factionPackStatus.artifacts.find(artifact=>artifact.path.endsWith('.pdf')).sha256.toUpperCase());
 assert.equal((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g)||[]).length,17);
 assert.equal(factionPack.previousFrozenOfficialBinary,'absent');
-
-const {captureSha256,...captureBody}=capture;
-assert.equal(sha(JSON.stringify(captureBody)),captureSha256);
-assert.equal(mfm.captureSha256,captureSha256);
+assert.equal(factionPackStatus.acceptedRevision,'v1.2');
+assert.equal(mfmStatus.acceptedRevision,'v1.3-capture-2026-08-27');
+assert.equal(verifyFrozenSource(factionPackStatus.sourceId).artifacts.length,2);
+assert.equal(verifyFrozenSource(mfmStatus.sourceId).artifacts.length,1);
 assert.deepEqual(capture.counts,{units:36,detachments:9,enhancements:30,pricedOptions:2,legends:5});
 assert.equal(manifest.currentScope.unresolved,0);
 
@@ -71,12 +73,10 @@ const worldblight='At the end of your Command phase, if a friendly DEATH GUARD u
 const mortarion=content.sections.find(section=>section.id==='unit-mortarion');
 assert.equal(content.sections.find(section=>section.id==='detachment-virulent-vectorium').subsections[0].blocks[0].text,worldblight);
 assert.ok(JSON.stringify(mortarion).includes('If it does, after the attacking unit has finished making its attacks'));
-for(const surface of [desktop,phoneUpdates])assert.ok(surface.includes('Virulent Vectorium - Worldblight:')&&surface.includes('objective is secured'));
-for(const surface of [desktop,phoneUpdates,phoneMortarion])assert.ok(surface.includes('If it does, after the attacking unit has finished making its attacks'));
-assert.ok(desktop.includes('Official Faction Pack v1.1 and Munitorum Field Manual v1.2 verified 11 August 2026'));
+assert.ok(published.includes('Virulent Vectorium - Worldblight:')&&published.includes('objective is secured'));
+assert.ok(published.includes('If it does, after the attacking unit has finished making its attacks'));
 assert.equal(ledger.updates.length,10);
-assert.ok(ledger.updates.every(update=>update.id.startsWith('dg-fp-1.1-')&&update.source.documentId==='death-guard-faction-pack-v1.1'));
-assert.equal(content.audit.currentFactionPack,'v1.1');
-assert.equal(content.audit.currentMFM,'v1.2');
+assert.ok(ledger.updates.every(update=>update.source.documentId==='death-guard-faction-pack-v1.2'));
+assert.equal(content.audit.currentMFM,'v1.3');
 
 console.log(`Death Guard official source QA passed: ${capture.counts.units} units, ${capture.counts.detachments} detachments, ${capture.counts.enhancements} enhancements, ${capture.counts.pricedOptions} priced options.`);

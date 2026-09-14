@@ -198,7 +198,8 @@
     "codexDatasheets": "content/dark-angels-codex-datasheets.en.json",
     "relatedRules": "content/dark-angels-related-rules.en.json",
     "manifest": "sources/source-manifest.json",
-    "codexParity": "content/dark-angels-codex-parity.en.json"
+    "codexParity": "content/dark-angels-codex-parity.en.json",
+    "effectContracts": "sources/dark-angels-effect-contracts.v1.json"
   },
   "generatedOutputs": [
     {

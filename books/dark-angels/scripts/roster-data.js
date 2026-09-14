@@ -34520,6 +34520,8500 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "space-marines",
       "legacyKey": "vanguard-spearhead-shadow-war-veteran"
     }
+  ],
+  "effectContracts": [
+    {
+      "canonicalRecordId": "dark-angels-ability-astartes-banner",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ravenwing-command-squad",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ravenwing-command-squad"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-astartes-banner"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-ravenwing-command-squad:dark-angels-ability-astartes-banner:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ravenwing-command-squad:dark-angels-ability-astartes-banner:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-astartes-banner"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ravenwing-command-squad/abilities/dark-angels-ability-astartes-banner"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-book-of-salvation",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ezekiel",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ezekiel"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-book-of-salvation"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "unit-ezekiel:dark-angels-ability-book-of-salvation:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "A",
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ezekiel:dark-angels-ability-book-of-salvation:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-book-of-salvation"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ezekiel/abilities/dark-angels-ability-book-of-salvation"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-cut-off-their-escape",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-sammael",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-sammael"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-cut-off-their-escape"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-sammael:dark-angels-ability-cut-off-their-escape:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-cut-off-their-escape"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-sammael/abilities/dark-angels-ability-cut-off-their-escape"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-exemplar-of-hate",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-asmodai",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-asmodai"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-exemplar-of-hate"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-asmodai:dark-angels-ability-exemplar-of-hate:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-exemplar-of-hate"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-asmodai/abilities/dark-angels-ability-exemplar-of-hate"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-grand-master-of-the-deathwing",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-belial",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-belial"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-grand-master-of-the-deathwing"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-belial:dark-angels-ability-grand-master-of-the-deathwing:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-grand-master-of-the-deathwing"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-belial/abilities/dark-angels-ability-grand-master-of-the-deathwing"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-grand-master-of-the-ravenwing",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-sammael",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-sammael"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-grand-master-of-the-ravenwing"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-sammael:dark-angels-ability-grand-master-of-the-ravenwing:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              }
+            },
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "unit-sammael:dark-angels-ability-grand-master-of-the-ravenwing:clause-1-operation-2",
+              "canonicalTarget": "MOBILE",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-sammael:dark-angels-ability-grand-master-of-the-ravenwing:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-grand-master-of-the-ravenwing"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-sammael/abilities/dark-angels-ability-grand-master-of-the-ravenwing"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-honour-or-death",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ravenwing-command-squad",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ravenwing-command-squad"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-honour-or-death"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ravenwing-command-squad:dark-angels-ability-honour-or-death:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-honour-or-death"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ravenwing-command-squad/abilities/dark-angels-ability-honour-or-death"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-intractable-will",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-lazarus",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lazarus"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-intractable-will"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lazarus:dark-angels-ability-intractable-will:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-intractable-will"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-lazarus/abilities/dark-angels-ability-intractable-will"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-narthecium",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ravenwing-command-squad",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ravenwing-command-squad"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-narthecium"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ravenwing-command-squad:dark-angels-ability-narthecium:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-narthecium"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ravenwing-command-squad/abilities/dark-angels-ability-narthecium"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-psychic-hood",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ezekiel",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ezekiel"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-psychic-hood"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ezekiel:dark-angels-ability-psychic-hood:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-psychic-hood"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ezekiel/abilities/dark-angels-ability-psychic-hood"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-supreme-grand-master",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-azrael",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-azrael"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-supreme-grand-master"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-azrael:dark-angels-ability-supreme-grand-master:clause-1-operation-1",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-azrael:dark-angels-ability-supreme-grand-master:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-supreme-grand-master"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-azrael/abilities/dark-angels-ability-supreme-grand-master"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-the-lion-helm",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-azrael",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-azrael"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-the-lion-helm"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-azrael:dark-angels-ability-the-lion-helm:clause-1-operation-1",
+              "canonicalTarget": "effective-invulnerable-save-4",
+              "parameters": {
+                "title": "Invulnerable Save 4+",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-azrael:dark-angels-ability-the-lion-helm:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-the-lion-helm"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-azrael/abilities/dark-angels-ability-the-lion-helm"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-ancient-banner",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-company-heroes",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-company-heroes"
+        ],
+        "abilityIds": [
+          "space-marines-ability-ancient-banner"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-company-heroes:space-marines-ability-ancient-banner:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "bodyguard-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-company-heroes:space-marines-ability-ancient-banner:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-ancient-banner"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-company-heroes/abilities/space-marines-ability-ancient-banner"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-angels-wrath",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-captain-with-jump-pack",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-captain-with-jump-pack"
+        ],
+        "abilityIds": [
+          "space-marines-ability-angels-wrath"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-captain-with-jump-pack:space-marines-ability-angels-wrath:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-angels-wrath"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-captain-with-jump-pack/abilities/space-marines-ability-angels-wrath"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-astartes-banner",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-ancient",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ancient"
+        ],
+        "abilityIds": [
+          "space-marines-ability-astartes-banner"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-ancient:space-marines-ability-astartes-banner:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ancient:space-marines-ability-astartes-banner:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-astartes-banner"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-ancient/abilities/space-marines-ability-astartes-banner"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-astartes-banner",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-ancient-in-terminator-armor",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ancient-in-terminator-armor"
+        ],
+        "abilityIds": [
+          "space-marines-ability-astartes-banner"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-ancient-in-terminator-armor:space-marines-ability-astartes-banner:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ancient-in-terminator-armor:space-marines-ability-astartes-banner:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-astartes-banner"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-ancient-in-terminator-armor/abilities/space-marines-ability-astartes-banner"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-astartes-banner",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-bladeguard-ancient",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-bladeguard-ancient"
+        ],
+        "abilityIds": [
+          "space-marines-ability-astartes-banner"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-bladeguard-ancient:space-marines-ability-astartes-banner:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-bladeguard-ancient:space-marines-ability-astartes-banner:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-astartes-banner"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-bladeguard-ancient/abilities/space-marines-ability-astartes-banner"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-catechism-of-fire",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chaplain-on-bike",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chaplain-on-bike"
+        ],
+        "abilityIds": [
+          "space-marines-ability-catechism-of-fire"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chaplain-on-bike:space-marines-ability-catechism-of-fire:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-catechism-of-fire"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chaplain-on-bike/abilities/space-marines-ability-catechism-of-fire"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-cold-and-calculating",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-caanok-var",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-caanok-var"
+        ],
+        "abilityIds": [
+          "space-marines-ability-cold-and-calculating"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-caanok-var:space-marines-ability-cold-and-calculating:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-cold-and-calculating"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-caanok-var/abilities/space-marines-ability-cold-and-calculating"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-command-squad",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-company-heroes",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-company-heroes"
+        ],
+        "abilityIds": [
+          "space-marines-ability-command-squad"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "bodyguard-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-company-heroes:space-marines-ability-command-squad:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-command-squad"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-company-heroes/abilities/space-marines-ability-command-squad"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-deadly-terror",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-lieutenant-in-reiver-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lieutenant-in-reiver-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-deadly-terror"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lieutenant-in-reiver-armour:space-marines-ability-deadly-terror:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-deadly-terror"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-lieutenant-in-reiver-armour/abilities/space-marines-ability-deadly-terror"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-echo-of-the-ravenspire",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-kayvaan-shrike",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-kayvaan-shrike"
+        ],
+        "abilityIds": [
+          "space-marines-ability-echo-of-the-ravenspire"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-kayvaan-shrike:space-marines-ability-echo-of-the-ravenspire:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-echo-of-the-ravenspire"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-kayvaan-shrike/abilities/space-marines-ability-echo-of-the-ravenspire"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-exhortation-of-rage",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chaplain-with-jump-pack",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chaplain-with-jump-pack"
+        ],
+        "abilityIds": [
+          "space-marines-ability-exhortation-of-rage"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chaplain-with-jump-pack:space-marines-ability-exhortation-of-rage:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-exhortation-of-rage"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chaplain-with-jump-pack/abilities/space-marines-ability-exhortation-of-rage"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-for-the-khan",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-korsarro-khan",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-korsarro-khan"
+        ],
+        "abilityIds": [
+          "space-marines-ability-for-the-khan"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-korsarro-khan:space-marines-ability-for-the-khan:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              }
+            },
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-korsarro-khan:space-marines-ability-for-the-khan:clause-1-operation-2",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "LANCE"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-korsarro-khan:space-marines-ability-for-the-khan:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-for-the-khan"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-korsarro-khan/abilities/space-marines-ability-for-the-khan"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-honour-or-death",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-cato-sicarius",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-cato-sicarius"
+        ],
+        "abilityIds": [
+          "space-marines-ability-honour-or-death"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-cato-sicarius:space-marines-ability-honour-or-death:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-honour-or-death"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-cato-sicarius/abilities/space-marines-ability-honour-or-death"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-hood-of-hellfire",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chief-librarian-tigurius",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chief-librarian-tigurius"
+        ],
+        "abilityIds": [
+          "space-marines-ability-hood-of-hellfire"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chief-librarian-tigurius:space-marines-ability-hood-of-hellfire:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-hood-of-hellfire"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chief-librarian-tigurius/abilities/space-marines-ability-hood-of-hellfire"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-icon-of-obstinacy",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-darnath-lysander",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-darnath-lysander"
+        ],
+        "abilityIds": [
+          "space-marines-ability-icon-of-obstinacy"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-darnath-lysander:space-marines-ability-icon-of-obstinacy:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-icon-of-obstinacy"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-darnath-lysander/abilities/space-marines-ability-icon-of-obstinacy"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-inspiring-commander-2",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-iron-father-feirros",
+      "scope": "roster-reference",
+      "selector": {
+        "unitIds": [
+          "unit-heavy-intercessor-squad"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-heavy-intercessor-squad"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "ROSTER_UNIT_PRESENT",
+              "unitIds": [
+                "unit-iron-father-feirros"
+              ]
+            }
+          ],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-iron-father-feirros:space-marines-ability-inspiring-commander-2:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-inspiring-commander-2"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-iron-father-feirros/abilities/space-marines-ability-inspiring-commander-2"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-inspiring-commander-3",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-kayvaan-shrike",
+      "scope": "roster-reference",
+      "selector": {
+        "unitIds": [
+          "unit-assault-intercessors-with-jump-packs"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-assault-intercessors-with-jump-packs"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "ROSTER_UNIT_PRESENT",
+              "unitIds": [
+                "unit-kayvaan-shrike"
+              ]
+            }
+          ],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-kayvaan-shrike:space-marines-ability-inspiring-commander-3:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-inspiring-commander-3"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-kayvaan-shrike/abilities/space-marines-ability-inspiring-commander-3"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-inspiring-commander-4",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-korsarro-khan",
+      "scope": "roster-reference",
+      "selector": {
+        "unitIds": [
+          "unit-outrider-squad"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-outrider-squad"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "ROSTER_UNIT_PRESENT",
+              "unitIds": [
+                "unit-korsarro-khan"
+              ]
+            }
+          ],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-korsarro-khan:space-marines-ability-inspiring-commander-4:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-inspiring-commander-4"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-korsarro-khan/abilities/space-marines-ability-inspiring-commander-4"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-inspiring-commander-5",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-pedro-kantor",
+      "scope": "roster-reference",
+      "selector": {
+        "unitIds": [
+          "unit-sternguard-veteran-squad"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-sternguard-veteran-squad"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "ROSTER_UNIT_PRESENT",
+              "unitIds": [
+                "unit-pedro-kantor"
+              ]
+            }
+          ],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-pedro-kantor:space-marines-ability-inspiring-commander-5:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-inspiring-commander-5"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-pedro-kantor/abilities/space-marines-ability-inspiring-commander-5"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-inspiring-commander-6",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-vulkan-hestan",
+      "scope": "roster-reference",
+      "selector": {
+        "unitIds": [
+          "unit-infernus-squad"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-infernus-squad"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "ROSTER_UNIT_PRESENT",
+              "unitIds": [
+                "unit-vulkan-hestan"
+              ]
+            }
+          ],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-vulkan-hestan:space-marines-ability-inspiring-commander-6:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-inspiring-commander-6"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-vulkan-hestan/abilities/space-marines-ability-inspiring-commander-6"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-inspiring-commander",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-darnath-lysander",
+      "scope": "roster-reference",
+      "selector": {
+        "unitIds": [
+          "unit-terminator-assault-squad",
+          "unit-terminator-squad"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-terminator-assault-squad",
+              "unit-terminator-squad"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "ROSTER_UNIT_PRESENT",
+              "unitIds": [
+                "unit-darnath-lysander"
+              ]
+            }
+          ],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-darnath-lysander:space-marines-ability-inspiring-commander:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-inspiring-commander"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-darnath-lysander/abilities/space-marines-ability-inspiring-commander"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-inspiring-leader",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-marneus-calgar-in-armour-of-antilochus",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-marneus-calgar-in-armour-of-antilochus"
+        ],
+        "abilityIds": [
+          "space-marines-ability-inspiring-leader"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-marneus-calgar-in-armour-of-antilochus:space-marines-ability-inspiring-leader:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-inspiring-leader"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-marneus-calgar-in-armour-of-antilochus/abilities/space-marines-ability-inspiring-leader"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-keep-the-banner-high",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-ancient-in-terminator-armor",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ancient-in-terminator-armor"
+        ],
+        "abilityIds": [
+          "space-marines-ability-keep-the-banner-high"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ancient-in-terminator-armor:space-marines-ability-keep-the-banner-high:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-keep-the-banner-high"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-ancient-in-terminator-armor/abilities/space-marines-ability-keep-the-banner-high"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-knight-champion-of-macragge",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-cato-sicarius",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-cato-sicarius"
+        ],
+        "abilityIds": [
+          "space-marines-ability-knight-champion-of-macragge"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-cato-sicarius:space-marines-ability-knight-champion-of-macragge:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-knight-champion-of-macragge"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-cato-sicarius/abilities/space-marines-ability-knight-champion-of-macragge"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-litany-of-hate",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chaplain",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chaplain"
+        ],
+        "abilityIds": [
+          "space-marines-ability-litany-of-hate"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chaplain:space-marines-ability-litany-of-hate:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-litany-of-hate"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chaplain/abilities/space-marines-ability-litany-of-hate"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-litany-of-hate",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chaplain-in-terminator-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chaplain-in-terminator-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-litany-of-hate"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chaplain-in-terminator-armour:space-marines-ability-litany-of-hate:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-litany-of-hate"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chaplain-in-terminator-armour/abilities/space-marines-ability-litany-of-hate"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-litany-of-hate",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chaplain-on-bike",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chaplain-on-bike"
+        ],
+        "abilityIds": [
+          "space-marines-ability-litany-of-hate"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chaplain-on-bike:space-marines-ability-litany-of-hate:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-litany-of-hate"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chaplain-on-bike/abilities/space-marines-ability-litany-of-hate"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-litany-of-hate",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chaplain-with-jump-pack",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chaplain-with-jump-pack"
+        ],
+        "abilityIds": [
+          "space-marines-ability-litany-of-hate"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chaplain-with-jump-pack:space-marines-ability-litany-of-hate:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-litany-of-hate"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chaplain-with-jump-pack/abilities/space-marines-ability-litany-of-hate"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-master-of-prescience-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chief-librarian-tigurius",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chief-librarian-tigurius"
+        ],
+        "abilityIds": [
+          "space-marines-ability-master-of-prescience-psychic"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-chief-librarian-tigurius:space-marines-ability-master-of-prescience-psychic:clause-1-operation-1",
+              "canonicalTarget": "core-stealth",
+              "parameters": {
+                "title": "Stealth",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chief-librarian-tigurius:space-marines-ability-master-of-prescience-psychic:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-master-of-prescience-psychic"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chief-librarian-tigurius/abilities/space-marines-ability-master-of-prescience-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-mental-fortress-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-librarian",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-librarian"
+        ],
+        "abilityIds": [
+          "space-marines-ability-mental-fortress-psychic"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-librarian:space-marines-ability-mental-fortress-psychic:clause-1-operation-1",
+              "canonicalTarget": "effective-invulnerable-save-4",
+              "parameters": {
+                "title": "Invulnerable Save 4+",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-librarian:space-marines-ability-mental-fortress-psychic:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-mental-fortress-psychic"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-librarian/abilities/space-marines-ability-mental-fortress-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-narthecium",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-apothecary",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-apothecary"
+        ],
+        "abilityIds": [
+          "space-marines-ability-narthecium"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-apothecary:space-marines-ability-narthecium:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-narthecium"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-apothecary/abilities/space-marines-ability-narthecium"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-oath-of-rynn",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-pedro-kantor",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-pedro-kantor"
+        ],
+        "abilityIds": [
+          "space-marines-ability-oath-of-rynn"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-pedro-kantor:space-marines-ability-oath-of-rynn:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-oath-of-rynn"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-pedro-kantor/abilities/space-marines-ability-oath-of-rynn"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-press-the-attack",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-captain-titus",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-captain-titus"
+        ],
+        "abilityIds": [
+          "space-marines-ability-press-the-attack"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-captain-titus:space-marines-ability-press-the-attack:clause-1-operation-1",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-captain-titus:space-marines-ability-press-the-attack:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-press-the-attack"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-captain-titus/abilities/space-marines-ability-press-the-attack"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-psychic-hood",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-librarian",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-librarian"
+        ],
+        "abilityIds": [
+          "space-marines-ability-psychic-hood"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-librarian:space-marines-ability-psychic-hood:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-psychic-hood"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-librarian/abilities/space-marines-ability-psychic-hood"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-psychic-hood",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-librarian-in-phobos-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-librarian-in-phobos-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-psychic-hood"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-librarian-in-phobos-armour:space-marines-ability-psychic-hood:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-psychic-hood"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-librarian-in-phobos-armour/abilities/space-marines-ability-psychic-hood"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-psychic-hood",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-librarian-in-terminator-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-librarian-in-terminator-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-psychic-hood"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-librarian-in-terminator-armour:space-marines-ability-psychic-hood:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-psychic-hood"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-librarian-in-terminator-armour/abilities/space-marines-ability-psychic-hood"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-recitation-of-faith",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chaplain-in-terminator-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chaplain-in-terminator-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-recitation-of-faith"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-chaplain-in-terminator-armour:space-marines-ability-recitation-of-faith:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-recitation-of-faith"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chaplain-in-terminator-armour/abilities/space-marines-ability-recitation-of-faith"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-rites-of-tempering",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-iron-father-feirros",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-iron-father-feirros"
+        ],
+        "abilityIds": [
+          "space-marines-ability-rites-of-tempering"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-iron-father-feirros:space-marines-ability-rites-of-tempering:clause-1-operation-1",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-iron-father-feirros:space-marines-ability-rites-of-tempering:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-rites-of-tempering"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-iron-father-feirros/abilities/space-marines-ability-rites-of-tempering"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-second-company-banner",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-wardens-of-ultramar",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-wardens-of-ultramar"
+        ],
+        "abilityIds": [
+          "space-marines-ability-second-company-banner"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-wardens-of-ultramar:space-marines-ability-second-company-banner:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [
+            {
+              "kind": "ATTACHMENT_MEMBER_PRESENT",
+              "unitIds": [
+                "unit-captain-titus"
+              ]
+            }
+          ],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-wardens-of-ultramar:space-marines-ability-second-company-banner:clause-2-operation-1",
+              "canonicalTarget": "Ld",
+              "parameters": {
+                "delta": -1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "bodyguard-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-wardens-of-ultramar:space-marines-ability-second-company-banner:clause-3-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-second-company-banner"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-wardens-of-ultramar/abilities/space-marines-ability-second-company-banner"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-shrouding-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-librarian-in-phobos-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-librarian-in-phobos-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-shrouding-psychic"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-librarian-in-phobos-armour:space-marines-ability-shrouding-psychic:clause-1-operation-1",
+              "canonicalTarget": "core-stealth",
+              "parameters": {
+                "title": "Stealth",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-librarian-in-phobos-armour:space-marines-ability-shrouding-psychic:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-shrouding-psychic"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-librarian-in-phobos-armour/abilities/space-marines-ability-shrouding-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-signum-array",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-tor-garadon",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-tor-garadon"
+        ],
+        "abilityIds": [
+          "space-marines-ability-signum-array"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-tor-garadon:space-marines-ability-signum-array:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-tor-garadon:space-marines-ability-signum-array:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-signum-array"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-tor-garadon/abilities/space-marines-ability-signum-array"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-skilled-riders",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-suboden-khan",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-suboden-khan"
+        ],
+        "abilityIds": [
+          "space-marines-ability-skilled-riders"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-suboden-khan:space-marines-ability-skilled-riders:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-skilled-riders"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-suboden-khan/abilities/space-marines-ability-skilled-riders"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-spear-of-chogoris",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-suboden-khan",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-suboden-khan"
+        ],
+        "abilityIds": [
+          "space-marines-ability-spear-of-chogoris"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-suboden-khan:space-marines-ability-spear-of-chogoris:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-spear-of-chogoris"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-suboden-khan/abilities/space-marines-ability-spear-of-chogoris"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-strategic-dispersal",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-lieutenant-in-phobos-armour",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lieutenant-in-phobos-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-strategic-dispersal"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lieutenant-in-phobos-armour:space-marines-ability-strategic-dispersal:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-strategic-dispersal"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-lieutenant-in-phobos-armour/abilities/space-marines-ability-strategic-dispersal"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-surgical-precision",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-apothecary-biologis",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-apothecary-biologis"
+        ],
+        "abilityIds": [
+          "space-marines-ability-surgical-precision"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-apothecary-biologis:space-marines-ability-surgical-precision:clause-1-operation-1",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "LETHAL HITS"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-apothecary-biologis:space-marines-ability-surgical-precision:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-surgical-precision"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-apothecary-biologis/abilities/space-marines-ability-surgical-precision"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-tactical-precision",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-lieutenant",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lieutenant"
+        ],
+        "abilityIds": [
+          "space-marines-ability-tactical-precision"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-lieutenant:space-marines-ability-tactical-precision:clause-1-operation-1",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "LETHAL HITS"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lieutenant:space-marines-ability-tactical-precision:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-tactical-precision"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-lieutenant/abilities/space-marines-ability-tactical-precision"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-tactical-precision",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-lieutenant-in-phobos-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lieutenant-in-phobos-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-tactical-precision"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-lieutenant-in-phobos-armour:space-marines-ability-tactical-precision:clause-1-operation-1",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "LETHAL HITS"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lieutenant-in-phobos-armour:space-marines-ability-tactical-precision:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-tactical-precision"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-lieutenant-in-phobos-armour/abilities/space-marines-ability-tactical-precision"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-tactical-precision",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-lieutenant-in-reiver-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lieutenant-in-reiver-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-tactical-precision"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-lieutenant-in-reiver-armour:space-marines-ability-tactical-precision:clause-1-operation-1",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "LETHAL HITS"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lieutenant-in-reiver-armour:space-marines-ability-tactical-precision:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-tactical-precision"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-lieutenant-in-reiver-armour/abilities/space-marines-ability-tactical-precision"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-target-priority",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-lieutenant",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lieutenant"
+        ],
+        "abilityIds": [
+          "space-marines-ability-target-priority"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lieutenant:space-marines-ability-target-priority:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-target-priority"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-lieutenant/abilities/space-marines-ability-target-priority"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-tempormortis",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-judiciar",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-judiciar"
+        ],
+        "abilityIds": [
+          "space-marines-ability-tempormortis"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-judiciar:space-marines-ability-tempormortis:clause-1-operation-1",
+              "canonicalTarget": "core-fights-first",
+              "parameters": {
+                "title": "Fights First",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-judiciar:space-marines-ability-tempormortis:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-tempormortis"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-judiciar/abilities/space-marines-ability-tempormortis"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-to-the-last",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-pedro-kantor",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-pedro-kantor"
+        ],
+        "abilityIds": [
+          "space-marines-ability-to-the-last"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-pedro-kantor:space-marines-ability-to-the-last:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-to-the-last"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-pedro-kantor/abilities/space-marines-ability-to-the-last"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-trifold-path-of-shadow",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-kayvaan-shrike",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-kayvaan-shrike"
+        ],
+        "abilityIds": [
+          "space-marines-ability-trifold-path-of-shadow"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-kayvaan-shrike:space-marines-ability-trifold-path-of-shadow:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-trifold-path-of-shadow"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-kayvaan-shrike/abilities/space-marines-ability-trifold-path-of-shadow"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-ultramarines-honour-guard",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-victrix-honour-guard",
+      "scope": "unit",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-victrix-honour-guard"
+        ],
+        "abilityIds": [
+          "space-marines-ability-ultramarines-honour-guard"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "bodyguard-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-victrix-honour-guard:space-marines-ability-ultramarines-honour-guard:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-ultramarines-honour-guard"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-victrix-honour-guard/abilities/space-marines-ability-ultramarines-honour-guard"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-unto-the-anvil",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-adrax-agatone",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-adrax-agatone"
+        ],
+        "abilityIds": [
+          "space-marines-ability-unto-the-anvil"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-adrax-agatone:space-marines-ability-unto-the-anvil:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-unto-the-anvil"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-adrax-agatone/abilities/space-marines-ability-unto-the-anvil"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "space-marines-ability-veil-of-time-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-librarian-in-terminator-armour",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-librarian-in-terminator-armour"
+        ],
+        "abilityIds": [
+          "space-marines-ability-veil-of-time-psychic"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-librarian-in-terminator-armour:space-marines-ability-veil-of-time-psychic:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-librarian-in-terminator-armour:space-marines-ability-veil-of-time-psychic:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "space-marines-ability-veil-of-time-psychic"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-librarian-in-terminator-armour/abilities/space-marines-ability-veil-of-time-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "anvil-siege-force-shield-of-the-imperium",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "anvil-siege-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "anvil-siege-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "anvil-siege-force-shield-of-the-imperium:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "HEAVY"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "anvil-siege-force-shield-of-the-imperium:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "anvil-siege-force-shield-of-the-imperium"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/anvil-siege-force/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "armoured-speartip-rapid-deployment",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "armoured-speartip",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "armoured-speartip"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "TRANSPORT"
+            ],
+            "noneKeywords": [
+              "FLY"
+            ],
+            "stat": {
+              "id": "W",
+              "operator": "gte",
+              "value": 14
+            }
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "armoured-speartip-rapid-deployment:clause-1-operation-1",
+              "canonicalTarget": "HEAVY TRANSPORT",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "selector": {
+            "allKeywords": [
+              "TRANSPORT"
+            ],
+            "noneKeywords": [
+              "FLY"
+            ],
+            "stat": {
+              "id": "W",
+              "operator": "gte",
+              "value": 14
+            }
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "armoured-speartip-rapid-deployment:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "armoured-speartip-rapid-deployment"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/armoured-speartip/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "bastion-task-force-interlocking-tactics",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "bastion-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "bastion-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "BATTLELINE"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "bastion-task-force-interlocking-tactics:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "bastion-task-force-interlocking-tactics"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/bastion-task-force/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-black-winged-vigilance",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "darkflight-pursuit",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "darkflight-pursuit"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "RAVENWING",
+              "FLY"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "dark-angels-detachment-rule-black-winged-vigilance:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "allKeywords": [
+              "RAVENWING",
+              "FLY"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-black-winged-vigilance:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-black-winged-vigilance"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/darkflight-pursuit/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-dread-catechism",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "interrogation-conclave",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "interrogation-conclave"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "CHAPLAIN"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-dread-catechism:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-dread-catechism"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/interrogation-conclave/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-dutiful-tenacity",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "wrath-of-the-rock"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "anyKeywords": [
+              "INFANTRY",
+              "MOUNTED"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-dutiful-tenacity:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-dutiful-tenacity"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-grim-resolve",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "unforgiven-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-grim-resolve:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-grim-resolve"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-in-the-lions-claws",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "lion-s-blade-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "anyKeywords": [
+              "RAVENWING",
+              "DEATHWING"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-in-the-lions-claws:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-in-the-lions-claws"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-invocations-of-ancient-fury",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "dark-age-arsenal",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "dark-age-arsenal"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "dark-angels-detachment-rule-invocations-of-ancient-fury:clause-1-operation-1",
+              "canonicalTarget": "plasma",
+              "parameters": {
+                "stat": "S",
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-invocations-of-ancient-fury:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-invocations-of-ancient-fury"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/dark-age-arsenal/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-masters-of-manoeuvre",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "company-of-hunters"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "dark-angels-detachment-rule-masters-of-manoeuvre:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "unitIds": [
+              "unit-outrider-squad"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "dark-angels-detachment-rule-masters-of-manoeuvre:clause-2-operation-1",
+              "canonicalTarget": "BATTLELINE",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-masters-of-manoeuvre:clause-3-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-masters-of-manoeuvre"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-vowed-target",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "inner-circle-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "DEATHWING",
+              "INFANTRY"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-vowed-target:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-vowed-target"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "firestorm-assault-force-close-range-eradication",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "firestorm-assault-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "firestorm-assault-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "firestorm-assault-force-close-range-eradication:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "firestorm-assault-force-close-range-eradication:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "firestorm-assault-force-close-range-eradication"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/firestorm-assault-force/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "forgefather-s-seekers-vulkan-s-quest",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "forgefather-s-seekers",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "forgefather-s-seekers"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "forgefather-s-seekers-vulkan-s-quest:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "forgefather-s-seekers-vulkan-s-quest:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "forgefather-s-seekers-vulkan-s-quest"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/forgefather-s-seekers/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "fulguris-task-force-skystrike",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "fulguris-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "fulguris-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-land-speeder",
+              "unit-storm-speeder-hailstrike",
+              "unit-storm-speeder-hammerstrike",
+              "unit-storm-speeder-thunderstrike"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "fulguris-task-force-skystrike:clause-1-operation-1",
+              "canonicalTarget": "SPEEDER",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "selector": {
+            "unitIds": [
+              "unit-land-speeder",
+              "unit-storm-speeder-hailstrike",
+              "unit-storm-speeder-hammerstrike",
+              "unit-storm-speeder-thunderstrike"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "fulguris-task-force-skystrike:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "fulguris-task-force-skystrike"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/fulguris-task-force/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "headhunter-task-force-target-sighted",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "headhunter-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "headhunter-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "VEHICLE"
+            ],
+            "noneKeywords": [
+              "FORTIFICATION",
+              "WALKER",
+              "FLY"
+            ],
+            "excludeUnitIds": [
+              "unit-drop-pod"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "headhunter-task-force-target-sighted:clause-1-operation-1",
+              "canonicalTarget": "TANK ACE",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "selector": {
+            "allKeywords": [
+              "VEHICLE"
+            ],
+            "noneKeywords": [
+              "FORTIFICATION",
+              "WALKER",
+              "FLY"
+            ],
+            "excludeUnitIds": [
+              "unit-drop-pod"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "headhunter-task-force-target-sighted:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "headhunter-task-force-target-sighted"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/headhunter-task-force/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "spearpoint-task-force-storm-swift-onslaught",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "spearpoint-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "spearpoint-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "spearpoint-task-force-storm-swift-onslaught:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "spearpoint-task-force-storm-swift-onslaught"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/spearpoint-task-force/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "stormlance-task-force-lightning-assault",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "stormlance-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "stormlance-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "stormlance-task-force-lightning-assault:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "stormlance-task-force-lightning-assault"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/stormlance-task-force/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "subversion-assets-nowhere-to-hide",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "subversion-assets",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "subversion-assets"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "any": [
+              {
+                "allKeywords": [
+                  "PHOBOS"
+                ]
+              },
+              {
+                "unitIds": [
+                  "unit-scout-squad"
+                ]
+              }
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "subversion-assets-nowhere-to-hide:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "subversion-assets-nowhere-to-hide"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/subversion-assets/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "1st-company-task-force-iron-resolve",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "1st-company-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "1st-company-task-force-iron-resolve:clause-1-operation-1",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "1st-company-task-force-iron-resolve:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "1st-company-task-force-iron-resolve"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/1st-company-task-force/enhancements/1st-company-task-force-iron-resolve"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "1st-company-task-force-rites-of-war",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "1st-company-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "1st-company-task-force-rites-of-war:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "1st-company-task-force-rites-of-war:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "1st-company-task-force-rites-of-war"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/1st-company-task-force/enhancements/1st-company-task-force-rites-of-war"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "1st-company-task-force-the-imperiums-sword",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "1st-company-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "1st-company-task-force-the-imperiums-sword:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "A",
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "1st-company-task-force-the-imperiums-sword:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "1st-company-task-force-the-imperiums-sword"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/1st-company-task-force/enhancements/1st-company-task-force-the-imperiums-sword"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "ancient-weapons",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "ancient-weapons:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "S",
+                "delta": 2
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "ancient-weapons:clause-1-operation-2",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "AP",
+                "delta": -1
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "ancient-weapons:clause-1-operation-3",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "D",
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/enhancements/ancient-weapons"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "anvil-siege-force-architect-of-war",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "anvil-siege-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "anvil-siege-force-architect-of-war:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "anvil-siege-force-architect-of-war:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "anvil-siege-force-architect-of-war"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/anvil-siege-force/enhancements/anvil-siege-force-architect-of-war"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "anvil-siege-force-stoic-defender",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "anvil-siege-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "anvil-siege-force-stoic-defender:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "anvil-siege-force-stoic-defender"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/anvil-siege-force/enhancements/anvil-siege-force-stoic-defender"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "bellicose-weapon-spirits",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "fulguris-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-land-speeder",
+          "unit-storm-speeder-hailstrike",
+          "unit-storm-speeder-hammerstrike",
+          "unit-storm-speeder-thunderstrike"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/fulguris-task-force/enhancements/bellicose-weapon-spirits"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "blades-of-valour",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "bastion-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner-or-battleline"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "blades-of-valour:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "AP",
+                "delta": -1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "owner-or-battleline",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blades-of-valour:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "blades-of-valour"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/bastion-task-force/enhancements/blades-of-valour"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "bombast-omnivox",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "bastion-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "bombast-omnivox:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "bombast-omnivox"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/bastion-task-force/enhancements/bombast-omnivox"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "calibanite-armaments",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "calibanite-armaments:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "D",
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/enhancements/calibanite-armaments"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "castellum-omnivox",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "ceramite-sentinels",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "castellum-omnivox:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "castellum-omnivox"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/ceramite-sentinels/enhancements/castellum-omnivox"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "celerity",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "librarius-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "celerity:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "celerity"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/librarius-conclave/enhancements/celerity"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "deathwing-assault",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ],
+        "allAbilities": [
+          "core-deep-strike"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "deathwing-assault:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "deathwing-assault"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/enhancements/deathwing-assault"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dedicated-gunship",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "orbital-assault-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dedicated-gunship:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "dedicated-gunship"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/orbital-assault-force/enhancements/dedicated-gunship"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-avenging-angel",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "vengeful-hosts",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-captain-with-jump-pack",
+          "unit-chaplain-with-jump-pack"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-avenging-angel:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-avenging-angel"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/vengeful-hosts/enhancements/enhancement-avenging-angel"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-champion-of-the-deathwing",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "enhancement-champion-of-the-deathwing:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "LETHAL HITS"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/enhancements/enhancement-champion-of-the-deathwing"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-eye-of-the-unseen",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/enhancements/enhancement-eye-of-the-unseen"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-inner-circle-task-force-deathwing-assault",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ],
+        "allAbilities": [
+          "core-deep-strike"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-inner-circle-task-force-deathwing-assault:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-inner-circle-task-force-deathwing-assault"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/enhancements/enhancement-inner-circle-task-force-deathwing-assault"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-master-crafted-weapon",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "enhancement-master-crafted-weapon:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "PRECISION"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/enhancements/enhancement-master-crafted-weapon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-master-of-manoeuvre",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/enhancements/enhancement-master-of-manoeuvre"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-mounted-strategist",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-mounted-strategist:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-mounted-strategist"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/enhancements/enhancement-mounted-strategist"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-orksbane",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "vengeful-hosts",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-captain-with-jump-pack",
+          "unit-chaplain-with-jump-pack"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_PROFILE_GRANT",
+              "id": "enhancement-orksbane:clause-1-operation-1",
+              "canonicalTarget": "added-profile",
+              "parameters": {
+                "profile": {
+                  "name": "Orksbane",
+                  "type": "Melee Weapons",
+                  "characteristics": {
+                    "Range": "Melee",
+                    "A": "4",
+                    "WS": "2+",
+                    "S": "8",
+                    "AP": "-2",
+                    "D": "3",
+                    "Keywords": "Cleave 2"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/vengeful-hosts/enhancements/enhancement-orksbane"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-pennant-of-remembrance",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ANCIENT"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "enhancement-pennant-of-remembrance:clause-1-operation-1",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 6+",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-pennant-of-remembrance:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-pennant-of-remembrance"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/enhancements/enhancement-pennant-of-remembrance"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-recon-hunter",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "enhancement-recon-hunter:clause-1-operation-1",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 9\"",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-recon-hunter:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-recon-hunter"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/enhancements/enhancement-recon-hunter"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-shroud-of-heroes",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/enhancements/enhancement-shroud-of-heroes"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-singular-will",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-singular-will:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-singular-will"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/enhancements/enhancement-singular-will"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-stubborn-tenacity",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-stubborn-tenacity:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-stubborn-tenacity"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/enhancements/enhancement-stubborn-tenacity"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-weapons-of-the-first-legion",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "enhancement-weapons-of-the-first-legion:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "A",
+                "delta": 1
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "enhancement-weapons-of-the-first-legion:clause-1-operation-2",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "S",
+                "delta": 1
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "enhancement-weapons-of-the-first-legion:clause-1-operation-3",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "D",
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/enhancements/enhancement-weapons-of-the-first-legion"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "entreaty-of-perpetual-ardour",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "dark-age-arsenal",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-hellblaster-squad"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/dark-age-arsenal/enhancements/entreaty-of-perpetual-ardour"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "eye-of-the-primarch",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "bastion-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner-or-battleline"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "eye-of-the-primarch:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "PRECISION"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "owner-or-battleline",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "eye-of-the-primarch:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "eye-of-the-primarch"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/bastion-task-force/enhancements/eye-of-the-primarch"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "firestorm-assault-force-champion-of-humanity",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "firestorm-assault-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-apothecary",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-lieutenant",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "firestorm-assault-force-champion-of-humanity:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "firestorm-assault-force-champion-of-humanity"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/firestorm-assault-force/enhancements/firestorm-assault-force-champion-of-humanity"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "firestorm-assault-force-forged-in-battle",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "firestorm-assault-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "firestorm-assault-force-forged-in-battle:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "firestorm-assault-force-forged-in-battle"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/firestorm-assault-force/enhancements/firestorm-assault-force-forged-in-battle"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "firestorm-assault-force-war-tempered-artifice",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "firestorm-assault-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "firestorm-assault-force-war-tempered-artifice:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "S",
+                "delta": 3
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/firestorm-assault-force/enhancements/firestorm-assault-force-war-tempered-artifice"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "firestorm-coordinators",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "headhunter-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-firestrike-servo-turrets",
+          "unit-gladiator-lancer",
+          "unit-gladiator-reaper",
+          "unit-gladiator-valiant",
+          "unit-impulsor",
+          "unit-land-raider",
+          "unit-land-raider-crusader",
+          "unit-land-raider-redeemer",
+          "unit-predator-annihilator",
+          "unit-predator-destructor",
+          "unit-razorback",
+          "unit-repulsor",
+          "unit-repulsor-executioner",
+          "unit-rhino",
+          "unit-vindicator",
+          "unit-whirlwind"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "firestorm-coordinators:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/headhunter-task-force/enhancements/firestorm-coordinators"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "fulgus-magna",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "fulgus-magna:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "fulgus-magna"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/enhancements/fulgus-magna"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "fusillade",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "librarius-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "fusillade:clause-1-operation-1",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "LETHAL HITS"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "fusillade:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "fusillade"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/librarius-conclave/enhancements/fusillade"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "gladius-task-force-artificer-armour",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "gladius-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_SET",
+              "id": "gladius-task-force-artificer-armour:clause-1-operation-1",
+              "canonicalTarget": "Sv",
+              "parameters": {
+                "to": "2+"
+              }
+            },
+            {
+              "type": "ABILITY_GRANT",
+              "id": "gladius-task-force-artificer-armour:clause-1-operation-2",
+              "canonicalTarget": "feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+",
+                "summary": ""
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/gladius-task-force/enhancements/gladius-task-force-artificer-armour"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "gladius-task-force-fire-discipline",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "gladius-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "gladius-task-force-fire-discipline:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "gladius-task-force-fire-discipline:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "gladius-task-force-fire-discipline"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/gladius-task-force/enhancements/gladius-task-force-fire-discipline"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "gladius-task-force-the-honour-vehement",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "gladius-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "gladius-task-force-the-honour-vehement:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "A",
+                "delta": 1
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "gladius-task-force-the-honour-vehement:clause-1-operation-2",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "S",
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/gladius-task-force/enhancements/gladius-task-force-the-honour-vehement"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "hero-of-the-chapter",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "bastion-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner-if-leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "hero-of-the-chapter:clause-1-operation-1",
+              "canonicalTarget": "BATTLELINE",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/bastion-task-force/enhancements/hero-of-the-chapter"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "inescapable-interrogation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "interrogation-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "CHAPLAIN"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "inescapable-interrogation:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "inescapable-interrogation:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "inescapable-interrogation"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/interrogation-conclave/enhancements/inescapable-interrogation"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "ironstorm-spearhead-the-flesh-is-weak",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "ironstorm-spearhead",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "ironstorm-spearhead-the-flesh-is-weak:clause-1-operation-1",
+              "canonicalTarget": "feel-no-pain-4",
+              "parameters": {
+                "title": "Feel No Pain 4+",
+                "summary": ""
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/ironstorm-spearhead/enhancements/ironstorm-spearhead-the-flesh-is-weak"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "laurels-of-thunder",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "orbital-assault-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "laurels-of-thunder:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "laurels-of-thunder"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/orbital-assault-force/enhancements/laurels-of-thunder"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "limitless-zeal",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "interrogation-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "CHAPLAIN"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "limitless-zeal:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "limitless-zeal"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/interrogation-conclave/enhancements/limitless-zeal"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "lord-of-the-hunt",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "lord-of-the-hunt:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "lord-of-the-hunt"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/enhancements/lord-of-the-hunt"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "lord-of-the-ravenwing",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "lord-of-the-ravenwing:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "lord-of-the-ravenwing"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/enhancements/lord-of-the-ravenwing"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "nightforged-battery",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "darkflight-pursuit",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-land-speeder-vengeance"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/darkflight-pursuit/enhancements/nightforged-battery"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "obfuscation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "librarius-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "obfuscation:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "obfuscation"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/librarius-conclave/enhancements/obfuscation"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "petition-of-stability",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "dark-age-arsenal",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "petition-of-stability:clause-1-operation-1",
+              "canonicalTarget": "plasma",
+              "parameters": {
+                "stat": "Range",
+                "delta": 6
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "petition-of-stability:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "petition-of-stability"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/dark-age-arsenal/enhancements/petition-of-stability"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "prescience",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "librarius-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "prescience:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "prescience"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/librarius-conclave/enhancements/prescience"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "raptorial-cogitator-core",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "fulguris-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-land-speeder",
+          "unit-storm-speeder-hailstrike",
+          "unit-storm-speeder-hammerstrike",
+          "unit-storm-speeder-thunderstrike"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "raptorial-cogitator-core:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/fulguris-task-force/enhancements/raptorial-cogitator-core"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "shock-deployment",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "armoured-speartip",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary-biologis",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "shock-deployment:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "shock-deployment"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/armoured-speartip/enhancements/shock-deployment"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "shroud-field",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "subversion-assets",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-captain-in-phobos-armour",
+          "unit-librarian-in-phobos-armour",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "shroud-field:clause-1-operation-1",
+              "canonicalTarget": "stealth",
+              "parameters": {
+                "title": "Stealth",
+                "summary": ""
+              }
+            },
+            {
+              "type": "ABILITY_GRANT",
+              "id": "shroud-field:clause-1-operation-2",
+              "canonicalTarget": "lone-operative",
+              "parameters": {
+                "title": "Lone Operative",
+                "summary": ""
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/subversion-assets/enhancements/shroud-field"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "spy-skull-data-link",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "ceramite-sentinels",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "spy-skull-data-link:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "spy-skull-data-link:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "spy-skull-data-link"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/ceramite-sentinels/enhancements/spy-skull-data-link"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "stalwart-champion",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "anyKeywords": [
+          "CAPTAIN",
+          "CHAPLAIN",
+          "LIEUTENANT"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "stalwart-champion:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "stalwart-champion"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/enhancements/stalwart-champion"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "stormlance-task-force-feinting-withdrawal",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "stormlance-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "stormlance-task-force-feinting-withdrawal:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "stormlance-task-force-feinting-withdrawal"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/stormlance-task-force/enhancements/stormlance-task-force-feinting-withdrawal"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "stormlance-task-force-fury-of-the-storm",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "stormlance-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-chaplain-on-bike"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "stormlance-task-force-fury-of-the-storm:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "S",
+                "delta": 1
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "stormlance-task-force-fury-of-the-storm:clause-1-operation-2",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "AP",
+                "delta": -1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/stormlance-task-force/enhancements/stormlance-task-force-fury-of-the-storm"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "stormlance-task-force-hunters-instincts",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "stormlance-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-chaplain-on-bike"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "stormlance-task-force-hunters-instincts:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "stormlance-task-force-hunters-instincts"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/stormlance-task-force/enhancements/stormlance-task-force-hunters-instincts"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "stormlance-task-force-portents-of-wisdom",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "stormlance-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "stormlance-task-force-portents-of-wisdom:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "stormlance-task-force-portents-of-wisdom"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/stormlance-task-force/enhancements/stormlance-task-force-portents-of-wisdom"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tempered-in-battle-aura",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/enhancements/tempered-in-battle-aura"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "temporal-corridor",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "librarius-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "temporal-corridor:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "temporal-corridor"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/librarius-conclave/enhancements/temporal-corridor"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "thundercowl-turbines",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "darkflight-pursuit",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING",
+          "FLY"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/darkflight-pursuit/enhancements/thundercowl-turbines"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "vanguard-spearhead-execute-and-redeploy",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "vanguard-spearhead",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-captain-in-phobos-armour",
+          "unit-librarian-in-phobos-armour",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "vanguard-spearhead-execute-and-redeploy:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "vanguard-spearhead-execute-and-redeploy"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/vanguard-spearhead/enhancements/vanguard-spearhead-execute-and-redeploy"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "vanguard-spearhead-ghostweave-cloak",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "vanguard-spearhead",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "vanguard-spearhead-ghostweave-cloak:clause-1-operation-1",
+              "canonicalTarget": "stealth",
+              "parameters": {
+                "title": "Stealth",
+                "summary": ""
+              }
+            },
+            {
+              "type": "ABILITY_GRANT",
+              "id": "vanguard-spearhead-ghostweave-cloak:clause-1-operation-2",
+              "canonicalTarget": "lone-operative",
+              "parameters": {
+                "title": "Lone Operative",
+                "summary": ""
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/vanguard-spearhead/enhancements/vanguard-spearhead-ghostweave-cloak"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "vanguard-spearhead-the-blade-driven-deep",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "vanguard-spearhead",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "vanguard-spearhead-the-blade-driven-deep:clause-1-operation-1",
+              "canonicalTarget": "core-infiltrators",
+              "parameters": {
+                "title": "Infiltrators",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "vanguard-spearhead-the-blade-driven-deep:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "vanguard-spearhead-the-blade-driven-deep"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-current-overlay.en.json#/detachments/vanguard-spearhead/enhancements/vanguard-spearhead-the-blade-driven-deep"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "veteran-of-the-vanguard",
+      "sourceKind": "enhancement",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "detachmentId": "orbital-assault-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "veteran-of-the-vanguard:clause-1-operation-1",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 6\"",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "veteran-of-the-vanguard:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "veteran-of-the-vanguard"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "locator": "books/space-marines/content/space-marines-faction-pack.en.json#/detachments/orbital-assault-force/enhancements/veteran-of-the-vanguard"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-ancient-in-terminator-armor",
+      "scope": "selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ancient-in-terminator-armor"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_SET",
+              "id": "unit-ancient-in-terminator-armor:unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield:clause-1-operation-1",
+              "canonicalTarget": "W",
+              "parameters": {
+                "to": "6"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-ancient-in-terminator-armor/wargearAbilities/unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "unit-captain-wargear-ability-relic-shield",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-captain",
+      "scope": "selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-captain"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-captain-wargear-ability-relic-shield"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-captain:unit-captain-wargear-ability-relic-shield:clause-1-operation-1",
+              "canonicalTarget": "W",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-captain/wargearAbilities/unit-captain-wargear-ability-relic-shield"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "unit-captain-with-jump-pack-wargear-ability-relic-shield",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-captain-with-jump-pack",
+      "scope": "selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-captain-with-jump-pack"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-captain-with-jump-pack-wargear-ability-relic-shield"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-captain-with-jump-pack:unit-captain-with-jump-pack-wargear-ability-relic-shield:clause-1-operation-1",
+              "canonicalTarget": "W",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-captain-with-jump-pack/wargearAbilities/unit-captain-with-jump-pack-wargear-ability-relic-shield"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-centurion-assault-squad",
+      "scope": "selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-centurion-assault-squad"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "unit-centurion-assault-squad:unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers:clause-1-operation-1",
+              "canonicalTarget": "GRENADES",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-centurion-assault-squad/wargearAbilities/unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-chaplain-in-terminator-armour",
+      "scope": "selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-chaplain-in-terminator-armour"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-chaplain-in-terminator-armour:unit-chaplain-in-terminator-armour-wargear-ability-relic-shield:clause-1-operation-1",
+              "canonicalTarget": "W",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-chaplain-in-terminator-armour/wargearAbilities/unit-chaplain-in-terminator-armour-wargear-ability-relic-shield"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "unit-infiltrator-squad-wargear-ability-helix-gauntlet",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-infiltrator-squad",
+      "scope": "selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-infiltrator-squad"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-infiltrator-squad-wargear-ability-helix-gauntlet"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-infiltrator-squad:unit-infiltrator-squad-wargear-ability-helix-gauntlet:clause-1-operation-1",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 6+",
+                "summary": ""
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-infiltrator-squad/wargearAbilities/unit-infiltrator-squad-wargear-ability-helix-gauntlet"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "unit-reiver-squad-wargear-ability-reiver-grav-chute",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-reiver-squad",
+      "scope": "selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-reiver-squad"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-reiver-squad-wargear-ability-reiver-grav-chute"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-reiver-squad:unit-reiver-squad-wargear-ability-reiver-grav-chute:clause-1-operation-1",
+              "canonicalTarget": "core-deep-strike",
+              "parameters": {
+                "title": "Deep Strike",
+                "summary": ""
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-reiver-squad/wargearAbilities/unit-reiver-squad-wargear-ability-reiver-grav-chute"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "unit-terminator-assault-squad-wargear-ability-storm-shield",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "space-marines",
+      "effectiveBookIds": [
+        "space-marines",
+        "dark-angels",
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-terminator-assault-squad",
+      "scope": "selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-terminator-assault-squad"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-terminator-assault-squad-wargear-ability-storm-shield"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_SET",
+              "id": "unit-terminator-assault-squad:unit-terminator-assault-squad-wargear-ability-storm-shield:clause-1-operation-1",
+              "canonicalTarget": "W",
+              "parameters": {
+                "to": "4"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "space-marines-codex-details",
+        "locator": "books/space-marines/content/space-marines-codex-datasheets.en.json#/datasheets/unit-terminator-assault-squad/wargearAbilities/unit-terminator-assault-squad-wargear-ability-storm-shield"
+      },
+      "confidence": "SOURCE_LIMITED"
+    }
   ]
 });
 window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({

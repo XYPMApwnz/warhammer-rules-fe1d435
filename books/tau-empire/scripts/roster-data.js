@@ -12371,6 +12371,1689 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tau-empire",
       "legacyKey": "enhancement-starflare-ignition-system"
     }
+  ],
+  "effectContracts": [
+    {
+      "canonicalRecordId": "tau-empire-ability-coldstar-commander",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-commander-in-coldstar-battlesuit",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-commander-in-coldstar-battlesuit"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-commander-in-coldstar-battlesuit"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "coldstar-move",
+              "canonicalTarget": "M",
+              "parameters": {
+                "to": "12\""
+              },
+              "type": "CHARACTERISTIC_SET"
+            },
+            {
+              "id": "coldstar-assault",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT",
+                "termId": "core-assault"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-coldstar-commander"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-enforcer-commander",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-commander-in-enforcer-battlesuit",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-commander-in-enforcer-battlesuit"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-commander-in-enforcer-battlesuit"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-ability-enforcer-commander",
+              "canonicalTarget": "tau-empire-ability-enforcer-commander",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-enforcer-commander"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-failure-is-not-an-option",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-ethereal",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-ethereal"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-ethereal"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "ethereal-fnp",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-failure-is-not-an-option"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-kroot-ambush",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-kroot-trail-shaper",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-kroot-trail-shaper"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-kroot-trail-shaper"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-ability-kroot-ambush",
+              "canonicalTarget": "tau-empire-ability-kroot-ambush",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-kroot-ambush"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-puretides-teachings",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-commander-farsight",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-commander-farsight"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-commander-farsight"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-ability-puretides-teachings",
+              "canonicalTarget": "tau-empire-ability-puretides-teachings",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-puretides-teachings"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-rites-of-feasting",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-kroot-flesh-shaper",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-kroot-flesh-shaper"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-kroot-flesh-shaper"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "rites-fnp",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 6+"
+              },
+              "type": "ABILITY_GRANT"
+            },
+            {
+              "id": "canonical-tau-empire-ability-rites-of-feasting",
+              "canonicalTarget": "tau-empire-ability-rites-of-feasting",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-rites-of-feasting"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-ritual-butchery",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-kroot-flesh-shaper",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-kroot-flesh-shaper"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-kroot-flesh-shaper"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "ritual-butchery",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1",
+                "termId": "core-sustained-hits"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-ritual-butchery"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-structural-analyser",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-darkstrider",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-darkstrider"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-darkstrider"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-ability-structural-analyser",
+              "canonicalTarget": "tau-empire-ability-structural-analyser",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-structural-analyser"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-trail-finding",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-kroot-trail-shaper",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-kroot-trail-shaper"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-kroot-trail-shaper"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-ability-trail-finding",
+              "canonicalTarget": "tau-empire-ability-trail-finding",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-trail-finding"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-volley-fire",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-cadre-fireblade",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-cadre-fireblade"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-cadre-fireblade"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "volley-fire",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "delta": 1,
+                "stat": "A"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-volley-fire"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-war-leader",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-kroot-war-shaper",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-kroot-war-shaper"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-kroot-war-shaper"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-ability-war-leader",
+              "canonicalTarget": "tau-empire-ability-war-leader",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-war-leader"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-ability-way-of-the-short-blade",
+      "sourceKind": "ability",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "sourceUnitId": "unit-commander-farsight",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-commander-farsight"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-commander-farsight"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-ability-way-of-the-short-blade",
+              "canonicalTarget": "tau-empire-ability-way-of-the-short-blade",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-ability-way-of-the-short-blade"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-detachment-rule-bonded-heroes",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "retaliation-cadre",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "BATTLESUIT"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-detachment-rule-bonded-heroes",
+              "canonicalTarget": "tau-empire-detachment-rule-bonded-heroes",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-detachment-rule-bonded-heroes"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-detachment-rule-expert-fieldcraft",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "advanced-acquisition-cadre",
+      "scope": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-pathfinder-team",
+          "unit-stealth-battlesuits"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-detachment-rule-expert-fieldcraft",
+              "canonicalTarget": "tau-empire-detachment-rule-expert-fieldcraft",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-detachment-rule-expert-fieldcraft"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kroot-hunting-pack",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "KROOT"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+              "canonicalTarget": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-detachment-rule-hunters-instincts-skirmish-fighters"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-detachment-rule-integrated-command-structure",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "auxiliary-cadre",
+      "scope": "unit",
+      "selector": {
+        "any": [
+          {
+            "allKeywords": [
+              "KROOT"
+            ]
+          },
+          {
+            "unitIds": [
+              "unit-vespid-stingwings",
+              "unit-ghostkeel-battlesuit",
+              "unit-stealth-battlesuits"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-detachment-rule-integrated-command-structure",
+              "canonicalTarget": "tau-empire-detachment-rule-integrated-command-structure",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-detachment-rule-integrated-command-structure"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-detachment-rule-killing-blow",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "montka",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "T'AU EMPIRE"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-detachment-rule-killing-blow",
+              "canonicalTarget": "tau-empire-detachment-rule-killing-blow",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-detachment-rule-killing-blow"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-detachment-rule-patient-hunter",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kauyon",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "T'AU EMPIRE"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tau-empire-detachment-rule-patient-hunter",
+              "canonicalTarget": "tau-empire-detachment-rule-patient-hunter",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-detachment-rule-patient-hunter"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-detachment-rule-superior-craftsmanship",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "experimental-prototype-cadre",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "BATTLESUIT",
+          "CHARACTER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "superior-craftsmanship",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "delta": 6,
+                "stat": "Range"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-detachment-rule-superior-craftsmanship"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-borthrod-gland",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kroot-hunting-pack",
+      "scope": "attached-group",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "borthrod-critical",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "CRITICAL HITS 5+"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-borthrod-gland"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-coordinated-exploitation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "montka",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-coordinated-exploitation",
+              "canonicalTarget": "enhancement-coordinated-exploitation",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-coordinated-exploitation"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-exemplar-of-the-kauyon",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kauyon",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-exemplar-of-the-kauyon",
+              "canonicalTarget": "enhancement-exemplar-of-the-kauyon",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-exemplar-of-the-kauyon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-exemplar-of-the-montka",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "montka",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-exemplar-of-the-montka",
+              "canonicalTarget": "enhancement-exemplar-of-the-montka",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-exemplar-of-the-montka"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-internal-grenade-racks",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "retaliation-cadre",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "internal-grenade-keyword",
+              "canonicalTarget": "GRENADES",
+              "parameters": {
+                "keyword": "GRENADES"
+              },
+              "type": "KEYWORD_GRANT"
+            },
+            {
+              "id": "canonical-enhancement-internal-grenade-racks",
+              "canonicalTarget": "enhancement-internal-grenade-racks",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-internal-grenade-racks"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-kroothawk-flock",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kroot-hunting-pack",
+      "scope": "attached-group",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "kroothawk-cover",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER",
+                "termId": "core-ignores-cover"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            },
+            {
+              "id": "canonical-enhancement-kroothawk-flock",
+              "canonicalTarget": "enhancement-kroothawk-flock",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-kroothawk-flock"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-nomadic-hunter",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kroot-hunting-pack",
+      "scope": "attached-group",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "nomadic-move",
+              "canonicalTarget": "M",
+              "parameters": {
+                "delta": 3
+              },
+              "type": "CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "nomadic-assault",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT",
+                "termId": "core-assault"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-nomadic-hunter"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-precision-of-the-patient-hunter",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kauyon",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-precision-of-the-patient-hunter",
+              "canonicalTarget": "enhancement-precision-of-the-patient-hunter",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-precision-of-the-patient-hunter"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-root-carved-weapons",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kroot-hunting-pack",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "root-carved-precision",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "PRECISION",
+                "termId": "core-precision"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            },
+            {
+              "id": "root-carved-devastating",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "DEVASTATING WOUNDS",
+                "termId": "core-devastating-wounds"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-root-carved-weapons"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-through-unity-devastation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "detachmentId": "kauyon",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-through-unity-devastation",
+              "canonicalTarget": "enhancement-through-unity-devastation",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#enhancement-through-unity-devastation"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-equipment-hover-drone",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-ethereal-wargear-ability-66ef7c251c"
+        ],
+        "equipmentFamilyId": "tau-empire-equipment-family-hover-drone"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "hover-drone-move",
+              "canonicalTarget": "M",
+              "parameters": {
+                "to": "10\""
+              },
+              "type": "CHARACTERISTIC_SET"
+            },
+            {
+              "id": "hover-drone-fly",
+              "canonicalTarget": "FLY",
+              "parameters": {
+                "keyword": "FLY"
+              },
+              "type": "KEYWORD_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-equipment-hover-drone"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-equipment-marker-drone",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "scope": "attached-group",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-breacher-team-wargear-ability-054fa4f2b6",
+          "unit-broadside-battlesuits-wargear-ability-054fa4f2b6",
+          "unit-cadre-fireblade-wargear-ability-054fa4f2b6",
+          "unit-commander-in-coldstar-battlesuit-wargear-ability-054fa4f2b6",
+          "unit-commander-in-enforcer-battlesuit-wargear-ability-054fa4f2b6",
+          "unit-crisis-fireknife-battlesuits-wargear-ability-054fa4f2b6",
+          "unit-crisis-starscythe-battlesuits-wargear-ability-054fa4f2b6",
+          "unit-crisis-sunforge-battlesuits-wargear-ability-054fa4f2b6",
+          "unit-ethereal-wargear-ability-054fa4f2b6",
+          "unit-pathfinder-team-wargear-ability-054fa4f2b6",
+          "unit-stealth-battlesuits-wargear-ability-054fa4f2b6",
+          "unit-strike-team-wargear-ability-054fa4f2b6"
+        ],
+        "equipmentFamilyId": "tau-empire-equipment-family-marker-drone"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "marker-drone-keyword",
+              "canonicalTarget": "MARKERLIGHT",
+              "parameters": {
+                "keyword": "MARKERLIGHT"
+              },
+              "type": "KEYWORD_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-equipment-marker-drone"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-equipment-mv15-gun-drone",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-the-twin-lance-wargear-ability-1668782923"
+        ],
+        "equipmentFamilyId": "tau-empire-equipment-family-mv15-gun-drone"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "mv15-gun-drone-profile",
+              "canonicalTarget": "profile-family:twin-pulse-blaster",
+              "parameters": {
+                "profileIds": [
+                  "unit-the-twin-lance-profile-df5c6e42e9"
+                ]
+              },
+              "type": "WEAPON_PROFILE_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-equipment-mv15-gun-drone"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-equipment-pulse-accelerator-drone",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-pathfinder-team-wargear-ability-6169f4c0aa"
+        ],
+        "equipmentFamilyId": "tau-empire-equipment-family-pulse-accelerator-drone"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "pulse-accelerator-range",
+              "canonicalTarget": "profile-family:pulse-carbine",
+              "parameters": {
+                "delta": 6,
+                "stat": "Range"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-equipment-pulse-accelerator-drone"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-equipment-recon-drone",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-pathfinder-team-wargear-ability-5c4f55de99"
+        ],
+        "equipmentFamilyId": "tau-empire-equipment-family-recon-drone"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "recon-drone-infiltrators",
+              "canonicalTarget": "core-infiltrators",
+              "parameters": {
+                "title": "Infiltrators"
+              },
+              "type": "ABILITY_GRANT"
+            },
+            {
+              "id": "recon-drone-profile",
+              "canonicalTarget": "profile-family:drone-burst-cannon",
+              "parameters": {
+                "profileIds": [
+                  "unit-pathfinder-team-profile-dde20391e8"
+                ]
+              },
+              "type": "WEAPON_PROFILE_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-equipment-recon-drone"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-equipment-shield-drone",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-breacher-team-wargear-ability-bc6aabc321",
+          "unit-broadside-battlesuits-wargear-ability-bc6aabc321",
+          "unit-cadre-fireblade-wargear-ability-bc6aabc321",
+          "unit-commander-in-coldstar-battlesuit-wargear-ability-bc6aabc321",
+          "unit-commander-in-enforcer-battlesuit-wargear-ability-bc6aabc321",
+          "unit-crisis-fireknife-battlesuits-wargear-ability-bc6aabc321",
+          "unit-crisis-starscythe-battlesuits-wargear-ability-bc6aabc321",
+          "unit-crisis-sunforge-battlesuits-wargear-ability-bc6aabc321",
+          "unit-ethereal-wargear-ability-bc6aabc321",
+          "unit-pathfinder-team-wargear-ability-bc6aabc321",
+          "unit-strike-team-wargear-ability-bc6aabc321"
+        ],
+        "equipmentFamilyId": "tau-empire-equipment-family-shield-drone"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "modelCount": {
+                  "operator": "eq",
+                  "value": 1
+                }
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "shield-drone-wounds",
+              "canonicalTarget": "W",
+              "parameters": {
+                "delta": 1
+              },
+              "type": "CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-equipment-shield-drone"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-equipment-shield-generator",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-commander-in-coldstar-battlesuit-wargear-ability-bf1c946221",
+          "unit-commander-in-enforcer-battlesuit-wargear-ability-bf1c946221"
+        ],
+        "equipmentFamilyId": "tau-empire-equipment-family-shield-generator"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "shield-generator-invulnerable",
+              "canonicalTarget": "core-invulnerable-save",
+              "parameters": {
+                "title": "Invulnerable Save 4+"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-equipment-shield-generator"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tau-empire-equipment-tidewall-defence-platform",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "tau-empire",
+      "effectiveBookIds": [
+        "tau-empire"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-tidewall-shieldline-wargear-ability-44f6788bd4"
+        ],
+        "equipmentFamilyId": "tau-empire-equipment-family-tidewall-defence-platform"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "defence-platform-wounds",
+              "canonicalTarget": "W",
+              "parameters": {
+                "to": "15"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tau-codex-transcription",
+        "locator": "books/tau-empire/content/tau-empire-codex-parity.en.json#tau-empire-equipment-tidewall-defence-platform"
+      },
+      "confidence": "SOURCE_LIMITED"
+    }
   ]
 });
 window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({

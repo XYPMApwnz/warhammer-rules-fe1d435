@@ -148,6 +148,28 @@
     },
     {
       "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "b33f3f622e0d9352397942ca2991ef00eeee9947f15582e083df8e1ad33e2dc3",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/sources/adeptus-mechanicus-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "b33f3f622e0d9352397942ca2991ef00eeee9947f15582e083df8e1ad33e2dc3"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
+    },
+    {
+      "book": "adeptus-mechanicus",
       "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
       "authority": "official-pdf",
       "sourceType": "official-pdf",
@@ -283,6 +305,28 @@
     },
     {
       "book": "blood-angels",
+      "sourceId": "blood-angels-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "8b9a90712487a816df59fb80849bbb0687a6cd221da3f4ee8bd7c7c6b949e6c6",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/blood-angels/sources/blood-angels-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "8b9a90712487a816df59fb80849bbb0687a6cd221da3f4ee8bd7c7c6b949e6c6"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
+    },
+    {
+      "book": "blood-angels",
       "sourceId": "blood-angels-faction-pack-v1.1",
       "authority": "official-pdf",
       "sourceType": "official-pdf",
@@ -334,6 +378,28 @@
         }
       ],
       "notes": "Enrolled factual owner for points, costs."
+    },
+    {
+      "book": "chaos-space-marines",
+      "sourceId": "chaos-space-marines-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "7baeec409dc89c8e6a1043fa8cc9e4dfa65cd53a96ca0259ac6a1675f41b4244",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/chaos-space-marines/sources/chaos-space-marines-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "7baeec409dc89c8e6a1043fa8cc9e4dfa65cd53a96ca0259ac6a1675f41b4244"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
     },
     {
       "book": "chaos-space-marines",
@@ -521,6 +587,28 @@
     },
     {
       "book": "dark-angels",
+      "sourceId": "dark-angels-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "4188c7ac89f2173e99fbd4b33298a7e8073414dda2fc4e543ee715c4f04d9128",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/dark-angels/sources/dark-angels-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "4188c7ac89f2173e99fbd4b33298a7e8073414dda2fc4e543ee715c4f04d9128"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
+    },
+    {
+      "book": "dark-angels",
       "sourceId": "dark-angels-faction-pack-v1.2",
       "authority": "official-pdf",
       "sourceType": "official-pdf",
@@ -648,6 +736,28 @@
         }
       ],
       "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "86bc1a4a699275a59e7f8e20aef714cd2cf62dcdcdc7de7255ada59d9bf8697c",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/death-guard/sources/death-guard-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "86bc1a4a699275a59e7f8e20aef714cd2cf62dcdcdc7de7255ada59d9bf8697c"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
     },
     {
       "book": "death-guard",
@@ -878,6 +988,28 @@
         }
       ],
       "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "c7a85ca74a1a99fffda1b4e08b61988d336702220c96bddf5f382b81c505cbdc",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/sources/emperors-children-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "c7a85ca74a1a99fffda1b4e08b61988d336702220c96bddf5f382b81c505cbdc"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
     },
     {
       "book": "emperors-children",
@@ -1149,6 +1281,28 @@
     },
     {
       "book": "space-marines",
+      "sourceId": "space-marines-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "2ece6e9002671958f4f8056507976ba8d2b828115ecaedbe9da8ddd010bdc853",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/space-marines/sources/space-marines-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "2ece6e9002671958f4f8056507976ba8d2b828115ecaedbe9da8ddd010bdc853"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
+    },
+    {
+      "book": "space-marines",
       "sourceId": "space-marines-faction-pack-v1.2",
       "authority": "official-pdf",
       "sourceType": "official-pdf",
@@ -1359,6 +1513,28 @@
         }
       ],
       "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-empire-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "576cebdbaf85c7d559b2b7eca6d2222d6574ed2c8a7211b92d1c1ec16696ec9f",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/tau-empire-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "576cebdbaf85c7d559b2b7eca6d2222d6574ed2c8a7211b92d1c1ec16696ec9f"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
     },
     {
       "book": "tau-empire",
@@ -1594,6 +1770,28 @@
         }
       ],
       "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-effect-contracts",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "effect-contracts-v1-2026-09-14",
+      "acceptedHash": "d2dd884810fdb03512208746a9fbb13d2ae9a53ef97549bdf896ea6615a15011",
+      "lastChecked": "2026-09-14",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tyranids/sources/tyranids-effect-contracts.v1.json",
+          "normalization": "lf",
+          "sha256": "d2dd884810fdb03512208746a9fbb13d2ae9a53ef97549bdf896ea6615a15011"
+        }
+      ],
+      "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
     },
     {
       "book": "tyranids",

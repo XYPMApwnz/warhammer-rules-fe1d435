@@ -209,6 +209,23 @@
       "paths": [
         "books/emperors-children/mobile/related-rules.inc"
       ]
+    },
+    {
+      "id": "emperors-children-effect-contracts",
+      "sourceId": "emperors-children-effect-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "gameplay-effect-contracts"
+      ],
+      "consumers": [
+        "EFFECTIVE_MODEL",
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/emperors-children/sources/emperors-children-effect-contracts.v1.json"
+      ]
     }
   ],
   "gates": {

@@ -166,6 +166,23 @@
       "paths": [
         "books/adeptus-mechanicus/sources/compatible-rules-correction-ledger.json"
       ]
+    },
+    {
+      "id": "adeptus-mechanicus-effect-contracts",
+      "sourceId": "adeptus-mechanicus-effect-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "gameplay-effect-contracts"
+      ],
+      "consumers": [
+        "EFFECTIVE_MODEL",
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/sources/adeptus-mechanicus-effect-contracts.v1.json"
+      ]
     }
   ],
   "enrollmentScope": "PUBLIC_BOOK"

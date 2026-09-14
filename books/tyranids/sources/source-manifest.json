@@ -331,6 +331,23 @@
       "paths": [
         "books/tyranids/sources/compatible-rules-correction-ledger.json"
       ]
+    },
+    {
+      "id": "tyranids-effect-contracts",
+      "sourceId": "tyranids-effect-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "gameplay-effect-contracts"
+      ],
+      "consumers": [
+        "EFFECTIVE_MODEL",
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/tyranids/sources/tyranids-effect-contracts.v1.json"
+      ]
     }
   ],
   "knownGaps": [

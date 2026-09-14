@@ -1,0 +1,1677 @@
+{
+  "schema": "wh40k-effect-contracts/v1",
+  "bookId": "emperors-children",
+  "contracts": [
+    {
+      "canonicalRecordId": "emperors-children-ability-perfectionists",
+      "sourceKind": "ability",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "sourceUnitId": "unit-lord-exultant",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-lord-exultant"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-lord-exultant"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "perfectionists-weapons",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "LETHAL HITS",
+                "termId": "core-lethal-hits"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-ability-perfectionists"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-ability-lord-of-the-host",
+      "sourceKind": "ability",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "sourceUnitId": "unit-lord-exultant",
+      "scope": "source",
+      "selector": {
+        "unitIds": [
+          "unit-lord-exultant"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "on": "bodyguard",
+            "allKeywords": [
+              "BATTLELINE"
+            ]
+          },
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-lord-exultant"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "lord-host-infiltrators",
+              "canonicalTarget": "core-infiltrators",
+              "parameters": {
+                "title": "Infiltrators"
+              },
+              "type": "ABILITY_GRANT"
+            },
+            {
+              "id": "lord-host-scouts",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 6\""
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-ability-lord-of-the-host"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-ability-obsessive-annunciation",
+      "sourceKind": "ability",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "sourceUnitId": "unit-lord-kakophonist",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-lord-kakophonist"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-lord-kakophonist"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "obsessive-annunciation",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1",
+                "termId": "core-sustained-hits"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-ability-obsessive-annunciation"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-ability-warped-interference-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "sourceUnitId": "unit-sorcerer",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-sorcerer"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-sorcerer"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-ability-warped-interference-psychic",
+              "canonicalTarget": "emperors-children-ability-warped-interference-psychic",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-ability-warped-interference-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-daemonic-empowerment",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "carnival-of-excess",
+      "scope": "unit",
+      "selector": {
+        "any": [
+          {
+            "allKeywords": [
+              "EMPEROR'S CHILDREN"
+            ]
+          },
+          {
+            "allKeywords": [
+              "LEGIONS OF EXCESS"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-daemonic-empowerment",
+              "canonicalTarget": "emperors-children-detachment-rule-daemonic-empowerment",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-daemonic-empowerment"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-pledges-to-the-dark-prince",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "coterie-of-the-conceited",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "EMPEROR'S CHILDREN"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-pledges-to-the-dark-prince",
+              "canonicalTarget": "emperors-children-detachment-rule-pledges-to-the-dark-prince",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-pledges-to-the-dark-prince"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-sensational-performance",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "court-of-the-phoenician",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "EMPEROR'S CHILDREN"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-sensational-performance",
+              "canonicalTarget": "emperors-children-detachment-rule-sensational-performance",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-sensational-performance"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-eager-to-kill",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "elegant-brutes",
+      "scope": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-chaos-terminators"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-eager-to-kill",
+              "canonicalTarget": "emperors-children-detachment-rule-eager-to-kill",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-eager-to-kill"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-frantic-focus",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "frenzied-host",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "BATTLELINE"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-frantic-focus",
+              "canonicalTarget": "emperors-children-detachment-rule-frantic-focus",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-frantic-focus"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-quicksilver-grace",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "mercurial-host",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "EMPEROR'S CHILDREN"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-quicksilver-grace",
+              "canonicalTarget": "emperors-children-detachment-rule-quicksilver-grace",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-quicksilver-grace"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-exquisite-swordsmanship",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "peerless-bladesmen",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "EMPEROR'S CHILDREN"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-exquisite-swordsmanship",
+              "canonicalTarget": "emperors-children-detachment-rule-exquisite-swordsmanship",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-exquisite-swordsmanship"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-mechanised-murder",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "rapid-evisceration",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "EMPEROR'S CHILDREN"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-mechanised-murder",
+              "canonicalTarget": "emperors-children-detachment-rule-mechanised-murder",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-mechanised-murder"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-internal-rivalries",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "slaaneshs-chosen",
+      "scope": "unit",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "EMPEROR'S CHILDREN"
+            ]
+          },
+          {
+            "any": [
+              {
+                "allKeywords": [
+                  "CHARACTER"
+                ]
+              },
+              {
+                "attachmentState": "leading"
+              },
+              {
+                "attachmentState": "being-led"
+              }
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-internal-rivalries",
+              "canonicalTarget": "emperors-children-detachment-rule-internal-rivalries",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-internal-rivalries"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-entitled-to-victory",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "spectacle-of-slaughter",
+      "scope": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-flawless-blades"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-entitled-to-victory",
+              "canonicalTarget": "emperors-children-detachment-rule-entitled-to-victory",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-detachment-rule-entitled-to-victory"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-detachment-rule-master-of-the-pageant",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "court-of-the-phoenician",
+      "scope": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-fulgrim"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-emperors-children-detachment-rule-master-of-the-pageant",
+              "canonicalTarget": "emperors-children-detachment-rule-master-of-the-pageant",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#emperors-children-detachment-rule-master-of-the-pageant"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-tears-of-the-phoenix",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "court-of-the-phoenician",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-tears-of-the-phoenix",
+              "canonicalTarget": "enhancement-tears-of-the-phoenix",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#enhancement-tears-of-the-phoenix"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-steeped-in-suffering",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "mercurial-host",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-steeped-in-suffering",
+              "canonicalTarget": "enhancement-steeped-in-suffering",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-steeped-in-suffering"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-intoxicating-musk",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "mercurial-host",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-intoxicating-musk",
+              "canonicalTarget": "enhancement-intoxicating-musk",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-intoxicating-musk"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-loathsome-dexterity",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "mercurial-host",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-loathsome-dexterity",
+              "canonicalTarget": "enhancement-loathsome-dexterity",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-loathsome-dexterity"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-faultless-opportunist",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "peerless-bladesmen",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-faultless-opportunist",
+              "canonicalTarget": "enhancement-faultless-opportunist",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-faultless-opportunist"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-blinding-speed",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "peerless-bladesmen",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-blinding-speed",
+              "canonicalTarget": "enhancement-blinding-speed",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-blinding-speed"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-spearhead-striker",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "rapid-evisceration",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-spearhead-striker",
+              "canonicalTarget": "enhancement-spearhead-striker",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-spearhead-striker"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-empyric-suffusion",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "carnival-of-excess",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-empyric-suffusion",
+              "canonicalTarget": "enhancement-empyric-suffusion",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-empyric-suffusion"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-warp-walker",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "carnival-of-excess",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-warp-walker",
+              "canonicalTarget": "enhancement-warp-walker",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-warp-walker"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-pledge-of-unholy-fortune",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "coterie-of-the-conceited",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-pledge-of-unholy-fortune",
+              "canonicalTarget": "enhancement-pledge-of-unholy-fortune",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-pledge-of-unholy-fortune"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-eager-to-prove",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "slaaneshs-chosen",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eager-to-prove",
+              "canonicalTarget": "enhancement-eager-to-prove",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-eager-to-prove"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-repulsed-by-weakness",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "slaaneshs-chosen",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-repulsed-by-weakness",
+              "canonicalTarget": "enhancement-repulsed-by-weakness",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-repulsed-by-weakness"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-proud-and-vainglorious",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "slaaneshs-chosen",
+      "scope": "bodyguard",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-proud-and-vainglorious",
+              "canonicalTarget": "enhancement-proud-and-vainglorious",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-proud-and-vainglorious"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-exalted-patron",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "court-of-the-phoenician",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "exalted-patron-move",
+              "canonicalTarget": "M",
+              "parameters": {
+                "delta": 1
+              },
+              "type": "CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#enhancement-exalted-patron"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-spiritsliver",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "court-of-the-phoenician",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "spiritsliver-strength",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "S"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "spiritsliver-attacks",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "A"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#enhancement-spiritsliver"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-cacophonic-accompaniment",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "elegant-brutes",
+      "scope": "owner-or-attached-group",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {
+            "targetRelation": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "cacophonic-deep-strike",
+              "canonicalTarget": "core-deep-strike",
+              "parameters": {
+                "title": "Deep Strike"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        },
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "cacophonic-ignores-cover",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER",
+                "termId": "core-ignores-cover"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        },
+        {
+          "selector": {
+            "targetRelation": "bodyguard"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-cacophonic-accompaniment",
+              "canonicalTarget": "enhancement-cacophonic-accompaniment",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#enhancement-cacophonic-accompaniment"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-frenzied-ferocity",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "elegant-brutes",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "frenzied-ferocity",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1",
+                "termId": "core-sustained-hits"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#enhancement-frenzied-ferocity"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-euphoric-crown",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "frenzied-host",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "euphoric-crown",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "S"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#enhancement-euphoric-crown"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-howling-plate",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "frenzied-host",
+      "scope": "owner-or-attached-group",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "howling-plate",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "delta": -1,
+                "stat": "AP"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#enhancement-howling-plate"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-distortion",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "peerless-bladesmen",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "distortion-attacks",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "A"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "distortion-damage",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "D"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-distortion"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-eager-patrons",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "spectacle-of-slaughter",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "eager-patrons-move",
+              "canonicalTarget": "M",
+              "parameters": {
+                "delta": 2
+              },
+              "type": "CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-faction-pack-v1.2",
+        "locator": "books/emperors-children/content/emperors-children-faction-pack.en.json#enhancement-eager-patrons"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-pledge-of-dark-glory",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "coterie-of-the-conceited",
+      "scope": "attached-group",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "detachmentIds": [
+                  "coterie-of-the-conceited"
+                ]
+              }
+            },
+            {
+              "selector": {
+                "on": "owner",
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "pledge-dark-glory-leadership",
+              "canonicalTarget": "Ld",
+              "parameters": {
+                "delta": -1
+              },
+              "type": "CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "pledge-dark-glory-objective-control",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              },
+              "type": "CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-pledge-of-dark-glory"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-slayer-of-champions",
+      "sourceKind": "enhancement",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "detachmentId": "slaaneshs-chosen",
+      "scope": "owner",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "slayer-of-champions-precision",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "PRECISION",
+                "termId": "core-precision"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#enhancement-slayer-of-champions"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-equipment-daemonic-icon",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-daemonettes-wargear-ability-b3dad0463e",
+          "unit-seekers-wargear-ability-b3dad0463e"
+        ],
+        "equipmentFamilyId": "emperors-children-equipment-family-daemonic-icon"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "daemonic-icon-leadership",
+              "canonicalTarget": "Ld",
+              "parameters": {
+                "to": "6+"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-equipment-daemonic-icon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "emperors-children-equipment-shining-aegis",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "emperors-children",
+      "effectiveBookIds": [
+        "emperors-children"
+      ],
+      "scope": "owner",
+      "selector": {
+        "selectedWargearAbilityIds": [
+          "unit-keeper-of-secrets-wargear-ability-8c94fe64e9"
+        ],
+        "equipmentFamilyId": "emperors-children-equipment-family-shining-aegis"
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "shining-aegis-save",
+              "canonicalTarget": "Sv",
+              "parameters": {
+                "to": "3+"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "emperors-children-codex-transcription",
+        "locator": "books/emperors-children/content/emperors-children-codex-parity.en.json#emperors-children-equipment-shining-aegis"
+      },
+      "confidence": "SOURCE_LIMITED"
+    }
+  ]
+}

@@ -10002,6 +10002,2495 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "tyranids",
       "legacyKey": "ocular-adaptation"
     }
+  ],
+  "effectContracts": [
+    {
+      "canonicalRecordId": "tyranids-ability-aggressive-leader-beast",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-tyranid-prime-with-lash-whip",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-tyranid-prime-with-lash-whip"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-tyranid-prime-with-lash-whip"
+                ]
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tyranids-ability-aggressive-leader-beast",
+              "canonicalTarget": "tyranids-ability-aggressive-leader-beast",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-aggressive-leader-beast"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-alpha-invader",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-hyperadapted-raveners",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-hyperadapted-raveners"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-hyperadapted-raveners"
+                ]
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "alpha-invader:sustained",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-alpha-invader"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-alpha-leader",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-old-one-eye",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-old-one-eye"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-old-one-eye"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tyranids-ability-alpha-leader",
+              "canonicalTarget": "tyranids-ability-alpha-leader",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-alpha-leader"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-alpha-warrior-2",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-winged-tyranid-prime",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-winged-tyranid-prime"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-winged-tyranid-prime"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "alpha-warrior-2:sustained",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-alpha-warrior-2"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-alpha-warrior",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-tyranid-prime-with-lash-whip",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-tyranid-prime-with-lash-whip"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-tyranid-prime-with-lash-whip"
+                ]
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "alpha-warrior:sustained",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-alpha-warrior"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-domination-of-the-hive-mind-aura",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-the-swarmlord",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-the-swarmlord"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-the-swarmlord"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tyranids-ability-domination-of-the-hive-mind-aura",
+              "canonicalTarget": "tyranids-ability-domination-of-the-hive-mind-aura",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-domination-of-the-hive-mind-aura"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-guardian-organism",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-tyrant-guard",
+      "scope": "attached-leaders",
+      "selector": {
+        "unitIds": [
+          "unit-tyrant-guard"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-tyrant-guard"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "guardian-organism:fnp",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-guardian-organism"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-hypersensory-array",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-hyperadapted-raveners",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-hyperadapted-raveners"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-hyperadapted-raveners"
+                ]
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tyranids-ability-hypersensory-array",
+              "canonicalTarget": "tyranids-ability-hypersensory-array",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-hypersensory-array"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-node-lash-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-neurotyrant",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-neurotyrant"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-neurotyrant"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tyranids-ability-node-lash-psychic",
+              "canonicalTarget": "tyranids-ability-node-lash-psychic",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-node-lash-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-onslaught-aura-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-hive-tyrant",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-hive-tyrant"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-hive-tyrant"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tyranids-ability-onslaught-aura-psychic",
+              "canonicalTarget": "tyranids-ability-onslaught-aura-psychic",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-onslaught-aura-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-vicious-insight",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-broodlord",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-broodlord"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-broodlord"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "vicious-insight:devastating",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "DEVASTATING WOUNDS"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-vicious-insight"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-ability-will-of-the-hive-mind",
+      "sourceKind": "ability",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "sourceUnitId": "unit-hive-tyrant",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-hive-tyrant"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-hive-tyrant"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-tyranids-ability-will-of-the-hive-mind",
+              "canonicalTarget": "tyranids-ability-will-of-the-hive-mind",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-ability-will-of-the-hive-mind"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-enraged-behemoths",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "crusher-stampede",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "MONSTER"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-enraged-behemoths",
+              "canonicalTarget": "tyranids-detachment-rule-enraged-behemoths",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-enraged-behemoths"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-feed-the-swarm",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "assimilation-swarm",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "HARVESTER"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-feed-the-swarm",
+              "canonicalTarget": "tyranids-detachment-rule-feed-the-swarm",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-feed-the-swarm"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-higher-imperatives",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "talons-of-the-norn-queen",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-norn-emissary",
+              "unit-norn-assimilator"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-higher-imperatives",
+              "canonicalTarget": "tyranids-detachment-rule-higher-imperatives",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-higher-imperatives"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-hyper-adaptations",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "invasion-fleet",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-hyper-adaptations",
+              "canonicalTarget": "tyranids-detachment-rule-hyper-adaptations",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-hyper-adaptations"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-insurmountable-odds",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "unending-swarm",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "ENDLESS MULTITUDE"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-insurmountable-odds",
+              "canonicalTarget": "tyranids-detachment-rule-insurmountable-odds",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-insurmountable-odds"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-leader-beasts",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "warrior-bioform-onslaught",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons",
+              "unit-tyranid-warriors-with-melee-bio-weapons"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "leader-beasts:battleline",
+              "canonicalTarget": "BATTLELINE",
+              "parameters": {
+                "keyword": "BATTLELINE"
+              },
+              "type": "KEYWORD_GRANT"
+            }
+          ]
+        },
+        {
+          "selector": {
+            "unitIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons",
+              "unit-tyranid-warriors-with-melee-bio-weapons",
+              "unit-tyranid-prime-with-lash-whip",
+              "unit-winged-tyranid-prime"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "leader-beasts:invulnerable",
+              "canonicalTarget": "Invulnerable",
+              "parameters": {
+                "to": "5+"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-leader-beasts"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-mindhunger",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "ambush-predators",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-deathleaper",
+              "unit-lictor",
+              "unit-neurolictor"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-mindhunger",
+              "canonicalTarget": "tyranids-detachment-rule-mindhunger",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "mindhunger:deep-strike",
+              "canonicalTarget": "core-deep-strike",
+              "parameters": {
+                "title": "Deep Strike"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-mindhunger"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-questing-tendrils",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "vanguard-onslaught",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-questing-tendrils",
+              "canonicalTarget": "tyranids-detachment-rule-questing-tendrils",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-questing-tendrils"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-surprise-assault",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "subterranean-assault",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-surprise-assault",
+              "canonicalTarget": "tyranids-detachment-rule-surprise-assault",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-surprise-assault"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tyranids-detachment-rule-synaptic-imperatives",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "synaptic-nexus",
+      "scope": "unit",
+      "selector": {},
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tyranids-detachment-rule-synaptic-imperatives",
+              "canonicalTarget": "tyranids-detachment-rule-synaptic-imperatives",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#tyranids-detachment-rule-synaptic-imperatives"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "cryptophotaic-camouflage",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "ambush-predators",
+      "scope": "owner",
+      "selector": {
+        "unitIds": [
+          "unit-von-ryans-leapers"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-cryptophotaic-camouflage",
+              "canonicalTarget": "cryptophotaic-camouflage",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#cryptophotaic-camouflage"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "destabilising-predation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "talons-of-the-norn-queen",
+      "scope": "owner",
+      "selector": {
+        "unitIds": [
+          "unit-norn-emissary"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-destabilising-predation",
+              "canonicalTarget": "destabilising-predation",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "destabilising-predation:anti-character",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ANTI-CHARACTER 2+"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#destabilising-predation"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "elevated-might",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "warrior-bioform-onslaught",
+      "scope": "owner",
+      "selector": {
+        "unitIds": [
+          "unit-winged-tyranid-prime",
+          "unit-tyranid-prime-with-lash-whip"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-elevated-might",
+              "canonicalTarget": "elevated-might",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "elevated-might:ap",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": -1,
+                "stat": "AP"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#elevated-might"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "encircling-horrors",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "ambush-predators",
+      "scope": "owner",
+      "selector": {
+        "unitIds": [
+          "unit-lictor",
+          "unit-neurolictor",
+          "unit-von-ryans-leapers"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-encircling-horrors",
+              "canonicalTarget": "encircling-horrors",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#encircling-horrors"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-adaptive-biology",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "invasion-fleet",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-adaptive-biology",
+              "canonicalTarget": "enhancement-adaptive-biology",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "enhancement-adaptive-biology:feel-no-pain",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-adaptive-biology"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-adrenalised-onslaught",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "unending-swarm",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-adrenalised-onslaught",
+              "canonicalTarget": "enhancement-adrenalised-onslaught",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-adrenalised-onslaught"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-alien-cunning",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "invasion-fleet",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-alien-cunning",
+              "canonicalTarget": "enhancement-alien-cunning",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-alien-cunning"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-biophagic-flow-aura",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "assimilation-swarm",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-biophagic-flow-aura",
+              "canonicalTarget": "enhancement-biophagic-flow-aura",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-biophagic-flow-aura"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-chameleonic",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "vanguard-onslaught",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "VANGUARD INVADER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-chameleonic",
+              "canonicalTarget": "enhancement-chameleonic",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "chameleonic:stealth",
+              "canonicalTarget": "core-stealth",
+              "parameters": {
+                "title": "Stealth"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-chameleonic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-enraged-reserves",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "crusher-stampede",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "MONSTER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-enraged-reserves",
+              "canonicalTarget": "enhancement-enraged-reserves",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-enraged-reserves"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-hunting-grounds",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "vanguard-onslaught",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-hunting-grounds",
+              "canonicalTarget": "enhancement-hunting-grounds",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-hunting-grounds"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-instinctive-defense",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "assimilation-swarm",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-instinctive-defense",
+              "canonicalTarget": "enhancement-instinctive-defense",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-instinctive-defense"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-monstrous-nemesis",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "crusher-stampede",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "MONSTER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-monstrous-nemesis",
+              "canonicalTarget": "enhancement-monstrous-nemesis",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-monstrous-nemesis"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-naturalised-camoflage",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "unending-swarm",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-naturalised-camoflage",
+              "canonicalTarget": "enhancement-naturalised-camoflage",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-naturalised-camoflage"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-neuronode",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "vanguard-onslaught",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-neuronode",
+              "canonicalTarget": "enhancement-neuronode",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-neuronode"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-null-nodules",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "crusher-stampede",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "MONSTER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-null-nodules",
+              "canonicalTarget": "enhancement-null-nodules",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-null-nodules"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-ominous-presence",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "crusher-stampede",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "MONSTER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-ominous-presence",
+              "canonicalTarget": "enhancement-ominous-presence",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "ominous-presence:oc",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 3
+              },
+              "type": "CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-ominous-presence"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-parasitic-biomorphology",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "assimilation-swarm",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-parasitic-biomorphology",
+              "canonicalTarget": "enhancement-parasitic-biomorphology",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "parasitic-biomorphology:strength",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "S"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-parasitic-biomorphology"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-perfectly-adapted",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "invasion-fleet",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-perfectly-adapted",
+              "canonicalTarget": "enhancement-perfectly-adapted",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-perfectly-adapted"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-piercing-talons",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "unending-swarm",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-piercing-talons",
+              "canonicalTarget": "enhancement-piercing-talons",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-piercing-talons"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-power-of-the-hive-mind",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "synaptic-nexus",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "PSYKER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-power-of-the-hive-mind",
+              "canonicalTarget": "enhancement-power-of-the-hive-mind",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "power-of-hive-mind:strength",
+              "canonicalTarget": "psychic",
+              "parameters": {
+                "delta": 1,
+                "stat": "S"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "power-of-hive-mind:ap",
+              "canonicalTarget": "psychic",
+              "parameters": {
+                "delta": -1,
+                "stat": "AP"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-power-of-the-hive-mind"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-psychostatic-disruption-aura",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "synaptic-nexus",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "SYNAPSE"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-psychostatic-disruption-aura",
+              "canonicalTarget": "enhancement-psychostatic-disruption-aura",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-psychostatic-disruption-aura"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-regenerating-monstrosity",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "assimilation-swarm",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "noneKeywords": [
+          "MONSTER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-regenerating-monstrosity",
+              "canonicalTarget": "enhancement-regenerating-monstrosity",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-regenerating-monstrosity"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-relentless-hunger",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "unending-swarm",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-relentless-hunger",
+              "canonicalTarget": "enhancement-relentless-hunger",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "relentless-hunger:move",
+              "canonicalTarget": "M",
+              "parameters": {
+                "delta": 2
+              },
+              "type": "CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-relentless-hunger"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-stalker",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "vanguard-onslaught",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "VANGUARD INVADER"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-stalker",
+              "canonicalTarget": "enhancement-stalker",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-stalker"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-synaptic-control",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "synaptic-nexus",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "SYNAPSE"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-synaptic-control",
+              "canonicalTarget": "enhancement-synaptic-control",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-synaptic-control"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-synaptic-linchpin",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "invasion-fleet",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-synaptic-linchpin",
+              "canonicalTarget": "enhancement-synaptic-linchpin",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-synaptic-linchpin"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-the-dirgeheart-of-kharis-aura",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "synaptic-nexus",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "SYNAPSE"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-the-dirgeheart-of-kharis-aura",
+              "canonicalTarget": "enhancement-the-dirgeheart-of-kharis-aura",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-codex-transcription",
+        "locator": "books/tyranids/content/tyranids-codex-parity.en.json#enhancement-the-dirgeheart-of-kharis-aura"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "ocular-adaptation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "warrior-bioform-onslaught",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-winged-tyranid-prime",
+          "unit-tyranid-prime-with-lash-whip"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-ocular-adaptation",
+              "canonicalTarget": "ocular-adaptation",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#ocular-adaptation"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "synaptic-strategy",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "subterranean-assault",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-synaptic-strategy",
+              "canonicalTarget": "synaptic-strategy",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#synaptic-strategy"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "synaptoprescience",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "talons-of-the-norn-queen",
+      "scope": "owner",
+      "selector": {
+        "unitIds": [
+          "unit-norn-assimilator"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-synaptoprescience",
+              "canonicalTarget": "synaptoprescience",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "synaptoprescience:invulnerable",
+              "canonicalTarget": "Invulnerable",
+              "parameters": {
+                "to": "4+"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#synaptoprescience"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "tremor-senses",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "subterranean-assault",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "TYRANIDS"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-tremor-senses",
+              "canonicalTarget": "tremor-senses",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#tremor-senses"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "trygon-prime",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "subterranean-assault",
+      "scope": "owner",
+      "selector": {
+        "unitIds": [
+          "unit-trygon"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-trygon-prime",
+              "canonicalTarget": "trygon-prime",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "trygon-prime:synapse",
+              "canonicalTarget": "SYNAPSE",
+              "parameters": {
+                "keyword": "SYNAPSE"
+              },
+              "type": "KEYWORD_GRANT"
+            },
+            {
+              "id": "trygon-prime:strength",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "S"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "trygon-prime:weapon-skill",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": -1,
+                "stat": "WS"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#trygon-prime"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "vanguard-intellect",
+      "sourceKind": "enhancement",
+      "sourceBookId": "tyranids",
+      "effectiveBookIds": [
+        "tyranids"
+      ],
+      "detachmentId": "subterranean-assault",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "abilityIds": [
+          "core-deep-strike"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-vanguard-intellect",
+              "canonicalTarget": "vanguard-intellect",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "tyranids-faction-pack-v1.2",
+        "locator": "books/tyranids/content/tyranids-faction-pack.en.json#vanguard-intellect"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    }
   ]
 });
 window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({

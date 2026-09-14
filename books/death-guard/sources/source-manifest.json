@@ -189,6 +189,23 @@
       "paths": [
         "books/death-guard/sources/enhancement-owner-matrix.json"
       ]
+    },
+    {
+      "id": "death-guard-effect-contracts",
+      "sourceId": "death-guard-effect-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "gameplay-effect-contracts"
+      ],
+      "consumers": [
+        "EFFECTIVE_MODEL",
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/death-guard/sources/death-guard-effect-contracts.v1.json"
+      ]
     }
   ],
   "currentScope": {

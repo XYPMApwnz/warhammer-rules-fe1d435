@@ -48,7 +48,7 @@
     "ruleFacts": 5,
     "book": 4,
     "tokens": 2,
-    "rosterFilter": 5,
+    "rosterFilter": 6,
     "rosterData": 1
   },
   "expected": {
@@ -63,7 +63,8 @@
     "relatedRules": "content/emperors-children-related-rules.en.json",
     "enhancementOwners": "sources/enhancement-owner-matrix.json",
     "officialMfm": "sources/official-mfm-v1.3.json",
-    "manifest": "sources/source-manifest.json"
+    "manifest": "sources/source-manifest.json",
+    "effectContracts": "sources/emperors-children-effect-contracts.v1.json"
   },
   "compactSharedAbilities": [
     "Anti",

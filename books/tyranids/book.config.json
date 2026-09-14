@@ -54,7 +54,7 @@
     "rosterContext": 20,
     "relatedRules": 18,
     "ruleFacts": 5,
-    "rosterFilter": 6
+    "rosterFilter": 7
   },
   "expected": {
     "matchedDetachments": 10,
@@ -68,7 +68,8 @@
     "codexParity": "content/tyranids-codex-parity.en.json",
     "points": "content/tyranids-points.en.json",
     "relatedRules": "content/tyranids-related-rules.en.json",
-    "manifest": "sources/source-manifest.json"
+    "manifest": "sources/source-manifest.json",
+    "effectContracts": "sources/tyranids-effect-contracts.v1.json"
   },
   "relatedRulesOwnership": {
     "mode": "authoritative-runtime-source",

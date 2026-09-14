@@ -1,0 +1,2299 @@
+{
+  "schema": "wh40k-effect-contracts/v1",
+  "bookId": "adeptus-mechanicus",
+  "contracts": [
+    {
+      "canonicalRecordId": "enhancement-clandestine-infiltrator",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-skitarii-hunter-cohort",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-clandestine-infiltrator"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "clandestine-infiltrators",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-infiltrators",
+              "parameters": {}
+            },
+            {
+              "id": "clandestine-scouts",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "distance": 6
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-clandestine-infiltrator"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-malphonic-susurrus",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-rad-zone-corps",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-malphonic-susurrus"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "malphonic-stealth",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-stealth",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-malphonic-susurrus"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-peerless-eradicator",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-rad-zone-corps",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-peerless-eradicator"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "weaponMode": "ranged"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "peerless-sustained-hits",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1",
+                "termId": "core-sustained-hits"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-peerless-eradicator"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-autoclavic-denunciation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-rad-zone-corps",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-autoclavic-denunciation"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer",
+            "weaponMode": "ranged"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "autoclavic-anti-infantry",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ANTI-INFANTRY 2+",
+                "termId": "core-anti"
+              }
+            },
+            {
+              "id": "autoclavic-anti-monster",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ANTI-MONSTER 4+",
+                "termId": "core-anti"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-autoclavic-denunciation"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-mechanicus-locum",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-data-psalm-conclave",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-mechanicus-locum"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "mechanicus-locum-leadership",
+              "type": "CHARACTERISTIC_SET",
+              "canonicalTarget": "Ld",
+              "parameters": {
+                "value": "6+"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-mechanicus-locum"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-temporcopia",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-data-psalm-conclave",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-temporcopia"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "temporcopia-fights-first",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-fights-first",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-temporcopia"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-arch-negator",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-cohort-cybernetica",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-arch-negator"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer",
+            "weaponMode": "ranged"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "arch-negator-anti-vehicle",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ANTI-VEHICLE 4+",
+                "termId": "core-anti"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-arch-negator"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-transoracular-dyad-wafers",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-haloscreed-battle-clade",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-transoracular-dyad-wafers"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "attachmentGroup": {
+              "allUnitIds": [
+                "unit-cybernetica-datasmith",
+                "unit-kastelan-robots"
+              ]
+            }
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "transoracular-halo-override",
+              "type": "KEYWORD_GRANT",
+              "canonicalTarget": "HALO OVERRIDE",
+              "parameters": {}
+            },
+            {
+              "id": "transoracular-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-transoracular-dyad-wafers",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-transoracular-dyad-wafers"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-cognitive-reinforcement",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-haloscreed-battle-clade",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-cognitive-reinforcement"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "cognitive-heavy",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "HEAVY",
+                "termId": "core-heavy"
+              }
+            },
+            {
+              "id": "cognitive-assault",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT",
+                "termId": "core-assault"
+              }
+            },
+            {
+              "id": "cognitive-bs",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "characteristic": "BS",
+                "value": -1
+              }
+            },
+            {
+              "id": "cognitive-ws",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "WS",
+                "value": -1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "unit-keyword",
+              "keyword": "BATTLELINE"
+            }
+          ],
+          "operations": [
+            {
+              "id": "cognitive-ap-ranged",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "characteristic": "AP",
+                "value": -1
+              }
+            },
+            {
+              "id": "cognitive-ap-melee",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "AP",
+                "value": -1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-cognitive-reinforcement"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-sanctified-ordnance",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-haloscreed-battle-clade",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-sanctified-ordnance"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "weaponMode": "ranged"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "sanctified-range",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "characteristic": "Range",
+                "value": 6
+              }
+            },
+            {
+              "id": "sanctified-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-sanctified-ordnance",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-sanctified-ordnance"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-inloaded-lethality",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-haloscreed-battle-clade",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-inloaded-lethality"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer",
+            "weaponMode": "melee"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "inloaded-attacks",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "A",
+                "value": 3
+              }
+            },
+            {
+              "id": "inloaded-damage",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "D",
+                "value": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-inloaded-lethality"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-explorator-dispensation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-cohort-acquisitus",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-explorator-dispensation"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "explorator-infiltrators",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-infiltrators",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-explorator-dispensation"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-vinghs-wafers-of-dynamism",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-lords-of-the-forge",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-vinghs-wafers-of-dynamism"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "vinghs-mobile",
+              "type": "KEYWORD_GRANT",
+              "canonicalTarget": "MOBILE",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-vinghs-wafers-of-dynamism"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-tl-4-9",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-lords-of-the-forge",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-tl-4-9"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "tl-4-9-profile",
+              "type": "WEAPON_PROFILE_GRANT",
+              "canonicalTarget": "enhancement-tl-4-9-profile",
+          "parameters": {
+            "profileSource": "canonical-record",
+            "profile": {
+              "name": "TL-409",
+              "mode": "ranged",
+              "range": "24\"",
+              "a": "3",
+              "skill": "2+",
+              "s": "11",
+              "ap": "-2",
+              "d": "D3+2",
+              "abilities": "Devastating Wounds, Hazardous"
+            }
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-tl-4-9"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-voltagheist-reliquary",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-luminen-auto-choir",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-voltagheist-reliquary"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "manual-resolution",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "voltagheist-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-voltagheist-reliquary",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-voltagheist-reliquary"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-electromiasmic-brazier",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-luminen-auto-choir",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-electromiasmic-brazier"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "electromiasmic-stealth",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-stealth",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-electromiasmic-brazier"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-omnicogitator",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-eradication-cohort",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-omnicogitator"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "omnicogitator-heavy",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "HEAVY",
+                "termId": "core-heavy"
+              }
+            },
+            {
+              "id": "omnicogitator-assault",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT",
+                "termId": "core-assault"
+              }
+            },
+            {
+              "id": "omnicogitator-bs",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "characteristic": "BS",
+                "value": -1
+              }
+            },
+            {
+              "id": "omnicogitator-ws",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "WS",
+                "value": -1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "unit-keyword",
+              "keyword": "BATTLELINE"
+            }
+          ],
+          "operations": [
+            {
+              "id": "omnicogitator-ap-ranged",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "characteristic": "AP",
+                "value": -1
+              }
+            },
+            {
+              "id": "omnicogitator-ap-melee",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "AP",
+                "value": -1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-omnicogitator"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-martial-signatum-amplificator",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-eradication-cohort",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-martial-signatum-amplificator"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "martial-skitarii",
+              "type": "KEYWORD_GRANT",
+              "canonicalTarget": "SKITARII",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-martial-signatum-amplificator"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-belicosa-class-capacitor-vanes",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-eradication-cohort",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-belicosa-class-capacitor-vanes"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer",
+            "weaponMode": "ranged"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "belicosa-range",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "characteristic": "Range",
+                "value": 6
+              }
+            },
+            {
+              "id": "belicosa-strength",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "characteristic": "S",
+                "value": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-belicosa-class-capacitor-vanes"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-omnissiahs-fury",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-eradication-cohort",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-omnissiahs-fury"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer",
+            "weaponMode": "melee"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "omnissiahs-attacks",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "A",
+                "value": 2
+              }
+            },
+            {
+              "id": "omnissiahs-ap",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "AP",
+                "value": -1
+              }
+            },
+            {
+              "id": "omnissiahs-damage",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "D",
+                "value": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-omnissiahs-fury"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-stealth-screened-cybercanids-upgrade",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-cohort-acquisitus",
+      "scope": "upgraded-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-stealth-screened-cybercanids-upgrade"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "upgraded-unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "cybercanids-lone-operative",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-lone-operative",
+              "parameters": {
+                "distance": 15
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#enhancement-stealth-screened-cybercanids-upgrade"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-data-blessed-autosermon",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-data-psalm-conclave",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-data-blessed-autosermon"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "manual-resolution",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "enhancement-data-blessed-autosermon-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-data-blessed-autosermon",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-data-blessed-autosermon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-artisan",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-explorator-maniple",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-artisan"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "manual-resolution",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "enhancement-artisan-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-artisan",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-artisan"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-logis",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-explorator-maniple",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-logis"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "manual-resolution",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "enhancement-logis-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-logis",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-logis"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-genetor",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-explorator-maniple",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-genetor"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "manual-resolution",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "enhancement-genetor-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-genetor",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-genetor"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-battle-sphere-uplink",
+      "sourceKind": "enhancement",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-skitarii-hunter-cohort",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-battle-sphere-uplink"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "manual-resolution",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "enhancement-battle-sphere-uplink-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-battle-sphere-uplink",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#enhancement-battle-sphere-uplink"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "cohort-acquisitus-rule",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-cohort-acquisitus",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-cohort-acquisitus"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "anyKeywords": [
+              "PTERAXII",
+              "INFILTRATORS",
+              "RANGERS",
+              "SERBERYS RAIDERS",
+              "SERBERYS SULPHURHOUNDS"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "recon-augury",
+              "type": "KEYWORD_GRANT",
+              "canonicalTarget": "RECON AUGURY",
+              "parameters": {}
+            },
+            {
+              "id": "cohort-acquisitus-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "cohort-acquisitus-rule",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#cohort-acquisitus-rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "lords-of-the-forge-rule",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-lords-of-the-forge",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-lords-of-the-forge"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "model",
+            "allKeywords": [
+              "TECH-PRIEST"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "lords-invulnerable",
+              "type": "CHARACTERISTIC_SET",
+              "canonicalTarget": "Invulnerable",
+              "parameters": {
+                "value": "4+"
+              }
+            },
+            {
+              "id": "lords-feel-no-pain",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "value": "5+"
+              }
+            },
+            {
+              "id": "lords-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "lords-of-the-forge-rule",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "best-value",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#lords-of-the-forge-rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "luminen-auto-choir-rule",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-luminen-auto-choir",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-luminen-auto-choir"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "allKeywords": [
+              "CORPUSCARII"
+            ],
+            "weaponMode": "ranged"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "luminen-lethal-hits",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "LETHAL HITS",
+                "termId": "core-lethal-hits"
+              }
+            },
+            {
+              "id": "luminen-reference-corpuscarii",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "luminen-auto-choir-rule",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "subject": "unit",
+            "allKeywords": [
+              "FULGURITE"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "after-fight",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "luminen-reference-fulgurite",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "luminen-auto-choir-rule",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "mixed",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#luminen-auto-choir-rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "eradication-cohort-rule",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-eradication-cohort",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-eradication-cohort"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "allKeywords": [
+              "SKITARII"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "battle-imperative",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "eradication-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "eradication-cohort-rule",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-faction-pack-v1.2",
+        "locator": "content/adeptus-mechanicus-rules.en.json#eradication-cohort-rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "cohort-cybernetica-rule",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-cohort-cybernetica",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-cohort-cybernetica"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "allKeywords": [
+              "LEGIO CYBERNETICA"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "cybernetica-move",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "M",
+              "parameters": {
+                "value": 2
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "subject": "unit",
+            "allKeywords": [
+              "LEGIO CYBERNETICA"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "battle-shock",
+              "requiredState": "not-battle-shocked",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "cybernetica-oc",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "value": 1
+              }
+            },
+            {
+              "id": "cybernetica-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "cohort-cybernetica-rule",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#cohort-cybernetica-rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "data-psalm-conclave-rule",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-data-psalm-conclave",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-data-psalm-conclave"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "allKeywords": [
+              "CULT MECHANICUS"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "battle-selection",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "data-psalm-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "data-psalm-conclave-rule",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "battle-setup",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#data-psalm-conclave-rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "explorator-maniple-rule",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-explorator-maniple",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-explorator-maniple"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "allKeywords": [
+              "ADEPTUS MECHANICUS"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "acquisition-objective-state",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "explorator-maniple-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "explorator-maniple-rule",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#explorator-maniple-rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "skitarii-hunter-cohort-rule",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "detachmentId": "detachment-skitarii-hunter-cohort",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-skitarii-hunter-cohort"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "anyOf": [
+              {
+                "allKeywords": [
+                  "SKITARII",
+                  "INFANTRY"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "SKITARII",
+                  "MOUNTED"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "IRONSTRIDER BALLISTARII"
+                ]
+              }
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "skitarii-hunter-stealth",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-stealth",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-codex-carry-forward",
+        "locator": "content/adeptus-mechanicus-codex-detachments.en.json#skitarii-hunter-cohort-rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "datasheet-control-edict",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "sourceUnitId": "unit-skitarii-marshal",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-skitarii-marshal"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "control-edict-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "datasheet-control-edict",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-bsdata-codex",
+        "locator": "content/adeptus-mechanicus-codex-datasheets.en.json#unit-skitarii-marshal#datasheet-control-edict"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "datasheet-lord-of-the-machine-cult",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "sourceUnitId": "unit-tech-priest-dominus",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-tech-priest-dominus"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "allKeywords": [
+              "ELECTRO-PRIESTS"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "machine-cult-fnp-electro-priests",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "value": "4+"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "unit-keyword-absent",
+              "keyword": "ELECTRO-PRIESTS"
+            }
+          ],
+          "operations": [
+            {
+              "id": "machine-cult-fnp-other",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "value": "5+"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "best-value",
+      "source": {
+        "sourceId": "adeptus-mechanicus-bsdata-codex",
+        "locator": "content/adeptus-mechanicus-codex-datasheets.en.json#unit-tech-priest-dominus#datasheet-lord-of-the-machine-cult"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "datasheet-galvanic-field",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "sourceUnitId": "unit-tech-priest-manipulus",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-tech-priest-manipulus"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "weaponMode": "all"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "galvanic-field",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "LETHAL HITS",
+                "termId": "core-lethal-hits"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-bsdata-codex",
+        "locator": "content/adeptus-mechanicus-codex-datasheets.en.json#unit-tech-priest-manipulus#datasheet-galvanic-field"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "datasheet-seekers-of-divine-arcana",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "sourceUnitId": "unit-technoarcheologist",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-technoarcheologist"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "technoarcheologist-oc",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "value": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-bsdata-codex",
+        "locator": "content/adeptus-mechanicus-codex-datasheets.en.json#unit-technoarcheologist#datasheet-seekers-of-divine-arcana"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "datasheet-robotic-bodyguard",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "sourceUnitId": "unit-kastelan-robots",
+      "scope": "attachment-group",
+      "selector": {
+        "kind": "attachment-group",
+        "allUnitIds": [
+          "unit-kastelan-robots",
+          "unit-cybernetica-datasmith"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "unitIds": [
+              "unit-cybernetica-datasmith"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "attachment-group-contains",
+              "unitId": "unit-kastelan-robots"
+            }
+          ],
+          "operations": [
+            {
+              "id": "robotic-bodyguard-fnp",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "value": "4+"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-bsdata-codex",
+        "locator": "content/adeptus-mechanicus-codex-datasheets.en.json#unit-kastelan-robots#datasheet-robotic-bodyguard"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "datasheet-data-severed",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "sourceUnitId": "unit-cybernetica-datasmith",
+      "scope": "physical-support-composition",
+      "selector": {
+        "kind": "canonical-unit",
+        "unitIds": [
+          "unit-cybernetica-datasmith"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "unitIds": [
+              "unit-cybernetica-datasmith"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "attachment-group-excludes",
+              "unitId": "unit-kastelan-robots"
+            }
+          ],
+          "operations": [
+            {
+              "id": "data-severed-remove-vehicle",
+              "type": "KEYWORD_REMOVE",
+              "canonicalTarget": "VEHICLE",
+              "parameters": {}
+            },
+            {
+              "id": "data-severed-grant-infantry",
+              "type": "KEYWORD_GRANT",
+              "canonicalTarget": "INFANTRY",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-bsdata-codex",
+        "locator": "content/adeptus-mechanicus-codex-datasheets.en.json#unit-cybernetica-datasmith#datasheet-data-severed"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "datasheet-battle-protocols",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "sourceUnitId": "unit-cybernetica-datasmith",
+      "scope": "attachment-group",
+      "selector": {
+        "kind": "attachment-group",
+        "allUnitIds": [
+          "unit-kastelan-robots",
+          "unit-cybernetica-datasmith"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "unitIds": [
+              "unit-kastelan-robots"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "attachment-group-contains",
+              "unitId": "unit-cybernetica-datasmith"
+            },
+            {
+              "kind": "battle-protocol",
+              "requiredValue": "aegis",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "aegis-protocol-toughness",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "T",
+              "parameters": {
+                "value": 1
+              }
+            },
+            {
+              "id": "battle-protocols-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "datasheet-battle-protocols",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-bsdata-codex",
+        "locator": "content/adeptus-mechanicus-codex-datasheets.en.json#unit-cybernetica-datasmith#datasheet-battle-protocols"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "datasheet-electro-infusion",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "adeptus-mechanicus",
+      "effectiveBookIds": [
+        "adeptus-mechanicus"
+      ],
+      "sourceUnitId": "unit-fulgurite-electro-priests",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-fulgurite-electro-priests"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-character"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            },
+            {
+              "kind": "source-unit-present",
+              "unitId": "unit-fulgurite-electro-priests"
+            }
+          ],
+          "operations": [
+            {
+              "id": "electro-infusion-reference",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "datasheet-electro-infusion",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "adeptus-mechanicus-bsdata-codex",
+        "locator": "content/adeptus-mechanicus-codex-datasheets.en.json#unit-fulgurite-electro-priests#datasheet-electro-infusion"
+      },
+      "confidence": "SOURCE_LIMITED"
+    }
+  ]
+}

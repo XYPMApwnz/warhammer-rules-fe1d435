@@ -1,0 +1,2164 @@
+{
+  "schema": "wh40k-effect-contracts/v1",
+  "bookId": "dark-angels",
+  "contracts": [
+    {
+      "canonicalRecordId": "dark-angels-ability-exemplar-of-hate",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-asmodai",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-asmodai"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-exemplar-of-hate"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-asmodai:dark-angels-ability-exemplar-of-hate:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-exemplar-of-hate"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-asmodai/abilities/dark-angels-ability-exemplar-of-hate"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-supreme-grand-master",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-azrael",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-azrael"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-supreme-grand-master"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-azrael:dark-angels-ability-supreme-grand-master:clause-1-operation-1",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-azrael:dark-angels-ability-supreme-grand-master:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-supreme-grand-master"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-azrael/abilities/dark-angels-ability-supreme-grand-master"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-the-lion-helm",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-azrael",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-azrael"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-the-lion-helm"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-azrael:dark-angels-ability-the-lion-helm:clause-1-operation-1",
+              "canonicalTarget": "effective-invulnerable-save-4",
+              "parameters": {
+                "title": "Invulnerable Save 4+",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-azrael:dark-angels-ability-the-lion-helm:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-the-lion-helm"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-azrael/abilities/dark-angels-ability-the-lion-helm"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-grand-master-of-the-deathwing",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-belial",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-belial"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-grand-master-of-the-deathwing"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-belial:dark-angels-ability-grand-master-of-the-deathwing:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-grand-master-of-the-deathwing"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-belial/abilities/dark-angels-ability-grand-master-of-the-deathwing"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-book-of-salvation",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ezekiel",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ezekiel"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-book-of-salvation"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "unit-ezekiel:dark-angels-ability-book-of-salvation:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "A",
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ezekiel:dark-angels-ability-book-of-salvation:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-book-of-salvation"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ezekiel/abilities/dark-angels-ability-book-of-salvation"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-psychic-hood",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ezekiel",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ezekiel"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-psychic-hood"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ezekiel:dark-angels-ability-psychic-hood:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-psychic-hood"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ezekiel/abilities/dark-angels-ability-psychic-hood"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-intractable-will",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-lazarus",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lazarus"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-intractable-will"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lazarus:dark-angels-ability-intractable-will:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-intractable-will"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-lazarus/abilities/dark-angels-ability-intractable-will"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-astartes-banner",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ravenwing-command-squad",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ravenwing-command-squad"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-astartes-banner"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-ravenwing-command-squad:dark-angels-ability-astartes-banner:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ravenwing-command-squad:dark-angels-ability-astartes-banner:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-astartes-banner"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ravenwing-command-squad/abilities/dark-angels-ability-astartes-banner"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-honour-or-death",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ravenwing-command-squad",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ravenwing-command-squad"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-honour-or-death"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ravenwing-command-squad:dark-angels-ability-honour-or-death:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-honour-or-death"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ravenwing-command-squad/abilities/dark-angels-ability-honour-or-death"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-narthecium",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-ravenwing-command-squad",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-ravenwing-command-squad"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-narthecium"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-ravenwing-command-squad:dark-angels-ability-narthecium:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-narthecium"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-ravenwing-command-squad/abilities/dark-angels-ability-narthecium"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-cut-off-their-escape",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-sammael",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-sammael"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-cut-off-their-escape"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-sammael:dark-angels-ability-cut-off-their-escape:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-cut-off-their-escape"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-sammael/abilities/dark-angels-ability-cut-off-their-escape"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-ability-grand-master-of-the-ravenwing",
+      "sourceKind": "ability",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "sourceUnitId": "unit-sammael",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-sammael"
+        ],
+        "abilityIds": [
+          "dark-angels-ability-grand-master-of-the-ravenwing"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-sammael:dark-angels-ability-grand-master-of-the-ravenwing:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              }
+            },
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "unit-sammael:dark-angels-ability-grand-master-of-the-ravenwing:clause-1-operation-2",
+              "canonicalTarget": "MOBILE",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-sammael:dark-angels-ability-grand-master-of-the-ravenwing:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "dark-angels-ability-grand-master-of-the-ravenwing"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-codex-transcription",
+        "locator": "books/dark-angels/content/dark-angels-codex-datasheets.en.json#/datasheets/unit-sammael/abilities/dark-angels-ability-grand-master-of-the-ravenwing"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-masters-of-manoeuvre",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "company-of-hunters"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "dark-angels-detachment-rule-masters-of-manoeuvre:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "unitIds": [
+              "unit-outrider-squad"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "dark-angels-detachment-rule-masters-of-manoeuvre:clause-2-operation-1",
+              "canonicalTarget": "BATTLELINE",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-masters-of-manoeuvre:clause-3-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-masters-of-manoeuvre"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-invocations-of-ancient-fury",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "dark-age-arsenal",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "dark-age-arsenal"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "dark-angels-detachment-rule-invocations-of-ancient-fury:clause-1-operation-1",
+              "canonicalTarget": "plasma",
+              "parameters": {
+                "stat": "S",
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-invocations-of-ancient-fury:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-invocations-of-ancient-fury"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/dark-age-arsenal/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-black-winged-vigilance",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "darkflight-pursuit",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "darkflight-pursuit"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "RAVENWING",
+              "FLY"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "dark-angels-detachment-rule-black-winged-vigilance:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "allKeywords": [
+              "RAVENWING",
+              "FLY"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-black-winged-vigilance:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-black-winged-vigilance"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/darkflight-pursuit/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-vowed-target",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "inner-circle-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "DEATHWING",
+              "INFANTRY"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-vowed-target:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-vowed-target"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-dread-catechism",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "interrogation-conclave",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "interrogation-conclave"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "CHAPLAIN"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-dread-catechism:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-dread-catechism"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/interrogation-conclave/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-in-the-lions-claws",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "lion-s-blade-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "anyKeywords": [
+              "RAVENWING",
+              "DEATHWING"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-in-the-lions-claws:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-in-the-lions-claws"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-grim-resolve",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "unforgiven-task-force"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-grim-resolve:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-grim-resolve"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "dark-angels-detachment-rule-dutiful-tenacity",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "wrath-of-the-rock"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "anyKeywords": [
+              "INFANTRY",
+              "MOUNTED"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "dark-angels-detachment-rule-dutiful-tenacity:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "dark-angels-detachment-rule-dutiful-tenacity"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-master-crafted-weapon",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "enhancement-master-crafted-weapon:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "PRECISION"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/enhancements/enhancement-master-crafted-weapon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-master-of-manoeuvre",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/enhancements/enhancement-master-of-manoeuvre"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-mounted-strategist",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-mounted-strategist:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-mounted-strategist"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/enhancements/enhancement-mounted-strategist"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-recon-hunter",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "company-of-hunters",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "enhancement-recon-hunter:clause-1-operation-1",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 9\"",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-recon-hunter:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-recon-hunter"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/company-of-hunters/enhancements/enhancement-recon-hunter"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "entreaty-of-perpetual-ardour",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "dark-age-arsenal",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-hellblaster-squad"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/dark-age-arsenal/enhancements/entreaty-of-perpetual-ardour"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "petition-of-stability",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "dark-age-arsenal",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "petition-of-stability:clause-1-operation-1",
+              "canonicalTarget": "plasma",
+              "parameters": {
+                "stat": "Range",
+                "delta": 6
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "petition-of-stability:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "petition-of-stability"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/dark-age-arsenal/enhancements/petition-of-stability"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "nightforged-battery",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "darkflight-pursuit",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "unitIds": [
+          "unit-land-speeder-vengeance"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/darkflight-pursuit/enhancements/nightforged-battery"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "thundercowl-turbines",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "darkflight-pursuit",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING",
+          "FLY"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/darkflight-pursuit/enhancements/thundercowl-turbines"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-champion-of-the-deathwing",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "enhancement-champion-of-the-deathwing:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "LETHAL HITS"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/enhancements/enhancement-champion-of-the-deathwing"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-eye-of-the-unseen",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/enhancements/enhancement-eye-of-the-unseen"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-inner-circle-task-force-deathwing-assault",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ],
+        "allAbilities": [
+          "core-deep-strike"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-inner-circle-task-force-deathwing-assault:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-inner-circle-task-force-deathwing-assault"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/enhancements/enhancement-inner-circle-task-force-deathwing-assault"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-singular-will",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "inner-circle-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-singular-will:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-singular-will"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/inner-circle-task-force/enhancements/enhancement-singular-will"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "inescapable-interrogation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "interrogation-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "CHAPLAIN"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "inescapable-interrogation:clause-1-operation-1",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "inescapable-interrogation:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "inescapable-interrogation"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/interrogation-conclave/enhancements/inescapable-interrogation"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "limitless-zeal",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "interrogation-conclave",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "CHAPLAIN"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "limitless-zeal:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "limitless-zeal"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/interrogation-conclave/enhancements/limitless-zeal"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "calibanite-armaments",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "calibanite-armaments:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "D",
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/enhancements/calibanite-armaments"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "fulgus-magna",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "fulgus-magna:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "fulgus-magna"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/enhancements/fulgus-magna"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "lord-of-the-hunt",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "lord-of-the-hunt:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "lord-of-the-hunt"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/enhancements/lord-of-the-hunt"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "stalwart-champion",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "lion-s-blade-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "anyKeywords": [
+          "CAPTAIN",
+          "CHAPLAIN",
+          "LIEUTENANT"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "stalwart-champion:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "stalwart-champion"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/lion-s-blade-task-force/enhancements/stalwart-champion"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-pennant-of-remembrance",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ANCIENT"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "enhancement-pennant-of-remembrance:clause-1-operation-1",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 6+",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-pennant-of-remembrance:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-pennant-of-remembrance"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/enhancements/enhancement-pennant-of-remembrance"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-shroud-of-heroes",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/enhancements/enhancement-shroud-of-heroes"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-stubborn-tenacity",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-stubborn-tenacity:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-stubborn-tenacity"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/enhancements/enhancement-stubborn-tenacity"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-weapons-of-the-first-legion",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "unforgiven-task-force",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "enhancement-weapons-of-the-first-legion:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "A",
+                "delta": 1
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "enhancement-weapons-of-the-first-legion:clause-1-operation-2",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "S",
+                "delta": 1
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "enhancement-weapons-of-the-first-legion:clause-1-operation-3",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "D",
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-app-parity",
+        "locator": "books/dark-angels/content/dark-angels-codex-parity.en.json#/detachments/unforgiven-task-force/enhancements/enhancement-weapons-of-the-first-legion"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "ancient-weapons",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "ancient-weapons:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "S",
+                "delta": 2
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "ancient-weapons:clause-1-operation-2",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "AP",
+                "delta": -1
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "ancient-weapons:clause-1-operation-3",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "D",
+                "delta": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/enhancements/ancient-weapons"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "deathwing-assault",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "DEATHWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ],
+        "allAbilities": [
+          "core-deep-strike"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "deathwing-assault:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "deathwing-assault"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/enhancements/deathwing-assault"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "lord-of-the-ravenwing",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "RAVENWING"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "lord-of-the-ravenwing:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "lord-of-the-ravenwing"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/enhancements/lord-of-the-ravenwing"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "tempered-in-battle-aura",
+      "sourceKind": "enhancement",
+      "sourceBookId": "dark-angels",
+      "effectiveBookIds": [
+        "dark-angels"
+      ],
+      "detachmentId": "wrath-of-the-rock",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "locator": "books/dark-angels/content/dark-angels-faction-pack.en.json#/detachments/wrath-of-the-rock/enhancements/tempered-in-battle-aura"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    }
+  ]
+}

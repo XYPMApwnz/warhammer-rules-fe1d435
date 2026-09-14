@@ -15,11 +15,7 @@
         })||{};
         return {
           stateKey(raw){return semantics.stateKey?.(raw)||JSON.stringify(raw);},
-          keywordProfile({unit},base){
-            if(projection.detachmentIds.has('detachment-shamblerot-vectorium')&&unit.id==='unit-poxwalkers')return {...base,added:[...base.added,'BATTLELINE']};
-            return base;
-          },
-          gameEffects({item,gameUnit,detachments}){return semantics.projectEffects?.(item.raw,item.catalogUnit.id,detachments.map(detachment=>detachment.id),gameUnit)||[];},
+          gameEffects(context){return root.WHEffectContractRuntime?.project?.(context)||[];},
           decorate(card,current,items){semantics.decorate?.(card,items.map(item=>item.raw),[...current.detachmentIds],items[0]?.game?.effects||[],false);}
         };
       }

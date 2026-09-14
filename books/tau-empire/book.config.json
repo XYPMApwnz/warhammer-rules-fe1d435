@@ -62,7 +62,7 @@
     "ruleFacts": 5,
     "book": 5,
     "mobile": 2,
-    "rosterFilter": 7,
+    "rosterFilter": 8,
     "rosterData": 1
   },
   "expected": {
@@ -78,7 +78,8 @@
     "points": "content/tau-empire-points.en.json",
     "relatedRules": "content/tau-empire-related-rules.en.json",
     "manifest": "sources/source-manifest.json",
-    "officialMfm": "sources/official-mfm-v1.3.json"
+    "officialMfm": "sources/official-mfm-v1.3.json",
+    "effectContracts": "sources/tau-empire-effect-contracts.v1.json"
   },
   "relatedRulesOwnership": {
     "mode": "authoritative-runtime-source",

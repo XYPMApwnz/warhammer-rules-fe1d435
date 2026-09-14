@@ -36,7 +36,7 @@
     "rosterContext": 20,
     "relatedRules": 18,
     "ruleFacts": 5,
-    "rosterFilter": 5,
+    "rosterFilter": 6,
     "rosterData": 2
   },
   "armyRules": [
@@ -56,7 +56,8 @@
     "codexWargear": "content/chaos-space-marines-codex-wargear.en.json",
     "relatedRules": "content/chaos-space-marines-related-rules.en.json",
     "manifest": "sources/source-manifest.json",
-    "codexParity": "content/chaos-space-marines-codex-parity.en.json"
+    "codexParity": "content/chaos-space-marines-codex-parity.en.json",
+    "effectContracts": "sources/chaos-space-marines-effect-contracts.v1.json"
   },
   "generatedOutputs": [
     {

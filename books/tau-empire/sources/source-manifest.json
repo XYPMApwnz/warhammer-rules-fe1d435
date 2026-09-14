@@ -297,6 +297,23 @@
       "paths": [
         "books/tau-empire/mobile/related-rules.inc"
       ]
+    },
+    {
+      "id": "tau-empire-effect-contracts",
+      "sourceId": "tau-empire-effect-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "gameplay-effect-contracts"
+      ],
+      "consumers": [
+        "EFFECTIVE_MODEL",
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/tau-empire/sources/tau-empire-effect-contracts.v1.json"
+      ]
     }
   ],
   "gates": {

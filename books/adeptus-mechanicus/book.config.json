@@ -16,8 +16,8 @@
     "relatedRules": 18,
     "rosterContext": 20,
     "ruleFacts": 5,
-    "rosterFilter": 11,
-    "rosterEnhancements": 9,
+    "rosterFilter": 12,
+    "rosterEnhancements": 10,
     "data": 1,
     "tokens": 15,
     "book": 23,
@@ -52,7 +52,8 @@
     "officialMfm": "sources/official-mfm-v1.3.json",
     "unitImages": "presentation/unit-images.json",
     "globalGlossary": "../../glossary/registry.en.json",
-    "manifest": "sources/source-manifest.json"
+    "manifest": "sources/source-manifest.json",
+    "effectContracts": "sources/adeptus-mechanicus-effect-contracts.v1.json"
   },
   "relatedRulesOwnership": {
     "mode": "authoritative-runtime-source",

@@ -19033,6 +19033,4976 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "chaos-space-marines",
       "legacyKey": "enhancement-tzagulla"
     }
+  ],
+  "effectContracts": [
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-brutal-example",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-traitor-enforcer",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-traitor-enforcer"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-traitor-enforcer"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-brutal-example",
+              "canonicalTarget": "chaos-space-marines-ability-brutal-example",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-brutal-example"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-cruel-hunter",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-chaos-lord-with-jump-pack",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-chaos-lord-with-jump-pack"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-chaos-lord-with-jump-pack"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-cruel-hunter",
+              "canonicalTarget": "chaos-space-marines-ability-cruel-hunter",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-cruel-hunter"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-daemonkin-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-master-of-possession",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-master-of-possession"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-master-of-possession"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-daemonkin-psychic",
+              "canonicalTarget": "chaos-space-marines-ability-daemonkin-psychic",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-daemonkin-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-dark-ritual",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-dark-commune",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-dark-commune"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-dark-commune"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-dark-ritual",
+              "canonicalTarget": "chaos-space-marines-ability-dark-ritual",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-dark-ritual"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-dark-zealotry",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-dark-apostle",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-dark-apostle"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-dark-apostle"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-dark-zealotry",
+              "canonicalTarget": "chaos-space-marines-ability-dark-zealotry",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-dark-zealotry"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-enhanced-warriors",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-fabius-bile",
+      "scope": "bodyguard",
+      "selector": {
+        "unitIds": [
+          "unit-fabius-bile"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-fabius-bile"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "enhanced-warriors:toughness",
+              "canonicalTarget": "T",
+              "parameters": {
+                "delta": 1
+              },
+              "type": "CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "enhanced-warriors:strength",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "S"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-enhanced-warriors"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-faithful-flock",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-dark-commune",
+      "scope": "attached-group",
+      "selector": {
+        "unitIds": [
+          "unit-dark-commune"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-dark-commune"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-faithful-flock",
+              "canonicalTarget": "chaos-space-marines-ability-faithful-flock",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "faithful-flock:invulnerable",
+              "canonicalTarget": "Invulnerable",
+              "parameters": {
+                "to": "5+",
+                "direction": "lower-is-better"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "best-value",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-faithful-flock"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-fiery-faith",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-cultist-firebrand",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-cultist-firebrand"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-cultist-firebrand"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-fiery-faith",
+              "canonicalTarget": "chaos-space-marines-ability-fiery-faith",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-fiery-faith"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-fleet-command",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-masters-of-the-maelstrom",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-masters-of-the-maelstrom"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-masters-of-the-maelstrom"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-fleet-command",
+              "canonicalTarget": "chaos-space-marines-ability-fleet-command",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-fleet-command"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-head-taker",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-haarken-worldclaimer",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-haarken-worldclaimer"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-haarken-worldclaimer"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-head-taker",
+              "canonicalTarget": "chaos-space-marines-ability-head-taker",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-head-taker"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-headlong-destruction",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-kravek-morne",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-kravek-morne"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-kravek-morne"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-headlong-destruction",
+              "canonicalTarget": "chaos-space-marines-ability-headlong-destruction",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-headlong-destruction"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-plunder",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-masters-of-the-maelstrom",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-masters-of-the-maelstrom"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-masters-of-the-maelstrom"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-plunder",
+              "canonicalTarget": "chaos-space-marines-ability-plunder",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-plunder"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-prescience-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-sorcerer",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-sorcerer"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-sorcerer"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-prescience-psychic",
+              "canonicalTarget": "chaos-space-marines-ability-prescience-psychic",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-prescience-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-raiders-due",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-red-corsairs-reave-captain",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-red-corsairs-reave-captain"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-red-corsairs-reave-captain"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-raiders-due",
+              "canonicalTarget": "chaos-space-marines-ability-raiders-due",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-raiders-due"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-warp-sighted-butcher",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-master-of-executions",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-master-of-executions"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-master-of-executions"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-warp-sighted-butcher",
+              "canonicalTarget": "chaos-space-marines-ability-warp-sighted-butcher",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-warp-sighted-butcher"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-ability-warptime-psychic",
+      "sourceKind": "ability",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "sourceUnitId": "unit-sorcerer-in-terminator-armour",
+      "scope": "attached-group-excluding-source",
+      "selector": {
+        "unitIds": [
+          "unit-sorcerer-in-terminator-armour"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "on": "source",
+                "sourceUnitIds": [
+                  "unit-sorcerer-in-terminator-armour"
+                ],
+                "requiresLeading": true
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-ability-warptime-psychic",
+              "canonicalTarget": "chaos-space-marines-ability-warptime-psychic",
+              "parameters": {
+                "referenceKind": "ability"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-ability-warptime-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-empyric-wellspring",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "cabal-of-chaos",
+      "scope": "unit",
+      "selector": {
+        "any": [
+          {
+            "all": [
+              {
+                "allKeywords": [
+                  "PSYKER"
+                ],
+                "noneKeywords": [
+                  "DAEMON"
+                ]
+              }
+            ]
+          },
+          {
+            "all": [
+              {
+                "anyKeywords": [
+                  "DAEMON PRINCE",
+                  "DAEMON PRINCE WITH WINGS"
+                ],
+                "noneKeywords": [
+                  "KHORNE"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-empyric-wellspring",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-empyric-wellspring",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-empyric-wellspring"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-experimental-augmentations",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "creations-of-bile",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES",
+          "INFANTRY"
+        ],
+        "noneKeywords": [
+          "DAMNED"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-experimental-augmentations",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-experimental-augmentations",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-experimental-augmentations"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-focus-of-hatred",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "veterans-of-the-long-war",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "DAMNED"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-focus-of-hatred",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-focus-of-hatred",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-focus-of-hatred"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-iron-fortitude",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "fellhammer-siege-host",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "DAMNED"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-iron-fortitude",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-iron-fortitude",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-iron-fortitude"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-marks-of-chaos",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "pactbound-zealots",
+      "scope": "unit",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          },
+          {
+            "anyKeywords": [
+              "KHORNE",
+              "TZEENTCH",
+              "NURGLE",
+              "SLAANESH",
+              "CHAOS UNDIVIDED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-marks-of-chaos",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-marks-of-chaos",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-marks-of-chaos"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-prey-on-the-weak",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "murdertalon-raiders",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES",
+          "INFANTRY",
+          "FLY"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-prey-on-the-weak",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-prey-on-the-weak",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-prey-on-the-weak"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-raiders-and-reavers",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-raiders",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "raiders-reavers:assault",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            },
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-raiders-and-reavers",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-raiders-and-reavers",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-raiders-and-reavers"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-rain-of-ruin",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "devotees-of-destruction",
+      "scope": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-havocs",
+          "unit-obliterators"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "rain-of-ruin:heavy",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "HEAVY"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-rain-of-ruin"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-slaves-to-none",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-warband",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "slaves-to-none:dark-pacts",
+              "canonicalTarget": "chaos-space-marines-ability-dark-pacts",
+              "parameters": {
+                "title": "Dark Pacts"
+              },
+              "type": "ABILITY_REMOVE"
+            },
+            {
+              "id": "slaves-to-none:assault",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            },
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-slaves-to-none",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-slaves-to-none",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-slaves-to-none"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-soul-forge-boons",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "cult-of-the-arkifane",
+      "scope": "unit",
+      "selector": {
+        "any": [
+          {
+            "allKeywords": [
+              "VEHICLE"
+            ]
+          },
+          {
+            "unitIds": [
+              "unit-lord-discordant-on-helstalker",
+              "unit-vashtorr-the-arkifane"
+            ]
+          },
+          {
+            "groupHasEnhancementIds": [
+              "enhancement-cybinfernal-font"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "VEHICLE"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "soul-forge-boons:daemon",
+              "canonicalTarget": "DAEMON",
+              "parameters": {
+                "keyword": "DAEMON"
+              },
+              "type": "KEYWORD_GRANT"
+            }
+          ]
+        },
+        {
+          "selector": {
+            "any": [
+              {
+                "allKeywords": [
+                  "VEHICLE"
+                ]
+              },
+              {
+                "unitIds": [
+                  "unit-lord-discordant-on-helstalker",
+                  "unit-vashtorr-the-arkifane"
+                ]
+              }
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "soul-forge-boons:soul-forge",
+              "canonicalTarget": "SOUL FORGE",
+              "parameters": {
+                "keyword": "SOUL FORGE"
+              },
+              "type": "KEYWORD_GRANT"
+            },
+            {
+              "id": "soul-forge-boons:invulnerable",
+              "canonicalTarget": "Invulnerable",
+              "parameters": {
+                "to": "5+",
+                "direction": "lower-is-better"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        },
+        {
+          "selector": {
+            "groupHasEnhancementIds": [
+              "enhancement-cybinfernal-font"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "soul-forge-boons:font-invulnerable",
+              "canonicalTarget": "Invulnerable",
+              "parameters": {
+                "to": "5+",
+                "direction": "lower-is-better"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "best-value",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-soul-forge-boons"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-terror-descends-aura",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "dread-talons",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-terror-descends-aura",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-terror-descends-aura",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-terror-descends-aura"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-terror-made-manifest",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "nightmare-hunt",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-terror-made-manifest",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-terror-made-manifest",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-terror-made-manifest"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-tyrannical-motivation",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "huron-s-marauders",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES",
+          "INFANTRY"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-tyrannical-motivation",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-tyrannical-motivation",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-tyrannical-motivation"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "chaos-space-marines-detachment-rule-warp-portals",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "warpstrike-champions",
+      "scope": "unit",
+      "selector": {
+        "any": [
+          {
+            "unitIds": [
+              "unit-chaos-terminator-squad",
+              "unit-obliterators",
+              "unit-mutilators"
+            ]
+          },
+          {
+            "allKeywords": [
+              "TERMINATOR"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-chaos-space-marines-detachment-rule-warp-portals",
+              "canonicalTarget": "chaos-space-marines-detachment-rule-warp-portals",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#chaos-space-marines-detachment-rule-warp-portals"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "detachment-rule-chaos-cult-desperate-devotion",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "chaos-cult",
+      "scope": "unit",
+      "selector": {
+        "any": [
+          {
+            "allKeywords": [
+              "DAMNED"
+            ]
+          },
+          {
+            "unitIds": [
+              "unit-traitor-guardsmen-squad"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "DAMNED"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-detachment-rule-chaos-cult-desperate-devotion",
+              "canonicalTarget": "detachment-rule-chaos-cult-desperate-devotion",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        },
+        {
+          "selector": {
+            "unitIds": [
+              "unit-traitor-guardsmen-squad"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "desperate-devotion:battleline",
+              "canonicalTarget": "BATTLELINE",
+              "parameters": {
+                "keyword": "BATTLELINE"
+              },
+              "type": "KEYWORD_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#detachment-rule-chaos-cult-desperate-devotion"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "soulforged-warpack",
+      "scope": "unit",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES",
+          "DAEMON",
+          "VEHICLE"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
+              "canonicalTarget": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#detachment-rule-soulforged-warpack-debt-to-the-soul-forge"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-akshurs-binding-runes",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "warpstrike-champions",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "abilityIds": [
+              "core-deep-strike"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-akshurs-binding-runes",
+              "canonicalTarget": "enhancement-akshurs-binding-runes",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-akshurs-binding-runes"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-amulet-of-tainted-vigour",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "chaos-cult",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "DARK APOSTLE"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-amulet-of-tainted-vigour",
+              "canonicalTarget": "enhancement-amulet-of-tainted-vigour",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-amulet-of-tainted-vigour"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-bastion-plate",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "fellhammer-siege-host",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "CHAOS LORD"
+            ],
+            "noneKeywords": [
+              "JUMP PACK"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-bastion-plate",
+              "canonicalTarget": "enhancement-bastion-plate",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-bastion-plate"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-conduit-of-chaos",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "cabal-of-chaos",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "DAEMON"
+            ],
+            "noneKeywords": [
+              "KHORNE"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-conduit-of-chaos",
+              "canonicalTarget": "enhancement-conduit-of-chaos",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "conduit:lance",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "LANCE"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-conduit-of-chaos"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-crown-of-worms",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "cult-of-the-arkifane",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "WARPSMITH"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-crown-of-worms",
+              "canonicalTarget": "enhancement-crown-of-worms",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-crown-of-worms"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-cultists-brand",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "chaos-cult",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "anyKeywords": [
+              "DARK APOSTLE",
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-cultists-brand",
+              "canonicalTarget": "enhancement-cultists-brand",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-cultists-brand"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-cursed-fang",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "deceptors",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "INFANTRY"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-cursed-fang",
+              "canonicalTarget": "enhancement-cursed-fang",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "cursed-fang:ap",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": -1,
+                "stat": "AP"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "cursed-fang:precision",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "PRECISION"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-cursed-fang"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-cybinfernal-font",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "cult-of-the-arkifane",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-cybinfernal-font",
+              "canonicalTarget": "enhancement-cybinfernal-font",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "cybinfernal-font:soul-forge",
+              "canonicalTarget": "SOUL FORGE",
+              "parameters": {
+                "keyword": "SOUL FORGE"
+              },
+              "type": "KEYWORD_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-cybinfernal-font"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-despots-claim",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-raiders",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-despots-claim",
+              "canonicalTarget": "enhancement-despots-claim",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-despots-claim"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-dread-reaver",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-raiders",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-dread-reaver",
+              "canonicalTarget": "enhancement-dread-reaver",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-dread-reaver"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-dread-reputation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "huron-s-marauders",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-dread-reputation",
+              "canonicalTarget": "enhancement-dread-reputation",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-dread-reputation"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-dread-talons-warp-fuelled-thrusters",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "dread-talons",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "unitIds": [
+              "unit-chaos-lord-with-jump-pack"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-dread-talons-warp-fuelled-thrusters",
+              "canonicalTarget": "enhancement-dread-talons-warp-fuelled-thrusters",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-dread-talons-warp-fuelled-thrusters"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-eager-for-bloodshed",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "huron-s-marauders",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eager-for-bloodshed",
+              "canonicalTarget": "enhancement-eager-for-bloodshed",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "eager-bloodshed:infiltrators",
+              "canonicalTarget": "core-infiltrators",
+              "parameters": {
+                "title": "Infiltrators"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-eager-for-bloodshed"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-eager-for-vengeance",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "veterans-of-the-long-war",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eager-for-vengeance",
+              "canonicalTarget": "enhancement-eager-for-vengeance",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-eager-for-vengeance"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-eater-of-dread",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "dread-talons",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eater-of-dread",
+              "canonicalTarget": "enhancement-eater-of-dread",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-eater-of-dread"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-empyric-symbiote",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-warband",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-empyric-symbiote",
+              "canonicalTarget": "enhancement-empyric-symbiote",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-empyric-symbiote"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-eye-of-abaddon",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "veterans-of-the-long-war",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eye-of-abaddon",
+              "canonicalTarget": "enhancement-eye-of-abaddon",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-eye-of-abaddon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-eye-of-oblivion",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "devotees-of-destruction",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "WARPSMITH"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eye-of-oblivion",
+              "canonicalTarget": "enhancement-eye-of-oblivion",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-eye-of-oblivion"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-eye-of-the-warp",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "warpstrike-champions",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "abilityIds": [
+              "core-deep-strike"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eye-of-the-warp",
+              "canonicalTarget": "enhancement-eye-of-the-warp",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-eye-of-the-warp"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-eye-of-tzeentch",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "pactbound-zealots",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "TZEENTCH"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eye-of-tzeentch",
+              "canonicalTarget": "enhancement-eye-of-tzeentch",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-eye-of-tzeentch"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-eyes-of-the-hunter",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-warband",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eyes-of-the-hunter",
+              "canonicalTarget": "enhancement-eyes-of-the-hunter",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "eyes-hunter:ignores-cover",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "IGNORES COVER"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-eyes-of-the-hunter"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-falsehood",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "deceptors",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "CHAOS LORD"
+            ],
+            "noneKeywords": [
+              "TERMINATOR",
+              "JUMP PACK"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-falsehood",
+              "canonicalTarget": "enhancement-falsehood",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-falsehood"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-forges-blessing",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "soulforged-warpack",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-forges-blessing",
+              "canonicalTarget": "enhancement-forges-blessing",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-forges-blessing"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-fratricidal-trophies",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-warband",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "TERMINATOR"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-fratricidal-trophies",
+              "canonicalTarget": "enhancement-fratricidal-trophies",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-fratricidal-trophies"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-greyveil-hex",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "nightmare-hunt",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "CHAOS LORD"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-greyveil-hex",
+              "canonicalTarget": "enhancement-greyveil-hex",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "greyveil:stealth",
+              "canonicalTarget": "core-stealth",
+              "parameters": {
+                "title": "Stealth"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-greyveil-hex"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-helm-of-all-seeing",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "creations-of-bile",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "INFANTRY"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-helm-of-all-seeing",
+              "canonicalTarget": "enhancement-helm-of-all-seeing",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-helm-of-all-seeing"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-incendiary-goad",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "chaos-cult",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "anyKeywords": [
+              "DARK APOSTLE",
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-incendiary-goad",
+              "canonicalTarget": "enhancement-incendiary-goad",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-incendiary-goad"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-infernal-fulgurite",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "warpstrike-champions",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "abilityIds": [
+              "core-deep-strike"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-infernal-fulgurite",
+              "canonicalTarget": "enhancement-infernal-fulgurite",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-infernal-fulgurite"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-intoxicating-elixir",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "pactbound-zealots",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "SLAANESH"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-intoxicating-elixir",
+              "canonicalTarget": "enhancement-intoxicating-elixir",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "intoxicating-elixir:fnp",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-intoxicating-elixir"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-invigorated-mechatendrils",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "soulforged-warpack",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "WARPSMITH"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-invigorated-mechatendrils",
+              "canonicalTarget": "enhancement-invigorated-mechatendrils",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "mechatendrils:move",
+              "canonicalTarget": "M",
+              "parameters": {
+                "delta": 4
+              },
+              "type": "CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-invigorated-mechatendrils"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-iron-artifice",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "fellhammer-siege-host",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "INFANTRY"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-iron-artifice",
+              "canonicalTarget": "enhancement-iron-artifice",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "iron-artifice:anti-vehicle",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "ANTI-VEHICLE 4+"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            },
+            {
+              "id": "iron-artifice:anti-fortification",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "ANTI-FORTIFICATION 4+"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-iron-artifice"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-ironbound-enmity",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "fellhammer-siege-host",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-ironbound-enmity",
+              "canonicalTarget": "enhancement-ironbound-enmity",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-ironbound-enmity"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-living-carapace",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "creations-of-bile",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "CHAOS LORD"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-living-carapace",
+              "canonicalTarget": "enhancement-living-carapace",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "living-carapace:wounds",
+              "canonicalTarget": "W",
+              "parameters": {
+                "delta": 1
+              },
+              "type": "CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "living-carapace:fnp",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-living-carapace"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-mark-of-legend",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "veterans-of-the-long-war",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-mark-of-legend",
+              "canonicalTarget": "enhancement-mark-of-legend",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-mark-of-legend"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-mark-of-the-hound",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-raiders",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-mark-of-the-hound",
+              "canonicalTarget": "enhancement-mark-of-the-hound",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "mark-hound:scouts",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 6\""
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-mark-of-the-hound"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-mark-of-the-soul-forges",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "cult-of-the-arkifane",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-mark-of-the-soul-forges",
+              "canonicalTarget": "enhancement-mark-of-the-soul-forges",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-mark-of-the-soul-forges"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-nightmare-hunt-warp-fuelled-thrusters",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "nightmare-hunt",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "unitIds": [
+              "unit-chaos-lord-with-jump-pack"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-nightmare-hunt-warp-fuelled-thrusters",
+              "canonicalTarget": "enhancement-nightmare-hunt-warp-fuelled-thrusters",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-nightmare-hunt-warp-fuelled-thrusters"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-nights-shroud",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "dread-talons",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "CHAOS LORD"
+            ],
+            "noneKeywords": [
+              "TERMINATOR"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-nights-shroud",
+              "canonicalTarget": "enhancement-nights-shroud",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "nights-shroud:stealth",
+              "canonicalTarget": "core-stealth",
+              "parameters": {
+                "title": "Stealth"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-nights-shroud"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-orbs-of-unlife",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "pactbound-zealots",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "NURGLE"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-orbs-of-unlife",
+              "canonicalTarget": "enhancement-orbs-of-unlife",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-orbs-of-unlife"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-pact-of-cursed-pinions",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "murdertalon-raiders",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "unitIds": [
+              "unit-chaos-lord-with-jump-pack"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-pact-of-cursed-pinions",
+              "canonicalTarget": "enhancement-pact-of-cursed-pinions",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "cursed-pinions:daemon",
+              "canonicalTarget": "DAEMON",
+              "parameters": {
+                "keyword": "DAEMON"
+              },
+              "type": "KEYWORD_GRANT"
+            },
+            {
+              "id": "cursed-pinions:attacks",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "A"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-pact-of-cursed-pinions"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-pact-of-destruction",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "devotees-of-destruction",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "WARPSMITH"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-pact-of-destruction",
+              "canonicalTarget": "enhancement-pact-of-destruction",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-pact-of-destruction"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-prime-test-subject",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "creations-of-bile",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "INFANTRY"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-prime-test-subject",
+              "canonicalTarget": "enhancement-prime-test-subject",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "prime-test-subject:damage",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "D"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-prime-test-subject"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-raid-leader",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "huron-s-marauders",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-raid-leader",
+              "canonicalTarget": "enhancement-raid-leader",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-raid-leader"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-shadowcowl-talisman",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "murdertalon-raiders",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "unitIds": [
+              "unit-chaos-lord-with-jump-pack"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-shadowcowl-talisman",
+              "canonicalTarget": "enhancement-shadowcowl-talisman",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "shadowcowl:invulnerable",
+              "canonicalTarget": "Invulnerable",
+              "parameters": {
+                "to": "5+",
+                "direction": "lower-is-better"
+              },
+              "type": "CHARACTERISTIC_SET"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "best-value",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-shadowcowl-talisman"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-shroud-of-obfuscation",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "deceptors",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "INFANTRY"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-shroud-of-obfuscation",
+              "canonicalTarget": "enhancement-shroud-of-obfuscation",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "shroud:stealth",
+              "canonicalTarget": "core-stealth",
+              "parameters": {
+                "title": "Stealth"
+              },
+              "type": "ABILITY_GRANT"
+            },
+            {
+              "id": "shroud:lone-operative",
+              "canonicalTarget": "core-lone-operative",
+              "parameters": {
+                "title": "Lone Operative"
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-shroud-of-obfuscation"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-sorrowscent-vulture",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "nightmare-hunt",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "unitIds": [
+              "unit-chaos-lord-with-jump-pack"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-sorrowscent-vulture",
+              "canonicalTarget": "enhancement-sorrowscent-vulture",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "sorrowscent:scouts",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 6\""
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-sorrowscent-vulture"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-soul-harvester",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "soulforged-warpack",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-soul-harvester",
+              "canonicalTarget": "enhancement-soul-harvester",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-soul-harvester"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-soul-link",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "deceptors",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "INFANTRY"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-soul-link",
+              "canonicalTarget": "enhancement-soul-link",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-soul-link"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-surgical-precision",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "creations-of-bile",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-surgical-precision",
+              "canonicalTarget": "enhancement-surgical-precision",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "surgical:precision",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "PRECISION"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-surgical-precision"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-talisman-of-burning-blood",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "pactbound-zealots",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "KHORNE"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-talisman-of-burning-blood",
+              "canonicalTarget": "enhancement-talisman-of-burning-blood",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "burning-blood:attacks",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "A"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "burning-blood:strength",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "delta": 1,
+                "stat": "S"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-talisman-of-burning-blood"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-tempting-addendum",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "soulforged-warpack",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-tempting-addendum",
+              "canonicalTarget": "enhancement-tempting-addendum",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-tempting-addendum"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-terrorglut-parasite",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "nightmare-hunt",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-terrorglut-parasite",
+              "canonicalTarget": "enhancement-terrorglut-parasite",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-terrorglut-parasite"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-touched-by-the-warp",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "cabal-of-chaos",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "noneKeywords": [
+              "KHORNE"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-touched-by-the-warp",
+              "canonicalTarget": "enhancement-touched-by-the-warp",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "touched-by-warp:psyker",
+              "canonicalTarget": "PSYKER",
+              "parameters": {
+                "keyword": "PSYKER"
+              },
+              "type": "KEYWORD_GRANT"
+            },
+            {
+              "id": "touched-by-warp:psychic",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "PSYCHIC"
+              },
+              "type": "WEAPON_TAG_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-touched-by-the-warp"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-tyrants-lash",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-raiders",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-tyrants-lash",
+              "canonicalTarget": "enhancement-tyrants-lash",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-tyrants-lash"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-tzagulla",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "warpstrike-champions",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "abilityIds": [
+              "core-deep-strike"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-tzagulla",
+              "canonicalTarget": "enhancement-tzagulla",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "tzagulla:attacks",
+              "canonicalTarget": "all",
+              "parameters": {
+                "delta": 1,
+                "stat": "A"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "tzagulla:strength",
+              "canonicalTarget": "all",
+              "parameters": {
+                "delta": 1,
+                "stat": "S"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            },
+            {
+              "id": "tzagulla:ap",
+              "canonicalTarget": "all",
+              "parameters": {
+                "delta": -1,
+                "stat": "AP"
+              },
+              "type": "WEAPON_CHARACTERISTIC_ADD"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-tzagulla"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-voice-of-the-tyrant",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "huron-s-marauders",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-voice-of-the-tyrant",
+              "canonicalTarget": "enhancement-voice-of-the-tyrant",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-voice-of-the-tyrant"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-warmasters-gift",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "veterans-of-the-long-war",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "allKeywords": [
+              "CHAOS LORD"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-warmasters-gift",
+              "canonicalTarget": "enhancement-warmasters-gift",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-warmasters-gift"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-warp-tracer",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "fellhammer-siege-host",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-warp-tracer",
+              "canonicalTarget": "enhancement-warp-tracer",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-warp-tracer"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-warped-foresight",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "chaos-cult",
+      "scope": "owner-or-attached-group",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "anyKeywords": [
+              "DARK APOSTLE",
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [
+            {
+              "selector": {
+                "groupAbilityIds": [
+                  "core-scouts"
+                ],
+                "abilityParameters": {
+                  "distance": "6\""
+                }
+              }
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-warped-foresight",
+              "canonicalTarget": "enhancement-warped-foresight",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            },
+            {
+              "id": "warped-foresight:scouts",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 6\""
+              },
+              "type": "ABILITY_GRANT"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-warped-foresight"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-weaponised-hatred",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "renegade-warband",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-weaponised-hatred",
+              "canonicalTarget": "enhancement-weaponised-hatred",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-weaponised-hatred"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-willbreaker",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "dread-talons",
+      "scope": "owner",
+      "selector": {
+        "allKeywords": [
+          "HERETIC ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-willbreaker",
+              "canonicalTarget": "enhancement-willbreaker",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "csm-codex-secondary-consensus",
+        "locator": "books/chaos-space-marines/sources/codex-secondary-consensus.en.json#enhancement-willbreaker"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-wyredjinn",
+      "sourceKind": "enhancement",
+      "sourceBookId": "chaos-space-marines",
+      "effectiveBookIds": [
+        "chaos-space-marines"
+      ],
+      "detachmentId": "cult-of-the-arkifane",
+      "scope": "owner",
+      "selector": {
+        "all": [
+          {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          },
+          {
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {},
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-enhancement-wyredjinn",
+              "canonicalTarget": "enhancement-wyredjinn",
+              "parameters": {
+                "referenceKind": "enhancement"
+              },
+              "type": "CANONICAL_REFERENCE"
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "CURRENT_ROSTER_STATE"
+      },
+      "stackingPolicy": "dedupe-effect-id",
+      "source": {
+        "sourceId": "chaos-space-marines-faction-pack-v1.2",
+        "locator": "books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json#enhancement-wyredjinn"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    }
   ]
 });
 window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({

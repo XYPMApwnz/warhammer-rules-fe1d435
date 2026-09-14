@@ -13,7 +13,8 @@
     "presentation": "sources/canonical-presentation-contract.json",
     "runtimeRelatedTerms": "sources/runtime-related-terms.json",
     "unitImages": "presentation/unit-images.json",
-    "coreRules": "books/core-rules/content/core-rules.digital-11e.json"
+    "coreRules": "books/core-rules/content/core-rules.digital-11e.json",
+    "effectContracts": "sources/death-guard-effect-contracts.v1.json"
   },
   "expected": {
     "datasheets": 36,
@@ -41,8 +42,8 @@
     "rosterEntities": 1,
     "rosterEnhancements": 4,
     "modalFocus": 1,
-    "rosterSemantics": 15,
-    "rosterFilter": 30,
+    "rosterSemantics": 16,
+    "rosterFilter": 31,
     "app": 48
   },
   "relatedRulesOwnership": {

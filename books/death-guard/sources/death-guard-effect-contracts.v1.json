@@ -1,0 +1,2381 @@
+{
+  "schema": "wh40k-effect-contracts/v1",
+  "bookId": "death-guard",
+  "contracts": [
+    {
+      "canonicalRecordId": "enhancement-daemon-weapon-of-nurgle",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-virulent-vectorium",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-daemon-weapon-of-nurgle"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "weaponMode": "melee",
+            "equippedBy": "bearer"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "critical-hit-5",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "selected-melee",
+              "parameters": {
+                "tag": "CRITICAL HITS 5+"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-daemon-weapon-of-nurgle"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-furnace-of-plagues",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-virulent-vectorium",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-furnace-of-plagues"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "weaponMode": "melee",
+            "equippedBy": "bearer"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "furnace-attacks",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "A",
+                "value": 1
+              }
+            },
+            {
+              "id": "furnace-strength",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "S",
+                "value": 1
+              }
+            },
+            {
+              "id": "furnace-devastating",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "DEVASTATING WOUNDS",
+                "termId": "core-devastating-wounds"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-furnace-of-plagues"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-arch-contaminator",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-virulent-vectorium",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-arch-contaminator"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "objective-controlled-by-owner",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-arch-contaminator",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-arch-contaminator",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-arch-contaminator"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-revolting-regeneration",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-virulent-vectorium",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-revolting-regeneration"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "revolting-regeneration",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "value": "5+"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "best-value",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-revolting-regeneration"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-eye-of-affliction",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-mortarions-hammer",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-eye-of-affliction"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "weaponMode": "ranged"
+          },
+          "conditions": [
+            {
+              "kind": "target-status",
+              "canonicalTarget": "afflicted",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-eye-of-affliction",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-eye-of-affliction",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-eye-of-affliction"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-bilemaw-blight",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-mortarions-hammer",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-bilemaw-blight"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer",
+            "weaponFamilyId": "plague-wind"
+          },
+          "conditions": [
+            {
+              "kind": "phase",
+              "owner": "friendly",
+              "value": "shooting",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "plague-wind-range",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "family:plague-wind",
+              "parameters": {
+                "characteristic": "Range",
+                "value": 12
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "phase",
+        "owner": "friendly",
+        "value": "shooting",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-bilemaw-blight"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-shriekworm-familiar",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-mortarions-hammer",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-shriekworm-familiar"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "once-per-battle-round",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-shriekworm-familiar",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-shriekworm-familiar",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "once-per-battle-round",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-shriekworm-familiar"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-tendrilous-emissions",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-mortarions-hammer",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-tendrilous-emissions"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [
+            {
+              "kind": "nearby-friendly-unit",
+              "allKeywords": [
+                "DEATH GUARD",
+                "VEHICLE"
+              ],
+              "distance": 3,
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-tendrilous-emissions",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-tendrilous-emissions",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-tendrilous-emissions"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-final-ingredient",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-champions-of-contagion",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-final-ingredient"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "once-per-battle",
+              "state": "unknown"
+            },
+            {
+              "kind": "destroyed-target-keyword",
+              "keyword": "CHARACTER",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-final-ingredient",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-final-ingredient",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "after-fight",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-final-ingredient"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-visions-of-virulence",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-champions-of-contagion",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-visions-of-virulence"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [
+            {
+              "kind": "target-status",
+              "canonicalTarget": "enfeebled",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-visions-of-virulence",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-visions-of-virulence",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-visions-of-virulence"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-needle-of-nurgle",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-champions-of-contagion",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-needle-of-nurgle"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "ability-use",
+              "canonicalTarget": "ability-tainted-narthecium-01ba1bd",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-needle-of-nurgle",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-needle-of-nurgle",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "ability-use",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-needle-of-nurgle"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-cornucophagus",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-champions-of-contagion",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-cornucophagus"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer"
+          },
+          "conditions": [
+            {
+              "kind": "battle-formation-selection",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-cornucophagus",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-cornucophagus",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "battle-setup",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-cornucophagus"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-beckoning-blight",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-tallyband-summoners",
+      "scope": "bearer-aura",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-beckoning-blight"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "nearby-friendly-unit",
+            "allKeywords": [
+              "PLAGUE LEGIONS"
+            ],
+            "distance": 12
+          },
+          "conditions": [
+            {
+              "kind": "setup-from-reserves",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-beckoning-blight",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-beckoning-blight",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "setup",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-beckoning-blight"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-fell-harvester",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-tallyband-summoners",
+      "scope": "bearer",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-fell-harvester"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer",
+            "weaponMode": "melee"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "melee-a-2",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "characteristic": "A",
+                "value": 2
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-fell-harvester"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-entropic-knell",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-tallyband-summoners",
+      "scope": "bearer-aura",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-entropic-knell"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "enemy-unit",
+            "distance": 6
+          },
+          "conditions": [
+            {
+              "kind": "below-starting-strength",
+              "state": "unknown"
+            },
+            {
+              "kind": "battle-shock-step",
+              "owner": "opponent",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-entropic-knell",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-entropic-knell",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "battle-shock-step",
+        "owner": "opponent",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-entropic-knell"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-tome-of-bounteous-blessings",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-tallyband-summoners",
+      "scope": "bearer-aura",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-tome-of-bounteous-blessings"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "nearby-friendly-unit",
+            "allKeywords": [
+              "PLAGUE LEGIONS"
+            ],
+            "distance": 12
+          },
+          "conditions": [
+            {
+              "kind": "battle-shock-test",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-tome-of-bounteous-blessings",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-tome-of-bounteous-blessings",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-tome-of-bounteous-blessings"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-witherbone-pipes",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-shamblerot-vectorium",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-witherbone-pipes"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "bodyguardUnitIds": [
+              "unit-poxwalkers"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "witherbone-pipes-oc",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "value": 1
+              }
+            },
+            {
+              "id": "canonical-enhancement-witherbone-pipes",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-witherbone-pipes",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-witherbone-pipes"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-lord-of-the-walking-pox",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-shamblerot-vectorium",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-lord-of-the-walking-pox"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "bodyguardUnitIds": [
+              "unit-poxwalkers"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "reserve-state",
+              "value": "strategic-reserves",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-lord-of-the-walking-pox",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-lord-of-the-walking-pox",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "setup",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-lord-of-the-walking-pox"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-sorrowsyphon",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-shamblerot-vectorium",
+      "scope": "attachment-group",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-sorrowsyphon"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bearer",
+            "bodyguardUnitIds": [
+              "unit-poxwalkers"
+            ],
+            "weaponFamilyId": "plague-wind"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "sorrowsyphon",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "family:plague-wind",
+              "parameters": {
+                "characteristic": "D",
+                "value": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "unitIds": [
+              "unit-poxwalkers"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-sorrowsyphon",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-sorrowsyphon",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-sorrowsyphon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-talisman-of-burgeoning",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-shamblerot-vectorium",
+      "scope": "attached-bodyguard",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-talisman-of-burgeoning"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "unitIds": [
+              "unit-poxwalkers"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "talisman-of-burgeoning",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "T",
+              "parameters": {
+                "value": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-talisman-of-burgeoning"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-face-of-death",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-death-lords-chosen",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-face-of-death"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "enemy-unit",
+            "relationship": "engagement-range"
+          },
+          "conditions": [
+            {
+              "kind": "phase-start",
+              "value": "fight",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-face-of-death",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-face-of-death",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "phase-start",
+        "value": "fight",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-face-of-death"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-vile-vigour",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-death-lords-chosen",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-vile-vigour"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "vile-vigour-move",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "M",
+              "parameters": {
+                "value": 1
+              }
+            },
+            {
+              "id": "canonical-enhancement-vile-vigour",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-vile-vigour",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-vile-vigour"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-warprot-talisman",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-death-lords-chosen",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-warprot-talisman"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "once-per-battle",
+              "state": "unknown"
+            },
+            {
+              "kind": "not-in-engagement-range",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-warprot-talisman",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-warprot-talisman",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "turn-end",
+        "owner": "opponent",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-warprot-talisman"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-helm-of-the-fly-king",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-death-lords-chosen",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-helm-of-the-fly-king"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "attachment-state",
+              "value": "attached"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-helm-of-the-fly-king",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-helm-of-the-fly-king",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#enhancement-helm-of-the-fly-king"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-parasitic-woe-reaper",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-contagion-engines",
+      "scope": "unit-upgrade",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-parasitic-woe-reaper"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "upgraded-unit"
+          },
+          "conditions": [
+            {
+              "kind": "after-fight",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-parasitic-woe-reaper",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-parasitic-woe-reaper",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "after-fight",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-faction-pack-v1.2",
+        "locator": "sources/death-guard-faction-pack-v1.2.pdf#page=2"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-lancet-of-the-worldsore",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-contagion-engines",
+      "scope": "unit-upgrade",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-lancet-of-the-worldsore"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "upgraded-unit",
+            "unitIds": [
+              "unit-helbrute",
+              "unit-myphitic-blight-hauler"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "mobile-keyword",
+              "type": "KEYWORD_GRANT",
+              "canonicalTarget": "MOBILE",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-faction-pack-v1.2",
+        "locator": "sources/death-guard-faction-pack-v1.2.pdf#page=2"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-insectile-murmuration",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-flyblown-host",
+      "scope": "unit-upgrade",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-insectile-murmuration"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "upgraded-unit",
+            "unitIds": [
+              "unit-plague-marines"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "target-within-friendly-contagion-range",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-insectile-murmuration",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-insectile-murmuration",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-faction-pack-v1.2",
+        "locator": "sources/death-guard-faction-pack-v1.2.pdf#page=3"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-plagueveil",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-flyblown-host",
+      "scope": "unit-upgrade",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-plagueveil"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "upgraded-unit",
+            "unitIds": [
+              "unit-plague-marines"
+            ]
+          },
+          "conditions": [
+            {
+              "kind": "manual-resolution",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-plagueveil",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-plagueveil",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-faction-pack-v1.2",
+        "locator": "sources/death-guard-faction-pack-v1.2.pdf#page=3"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-rejuvenating-swarm",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-paragons-of-putrescence",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-rejuvenating-swarm"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "incoming-attack-strength-greater-than-toughness",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-rejuvenating-swarm",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-rejuvenating-swarm",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "conditional",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-faction-pack-v1.2",
+        "locator": "sources/death-guard-faction-pack-v1.2.pdf#page=4"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-host-of-the-hybridised-pox",
+      "sourceKind": "enhancement",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-paragons-of-putrescence",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "assigned-enhancement",
+        "canonicalRecordId": "enhancement-host-of-the-hybridised-pox"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [
+            {
+              "kind": "once-per-battle-per-army",
+              "state": "unknown"
+            },
+            {
+              "kind": "phase",
+              "owner": "friendly",
+              "value": "command",
+              "state": "unknown"
+            }
+          ],
+          "operations": [
+            {
+              "id": "canonical-enhancement-host-of-the-hybridised-pox",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "enhancement-host-of-the-hybridised-pox",
+              "parameters": {
+                "referenceKind": "enhancement"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "phase",
+        "owner": "friendly",
+        "value": "command",
+        "state": "unknown"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-faction-pack-v1.2",
+        "locator": "sources/death-guard-faction-pack-v1.2.pdf#page=4"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "detachment-rule-numberless-horde",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-shamblerot-vectorium",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-shamblerot-vectorium"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "unitIds": [
+              "unit-poxwalkers"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "shamblerot-battleline",
+              "type": "KEYWORD_GRANT",
+              "canonicalTarget": "BATTLELINE",
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#shamblerot-vectorium-rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "detachment-rule-warped-and-rusted-animus",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-contagion-engines",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-contagion-engines"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "unitIds": [
+              "unit-foetid-bloat-drone",
+              "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+              "unit-helbrute",
+              "unit-myphitic-blight-hauler"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "contagion-engine-keyword",
+              "type": "KEYWORD_GRANT",
+              "canonicalTarget": "CONTAGION ENGINE",
+              "parameters": {}
+            },
+            {
+              "id": "warped-and-rusted-animus",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "ranged",
+              "parameters": {
+                "tag": "ASSAULT",
+                "termId": "core-assault"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-faction-pack-v1.2",
+        "locator": "sources/death-guard-faction-pack-v1.2.pdf#page=2"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "detachment-rule-hypervirulent-strains",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "detachmentId": "detachment-paragons-of-putrescence",
+      "scope": "selected-detachment",
+      "selector": {
+        "kind": "selected-detachment",
+        "detachmentId": "detachment-paragons-of-putrescence"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "allKeywords": [
+              "CHARACTER"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-detachment-rule-hypervirulent-strains",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "detachment-rule-hypervirulent-strains",
+              "parameters": {
+                "referenceKind": "detachment-rule"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-faction-pack-v1.2",
+        "locator": "sources/death-guard-faction-pack-v1.2.pdf#page=4"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "typhus-ability-the-destroyer-hive",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-typhus",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-typhus"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-ability-the-destroyer-hive-70f0cc1",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "typhus-ability-the-destroyer-hive",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#typhus-ability-the-destroyer-hive"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "biologus-putrifier-ability-foul-infusion",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-biologus-putrifier",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-biologus-putrifier"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "weaponMode": "all"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "foul-infusion-weapons",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "all",
+              "parameters": {
+                "tag": "LETHAL HITS",
+                "termId": "core-lethal-hits"
+              }
+            },
+            {
+              "id": "canonical-ability-foul-infusion-490467e",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "biologus-putrifier-ability-foul-infusion",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#biologus-putrifier-ability-foul-infusion"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "icon-bearer-ability-unclean-icon",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-icon-bearer",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-icon-bearer"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "unclean-icon",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "value": 1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#icon-bearer-ability-unclean-icon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "lord-of-contagion-ability-vector-of-disease",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-lord-of-contagion",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-lord-of-contagion"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit",
+            "weaponMode": "melee"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "vector-sustained",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1",
+                "termId": "core-sustained-hits"
+              }
+            },
+            {
+              "id": "vector-lance",
+              "type": "WEAPON_TAG_GRANT",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "LANCE",
+                "termId": "core-lance"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#lord-of-contagion-ability-vector-of-disease"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "lord-of-poxes-ability-shroud-of-disease",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-lord-of-poxes",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-lord-of-poxes"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-ability-shroud-of-disease-90475da",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "lord-of-poxes-ability-shroud-of-disease",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#lord-of-poxes-ability-shroud-of-disease"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "lord-of-virulence-ability-virulent-aura",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-lord-of-virulence",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-lord-of-virulence"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-ability-virulent-aura-c28aa51",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "lord-of-virulence-ability-virulent-aura",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#lord-of-virulence-ability-virulent-aura"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "noxious-blightbringer-ability-sickening-vitality",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-noxious-blightbringer",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-noxious-blightbringer"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "sickening-vitality-move",
+              "type": "CHARACTERISTIC_ADD",
+              "canonicalTarget": "M",
+              "parameters": {
+                "value": 1
+              }
+            },
+            {
+              "id": "canonical-ability-sickening-vitality-89bb5ff",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "noxious-blightbringer-ability-sickening-vitality",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#noxious-blightbringer-ability-sickening-vitality"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "tallyman-ability-malicious-calculations",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-tallyman",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-tallyman"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-ability-malicious-calculations-8505f03",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "tallyman-ability-malicious-calculations",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#tallyman-ability-malicious-calculations"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "malignant-plaguecaster-ability-gift-of-contagion-psychic",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-malignant-plaguecaster",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-malignant-plaguecaster"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-ability-gift-of-contagion-psychic-4fea300",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "malignant-plaguecaster-ability-gift-of-contagion-psychic",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#malignant-plaguecaster-ability-gift-of-contagion-psychic"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "foul-blightspawn-ability-blinding-spray",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-foul-blightspawn",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-foul-blightspawn"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-ability-blinding-spray-7d189f5",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "foul-blightspawn-ability-blinding-spray",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#foul-blightspawn-ability-blinding-spray"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "plague-surgeon-ability-tainted-narthecium",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-plague-surgeon",
+      "scope": "attached-unit",
+      "selector": {
+        "kind": "attached-source-unit",
+        "sourceUnitId": "unit-plague-surgeon"
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "bodyguard",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-ability-tainted-narthecium-01ba1bd",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "plague-surgeon-ability-tainted-narthecium",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#plague-surgeon-ability-tainted-narthecium"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "deathshroud-terminators-ability-silent-bodyguard",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-deathshroud-terminators",
+      "scope": "attached-leaders",
+      "selector": {
+        "kind": "bodyguard-unit",
+        "unitIds": [
+          "unit-deathshroud-terminators"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "attached-leader",
+            "excludeSourceUnit": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "silent-bodyguard",
+              "type": "ABILITY_GRANT",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "value": "4+"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-attached"
+      },
+      "stackingPolicy": "best-value",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#deathshroud-terminators-ability-silent-bodyguard"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "helbrute-ability-froth-spattered-frenzy",
+      "sourceKind": "datasheet-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-helbrute",
+      "scope": "selected-physical-loadout",
+      "selector": {
+        "kind": "canonical-unit",
+        "unitIds": [
+          "unit-helbrute"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit",
+            "modelCount": {
+              "equals": 1,
+              "requiredState": "resolved"
+            },
+            "physicalEquipment": {
+              "kind": "weapon-family-cardinality",
+              "weaponMode": "melee",
+              "excludeProfileIds": [
+                "helbrute-weapon-close-combat-weapon"
+              ],
+              "equals": 2,
+              "requireResolvedLoadout": true,
+              "requireDistinctPhysicalItems": true,
+              "target": "selected-profile-ids"
+            }
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "froth-spattered-frenzy",
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "canonicalTarget": "selected-physical-melee-profiles",
+              "parameters": {
+                "characteristic": "A",
+                "value": 2
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "always"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#helbrute-ability-froth-spattered-frenzy"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "wargear-ability-daemonic-icon",
+      "sourceKind": "wargear-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "scope": "selected-wargear",
+      "selector": {
+        "kind": "selected-canonical-wargear-ability",
+        "canonicalTargetIds": [
+          "plague-drones-ability-daemonic-icon",
+          "plaguebearers-ability-daemonic-icon"
+        ],
+        "sourceUnitIds": [
+          "unit-plague-drones",
+          "unit-plaguebearers"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "daemonic-icon",
+              "type": "CHARACTERISTIC_SET",
+              "canonicalTarget": "Ld",
+              "parameters": {
+                "value": "6+"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-selected"
+      },
+      "stackingPolicy": "set-exact",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#daemonic-icon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "plague-drones-ability-instrument-of-chaos",
+      "sourceKind": "wargear-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-plague-drones",
+      "scope": "selected-wargear",
+      "selector": {
+        "kind": "selected-canonical-wargear-ability",
+        "canonicalTargetIds": [
+          "plague-drones-ability-instrument-of-chaos"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-plague-drones-ability-instrument-of-chaos",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "plague-drones-ability-instrument-of-chaos",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-selected"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#plague-drones-ability-instrument-of-chaos"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "plaguebearers-ability-instrument-of-chaos",
+      "sourceKind": "wargear-ability",
+      "sourceBookId": "death-guard",
+      "effectiveBookIds": [
+        "death-guard"
+      ],
+      "sourceUnitId": "unit-plaguebearers",
+      "scope": "selected-wargear",
+      "selector": {
+        "kind": "selected-canonical-wargear-ability",
+        "canonicalTargetIds": [
+          "plaguebearers-ability-instrument-of-chaos"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "subject": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "id": "canonical-plaguebearers-ability-instrument-of-chaos",
+              "type": "CANONICAL_REFERENCE",
+              "canonicalTarget": "plaguebearers-ability-instrument-of-chaos",
+              "parameters": {
+                "referenceKind": "ability"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": {
+        "kind": "while-selected"
+      },
+      "stackingPolicy": "apply-once-per-source",
+      "source": {
+        "sourceId": "death-guard-codex-transcription",
+        "locator": "content/death-guard-rules.en.json#plaguebearers-ability-instrument-of-chaos"
+      },
+      "confidence": "SOURCE_LIMITED"
+    }
+  ]
+}

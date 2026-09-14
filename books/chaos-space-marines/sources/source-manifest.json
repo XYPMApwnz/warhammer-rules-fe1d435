@@ -129,6 +129,23 @@
       "paths": [
         "books/chaos-space-marines/sources/related-rules-base.en.json"
       ]
+    },
+    {
+      "id": "chaos-space-marines-effect-contracts",
+      "sourceId": "chaos-space-marines-effect-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "gameplay-effect-contracts"
+      ],
+      "consumers": [
+        "EFFECTIVE_MODEL",
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/chaos-space-marines/sources/chaos-space-marines-effect-contracts.v1.json"
+      ]
     }
   ],
   "gates": {

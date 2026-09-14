@@ -1,0 +1,2042 @@
+{
+  "schema": "wh40k-effect-contracts/v1",
+  "bookId": "blood-angels",
+  "contracts": [
+    {
+      "canonicalRecordId": "blood-angels-ability-mass-of-doom",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-astorath",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-astorath"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-mass-of-doom"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-astorath:blood-angels-ability-mass-of-doom:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-mass-of-doom"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-astorath/abilities/blood-angels-ability-mass-of-doom"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-redeemer-of-the-lost",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-astorath",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-astorath"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-redeemer-of-the-lost"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-astorath:blood-angels-ability-redeemer-of-the-lost:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-redeemer-of-the-lost"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-astorath/abilities/blood-angels-ability-redeemer-of-the-lost"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-rites-of-battle",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-blood-angels-captain",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-blood-angels-captain"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-rites-of-battle"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-blood-angels-captain:blood-angels-ability-rites-of-battle:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-rites-of-battle"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-blood-angels-captain/abilities/blood-angels-ability-rites-of-battle"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-lord-regent-of-the-imperium-nihilus",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-commander-dante",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-commander-dante"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-lord-regent-of-the-imperium-nihilus"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-commander-dante:blood-angels-ability-lord-regent-of-the-imperium-nihilus:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-lord-regent-of-the-imperium-nihilus"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-commander-dante/abilities/blood-angels-ability-lord-regent-of-the-imperium-nihilus"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-lost-to-fury",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-death-company-captain-with-jump-pack",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-death-company-captain-with-jump-pack"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-lost-to-fury"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-death-company-captain-with-jump-pack:blood-angels-ability-lost-to-fury:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "SUSTAINED HITS 1"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-death-company-captain-with-jump-pack:blood-angels-ability-lost-to-fury:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-lost-to-fury"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-death-company-captain-with-jump-pack/abilities/blood-angels-ability-lost-to-fury"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-forlorn-hero",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-death-company-captain",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-death-company-captain"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-forlorn-hero"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-death-company-captain:blood-angels-ability-forlorn-hero:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-forlorn-hero"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-death-company-captain/abilities/blood-angels-ability-forlorn-hero"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-fury-unbound",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-lemartes",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lemartes"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-fury-unbound"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "unit-lemartes:blood-angels-ability-fury-unbound:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "LETHAL HITS"
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lemartes:blood-angels-ability-fury-unbound:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-fury-unbound"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-lemartes/abilities/blood-angels-ability-fury-unbound"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-guardian-of-the-lost",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-lemartes",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-lemartes"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-guardian-of-the-lost"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-lemartes:blood-angels-ability-guardian-of-the-lost:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-guardian-of-the-lost"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-lemartes/abilities/blood-angels-ability-guardian-of-the-lost"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-heirs-of-azkaellon",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-sanguinary-guard",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-sanguinary-guard"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-heirs-of-azkaellon"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "bodyguard-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-sanguinary-guard:blood-angels-ability-heirs-of-azkaellon:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-heirs-of-azkaellon"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-sanguinary-guard/abilities/blood-angels-ability-heirs-of-azkaellon"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-blood-chalice",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-sanguinary-priest",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-sanguinary-priest"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-blood-chalice"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "unit-sanguinary-priest:blood-angels-ability-blood-chalice:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "AP",
+                "delta": -1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-sanguinary-priest:blood-angels-ability-blood-chalice:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-blood-chalice"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-sanguinary-priest/abilities/blood-angels-ability-blood-chalice"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-ability-sanguinary-priest",
+      "sourceKind": "ability",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-sanguinary-priest",
+      "scope": "leading",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-sanguinary-priest"
+        ],
+        "abilityIds": [
+          "blood-angels-ability-sanguinary-priest"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "leading"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "unit-sanguinary-priest:blood-angels-ability-sanguinary-priest:clause-1-operation-1",
+              "canonicalTarget": "core-feel-no-pain",
+              "parameters": {
+                "title": "Feel No Pain 5+",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-sanguinary-priest:blood-angels-ability-sanguinary-priest:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "blood-angels-ability-sanguinary-priest"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-sanguinary-priest/abilities/blood-angels-ability-sanguinary-priest"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "angelic-inheritors",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "angelic-inheritors"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "blood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/angelic-inheritors/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "encarmine-speartip",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "encarmine-speartip"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "SANGUINARY GUARD"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/encarmine-speartip/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "legacy-of-grace",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "legacy-of-grace"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "BLOOD ANGELS",
+              "INFANTRY",
+              "CHARACTER"
+            ],
+            "excludeUnitIds": [
+              "unit-commander-dante"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/legacy-of-grace/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "blood-angels-detachment-rule-liberator-assault-group-red-thirst",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "liberator-assault-group",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "liberator-assault-group"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blood-angels-detachment-rule-liberator-assault-group-red-thirst:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "blood-angels-detachment-rule-liberator-assault-group-red-thirst"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/liberator-assault-group/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "rage-cursed-onslaught",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "rage-cursed-onslaught"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/rage-cursed-onslaught/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-angelic-host",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "the-angelic-host"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-angelic-host/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-lost-brethren",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "the-lost-brethren"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "unitIds": [
+              "unit-death-company-marines",
+              "unit-death-company-marines-with-bolt-rifles"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "KEYWORD_GRANT",
+              "id": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat:clause-1-operation-1",
+              "canonicalTarget": "BATTLELINE",
+              "parameters": {}
+            }
+          ]
+        },
+        {
+          "selector": {
+            "allKeywords": [
+              "DEATH COMPANY"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-lost-brethren/rule"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity",
+      "sourceKind": "detachment-rule",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "wrath-of-the-doomed",
+      "scope": "selected-detachment",
+      "selector": {
+        "detachmentIds": [
+          "wrath-of-the-doomed"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "allKeywords": [
+              "DEATH COMPANY"
+            ]
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "detachment-rule",
+                "id": "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/wrath-of-the-doomed/rule"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-blazing-icon",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "angelic-inheritors",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "INFANTRY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-blazing-icon:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-blazing-icon"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/angelic-inheritors/enhancements/enhancement-blazing-icon"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-ordained-sacrifice",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "angelic-inheritors",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/angelic-inheritors/enhancements/enhancement-ordained-sacrifice"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-prescient-flash",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "angelic-inheritors",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "enhancement-prescient-flash:clause-1-operation-1",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 6\"",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-prescient-flash:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-prescient-flash"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/angelic-inheritors/enhancements/enhancement-prescient-flash"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-troubling-visions",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "angelic-inheritors",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-troubling-visions:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-troubling-visions"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/angelic-inheritors/enhancements/enhancement-troubling-visions"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-angelic-executioner",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "encarmine-speartip",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-angelic-executioner:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-angelic-executioner"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/encarmine-speartip/enhancements/enhancement-angelic-executioner"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-shadow-of-abomination",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "encarmine-speartip",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/encarmine-speartip/enhancements/enhancement-shadow-of-abomination"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-aureole-of-the-angel",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "legacy-of-grace",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-aureole-of-the-angel:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-aureole-of-the-angel"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/legacy-of-grace/enhancements/enhancement-aureole-of-the-angel"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-blood-boil",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "legacy-of-grace",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "PSYKER",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "enhancement-blood-boil:clause-1-operation-1",
+              "canonicalTarget": "psychic",
+              "parameters": {
+                "tag": "ANTI-NON-MONSTER/VEHICLE 5+"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/legacy-of-grace/enhancements/enhancement-blood-boil"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-gift-of-foresight",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "liberator-assault-group",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/liberator-assault-group/enhancements/enhancement-gift-of-foresight"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-icon-of-the-angel",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "liberator-assault-group",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-icon-of-the-angel:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-icon-of-the-angel"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/liberator-assault-group/enhancements/enhancement-icon-of-the-angel"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-rage-fuelled-warrior",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "liberator-assault-group",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/liberator-assault-group/enhancements/enhancement-rage-fuelled-warrior"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-speed-of-the-primarch",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "liberator-assault-group",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-speed-of-the-primarch:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-speed-of-the-primarch"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/liberator-assault-group/enhancements/enhancement-speed-of-the-primarch"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-angels-fang",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "rage-cursed-onslaught",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/rage-cursed-onslaught/enhancements/enhancement-angels-fang"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-carmine-reliquary",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "rage-cursed-onslaught",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHAPLAIN",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "ABILITY_GRANT",
+              "id": "enhancement-carmine-reliquary:clause-1-operation-1",
+              "canonicalTarget": "core-scouts",
+              "parameters": {
+                "title": "Scouts 6\"",
+                "summary": ""
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-carmine-reliquary:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-carmine-reliquary"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/rage-cursed-onslaught/enhancements/enhancement-carmine-reliquary"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-master-of-the-red-thirst",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "rage-cursed-onslaught",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-master-of-the-red-thirst:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-master-of-the-red-thirst"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/rage-cursed-onslaught/enhancements/enhancement-master-of-the-red-thirst"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "sanguinary-tear-aura",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "rage-cursed-onslaught",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/rage-cursed-onslaught/enhancements/sanguinary-tear-aura"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-archangels-shard",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-angelic-host",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "enhancement-archangels-shard:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "ANTI-CHAOS 5+"
+              }
+            },
+            {
+              "type": "WEAPON_TAG_GRANT",
+              "id": "enhancement-archangels-shard:clause-1-operation-2",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "tag": "LANCE"
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-angelic-host/enhancements/enhancement-archangels-shard"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-artisan-of-war",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-angelic-host",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_SET",
+              "id": "enhancement-artisan-of-war:clause-1-operation-1",
+              "canonicalTarget": "Sv",
+              "parameters": {
+                "to": "2+"
+              }
+            },
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "enhancement-artisan-of-war:clause-1-operation-2",
+              "canonicalTarget": "all",
+              "parameters": {
+                "stat": "AP",
+                "delta": -1
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-angelic-host/enhancements/enhancement-artisan-of-war"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-gleaming-pinions",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-angelic-host",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-gleaming-pinions:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-gleaming-pinions"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-angelic-host/enhancements/enhancement-gleaming-pinions"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-visage-of-death",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-angelic-host",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "JUMP PACK",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-angelic-host/enhancements/enhancement-visage-of-death"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-blood-shard",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-lost-brethren",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-lost-brethren/enhancements/enhancement-blood-shard"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-sanguinius-grace",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-lost-brethren",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-lost-brethren/enhancements/enhancement-sanguinius-grace"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-to-slay-the-warmaster",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-lost-brethren",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-lost-brethren/enhancements/enhancement-to-slay-the-warmaster"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-vengeful-onslaught",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "the-lost-brethren",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-parity.en.json#/detachments/the-lost-brethren/enhancements/enhancement-vengeful-onslaught"
+      },
+      "confidence": "SOURCE_LIMITED"
+    },
+    {
+      "canonicalRecordId": "enhancement-instinctive-interception",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "wrath-of-the-doomed",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "unit",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "enhancement-instinctive-interception:clause-1-operation-1",
+              "canonicalTarget": {
+                "kind": "enhancement",
+                "id": "enhancement-instinctive-interception"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/wrath-of-the-doomed/enhancements/enhancement-instinctive-interception"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "enhancement-on-the-archtraitors-bridge",
+      "sourceKind": "enhancement",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "detachmentId": "wrath-of-the-doomed",
+      "scope": "assigned-enhancement",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "DEATH COMPANY",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "owner"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "WEAPON_CHARACTERISTIC_ADD",
+              "id": "enhancement-on-the-archtraitors-bridge:clause-1-operation-1",
+              "canonicalTarget": "melee",
+              "parameters": {
+                "stat": "A",
+                "delta": 2
+              }
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "locator": "books/blood-angels/content/blood-angels-faction-pack.en.json#/detachments/wrath-of-the-doomed/enhancements/enhancement-on-the-archtraitors-bridge"
+      },
+      "confidence": "VERIFIED_FROZEN"
+    },
+    {
+      "canonicalRecordId": "unit-sanguinary-guard-wargear-ability-0a0377fd66",
+      "sourceKind": "selected-wargear",
+      "sourceBookId": "blood-angels",
+      "effectiveBookIds": [
+        "blood-angels"
+      ],
+      "sourceUnitId": "unit-sanguinary-guard",
+      "scope": "attached-selected-wargear",
+      "selector": {
+        "sourceUnitIds": [
+          "unit-sanguinary-guard"
+        ],
+        "selectedWargearAbilityIds": [
+          "unit-sanguinary-guard-wargear-ability-0a0377fd66"
+        ]
+      },
+      "clauses": [
+        {
+          "selector": {
+            "scope": "attached-selected-wargear"
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CHARACTERISTIC_ADD",
+              "id": "unit-sanguinary-guard:unit-sanguinary-guard-wargear-ability-sanguinary-banner:clause-1-operation-1",
+              "canonicalTarget": "OC",
+              "parameters": {
+                "delta": 1
+              }
+            }
+          ]
+        },
+        {
+          "selector": {
+            "scope": "attachment-members-excluding-source",
+            "excludeSourceOwner": true
+          },
+          "conditions": [],
+          "operations": [
+            {
+              "type": "CANONICAL_REFERENCE",
+              "id": "unit-sanguinary-guard:unit-sanguinary-guard-wargear-ability-sanguinary-banner:clause-2-operation-1",
+              "canonicalTarget": {
+                "kind": "ability",
+                "id": "unit-sanguinary-guard-wargear-ability-0a0377fd66"
+              },
+              "parameters": {}
+            }
+          ]
+        }
+      ],
+      "timingState": "roster-projection",
+      "stackingPolicy": "deduplicate-by-effect-id",
+      "source": {
+        "sourceId": "blood-angels-codex-secondary-consensus",
+        "locator": "books/blood-angels/content/blood-angels-codex-datasheets.en.json#/datasheets/unit-sanguinary-guard/wargearAbilities/unit-sanguinary-guard-wargear-ability-sanguinary-banner"
+      },
+      "confidence": "SOURCE_LIMITED"
+    }
+  ]
+}

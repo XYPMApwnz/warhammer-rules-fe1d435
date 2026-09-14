@@ -195,6 +195,23 @@
       "localFile": "space-marines-faction-pack-v1.0.pdf",
       "active": false,
       "lifecycle": "HISTORICAL_EVIDENCE"
+    },
+    {
+      "id": "space-marines-effect-contracts",
+      "sourceId": "space-marines-effect-contracts",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": [
+        "gameplay-effect-contracts"
+      ],
+      "consumers": [
+        "EFFECTIVE_MODEL",
+        "RUNTIME_PUBLICATION"
+      ],
+      "paths": [
+        "books/space-marines/sources/space-marines-effect-contracts.v1.json"
+      ]
     }
   ],
   "gates": {

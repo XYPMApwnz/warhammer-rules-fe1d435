@@ -58,7 +58,7 @@ function canonicalIdCompilerControls(){
   };
   try{
     fs.mkdirSync(tools,{recursive:true});
-    for(const file of ['build-army-book.mjs','canonical-build-contract.mjs','build-relation-graph.mjs','build-roster-catalog.mjs','build-army-book-targets.mjs','effective-points-projection.mjs','generated-output-contract.mjs'])fs.copyFileSync(path.join(root,'books/shared/tools',file),path.join(tools,file));
+    for(const file of ['build-army-book.mjs','canonical-build-contract.mjs','canonical-join-contract.mjs','build-relation-graph.mjs','build-roster-catalog.mjs','build-army-book-targets.mjs','effective-points-projection.mjs','generated-output-contract.mjs'])fs.copyFileSync(path.join(root,'books/shared/tools',file),path.join(tools,file));
     fs.copyFileSync(path.join(root,'books/shared/rule-facts.js'),path.join(temp,'books/shared/rule-facts.js'));
     fs.copyFileSync(path.join(root,'books/shared/runtime-asset-versions.json'),path.join(temp,'books/shared/runtime-asset-versions.json'));
     writeJson(path.join(temp,'glossary/registry.en.json'),{terms:{}});
@@ -89,12 +89,16 @@ function canonicalIdCompilerControls(){
     if(process.argv.includes('--duplicate-id-mutation')){
       const guard=source.split('\n').find(line=>line.includes('if(seen.has(unit.id))throw new Error')&&line.includes('duplicate canonical ID'));
       assert.ok(guard,'duplicate guard mutation anchor');
+      const joinContract=path.join(tools,'canonical-join-contract.mjs'),joinSource=fs.readFileSync(joinContract,'utf8');
+      const joinGuard=joinSource.split('\n').find(line=>line.includes('if(result.has(id))throw new Error')&&line.includes('duplicate'));
+      assert.ok(joinGuard,'shared duplicate guard mutation anchor');
       fs.writeFileSync(builder,source.replace(guard,''));
+      fs.writeFileSync(joinContract,joinSource.replace(joinGuard,''));
       try{
         assert.throws(()=>rejects(local,'duplicate-local',['datasheets[0]','datasheets[1]']),/duplicate canonical ID must fail compilation/,'disabled guard must make the regression oracle red');
         assert.deepEqual(catalog(local).map(({id,title})=>({id,title})),[{id:first.id,title:second.title}],'disabled guard reproduces destructive last-write-wins merge');
         console.log('Duplicate canonical ID mutation: KILLED (compiler exited 0; regression rejected false success)');
-      }finally{fs.writeFileSync(builder,source);}
+      }finally{fs.writeFileSync(builder,source);fs.writeFileSync(joinContract,joinSource);}
       rejects(fixture('restored',{datasheets:[first,duplicate]}),'restored',['datasheets[0]','datasheets[1]']);
     }
     console.log('Canonical ID compiler controls passed: unique, duplicate, cross-layer, dependency, overlay, pre-merge rejection');

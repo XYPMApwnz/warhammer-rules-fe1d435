@@ -7,6 +7,7 @@ import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfil
 import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
 import {createCanonicalBuildContext,finishCanonicalBuild,runCanonicalBuildExtension} from './canonical-build-contract.mjs';
 import {createEffectivePointsProjection,resolveEffectiveEnhancementContractId,resolveEffectiveEnhancementIdentity} from './effective-points-projection.mjs';
+import {bindRowsToCanonicalIds,canonicalDisplayKey,canonicalSlug,canonicalizeRelationTargets,indexCanonicalById,mergeCanonicalById} from './canonical-join-contract.mjs';
 
 export async function buildCanonicalBook(context,{projectionOnly=false}={}){
 const {args,check,configPath,root,repo,readJson,config,runtimeVersions}=context;
@@ -42,6 +43,7 @@ const clean=value=>String(value??'').replaceAll('\u00a0',' ').replace(/\s+/g,' '
 const slug=value=>clean(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const unique=(items,keyOf)=>{const seen=new Set();return items.filter(item=>{const key=keyOf(item);if(seen.has(key))return false;seen.add(key);return true;});};
 const titleKey=value=>clean(value).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const sourceUnitId=value=>{const raw=String(value?.unitId||value?.canonicalId||value?.id||'');return raw?raw.startsWith('unit-')?raw:`unit-${raw}`:null;};
 const coreBaseKey=value=>{const normalized=titleKey(value).replace(/\s+(?:d\d+|\d+)$/,'').trim();return normalized.startsWith('anti ')?'anti':normalized;};
 const canonicalCoreAbilityTerms=new Map(Object.entries(glossaryTerms).filter(([id])=>id.startsWith('core-')).map(([id,term])=>[coreBaseKey(String(term.title?.en||'').replace(/^\[|\]$/g,'')),id]));
 const unitInventory=layer=>[...(layer.datasheets||[]),...(layer.imperialArmour||[]),...(layer.legends||[])];
@@ -54,7 +56,10 @@ const dependencyCodices=(config.dependencies||[]).map(id=>{
   const dependencyParity=dependencyConfig.sources.codexParity?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexParity),'utf8')):null;
   const dependencyRelatedRules=dependencyConfig.sources.relatedRules?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.relatedRules),'utf8')):{stratagems:{},enhancements:{},keywordGrants:{}};
   const dependencyWargear=dependencyConfig.sources.codexWargear?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexWargear),'utf8')):null;
-  return {id,config:dependencyConfig,codex:dependencyCodex,pack:dependencyPack,parity:dependencyParity,points:dependencyPoints,relatedRules:dependencyRelatedRules,pointsByTitle:new Map(dependencyPoints.units.map(item=>[titleKey(item.title),item])),wargearByTitle:new Map((dependencyWargear?.units||[]).map(item=>[titleKey(item.title),item])),wargearSource:dependencyWargear?.source,officialByTitle:new Map(Object.values(dependencyPack.datasheets||{}).flat().map(item=>[titleKey(item.title),item]))};
+  const dependencyUnits=unitInventory(dependencyCodex),pointsById=indexCanonicalById(dependencyPoints.units,{label:`${id} points unit`});
+  const wargearRows=bindRowsToCanonicalIds(dependencyWargear?.units||[],dependencyUnits,{label:`${id} wargear unit`,rowId:sourceUnitId});
+  const officialRows=bindRowsToCanonicalIds(Object.values(dependencyPack.datasheets||{}).flat(),dependencyUnits,{label:`${id} Faction Pack Datasheet`,rowId:sourceUnitId,allowUnbound:true});
+  return {id,config:dependencyConfig,codex:dependencyCodex,pack:dependencyPack,parity:dependencyParity,points:dependencyPoints,relatedRules:dependencyRelatedRules,pointsById,wargearByUnitId:new Map(wargearRows.map(item=>[item.canonicalId,item])),wargearSource:dependencyWargear?.source,officialByUnitId:new Map(officialRows.map(item=>[item.canonicalId,item]))};
 });
 const dependencyById=new Map(dependencyCodices.map(item=>[item.id,item]));
 const dependencyScope=config.dependencyDatasheets||{};
@@ -86,7 +91,7 @@ const validateDependencyPointOverride=(unitId,override)=>{
 const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.currentOnly?[...(dependency.codex.datasheets||[]),...(dependency.codex.imperialArmour||[])]:unitInventory(dependency.codex))
   .filter(unit=>![...(unit.keywords||[]),...dependencyCompatibilityKeywords(dependency,unit)].some(keyword=>excludedDependencyKeywords.has(clean(keyword).toUpperCase())))
   .map(unit=>{
-    const inheritedPoint=dependency.pointsByTitle.get(titleKey(unit.title)),pointOverride=dependencyPointOverrides[unit.id],exact=dependency.wargearByTitle.get(titleKey(unit.title)),official=dependency.officialByTitle.get(titleKey(unit.title));
+    const inheritedPoint=dependency.pointsById.get(unit.id),pointOverride=dependencyPointOverrides[unit.id],exact=dependency.wargearByUnitId.get(unit.id),official=dependency.officialByUnitId.get(unit.id);
     if(pointOverride&&!inheritedPoint)throw new Error(`${config.id}: dependency point override ${unit.id} has no inherited point record`);
     if(pointOverride&&titleKey(pointOverride.title)!==titleKey(unit.title))throw new Error(`${config.id}: dependency point override ${unit.id} title mismatch`);
     if(pointOverride)validateDependencyPointOverride(unit.id,pointOverride);
@@ -97,56 +102,63 @@ const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.cur
 const dependencyUnitIds=new Set(dependencyUnits.map(unit=>unit.id));
 for(const unitId of Object.keys(dependencyPointOverrides))if(!dependencyUnitIds.has(unitId))throw new Error(`${config.id}: dependency point override ${unitId} does not resolve to an effective dependency Datasheet`);
 const ownUnits=config.currentDatasheetLayers?config.currentDatasheetLayers.flatMap(layer=>codex[layer]||[]):config.currentDatasheetsOnly?codex.datasheets||[]:unitInventory(codex);
-const pointsByTitle=new Map(points.units.map(item=>[titleKey(item.title),item]));
-const wargearByTitle=new Map((codexWargear?.units||[]).map(item=>[titleKey(item.title),item]));
+const pointsById=indexCanonicalById(points.units,{label:`${config.id} points unit`});
+const boundWargear=bindRowsToCanonicalIds(codexWargear?.units||[],ownUnits,{label:`${config.id} wargear unit`,rowId:sourceUnitId});
+const wargearByUnitId=new Map(boundWargear.map(item=>[item.canonicalId,item]));
 const mergedUnits=new Map();
 if(dependencyScope.render!==false)for(const unit of dependencyUnits)mergedUnits.set(unit.id,unit);
 for(const unit of ownUnits){
-  const point=pointsByTitle.get(titleKey(unit.title)),exact=wargearByTitle.get(titleKey(unit.title));
+  const point=pointsById.get(unit.id),exact=wargearByUnitId.get(unit.id);
   mergedUnits.set(unit.id,{...unit,...(point?{points:point.points,paidWargear:point.paidWargear,pointsSource:point.pointsSource}:{}),...(exact?{wargear:exact.wargear,compositionText:exact.composition,wargearSource:{label:codexWargear.source?.label||'Current 11e reference',url:exact.url}}:{})});
 }
-const officialIds=new Map(Object.values(pack.datasheets||{}).flat().map(item=>[titleKey(item.title),item]));
+const boundOfficialDatasheets=bindRowsToCanonicalIds(Object.values(pack.datasheets||{}).flat(),unitInventory(codex),{label:`${config.id} Faction Pack Datasheet`,rowId:sourceUnitId,allowUnbound:true});
+const officialByUnitId=new Map(boundOfficialDatasheets.filter(item=>item.canonicalId).map(item=>[item.canonicalId,item]));
 const units=[...mergedUnits.values()].map(unit=>{
-  const official=officialIds.get(titleKey(unit.title));
+  const official=officialByUnitId.get(unit.id);
   return official?{...unit,sourcePages:official.sourcePages,provenance:official.provenance,sourceLayer:unit.sourceLayer==='codex'?'faction-pack':unit.sourceLayer}:unit;
 });
 const relationUnits=unique([...units,...dependencyUnits],unit=>unit.id);
-const unitById=new Map(relationUnits.map(unit=>[unit.id,unit])),unitByTitle=new Map(relationUnits.map(unit=>[titleKey(unit.title),unit]));
+const unitById=indexCanonicalById(relationUnits,{label:`${config.id} relation unit`});
+const presentationUnitByTitle=new Map(relationUnits.map(unit=>[titleKey(unit.title),unit]));
 
-const codexDetachmentNames=unique(points.enhancements.map(item=>item.detachment),titleKey);
-const packByTitle=new Map(pack.detachments.map(item=>[titleKey(item.title),item]));
-const parityByTitle=new Map((codexParity?.detachments||[]).map(item=>[titleKey(item.title),item]));
+const sourceDetachments=unique([...(pack.detachments||[]),...(codexParity?.detachments||[])],item=>item.id);
+const sourceDetachmentById=indexCanonicalById(sourceDetachments,{label:`${config.id} Detachment`});
+const boundPointDetachments=bindRowsToCanonicalIds(points.detachments||[],sourceDetachments,{label:`${config.id} points Detachment`,rowId:item=>item.detachmentId||item.canonicalId||item.id});
+const pointDetachmentById=new Map(boundPointDetachments.map(item=>[item.canonicalId,item]));
+const detachmentIdByDeclaredTitle=new Map(sourceDetachments.map(item=>[titleKey(item.title),item.id]));
+const rawPointEnhancementByBound=new WeakMap();
+const bindPointEnhancement=record=>{const detachmentId=record.detachmentId||detachmentIdByDeclaredTitle.get(titleKey(record.detachment));if(!detachmentId)throw new Error(`${config.id}: Enhancement points ${record.id} references unknown Detachment ${record.detachment}`);const bound={...record,detachmentId,canonicalId:record.canonicalEnhancementId||record.id};rawPointEnhancementByBound.set(bound,record);return bound;};
+const boundPointEnhancements=(points.enhancements||[]).map(bindPointEnhancement);
+const codexDetachmentIds=unique(boundPointEnhancements.map(item=>item.detachmentId),value=>value);
 const pointTitleKey=value=>titleKey(value).replace(/ upgrade$/,'');
-const enhancementPointsByTitle=new Map(points.enhancements.map(item=>[pointTitleKey(item.title),item]));
-const enhancementPointsByDetachment=new Map(points.enhancements.map(item=>[`${titleKey(item.detachment)}\0${pointTitleKey(item.title)}`,item]));
-const detachmentMetaByTitle=new Map((points.detachments||[]).map(item=>[titleKey(item.title),item]));
+const enhancementPointsByScope=new Map(boundPointEnhancements.map(item=>[`${item.detachmentId}\0${item.canonicalId}`,item]));
+const detachmentMetaById=pointDetachmentById;
 const enhancementSourceId=item=>item?.sourceId||item?.id||null;
 const enhancementDependencyFacts=(...sources)=>Object.fromEntries(['profile','owner','assignment'].flatMap(key=>{const source=sources.find(item=>item?.[key]!=null);return source?[[key,source[key]]]:[];}));
 const pointsPublicationByEnhancement=new WeakMap(),pointsPublicationByDetachment=new WeakMap(),dependencyEnhancementIdentityByPublication=new Map();
-const enrichEnhancement=(item,detachment)=>{const qualified=Boolean(config.detachmentQualifiedEnhancementPoints),current=qualified?enhancementPointsByDetachment.get(`${titleKey(detachment)}\0${pointTitleKey(item.title)}`):enhancementPointsByTitle.get(pointTitleKey(item.title));if(!current)return item;const sourceId=item.sourceId||current.sourceId||(qualified&&current.id?item.id:null),enriched={...item,...(qualified&&current.id?{id:current.id}:{}),...(sourceId?{sourceId}:{}),value:current.value,pointsSource:current.pointsSource,...enhancementDependencyFacts(item,qualified?current:null)};pointsPublicationByEnhancement.set(enriched,current);return enriched;};
-const enrichDetachment=detachment=>{const pointsPublication=detachmentMetaByTitle.get(titleKey(detachment.title)),enriched={...detachment,...pointsPublication,enhancements:(detachment.enhancements||[]).map(item=>enrichEnhancement(item,detachment.title))};if(pointsPublication)pointsPublicationByDetachment.set(enriched,pointsPublication);return enriched;};
-const localDetachments=codexDetachmentNames.map(title=>enrichDetachment(packByTitle.get(titleKey(title))||parityByTitle.get(titleKey(title))||{
-  id:slug(title),title,sourceLayer:'codex-transcription',rule:null,
-  enhancements:points.enhancements.filter(item=>titleKey(item.detachment)===titleKey(title)),stratagems:[]
-}));
-for(const item of pack.detachments)if(!localDetachments.some(other=>titleKey(other.title)===titleKey(item.title)))localDetachments.push(enrichDetachment(item));
+const pointEnhancementFor=(item,detachment)=>{const candidates=[item.canonicalId,item.id,item.sourceId,item.ruleId].filter(Boolean).flatMap(id=>[id,id.startsWith('enhancement-')?id.slice(12):`enhancement-${id}`]);const exact=[...new Set(candidates)].map(id=>enhancementPointsByScope.get(`${detachment.id}\0${id}`)).filter(Boolean);if(exact.length===1)return exact[0];if(exact.length>1&&new Set(exact).size>1)throw new Error(`${config.id}: ambiguous Enhancement identity ${detachment.id}/${item.id}`);const matches=boundPointEnhancements.filter(record=>record.detachmentId===detachment.id&&pointTitleKey(record.title)===pointTitleKey(item.title));if(matches.length>1)throw new Error(`${config.id}: Enhancement ${detachment.id}/${item.title} display assertion is ambiguous`);return matches[0]||null;};
+const enrichEnhancement=(item,detachment)=>{const qualified=Boolean(config.detachmentQualifiedEnhancementPoints),current=pointEnhancementFor(item,detachment);if(!current)return item;if(pointTitleKey(current.title)!==pointTitleKey(item.title)){pointsPublicationByEnhancement.set(item,current);return item;}const sourceId=item.sourceId||current.sourceId||(qualified&&current.id?item.id:null),enriched={...item,...(qualified&&current.id?{id:current.id}:{}),...(sourceId?{sourceId}:{}),value:current.value,pointsSource:current.pointsSource,...enhancementDependencyFacts(item,qualified?current:null)};pointsPublicationByEnhancement.set(enriched,current);return enriched;};
+const enrichDetachment=detachment=>{const pointsPublication=detachmentMetaById.get(detachment.id),enriched={...detachment,...pointsPublication,id:detachment.id,enhancements:(detachment.enhancements||[]).map(item=>enrichEnhancement(item,detachment))};if(pointsPublication)pointsPublicationByDetachment.set(enriched,pointsPublication);return enriched;};
+const localDetachments=codexDetachmentIds.map(id=>{const source=sourceDetachmentById.get(id);if(!source)throw new Error(`${config.id}: points Detachment ${id} has no accepted canonical owner`);return enrichDetachment(source);});
+for(const item of sourceDetachments)if(!localDetachments.some(other=>other.id===item.id))localDetachments.push(enrichDetachment(item));
 const dependencyDetachmentScope=config.dependencyDetachments;
 const dependencyDetachments=!dependencyDetachmentScope||dependencyDetachmentScope.render===false?[]:dependencyCodices.flatMap(dependency=>{
-  const currentTitles=new Set((dependency.points.detachments||[]).map(item=>titleKey(item.title)));
-  const pointMeta=new Map((dependency.points.detachments||[]).map(item=>[titleKey(item.title),item]));
-  const pointEnhancements=new Map((dependency.points.enhancements||[]).map(item=>[`${titleKey(item.detachment)}\0${pointTitleKey(item.title)}`,item]));
-  const source=unique([...(dependency.pack.detachments||[]),...(dependency.parity?.detachments||[])],item=>titleKey(item.title));
+  const source=unique([...(dependency.pack.detachments||[]),...(dependency.parity?.detachments||[])],item=>item.id);
+  const boundDetachmentPoints=bindRowsToCanonicalIds(dependency.points.detachments||[],source,{label:`${dependency.id} points Detachment`,rowId:item=>item.detachmentId||item.canonicalId||item.id});
+  const currentIds=new Set(boundDetachmentPoints.map(item=>item.canonicalId)),pointMeta=new Map(boundDetachmentPoints.map(item=>[item.canonicalId,item]));
+  const dependencyDetachmentIdByTitle=new Map(source.map(item=>[titleKey(item.title),item.id]));
+  const pointEnhancements=new Map((dependency.points.enhancements||[]).map(item=>{const detachmentId=item.detachmentId||dependencyDetachmentIdByTitle.get(titleKey(item.detachment));if(!detachmentId)throw new Error(`${dependency.id}: Enhancement points ${item.id} references unknown Detachment ${item.detachment}`);return[`${detachmentId}\0${item.id}`,{...item,detachmentId}];}));
   const chapterKey=titleKey(dependencyDetachmentScope.chapterKeyword||config.factionKeyword);
-  const selected=source.filter(item=>{const restriction=item.restriction||dependency.config.detachmentChapterRestrictions?.[item.title];return currentTitles.has(titleKey(item.title))&&(!restriction||titleKey(restriction)===chapterKey);}).map(item=>{
-    const meta=pointMeta.get(titleKey(item.title))||{},override=dependencyDetachmentScope.pointOverrides?.[item.title]||{};
+  const selected=source.filter(item=>{const restriction=item.restriction||dependency.config.detachmentChapterRestrictionsById?.[item.id]||dependency.config.detachmentChapterRestrictions?.[item.title];return currentIds.has(item.id)&&(!restriction||titleKey(restriction)===chapterKey);}).map(item=>{
+    const meta=pointMeta.get(item.id)||{},override=dependencyDetachmentScope.pointOverridesById?.[item.id]||dependencyDetachmentScope.pointOverrides?.[item.title]||{};
     const mark=record=>({...record,dependencyBook:dependency.id});
-    const pointsPublication={...meta,...override,title:item.title},enhancements=(item.enhancements||[]).map(enhancement=>{const current=pointEnhancements.get(`${titleKey(item.title)}\0${pointTitleKey(enhancement.title)}`)||{},sourceId=enhancementSourceId(enhancement),enriched=mark({...enhancement,...current,text:enhancement.text,...(sourceId?{sourceId}:{}),...enhancementDependencyFacts(enhancement,current)});pointsPublicationByEnhancement.set(enriched,current);if(current.id&&sourceId)dependencyEnhancementIdentityByPublication.set([dependency.id,item.id,current.id].join('\0'),sourceId);return enriched;}),enriched={...item,...meta,...override,rule:item.rule?mark(item.rule):item.rule,enhancements,stratagems:(item.stratagems||[]).map(mark),dependencyBook:dependency.id,dependencyTitle:dependency.config.title,dependencySourceFile:path.basename(dependency.pack.meta.file),dependencySourceVersion:dependency.pack.meta.version,dependencyCodexSourceLabel:dependency.config.codexSourceLabel||'SECONDARY CODEX'};
+    const pointsPublication={...meta,...override,id:item.id,title:item.title},enhancements=(item.enhancements||[]).map(enhancement=>{const candidates=[enhancement.id,enhancement.sourceId].filter(Boolean).flatMap(id=>[id,id.startsWith('enhancement-')?id.slice(12):`enhancement-${id}`]),exact=candidates.map(id=>pointEnhancements.get(`${item.id}\0${id}`)).find(Boolean),titleMatches=[...pointEnhancements.values()].filter(record=>record.detachmentId===item.id&&pointTitleKey(record.title)===pointTitleKey(enhancement.title)),current=exact||(titleMatches.length===1?titleMatches[0]:null)||{};if(!exact&&titleMatches.length>1)throw new Error(`${dependency.id}: Enhancement ${item.id}/${enhancement.title} display assertion is ambiguous`);const sourceId=enhancementSourceId(enhancement),enriched=mark({...enhancement,...current,text:enhancement.text,...(sourceId?{sourceId}:{}),...enhancementDependencyFacts(enhancement,current)});pointsPublicationByEnhancement.set(enriched,current);if(current.id&&sourceId)dependencyEnhancementIdentityByPublication.set([dependency.id,item.id,current.id].join('\0'),sourceId);return enriched;}),enriched={...item,...meta,...override,id:item.id,title:item.title,rule:item.rule?mark(item.rule):item.rule,enhancements,stratagems:(item.stratagems||[]).map(mark),dependencyBook:dependency.id,dependencyTitle:dependency.config.title,dependencySourceFile:path.basename(dependency.pack.meta.file),dependencySourceVersion:dependency.pack.meta.version,dependencyCodexSourceLabel:dependency.config.codexSourceLabel||'SECONDARY CODEX'};
     pointsPublicationByDetachment.set(enriched,pointsPublication);return enriched;
   });
   if(dependencyDetachmentScope.expected!=null&&selected.length!==dependencyDetachmentScope.expected)throw new Error(`${config.id}: expected ${dependencyDetachmentScope.expected} compatible ${dependency.config.title} Detachments, got ${selected.length}`);
   return selected;
 });
-const detachments=unique([...localDetachments,...dependencyDetachments],item=>titleKey(item.title));
+const detachments=unique([...localDetachments,...dependencyDetachments],item=>item.id);
 
 const allKeywords=new Set(units.flatMap(unit=>unit.keywords||[]).map(value=>clean(value).toUpperCase()));
 const namedGroups=[
@@ -161,15 +173,15 @@ const namedGroups=[
   ['TRYGON',units.filter(unit=>titleKey(unit.title)==='trygon').map(unit=>unit.id)]
 ];
 const relatedRulesFor=item=>item.dependencyBook?dependencyById.get(item.dependencyBook)?.relatedRules||relatedRules:relatedRules;
-const contractById=(records,...ids)=>{for(const id of ids){if(records?.[id])return records[id];const compact=String(id||'').replace(/^enhancement-/,'').replace(/[^a-z0-9]/gi,'').toLowerCase(),match=Object.entries(records||{}).find(([key])=>key.replace(/[^a-z0-9]/gi,'').toLowerCase()===compact);if(match)return match[1];}return null;};
+const contractById=(records,...ids)=>{for(const raw of ids){for(const id of [raw,String(raw||'').replace(/^enhancement-/,'')].filter(Boolean))if(records?.[id])return records[id];}return null;};
 const enhancementEligibility=item=>contractById(relatedRulesFor(item).enhancements,item.id,item.sourceId);
 const enhancementOwnerRecords=Object.entries(enhancementOwners?.enhancements||{}).map(([id,record])=>({id,...record}));
-const enhancementRuleId=item=>config.id==='chaos-space-marines'&&item.id?item.id:['space-marines','dark-angels'].includes(config.id)&&(item.sourceId||item.id)?item.sourceId||item.id:enhancementOwnerRecords.find(record=>titleKey(record.title)===titleKey(item.title))?.id||item.id||`enhancement-${slug(item.title)}`;
-const enhancementOwnerRecord=item=>enhancementOwnerRecords.find(record=>record.id===enhancementRuleId(item))||null;
+const enhancementRuleId=(item,detachment)=>{const candidates=[item.canonicalId,item.ruleId,item.sourceId,item.id].filter(Boolean);if(config.id==='chaos-space-marines'&&item.id)return item.id;if(['space-marines','dark-angels'].includes(config.id)&&(item.sourceId||item.id))return item.sourceId||item.id;const exact=candidates.find(id=>enhancementOwnerRecords.some(record=>record.id===id));if(exact)return exact;if(enhancementOwnerRecords.length){const matches=enhancementOwnerRecords.filter(record=>record.detachmentId===detachment?.id&&titleKey(record.title)===titleKey(item.title));if(matches.length!==1)throw new Error(`${config.id}: Enhancement ${detachment?.id||'unknown'}/${item.id||item.title} must bind to one exact owner identity; got ${matches.length}`);return matches[0].id;}return item.id||`enhancement-${slug(item.title)}`;};
+const enhancementOwnerRecord=(item,detachment)=>enhancementOwnerRecords.find(record=>record.id===enhancementRuleId(item,detachment))||null;
 const publishedEnhancementContracts=new Set(['tyranids','tau-empire']);
 const publishedRelationContracts=new Set(['tyranids','tau-empire']);
-const enhancementContract=item=>{
-  const frozen=enhancementOwnerRecord(item);
+const enhancementContract=(item,detachment)=>{
+  const frozen=enhancementOwnerRecord(item,detachment);
   if(frozen){
     if(!frozen.ownerGroup)return null;
     const group=enhancementOwners.ownerGroups?.[frozen.ownerGroup];
@@ -206,17 +218,7 @@ const stratagemEligibility=item=>{
   return explicit;
 };
 
-const relationEdges=[];
-for(const leader of units){
-  for(const [role,targets] of [['leader',leader.relations?.leader||[]],['support',leader.relations?.support||[]]])for(const targetName of targets){
-    const names=unitByTitle.has(titleKey(targetName))?[targetName]:String(targetName).split(/[;,]/).map(value=>value.trim()).filter(Boolean);
-    for(const name of names){
-      const body=unitByTitle.get(titleKey(name));
-      if(!body){if(publishedRelationContracts.has(config.id))throw new Error(`${config.id}: ${leader.id} references unknown ${role} target ${name}`);continue;}
-      relationEdges.push({role,sourceId:leader.id,targetId:body.id});
-    }
-  }
-}
+const relationEdges=canonicalizeRelationTargets(units,{bookId:config.id,dispositions:config.relationTargetDispositions||[]});
 const relationGraphs=buildRelationGraphs(relationUnits,relationEdges,{
   bookId:config.id,
   inheritedUnits:dependencyUnits,
@@ -274,24 +276,26 @@ const compileUnitRuleFacts=unit=>{
 };
 const unitRuleFacts=new Map(units.map(unit=>[unit.id,compileUnitRuleFacts(unit)]));
 const unitRuleProfiles=new Map([...unitRuleFacts].map(([id,facts])=>[id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(facts))]));
-const projectionEnhancementSources=detachments.flatMap(det=>(det.enhancements||[]).filter(item=>!enhancementOwnerRecord(item)||enhancementContract(item)).map(item=>({det,item,contract:enhancementContract(item),ownerRecord:enhancementOwnerRecord(item)})));
-const rosterEnhancements=Object.fromEntries(projectionEnhancementSources.map(({det,item,contract,ownerRecord})=>{const dependencyRecord=Boolean(det.dependencyBook),sourceId=dependencyRecord?item.sourceId:null,facts=dependencyRecord?enhancementDependencyFacts(item):{},record={title:item.title,text:item.text,value:ownerRecord?ownerRecord.points:item.value,detachment:det.title,tags:contract?.tags||item.tags||[],...(sourceId?{sourceId}:{}),...(item.profile?{profile:item.profile}:{}),...facts,owner:contract?.owner||facts.owner||null,assignment:contract?.assignment||facts.assignment||null},configuredExactIdentity=Boolean(config.rosterCatalog?.exactEnhancementIds),builtInExactIdentity=['chaos-space-marines','space-marines','dark-angels','blood-angels'].includes(config.id),exactRecord={...record,ruleId:enhancementRuleId(item),detachmentId:det.id};return configuredExactIdentity?[titleKey(item.title),exactRecord]:builtInExactIdentity?[enhancementRuleId(item),exactRecord]:[titleKey(item.title),record];}));
+const projectionEnhancementSources=detachments.flatMap(det=>(det.enhancements||[]).filter(item=>!enhancementOwnerRecord(item,det)||enhancementContract(item,det)).map(item=>({det,item,contract:enhancementContract(item,det),ownerRecord:enhancementOwnerRecord(item,det)})));
+const rosterEnhancements=Object.fromEntries(projectionEnhancementSources.map(({det,item,contract,ownerRecord})=>{const dependencyRecord=Boolean(det.dependencyBook),sourceId=dependencyRecord?item.sourceId:null,facts=dependencyRecord?enhancementDependencyFacts(item):{},record={title:item.title,text:item.text,value:ownerRecord?ownerRecord.points:item.value,detachment:det.title,tags:contract?.tags||item.tags||[],...(sourceId?{sourceId}:{}),...(item.profile?{profile:item.profile}:{}),...facts,owner:contract?.owner||facts.owner||null,assignment:contract?.assignment||facts.assignment||null},configuredExactIdentity=Boolean(config.rosterCatalog?.exactEnhancementIds),builtInExactIdentity=['chaos-space-marines','space-marines','dark-angels','blood-angels'].includes(config.id),exactRecord={...record,ruleId:enhancementRuleId(item,det),detachmentId:det.id};return configuredExactIdentity?[titleKey(item.title),exactRecord]:builtInExactIdentity?[enhancementRuleId(item,det),exactRecord]:[titleKey(item.title),record];}));
 const rosterCatalog=createRosterCatalog({config,units,detachments,relationGraphs,legacyEnhancements:rosterEnhancements,keywordGrants:relatedRules?.keywordGrants||[]});
-const unitPointsPublication=unit=>{if(!unit.dependencyBook)return pointsByTitle.get(titleKey(unit.title));const dependency=dependencyById.get(unit.dependencyBook),inherited=dependency?.pointsByTitle.get(titleKey(unit.title)),override=dependencyPointOverrides[unit.id];return override?{...inherited,...override}:inherited;};
-const effectiveUnitByTitle=new Map(units.map(unit=>[titleKey(unit.title),unit])),pointOrderedUnits=[...(points.units||[]),...dependencyCodices.flatMap(dependency=>dependency.points.units||[])].map(publication=>effectiveUnitByTitle.get(titleKey(publication.title))).filter((unit,index,items)=>unit&&items.indexOf(unit)===index);
+const unitPointsPublication=unit=>{if(!unit.dependencyBook)return pointsById.get(unit.id);const dependency=dependencyById.get(unit.dependencyBook),inherited=dependency?.pointsById.get(unit.id),override=dependencyPointOverrides[unit.id];return override?{...inherited,...override}:inherited;};
+const effectiveUnitById=indexCanonicalById(units,{label:`${config.id} effective unit`}),pointOrderedUnits=[...(points.units||[]),...dependencyCodices.flatMap(dependency=>dependency.points.units||[])].map(publication=>effectiveUnitById.get(publication.id)).filter((unit,index,items)=>unit&&items.indexOf(unit)===index);
 if(pointOrderedUnits.length!==units.length)throw new Error(`${config.id}: effective points unit ordering did not cover the effective unit inventory`);
-const effectiveDetachmentByTitle=new Map(detachments.map(det=>[titleKey(det.title),det]));
-const pointOrderedDetachments=[...(points.detachments||[]),...dependencyCodices.flatMap(dependency=>dependency.points.detachments||[])].map(publication=>effectiveDetachmentByTitle.get(titleKey(publication.title))).filter((detachment,index,items)=>detachment&&items.indexOf(detachment)===index);
+const effectiveDetachmentById=indexCanonicalById(detachments,{label:`${config.id} effective Detachment`});
+const dependencyPointDetachments=dependencyCodices.flatMap(dependency=>{const sources=unique([...(dependency.pack.detachments||[]),...(dependency.parity?.detachments||[])],item=>item.id);return bindRowsToCanonicalIds(dependency.points.detachments||[],sources,{label:`${dependency.id} points Detachment`,rowId:item=>item.detachmentId||item.canonicalId||item.id}).map(item=>({...item,sourceBookId:dependency.id}));});
+const pointOrderedDetachments=[...boundPointDetachments,...dependencyPointDetachments].map(publication=>effectiveDetachmentById.get(publication.canonicalId)).filter((detachment,index,items)=>detachment&&items.indexOf(detachment)===index);
 if(pointOrderedDetachments.length!==detachments.length)throw new Error(`${config.id}: effective points Detachment ordering did not cover the effective Detachment inventory`);
 const enhancementSourceByPublication=new Map(projectionEnhancementSources.map(source=>{const publication=pointsPublicationByEnhancement.get(source.item)||source.item,sourceBookId=source.det.dependencyBook||config.id;return publication?.id?[[sourceBookId,source.det.id,publication.id].join('\0'),source]:null;}).filter(Boolean));
-const officialEnhancementIdentityByPublication=new Map((officialMfm?.enhancements||[]).filter(item=>item.id&&item.sourceTitle).map(item=>[`${titleKey(item.detachment)}\0${titleKey(item.title)}`,item]));
-const pointEnhancementPublications=[...(points.enhancements||[]).map(publication=>({publication,sourceBookId:config.id,contracts:relatedRules.enhancements||{}})),...dependencyCodices.flatMap(dependency=>(dependency.points.enhancements||[]).map(publication=>({publication,sourceBookId:dependency.id,contracts:dependency.relatedRules.enhancements||{}})))].map(record=>{const det=effectiveDetachmentByTitle.get(titleKey(record.publication.detachment));return{...record,det,source:det?enhancementSourceByPublication.get([record.sourceBookId,det.id,record.publication.id].join('\0')):null};}).filter(record=>record.det&&(record.det.dependencyBook===record.sourceBookId||!record.det.dependencyBook&&record.sourceBookId===config.id));
+const officialEnhancementIdentityByPublication=new Map((officialMfm?.enhancements||[]).filter(item=>item.id&&item.sourceTitle).map(item=>{const matches=boundPointEnhancements.filter(point=>point.detachmentId===detachmentIdByDeclaredTitle.get(titleKey(item.detachment))&&pointTitleKey(point.title)===pointTitleKey(item.title));if(matches.length!==1)throw new Error(`${config.id}: official Enhancement identity ${item.id} must bind to one points record`);return[matches[0].id,item];}));
+const dependencyPointEnhancements=dependencyCodices.flatMap(dependency=>{const sources=unique([...(dependency.pack.detachments||[]),...(dependency.parity?.detachments||[])],item=>item.id),detachmentIds=new Map(sources.map(item=>[titleKey(item.title),item.id]));return(dependency.points.enhancements||[]).map(publication=>{const detachmentId=publication.detachmentId||detachmentIds.get(titleKey(publication.detachment));if(!detachmentId)throw new Error(`${dependency.id}: Enhancement points ${publication.id} references unknown Detachment ${publication.detachment}`);const bound={...publication,detachmentId};rawPointEnhancementByBound.set(bound,publication);return{publication:bound,sourceBookId:dependency.id,contracts:dependency.relatedRules.enhancements||{}};});});
+const pointEnhancementPublications=[...boundPointEnhancements.map(publication=>({publication,sourceBookId:config.id,contracts:relatedRules.enhancements||{}})),...dependencyPointEnhancements].map(record=>{const det=effectiveDetachmentById.get(record.publication.detachmentId);return{...record,det,source:det?enhancementSourceByPublication.get([record.sourceBookId,det.id,record.publication.id].join('\0')):null};}).filter(record=>record.det&&(record.det.dependencyBook===record.sourceBookId||!record.det.dependencyBook&&record.sourceBookId===config.id));
 const effectivePointsProjection=createEffectivePointsProjection({
   book:{id:config.id,title:config.title,parentBookId:config.dependencies?.[0]||null},
   dependencies:(config.dependencies||[]).map(id=>({bookId:id,kind:'effective-book-dependency'})),
   units:pointOrderedUnits.map(unit=>{const compatibleChapterKeywords=unit.dependencyBook?[]:config.unitCompatibleChapterKeywords?.[unit.id]||unit.compatibleChapterKeywords||[];return{id:unit.id,title:unit.title,sourceBookId:unit.dependencyBook||config.id,publicationState:unit.status||'Current',points:unit.points||[],paidWargear:unit.paidWargear||[],...(unit.pointsSource?{pointsSource:unit.pointsSource}:{}),...(compatibleChapterKeywords.length?{compatibleChapterKeywords}:{}),ruleProfile:unitRuleProfiles.get(unit.id),publicationRecord:unitPointsPublication(unit)||{id:unit.id,title:unit.title,status:unit.status,sourceLayer:unit.sourceLayer,points:unit.points,paidWargear:unit.paidWargear,pointsSource:unit.pointsSource}};}),
   detachments:pointOrderedDetachments.map(det=>({id:det.id,title:det.title,sourceBookId:det.dependencyBook||config.id,detachmentPoints:Number(String(det.detachmentPoints??det.dp??0).match(/\d+/)?.[0]||0),forceDisposition:det.forceDisposition||det.disposition||'',publicationRecord:pointsPublicationByDetachment.get(det)||{title:det.title,detachmentPoints:det.detachmentPoints,forceDisposition:det.forceDisposition}})),
-  enhancements:pointEnhancementPublications.map(({publication,sourceBookId,contracts,det,source})=>{const officialIdentity=sourceBookId===config.id?officialEnhancementIdentityByPublication.get(`${titleKey(publication.detachment)}\0${titleKey(publication.title)}`):null,sourceIdentity=source?.item?.sourceId||source?.item?.id||dependencyEnhancementIdentityByPublication.get([sourceBookId,det.id,publication.id].join('\0')),contractIdentity=sourceBookId!==config.id?resolveEffectiveEnhancementContractId(publication.id,det.id,contracts):null,identityId=sourceBookId!==config.id?contractIdentity||sourceIdentity||publication.id:publishedEnhancementContracts.has(config.id)&&source?enhancementRuleId(source.item):officialIdentity?.id||publication.id,identityInput={...publication,id:identityId,detachmentId:det.id},resolvedIdentity=resolveEffectiveEnhancementIdentity(identityInput,rosterCatalog,contracts),compatibilityIdentity=contractIdentity?{...resolvedIdentity,canonicalEnhancementId:contractIdentity}:resolvedIdentity,id=compatibilityIdentity.canonicalEnhancementId||identityId;return{id,sourceId:publication.sourceId||null,ruleId:id,legacyKey:publication.legacyKey||null,detachmentId:det.id,detachmentTitle:det.title,sourceBookId,title:publication.title,value:Number(publication.value),owner:compatibilityIdentity.owner||publication.owner||null,assignment:compatibilityIdentity.assignment||publication.assignment||null,tags:compatibilityIdentity.tags||publication.tags||[],text:publication.text||'',...(publication.profile?{profile:publication.profile}:{}),...(compatibilityIdentity.sourceLimited?{sourceLimited:true}:{}),aliases:officialIdentity?.sourceTitle?[officialIdentity.sourceTitle]:[],publicationRecord:officialIdentity?{...publication,id:officialIdentity.id}:publication,compatibilityIdentity};})
+  enhancements:pointEnhancementPublications.map(({publication,sourceBookId,contracts,det,source})=>{const officialIdentity=sourceBookId===config.id?officialEnhancementIdentityByPublication.get(publication.id):null,sourceIdentity=source?.item?.sourceId||source?.item?.id||dependencyEnhancementIdentityByPublication.get([sourceBookId,det.id,publication.id].join('\0')),contractIdentity=sourceBookId!==config.id?resolveEffectiveEnhancementContractId(publication.id,det.id,contracts):null,identityId=sourceBookId!==config.id?contractIdentity||sourceIdentity||publication.id:publishedEnhancementContracts.has(config.id)&&source?enhancementRuleId(source.item,det):officialIdentity?.id||publication.id,identityInput={...publication,id:identityId,detachmentId:det.id},resolvedIdentity=resolveEffectiveEnhancementIdentity(identityInput,rosterCatalog,contracts),compatibilityIdentity=contractIdentity?{...resolvedIdentity,canonicalEnhancementId:contractIdentity}:resolvedIdentity,id=compatibilityIdentity.canonicalEnhancementId||identityId,rawPublication=rawPointEnhancementByBound.get(publication)||publication;return{id,sourceId:publication.sourceId||null,ruleId:id,legacyKey:publication.legacyKey||null,detachmentId:det.id,detachmentTitle:det.title,sourceBookId,title:publication.title,value:Number(publication.value),owner:compatibilityIdentity.owner||publication.owner||null,assignment:compatibilityIdentity.assignment||publication.assignment||null,tags:compatibilityIdentity.tags||publication.tags||[],text:publication.text||'',...(publication.profile?{profile:publication.profile}:{}),...(compatibilityIdentity.sourceLimited?{sourceLimited:true}:{}),aliases:officialIdentity?.sourceTitle?[officialIdentity.sourceTitle]:[],publicationRecord:officialIdentity?{...rawPublication,id:officialIdentity.id}:rawPublication,compatibilityIdentity};})
 });
 if(projectionOnly)return {effectivePointsProjection};
 
@@ -330,11 +334,11 @@ const toc=navLeaf('start','Start',1)
   +navBranch('updates','Updates',1,[...pack.updates.filter(item=>!armyRules.some(rule=>rule.title===item.subject)),...pack.faqs].map(item=>navLeaf(`update-${item.id}`,item.title||item.subject||item.question,2)).join(''));
 
 const enhancementCard=(item,det,{related=false}={})=>{
-  const explicit=enhancementContract(item),tags=explicit?.tags||item.tags||[],isUpgrade=tags.includes('UPGRADE');
-  if(enhancementOwnerRecord(item)&&!explicit)return'';
+  const explicit=enhancementContract(item,det),tags=explicit?.tags||item.tags||[],isUpgrade=tags.includes('UPGRADE');
+  if(enhancementOwnerRecord(item,det)&&!explicit)return'';
   if(related&&!explicit)return'';
   const termText=isUpgrade?`UPGRADE. ${item.text}`:item.text;
-  return`<article class="enhancement surface" data-rule-id="${esc(enhancementRuleId(item))}" data-enhancement-tags="${esc(tags.join('|'))}" data-owner-subject="${esc(explicit?.owner?.subject||'')}"${config.compatibleRulesMatrix?` data-enhancement-title="${esc(item.title.replace(/\s*\(Aura\)$/i,''))}"`:''}${explicit&&config.legacyRelatedRuleAttributes!==false?` data-eligibility="${esc(JSON.stringify(explicit))}"`:''}><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}${item.value?` · ${item.value} pts`:''}</div><h4><button class="term-button" data-term="${addTerm(item.title,termText,`detachment-${det.id}`,'enhancement','',det.dependencyBook||config.id)}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p></article>`;
+  return`<article class="enhancement surface" data-rule-id="${esc(enhancementRuleId(item,det))}" data-enhancement-tags="${esc(tags.join('|'))}" data-owner-subject="${esc(explicit?.owner?.subject||'')}"${config.compatibleRulesMatrix?` data-enhancement-title="${esc(item.title.replace(/\s*\(Aura\)$/i,''))}"`:''}${explicit&&config.legacyRelatedRuleAttributes!==false?` data-eligibility="${esc(JSON.stringify(explicit))}"`:''}><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}${item.value?` · ${item.value} pts`:''}</div><h4><button class="term-button" data-term="${addTerm(item.title,termText,`detachment-${det.id}`,'enhancement','',det.dependencyBook||config.id)}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p></article>`;
 };
 const stratagemCard=(item,det)=>{const eligibility=config.legacyRelatedRuleAttributes!==false?stratagemEligibility(item):null,type=item.canonicalType||item.typeStatus||'',typeAttrs=item.typeStatus?` data-stratagem-type="${esc(type)}" data-source-label="${esc(item.sourceLabel||'')}"`:'',typeLabel=item.typeStatus&&item.sourceLabel?`<span class="stratagem-type">${esc(item.sourceLabel)}</span>`:'';return`<article class="stratagem surface" data-rule-id="${esc(item.id)}"${typeAttrs}${config.legacyRelatedRuleAttributes!==false?` data-eligibility="${esc(JSON.stringify(eligibility))}"`:''}><div class="stratagem-head"><div><h3><button class="term-button" data-term="${addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem','',det.dependencyBook||config.id)}">${esc(item.title)}</button></h3>${typeLabel}</div><div class="cp">${esc(item.cp)}CP</div></div><p class="field" data-source-field="when"><b>When</b><br>${esc(item.when)}</p><p class="field" data-source-field="target"><b>Target</b><br>${esc(item.target)}</p><p class="field" data-source-field="effect"><b>Effect</b><br>${esc(item.effect)}</p>${item.restrictions?`<p class="field" data-source-field="restrictions"><b>Restrictions</b><br>${esc(item.restrictions)}</p>`:''}</article>`;};
 const dependencyDetachmentSourceLink=det=>`<a class="source-link" href="../${esc(det.dependencyBook)}/sources/${esc(det.dependencySourceFile)}#page=${det.sourcePages[0]}">${esc(det.dependencyTitle)} Faction Pack v${esc(det.dependencySourceVersion)} · p. ${det.sourcePages.join('–')}</a>`;
@@ -352,7 +356,7 @@ const detachmentHtml=detachments.map(det=>{
 const statline=unit=>{const ownerId=`${unit.id.replace(/^unit-/,'')}-profile`;return(unit.profiles||[]).map(profile=>{const stats=Object.entries(profile.stats).filter(([,value])=>value),base=stats.find(([name])=>name==='Base'),combat=stats.filter(([name])=>name!=='Base');return`<div class="model-profile" data-profile="${esc(slug(profile.name))}" data-logical-owner="${esc(ownerId)}">${unit.profiles.length>1?`<h5>${esc(profile.name)}</h5>`:''}<div class="statline" data-logical-owner="${esc(ownerId)}">${combat.map(([name,value])=>`<div class="stat" data-source-field="stats.${esc(name)}"><b>${esc(name)}</b><span>${esc(value)}</span></div>`).join('')}</div>${base?`<p class="profile-base" data-logical-owner="${esc(ownerId)}" data-source-field="stats.Base">Base: ${esc(base[1])}</p>`:''}</div>`;}).join('');};
 const weaponTables=unit=>['ranged','melee'].map(mode=>{const rows=(unit.weapons||[]).map((item,index)=>({item,index})).filter(record=>record.item.mode===mode);if(!rows.length)return'';const skill=mode==='ranged'?'BS':'WS';return`<div class="weapon-group"><h5>${mode==='ranged'?'Ranged':'Melee'} weapons</h5><div class="weapon-table" role="table"><div class="weapon-row weapon-head"><div>Weapon</div><div>Range</div><div>A</div><div>${skill}</div><div>S</div><div>AP</div><div>D</div></div>${rows.map(({item,index})=>`<div class="weapon-row" data-roster-profile-id="${esc(canonicalWeaponProfileId(unit,item,index))}" data-source-field="weapons.${esc(slug(item.name))}" data-mode="${mode}"><div data-source-field="name"><button class="weapon-button" data-term="${item.termId}">${esc(item.name)}</button>${item.abilities?weaponAbilityTokens(item.abilities,unit.dependencyBook||config.id):''}</div><div data-label="Range" data-source-field="range">${esc(item.range)}</div><div data-label="A" data-source-field="a">${esc(item.a)}</div><div data-label="${skill}" data-source-field="skill">${esc(item.skill)}</div><div data-label="S" data-source-field="s">${esc(item.s)}</div><div data-label="AP" data-source-field="ap">${esc(item.ap)}</div><div data-label="D" data-source-field="d">${esc(item.d)}</div></div>`).join('')}</div></div>`;}).join('');
 const renderedUnitIds=new Set(units.map(unit=>unit.id));
-const relationLabel=name=>{const target=unitByTitle.get(titleKey(name));return target&&renderedUnitIds.has(target.id)?`<button class="term-button" data-journey-target="${esc(target.id)}" data-journey-type="datasheet">${esc(name)}</button>`:esc(name);};
+const relationLabel=name=>{const target=presentationUnitByTitle.get(titleKey(name));return target&&renderedUnitIds.has(target.id)?`<button class="term-button" data-journey-target="${esc(target.id)}" data-journey-type="datasheet">${esc(name)}</button>`:esc(name);};
 const unitSourceLink=unit=>unit.dependencyBook?`<a class="source-link" href="../${esc(unit.dependencyBook)}/sources/${esc(unit.dependencySourceFile)}#page=${unit.sourcePages[0]}">${esc(unit.dependencyTitle)} Faction Pack v${esc(unit.dependencySourceVersion)} · p. ${unit.sourcePages.join('–')}</a>`:sourceLink(unit.sourcePages);
 const unitCard=unit=>{
   const base=unit.id.replace(/^unit-/,''),pointsText=(unit.points||[]).map(item=>{

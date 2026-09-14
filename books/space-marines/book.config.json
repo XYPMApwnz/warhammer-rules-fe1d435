@@ -17,15 +17,6 @@
   "detachmentQualifiedEnhancementPoints": true,
   "includeCoreStratagems": true,
   "legacyRelatedRuleAttributes": false,
-  "detachmentChapterRestrictions": {
-    "Blade of Ultramar": "ULTRAMARINES",
-    "Reclamation Force": "ULTRAMARINES",
-    "Hammer of Avernii": "IRON HANDS",
-    "Spearpoint Task Force": "WHITE SCARS",
-    "Forgefather's Seekers": "SALAMANDERS",
-    "Emperor's Shield": "IMPERIAL FISTS",
-    "Shadowmark Talon": "RAVEN GUARD"
-  },
   "unitCompatibleChapterKeywords": {
     "unit-pedro-kantor": [
       "IMPERIAL FISTS"
@@ -168,5 +159,286 @@
       "tracked": true,
       "lifecycle": "NORMAL_BUILD_OUTPUT"
     }
-  ]
+  ],
+  "relationTargetDispositions": [
+    {
+      "sourceId": "unit-captain-in-gravis-armour",
+      "role": "leader",
+      "title": "INDOMITOR KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain-in-phobos-armour",
+      "role": "leader",
+      "title": "SPECTRUS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWATCH TERMINATOR SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWING KNIGHTS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWING TERMINATOR SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain-with-jump-pack",
+      "role": "leader",
+      "title": "SANGUINARY GUARD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain-with-jump-pack",
+      "role": "leader",
+      "title": "TALONSTRIKE KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain",
+      "role": "leader",
+      "title": "CRUSADER SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain",
+      "role": "leader",
+      "title": "DEATHWATCH VETERANS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain",
+      "role": "leader",
+      "title": "DECIMUS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain",
+      "role": "leader",
+      "title": "FORTIS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain",
+      "role": "leader",
+      "title": "INNER CIRCLE COMPANIONS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-captain",
+      "role": "leader",
+      "title": "SWORD BRETHREN SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWATCH TERMINATOR SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWING KNIGHTS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWING TERMINATOR SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain-on-bike",
+      "role": "leader",
+      "title": "RAVENWING BLACK KNIGHTS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain-with-jump-pack",
+      "role": "leader",
+      "title": "DEATH COMPANY MARINES WITH JUMP PACKS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain-with-jump-pack",
+      "role": "leader",
+      "title": "TALONSTRIKE KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain",
+      "role": "leader",
+      "title": "CRUSADER SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain",
+      "role": "leader",
+      "title": "DEATH COMPANY MARINES",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain",
+      "role": "leader",
+      "title": "DEATH COMPANY MARINES WITH BOLT RIFLES",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain",
+      "role": "leader",
+      "title": "DEATHWATCH VETERANS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain",
+      "role": "leader",
+      "title": "DECIMUS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain",
+      "role": "leader",
+      "title": "FORTIS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain",
+      "role": "leader",
+      "title": "INNER CIRCLE COMPANIONS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-chaplain",
+      "role": "leader",
+      "title": "SWORD BRETHREN SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-judiciar",
+      "role": "leader",
+      "title": "CRUSADER SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-judiciar",
+      "role": "leader",
+      "title": "DEATHWATCH VETERANS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-judiciar",
+      "role": "leader",
+      "title": "DECIMUS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-judiciar",
+      "role": "leader",
+      "title": "FORTIS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-judiciar",
+      "role": "leader",
+      "title": "INNER CIRCLE COMPANIONS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-judiciar",
+      "role": "leader",
+      "title": "SWORD BRETHREN SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-librarian-in-phobos-armour",
+      "role": "leader",
+      "title": "SPECTRUS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-librarian-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWATCH TERMINATOR SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-librarian-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWING KNIGHTS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-librarian-in-terminator-armour",
+      "role": "leader",
+      "title": "DEATHWING TERMINATOR SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-librarian",
+      "role": "leader",
+      "title": "DEATHWATCH VETERANS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-librarian",
+      "role": "leader",
+      "title": "DECIMUS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-librarian",
+      "role": "leader",
+      "title": "FORTIS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-librarian",
+      "role": "leader",
+      "title": "INNER CIRCLE COMPANIONS",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-techmarine",
+      "role": "leader",
+      "title": "CRUSADER SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-techmarine",
+      "role": "leader",
+      "title": "DECIMUS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-techmarine",
+      "role": "leader",
+      "title": "FORTIS KILL TEAM",
+      "disposition": "non-effective-external-datasheet"
+    },
+    {
+      "sourceId": "unit-techmarine",
+      "role": "leader",
+      "title": "SWORD BRETHREN SQUAD",
+      "disposition": "non-effective-external-datasheet"
+    }
+  ],
+  "detachmentChapterRestrictionsById": {
+    "blade-of-ultramar": "ULTRAMARINES",
+    "reclamation-force": "ULTRAMARINES",
+    "hammer-of-avernii": "IRON HANDS",
+    "spearpoint-task-force": "WHITE SCARS",
+    "forgefather-s-seekers": "SALAMANDERS",
+    "emperor-s-shield": "IMPERIAL FISTS",
+    "shadowmark-talon": "RAVEN GUARD"
+  }
 }

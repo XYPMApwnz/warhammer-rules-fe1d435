@@ -254,7 +254,6 @@ function dgStableId(entry){
 
 const dgNurglesGiftSection=dgSource.sections.find(section=>section.id==='army-rule-nurgles-gift');
 if(!dgNurglesGiftSection)throw new Error('Missing canonical Death Guard Nurgle’s Gift section');
-const dgNurglesGiftText=(dgNurglesGiftSection.blocks||[]).find(block=>block.type==='p')?.text||'';
 const dgContagionRangeText=(dgNurglesGiftSection.blocks||[]).map(block=>{
   if(block.type==='p')return block.id==='contagion-range-cap'?block.text:'';
   if(block.type!=='table')return'';
@@ -262,7 +261,7 @@ const dgContagionRangeText=(dgNurglesGiftSection.blocks||[]).map(block=>{
   const rows=(block.rows||[]).map(row=>row.join(' | ')).join('; ');
   return `${columns}: ${rows}.`;
 }).filter(Boolean).join(' ');
-if(!dgNurglesGiftText||!dgContagionRangeText)throw new Error('Incomplete canonical Death Guard Nurgle’s Gift/Contagion Range source');
+if(!dgContagionRangeText)throw new Error('Incomplete canonical Death Guard Contagion Range source');
 
 for(const entry of dgSource.glossary){
   const enhancement=dgEnhancementById.get(entry.sectionId),upgrade=enhancement?.tags?.includes('UPGRADE');
@@ -277,7 +276,7 @@ for(const entry of dgSource.glossary){
   const runtime=dgRuntime[entry.id]||{};
   const effectivePoints=entry.kind==='unit'&&entry.sectionId?dgUnitsById.get(entry.sectionId)?.points:entry.points;
   const related=(runtime.related||[]).map(value=>aliases[value]||value);
-  const sourceSummary=entry.id==='nurgles-gift'?dgNurglesGiftText:(entry.short||runtime.summary||entry.full);
+  const sourceSummary=entry.id==='nurgles-gift'?entry.full:(entry.short||runtime.summary||entry.full);
   const sourceDefinition=entry.id==='contagion-range'?dgContagionRangeText:(entry.full||entry.short||runtime.summary);
   addTerm({
     id,

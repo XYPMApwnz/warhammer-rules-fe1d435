@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import ruleFacts from '../../shared/rule-facts.js';
+import {bindRowsToCanonicalIds} from '../../shared/tools/canonical-join-contract.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -42,12 +43,12 @@ function target(contract){
   return role.selector||{};
 }
 
-export function inputs(){return{pack:read('content/chaos-space-marines-faction-pack.en.json'),codex:read('content/chaos-space-marines-codex-datasheets.en.json'),points:read('content/chaos-space-marines-points.en.json'),contracts:read('content/chaos-space-marines-related-rules.en.json')}};
+export function inputs(){return{config:read('book.config.json'),pack:read('content/chaos-space-marines-faction-pack.en.json'),codex:read('content/chaos-space-marines-codex-datasheets.en.json'),points:read('content/chaos-space-marines-points.en.json'),contracts:read('content/chaos-space-marines-related-rules.en.json')}};
 
-export function buildCompatibleRules({pack,codex,points,contracts}){
+export function buildCompatibleRules({config,pack,codex,points,contracts}){
   const units=codex.datasheets,rows=new Map(units.map(unit=>[unit.id,new Map()]));
   if(units.length!==54)throw new Error(`Expected 54 current Datasheets, got ${units.length}`);
-  const pointEnhancements=new Map(points.enhancements.map(item=>[`${titleKey(item.detachment)}\0${titleKey(item.title)}`,item]));
+  const pointEnhancements=new Map();for(const item of points.enhancements){const owner=bindRowsToCanonicalIds([{title:item.detachment}],pack.detachments,{label:`CSM points Enhancement ${item.id} Detachment`})[0],key=`${owner.canonicalId}\0${item.id}`;if(pointEnhancements.has(key))throw new Error(`Duplicate CSM points Enhancement identity ${key}`);pointEnhancements.set(key,item);}
   const add=(unitId,row)=>rows.get(unitId).set(row.ruleId,row);
   for(const detachment of pack.detachments){
     const grants=contracts.keywordGrants?.[detachment.id]||[];
@@ -57,7 +58,7 @@ export function buildCompatibleRules({pack,codex,points,contracts}){
     }
     for(const item of detachment.enhancements){
       const contract=contracts.enhancements[item.id];if(!contract)throw new Error(`Missing Enhancement contract ${item.id}`);
-      const current=pointEnhancements.get(`${titleKey(detachment.title)}\0${titleKey(item.title)}`);if(!current?.id)throw new Error(`Missing detachment-qualified Enhancement identity ${detachment.title}: ${item.title}`);
+      const raw=String(item.id).replace(/^enhancement-/,''),suffix=raw.startsWith(`${detachment.id}-`)?raw.slice(detachment.id.length+1):raw,declared=config.compatibleRulesEnhancementAliases?.[`${detachment.id}|${item.id}`],candidateIds=[item.id,`enhancement-${raw}`,`enhancement-${suffix}`,`enhancement-${detachment.id}-${suffix}`,declared].filter(Boolean),candidates=candidateIds.map(id=>pointEnhancements.get(`${detachment.id}\0${id}`)).filter(Boolean),current=[...new Set(candidates)][0];if(new Set(candidates).size!==1||!current?.id)throw new Error(`Missing or ambiguous detachment-qualified Enhancement identity ${detachment.id}: ${item.id}`);
       for(const unit of units)if(matches(target(contract),unit,grants))add(unit.id,{ruleId:current.id,kind:'enhancement',detachmentId:detachment.id,state:'match'});
     }
   }

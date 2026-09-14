@@ -13,6 +13,9 @@
   "mobileRelatedRulesSource": true,
   "includeCoreStratagems": true,
   "rosterSupport": true,
+  "compatibleRulesEnhancementAliases": {
+    "warpstrike-champions|akshur-s-binding-runes": "enhancement-akshurs-binding-runes"
+  },
   "sharedArmyBookApp": true,
   "compatibleRulesMatrix": true,
   "classifiedAbilityPresentation": true,

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import ruleFacts from '../../shared/rule-facts.js';
+import {bindRowsToCanonicalIds} from '../../shared/tools/canonical-join-contract.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -43,7 +44,7 @@ function targets(contract){
   if(!roles.length)throw new Error('Compatible rule must declare a friendly unit target.');
   return roles.map(role=>role.selector||{});
 }
-const contractById=(records,...ids)=>ids.map(id=>id&&records[id]).find(Boolean)||Object.entries(records).find(([key])=>ids.some(id=>id&&key.replace(/[^a-z0-9]/gi,'').toLowerCase()===id.replace(/[^a-z0-9]/gi,'').toLowerCase()))?.[1];
+const contractById=(records,...ids)=>{for(const id of ids.filter(Boolean))for(const key of [id,String(id).replace(/^enhancement-/,'')])if(records[key])return records[key];throw new Error(`Enhancement contract ${ids.filter(Boolean).join(', ')} is unknown`);};
 
 export function inputs(){
   return{
@@ -73,12 +74,13 @@ export function buildCompatibleRules({config,pack,parity,codex,points,contracts,
   const localIds=new Set(local.map(unit=>unit.id)),collisions=shared.filter(unit=>localIds.has(unit.id));
   if(local.length!==15||shared.length!==82||collisions.length)throw new Error(`Expected 15 local and 82 shared Datasheets with no collisions; found ${local.length}, ${shared.length} and ${collisions.length}`);
   const units=[...local,...shared],rows=new Map(units.map(unit=>[unit.id,new Map()]));
-  const localDetachments=[...(pack.detachments||[]),...(parity.detachments||[])],chapterKey=titleKey(config.dependencyDetachments.chapterKeyword);
-  const currentSharedTitles=new Set(spaceMarinesPoints.detachments.map(item=>titleKey(item.title)));
-  const sharedDetachments=[...(spaceMarinesPack.detachments||[]),...(spaceMarinesParity.detachments||[])].filter(item=>{const restriction=item.restriction||spaceMarinesConfig.detachmentChapterRestrictions?.[item.title];return currentSharedTitles.has(titleKey(item.title))&&(!restriction||titleKey(restriction)===chapterKey);}).map(item=>({...item,dependencyBook:'space-marines'}));
+  const localDetachments=[...(pack.detachments||[]),...(parity.detachments||[])],chapterKey=titleKey(config.dependencyDetachments.chapterKeyword),sharedOwners=[...(spaceMarinesPack.detachments||[]),...(spaceMarinesParity.detachments||[])];
+  const currentSharedIds=new Set(bindRowsToCanonicalIds(spaceMarinesPoints.detachments,sharedOwners,{label:'Blood Angels inherited points Detachment',rowId:item=>item.detachmentId||item.canonicalId||item.id||null}).map(item=>item.canonicalId));
+  const sharedDetachments=sharedOwners.filter(item=>{const restriction=item.restriction||spaceMarinesConfig.detachmentChapterRestrictionsById?.[item.id];return currentSharedIds.has(item.id)&&(!restriction||titleKey(restriction)===chapterKey);}).map(item=>({...item,dependencyBook:'space-marines'}));
   const detachments=[...localDetachments,...sharedDetachments];
   if(localDetachments.length!==8||sharedDetachments.length!==16||new Set(detachments.map(item=>item.id)).size!==24)throw new Error(`Expected 8 local and 16 shared unique Detachments, got ${localDetachments.length} and ${sharedDetachments.length}`);
-  const localPointEnhancements=new Map(points.enhancements.map(item=>[`${titleKey(item.detachment)}\0${titleKey(item.title)}`,item])),sharedPointEnhancements=new Map(spaceMarinesPoints.enhancements.map(item=>[`${titleKey(item.detachment)}\0${titleKey(item.title)}`,item]));
+  const pointIndex=(source,owners,label)=>{const result=new Map();for(const item of source.enhancements){const owner=bindRowsToCanonicalIds([{title:item.detachment}],owners,{label:`${label} ${item.id} Detachment`})[0],key=`${owner.canonicalId}\0${item.id}`;if(result.has(key))throw new Error(`Duplicate ${label} identity ${key}`);result.set(key,item);}return result;},localPointEnhancements=pointIndex(points,localDetachments,'Blood Angels points Enhancement'),sharedPointEnhancements=pointIndex(spaceMarinesPoints,sharedOwners,'Blood Angels inherited points Enhancement');
+  const pointEnhancement=(item,detachment,index,aliases)=>{const raw=String(item.id).replace(/^enhancement-/,''),suffix=raw.startsWith(`${detachment.id}-`)?raw.slice(detachment.id.length+1):raw,declared=aliases?.[`${detachment.id}|${item.id}`],ids=[item.id,`enhancement-${raw}`,`enhancement-${suffix}`,`enhancement-${detachment.id}-${suffix}`,declared].filter(Boolean),matches=[...new Set(ids.map(id=>index.get(`${detachment.id}\0${id}`)).filter(Boolean))];if(matches.length!==1)throw new Error(`Missing or ambiguous detachment-qualified Enhancement identity ${detachment.id}/${item.id}`);return matches[0];};
   const add=(unitId,row)=>rows.get(unitId).set(row.ruleId,row);
   for(const detachment of detachments){
     const source=detachment.dependencyBook?spaceMarinesContracts:contracts,pointEnhancements=detachment.dependencyBook?sharedPointEnhancements:localPointEnhancements,grants=source.keywordGrants?.[detachment.id]||[];
@@ -87,8 +89,8 @@ export function buildCompatibleRules({config,pack,parity,codex,points,contracts,
       for(const unit of units)if(targets(contract).some(selector=>matches(selector,unit,grants))){const conditions=contract.conditions?.length?['battle-state-unknown']:[];add(unit.id,{ruleId:item.id,kind:'stratagem',detachmentId:detachment.id,state:conditions.length?'conditional':'match',...(conditions.length?{condition:conditions[0],conditions}:{})});}
     }
     for(const item of detachment.enhancements||[]){
-      const current=pointEnhancements.get(`${titleKey(detachment.title)}\0${titleKey(item.title)}`);if(!current?.id)throw new Error(`Missing detachment-qualified Enhancement identity ${detachment.title}: ${item.title}`);
-      const contract=contractById(source.enhancements,current.id,item.id);if(!contract)throw new Error(`Missing Enhancement contract ${current.id} (${item.id})`);
+      const aliases=detachment.dependencyBook?spaceMarinesConfig.compatibleRulesEnhancementAliases:config.compatibleRulesEnhancementAliases,current=pointEnhancement(item,detachment,pointEnhancements,aliases);
+      const contract=contractById(source.enhancements,item.id,current.id);
       for(const unit of units)if(targets(contract).some(selector=>matches(selector,unit,grants)))add(unit.id,{ruleId:current.id,kind:'enhancement',detachmentId:detachment.id,state:'match'});
     }
   }

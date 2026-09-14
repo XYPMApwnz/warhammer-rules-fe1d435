@@ -9,6 +9,12 @@
   "entryCoverImage": "assets/space-marines-cover-480.webp",
   "dedicatedMobile": true,
   "rosterSupport": true,
+  "compatibleRulesEnhancementAliases": {
+    "hammer-of-avernii|medusan-roar-aura": "enhancement-medusan-roar",
+    "spearpoint-task-force|hunter-s-eye": "enhancement-hunters-eye",
+    "shadowmark-talon|hunter-s-instincts": "enhancement-hunters-instincts",
+    "1st-company-task-force|1st-company-task-force-fear-made-manifest-aura": "enhancement-fear-made-manifest"
+  },
   "rosterCatalog": {
     "inferExactWargearAbilitySelections": true
   },

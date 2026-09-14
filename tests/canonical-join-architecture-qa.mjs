@@ -13,6 +13,7 @@ import {
   resolveDeclaredLegacyAlias,
   resolveScopedEnhancement
 } from '../books/shared/tools/canonical-join-contract.mjs';
+import {buildCompatibleRules as buildCsmCompatibleRules,inputs as csmCompatibleInputs} from '../books/chaos-space-marines/tools/build-compatible-rules.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=relative=>fs.readFileSync(path.join(root,relative),'utf8');
@@ -75,5 +76,13 @@ for(const fixture of [
   const [bookId,enhancementId,detachmentId]=fixture,catalog=roster(bookId);
   assert.equal(resolveScopedEnhancement({enhancementId,detachmentId},catalog.enhancements).detachmentId,detachmentId);
 }
+
+const csmInputs=csmCompatibleInputs();
+assert.doesNotThrow(()=>buildCsmCompatibleRules(csmInputs));
+const unknownCompatibleOwner=structuredClone(csmInputs);unknownCompatibleOwner.pack.detachments[0].enhancements[0].id='unknown-enhancement-owner';
+throws(()=>buildCsmCompatibleRules(unknownCompatibleOwner),/Missing Enhancement contract|Missing or ambiguous detachment-qualified Enhancement identity/);
+const ambiguousAlias=structuredClone(csmInputs),aliasKey='cabal-of-chaos|touched-by-the-warp';
+ambiguousAlias.config.compatibleRulesEnhancementAliases[aliasKey]='enhancement-conduit-of-chaos';
+throws(()=>buildCsmCompatibleRules(ambiguousAlias),/ambiguous detachment-qualified Enhancement identity/);
 
 console.log('Canonical join architecture QA passed: exact IDs, scoped Enhancements, collision rejection, prose canonicalization, child stability and DG/AM relation graphs.');

@@ -184,13 +184,14 @@ assert(smFactionPackExtractor.includes('parser.add_argument("--bsdata-faction", 
 assert(packageJson.scripts['army-books:sources:check'].includes('node books/space-marines/tools/extract-faction-pack.mjs --check'),'Normal source checking must use the authenticated Space Marines Faction Pack wrapper');
 const smCodexDetails=read('books/space-marines/tools/extract-codex-details.cjs');
 const smSessionIndex=smCodexDetails.indexOf('contract.createCaptureSession({sourceId:');
-for(const input of ['datasheetsPath','packPath','overlayPath','relatedPath','mechanicusConfigPath']){
+for(const input of ['datasheetsPath','packPath','overlayPath','relatedPath']){
   assert(smCodexDetails.indexOf(`path:path.relative(path.resolve(root,'../..'),${input})`,smSessionIndex)>smSessionIndex,`Space Marines codex-details must authenticate ${input}`);
   assert(smCodexDetails.indexOf(`fs.readFileSync(${input}`,smSessionIndex)>smCodexDetails.indexOf(`path:path.relative(path.resolve(root,'../..'),${input})`,smSessionIndex),`Space Marines codex-details must authenticate ${input} before reading it`);
 }
-assert(smCodexDetails.indexOf("path:path.relative(path.resolve(root,'../..'),mechanicusRelatedPath)",smSessionIndex)>smSessionIndex,'Space Marines codex-details must authenticate mechanicusRelatedPath');
-assert(smCodexDetails.indexOf('coreRuleMap(),details=[]',smSessionIndex)>smCodexDetails.indexOf("path:path.relative(path.resolve(root,'../..'),mechanicusRelatedPath)",smSessionIndex),'Space Marines codex-details must authenticate mechanicusRelatedPath before using it');
-assert(smCodexDetails.includes("mechanicusConfig.relatedRulesOwnership?.mode!=='authoritative-runtime-source'"),'Space Marines codex-details must verify the declared owner of its cross-book generated input');
+const coreInputDeclaration=smCodexDetails.indexOf("path:path.relative(path.resolve(root,'../..'),coreRelatedPath)",smSessionIndex);
+assert(coreInputDeclaration>smSessionIndex,'Space Marines codex-details must authenticate its Core-owned Related Rules input');
+assert(smCodexDetails.indexOf('coreRuleMap(),details=[]',smSessionIndex)>coreInputDeclaration,'Space Marines codex-details must authenticate the Core-owned input before using it');
+assert(!smCodexDetails.includes('adeptus-mechanicus'),'Space Marines codex-details must not consume Adeptus Mechanicus generated presentation');
 for(const [tool,inputs] of [
   ['books/chaos-space-marines/tools/extract-mfm.cjs',['datasheetsPath','manifestPath']],
   ['books/tau-empire/tools/extract-mfm.cjs',['datasheetsPath']],
@@ -234,5 +235,7 @@ for(const source of registry.sources){
   const expectedHash=source.artifacts.length===1?source.artifacts[0].sha256:aggregateArtifactHash(source.artifacts);
   assert.equal(source.acceptedHash.toLowerCase(),expectedHash.toLowerCase(),`${source.sourceId}: accepted hash must identify its complete frozen artifact set`);
 }
+
+await import('./space-marines-feedback-edge-qa.mjs');
 
 console.log(`Source ingestion contract QA passed: ${active.length} frozen live-derived sources, ${legacy.length} candidate-only legacy update tools; 0 direct accepted writers.`);

@@ -9,7 +9,7 @@ import ruleFactsApi from '../../shared/rule-facts.js';
 
 export async function buildCanonicalBook(context,{projectionOnly=false}={}){
 const {root,repo,config,runtimeVersions}=context;
-const {factionRules,source,codex,codexDatasheets,pointsCatalog,unitImages,pointsByUnit,titleKey,slugKey,abilityText,enhancementsByTitle,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds}=createAdeptusMechanicusCanonicalModel(context);
+const {factionRules,source,codex,codexDatasheets,pointsCatalog,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds}=createAdeptusMechanicusCanonicalModel(context);
 const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const cleanText=value=>String(value??'').replace(/[ \t]+\n/g,'\n').trim();
 const pagesLabel=pages=>pages.length===1?`p. ${pages[0]}`:`pp. ${pages[0]}–${pages.at(-1)}`;
@@ -124,7 +124,7 @@ const detachments=allDetachments.map(det=>{
   const slug=det.id.replace('detachment-','');
   const isCodex=!det.sourcePages;
   const enhancements=det.enhancements.map(original=>{
-    const current=isCodex?enhancementsByTitle.get(titleKey(original.title)):null;
+    const current=isCodex?enhancementsById.get(original.id):null;
     const item=current?{...original,title:current.title,text:current.text}:original,isUpgrade=(item.tags||[]).includes('UPGRADE');
     validateEligibility(item);
     return `<article class="enhancement surface" data-rule-id="${esc(item.id)}" data-enhancement-tags="${esc((item.tags||[]).join('|'))}" data-owner-subject="${esc(item.eligibility?.owner?.subject||'')}" data-enhancement-title="${esc(item.title)}"><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}</div><h4>${esc(item.title)}</h4><p data-source-field="text">${decorate(item.text)}</p></article>`;
@@ -175,11 +175,11 @@ const compileUnitRuleFacts=(unit,renderedTermIds=null)=>{
 };
 const compiledUnitRuleFacts=new Map(rules.datasheets.map(unit=>[unit.id,compileUnitRuleFacts(unit)]));
 const compiledUnitRuleProfiles=new Map([...compiledUnitRuleFacts].map(([id,facts])=>[id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(facts))]));
-const pointsOrderedDatasheets=pointsCatalog.units.map(publication=>{const unit=rules.datasheets.find(candidate=>titleKey(candidate.title)===titleKey(publication.title));if(!unit)throw new Error(`Adeptus Mechanicus: points unit does not resolve: ${publication.title}`);return unit;});
-const officialMfm=context.readJson(config.sources.officialMfm),detachmentOrder=new Map(Object.keys(officialMfm.detachments||{}).map((title,index)=>[titleKey(title),index]));
-const pointsOrderedDetachments=[...allDetachments].sort((left,right)=>(detachmentOrder.get(titleKey(left.title))??Infinity)-(detachmentOrder.get(titleKey(right.title))??Infinity));
-const detachmentByTitle=new Map(allDetachments.map(item=>[titleKey(item.title),item]));
-const effectivePointsProjection=createEffectivePointsProjection({book:{id:config.id,title:config.title,parentBookId:null},units:pointsOrderedDatasheets.map(unit=>{const publication=pointsByUnit.get(unit.title.toLowerCase());return{id:unit.id,title:unit.title,sourceBookId:config.id,publicationState:unit.status||'Current',points:publication?.points||[],paidWargear:publication?.wargear||[],ruleProfile:compiledUnitRuleProfiles.get(unit.id),publicationRecord:publication};}),detachments:pointsOrderedDetachments.map(item=>({id:item.id,title:item.title,sourceBookId:config.id,detachmentPoints:Number(String(item.dp||0).match(/\d+/)?.[0]||0),forceDisposition:item.disposition||'',publicationRecord:{title:item.title,detachmentPoints:item.dp,forceDisposition:item.disposition}})),enhancements:pointsCatalog.enhancements.map(item=>{const detachment=detachmentByTitle.get(titleKey(item.detachment));if(!detachment)throw new Error(`Adeptus Mechanicus: ${item.id} references unknown Detachment ${item.detachment}`);return{id:item.canonicalEnhancementId||item.id,sourceId:item.sourceId||null,ruleId:item.canonicalEnhancementId||item.id,legacyKey:item.legacyKey||null,detachmentId:item.canonicalDetachmentId||detachment.id,detachmentTitle:detachment.title,sourceBookId:config.id,title:item.title,value:Number(item.value),owner:item.owner||null,assignment:item.assignment||null,tags:item.tags||[],text:item.text||'',...(item.profile?{profile:item.profile}:{}),...(item.effect?{legacyEffect:item.effect}:{}),publicationRecord:item};})});
+const pointsOrderedDatasheets=boundPointUnits.map(publication=>{const unit=rules.datasheets.find(candidate=>candidate.id===publication.canonicalId);if(!unit)throw new Error(`Adeptus Mechanicus: points unit does not resolve: ${publication.canonicalId}`);return unit;});
+const officialMfm=context.readJson(config.sources.officialMfm),detachmentOrder=new Map(Object.keys(officialMfm.detachments||{}).map((title,index)=>[`detachment-${slugKey(title)}`,index]));
+const pointsOrderedDetachments=[...allDetachments].sort((left,right)=>(detachmentOrder.get(left.id)??Infinity)-(detachmentOrder.get(right.id)??Infinity));
+const detachmentById=new Map(allDetachments.map(item=>[item.id,item]));
+const effectivePointsProjection=createEffectivePointsProjection({book:{id:config.id,title:config.title,parentBookId:null},units:pointsOrderedDatasheets.map(unit=>{const publication=pointsByUnitId.get(unit.id);return{id:unit.id,title:unit.title,sourceBookId:config.id,publicationState:unit.status||'Current',points:publication?.points||[],paidWargear:publication?.wargear||[],ruleProfile:compiledUnitRuleProfiles.get(unit.id),publicationRecord:publication};}),detachments:pointsOrderedDetachments.map(item=>({id:item.id,title:item.title,sourceBookId:config.id,detachmentPoints:Number(String(item.dp||0).match(/\d+/)?.[0]||0),forceDisposition:item.disposition||'',publicationRecord:{title:item.title,detachmentPoints:item.dp,forceDisposition:item.disposition}})),enhancements:pointsCatalog.enhancements.map(item=>{const detachment=detachmentById.get(item.canonicalDetachmentId);if(!detachment)throw new Error(`Adeptus Mechanicus: ${item.id} references unknown Detachment ${item.canonicalDetachmentId}`);return{id:item.canonicalEnhancementId||item.id,sourceId:item.sourceId||null,ruleId:item.canonicalEnhancementId||item.id,legacyKey:item.legacyKey||null,detachmentId:item.canonicalDetachmentId,detachmentTitle:detachment.title,sourceBookId:config.id,title:item.title,value:Number(item.value),owner:item.owner||null,assignment:item.assignment||null,tags:item.tags||[],text:item.text||'',...(item.profile?{profile:item.profile}:{}),...(item.effect?{legacyEffect:item.effect}:{}),publicationRecord:item};})});
 if(projectionOnly)return {effectivePointsProjection};
 const abilityCard=(item,unit,wargearAbilityId='')=>`<article class="ability"${wargearAbilityId?` data-roster-wargear-ability-id="${esc(wargearAbilityId)}"`:''} data-source-field="abilities.${esc(slugKey(item.title))}"><h5 data-source-field="title"><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.openingText?`<p data-source-field="openingText">${decorate(item.openingText,unit.id)}</p>`:''}${(item.options||[]).map(option=>`<div class="ability-option" data-source-field="options.${esc(option.id)}"><h6>${esc(option.title)}</h6><p data-source-field="text">${decorate(option.text,unit.id)}</p></div>`).join('')}${item.text?`<p data-source-field="text">${decorate(item.text,unit.id)}</p>`:''}</article>`;
 const compactAbilities=(title,items,unit)=>items.length?`<div class="shared-ability-group" data-ability-class="${esc(slugKey(title))}"><h5>${title}</h5><div class="keyword-list shared-abilities">${items.map(item=>/^core$/i.test(item.title)?decorate(abilityText(item),unit.id):`<button class="term-button" data-term="${item.termId}" data-source-field="abilities.${esc(slugKey(item.title))}">${esc(item.title)}</button>`).join(' ')}</div></div>`:'';
@@ -195,7 +195,7 @@ const unitCard=unit=>{
   for(const item of unit.abilities)(grouped[abilityKind(item)]||grouped.datasheet).push(item);
   const wargearAbilities=unit.wargearAbilities||[];
   const wargear=Array.isArray(unit.wargear)?unit.wargear:(unit.wargear?[unit.wargear]:[]);
-  const currentPoints=pointsByUnit.get(unit.title.toLowerCase());
+  const currentPoints=pointsByUnitId.get(unit.id);
   const pointRows=(currentPoints?.points||[]).filter(row=>Number.isFinite(Number(row.value)));
 
   const points=pointRows.length===1?`${pointRows[0].value}`:pointRows.length>1?'MULTIPLE COSTS':(unit.points?.length?unit.points.join(' / '):'');

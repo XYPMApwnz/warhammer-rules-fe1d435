@@ -121,7 +121,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-rangers-profile-alpha-combat-weapon-melee"
+              "unit-skitarii-rangers-profile-f4fa54e843"
             ],
             "wargearAbilityIds": []
           },
@@ -133,7 +133,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-rangers-profile-galvanic-rifle-ranged-2"
+              "unit-skitarii-rangers-profile-f99b94b080"
             ],
             "wargearAbilityIds": []
           },
@@ -145,7 +145,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-rangers-profile-mechanicus-pistol-ranged-3"
+              "unit-skitarii-rangers-profile-8a7f265f02"
             ],
             "wargearAbilityIds": []
           },
@@ -157,7 +157,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-rangers-profile-close-combat-weapon-melee-4"
+              "unit-skitarii-rangers-profile-a3d11c7b0e"
             ],
             "wargearAbilityIds": []
           },
@@ -169,7 +169,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-rangers-profile-transuranic-arquebus-ranged-5"
+              "unit-skitarii-rangers-profile-e39782ff83"
             ],
             "wargearAbilityIds": []
           },
@@ -181,7 +181,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-rangers-profile-arc-rifle-ranged-6"
+              "unit-skitarii-rangers-profile-2a957ff0ca"
             ],
             "wargearAbilityIds": []
           },
@@ -193,7 +193,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-rangers-profile-plasma-caliver-supercharge-ranged-7"
+              "unit-skitarii-rangers-profile-502ab08010"
             ],
             "wargearAbilityIds": []
           },
@@ -205,7 +205,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-rangers-profile-plasma-caliver-standard-ranged-8"
+              "unit-skitarii-rangers-profile-d8be5b4fc3"
             ],
             "wargearAbilityIds": []
           },
@@ -218,8 +218,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-skitarii-rangers-weapon-family-plasma-caliver",
             "profileIds": [
-              "unit-skitarii-rangers-profile-plasma-caliver-supercharge-ranged-7",
-              "unit-skitarii-rangers-profile-plasma-caliver-standard-ranged-8"
+              "unit-skitarii-rangers-profile-502ab08010",
+              "unit-skitarii-rangers-profile-d8be5b4fc3"
             ],
             "wargearAbilityIds": []
           },
@@ -232,7 +232,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-skitarii-rangers-wargear-ability-enhanced-data-tether"
+              "unit-skitarii-rangers-wargear-ability-893f3b727c"
             ]
           },
           {
@@ -244,7 +244,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-skitarii-rangers-wargear-ability-omnispex-2"
+              "unit-skitarii-rangers-wargear-ability-2e4de9ef20"
             ]
           }
         ],
@@ -256,15 +256,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Plasma caliver"
             ],
             "profileIds": [
-              "unit-skitarii-rangers-profile-plasma-caliver-supercharge-ranged-7",
-              "unit-skitarii-rangers-profile-plasma-caliver-standard-ranged-8"
+              "unit-skitarii-rangers-profile-502ab08010",
+              "unit-skitarii-rangers-profile-d8be5b4fc3"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-skitarii-rangers-profile-alpha-combat-weapon-melee",
+            "id": "unit-skitarii-rangers-profile-f4fa54e843",
+            "legacyIds": [
+              "unit-skitarii-rangers-profile-alpha-combat-weapon-melee"
+            ],
             "title": "Alpha combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -279,7 +282,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-rangers-profile-galvanic-rifle-ranged-2",
+            "id": "unit-skitarii-rangers-profile-f99b94b080",
+            "legacyIds": [
+              "unit-skitarii-rangers-profile-galvanic-rifle-ranged-2"
+            ],
             "title": "Galvanic rifle",
             "mode": "ranged",
             "range": "30\"",
@@ -294,7 +300,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-rangers-profile-mechanicus-pistol-ranged-3",
+            "id": "unit-skitarii-rangers-profile-8a7f265f02",
+            "legacyIds": [
+              "unit-skitarii-rangers-profile-mechanicus-pistol-ranged-3"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -309,7 +318,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-rangers-profile-close-combat-weapon-melee-4",
+            "id": "unit-skitarii-rangers-profile-a3d11c7b0e",
+            "legacyIds": [
+              "unit-skitarii-rangers-profile-close-combat-weapon-melee-4"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -324,7 +336,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-rangers-profile-transuranic-arquebus-ranged-5",
+            "id": "unit-skitarii-rangers-profile-e39782ff83",
+            "legacyIds": [
+              "unit-skitarii-rangers-profile-transuranic-arquebus-ranged-5"
+            ],
             "title": "Transuranic arquebus",
             "mode": "ranged",
             "range": "36\"",
@@ -339,7 +354,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-rangers-profile-arc-rifle-ranged-6",
+            "id": "unit-skitarii-rangers-profile-2a957ff0ca",
+            "legacyIds": [
+              "unit-skitarii-rangers-profile-arc-rifle-ranged-6"
+            ],
             "title": "Arc rifle",
             "mode": "ranged",
             "range": "30\"",
@@ -354,7 +372,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-rangers-profile-plasma-caliver-supercharge-ranged-7",
+            "id": "unit-skitarii-rangers-profile-502ab08010",
+            "legacyIds": [
+              "unit-skitarii-rangers-profile-plasma-caliver-supercharge-ranged-7"
+            ],
             "title": "➤ Plasma caliver - supercharge",
             "mode": "ranged",
             "range": "30\"",
@@ -370,7 +391,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-rangers-profile-plasma-caliver-standard-ranged-8",
+            "id": "unit-skitarii-rangers-profile-d8be5b4fc3",
+            "legacyIds": [
+              "unit-skitarii-rangers-profile-plasma-caliver-standard-ranged-8"
+            ],
             "title": "➤ Plasma caliver - standard",
             "mode": "ranged",
             "range": "30\"",
@@ -388,21 +412,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-skitarii-rangers-wargear-ability-enhanced-data-tether",
-            "sectionId": "unit-skitarii-rangers-wargear-ability-enhanced-data-tether",
+            "id": "unit-skitarii-rangers-wargear-ability-893f3b727c",
+            "sectionId": "unit-skitarii-rangers-wargear-ability-893f3b727c",
             "title": "Enhanced data-tether",
             "text": "Each time you select the bearer’s unit\nas the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "sourceUnitId": "unit-skitarii-rangers",
+            "legacyIds": [
+              "unit-skitarii-rangers-wargear-ability-enhanced-data-tether"
+            ],
             "requiredSelectionIds": [
               "unit-skitarii-rangers-selection-enhanced-data-tether"
             ]
           },
           {
-            "id": "unit-skitarii-rangers-wargear-ability-omnispex-2",
-            "sectionId": "unit-skitarii-rangers-wargear-ability-omnispex-2",
+            "id": "unit-skitarii-rangers-wargear-ability-2e4de9ef20",
+            "sectionId": "unit-skitarii-rangers-wargear-ability-2e4de9ef20",
             "title": "Omnispex",
             "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
             "sourceUnitId": "unit-skitarii-rangers",
+            "legacyIds": [
+              "unit-skitarii-rangers-wargear-ability-omnispex-2"
+            ],
             "requiredSelectionIds": [
               "unit-skitarii-rangers-selection-omnispex"
             ]
@@ -516,7 +546,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-alpha-combat-weapon-melee"
+              "unit-skitarii-vanguard-profile-f4fa54e843"
             ],
             "wargearAbilityIds": []
           },
@@ -528,7 +558,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-radium-carbine-ranged-2"
+              "unit-skitarii-vanguard-profile-c1982b3bbe"
             ],
             "wargearAbilityIds": []
           },
@@ -540,7 +570,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-mechanicus-pistol-ranged-3"
+              "unit-skitarii-vanguard-profile-8a7f265f02"
             ],
             "wargearAbilityIds": []
           },
@@ -552,7 +582,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-close-combat-weapon-melee-4"
+              "unit-skitarii-vanguard-profile-a3d11c7b0e"
             ],
             "wargearAbilityIds": []
           },
@@ -564,7 +594,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-transuranic-arquebus-ranged-5"
+              "unit-skitarii-vanguard-profile-e39782ff83"
             ],
             "wargearAbilityIds": []
           },
@@ -576,7 +606,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-arc-rifle-ranged-6"
+              "unit-skitarii-vanguard-profile-2a957ff0ca"
             ],
             "wargearAbilityIds": []
           },
@@ -588,7 +618,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-plasma-caliver-supercharge-ranged-7"
+              "unit-skitarii-vanguard-profile-502ab08010"
             ],
             "wargearAbilityIds": []
           },
@@ -600,7 +630,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-plasma-caliver-standard-ranged-8"
+              "unit-skitarii-vanguard-profile-d8be5b4fc3"
             ],
             "wargearAbilityIds": []
           },
@@ -613,8 +643,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-skitarii-vanguard-weapon-family-plasma-caliver",
             "profileIds": [
-              "unit-skitarii-vanguard-profile-plasma-caliver-supercharge-ranged-7",
-              "unit-skitarii-vanguard-profile-plasma-caliver-standard-ranged-8"
+              "unit-skitarii-vanguard-profile-502ab08010",
+              "unit-skitarii-vanguard-profile-d8be5b4fc3"
             ],
             "wargearAbilityIds": []
           },
@@ -627,7 +657,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-skitarii-vanguard-wargear-ability-enhanced-data-tether"
+              "unit-skitarii-vanguard-wargear-ability-86cd99761f"
             ]
           },
           {
@@ -639,7 +669,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-skitarii-vanguard-wargear-ability-omnispex-2"
+              "unit-skitarii-vanguard-wargear-ability-2e4de9ef20"
             ]
           }
         ],
@@ -651,15 +681,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Plasma caliver"
             ],
             "profileIds": [
-              "unit-skitarii-vanguard-profile-plasma-caliver-supercharge-ranged-7",
-              "unit-skitarii-vanguard-profile-plasma-caliver-standard-ranged-8"
+              "unit-skitarii-vanguard-profile-502ab08010",
+              "unit-skitarii-vanguard-profile-d8be5b4fc3"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-skitarii-vanguard-profile-alpha-combat-weapon-melee",
+            "id": "unit-skitarii-vanguard-profile-f4fa54e843",
+            "legacyIds": [
+              "unit-skitarii-vanguard-profile-alpha-combat-weapon-melee"
+            ],
             "title": "Alpha combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -674,7 +707,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-vanguard-profile-radium-carbine-ranged-2",
+            "id": "unit-skitarii-vanguard-profile-c1982b3bbe",
+            "legacyIds": [
+              "unit-skitarii-vanguard-profile-radium-carbine-ranged-2"
+            ],
             "title": "Radium carbine",
             "mode": "ranged",
             "range": "18\"",
@@ -689,7 +725,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-vanguard-profile-mechanicus-pistol-ranged-3",
+            "id": "unit-skitarii-vanguard-profile-8a7f265f02",
+            "legacyIds": [
+              "unit-skitarii-vanguard-profile-mechanicus-pistol-ranged-3"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -704,7 +743,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-vanguard-profile-close-combat-weapon-melee-4",
+            "id": "unit-skitarii-vanguard-profile-a3d11c7b0e",
+            "legacyIds": [
+              "unit-skitarii-vanguard-profile-close-combat-weapon-melee-4"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -719,7 +761,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-vanguard-profile-transuranic-arquebus-ranged-5",
+            "id": "unit-skitarii-vanguard-profile-e39782ff83",
+            "legacyIds": [
+              "unit-skitarii-vanguard-profile-transuranic-arquebus-ranged-5"
+            ],
             "title": "Transuranic arquebus",
             "mode": "ranged",
             "range": "36\"",
@@ -734,7 +779,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-vanguard-profile-arc-rifle-ranged-6",
+            "id": "unit-skitarii-vanguard-profile-2a957ff0ca",
+            "legacyIds": [
+              "unit-skitarii-vanguard-profile-arc-rifle-ranged-6"
+            ],
             "title": "Arc rifle",
             "mode": "ranged",
             "range": "30\"",
@@ -749,7 +797,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-vanguard-profile-plasma-caliver-supercharge-ranged-7",
+            "id": "unit-skitarii-vanguard-profile-502ab08010",
+            "legacyIds": [
+              "unit-skitarii-vanguard-profile-plasma-caliver-supercharge-ranged-7"
+            ],
             "title": "➤ Plasma caliver - supercharge",
             "mode": "ranged",
             "range": "30\"",
@@ -765,7 +816,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-vanguard-profile-plasma-caliver-standard-ranged-8",
+            "id": "unit-skitarii-vanguard-profile-d8be5b4fc3",
+            "legacyIds": [
+              "unit-skitarii-vanguard-profile-plasma-caliver-standard-ranged-8"
+            ],
             "title": "➤ Plasma caliver - standard",
             "mode": "ranged",
             "range": "30\"",
@@ -783,21 +837,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-skitarii-vanguard-wargear-ability-enhanced-data-tether",
-            "sectionId": "unit-skitarii-vanguard-wargear-ability-enhanced-data-tether",
+            "id": "unit-skitarii-vanguard-wargear-ability-86cd99761f",
+            "sectionId": "unit-skitarii-vanguard-wargear-ability-86cd99761f",
             "title": "Enhanced data-tether",
             "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "sourceUnitId": "unit-skitarii-vanguard",
+            "legacyIds": [
+              "unit-skitarii-vanguard-wargear-ability-enhanced-data-tether"
+            ],
             "requiredSelectionIds": [
               "unit-skitarii-vanguard-selection-enhanced-data-tether"
             ]
           },
           {
-            "id": "unit-skitarii-vanguard-wargear-ability-omnispex-2",
-            "sectionId": "unit-skitarii-vanguard-wargear-ability-omnispex-2",
+            "id": "unit-skitarii-vanguard-wargear-ability-2e4de9ef20",
+            "sectionId": "unit-skitarii-vanguard-wargear-ability-2e4de9ef20",
             "title": "Omnispex",
             "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.",
             "sourceUnitId": "unit-skitarii-vanguard",
+            "legacyIds": [
+              "unit-skitarii-vanguard-wargear-ability-omnispex-2"
+            ],
             "requiredSelectionIds": [
               "unit-skitarii-vanguard-selection-omnispex"
             ]
@@ -907,7 +967,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-cybernetica-datasmith-profile-power-fist-melee"
+              "unit-cybernetica-datasmith-profile-9c2ab1e5d9"
             ],
             "wargearAbilityIds": []
           },
@@ -919,7 +979,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-cybernetica-datasmith-profile-mechanicus-pistol-ranged-2"
+              "unit-cybernetica-datasmith-profile-3afd508261"
             ],
             "wargearAbilityIds": []
           }
@@ -927,7 +987,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-cybernetica-datasmith-profile-power-fist-melee",
+            "id": "unit-cybernetica-datasmith-profile-9c2ab1e5d9",
+            "legacyIds": [
+              "unit-cybernetica-datasmith-profile-power-fist-melee"
+            ],
             "title": "Power fist",
             "mode": "melee",
             "range": "Melee",
@@ -942,7 +1005,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-cybernetica-datasmith-profile-mechanicus-pistol-ranged-2",
+            "id": "unit-cybernetica-datasmith-profile-3afd508261",
+            "legacyIds": [
+              "unit-cybernetica-datasmith-profile-mechanicus-pistol-ranged-2"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -1070,7 +1136,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-marshal-profile-control-stave-melee"
+              "unit-skitarii-marshal-profile-43922c96ca"
             ],
             "wargearAbilityIds": []
           },
@@ -1082,7 +1148,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skitarii-marshal-profile-mechanicus-pistol-ranged-2"
+              "unit-skitarii-marshal-profile-3afd508261"
             ],
             "wargearAbilityIds": []
           }
@@ -1090,7 +1156,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-skitarii-marshal-profile-control-stave-melee",
+            "id": "unit-skitarii-marshal-profile-43922c96ca",
+            "legacyIds": [
+              "unit-skitarii-marshal-profile-control-stave-melee"
+            ],
             "title": "Control stave",
             "mode": "melee",
             "range": "Melee",
@@ -1105,7 +1174,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skitarii-marshal-profile-mechanicus-pistol-ranged-2",
+            "id": "unit-skitarii-marshal-profile-3afd508261",
+            "legacyIds": [
+              "unit-skitarii-marshal-profile-mechanicus-pistol-ranged-2"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -1214,7 +1286,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-skatros-profile-sydonian-feet-melee"
+              "unit-sydonian-skatros-profile-1e66bb8385"
             ],
             "wargearAbilityIds": []
           },
@@ -1226,7 +1298,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-skatros-profile-radium-jezzail-ranged-2"
+              "unit-sydonian-skatros-profile-3bc8e05cc1"
             ],
             "wargearAbilityIds": []
           },
@@ -1238,7 +1310,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-skatros-profile-skatros-transuranic-arquebus-ranged-3"
+              "unit-sydonian-skatros-profile-b2baeaef2e"
             ],
             "wargearAbilityIds": []
           },
@@ -1250,7 +1322,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-skatros-profile-mechanicus-pistol-ranged-4"
+              "unit-sydonian-skatros-profile-3afd508261"
             ],
             "wargearAbilityIds": []
           }
@@ -1258,7 +1330,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-sydonian-skatros-profile-sydonian-feet-melee",
+            "id": "unit-sydonian-skatros-profile-1e66bb8385",
+            "legacyIds": [
+              "unit-sydonian-skatros-profile-sydonian-feet-melee"
+            ],
             "title": "Sydonian Feet",
             "mode": "melee",
             "range": "Melee",
@@ -1273,7 +1348,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sydonian-skatros-profile-radium-jezzail-ranged-2",
+            "id": "unit-sydonian-skatros-profile-3bc8e05cc1",
+            "legacyIds": [
+              "unit-sydonian-skatros-profile-radium-jezzail-ranged-2"
+            ],
             "title": "Radium Jezzail",
             "mode": "ranged",
             "range": "36\"",
@@ -1288,7 +1366,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sydonian-skatros-profile-skatros-transuranic-arquebus-ranged-3",
+            "id": "unit-sydonian-skatros-profile-b2baeaef2e",
+            "legacyIds": [
+              "unit-sydonian-skatros-profile-skatros-transuranic-arquebus-ranged-3"
+            ],
             "title": "Skatros transuranic arquebus",
             "mode": "ranged",
             "range": "36\"",
@@ -1303,7 +1384,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sydonian-skatros-profile-mechanicus-pistol-ranged-4",
+            "id": "unit-sydonian-skatros-profile-3afd508261",
+            "legacyIds": [
+              "unit-sydonian-skatros-profile-mechanicus-pistol-ranged-4"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -1479,7 +1563,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-dominus-profile-omnissian-axe-melee"
+              "unit-tech-priest-dominus-profile-5a117e1aa5"
             ],
             "wargearAbilityIds": []
           },
@@ -1491,7 +1575,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-dominus-profile-macrostubber-ranged-2"
+              "unit-tech-priest-dominus-profile-806922726e"
             ],
             "wargearAbilityIds": []
           },
@@ -1503,7 +1587,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-dominus-profile-phosphor-serpenta-ranged-3"
+              "unit-tech-priest-dominus-profile-0938583a1d"
             ],
             "wargearAbilityIds": []
           },
@@ -1515,7 +1599,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-dominus-profile-eradication-ray-dissipated-ranged-4"
+              "unit-tech-priest-dominus-profile-6e74157b74"
             ],
             "wargearAbilityIds": []
           },
@@ -1527,7 +1611,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-dominus-profile-eradication-ray-focused-ranged-5"
+              "unit-tech-priest-dominus-profile-2a1160a3c4"
             ],
             "wargearAbilityIds": []
           },
@@ -1539,7 +1623,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-dominus-profile-volkite-blaster-ranged-6"
+              "unit-tech-priest-dominus-profile-6ac132a896"
             ],
             "wargearAbilityIds": []
           },
@@ -1552,8 +1636,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-tech-priest-dominus-weapon-family-eradication-ray",
             "profileIds": [
-              "unit-tech-priest-dominus-profile-eradication-ray-dissipated-ranged-4",
-              "unit-tech-priest-dominus-profile-eradication-ray-focused-ranged-5"
+              "unit-tech-priest-dominus-profile-6e74157b74",
+              "unit-tech-priest-dominus-profile-2a1160a3c4"
             ],
             "wargearAbilityIds": []
           }
@@ -1566,15 +1650,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Eradication ray"
             ],
             "profileIds": [
-              "unit-tech-priest-dominus-profile-eradication-ray-dissipated-ranged-4",
-              "unit-tech-priest-dominus-profile-eradication-ray-focused-ranged-5"
+              "unit-tech-priest-dominus-profile-6e74157b74",
+              "unit-tech-priest-dominus-profile-2a1160a3c4"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-tech-priest-dominus-profile-omnissian-axe-melee",
+            "id": "unit-tech-priest-dominus-profile-5a117e1aa5",
+            "legacyIds": [
+              "unit-tech-priest-dominus-profile-omnissian-axe-melee"
+            ],
             "title": "Omnissian axe",
             "mode": "melee",
             "range": "Melee",
@@ -1589,7 +1676,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-dominus-profile-macrostubber-ranged-2",
+            "id": "unit-tech-priest-dominus-profile-806922726e",
+            "legacyIds": [
+              "unit-tech-priest-dominus-profile-macrostubber-ranged-2"
+            ],
             "title": "Macrostubber",
             "mode": "ranged",
             "range": "12\"",
@@ -1604,7 +1694,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-dominus-profile-phosphor-serpenta-ranged-3",
+            "id": "unit-tech-priest-dominus-profile-0938583a1d",
+            "legacyIds": [
+              "unit-tech-priest-dominus-profile-phosphor-serpenta-ranged-3"
+            ],
             "title": "Phosphor serpenta",
             "mode": "ranged",
             "range": "18\"",
@@ -1619,7 +1712,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-dominus-profile-eradication-ray-dissipated-ranged-4",
+            "id": "unit-tech-priest-dominus-profile-6e74157b74",
+            "legacyIds": [
+              "unit-tech-priest-dominus-profile-eradication-ray-dissipated-ranged-4"
+            ],
             "title": "➤ Eradication ray - dissipated",
             "mode": "ranged",
             "range": "24\"",
@@ -1635,7 +1731,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-dominus-profile-eradication-ray-focused-ranged-5",
+            "id": "unit-tech-priest-dominus-profile-2a1160a3c4",
+            "legacyIds": [
+              "unit-tech-priest-dominus-profile-eradication-ray-focused-ranged-5"
+            ],
             "title": "➤ Eradication ray - focused",
             "mode": "ranged",
             "range": "12\"",
@@ -1651,7 +1750,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-dominus-profile-volkite-blaster-ranged-6",
+            "id": "unit-tech-priest-dominus-profile-6ac132a896",
+            "legacyIds": [
+              "unit-tech-priest-dominus-profile-volkite-blaster-ranged-6"
+            ],
             "title": "Volkite blaster",
             "mode": "ranged",
             "range": "24\"",
@@ -1834,7 +1936,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-enginseer-profile-servo-arm-melee"
+              "unit-tech-priest-enginseer-profile-f39deea3d1"
             ],
             "wargearAbilityIds": []
           },
@@ -1846,7 +1948,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-enginseer-profile-omnissian-axe-melee-2"
+              "unit-tech-priest-enginseer-profile-26771c1737"
             ],
             "wargearAbilityIds": []
           },
@@ -1858,7 +1960,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-enginseer-profile-mechanicus-pistol-ranged-3"
+              "unit-tech-priest-enginseer-profile-3afd508261"
             ],
             "wargearAbilityIds": []
           }
@@ -1866,7 +1968,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-tech-priest-enginseer-profile-servo-arm-melee",
+            "id": "unit-tech-priest-enginseer-profile-f39deea3d1",
+            "legacyIds": [
+              "unit-tech-priest-enginseer-profile-servo-arm-melee"
+            ],
             "title": "Servo arm",
             "mode": "melee",
             "range": "Melee",
@@ -1881,7 +1986,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-enginseer-profile-omnissian-axe-melee-2",
+            "id": "unit-tech-priest-enginseer-profile-26771c1737",
+            "legacyIds": [
+              "unit-tech-priest-enginseer-profile-omnissian-axe-melee-2"
+            ],
             "title": "Omnissian axe",
             "mode": "melee",
             "range": "Melee",
@@ -1896,7 +2004,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-enginseer-profile-mechanicus-pistol-ranged-3",
+            "id": "unit-tech-priest-enginseer-profile-3afd508261",
+            "legacyIds": [
+              "unit-tech-priest-enginseer-profile-mechanicus-pistol-ranged-3"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -2072,7 +2183,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-manipulus-profile-omnissian-staff-melee"
+              "unit-tech-priest-manipulus-profile-f87e9bc505"
             ],
             "wargearAbilityIds": []
           },
@@ -2084,7 +2195,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-manipulus-profile-magnarail-lance-ranged-2"
+              "unit-tech-priest-manipulus-profile-394f6240eb"
             ],
             "wargearAbilityIds": []
           },
@@ -2096,7 +2207,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tech-priest-manipulus-profile-transonic-cannon-ranged-3"
+              "unit-tech-priest-manipulus-profile-33abafe5c4"
             ],
             "wargearAbilityIds": []
           }
@@ -2104,7 +2215,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-tech-priest-manipulus-profile-omnissian-staff-melee",
+            "id": "unit-tech-priest-manipulus-profile-f87e9bc505",
+            "legacyIds": [
+              "unit-tech-priest-manipulus-profile-omnissian-staff-melee"
+            ],
             "title": "Omnissian staff",
             "mode": "melee",
             "range": "Melee",
@@ -2119,7 +2233,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-manipulus-profile-magnarail-lance-ranged-2",
+            "id": "unit-tech-priest-manipulus-profile-394f6240eb",
+            "legacyIds": [
+              "unit-tech-priest-manipulus-profile-magnarail-lance-ranged-2"
+            ],
             "title": "Magnarail lance",
             "mode": "ranged",
             "range": "36\"",
@@ -2134,7 +2251,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tech-priest-manipulus-profile-transonic-cannon-ranged-3",
+            "id": "unit-tech-priest-manipulus-profile-33abafe5c4",
+            "legacyIds": [
+              "unit-tech-priest-manipulus-profile-transonic-cannon-ranged-3"
+            ],
             "title": "Transonic cannon",
             "mode": "ranged",
             "range": "12\"",
@@ -2310,7 +2430,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-technoarcheologist-profile-servo-arc-claw-melee"
+              "unit-technoarcheologist-profile-65f081aa32"
             ],
             "wargearAbilityIds": []
           },
@@ -2322,7 +2442,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-technoarcheologist-profile-mechanicus-pistol-ranged-2"
+              "unit-technoarcheologist-profile-3afd508261"
             ],
             "wargearAbilityIds": []
           }
@@ -2330,7 +2450,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-technoarcheologist-profile-servo-arc-claw-melee",
+            "id": "unit-technoarcheologist-profile-65f081aa32",
+            "legacyIds": [
+              "unit-technoarcheologist-profile-servo-arc-claw-melee"
+            ],
             "title": "Servo-arc claw",
             "mode": "melee",
             "range": "Melee",
@@ -2345,7 +2468,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-technoarcheologist-profile-mechanicus-pistol-ranged-2",
+            "id": "unit-technoarcheologist-profile-3afd508261",
+            "legacyIds": [
+              "unit-technoarcheologist-profile-mechanicus-pistol-ranged-2"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -2449,7 +2575,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skorpius-dunerider-profile-armoured-hull-melee"
+              "unit-skorpius-dunerider-profile-7809a5e4d6"
             ],
             "wargearAbilityIds": []
           },
@@ -2461,7 +2587,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skorpius-dunerider-profile-cognis-heavy-stubber-array-ranged-2"
+              "unit-skorpius-dunerider-profile-d60783ae2b"
             ],
             "wargearAbilityIds": []
           }
@@ -2469,7 +2595,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-skorpius-dunerider-profile-armoured-hull-melee",
+            "id": "unit-skorpius-dunerider-profile-7809a5e4d6",
+            "legacyIds": [
+              "unit-skorpius-dunerider-profile-armoured-hull-melee"
+            ],
             "title": "Armoured hull",
             "mode": "melee",
             "range": "Melee",
@@ -2484,7 +2613,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skorpius-dunerider-profile-cognis-heavy-stubber-array-ranged-2",
+            "id": "unit-skorpius-dunerider-profile-d60783ae2b",
+            "legacyIds": [
+              "unit-skorpius-dunerider-profile-cognis-heavy-stubber-array-ranged-2"
+            ],
             "title": "Cognis heavy stubber array",
             "mode": "ranged",
             "range": "36\"",
@@ -2595,7 +2727,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-belisarius-cawl-profile-arc-scourge-melee"
+              "unit-belisarius-cawl-profile-c56e9d1cbb"
             ],
             "wargearAbilityIds": []
           },
@@ -2607,7 +2739,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-belisarius-cawl-profile-cawls-omnissian-axe-melee-2"
+              "unit-belisarius-cawl-profile-c53d9922ab"
             ],
             "wargearAbilityIds": []
           },
@@ -2619,7 +2751,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-belisarius-cawl-profile-mechadendrite-hive-melee-3"
+              "unit-belisarius-cawl-profile-959110435e"
             ],
             "wargearAbilityIds": []
           },
@@ -2631,7 +2763,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-belisarius-cawl-profile-solar-atomiser-ranged-4"
+              "unit-belisarius-cawl-profile-98f1721c9f"
             ],
             "wargearAbilityIds": []
           }
@@ -2639,7 +2771,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-belisarius-cawl-profile-arc-scourge-melee",
+            "id": "unit-belisarius-cawl-profile-c56e9d1cbb",
+            "legacyIds": [
+              "unit-belisarius-cawl-profile-arc-scourge-melee"
+            ],
             "title": "Arc Scourge",
             "mode": "melee",
             "range": "Melee",
@@ -2654,7 +2789,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-belisarius-cawl-profile-cawls-omnissian-axe-melee-2",
+            "id": "unit-belisarius-cawl-profile-c53d9922ab",
+            "legacyIds": [
+              "unit-belisarius-cawl-profile-cawls-omnissian-axe-melee-2"
+            ],
             "title": "Cawl's Omnissian axe",
             "mode": "melee",
             "range": "Melee",
@@ -2669,7 +2807,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-belisarius-cawl-profile-mechadendrite-hive-melee-3",
+            "id": "unit-belisarius-cawl-profile-959110435e",
+            "legacyIds": [
+              "unit-belisarius-cawl-profile-mechadendrite-hive-melee-3"
+            ],
             "title": "Mechadendrite hive",
             "mode": "melee",
             "range": "Melee",
@@ -2684,7 +2825,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-belisarius-cawl-profile-solar-atomiser-ranged-4",
+            "id": "unit-belisarius-cawl-profile-98f1721c9f",
+            "legacyIds": [
+              "unit-belisarius-cawl-profile-solar-atomiser-ranged-4"
+            ],
             "title": "Solar atomiser",
             "mode": "ranged",
             "range": "18\"",
@@ -2780,11 +2924,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-thulia-ghuld-model-archmagos-terminus-thulia-ghuld",
+            "id": "unit-thulia-ghuld-model-c93390198d",
             "title": "Archmagos Terminus Thulia Ghuld",
             "aliases": [
               "Archmagos Terminus Thulia Ghuld",
               "Archmagos Terminus Thulia Ghuld - Epic Hero"
+            ],
+            "legacyIds": [
+              "unit-thulia-ghuld-model-archmagos-terminus-thulia-ghuld"
             ]
           }
         ],
@@ -2797,7 +2944,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-titanic-impact-ranged"
+              "unit-thulia-ghuld-profile-53b49dbc46"
             ],
             "wargearAbilityIds": []
           },
@@ -2809,7 +2956,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-shockwave-ranged-2"
+              "unit-thulia-ghuld-profile-3b06e93bc0"
             ],
             "wargearAbilityIds": []
           },
@@ -2821,7 +2968,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-thulia-ghuld-profile-rod-of-the-war-forge-strike-melee-3"
+              "unit-thulia-ghuld-profile-f4b45aad05"
             ],
             "wargearAbilityIds": []
           },
@@ -2833,7 +2980,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-thulia-ghuld-profile-rod-of-the-war-forge-sweep-melee-4"
+              "unit-thulia-ghuld-profile-c466e338e6"
             ],
             "wargearAbilityIds": []
           },
@@ -2846,8 +2993,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-thulia-ghuld-weapon-family-jericho-class-conversion-resonator",
             "profileIds": [
-              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-titanic-impact-ranged",
-              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-shockwave-ranged-2"
+              "unit-thulia-ghuld-profile-53b49dbc46",
+              "unit-thulia-ghuld-profile-3b06e93bc0"
             ],
             "wargearAbilityIds": []
           },
@@ -2860,8 +3007,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-thulia-ghuld-weapon-family-rod-of-the-war-forge",
             "profileIds": [
-              "unit-thulia-ghuld-profile-rod-of-the-war-forge-strike-melee-3",
-              "unit-thulia-ghuld-profile-rod-of-the-war-forge-sweep-melee-4"
+              "unit-thulia-ghuld-profile-f4b45aad05",
+              "unit-thulia-ghuld-profile-c466e338e6"
             ],
             "wargearAbilityIds": []
           }
@@ -2874,8 +3021,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "Jericho-class conversion resonator"
             ],
             "profileIds": [
-              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-titanic-impact-ranged",
-              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-shockwave-ranged-2"
+              "unit-thulia-ghuld-profile-53b49dbc46",
+              "unit-thulia-ghuld-profile-3b06e93bc0"
             ],
             "ambiguousAlias": false
           },
@@ -2886,15 +3033,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "Rod of the War Forge"
             ],
             "profileIds": [
-              "unit-thulia-ghuld-profile-rod-of-the-war-forge-strike-melee-3",
-              "unit-thulia-ghuld-profile-rod-of-the-war-forge-sweep-melee-4"
+              "unit-thulia-ghuld-profile-f4b45aad05",
+              "unit-thulia-ghuld-profile-c466e338e6"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-titanic-impact-ranged",
+            "id": "unit-thulia-ghuld-profile-53b49dbc46",
+            "legacyIds": [
+              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-titanic-impact-ranged"
+            ],
             "title": "Jericho-class conversion resonator - titanic impact",
             "mode": "ranged",
             "range": "24\"",
@@ -2910,7 +3060,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-shockwave-ranged-2",
+            "id": "unit-thulia-ghuld-profile-3b06e93bc0",
+            "legacyIds": [
+              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-shockwave-ranged-2"
+            ],
             "title": "Jericho-class conversion resonator - shockwave",
             "mode": "ranged",
             "range": "24\"",
@@ -2926,7 +3079,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-thulia-ghuld-profile-rod-of-the-war-forge-strike-melee-3",
+            "id": "unit-thulia-ghuld-profile-f4b45aad05",
+            "legacyIds": [
+              "unit-thulia-ghuld-profile-rod-of-the-war-forge-strike-melee-3"
+            ],
             "title": "Rod of the War Forge - strike",
             "mode": "melee",
             "range": "Melee",
@@ -2942,7 +3098,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-thulia-ghuld-profile-rod-of-the-war-forge-sweep-melee-4",
+            "id": "unit-thulia-ghuld-profile-c466e338e6",
+            "legacyIds": [
+              "unit-thulia-ghuld-profile-rod-of-the-war-forge-sweep-melee-4"
+            ],
             "title": "Rod of the War Forge - sweep",
             "mode": "melee",
             "range": "Melee",
@@ -3066,8 +3225,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-corpuscarii-electro-priests-profile-electrostatic-gauntlets-ranged",
-              "unit-corpuscarii-electro-priests-profile-electrostatic-gauntlets-melee-2"
+              "unit-corpuscarii-electro-priests-profile-6a2f5652f2",
+              "unit-corpuscarii-electro-priests-profile-a11221f038"
             ],
             "wargearAbilityIds": []
           }
@@ -3075,7 +3234,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-corpuscarii-electro-priests-profile-electrostatic-gauntlets-ranged",
+            "id": "unit-corpuscarii-electro-priests-profile-6a2f5652f2",
+            "legacyIds": [
+              "unit-corpuscarii-electro-priests-profile-electrostatic-gauntlets-ranged"
+            ],
             "title": "Electrostatic gauntlets",
             "mode": "ranged",
             "range": "12\"",
@@ -3090,7 +3252,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-corpuscarii-electro-priests-profile-electrostatic-gauntlets-melee-2",
+            "id": "unit-corpuscarii-electro-priests-profile-a11221f038",
+            "legacyIds": [
+              "unit-corpuscarii-electro-priests-profile-electrostatic-gauntlets-melee-2"
+            ],
             "title": "Electrostatic gauntlets",
             "mode": "melee",
             "range": "Melee",
@@ -3213,7 +3378,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-fulgurite-electro-priests-profile-electroleech-stave-melee"
+              "unit-fulgurite-electro-priests-profile-cf7718ae6f"
             ],
             "wargearAbilityIds": []
           }
@@ -3221,7 +3386,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-fulgurite-electro-priests-profile-electroleech-stave-melee",
+            "id": "unit-fulgurite-electro-priests-profile-cf7718ae6f",
+            "legacyIds": [
+              "unit-fulgurite-electro-priests-profile-electroleech-stave-melee"
+            ],
             "title": "Electroleech stave",
             "mode": "melee",
             "range": "Melee",
@@ -3337,10 +3505,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-hastarii-exterminators-model-hastarii-exterminator-alpha-and-4-hastarii-exterminators",
+            "id": "unit-hastarii-exterminators-model-53103ae2b2",
             "title": "Hastarii Exterminator Alpha and 4 Hastarii Exterminators",
             "aliases": [
               "Hastarii Exterminator Alpha and 4 Hastarii Exterminators"
+            ],
+            "legacyIds": [
+              "unit-hastarii-exterminators-model-hastarii-exterminator-alpha-and-4-hastarii-exterminators"
             ]
           }
         ],
@@ -3353,7 +3524,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-exterminators-profile-hastarii-arc-blaster-ranged"
+              "unit-hastarii-exterminators-profile-2e7a681394"
             ],
             "wargearAbilityIds": []
           },
@@ -3365,7 +3536,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-exterminators-profile-eradication-caster-dissipated-ranged-2"
+              "unit-hastarii-exterminators-profile-1c6ca76b13"
             ],
             "wargearAbilityIds": []
           },
@@ -3377,7 +3548,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-exterminators-profile-eradication-caster-focused-ranged-3"
+              "unit-hastarii-exterminators-profile-5717c27202"
             ],
             "wargearAbilityIds": []
           },
@@ -3389,7 +3560,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-exterminators-profile-close-combat-weapon-melee-4"
+              "unit-hastarii-exterminators-profile-26b89e7ead"
             ],
             "wargearAbilityIds": []
           },
@@ -3401,7 +3572,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-exterminators-profile-power-weapon-melee-5"
+              "unit-hastarii-exterminators-profile-ac5b526e9c"
             ],
             "wargearAbilityIds": []
           },
@@ -3414,8 +3585,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-hastarii-exterminators-weapon-family-eradication-caster",
             "profileIds": [
-              "unit-hastarii-exterminators-profile-eradication-caster-dissipated-ranged-2",
-              "unit-hastarii-exterminators-profile-eradication-caster-focused-ranged-3"
+              "unit-hastarii-exterminators-profile-1c6ca76b13",
+              "unit-hastarii-exterminators-profile-5717c27202"
             ],
             "wargearAbilityIds": []
           }
@@ -3428,15 +3599,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "Eradication caster"
             ],
             "profileIds": [
-              "unit-hastarii-exterminators-profile-eradication-caster-dissipated-ranged-2",
-              "unit-hastarii-exterminators-profile-eradication-caster-focused-ranged-3"
+              "unit-hastarii-exterminators-profile-1c6ca76b13",
+              "unit-hastarii-exterminators-profile-5717c27202"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-hastarii-exterminators-profile-hastarii-arc-blaster-ranged",
+            "id": "unit-hastarii-exterminators-profile-2e7a681394",
+            "legacyIds": [
+              "unit-hastarii-exterminators-profile-hastarii-arc-blaster-ranged"
+            ],
             "title": "Hastarii arc blaster",
             "mode": "ranged",
             "range": "18\"",
@@ -3451,7 +3625,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hastarii-exterminators-profile-eradication-caster-dissipated-ranged-2",
+            "id": "unit-hastarii-exterminators-profile-1c6ca76b13",
+            "legacyIds": [
+              "unit-hastarii-exterminators-profile-eradication-caster-dissipated-ranged-2"
+            ],
             "title": "Eradication caster - dissipated",
             "mode": "ranged",
             "range": "30\"",
@@ -3467,7 +3644,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hastarii-exterminators-profile-eradication-caster-focused-ranged-3",
+            "id": "unit-hastarii-exterminators-profile-5717c27202",
+            "legacyIds": [
+              "unit-hastarii-exterminators-profile-eradication-caster-focused-ranged-3"
+            ],
             "title": "Eradication caster - focused",
             "mode": "ranged",
             "range": "15\"",
@@ -3483,7 +3663,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hastarii-exterminators-profile-close-combat-weapon-melee-4",
+            "id": "unit-hastarii-exterminators-profile-26b89e7ead",
+            "legacyIds": [
+              "unit-hastarii-exterminators-profile-close-combat-weapon-melee-4"
+            ],
             "title": "Close-combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -3498,7 +3681,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hastarii-exterminators-profile-power-weapon-melee-5",
+            "id": "unit-hastarii-exterminators-profile-ac5b526e9c",
+            "legacyIds": [
+              "unit-hastarii-exterminators-profile-power-weapon-melee-5"
+            ],
             "title": "Power weapon",
             "mode": "melee",
             "range": "Melee",
@@ -3614,10 +3800,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-hastarii-fusiliers-model-hastarii-fusilier-alpha-and-4-hastarii-fusiliers",
+            "id": "unit-hastarii-fusiliers-model-288d7b9252",
             "title": "Hastarii Fusilier Alpha and 4 Hastarii Fusiliers",
             "aliases": [
               "Hastarii Fusilier Alpha and 4 Hastarii Fusiliers"
+            ],
+            "legacyIds": [
+              "unit-hastarii-fusiliers-model-hastarii-fusilier-alpha-and-4-hastarii-fusiliers"
             ]
           }
         ],
@@ -3630,7 +3819,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-fusiliers-profile-neutron-fusil-ranged"
+              "unit-hastarii-fusiliers-profile-212c3ca231"
             ],
             "wargearAbilityIds": []
           },
@@ -3642,7 +3831,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-fusiliers-profile-hastarii-phosphor-blaster-ranged-2"
+              "unit-hastarii-fusiliers-profile-f21dddfd67"
             ],
             "wargearAbilityIds": []
           },
@@ -3654,7 +3843,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-fusiliers-profile-close-combat-weapon-melee-3"
+              "unit-hastarii-fusiliers-profile-26b89e7ead"
             ],
             "wargearAbilityIds": []
           },
@@ -3666,7 +3855,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hastarii-fusiliers-profile-power-weapon-melee-4"
+              "unit-hastarii-fusiliers-profile-ac5b526e9c"
             ],
             "wargearAbilityIds": []
           }
@@ -3674,7 +3863,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-hastarii-fusiliers-profile-neutron-fusil-ranged",
+            "id": "unit-hastarii-fusiliers-profile-212c3ca231",
+            "legacyIds": [
+              "unit-hastarii-fusiliers-profile-neutron-fusil-ranged"
+            ],
             "title": "Neutron fusil",
             "mode": "ranged",
             "range": "24\"",
@@ -3689,7 +3881,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hastarii-fusiliers-profile-hastarii-phosphor-blaster-ranged-2",
+            "id": "unit-hastarii-fusiliers-profile-f21dddfd67",
+            "legacyIds": [
+              "unit-hastarii-fusiliers-profile-hastarii-phosphor-blaster-ranged-2"
+            ],
             "title": "Hastarii phosphor blaster",
             "mode": "ranged",
             "range": "18\"",
@@ -3704,7 +3899,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hastarii-fusiliers-profile-close-combat-weapon-melee-3",
+            "id": "unit-hastarii-fusiliers-profile-26b89e7ead",
+            "legacyIds": [
+              "unit-hastarii-fusiliers-profile-close-combat-weapon-melee-3"
+            ],
             "title": "Close-combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -3719,7 +3917,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hastarii-fusiliers-profile-power-weapon-melee-4",
+            "id": "unit-hastarii-fusiliers-profile-ac5b526e9c",
+            "legacyIds": [
+              "unit-hastarii-fusiliers-profile-power-weapon-melee-4"
+            ],
             "title": "Power weapon",
             "mode": "melee",
             "range": "Melee",
@@ -3835,7 +4036,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-breachers-profile-arc-claw-melee"
+              "unit-kataphron-breachers-profile-0a48041ca3"
             ],
             "wargearAbilityIds": []
           },
@@ -3847,7 +4048,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-breachers-profile-heavy-arc-rifle-ranged-2"
+              "unit-kataphron-breachers-profile-94f82de00c"
             ],
             "wargearAbilityIds": []
           },
@@ -3859,7 +4060,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-breachers-profile-hydraulic-claw-melee-3"
+              "unit-kataphron-breachers-profile-a2821e369c"
             ],
             "wargearAbilityIds": []
           },
@@ -3871,7 +4072,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-breachers-profile-torsion-cannon-ranged-4"
+              "unit-kataphron-breachers-profile-50697bf734"
             ],
             "wargearAbilityIds": []
           }
@@ -3879,7 +4080,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-kataphron-breachers-profile-arc-claw-melee",
+            "id": "unit-kataphron-breachers-profile-0a48041ca3",
+            "legacyIds": [
+              "unit-kataphron-breachers-profile-arc-claw-melee"
+            ],
             "title": "Arc claw",
             "mode": "melee",
             "range": "Melee",
@@ -3894,7 +4098,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kataphron-breachers-profile-heavy-arc-rifle-ranged-2",
+            "id": "unit-kataphron-breachers-profile-94f82de00c",
+            "legacyIds": [
+              "unit-kataphron-breachers-profile-heavy-arc-rifle-ranged-2"
+            ],
             "title": "Heavy arc rifle",
             "mode": "ranged",
             "range": "30\"",
@@ -3909,7 +4116,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kataphron-breachers-profile-hydraulic-claw-melee-3",
+            "id": "unit-kataphron-breachers-profile-a2821e369c",
+            "legacyIds": [
+              "unit-kataphron-breachers-profile-hydraulic-claw-melee-3"
+            ],
             "title": "Hydraulic claw",
             "mode": "melee",
             "range": "Melee",
@@ -3924,7 +4134,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kataphron-breachers-profile-torsion-cannon-ranged-4",
+            "id": "unit-kataphron-breachers-profile-50697bf734",
+            "legacyIds": [
+              "unit-kataphron-breachers-profile-torsion-cannon-ranged-4"
+            ],
             "title": "Torsion cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -4040,7 +4253,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-destroyers-profile-heavy-grav-cannon-ranged"
+              "unit-kataphron-destroyers-profile-f47cf110c0"
             ],
             "wargearAbilityIds": []
           },
@@ -4052,7 +4265,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-destroyers-profile-cognis-flamer-ranged-2"
+              "unit-kataphron-destroyers-profile-32a59f36ac"
             ],
             "wargearAbilityIds": []
           },
@@ -4064,7 +4277,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-destroyers-profile-close-combat-weapon-melee-3"
+              "unit-kataphron-destroyers-profile-3d5020cc1a"
             ],
             "wargearAbilityIds": []
           },
@@ -4076,7 +4289,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-destroyers-profile-phosphor-blaster-ranged-4"
+              "unit-kataphron-destroyers-profile-b9ef700d2f"
             ],
             "wargearAbilityIds": []
           },
@@ -4088,7 +4301,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-standard-ranged-5"
+              "unit-kataphron-destroyers-profile-f8c0c8ca90"
             ],
             "wargearAbilityIds": []
           },
@@ -4100,7 +4313,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-supercharge-ranged-6"
+              "unit-kataphron-destroyers-profile-c04639e5a4"
             ],
             "wargearAbilityIds": []
           },
@@ -4113,8 +4326,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-kataphron-destroyers-weapon-family-kataphron-plasma-culverin",
             "profileIds": [
-              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-standard-ranged-5",
-              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-supercharge-ranged-6"
+              "unit-kataphron-destroyers-profile-f8c0c8ca90",
+              "unit-kataphron-destroyers-profile-c04639e5a4"
             ],
             "wargearAbilityIds": []
           }
@@ -4127,15 +4340,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Kataphron plasma culverin"
             ],
             "profileIds": [
-              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-standard-ranged-5",
-              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-supercharge-ranged-6"
+              "unit-kataphron-destroyers-profile-f8c0c8ca90",
+              "unit-kataphron-destroyers-profile-c04639e5a4"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-kataphron-destroyers-profile-heavy-grav-cannon-ranged",
+            "id": "unit-kataphron-destroyers-profile-f47cf110c0",
+            "legacyIds": [
+              "unit-kataphron-destroyers-profile-heavy-grav-cannon-ranged"
+            ],
             "title": "Heavy grav-cannon",
             "mode": "ranged",
             "range": "30\"",
@@ -4150,7 +4366,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kataphron-destroyers-profile-cognis-flamer-ranged-2",
+            "id": "unit-kataphron-destroyers-profile-32a59f36ac",
+            "legacyIds": [
+              "unit-kataphron-destroyers-profile-cognis-flamer-ranged-2"
+            ],
             "title": "Cognis flamer",
             "mode": "ranged",
             "range": "12\"",
@@ -4165,7 +4384,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kataphron-destroyers-profile-close-combat-weapon-melee-3",
+            "id": "unit-kataphron-destroyers-profile-3d5020cc1a",
+            "legacyIds": [
+              "unit-kataphron-destroyers-profile-close-combat-weapon-melee-3"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -4180,7 +4402,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kataphron-destroyers-profile-phosphor-blaster-ranged-4",
+            "id": "unit-kataphron-destroyers-profile-b9ef700d2f",
+            "legacyIds": [
+              "unit-kataphron-destroyers-profile-phosphor-blaster-ranged-4"
+            ],
             "title": "Phosphor blaster",
             "mode": "ranged",
             "range": "24\"",
@@ -4195,7 +4420,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-standard-ranged-5",
+            "id": "unit-kataphron-destroyers-profile-f8c0c8ca90",
+            "legacyIds": [
+              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-standard-ranged-5"
+            ],
             "title": "➤ Kataphron plasma culverin - standard",
             "mode": "ranged",
             "range": "36\"",
@@ -4211,7 +4439,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-supercharge-ranged-6",
+            "id": "unit-kataphron-destroyers-profile-c04639e5a4",
+            "legacyIds": [
+              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-supercharge-ranged-6"
+            ],
             "title": "➤ Kataphron plasma culverin - supercharge",
             "mode": "ranged",
             "range": "36\"",
@@ -4302,7 +4533,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pteraxii-skystalkers-profile-flechette-blaster-ranged"
+              "unit-pteraxii-skystalkers-profile-6b1071c6bc"
             ],
             "wargearAbilityIds": []
           },
@@ -4314,7 +4545,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pteraxii-skystalkers-profile-taser-goad-melee-2"
+              "unit-pteraxii-skystalkers-profile-03a79cd425"
             ],
             "wargearAbilityIds": []
           },
@@ -4326,7 +4557,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pteraxii-skystalkers-profile-close-combat-weapon-melee-3"
+              "unit-pteraxii-skystalkers-profile-ace9e4828a"
             ],
             "wargearAbilityIds": []
           },
@@ -4338,7 +4569,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pteraxii-skystalkers-profile-flechette-carbine-ranged-4"
+              "unit-pteraxii-skystalkers-profile-d308c8dd74"
             ],
             "wargearAbilityIds": []
           }
@@ -4346,7 +4577,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-pteraxii-skystalkers-profile-flechette-blaster-ranged",
+            "id": "unit-pteraxii-skystalkers-profile-6b1071c6bc",
+            "legacyIds": [
+              "unit-pteraxii-skystalkers-profile-flechette-blaster-ranged"
+            ],
             "title": "Flechette blaster",
             "mode": "ranged",
             "range": "12\"",
@@ -4361,7 +4595,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-pteraxii-skystalkers-profile-taser-goad-melee-2",
+            "id": "unit-pteraxii-skystalkers-profile-03a79cd425",
+            "legacyIds": [
+              "unit-pteraxii-skystalkers-profile-taser-goad-melee-2"
+            ],
             "title": "Taser goad",
             "mode": "melee",
             "range": "Melee",
@@ -4376,7 +4613,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-pteraxii-skystalkers-profile-close-combat-weapon-melee-3",
+            "id": "unit-pteraxii-skystalkers-profile-ace9e4828a",
+            "legacyIds": [
+              "unit-pteraxii-skystalkers-profile-close-combat-weapon-melee-3"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -4391,7 +4631,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-pteraxii-skystalkers-profile-flechette-carbine-ranged-4",
+            "id": "unit-pteraxii-skystalkers-profile-d308c8dd74",
+            "legacyIds": [
+              "unit-pteraxii-skystalkers-profile-flechette-carbine-ranged-4"
+            ],
             "title": "Flechette carbine",
             "mode": "ranged",
             "range": "18\"",
@@ -4480,7 +4723,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pteraxii-sterylizors-profile-flechette-blaster-ranged"
+              "unit-pteraxii-sterylizors-profile-6b1071c6bc"
             ],
             "wargearAbilityIds": []
           },
@@ -4492,7 +4735,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pteraxii-sterylizors-profile-taser-goad-melee-2"
+              "unit-pteraxii-sterylizors-profile-03a79cd425"
             ],
             "wargearAbilityIds": []
           },
@@ -4504,7 +4747,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pteraxii-sterylizors-profile-pteraxii-talons-melee-3"
+              "unit-pteraxii-sterylizors-profile-ceb42372e6"
             ],
             "wargearAbilityIds": []
           },
@@ -4516,7 +4759,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pteraxii-sterylizors-profile-phosphor-torch-ranged-4"
+              "unit-pteraxii-sterylizors-profile-6b6481f920"
             ],
             "wargearAbilityIds": []
           }
@@ -4524,7 +4767,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-pteraxii-sterylizors-profile-flechette-blaster-ranged",
+            "id": "unit-pteraxii-sterylizors-profile-6b1071c6bc",
+            "legacyIds": [
+              "unit-pteraxii-sterylizors-profile-flechette-blaster-ranged"
+            ],
             "title": "Flechette blaster",
             "mode": "ranged",
             "range": "12\"",
@@ -4539,7 +4785,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-pteraxii-sterylizors-profile-taser-goad-melee-2",
+            "id": "unit-pteraxii-sterylizors-profile-03a79cd425",
+            "legacyIds": [
+              "unit-pteraxii-sterylizors-profile-taser-goad-melee-2"
+            ],
             "title": "Taser goad",
             "mode": "melee",
             "range": "Melee",
@@ -4554,7 +4803,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-pteraxii-sterylizors-profile-pteraxii-talons-melee-3",
+            "id": "unit-pteraxii-sterylizors-profile-ceb42372e6",
+            "legacyIds": [
+              "unit-pteraxii-sterylizors-profile-pteraxii-talons-melee-3"
+            ],
             "title": "Pteraxii talons",
             "mode": "melee",
             "range": "Melee",
@@ -4569,7 +4821,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-pteraxii-sterylizors-profile-phosphor-torch-ranged-4",
+            "id": "unit-pteraxii-sterylizors-profile-6b6481f920",
+            "legacyIds": [
+              "unit-pteraxii-sterylizors-profile-phosphor-torch-ranged-4"
+            ],
             "title": "Phosphor torch",
             "mode": "ranged",
             "range": "12\"",
@@ -4676,27 +4931,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-servitor-battleclade-model-servitor-underseer",
+            "id": "unit-servitor-battleclade-model-eb1729a0ef",
             "title": "Servitor Underseer",
             "aliases": [
               "Servitor Underseer"
+            ],
+            "legacyIds": [
+              "unit-servitor-battleclade-model-servitor-underseer"
             ],
             "intrinsicKeywords": [
               "TECH-PRIEST"
             ]
           },
           {
-            "id": "unit-servitor-battleclade-model-gun-servitor-2",
+            "id": "unit-servitor-battleclade-model-da83529346",
             "title": "Gun Servitor",
             "aliases": [
               "Gun Servitor"
+            ],
+            "legacyIds": [
+              "unit-servitor-battleclade-model-gun-servitor-2"
             ]
           },
           {
-            "id": "unit-servitor-battleclade-model-combat-servitor-3",
+            "id": "unit-servitor-battleclade-model-c9982dc7f0",
             "title": "Combat Servitor",
             "aliases": [
               "Combat Servitor"
+            ],
+            "legacyIds": [
+              "unit-servitor-battleclade-model-combat-servitor-3"
             ]
           }
         ],
@@ -4709,7 +4973,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-servitor-battleclade-profile-heavy-arc-rifle-ranged"
+              "unit-servitor-battleclade-profile-6346e93635"
             ],
             "wargearAbilityIds": []
           },
@@ -4721,7 +4985,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-servitor-battleclade-profile-heavy-bolter-ranged-2"
+              "unit-servitor-battleclade-profile-6ef672a5ca"
             ],
             "wargearAbilityIds": []
           },
@@ -4733,7 +4997,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-servitor-battleclade-profile-incendine-igniter-ranged-3"
+              "unit-servitor-battleclade-profile-e3bb484d5d"
             ],
             "wargearAbilityIds": []
           },
@@ -4745,7 +5009,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-servitor-battleclade-profile-mechanicus-pistol-ranged-4"
+              "unit-servitor-battleclade-profile-8a7f265f02"
             ],
             "wargearAbilityIds": []
           },
@@ -4757,7 +5021,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-servitor-battleclade-profile-meltagun-ranged-5"
+              "unit-servitor-battleclade-profile-7baf145482"
             ],
             "wargearAbilityIds": []
           },
@@ -4769,7 +5033,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-servitor-battleclade-profile-phosphor-blaster-ranged-6"
+              "unit-servitor-battleclade-profile-4cc1197e8d"
             ],
             "wargearAbilityIds": []
           },
@@ -4781,7 +5045,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-servitor-battleclade-profile-dataspikes-melee-7"
+              "unit-servitor-battleclade-profile-8e3105c436"
             ],
             "wargearAbilityIds": []
           },
@@ -4793,7 +5057,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-servitor-battleclade-profile-servo-claw-melee-8"
+              "unit-servitor-battleclade-profile-47f566871a"
             ],
             "wargearAbilityIds": []
           }
@@ -4801,7 +5065,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-servitor-battleclade-profile-heavy-arc-rifle-ranged",
+            "id": "unit-servitor-battleclade-profile-6346e93635",
+            "legacyIds": [
+              "unit-servitor-battleclade-profile-heavy-arc-rifle-ranged"
+            ],
             "title": "Heavy arc rifle",
             "mode": "ranged",
             "range": "30\"",
@@ -4816,7 +5083,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-servitor-battleclade-profile-heavy-bolter-ranged-2",
+            "id": "unit-servitor-battleclade-profile-6ef672a5ca",
+            "legacyIds": [
+              "unit-servitor-battleclade-profile-heavy-bolter-ranged-2"
+            ],
             "title": "Heavy bolter",
             "mode": "ranged",
             "range": "36\"",
@@ -4831,7 +5101,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-servitor-battleclade-profile-incendine-igniter-ranged-3",
+            "id": "unit-servitor-battleclade-profile-e3bb484d5d",
+            "legacyIds": [
+              "unit-servitor-battleclade-profile-incendine-igniter-ranged-3"
+            ],
             "title": "Incendine igniter",
             "mode": "ranged",
             "range": "12\"",
@@ -4846,7 +5119,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-servitor-battleclade-profile-mechanicus-pistol-ranged-4",
+            "id": "unit-servitor-battleclade-profile-8a7f265f02",
+            "legacyIds": [
+              "unit-servitor-battleclade-profile-mechanicus-pistol-ranged-4"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -4861,7 +5137,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-servitor-battleclade-profile-meltagun-ranged-5",
+            "id": "unit-servitor-battleclade-profile-7baf145482",
+            "legacyIds": [
+              "unit-servitor-battleclade-profile-meltagun-ranged-5"
+            ],
             "title": "Meltagun",
             "mode": "ranged",
             "range": "12\"",
@@ -4876,7 +5155,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-servitor-battleclade-profile-phosphor-blaster-ranged-6",
+            "id": "unit-servitor-battleclade-profile-4cc1197e8d",
+            "legacyIds": [
+              "unit-servitor-battleclade-profile-phosphor-blaster-ranged-6"
+            ],
             "title": "Phosphor blaster",
             "mode": "ranged",
             "range": "24\"",
@@ -4891,7 +5173,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-servitor-battleclade-profile-dataspikes-melee-7",
+            "id": "unit-servitor-battleclade-profile-8e3105c436",
+            "legacyIds": [
+              "unit-servitor-battleclade-profile-dataspikes-melee-7"
+            ],
             "title": "Dataspikes",
             "mode": "melee",
             "range": "Melee",
@@ -4906,7 +5191,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-servitor-battleclade-profile-servo-claw-melee-8",
+            "id": "unit-servitor-battleclade-profile-47f566871a",
+            "legacyIds": [
+              "unit-servitor-battleclade-profile-servo-claw-melee-8"
+            ],
             "title": "Servo-claw",
             "mode": "melee",
             "range": "Melee",
@@ -5000,7 +5288,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sicarian-infiltrators-profile-power-weapon-melee"
+              "unit-sicarian-infiltrators-profile-ff6096bbdd"
             ],
             "wargearAbilityIds": []
           },
@@ -5012,7 +5300,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sicarian-infiltrators-profile-stubcarbine-ranged-2"
+              "unit-sicarian-infiltrators-profile-732aa763cc"
             ],
             "wargearAbilityIds": []
           },
@@ -5024,7 +5312,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sicarian-infiltrators-profile-flechette-blaster-ranged-3"
+              "unit-sicarian-infiltrators-profile-6b1071c6bc"
             ],
             "wargearAbilityIds": []
           },
@@ -5036,7 +5324,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sicarian-infiltrators-profile-taser-goad-melee-4"
+              "unit-sicarian-infiltrators-profile-62e9bee21a"
             ],
             "wargearAbilityIds": []
           }
@@ -5044,7 +5332,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-sicarian-infiltrators-profile-power-weapon-melee",
+            "id": "unit-sicarian-infiltrators-profile-ff6096bbdd",
+            "legacyIds": [
+              "unit-sicarian-infiltrators-profile-power-weapon-melee"
+            ],
             "title": "Power weapon",
             "mode": "melee",
             "range": "Melee",
@@ -5059,7 +5350,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sicarian-infiltrators-profile-stubcarbine-ranged-2",
+            "id": "unit-sicarian-infiltrators-profile-732aa763cc",
+            "legacyIds": [
+              "unit-sicarian-infiltrators-profile-stubcarbine-ranged-2"
+            ],
             "title": "Stubcarbine",
             "mode": "ranged",
             "range": "12\"",
@@ -5074,7 +5368,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sicarian-infiltrators-profile-flechette-blaster-ranged-3",
+            "id": "unit-sicarian-infiltrators-profile-6b1071c6bc",
+            "legacyIds": [
+              "unit-sicarian-infiltrators-profile-flechette-blaster-ranged-3"
+            ],
             "title": "Flechette blaster",
             "mode": "ranged",
             "range": "12\"",
@@ -5089,7 +5386,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sicarian-infiltrators-profile-taser-goad-melee-4",
+            "id": "unit-sicarian-infiltrators-profile-62e9bee21a",
+            "legacyIds": [
+              "unit-sicarian-infiltrators-profile-taser-goad-melee-4"
+            ],
             "title": "Taser goad",
             "mode": "melee",
             "range": "Melee",
@@ -5176,7 +5476,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sicarian-ruststalkers-profile-transonic-razor-chordclaw-melee"
+              "unit-sicarian-ruststalkers-profile-cf63eb1d4b"
             ],
             "wargearAbilityIds": []
           },
@@ -5188,7 +5488,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sicarian-ruststalkers-profile-transonic-blades-melee-2"
+              "unit-sicarian-ruststalkers-profile-90e1acf784"
             ],
             "wargearAbilityIds": []
           },
@@ -5200,7 +5500,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sicarian-ruststalkers-profile-transonic-blades-chordclaw-melee-3"
+              "unit-sicarian-ruststalkers-profile-3b17d7ad21"
             ],
             "wargearAbilityIds": []
           }
@@ -5208,7 +5508,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-sicarian-ruststalkers-profile-transonic-razor-chordclaw-melee",
+            "id": "unit-sicarian-ruststalkers-profile-cf63eb1d4b",
+            "legacyIds": [
+              "unit-sicarian-ruststalkers-profile-transonic-razor-chordclaw-melee"
+            ],
             "title": "Transonic razor & chordclaw",
             "mode": "melee",
             "range": "Melee",
@@ -5223,7 +5526,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sicarian-ruststalkers-profile-transonic-blades-melee-2",
+            "id": "unit-sicarian-ruststalkers-profile-90e1acf784",
+            "legacyIds": [
+              "unit-sicarian-ruststalkers-profile-transonic-blades-melee-2"
+            ],
             "title": "Transonic blades",
             "mode": "melee",
             "range": "Melee",
@@ -5238,7 +5544,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sicarian-ruststalkers-profile-transonic-blades-chordclaw-melee-3",
+            "id": "unit-sicarian-ruststalkers-profile-3b17d7ad21",
+            "legacyIds": [
+              "unit-sicarian-ruststalkers-profile-transonic-blades-chordclaw-melee-3"
+            ],
             "title": "Transonic blades & chordclaw",
             "mode": "melee",
             "range": "Melee",
@@ -5324,7 +5633,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-raiders-profile-galvanic-carbine-ranged"
+              "unit-serberys-raiders-profile-e6b6b0e489"
             ],
             "wargearAbilityIds": []
           },
@@ -5336,7 +5645,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-raiders-profile-cavalry-sabre-clawed-limbs-melee-2"
+              "unit-serberys-raiders-profile-34f33545b8"
             ],
             "wargearAbilityIds": []
           },
@@ -5348,7 +5657,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-raiders-profile-mechanicus-pistol-ranged-3"
+              "unit-serberys-raiders-profile-8a7f265f02"
             ],
             "wargearAbilityIds": []
           },
@@ -5361,14 +5670,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-serberys-raiders-wargear-ability-enhanced-data-tether"
+              "unit-serberys-raiders-wargear-ability-86cd99761f"
             ]
           }
         ],
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-serberys-raiders-profile-galvanic-carbine-ranged",
+            "id": "unit-serberys-raiders-profile-e6b6b0e489",
+            "legacyIds": [
+              "unit-serberys-raiders-profile-galvanic-carbine-ranged"
+            ],
             "title": "Galvanic carbine",
             "mode": "ranged",
             "range": "18\"",
@@ -5383,7 +5695,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-serberys-raiders-profile-cavalry-sabre-clawed-limbs-melee-2",
+            "id": "unit-serberys-raiders-profile-34f33545b8",
+            "legacyIds": [
+              "unit-serberys-raiders-profile-cavalry-sabre-clawed-limbs-melee-2"
+            ],
             "title": "Cavalry sabre & clawed limbs",
             "mode": "melee",
             "range": "Melee",
@@ -5398,7 +5713,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-serberys-raiders-profile-mechanicus-pistol-ranged-3",
+            "id": "unit-serberys-raiders-profile-8a7f265f02",
+            "legacyIds": [
+              "unit-serberys-raiders-profile-mechanicus-pistol-ranged-3"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -5415,11 +5733,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-serberys-raiders-wargear-ability-enhanced-data-tether",
-            "sectionId": "unit-serberys-raiders-wargear-ability-enhanced-data-tether",
+            "id": "unit-serberys-raiders-wargear-ability-86cd99761f",
+            "sectionId": "unit-serberys-raiders-wargear-ability-86cd99761f",
             "title": "Enhanced data-tether",
             "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "sourceUnitId": "unit-serberys-raiders",
+            "legacyIds": [
+              "unit-serberys-raiders-wargear-ability-enhanced-data-tether"
+            ],
             "requiredSelectionIds": [
               "unit-serberys-raiders-selection-enhanced-data-tether"
             ]
@@ -5488,7 +5809,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-sulphurhounds-profile-cavalry-arc-maul-melee"
+              "unit-serberys-sulphurhounds-profile-7364bde76b"
             ],
             "wargearAbilityIds": []
           },
@@ -5500,7 +5821,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-sulphurhounds-profile-clawed-limbs-melee-2"
+              "unit-serberys-sulphurhounds-profile-c9b8d02f80"
             ],
             "wargearAbilityIds": []
           },
@@ -5512,7 +5833,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-sulphurhounds-profile-mechanicus-pistol-ranged-3"
+              "unit-serberys-sulphurhounds-profile-8a7f265f02"
             ],
             "wargearAbilityIds": []
           },
@@ -5524,7 +5845,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-sulphurhounds-profile-sulphur-breath-ranged-4"
+              "unit-serberys-sulphurhounds-profile-d376e8e883"
             ],
             "wargearAbilityIds": []
           },
@@ -5536,7 +5857,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-sulphurhounds-profile-phosphor-pistol-ranged-5"
+              "unit-serberys-sulphurhounds-profile-6aceb79c72"
             ],
             "wargearAbilityIds": []
           },
@@ -5548,7 +5869,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-serberys-sulphurhounds-profile-phosphor-blast-carbine-ranged-6"
+              "unit-serberys-sulphurhounds-profile-6380197a39"
             ],
             "wargearAbilityIds": []
           }
@@ -5556,7 +5877,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-serberys-sulphurhounds-profile-cavalry-arc-maul-melee",
+            "id": "unit-serberys-sulphurhounds-profile-7364bde76b",
+            "legacyIds": [
+              "unit-serberys-sulphurhounds-profile-cavalry-arc-maul-melee"
+            ],
             "title": "Cavalry arc maul",
             "mode": "melee",
             "range": "Melee",
@@ -5571,7 +5895,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-serberys-sulphurhounds-profile-clawed-limbs-melee-2",
+            "id": "unit-serberys-sulphurhounds-profile-c9b8d02f80",
+            "legacyIds": [
+              "unit-serberys-sulphurhounds-profile-clawed-limbs-melee-2"
+            ],
             "title": "Clawed limbs",
             "mode": "melee",
             "range": "Melee",
@@ -5586,7 +5913,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-serberys-sulphurhounds-profile-mechanicus-pistol-ranged-3",
+            "id": "unit-serberys-sulphurhounds-profile-8a7f265f02",
+            "legacyIds": [
+              "unit-serberys-sulphurhounds-profile-mechanicus-pistol-ranged-3"
+            ],
             "title": "Mechanicus pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -5601,7 +5931,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-serberys-sulphurhounds-profile-sulphur-breath-ranged-4",
+            "id": "unit-serberys-sulphurhounds-profile-d376e8e883",
+            "legacyIds": [
+              "unit-serberys-sulphurhounds-profile-sulphur-breath-ranged-4"
+            ],
             "title": "Sulphur breath",
             "mode": "ranged",
             "range": "9\"",
@@ -5616,7 +5949,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-serberys-sulphurhounds-profile-phosphor-pistol-ranged-5",
+            "id": "unit-serberys-sulphurhounds-profile-6aceb79c72",
+            "legacyIds": [
+              "unit-serberys-sulphurhounds-profile-phosphor-pistol-ranged-5"
+            ],
             "title": "Phosphor pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -5631,7 +5967,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-serberys-sulphurhounds-profile-phosphor-blast-carbine-ranged-6",
+            "id": "unit-serberys-sulphurhounds-profile-6380197a39",
+            "legacyIds": [
+              "unit-serberys-sulphurhounds-profile-phosphor-blast-carbine-ranged-6"
+            ],
             "title": "Phosphor blast carbine",
             "mode": "ranged",
             "range": "18\"",
@@ -5719,7 +6058,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-archaeopter-fusilave-profile-armoured-hull-melee"
+              "unit-archaeopter-fusilave-profile-7809a5e4d6"
             ],
             "wargearAbilityIds": []
           },
@@ -5731,7 +6070,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-archaeopter-fusilave-profile-cognis-heavy-stubber-array-ranged-2"
+              "unit-archaeopter-fusilave-profile-d60783ae2b"
             ],
             "wargearAbilityIds": []
           },
@@ -5744,7 +6083,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-archaeopter-fusilave-wargear-ability-chaff-launcher"
+              "unit-archaeopter-fusilave-wargear-ability-12711a645a"
             ]
           },
           {
@@ -5756,14 +6095,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-archaeopter-fusilave-wargear-ability-command-uplink-2"
+              "unit-archaeopter-fusilave-wargear-ability-b314938f56"
             ]
           }
         ],
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-archaeopter-fusilave-profile-armoured-hull-melee",
+            "id": "unit-archaeopter-fusilave-profile-7809a5e4d6",
+            "legacyIds": [
+              "unit-archaeopter-fusilave-profile-armoured-hull-melee"
+            ],
             "title": "Armoured hull",
             "mode": "melee",
             "range": "Melee",
@@ -5778,7 +6120,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-archaeopter-fusilave-profile-cognis-heavy-stubber-array-ranged-2",
+            "id": "unit-archaeopter-fusilave-profile-d60783ae2b",
+            "legacyIds": [
+              "unit-archaeopter-fusilave-profile-cognis-heavy-stubber-array-ranged-2"
+            ],
             "title": "Cognis heavy stubber array",
             "mode": "ranged",
             "range": "36\"",
@@ -5795,21 +6140,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-archaeopter-fusilave-wargear-ability-chaff-launcher",
-            "sectionId": "unit-archaeopter-fusilave-wargear-ability-chaff-launcher",
+            "id": "unit-archaeopter-fusilave-wargear-ability-12711a645a",
+            "sectionId": "unit-archaeopter-fusilave-wargear-ability-12711a645a",
             "title": "Chaff Launcher",
             "text": "The bearer has the Smoke keyword.",
             "sourceUnitId": "unit-archaeopter-fusilave",
+            "legacyIds": [
+              "unit-archaeopter-fusilave-wargear-ability-chaff-launcher"
+            ],
             "requiredSelectionIds": [
               "unit-archaeopter-fusilave-selection-chaff-launcher"
             ]
           },
           {
-            "id": "unit-archaeopter-fusilave-wargear-ability-command-uplink-2",
-            "sectionId": "unit-archaeopter-fusilave-wargear-ability-command-uplink-2",
+            "id": "unit-archaeopter-fusilave-wargear-ability-b314938f56",
+            "sectionId": "unit-archaeopter-fusilave-wargear-ability-b314938f56",
             "title": "Command Uplink",
             "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "sourceUnitId": "unit-archaeopter-fusilave",
+            "legacyIds": [
+              "unit-archaeopter-fusilave-wargear-ability-command-uplink-2"
+            ],
             "requiredSelectionIds": [
               "unit-archaeopter-fusilave-selection-command-uplink"
             ]
@@ -5887,7 +6238,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-archaeopter-stratoraptor-profile-cognis-heavy-stubber-ranged"
+              "unit-archaeopter-stratoraptor-profile-c9ef020652"
             ],
             "wargearAbilityIds": []
           },
@@ -5899,7 +6250,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-archaeopter-stratoraptor-profile-heavy-phosphor-blaster-ranged-2"
+              "unit-archaeopter-stratoraptor-profile-f4fa84c61d"
             ],
             "wargearAbilityIds": []
           },
@@ -5911,7 +6262,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-archaeopter-stratoraptor-profile-twin-cognis-lascannon-ranged-3"
+              "unit-archaeopter-stratoraptor-profile-041a74e806"
             ],
             "wargearAbilityIds": []
           },
@@ -5923,7 +6274,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-archaeopter-stratoraptor-profile-armoured-hull-melee-4"
+              "unit-archaeopter-stratoraptor-profile-7809a5e4d6"
             ],
             "wargearAbilityIds": []
           },
@@ -5936,7 +6287,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-archaeopter-stratoraptor-wargear-ability-chaff-launcher"
+              "unit-archaeopter-stratoraptor-wargear-ability-12711a645a"
             ]
           },
           {
@@ -5948,14 +6299,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-archaeopter-stratoraptor-wargear-ability-command-uplink-2"
+              "unit-archaeopter-stratoraptor-wargear-ability-b314938f56"
             ]
           }
         ],
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-archaeopter-stratoraptor-profile-cognis-heavy-stubber-ranged",
+            "id": "unit-archaeopter-stratoraptor-profile-c9ef020652",
+            "legacyIds": [
+              "unit-archaeopter-stratoraptor-profile-cognis-heavy-stubber-ranged"
+            ],
             "title": "Cognis heavy stubber",
             "mode": "ranged",
             "range": "36\"",
@@ -5970,7 +6324,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-archaeopter-stratoraptor-profile-heavy-phosphor-blaster-ranged-2",
+            "id": "unit-archaeopter-stratoraptor-profile-f4fa84c61d",
+            "legacyIds": [
+              "unit-archaeopter-stratoraptor-profile-heavy-phosphor-blaster-ranged-2"
+            ],
             "title": "Heavy phosphor blaster",
             "mode": "ranged",
             "range": "36\"",
@@ -5985,7 +6342,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-archaeopter-stratoraptor-profile-twin-cognis-lascannon-ranged-3",
+            "id": "unit-archaeopter-stratoraptor-profile-041a74e806",
+            "legacyIds": [
+              "unit-archaeopter-stratoraptor-profile-twin-cognis-lascannon-ranged-3"
+            ],
             "title": "Twin cognis lascannon",
             "mode": "ranged",
             "range": "48\"",
@@ -6000,7 +6360,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-archaeopter-stratoraptor-profile-armoured-hull-melee-4",
+            "id": "unit-archaeopter-stratoraptor-profile-7809a5e4d6",
+            "legacyIds": [
+              "unit-archaeopter-stratoraptor-profile-armoured-hull-melee-4"
+            ],
             "title": "Armoured hull",
             "mode": "melee",
             "range": "Melee",
@@ -6017,21 +6380,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-archaeopter-stratoraptor-wargear-ability-chaff-launcher",
-            "sectionId": "unit-archaeopter-stratoraptor-wargear-ability-chaff-launcher",
+            "id": "unit-archaeopter-stratoraptor-wargear-ability-12711a645a",
+            "sectionId": "unit-archaeopter-stratoraptor-wargear-ability-12711a645a",
             "title": "Chaff Launcher",
             "text": "The bearer has the Smoke keyword.",
             "sourceUnitId": "unit-archaeopter-stratoraptor",
+            "legacyIds": [
+              "unit-archaeopter-stratoraptor-wargear-ability-chaff-launcher"
+            ],
             "requiredSelectionIds": [
               "unit-archaeopter-stratoraptor-selection-chaff-launcher"
             ]
           },
           {
-            "id": "unit-archaeopter-stratoraptor-wargear-ability-command-uplink-2",
-            "sectionId": "unit-archaeopter-stratoraptor-wargear-ability-command-uplink-2",
+            "id": "unit-archaeopter-stratoraptor-wargear-ability-b314938f56",
+            "sectionId": "unit-archaeopter-stratoraptor-wargear-ability-b314938f56",
             "title": "Command Uplink",
             "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "sourceUnitId": "unit-archaeopter-stratoraptor",
+            "legacyIds": [
+              "unit-archaeopter-stratoraptor-wargear-ability-command-uplink-2"
+            ],
             "requiredSelectionIds": [
               "unit-archaeopter-stratoraptor-selection-command-uplink"
             ]
@@ -6123,7 +6492,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-archaeopter-transvector-profile-armoured-hull-melee"
+              "unit-archaeopter-transvector-profile-7809a5e4d6"
             ],
             "wargearAbilityIds": []
           },
@@ -6135,7 +6504,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-archaeopter-transvector-profile-cognis-heavy-stubber-array-ranged-2"
+              "unit-archaeopter-transvector-profile-d60783ae2b"
             ],
             "wargearAbilityIds": []
           },
@@ -6148,7 +6517,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-archaeopter-transvector-wargear-ability-chaff-launcher"
+              "unit-archaeopter-transvector-wargear-ability-12711a645a"
             ]
           },
           {
@@ -6160,14 +6529,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-archaeopter-transvector-wargear-ability-command-uplink-2"
+              "unit-archaeopter-transvector-wargear-ability-b314938f56"
             ]
           }
         ],
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-archaeopter-transvector-profile-armoured-hull-melee",
+            "id": "unit-archaeopter-transvector-profile-7809a5e4d6",
+            "legacyIds": [
+              "unit-archaeopter-transvector-profile-armoured-hull-melee"
+            ],
             "title": "Armoured hull",
             "mode": "melee",
             "range": "Melee",
@@ -6182,7 +6554,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-archaeopter-transvector-profile-cognis-heavy-stubber-array-ranged-2",
+            "id": "unit-archaeopter-transvector-profile-d60783ae2b",
+            "legacyIds": [
+              "unit-archaeopter-transvector-profile-cognis-heavy-stubber-array-ranged-2"
+            ],
             "title": "Cognis heavy stubber array",
             "mode": "ranged",
             "range": "36\"",
@@ -6199,21 +6574,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-archaeopter-transvector-wargear-ability-chaff-launcher",
-            "sectionId": "unit-archaeopter-transvector-wargear-ability-chaff-launcher",
+            "id": "unit-archaeopter-transvector-wargear-ability-12711a645a",
+            "sectionId": "unit-archaeopter-transvector-wargear-ability-12711a645a",
             "title": "Chaff Launcher",
             "text": "The bearer has the Smoke keyword.",
             "sourceUnitId": "unit-archaeopter-transvector",
+            "legacyIds": [
+              "unit-archaeopter-transvector-wargear-ability-chaff-launcher"
+            ],
             "requiredSelectionIds": [
               "unit-archaeopter-transvector-selection-chaff-launcher"
             ]
           },
           {
-            "id": "unit-archaeopter-transvector-wargear-ability-command-uplink-2",
-            "sectionId": "unit-archaeopter-transvector-wargear-ability-command-uplink-2",
+            "id": "unit-archaeopter-transvector-wargear-ability-b314938f56",
+            "sectionId": "unit-archaeopter-transvector-wargear-ability-b314938f56",
             "title": "Command Uplink",
             "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "sourceUnitId": "unit-archaeopter-transvector",
+            "legacyIds": [
+              "unit-archaeopter-transvector-wargear-ability-command-uplink-2"
+            ],
             "requiredSelectionIds": [
               "unit-archaeopter-transvector-selection-command-uplink"
             ]
@@ -6298,7 +6679,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-ironstrider-ballistarii-profile-twin-cognis-autocannon-ranged"
+              "unit-ironstrider-ballistarii-profile-c9e59c239d"
             ],
             "wargearAbilityIds": []
           },
@@ -6310,7 +6691,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-ironstrider-ballistarii-profile-ironstrider-feet-melee-2"
+              "unit-ironstrider-ballistarii-profile-2661cdde1f"
             ],
             "wargearAbilityIds": []
           },
@@ -6322,7 +6703,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-ironstrider-ballistarii-profile-twin-cognis-lascannon-ranged-3"
+              "unit-ironstrider-ballistarii-profile-fa6f633b27"
             ],
             "wargearAbilityIds": []
           }
@@ -6330,7 +6711,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-ironstrider-ballistarii-profile-twin-cognis-autocannon-ranged",
+            "id": "unit-ironstrider-ballistarii-profile-c9e59c239d",
+            "legacyIds": [
+              "unit-ironstrider-ballistarii-profile-twin-cognis-autocannon-ranged"
+            ],
             "title": "Twin cognis autocannon",
             "mode": "ranged",
             "range": "48\"",
@@ -6345,7 +6729,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-ironstrider-ballistarii-profile-ironstrider-feet-melee-2",
+            "id": "unit-ironstrider-ballistarii-profile-2661cdde1f",
+            "legacyIds": [
+              "unit-ironstrider-ballistarii-profile-ironstrider-feet-melee-2"
+            ],
             "title": "Ironstrider feet",
             "mode": "melee",
             "range": "Melee",
@@ -6360,7 +6747,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-ironstrider-ballistarii-profile-twin-cognis-lascannon-ranged-3",
+            "id": "unit-ironstrider-ballistarii-profile-fa6f633b27",
+            "legacyIds": [
+              "unit-ironstrider-ballistarii-profile-twin-cognis-lascannon-ranged-3"
+            ],
             "title": "Twin cognis lascannon",
             "mode": "ranged",
             "range": "48\"",
@@ -6470,7 +6860,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kastelan-robots-profile-close-combat-weapon-melee"
+              "unit-kastelan-robots-profile-ec5fe9cde7"
             ],
             "wargearAbilityIds": []
           },
@@ -6482,7 +6872,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kastelan-robots-profile-twin-kastelan-phosphor-blaster-ranged-2"
+              "unit-kastelan-robots-profile-dd33851a8b"
             ],
             "wargearAbilityIds": []
           },
@@ -6494,7 +6884,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kastelan-robots-profile-twin-kastelan-fist-melee-3"
+              "unit-kastelan-robots-profile-883d27ea6d"
             ],
             "wargearAbilityIds": []
           },
@@ -6506,7 +6896,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kastelan-robots-profile-kastelan-fist-melee-4"
+              "unit-kastelan-robots-profile-4ede1124f0"
             ],
             "wargearAbilityIds": []
           },
@@ -6518,7 +6908,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kastelan-robots-profile-kastelan-phosphor-blaster-ranged-5"
+              "unit-kastelan-robots-profile-8d6729e652"
             ],
             "wargearAbilityIds": []
           },
@@ -6530,7 +6920,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kastelan-robots-profile-incendine-combustor-ranged-6"
+              "unit-kastelan-robots-profile-ad692f2d00"
             ],
             "wargearAbilityIds": []
           },
@@ -6542,7 +6932,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-kastelan-robots-profile-heavy-phosphor-blaster-ranged-7"
+              "unit-kastelan-robots-profile-f4fa84c61d"
             ],
             "wargearAbilityIds": []
           }
@@ -6550,7 +6940,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-kastelan-robots-profile-close-combat-weapon-melee",
+            "id": "unit-kastelan-robots-profile-ec5fe9cde7",
+            "legacyIds": [
+              "unit-kastelan-robots-profile-close-combat-weapon-melee"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -6565,7 +6958,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kastelan-robots-profile-twin-kastelan-phosphor-blaster-ranged-2",
+            "id": "unit-kastelan-robots-profile-dd33851a8b",
+            "legacyIds": [
+              "unit-kastelan-robots-profile-twin-kastelan-phosphor-blaster-ranged-2"
+            ],
             "title": "Twin Kastelan phosphor blaster",
             "mode": "ranged",
             "range": "24\"",
@@ -6580,7 +6976,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kastelan-robots-profile-twin-kastelan-fist-melee-3",
+            "id": "unit-kastelan-robots-profile-883d27ea6d",
+            "legacyIds": [
+              "unit-kastelan-robots-profile-twin-kastelan-fist-melee-3"
+            ],
             "title": "Twin Kastelan fist",
             "mode": "melee",
             "range": "Melee",
@@ -6595,7 +6994,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kastelan-robots-profile-kastelan-fist-melee-4",
+            "id": "unit-kastelan-robots-profile-4ede1124f0",
+            "legacyIds": [
+              "unit-kastelan-robots-profile-kastelan-fist-melee-4"
+            ],
             "title": "Kastelan fist",
             "mode": "melee",
             "range": "Melee",
@@ -6610,7 +7012,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kastelan-robots-profile-kastelan-phosphor-blaster-ranged-5",
+            "id": "unit-kastelan-robots-profile-8d6729e652",
+            "legacyIds": [
+              "unit-kastelan-robots-profile-kastelan-phosphor-blaster-ranged-5"
+            ],
             "title": "Kastelan phosphor blaster",
             "mode": "ranged",
             "range": "24\"",
@@ -6625,7 +7030,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kastelan-robots-profile-incendine-combustor-ranged-6",
+            "id": "unit-kastelan-robots-profile-ad692f2d00",
+            "legacyIds": [
+              "unit-kastelan-robots-profile-incendine-combustor-ranged-6"
+            ],
             "title": "Incendine combustor",
             "mode": "ranged",
             "range": "12\"",
@@ -6640,7 +7048,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-kastelan-robots-profile-heavy-phosphor-blaster-ranged-7",
+            "id": "unit-kastelan-robots-profile-f4fa84c61d",
+            "legacyIds": [
+              "unit-kastelan-robots-profile-heavy-phosphor-blaster-ranged-7"
+            ],
             "title": "Heavy phosphor blaster",
             "mode": "ranged",
             "range": "36\"",
@@ -6742,7 +7153,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-cognis-heavy-stubber-ranged"
+              "unit-onager-dunecrawler-profile-c9ef020652"
             ],
             "wargearAbilityIds": []
           },
@@ -6754,7 +7165,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-dunecrawler-legs-melee-2"
+              "unit-onager-dunecrawler-profile-acb57be0d9"
             ],
             "wargearAbilityIds": []
           },
@@ -6766,7 +7177,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-eradication-beamer-dissipated-ranged-3"
+              "unit-onager-dunecrawler-profile-3025b7862a"
             ],
             "wargearAbilityIds": []
           },
@@ -6778,7 +7189,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-eradication-beamer-focused-ranged-4"
+              "unit-onager-dunecrawler-profile-eb26a963bd"
             ],
             "wargearAbilityIds": []
           },
@@ -6790,7 +7201,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-daedalus-missile-launcher-ranged-5"
+              "unit-onager-dunecrawler-profile-63b2f93249"
             ],
             "wargearAbilityIds": []
           },
@@ -6802,7 +7213,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-icarus-array-ranged-6"
+              "unit-onager-dunecrawler-profile-19560be51c"
             ],
             "wargearAbilityIds": []
           },
@@ -6814,7 +7225,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-neutron-laser-ranged-7"
+              "unit-onager-dunecrawler-profile-d1b920b4a0"
             ],
             "wargearAbilityIds": []
           },
@@ -6826,7 +7237,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-twin-onager-heavy-phosphor-blaster-ranged-8"
+              "unit-onager-dunecrawler-profile-77adda6652"
             ],
             "wargearAbilityIds": []
           },
@@ -6839,8 +7250,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-onager-dunecrawler-weapon-family-eradication-beamer",
             "profileIds": [
-              "unit-onager-dunecrawler-profile-eradication-beamer-dissipated-ranged-3",
-              "unit-onager-dunecrawler-profile-eradication-beamer-focused-ranged-4"
+              "unit-onager-dunecrawler-profile-3025b7862a",
+              "unit-onager-dunecrawler-profile-eb26a963bd"
             ],
             "wargearAbilityIds": []
           },
@@ -6853,7 +7264,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether"
+              "unit-onager-dunecrawler-wargear-ability-7c2b04fe30"
             ]
           }
         ],
@@ -6865,15 +7276,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Eradication beamer"
             ],
             "profileIds": [
-              "unit-onager-dunecrawler-profile-eradication-beamer-dissipated-ranged-3",
-              "unit-onager-dunecrawler-profile-eradication-beamer-focused-ranged-4"
+              "unit-onager-dunecrawler-profile-3025b7862a",
+              "unit-onager-dunecrawler-profile-eb26a963bd"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-onager-dunecrawler-profile-cognis-heavy-stubber-ranged",
+            "id": "unit-onager-dunecrawler-profile-c9ef020652",
+            "legacyIds": [
+              "unit-onager-dunecrawler-profile-cognis-heavy-stubber-ranged"
+            ],
             "title": "Cognis heavy stubber",
             "mode": "ranged",
             "range": "36\"",
@@ -6888,7 +7302,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-onager-dunecrawler-profile-dunecrawler-legs-melee-2",
+            "id": "unit-onager-dunecrawler-profile-acb57be0d9",
+            "legacyIds": [
+              "unit-onager-dunecrawler-profile-dunecrawler-legs-melee-2"
+            ],
             "title": "Dunecrawler legs",
             "mode": "melee",
             "range": "Melee",
@@ -6903,7 +7320,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-onager-dunecrawler-profile-eradication-beamer-dissipated-ranged-3",
+            "id": "unit-onager-dunecrawler-profile-3025b7862a",
+            "legacyIds": [
+              "unit-onager-dunecrawler-profile-eradication-beamer-dissipated-ranged-3"
+            ],
             "title": "➤ Eradication beamer - dissipated",
             "mode": "ranged",
             "range": "36\"",
@@ -6919,7 +7339,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-onager-dunecrawler-profile-eradication-beamer-focused-ranged-4",
+            "id": "unit-onager-dunecrawler-profile-eb26a963bd",
+            "legacyIds": [
+              "unit-onager-dunecrawler-profile-eradication-beamer-focused-ranged-4"
+            ],
             "title": "➤ Eradication beamer - focused",
             "mode": "ranged",
             "range": "18\"",
@@ -6935,7 +7358,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-onager-dunecrawler-profile-daedalus-missile-launcher-ranged-5",
+            "id": "unit-onager-dunecrawler-profile-63b2f93249",
+            "legacyIds": [
+              "unit-onager-dunecrawler-profile-daedalus-missile-launcher-ranged-5"
+            ],
             "title": "Daedalus missile launcher",
             "mode": "ranged",
             "range": "48\"",
@@ -6950,7 +7376,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-onager-dunecrawler-profile-icarus-array-ranged-6",
+            "id": "unit-onager-dunecrawler-profile-19560be51c",
+            "legacyIds": [
+              "unit-onager-dunecrawler-profile-icarus-array-ranged-6"
+            ],
             "title": "Icarus array",
             "mode": "ranged",
             "range": "48\"",
@@ -6965,7 +7394,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-onager-dunecrawler-profile-neutron-laser-ranged-7",
+            "id": "unit-onager-dunecrawler-profile-d1b920b4a0",
+            "legacyIds": [
+              "unit-onager-dunecrawler-profile-neutron-laser-ranged-7"
+            ],
             "title": "Neutron laser",
             "mode": "ranged",
             "range": "48\"",
@@ -6980,7 +7412,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-onager-dunecrawler-profile-twin-onager-heavy-phosphor-blaster-ranged-8",
+            "id": "unit-onager-dunecrawler-profile-77adda6652",
+            "legacyIds": [
+              "unit-onager-dunecrawler-profile-twin-onager-heavy-phosphor-blaster-ranged-8"
+            ],
             "title": "Twin Onager heavy phosphor blaster",
             "mode": "ranged",
             "range": "36\"",
@@ -6997,11 +7432,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether",
-            "sectionId": "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether",
+            "id": "unit-onager-dunecrawler-wargear-ability-7c2b04fe30",
+            "sectionId": "unit-onager-dunecrawler-wargear-ability-7c2b04fe30",
             "title": "Broad spectrum data-tether",
             "text": "The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "sourceUnitId": "unit-onager-dunecrawler",
+            "legacyIds": [
+              "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether"
+            ],
             "requiredSelectionIds": [
               "unit-onager-dunecrawler-selection-broad-spectrum-data-tether"
             ]
@@ -7093,7 +7531,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skorpius-disintegrator-profile-cognis-heavy-stubber-ranged"
+              "unit-skorpius-disintegrator-profile-c9ef020652"
             ],
             "wargearAbilityIds": []
           },
@@ -7105,7 +7543,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skorpius-disintegrator-profile-disruptor-missile-launcher-ranged-2"
+              "unit-skorpius-disintegrator-profile-9b9325ffa7"
             ],
             "wargearAbilityIds": []
           },
@@ -7117,7 +7555,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skorpius-disintegrator-profile-belleros-energy-cannon-ranged-3"
+              "unit-skorpius-disintegrator-profile-635b4eede1"
             ],
             "wargearAbilityIds": []
           },
@@ -7129,7 +7567,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skorpius-disintegrator-profile-ferrumite-cannon-ranged-4"
+              "unit-skorpius-disintegrator-profile-dbbcb28f09"
             ],
             "wargearAbilityIds": []
           },
@@ -7141,7 +7579,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-skorpius-disintegrator-profile-armoured-hull-melee-5"
+              "unit-skorpius-disintegrator-profile-7809a5e4d6"
             ],
             "wargearAbilityIds": []
           }
@@ -7149,7 +7587,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-skorpius-disintegrator-profile-cognis-heavy-stubber-ranged",
+            "id": "unit-skorpius-disintegrator-profile-c9ef020652",
+            "legacyIds": [
+              "unit-skorpius-disintegrator-profile-cognis-heavy-stubber-ranged"
+            ],
             "title": "Cognis heavy stubber",
             "mode": "ranged",
             "range": "36\"",
@@ -7164,7 +7605,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skorpius-disintegrator-profile-disruptor-missile-launcher-ranged-2",
+            "id": "unit-skorpius-disintegrator-profile-9b9325ffa7",
+            "legacyIds": [
+              "unit-skorpius-disintegrator-profile-disruptor-missile-launcher-ranged-2"
+            ],
             "title": "Disruptor missile launcher",
             "mode": "ranged",
             "range": "36\"",
@@ -7179,7 +7623,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skorpius-disintegrator-profile-belleros-energy-cannon-ranged-3",
+            "id": "unit-skorpius-disintegrator-profile-635b4eede1",
+            "legacyIds": [
+              "unit-skorpius-disintegrator-profile-belleros-energy-cannon-ranged-3"
+            ],
             "title": "Belleros energy cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -7194,7 +7641,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skorpius-disintegrator-profile-ferrumite-cannon-ranged-4",
+            "id": "unit-skorpius-disintegrator-profile-dbbcb28f09",
+            "legacyIds": [
+              "unit-skorpius-disintegrator-profile-ferrumite-cannon-ranged-4"
+            ],
             "title": "Ferrumite cannon",
             "mode": "ranged",
             "range": "48\"",
@@ -7209,7 +7659,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-skorpius-disintegrator-profile-armoured-hull-melee-5",
+            "id": "unit-skorpius-disintegrator-profile-7809a5e4d6",
+            "legacyIds": [
+              "unit-skorpius-disintegrator-profile-armoured-hull-melee-5"
+            ],
             "title": "Armoured hull",
             "mode": "melee",
             "range": "Melee",
@@ -7312,7 +7765,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-dragoons-with-radium-jezzails-profile-phosphor-serpenta-ranged"
+              "unit-sydonian-dragoons-with-radium-jezzails-profile-0d605a2efb"
             ],
             "wargearAbilityIds": []
           },
@@ -7324,7 +7777,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-dragoons-with-radium-jezzails-profile-radium-jezzail-ranged-2"
+              "unit-sydonian-dragoons-with-radium-jezzails-profile-5d3df3263f"
             ],
             "wargearAbilityIds": []
           },
@@ -7336,7 +7789,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-dragoons-with-radium-jezzails-profile-ironstrider-feet-melee-3"
+              "unit-sydonian-dragoons-with-radium-jezzails-profile-2661cdde1f"
             ],
             "wargearAbilityIds": []
           }
@@ -7344,7 +7797,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-sydonian-dragoons-with-radium-jezzails-profile-phosphor-serpenta-ranged",
+            "id": "unit-sydonian-dragoons-with-radium-jezzails-profile-0d605a2efb",
+            "legacyIds": [
+              "unit-sydonian-dragoons-with-radium-jezzails-profile-phosphor-serpenta-ranged"
+            ],
             "title": "Phosphor serpenta",
             "mode": "ranged",
             "range": "18\"",
@@ -7359,7 +7815,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sydonian-dragoons-with-radium-jezzails-profile-radium-jezzail-ranged-2",
+            "id": "unit-sydonian-dragoons-with-radium-jezzails-profile-5d3df3263f",
+            "legacyIds": [
+              "unit-sydonian-dragoons-with-radium-jezzails-profile-radium-jezzail-ranged-2"
+            ],
             "title": "Radium jezzail",
             "mode": "ranged",
             "range": "36\"",
@@ -7374,7 +7833,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sydonian-dragoons-with-radium-jezzails-profile-ironstrider-feet-melee-3",
+            "id": "unit-sydonian-dragoons-with-radium-jezzails-profile-2661cdde1f",
+            "legacyIds": [
+              "unit-sydonian-dragoons-with-radium-jezzails-profile-ironstrider-feet-melee-3"
+            ],
             "title": "Ironstrider feet",
             "mode": "melee",
             "range": "Melee",
@@ -7477,7 +7939,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-dragoons-with-taser-lances-profile-phosphor-serpenta-ranged"
+              "unit-sydonian-dragoons-with-taser-lances-profile-0d605a2efb"
             ],
             "wargearAbilityIds": []
           },
@@ -7489,7 +7951,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sydonian-dragoons-with-taser-lances-profile-taser-lance-melee-2"
+              "unit-sydonian-dragoons-with-taser-lances-profile-49737331a5"
             ],
             "wargearAbilityIds": []
           }
@@ -7497,7 +7959,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-sydonian-dragoons-with-taser-lances-profile-phosphor-serpenta-ranged",
+            "id": "unit-sydonian-dragoons-with-taser-lances-profile-0d605a2efb",
+            "legacyIds": [
+              "unit-sydonian-dragoons-with-taser-lances-profile-phosphor-serpenta-ranged"
+            ],
             "title": "Phosphor serpenta",
             "mode": "ranged",
             "range": "18\"",
@@ -7512,7 +7977,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sydonian-dragoons-with-taser-lances-profile-taser-lance-melee-2",
+            "id": "unit-sydonian-dragoons-with-taser-lances-profile-49737331a5",
+            "legacyIds": [
+              "unit-sydonian-dragoons-with-taser-lances-profile-taser-lance-melee-2"
+            ],
             "title": "Taser lance",
             "mode": "melee",
             "range": "Melee",

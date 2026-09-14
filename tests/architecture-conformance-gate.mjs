@@ -31,6 +31,8 @@ const effectProviders=read('books/extensions/book-roster-enhancement-providers.j
 const runNode=relative=>spawnSync(process.execPath,[path.join(root,relative)],{cwd:root,encoding:'utf8'});
 const lifecycleProbe=runNode('tests/source-ingestion-contract-qa.mjs');
 const lifecyclePass=lifecycleProbe.status===0;
+const canonicalJoinProbe=runNode('tests/canonical-join-architecture-qa.mjs');
+const canonicalJoinPass=canonicalJoinProbe.status===0;
 const evidence=(status,...items)=>({status,evidence:items});
 const loadRosterCatalog=id=>{
   const sandbox={window:{}};
@@ -79,6 +81,8 @@ function generatedOutputOwnership(book){
 function rawResults(book){
   const id=book.id,config=json(book.config),source=sourceByBook.get(id),catalog=loadRosterCatalog(id),outputOwnership=generatedOutputOwnership(book);
   const custom=Boolean(config.buildExtension);
+  const customAdapter=custom?read(`books/${id}/tools/canonical-source-adapter.mjs`):'';
+  const customCanonicalJoin=customAdapter.includes("canonicalJoinContract:'v1'");
   const dependencies=config.dependencies||[];
   const projectedDependencies=(catalog.book?.dependencies||[]).map(item=>item.bookId);
   const dependencyOk=dependencies.length===0||(
@@ -118,14 +122,14 @@ function rawResults(book){
   const results={
     SOURCE_LIFECYCLE:evidence(lifecyclePass?'PASS':'FAIL','tests/source-ingestion-contract-qa.mjs'),
     SOURCE_ENROLLMENT:evidence(source?.ENROLLMENT==='COMPLETE'?'PASS':'FAIL',`enrollment=${source?.ENROLLMENT||'UNKNOWN'}`,`declared=${source?.DECLARED_SOURCE_COUNT??0}`,`registered=${source?.REGISTERED_SOURCE_COUNT??0}`),
-    CANONICAL_IDENTITY:evidence((custom||genericTitleJoins.length)&&'FAIL'||'PASS',custom?`${id} adapter still performs correctness-sensitive title joins`:`generic builder title joins: ${genericTitleJoins.join(',')}`),
+    CANONICAL_IDENTITY:evidence(canonicalJoinPass&&(custom?customCanonicalJoin:genericTitleJoins.length===0)?'PASS':'FAIL',custom?`${id} canonical adapter contract=${customCanonicalJoin?'v1':'missing'}`:`generic builder title joins: ${genericTitleJoins.join(',')}`,'tests/canonical-join-architecture-qa.mjs'),
     FACT_OWNERSHIP:evidence(selfInput||glossarySelfSeeds?'FAIL':'PASS',...(selfInput?[`${id} producer reads its previous output`]:[]),...(glossarySelfSeeds?[`glossary feedback reads remain: ${glossaryFeedbackReads.join(', ')}`]:[])),
     EFFECTIVE_MODEL:evidence(custom?'FAIL':'PASS',custom?`buildExtension=${config.buildExtension}`:'shared effective assembly and renderer'),
     DEPENDENCY_PRECEDENCE:dependencies.length?evidence(dependencyOk?'PASS':'FAIL',`dependencies=${dependencies.join(',')}`):evidence('NOT_APPLICABLE','no book dependency'),
     POINTS:evidence(pointsRecomposes?'FAIL':'PASS',pointsRecomposes?'Roster Guides recomposes book/dependency points independently':'one effective points input'),
-    ENHANCEMENTS:evidence(localEnhancementJoin?'FAIL':'PASS',localEnhancementJoin?'Enhancement ownership/points still uses title joins':'exact canonical Enhancement identities'),
+    ENHANCEMENTS:evidence(canonicalJoinPass&&(custom?customCanonicalJoin:!localEnhancementJoin)?'PASS':'FAIL',custom?'custom adapter uses the shared scoped identity contract':localEnhancementJoin?'Enhancement ownership/points still uses title joins':'exact canonical Enhancement identities'),
     STRATAGEMS:evidence(stratagemOk?'PASS':'FAIL',`canonical roster Detachments=${(catalog.detachments||[]).length}`),
-    RELATIONS:evidence(localRelationJoin?'FAIL':'PASS',localRelationJoin?'relation ownership still resolves titles/prose below ingestion':'ID-keyed relation graph'),
+    RELATIONS:evidence(canonicalJoinPass&&(custom?customCanonicalJoin:!localRelationJoin)?'PASS':'FAIL',custom?'custom adapter canonicalizes source prose before graph construction':localRelationJoin?'relation ownership still resolves titles/prose below ingestion':'ID-keyed relation graph'),
     ROSTER:evidence(rosterOk?'PASS':'FAIL',catalog?.schema||'missing roster catalog'),
     EFFECTS:evidence(providerOwnedEffects?'FAIL':'PASS',providerOwnedEffects?'fixed numeric/tag facts remain provider-owned':'canonical effect facts with shared interpreter'),
     GLOSSARY:evidence(glossarySelfSeeds?'FAIL':'PASS',glossarySelfSeeds?'previous generated glossary remains a factual/editorial input':'clean source-owned rebuild'),

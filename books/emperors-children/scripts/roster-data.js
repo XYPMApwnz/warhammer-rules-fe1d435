@@ -72,17 +72,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-daemonettes-model-daemonette",
+            "id": "unit-daemonettes-model-381178c0cf",
             "title": "Daemonette",
             "aliases": [
               "Daemonette"
+            ],
+            "legacyIds": [
+              "unit-daemonettes-model-daemonette"
             ]
           },
           {
-            "id": "unit-daemonettes-model-alluress-2",
+            "id": "unit-daemonettes-model-6f896f5f0d",
             "title": "Alluress",
             "aliases": [
               "Alluress"
+            ],
+            "legacyIds": [
+              "unit-daemonettes-model-alluress-2"
             ]
           }
         ],
@@ -95,7 +101,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-daemonettes-profile-slashing-claws-melee"
+              "unit-daemonettes-profile-bc06a66b66"
             ],
             "wargearAbilityIds": []
           },
@@ -108,7 +114,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-daemonettes-wargear-ability-daemonic-icon"
+              "unit-daemonettes-wargear-ability-b3dad0463e"
             ]
           },
           {
@@ -120,14 +126,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-daemonettes-wargear-ability-instrument-of-chaos-2"
+              "unit-daemonettes-wargear-ability-afa43288c6"
             ]
           }
         ],
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-daemonettes-profile-slashing-claws-melee",
+            "id": "unit-daemonettes-profile-bc06a66b66",
+            "legacyIds": [
+              "unit-daemonettes-profile-slashing-claws-melee"
+            ],
             "title": "Slashing claws",
             "mode": "melee",
             "range": "Melee",
@@ -144,21 +153,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-daemonettes-wargear-ability-daemonic-icon",
-            "sectionId": "unit-daemonettes-wargear-ability-daemonic-icon",
+            "id": "unit-daemonettes-wargear-ability-b3dad0463e",
+            "sectionId": "unit-daemonettes-wargear-ability-b3dad0463e",
             "title": "Daemonic Icon",
             "text": "Models in the bearer's unit have a Leadership characteristic of 6+.",
             "sourceUnitId": "unit-daemonettes",
+            "legacyIds": [
+              "unit-daemonettes-wargear-ability-daemonic-icon"
+            ],
             "requiredSelectionIds": [
               "unit-daemonettes-selection-daemonic-icon"
             ]
           },
           {
-            "id": "unit-daemonettes-wargear-ability-instrument-of-chaos-2",
-            "sectionId": "unit-daemonettes-wargear-ability-instrument-of-chaos-2",
+            "id": "unit-daemonettes-wargear-ability-afa43288c6",
+            "sectionId": "unit-daemonettes-wargear-ability-afa43288c6",
             "title": "Instrument of Chaos",
             "text": "Add 1 to Charge rolls made for the bearer's unit.",
             "sourceUnitId": "unit-daemonettes",
+            "legacyIds": [
+              "unit-daemonettes-wargear-ability-instrument-of-chaos-2"
+            ],
             "requiredSelectionIds": [
               "unit-daemonettes-selection-instrument-of-chaos"
             ]
@@ -247,17 +262,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-infractors-model-obsessionist",
+            "id": "unit-infractors-model-897249bc89",
             "title": "Obsessionist",
             "aliases": [
               "Obsessionist"
+            ],
+            "legacyIds": [
+              "unit-infractors-model-obsessionist"
             ]
           },
           {
-            "id": "unit-infractors-model-infractors-2",
+            "id": "unit-infractors-model-273cdc19c8",
             "title": "Infractors",
             "aliases": [
               "Infractors"
+            ],
+            "legacyIds": [
+              "unit-infractors-model-infractors-2"
             ]
           }
         ],
@@ -270,7 +291,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-infractors-profile-bolt-pistol-ranged"
+              "unit-infractors-profile-a16d0444b0"
             ],
             "wargearAbilityIds": []
           },
@@ -282,7 +303,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-infractors-profile-plasma-pistol-standard-ranged-2"
+              "unit-infractors-profile-d02e622c84"
             ],
             "wargearAbilityIds": []
           },
@@ -294,7 +315,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-infractors-profile-plasma-pistol-supercharge-ranged-3"
+              "unit-infractors-profile-08f1080123"
             ],
             "wargearAbilityIds": []
           },
@@ -306,7 +327,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-infractors-profile-rapture-lash-melee-4"
+              "unit-infractors-profile-c2c5795df5"
             ],
             "wargearAbilityIds": []
           },
@@ -318,7 +339,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-infractors-profile-power-sword-melee-5"
+              "unit-infractors-profile-9f1035c6f5"
             ],
             "wargearAbilityIds": []
           },
@@ -330,7 +351,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-infractors-profile-duelling-sabre-melee-6"
+              "unit-infractors-profile-dc8377d607"
             ],
             "wargearAbilityIds": []
           },
@@ -343,8 +364,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-infractors-weapon-family-plasma-pistol",
             "profileIds": [
-              "unit-infractors-profile-plasma-pistol-standard-ranged-2",
-              "unit-infractors-profile-plasma-pistol-supercharge-ranged-3"
+              "unit-infractors-profile-d02e622c84",
+              "unit-infractors-profile-08f1080123"
             ],
             "wargearAbilityIds": []
           },
@@ -357,7 +378,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-infractors-wargear-ability-icon-of-excess"
+              "unit-infractors-wargear-ability-f8902b8511"
             ]
           }
         ],
@@ -369,15 +390,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Plasma pistol"
             ],
             "profileIds": [
-              "unit-infractors-profile-plasma-pistol-standard-ranged-2",
-              "unit-infractors-profile-plasma-pistol-supercharge-ranged-3"
+              "unit-infractors-profile-d02e622c84",
+              "unit-infractors-profile-08f1080123"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-infractors-profile-bolt-pistol-ranged",
+            "id": "unit-infractors-profile-a16d0444b0",
+            "legacyIds": [
+              "unit-infractors-profile-bolt-pistol-ranged"
+            ],
             "title": "Bolt pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -392,7 +416,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-infractors-profile-plasma-pistol-standard-ranged-2",
+            "id": "unit-infractors-profile-d02e622c84",
+            "legacyIds": [
+              "unit-infractors-profile-plasma-pistol-standard-ranged-2"
+            ],
             "title": "➤ Plasma pistol - standard",
             "mode": "ranged",
             "range": "12\"",
@@ -408,7 +435,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-infractors-profile-plasma-pistol-supercharge-ranged-3",
+            "id": "unit-infractors-profile-08f1080123",
+            "legacyIds": [
+              "unit-infractors-profile-plasma-pistol-supercharge-ranged-3"
+            ],
             "title": "➤ Plasma pistol - supercharge",
             "mode": "ranged",
             "range": "12\"",
@@ -424,7 +454,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-infractors-profile-rapture-lash-melee-4",
+            "id": "unit-infractors-profile-c2c5795df5",
+            "legacyIds": [
+              "unit-infractors-profile-rapture-lash-melee-4"
+            ],
             "title": "Rapture lash",
             "mode": "melee",
             "range": "Melee",
@@ -439,7 +472,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-infractors-profile-power-sword-melee-5",
+            "id": "unit-infractors-profile-9f1035c6f5",
+            "legacyIds": [
+              "unit-infractors-profile-power-sword-melee-5"
+            ],
             "title": "Power sword",
             "mode": "melee",
             "range": "Melee",
@@ -454,7 +490,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-infractors-profile-duelling-sabre-melee-6",
+            "id": "unit-infractors-profile-dc8377d607",
+            "legacyIds": [
+              "unit-infractors-profile-duelling-sabre-melee-6"
+            ],
             "title": "Duelling sabre",
             "mode": "melee",
             "range": "Melee",
@@ -471,11 +510,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-infractors-wargear-ability-icon-of-excess",
-            "sectionId": "unit-infractors-wargear-ability-icon-of-excess",
+            "id": "unit-infractors-wargear-ability-f8902b8511",
+            "sectionId": "unit-infractors-wargear-ability-f8902b8511",
             "title": "Icon of Excess",
             "text": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
             "sourceUnitId": "unit-infractors",
+            "legacyIds": [
+              "unit-infractors-wargear-ability-icon-of-excess"
+            ],
             "requiredSelectionIds": [
               "unit-infractors-selection-icon-of-excess"
             ]
@@ -564,17 +606,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-tormentors-model-obsessionist",
+            "id": "unit-tormentors-model-897249bc89",
             "title": "Obsessionist",
             "aliases": [
               "Obsessionist"
+            ],
+            "legacyIds": [
+              "unit-tormentors-model-obsessionist"
             ]
           },
           {
-            "id": "unit-tormentors-model-tormentors-2",
+            "id": "unit-tormentors-model-205e960003",
             "title": "Tormentors",
             "aliases": [
               "Tormentors"
+            ],
+            "legacyIds": [
+              "unit-tormentors-model-tormentors-2"
             ]
           }
         ],
@@ -587,7 +635,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-bolt-pistol-ranged"
+              "unit-tormentors-profile-c7fd584746"
             ],
             "wargearAbilityIds": []
           },
@@ -599,7 +647,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-plasma-pistol-standard-ranged-2"
+              "unit-tormentors-profile-5e8cf8a6f1"
             ],
             "wargearAbilityIds": []
           },
@@ -611,7 +659,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-plasma-pistol-supercharge-ranged-3"
+              "unit-tormentors-profile-9b78ec6e49"
             ],
             "wargearAbilityIds": []
           },
@@ -623,7 +671,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-rapture-lash-melee-4"
+              "unit-tormentors-profile-c2c5795df5"
             ],
             "wargearAbilityIds": []
           },
@@ -635,7 +683,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-power-sword-melee-5"
+              "unit-tormentors-profile-9f1035c6f5"
             ],
             "wargearAbilityIds": []
           },
@@ -647,7 +695,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-boltgun-ranged-6"
+              "unit-tormentors-profile-22803f2b76"
             ],
             "wargearAbilityIds": []
           },
@@ -659,7 +707,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-close-combat-weapon-melee-7"
+              "unit-tormentors-profile-38edd622b4"
             ],
             "wargearAbilityIds": []
           },
@@ -671,7 +719,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-plasma-gun-standard-ranged-8"
+              "unit-tormentors-profile-29a1b3563e"
             ],
             "wargearAbilityIds": []
           },
@@ -683,7 +731,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-plasma-gun-supercharge-ranged-9"
+              "unit-tormentors-profile-df61bd09a6"
             ],
             "wargearAbilityIds": []
           },
@@ -695,7 +743,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tormentors-profile-meltagun-ranged-10"
+              "unit-tormentors-profile-c1dc7b107e"
             ],
             "wargearAbilityIds": []
           },
@@ -708,8 +756,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-tormentors-weapon-family-plasma-pistol",
             "profileIds": [
-              "unit-tormentors-profile-plasma-pistol-standard-ranged-2",
-              "unit-tormentors-profile-plasma-pistol-supercharge-ranged-3"
+              "unit-tormentors-profile-5e8cf8a6f1",
+              "unit-tormentors-profile-9b78ec6e49"
             ],
             "wargearAbilityIds": []
           },
@@ -722,8 +770,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-tormentors-weapon-family-plasma-gun",
             "profileIds": [
-              "unit-tormentors-profile-plasma-gun-standard-ranged-8",
-              "unit-tormentors-profile-plasma-gun-supercharge-ranged-9"
+              "unit-tormentors-profile-29a1b3563e",
+              "unit-tormentors-profile-df61bd09a6"
             ],
             "wargearAbilityIds": []
           },
@@ -736,7 +784,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-tormentors-wargear-ability-icon-of-excess"
+              "unit-tormentors-wargear-ability-f8902b8511"
             ]
           }
         ],
@@ -748,8 +796,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Plasma pistol"
             ],
             "profileIds": [
-              "unit-tormentors-profile-plasma-pistol-standard-ranged-2",
-              "unit-tormentors-profile-plasma-pistol-supercharge-ranged-3"
+              "unit-tormentors-profile-5e8cf8a6f1",
+              "unit-tormentors-profile-9b78ec6e49"
             ],
             "ambiguousAlias": false
           },
@@ -760,15 +808,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Plasma gun"
             ],
             "profileIds": [
-              "unit-tormentors-profile-plasma-gun-standard-ranged-8",
-              "unit-tormentors-profile-plasma-gun-supercharge-ranged-9"
+              "unit-tormentors-profile-29a1b3563e",
+              "unit-tormentors-profile-df61bd09a6"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-tormentors-profile-bolt-pistol-ranged",
+            "id": "unit-tormentors-profile-c7fd584746",
+            "legacyIds": [
+              "unit-tormentors-profile-bolt-pistol-ranged"
+            ],
             "title": "Bolt pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -783,7 +834,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-plasma-pistol-standard-ranged-2",
+            "id": "unit-tormentors-profile-5e8cf8a6f1",
+            "legacyIds": [
+              "unit-tormentors-profile-plasma-pistol-standard-ranged-2"
+            ],
             "title": "➤ Plasma pistol - standard",
             "mode": "ranged",
             "range": "12\"",
@@ -799,7 +853,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-plasma-pistol-supercharge-ranged-3",
+            "id": "unit-tormentors-profile-9b78ec6e49",
+            "legacyIds": [
+              "unit-tormentors-profile-plasma-pistol-supercharge-ranged-3"
+            ],
             "title": "➤ Plasma pistol - supercharge",
             "mode": "ranged",
             "range": "12\"",
@@ -815,7 +872,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-rapture-lash-melee-4",
+            "id": "unit-tormentors-profile-c2c5795df5",
+            "legacyIds": [
+              "unit-tormentors-profile-rapture-lash-melee-4"
+            ],
             "title": "Rapture lash",
             "mode": "melee",
             "range": "Melee",
@@ -830,7 +890,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-power-sword-melee-5",
+            "id": "unit-tormentors-profile-9f1035c6f5",
+            "legacyIds": [
+              "unit-tormentors-profile-power-sword-melee-5"
+            ],
             "title": "Power sword",
             "mode": "melee",
             "range": "Melee",
@@ -845,7 +908,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-boltgun-ranged-6",
+            "id": "unit-tormentors-profile-22803f2b76",
+            "legacyIds": [
+              "unit-tormentors-profile-boltgun-ranged-6"
+            ],
             "title": "Boltgun",
             "mode": "ranged",
             "range": "24\"",
@@ -860,7 +926,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-close-combat-weapon-melee-7",
+            "id": "unit-tormentors-profile-38edd622b4",
+            "legacyIds": [
+              "unit-tormentors-profile-close-combat-weapon-melee-7"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -875,7 +944,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-plasma-gun-standard-ranged-8",
+            "id": "unit-tormentors-profile-29a1b3563e",
+            "legacyIds": [
+              "unit-tormentors-profile-plasma-gun-standard-ranged-8"
+            ],
             "title": "➤ Plasma gun - standard",
             "mode": "ranged",
             "range": "24\"",
@@ -891,7 +963,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-plasma-gun-supercharge-ranged-9",
+            "id": "unit-tormentors-profile-df61bd09a6",
+            "legacyIds": [
+              "unit-tormentors-profile-plasma-gun-supercharge-ranged-9"
+            ],
             "title": "➤ Plasma gun - supercharge",
             "mode": "ranged",
             "range": "24\"",
@@ -907,7 +982,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tormentors-profile-meltagun-ranged-10",
+            "id": "unit-tormentors-profile-c1dc7b107e",
+            "legacyIds": [
+              "unit-tormentors-profile-meltagun-ranged-10"
+            ],
             "title": "Meltagun",
             "mode": "ranged",
             "range": "12\"",
@@ -924,11 +1002,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-tormentors-wargear-ability-icon-of-excess",
-            "sectionId": "unit-tormentors-wargear-ability-icon-of-excess",
+            "id": "unit-tormentors-wargear-ability-f8902b8511",
+            "sectionId": "unit-tormentors-wargear-ability-f8902b8511",
             "title": "Icon of Excess",
             "text": "At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more enemy units this phase, the bearer's unit takes a Leadership test. If that test is passed, you gain 1CP.",
             "sourceUnitId": "unit-tormentors",
+            "legacyIds": [
+              "unit-tormentors-wargear-ability-icon-of-excess"
+            ],
             "requiredSelectionIds": [
               "unit-tormentors-selection-icon-of-excess"
             ]
@@ -1013,10 +1094,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-daemon-prince-of-slaanesh-model-daemon-prince-of-slaanesh",
+            "id": "unit-daemon-prince-of-slaanesh-model-ab2a7817c2",
             "title": "Daemon Prince of Slaanesh",
             "aliases": [
               "Daemon Prince of Slaanesh"
+            ],
+            "legacyIds": [
+              "unit-daemon-prince-of-slaanesh-model-daemon-prince-of-slaanesh"
             ]
           }
         ],
@@ -1029,7 +1113,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-strike-melee"
+              "unit-daemon-prince-of-slaanesh-profile-c3e5b71d09"
             ],
             "wargearAbilityIds": []
           },
@@ -1041,7 +1125,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-sweep-melee-2"
+              "unit-daemon-prince-of-slaanesh-profile-ca66158213"
             ],
             "wargearAbilityIds": []
           },
@@ -1053,7 +1137,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-profile-infernal-cannon-ranged-3"
+              "unit-daemon-prince-of-slaanesh-profile-4c4589e7bd"
             ],
             "wargearAbilityIds": []
           },
@@ -1066,8 +1150,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-daemon-prince-of-slaanesh-weapon-family-hellforged-weapons",
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-strike-melee",
-              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-sweep-melee-2"
+              "unit-daemon-prince-of-slaanesh-profile-c3e5b71d09",
+              "unit-daemon-prince-of-slaanesh-profile-ca66158213"
             ],
             "wargearAbilityIds": []
           }
@@ -1080,15 +1164,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Hellforged weapons"
             ],
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-strike-melee",
-              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-sweep-melee-2"
+              "unit-daemon-prince-of-slaanesh-profile-c3e5b71d09",
+              "unit-daemon-prince-of-slaanesh-profile-ca66158213"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-strike-melee",
+            "id": "unit-daemon-prince-of-slaanesh-profile-c3e5b71d09",
+            "legacyIds": [
+              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-strike-melee"
+            ],
             "title": "➤ Hellforged weapons - strike",
             "mode": "melee",
             "range": "Melee",
@@ -1104,7 +1191,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-sweep-melee-2",
+            "id": "unit-daemon-prince-of-slaanesh-profile-ca66158213",
+            "legacyIds": [
+              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-sweep-melee-2"
+            ],
             "title": "➤ Hellforged weapons - sweep",
             "mode": "melee",
             "range": "Melee",
@@ -1120,7 +1210,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-profile-infernal-cannon-ranged-3",
+            "id": "unit-daemon-prince-of-slaanesh-profile-4c4589e7bd",
+            "legacyIds": [
+              "unit-daemon-prince-of-slaanesh-profile-infernal-cannon-ranged-3"
+            ],
             "title": "Infernal cannon",
             "mode": "ranged",
             "range": "24\"",
@@ -1216,10 +1309,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-model-daemon-prince-of-slaanesh-with-wings",
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-model-18e296893e",
             "title": "Daemon Prince of Slaanesh with Wings",
             "aliases": [
               "Daemon Prince of Slaanesh with Wings"
+            ],
+            "legacyIds": [
+              "unit-daemon-prince-of-slaanesh-with-wings-model-daemon-prince-of-slaanesh-with-wings"
             ]
           }
         ],
@@ -1232,7 +1328,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-strike-melee"
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-c3e5b71d09"
             ],
             "wargearAbilityIds": []
           },
@@ -1244,7 +1340,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-sweep-melee-2"
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-ca66158213"
             ],
             "wargearAbilityIds": []
           },
@@ -1256,7 +1352,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-with-wings-profile-infernal-cannon-ranged-3"
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-4c4589e7bd"
             ],
             "wargearAbilityIds": []
           },
@@ -1269,8 +1365,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-daemon-prince-of-slaanesh-with-wings-weapon-family-hellforged-weapons",
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-strike-melee",
-              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-sweep-melee-2"
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-c3e5b71d09",
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-ca66158213"
             ],
             "wargearAbilityIds": []
           }
@@ -1283,15 +1379,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Hellforged weapons"
             ],
             "profileIds": [
-              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-strike-melee",
-              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-sweep-melee-2"
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-c3e5b71d09",
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-ca66158213"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-strike-melee",
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-profile-c3e5b71d09",
+            "legacyIds": [
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-strike-melee"
+            ],
             "title": "➤ Hellforged weapons - strike",
             "mode": "melee",
             "range": "Melee",
@@ -1307,7 +1406,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-sweep-melee-2",
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-profile-ca66158213",
+            "legacyIds": [
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-sweep-melee-2"
+            ],
             "title": "➤ Hellforged weapons - sweep",
             "mode": "melee",
             "range": "Melee",
@@ -1323,7 +1425,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-daemon-prince-of-slaanesh-with-wings-profile-infernal-cannon-ranged-3",
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-profile-4c4589e7bd",
+            "legacyIds": [
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-infernal-cannon-ranged-3"
+            ],
             "title": "Infernal cannon",
             "mode": "ranged",
             "range": "24\"",
@@ -1419,10 +1524,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-keeper-of-secrets-model-keeper-of-secrets",
+            "id": "unit-keeper-of-secrets-model-0463e49756",
             "title": "Keeper of Secrets",
             "aliases": [
               "Keeper of Secrets"
+            ],
+            "legacyIds": [
+              "unit-keeper-of-secrets-model-keeper-of-secrets"
             ]
           }
         ],
@@ -1435,7 +1543,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-keeper-of-secrets-profile-phantasmagoria-witchfire-ranged"
+              "unit-keeper-of-secrets-profile-1e3274604b"
             ],
             "wargearAbilityIds": []
           },
@@ -1447,7 +1555,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-keeper-of-secrets-profile-phantasmagoria-focused-witchfire-ranged-2"
+              "unit-keeper-of-secrets-profile-d1c48a59c6"
             ],
             "wargearAbilityIds": []
           },
@@ -1459,7 +1567,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-keeper-of-secrets-profile-snapping-claws-melee-3"
+              "unit-keeper-of-secrets-profile-18e13e0d13"
             ],
             "wargearAbilityIds": []
           },
@@ -1471,7 +1579,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-keeper-of-secrets-profile-witstealer-sword-melee-4"
+              "unit-keeper-of-secrets-profile-baa12b9e69"
             ],
             "wargearAbilityIds": []
           },
@@ -1483,7 +1591,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-keeper-of-secrets-profile-living-whip-ranged-5"
+              "unit-keeper-of-secrets-profile-729db60bbb"
             ],
             "wargearAbilityIds": []
           },
@@ -1495,7 +1603,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-keeper-of-secrets-profile-ritual-knife-melee-6"
+              "unit-keeper-of-secrets-profile-7439de4698"
             ],
             "wargearAbilityIds": []
           },
@@ -1508,8 +1616,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-keeper-of-secrets-weapon-family-phantasmagoria",
             "profileIds": [
-              "unit-keeper-of-secrets-profile-phantasmagoria-witchfire-ranged",
-              "unit-keeper-of-secrets-profile-phantasmagoria-focused-witchfire-ranged-2"
+              "unit-keeper-of-secrets-profile-1e3274604b",
+              "unit-keeper-of-secrets-profile-d1c48a59c6"
             ],
             "wargearAbilityIds": []
           },
@@ -1522,7 +1630,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-keeper-of-secrets-wargear-ability-shining-aegis"
+              "unit-keeper-of-secrets-wargear-ability-8c94fe64e9"
             ]
           }
         ],
@@ -1534,15 +1642,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Phantasmagoria"
             ],
             "profileIds": [
-              "unit-keeper-of-secrets-profile-phantasmagoria-witchfire-ranged",
-              "unit-keeper-of-secrets-profile-phantasmagoria-focused-witchfire-ranged-2"
+              "unit-keeper-of-secrets-profile-1e3274604b",
+              "unit-keeper-of-secrets-profile-d1c48a59c6"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-keeper-of-secrets-profile-phantasmagoria-witchfire-ranged",
+            "id": "unit-keeper-of-secrets-profile-1e3274604b",
+            "legacyIds": [
+              "unit-keeper-of-secrets-profile-phantasmagoria-witchfire-ranged"
+            ],
             "title": "➤ Phantasmagoria - witchfire",
             "mode": "ranged",
             "range": "18\"",
@@ -1558,7 +1669,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-keeper-of-secrets-profile-phantasmagoria-focused-witchfire-ranged-2",
+            "id": "unit-keeper-of-secrets-profile-d1c48a59c6",
+            "legacyIds": [
+              "unit-keeper-of-secrets-profile-phantasmagoria-focused-witchfire-ranged-2"
+            ],
             "title": "➤ Phantasmagoria - focused witchfire",
             "mode": "ranged",
             "range": "18\"",
@@ -1574,7 +1688,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-keeper-of-secrets-profile-snapping-claws-melee-3",
+            "id": "unit-keeper-of-secrets-profile-18e13e0d13",
+            "legacyIds": [
+              "unit-keeper-of-secrets-profile-snapping-claws-melee-3"
+            ],
             "title": "Snapping claws",
             "mode": "melee",
             "range": "Melee",
@@ -1589,7 +1706,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-keeper-of-secrets-profile-witstealer-sword-melee-4",
+            "id": "unit-keeper-of-secrets-profile-baa12b9e69",
+            "legacyIds": [
+              "unit-keeper-of-secrets-profile-witstealer-sword-melee-4"
+            ],
             "title": "Witstealer sword",
             "mode": "melee",
             "range": "Melee",
@@ -1604,7 +1724,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-keeper-of-secrets-profile-living-whip-ranged-5",
+            "id": "unit-keeper-of-secrets-profile-729db60bbb",
+            "legacyIds": [
+              "unit-keeper-of-secrets-profile-living-whip-ranged-5"
+            ],
             "title": "Living whip",
             "mode": "ranged",
             "range": "12\"",
@@ -1619,7 +1742,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-keeper-of-secrets-profile-ritual-knife-melee-6",
+            "id": "unit-keeper-of-secrets-profile-7439de4698",
+            "legacyIds": [
+              "unit-keeper-of-secrets-profile-ritual-knife-melee-6"
+            ],
             "title": "Ritual knife",
             "mode": "melee",
             "range": "Melee",
@@ -1636,11 +1762,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-keeper-of-secrets-wargear-ability-shining-aegis",
-            "sectionId": "unit-keeper-of-secrets-wargear-ability-shining-aegis",
+            "id": "unit-keeper-of-secrets-wargear-ability-8c94fe64e9",
+            "sectionId": "unit-keeper-of-secrets-wargear-ability-8c94fe64e9",
             "title": "Shining aegis",
             "text": "The bearer has a Save characteristic of 3+.",
             "sourceUnitId": "unit-keeper-of-secrets",
+            "legacyIds": [
+              "unit-keeper-of-secrets-wargear-ability-shining-aegis"
+            ],
             "requiredSelectionIds": [
               "unit-keeper-of-secrets-selection-shining-aegis"
             ]
@@ -1727,11 +1856,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-lord-exultant"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-lord-exultant-ability-8d5aa8c8cf",
+            "sectionId": "unit-lord-exultant-ability-8d5aa8c8cf",
+            "title": "Leader",
+            "text": "This model can be attached to the following units: INFRACTORS, TORMENTORS.",
+            "sourceUnitId": "unit-lord-exultant",
+            "legacyIds": [
+              "core-leader"
+            ]
+          },
+          {
+            "id": "unit-lord-exultant-ability-3c19dd15aa",
+            "sectionId": "unit-lord-exultant-ability-3c19dd15aa",
             "title": "Leader",
             "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-lord-exultant"
+            "sourceUnitId": "unit-lord-exultant",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "emperors-children-ability-thrill-seekers",
@@ -1743,10 +1885,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-lord-exultant-model-lord-exultant",
+            "id": "unit-lord-exultant-model-fad99158fd",
             "title": "Lord Exultant",
             "aliases": [
               "Lord Exultant"
+            ],
+            "legacyIds": [
+              "unit-lord-exultant-model-lord-exultant"
             ]
           }
         ],
@@ -1759,7 +1904,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-close-combat-weapon-melee"
+              "unit-lord-exultant-profile-8dd496396b"
             ],
             "wargearAbilityIds": []
           },
@@ -1771,7 +1916,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-rapture-lash-melee-2"
+              "unit-lord-exultant-profile-4c2c7fea59"
             ],
             "wargearAbilityIds": []
           },
@@ -1783,7 +1928,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-plasma-pistol-standard-ranged-3"
+              "unit-lord-exultant-profile-d02e622c84"
             ],
             "wargearAbilityIds": []
           },
@@ -1795,7 +1940,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-plasma-pistol-supercharge-ranged-4"
+              "unit-lord-exultant-profile-08f1080123"
             ],
             "wargearAbilityIds": []
           },
@@ -1807,7 +1952,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-power-fist-melee-5"
+              "unit-lord-exultant-profile-079648680a"
             ],
             "wargearAbilityIds": []
           },
@@ -1819,7 +1964,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-phoenix-power-spear-melee-6"
+              "unit-lord-exultant-profile-20739776bf"
             ],
             "wargearAbilityIds": []
           },
@@ -1831,7 +1976,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-master-crafted-power-sword-melee-7"
+              "unit-lord-exultant-profile-1f62a6185d"
             ],
             "wargearAbilityIds": []
           },
@@ -1843,7 +1988,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-screamer-pistol-ranged-8"
+              "unit-lord-exultant-profile-e99a763788"
             ],
             "wargearAbilityIds": []
           },
@@ -1855,7 +2000,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-exultant-profile-bolt-pistol-ranged-9"
+              "unit-lord-exultant-profile-a16d0444b0"
             ],
             "wargearAbilityIds": []
           },
@@ -1868,8 +2013,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-lord-exultant-weapon-family-plasma-pistol",
             "profileIds": [
-              "unit-lord-exultant-profile-plasma-pistol-standard-ranged-3",
-              "unit-lord-exultant-profile-plasma-pistol-supercharge-ranged-4"
+              "unit-lord-exultant-profile-d02e622c84",
+              "unit-lord-exultant-profile-08f1080123"
             ],
             "wargearAbilityIds": []
           }
@@ -1882,15 +2027,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Plasma pistol"
             ],
             "profileIds": [
-              "unit-lord-exultant-profile-plasma-pistol-standard-ranged-3",
-              "unit-lord-exultant-profile-plasma-pistol-supercharge-ranged-4"
+              "unit-lord-exultant-profile-d02e622c84",
+              "unit-lord-exultant-profile-08f1080123"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-lord-exultant-profile-close-combat-weapon-melee",
+            "id": "unit-lord-exultant-profile-8dd496396b",
+            "legacyIds": [
+              "unit-lord-exultant-profile-close-combat-weapon-melee"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -1905,7 +2053,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-exultant-profile-rapture-lash-melee-2",
+            "id": "unit-lord-exultant-profile-4c2c7fea59",
+            "legacyIds": [
+              "unit-lord-exultant-profile-rapture-lash-melee-2"
+            ],
             "title": "Rapture lash",
             "mode": "melee",
             "range": "Melee",
@@ -1920,7 +2071,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-exultant-profile-plasma-pistol-standard-ranged-3",
+            "id": "unit-lord-exultant-profile-d02e622c84",
+            "legacyIds": [
+              "unit-lord-exultant-profile-plasma-pistol-standard-ranged-3"
+            ],
             "title": "➤ Plasma pistol - standard",
             "mode": "ranged",
             "range": "12\"",
@@ -1936,7 +2090,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-exultant-profile-plasma-pistol-supercharge-ranged-4",
+            "id": "unit-lord-exultant-profile-08f1080123",
+            "legacyIds": [
+              "unit-lord-exultant-profile-plasma-pistol-supercharge-ranged-4"
+            ],
             "title": "➤ Plasma pistol - supercharge",
             "mode": "ranged",
             "range": "12\"",
@@ -1952,7 +2109,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-exultant-profile-power-fist-melee-5",
+            "id": "unit-lord-exultant-profile-079648680a",
+            "legacyIds": [
+              "unit-lord-exultant-profile-power-fist-melee-5"
+            ],
             "title": "Power fist",
             "mode": "melee",
             "range": "Melee",
@@ -1967,7 +2127,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-exultant-profile-phoenix-power-spear-melee-6",
+            "id": "unit-lord-exultant-profile-20739776bf",
+            "legacyIds": [
+              "unit-lord-exultant-profile-phoenix-power-spear-melee-6"
+            ],
             "title": "Phoenix power spear",
             "mode": "melee",
             "range": "Melee",
@@ -1982,7 +2145,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-exultant-profile-master-crafted-power-sword-melee-7",
+            "id": "unit-lord-exultant-profile-1f62a6185d",
+            "legacyIds": [
+              "unit-lord-exultant-profile-master-crafted-power-sword-melee-7"
+            ],
             "title": "Master-crafted power sword",
             "mode": "melee",
             "range": "Melee",
@@ -1997,7 +2163,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-exultant-profile-screamer-pistol-ranged-8",
+            "id": "unit-lord-exultant-profile-e99a763788",
+            "legacyIds": [
+              "unit-lord-exultant-profile-screamer-pistol-ranged-8"
+            ],
             "title": "Screamer pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -2012,7 +2181,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-exultant-profile-bolt-pistol-ranged-9",
+            "id": "unit-lord-exultant-profile-a16d0444b0",
+            "legacyIds": [
+              "unit-lord-exultant-profile-bolt-pistol-ranged-9"
+            ],
             "title": "Bolt pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -2088,11 +2260,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-lord-kakophonist-ability-8d52139d0f",
+            "sectionId": "unit-lord-kakophonist-ability-8d52139d0f",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-lord-kakophonist"
+            "text": "This model can be attached to the following units: CHAOS TERMINATORS, NOISE MARINES.",
+            "sourceUnitId": "unit-lord-kakophonist",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "emperors-children-ability-obsessive-annunciation",
@@ -2109,6 +2284,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-lord-kakophonist"
           },
           {
+            "id": "unit-lord-kakophonist-ability-3c19dd15aa",
+            "sectionId": "unit-lord-kakophonist-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-lord-kakophonist",
+            "legacyIds": [
+              "core-leader"
+            ]
+          },
+          {
             "id": "emperors-children-ability-thrill-seekers",
             "sectionId": "emperors-children-ability-thrill-seekers",
             "title": "Thrill Seekers",
@@ -2118,10 +2303,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-lord-kakophonist-model-lord-kakophonist",
+            "id": "unit-lord-kakophonist-model-74bbb1ff16",
             "title": "Lord Kakophonist",
             "aliases": [
               "Lord Kakophonist"
+            ],
+            "legacyIds": [
+              "unit-lord-kakophonist-model-lord-kakophonist"
             ]
           }
         ],
@@ -2134,7 +2322,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-kakophonist-profile-power-sword-melee"
+              "unit-lord-kakophonist-profile-a918f5cd1e"
             ],
             "wargearAbilityIds": []
           },
@@ -2146,7 +2334,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-kakophonist-profile-close-combat-weapon-melee-2"
+              "unit-lord-kakophonist-profile-8dd496396b"
             ],
             "wargearAbilityIds": []
           },
@@ -2158,7 +2346,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lord-kakophonist-profile-screamer-pistol-ranged-3"
+              "unit-lord-kakophonist-profile-e99a763788"
             ],
             "wargearAbilityIds": []
           }
@@ -2166,7 +2354,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-lord-kakophonist-profile-power-sword-melee",
+            "id": "unit-lord-kakophonist-profile-a918f5cd1e",
+            "legacyIds": [
+              "unit-lord-kakophonist-profile-power-sword-melee"
+            ],
             "title": "Power sword",
             "mode": "melee",
             "range": "Melee",
@@ -2181,7 +2372,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-kakophonist-profile-close-combat-weapon-melee-2",
+            "id": "unit-lord-kakophonist-profile-8dd496396b",
+            "legacyIds": [
+              "unit-lord-kakophonist-profile-close-combat-weapon-melee-2"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -2196,7 +2390,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lord-kakophonist-profile-screamer-pistol-ranged-3",
+            "id": "unit-lord-kakophonist-profile-e99a763788",
+            "legacyIds": [
+              "unit-lord-kakophonist-profile-screamer-pistol-ranged-3"
+            ],
             "title": "Screamer pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -2281,11 +2478,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-sorcerer-ability-9f70b80c7b",
+            "sectionId": "unit-sorcerer-ability-9f70b80c7b",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-sorcerer"
+            "text": "This model can be attached to the following units: INFRACTORS, NOISE MARINES, TORMENTORS.",
+            "sourceUnitId": "unit-sorcerer",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "emperors-children-ability-warped-interference-psychic",
@@ -2302,6 +2502,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-sorcerer"
           },
           {
+            "id": "unit-sorcerer-ability-3c19dd15aa",
+            "sectionId": "unit-sorcerer-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-sorcerer",
+            "legacyIds": [
+              "core-leader"
+            ]
+          },
+          {
             "id": "emperors-children-ability-thrill-seekers",
             "sectionId": "emperors-children-ability-thrill-seekers",
             "title": "Thrill Seekers",
@@ -2311,10 +2521,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-sorcerer-model-sorcerer",
+            "id": "unit-sorcerer-model-93418ea12f",
             "title": "Sorcerer",
             "aliases": [
               "Sorcerer"
+            ],
+            "legacyIds": [
+              "unit-sorcerer-model-sorcerer"
             ]
           }
         ],
@@ -2327,7 +2540,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sorcerer-profile-agonising-energies-witchfire-ranged"
+              "unit-sorcerer-profile-97b422cdff"
             ],
             "wargearAbilityIds": []
           },
@@ -2339,7 +2552,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sorcerer-profile-agonising-energies-focused-witchfire-ranged-2"
+              "unit-sorcerer-profile-4da4955b23"
             ],
             "wargearAbilityIds": []
           },
@@ -2351,7 +2564,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sorcerer-profile-force-weapon-melee-3"
+              "unit-sorcerer-profile-99b234094f"
             ],
             "wargearAbilityIds": []
           },
@@ -2363,7 +2576,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sorcerer-profile-bolt-pistol-ranged-4"
+              "unit-sorcerer-profile-a16d0444b0"
             ],
             "wargearAbilityIds": []
           },
@@ -2376,8 +2589,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-sorcerer-weapon-family-agonising-energies",
             "profileIds": [
-              "unit-sorcerer-profile-agonising-energies-witchfire-ranged",
-              "unit-sorcerer-profile-agonising-energies-focused-witchfire-ranged-2"
+              "unit-sorcerer-profile-97b422cdff",
+              "unit-sorcerer-profile-4da4955b23"
             ],
             "wargearAbilityIds": []
           }
@@ -2390,15 +2603,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "Agonising Energies"
             ],
             "profileIds": [
-              "unit-sorcerer-profile-agonising-energies-witchfire-ranged",
-              "unit-sorcerer-profile-agonising-energies-focused-witchfire-ranged-2"
+              "unit-sorcerer-profile-97b422cdff",
+              "unit-sorcerer-profile-4da4955b23"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-sorcerer-profile-agonising-energies-witchfire-ranged",
+            "id": "unit-sorcerer-profile-97b422cdff",
+            "legacyIds": [
+              "unit-sorcerer-profile-agonising-energies-witchfire-ranged"
+            ],
             "title": "Agonising Energies - witchfire",
             "mode": "ranged",
             "range": "18\"",
@@ -2414,7 +2630,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sorcerer-profile-agonising-energies-focused-witchfire-ranged-2",
+            "id": "unit-sorcerer-profile-4da4955b23",
+            "legacyIds": [
+              "unit-sorcerer-profile-agonising-energies-focused-witchfire-ranged-2"
+            ],
             "title": "Agonising Energies - focused witchfire",
             "mode": "ranged",
             "range": "18\"",
@@ -2430,7 +2649,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sorcerer-profile-force-weapon-melee-3",
+            "id": "unit-sorcerer-profile-99b234094f",
+            "legacyIds": [
+              "unit-sorcerer-profile-force-weapon-melee-3"
+            ],
             "title": "Force weapon",
             "mode": "melee",
             "range": "Melee",
@@ -2445,7 +2667,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sorcerer-profile-bolt-pistol-ranged-4",
+            "id": "unit-sorcerer-profile-a16d0444b0",
+            "legacyIds": [
+              "unit-sorcerer-profile-bolt-pistol-ranged-4"
+            ],
             "title": "Bolt pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -2535,10 +2760,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-rhino-model-chaos-rhino",
+            "id": "unit-chaos-rhino-model-74ad18f164",
             "title": "Chaos Rhino",
             "aliases": [
               "Chaos Rhino"
+            ],
+            "legacyIds": [
+              "unit-chaos-rhino-model-chaos-rhino"
             ]
           }
         ],
@@ -2551,7 +2779,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-rhino-profile-armoured-tracks-melee"
+              "unit-chaos-rhino-profile-370d5ddd9f"
             ],
             "wargearAbilityIds": []
           },
@@ -2563,7 +2791,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-rhino-profile-combi-bolter-ranged-2"
+              "unit-chaos-rhino-profile-fccf7bd10d"
             ],
             "wargearAbilityIds": []
           },
@@ -2575,7 +2803,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-rhino-profile-combi-weapon-ranged-3"
+              "unit-chaos-rhino-profile-a0e05510db"
             ],
             "wargearAbilityIds": []
           },
@@ -2587,7 +2815,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-rhino-profile-havoc-launcher-ranged-4"
+              "unit-chaos-rhino-profile-b45d52231c"
             ],
             "wargearAbilityIds": []
           }
@@ -2595,7 +2823,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-chaos-rhino-profile-armoured-tracks-melee",
+            "id": "unit-chaos-rhino-profile-370d5ddd9f",
+            "legacyIds": [
+              "unit-chaos-rhino-profile-armoured-tracks-melee"
+            ],
             "title": "Armoured tracks",
             "mode": "melee",
             "range": "Melee",
@@ -2610,7 +2841,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-rhino-profile-combi-bolter-ranged-2",
+            "id": "unit-chaos-rhino-profile-fccf7bd10d",
+            "legacyIds": [
+              "unit-chaos-rhino-profile-combi-bolter-ranged-2"
+            ],
             "title": "Combi-bolter",
             "mode": "ranged",
             "range": "24\"",
@@ -2625,7 +2859,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-rhino-profile-combi-weapon-ranged-3",
+            "id": "unit-chaos-rhino-profile-a0e05510db",
+            "legacyIds": [
+              "unit-chaos-rhino-profile-combi-weapon-ranged-3"
+            ],
             "title": "Combi-weapon",
             "mode": "ranged",
             "range": "24\"",
@@ -2640,7 +2877,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-rhino-profile-havoc-launcher-ranged-4",
+            "id": "unit-chaos-rhino-profile-b45d52231c",
+            "legacyIds": [
+              "unit-chaos-rhino-profile-havoc-launcher-ranged-4"
+            ],
             "title": "Havoc launcher",
             "mode": "ranged",
             "range": "48\"",
@@ -2781,10 +3021,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-fulgrim-model-fulgrim",
+            "id": "unit-fulgrim-model-118a4ba90d",
             "title": "Fulgrim",
             "aliases": [
               "Fulgrim"
+            ],
+            "legacyIds": [
+              "unit-fulgrim-model-fulgrim"
             ]
           }
         ],
@@ -2797,7 +3040,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-fulgrim-profile-malefic-lash-ranged"
+              "unit-fulgrim-profile-012605781d"
             ],
             "wargearAbilityIds": []
           },
@@ -2809,7 +3052,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-fulgrim-profile-serpentine-tail-melee-2"
+              "unit-fulgrim-profile-2c3eaf558e"
             ],
             "wargearAbilityIds": []
           },
@@ -2821,7 +3064,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-fulgrim-profile-daemonic-blades-strike-melee-3"
+              "unit-fulgrim-profile-8ca768add0"
             ],
             "wargearAbilityIds": []
           },
@@ -2833,7 +3076,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-fulgrim-profile-daemonic-blades-sweep-melee-4"
+              "unit-fulgrim-profile-84d9a73686"
             ],
             "wargearAbilityIds": []
           },
@@ -2846,8 +3089,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-fulgrim-weapon-family-daemonic-blades",
             "profileIds": [
-              "unit-fulgrim-profile-daemonic-blades-strike-melee-3",
-              "unit-fulgrim-profile-daemonic-blades-sweep-melee-4"
+              "unit-fulgrim-profile-8ca768add0",
+              "unit-fulgrim-profile-84d9a73686"
             ],
             "wargearAbilityIds": []
           }
@@ -2860,15 +3103,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Daemonic blades"
             ],
             "profileIds": [
-              "unit-fulgrim-profile-daemonic-blades-strike-melee-3",
-              "unit-fulgrim-profile-daemonic-blades-sweep-melee-4"
+              "unit-fulgrim-profile-8ca768add0",
+              "unit-fulgrim-profile-84d9a73686"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-fulgrim-profile-malefic-lash-ranged",
+            "id": "unit-fulgrim-profile-012605781d",
+            "legacyIds": [
+              "unit-fulgrim-profile-malefic-lash-ranged"
+            ],
             "title": "Malefic lash",
             "mode": "ranged",
             "range": "12\"",
@@ -2883,7 +3129,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-fulgrim-profile-serpentine-tail-melee-2",
+            "id": "unit-fulgrim-profile-2c3eaf558e",
+            "legacyIds": [
+              "unit-fulgrim-profile-serpentine-tail-melee-2"
+            ],
             "title": "Serpentine tail",
             "mode": "melee",
             "range": "Melee",
@@ -2898,7 +3147,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-fulgrim-profile-daemonic-blades-strike-melee-3",
+            "id": "unit-fulgrim-profile-8ca768add0",
+            "legacyIds": [
+              "unit-fulgrim-profile-daemonic-blades-strike-melee-3"
+            ],
             "title": "➤ Daemonic blades - strike",
             "mode": "melee",
             "range": "Melee",
@@ -2914,7 +3166,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-fulgrim-profile-daemonic-blades-sweep-melee-4",
+            "id": "unit-fulgrim-profile-84d9a73686",
+            "legacyIds": [
+              "unit-fulgrim-profile-daemonic-blades-sweep-melee-4"
+            ],
             "title": "➤ Daemonic blades - sweep",
             "mode": "melee",
             "range": "Melee",
@@ -2983,11 +3238,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         "abilities": [
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-lucius-the-eternal-ability-cb0e22552b",
+            "sectionId": "unit-lucius-the-eternal-ability-cb0e22552b",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-lucius-the-eternal"
+            "text": "This model can be attached to the following units: FLAWLESS BLADES.",
+            "sourceUnitId": "unit-lucius-the-eternal",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "emperors-children-ability-duellists-hubris",
@@ -3002,6 +3260,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "A Challenge Worthy of Skill",
             "text": "Each time this model makes an attack that targets a Character, Monster or Walker unit, you can re-roll the Hit roll and re-roll the Wound roll.",
             "sourceUnitId": "unit-lucius-the-eternal"
+          },
+          {
+            "id": "unit-lucius-the-eternal-ability-3c19dd15aa",
+            "sectionId": "unit-lucius-the-eternal-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-lucius-the-eternal",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "emperors-children-ability-thrill-seekers",
@@ -3027,10 +3295,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-lucius-the-eternal-model-lucius-the-eternal",
+            "id": "unit-lucius-the-eternal-model-e109e0d103",
             "title": "Lucius the Eternal",
             "aliases": [
               "Lucius the Eternal"
+            ],
+            "legacyIds": [
+              "unit-lucius-the-eternal-model-lucius-the-eternal"
             ]
           }
         ],
@@ -3043,7 +3314,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lucius-the-eternal-profile-blade-of-the-laer-melee"
+              "unit-lucius-the-eternal-profile-9ddaf6e49f"
             ],
             "wargearAbilityIds": []
           },
@@ -3055,7 +3326,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lucius-the-eternal-profile-lash-of-torment-melee-2"
+              "unit-lucius-the-eternal-profile-a824baed74"
             ],
             "wargearAbilityIds": []
           }
@@ -3063,7 +3334,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-lucius-the-eternal-profile-blade-of-the-laer-melee",
+            "id": "unit-lucius-the-eternal-profile-9ddaf6e49f",
+            "legacyIds": [
+              "unit-lucius-the-eternal-profile-blade-of-the-laer-melee"
+            ],
             "title": "Blade of the Laer",
             "mode": "melee",
             "range": "Melee",
@@ -3078,7 +3352,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-lucius-the-eternal-profile-lash-of-torment-melee-2",
+            "id": "unit-lucius-the-eternal-profile-a824baed74",
+            "legacyIds": [
+              "unit-lucius-the-eternal-profile-lash-of-torment-melee-2"
+            ],
             "title": "Lash of Torment",
             "mode": "melee",
             "range": "Melee",
@@ -3175,10 +3452,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-shalaxi-helbane-model-shalaxi-helbane",
+            "id": "unit-shalaxi-helbane-model-4cfce2c22f",
             "title": "Shalaxi Helbane",
             "aliases": [
               "Shalaxi Helbane"
+            ],
+            "legacyIds": [
+              "unit-shalaxi-helbane-model-shalaxi-helbane"
             ]
           }
         ],
@@ -3191,7 +3471,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-shalaxi-helbane-profile-lash-of-slaanesh-ranged"
+              "unit-shalaxi-helbane-profile-321867fac2"
             ],
             "wargearAbilityIds": []
           },
@@ -3203,7 +3483,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-witchfire-ranged-2"
+              "unit-shalaxi-helbane-profile-965880ad13"
             ],
             "wargearAbilityIds": []
           },
@@ -3215,7 +3495,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-focused-witchfire-ranged-3"
+              "unit-shalaxi-helbane-profile-0bb4720afd"
             ],
             "wargearAbilityIds": []
           },
@@ -3227,7 +3507,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-shalaxi-helbane-profile-snapping-claws-melee-4"
+              "unit-shalaxi-helbane-profile-18e13e0d13"
             ],
             "wargearAbilityIds": []
           },
@@ -3239,7 +3519,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-shalaxi-helbane-profile-soulpiercer-melee-5"
+              "unit-shalaxi-helbane-profile-4bb8fed09c"
             ],
             "wargearAbilityIds": []
           },
@@ -3252,8 +3532,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-shalaxi-helbane-weapon-family-pavane-of-slaanesh",
             "profileIds": [
-              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-witchfire-ranged-2",
-              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-focused-witchfire-ranged-3"
+              "unit-shalaxi-helbane-profile-965880ad13",
+              "unit-shalaxi-helbane-profile-0bb4720afd"
             ],
             "wargearAbilityIds": []
           }
@@ -3266,15 +3546,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Pavane of Slaanesh"
             ],
             "profileIds": [
-              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-witchfire-ranged-2",
-              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-focused-witchfire-ranged-3"
+              "unit-shalaxi-helbane-profile-965880ad13",
+              "unit-shalaxi-helbane-profile-0bb4720afd"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-shalaxi-helbane-profile-lash-of-slaanesh-ranged",
+            "id": "unit-shalaxi-helbane-profile-321867fac2",
+            "legacyIds": [
+              "unit-shalaxi-helbane-profile-lash-of-slaanesh-ranged"
+            ],
             "title": "Lash of Slaanesh",
             "mode": "ranged",
             "range": "12\"",
@@ -3289,7 +3572,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-shalaxi-helbane-profile-pavane-of-slaanesh-witchfire-ranged-2",
+            "id": "unit-shalaxi-helbane-profile-965880ad13",
+            "legacyIds": [
+              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-witchfire-ranged-2"
+            ],
             "title": "➤ Pavane of Slaanesh - witchfire",
             "mode": "ranged",
             "range": "18\"",
@@ -3305,7 +3591,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-shalaxi-helbane-profile-pavane-of-slaanesh-focused-witchfire-ranged-3",
+            "id": "unit-shalaxi-helbane-profile-0bb4720afd",
+            "legacyIds": [
+              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-focused-witchfire-ranged-3"
+            ],
             "title": "➤ Pavane of Slaanesh - focused witchfire",
             "mode": "ranged",
             "range": "18\"",
@@ -3321,7 +3610,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-shalaxi-helbane-profile-snapping-claws-melee-4",
+            "id": "unit-shalaxi-helbane-profile-18e13e0d13",
+            "legacyIds": [
+              "unit-shalaxi-helbane-profile-snapping-claws-melee-4"
+            ],
             "title": "Snapping claws",
             "mode": "melee",
             "range": "Melee",
@@ -3336,7 +3628,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-shalaxi-helbane-profile-soulpiercer-melee-5",
+            "id": "unit-shalaxi-helbane-profile-4bb8fed09c",
+            "legacyIds": [
+              "unit-shalaxi-helbane-profile-soulpiercer-melee-5"
+            ],
             "title": "Soulpiercer",
             "mode": "melee",
             "range": "Melee",
@@ -3426,17 +3721,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-terminators-model-terminator-champion",
+            "id": "unit-chaos-terminators-model-094033026c",
             "title": "Terminator Champion",
             "aliases": [
               "Terminator Champion"
+            ],
+            "legacyIds": [
+              "unit-chaos-terminators-model-terminator-champion"
             ]
           },
           {
-            "id": "unit-chaos-terminators-model-terminators-2",
+            "id": "unit-chaos-terminators-model-1538ad2e04",
             "title": "Terminators",
             "aliases": [
               "Terminators"
+            ],
+            "legacyIds": [
+              "unit-chaos-terminators-model-terminators-2"
             ]
           }
         ],
@@ -3449,7 +3750,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-terminators-profile-combi-bolter-ranged"
+              "unit-chaos-terminators-profile-fccf7bd10d"
             ],
             "wargearAbilityIds": []
           },
@@ -3461,7 +3762,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-terminators-profile-accursed-weapon-melee-2"
+              "unit-chaos-terminators-profile-40815771a3"
             ],
             "wargearAbilityIds": []
           },
@@ -3473,7 +3774,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-terminators-profile-combi-weapon-ranged-3"
+              "unit-chaos-terminators-profile-a0e05510db"
             ],
             "wargearAbilityIds": []
           },
@@ -3485,7 +3786,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-terminators-profile-chainfist-melee-4"
+              "unit-chaos-terminators-profile-8f7b4e3d36"
             ],
             "wargearAbilityIds": []
           },
@@ -3497,7 +3798,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-terminators-profile-power-fist-melee-5"
+              "unit-chaos-terminators-profile-524161d40c"
             ],
             "wargearAbilityIds": []
           },
@@ -3509,7 +3810,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-terminators-profile-paired-accursed-weapons-melee-6"
+              "unit-chaos-terminators-profile-62f65f2b1a"
             ],
             "wargearAbilityIds": []
           },
@@ -3521,7 +3822,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-terminators-profile-heavy-flamer-ranged-7"
+              "unit-chaos-terminators-profile-c3d47deaa1"
             ],
             "wargearAbilityIds": []
           },
@@ -3533,7 +3834,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-terminators-profile-reaper-autocannon-ranged-8"
+              "unit-chaos-terminators-profile-a191168b7a"
             ],
             "wargearAbilityIds": []
           }
@@ -3541,7 +3842,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-chaos-terminators-profile-combi-bolter-ranged",
+            "id": "unit-chaos-terminators-profile-fccf7bd10d",
+            "legacyIds": [
+              "unit-chaos-terminators-profile-combi-bolter-ranged"
+            ],
             "title": "Combi-bolter",
             "mode": "ranged",
             "range": "24\"",
@@ -3556,7 +3860,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-terminators-profile-accursed-weapon-melee-2",
+            "id": "unit-chaos-terminators-profile-40815771a3",
+            "legacyIds": [
+              "unit-chaos-terminators-profile-accursed-weapon-melee-2"
+            ],
             "title": "Accursed weapon",
             "mode": "melee",
             "range": "Melee",
@@ -3571,7 +3878,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-terminators-profile-combi-weapon-ranged-3",
+            "id": "unit-chaos-terminators-profile-a0e05510db",
+            "legacyIds": [
+              "unit-chaos-terminators-profile-combi-weapon-ranged-3"
+            ],
             "title": "Combi-weapon",
             "mode": "ranged",
             "range": "24\"",
@@ -3586,7 +3896,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-terminators-profile-chainfist-melee-4",
+            "id": "unit-chaos-terminators-profile-8f7b4e3d36",
+            "legacyIds": [
+              "unit-chaos-terminators-profile-chainfist-melee-4"
+            ],
             "title": "Chainfist",
             "mode": "melee",
             "range": "Melee",
@@ -3601,7 +3914,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-terminators-profile-power-fist-melee-5",
+            "id": "unit-chaos-terminators-profile-524161d40c",
+            "legacyIds": [
+              "unit-chaos-terminators-profile-power-fist-melee-5"
+            ],
             "title": "Power fist",
             "mode": "melee",
             "range": "Melee",
@@ -3616,7 +3932,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-terminators-profile-paired-accursed-weapons-melee-6",
+            "id": "unit-chaos-terminators-profile-62f65f2b1a",
+            "legacyIds": [
+              "unit-chaos-terminators-profile-paired-accursed-weapons-melee-6"
+            ],
             "title": "Paired accursed weapons",
             "mode": "melee",
             "range": "Melee",
@@ -3631,7 +3950,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-terminators-profile-heavy-flamer-ranged-7",
+            "id": "unit-chaos-terminators-profile-c3d47deaa1",
+            "legacyIds": [
+              "unit-chaos-terminators-profile-heavy-flamer-ranged-7"
+            ],
             "title": "Heavy flamer",
             "mode": "ranged",
             "range": "12\"",
@@ -3646,7 +3968,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-terminators-profile-reaper-autocannon-ranged-8",
+            "id": "unit-chaos-terminators-profile-a191168b7a",
+            "legacyIds": [
+              "unit-chaos-terminators-profile-reaper-autocannon-ranged-8"
+            ],
             "title": "Reaper autocannon",
             "mode": "ranged",
             "range": "36\"",
@@ -3736,10 +4061,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-flawless-blades-model-flawless-blade",
+            "id": "unit-flawless-blades-model-f0959f7865",
             "title": "Flawless Blade",
             "aliases": [
               "Flawless Blade"
+            ],
+            "legacyIds": [
+              "unit-flawless-blades-model-flawless-blade"
             ]
           }
         ],
@@ -3752,7 +4080,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-flawless-blades-profile-blissblade-melee"
+              "unit-flawless-blades-profile-38b210a32f"
             ],
             "wargearAbilityIds": []
           },
@@ -3764,7 +4092,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-flawless-blades-profile-bolt-pistol-ranged-2"
+              "unit-flawless-blades-profile-a16d0444b0"
             ],
             "wargearAbilityIds": []
           }
@@ -3772,7 +4100,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-flawless-blades-profile-blissblade-melee",
+            "id": "unit-flawless-blades-profile-38b210a32f",
+            "legacyIds": [
+              "unit-flawless-blades-profile-blissblade-melee"
+            ],
             "title": "Blissblade",
             "mode": "melee",
             "range": "Melee",
@@ -3787,7 +4118,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-flawless-blades-profile-bolt-pistol-ranged-2",
+            "id": "unit-flawless-blades-profile-a16d0444b0",
+            "legacyIds": [
+              "unit-flawless-blades-profile-bolt-pistol-ranged-2"
+            ],
             "title": "Bolt pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -3877,17 +4211,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-noise-marines-model-disharmonist",
+            "id": "unit-noise-marines-model-053c3f7ac2",
             "title": "Disharmonist",
             "aliases": [
               "Disharmonist"
+            ],
+            "legacyIds": [
+              "unit-noise-marines-model-disharmonist"
             ]
           },
           {
-            "id": "unit-noise-marines-model-noise-marines-2",
+            "id": "unit-noise-marines-model-6a223b9b75",
             "title": "Noise Marines",
             "aliases": [
               "Noise Marines"
+            ],
+            "legacyIds": [
+              "unit-noise-marines-model-noise-marines-2"
             ]
           }
         ],
@@ -3900,7 +4240,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-noise-marines-profile-power-sword-melee"
+              "unit-noise-marines-profile-9f1035c6f5"
             ],
             "wargearAbilityIds": []
           },
@@ -3912,7 +4252,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-noise-marines-profile-screamer-pistol-ranged-2"
+              "unit-noise-marines-profile-705f300dbd"
             ],
             "wargearAbilityIds": []
           },
@@ -3924,7 +4264,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-noise-marines-profile-sonic-blaster-ranged-3"
+              "unit-noise-marines-profile-09bc5ae2b7"
             ],
             "wargearAbilityIds": []
           },
@@ -3936,7 +4276,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-noise-marines-profile-close-combat-weapon-melee-4"
+              "unit-noise-marines-profile-38edd622b4"
             ],
             "wargearAbilityIds": []
           },
@@ -3948,7 +4288,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-noise-marines-profile-blastmaster-varied-frequency-ranged-5"
+              "unit-noise-marines-profile-3ca062064f"
             ],
             "wargearAbilityIds": []
           },
@@ -3960,7 +4300,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-noise-marines-profile-blastmaster-single-frequency-ranged-6"
+              "unit-noise-marines-profile-77f330bf8f"
             ],
             "wargearAbilityIds": []
           },
@@ -3973,8 +4313,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-noise-marines-weapon-family-blastmaster",
             "profileIds": [
-              "unit-noise-marines-profile-blastmaster-varied-frequency-ranged-5",
-              "unit-noise-marines-profile-blastmaster-single-frequency-ranged-6"
+              "unit-noise-marines-profile-3ca062064f",
+              "unit-noise-marines-profile-77f330bf8f"
             ],
             "wargearAbilityIds": []
           }
@@ -3987,15 +4327,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Blastmaster"
             ],
             "profileIds": [
-              "unit-noise-marines-profile-blastmaster-varied-frequency-ranged-5",
-              "unit-noise-marines-profile-blastmaster-single-frequency-ranged-6"
+              "unit-noise-marines-profile-3ca062064f",
+              "unit-noise-marines-profile-77f330bf8f"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-noise-marines-profile-power-sword-melee",
+            "id": "unit-noise-marines-profile-9f1035c6f5",
+            "legacyIds": [
+              "unit-noise-marines-profile-power-sword-melee"
+            ],
             "title": "Power sword",
             "mode": "melee",
             "range": "Melee",
@@ -4010,7 +4353,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-noise-marines-profile-screamer-pistol-ranged-2",
+            "id": "unit-noise-marines-profile-705f300dbd",
+            "legacyIds": [
+              "unit-noise-marines-profile-screamer-pistol-ranged-2"
+            ],
             "title": "Screamer pistol",
             "mode": "ranged",
             "range": "12\"",
@@ -4025,7 +4371,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-noise-marines-profile-sonic-blaster-ranged-3",
+            "id": "unit-noise-marines-profile-09bc5ae2b7",
+            "legacyIds": [
+              "unit-noise-marines-profile-sonic-blaster-ranged-3"
+            ],
             "title": "Sonic blaster",
             "mode": "ranged",
             "range": "18\"",
@@ -4040,7 +4389,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-noise-marines-profile-close-combat-weapon-melee-4",
+            "id": "unit-noise-marines-profile-38edd622b4",
+            "legacyIds": [
+              "unit-noise-marines-profile-close-combat-weapon-melee-4"
+            ],
             "title": "Close combat weapon",
             "mode": "melee",
             "range": "Melee",
@@ -4055,7 +4407,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-noise-marines-profile-blastmaster-varied-frequency-ranged-5",
+            "id": "unit-noise-marines-profile-3ca062064f",
+            "legacyIds": [
+              "unit-noise-marines-profile-blastmaster-varied-frequency-ranged-5"
+            ],
             "title": "➤ Blastmaster - varied frequency",
             "mode": "ranged",
             "range": "18\"",
@@ -4071,7 +4426,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-noise-marines-profile-blastmaster-single-frequency-ranged-6",
+            "id": "unit-noise-marines-profile-77f330bf8f",
+            "legacyIds": [
+              "unit-noise-marines-profile-blastmaster-single-frequency-ranged-6"
+            ],
             "title": "➤ Blastmaster - single frequency",
             "mode": "ranged",
             "range": "18\"",
@@ -4161,10 +4519,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-land-raider-model-chaos-land-raider",
+            "id": "unit-chaos-land-raider-model-8a15b8b0db",
             "title": "Chaos Land Raider",
             "aliases": [
               "Chaos Land Raider"
+            ],
+            "legacyIds": [
+              "unit-chaos-land-raider-model-chaos-land-raider"
             ]
           }
         ],
@@ -4177,7 +4538,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-land-raider-profile-armoured-tracks-melee"
+              "unit-chaos-land-raider-profile-778f1a9f48"
             ],
             "wargearAbilityIds": []
           },
@@ -4189,7 +4550,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-land-raider-profile-soulshatter-lascannon-ranged-2"
+              "unit-chaos-land-raider-profile-34cb44dd98"
             ],
             "wargearAbilityIds": []
           },
@@ -4201,7 +4562,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-land-raider-profile-combi-bolter-ranged-3"
+              "unit-chaos-land-raider-profile-fccf7bd10d"
             ],
             "wargearAbilityIds": []
           },
@@ -4213,7 +4574,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-land-raider-profile-combi-weapon-ranged-4"
+              "unit-chaos-land-raider-profile-a0e05510db"
             ],
             "wargearAbilityIds": []
           },
@@ -4225,7 +4586,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-land-raider-profile-havoc-launcher-ranged-5"
+              "unit-chaos-land-raider-profile-b45d52231c"
             ],
             "wargearAbilityIds": []
           },
@@ -4237,7 +4598,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-land-raider-profile-twin-heavy-bolter-ranged-6"
+              "unit-chaos-land-raider-profile-82e687d22a"
             ],
             "wargearAbilityIds": []
           }
@@ -4245,7 +4606,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-chaos-land-raider-profile-armoured-tracks-melee",
+            "id": "unit-chaos-land-raider-profile-778f1a9f48",
+            "legacyIds": [
+              "unit-chaos-land-raider-profile-armoured-tracks-melee"
+            ],
             "title": "Armoured tracks",
             "mode": "melee",
             "range": "Melee",
@@ -4260,7 +4624,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-land-raider-profile-soulshatter-lascannon-ranged-2",
+            "id": "unit-chaos-land-raider-profile-34cb44dd98",
+            "legacyIds": [
+              "unit-chaos-land-raider-profile-soulshatter-lascannon-ranged-2"
+            ],
             "title": "Soulshatter lascannon",
             "mode": "ranged",
             "range": "48\"",
@@ -4275,7 +4642,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-land-raider-profile-combi-bolter-ranged-3",
+            "id": "unit-chaos-land-raider-profile-fccf7bd10d",
+            "legacyIds": [
+              "unit-chaos-land-raider-profile-combi-bolter-ranged-3"
+            ],
             "title": "Combi-bolter",
             "mode": "ranged",
             "range": "24\"",
@@ -4290,7 +4660,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-land-raider-profile-combi-weapon-ranged-4",
+            "id": "unit-chaos-land-raider-profile-a0e05510db",
+            "legacyIds": [
+              "unit-chaos-land-raider-profile-combi-weapon-ranged-4"
+            ],
             "title": "Combi-weapon",
             "mode": "ranged",
             "range": "24\"",
@@ -4305,7 +4678,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-land-raider-profile-havoc-launcher-ranged-5",
+            "id": "unit-chaos-land-raider-profile-b45d52231c",
+            "legacyIds": [
+              "unit-chaos-land-raider-profile-havoc-launcher-ranged-5"
+            ],
             "title": "Havoc launcher",
             "mode": "ranged",
             "range": "48\"",
@@ -4320,7 +4696,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-chaos-land-raider-profile-twin-heavy-bolter-ranged-6",
+            "id": "unit-chaos-land-raider-profile-82e687d22a",
+            "legacyIds": [
+              "unit-chaos-land-raider-profile-twin-heavy-bolter-ranged-6"
+            ],
             "title": "Twin heavy bolter",
             "mode": "ranged",
             "range": "36\"",
@@ -4399,10 +4778,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-spawn-model-chaos-spawn",
+            "id": "unit-chaos-spawn-model-be65517d2e",
             "title": "Chaos Spawn",
             "aliases": [
               "Chaos Spawn"
+            ],
+            "legacyIds": [
+              "unit-chaos-spawn-model-chaos-spawn"
             ]
           }
         ],
@@ -4415,7 +4797,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-chaos-spawn-profile-hideous-mutations-melee"
+              "unit-chaos-spawn-profile-7c026ed22f"
             ],
             "wargearAbilityIds": []
           }
@@ -4423,7 +4805,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-chaos-spawn-profile-hideous-mutations-melee",
+            "id": "unit-chaos-spawn-profile-7c026ed22f",
+            "legacyIds": [
+              "unit-chaos-spawn-profile-hideous-mutations-melee"
+            ],
             "title": "Hideous Mutations",
             "mode": "melee",
             "range": "Melee",
@@ -4518,10 +4903,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-defiler-model-defiler",
+            "id": "unit-defiler-model-5f9d1a0197",
             "title": "Defiler",
             "aliases": [
               "Defiler"
+            ],
+            "legacyIds": [
+              "unit-defiler-model-defiler"
             ]
           }
         ],
@@ -4534,7 +4922,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-shearing-claws-strike-melee"
+              "unit-defiler-profile-c7b0f52a9b"
             ],
             "wargearAbilityIds": []
           },
@@ -4546,7 +4934,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-shearing-claws-sweep-melee-2"
+              "unit-defiler-profile-53464fa0b6"
             ],
             "wargearAbilityIds": []
           },
@@ -4558,7 +4946,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3"
+              "unit-defiler-profile-f6b8def2c9"
             ],
             "wargearAbilityIds": []
           },
@@ -4570,7 +4958,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4"
+              "unit-defiler-profile-c15a9e7fe9"
             ],
             "wargearAbilityIds": []
           },
@@ -4582,7 +4970,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-electroscourge-melee-5"
+              "unit-defiler-profile-3ab686d883"
             ],
             "wargearAbilityIds": []
           },
@@ -4594,7 +4982,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-hades-lascannon-ranged-6"
+              "unit-defiler-profile-af071f9f24"
             ],
             "wargearAbilityIds": []
           },
@@ -4606,7 +4994,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-heavy-reaper-autocannon-ranged-7"
+              "unit-defiler-profile-011a333a82"
             ],
             "wargearAbilityIds": []
           },
@@ -4618,7 +5006,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-hades-battle-cannon-ranged-8"
+              "unit-defiler-profile-0929e60bc3"
             ],
             "wargearAbilityIds": []
           },
@@ -4630,7 +5018,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-ectoplasma-destructor-ranged-9"
+              "unit-defiler-profile-3039b5edd8"
             ],
             "wargearAbilityIds": []
           },
@@ -4642,7 +5030,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-heavy-baleflamer-ranged-10"
+              "unit-defiler-profile-cffb437a63"
             ],
             "wargearAbilityIds": []
           },
@@ -4654,7 +5042,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-excruciator-cannon-ranged-11"
+              "unit-defiler-profile-f28bc6ebad"
             ],
             "wargearAbilityIds": []
           },
@@ -4666,7 +5054,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-defiler-profile-magma-cutters-ranged-12"
+              "unit-defiler-profile-81793266f1"
             ],
             "wargearAbilityIds": []
           },
@@ -4679,8 +5067,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-defiler-weapon-family-shearing-claws",
             "profileIds": [
-              "unit-defiler-profile-shearing-claws-strike-melee",
-              "unit-defiler-profile-shearing-claws-sweep-melee-2"
+              "unit-defiler-profile-c7b0f52a9b",
+              "unit-defiler-profile-53464fa0b6"
             ],
             "wargearAbilityIds": []
           },
@@ -4693,8 +5081,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-defiler-weapon-family-heavy-missile-launcher",
             "profileIds": [
-              "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3",
-              "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4"
+              "unit-defiler-profile-f6b8def2c9",
+              "unit-defiler-profile-c15a9e7fe9"
             ],
             "wargearAbilityIds": []
           }
@@ -4707,8 +5095,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "Shearing claws"
             ],
             "profileIds": [
-              "unit-defiler-profile-shearing-claws-strike-melee",
-              "unit-defiler-profile-shearing-claws-sweep-melee-2"
+              "unit-defiler-profile-c7b0f52a9b",
+              "unit-defiler-profile-53464fa0b6"
             ],
             "ambiguousAlias": false
           },
@@ -4719,15 +5107,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Heavy missile launcher"
             ],
             "profileIds": [
-              "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3",
-              "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4"
+              "unit-defiler-profile-f6b8def2c9",
+              "unit-defiler-profile-c15a9e7fe9"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-defiler-profile-shearing-claws-strike-melee",
+            "id": "unit-defiler-profile-c7b0f52a9b",
+            "legacyIds": [
+              "unit-defiler-profile-shearing-claws-strike-melee"
+            ],
             "title": "Shearing claws - strike",
             "mode": "melee",
             "range": "Melee",
@@ -4743,7 +5134,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-shearing-claws-sweep-melee-2",
+            "id": "unit-defiler-profile-53464fa0b6",
+            "legacyIds": [
+              "unit-defiler-profile-shearing-claws-sweep-melee-2"
+            ],
             "title": "Shearing claws - sweep",
             "mode": "melee",
             "range": "Melee",
@@ -4759,7 +5153,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3",
+            "id": "unit-defiler-profile-f6b8def2c9",
+            "legacyIds": [
+              "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3"
+            ],
             "title": "➤ Heavy missile launcher - frag",
             "mode": "ranged",
             "range": "48\"",
@@ -4775,7 +5172,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4",
+            "id": "unit-defiler-profile-c15a9e7fe9",
+            "legacyIds": [
+              "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4"
+            ],
             "title": "➤ Heavy missile launcher - krak",
             "mode": "ranged",
             "range": "48\"",
@@ -4791,7 +5191,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-electroscourge-melee-5",
+            "id": "unit-defiler-profile-3ab686d883",
+            "legacyIds": [
+              "unit-defiler-profile-electroscourge-melee-5"
+            ],
             "title": "Electroscourge",
             "mode": "melee",
             "range": "Melee",
@@ -4806,7 +5209,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-hades-lascannon-ranged-6",
+            "id": "unit-defiler-profile-af071f9f24",
+            "legacyIds": [
+              "unit-defiler-profile-hades-lascannon-ranged-6"
+            ],
             "title": "Hades lascannon",
             "mode": "ranged",
             "range": "48\"",
@@ -4821,7 +5227,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-heavy-reaper-autocannon-ranged-7",
+            "id": "unit-defiler-profile-011a333a82",
+            "legacyIds": [
+              "unit-defiler-profile-heavy-reaper-autocannon-ranged-7"
+            ],
             "title": "Heavy reaper autocannon",
             "mode": "ranged",
             "range": "48\"",
@@ -4836,7 +5245,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-hades-battle-cannon-ranged-8",
+            "id": "unit-defiler-profile-0929e60bc3",
+            "legacyIds": [
+              "unit-defiler-profile-hades-battle-cannon-ranged-8"
+            ],
             "title": "Hades battle cannon",
             "mode": "ranged",
             "range": "48\"",
@@ -4851,7 +5263,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-ectoplasma-destructor-ranged-9",
+            "id": "unit-defiler-profile-3039b5edd8",
+            "legacyIds": [
+              "unit-defiler-profile-ectoplasma-destructor-ranged-9"
+            ],
             "title": "Ectoplasma destructor",
             "mode": "ranged",
             "range": "36\"",
@@ -4866,7 +5281,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-heavy-baleflamer-ranged-10",
+            "id": "unit-defiler-profile-cffb437a63",
+            "legacyIds": [
+              "unit-defiler-profile-heavy-baleflamer-ranged-10"
+            ],
             "title": "Heavy baleflamer",
             "mode": "ranged",
             "range": "12\"",
@@ -4881,7 +5299,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-excruciator-cannon-ranged-11",
+            "id": "unit-defiler-profile-f28bc6ebad",
+            "legacyIds": [
+              "unit-defiler-profile-excruciator-cannon-ranged-11"
+            ],
             "title": "Excruciator cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -4896,7 +5317,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-defiler-profile-magma-cutters-ranged-12",
+            "id": "unit-defiler-profile-81793266f1",
+            "legacyIds": [
+              "unit-defiler-profile-magma-cutters-ranged-12"
+            ],
             "title": "Magma cutters",
             "mode": "ranged",
             "range": "12\"",
@@ -4970,17 +5394,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-fiends-model-fiends",
+            "id": "unit-fiends-model-26b605f1bb",
             "title": "Fiends",
             "aliases": [
               "Fiends"
+            ],
+            "legacyIds": [
+              "unit-fiends-model-fiends"
             ]
           },
           {
-            "id": "unit-fiends-model-blissbringer-2",
+            "id": "unit-fiends-model-4c8405de97",
             "title": "Blissbringer",
             "aliases": [
               "Blissbringer"
+            ],
+            "legacyIds": [
+              "unit-fiends-model-blissbringer-2"
             ]
           }
         ],
@@ -4993,7 +5423,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-fiends-profile-barbed-tail-and-dissecting-claws-melee"
+              "unit-fiends-profile-3f82357b96"
             ],
             "wargearAbilityIds": []
           }
@@ -5001,7 +5431,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-fiends-profile-barbed-tail-and-dissecting-claws-melee",
+            "id": "unit-fiends-profile-3f82357b96",
+            "legacyIds": [
+              "unit-fiends-profile-barbed-tail-and-dissecting-claws-melee"
+            ],
             "title": "Barbed tail and dissecting claws",
             "mode": "melee",
             "range": "Melee",
@@ -5089,10 +5522,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-heldrake-model-heldrake",
+            "id": "unit-heldrake-model-56f5db078f",
             "title": "Heldrake",
             "aliases": [
               "Heldrake"
+            ],
+            "legacyIds": [
+              "unit-heldrake-model-heldrake"
             ]
           }
         ],
@@ -5105,7 +5541,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-heldrake-profile-heldrake-claws-melee"
+              "unit-heldrake-profile-9efab2a6a1"
             ],
             "wargearAbilityIds": []
           },
@@ -5117,7 +5553,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-heldrake-profile-baleflamer-ranged-2"
+              "unit-heldrake-profile-170a5aedf7"
             ],
             "wargearAbilityIds": []
           },
@@ -5129,7 +5565,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-heldrake-profile-hades-autocannon-ranged-3"
+              "unit-heldrake-profile-96e029084d"
             ],
             "wargearAbilityIds": []
           }
@@ -5137,7 +5573,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-heldrake-profile-heldrake-claws-melee",
+            "id": "unit-heldrake-profile-9efab2a6a1",
+            "legacyIds": [
+              "unit-heldrake-profile-heldrake-claws-melee"
+            ],
             "title": "Heldrake claws",
             "mode": "melee",
             "range": "Melee",
@@ -5152,7 +5591,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-heldrake-profile-baleflamer-ranged-2",
+            "id": "unit-heldrake-profile-170a5aedf7",
+            "legacyIds": [
+              "unit-heldrake-profile-baleflamer-ranged-2"
+            ],
             "title": "Baleflamer",
             "mode": "ranged",
             "range": "12\"",
@@ -5167,7 +5609,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-heldrake-profile-hades-autocannon-ranged-3",
+            "id": "unit-heldrake-profile-96e029084d",
+            "legacyIds": [
+              "unit-heldrake-profile-hades-autocannon-ranged-3"
+            ],
             "title": "Hades autocannon",
             "mode": "ranged",
             "range": "36\"",
@@ -5248,10 +5693,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-maulerfiend-model-maulerfiend",
+            "id": "unit-maulerfiend-model-df15c61bbe",
             "title": "Maulerfiend",
             "aliases": [
               "Maulerfiend"
+            ],
+            "legacyIds": [
+              "unit-maulerfiend-model-maulerfiend"
             ]
           }
         ],
@@ -5264,7 +5712,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-maulerfiend-profile-maulerfiend-fists-melee"
+              "unit-maulerfiend-profile-b27be1b537"
             ],
             "wargearAbilityIds": []
           },
@@ -5276,7 +5724,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-maulerfiend-profile-magma-cutter-ranged-2"
+              "unit-maulerfiend-profile-7573253c7f"
             ],
             "wargearAbilityIds": []
           },
@@ -5288,7 +5736,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-maulerfiend-profile-lasher-tendrils-melee-3"
+              "unit-maulerfiend-profile-dd6a44c758"
             ],
             "wargearAbilityIds": []
           }
@@ -5296,7 +5744,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-maulerfiend-profile-maulerfiend-fists-melee",
+            "id": "unit-maulerfiend-profile-b27be1b537",
+            "legacyIds": [
+              "unit-maulerfiend-profile-maulerfiend-fists-melee"
+            ],
             "title": "Maulerfiend fists",
             "mode": "melee",
             "range": "Melee",
@@ -5311,7 +5762,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-maulerfiend-profile-magma-cutter-ranged-2",
+            "id": "unit-maulerfiend-profile-7573253c7f",
+            "legacyIds": [
+              "unit-maulerfiend-profile-magma-cutter-ranged-2"
+            ],
             "title": "Magma cutter",
             "mode": "ranged",
             "range": "6\"",
@@ -5326,7 +5780,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-maulerfiend-profile-lasher-tendrils-melee-3",
+            "id": "unit-maulerfiend-profile-dd6a44c758",
+            "legacyIds": [
+              "unit-maulerfiend-profile-lasher-tendrils-melee-3"
+            ],
             "title": "Lasher tendrils",
             "mode": "melee",
             "range": "Melee",
@@ -5407,17 +5864,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-seekers-model-seeker",
+            "id": "unit-seekers-model-61c845eb3e",
             "title": "Seeker",
             "aliases": [
               "Seeker"
+            ],
+            "legacyIds": [
+              "unit-seekers-model-seeker"
             ]
           },
           {
-            "id": "unit-seekers-model-heartseeker-2",
+            "id": "unit-seekers-model-edaf52afdb",
             "title": "Heartseeker",
             "aliases": [
               "Heartseeker"
+            ],
+            "legacyIds": [
+              "unit-seekers-model-heartseeker-2"
             ]
           }
         ],
@@ -5430,7 +5893,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-seekers-profile-lashing-tongue-melee"
+              "unit-seekers-profile-4558276cee"
             ],
             "wargearAbilityIds": []
           },
@@ -5442,7 +5905,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-seekers-profile-slashing-claws-melee-2"
+              "unit-seekers-profile-bc06a66b66"
             ],
             "wargearAbilityIds": []
           },
@@ -5455,7 +5918,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-seekers-wargear-ability-daemonic-icon"
+              "unit-seekers-wargear-ability-b3dad0463e"
             ]
           },
           {
@@ -5467,14 +5930,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "wargear",
             "profileIds": [],
             "wargearAbilityIds": [
-              "unit-seekers-wargear-ability-instrument-of-chaos-2"
+              "unit-seekers-wargear-ability-afa43288c6"
             ]
           }
         ],
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-seekers-profile-lashing-tongue-melee",
+            "id": "unit-seekers-profile-4558276cee",
+            "legacyIds": [
+              "unit-seekers-profile-lashing-tongue-melee"
+            ],
             "title": "Lashing tongue",
             "mode": "melee",
             "range": "Melee",
@@ -5489,7 +5955,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-seekers-profile-slashing-claws-melee-2",
+            "id": "unit-seekers-profile-bc06a66b66",
+            "legacyIds": [
+              "unit-seekers-profile-slashing-claws-melee-2"
+            ],
             "title": "Slashing claws",
             "mode": "melee",
             "range": "Melee",
@@ -5506,21 +5975,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "wargearAbilities": [
           {
-            "id": "unit-seekers-wargear-ability-daemonic-icon",
-            "sectionId": "unit-seekers-wargear-ability-daemonic-icon",
+            "id": "unit-seekers-wargear-ability-b3dad0463e",
+            "sectionId": "unit-seekers-wargear-ability-b3dad0463e",
             "title": "Daemonic Icon",
             "text": "Models in the bearer's unit have a Leadership characteristic of 6+.",
             "sourceUnitId": "unit-seekers",
+            "legacyIds": [
+              "unit-seekers-wargear-ability-daemonic-icon"
+            ],
             "requiredSelectionIds": [
               "unit-seekers-selection-daemonic-icon"
             ]
           },
           {
-            "id": "unit-seekers-wargear-ability-instrument-of-chaos-2",
-            "sectionId": "unit-seekers-wargear-ability-instrument-of-chaos-2",
+            "id": "unit-seekers-wargear-ability-afa43288c6",
+            "sectionId": "unit-seekers-wargear-ability-afa43288c6",
             "title": "Instrument of Chaos",
             "text": "Add 1 to Charge rolls made for the bearer's unit.",
             "sourceUnitId": "unit-seekers",
+            "legacyIds": [
+              "unit-seekers-wargear-ability-instrument-of-chaos-2"
+            ],
             "requiredSelectionIds": [
               "unit-seekers-selection-instrument-of-chaos"
             ]
@@ -5735,7 +6210,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   ],
   "enhancements": [
     {
-      "legacyKey": "empyric suffusion",
       "title": "Empyric Suffusion",
       "text": "EMPEROR’S CHILDREN model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
       "value": 15,
@@ -5761,18 +6235,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-empyric-suffusion",
-      "detachmentId": "carnival-of-excess",
       "id": "enhancement-empyric-suffusion",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-empyric-suffusion",
+      "detachmentId": "carnival-of-excess",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-empyric-suffusion"
     },
     {
-      "legacyKey": "dark blessings",
       "title": "Dark Blessings",
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, just after an enemy unit has selected its targets, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer has a 3+ invulnerable save.",
       "value": 10,
@@ -5798,18 +6272,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-dark-blessings",
-      "detachmentId": "carnival-of-excess",
       "id": "enhancement-dark-blessings",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-dark-blessings",
+      "detachmentId": "carnival-of-excess",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-dark-blessings"
     },
     {
-      "legacyKey": "possessed blade",
       "title": "Possessed Blade",
       "text": "EMPEROR’S CHILDREN model only. At the start of the battle, select one melee weapon equipped by the bearer; add 1 to the Attacks characteristic of that weapon. In addition, each time the bearer is selected to fight, it can use this Enhancement. If it does, while resolving those attacks, add 1 to the Damage characteristic of that weapon and that weapon has the [devastating wounds] and [hazardous] abilities.",
       "value": 35,
@@ -5835,18 +6309,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-possessed-blade",
-      "detachmentId": "carnival-of-excess",
       "id": "enhancement-possessed-blade",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-possessed-blade",
+      "detachmentId": "carnival-of-excess",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-possessed-blade"
     },
     {
-      "legacyKey": "warp walker",
       "title": "Warp Walker",
       "text": "EMPEROR’S CHILDREN or KEEPER OF SECRETS model only. Each time the bearer’s unit Advances, do not make an Advance roll . Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
       "value": 35,
@@ -5872,18 +6346,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-warp-walker",
-      "detachmentId": "carnival-of-excess",
       "id": "enhancement-warp-walker",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-warp-walker",
+      "detachmentId": "carnival-of-excess",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-warp-walker"
     },
     {
-      "legacyKey": "pledge of eternal servitude",
       "title": "Pledge of Eternal Servitude",
       "text": "EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).",
       "value": 25,
@@ -5909,18 +6383,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-pledge-of-eternal-servitude",
-      "detachmentId": "coterie-of-the-conceited",
       "id": "enhancement-pledge-of-eternal-servitude",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-pledge-of-eternal-servitude",
+      "detachmentId": "coterie-of-the-conceited",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-pledge-of-eternal-servitude"
     },
     {
-      "legacyKey": "pledge of dark glory",
       "title": "Pledge of Dark Glory",
       "text": "EMPEROR’S CHILDREN model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1.",
       "value": 25,
@@ -5946,18 +6420,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-pledge-of-dark-glory",
-      "detachmentId": "coterie-of-the-conceited",
       "id": "enhancement-pledge-of-dark-glory",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-pledge-of-dark-glory",
+      "detachmentId": "coterie-of-the-conceited",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-pledge-of-dark-glory"
     },
     {
-      "legacyKey": "pledge of mortal pain",
       "title": "Pledge of Mortal Pain",
       "text": "EMPEROR’S CHILDREN model only. At the start of your Shooting phase , select one enemy unit within 12\" of and visible to the bearer. That unit must take a Leadership test , subtracting 2 from the result if it is Battle-shocked : if failed, that enemy unit suffers 3 mortal wounds .",
       "value": 15,
@@ -5983,18 +6457,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-pledge-of-mortal-pain",
-      "detachmentId": "coterie-of-the-conceited",
       "id": "enhancement-pledge-of-mortal-pain",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-pledge-of-mortal-pain",
+      "detachmentId": "coterie-of-the-conceited",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-pledge-of-mortal-pain"
     },
     {
-      "legacyKey": "pledge of unholy fortune",
       "title": "Pledge of Unholy Fortune",
       "text": "EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll , a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked , it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
       "value": 30,
@@ -6020,18 +6494,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-pledge-of-unholy-fortune",
-      "detachmentId": "coterie-of-the-conceited",
       "id": "enhancement-pledge-of-unholy-fortune",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-pledge-of-unholy-fortune",
+      "detachmentId": "coterie-of-the-conceited",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-pledge-of-unholy-fortune"
     },
     {
-      "legacyKey": "tears of the phoenix",
       "title": "Tears of the Phoenix",
       "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a melee attack, you can ignore any or all modifiers to that attack’s Weapon Skill characteristic and any or all modifiers to the Hit roll and Wound roll.",
       "value": 25,
@@ -6057,8 +6531,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-tears-of-the-phoenix",
-      "detachmentId": "court-of-the-phoenician",
       "id": "enhancement-tears-of-the-phoenix",
       "sourcePages": [
         5
@@ -6074,10 +6546,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-tears-of-the-phoenix",
+      "detachmentId": "court-of-the-phoenician",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-tears-of-the-phoenix"
     },
     {
-      "legacyKey": "exalted patron",
       "title": "Exalted Patron",
       "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
       "value": 15,
@@ -6099,8 +6573,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-exalted-patron",
-      "detachmentId": "court-of-the-phoenician",
       "id": "enhancement-exalted-patron",
       "sourcePages": [
         5
@@ -6116,10 +6588,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-exalted-patron",
+      "detachmentId": "court-of-the-phoenician",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-exalted-patron"
     },
     {
-      "legacyKey": "soulstain made manifest",
       "title": "Soulstain Made Manifest",
       "text": "EMPEROR’S CHILDREN model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle-shock test, subtracting 1 from the result.",
       "value": 15,
@@ -6145,8 +6619,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-soulstain-made-manifest",
-      "detachmentId": "court-of-the-phoenician",
       "id": "enhancement-soulstain-made-manifest",
       "sourcePages": [
         5
@@ -6162,10 +6634,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-soulstain-made-manifest",
+      "detachmentId": "court-of-the-phoenician",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-soulstain-made-manifest"
     },
     {
-      "legacyKey": "spiritsliver",
       "title": "Spiritsliver",
       "text": "EMPEROR’S CHILDREN DAEMON PRINCE model only. Add 1 to the Strength and Attacks characteristics of the bearer’s melee weapons.",
       "value": 20,
@@ -6187,8 +6661,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-spiritsliver",
-      "detachmentId": "court-of-the-phoenician",
       "id": "enhancement-spiritsliver",
       "sourcePages": [
         5
@@ -6204,10 +6676,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-spiritsliver",
+      "detachmentId": "court-of-the-phoenician",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-spiritsliver"
     },
     {
-      "legacyKey": "cacophonic accompaniment",
       "title": "Cacophonic Accompaniment",
       "text": "LORD KAKOPHONIST model only. This model has Deep Strike. This unit’s ranged attacks have [IGNORES COVER].",
       "value": 20,
@@ -6229,8 +6703,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-cacophonic-accompaniment",
-      "detachmentId": "elegant-brutes",
       "id": "enhancement-cacophonic-accompaniment",
       "sourcePages": [
         2
@@ -6246,10 +6718,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-cacophonic-accompaniment",
+      "detachmentId": "elegant-brutes",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-cacophonic-accompaniment"
     },
     {
-      "legacyKey": "frenzied ferocity",
       "title": "Frenzied Ferocity",
       "text": "EMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks have [SUSTAINED HITS 1].",
       "value": 15,
@@ -6271,8 +6745,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-frenzied-ferocity",
-      "detachmentId": "elegant-brutes",
       "id": "enhancement-frenzied-ferocity",
       "kind": "upgrade",
       "sourcePages": [
@@ -6289,10 +6761,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-frenzied-ferocity",
+      "detachmentId": "elegant-brutes",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-frenzied-ferocity"
     },
     {
-      "legacyKey": "euphoric crown",
       "title": "Euphoric Crown",
       "text": "LORD EXULTANT model only. This model’s melee attacks have +1 S.",
       "value": 20,
@@ -6314,8 +6788,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-euphoric-crown",
-      "detachmentId": "frenzied-host",
       "id": "enhancement-euphoric-crown",
       "sourcePages": [
         3
@@ -6331,10 +6803,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-euphoric-crown",
+      "detachmentId": "frenzied-host",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-euphoric-crown"
     },
     {
-      "legacyKey": "howling plate",
       "title": "Howling Plate",
       "text": "LORD EXULTANT model only. This unit’s ranged attacks have +1 AP.",
       "value": 20,
@@ -6356,8 +6830,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-howling-plate",
-      "detachmentId": "frenzied-host",
       "id": "enhancement-howling-plate",
       "sourcePages": [
         3
@@ -6373,10 +6845,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-howling-plate",
+      "detachmentId": "frenzied-host",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-howling-plate"
     },
     {
-      "legacyKey": "steeped in suffering",
       "title": "Steeped in Suffering",
       "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit below its Starting Strength , add 1 to the Hit roll . If that target is also Below Half-strength , add 1 to the Wound roll as well.",
       "value": 20,
@@ -6402,18 +6876,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-steeped-in-suffering",
-      "detachmentId": "mercurial-host",
       "id": "enhancement-steeped-in-suffering",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-steeped-in-suffering",
+      "detachmentId": "mercurial-host",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-steeped-in-suffering"
     },
     {
-      "legacyKey": "intoxicating musk",
       "title": "Intoxicating Musk",
       "text": "EMPEROR’S CHILDREN model only. Each time a melee attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll .",
       "value": 20,
@@ -6439,18 +6913,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-intoxicating-musk",
-      "detachmentId": "mercurial-host",
       "id": "enhancement-intoxicating-musk",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-intoxicating-musk",
+      "detachmentId": "mercurial-host",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-intoxicating-musk"
     },
     {
-      "legacyKey": "tactical perfection",
       "title": "Tactical Perfection",
       "text": "EMPEROR’S CHILDREN model only. After both players have deployed their armies, select up to two EMPEROR’S CHILDREN units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "value": 15,
@@ -6476,18 +6950,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-tactical-perfection",
-      "detachmentId": "mercurial-host",
       "id": "enhancement-tactical-perfection",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-tactical-perfection",
+      "detachmentId": "mercurial-host",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-tactical-perfection"
     },
     {
-      "legacyKey": "loathsome dexterity",
       "title": "Loathsome Dexterity",
       "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
       "value": 10,
@@ -6513,18 +6987,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-loathsome-dexterity",
-      "detachmentId": "mercurial-host",
       "id": "enhancement-loathsome-dexterity",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-loathsome-dexterity",
+      "detachmentId": "mercurial-host",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-loathsome-dexterity"
     },
     {
-      "legacyKey": "faultless opportunist",
       "title": "Faultless Opportunist",
       "text": "EMPEROR’S CHILDREN model only. You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase.",
       "value": 15,
@@ -6550,18 +7024,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-faultless-opportunist",
-      "detachmentId": "peerless-bladesmen",
       "id": "enhancement-faultless-opportunist",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-faultless-opportunist",
+      "detachmentId": "peerless-bladesmen",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-faultless-opportunist"
     },
     {
-      "legacyKey": "blinding speed",
       "title": "Blinding Speed",
       "text": "EMPEROR’S CHILDREN model only. Once per battle, at the start of the Fight phase , the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
       "value": 25,
@@ -6587,18 +7061,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-blinding-speed",
-      "detachmentId": "peerless-bladesmen",
       "id": "enhancement-blinding-speed",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-blinding-speed",
+      "detachmentId": "peerless-bladesmen",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-blinding-speed"
     },
     {
-      "legacyKey": "distortion",
       "title": "Distortion",
       "text": "EMPEROR’S CHILDREN model only. Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer.",
       "value": 25,
@@ -6624,18 +7098,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-distortion",
-      "detachmentId": "peerless-bladesmen",
       "id": "enhancement-distortion",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-distortion",
+      "detachmentId": "peerless-bladesmen",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-distortion"
     },
     {
-      "legacyKey": "rise to the challenge",
       "title": "Rise to the Challenge",
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, at the end of the Fight phase , if the bearer is within Engagement Range of three or more enemy models, it can use this Enhancement. If it does, the bearer can fight one additional time. When doing so, you can select one ability using the Exquisite Swordsmanship Detachment rule to apply to those attacks.",
       "value": 30,
@@ -6661,18 +7135,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-rise-to-the-challenge",
-      "detachmentId": "peerless-bladesmen",
       "id": "enhancement-rise-to-the-challenge",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-rise-to-the-challenge",
+      "detachmentId": "peerless-bladesmen",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-rise-to-the-challenge"
     },
     {
-      "legacyKey": "sublime prescience",
       "title": "Sublime Prescience",
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your Movement phase , the bearer can use this Enhancement. If it does, select one friendly EMPEROR’S CHILDREN TRANSPORT that is in Strategic Reserves . Until the end of the phase, for the purposes of setting up that TRANSPORT on the battlefield, treat the current battle round number as being one higher than it actually is.",
       "value": 25,
@@ -6698,18 +7172,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-sublime-prescience",
-      "detachmentId": "rapid-evisceration",
       "id": "enhancement-sublime-prescience",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-sublime-prescience",
+      "detachmentId": "rapid-evisceration",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-sublime-prescience"
     },
     {
-      "legacyKey": "spearhead striker",
       "title": "Spearhead Striker",
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Each time the bearer disembarks from a TRANSPORT , until the end of the turn, you can re-roll Charge rolls made for the bearer’s unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
       "value": 20,
@@ -6735,18 +7209,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-spearhead-striker",
-      "detachmentId": "rapid-evisceration",
       "id": "enhancement-spearhead-striker",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-spearhead-striker",
+      "detachmentId": "rapid-evisceration",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-spearhead-striker"
     },
     {
-      "legacyKey": "accomplished tactician",
       "title": "Accomplished Tactician",
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your opponent’s Shooting phase , just after an enemy unit has shot, you can select one friendly EMPEROR’S CHILDREN unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly TRANSPORT that unit is wholly within 6\" of and is able to embark within. That EMPEROR’S CHILDREN unit can embark within that Transport.",
       "value": 35,
@@ -6772,18 +7246,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-accomplished-tactician",
-      "detachmentId": "rapid-evisceration",
       "id": "enhancement-accomplished-tactician",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-accomplished-tactician",
+      "detachmentId": "rapid-evisceration",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-accomplished-tactician"
     },
     {
-      "legacyKey": "heretek adept",
       "title": "Heretek Adept",
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle round , when a saving throw is failed for a friendly EMPEROR’S CHILDREN VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
       "value": 35,
@@ -6809,18 +7283,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-heretek-adept",
-      "detachmentId": "rapid-evisceration",
       "id": "enhancement-heretek-adept",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-heretek-adept",
+      "detachmentId": "rapid-evisceration",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-heretek-adept"
     },
     {
-      "legacyKey": "eager to prove",
       "title": "Eager to Prove",
       "text": "EMPEROR’S CHILDREN model only. You can re-roll Charge rolls made for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions , add 2\" to the Move characteristic of models in that unit.",
       "value": 15,
@@ -6846,18 +7320,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-eager-to-prove",
-      "detachmentId": "slaaneshs-chosen",
       "id": "enhancement-eager-to-prove",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-eager-to-prove",
+      "detachmentId": "slaaneshs-chosen",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-eager-to-prove"
     },
     {
-      "legacyKey": "repulsed by weakness",
       "title": "Repulsed by Weakness",
       "text": "EMPEROR’S CHILDREN model only. Each time an enemy unit (excluding MONSTERS and VEHICLES ) within Engagement Range of the bearer’s unit Falls Back , models in that enemy unit must take Desperate Escape tests . When doing so, if the bearer’s unit is your army’s Favoured Champions , subtract 1 from each of those Desperate Escape tests.",
       "value": 25,
@@ -6883,18 +7357,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-repulsed-by-weakness",
-      "detachmentId": "slaaneshs-chosen",
       "id": "enhancement-repulsed-by-weakness",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-repulsed-by-weakness",
+      "detachmentId": "slaaneshs-chosen",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-repulsed-by-weakness"
     },
     {
-      "legacyKey": "proud and vainglorious",
       "title": "Proud and Vainglorious",
       "text": "EMPEROR’S CHILDREN model only. You can re-roll Battle-shock and Leadership tests taken for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions , add 1 to the Objective Control characteristic of models in that unit.",
       "value": 20,
@@ -6920,18 +7394,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-proud-and-vainglorious",
-      "detachmentId": "slaaneshs-chosen",
       "id": "enhancement-proud-and-vainglorious",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-proud-and-vainglorious",
+      "detachmentId": "slaaneshs-chosen",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-proud-and-vainglorious"
     },
     {
-      "legacyKey": "slayer of champions",
       "title": "Slayer of Champions",
       "text": "EMPEROR’S CHILDREN model only. The bearer’s melee weapons have the [PRECISION] ability, and each time the bearer makes a melee attack that targets a CHARACTER unit, improve the Strength and Armour Penetration characteristics of that attack by 1.",
       "value": 15,
@@ -6957,18 +7431,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-slayer-of-champions",
-      "detachmentId": "slaaneshs-chosen",
       "id": "enhancement-slayer-of-champions",
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-slayer-of-champions",
+      "detachmentId": "slaaneshs-chosen",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-slayer-of-champions"
     },
     {
-      "legacyKey": "eager patrons",
       "title": "Eager Patrons",
       "text": "FLAWLESS BLADES unit only. This unit has +2\" M.",
       "value": 20,
@@ -6990,8 +7464,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-eager-patrons",
-      "detachmentId": "spectacle-of-slaughter",
       "id": "enhancement-eager-patrons",
       "kind": "upgrade",
       "sourcePages": [
@@ -7008,10 +7480,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-eager-patrons",
+      "detachmentId": "spectacle-of-slaughter",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-eager-patrons"
     },
     {
-      "legacyKey": "beguiling grotesquerie",
       "title": "Beguiling Grotesquerie",
       "text": "FLAWLESS BLADES unit only. Enemy units cannot target this unit with snap shooting attacks.",
       "value": 15,
@@ -7033,8 +7507,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "ruleId": "enhancement-beguiling-grotesquerie",
-      "detachmentId": "spectacle-of-slaughter",
       "id": "enhancement-beguiling-grotesquerie",
       "kind": "upgrade",
       "sourcePages": [
@@ -7051,7 +7523,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "url": "https://mfm.warhammer-community.com/en/emperors-children",
         "verifiedAt": "2026-08-27"
       },
-      "sourceBookId": "emperors-children"
+      "ruleId": "enhancement-beguiling-grotesquerie",
+      "detachmentId": "spectacle-of-slaughter",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-beguiling-grotesquerie"
     }
   ]
 });

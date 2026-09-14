@@ -82,10 +82,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-gargoyles-model-gargoyles",
+            "id": "unit-gargoyles-model-98533931fa",
             "title": "Gargoyles",
             "aliases": [
               "Gargoyles"
+            ],
+            "legacyIds": [
+              "unit-gargoyles-model-gargoyles"
             ]
           }
         ],
@@ -98,7 +101,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-gargoyles-profile-blinding-venom-melee"
+              "unit-gargoyles-profile-56413726c3"
             ],
             "wargearAbilityIds": []
           },
@@ -110,7 +113,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-gargoyles-profile-fleshborer-ranged-2"
+              "unit-gargoyles-profile-2378584c27"
             ],
             "wargearAbilityIds": []
           }
@@ -118,7 +121,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-gargoyles-profile-blinding-venom-melee",
+            "id": "unit-gargoyles-profile-56413726c3",
+            "legacyIds": [
+              "unit-gargoyles-profile-blinding-venom-melee"
+            ],
             "title": "Blinding venom",
             "mode": "melee",
             "range": "Melee",
@@ -133,7 +139,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-gargoyles-profile-fleshborer-ranged-2",
+            "id": "unit-gargoyles-profile-2378584c27",
+            "legacyIds": [
+              "unit-gargoyles-profile-fleshborer-ranged-2"
+            ],
             "title": "Fleshborer",
             "mode": "ranged",
             "range": "18\"",
@@ -216,10 +225,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-hormagaunts-model-10-20-hormagaunts",
+            "id": "unit-hormagaunts-model-407cbd64f7",
             "title": "10-20 Hormagaunts",
             "aliases": [
               "10-20 Hormagaunts"
+            ],
+            "legacyIds": [
+              "unit-hormagaunts-model-10-20-hormagaunts"
             ]
           }
         ],
@@ -232,7 +244,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hormagaunts-profile-hormagaunt-talons-melee"
+              "unit-hormagaunts-profile-32ebfcd7d7"
             ],
             "wargearAbilityIds": []
           }
@@ -240,7 +252,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-hormagaunts-profile-hormagaunt-talons-melee",
+            "id": "unit-hormagaunts-profile-32ebfcd7d7",
+            "legacyIds": [
+              "unit-hormagaunts-profile-hormagaunt-talons-melee"
+            ],
             "title": "Hormagaunt talons",
             "mode": "melee",
             "range": "Melee",
@@ -323,10 +338,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-termagants-model-10-20-termagants",
+            "id": "unit-termagants-model-8a07b9f73c",
             "title": "10-20 Termagants",
             "aliases": [
               "10-20 Termagants"
+            ],
+            "legacyIds": [
+              "unit-termagants-model-10-20-termagants"
             ]
           }
         ],
@@ -339,7 +357,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-termagants-profile-fleshborer-ranged"
+              "unit-termagants-profile-2378584c27"
             ],
             "wargearAbilityIds": []
           },
@@ -351,7 +369,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-termagants-profile-termagant-spinefists-ranged-2"
+              "unit-termagants-profile-e69f6d840a"
             ],
             "wargearAbilityIds": []
           },
@@ -363,7 +381,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-termagants-profile-termagant-devourer-ranged-3"
+              "unit-termagants-profile-87e8952019"
             ],
             "wargearAbilityIds": []
           },
@@ -375,7 +393,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-termagants-profile-chitinous-claws-and-teeth-melee-4"
+              "unit-termagants-profile-8766ebf34c"
             ],
             "wargearAbilityIds": []
           },
@@ -387,7 +405,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-termagants-profile-shardlauncher-ranged-5"
+              "unit-termagants-profile-eade58d306"
             ],
             "wargearAbilityIds": []
           },
@@ -399,7 +417,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-termagants-profile-spike-rifle-ranged-6"
+              "unit-termagants-profile-7be691dcc1"
             ],
             "wargearAbilityIds": []
           },
@@ -411,7 +429,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-termagants-profile-strangleweb-ranged-7"
+              "unit-termagants-profile-dac5afc1dc"
             ],
             "wargearAbilityIds": []
           }
@@ -419,7 +437,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-termagants-profile-fleshborer-ranged",
+            "id": "unit-termagants-profile-2378584c27",
+            "legacyIds": [
+              "unit-termagants-profile-fleshborer-ranged"
+            ],
             "title": "Fleshborer",
             "mode": "ranged",
             "range": "18\"",
@@ -434,7 +455,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-termagants-profile-termagant-spinefists-ranged-2",
+            "id": "unit-termagants-profile-e69f6d840a",
+            "legacyIds": [
+              "unit-termagants-profile-termagant-spinefists-ranged-2"
+            ],
             "title": "Termagant spinefists",
             "mode": "ranged",
             "range": "12\"",
@@ -449,7 +473,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-termagants-profile-termagant-devourer-ranged-3",
+            "id": "unit-termagants-profile-87e8952019",
+            "legacyIds": [
+              "unit-termagants-profile-termagant-devourer-ranged-3"
+            ],
             "title": "Termagant devourer",
             "mode": "ranged",
             "range": "18\"",
@@ -464,7 +491,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-termagants-profile-chitinous-claws-and-teeth-melee-4",
+            "id": "unit-termagants-profile-8766ebf34c",
+            "legacyIds": [
+              "unit-termagants-profile-chitinous-claws-and-teeth-melee-4"
+            ],
             "title": "Chitinous claws and teeth",
             "mode": "melee",
             "range": "Melee",
@@ -479,7 +509,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-termagants-profile-shardlauncher-ranged-5",
+            "id": "unit-termagants-profile-eade58d306",
+            "legacyIds": [
+              "unit-termagants-profile-shardlauncher-ranged-5"
+            ],
             "title": "Shardlauncher",
             "mode": "ranged",
             "range": "18\"",
@@ -494,7 +527,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-termagants-profile-spike-rifle-ranged-6",
+            "id": "unit-termagants-profile-7be691dcc1",
+            "legacyIds": [
+              "unit-termagants-profile-spike-rifle-ranged-6"
+            ],
             "title": "Spike rifle",
             "mode": "ranged",
             "range": "24\"",
@@ -509,7 +545,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-termagants-profile-strangleweb-ranged-7",
+            "id": "unit-termagants-profile-dac5afc1dc",
+            "legacyIds": [
+              "unit-termagants-profile-strangleweb-ranged-7"
+            ],
             "title": "Strangleweb",
             "mode": "ranged",
             "range": "18\"",
@@ -592,11 +631,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-broodlord"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-broodlord-ability-f75667a0a4",
+            "sectionId": "unit-broodlord-ability-f75667a0a4",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-broodlord"
+            "text": "This model can be attached to the following units: GENESTEALERS.",
+            "sourceUnitId": "unit-broodlord",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "core-scouts",
@@ -618,14 +660,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Shadow in the Warp",
             "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
             "sourceUnitId": "unit-broodlord"
+          },
+          {
+            "id": "unit-broodlord-ability-3c19dd15aa",
+            "sectionId": "unit-broodlord-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-broodlord",
+            "legacyIds": [
+              "core-leader"
+            ]
           }
         ],
         "models": [
           {
-            "id": "unit-broodlord-model-broodlord",
+            "id": "unit-broodlord-model-43701eb76b",
             "title": "Broodlord",
             "aliases": [
               "Broodlord"
+            ],
+            "legacyIds": [
+              "unit-broodlord-model-broodlord"
             ]
           }
         ],
@@ -638,7 +693,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-broodlord-profile-broodlord-claws-and-talons-melee"
+              "unit-broodlord-profile-a5d4762879"
             ],
             "wargearAbilityIds": []
           }
@@ -646,7 +701,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-broodlord-profile-broodlord-claws-and-talons-melee",
+            "id": "unit-broodlord-profile-a5d4762879",
+            "legacyIds": [
+              "unit-broodlord-profile-broodlord-claws-and-talons-melee"
+            ],
             "title": "Broodlord Claws and Talons",
             "mode": "melee",
             "range": "Melee",
@@ -721,11 +779,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-hive-tyrant"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-hive-tyrant-ability-c2c8d3feea",
+            "sectionId": "unit-hive-tyrant-ability-c2c8d3feea",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-hive-tyrant"
+            "text": "This model can be attached to the following units: TYRANT GUARD.",
+            "sourceUnitId": "unit-hive-tyrant",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "tyranids-ability-will-of-the-hive-mind",
@@ -754,14 +815,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Synapse",
             "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
             "sourceUnitId": "unit-hive-tyrant"
+          },
+          {
+            "id": "unit-hive-tyrant-ability-3c19dd15aa",
+            "sectionId": "unit-hive-tyrant-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-hive-tyrant",
+            "legacyIds": [
+              "core-leader"
+            ]
           }
         ],
         "models": [
           {
-            "id": "unit-hive-tyrant-model-hive-tyrant",
+            "id": "unit-hive-tyrant-model-ba46a2dc47",
             "title": "Hive Tyrant",
             "aliases": [
               "Hive Tyrant"
+            ],
+            "legacyIds": [
+              "unit-hive-tyrant-model-hive-tyrant"
             ]
           }
         ],
@@ -774,7 +848,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-tyrant-profile-monstrous-bonesword-and-lash-whip-melee"
+              "unit-hive-tyrant-profile-1f04e88c40"
             ],
             "wargearAbilityIds": []
           },
@@ -786,7 +860,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-tyrant-profile-heavy-venom-cannon-ranged-2"
+              "unit-hive-tyrant-profile-04d42f0a05"
             ],
             "wargearAbilityIds": []
           },
@@ -798,7 +872,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-tyrant-profile-stranglethorn-cannon-ranged-3"
+              "unit-hive-tyrant-profile-f7aad943cf"
             ],
             "wargearAbilityIds": []
           },
@@ -810,7 +884,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-tyrant-profile-monstrous-scything-talons-melee-4"
+              "unit-hive-tyrant-profile-0cee41270b"
             ],
             "wargearAbilityIds": []
           }
@@ -818,7 +892,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-hive-tyrant-profile-monstrous-bonesword-and-lash-whip-melee",
+            "id": "unit-hive-tyrant-profile-1f04e88c40",
+            "legacyIds": [
+              "unit-hive-tyrant-profile-monstrous-bonesword-and-lash-whip-melee"
+            ],
             "title": "Monstrous bonesword and lash whip",
             "mode": "melee",
             "range": "Melee",
@@ -833,7 +910,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-tyrant-profile-heavy-venom-cannon-ranged-2",
+            "id": "unit-hive-tyrant-profile-04d42f0a05",
+            "legacyIds": [
+              "unit-hive-tyrant-profile-heavy-venom-cannon-ranged-2"
+            ],
             "title": "Heavy venom cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -848,7 +928,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-tyrant-profile-stranglethorn-cannon-ranged-3",
+            "id": "unit-hive-tyrant-profile-f7aad943cf",
+            "legacyIds": [
+              "unit-hive-tyrant-profile-stranglethorn-cannon-ranged-3"
+            ],
             "title": "Stranglethorn cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -863,7 +946,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-tyrant-profile-monstrous-scything-talons-melee-4",
+            "id": "unit-hive-tyrant-profile-0cee41270b",
+            "legacyIds": [
+              "unit-hive-tyrant-profile-monstrous-scything-talons-melee-4"
+            ],
             "title": "Monstrous scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -944,11 +1030,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-hyperadapted-raveners"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-hyperadapted-raveners-ability-3a141c1864",
+            "sectionId": "unit-hyperadapted-raveners-ability-3a141c1864",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-hyperadapted-raveners"
+            "text": "This model can be attached to the following units: RAVENERS.",
+            "sourceUnitId": "unit-hyperadapted-raveners",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "tyranids-ability-shadow-in-the-warp",
@@ -977,14 +1066,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Sustained Hits",
             "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
             "sourceUnitId": "unit-hyperadapted-raveners"
+          },
+          {
+            "id": "unit-hyperadapted-raveners-ability-3c19dd15aa",
+            "sectionId": "unit-hyperadapted-raveners-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-hyperadapted-raveners",
+            "legacyIds": [
+              "core-leader"
+            ]
           }
         ],
         "models": [
           {
-            "id": "unit-hyperadapted-raveners-model-ravener-prime",
+            "id": "unit-hyperadapted-raveners-model-a0bb46bc68",
             "title": "Ravener Prime",
             "aliases": [
               "Ravener Prime"
+            ],
+            "legacyIds": [
+              "unit-hyperadapted-raveners-model-ravener-prime"
             ],
             "intrinsicKeywords": [
               "Character",
@@ -992,10 +1094,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hyperadapted-raveners-model-raveners-2",
+            "id": "unit-hyperadapted-raveners-model-eb3f20c310",
             "title": "Raveners",
             "aliases": [
               "Raveners"
+            ],
+            "legacyIds": [
+              "unit-hyperadapted-raveners-model-raveners-2"
             ]
           }
         ],
@@ -1008,7 +1113,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hyperadapted-raveners-profile-prime-claws-and-talons-melee"
+              "unit-hyperadapted-raveners-profile-ac68429ff3"
             ],
             "wargearAbilityIds": []
           },
@@ -1020,7 +1125,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hyperadapted-raveners-profile-ravener-heavy-claws-and-talons-melee-2"
+              "unit-hyperadapted-raveners-profile-f5df978e41"
             ],
             "wargearAbilityIds": []
           },
@@ -1032,7 +1137,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hyperadapted-raveners-profile-venom-bolt-ranged-3"
+              "unit-hyperadapted-raveners-profile-4f4a59cf18"
             ],
             "wargearAbilityIds": []
           }
@@ -1040,7 +1145,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-hyperadapted-raveners-profile-prime-claws-and-talons-melee",
+            "id": "unit-hyperadapted-raveners-profile-ac68429ff3",
+            "legacyIds": [
+              "unit-hyperadapted-raveners-profile-prime-claws-and-talons-melee"
+            ],
             "title": "Prime claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -1055,7 +1163,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hyperadapted-raveners-profile-ravener-heavy-claws-and-talons-melee-2",
+            "id": "unit-hyperadapted-raveners-profile-f5df978e41",
+            "legacyIds": [
+              "unit-hyperadapted-raveners-profile-ravener-heavy-claws-and-talons-melee-2"
+            ],
             "title": "Ravener heavy claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -1070,7 +1181,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hyperadapted-raveners-profile-venom-bolt-ranged-3",
+            "id": "unit-hyperadapted-raveners-profile-4f4a59cf18",
+            "legacyIds": [
+              "unit-hyperadapted-raveners-profile-venom-bolt-ranged-3"
+            ],
             "title": "Venom bolt",
             "mode": "ranged",
             "range": "12\"",
@@ -1176,11 +1290,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-neurotyrant"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-neurotyrant-ability-65885acea5",
+            "sectionId": "unit-neurotyrant-ability-65885acea5",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-neurotyrant"
+            "text": "This model can be attached to the following units: NEUROGAUNTS, TYRANT GUARD, ZOANTHROPES.",
+            "sourceUnitId": "unit-neurotyrant",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "tyranids-ability-shadow-in-the-warp",
@@ -1195,14 +1312,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Synapse",
             "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
             "sourceUnitId": "unit-neurotyrant"
+          },
+          {
+            "id": "unit-neurotyrant-ability-3c19dd15aa",
+            "sectionId": "unit-neurotyrant-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-neurotyrant",
+            "legacyIds": [
+              "core-leader"
+            ]
           }
         ],
         "models": [
           {
-            "id": "unit-neurotyrant-model-neurotyrant",
+            "id": "unit-neurotyrant-model-7491544b5d",
             "title": "Neurotyrant",
             "aliases": [
               "Neurotyrant"
+            ],
+            "legacyIds": [
+              "unit-neurotyrant-model-neurotyrant"
             ]
           }
         ],
@@ -1215,7 +1345,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-neurotyrant-profile-neurotyrant-claws-and-lashes-melee"
+              "unit-neurotyrant-profile-f3d25213c1"
             ],
             "wargearAbilityIds": []
           },
@@ -1227,7 +1357,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-neurotyrant-profile-psychic-scream-ranged-2"
+              "unit-neurotyrant-profile-0461ca45af"
             ],
             "wargearAbilityIds": []
           }
@@ -1235,7 +1365,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-neurotyrant-profile-neurotyrant-claws-and-lashes-melee",
+            "id": "unit-neurotyrant-profile-f3d25213c1",
+            "legacyIds": [
+              "unit-neurotyrant-profile-neurotyrant-claws-and-lashes-melee"
+            ],
             "title": "Neurotyrant claws and lashes",
             "mode": "melee",
             "range": "Melee",
@@ -1250,7 +1383,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-neurotyrant-profile-psychic-scream-ranged-2",
+            "id": "unit-neurotyrant-profile-0461ca45af",
+            "legacyIds": [
+              "unit-neurotyrant-profile-psychic-scream-ranged-2"
+            ],
             "title": "Psychic scream",
             "mode": "ranged",
             "range": "18\"",
@@ -1360,10 +1496,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-parasite-of-mortrex-model-parasite-of-mortrex",
+            "id": "unit-parasite-of-mortrex-model-90fe23f983",
             "title": "Parasite of Mortrex",
             "aliases": [
               "Parasite of Mortrex"
+            ],
+            "legacyIds": [
+              "unit-parasite-of-mortrex-model-parasite-of-mortrex"
             ]
           }
         ],
@@ -1376,7 +1515,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-parasite-of-mortrex-profile-barbed-ovipositor-melee"
+              "unit-parasite-of-mortrex-profile-28b2a27fc4"
             ],
             "wargearAbilityIds": []
           },
@@ -1388,7 +1527,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-parasite-of-mortrex-profile-clawed-limbs-melee-2"
+              "unit-parasite-of-mortrex-profile-931a0650b9"
             ],
             "wargearAbilityIds": []
           }
@@ -1396,7 +1535,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-parasite-of-mortrex-profile-barbed-ovipositor-melee",
+            "id": "unit-parasite-of-mortrex-profile-28b2a27fc4",
+            "legacyIds": [
+              "unit-parasite-of-mortrex-profile-barbed-ovipositor-melee"
+            ],
             "title": "Barbed ovipositor",
             "mode": "melee",
             "range": "Melee",
@@ -1411,7 +1553,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-parasite-of-mortrex-profile-clawed-limbs-melee-2",
+            "id": "unit-parasite-of-mortrex-profile-931a0650b9",
+            "legacyIds": [
+              "unit-parasite-of-mortrex-profile-clawed-limbs-melee-2"
+            ],
             "title": "Clawed limbs",
             "mode": "melee",
             "range": "Melee",
@@ -1513,10 +1658,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-tervigon-model-tervigon",
+            "id": "unit-tervigon-model-6382866772",
             "title": "Tervigon",
             "aliases": [
               "Tervigon"
+            ],
+            "legacyIds": [
+              "unit-tervigon-model-tervigon"
             ]
           }
         ],
@@ -1529,7 +1677,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tervigon-profile-massive-scything-talons-strike-melee"
+              "unit-tervigon-profile-d4b76e9587"
             ],
             "wargearAbilityIds": []
           },
@@ -1541,7 +1689,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tervigon-profile-massive-scything-talons-sweep-melee-2"
+              "unit-tervigon-profile-5fa17c1632"
             ],
             "wargearAbilityIds": []
           },
@@ -1553,7 +1701,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tervigon-profile-massive-crushing-claws-melee-3"
+              "unit-tervigon-profile-b62521143e"
             ],
             "wargearAbilityIds": []
           },
@@ -1565,7 +1713,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tervigon-profile-stinger-salvoes-ranged-4"
+              "unit-tervigon-profile-22904f612a"
             ],
             "wargearAbilityIds": []
           },
@@ -1578,8 +1726,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-tervigon-weapon-family-massive-scything-talons",
             "profileIds": [
-              "unit-tervigon-profile-massive-scything-talons-strike-melee",
-              "unit-tervigon-profile-massive-scything-talons-sweep-melee-2"
+              "unit-tervigon-profile-d4b76e9587",
+              "unit-tervigon-profile-5fa17c1632"
             ],
             "wargearAbilityIds": []
           }
@@ -1592,15 +1740,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Massive scything talons"
             ],
             "profileIds": [
-              "unit-tervigon-profile-massive-scything-talons-strike-melee",
-              "unit-tervigon-profile-massive-scything-talons-sweep-melee-2"
+              "unit-tervigon-profile-d4b76e9587",
+              "unit-tervigon-profile-5fa17c1632"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-tervigon-profile-massive-scything-talons-strike-melee",
+            "id": "unit-tervigon-profile-d4b76e9587",
+            "legacyIds": [
+              "unit-tervigon-profile-massive-scything-talons-strike-melee"
+            ],
             "title": "➤ Massive scything talons - strike",
             "mode": "melee",
             "range": "Melee",
@@ -1616,7 +1767,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tervigon-profile-massive-scything-talons-sweep-melee-2",
+            "id": "unit-tervigon-profile-5fa17c1632",
+            "legacyIds": [
+              "unit-tervigon-profile-massive-scything-talons-sweep-melee-2"
+            ],
             "title": "➤ Massive scything talons - sweep",
             "mode": "melee",
             "range": "Melee",
@@ -1632,7 +1786,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tervigon-profile-massive-crushing-claws-melee-3",
+            "id": "unit-tervigon-profile-b62521143e",
+            "legacyIds": [
+              "unit-tervigon-profile-massive-crushing-claws-melee-3"
+            ],
             "title": "Massive crushing claws",
             "mode": "melee",
             "range": "Melee",
@@ -1647,7 +1804,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tervigon-profile-stinger-salvoes-ranged-4",
+            "id": "unit-tervigon-profile-22904f612a",
+            "legacyIds": [
+              "unit-tervigon-profile-stinger-salvoes-ranged-4"
+            ],
             "title": "Stinger salvoes",
             "mode": "ranged",
             "range": "24\"",
@@ -1752,11 +1912,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-tyranid-prime-with-lash-whip"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-tyranid-prime-with-lash-whip-ability-b399887cf8",
+            "sectionId": "unit-tyranid-prime-with-lash-whip-ability-b399887cf8",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-tyranid-prime-with-lash-whip"
+            "text": "This model can be attached to the following units: HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS.",
+            "sourceUnitId": "unit-tyranid-prime-with-lash-whip",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "tyranids-ability-synapse",
@@ -1771,14 +1934,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Shadow in the Warp",
             "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
             "sourceUnitId": "unit-tyranid-prime-with-lash-whip"
+          },
+          {
+            "id": "unit-tyranid-prime-with-lash-whip-ability-3c19dd15aa",
+            "sectionId": "unit-tyranid-prime-with-lash-whip-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-tyranid-prime-with-lash-whip",
+            "legacyIds": [
+              "core-leader"
+            ]
           }
         ],
         "models": [
           {
-            "id": "unit-tyranid-prime-with-lash-whip-model-tyranid-prime-with-lash-whip",
+            "id": "unit-tyranid-prime-with-lash-whip-model-1f97abb33a",
             "title": "Tyranid Prime with Lash Whip",
             "aliases": [
               "Tyranid Prime with Lash Whip"
+            ],
+            "legacyIds": [
+              "unit-tyranid-prime-with-lash-whip-model-tyranid-prime-with-lash-whip"
             ]
           }
         ],
@@ -1791,7 +1967,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-prime-with-lash-whip-profile-rending-claw-melee"
+              "unit-tyranid-prime-with-lash-whip-profile-a3b2801966"
             ],
             "wargearAbilityIds": []
           },
@@ -1803,7 +1979,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-prime-with-lash-whip-profile-lash-whip-melee-2"
+              "unit-tyranid-prime-with-lash-whip-profile-6d00a40466"
             ],
             "wargearAbilityIds": []
           },
@@ -1815,7 +1991,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-prime-with-lash-whip-profile-scything-talons-melee-3"
+              "unit-tyranid-prime-with-lash-whip-profile-838e0889ce"
             ],
             "wargearAbilityIds": []
           }
@@ -1823,7 +1999,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-tyranid-prime-with-lash-whip-profile-rending-claw-melee",
+            "id": "unit-tyranid-prime-with-lash-whip-profile-a3b2801966",
+            "legacyIds": [
+              "unit-tyranid-prime-with-lash-whip-profile-rending-claw-melee"
+            ],
             "title": "Rending claw",
             "mode": "melee",
             "range": "Melee",
@@ -1838,7 +2017,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyranid-prime-with-lash-whip-profile-lash-whip-melee-2",
+            "id": "unit-tyranid-prime-with-lash-whip-profile-6d00a40466",
+            "legacyIds": [
+              "unit-tyranid-prime-with-lash-whip-profile-lash-whip-melee-2"
+            ],
             "title": "Lash whip",
             "mode": "melee",
             "range": "Melee",
@@ -1853,7 +2035,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyranid-prime-with-lash-whip-profile-scything-talons-melee-3",
+            "id": "unit-tyranid-prime-with-lash-whip-profile-838e0889ce",
+            "legacyIds": [
+              "unit-tyranid-prime-with-lash-whip-profile-scything-talons-melee-3"
+            ],
             "title": "Scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -1958,10 +2143,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-winged-hive-tyrant-model-winged-hive-tyrant",
+            "id": "unit-winged-hive-tyrant-model-903aea15b9",
             "title": "Winged Hive Tyrant",
             "aliases": [
               "Winged Hive Tyrant"
+            ],
+            "legacyIds": [
+              "unit-winged-hive-tyrant-model-winged-hive-tyrant"
             ]
           }
         ],
@@ -1974,7 +2162,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-winged-hive-tyrant-profile-tyrant-talons-melee"
+              "unit-winged-hive-tyrant-profile-e470e7c075"
             ],
             "wargearAbilityIds": []
           },
@@ -1986,7 +2174,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-winged-hive-tyrant-profile-monstrous-scything-talons-melee-2"
+              "unit-winged-hive-tyrant-profile-0cee41270b"
             ],
             "wargearAbilityIds": []
           },
@@ -1998,7 +2186,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-winged-hive-tyrant-profile-stranglethorn-cannon-ranged-3"
+              "unit-winged-hive-tyrant-profile-f7aad943cf"
             ],
             "wargearAbilityIds": []
           },
@@ -2010,7 +2198,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-winged-hive-tyrant-profile-heavy-venom-cannon-ranged-4"
+              "unit-winged-hive-tyrant-profile-04d42f0a05"
             ],
             "wargearAbilityIds": []
           },
@@ -2022,7 +2210,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-winged-hive-tyrant-profile-monstrous-bonesword-and-lash-whip-melee-5"
+              "unit-winged-hive-tyrant-profile-1f04e88c40"
             ],
             "wargearAbilityIds": []
           }
@@ -2030,7 +2218,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-winged-hive-tyrant-profile-tyrant-talons-melee",
+            "id": "unit-winged-hive-tyrant-profile-e470e7c075",
+            "legacyIds": [
+              "unit-winged-hive-tyrant-profile-tyrant-talons-melee"
+            ],
             "title": "Tyrant talons",
             "mode": "melee",
             "range": "Melee",
@@ -2045,7 +2236,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-winged-hive-tyrant-profile-monstrous-scything-talons-melee-2",
+            "id": "unit-winged-hive-tyrant-profile-0cee41270b",
+            "legacyIds": [
+              "unit-winged-hive-tyrant-profile-monstrous-scything-talons-melee-2"
+            ],
             "title": "Monstrous scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -2060,7 +2254,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-winged-hive-tyrant-profile-stranglethorn-cannon-ranged-3",
+            "id": "unit-winged-hive-tyrant-profile-f7aad943cf",
+            "legacyIds": [
+              "unit-winged-hive-tyrant-profile-stranglethorn-cannon-ranged-3"
+            ],
             "title": "Stranglethorn cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -2075,7 +2272,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-winged-hive-tyrant-profile-heavy-venom-cannon-ranged-4",
+            "id": "unit-winged-hive-tyrant-profile-04d42f0a05",
+            "legacyIds": [
+              "unit-winged-hive-tyrant-profile-heavy-venom-cannon-ranged-4"
+            ],
             "title": "Heavy venom cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -2090,7 +2290,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-winged-hive-tyrant-profile-monstrous-bonesword-and-lash-whip-melee-5",
+            "id": "unit-winged-hive-tyrant-profile-1f04e88c40",
+            "legacyIds": [
+              "unit-winged-hive-tyrant-profile-monstrous-bonesword-and-lash-whip-melee-5"
+            ],
             "title": "Monstrous bonesword and lash whip",
             "mode": "melee",
             "range": "Melee",
@@ -2189,11 +2392,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-winged-tyranid-prime"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-winged-tyranid-prime-ability-1670b9048f",
+            "sectionId": "unit-winged-tyranid-prime-ability-1670b9048f",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-winged-tyranid-prime"
+            "text": "This model can be attached to the following units: GARGOYLES, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS.",
+            "sourceUnitId": "unit-winged-tyranid-prime",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "core-deep-strike",
@@ -2215,14 +2421,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Shadow in the Warp",
             "text": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
             "sourceUnitId": "unit-winged-tyranid-prime"
+          },
+          {
+            "id": "unit-winged-tyranid-prime-ability-3c19dd15aa",
+            "sectionId": "unit-winged-tyranid-prime-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-winged-tyranid-prime",
+            "legacyIds": [
+              "core-leader"
+            ]
           }
         ],
         "models": [
           {
-            "id": "unit-winged-tyranid-prime-model-winged-tyranid-prime",
+            "id": "unit-winged-tyranid-prime-model-e00bd2c14a",
             "title": "Winged Tyranid Prime",
             "aliases": [
               "Winged Tyranid Prime"
+            ],
+            "legacyIds": [
+              "unit-winged-tyranid-prime-model-winged-tyranid-prime"
             ]
           }
         ],
@@ -2235,7 +2454,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-winged-tyranid-prime-profile-prime-talons-melee"
+              "unit-winged-tyranid-prime-profile-8488e93add"
             ],
             "wargearAbilityIds": []
           }
@@ -2243,7 +2462,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-winged-tyranid-prime-profile-prime-talons-melee",
+            "id": "unit-winged-tyranid-prime-profile-8488e93add",
+            "legacyIds": [
+              "unit-winged-tyranid-prime-profile-prime-talons-melee"
+            ],
             "title": "Prime talons",
             "mode": "melee",
             "range": "Melee",
@@ -2333,10 +2555,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-tyrannocyte-model-tyrannocyte",
+            "id": "unit-tyrannocyte-model-f721fce7c5",
             "title": "Tyrannocyte",
             "aliases": [
               "Tyrannocyte"
+            ],
+            "legacyIds": [
+              "unit-tyrannocyte-model-tyrannocyte"
             ]
           }
         ],
@@ -2349,7 +2574,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrannocyte-profile-flensing-whips-melee"
+              "unit-tyrannocyte-profile-03def1b9c4"
             ],
             "wargearAbilityIds": []
           },
@@ -2361,7 +2586,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrannocyte-profile-tyrannocyte-bio-weapons-ranged-2"
+              "unit-tyrannocyte-profile-f142e2ca6c"
             ],
             "wargearAbilityIds": []
           }
@@ -2369,7 +2594,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-tyrannocyte-profile-flensing-whips-melee",
+            "id": "unit-tyrannocyte-profile-03def1b9c4",
+            "legacyIds": [
+              "unit-tyrannocyte-profile-flensing-whips-melee"
+            ],
             "title": "Flensing Whips",
             "mode": "melee",
             "range": "Melee",
@@ -2384,7 +2612,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyrannocyte-profile-tyrannocyte-bio-weapons-ranged-2",
+            "id": "unit-tyrannocyte-profile-f142e2ca6c",
+            "legacyIds": [
+              "unit-tyrannocyte-profile-tyrannocyte-bio-weapons-ranged-2"
+            ],
             "title": "Tyrannocyte Bio-weapons",
             "mode": "ranged",
             "range": "24\"",
@@ -2500,10 +2731,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-deathleaper-model-deathleaper",
+            "id": "unit-deathleaper-model-0fa382a724",
             "title": "Deathleaper",
             "aliases": [
               "Deathleaper"
+            ],
+            "legacyIds": [
+              "unit-deathleaper-model-deathleaper"
             ]
           }
         ],
@@ -2516,7 +2750,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-deathleaper-profile-lictor-claws-and-talons-melee"
+              "unit-deathleaper-profile-87a135e07b"
             ],
             "wargearAbilityIds": []
           }
@@ -2524,7 +2758,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-deathleaper-profile-lictor-claws-and-talons-melee",
+            "id": "unit-deathleaper-profile-87a135e07b",
+            "legacyIds": [
+              "unit-deathleaper-profile-lictor-claws-and-talons-melee"
+            ],
             "title": "Lictor claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -2605,11 +2842,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-old-one-eye"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-old-one-eye-ability-6b38117c66",
+            "sectionId": "unit-old-one-eye-ability-6b38117c66",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-old-one-eye"
+            "text": "This model can be attached to the following units: CARNIFEXES.",
+            "sourceUnitId": "unit-old-one-eye",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "tyranids-ability-synapse",
@@ -2624,14 +2864,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Feel No Pain 5+",
             "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
             "sourceUnitId": "unit-old-one-eye"
+          },
+          {
+            "id": "unit-old-one-eye-ability-3c19dd15aa",
+            "sectionId": "unit-old-one-eye-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-old-one-eye",
+            "legacyIds": [
+              "core-leader"
+            ]
           }
         ],
         "models": [
           {
-            "id": "unit-old-one-eye-model-old-one-eye",
+            "id": "unit-old-one-eye-model-19e7d7000f",
             "title": "Old One Eye",
             "aliases": [
               "Old One Eye"
+            ],
+            "legacyIds": [
+              "unit-old-one-eye-model-old-one-eye"
             ]
           }
         ],
@@ -2644,7 +2897,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-strike-melee"
+              "unit-old-one-eye-profile-4383b5b1ae"
             ],
             "wargearAbilityIds": []
           },
@@ -2656,7 +2909,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-sweep-melee-2"
+              "unit-old-one-eye-profile-3c75265f32"
             ],
             "wargearAbilityIds": []
           },
@@ -2669,8 +2922,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-old-one-eye-weapon-family-old-one-eyes-claws-and-talons",
             "profileIds": [
-              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-strike-melee",
-              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-sweep-melee-2"
+              "unit-old-one-eye-profile-4383b5b1ae",
+              "unit-old-one-eye-profile-3c75265f32"
             ],
             "wargearAbilityIds": []
           }
@@ -2683,15 +2936,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Old One Eye’s claws and talons"
             ],
             "profileIds": [
-              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-strike-melee",
-              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-sweep-melee-2"
+              "unit-old-one-eye-profile-4383b5b1ae",
+              "unit-old-one-eye-profile-3c75265f32"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-strike-melee",
+            "id": "unit-old-one-eye-profile-4383b5b1ae",
+            "legacyIds": [
+              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-strike-melee"
+            ],
             "title": "➤ Old One Eye’s claws and talons - Strike",
             "mode": "melee",
             "range": "Melee",
@@ -2707,7 +2963,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-sweep-melee-2",
+            "id": "unit-old-one-eye-profile-3c75265f32",
+            "legacyIds": [
+              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-sweep-melee-2"
+            ],
             "title": "➤ Old One Eye’s claws and talons - Sweep",
             "mode": "melee",
             "range": "Melee",
@@ -2798,10 +3057,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-the-red-terror-model-the-red-terror",
+            "id": "unit-the-red-terror-model-68853bdb4b",
             "title": "The Red Terror",
             "aliases": [
               "The Red Terror"
+            ],
+            "legacyIds": [
+              "unit-the-red-terror-model-the-red-terror"
             ]
           }
         ],
@@ -2814,7 +3076,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-the-red-terror-profile-gaping-maw-melee"
+              "unit-the-red-terror-profile-ef7d21ef08"
             ],
             "wargearAbilityIds": []
           },
@@ -2826,7 +3088,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-the-red-terror-profile-scything-talons-melee-2"
+              "unit-the-red-terror-profile-64c1a4ae3d"
             ],
             "wargearAbilityIds": []
           }
@@ -2834,7 +3096,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-the-red-terror-profile-gaping-maw-melee",
+            "id": "unit-the-red-terror-profile-ef7d21ef08",
+            "legacyIds": [
+              "unit-the-red-terror-profile-gaping-maw-melee"
+            ],
             "title": "Gaping maw",
             "mode": "melee",
             "range": "Melee",
@@ -2849,7 +3114,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-the-red-terror-profile-scything-talons-melee-2",
+            "id": "unit-the-red-terror-profile-64c1a4ae3d",
+            "legacyIds": [
+              "unit-the-red-terror-profile-scything-talons-melee-2"
+            ],
             "title": "Scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -2940,11 +3208,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-the-swarmlord"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "unit-the-swarmlord-ability-c2c8d3feea",
+            "sectionId": "unit-the-swarmlord-ability-c2c8d3feea",
             "title": "Leader",
-            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-            "sourceUnitId": "unit-the-swarmlord"
+            "text": "This model can be attached to the following units: TYRANT GUARD.",
+            "sourceUnitId": "unit-the-swarmlord",
+            "legacyIds": [
+              "core-leader"
+            ]
           },
           {
             "id": "core-deadly-demise",
@@ -2966,14 +3237,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "title": "Synapse",
             "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
             "sourceUnitId": "unit-the-swarmlord"
+          },
+          {
+            "id": "unit-the-swarmlord-ability-3c19dd15aa",
+            "sectionId": "unit-the-swarmlord-ability-3c19dd15aa",
+            "title": "Leader",
+            "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+            "sourceUnitId": "unit-the-swarmlord",
+            "legacyIds": [
+              "core-leader"
+            ]
           }
         ],
         "models": [
           {
-            "id": "unit-the-swarmlord-model-the-swarmlord",
+            "id": "unit-the-swarmlord-model-f45a5252d9",
             "title": "The Swarmlord",
             "aliases": [
               "The Swarmlord"
+            ],
+            "legacyIds": [
+              "unit-the-swarmlord-model-the-swarmlord"
             ]
           }
         ],
@@ -2986,7 +3270,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-the-swarmlord-profile-bone-sabres-melee"
+              "unit-the-swarmlord-profile-96b4fc5577"
             ],
             "wargearAbilityIds": []
           },
@@ -2998,7 +3282,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-the-swarmlord-profile-synaptic-pulse-ranged-2"
+              "unit-the-swarmlord-profile-c64ef70c97"
             ],
             "wargearAbilityIds": []
           }
@@ -3006,7 +3290,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-the-swarmlord-profile-bone-sabres-melee",
+            "id": "unit-the-swarmlord-profile-96b4fc5577",
+            "legacyIds": [
+              "unit-the-swarmlord-profile-bone-sabres-melee"
+            ],
             "title": "Bone Sabres",
             "mode": "melee",
             "range": "Melee",
@@ -3021,7 +3308,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-the-swarmlord-profile-synaptic-pulse-ranged-2",
+            "id": "unit-the-swarmlord-profile-c64ef70c97",
+            "legacyIds": [
+              "unit-the-swarmlord-profile-synaptic-pulse-ranged-2"
+            ],
             "title": "Synaptic Pulse",
             "mode": "ranged",
             "range": "18\"",
@@ -3092,10 +3382,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-barbgaunts-model-barbgaunt",
+            "id": "unit-barbgaunts-model-76174b674f",
             "title": "Barbgaunt",
             "aliases": [
               "Barbgaunt"
+            ],
+            "legacyIds": [
+              "unit-barbgaunts-model-barbgaunt"
             ]
           }
         ],
@@ -3108,7 +3401,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-barbgaunts-profile-barblauncher-ranged"
+              "unit-barbgaunts-profile-53bd1e9142"
             ],
             "wargearAbilityIds": []
           },
@@ -3120,7 +3413,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-barbgaunts-profile-chitinous-claws-and-teeth-melee-2"
+              "unit-barbgaunts-profile-93d4ef6ce1"
             ],
             "wargearAbilityIds": []
           }
@@ -3128,7 +3421,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-barbgaunts-profile-barblauncher-ranged",
+            "id": "unit-barbgaunts-profile-53bd1e9142",
+            "legacyIds": [
+              "unit-barbgaunts-profile-barblauncher-ranged"
+            ],
             "title": "Barblauncher",
             "mode": "ranged",
             "range": "24\"",
@@ -3143,7 +3439,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-barbgaunts-profile-chitinous-claws-and-teeth-melee-2",
+            "id": "unit-barbgaunts-profile-93d4ef6ce1",
+            "legacyIds": [
+              "unit-barbgaunts-profile-chitinous-claws-and-teeth-melee-2"
+            ],
             "title": "Chitinous claws and teeth",
             "mode": "melee",
             "range": "Melee",
@@ -3221,10 +3520,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-biovores-model-biovore",
+            "id": "unit-biovores-model-a68f2e7fcb",
             "title": "Biovore",
             "aliases": [
               "Biovore"
+            ],
+            "legacyIds": [
+              "unit-biovores-model-biovore"
             ]
           }
         ],
@@ -3237,7 +3539,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-biovores-profile-spore-mine-launcher-ranged"
+              "unit-biovores-profile-0cead493f6"
             ],
             "wargearAbilityIds": []
           },
@@ -3249,7 +3551,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-biovores-profile-chitin-barbed-limbs-melee-2"
+              "unit-biovores-profile-050dde5ecd"
             ],
             "wargearAbilityIds": []
           }
@@ -3257,7 +3559,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-biovores-profile-spore-mine-launcher-ranged",
+            "id": "unit-biovores-profile-0cead493f6",
+            "legacyIds": [
+              "unit-biovores-profile-spore-mine-launcher-ranged"
+            ],
             "title": "Spore mine launcher",
             "mode": "ranged",
             "range": "48\"",
@@ -3272,7 +3577,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-biovores-profile-chitin-barbed-limbs-melee-2",
+            "id": "unit-biovores-profile-050dde5ecd",
+            "legacyIds": [
+              "unit-biovores-profile-chitin-barbed-limbs-melee-2"
+            ],
             "title": "Chitin-barbed limbs",
             "mode": "melee",
             "range": "Melee",
@@ -3361,10 +3669,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-genestealers-model-5-10-genestealers",
+            "id": "unit-genestealers-model-966cee1b09",
             "title": "5-10 Genestealers",
             "aliases": [
               "5-10 Genestealers"
+            ],
+            "legacyIds": [
+              "unit-genestealers-model-5-10-genestealers"
             ]
           }
         ],
@@ -3377,7 +3688,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-genestealers-profile-genestealer-claws-and-talons-melee"
+              "unit-genestealers-profile-51cfa34e47"
             ],
             "wargearAbilityIds": []
           }
@@ -3385,7 +3696,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-genestealers-profile-genestealer-claws-and-talons-melee",
+            "id": "unit-genestealers-profile-51cfa34e47",
+            "legacyIds": [
+              "unit-genestealers-profile-genestealer-claws-and-talons-melee"
+            ],
             "title": "Genestealer claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -3456,10 +3770,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-hive-guard-model-3-6-hive-guard",
+            "id": "unit-hive-guard-model-7d7ca4bd71",
             "title": "3-6 Hive Guard",
             "aliases": [
               "3-6 Hive Guard"
+            ],
+            "legacyIds": [
+              "unit-hive-guard-model-3-6-hive-guard"
             ]
           }
         ],
@@ -3472,7 +3789,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-guard-profile-shockcannon-ranged"
+              "unit-hive-guard-profile-023d8ac899"
             ],
             "wargearAbilityIds": []
           },
@@ -3484,7 +3801,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-guard-profile-chitinous-claws-and-teeth-melee-2"
+              "unit-hive-guard-profile-8a3f92e1bc"
             ],
             "wargearAbilityIds": []
           },
@@ -3496,7 +3813,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-guard-profile-impaler-cannon-ranged-3"
+              "unit-hive-guard-profile-9e20600dfd"
             ],
             "wargearAbilityIds": []
           }
@@ -3504,7 +3821,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-hive-guard-profile-shockcannon-ranged",
+            "id": "unit-hive-guard-profile-023d8ac899",
+            "legacyIds": [
+              "unit-hive-guard-profile-shockcannon-ranged"
+            ],
             "title": "Shockcannon",
             "mode": "ranged",
             "range": "24\"",
@@ -3519,7 +3839,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-guard-profile-chitinous-claws-and-teeth-melee-2",
+            "id": "unit-hive-guard-profile-8a3f92e1bc",
+            "legacyIds": [
+              "unit-hive-guard-profile-chitinous-claws-and-teeth-melee-2"
+            ],
             "title": "Chitinous claws and teeth",
             "mode": "melee",
             "range": "Melee",
@@ -3534,7 +3857,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-guard-profile-impaler-cannon-ranged-3",
+            "id": "unit-hive-guard-profile-9e20600dfd",
+            "legacyIds": [
+              "unit-hive-guard-profile-impaler-cannon-ranged-3"
+            ],
             "title": "Impaler cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -3641,10 +3967,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-lictor-model-lictor",
+            "id": "unit-lictor-model-a8031d3909",
             "title": "Lictor",
             "aliases": [
               "Lictor"
+            ],
+            "legacyIds": [
+              "unit-lictor-model-lictor"
             ]
           }
         ],
@@ -3657,7 +3986,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-lictor-profile-lictor-claws-and-talons-melee"
+              "unit-lictor-profile-87a135e07b"
             ],
             "wargearAbilityIds": []
           }
@@ -3665,7 +3994,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-lictor-profile-lictor-claws-and-talons-melee",
+            "id": "unit-lictor-profile-87a135e07b",
+            "legacyIds": [
+              "unit-lictor-profile-lictor-claws-and-talons-melee"
+            ],
             "title": "Lictor claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -3747,17 +4079,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-neurogaunts-model-1-2-neurogaunt-nodebeasts",
+            "id": "unit-neurogaunts-model-c37f3e9fc9",
             "title": "1-2 Neurogaunt Nodebeasts",
             "aliases": [
               "1-2 Neurogaunt Nodebeasts"
+            ],
+            "legacyIds": [
+              "unit-neurogaunts-model-1-2-neurogaunt-nodebeasts"
             ]
           },
           {
-            "id": "unit-neurogaunts-model-10-20-neurogaunts-2",
+            "id": "unit-neurogaunts-model-ccb344f98e",
             "title": "10-20 Neurogaunts",
             "aliases": [
               "10-20 Neurogaunts"
+            ],
+            "legacyIds": [
+              "unit-neurogaunts-model-10-20-neurogaunts-2"
             ]
           }
         ],
@@ -3770,7 +4108,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-neurogaunts-profile-chitinous-claws-and-teeth-melee"
+              "unit-neurogaunts-profile-8766ebf34c"
             ],
             "wargearAbilityIds": []
           }
@@ -3778,7 +4116,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-neurogaunts-profile-chitinous-claws-and-teeth-melee",
+            "id": "unit-neurogaunts-profile-8766ebf34c",
+            "legacyIds": [
+              "unit-neurogaunts-profile-chitinous-claws-and-teeth-melee"
+            ],
             "title": "Chitinous claws and teeth",
             "mode": "melee",
             "range": "Melee",
@@ -3893,10 +4234,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-neurolictor-model-neurolictor",
+            "id": "unit-neurolictor-model-a06fc16620",
             "title": "Neurolictor",
             "aliases": [
               "Neurolictor"
+            ],
+            "legacyIds": [
+              "unit-neurolictor-model-neurolictor"
             ]
           }
         ],
@@ -3909,7 +4253,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-neurolictor-profile-piercing-claws-and-talons-melee"
+              "unit-neurolictor-profile-a4afa00e0f"
             ],
             "wargearAbilityIds": []
           }
@@ -3917,7 +4261,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-neurolictor-profile-piercing-claws-and-talons-melee",
+            "id": "unit-neurolictor-profile-a4afa00e0f",
+            "legacyIds": [
+              "unit-neurolictor-profile-piercing-claws-and-talons-melee"
+            ],
             "title": "Piercing claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -3996,10 +4343,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-pyrovores-model-1-3-pyrovores",
+            "id": "unit-pyrovores-model-e7edc4e0a9",
             "title": "1-3 Pyrovores",
             "aliases": [
               "1-3 Pyrovores"
+            ],
+            "legacyIds": [
+              "unit-pyrovores-model-1-3-pyrovores"
             ]
           }
         ],
@@ -4012,7 +4362,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pyrovores-profile-flamespurt-ranged"
+              "unit-pyrovores-profile-3d50673522"
             ],
             "wargearAbilityIds": []
           },
@@ -4024,7 +4374,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-pyrovores-profile-chitin-barbed-limbs-melee-2"
+              "unit-pyrovores-profile-050dde5ecd"
             ],
             "wargearAbilityIds": []
           }
@@ -4032,7 +4382,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-pyrovores-profile-flamespurt-ranged",
+            "id": "unit-pyrovores-profile-3d50673522",
+            "legacyIds": [
+              "unit-pyrovores-profile-flamespurt-ranged"
+            ],
             "title": "Flamespurt",
             "mode": "ranged",
             "range": "12\"",
@@ -4047,7 +4400,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-pyrovores-profile-chitin-barbed-limbs-melee-2",
+            "id": "unit-pyrovores-profile-050dde5ecd",
+            "legacyIds": [
+              "unit-pyrovores-profile-chitin-barbed-limbs-melee-2"
+            ],
             "title": "Chitin-barbed limbs",
             "mode": "melee",
             "range": "Melee",
@@ -4137,10 +4493,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-raveners-model-5-raveners",
+            "id": "unit-raveners-model-4a10e5e416",
             "title": "5 Raveners",
             "aliases": [
               "5 Raveners"
+            ],
+            "legacyIds": [
+              "unit-raveners-model-5-raveners"
             ]
           }
         ],
@@ -4153,7 +4512,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-raveners-profile-ravener-claws-and-talons-melee"
+              "unit-raveners-profile-0aeec4f818"
             ],
             "wargearAbilityIds": []
           }
@@ -4161,7 +4520,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-raveners-profile-ravener-claws-and-talons-melee",
+            "id": "unit-raveners-profile-0aeec4f818",
+            "legacyIds": [
+              "unit-raveners-profile-ravener-claws-and-talons-melee"
+            ],
             "title": "Ravener claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -4259,17 +4621,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-tyranid-warriors-with-melee-bio-weapons-model-tyranid-prime",
+            "id": "unit-tyranid-warriors-with-melee-bio-weapons-model-f913c25b59",
             "title": "Tyranid Prime",
             "aliases": [
               "Tyranid Prime"
+            ],
+            "legacyIds": [
+              "unit-tyranid-warriors-with-melee-bio-weapons-model-tyranid-prime"
             ]
           },
           {
-            "id": "unit-tyranid-warriors-with-melee-bio-weapons-model-2-5-tyranid-warriors-2",
+            "id": "unit-tyranid-warriors-with-melee-bio-weapons-model-2baba44032",
             "title": "2-5 Tyranid Warriors",
             "aliases": [
               "2-5 Tyranid Warriors"
+            ],
+            "legacyIds": [
+              "unit-tyranid-warriors-with-melee-bio-weapons-model-2-5-tyranid-warriors-2"
             ]
           }
         ],
@@ -4282,7 +4650,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-warriors-with-melee-bio-weapons-profile-tyranid-warrior-claws-and-talons-melee"
+              "unit-tyranid-warriors-with-melee-bio-weapons-profile-bf63ae50a9"
             ],
             "wargearAbilityIds": []
           }
@@ -4290,7 +4658,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-tyranid-warriors-with-melee-bio-weapons-profile-tyranid-warrior-claws-and-talons-melee",
+            "id": "unit-tyranid-warriors-with-melee-bio-weapons-profile-bf63ae50a9",
+            "legacyIds": [
+              "unit-tyranid-warriors-with-melee-bio-weapons-profile-tyranid-warrior-claws-and-talons-melee"
+            ],
             "title": "Tyranid Warrior claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -4387,17 +4758,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-model-tyranid-prime",
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-model-f913c25b59",
             "title": "Tyranid Prime",
             "aliases": [
               "Tyranid Prime"
+            ],
+            "legacyIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons-model-tyranid-prime"
             ]
           },
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-model-2-5-tyranid-warriors-2",
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-model-2baba44032",
             "title": "2-5 Tyranid Warriors",
             "aliases": [
               "2-5 Tyranid Warriors"
+            ],
+            "legacyIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons-model-2-5-tyranid-warriors-2"
             ]
           }
         ],
@@ -4410,7 +4787,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-deathspitter-ranged"
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-0bc0a2b72f"
             ],
             "wargearAbilityIds": []
           },
@@ -4422,7 +4799,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-spinefists-ranged-2"
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-b5c44829d3"
             ],
             "wargearAbilityIds": []
           },
@@ -4434,7 +4811,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-venom-cannon-ranged-3"
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-6fcc3cf2ea"
             ],
             "wargearAbilityIds": []
           },
@@ -4446,7 +4823,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-barbed-strangler-ranged-4"
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-aaefd25d1a"
             ],
             "wargearAbilityIds": []
           },
@@ -4458,7 +4835,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-devourer-ranged-5"
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-bddaa5f849"
             ],
             "wargearAbilityIds": []
           },
@@ -4470,7 +4847,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-tyranid-warrior-claws-and-talons-melee-6"
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-a1273534ea"
             ],
             "wargearAbilityIds": []
           }
@@ -4478,7 +4855,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-deathspitter-ranged",
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-0bc0a2b72f",
+            "legacyIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-deathspitter-ranged"
+            ],
             "title": "Deathspitter",
             "mode": "ranged",
             "range": "24\"",
@@ -4493,7 +4873,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-spinefists-ranged-2",
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-b5c44829d3",
+            "legacyIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-spinefists-ranged-2"
+            ],
             "title": "Spinefists",
             "mode": "ranged",
             "range": "12\"",
@@ -4508,7 +4891,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-venom-cannon-ranged-3",
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-6fcc3cf2ea",
+            "legacyIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-venom-cannon-ranged-3"
+            ],
             "title": "Venom cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -4523,7 +4909,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-barbed-strangler-ranged-4",
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-aaefd25d1a",
+            "legacyIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-barbed-strangler-ranged-4"
+            ],
             "title": "Barbed strangler",
             "mode": "ranged",
             "range": "36\"",
@@ -4538,7 +4927,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-devourer-ranged-5",
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-bddaa5f849",
+            "legacyIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-devourer-ranged-5"
+            ],
             "title": "Devourer",
             "mode": "ranged",
             "range": "18\"",
@@ -4553,7 +4945,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-tyranid-warrior-claws-and-talons-melee-6",
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-a1273534ea",
+            "legacyIds": [
+              "unit-tyranid-warriors-with-ranged-bio-weapons-profile-tyranid-warrior-claws-and-talons-melee-6"
+            ],
             "title": "Tyranid Warrior claws and talons",
             "mode": "melee",
             "range": "Melee",
@@ -4650,10 +5045,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-tyrant-guard-model-3-6-tyrant-guard",
+            "id": "unit-tyrant-guard-model-811009486b",
             "title": "3-6 Tyrant Guard",
             "aliases": [
               "3-6 Tyrant Guard"
+            ],
+            "legacyIds": [
+              "unit-tyrant-guard-model-3-6-tyrant-guard"
             ]
           }
         ],
@@ -4666,7 +5064,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrant-guard-profile-scything-talons-and-rending-claws-melee"
+              "unit-tyrant-guard-profile-77927721c8"
             ],
             "wargearAbilityIds": []
           },
@@ -4678,7 +5076,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrant-guard-profile-bone-cleaver-lash-whip-and-rending-claws-melee-2"
+              "unit-tyrant-guard-profile-7083debcbc"
             ],
             "wargearAbilityIds": []
           },
@@ -4690,7 +5088,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrant-guard-profile-crushing-claws-and-rending-claws-melee-3"
+              "unit-tyrant-guard-profile-35d11dbc32"
             ],
             "wargearAbilityIds": []
           }
@@ -4698,7 +5096,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-tyrant-guard-profile-scything-talons-and-rending-claws-melee",
+            "id": "unit-tyrant-guard-profile-77927721c8",
+            "legacyIds": [
+              "unit-tyrant-guard-profile-scything-talons-and-rending-claws-melee"
+            ],
             "title": "Scything talons and rending claws",
             "mode": "melee",
             "range": "Melee",
@@ -4713,7 +5114,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyrant-guard-profile-bone-cleaver-lash-whip-and-rending-claws-melee-2",
+            "id": "unit-tyrant-guard-profile-7083debcbc",
+            "legacyIds": [
+              "unit-tyrant-guard-profile-bone-cleaver-lash-whip-and-rending-claws-melee-2"
+            ],
             "title": "Bone cleaver, lash whip and rending claws",
             "mode": "melee",
             "range": "Melee",
@@ -4728,7 +5132,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyrant-guard-profile-crushing-claws-and-rending-claws-melee-3",
+            "id": "unit-tyrant-guard-profile-35d11dbc32",
+            "legacyIds": [
+              "unit-tyrant-guard-profile-crushing-claws-and-rending-claws-melee-3"
+            ],
             "title": "Crushing claws and rending claws",
             "mode": "melee",
             "range": "Melee",
@@ -4807,10 +5214,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-venomthropes-model-3-6-venomthropes",
+            "id": "unit-venomthropes-model-13718ac606",
             "title": "3-6 Venomthropes",
             "aliases": [
               "3-6 Venomthropes"
+            ],
+            "legacyIds": [
+              "unit-venomthropes-model-3-6-venomthropes"
             ]
           }
         ],
@@ -4823,7 +5233,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-venomthropes-profile-toxic-lashes-melee"
+              "unit-venomthropes-profile-671a45d7d0"
             ],
             "wargearAbilityIds": []
           }
@@ -4831,7 +5241,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-venomthropes-profile-toxic-lashes-melee",
+            "id": "unit-venomthropes-profile-671a45d7d0",
+            "legacyIds": [
+              "unit-venomthropes-profile-toxic-lashes-melee"
+            ],
             "title": "Toxic lashes",
             "mode": "melee",
             "range": "Melee",
@@ -4924,10 +5337,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-von-ryans-leapers-model-3-6-von-ryans-leapers",
+            "id": "unit-von-ryans-leapers-model-f9ab31a3cc",
             "title": "3-6 Von Ryan's Leapers",
             "aliases": [
               "3-6 Von Ryan's Leapers"
+            ],
+            "legacyIds": [
+              "unit-von-ryans-leapers-model-3-6-von-ryans-leapers"
             ]
           }
         ],
@@ -4940,7 +5356,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-von-ryans-leapers-profile-leapers-talons-melee"
+              "unit-von-ryans-leapers-profile-556e19e62a"
             ],
             "wargearAbilityIds": []
           }
@@ -4948,7 +5364,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-von-ryans-leapers-profile-leapers-talons-melee",
+            "id": "unit-von-ryans-leapers-profile-556e19e62a",
+            "legacyIds": [
+              "unit-von-ryans-leapers-profile-leapers-talons-melee"
+            ],
             "title": "Leaper's talons",
             "mode": "melee",
             "range": "Melee",
@@ -5046,17 +5465,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-zoanthropes-model-neurothrope",
+            "id": "unit-zoanthropes-model-24bc5e35f1",
             "title": "Neurothrope",
             "aliases": [
               "Neurothrope"
+            ],
+            "legacyIds": [
+              "unit-zoanthropes-model-neurothrope"
             ]
           },
           {
-            "id": "unit-zoanthropes-model-2-5-zoanthropes-2",
+            "id": "unit-zoanthropes-model-cd59a635e0",
             "title": "2-5 Zoanthropes",
             "aliases": [
               "2-5 Zoanthropes"
+            ],
+            "legacyIds": [
+              "unit-zoanthropes-model-2-5-zoanthropes-2"
             ]
           }
         ],
@@ -5069,7 +5494,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-zoanthropes-profile-chitinous-claws-and-teeth-melee"
+              "unit-zoanthropes-profile-cff1bff7c3"
             ],
             "wargearAbilityIds": []
           },
@@ -5081,7 +5506,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-zoanthropes-profile-warp-blast-witchfire-ranged-2"
+              "unit-zoanthropes-profile-6a216ac68a"
             ],
             "wargearAbilityIds": []
           },
@@ -5093,7 +5518,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-zoanthropes-profile-warp-blast-focused-witchfire-ranged-3"
+              "unit-zoanthropes-profile-2bd81f35c7"
             ],
             "wargearAbilityIds": []
           },
@@ -5106,8 +5531,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-zoanthropes-weapon-family-warp-blast",
             "profileIds": [
-              "unit-zoanthropes-profile-warp-blast-witchfire-ranged-2",
-              "unit-zoanthropes-profile-warp-blast-focused-witchfire-ranged-3"
+              "unit-zoanthropes-profile-6a216ac68a",
+              "unit-zoanthropes-profile-2bd81f35c7"
             ],
             "wargearAbilityIds": []
           }
@@ -5120,15 +5545,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Warp blast"
             ],
             "profileIds": [
-              "unit-zoanthropes-profile-warp-blast-witchfire-ranged-2",
-              "unit-zoanthropes-profile-warp-blast-focused-witchfire-ranged-3"
+              "unit-zoanthropes-profile-6a216ac68a",
+              "unit-zoanthropes-profile-2bd81f35c7"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-zoanthropes-profile-chitinous-claws-and-teeth-melee",
+            "id": "unit-zoanthropes-profile-cff1bff7c3",
+            "legacyIds": [
+              "unit-zoanthropes-profile-chitinous-claws-and-teeth-melee"
+            ],
             "title": "Chitinous claws and teeth",
             "mode": "melee",
             "range": "Melee",
@@ -5143,7 +5571,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-zoanthropes-profile-warp-blast-witchfire-ranged-2",
+            "id": "unit-zoanthropes-profile-6a216ac68a",
+            "legacyIds": [
+              "unit-zoanthropes-profile-warp-blast-witchfire-ranged-2"
+            ],
             "title": "➤ Warp blast - witchfire",
             "mode": "ranged",
             "range": "24\"",
@@ -5159,7 +5590,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-zoanthropes-profile-warp-blast-focused-witchfire-ranged-3",
+            "id": "unit-zoanthropes-profile-2bd81f35c7",
+            "legacyIds": [
+              "unit-zoanthropes-profile-warp-blast-focused-witchfire-ranged-3"
+            ],
             "title": "➤ Warp blast - focused witchfire",
             "mode": "ranged",
             "range": "24\"",
@@ -5248,10 +5682,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-carnifexes-model-carnifex",
+            "id": "unit-carnifexes-model-14a678786f",
             "title": "Carnifex",
             "aliases": [
               "Carnifex"
+            ],
+            "legacyIds": [
+              "unit-carnifexes-model-carnifex"
             ]
           }
         ],
@@ -5264,7 +5701,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-chitinous-claws-and-teeth-melee"
+              "unit-carnifexes-profile-ed964aba52"
             ],
             "wargearAbilityIds": []
           },
@@ -5276,7 +5713,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-bio-plasma-ranged-2"
+              "unit-carnifexes-profile-c902801553"
             ],
             "wargearAbilityIds": []
           },
@@ -5288,7 +5725,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-spine-banks-ranged-3"
+              "unit-carnifexes-profile-fba8e0b3d4"
             ],
             "wargearAbilityIds": []
           },
@@ -5300,7 +5737,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-carnifex-scything-talons-melee-4"
+              "unit-carnifexes-profile-2a5de6db81"
             ],
             "wargearAbilityIds": []
           },
@@ -5312,7 +5749,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-deathspitters-with-slimer-maggots-ranged-5"
+              "unit-carnifexes-profile-219bba0fb8"
             ],
             "wargearAbilityIds": []
           },
@@ -5324,7 +5761,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-devourers-with-brainleech-worms-ranged-6"
+              "unit-carnifexes-profile-b3a8a12149"
             ],
             "wargearAbilityIds": []
           },
@@ -5336,7 +5773,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-carnifex-crushing-claws-melee-7"
+              "unit-carnifexes-profile-62d6610e9e"
             ],
             "wargearAbilityIds": []
           },
@@ -5348,7 +5785,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-heavy-venom-cannon-ranged-8"
+              "unit-carnifexes-profile-28f95b05b0"
             ],
             "wargearAbilityIds": []
           },
@@ -5360,7 +5797,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-stranglethorn-cannon-ranged-9"
+              "unit-carnifexes-profile-71c3fa5429"
             ],
             "wargearAbilityIds": []
           },
@@ -5372,7 +5809,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-carnifexes-profile-carnifex-extra-scything-talons-melee-10"
+              "unit-carnifexes-profile-4f404010c6"
             ],
             "wargearAbilityIds": []
           }
@@ -5380,7 +5817,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-carnifexes-profile-chitinous-claws-and-teeth-melee",
+            "id": "unit-carnifexes-profile-ed964aba52",
+            "legacyIds": [
+              "unit-carnifexes-profile-chitinous-claws-and-teeth-melee"
+            ],
             "title": "Chitinous claws and teeth",
             "mode": "melee",
             "range": "Melee",
@@ -5395,7 +5835,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-bio-plasma-ranged-2",
+            "id": "unit-carnifexes-profile-c902801553",
+            "legacyIds": [
+              "unit-carnifexes-profile-bio-plasma-ranged-2"
+            ],
             "title": "Bio-plasma",
             "mode": "ranged",
             "range": "12\"",
@@ -5410,7 +5853,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-spine-banks-ranged-3",
+            "id": "unit-carnifexes-profile-fba8e0b3d4",
+            "legacyIds": [
+              "unit-carnifexes-profile-spine-banks-ranged-3"
+            ],
             "title": "Spine banks",
             "mode": "ranged",
             "range": "6\"",
@@ -5425,7 +5871,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-carnifex-scything-talons-melee-4",
+            "id": "unit-carnifexes-profile-2a5de6db81",
+            "legacyIds": [
+              "unit-carnifexes-profile-carnifex-scything-talons-melee-4"
+            ],
             "title": "Carnifex scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -5440,7 +5889,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-deathspitters-with-slimer-maggots-ranged-5",
+            "id": "unit-carnifexes-profile-219bba0fb8",
+            "legacyIds": [
+              "unit-carnifexes-profile-deathspitters-with-slimer-maggots-ranged-5"
+            ],
             "title": "Deathspitters with slimer maggots",
             "mode": "ranged",
             "range": "24\"",
@@ -5455,7 +5907,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-devourers-with-brainleech-worms-ranged-6",
+            "id": "unit-carnifexes-profile-b3a8a12149",
+            "legacyIds": [
+              "unit-carnifexes-profile-devourers-with-brainleech-worms-ranged-6"
+            ],
             "title": "Devourers with brainleech worms",
             "mode": "ranged",
             "range": "18\"",
@@ -5470,7 +5925,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-carnifex-crushing-claws-melee-7",
+            "id": "unit-carnifexes-profile-62d6610e9e",
+            "legacyIds": [
+              "unit-carnifexes-profile-carnifex-crushing-claws-melee-7"
+            ],
             "title": "Carnifex crushing claws",
             "mode": "melee",
             "range": "Melee",
@@ -5485,7 +5943,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-heavy-venom-cannon-ranged-8",
+            "id": "unit-carnifexes-profile-28f95b05b0",
+            "legacyIds": [
+              "unit-carnifexes-profile-heavy-venom-cannon-ranged-8"
+            ],
             "title": "Heavy venom cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -5500,7 +5961,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-stranglethorn-cannon-ranged-9",
+            "id": "unit-carnifexes-profile-71c3fa5429",
+            "legacyIds": [
+              "unit-carnifexes-profile-stranglethorn-cannon-ranged-9"
+            ],
             "title": "Stranglethorn cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -5515,7 +5979,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-carnifexes-profile-carnifex-extra-scything-talons-melee-10",
+            "id": "unit-carnifexes-profile-4f404010c6",
+            "legacyIds": [
+              "unit-carnifexes-profile-carnifex-extra-scything-talons-melee-10"
+            ],
             "title": "Carnifex extra scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -5600,10 +6067,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-exocrine-model-exocrine",
+            "id": "unit-exocrine-model-dcc302d1c5",
             "title": "Exocrine",
             "aliases": [
               "Exocrine"
+            ],
+            "legacyIds": [
+              "unit-exocrine-model-exocrine"
             ]
           }
         ],
@@ -5616,7 +6086,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-exocrine-profile-bio-plasmic-cannon-ranged"
+              "unit-exocrine-profile-44775129ec"
             ],
             "wargearAbilityIds": []
           },
@@ -5628,7 +6098,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-exocrine-profile-powerful-limbs-melee-2"
+              "unit-exocrine-profile-2321141c75"
             ],
             "wargearAbilityIds": []
           }
@@ -5636,7 +6106,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-exocrine-profile-bio-plasmic-cannon-ranged",
+            "id": "unit-exocrine-profile-44775129ec",
+            "legacyIds": [
+              "unit-exocrine-profile-bio-plasmic-cannon-ranged"
+            ],
             "title": "Bio-plasmic cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -5651,7 +6124,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-exocrine-profile-powerful-limbs-melee-2",
+            "id": "unit-exocrine-profile-2321141c75",
+            "legacyIds": [
+              "unit-exocrine-profile-powerful-limbs-melee-2"
+            ],
             "title": "Powerful limbs",
             "mode": "melee",
             "range": "Melee",
@@ -5739,10 +6215,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-harpy-model-harpy",
+            "id": "unit-harpy-model-abcaf4a94c",
             "title": "Harpy",
             "aliases": [
               "Harpy"
+            ],
+            "legacyIds": [
+              "unit-harpy-model-harpy"
             ]
           }
         ],
@@ -5755,7 +6234,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-harpy-profile-twin-stranglethorn-cannon-ranged"
+              "unit-harpy-profile-ffb601aa8a"
             ],
             "wargearAbilityIds": []
           },
@@ -5767,7 +6246,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-harpy-profile-twin-heavy-venom-cannon-ranged-2"
+              "unit-harpy-profile-e59c55747f"
             ],
             "wargearAbilityIds": []
           },
@@ -5779,7 +6258,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-harpy-profile-stinger-salvoes-ranged-3"
+              "unit-harpy-profile-22904f612a"
             ],
             "wargearAbilityIds": []
           },
@@ -5791,7 +6270,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-harpy-profile-scything-wings-melee-4"
+              "unit-harpy-profile-b27a5bca20"
             ],
             "wargearAbilityIds": []
           }
@@ -5799,7 +6278,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-harpy-profile-twin-stranglethorn-cannon-ranged",
+            "id": "unit-harpy-profile-ffb601aa8a",
+            "legacyIds": [
+              "unit-harpy-profile-twin-stranglethorn-cannon-ranged"
+            ],
             "title": "Twin stranglethorn cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -5814,7 +6296,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-harpy-profile-twin-heavy-venom-cannon-ranged-2",
+            "id": "unit-harpy-profile-e59c55747f",
+            "legacyIds": [
+              "unit-harpy-profile-twin-heavy-venom-cannon-ranged-2"
+            ],
             "title": "Twin heavy venom cannon",
             "mode": "ranged",
             "range": "36\"",
@@ -5829,7 +6314,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-harpy-profile-stinger-salvoes-ranged-3",
+            "id": "unit-harpy-profile-22904f612a",
+            "legacyIds": [
+              "unit-harpy-profile-stinger-salvoes-ranged-3"
+            ],
             "title": "Stinger salvoes",
             "mode": "ranged",
             "range": "24\"",
@@ -5844,7 +6332,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-harpy-profile-scything-wings-melee-4",
+            "id": "unit-harpy-profile-b27a5bca20",
+            "legacyIds": [
+              "unit-harpy-profile-scything-wings-melee-4"
+            ],
             "title": "Scything wings",
             "mode": "melee",
             "range": "Melee",
@@ -5930,10 +6421,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-haruspex-model-haruspex",
+            "id": "unit-haruspex-model-d9c8860ca5",
             "title": "Haruspex",
             "aliases": [
               "Haruspex"
+            ],
+            "legacyIds": [
+              "unit-haruspex-model-haruspex"
             ]
           }
         ],
@@ -5946,7 +6440,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-haruspex-profile-grasping-tongue-ranged"
+              "unit-haruspex-profile-665318e91b"
             ],
             "wargearAbilityIds": []
           },
@@ -5958,7 +6452,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-haruspex-profile-shovelling-claws-melee-2"
+              "unit-haruspex-profile-e749d1e212"
             ],
             "wargearAbilityIds": []
           },
@@ -5970,7 +6464,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-haruspex-profile-ravenous-maw-melee-3"
+              "unit-haruspex-profile-ea70b63542"
             ],
             "wargearAbilityIds": []
           }
@@ -5978,7 +6472,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-haruspex-profile-grasping-tongue-ranged",
+            "id": "unit-haruspex-profile-665318e91b",
+            "legacyIds": [
+              "unit-haruspex-profile-grasping-tongue-ranged"
+            ],
             "title": "Grasping tongue",
             "mode": "ranged",
             "range": "12\"",
@@ -5993,7 +6490,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-haruspex-profile-shovelling-claws-melee-2",
+            "id": "unit-haruspex-profile-e749d1e212",
+            "legacyIds": [
+              "unit-haruspex-profile-shovelling-claws-melee-2"
+            ],
             "title": "Shovelling claws",
             "mode": "melee",
             "range": "Melee",
@@ -6008,7 +6508,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-haruspex-profile-ravenous-maw-melee-3",
+            "id": "unit-haruspex-profile-ea70b63542",
+            "legacyIds": [
+              "unit-haruspex-profile-ravenous-maw-melee-3"
+            ],
             "title": "Ravenous maw",
             "mode": "melee",
             "range": "Melee",
@@ -6096,10 +6599,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-hive-crone-model-hive-crone",
+            "id": "unit-hive-crone-model-08ae528d0a",
             "title": "Hive Crone",
             "aliases": [
               "Hive Crone"
+            ],
+            "legacyIds": [
+              "unit-hive-crone-model-hive-crone"
             ]
           }
         ],
@@ -6112,7 +6618,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-crone-profile-drool-cannon-ranged"
+              "unit-hive-crone-profile-c254f1a2a9"
             ],
             "wargearAbilityIds": []
           },
@@ -6124,7 +6630,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-crone-profile-tentaclids-ranged-2"
+              "unit-hive-crone-profile-e550851ea2"
             ],
             "wargearAbilityIds": []
           },
@@ -6136,7 +6642,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-crone-profile-thorax-spur-melee-3"
+              "unit-hive-crone-profile-e92ee75bff"
             ],
             "wargearAbilityIds": []
           },
@@ -6148,7 +6654,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-crone-profile-scything-wings-melee-4"
+              "unit-hive-crone-profile-b27a5bca20"
             ],
             "wargearAbilityIds": []
           },
@@ -6160,7 +6666,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hive-crone-profile-stinger-salvoes-ranged-5"
+              "unit-hive-crone-profile-22904f612a"
             ],
             "wargearAbilityIds": []
           }
@@ -6168,7 +6674,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-hive-crone-profile-drool-cannon-ranged",
+            "id": "unit-hive-crone-profile-c254f1a2a9",
+            "legacyIds": [
+              "unit-hive-crone-profile-drool-cannon-ranged"
+            ],
             "title": "Drool cannon",
             "mode": "ranged",
             "range": "12\"",
@@ -6183,7 +6692,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-crone-profile-tentaclids-ranged-2",
+            "id": "unit-hive-crone-profile-e550851ea2",
+            "legacyIds": [
+              "unit-hive-crone-profile-tentaclids-ranged-2"
+            ],
             "title": "Tentaclids",
             "mode": "ranged",
             "range": "36\"",
@@ -6198,7 +6710,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-crone-profile-thorax-spur-melee-3",
+            "id": "unit-hive-crone-profile-e92ee75bff",
+            "legacyIds": [
+              "unit-hive-crone-profile-thorax-spur-melee-3"
+            ],
             "title": "Thorax spur",
             "mode": "melee",
             "range": "Melee",
@@ -6213,7 +6728,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-crone-profile-scything-wings-melee-4",
+            "id": "unit-hive-crone-profile-b27a5bca20",
+            "legacyIds": [
+              "unit-hive-crone-profile-scything-wings-melee-4"
+            ],
             "title": "Scything wings",
             "mode": "melee",
             "range": "Melee",
@@ -6228,7 +6746,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hive-crone-profile-stinger-salvoes-ranged-5",
+            "id": "unit-hive-crone-profile-22904f612a",
+            "legacyIds": [
+              "unit-hive-crone-profile-stinger-salvoes-ranged-5"
+            ],
             "title": "Stinger salvoes",
             "mode": "ranged",
             "range": "24\"",
@@ -6322,10 +6843,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-maleceptor-model-maleceptor",
+            "id": "unit-maleceptor-model-1649c87a74",
             "title": "Maleceptor",
             "aliases": [
               "Maleceptor"
+            ],
+            "legacyIds": [
+              "unit-maleceptor-model-maleceptor"
             ]
           }
         ],
@@ -6338,7 +6862,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-maleceptor-profile-massive-scything-talons-strike-melee"
+              "unit-maleceptor-profile-9bfc3d26c3"
             ],
             "wargearAbilityIds": []
           },
@@ -6350,7 +6874,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-maleceptor-profile-massive-scything-talons-sweep-melee-2"
+              "unit-maleceptor-profile-b4ce172c7e"
             ],
             "wargearAbilityIds": []
           },
@@ -6362,7 +6886,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-maleceptor-profile-psychic-overload-ranged-3"
+              "unit-maleceptor-profile-92c935fd52"
             ],
             "wargearAbilityIds": []
           },
@@ -6375,8 +6899,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-maleceptor-weapon-family-massive-scything-talons",
             "profileIds": [
-              "unit-maleceptor-profile-massive-scything-talons-strike-melee",
-              "unit-maleceptor-profile-massive-scything-talons-sweep-melee-2"
+              "unit-maleceptor-profile-9bfc3d26c3",
+              "unit-maleceptor-profile-b4ce172c7e"
             ],
             "wargearAbilityIds": []
           }
@@ -6389,15 +6913,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Massive scything talons"
             ],
             "profileIds": [
-              "unit-maleceptor-profile-massive-scything-talons-strike-melee",
-              "unit-maleceptor-profile-massive-scything-talons-sweep-melee-2"
+              "unit-maleceptor-profile-9bfc3d26c3",
+              "unit-maleceptor-profile-b4ce172c7e"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-maleceptor-profile-massive-scything-talons-strike-melee",
+            "id": "unit-maleceptor-profile-9bfc3d26c3",
+            "legacyIds": [
+              "unit-maleceptor-profile-massive-scything-talons-strike-melee"
+            ],
             "title": "➤ Massive scything talons - strike",
             "mode": "melee",
             "range": "Melee",
@@ -6413,7 +6940,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-maleceptor-profile-massive-scything-talons-sweep-melee-2",
+            "id": "unit-maleceptor-profile-b4ce172c7e",
+            "legacyIds": [
+              "unit-maleceptor-profile-massive-scything-talons-sweep-melee-2"
+            ],
             "title": "➤ Massive scything talons - sweep",
             "mode": "melee",
             "range": "Melee",
@@ -6429,7 +6959,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-maleceptor-profile-psychic-overload-ranged-3",
+            "id": "unit-maleceptor-profile-92c935fd52",
+            "legacyIds": [
+              "unit-maleceptor-profile-psychic-overload-ranged-3"
+            ],
             "title": "Psychic overload",
             "mode": "ranged",
             "range": "18\"",
@@ -6515,10 +7048,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-mawloc-model-mawloc",
+            "id": "unit-mawloc-model-4155cc3f31",
             "title": "Mawloc",
             "aliases": [
               "Mawloc"
+            ],
+            "legacyIds": [
+              "unit-mawloc-model-mawloc"
             ]
           }
         ],
@@ -6531,7 +7067,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-mawloc-profile-distensible-jaw-melee"
+              "unit-mawloc-profile-9d25ad8a7f"
             ],
             "wargearAbilityIds": []
           },
@@ -6543,7 +7079,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-mawloc-profile-mawloc-scything-talons-melee-2"
+              "unit-mawloc-profile-74d9cc7df7"
             ],
             "wargearAbilityIds": []
           }
@@ -6551,7 +7087,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-mawloc-profile-distensible-jaw-melee",
+            "id": "unit-mawloc-profile-9d25ad8a7f",
+            "legacyIds": [
+              "unit-mawloc-profile-distensible-jaw-melee"
+            ],
             "title": "Distensible jaw",
             "mode": "melee",
             "range": "Melee",
@@ -6566,7 +7105,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-mawloc-profile-mawloc-scything-talons-melee-2",
+            "id": "unit-mawloc-profile-74d9cc7df7",
+            "legacyIds": [
+              "unit-mawloc-profile-mawloc-scything-talons-melee-2"
+            ],
             "title": "Mawloc scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -6665,7 +7207,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-norn-assimilator"
           },
           {
-            "id": "tyranids-ability-harpooned",
+            "id": "62c7-3cb5-45c-cc3b",
             "sectionId": "62c7-3cb5-45c-cc3b",
             "title": "Harpooned",
             "text": "When this unit declares a charge, if an enemy MONSTER or VEHICLE unit is within 12\" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:\n- This unit has +2 to charge rolls until the end of the phase.\n- This unit must end that charge move engaged with that MONSTER or VEHICLE unit.",
@@ -6674,10 +7216,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-norn-assimilator-model-norn-assimilator",
+            "id": "unit-norn-assimilator-model-6ce5ca2019",
             "title": "Norn Assimilator",
             "aliases": [
               "Norn Assimilator"
+            ],
+            "legacyIds": [
+              "unit-norn-assimilator-model-norn-assimilator"
             ]
           }
         ],
@@ -6690,7 +7235,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-norn-assimilator-profile-monstrous-scything-talons-melee"
+              "unit-norn-assimilator-profile-d312473440"
             ],
             "wargearAbilityIds": []
           },
@@ -6702,8 +7247,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-norn-assimilator-profile-toxinjector-harpoon-melee-2",
-              "unit-norn-assimilator-profile-toxinjector-harpoon-ranged-3"
+              "unit-norn-assimilator-profile-d058de5ae5",
+              "unit-norn-assimilator-profile-1f159777cd"
             ],
             "wargearAbilityIds": []
           }
@@ -6711,7 +7256,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-norn-assimilator-profile-monstrous-scything-talons-melee",
+            "id": "unit-norn-assimilator-profile-d312473440",
+            "legacyIds": [
+              "unit-norn-assimilator-profile-monstrous-scything-talons-melee"
+            ],
             "title": "Monstrous scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -6726,7 +7274,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-norn-assimilator-profile-toxinjector-harpoon-melee-2",
+            "id": "unit-norn-assimilator-profile-d058de5ae5",
+            "legacyIds": [
+              "unit-norn-assimilator-profile-toxinjector-harpoon-melee-2"
+            ],
             "title": "Toxinjector harpoon",
             "mode": "melee",
             "range": "Melee",
@@ -6741,7 +7292,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-norn-assimilator-profile-toxinjector-harpoon-ranged-3",
+            "id": "unit-norn-assimilator-profile-1f159777cd",
+            "legacyIds": [
+              "unit-norn-assimilator-profile-toxinjector-harpoon-ranged-3"
+            ],
             "title": "Toxinjector harpoon",
             "mode": "ranged",
             "range": "12\"",
@@ -6842,10 +7396,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-norn-emissary-model-norn-emissary",
+            "id": "unit-norn-emissary-model-02bd671494",
             "title": "Norn Emissary",
             "aliases": [
               "Norn Emissary"
+            ],
+            "legacyIds": [
+              "unit-norn-emissary-model-norn-emissary"
             ]
           }
         ],
@@ -6858,7 +7415,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-norn-emissary-profile-monstrous-rending-claws-melee"
+              "unit-norn-emissary-profile-1a9b2981d7"
             ],
             "wargearAbilityIds": []
           },
@@ -6870,7 +7427,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-norn-emissary-profile-monstrous-scything-talons-melee-2"
+              "unit-norn-emissary-profile-d312473440"
             ],
             "wargearAbilityIds": []
           },
@@ -6882,7 +7439,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-norn-emissary-profile-psychic-tendril-neuroparasite-ranged-3"
+              "unit-norn-emissary-profile-5292473d11"
             ],
             "wargearAbilityIds": []
           },
@@ -6894,7 +7451,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-norn-emissary-profile-psychic-tendril-neurolance-ranged-4"
+              "unit-norn-emissary-profile-1a06bbf3b0"
             ],
             "wargearAbilityIds": []
           },
@@ -6906,7 +7463,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-norn-emissary-profile-psychic-tendril-neuroblast-ranged-5"
+              "unit-norn-emissary-profile-38f3a725db"
             ],
             "wargearAbilityIds": []
           },
@@ -6919,9 +7476,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "kind": "weapon",
             "familyId": "unit-norn-emissary-weapon-family-psychic-tendril",
             "profileIds": [
-              "unit-norn-emissary-profile-psychic-tendril-neuroparasite-ranged-3",
-              "unit-norn-emissary-profile-psychic-tendril-neurolance-ranged-4",
-              "unit-norn-emissary-profile-psychic-tendril-neuroblast-ranged-5"
+              "unit-norn-emissary-profile-5292473d11",
+              "unit-norn-emissary-profile-1a06bbf3b0",
+              "unit-norn-emissary-profile-38f3a725db"
             ],
             "wargearAbilityIds": []
           }
@@ -6934,16 +7491,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "➤ Psychic tendril"
             ],
             "profileIds": [
-              "unit-norn-emissary-profile-psychic-tendril-neuroparasite-ranged-3",
-              "unit-norn-emissary-profile-psychic-tendril-neurolance-ranged-4",
-              "unit-norn-emissary-profile-psychic-tendril-neuroblast-ranged-5"
+              "unit-norn-emissary-profile-5292473d11",
+              "unit-norn-emissary-profile-1a06bbf3b0",
+              "unit-norn-emissary-profile-38f3a725db"
             ],
             "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
           {
-            "id": "unit-norn-emissary-profile-monstrous-rending-claws-melee",
+            "id": "unit-norn-emissary-profile-1a9b2981d7",
+            "legacyIds": [
+              "unit-norn-emissary-profile-monstrous-rending-claws-melee"
+            ],
             "title": "Monstrous rending claws",
             "mode": "melee",
             "range": "Melee",
@@ -6958,7 +7518,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-norn-emissary-profile-monstrous-scything-talons-melee-2",
+            "id": "unit-norn-emissary-profile-d312473440",
+            "legacyIds": [
+              "unit-norn-emissary-profile-monstrous-scything-talons-melee-2"
+            ],
             "title": "Monstrous scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -6973,7 +7536,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-norn-emissary-profile-psychic-tendril-neuroparasite-ranged-3",
+            "id": "unit-norn-emissary-profile-5292473d11",
+            "legacyIds": [
+              "unit-norn-emissary-profile-psychic-tendril-neuroparasite-ranged-3"
+            ],
             "title": "➤ Psychic tendril - neuroparasite",
             "mode": "ranged",
             "range": "18\"",
@@ -6989,7 +7555,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-norn-emissary-profile-psychic-tendril-neurolance-ranged-4",
+            "id": "unit-norn-emissary-profile-1a06bbf3b0",
+            "legacyIds": [
+              "unit-norn-emissary-profile-psychic-tendril-neurolance-ranged-4"
+            ],
             "title": "➤ Psychic tendril - neurolance",
             "mode": "ranged",
             "range": "18\"",
@@ -7005,7 +7574,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-norn-emissary-profile-psychic-tendril-neuroblast-ranged-5",
+            "id": "unit-norn-emissary-profile-38f3a725db",
+            "legacyIds": [
+              "unit-norn-emissary-profile-psychic-tendril-neuroblast-ranged-5"
+            ],
             "title": "➤ Psychic tendril - neuroblast",
             "mode": "ranged",
             "range": "18\"",
@@ -7100,10 +7672,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-psychophage-model-psychophage",
+            "id": "unit-psychophage-model-2df653cb00",
             "title": "Psychophage",
             "aliases": [
               "Psychophage"
+            ],
+            "legacyIds": [
+              "unit-psychophage-model-psychophage"
             ]
           }
         ],
@@ -7116,7 +7691,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-psychophage-profile-talons-and-betentacled-maw-melee"
+              "unit-psychophage-profile-a619b179be"
             ],
             "wargearAbilityIds": []
           },
@@ -7128,7 +7703,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-psychophage-profile-psychoclastic-torrent-ranged-2"
+              "unit-psychophage-profile-bed46f1e15"
             ],
             "wargearAbilityIds": []
           }
@@ -7136,7 +7711,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-psychophage-profile-talons-and-betentacled-maw-melee",
+            "id": "unit-psychophage-profile-a619b179be",
+            "legacyIds": [
+              "unit-psychophage-profile-talons-and-betentacled-maw-melee"
+            ],
             "title": "Talons and betentacled maw",
             "mode": "melee",
             "range": "Melee",
@@ -7151,7 +7729,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-psychophage-profile-psychoclastic-torrent-ranged-2",
+            "id": "unit-psychophage-profile-bed46f1e15",
+            "legacyIds": [
+              "unit-psychophage-profile-psychoclastic-torrent-ranged-2"
+            ],
             "title": "Psychoclastic torrent",
             "mode": "ranged",
             "range": "12\"",
@@ -7229,10 +7810,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-screamer-killer-model-screamer-killer",
+            "id": "unit-screamer-killer-model-7ffa643cf4",
             "title": "Screamer-killer",
             "aliases": [
               "Screamer-killer"
+            ],
+            "legacyIds": [
+              "unit-screamer-killer-model-screamer-killer"
             ]
           }
         ],
@@ -7245,7 +7829,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-screamer-killer-profile-bio-plasmic-scream-ranged"
+              "unit-screamer-killer-profile-671a3aa9d5"
             ],
             "wargearAbilityIds": []
           },
@@ -7257,7 +7841,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-screamer-killer-profile-screamer-killer-talons-melee-2"
+              "unit-screamer-killer-profile-2dce770006"
             ],
             "wargearAbilityIds": []
           }
@@ -7265,7 +7849,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-screamer-killer-profile-bio-plasmic-scream-ranged",
+            "id": "unit-screamer-killer-profile-671a3aa9d5",
+            "legacyIds": [
+              "unit-screamer-killer-profile-bio-plasmic-scream-ranged"
+            ],
             "title": "Bio-plasmic scream",
             "mode": "ranged",
             "range": "18\"",
@@ -7280,7 +7867,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-screamer-killer-profile-screamer-killer-talons-melee-2",
+            "id": "unit-screamer-killer-profile-2dce770006",
+            "legacyIds": [
+              "unit-screamer-killer-profile-screamer-killer-talons-melee-2"
+            ],
             "title": "Screamer-killer talons",
             "mode": "melee",
             "range": "Melee",
@@ -7365,10 +7955,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-sporocyst-model-sporocyst",
+            "id": "unit-sporocyst-model-c0822a3bf9",
             "title": "Sporocyst",
             "aliases": [
               "Sporocyst"
+            ],
+            "legacyIds": [
+              "unit-sporocyst-model-sporocyst"
             ]
           }
         ],
@@ -7381,7 +7974,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sporocyst-profile-flensing-whips-melee"
+              "unit-sporocyst-profile-5731ca90ce"
             ],
             "wargearAbilityIds": []
           },
@@ -7393,7 +7986,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-sporocyst-profile-sporocyst-bio-weapons-ranged-2"
+              "unit-sporocyst-profile-89694a672b"
             ],
             "wargearAbilityIds": []
           }
@@ -7401,7 +7994,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-sporocyst-profile-flensing-whips-melee",
+            "id": "unit-sporocyst-profile-5731ca90ce",
+            "legacyIds": [
+              "unit-sporocyst-profile-flensing-whips-melee"
+            ],
             "title": "Flensing whips",
             "mode": "melee",
             "range": "Melee",
@@ -7416,7 +8012,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-sporocyst-profile-sporocyst-bio-weapons-ranged-2",
+            "id": "unit-sporocyst-profile-89694a672b",
+            "legacyIds": [
+              "unit-sporocyst-profile-sporocyst-bio-weapons-ranged-2"
+            ],
             "title": "Sporocyst bio-weapons",
             "mode": "ranged",
             "range": "24\"",
@@ -7509,10 +8108,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-toxicrene-model-toxicrene",
+            "id": "unit-toxicrene-model-0871dcc1d1",
             "title": "Toxicrene",
             "aliases": [
               "Toxicrene"
+            ],
+            "legacyIds": [
+              "unit-toxicrene-model-toxicrene"
             ]
           }
         ],
@@ -7525,8 +8127,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-toxicrene-profile-massive-toxic-lashes-melee",
-              "unit-toxicrene-profile-massive-toxic-lashes-ranged-2"
+              "unit-toxicrene-profile-153aa30827",
+              "unit-toxicrene-profile-3dc87992a6"
             ],
             "wargearAbilityIds": []
           }
@@ -7534,7 +8136,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-toxicrene-profile-massive-toxic-lashes-melee",
+            "id": "unit-toxicrene-profile-153aa30827",
+            "legacyIds": [
+              "unit-toxicrene-profile-massive-toxic-lashes-melee"
+            ],
             "title": "Massive toxic lashes",
             "mode": "melee",
             "range": "Melee",
@@ -7549,7 +8154,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-toxicrene-profile-massive-toxic-lashes-ranged-2",
+            "id": "unit-toxicrene-profile-3dc87992a6",
+            "legacyIds": [
+              "unit-toxicrene-profile-massive-toxic-lashes-ranged-2"
+            ],
             "title": "Massive toxic lashes",
             "mode": "ranged",
             "range": "9\"",
@@ -7635,10 +8243,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-trygon-model-trygon",
+            "id": "unit-trygon-model-d4ab79e586",
             "title": "Trygon",
             "aliases": [
               "Trygon"
+            ],
+            "legacyIds": [
+              "unit-trygon-model-trygon"
             ]
           }
         ],
@@ -7651,7 +8262,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-trygon-profile-trygon-scything-talons-melee"
+              "unit-trygon-profile-3d7d6b307d"
             ],
             "wargearAbilityIds": []
           },
@@ -7663,7 +8274,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-trygon-profile-bio-electric-pulse-ranged-2"
+              "unit-trygon-profile-3bc25229d2"
             ],
             "wargearAbilityIds": []
           }
@@ -7671,7 +8282,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-trygon-profile-trygon-scything-talons-melee",
+            "id": "unit-trygon-profile-3d7d6b307d",
+            "legacyIds": [
+              "unit-trygon-profile-trygon-scything-talons-melee"
+            ],
             "title": "Trygon scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -7686,7 +8300,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-trygon-profile-bio-electric-pulse-ranged-2",
+            "id": "unit-trygon-profile-3bc25229d2",
+            "legacyIds": [
+              "unit-trygon-profile-bio-electric-pulse-ranged-2"
+            ],
             "title": "Bio-electric pulse",
             "mode": "ranged",
             "range": "12\"",
@@ -7772,10 +8389,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-tyrannofex-model-tyrannofex",
+            "id": "unit-tyrannofex-model-9dc5f9bf1a",
             "title": "Tyrannofex",
             "aliases": [
               "Tyrannofex"
+            ],
+            "legacyIds": [
+              "unit-tyrannofex-model-tyrannofex"
             ]
           }
         ],
@@ -7788,7 +8408,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrannofex-profile-powerful-limbs-melee"
+              "unit-tyrannofex-profile-f41a3b7b35"
             ],
             "wargearAbilityIds": []
           },
@@ -7800,7 +8420,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrannofex-profile-rupture-cannon-ranged-2"
+              "unit-tyrannofex-profile-da571b318a"
             ],
             "wargearAbilityIds": []
           },
@@ -7812,7 +8432,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrannofex-profile-fleshborer-hive-ranged-3"
+              "unit-tyrannofex-profile-06678ee125"
             ],
             "wargearAbilityIds": []
           },
@@ -7824,7 +8444,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrannofex-profile-acid-spray-ranged-4"
+              "unit-tyrannofex-profile-863cf678f9"
             ],
             "wargearAbilityIds": []
           },
@@ -7836,7 +8456,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-tyrannofex-profile-stinger-salvoes-ranged-5"
+              "unit-tyrannofex-profile-22904f612a"
             ],
             "wargearAbilityIds": []
           }
@@ -7844,7 +8464,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-tyrannofex-profile-powerful-limbs-melee",
+            "id": "unit-tyrannofex-profile-f41a3b7b35",
+            "legacyIds": [
+              "unit-tyrannofex-profile-powerful-limbs-melee"
+            ],
             "title": "Powerful limbs",
             "mode": "melee",
             "range": "Melee",
@@ -7859,7 +8482,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyrannofex-profile-rupture-cannon-ranged-2",
+            "id": "unit-tyrannofex-profile-da571b318a",
+            "legacyIds": [
+              "unit-tyrannofex-profile-rupture-cannon-ranged-2"
+            ],
             "title": "Rupture cannon",
             "mode": "ranged",
             "range": "48\"",
@@ -7874,7 +8500,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyrannofex-profile-fleshborer-hive-ranged-3",
+            "id": "unit-tyrannofex-profile-06678ee125",
+            "legacyIds": [
+              "unit-tyrannofex-profile-fleshborer-hive-ranged-3"
+            ],
             "title": "Fleshborer hive",
             "mode": "ranged",
             "range": "24\"",
@@ -7889,7 +8518,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyrannofex-profile-acid-spray-ranged-4",
+            "id": "unit-tyrannofex-profile-863cf678f9",
+            "legacyIds": [
+              "unit-tyrannofex-profile-acid-spray-ranged-4"
+            ],
             "title": "Acid spray",
             "mode": "ranged",
             "range": "18\"",
@@ -7904,7 +8536,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-tyrannofex-profile-stinger-salvoes-ranged-5",
+            "id": "unit-tyrannofex-profile-22904f612a",
+            "legacyIds": [
+              "unit-tyrannofex-profile-stinger-salvoes-ranged-5"
+            ],
             "title": "Stinger salvoes",
             "mode": "ranged",
             "range": "24\"",
@@ -7990,10 +8625,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-mucolid-spores-model-mucolid-spore",
+            "id": "unit-mucolid-spores-model-364767c1ce",
             "title": "Mucolid Spore",
             "aliases": [
               "Mucolid Spore"
+            ],
+            "legacyIds": [
+              "unit-mucolid-spores-model-mucolid-spore"
             ]
           }
         ],
@@ -8064,10 +8702,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-ripper-swarms-model-ripper-swarm",
+            "id": "unit-ripper-swarms-model-8fef8abe57",
             "title": "Ripper Swarm",
             "aliases": [
               "Ripper Swarm"
+            ],
+            "legacyIds": [
+              "unit-ripper-swarms-model-ripper-swarm"
             ]
           }
         ],
@@ -8080,7 +8721,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-ripper-swarms-profile-spinemaws-ranged"
+              "unit-ripper-swarms-profile-936d7fc3f5"
             ],
             "wargearAbilityIds": []
           },
@@ -8092,7 +8733,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-ripper-swarms-profile-chitinous-claws-and-teeth-melee-2"
+              "unit-ripper-swarms-profile-5c1a2dd893"
             ],
             "wargearAbilityIds": []
           }
@@ -8100,7 +8741,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-ripper-swarms-profile-spinemaws-ranged",
+            "id": "unit-ripper-swarms-profile-936d7fc3f5",
+            "legacyIds": [
+              "unit-ripper-swarms-profile-spinemaws-ranged"
+            ],
             "title": "Spinemaws",
             "mode": "ranged",
             "range": "6\"",
@@ -8115,7 +8759,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-ripper-swarms-profile-chitinous-claws-and-teeth-melee-2",
+            "id": "unit-ripper-swarms-profile-5c1a2dd893",
+            "legacyIds": [
+              "unit-ripper-swarms-profile-chitinous-claws-and-teeth-melee-2"
+            ],
             "title": "Chitinous claws and teeth",
             "mode": "melee",
             "range": "Melee",
@@ -8201,10 +8848,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-spore-mines-model-spore-mine",
+            "id": "unit-spore-mines-model-4ee6ff0dd3",
             "title": "Spore Mine",
             "aliases": [
               "Spore Mine"
+            ],
+            "legacyIds": [
+              "unit-spore-mines-model-spore-mine"
             ]
           }
         ],
@@ -8292,10 +8942,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-harridan-model-harridan",
+            "id": "unit-harridan-model-404155b6a5",
             "title": "Harridan",
             "aliases": [
               "Harridan"
+            ],
+            "legacyIds": [
+              "unit-harridan-model-harridan"
             ]
           }
         ],
@@ -8308,7 +8961,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-harridan-profile-dire-bio-cannon-ranged"
+              "unit-harridan-profile-784739a5a7"
             ],
             "wargearAbilityIds": []
           },
@@ -8320,7 +8973,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-harridan-profile-gargantuan-scything-talons-melee-2"
+              "unit-harridan-profile-4849a0fc57"
             ],
             "wargearAbilityIds": []
           }
@@ -8328,7 +8981,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-harridan-profile-dire-bio-cannon-ranged",
+            "id": "unit-harridan-profile-784739a5a7",
+            "legacyIds": [
+              "unit-harridan-profile-dire-bio-cannon-ranged"
+            ],
             "title": "Dire bio-cannon",
             "mode": "ranged",
             "range": "48\"",
@@ -8343,7 +8999,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-harridan-profile-gargantuan-scything-talons-melee-2",
+            "id": "unit-harridan-profile-4849a0fc57",
+            "legacyIds": [
+              "unit-harridan-profile-gargantuan-scything-talons-melee-2"
+            ],
             "title": "Gargantuan scything talons",
             "mode": "melee",
             "range": "Melee",
@@ -8439,10 +9098,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-hierophant-model-hierophant",
+            "id": "unit-hierophant-model-6aa4f37a7b",
             "title": "Hierophant",
             "aliases": [
               "Hierophant"
+            ],
+            "legacyIds": [
+              "unit-hierophant-model-hierophant"
             ]
           }
         ],
@@ -8455,7 +9117,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hierophant-profile-bio-plasma-torrent-ranged"
+              "unit-hierophant-profile-819fedaab6"
             ],
             "wargearAbilityIds": []
           },
@@ -8467,7 +9129,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hierophant-profile-dire-bio-cannon-ranged-2"
+              "unit-hierophant-profile-784739a5a7"
             ],
             "wargearAbilityIds": []
           },
@@ -8479,7 +9141,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hierophant-profile-lashwhip-pods-melee-3"
+              "unit-hierophant-profile-eeb3bf6819"
             ],
             "wargearAbilityIds": []
           },
@@ -8491,7 +9153,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "kind": "weapon",
             "profileIds": [
-              "unit-hierophant-profile-titanic-scything-talons-melee-4"
+              "unit-hierophant-profile-f09f17c267"
             ],
             "wargearAbilityIds": []
           }
@@ -8499,7 +9161,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "weaponFamilies": [],
         "weaponProfiles": [
           {
-            "id": "unit-hierophant-profile-bio-plasma-torrent-ranged",
+            "id": "unit-hierophant-profile-819fedaab6",
+            "legacyIds": [
+              "unit-hierophant-profile-bio-plasma-torrent-ranged"
+            ],
             "title": "Bio-plasma torrent",
             "mode": "ranged",
             "range": "12\"",
@@ -8514,7 +9179,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hierophant-profile-dire-bio-cannon-ranged-2",
+            "id": "unit-hierophant-profile-784739a5a7",
+            "legacyIds": [
+              "unit-hierophant-profile-dire-bio-cannon-ranged-2"
+            ],
             "title": "Dire bio-cannon",
             "mode": "ranged",
             "range": "48\"",
@@ -8529,7 +9197,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hierophant-profile-lashwhip-pods-melee-3",
+            "id": "unit-hierophant-profile-eeb3bf6819",
+            "legacyIds": [
+              "unit-hierophant-profile-lashwhip-pods-melee-3"
+            ],
             "title": "Lashwhip pods",
             "mode": "melee",
             "range": "Melee",
@@ -8544,7 +9215,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           },
           {
-            "id": "unit-hierophant-profile-titanic-scything-talons-melee-4",
+            "id": "unit-hierophant-profile-f09f17c267",
+            "legacyIds": [
+              "unit-hierophant-profile-titanic-scything-talons-melee-4"
+            ],
             "title": "Titanic scything talons",
             "mode": "melee",
             "range": "Melee",

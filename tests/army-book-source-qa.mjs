@@ -19,6 +19,7 @@ const books={
 const errors=[];
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const targetHtml=id=>{const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'books',id,'scripts','target-data.js'),'utf8'),sandbox);return sandbox.window.WH_ARMY_BOOK_TARGETS.html;};
+const rosterCatalog=id=>{const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'books',id,'scripts','roster-data.js'),'utf8'),sandbox);return sandbox.window.WH_BOOK_ROSTER_CATALOG;};
 const renderedBook=id=>fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8')+targetHtml(id);
 const expect=(condition,message)=>{if(!condition)errors.push(message);};
 const inventory=data=>[...(data.datasheets||[]),...(data.imperialArmour||[]),...(data.legends||[])];
@@ -190,11 +191,13 @@ const sourceObjects=[];
 const sourceTraitor=sourceObjects.find(item=>item.type==='unit'&&item.name==='Traitor Enforcer'&&item.selectionEntries?.filter(child=>child.type==='model').length===2);
 const sourceModelKeywords=Object.fromEntries(sourceTraitor?.selectionEntries?.filter(item=>item.type==='model').map(item=>[item.name,(item.categoryLinks||[]).map(link=>link.name.replace(/^Faction:\s*/i,''))])||[]);
 const canonicalTraitor=csmByTitle.get('Traitor Enforcer');
+const traitorRoster=rosterCatalog('chaos-space-marines').units.find(unit=>unit.id==='unit-traitor-enforcer');
 expect(Boolean(sourceTraitor)&&Object.keys(sourceModelKeywords).length===2,'chaos-space-marines: Traitor Enforcer child-model BSData evidence missing');
 expect(canonicalTraitor?.composition?.length===2,'chaos-space-marines: Traitor Enforcer canonical model composition missing');
 for(const model of canonicalTraitor?.composition||[]){
   expect(JSON.stringify(model.intrinsicKeywords)===JSON.stringify(sourceModelKeywords[model.name]),`chaos-space-marines: Traitor Enforcer ${model.name} model-scoped keywords lost during BSData extraction`);
-  const modelId=`unit-traitor-enforcer-model-${model.name==='Traitor Enforcer'?'traitor-enforcer':'traitor-ogryn-2'}`;
+  const modelId=traitorRoster?.gameSelections?.models?.find(item=>item.title===model.name)?.id;
+  expect(Boolean(modelId),`chaos-space-marines: Traitor Enforcer ${model.name} canonical roster model identity missing`);
   const row=csmReader.match(new RegExp(`<p class="model-keywords" data-roster-model-id="${modelId}">[\\s\\S]*?</p>`))?.[0]||'';
   for(const keyword of sourceModelKeywords[model.name]||[])expect(row.includes(`data-model-keyword="${keyword}"`),`chaos-space-marines: Traitor Enforcer ${model.name} model-scoped keyword ${keyword} is not published`);
 }

@@ -18,6 +18,7 @@ export function validatePublicationInventory({root=defaultRoot(),inventory}={}){
     for(const field of ['id','title','config'])if(typeof book[field]!=='string'||!book[field])errors.push(`${book.id||'<unknown>'}: invalid ${field}`);
     for(const field of ['library','offline','freshness','mobile'])if(typeof book[field]!=='boolean')errors.push(`${book.id||'<unknown>'}: ${field} must be boolean`);
     if(book.offline&&!book.library)errors.push(`${book.id}: offline publication requires library publication`);
+    if(book.mobile&&!book.library)errors.push(`${book.id}: mobile output requires library publication`);
     if(book.mobile&&!book.freshness)errors.push(`${book.id}: mobile output requires freshness coverage`);
     const configPath=path.join(root,book.config||'');
     if(!fs.existsSync(configPath)){errors.push(`${book.id}: missing config ${book.config}`);continue;}
@@ -42,6 +43,8 @@ export function loadPublicationInventory({root=defaultRoot()}={}){
 }
 
 export const selectPublicationBooks=(inventory,field)=>inventory.books.filter(book=>book[field]);
+export const selectArmyBookBuildBooks=inventory=>selectPublicationBooks(inventory,'library');
+export const selectFreshnessOnlyBooks=inventory=>inventory.books.filter(book=>book.freshness&&!book.library);
 
 function run(command,args,root){
   const result=spawnSync(command,args,{cwd:root,encoding:'utf8',maxBuffer:32*1024*1024});
@@ -50,8 +53,9 @@ function run(command,args,root){
 
 export function checkPublicationFreshness({root=defaultRoot()}={}){
   const inventory=loadPublicationInventory({root});
-  for(const book of selectPublicationBooks(inventory,'freshness'))run(process.execPath,['books/shared/tools/build-army-book.mjs',book.config,'--check'],root);
+  for(const book of selectArmyBookBuildBooks(inventory))run(process.execPath,['books/shared/tools/build-army-book.mjs',book.config,'--check'],root);
   for(const book of selectPublicationBooks(inventory,'mobile'))run(process.execPath,[`books/${book.id}/mobile/build.mjs`,'--check'],root);
+  if(selectFreshnessOnlyBooks(inventory).length)run(process.execPath,['books/shared/tools/source-freshness.mjs'],root);
   return inventory;
 }
 

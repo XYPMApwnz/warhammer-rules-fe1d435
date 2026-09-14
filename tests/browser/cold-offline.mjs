@@ -7,12 +7,14 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {createRosterFixture} from '../helpers/roster-fixtures.mjs';
 import {collectOfflineMobileRoutes} from '../../tools/build-offline-mobile-routes.mjs';
+import {assertCoreDiagramInventoriesEqual,readPublishedCoreDiagramInventory} from '../helpers/core-diagram-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const fixtureData=async(slug,key)=>{const scope=vm.createContext({window:{}});for(const file of [`books/${slug}/scripts/roster-data.js`,'roster-guides/points-data.js'])vm.runInContext(await readFile(path.join(root,file),'utf8'),scope,{filename:file});return{catalog:scope.window.WH_BOOK_ROSTER_CATALOG,points:scope.window.WH_POINTS_CATALOG[key]};};
 const {catalog:csmCatalog,points:csmPoints}=await fixtureData('chaos-space-marines','chaos space marines'),{catalog:ecCatalog,points:ecPoints}=await fixtureData('emperors-children','emperor s children'),{catalog:tyrCatalog,points:tyrPoints}=await fixtureData('tyranids','tyranids'),{catalog:tauCatalog,points:tauPoints}=await fixtureData('tau-empire','t au empire');
 const runtimeVersions=JSON.parse(await readFile(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
 const offlineMobileRoutes=collectOfflineMobileRoutes({root});
+const coreDiagramPaths=readPublishedCoreDiagramInventory({root});
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
 const server=createServer(async(request,response)=>{
   try{
@@ -430,7 +432,7 @@ try{
     assert.ok(install.urls.includes('/books/shared/rule-facts.js?v=5'),'Fresh install omitted the active Roster Guides Rule Facts script');
     for(const route of offlineMobileRoutes)assert.ok(install.urls.includes(route.url.slice(1)),`Fresh install omitted physical mobile route ${route.url}`);
     const diagramUrls=install.urls.filter(url=>url.startsWith('/books/core-rules/assets/diagrams/'));
-    assert.equal(new Set(diagramUrls).size,39,'Fresh install did not cache all required Core Rules diagrams');
+    assertCoreDiagramInventoriesEqual(coreDiagramPaths,diagramUrls,'Fresh-install Core Rules diagrams');
     errors.length=0;
     await new Promise((resolve,reject)=>server.close(error=>error?reject(error):resolve()));
     for(let offset=0;offset<offlineMobileRoutes.length;offset+=50){

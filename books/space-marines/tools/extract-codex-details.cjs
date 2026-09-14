@@ -4,7 +4,6 @@ const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const detailsPath=path.join(root,'content','space-marines-codex-wargear.en.json');
 const overlayPath=path.join(root,'content','space-marines-current-overlay.en.json');
-const relatedPath=path.join(root,'content','space-marines-related-rules.en.json');
 const snapshotPath=path.join(root,'sources','wahapedia-compatible-rules.snapshot.json');
 const datasheetsPath=path.join(root,'content','space-marines-codex-datasheets.en.json');
 const packPath=path.join(root,'content','space-marines-faction-pack.en.json');
@@ -56,12 +55,10 @@ async function main(){
   const session=contract.createCaptureSession({sourceId:'space-marines-codex-details',authority:'secondary',sourceType:'wahapedia-html',candidateDir:mode.candidateDir,extractorPath:'books/space-marines/tools/extract-codex-details.cjs',localInputs:[
     {path:path.relative(path.resolve(root,'../..'),datasheetsPath),kind:'generated-repository-input',owner:'books/space-marines/sources/bsdata-extract.config.json'},
     {path:path.relative(path.resolve(root,'../..'),packPath),kind:'generated-repository-input',owner:'books/space-marines/tools/extract-faction-pack.mjs'},
-    {path:path.relative(path.resolve(root,'../..'),relatedPath),kind:'generated-repository-input',owner:'books/space-marines/tools/extract-codex-details.cjs'},
     {path:path.relative(path.resolve(root,'../..'),coreRelatedPath),kind:'tracked-repository-input',owner:'books/core-rules/content/core-stratagems.related-rules.inc'}
   ],notes:'Candidate only; accepted normalized legacy state is not mutated.'});
   const datasheets=JSON.parse(fs.readFileSync(datasheetsPath,'utf8')).datasheets;
   const pack=JSON.parse(fs.readFileSync(packPath,'utf8'));
-  const previousRelated=JSON.parse(fs.readFileSync(relatedPath,'utf8'));
   const {chromium}=require('playwright');
   const browser=await chromium.launch({channel:'chrome',headless:true});
   const indexPage=await browser.newPage();
@@ -103,8 +100,7 @@ async function main(){
   }
   await Promise.all(Array.from({length:6},worker));await browser.close();details.sort((a,b)=>a.title.localeCompare(b.title,'en'));
   const source={title:'Wahapedia Warhammer 40,000 11th Edition · Space Marines',url:sourceUrl,authority:'secondary',checkedAt:checkedAt(detailsPath)},overlay={schema:1,source:{id:'space-marines-current-parity-2026',authority:'mixed',title:source.title,url:sourceUrl,checkedAt:checkedAt(overlayPath),knownGaps:['Codex rule-bearing text is secondary parity evidence.','Vengeful Hosts exact detail retains its existing mixed provenance.']},detachments:overlayDetachments},detailsOutput={schema:1,source,units:details},snapshot={schema:1,source:{...source,checkedAt:checkedAt(snapshotPath)},units:Object.fromEntries(Object.entries(snapshotUnits).sort(([a],[b])=>a.localeCompare(b,'en')))};
-  const related=structuredClone(previousRelated);related.sourceId='space-marines-current-sources';related.enhancements={};const unitsForRule=new Map();for(const [unitId,rows] of Object.entries(snapshot.units))for(const row of rows){const list=unitsForRule.get(row.ruleId)||[];list.push(unitId);unitsForRule.set(row.ruleId,list);}for(const detachment of codexDetachments)for(const item of detachment.stratagems){const unitIds=unitsForRule.get(item.id)||[];if(!unitIds.length)throw new Error(`No compatible Datasheet for ${item.id}`);related.stratagems[item.id]={v:1,roles:[{id:'friendly-target',side:'friendly',subject:'unit',count:1,selector:{unitIds}}],conditions:[]};}for(const detachment of allDetachments)for(const item of detachment.enhancements||[]){const unitIds=unitsForRule.get(item.id)||[];related.enhancements[item.id]={tags:[],owner:{subject:'model',selector:{unitIds}},assignment:{maxOwners:1,enhancementChoices:1,payPointsPerOwner:true}};}
-  const outputs=[[detailsPath,detailsOutput],[overlayPath,overlay],[snapshotPath,snapshot],[relatedPath,related]];
+  const outputs=[[detailsPath,detailsOutput],[overlayPath,overlay],[snapshotPath,snapshot]];
   for(const [file,value] of outputs)session.writeCandidate(path.relative(root,file),stable(value));
   session.finalize();
   console.log(`Captured Space Marines source-details candidate: ${details.length} Datasheets, ${codexDetachments.length} Codex Detachments`);

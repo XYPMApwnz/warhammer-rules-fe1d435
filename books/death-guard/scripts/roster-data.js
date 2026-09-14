@@ -134,14 +134,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-mortarion"
           },
           {
-            "id": "ability-lord-of-the-death-guard-90db1c4",
+            "id": "mortarion-ability-lord-of-the-death-guard",
             "sectionId": "mortarion-ability-lord-of-the-death-guard",
             "title": "Lord of the Death Guard",
             "text": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target).",
             "sourceUnitId": "unit-mortarion"
           },
           {
-            "id": "ability-host-of-plagues-2f9d0aa",
+            "id": "mortarion-ability-host-of-plagues",
             "sectionId": "mortarion-ability-host-of-plagues",
             "title": "Host of Plagues",
             "text": "At the end of your Movement phase, roll one D6 for each enemy unit within 6\" of this model, adding 1 to the result if that enemy unit is Afflicted: on a 3+, that enemy unit suffers D3 mortal wounds.",
@@ -157,11 +157,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-mortarion-model-mortarion",
+            "id": "unit-mortarion-model-99470e12a7",
             "title": "Mortarion",
             "aliases": [
               "Mortarion",
               "Mortarion – EPIC HERO"
+            ],
+            "legacyIds": [
+              "unit-mortarion-model-mortarion"
             ]
           }
         ],
@@ -446,14 +449,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-typhus"
           },
           {
-            "id": "ability-the-destroyer-hive-70f0cc1",
+            "id": "typhus-ability-the-destroyer-hive",
             "sectionId": "typhus-ability-the-destroyer-hive",
             "title": "The Destroyer Hive",
             "text": "While this model is leading a unit, each time a melee attack targets that unit, subtract 1 from the Hit roll.",
             "sourceUnitId": "unit-typhus"
           },
           {
-            "id": "ability-eater-plague-psychic-2c7cc41",
+            "id": "typhus-ability-eater-plague-psychic",
             "sectionId": "typhus-ability-eater-plague-psychic",
             "title": "Eater Plague (Psychic)",
             "text": "In your Shooting phase, you can select one enemy unit within 18\" of and visible to this PSYKER (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this PSYKER) and roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2-5, that enemy unit suffers D6 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
@@ -462,11 +465,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-typhus-model-typhus",
+            "id": "unit-typhus-model-bb04325648",
             "title": "Typhus",
             "aliases": [
               "Typhus",
               "Typhus – EPIC HERO"
+            ],
+            "legacyIds": [
+              "unit-typhus-model-typhus"
             ]
           }
         ],
@@ -683,14 +689,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-biologus-putrifier"
           },
           {
-            "id": "ability-foul-infusion-490467e",
+            "id": "biologus-putrifier-ability-foul-infusion",
             "sectionId": "biologus-putrifier-ability-foul-infusion",
             "title": "Foul Infusion",
             "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability. In addition, each time a model in that unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6.",
             "sourceUnitId": "unit-biologus-putrifier"
           },
           {
-            "id": "ability-extraction-of-fresh-disease-b14e246",
+            "id": "biologus-putrifier-ability-extraction-of-fresh-disease",
             "sectionId": "biologus-putrifier-ability-extraction-of-fresh-disease",
             "title": "Extraction of Fresh Disease",
             "text": "The first time this model’s unit destroys an enemy unit as the result of a melee attack, until the end of the battle, add 6 to the Objective Control characteristic of this model.",
@@ -699,10 +705,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-biologus-putrifier-model-biologus-putrifier",
+            "id": "unit-biologus-putrifier-model-adb2a76bb1",
             "title": "Biologus Putrifier",
             "aliases": [
               "Biologus Putrifier"
+            ],
+            "legacyIds": [
+              "unit-biologus-putrifier-model-biologus-putrifier"
             ]
           }
         ],
@@ -899,21 +908,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-daemon-prince-of-nurgle"
           },
           {
-            "id": "ability-death-guard-defenders-c306937",
+            "id": "daemon-prince-of-nurgle-ability-death-guard-defenders",
             "sectionId": "daemon-prince-of-nurgle-ability-death-guard-defenders",
             "title": "Death Guard Defenders",
             "text": "While this model is within 3\" of one or more friendly DEATH GUARD INFANTRY units, this model has the Lone Operative ability.",
             "sourceUnitId": "unit-daemon-prince-of-nurgle"
           },
           {
-            "id": "ability-fevered-strategist-9a8ed87",
+            "id": "daemon-prince-of-nurgle-ability-fevered-strategist",
             "sectionId": "daemon-prince-of-nurgle-ability-fevered-strategist",
             "title": "Fevered Strategist",
             "text": "Once per battle round, one model from your army with this ability can use it when a friendly DEATH GUARD unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
             "sourceUnitId": "unit-daemon-prince-of-nurgle"
           },
           {
-            "id": "ability-miasma-of-pestilence-aura-92fd75f",
+            "id": "daemon-prince-of-nurgle-ability-miasma-of-pestilence-aura",
             "sectionId": "daemon-prince-of-nurgle-ability-miasma-of-pestilence-aura",
             "title": "Miasma of Pestilence (Aura)",
             "text": "While a friendly DEATH GUARD unit is within 6\" of this model, each time a ranged attack targets that unit, models in that unit have the Benefit of Cover against that attack.",
@@ -922,10 +931,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-daemon-prince-of-nurgle-model-daemon-prince-of-nurgle",
+            "id": "unit-daemon-prince-of-nurgle-model-62296483f7",
             "title": "Daemon Prince of Nurgle",
             "aliases": [
               "Daemon Prince of Nurgle"
+            ],
+            "legacyIds": [
+              "unit-daemon-prince-of-nurgle-model-daemon-prince-of-nurgle"
             ]
           }
         ],
@@ -1154,14 +1166,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-daemon-prince-of-nurgle-with-wings"
           },
           {
-            "id": "ability-horrifying-visage-bfdb06a",
+            "id": "daemon-prince-of-nurgle-with-wings-ability-horrifying-visage",
             "sectionId": "daemon-prince-of-nurgle-with-wings-ability-horrifying-visage",
             "title": "Horrifying Visage",
             "text": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it. That unit must take a Battle-shock test, subtracting 1 from that test.",
             "sourceUnitId": "unit-daemon-prince-of-nurgle-with-wings"
           },
           {
-            "id": "ability-enfeebling-miasma-aura-dba0eef",
+            "id": "daemon-prince-of-nurgle-with-wings-ability-enfeebling-miasma-aura",
             "sectionId": "daemon-prince-of-nurgle-with-wings-ability-enfeebling-miasma-aura",
             "title": "Enfeebling Miasma (Aura)",
             "text": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this model, each time that unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
@@ -1170,10 +1182,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-daemon-prince-of-nurgle-with-wings-model-daemon-prince-of-nurgle-with-wings",
+            "id": "unit-daemon-prince-of-nurgle-with-wings-model-4d080ad381",
             "title": "Daemon Prince of Nurgle with Wings",
             "aliases": [
               "Daemon Prince of Nurgle with Wings"
+            ],
+            "legacyIds": [
+              "unit-daemon-prince-of-nurgle-with-wings-model-daemon-prince-of-nurgle-with-wings"
             ]
           }
         ],
@@ -1415,14 +1430,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-foul-blightspawn"
           },
           {
-            "id": "ability-blinding-spray-7d189f5",
+            "id": "foul-blightspawn-ability-blinding-spray",
             "sectionId": "foul-blightspawn-ability-blinding-spray",
             "title": "Blinding Spray",
             "text": "In the Fight phase, you can select one model from your army with this ability to use this ability. If you do, until the end of the phase, that model’s unit has the Fights First ability. Each model can only be selected for this ability once per battle.",
             "sourceUnitId": "unit-foul-blightspawn"
           },
           {
-            "id": "ability-putrefying-stink-4f5145b",
+            "id": "foul-blightspawn-ability-putrefying-stink",
             "sectionId": "foul-blightspawn-ability-putrefying-stink",
             "title": "Putrefying Stink",
             "text": "Enemy models cannot start or end an Advance move within 9\" of this model.",
@@ -1431,10 +1446,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-foul-blightspawn-model-foul-blightspawn",
+            "id": "unit-foul-blightspawn-model-403c7b78f2",
             "title": "Foul Blightspawn",
             "aliases": [
               "Foul Blightspawn"
+            ],
+            "legacyIds": [
+              "unit-foul-blightspawn-model-foul-blightspawn"
             ]
           }
         ],
@@ -1620,14 +1638,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-icon-bearer"
           },
           {
-            "id": "ability-unclean-icon-5dadb9e",
+            "id": "icon-bearer-ability-unclean-icon",
             "sectionId": "icon-bearer-ability-unclean-icon",
             "title": "Unclean Icon",
             "text": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
             "sourceUnitId": "unit-icon-bearer"
           },
           {
-            "id": "ability-blessed-icon-of-disease-e331a6c",
+            "id": "icon-bearer-ability-blessed-icon-of-disease",
             "sectionId": "icon-bearer-ability-blessed-icon-of-disease",
             "title": "Blessed Icon of Disease",
             "text": "Once per battle, at the start of any phase, you can select one friendly DEATH GUARD unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked.",
@@ -1636,10 +1654,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-icon-bearer-model-icon-bearer",
+            "id": "unit-icon-bearer-model-7d76658327",
             "title": "Icon Bearer",
             "aliases": [
               "Icon Bearer"
+            ],
+            "legacyIds": [
+              "unit-icon-bearer-model-icon-bearer"
             ]
           }
         ],
@@ -1829,14 +1850,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-lord-of-contagion"
           },
           {
-            "id": "ability-vector-of-disease-2498580",
+            "id": "lord-of-contagion-ability-vector-of-disease",
             "sectionId": "lord-of-contagion-ability-vector-of-disease",
             "title": "Vector of Disease",
             "text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] and [LANCE] abilities.",
             "sourceUnitId": "unit-lord-of-contagion"
           },
           {
-            "id": "ability-unholy-resilience-745069e",
+            "id": "lord-of-contagion-ability-unholy-resilience",
             "sectionId": "lord-of-contagion-ability-unholy-resilience",
             "title": "Unholy Resilience",
             "text": "The first time a model with this ability is destroyed in a battle round, roll one D6 at the end of the phase. On a 2+, set that model back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining. Each model can only be set up in this way once per battle.",
@@ -1845,10 +1866,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-lord-of-contagion-model-lord-of-contagion",
+            "id": "unit-lord-of-contagion-model-54be47c1a3",
             "title": "Lord of Contagion",
             "aliases": [
               "Lord of Contagion"
+            ],
+            "legacyIds": [
+              "unit-lord-of-contagion-model-lord-of-contagion"
             ]
           }
         ],
@@ -2055,14 +2079,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-lord-of-poxes"
           },
           {
-            "id": "ability-gift-of-poxes-29d6059",
+            "id": "lord-of-poxes-ability-gift-of-poxes",
             "sectionId": "lord-of-poxes-ability-gift-of-poxes",
             "title": "Gift of Poxes",
             "text": "Add 3\" to the range of this model’s Contagion Range.",
             "sourceUnitId": "unit-lord-of-poxes"
           },
           {
-            "id": "ability-shroud-of-disease-90475da",
+            "id": "lord-of-poxes-ability-shroud-of-disease",
             "sectionId": "lord-of-poxes-ability-shroud-of-disease",
             "title": "Shroud of Disease",
             "text": "While this model is leading a unit, that unit cannot be targeted by ranged attacks unless the attacking model is within 18\".",
@@ -2071,10 +2095,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-lord-of-poxes-model-lord-of-poxes",
+            "id": "unit-lord-of-poxes-model-9e391e4d49",
             "title": "Lord of Poxes",
             "aliases": [
               "Lord of Poxes"
+            ],
+            "legacyIds": [
+              "unit-lord-of-poxes-model-lord-of-poxes"
             ]
           }
         ],
@@ -2316,14 +2343,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-lord-of-virulence"
           },
           {
-            "id": "ability-virulent-aura-c28aa51",
+            "id": "lord-of-virulence-ability-virulent-aura",
             "sectionId": "lord-of-virulence-ability-virulent-aura",
             "title": "Virulent Aura",
             "text": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Wound roll.",
             "sourceUnitId": "unit-lord-of-virulence"
           },
           {
-            "id": "ability-blight-bombardment-74bfb5b",
+            "id": "lord-of-virulence-ability-blight-bombardment",
             "sectionId": "lord-of-virulence-ability-blight-bombardment",
             "title": "Blight Bombardment",
             "text": "At the start of your Shooting phase, select one enemy unit within 30\" of and visible to this model. Until the end of the phase, each time a friendly DEATH GUARD model makes a ranged attack that targets that unit, re-roll a Hit roll of 1 (if that attack is made with a Blast weapon, you can re-roll the Hit roll instead).",
@@ -2332,10 +2359,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-lord-of-virulence-model-lord-of-virulence",
+            "id": "unit-lord-of-virulence-model-588d1c6b39",
             "title": "Lord of Virulence",
             "aliases": [
               "Lord of Virulence"
+            ],
+            "legacyIds": [
+              "unit-lord-of-virulence-model-lord-of-virulence"
             ]
           }
         ],
@@ -2521,14 +2551,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-malignant-plaguecaster"
           },
           {
-            "id": "ability-gift-of-contagion-psychic-4fea300",
+            "id": "malignant-plaguecaster-ability-gift-of-contagion-psychic",
             "sectionId": "malignant-plaguecaster-ability-gift-of-contagion-psychic",
             "title": "Gift of Contagion (Psychic)",
             "text": "While this model is leading a unit, each time a model in that unit makes an attack that targets a unit that is Afflicted, that attack has the [SUSTAINED HITS 1] ability.",
             "sourceUnitId": "unit-malignant-plaguecaster"
           },
           {
-            "id": "ability-pestilent-fallout-psychic-399986c",
+            "id": "malignant-plaguecaster-ability-pestilent-fallout-psychic",
             "sectionId": "malignant-plaguecaster-ability-pestilent-fallout-psychic",
             "title": "Pestilent Fallout (Psychic)",
             "text": "In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks made with its Plague Wind. Until the end of your opponent’s next turn, that unit is enfeebled. While a unit is enfeebled, subtract 2\" from the Move characteristic of models in that unit.",
@@ -2537,10 +2567,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-malignant-plaguecaster-model-malignant-plaguecaster",
+            "id": "unit-malignant-plaguecaster-model-bce1443944",
             "title": "Malignant Plaguecaster",
             "aliases": [
               "Malignant Plaguecaster"
+            ],
+            "legacyIds": [
+              "unit-malignant-plaguecaster-model-malignant-plaguecaster"
             ]
           }
         ],
@@ -2822,14 +2855,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-noxious-blightbringer"
           },
           {
-            "id": "ability-sickening-vitality-89bb5ff",
+            "id": "noxious-blightbringer-ability-sickening-vitality",
             "sectionId": "noxious-blightbringer-ability-sickening-vitality",
             "title": "Sickening Vitality",
             "text": "While this model is leading a unit, add 1\" to the Move characteristic of models in that unit and you can re-roll Advance and Charge rolls made for that unit.",
             "sourceUnitId": "unit-noxious-blightbringer"
           },
           {
-            "id": "ability-tocsin-of-misery-aura-7f2edfb",
+            "id": "noxious-blightbringer-ability-tocsin-of-misery-aura",
             "sectionId": "noxious-blightbringer-ability-tocsin-of-misery-aura",
             "title": "Tocsin of Misery (Aura)",
             "text": "In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of this model, that enemy unit must take a Battle-shock test, subtracting 1 from that test if it is a PSYKER unit.",
@@ -2838,10 +2871,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-noxious-blightbringer-model-noxious-blightbringer",
+            "id": "unit-noxious-blightbringer-model-0afa893a75",
             "title": "Noxious Blightbringer",
             "aliases": [
               "Noxious Blightbringer"
+            ],
+            "legacyIds": [
+              "unit-noxious-blightbringer-model-noxious-blightbringer"
             ]
           }
         ],
@@ -3079,14 +3115,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-plague-surgeon"
           },
           {
-            "id": "ability-tainted-narthecium-01ba1bd",
+            "id": "plague-surgeon-ability-tainted-narthecium",
             "sectionId": "plague-surgeon-ability-tainted-narthecium",
             "title": "Tainted Narthecium",
             "text": "While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
             "sourceUnitId": "unit-plague-surgeon"
           },
           {
-            "id": "ability-inflamed-infections-ca01e1a",
+            "id": "plague-surgeon-ability-inflamed-infections",
             "sectionId": "plague-surgeon-ability-inflamed-infections",
             "title": "Inflamed Infections",
             "text": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model. Until the end of the phase, each time this model makes an attack that targets that unit, an unmodified Hit roll of 5+ scores a Critical Hit. If that unit is Below Half-strength, an unmodified Hit roll of 4+ scores a Critical Hit instead.",
@@ -3095,10 +3131,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-plague-surgeon-model-plague-surgeon",
+            "id": "unit-plague-surgeon-model-33dcf9e18f",
             "title": "Plague Surgeon",
             "aliases": [
               "Plague Surgeon"
+            ],
+            "legacyIds": [
+              "unit-plague-surgeon-model-plague-surgeon"
             ]
           }
         ],
@@ -3281,14 +3320,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-tallyman"
           },
           {
-            "id": "ability-malicious-calculations-8505f03",
+            "id": "tallyman-ability-malicious-calculations",
             "sectionId": "tallyman-ability-malicious-calculations",
             "title": "Malicious Calculations",
             "text": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll.",
             "sourceUnitId": "unit-tallyman"
           },
           {
-            "id": "ability-sevenfold-chant-15ec601",
+            "id": "tallyman-ability-sevenfold-chant",
             "sectionId": "tallyman-ability-sevenfold-chant",
             "title": "Sevenfold Chant",
             "text": "In your Command phase, if this model is on the battlefield, roll 2D6: on a 7+, you gain 1CP.",
@@ -3297,10 +3336,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-tallyman-model-tallyman",
+            "id": "unit-tallyman-model-70198867ea",
             "title": "Tallyman",
             "aliases": [
               "Tallyman"
+            ],
+            "legacyIds": [
+              "unit-tallyman-model-tallyman"
             ]
           }
         ],
@@ -3640,7 +3682,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-plague-marines"
           },
           {
-            "id": "ability-infused-with-the-blessings-of-nurgle-577c42e",
+            "id": "plague-marines-ability-infused-with-the-blessings-of-nurgle",
             "sectionId": "plague-marines-ability-infused-with-the-blessings-of-nurgle",
             "title": "Infused with the Blessings of Nurgle",
             "text": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is Afflicted.",
@@ -3649,18 +3691,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-plague-marines-model-plague-champion",
+            "id": "unit-plague-marines-model-436dbe8b2e",
             "title": "Plague Champion",
             "aliases": [
               "Plague Champion"
+            ],
+            "legacyIds": [
+              "unit-plague-marines-model-plague-champion"
             ]
           },
           {
-            "id": "unit-plague-marines-model-plague-marine-2",
+            "id": "unit-plague-marines-model-9c3a7a113e",
             "title": "Plague Marine",
             "aliases": [
               "Plague Marine",
               "Plague Marines"
+            ],
+            "legacyIds": [
+              "unit-plague-marines-model-plague-marine-2"
             ]
           }
         ],
@@ -4258,7 +4306,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-blightlord-terminators"
           },
           {
-            "id": "ability-blistering-fusillade-01dcc5c",
+            "id": "blightlord-terminators-ability-blistering-fusillade",
             "sectionId": "blightlord-terminators-ability-blistering-fusillade",
             "title": "Blistering Fusillade",
             "text": "If this unit has a Starting Strength of 5 or more, or if a CHARACTER is leading this unit, then each time a model in this unit makes a ranged attack that targets an Afflicted unit, improve the Strength and Armour Penetration characteristics of that attack by 1.",
@@ -4267,18 +4315,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-blightlord-terminators-model-blightlord-champion",
+            "id": "unit-blightlord-terminators-model-eba248135a",
             "title": "Blightlord Champion",
             "aliases": [
               "Blightlord Champion"
+            ],
+            "legacyIds": [
+              "unit-blightlord-terminators-model-blightlord-champion"
             ]
           },
           {
-            "id": "unit-blightlord-terminators-model-blightlord-terminator-2",
+            "id": "unit-blightlord-terminators-model-d1d8690192",
             "title": "Blightlord Terminator",
             "aliases": [
               "Blightlord Terminator",
               "Blightlord Terminators"
+            ],
+            "legacyIds": [
+              "unit-blightlord-terminators-model-blightlord-terminator-2"
             ]
           }
         ],
@@ -4630,14 +4684,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-deathshroud-terminators"
           },
           {
-            "id": "ability-silent-bodyguard-03a0a1b",
+            "id": "deathshroud-terminators-ability-silent-bodyguard",
             "sectionId": "deathshroud-terminators-ability-silent-bodyguard",
             "title": "Silent Bodyguard",
             "text": "While a CHARACTER model is leading this unit, that CHARACTER model has the Feel No Pain 4+ ability.",
             "sourceUnitId": "unit-deathshroud-terminators"
           },
           {
-            "id": "ability-death-approaches-3347016",
+            "id": "deathshroud-terminators-ability-death-approaches",
             "sectionId": "deathshroud-terminators-ability-death-approaches",
             "title": "Death Approaches",
             "text": "In your Movement phase, each time this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from all other enemy units.",
@@ -4646,18 +4700,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-deathshroud-terminators-model-deathshroud-champion",
+            "id": "unit-deathshroud-terminators-model-bbfb38a9d8",
             "title": "Deathshroud Champion",
             "aliases": [
               "Deathshroud Champion"
+            ],
+            "legacyIds": [
+              "unit-deathshroud-terminators-model-deathshroud-champion"
             ]
           },
           {
-            "id": "unit-deathshroud-terminators-model-deathshroud-terminator-2",
+            "id": "unit-deathshroud-terminators-model-eaf728af78",
             "title": "Deathshroud Terminator",
             "aliases": [
               "Deathshroud Terminator",
               "Deathshroud Terminators"
+            ],
+            "legacyIds": [
+              "unit-deathshroud-terminators-model-deathshroud-terminator-2"
             ]
           }
         ],
@@ -4928,7 +4988,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-poxwalkers"
           },
           {
-            "id": "ability-curse-of-the-walking-pox-6a9093e",
+            "id": "poxwalkers-ability-curse-of-the-walking-pox",
             "sectionId": "poxwalkers-ability-curse-of-the-walking-pox",
             "title": "Curse of the Walking Pox",
             "text": "Each time a POXWALKER model in this unit makes an attack that destroys an enemy model (excluding MONSTER and VEHICLE models), after this unit has resolved its attacks, you can return one destroyed POXWALKER model to this unit. While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUS’ Eater Plague ability count as enemy models destroyed by an attack made by a POXWALKER model in this unit for the purposes of this ability.",
@@ -4937,11 +4997,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-poxwalkers-model-poxwalker",
+            "id": "unit-poxwalkers-model-4d2be0ca56",
             "title": "Poxwalker",
             "aliases": [
               "Poxwalker",
               "Poxwalkers"
+            ],
+            "legacyIds": [
+              "unit-poxwalkers-model-poxwalker"
             ]
           }
         ],
@@ -5071,7 +5134,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaos-spawn"
           },
           {
-            "id": "ability-lethal-ichor-6824af1",
+            "id": "chaos-spawn-ability-lethal-ichor",
             "sectionId": "chaos-spawn-ability-lethal-ichor",
             "title": "Lethal Ichor",
             "text": "Each time a melee attack is allocated to a model in this unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound.",
@@ -5080,10 +5143,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-spawn-model-chaos-spawn",
+            "id": "unit-chaos-spawn-model-be65517d2e",
             "title": "Chaos Spawn",
             "aliases": [
               "Chaos Spawn"
+            ],
+            "legacyIds": [
+              "unit-chaos-spawn-model-chaos-spawn"
             ]
           }
         ],
@@ -5228,7 +5294,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaos-land-raider"
           },
           {
-            "id": "ability-assault-ramp-e5223e4",
+            "id": "chaos-land-raider-ability-assault-ramp",
             "sectionId": "chaos-land-raider-ability-assault-ramp",
             "title": "Assault Ramp",
             "text": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
@@ -5237,10 +5303,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-land-raider-model-chaos-land-raider",
+            "id": "unit-chaos-land-raider-model-8a15b8b0db",
             "title": "Chaos Land Raider",
             "aliases": [
               "Chaos Land Raider"
+            ],
+            "legacyIds": [
+              "unit-chaos-land-raider-model-chaos-land-raider"
             ]
           }
         ],
@@ -5517,7 +5586,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaos-predator-annihilator"
           },
           {
-            "id": "ability-metalophagic-infection-7a47e75",
+            "id": "chaos-predator-annihilator-ability-metalophagic-infection",
             "sectionId": "chaos-predator-annihilator-ability-metalophagic-infection",
             "title": "Metalophagic Infection",
             "text": "In your Shooting phase, after this model has shot, select one enemy MONSTER or VEHICLE unit hit by one or more of those attacks. Roll one D6, adding 1 to the result if that unit is Afflicted; on a 5+, that unit suffers D3 mortal wounds.",
@@ -5526,10 +5595,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-predator-annihilator-model-chaos-predator-annihilator",
+            "id": "unit-chaos-predator-annihilator-model-82546cc94c",
             "title": "Chaos Predator Annihilator",
             "aliases": [
               "Chaos Predator Annihilator"
+            ],
+            "legacyIds": [
+              "unit-chaos-predator-annihilator-model-chaos-predator-annihilator"
             ]
           }
         ],
@@ -5833,7 +5905,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaos-predator-destructor"
           },
           {
-            "id": "ability-hail-of-corrosive-disease-0f6451f",
+            "id": "chaos-predator-destructor-ability-hail-of-corrosive-disease",
             "sectionId": "chaos-predator-destructor-ability-hail-of-corrosive-disease",
             "title": "Hail of Corrosive Disease",
             "text": "In your Shooting phase, after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES) hit by one or more of those attacks. Until the end of the phase, each time a friendly DEATH GUARD unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per phase.",
@@ -5842,10 +5914,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-predator-destructor-model-chaos-predator-destructor",
+            "id": "unit-chaos-predator-destructor-model-c17bde4f31",
             "title": "Chaos Predator Destructor",
             "aliases": [
               "Chaos Predator Destructor"
+            ],
+            "legacyIds": [
+              "unit-chaos-predator-destructor-model-chaos-predator-destructor"
             ]
           }
         ],
@@ -6157,14 +6232,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "ability-scuttling-walker-cb4a0c4",
+            "id": "defiler-ability-scuttling-walker",
             "sectionId": "defiler-ability-scuttling-walker",
             "title": "Scuttling Walker",
             "text": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
             "sourceUnitId": "unit-defiler"
           },
           {
-            "id": "ability-barrage-of-filth-f33e996",
+            "id": "defiler-ability-barrage-of-filth",
             "sectionId": "defiler-ability-barrage-of-filth",
             "title": "Barrage of Filth",
             "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that unit cannot have the Benefit of Cover.",
@@ -6173,10 +6248,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-defiler-model-defiler",
+            "id": "unit-defiler-model-5f9d1a0197",
             "title": "Defiler",
             "aliases": [
               "Defiler"
+            ],
+            "legacyIds": [
+              "unit-defiler-model-defiler"
             ]
           }
         ],
@@ -6669,7 +6747,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-foetid-bloat-drone"
           },
           {
-            "id": "ability-hovering-death-805d057",
+            "id": "foetid-bloat-drone-ability-hovering-death",
             "sectionId": "foetid-bloat-drone-ability-hovering-death",
             "title": "Hovering Death",
             "text": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back.",
@@ -6678,10 +6756,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-foetid-bloat-drone-model-foetid-bloat-drone",
+            "id": "unit-foetid-bloat-drone-model-78a1e84ebc",
             "title": "Foetid Bloat-drone",
             "aliases": [
               "Foetid Bloat-drone"
+            ],
+            "legacyIds": [
+              "unit-foetid-bloat-drone-model-foetid-bloat-drone"
             ]
           }
         ],
@@ -6873,7 +6954,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
           },
           {
-            "id": "ability-explosive-blight-4fe2f2d",
+            "id": "foetid-bloat-drone-with-heavy-blight-launcher-ability-explosive-blight",
             "sectionId": "foetid-bloat-drone-with-heavy-blight-launcher-ability-explosive-blight",
             "title": "Explosive Blight",
             "text": "In your Shooting phase, each time this model makes an attack that destroys an enemy unit, before removing the last model in that unit from play, roll a D6, adding 1 to the result if that unit is Afflicted: on a 5+, each enemy unit within 6\" of that model is Afflicted until the start of your next turn.",
@@ -6882,10 +6963,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-foetid-bloat-drone-with-heavy-blight-launcher-model-foetid-bloat-drone",
+            "id": "unit-foetid-bloat-drone-with-heavy-blight-launcher-model-78a1e84ebc",
             "title": "Foetid Bloat-drone",
             "aliases": [
               "Foetid Bloat-drone"
+            ],
+            "legacyIds": [
+              "unit-foetid-bloat-drone-with-heavy-blight-launcher-model-foetid-bloat-drone"
             ]
           }
         ],
@@ -7058,14 +7142,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-helbrute"
           },
           {
-            "id": "ability-diseased-malice-caa33aa",
+            "id": "helbrute-ability-diseased-malice",
             "sectionId": "helbrute-ability-diseased-malice",
             "title": "Diseased Malice",
             "text": "Each time this model makes an attack that targets an Afflicted unit, add 1 to the Wound roll.",
             "sourceUnitId": "unit-helbrute"
           },
           {
-            "id": "ability-froth-spattered-frenzy-9a139e5",
+            "id": "helbrute-ability-froth-spattered-frenzy",
             "sectionId": "helbrute-ability-froth-spattered-frenzy",
             "title": "Froth-spattered Frenzy",
             "text": "If this model is equipped with two melee weapons in addition to its close combat weapon, add 2 to the Attacks characteristic of those two weapons.",
@@ -7074,10 +7158,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-helbrute-model-helbrute",
+            "id": "unit-helbrute-model-34b32f3d20",
             "title": "Helbrute",
             "aliases": [
               "Helbrute"
+            ],
+            "legacyIds": [
+              "unit-helbrute-model-helbrute"
             ]
           }
         ],
@@ -7571,7 +7658,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-myphitic-blight-hauler"
           },
           {
-            "id": "ability-tank-hunters-8831aae",
+            "id": "myphitic-blight-hauler-ability-tank-hunters",
             "sectionId": "myphitic-blight-hauler-ability-tank-hunters",
             "title": "Tank Hunters",
             "text": "In your Shooting phase, each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll.",
@@ -7580,11 +7667,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-myphitic-blight-hauler-model-myphitic-blight-hauler",
+            "id": "unit-myphitic-blight-hauler-model-231cefd49f",
             "title": "Myphitic Blight-hauler",
             "aliases": [
               "Myphitic Blight-hauler",
               "Myphitic Blight-haulers"
+            ],
+            "legacyIds": [
+              "unit-myphitic-blight-hauler-model-myphitic-blight-hauler"
             ]
           }
         ],
@@ -7863,7 +7953,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-plagueburst-crawler"
           },
           {
-            "id": "ability-spore-laced-shock-waves-bc0251b",
+            "id": "plagueburst-crawler-ability-spore-laced-shock-waves",
             "sectionId": "plagueburst-crawler-ability-spore-laced-shock-waves",
             "title": "Spore-laced Shock Waves",
             "text": "In your Shooting phase, each time you select a target for this model’s Plagueburst mortar, roll one D6 for the target unit and every other enemy unit within 3\" of the target unit, adding 1 to that roll if the unit being rolled for is Afflicted. On a 6+, the unit being rolled for is struck by spores; after resolving all of this model’s attacks against the target unit, each unit struck by spores suffers D3 mortal wounds.",
@@ -7872,10 +7962,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-plagueburst-crawler-model-plagueburst-crawler",
+            "id": "unit-plagueburst-crawler-model-c8e49602ea",
             "title": "Plagueburst Crawler",
             "aliases": [
               "Plagueburst Crawler"
+            ],
+            "legacyIds": [
+              "unit-plagueburst-crawler-model-plagueburst-crawler"
             ]
           }
         ],
@@ -8158,7 +8251,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaos-rhino"
           },
           {
-            "id": "ability-fire-support-b0918db",
+            "id": "chaos-rhino-ability-fire-support",
             "sectionId": "chaos-rhino-ability-fire-support",
             "title": "Fire Support",
             "text": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
@@ -8167,10 +8260,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-chaos-rhino-model-chaos-rhino",
+            "id": "unit-chaos-rhino-model-74ad18f164",
             "title": "Chaos Rhino",
             "aliases": [
               "Chaos Rhino"
+            ],
+            "legacyIds": [
+              "unit-chaos-rhino-model-chaos-rhino"
             ]
           }
         ],
@@ -8388,21 +8484,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-miasmic-malignifier"
           },
           {
-            "id": "ability-putrescent-fog-aura-afeaa21",
+            "id": "miasmic-malignifier-ability-putrescent-fog-aura",
             "sectionId": "miasmic-malignifier-ability-putrescent-fog-aura",
             "title": "Putrescent Fog (Aura)",
             "text": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model.",
             "sourceUnitId": "unit-miasmic-malignifier"
           },
           {
-            "id": "ability-diseased-cover-8d71e30",
+            "id": "miasmic-malignifier-ability-diseased-cover",
             "sectionId": "miasmic-malignifier-ability-diseased-cover",
             "title": "Diseased Cover",
             "text": "Each time a ranged attack is allocated to a model, if that model is not fully visible to the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
             "sourceUnitId": "unit-miasmic-malignifier"
           },
           {
-            "id": "ability-fortification-e581151",
+            "id": "miasmic-malignifier-ability-fortification",
             "sectionId": "miasmic-malignifier-ability-fortification",
             "title": "Fortification",
             "text": "While an enemy unit is only within Engagement Range of one or more FORTIFICATIONS from your army:That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
@@ -8418,10 +8514,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-miasmic-malignifier-model-miasmic-malignifier",
+            "id": "unit-miasmic-malignifier-model-5622cb2341",
             "title": "Miasmic Malignifier",
             "aliases": [
               "Miasmic Malignifier"
+            ],
+            "legacyIds": [
+              "unit-miasmic-malignifier-model-miasmic-malignifier"
             ]
           }
         ],
@@ -8560,7 +8659,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-beasts-of-nurgle"
           },
           {
-            "id": "ability-grotesque-regeneration-60c7e2a",
+            "id": "beasts-of-nurgle-ability-grotesque-regeneration",
             "sectionId": "beasts-of-nurgle-ability-grotesque-regeneration",
             "title": "Grotesque Regeneration",
             "text": "At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds.",
@@ -8569,10 +8668,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-beasts-of-nurgle-model-beasts-of-nurgle",
+            "id": "unit-beasts-of-nurgle-model-bc67da4a7a",
             "title": "Beasts of Nurgle",
             "aliases": [
               "Beasts of Nurgle"
+            ],
+            "legacyIds": [
+              "unit-beasts-of-nurgle-model-beasts-of-nurgle"
             ]
           }
         ],
@@ -8727,14 +8829,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-great-unclean-one"
           },
           {
-            "id": "ability-daemon-lord-of-nurgle-aura-d613df7",
+            "id": "great-unclean-one-ability-daemon-lord-of-nurgle-aura",
             "sectionId": "great-unclean-one-ability-daemon-lord-of-nurgle-aura",
             "title": "Daemon Lord of Nurgle (Aura)",
             "text": "While a friendly PLAGUE LEGIONS unit is within 6\" of this model, add 1 to the Toughness characteristic of models in that unit.",
             "sourceUnitId": "unit-great-unclean-one"
           },
           {
-            "id": "ability-nurgles-rot-psychic-80d4e3f",
+            "id": "great-unclean-one-ability-nurgles-rot-psychic",
             "sectionId": "great-unclean-one-ability-nurgles-rot-psychic",
             "title": "Nurgle’s Rot (Psychic)",
             "text": "At the end of your Movement phase, you can select one enemy unit within 12\" of this model. Until the start of your next Movement phase, that unit is rotted. While a unit is rotted, subtract 1 from the Toughness characteristic of models in that unit.",
@@ -8750,10 +8852,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-great-unclean-one-model-great-unclean-one",
+            "id": "unit-great-unclean-one-model-76eb32cfe2",
             "title": "Great Unclean One",
             "aliases": [
               "Great Unclean One"
+            ],
+            "legacyIds": [
+              "unit-great-unclean-one-model-great-unclean-one"
             ]
           }
         ],
@@ -9055,7 +9160,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-nurglings"
           },
           {
-            "id": "ability-mischief-makers-6a686e9",
+            "id": "nurglings-ability-mischief-makers",
             "sectionId": "nurglings-ability-mischief-makers",
             "title": "Mischief Makers",
             "text": "Each time an enemy unit (excluding TITAN units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.",
@@ -9064,11 +9169,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-nurglings-model-nurgling-swarm",
+            "id": "unit-nurglings-model-7a0a3a372b",
             "title": "Nurgling Swarm",
             "aliases": [
               "Nurgling Swarm",
               "Nurgling Swarms"
+            ],
+            "legacyIds": [
+              "unit-nurglings-model-nurgling-swarm"
             ]
           }
         ],
@@ -9211,7 +9319,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-plague-drones"
           },
           {
-            "id": "ability-deaths-heads-546f077",
+            "id": "plague-drones-ability-deaths-heads",
             "sectionId": "plague-drones-ability-deaths-heads",
             "title": "Death’s Heads",
             "text": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly PLAGUE LEGIONS unit makes an attack that targets that unit, you can re-roll the Wound roll.",
@@ -9220,18 +9328,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-plague-drones-model-plaguebringer",
+            "id": "unit-plague-drones-model-3d58b8dae0",
             "title": "Plaguebringer",
             "aliases": [
               "Plaguebringer"
+            ],
+            "legacyIds": [
+              "unit-plague-drones-model-plaguebringer"
             ]
           },
           {
-            "id": "unit-plague-drones-model-plague-drone-2",
+            "id": "unit-plague-drones-model-f1979e9e47",
             "title": "Plague Drone",
             "aliases": [
               "Plague Drone",
               "Plague Drones"
+            ],
+            "legacyIds": [
+              "unit-plague-drones-model-plague-drone-2"
             ]
           }
         ],
@@ -9473,7 +9587,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-plaguebearers"
           },
           {
-            "id": "ability-infected-outbreak-faaf2d1",
+            "id": "plaguebearers-ability-infected-outbreak",
             "sectionId": "plaguebearers-ability-infected-outbreak",
             "title": "Infected Outbreak",
             "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
@@ -9482,18 +9596,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-plaguebearers-model-plagueridden",
+            "id": "unit-plaguebearers-model-d21114f2db",
             "title": "Plagueridden",
             "aliases": [
               "Plagueridden"
+            ],
+            "legacyIds": [
+              "unit-plaguebearers-model-plagueridden"
             ]
           },
           {
-            "id": "unit-plaguebearers-model-plaguebearer-2",
+            "id": "unit-plaguebearers-model-55fc8e4fdf",
             "title": "Plaguebearer",
             "aliases": [
               "Plaguebearer",
               "Plaguebearers"
+            ],
+            "legacyIds": [
+              "unit-plaguebearers-model-plaguebearer-2"
             ]
           }
         ],
@@ -9695,14 +9815,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-rotigus"
           },
           {
-            "id": "ability-virulent-blessing-psychic-62e7cae",
+            "id": "rotigus-ability-virulent-blessing-psychic",
             "sectionId": "rotigus-ability-virulent-blessing-psychic",
             "title": "Virulent Blessing (Psychic)",
             "text": "At the start of the Fight phase, you can select one enemy unit within 24\" and visible to this model. Until the end of the phase, each time an attack made by a PLAGUE LEGIONS model is allocated to a model in that unit, add 1 to the Damage characteristic of that attack.",
             "sourceUnitId": "unit-rotigus"
           },
           {
-            "id": "ability-deluge-of-nurgle-aura-49f7690",
+            "id": "rotigus-ability-deluge-of-nurgle-aura",
             "sectionId": "rotigus-ability-deluge-of-nurgle-aura",
             "title": "Deluge of Nurgle (Aura)",
             "text": "While an enemy unit is within 6\" of this model, subtract 2 from the Move characteristic and subtract 1 from the Objective Control characteristic of models in that unit.",
@@ -9711,11 +9831,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ],
         "models": [
           {
-            "id": "unit-rotigus-model-rotigus",
+            "id": "unit-rotigus-model-5bc0f85d70",
             "title": "Rotigus",
             "aliases": [
               "Rotigus",
               "Rotigus – EPIC HERO"
+            ],
+            "legacyIds": [
+              "unit-rotigus-model-rotigus"
             ]
           }
         ],

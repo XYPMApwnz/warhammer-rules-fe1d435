@@ -96,6 +96,26 @@ export function canonicalizeRelationTargets(units,{bookId='book',dispositions=[]
   return edges;
 }
 
+export function canonicalTargetsFromProse(text,units,{sourceId='source',role='relation',excludeId=null}={}){
+  const value=clean(text),records=[...indexCanonicalById(units,{label:`${sourceId} ${role} target`}).values()].filter(record=>record.id!==excludeId);
+  const escaped=input=>input.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  const matches=[];
+  for(const record of records){
+    if(!clean(record.title))throw new Error(`${sourceId}: ${role} target ${record.id} requires a display title assertion`);
+    for(const match of value.matchAll(new RegExp(`(^|[^A-Za-z0-9])(${escaped(clean(record.title))})(?=$|[^A-Za-z0-9])`,'giu')))matches.push({id:record.id,start:match.index+match[1].length,end:match.index+match[0].length});
+  }
+  matches.sort((left,right)=>left.start-right.start||(right.end-right.start)-(left.end-left.start)||left.id.localeCompare(right.id));
+  const accepted=[];
+  for(const match of matches){
+    const containing=accepted.find(other=>other.start<=match.start&&other.end>=match.end);
+    if(containing)continue;
+    const overlap=accepted.find(other=>other.start<match.end&&match.start<other.end);
+    if(overlap)throw new Error(`${sourceId}: ambiguous ${role} prose target ${overlap.id}/${match.id}`);
+    accepted.push(match);
+  }
+  return [...new Set(accepted.map(match=>match.id))];
+}
+
 const stableFingerprint=value=>crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex').slice(0,10);
 export function requireCanonicalChildIdentity(parent,record,{kind,title,semantic,legacyId}={}){
   if(record?.id)return {id:record.id,legacyIds:values(record.legacyIds)};

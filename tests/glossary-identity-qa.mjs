@@ -43,7 +43,6 @@ for(const [id,title] of pidbFulgrimIdentities){
   assert.equal(api.get(id).id,id,`${id}: generated glossary cannot resolve the PIDB identity`);
 }
 assert.ok(!registry['emperors-children-ability-daemon-prince-of-slaanesh'],'stale Fulgrim parent glossary identity must remain absent');
-assert.equal(Object.keys(aliases).length,662,'the three old canonical IDs must remain aliases');
 for(const id of [
   'emperors-children-weapon-bolt-pistol-2',
   'emperors-children-weapon-plasma-pistol-standard-2',
@@ -61,6 +60,8 @@ assert.ok(registry['blood-angels-weapon-heavy-bolt-pistol-2'],'canonical Blood A
 assert.ok(!registry['blood-angels-weapon-heavy-bolt-pistol-3'],'removed duplicate Blood Angels Heavy Bolt Pistol identity reappeared');
 
 const resolutions={
+  'core-anti-infantry':'core-anti',
+  'keyword-flying':'keyword-fly',
   'saving-throw':'core-rule-05-03-01-saving-throw',
   'leadership-test':'core-rule-01-06-01-leadership-test',
   'battle-shock-test':'core-rule-01-07-02-battle-shock-test',

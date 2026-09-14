@@ -97,7 +97,7 @@ export function derivePresentation(term,{contextOnly=false}={}){
   return summary===definition?'atomic':'article';
 }
 
-export function validateGlossaryGraph({registry,aliases,contexts}){
+export function validateGlossaryGraph({registry,aliases,contexts,bookDependencies={}}){
   const ids=new Set(registry.keys());
   for(const [alias,target] of Object.entries(aliases)){
     if(!ids.has(target))throw new Error(`Glossary alias ${alias} references unknown target ${target}`);
@@ -107,6 +107,8 @@ export function validateGlossaryGraph({registry,aliases,contexts}){
   for(const [bookId,records] of Object.entries(contexts))for(const [localId,record] of Object.entries(records)){
     const target=aliases[record.termId]||record.termId;
     if(!ids.has(target))throw new Error(`Glossary context ${bookId}/${localId} references unknown term ${record.termId}`);
+    const scope=registry.get(target).scope,dependencies=new Set(bookDependencies[bookId]||[]);
+    if(scope!=='global'&&scope!==bookId&&!dependencies.has(scope))throw new Error(`Glossary context ${bookId}/${localId} has wrong book ownership ${scope}`);
   }
   for(const term of registry.values())for(const id of [...(term.related||[]),...(term.mentions||[])])if(!ids.has(id))throw new Error(`Glossary term ${term.id} references unknown relation ${id}`);
 }

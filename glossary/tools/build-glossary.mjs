@@ -69,6 +69,7 @@ function weaponProfile(summary){
 }
 
 const dgSource=readJson(path.join(root,'books','death-guard','content','death-guard-rules.en.json'));
+const dgOfficialUpdates=readJson(path.join(root,'books','death-guard','content','official-update-ledger.en.json'));
 const dgUnitsById=new Map(dgSource.sections.filter(section=>section.kind==='unit').map(section=>[section.id,section]));
 const dgEnhancementById=new Map(dgSource.sections.flatMap(section=>(section.subsections||[]).flatMap(subsection=>(subsection.blocks||[]).filter(item=>item.type==='enhancement').map(item=>[item.id,item]))));
 const dgRuntime=loadWindow(path.join(root,'books','death-guard','scripts','data.js')).DG_TERMS;
@@ -95,7 +96,10 @@ const allGenericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:
   });
 // Registration publishes source-backed runtime concepts, not arbitrary reader targets.
 // Dependency owners must be registered before their overlay contexts.
-const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels','dark-angels'].includes(book.id)).sort((a,b)=>(a.config.dependencies?.length||0)-(b.config.dependencies?.length||0));
+const reverseBookAdapters=process.argv.includes('--reverse-book-adapters');
+const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels','dark-angels'].includes(book.id)).sort((a,b)=>
+  (a.config.dependencies?.length||0)-(b.config.dependencies?.length||0)||(reverseBookAdapters?b.id.localeCompare(a.id):a.id.localeCompare(b.id))
+);
 const coreData=loadWindow(path.join(root,'books','core-rules','content','core-rules.en.js')).CORE_RULES;
 const coreCurated=coreData.terms;
 const coreSource=loadWindow(path.join(root,'books','core-rules','content','core-rules.source.en.js')).CORE_PDF_SOURCE;
@@ -104,13 +108,7 @@ const resolutions=readJson(path.join(glossaryRoot,'resolutions.en.json'));
 const keywordLinks=readJson(path.join(glossaryRoot,'keyword-links.en.json'));
 const coreQuickReferences=readJson(path.join(glossaryRoot,'core-quick-reference.en.json'));
 const supplemental=readJson(path.join(glossaryRoot,'supplemental-terms.en.json'));
-const existingRegistry=fs.existsSync(path.join(glossaryRoot,'registry.en.json'))?readJson(path.join(glossaryRoot,'registry.en.json')).terms:{};
-const existingAliases=fs.existsSync(path.join(glossaryRoot,'aliases.en.json'))?readJson(path.join(glossaryRoot,'aliases.en.json')).aliases:{};
 const contextIds=['core-rules','death-guard','adeptus-mechanicus',...genericArmyBooks.map(book=>book.id)];
-const existingContexts=Object.fromEntries(contextIds.map(bookId=>{
-  const file=path.join(glossaryRoot,'contexts',`${bookId}.json`);
-  return [bookId,fs.existsSync(file)?readJson(file).terms:{}];
-}));
 
 const registry=new Map();
 const aliases={};
@@ -254,6 +252,18 @@ function dgStableId(entry){
   return owner.length?`${base}-${owner.join('-')}`:base;
 }
 
+const dgNurglesGiftSection=dgSource.sections.find(section=>section.id==='army-rule-nurgles-gift');
+if(!dgNurglesGiftSection)throw new Error('Missing canonical Death Guard Nurgle’s Gift section');
+const dgNurglesGiftText=(dgNurglesGiftSection.blocks||[]).find(block=>block.type==='p')?.text||'';
+const dgContagionRangeText=(dgNurglesGiftSection.blocks||[]).map(block=>{
+  if(block.type==='p')return block.id==='contagion-range-cap'?block.text:'';
+  if(block.type!=='table')return'';
+  const columns=(block.columns||[]).join(' | ');
+  const rows=(block.rows||[]).map(row=>row.join(' | ')).join('; ');
+  return `${columns}: ${rows}.`;
+}).filter(Boolean).join(' ');
+if(!dgNurglesGiftText||!dgContagionRangeText)throw new Error('Incomplete canonical Death Guard Nurgle’s Gift/Contagion Range source');
+
 for(const entry of dgSource.glossary){
   const enhancement=dgEnhancementById.get(entry.sectionId),upgrade=enhancement?.tags?.includes('UPGRADE');
   let id=dgStableId(entry);
@@ -267,6 +277,8 @@ for(const entry of dgSource.glossary){
   const runtime=dgRuntime[entry.id]||{};
   const effectivePoints=entry.kind==='unit'&&entry.sectionId?dgUnitsById.get(entry.sectionId)?.points:entry.points;
   const related=(runtime.related||[]).map(value=>aliases[value]||value);
+  const sourceSummary=entry.id==='nurgles-gift'?dgNurglesGiftText:(entry.short||runtime.summary||entry.full);
+  const sourceDefinition=entry.id==='contagion-range'?dgContagionRangeText:(entry.full||entry.short||runtime.summary);
   addTerm({
     id,
     kind:entry.kind||slug(entry.group),
@@ -274,8 +286,8 @@ for(const entry of dgSource.glossary){
     edition:'11e',
     language:'en',
     title:{en:entry.title},
-    summary:{en:concise(`${upgrade?'UPGRADE. ':''}${(entry.weapon||entry.statline)?runtime.summary:(entry.short||runtime.summary||entry.full)}`)},
-    definition:{en:clean(`${upgrade?'UPGRADE. ':''}${entry.weapon?`${entry.title} profile: ${Object.entries(entry.weapon).map(([key,value])=>`${key} ${value}`).join('; ')}.`:(entry.full||entry.short||runtime.summary)}`)},
+    summary:{en:concise(`${upgrade?'UPGRADE. ':''}${(entry.weapon||entry.statline)?runtime.summary:sourceSummary}`)},
+    definition:{en:clean(`${upgrade?'UPGRADE. ':''}${entry.weapon?`${entry.title} profile: ${Object.entries(entry.weapon).map(([key,value])=>`${key} ${value}`).join('; ')}.`:sourceDefinition}`)},
     structured:{...(entry.weapon?{weapon:entry.weapon}:{}),...(entry.statline?{statline:entry.statline}:{}),...(effectivePoints?{points:effectivePoints}:{}),...(upgrade?{tags:['UPGRADE']}:{})},
     aliases:[entry.id],
     related:[],
@@ -289,7 +301,7 @@ for(const entry of dgSource.glossary){
   }
   addContext('death-guard',entry.id,id,runtime,{owners:entry.unitIds||[],visible:entry.showGlossary!==false});
 }
-const pactSection=dgSource.sections.find(section=>section.id==='army-rule-nurgles-gift')?.subsections?.find(section=>section.id==='pact-of-decay');
+const pactSection=dgNurglesGiftSection.subsections?.find(section=>section.id==='pact-of-decay');
 if(!pactSection)throw new Error('Missing canonical Death Guard Pact of Decay section');
 const pactText=(pactSection.blocks||[]).filter(block=>block.type==='p').map(block=>block.text).join('\n');
 const pactId='death-guard-army-rules-pact-of-decay';
@@ -399,17 +411,12 @@ for(const datasheet of amDatasheets.datasheets||[]){
   addContext('adeptus-mechanicus',datasheet.id,id,{datasheet:datasheet.id,statline:`${datasheet.id.replace(/^unit-/,'')}-profile`});
 }
 
-const coreAbilitiesByTitle=new Map([...registry.values()]
-  .filter(term=>term.kind==='core-ability')
-  .map(term=>[normalTitle(term.title.en),term]));
-const coreAbilityTextById=new Map(coreDigital.records
-  .filter(rule=>rule.code.startsWith('24.'))
-  .map(rule=>[digitalCoreId(rule),recordText(rule)]));
-const isCoreAbilityCopy=(term,text)=>{
-  const candidate=clean(text).toLowerCase();
-  return [term.definition.en,coreAbilityTextById.get(term.id)]
-    .filter(Boolean)
-    .some(value=>{const canonical=clean(value).toLowerCase();return canonical===candidate||canonical.endsWith(candidate);});
+const coreAbilityForLocalId=(bookId,localId)=>{
+  const prefix=`${bookId}-ability-`;
+  if(!localId.startsWith(prefix))return null;
+  const stem=localId.slice(prefix.length).replace(/-\d+$/,'');
+  const term=registry.get(`core-${stem}`);
+  return term?.kind==='core-ability'?term:null;
 };
 const confirmedCanonicalAliases={
   'space-marines-weapon-grav-cannon-3':'space-marines-weapon-grav-cannon-2',
@@ -462,8 +469,8 @@ for(const book of genericArmyBooks){
     const profile=isWeapon?weaponProfile(entry.summary):null;
     const kind=isWeapon?'weapon':localId.startsWith(`${prefix}stratagem-`)?'stratagem':localId.startsWith(`${prefix}enhancement-`)?'enhancement':localId.startsWith(`${prefix}detachment-rule-`)?'detachment-rule':'datasheet-ability';
     const upgrade=kind==='enhancement'&&/^UPGRADE\./i.test(entry.full||entry.summary||'');
-    const coreAbility=kind==='datasheet-ability'?coreAbilitiesByTitle.get(normalTitle(entry.title)):null;
-    if(coreAbility&&(isCoreAbilityCopy(coreAbility,entry.full||entry.summary)||(book.id==='tau-empire'&&normalTitle(entry.title)==='leader'))){
+    const coreAbility=kind==='datasheet-ability'?coreAbilityForLocalId(book.id,localId):null;
+    if(coreAbility){
       aliases[localId]=coreAbility.id;
       coreAbility.sourceRefs=[...new Set([...(coreAbility.sourceRefs||[]),book.id])];
       addContext(book.id,localId,coreAbility.id,entry);
@@ -520,6 +527,9 @@ for(const [target,labels] of Object.entries(supplemental.matchLabels||{})){
 }
 
 for(const [alias,target] of Object.entries({...aliases}))if(aliases[target])aliases[alias]=aliases[target];
+const orderedAliases=Object.fromEntries(Object.entries(aliases).sort(([a],[b])=>a.localeCompare(b)));
+for(const alias of Object.keys(aliases))delete aliases[alias];
+Object.assign(aliases,orderedAliases);
 for(const term of registry.values()){
   term.aliases=[...new Set([...(term.aliases||[]),...Object.entries(aliases).filter(([,target])=>target===term.id).map(([alias])=>alias)])].filter(alias=>alias!==term.id).sort();
   term.mentions=[...new Set((term.mentions||[]).map(value=>aliases[value]||value).filter(value=>registry.has(value)))];
@@ -547,61 +557,9 @@ function readableList(values,limit=4){
 }
 
 const keywordCandidates=[];
-for(const term of registry.values()){
-  if(term.kind!=='keyword'&&!term.id.startsWith('keyword-'))continue;
-  const pattern=keywordPattern(term.title.en);
-  const profile=keywordLinks.keywords[term.id]||{forms:[term.title.en],intrinsicRules:[],referencedByRules:[],relatedKeywords:[]};
-  const intrinsicRules=[...new Set(profile.intrinsicRules||[])];
-  const referencedByRules=[...new Set(profile.referencedByRules||[])].filter(id=>!intrinsicRules.includes(id));
-  const commonRules=[...new Set(keywordLinks.commonRules||[])].filter(id=>!intrinsicRules.includes(id)&&!referencedByRules.includes(id));
-  const relatedKeywords=[...new Set(profile.relatedKeywords||[])];
-  term.references={intrinsicRules,referencedByRules,commonRules,factionTerms:[],relatedKeywords};
-  const intrinsicLabels=intrinsicRules.map(id=>registry.get(id)?.title.en).filter(Boolean);
-  const referencedLabels=referencedByRules.map(id=>registry.get(id)?.title.en).filter(Boolean);
-  if(intrinsicLabels.length)term.summary={en:concise(`${term.title.en} units use ${readableList(intrinsicLabels)}.`)};
-  else if(referencedLabels.length)term.summary={en:concise(`${term.title.en} has no standalone Core Rules effect; it is checked by ${readableList(referencedLabels)}.`)};
-  else term.summary={en:`${term.title.en} has no standalone Core Rules effect; it matters only when another rule explicitly references it.`};
-  const sentences=[`The ${term.title.en} keyword identifies models and units for rules interactions.`];
-  if(intrinsicLabels.length)sentences.push(`It applies the following Core Rules: ${readableList(intrinsicLabels,intrinsicLabels.length)}.`);
-  else sentences.push('It does not grant a standalone Core Rules effect.');
-  if(referencedLabels.length)sentences.push(`It is also used as a condition by ${readableList(referencedLabels,referencedLabels.length)}.`);
-  sentences.push('Singular and plural forms of the same keyword are treated identically.');
-  term.definition={en:sentences.join(' ')};
-  term.canonicalSource={documentId:'core-rules',revision:'11e',locator:[...commonRules,...intrinsicRules,...referencedByRules].map(id=>registry.get(id)?.canonicalSource?.locator?.split(';')[0]).filter(Boolean).join(', ')};
-  term.status='verified';
-  const linked=new Set([...intrinsicRules,...referencedByRules]);
-  const candidates=coreRules.filter(rule=>rule.code!=='02.05'&&pattern.test(clean(rule.text))).map(coreId).filter(id=>registry.has(id)&&!linked.has(id));
-  if(candidates.length)keywordCandidates.push({termId:term.id,candidateRuleIds:[...new Set(candidates)],status:'review-required'});
-}
-
-// registry.en.json is the editorial source of truth. Imports discover new
-// records and rebuild navigation, but never replace existing canonical text.
-for(const [id,existing] of Object.entries(existingRegistry)){
-  if(existing.curated===true&&!registry.has(id))registry.set(id,{...existing,sourceRefs:existing.sourceRefs||['curated-glossary']});
-  const term=registry.get(id);
-  if(!term)continue;
-  if((term.scope==='adeptus-mechanicus'||genericArmyBooks.some(book=>book.id===term.scope))&&existing.curated!==true)continue;
-  for(const field of ['kind','scope','edition','language','title','summary','definition','structured','presentation','related','mentions','references','matchLabels','canonicalSource','summarySource','status','curation']){
-    if(existing[field]==null)continue;
-    if(term.structured?.tags?.includes('UPGRADE')&&['summary','definition','structured'].includes(field))continue;
-    if(field==='definition'&&/^(weapon|datasheet) profile\.?$/i.test(existing.definition?.en||''))continue;
-    if(field==='structured'&&term.kind==='unit')continue;
-    if(field==='structured'&&existing.kind==='weapon'&&!Object.keys(existing.structured||{}).length)continue;
-    term[field]=existing[field];
-  }
-  if(existing.curated===true)term.curated=true;
-}
-for(const [alias,target] of Object.entries(existingAliases)){
-  if(!registry.has(target))continue;
-  if(aliases[alias]&&aliases[alias]!==target)continue;
-  aliases[alias]=target;
-}
 for(const alias of confirmedCoreSingularAliases){
   const target=aliases[alias];
   for(const term of registry.values())if(term.id!==target&&term.matchLabels)term.matchLabels=term.matchLabels.filter(label=>slug(label)!==alias);
-}
-for(const [bookId,records] of Object.entries(existingContexts)){
-  for(const [localId,record] of Object.entries(records))if(record.curated===true&&registry.has(aliases[record.termId]||record.termId))contexts[bookId][localId]=record;
 }
 const battleShockStep=registry.get('core-rule-08-03-battle-shock');
 if(battleShockStep)battleShockStep.matchLabels=[];
@@ -692,9 +650,17 @@ pactTerm.definition={en:cleanRuleText(pactText)};
 pactTerm.canonicalSource={documentId:'death-guard',revision:dgSource.version||'11e',locator:'Army Rules — Pact of Decay'};
 pactTerm.status='verified';
 delete pactTerm.curated;
-const editorialContract=loadEditorialContract({knownTermIds:new Set(registry.keys())});
+for(const update of dgOfficialUpdates.updates||[])for(const target of update.targets||[]){
+  if(!target.glossaryTermId)continue;
+  const term=registry.get(target.glossaryTermId);
+  if(!term)throw new Error(`Official update references unknown glossary term ${target.glossaryTermId}`);
+  term.canonicalSource={documentId:'death-guard',revision:update.source.documentId,locator:`Rules Updates · ${target.title}`};
+  term.status='verified';
+}
+const editorialContract=loadEditorialContract({knownTerms:registry});
 for(const record of editorialContract.summaries){
   const term=registry.get(record.termId);
+  if(term.canonicalSource.documentId!==record.semanticSource.documentId)throw new Error(`Editorial summary ${record.termId} conflicts with its canonical semantic owner`);
   term.summary={en:record.summary};
   term.summarySource={documentId:'global-glossary-editorial-contracts',revision:editorialContract.revision,locator:record.termId};
 }
@@ -725,6 +691,9 @@ for(const term of registry.values()){
   term.definition={en:sentences.join(' ')};
   term.canonicalSource={documentId:'core-rules',revision:'11e',locator:[...commonRules,...intrinsicRules,...referencedByRules].map(id=>registry.get(id).canonicalSource.locator.split(';')[0]).join(', ')};
   term.status='verified';
+  const pattern=keywordPattern(term.title.en),linked=new Set([...intrinsicRules,...referencedByRules]);
+  const candidates=coreRules.filter(rule=>rule.code!=='02.05'&&pattern.test(clean(rule.text))).map(coreId).filter(id=>registry.has(id)&&!linked.has(id));
+  if(candidates.length)keywordCandidates.push({termId:term.id,candidateRuleIds:[...new Set(candidates)],status:'review-required'});
 }
 applyDeterministicRelatedPolicies({registry,keywordLinks,relationClaims});
 for(const term of registry.values())term.aliases=[...new Set([...(term.aliases||[]),...Object.entries(aliases).filter(([,target])=>target===term.id).map(([alias])=>alias)])].filter(alias=>alias!==term.id).sort();
@@ -742,23 +711,25 @@ for(const [bookId,records] of Object.entries(contexts))for(const record of Objec
   if(candidate&&isAutoPublishedRulePath(root,candidate,fs))record.navigation.fullRulePath=candidate;
 }
 for(const term of registry.values())if(term.fullRulePath&&!hasAnchor(term.fullRulePath))throw new Error(`Broken fullRulePath for ${term.id}: ${term.fullRulePath}`);
-const aliasCandidates=[...titleIndex.entries()].filter(([,ids])=>new Set(ids).size>1).map(([normalizedTitle,ids])=>({normalizedTitle,termIds:[...new Set(ids)],status:'review-required'}));
+const stableRecordOrder=(a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b));
+const aliasCandidates=[...titleIndex.entries()].filter(([,ids])=>new Set(ids).size>1).map(([normalizedTitle,ids])=>({normalizedTitle,termIds:[...new Set(ids)].sort(),status:'review-required'})).sort(stableRecordOrder);
 const duplicateIndex=new Map();
 for(const term of registry.values()){
   const marker=`${normalTitle(term.title.en)}\n${clean(term.definition.en).toLowerCase()}`;
   if(!duplicateIndex.has(marker))duplicateIndex.set(marker,[]);
   duplicateIndex.get(marker).push(term.id);
 }
-const duplicateCandidates=[...duplicateIndex.values()].filter(termIds=>termIds.length>1).map(termIds=>({termIds,status:'review-required'}));
+const duplicateCandidates=[...duplicateIndex.values()].filter(termIds=>termIds.length>1).map(termIds=>({termIds:[...termIds].sort(),status:'review-required'})).sort(stableRecordOrder);
 const termIds=new Set(registry.keys());
 for(const term of registry.values()){
   term.related=(term.related||[]).filter(id=>termIds.has(id));
   term.mentions=(term.mentions||[]).filter(id=>termIds.has(id));
 }
-validateGlossaryGraph({registry,aliases,contexts});
+const bookDependencies=Object.fromEntries(genericArmyBooks.map(book=>[book.id,book.config.dependencies||[]]));
+validateGlossaryGraph({registry,aliases,contexts,bookDependencies});
 const registryDocument={schema:1,language:'en',terms:Object.fromEntries([...registry].sort(([a],[b])=>a.localeCompare(b)))};
 const contextDocuments={};
-for(const [bookId,records] of Object.entries(contexts))contextDocuments[bookId]={schema:1,bookId,terms:records};
+for(const bookId of Object.keys(contexts).sort())contextDocuments[bookId]={schema:1,bookId,terms:contexts[bookId]};
 const definitionCandidates=variants.flatMap(variant=>[
   {termId:variant.termId,candidateSource:variant.selectedSource,candidateDefinition:variant.selectedCandidateDefinition},
   {termId:variant.termId,candidateSource:variant.rejectedSource,candidateDefinition:variant.rejectedCandidateDefinition}
@@ -785,7 +756,7 @@ const semanticWarnings=[
   ...definitionCandidates.flatMap(candidate=>semanticAnomalies(candidate.candidateDefinition).map(issue=>({termId:candidate.termId,field:'definition',candidateSource:candidate.candidateSource,issue,fragment:concise(candidate.candidateDefinition,180)}))),
   ...summaryCandidates.flatMap(candidate=>semanticAnomalies(candidate.candidateSummary).map(issue=>({termId:candidate.termId,field:'summary',candidateSource:candidate.candidateSource,issue,fragment:concise(candidate.candidateSummary,180)})))
 ];
-const report={schema:2,counts:{terms:registry.size,aliases:Object.keys(aliases).length,definitionCandidates:definitionCandidates.length,summaryCandidates:summaryCandidates.length,semanticWarnings:semanticWarnings.length,aliasCandidates:aliasCandidates.length,duplicateCandidates:duplicateCandidates.length,keywordCandidates:keywordCandidates.length},definitionCandidates,summaryCandidates,semanticWarnings,aliasCandidates,duplicateCandidates,keywordCandidates};
+const report={schema:2,counts:{terms:registry.size,aliases:Object.keys(aliases).length,definitionCandidates:definitionCandidates.length,summaryCandidates:summaryCandidates.length,semanticWarnings:semanticWarnings.length,aliasCandidates:aliasCandidates.length,duplicateCandidates:duplicateCandidates.length,keywordCandidates:keywordCandidates.length},definitionCandidates:definitionCandidates.sort(stableRecordOrder),summaryCandidates:summaryCandidates.sort(stableRecordOrder),semanticWarnings:semanticWarnings.sort(stableRecordOrder),aliasCandidates,duplicateCandidates,keywordCandidates:keywordCandidates.sort(stableRecordOrder)};
 
 writeJson(path.join(glossaryRoot,'registry.en.json'),registryDocument);
 writeJson(path.join(glossaryRoot,'aliases.en.json'),{schema:1,language:'en',aliases});

@@ -65,7 +65,8 @@ const titleJoinSignals=[
 ];
 const genericTitleJoins=titleJoinSignals.filter(signal=>genericBuilder.includes(signal));
 const pointsRecomposes=pointsBuilder.includes('readerProfiles=')&&pointsBuilder.includes('sharedDetachmentTitles=')&&pointsBuilder.includes('rawCatalog=');
-const glossarySelfSeeds=glossaryBuilder.includes('existingRegistry')&&glossaryBuilder.includes("writeJson(path.join(glossaryRoot,'registry.en.json')");
+const glossaryFeedbackReads=['existingRegistry','existingAliases','existingContexts'].filter(token=>glossaryBuilder.includes(token));
+const glossarySelfSeeds=glossaryFeedbackReads.length>0;
 const generatedPointInputs=pointsBuilder.includes('scripts/roster-data.js')&&(pointsBuilder.includes('reader.html')||pointsBuilder.includes('scripts/target-data.js'));
 const outputOwnershipDeclared=config=>Array.isArray(config.generatedOutputs)&&config.generatedOutputs.length>0;
 
@@ -112,7 +113,7 @@ function rawResults(book){
     SOURCE_LIFECYCLE:evidence(lifecyclePass?'PASS':'FAIL','tests/source-ingestion-contract-qa.mjs'),
     SOURCE_ENROLLMENT:evidence(source?.ENROLLMENT==='COMPLETE'?'PASS':'FAIL',`enrollment=${source?.ENROLLMENT||'UNKNOWN'}`,`declared=${source?.DECLARED_SOURCE_COUNT??0}`,`registered=${source?.REGISTERED_SOURCE_COUNT??0}`),
     CANONICAL_IDENTITY:evidence((custom||genericTitleJoins.length)&&'FAIL'||'PASS',custom?`${id} adapter still performs correctness-sensitive title joins`:`generic builder title joins: ${genericTitleJoins.join(',')}`),
-    FACT_OWNERSHIP:evidence(selfInput||glossarySelfSeeds?'FAIL':'PASS',...(selfInput?[`${id} producer reads its previous output`]:[]),...(glossarySelfSeeds?['glossary registry/aliases/contexts are both inputs and outputs']:[])),
+    FACT_OWNERSHIP:evidence(selfInput||glossarySelfSeeds?'FAIL':'PASS',...(selfInput?[`${id} producer reads its previous output`]:[]),...(glossarySelfSeeds?[`glossary feedback reads remain: ${glossaryFeedbackReads.join(', ')}`]:[])),
     EFFECTIVE_MODEL:evidence(custom?'FAIL':'PASS',custom?`buildExtension=${config.buildExtension}`:'shared effective assembly and renderer'),
     DEPENDENCY_PRECEDENCE:dependencies.length?evidence(dependencyOk?'PASS':'FAIL',`dependencies=${dependencies.join(',')}`):evidence('NOT_APPLICABLE','no book dependency'),
     POINTS:evidence(pointsRecomposes?'FAIL':'PASS',pointsRecomposes?'Roster Guides recomposes book/dependency points independently':'one effective points input'),

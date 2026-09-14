@@ -5,16 +5,19 @@ import ruleFactsApi from '../rule-facts.js';
 import {buildRelationGraphs} from './build-relation-graph.mjs';
 import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,serializeRosterCatalog} from './build-roster-catalog.mjs';
 import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
-import {createCanonicalBuildContext,finishCanonicalBuild,runCanonicalBuildExtension} from './canonical-build-contract.mjs';
+import {createCanonicalBuildContext,finishCanonicalBuild} from './canonical-build-contract.mjs';
 import {createEffectivePointsProjection,resolveEffectiveEnhancementContractId,resolveEffectiveEnhancementIdentity} from './effective-points-projection.mjs';
 import {bindRowsToCanonicalIds,canonicalDisplayKey,canonicalSlug,canonicalizeRelationTargets,indexCanonicalById,mergeCanonicalById,resolvePointEnhancement} from './canonical-join-contract.mjs';
 import {effectiveEffectContracts,validateEffectContractSet,validateEffectContractsAgainstCatalog} from './effect-contract.mjs';
+import {buildEffectiveBook} from './build-effective-book.mjs';
+import {createEffectiveBookModel,EFFECTIVE_BOOK_MODEL_SCHEMA} from './effective-book-model.mjs';
 
 export async function buildCanonicalBook(context,{projectionOnly=false}={}){
 const {args,check,configPath,root,repo,readJson,config,runtimeVersions}=context;
-if(config.buildExtension){
-  if(projectionOnly)throw new Error(`${config.id}: effective points projection must be provided by its canonical build extension`);
-  return runCanonicalBuildExtension(context);
+if(config.effectiveModel){
+  const result=await buildEffectiveBook(context,{projectionOnly});
+  if(projectionOnly)return result;
+  return finishCanonicalBuild(context,result.outputs,{normalizeLineEndings:result.normalizeLineEndings===true,summary:result.summary});
 }
 const glossaryTerms=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en.json'),'utf8')).terms;
 const bookMark=config.mark||config.title.split(/\s+/).map(word=>word[0]).join('').slice(0,4).toUpperCase();
@@ -300,7 +303,20 @@ const effectivePointsProjection=createEffectivePointsProjection({
   dependencies:(config.dependencies||[]).map(id=>({bookId:id,kind:'effective-book-dependency'})),
   units:pointOrderedUnits.map(unit=>{const compatibleChapterKeywords=unit.dependencyBook?[]:config.unitCompatibleChapterKeywords?.[unit.id]||unit.compatibleChapterKeywords||[];return{id:unit.id,title:unit.title,sourceBookId:unit.dependencyBook||config.id,publicationState:unit.status||'Current',points:unit.points||[],paidWargear:unit.paidWargear||[],...(unit.pointsSource?{pointsSource:unit.pointsSource}:{}),...(compatibleChapterKeywords.length?{compatibleChapterKeywords}:{}),ruleProfile:unitRuleProfiles.get(unit.id),publicationRecord:unitPointsPublication(unit)||{id:unit.id,title:unit.title,status:unit.status,sourceLayer:unit.sourceLayer,points:unit.points,paidWargear:unit.paidWargear,pointsSource:unit.pointsSource}};}),
   detachments:pointOrderedDetachments.map(det=>({id:det.id,title:det.title,sourceBookId:det.dependencyBook||config.id,detachmentPoints:Number(String(det.detachmentPoints??det.dp??0).match(/\d+/)?.[0]||0),forceDisposition:det.forceDisposition||det.disposition||'',publicationRecord:pointsPublicationByDetachment.get(det)||{title:det.title,detachmentPoints:det.detachmentPoints,forceDisposition:det.forceDisposition}})),
-  enhancements:pointEnhancementPublications.map(({publication,sourceBookId,contracts,det,source})=>{const officialIdentity=sourceBookId===config.id?officialEnhancementIdentityByPublication.get(publication.id):null,sourceIdentity=source?.item?.sourceId||source?.item?.id||dependencyEnhancementIdentityByPublication.get([sourceBookId,det.id,publication.id].join('\0')),contractIdentity=sourceBookId!==config.id?resolveEffectiveEnhancementContractId(publication.id,det.id,contracts):null,identityId=sourceBookId!==config.id?contractIdentity||sourceIdentity||publication.id:publishedEnhancementContracts.has(config.id)&&source?enhancementRuleId(source.item,det):officialIdentity?.id||publication.id,identityInput={...publication,id:identityId,detachmentId:det.id},resolvedIdentity=resolveEffectiveEnhancementIdentity(identityInput,rosterCatalog,contracts),compatibilityIdentity=contractIdentity?{...resolvedIdentity,canonicalEnhancementId:contractIdentity}:resolvedIdentity,id=compatibilityIdentity.canonicalEnhancementId||identityId,rawPublication=rawPointEnhancementByBound.get(publication)||publication;return{id,sourceId:publication.sourceId||null,ruleId:id,legacyKey:publication.legacyKey||null,detachmentId:det.id,detachmentTitle:det.title,sourceBookId,title:publication.title,value:Number(publication.value),owner:compatibilityIdentity.owner||publication.owner||null,assignment:compatibilityIdentity.assignment||publication.assignment||null,tags:compatibilityIdentity.tags||publication.tags||[],text:publication.text||'',...(publication.profile?{profile:publication.profile}:{}),...(compatibilityIdentity.sourceLimited?{sourceLimited:true}:{}),aliases:officialIdentity?.sourceTitle?[officialIdentity.sourceTitle]:[],publicationRecord:officialIdentity?{...rawPublication,id:officialIdentity.id}:rawPublication,compatibilityIdentity};})
+  enhancements:pointEnhancementPublications.map(({publication,sourceBookId,contracts,det,source})=>{const officialIdentity=sourceBookId===config.id?officialEnhancementIdentityByPublication.get(publication.id):null,sourceIdentity=source?.item?.sourceId||source?.item?.id||dependencyEnhancementIdentityByPublication.get([sourceBookId,det.id,publication.id].join('\0')),contractIdentity=sourceBookId!==config.id?resolveEffectiveEnhancementContractId(publication.id,det.id,contracts):null,identityId=sourceBookId!==config.id?contractIdentity||sourceIdentity||publication.id:publishedEnhancementContracts.has(config.id)&&source?enhancementRuleId(source.item,det):officialIdentity?.id||publication.id,identityInput={...publication,id:identityId,detachmentId:det.id},resolvedIdentity=resolveEffectiveEnhancementIdentity(identityInput,rosterCatalog,contracts),compatibilityIdentity=contractIdentity?{...resolvedIdentity,canonicalEnhancementId:contractIdentity}:resolvedIdentity,id=compatibilityIdentity.canonicalEnhancementId||identityId,rawPublication=rawPointEnhancementByBound.get(publication)||publication,canonicalEffectRecordIds=[...new Set([source?.item?.id,source?.item?.ruleId,sourceIdentity].filter(Boolean))];return{id,sourceId:publication.sourceId||null,ruleId:id,legacyKey:publication.legacyKey||null,detachmentId:det.id,detachmentTitle:det.title,sourceBookId,title:publication.title,value:Number(publication.value),owner:compatibilityIdentity.owner||publication.owner||null,assignment:compatibilityIdentity.assignment||publication.assignment||null,tags:compatibilityIdentity.tags||publication.tags||[],text:publication.text||'',...(publication.profile?{profile:publication.profile}:{}),...(compatibilityIdentity.sourceLimited?{sourceLimited:true}:{}),...(canonicalEffectRecordIds.length?{canonicalEffectRecordIds}:{}),aliases:officialIdentity?.sourceTitle?[officialIdentity.sourceTitle]:[],publicationRecord:officialIdentity?{...rawPublication,id:officialIdentity.id}:rawPublication,compatibilityIdentity};})
+});
+const unitSourceById=new Map(units.map(unit=>[unit.id,unit])),detachmentSourceById=new Map(detachments.map(item=>[item.id,item]));
+createEffectiveBookModel({
+  schema:EFFECTIVE_BOOK_MODEL_SCHEMA,
+  book:{id:config.id,title:config.title,parentBookId:config.dependencies?.[0]||null,dependencies:(config.dependencies||[]).map(bookId=>({bookId,kind:'effective-book-dependency'}))},
+  dependencies:(config.dependencies||[]).map(bookId=>({bookId,kind:'effective-book-dependency'})),
+  units:effectivePointsProjection.units.map(unit=>({...unit,...unitSourceById.get(unit.id),sourceBookId:unit.sourceBookId,publicationState:unit.publicationState,points:unit.points,paidWargear:unit.paidWargear,ruleProfile:unit.ruleProfile,ruleFacts:unitRuleFacts.get(unit.id)})),
+  detachments:effectivePointsProjection.detachments.map(item=>({...detachmentSourceById.get(item.id),...item})),
+  enhancements:effectivePointsProjection.enhancements.map(item=>{const aliasKey=Object.entries(config.pointEnhancementAliases||{}).find(([,id])=>id===item.id)?.[0],effectId=aliasKey&&config.enhancementOwnerAliases?.[aliasKey];return effectId?{...item,canonicalEffectRecordIds:[...new Set([...(item.canonicalEffectRecordIds||[]),effectId])]}:item;}),
+  relationGraphs,
+  effectContracts,
+  effectivePointsProjection,
+  presentation:{mode:'shared-structured'}
 });
 if(projectionOnly)return {effectivePointsProjection};
 

@@ -3,7 +3,14 @@
   "id": "death-guard",
   "title": "Death Guard",
   "factionKeyword": "DEATH GUARD",
-  "buildExtension": "tools/canonical-build-extension.mjs",
+  "effectiveModel": {
+    "schema": "wh40k-effective-book-model/v1",
+    "sourceAdapter": "books/death-guard/tools/canonical-source-adapter.mjs",
+    "sourceAdapterExport": "buildDeathGuardEffectiveModelInput",
+    "renderer": "books/death-guard/tools/presentation-hook.mjs",
+    "rendererExport": "renderEffectiveBook",
+    "presentationMode": "validated-hook"
+  },
   "sources": {
     "canonical": "content/death-guard-rules.en.json",
     "legends": "content/death-guard-legends.en.json",
@@ -53,7 +60,7 @@
   "generatedOutputs": [
     {
       "class": "CANONICAL_PUBLICATION_BUNDLE",
-      "producer": "books/death-guard/tools/canonical-build-extension.mjs",
+      "producer": "books/shared/tools/build-army-book.mjs",
       "paths": [
         "reader.html",
         "index.html",
@@ -65,7 +72,7 @@
     },
     {
       "class": "TARGET_CATALOG",
-      "producer": "books/death-guard/tools/canonical-build-extension.mjs",
+      "producer": "books/shared/tools/build-army-book.mjs",
       "paths": [
         "scripts/target-data.js"
       ],
@@ -75,7 +82,7 @@
     },
     {
       "class": "ROSTER_CATALOG",
-      "producer": "books/death-guard/tools/canonical-build-extension.mjs",
+      "producer": "books/shared/tools/build-army-book.mjs",
       "paths": [
         "scripts/roster-data.js"
       ],

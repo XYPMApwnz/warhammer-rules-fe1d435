@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {fileURLToPath,pathToFileURL} from 'node:url';
+import {fileURLToPath} from 'node:url';
 import {assertGeneratedOutputPlan} from './generated-output-contract.mjs';
 
 const sharedRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
@@ -25,7 +25,7 @@ export function finishCanonicalBuild(context,outputs,{normalizeLineEndings=false
   if(Array.isArray(context.config.generatedOutputs))assertGeneratedOutputPlan({
     repo:context.repo,
     configPath:context.configPath,
-    producer:context.config.buildExtension?path.resolve(context.root,context.config.buildExtension):path.join(context.repo,'books/shared/tools/build-army-book.mjs'),
+    producer:path.join(context.repo,'books/shared/tools/build-army-book.mjs'),
     lifecycle:'NORMAL_BUILD_OUTPUT',
     outputs:outputs.keys()
   });
@@ -55,15 +55,4 @@ export function finishCanonicalBuild(context,outputs,{normalizeLineEndings=false
   const message=typeof summary==='function'?summary({check:context.check,outputs}):summary;
   if(message)console.log(message);
   return {outputs:[...outputs.keys()],stale};
-}
-
-export async function runCanonicalBuildExtension(context){
-  const relative=context.config.buildExtension;
-  if(!relative)throw new Error(`${context.config.id}: buildExtension is not configured`);
-  const extensionPath=path.resolve(context.root,relative);
-  if(!fs.existsSync(extensionPath))throw new Error(`${context.config.id}: build extension is missing: ${relative}`);
-  const extension=await import(pathToFileURL(extensionPath).href);
-  if(typeof extension.buildCanonicalBook!=='function')throw new Error(`${context.config.id}: build extension must export buildCanonicalBook(context)`);
-  const result=await extension.buildCanonicalBook(context);
-  return finishCanonicalBuild(context,result.outputs,{normalizeLineEndings:result.normalizeLineEndings===true,summary:result.summary});
 }

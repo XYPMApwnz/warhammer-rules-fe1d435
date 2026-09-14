@@ -5,7 +5,17 @@
   "shortTitle": "Adeptus Mechanicus Rules",
   "edition": "11E",
   "factionKeyword": "ADEPTUS MECHANICUS",
-  "buildExtension": "tools/canonical-build-extension.mjs",
+  "effectiveModel": {
+    "schema": "wh40k-effective-book-model/v1",
+    "sourceAdapter": "books/adeptus-mechanicus/tools/canonical-source-adapter.mjs",
+    "sourceAdapterExport": "buildAdeptusMechanicusEffectiveModelInput",
+    "renderer": "books/shared/tools/render-structured-effective-book.mjs",
+    "rendererExport": "renderEffectiveBook",
+    "presentationMode": "shared-structured"
+  },
+  "rosterCatalog": {
+    "includeRuleFacts": false
+  },
   "sharedArmyBookApp": true,
   "compatibleRulesMatrix": true,
   "rosterSupport": true,
@@ -62,7 +72,7 @@
   "generatedOutputs": [
     {
       "class": "CANONICAL_PUBLICATION_BUNDLE",
-      "producer": "books/adeptus-mechanicus/tools/canonical-build-extension.mjs",
+      "producer": "books/shared/tools/build-army-book.mjs",
       "paths": [
         "reader.html",
         "index.html",
@@ -74,7 +84,7 @@
     },
     {
       "class": "TARGET_CATALOG",
-      "producer": "books/adeptus-mechanicus/tools/canonical-build-extension.mjs",
+      "producer": "books/shared/tools/build-army-book.mjs",
       "paths": [
         "scripts/target-data.js"
       ],
@@ -84,7 +94,7 @@
     },
     {
       "class": "ROSTER_CATALOG",
-      "producer": "books/adeptus-mechanicus/tools/canonical-build-extension.mjs",
+      "producer": "books/shared/tools/build-army-book.mjs",
       "paths": [
         "scripts/roster-data.js"
       ],

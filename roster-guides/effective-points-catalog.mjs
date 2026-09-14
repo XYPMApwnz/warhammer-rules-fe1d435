@@ -1,5 +1,4 @@
 import path from 'node:path';
-import {pathToFileURL} from 'node:url';
 import {createCanonicalBuildContext} from '../books/shared/tools/canonical-build-contract.mjs';
 import {buildCanonicalBook as buildSharedCanonicalBook} from '../books/shared/tools/build-army-book.mjs';
 import {assertEffectivePointsProjection} from '../books/shared/tools/effective-points-projection.mjs';
@@ -11,10 +10,7 @@ const catalogKeys={'death-guard':'death guard','adeptus-mechanicus':'adeptus mec
 
 export async function loadEffectivePointsProjection(root,bookId){
   const configPath=path.join(root,'books',bookId,'book.config.json'),context=createCanonicalBuildContext({configPath});
-  if(!context.config.buildExtension)return assertEffectivePointsProjection((await buildSharedCanonicalBook(context,{projectionOnly:true})).effectivePointsProjection,bookId);
-  const extension=await import(pathToFileURL(path.resolve(context.root,context.config.buildExtension)).href);
-  if(typeof extension.buildEffectivePointsProjection!=='function')throw new Error(`${bookId}: canonical extension must export buildEffectivePointsProjection(context)`);
-  return assertEffectivePointsProjection(await extension.buildEffectivePointsProjection(context),bookId);
+  return assertEffectivePointsProjection((await buildSharedCanonicalBook(context,{projectionOnly:true})).effectivePointsProjection,bookId);
 }
 
 const unitRecord=unit=>({...unit.publicationRecord,wargear:unit.paidWargear||[],...(unit.compatibleChapterKeywords?.length?{compatibleChapterKeywords:[...unit.compatibleChapterKeywords]}:{}),...unit.ruleProfile});

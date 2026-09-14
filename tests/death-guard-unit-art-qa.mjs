@@ -12,7 +12,7 @@ const manifest=JSON.parse(text('books/death-guard/presentation/unit-images.json'
 const scope={};scope.window=scope;scope.globalThis=scope;vm.runInNewContext(text('books/death-guard/scripts/roster-data.js'),scope);
 const catalog=scope.WH_BOOK_ROSTER_CATALOG;
 const reader=text('books/death-guard/reader.html'),targets=text('books/death-guard/scripts/target-data.js'),sw=text('service-worker.js');
-const amBuild=text('books/adeptus-mechanicus/tools/canonical-build-extension.mjs'),dgBuild=text('books/death-guard/tools/canonical-build-extension.mjs');
+const amBuild=text('books/shared/tools/render-structured-effective-book.mjs'),dgBuild=text('books/death-guard/tools/presentation-hook.mjs');
 const entries=Object.entries(manifest.units),ids=new Set(catalog.units.map(unit=>unit.id));
 const expectedWithoutArt=['unit-chaos-predator-destructor','unit-daemon-prince-of-nurgle','unit-daemon-prince-of-nurgle-with-wings','unit-foetid-bloat-drone-with-heavy-blight-launcher'];
 const expectedPresentation={mode:'background',desktop:{scale:1.28,x:'-5%',y:'1%',opacity:.22},phone:{scale:1.14,x:'-4%',y:'1%',opacity:.18}};

@@ -1,12 +1,15 @@
 import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
-import {bindRowsToCanonicalIds,canonicalTargetsFromProse,indexCanonicalById} from '../../shared/tools/canonical-join-contract.mjs';
+import {bindRowsToCanonicalIds,canonicalTargetsFromProse} from '../../shared/tools/canonical-join-contract.mjs';
+import {effectiveEffectContracts,validateEffectContractSet} from '../../shared/tools/effect-contract.mjs';
+import {createEffectivePointsProjection} from '../../shared/tools/effective-points-projection.mjs';
+import ruleFactsApi from '../../shared/rule-facts.js';
 
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const slugKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
 export function createAdeptusMechanicusCanonicalModel(context){
   const {config,readJson}=context,sourcePaths=config.sources||{};
-  const required=['factionRules','sourceTranscript','codexDetachments','codexParity','codexDatasheets','codexWargear','points','officialMfm','unitImages','globalGlossary'];
+  const required=['factionRules','sourceTranscript','codexDetachments','codexParity','codexDatasheets','codexWargear','points','officialMfm','unitImages','globalGlossary','manifest'];
   for(const key of required)if(!sourcePaths[key])throw new Error(`adeptus-mechanicus: sources.${key} is required`);
   const factionRules=readJson(sourcePaths.factionRules);
   const source=readJson(sourcePaths.sourceTranscript);
@@ -18,6 +21,7 @@ export function createAdeptusMechanicusCanonicalModel(context){
   const officialMfm=readJson(sourcePaths.officialMfm);
   const unitImages=readJson(sourcePaths.unitImages).units;
   const globalGlossary=readJson(sourcePaths.globalGlossary).terms;
+  const manifest=readJson(sourcePaths.manifest);
 const boundParityDetachments=bindRowsToCanonicalIds(codexParity.detachments,codexSource.detachments,{label:'Adeptus Mechanicus Codex parity Detachment',rowId:item=>item.id||`detachment-${slugKey(item.title)}`});
 const parityByDetachmentId=new Map(boundParityDetachments.map(item=>[item.canonicalId,item]));
 const codex={...codexSource,detachments:codexSource.detachments.map(detachment=>{
@@ -143,5 +147,186 @@ for(const unit of rules.datasheets){
 rules.glossary=glossaryTerms;
 rules.audit.glossaryTerms=glossaryTerms.length;
 
-  return {factionRules,source,codex,codexDatasheets,pointsCatalog,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
+  return {factionRules,source,codex,codexDatasheets,pointsCatalog,officialMfm,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
+}
+
+const escapeRegExp=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+const normalizeDecoratedTerm=value=>String(value)
+  .replace(/^\[/,'')
+  .replace(/\]$/,'')
+  .replace(/\s+\d+\+$/,'')
+  .trim()
+  .toLowerCase();
+
+const createTermResolver=glossary=>{
+  const termsByKey=new Map();
+  for(const term of [...glossary].sort((left,right)=>right.title.length-left.title.length)){
+    for(const variant of [term.title,...(term.aliases||[])]){
+      const key=normalizeDecoratedTerm(variant);
+      if(!key)continue;
+      const candidates=termsByKey.get(key)||[];
+      if(!candidates.includes(term))candidates.push(term);
+      termsByKey.set(key,candidates);
+    }
+  }
+  const alternation=[...termsByKey.keys()].sort((left,right)=>right.length-left.length).map(escapeRegExp).join('|');
+  const pattern=alternation?new RegExp(`(^|[^A-Za-z0-9])((?:\\[)?(?:${alternation})(?:\\])?(?:\\s+\\d+\\+)?)(?=$|[^A-Za-z0-9])`,'gi'):null;
+  const resolve=(key,unitId)=>{
+    const candidates=termsByKey.get(key)||[];
+    return candidates.find(term=>term.group==='Core abilities')
+      ||candidates.find(term=>unitId&&(term.unitIds||[]).includes(unitId))
+      ||candidates[0];
+  };
+  return (value,unitId='')=>{
+    if(!pattern)return [];
+    const raw=String(value??'').replace(/[ \t]+\n/g,'\n'),ids=[];
+    pattern.lastIndex=0;
+    for(let match=pattern.exec(raw);match;match=pattern.exec(raw)){
+      const term=resolve(normalizeDecoratedTerm(match[2]),unitId);
+      if(term)ids.push(term.id);
+    }
+    return ids;
+  };
+};
+
+const ruleFactsFor=(unit,{abilityText,knownCoreTitles,coreBaseKey,relationGraphs,termIdsInPresentationOrder})=>{
+  const sourceAbilities=[...(unit.abilities||[])];
+  const abilityNames=sourceAbilities.flatMap(item=>/^core$/i.test(item.title)
+    ?abilityText(item).split(',').map(value=>value.trim().replace(/\.$/,'')).filter(Boolean).map(value=>/^deadly demise\b/i.test(value)?'DEADLY DEMISE':value)
+    :[/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title]);
+  const relations=relationGraphs.get(unit.id),mandatory=Object.values(relations).flat().some(relation=>relation.mandatory),canAttach=Object.values(relations).some(items=>items.length);
+  return {
+    id:unit.id,
+    unitId:unit.id,
+    slug:unit.id.replace(/^unit-/,''),
+    keywords:unit.keywords,
+    intrinsicKeywords:unit.keywords,
+    abilities:[...new Set(abilityNames)],
+    termIds:[...new Set(termIdsInPresentationOrder)],
+    epic:unit.keywords.includes('Epic Hero'),
+    deadlyDemise:sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(abilityText(item))),
+    attached:mandatory?true:canAttach?null:false,
+    attachmentKnown:mandatory||!canAttach,
+    formationRequired:mandatory,
+    characterCount:unit.keywords.includes('Character')?1:0,
+    twoCharacters:null,
+    warlord:null,
+    relations
+  };
+};
+
+export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel=createAdeptusMechanicusCanonicalModel(context)){
+  const {config}=context;
+  const {factionRules,source,codex,codexDatasheets,pointsCatalog,officialMfm,manifest,boundPointUnits,unitImages,pointsByUnitId,slugKey,abilityText,rules,relationGraphs,allDetachments,coreBaseKey,knownCoreTitles}=canonicalModel;
+  const decoratedTermIds=createTermResolver(rules.glossary);
+  const abilityKind=item=>{
+    if(/^doctrina imperatives$/i.test(item.title))return 'faction';
+    if(/^(leader|support|attached unit)$/i.test(item.title))return 'relation';
+    if(/^damaged:/i.test(item.title))return 'damaged';
+    if(/^transport$/i.test(item.title))return 'transport';
+    if(/^core$/i.test(item.title)||knownCoreTitles.has(coreBaseKey(item.title)))return 'core';
+    return 'datasheet';
+  };
+  const visibleTermIds=unit=>{
+    const grouped={core:[],faction:[],datasheet:[],relation:[],damaged:[],transport:[]};
+    for(const item of unit.abilities||[])(grouped[abilityKind(item)]||grouped.datasheet).push(item);
+    const ids=[];
+    for(const mode of ['ranged','melee'])for(const weapon of (unit.weapons||[]).filter(item=>item.mode===mode))ids.push(weapon.termId,...decoratedTermIds(weapon.abilities,unit.id));
+    for(const item of grouped.core)ids.push(...(/^core$/i.test(item.title)?decoratedTermIds(abilityText(item),unit.id):[item.termId]));
+    for(const item of grouped.faction)ids.push(...(/^core$/i.test(item.title)?decoratedTermIds(abilityText(item),unit.id):[item.termId]));
+    const abilityTerms=item=>[item.termId,...decoratedTermIds(item.openingText,unit.id),...(item.options||[]).flatMap(option=>decoratedTermIds(option.text,unit.id)),...decoratedTermIds(item.text,unit.id)];
+    for(const kind of ['datasheet','relation','transport','damaged'])for(const item of grouped[kind])ids.push(...abilityTerms(item));
+    if(unit.compositionText)ids.push(...decoratedTermIds(unit.compositionText,unit.id));
+    else if(!Array.isArray(unit.composition))ids.push(...decoratedTermIds(unit.composition,unit.id));
+    for(const item of Array.isArray(unit.wargear)?unit.wargear:[unit.wargear])ids.push(...decoratedTermIds(item,unit.id));
+    const wargearAbilities=unit.wargearAbilities||[],gatedTermIds=new Set(wargearAbilities.map(item=>item.termId).filter(Boolean));
+    for(const item of wargearAbilities)ids.push(...abilityTerms(item));
+    return ids.filter(id=>id&&!gatedTermIds.has(id));
+  };
+  const compiledRuleFacts=new Map(rules.datasheets.map(unit=>[unit.id,ruleFactsFor(unit,{abilityText,knownCoreTitles,coreBaseKey,relationGraphs,termIdsInPresentationOrder:visibleTermIds(unit)})]));
+  const compiledRuleProfiles=new Map([...compiledRuleFacts].map(([id,facts])=>[id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(facts))]));
+  const pointsOrderedDatasheets=boundPointUnits.map(publication=>{
+    const unit=rules.datasheets.find(candidate=>candidate.id===publication.canonicalId);
+    if(!unit)throw new Error(`Adeptus Mechanicus: points unit does not resolve: ${publication.canonicalId}`);
+    return unit;
+  });
+  const sourceEnhancements=new Map();
+  for(const detachment of allDetachments)for(const enhancement of detachment.enhancements||[]){
+    const key=`${detachment.id}\0${enhancement.id}`;
+    if(sourceEnhancements.has(key))throw new Error(`Adeptus Mechanicus: duplicate scoped Enhancement identity ${detachment.id}/${enhancement.id}`);
+    sourceEnhancements.set(key,enhancement);
+  }
+  const pointEnhancementByScope=new Map(pointsCatalog.enhancements.map(publication=>[`${publication.canonicalDetachmentId}\0${publication.canonicalEnhancementId||publication.id}`,publication]));
+  const enhancementFor=(publication,detachment,sourceRecord)=>{
+    if(publication.canonicalDetachmentId!==detachment.id)throw new Error(`Adeptus Mechanicus: ${publication.id} references unknown Detachment ${publication.canonicalDetachmentId}`);
+    const id=publication.canonicalEnhancementId||publication.id;
+    const owner=publication.owner||sourceRecord.eligibility?.owner||null;
+    const assignment=publication.assignment||sourceRecord.assignment||sourceRecord.eligibility?.assignment||null;
+    const tags=[...(publication.tags||sourceRecord.tags||sourceRecord.eligibility?.tags||[])];
+    return {
+      ...sourceRecord,
+      id,
+      sourceId:publication.sourceId||sourceRecord.sourceId||sourceRecord.id||null,
+      ruleId:sourceRecord.ruleId||id,
+      legacyKey:publication.legacyKey||sourceRecord.ruleId||sourceRecord.id||null,
+      detachmentId:detachment.id,
+      detachmentTitle:detachment.title,
+      sourceBookId:config.id,
+      title:publication.title||sourceRecord.title,
+      runtimeTitle:sourceRecord.title,
+      value:Number(publication.value),
+      owner,
+      assignment,
+      tags,
+      text:publication.text||sourceRecord.text||'',
+      eligibility:{...(sourceRecord.eligibility||{}),v:sourceRecord.eligibility?.v||1,tags,owner,assignment},
+      ...(publication.profile?{profile:publication.profile}:{}),
+      ...(publication.effect?{legacyEffect:publication.effect}:{}),
+      publicationRecord:publication
+    };
+  };
+  const enhancements=allDetachments.flatMap(detachment=>(detachment.enhancements||[]).map(sourceRecord=>{
+    const publication=pointEnhancementByScope.get(`${detachment.id}\0${sourceRecord.id}`);
+    if(!publication)throw new Error(`Adeptus Mechanicus: ${sourceRecord.id} has no points record in ${detachment.id}`);
+    return enhancementFor(publication,detachment,sourceRecord);
+  }));
+  if(enhancements.length!==sourceEnhancements.size)throw new Error(`Adeptus Mechanicus: effective Enhancement inventory ${enhancements.length} does not cover ${sourceEnhancements.size} canonical rules`);
+  const units=rules.datasheets.map(unit=>{
+    const publication=pointsByUnitId.get(unit.id),ruleFacts=compiledRuleFacts.get(unit.id),ruleProfile=compiledRuleProfiles.get(unit.id);
+    return {...unit,sourceBookId:config.id,publicationState:unit.status==='Warhammer Legends'?'Warhammer Legends':'Current',intrinsicKeywords:[...(unit.keywords||[])],points:publication?.points||[],paidWargear:publication?.wargear||[],ruleFacts,ruleProfile,publicationRecord:publication};
+  });
+  const detachmentOrder=new Map(Object.keys(officialMfm.detachments||{}).map((title,index)=>[`detachment-${slugKey(title)}`,index]));
+  const detachmentRecord=item=>({
+    ...item,
+    sourceBookId:config.id,
+    detachmentPoints:Number(String(item.dp||0).match(/\d+/)?.[0]||0),
+    forceDisposition:item.disposition||'',
+    publicationRecord:{title:item.title,detachmentPoints:item.dp,forceDisposition:item.disposition}
+  });
+  const detachments=allDetachments.map(detachmentRecord);
+  const effectContractSet=config.sources.effectContracts?validateEffectContractSet(context.readJson(config.sources.effectContracts),{expectedBookId:config.id}):{schema:'wh40k-effect-contracts/v1',bookId:config.id,contracts:[]};
+  const effectContracts=effectiveEffectContracts([effectContractSet],config.id);
+  const effectiveUnits=units;
+  const effectiveUnitById=new Map(effectiveUnits.map(unit=>[unit.id,unit])),effectiveDetachmentById=new Map(detachments.map(item=>[item.id,item])),effectiveEnhancementByScope=new Map(enhancements.map(item=>[`${item.detachmentId}\0${item.id}`,item]));
+  const effectivePointsProjection=createEffectivePointsProjection({
+    book:{id:config.id,title:config.title,parentBookId:null},
+    units:pointsOrderedDatasheets.map(unit=>effectiveUnitById.get(unit.id)),
+    detachments:[...allDetachments].sort((left,right)=>(detachmentOrder.get(left.id)??Infinity)-(detachmentOrder.get(right.id)??Infinity)).map(item=>effectiveDetachmentById.get(item.id)),
+    enhancements:pointsCatalog.enhancements.map(item=>effectiveEnhancementByScope.get(`${item.canonicalDetachmentId}\0${item.canonicalEnhancementId||item.id}`))
+  });
+  return {
+    schema:'wh40k-effective-book-model/v1',
+    book:{id:config.id,title:config.title,shortTitle:config.shortTitle||config.title,edition:config.edition||null,factionKeyword:config.factionKeyword||null,parentBookId:null,dependencies:[]},
+    units:effectiveUnits,
+    detachments,
+    enhancements,
+    relationGraphs,
+    rules:{source:rules.source,armyRule:rules.armyRule,updates:rules.updates,audit:rules.audit},
+    effectContractSet,
+    effectContracts,
+    effectivePointsProjection,
+    glossary:rules.glossary,
+    sourceMetadata:{manifest,primary:rules.source,transcript:source.meta,codex:codex.source,datasheets:codexDatasheets.source,points:pointsCatalog.source,officialMfm:officialMfm.source||null},
+    presentation:{unitImages,sourceTranscript:source,codexSource:codex.source,codexDatasheetsSource:codexDatasheets.source}
+  };
 }

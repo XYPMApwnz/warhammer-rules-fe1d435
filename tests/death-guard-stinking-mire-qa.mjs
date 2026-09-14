@@ -86,12 +86,12 @@ function audit(data){
 
 async function mutations(base){
   const {createCanonicalBuildContext}=await import('../books/shared/tools/canonical-build-contract.mjs');
-  const {buildCanonicalBook}=await import('../books/death-guard/tools/canonical-build-extension.mjs');
+  const {buildEffectiveBook}=await import('../books/shared/tools/build-effective-book.mjs');
   const context=createCanonicalBuildContext({args:[],configPath:path.join(root,'books/death-guard/book.config.json'),repo:root});
   const cache=new Map(),originalRead=context.readJson,originalRepoRead=context.readRepoJson;
   const memo=(key,reader)=>{if(!cache.has(key))cache.set(key,reader());return cache.get(key);};
   const render=async data=>{
-    const result=await buildCanonicalBook({...context,
+    const result=await buildEffectiveBook({...context,
       readJson:relative=>relative===context.config.sources.canonical?data.book:memo('book:'+relative,()=>originalRead(relative)),
       readRepoJson:relative=>memo('repo:'+relative,()=>originalRepoRead(relative))
     });

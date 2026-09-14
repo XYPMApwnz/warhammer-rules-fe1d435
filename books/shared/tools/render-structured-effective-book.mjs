@@ -1,16 +1,23 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {createAdeptusMechanicusCanonicalModel} from './canonical-source-adapter.mjs';
-import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,serializeRosterCatalog} from '../../shared/tools/build-roster-catalog.mjs';
-import {effectiveEffectContracts,validateEffectContractSet,validateEffectContractsAgainstCatalog} from '../../shared/tools/effect-contract.mjs';
-import {createArmyBookTargetBuild} from '../../shared/tools/build-army-book-targets.mjs';
-import {renderUnitArt} from '../../shared/tools/render-unit-art.mjs';
-import {createEffectivePointsProjection} from '../../shared/tools/effective-points-projection.mjs';
-import ruleFactsApi from '../../shared/rule-facts.js';
+import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId} from './build-roster-catalog.mjs';
+import {renderUnitArt} from './render-unit-art.mjs';
 
-export async function buildCanonicalBook(context,{projectionOnly=false}={}){
+export async function renderEffectiveBook(context,effectiveModelInput,{rosterCatalog}={}){
 const {root,repo,config,runtimeVersions}=context;
-const {factionRules,source,codex,codexDatasheets,pointsCatalog,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds}=createAdeptusMechanicusCanonicalModel(context);
+const {sourceTranscript:source,codexSource,codexDatasheetsSource,unitImages}=effectiveModelInput.presentation;
+const {units,detachments:allDetachments,enhancements}=effectiveModelInput;
+const rules={...effectiveModelInput.rules,datasheets:units,detachments:allDetachments.filter(item=>item.sourcePages),glossary:effectiveModelInput.glossary};
+const pointsCatalog={source:effectiveModelInput.sourceMetadata.points};
+const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const slugKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const slugify=slugKey;
+const abilityText=item=>[item.openingText,...(item.options||[]).flatMap(option=>[option.title,option.text]),item.text].filter(Boolean).join(' ');
+const coreTermKeys=new Map();
+for(const term of rules.glossary.filter(term=>term.group==='Core abilities'))for(const label of [term.title,...(term.aliases||[])])coreTermKeys.set(titleKey(label.replace(/^core-|^datasheet-/i,'').replace(/^\[|\]$/g,'')),term);
+const coreBaseKey=value=>{const normalized=titleKey(value).replace(/\s+(?:d\d+|\d+|\d+\+|\d+ inches)$/,'').trim();return normalized.startsWith('anti ')?'anti':normalized;};
+const knownCoreTitles=new Set([...coreTermKeys.keys(),'deadly demise','deep strike','firing deck','hover','scouts']);
+const termIds=new Set(rules.glossary.map(term=>term.id));
 const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const cleanText=value=>String(value??'').replace(/[ \t]+\n/g,'\n').trim();
 const pagesLabel=pages=>pages.length===1?`p. ${pages[0]}`:`pp. ${pages[0]}–${pages.at(-1)}`;
@@ -74,7 +81,7 @@ function validate(){
   if(source.meta.sha256!==rules.source.sha256)fail('Source hashes disagree');
   if(rules.detachments.length!==rules.audit.detachments)fail('Detachment audit mismatch');
   if(allDetachments.length!==config.expected.matchedDetachments)fail(`Expected ${config.expected.matchedDetachments} total Adeptus Mechanicus detachments`);
-  if(rules.datasheets.length!==codexDatasheets.audit.datasheets||rules.datasheets.length!==config.expected.codexDatasheets)fail('Codex datasheet audit mismatch');
+  if(rules.datasheets.length!==config.expected.codexDatasheets)fail('Codex datasheet audit mismatch');
   if(rules.datasheets.filter(unit=>unit.status==='Warhammer Legends').length!==rules.audit.legendsDatasheets)fail('Legends audit mismatch');
   if(rules.glossary.length!==rules.audit.glossaryTerms)fail('Glossary audit mismatch');
   const ids=[rules.armyRule.id,...rules.armyRule.options.map(x=>x.id),...rules.updates.map(x=>x.id),...allDetachments.flatMap(x=>[x.id,x.rule.id,`${x.id.replace('detachment-','')}-enhancements`,`${x.id.replace('detachment-','')}-stratagems`]),...rules.datasheets.map(x=>x.id),...rules.glossary.map(x=>`glossary-${x.id}`)];
@@ -124,11 +131,12 @@ const validateEligibility=item=>{
 const detachments=allDetachments.map(det=>{
   const slug=det.id.replace('detachment-','');
   const isCodex=!det.sourcePages;
-  const enhancements=det.enhancements.map(original=>{
-    const current=isCodex?enhancementsById.get(original.id):null;
-    const item=current?{...original,title:current.title,text:current.text}:original,isUpgrade=(item.tags||[]).includes('UPGRADE');
+  const renderedEnhancements=det.enhancements.map(original=>{
+    const matches=enhancements.filter(item=>item.detachmentId===det.id&&item.id===original.id);
+    if(matches.length!==1)throw new Error(`Adeptus Mechanicus: ${det.id}/${original.id} must resolve to one effective Enhancement`);
+    const item=matches[0],isUpgrade=(item.tags||[]).includes('UPGRADE');
     validateEligibility(item);
-    return `<article class="enhancement surface" data-rule-id="${esc(item.id)}" data-enhancement-tags="${esc((item.tags||[]).join('|'))}" data-owner-subject="${esc(item.eligibility?.owner?.subject||'')}" data-enhancement-title="${esc(item.title)}"><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}</div><h4>${esc(item.title)}</h4><p data-source-field="text">${decorate(item.text)}</p></article>`;
+    return `<article class="enhancement surface" data-rule-id="${esc(item.id)}" data-enhancement-tags="${esc((item.tags||[]).join('|'))}" data-owner-subject="${esc(item.owner?.subject||item.eligibility?.owner?.subject||'')}" data-enhancement-title="${esc(item.title)}"><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}</div><h4>${esc(item.title)}</h4><p data-source-field="text">${decorate(item.text)}</p></article>`;
   }).join('');
   const stratagems=det.stratagems.map(item=>{
     validateEligibility(item);
@@ -141,8 +149,8 @@ const detachments=allDetachments.map(det=>{
   }).join('');
   if(!det.dp)throw new Error(`${det.title}: Detachment Points are missing`);
   const publication=`<div class="detachment-meta"><span>${isCodex?'CODEX + 11E UPDATE':'FACTION PACK'}</span>${det.disposition?`<span>${esc(det.disposition)}</span>`:''}</div>`;
-  const provenance=isCodex?`<div class="source"><a class="source-link" href="${codex.source.officialIndexUrl}">Official 11e detachment index</a> · <a class="source-link" href="${codex.source.referenceUrl}">Codex rules reference</a>${det.updatedSourcePages?.length?` · ${sourceLink(det.updatedSourcePages)}`:''}</div>${det.updatedSourcePages?.length?transcript(det.updatedSourcePages):''}`:`<div class="source">${sourceLink(det.sourcePages)}</div>${transcript(det.sourcePages)}`;
-  const body=`${publication}<p class="lead">${esc(det.tagline)}</p><div class="detachment-content">${tracked(det.rule.id,'Detachment Rule',`<article class="rule-card surface"><h3>${esc(det.rule.title)}</h3><p data-source-field="text">${decorate(det.rule.text)}</p></article>`,'detachment-part')}${tracked(`${slug}-enhancements`,'Enhancements',`<div class="detachment-grid">${enhancements}</div>`,'detachment-part')}${tracked(`${slug}-stratagems`,'Stratagems',`<div class="stratagem-grid">${stratagems}</div>`,'detachment-part')}</div>${provenance}`;
+  const provenance=isCodex?`<div class="source"><a class="source-link" href="${codexSource.officialIndexUrl}">Official 11e detachment index</a> · <a class="source-link" href="${codexSource.referenceUrl}">Codex rules reference</a>${det.updatedSourcePages?.length?` · ${sourceLink(det.updatedSourcePages)}`:''}</div>${det.updatedSourcePages?.length?transcript(det.updatedSourcePages):''}`:`<div class="source">${sourceLink(det.sourcePages)}</div>${transcript(det.sourcePages)}`;
+  const body=`${publication}<p class="lead">${esc(det.tagline)}</p><div class="detachment-content">${tracked(det.rule.id,'Detachment Rule',`<article class="rule-card surface"><h3>${esc(det.rule.title)}</h3><p data-source-field="text">${decorate(det.rule.text)}</p></article>`,'detachment-part')}${tracked(`${slug}-enhancements`,'Enhancements',`<div class="detachment-grid">${renderedEnhancements}</div>`,'detachment-part')}${tracked(`${slug}-stratagems`,'Stratagems',`<div class="stratagem-grid">${stratagems}</div>`,'detachment-part')}</div>${provenance}`;
   return `<section class="content-group detachment" id="${det.id}" data-track="${det.id}" data-detachment="${slug}"><h3 class="category-title detachment-title">${esc(det.title)} <span class="detachment-dp">${esc(det.dp)}DP</span></h3>${body}</section>`;
 }).join('');
 
@@ -161,27 +169,6 @@ const abilityKind=item=>{
   if(/^core$/i.test(item.title)||knownCoreTitles.has(coreBaseKey(item.title)))return 'core';
   return 'datasheet';
 };
-const decoratedTermIds=(value,unitId)=>[...decorate(value,unitId).matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]);
-const compileUnitRuleFacts=(unit,renderedTermIds=null)=>{
-  const sourceAbilities=[...unit.abilities],wargearAbilities=unit.wargearAbilities||[],directTermIds=[],textValues=[];
-  for(const item of sourceAbilities){const kind=abilityKind(item);if(kind==='core'&&/^core$/i.test(item.title))textValues.push(abilityText(item));else directTermIds.push(item.termId);if(!['core','faction'].includes(kind))textValues.push(item.openingText,item.text,...(item.options||[]).flatMap(option=>[option.title,option.text]));}
-  for(const item of wargearAbilities)textValues.push(item.openingText,item.text,...(item.options||[]).flatMap(option=>[option.title,option.text]));
-  textValues.push(...(Array.isArray(unit.composition)?[]:[unit.composition]),...(Array.isArray(unit.wargear)?unit.wargear:[unit.wargear]),...(unit.weapons||[]).map(item=>item.abilities));
-  const deadlyDemise=sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(abilityText(item)));
-  const abilityNames=sourceAbilities.flatMap(item=>/^core$/i.test(item.title)?abilityText(item).split(',').map(value=>value.trim().replace(/\.$/,'' )).filter(Boolean).map(value=>/^deadly demise\b/i.test(value)?'DEADLY DEMISE':value):[/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title]);
-  const gatedTermIds=new Set(wargearAbilities.map(item=>item.termId).filter(Boolean));
-  const termIds=[...new Set((renderedTermIds||[...directTermIds,...(unit.weapons||[]).map(item=>item.termId),...textValues.flatMap(value=>decoratedTermIds(value,unit.id))]).filter(id=>id&&!gatedTermIds.has(id)))];
-  const relations=relationGraphs.get(unit.id),mandatory=Object.values(relations).flat().some(relation=>relation.mandatory),canAttach=Object.values(relations).some(items=>items.length);
-  return {id:unit.id,unitId:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:unit.keywords,intrinsicKeywords:unit.keywords,abilities:[...new Set(abilityNames)],termIds,epic:unit.keywords.includes('Epic Hero'),deadlyDemise,attached:mandatory?true:canAttach?null:false,attachmentKnown:mandatory||!canAttach,formationRequired:mandatory,characterCount:unit.keywords.includes('Character')?1:0,twoCharacters:null,warlord:null,relations};
-};
-const compiledUnitRuleFacts=new Map(rules.datasheets.map(unit=>[unit.id,compileUnitRuleFacts(unit)]));
-const compiledUnitRuleProfiles=new Map([...compiledUnitRuleFacts].map(([id,facts])=>[id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(facts))]));
-const pointsOrderedDatasheets=boundPointUnits.map(publication=>{const unit=rules.datasheets.find(candidate=>candidate.id===publication.canonicalId);if(!unit)throw new Error(`Adeptus Mechanicus: points unit does not resolve: ${publication.canonicalId}`);return unit;});
-const officialMfm=context.readJson(config.sources.officialMfm),detachmentOrder=new Map(Object.keys(officialMfm.detachments||{}).map((title,index)=>[`detachment-${slugKey(title)}`,index]));
-const pointsOrderedDetachments=[...allDetachments].sort((left,right)=>(detachmentOrder.get(left.id)??Infinity)-(detachmentOrder.get(right.id)??Infinity));
-const detachmentById=new Map(allDetachments.map(item=>[item.id,item]));
-const effectivePointsProjection=createEffectivePointsProjection({book:{id:config.id,title:config.title,parentBookId:null},units:pointsOrderedDatasheets.map(unit=>{const publication=pointsByUnitId.get(unit.id);return{id:unit.id,title:unit.title,sourceBookId:config.id,publicationState:unit.status||'Current',points:publication?.points||[],paidWargear:publication?.wargear||[],ruleProfile:compiledUnitRuleProfiles.get(unit.id),publicationRecord:publication};}),detachments:pointsOrderedDetachments.map(item=>({id:item.id,title:item.title,sourceBookId:config.id,detachmentPoints:Number(String(item.dp||0).match(/\d+/)?.[0]||0),forceDisposition:item.disposition||'',publicationRecord:{title:item.title,detachmentPoints:item.dp,forceDisposition:item.disposition}})),enhancements:pointsCatalog.enhancements.map(item=>{const detachment=detachmentById.get(item.canonicalDetachmentId);if(!detachment)throw new Error(`Adeptus Mechanicus: ${item.id} references unknown Detachment ${item.canonicalDetachmentId}`);return{id:item.canonicalEnhancementId||item.id,sourceId:item.sourceId||null,ruleId:item.canonicalEnhancementId||item.id,legacyKey:item.legacyKey||null,detachmentId:item.canonicalDetachmentId,detachmentTitle:detachment.title,sourceBookId:config.id,title:item.title,value:Number(item.value),owner:item.owner||null,assignment:item.assignment||null,tags:item.tags||[],text:item.text||'',...(item.profile?{profile:item.profile}:{}),...(item.effect?{legacyEffect:item.effect}:{}),publicationRecord:item};})});
-if(projectionOnly)return {effectivePointsProjection};
 const abilityCard=(item,unit,wargearAbilityId='')=>`<article class="ability"${wargearAbilityId?` data-roster-wargear-ability-id="${esc(wargearAbilityId)}"`:''} data-source-field="abilities.${esc(slugKey(item.title))}"><h5 data-source-field="title"><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.openingText?`<p data-source-field="openingText">${decorate(item.openingText,unit.id)}</p>`:''}${(item.options||[]).map(option=>`<div class="ability-option" data-source-field="options.${esc(option.id)}"><h6>${esc(option.title)}</h6><p data-source-field="text">${decorate(option.text,unit.id)}</p></div>`).join('')}${item.text?`<p data-source-field="text">${decorate(item.text,unit.id)}</p>`:''}</article>`;
 const compactAbilities=(title,items,unit)=>items.length?`<div class="shared-ability-group" data-ability-class="${esc(slugKey(title))}"><h5>${title}</h5><div class="keyword-list shared-abilities">${items.map(item=>/^core$/i.test(item.title)?decorate(abilityText(item),unit.id):`<button class="term-button" data-term="${item.termId}" data-source-field="abilities.${esc(slugKey(item.title))}">${esc(item.title)}</button>`).join(' ')}</div></div>`:'';
 const composition=unit=>unit.compositionText
@@ -196,8 +183,7 @@ const unitCard=unit=>{
   for(const item of unit.abilities)(grouped[abilityKind(item)]||grouped.datasheet).push(item);
   const wargearAbilities=unit.wargearAbilities||[];
   const wargear=Array.isArray(unit.wargear)?unit.wargear:(unit.wargear?[unit.wargear]:[]);
-  const currentPoints=pointsByUnitId.get(unit.id);
-  const pointRows=(currentPoints?.points||[]).filter(row=>Number.isFinite(Number(row.value)));
+  const pointRows=(unit.points||[]).filter(row=>Number.isFinite(Number(row.value)));
 
   const points=pointRows.length===1?`${pointRows[0].value}`:pointRows.length>1?'MULTIPLE COSTS':(unit.points?.length?unit.points.join(' / '):'');
   const pointsPanel=pointRows.length?`<div class="points-panel surface"><div class="eyebrow">Points</div>${pointRows.map(row=>`<div class="points-row"><span>${esc(row.label)}</span><strong>${esc(row.value)} pts</strong></div>`).join('')}</div>`:'';
@@ -217,19 +203,16 @@ const unitCard=unit=>{
   const provenance=unit.sourcePages
     ?`<div class="source">${sourceLink(unit.sourcePages)}</div>${transcript(unit.sourcePages)}`
     :unit.source?.url?`<div class="source"><a class="source-link" href="${esc(unit.source.url)}">${esc(unit.source.label||'Pinned Codex transcription')}</a></div>`:'';
-  const gatedTermIds=new Set(wargearAbilities.map(item=>item.termId).filter(Boolean));
-  const renderedTermIds=[...sections.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]).filter(id=>!gatedTermIds.has(id));
-  const ruleFacts=compileUnitRuleFacts(unit,renderedTermIds);
   const art=renderUnitArt({unit,unitImages,escape:esc});
   const artClass=art?(unitImages[unit.id]?.presentation?.mode==='background'?' has-unit-art-background':' has-unit-art'):'';
-  return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}${artClass}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div>${art}<div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)}${points==='MULTIPLE COSTS'?'':' PTS'}`:'CODEX'}</div></div><div class="local-nav">${tabs}</div>${sections}${provenance}</article>`;
+  return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}${artClass}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-rule-facts="${esc(JSON.stringify(unit.ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div>${art}<div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)}${points==='MULTIPLE COSTS'?'':' PTS'}`:'CODEX'}</div></div><div class="local-nav">${tabs}</div>${sections}${provenance}</article>`;
 };
 const datasheetGroups=datasheetCategories.map(group=>tracked(group.id,group.title,`<p class="lead">${group.units.length} datasheet${group.units.length===1?'':'s'} in this category.</p>${group.units.map(unitCard).join('')}`)).join('');
 const glossaryGroup=(id,title,terms)=>tracked(id,title,`<div class="glossary-grid">${terms.map(term=>`<article class="glossary-card surface" id="glossary-${term.id}" data-glossary-title="${esc(term.title)}"><h4>${esc(term.title)}</h4><p>${esc(cleanText(term.summary))}</p><p class="glossary-full">${esc(cleanText(term.full))}</p>${term.sectionId?`<button class="popup-action" data-journey-target="${term.sectionId}" data-journey-type="rule">Open rule</button>`:''}</article>`).join('')}</div>`);
 const glossary=glossaryGroups.map(group=>glossaryGroup(group.id,group.title,group.terms)).join('');
 
 const trackedCount=[...toc.matchAll(/data-nav-target="([^"]+)"/g)].length;
-const sourceStatus=`<div class="source-grid"><article class="rule-card surface"><div class="eyebrow">Primary official source</div><h3>Adeptus Mechanicus Faction Pack v1.0</h3><p>26 pages · SHA-256 <code>${rules.source.sha256}</code></p><p>${sourceLink([1])}</p></article><article class="rule-card surface"><div class="eyebrow">Official live points · dated capture</div><h3>Munitorum Field Manual ${esc(pointsCatalog.source.officialVersion)}</h3><p>Dated repository capture verified ${esc(pointsCatalog.source.verifiedAt)}; all 34 current Enhancement costs and all non-Legends unit point rows match the official live source.</p><p><a class="source-link" href="${esc(pointsCatalog.source.officialUrl)}">Open official MFM</a></p></article><article class="rule-card surface"><div class="eyebrow">Codex transcription layer</div><h3>${rules.datasheets.length} indexed datasheets</h3><p>Codex profiles are generated from a pinned 11th-edition community catalogue. Every sheet reprinted by GW is replaced with the official Faction Pack version.</p><p><a class="source-link" href="${codexDatasheets.source.url}">Pinned catalogue · revision ${esc(codexDatasheets.source.revision)}</a></p></article></div>`;
+const sourceStatus=`<div class="source-grid"><article class="rule-card surface"><div class="eyebrow">Primary official source</div><h3>Adeptus Mechanicus Faction Pack v1.0</h3><p>26 pages · SHA-256 <code>${rules.source.sha256}</code></p><p>${sourceLink([1])}</p></article><article class="rule-card surface"><div class="eyebrow">Official live points · dated capture</div><h3>Munitorum Field Manual ${esc(pointsCatalog.source.officialVersion)}</h3><p>Dated repository capture verified ${esc(pointsCatalog.source.verifiedAt)}; all 34 current Enhancement costs and all non-Legends unit point rows match the official live source.</p><p><a class="source-link" href="${esc(pointsCatalog.source.officialUrl)}">Open official MFM</a></p></article><article class="rule-card surface"><div class="eyebrow">Codex transcription layer</div><h3>${rules.datasheets.length} indexed datasheets</h3><p>Codex profiles are generated from a pinned 11th-edition community catalogue. Every sheet reprinted by GW is replaced with the official Faction Pack version.</p><p><a class="source-link" href="${codexDatasheetsSource.url}">Pinned catalogue · revision ${esc(codexDatasheetsSource.revision)}</a></p></article></div>`;
 const html=`<!doctype html>
 <html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101313"><meta name="description" content="Adeptus Mechanicus Faction Pack and current Codex rules reference."><title>Adeptus Mechanicus Rules — Faction Pack v1.0</title><link rel="manifest" href="../../manifest.webmanifest"><link rel="icon" href="./assets/mechanicus-logo.png" type="image/png"><link rel="stylesheet" href="./styles/tokens.css?v=${config.assetVersions.tokens}"><link rel="stylesheet" href="../shared/styles/layout.css?v=${runtimeVersions.shared.readerLayout}"><link rel="stylesheet" href="../shared/styles/navigation.css?v=${runtimeVersions.shared.readerNavigationCss}"><link rel="stylesheet" href="../shared/styles/content.css?v=${runtimeVersions.shared.readerContent}"><link rel="stylesheet" href="../shared/styles/popups.css?v=${runtimeVersions.shared.readerPopups}"><link rel="stylesheet" href="../shared/styles/offline-status.css?v=${runtimeVersions.shared.offlineStatusCss}"><link rel="stylesheet" href="./styles/mechanicus.css?v=${config.assetVersions.book}"><link rel="stylesheet" href="../shared/datasheet-system.css?v=8"><link rel="stylesheet" href="../shared/unit-art.css?v=${runtimeVersions.shared.unitArt}"></head><body>
 <header class="app-header" id="appHeader"><button class="header-button nav-menu" id="navMenu" type="button" aria-label="Open navigation" aria-controls="tocPanel" aria-expanded="false">☰</button><button class="header-button nav-collapse" id="navCollapse" type="button" aria-label="Collapse navigation" aria-controls="tocPanel" aria-expanded="true">◀</button><div class="app-brand"><strong>Adeptus Mechanicus Rules</strong><small>11E · Adeptus Mechanicus reference</small></div><a class="library-link" href="../../index.html" aria-label="Back to rulebook library"><span aria-hidden="true">←</span><b>Library</b></a><button class="back-button" id="backButton" type="button" hidden>Back</button><div class="header-spacer"></div></header><button class="toc-scrim" id="tocScrim" type="button" aria-label="Close navigation" aria-hidden="true"></button>
@@ -260,13 +243,8 @@ const releaseHtml=html
   .replace('./scripts/roster-filter.js?v=7',`./scripts/roster-filter.js?v=${config.assetVersions.rosterFilter}`)
   .replace('popup-controller.js?v=18','popup-controller.js?v=21')
   .replace('app.js?v=41',`app.js?v=${config.assetVersions.app}`);
-const targetBuild=createArmyBookTargetBuild(releaseHtml,{runtimeVersions});
 const entryHtml=`<!doctype html>
 <html lang="en" data-canonical-reader="./reader.html" data-canonical-target="start"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adeptus Mechanicus Rules</title><script src="../shared/mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}"></script></head><body><noscript><a href="./reader.html#start">Open Adeptus Mechanicus Rules</a></noscript></body></html>\n`;
-const effectContractSet=config.sources.effectContracts?validateEffectContractSet(context.readJson(config.sources.effectContracts),{expectedBookId:config.id}):{schema:'wh40k-effect-contracts/v1',bookId:config.id,contracts:[]},effectContracts=effectiveEffectContracts([effectContractSet],config.id);
-const rosterCatalog=createRosterCatalog({config,units:rules.datasheets,detachments:allDetachments,relationGraphs,effectContracts});validateEffectContractsAgainstCatalog(effectContractSet,rosterCatalog);
-const rosterDataJs=serializeRosterCatalog(rosterCatalog);
-const outputs=new Map([['index.html',entryHtml],['reader.html',targetBuild.readerHtml],['scripts/data.js',dataJs],['scripts/target-data.js',targetBuild.targetDataJs],['scripts/roster-data.js',rosterDataJs]]);
 
 if(/data-term="[^"]*</i.test(html))throw new Error('Generated data-term attributes must never contain markup');
 for(const match of html.matchAll(/data-term="([^"]+)"/g))if(!termIds.has(match[1]))throw new Error(`Generated page references unknown term: ${match[1]}`);
@@ -274,14 +252,13 @@ for(const match of html.matchAll(/data-term="([^"]+)"/g))if(!termIds.has(match[1
 validate();
 
 return {
-  outputs,
+  readerSource:releaseHtml,
+  indexHtml:entryHtml,
+  dataJs,
   normalizeLineEndings:false,
-  summary:({check})=>check
-    ? `Full build is current: ${allDetachments.length} detachments, ${rules.datasheets.length} datasheets, root PWA cache`
-    : `Built full Mechanicus project: ${allDetachments.length} detachments, ${rules.datasheets.length} datasheets, root PWA cache`
+  summary:`Adeptus Mechanicus effective-model publication: ${allDetachments.length} detachments, ${rules.datasheets.length} datasheets`
 };
 }
 
-export async function buildEffectivePointsProjection(context){return (await buildCanonicalBook(context,{projectionOnly:true})).effectivePointsProjection;}
 
 

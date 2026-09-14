@@ -1,6 +1,10 @@
 import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
 import {pointTierContract} from '../../shared/tools/point-tier-contract.mjs';
 import {canonicalTargetsFromProse} from '../../shared/tools/canonical-join-contract.mjs';
+import {effectiveEffectContracts,validateEffectContractSet} from '../../shared/tools/effect-contract.mjs';
+import {createEffectivePointsProjection} from '../../shared/tools/effective-points-projection.mjs';
+import {EFFECTIVE_BOOK_MODEL_SCHEMA,createEffectiveBookModel} from '../../shared/tools/effective-book-model.mjs';
+import ruleFactsApi from '../../shared/rule-facts.js';
 
 const slug=value=>String(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const keywordId=value=>`keyword-${slug(value)}`;
@@ -151,5 +155,45 @@ export function buildDeathGuardCanonicalModel(context){
   if(keywordOrder.length!==keywordEntries.size||new Set(keywordOrder).size!==keywordOrder.length||keywordOrder.some(id=>!keywordEntries.has(id)))throw new Error('Death Guard runtime keyword serialization order is incomplete');
   const orderedKeywords=keywordOrder.map(id=>keywordEntries.get(id));let keywordIndex=0;const runtimeGlossary=book.glossary.map(entry=>entry.kind==='keyword'?orderedKeywords[keywordIndex++]:entry);
   for(const entry of runtimeGlossary){let summary=entry.short;if(entry.statline)summary=Object.entries(entry.statline).map(([key,value])=>`${key} ${value}`).join(' · ');if(entry.weapon)summary=Object.entries(entry.weapon).map(([key,value])=>`${key} ${value}`).join(' · ');summary=presentation.runtimeSummaryOverrides[entry.id]?.summary||summary;const owner=entry.unitIds?.[0];runtime[entry.id]={title:entry.title,summary,glossary:`glossary-${entry.id}`,...(entry.sectionId?{rule:entry.sectionId}:{}),...(owner?{datasheet:owner}:{}),...(owner&&entry.kind==='weapon'?{statline:`${owner}-profile`}:{}),...(runtimeRelated.terms[entry.id]?.length?{related:runtimeRelated.terms[entry.id]}:{})};}
-  return {book,legends,updates,manifest,points,presentation,unitImages:unitImages.units,coreStratagems,coreTermIdByCode,ruleFacts,runtime,unitKeywords,canonicalJoinContract:'v1'};
+  return {book,legends,updates,manifest,points,presentation,unitImages:unitImages.units,coreStratagems,coreTermIdByCode,relationGraphs,ruleFacts,runtime,unitKeywords,canonicalJoinContract:'v1'};
+}
+
+const legacyEnhancementEffects=Object.freeze({
+  'daemon weapon of nurgle':'critical-hit-5','furnace of plagues':'furnace','arch contaminator':'conditional','revolting regeneration':'persistent','eye of affliction':'conditional','bilemaw blight':'plague-wind-range-12','shriekworm familiar':'persistent','tendrilous emissions':'conditional','final ingredient':'once','visions of virulence':'conditional','needle of nurgle':'narthecium-d3','cornucophagus':'setup','beckoning blight':'persistent','fell harvester':'melee-a-2','entropic knell':'conditional','tome of bounteous blessings':'conditional','witherbone pipes':'attachment','lord of the walking pox':'attachment','sorrowsyphon':'attachment','talisman of burgeoning':'attachment','face of death':'persistent','vile vigour':'attachment','warprot talisman':'once','helm of the fly king':'attachment','parasitic woe reaper':'persistent','lancet of the worldsore':'mobile','insectile murmuration':'conditional','plagueveil':'persistent','rejuvenating swarm':'conditional','host of the hybridised pox':'once'
+});
+
+const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+
+function effectiveEnhancementsFor(context,model,detachments){
+  const publicationByEnhancementId=new Map((model.points.enhancements||[]).filter(item=>item.id&&item.sourceTitle).map(item=>[item.id,item])),enhancements=[];
+  for(const detachment of detachments)for(const subsection of detachment.subsections||[])for(const item of (subsection.blocks||[]).filter(block=>block.type==='enhancement')){
+    const match=item.title.match(/^(.*?)\s+[-–—]\s+(\d+)\s*pts$/i);
+    if(!match)throw new Error(`Enhancement points missing: ${item.title}`);
+    const publication=publicationByEnhancementId.get(item.id),title=match[1],value=Number(match[2]),aliases=(item.tags||[]).includes('UPGRADE')?[`${title} Upgrade`,`${title} (Upgrade)`]:[];
+    if(publication&&(String(publication.sourceTitle).toLowerCase()!==title.toLowerCase()||Number(publication.value)!==value))throw new Error(`Death Guard point identity mismatch: ${item.id}`);
+    const legacyEffect=legacyEnhancementEffects[titleKey(title)]||'',detachmentTitle=publication?.detachment||detachment.title;
+    enhancements.push({...item,id:item.id,sourceId:item.sourceId||null,ruleId:item.id,legacyKey:null,detachmentId:detachment.id,detachmentTitle,sourceBookId:context.config.id,title,value,runtimeTitle:item.title,owner:item.owner||null,assignment:item.assignment||null,tags:item.tags||[],text:item.text||'',legacyEffect,aliases,publicationRecord:{id:item.id,title,value,text:item.text,effect:legacyEffect,detachment:publication?.detachment||String(detachment.id).replace(/^detachment-/,''),...(publication?{canonicalEnhancementId:item.id,canonicalDetachmentId:detachment.id}:{}),tags:item.tags||[],owner:item.owner||null,assignment:item.assignment||null,aliases}});
+  }
+  return enhancements;
+}
+
+function effectiveDetachmentsFor(context,model,sections){
+  return sections.map(detachment=>{
+    const publication=(model.points.detachments||[]).find(item=>titleKey(item.title)===titleKey(detachment.title)),disposition=(detachment.blocks||[]).find(block=>block.type==='p'&&/Force Disposition:/.test(block.text))?.text||'';
+    return {...detachment,sourceBookId:context.config.id,detachmentPoints:Number(String(publication?.detachmentPoints??publication?.dp??0).match(/\d+/)?.[0]||0),forceDisposition:publication?.forceDisposition||publication?.disposition||disposition.match(/Force Disposition:\s*([^.]*)/)?.[1]||'',publicationRecord:publication||{title:detachment.title}};
+  });
+}
+
+export function buildDeathGuardEffectiveModelInput(context,canonicalModel=buildDeathGuardCanonicalModel(context)){
+  const {config}=context,sourceUnits=canonicalModel.book.sections.filter(section=>section.kind==='unit'),sourceDetachments=canonicalModel.book.sections.filter(section=>section.id?.startsWith('detachment-'));
+  const relationGraphs=canonicalModel.relationGraphs||new Map(sourceUnits.map(unit=>[unit.id,canonicalModel.ruleFacts.get(unit.id)?.relations||{}]));
+  const ruleProfiles=new Map(sourceUnits.map(unit=>[unit.id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(canonicalModel.ruleFacts.get(unit.id)))]));
+  const baseUnits=sourceUnits.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points');return {...unit,sourceBookId:config.id,publicationState:unit.legends?'Legends':'Current',paidWargear:pointsBlock?.wargear||[],intrinsicKeywords:canonicalModel.unitKeywords.get(unit.id),ruleFacts:canonicalModel.ruleFacts.get(unit.id),ruleProfile:ruleProfiles.get(unit.id)};});
+  const detachments=effectiveDetachmentsFor(context,canonicalModel,sourceDetachments),enhancements=effectiveEnhancementsFor(context,canonicalModel,detachments);
+  const effectContractSet=config.sources.effectContracts?validateEffectContractSet(context.readJson(config.sources.effectContracts),{expectedBookId:config.id}):{schema:'wh40k-effect-contracts/v1',bookId:config.id,contracts:[]},effectContracts=effectiveEffectContracts([effectContractSet],config.id);
+  const units=baseUnits;
+  const detachmentOrder=new Map((canonicalModel.points.detachments||[]).map((item,index)=>[titleKey(item.title),index]));
+  const pointsProjectionInput={book:{id:config.id,title:config.title,parentBookId:null},units:units.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points');return{id:unit.id,title:unit.title,sourceBookId:config.id,publicationState:unit.publicationState,points:unit.points||[],paidWargear:pointsBlock?.wargear||[],ruleProfile:unit.ruleProfile,publicationRecord:{title:unit.title,points:unit.points,wargear:pointsBlock?.wargear||[]}};}),detachments:[...detachments].sort((left,right)=>(detachmentOrder.get(titleKey(left.title))??Infinity)-(detachmentOrder.get(titleKey(right.title))??Infinity)).map(detachment=>({id:detachment.id,title:detachment.title,sourceBookId:config.id,detachmentPoints:detachment.detachmentPoints,forceDisposition:detachment.forceDisposition,publicationRecord:detachment.publicationRecord})),enhancements};
+  const effectivePointsProjection=createEffectivePointsProjection(pointsProjectionInput),book={...canonicalModel.book,id:config.id,title:config.title,publicationTitle:canonicalModel.book.title,parentBookId:null};
+  return createEffectiveBookModel({schema:EFFECTIVE_BOOK_MODEL_SCHEMA,book,units,detachments,enhancements,relationGraphs,effectContractSet,effectContracts,pointsProjectionInput,effectivePointsProjection,ruleFacts:canonicalModel.ruleFacts,ruleProfiles,compiledRuleProfiles:ruleProfiles,glossary:book.glossary,runtime:canonicalModel.runtime,presentation:{metadata:canonicalModel.presentation},unitImages:canonicalModel.unitImages,coreStratagems:canonicalModel.coreStratagems,coreTermIdByCode:canonicalModel.coreTermIdByCode,sourceMetadata:{manifest:canonicalModel.manifest,officialUpdates:canonicalModel.updates,legends:canonicalModel.legends,officialPoints:canonicalModel.points,canonicalJoinContract:canonicalModel.canonicalJoinContract}});
 }

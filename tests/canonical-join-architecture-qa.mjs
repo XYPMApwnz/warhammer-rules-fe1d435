@@ -77,6 +77,10 @@ for(const fixture of [
   assert.equal(resolveScopedEnhancement({enhancementId,detachmentId},catalog.enhancements).detachmentId,detachmentId);
 }
 
+const sharedBuilder=read('books/shared/tools/build-army-book.mjs'),ecConfig=JSON.parse(read('books/emperors-children/book.config.json'));
+assert.doesNotMatch(sharedBuilder,/enhancementOwnerRecords\.filter\([^\n]*titleKey/);
+assert.equal(Object.keys(ecConfig.enhancementOwnerAliases||{}).length,10);
+
 const csmInputs=csmCompatibleInputs();
 assert.doesNotThrow(()=>buildCsmCompatibleRules(csmInputs));
 const unknownCompatibleOwner=structuredClone(csmInputs);unknownCompatibleOwner.pack.detachments[0].enhancements[0].id='unknown-enhancement-owner';

@@ -13,6 +13,18 @@
   ],
   "includeCoreStratagems": true,
   "rosterSupport": true,
+  "enhancementOwnerAliases": {
+    "elegant-brutes|cacophonic-accompaniment": "enhancement-cacophonic-accompaniment",
+    "elegant-brutes|frenzied-ferocity": "enhancement-frenzied-ferocity",
+    "frenzied-host|euphoric-crown": "enhancement-euphoric-crown",
+    "frenzied-host|howling-plate": "enhancement-howling-plate",
+    "spectacle-of-slaughter|eager-patrons": "enhancement-eager-patrons",
+    "spectacle-of-slaughter|beguiling-grotesquerie": "enhancement-beguiling-grotesquerie",
+    "court-of-the-phoenician|tears-of-the-phoenix": "enhancement-tears-of-the-phoenix",
+    "court-of-the-phoenician|exalted-patron": "enhancement-exalted-patron",
+    "court-of-the-phoenician|soulstain-made-manifest": "enhancement-soulstain-made-manifest",
+    "court-of-the-phoenician|spiritsliver": "enhancement-spiritsliver"
+  },
   "rosterCatalog": {
     "inferCanonicalDetachmentRuleIds": true,
     "inferExactWargearAbilitySelections": true,

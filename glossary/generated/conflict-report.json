@@ -8,7 +8,7 @@
     "semanticWarnings": 8,
     "aliasCandidates": 230,
     "duplicateCandidates": 116,
-    "keywordCandidates": 16
+    "keywordCandidates": 15
   },
   "definitionCandidates": [
     {
@@ -4001,11 +4001,7 @@
       "candidateRuleIds": [
         "core-rule-15-01-using-stratagems",
         "core-rule-15-09-snap-shooting",
-        "core-rule-16-01-performing-actions",
-        "core-rule-23-01-deployment",
-        "core-rule-23-02-movement",
-        "core-rule-23-03-shooting",
-        "core-rule-23-04-charging-and-fighting"
+        "core-rule-16-01-performing-actions"
       ],
       "status": "review-required"
     },
@@ -4014,8 +4010,7 @@
       "candidateRuleIds": [
         "core-rule-15-01-using-stratagems",
         "core-rule-15-09-snap-shooting",
-        "core-rule-16-01-performing-actions",
-        "core-super-heavy-walker"
+        "core-rule-16-01-performing-actions"
       ],
       "status": "review-required"
     },
@@ -4023,13 +4018,6 @@
       "termId": "keyword-explosives",
       "candidateRuleIds": [
         "core-rule-15-09-snap-shooting"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termId": "keyword-towering",
-      "candidateRuleIds": [
-        "core-rule-22-05-plunging-fire"
       ],
       "status": "review-required"
     },

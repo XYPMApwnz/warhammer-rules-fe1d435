@@ -27,6 +27,12 @@
       "referencedByRules": [],
       "relatedKeywords": []
     },
+    "keyword-aircraft": {
+      "forms": ["AIRCRAFT"],
+      "intrinsicRules": ["core-rule-23-01-deployment", "core-rule-23-02-movement", "core-rule-23-03-shooting", "core-rule-23-04-charging-and-fighting"],
+      "referencedByRules": [],
+      "relatedKeywords": []
+    },
     "keyword-mobile": {
       "forms": ["MOBILE"],
       "intrinsicRules": ["core-rule-13-06-terrain-and-movement"],
@@ -102,14 +108,26 @@
     "keyword-smoke": {
       "forms": ["SMOKE"],
       "intrinsicRules": [],
-      "referencedByRules": [],
+      "referencedByRules": ["core-rule-15-10-smokescreen"],
       "relatedKeywords": []
     },
     "keyword-walker": {
       "forms": ["WALKER", "WALKERS"],
       "intrinsicRules": [],
-      "referencedByRules": [],
+      "referencedByRules": ["core-rule-15-11-heroic-intervention"],
       "relatedKeywords": ["keyword-vehicle"]
+    },
+    "keyword-towering": {
+      "forms": ["TOWERING"],
+      "intrinsicRules": [],
+      "referencedByRules": ["core-rule-22-05-plunging-fire"],
+      "relatedKeywords": []
+    },
+    "keyword-titanic": {
+      "forms": ["TITANIC"],
+      "intrinsicRules": ["core-super-heavy-walker"],
+      "referencedByRules": ["core-stratagem-fire-overwatch"],
+      "relatedKeywords": []
     }
   }
 }

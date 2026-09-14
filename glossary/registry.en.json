@@ -33087,7 +33087,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-active-player": {
@@ -33272,7 +33272,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-battle-shocked": {
@@ -33437,7 +33437,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-characteristic-armour-penetration": {
@@ -33872,7 +33872,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-cleave": {
@@ -33977,7 +33977,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-critical-hit": {
@@ -34151,7 +34151,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-deep-strike": {
@@ -34224,7 +34224,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-destroyed": {
@@ -34287,7 +34287,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-detection-range": {
@@ -34536,7 +34536,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-fights-first": {
@@ -35141,7 +35141,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-objective-control": {
@@ -35205,7 +35205,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-one-shot": {
@@ -35308,7 +35308,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-precision": {
@@ -35592,8 +35592,9 @@
         "01.02.01"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-01-starting-strength-and-half-strength"
       }
     },
     "core-rule-01-02-02-persisting-rules-effects": {
@@ -35606,7 +35607,7 @@
         "en": "Persisting Rules Effects"
       },
       "summary": {
-        "en": "An effect with a stated duration continues for that full duration, including while its unit is embarked or in Strategic Reserves."
+        "en": "An effect with a stated duration continues for that full duration, including through embarkation or Strategic Reserves. If no duration is stated, it lasts only for the specified period or the phase in which it was given."
       },
       "definition": {
         "en": "Some rules apply an effect that lasts until a certain duration has passed (for example until the start of your next turn). Such effects are known as persisting effects. If a persisting effect applies to a unit when you place it in strategic reserves or when it embarks within a TRANSPORT, make a note of that effect and its duration; if that unit is set up on the battlefield again, any persisting effects continue to apply to that unit for their full duration. If you have a rule that specifies when it is triggered (for example ‘In the Shooting phase’) and it does not specify how long it is active for, it is only active for the duration of that specified period (for example until the end of that Shooting phase). After that period, that effect is no longer applicable/active. If a rule or effect is given to a unit and it does not specify how long it is active for, it is only active for the phase in which it was given."
@@ -35629,8 +35630,9 @@
         "01.02.02"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-02-persisting-rules-effects"
       }
     },
     "core-rule-01-02-03-revived-and-adding-models-to-a-unit": {
@@ -35643,7 +35645,7 @@
         "en": "Revived and Adding Models to a Unit"
       },
       "summary": {
-        "en": "Returned models rejoin their original unit without taking it above Starting Strength and must follow the rule's placement restrictions."
+        "en": "Revived, returned or added models cannot take a unit above Starting Strength and must follow the applicable placement, wargear, wounds and Transport restrictions. A revived Leader or Support model returns as a separate unit."
       },
       "definition": {
         "en": "When a rule revives, resurrects, returns or adds models to a unit, the specified number of models are added to the unit. • If a rule revives, resurrects or returns models to a unit, it does so through destroyed models from that unit. • This cannot expand a unit beyond its starting strength. • Unless otherwise stated, such models are added with all wargear and enhancements they started the battle with, and with their full W remaining. Models returned to a unit on the battlefield must be set up as follows: • They must be set up in coherency with models in that unit that started that phase on the battlefield. • They can be set up engaged with one or more enemy units, but only if those enemy units were already engaged with the unit that model is being returned to. If a leader or support model in an attached unit is destroyed and subsequently revived, it returns on its own as a unit of one, rather than returning as part of its attached unit. When a model revives, resurrects, returns or is added to an embarked unit, if that TRANSPORT has sufficient remaining transport capacity for that model, that model is returned to that unit and is embarked. Otherwise, that model is destroyed, but it does not trigger rules that apply when a model is destroyed."
@@ -35666,8 +35668,9 @@
         "01.02.03"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-03-revived-and-adding-models-to-a-unit"
       }
     },
     "core-rule-01-02-04-not-on-the-battlefield": {
@@ -35703,8 +35706,9 @@
         "01.02.04"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-04-not-on-the-battlefield"
       }
     },
     "core-rule-01-02-05-other-model-unit": {
@@ -35740,8 +35744,9 @@
         "01.02.05"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-05-other-model-unit"
       }
     },
     "core-rule-01-02-06-splitting-units": {
@@ -35777,8 +35782,9 @@
         "01.02.06"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-06-splitting-units"
       }
     },
     "core-rule-01-02-07-describing-units": {
@@ -35814,8 +35820,9 @@
         "01.02.07"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-07-describing-units"
       }
     },
     "core-rule-01-02-08-a-unit-model-object": {
@@ -35851,8 +35858,9 @@
         "01.02.08"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-08-a-unit-model-object"
       }
     },
     "core-rule-01-02-09-tokens": {
@@ -35888,8 +35896,9 @@
         "01.02.09"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-09-tokens"
       }
     },
     "core-rule-01-02-10-adding-a-new-unit-to-your-army": {
@@ -35925,8 +35934,9 @@
         "01.02.10"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-10-adding-a-new-unit-to-your-army"
       }
     },
     "core-rule-01-02-11-all-types-of-model": {
@@ -35962,8 +35972,9 @@
         "01.02.11"
       ],
       "summarySource": {
-        "documentId": "core-rules",
-        "kind": "curated-operational-reference"
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "core-rule-01-02-11-all-types-of-model"
       }
     },
     "core-rule-01-02-units-and-models": {
@@ -43301,7 +43312,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": []
     },
     "core-starting-strength": {
@@ -43437,7 +43448,7 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference",
+      "presentation": "atomic",
       "matchLabels": [
         "Strategic Reserves"
       ]
@@ -49352,7 +49363,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-ability-blight-bombardment-lord-of-virulence"
+      }
     },
     "death-guard-ability-blinding-spray-foul-blightspawn": {
       "id": "death-guard-ability-blinding-spray-foul-blightspawn",
@@ -49778,7 +49794,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-ability-eater-plague-psychic-typhus"
+      }
     },
     "death-guard-ability-enfeebling-miasma-aura-daemon-prince-of-nurgle-with-wings": {
       "id": "death-guard-ability-enfeebling-miasma-aura-daemon-prince-of-nurgle-with-wings",
@@ -49846,7 +49867,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-ability-explosive-blight-foetid-bloat-drone-with-heavy-blight-launcher"
+      }
     },
     "death-guard-ability-extraction-of-fresh-disease-biologus-putrifier": {
       "id": "death-guard-ability-extraction-of-fresh-disease-biologus-putrifier",
@@ -49949,7 +49975,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-ability-fire-support-chaos-rhino"
+      }
     },
     "death-guard-ability-fortification-miasmic-malignifier": {
       "id": "death-guard-ability-fortification-miasmic-malignifier",
@@ -50746,7 +50777,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-ability-numberless-horde"
+      }
     },
     "death-guard-ability-nurgles-rot-psychic-great-unclean-one": {
       "id": "death-guard-ability-nurgles-rot-psychic-great-unclean-one",
@@ -50892,7 +50928,7 @@
         "en": "Reverberant Rancidity"
       },
       "summary": {
-        "en": "Within 7\" of DEATH GUARD, PLAGUE LEGIONS gain Nurgle’s Gift; within 7\" of PLAGUE LEGIONS, DEATH GUARD units add 3\" to their Contagion Range."
+        "en": "Within 7\" of DEATH GUARD, PLAGUE LEGIONS gain Nurgle’s Gift; within 7\" of PLAGUE LEGIONS, DEATH GUARD units gain +3\" Contagion Range. The rule also permits PLAGUE LEGIONS allies up to 500/1000/1500 points in Incursion/Strike Force/Onslaught; they cannot be your WARLORD."
       },
       "definition": {
         "en": "While a PLAGUE LEGIONS unit from your army is within 7\" of one or more DEATH GUARD units from your army, it has the Nurgle’s Gift ability. While a DEATH GUARD unit from your army is within 7\" of one or more PLAGUE LEGIONS units from your army, add 3\" to that DEATH GUARD unit’s Contagion Range. You can include PLAGUE LEGIONS units in your army even if your Army Faction is DEATH GUARD. The combined points cost of such units depends on the battle size: Incursion: up to 500 pts. Strike Force: up to 1000 pts. Onslaught: up to 1500 pts. No PLAGUE LEGIONS model from your army can be your WARLORD."
@@ -50918,7 +50954,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-ability-reverberant-rancidity"
+      }
     },
     "death-guard-ability-scuttling-walker-defiler": {
       "id": "death-guard-ability-scuttling-walker-defiler",
@@ -51122,7 +51163,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-ability-spore-laced-shock-waves-plagueburst-crawler"
+      }
     },
     "death-guard-ability-tainted-narthecium-plague-surgeon": {
       "id": "death-guard-ability-tainted-narthecium-plague-surgeon",
@@ -51464,7 +51510,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-ability-virulent-blessing-psychic-rotigus"
+      }
     },
     "death-guard-ability-warped-and-rusted-animus": {
       "id": "death-guard-ability-warped-and-rusted-animus",
@@ -51572,7 +51623,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-army-rules-afflicted"
+      }
     },
     "death-guard-army-rules-contagion-range": {
       "id": "death-guard-army-rules-contagion-range",
@@ -51605,7 +51661,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-army-rules-contagion-range"
+      }
     },
     "death-guard-army-rules-nurgles-gift": {
       "id": "death-guard-army-rules-nurgles-gift",
@@ -51654,10 +51715,10 @@
         "en": "Pact of Decay"
       },
       "summary": {
-        "en": "Unless specifically stated otherwise, you cannot select PLAGUE LEGIONS as your Army Faction when mustering your army."
+        "en": "When mustering your army, unless specifically stated otherwise, you cannot select PLAGUE LEGIONS as your Army Faction."
       },
       "definition": {
-        "en": "Unless specifically stated otherwise, you cannot select PLAGUE LEGIONS as your Army Faction when mustering your army."
+        "en": "When mustering your army, unless specifically stated otherwise, you cannot select PLAGUE LEGIONS as your Army Faction."
       },
       "aliases": [
         "pact-of-decay"
@@ -51671,11 +51732,10 @@
         "revision": "death-guard-11ed-v1.1-working",
         "locator": "Army Rules — Pact of Decay"
       },
-      "status": "provisional",
+      "status": "verified",
       "sourceRefs": [
-        "curated-glossary"
+        "death-guard"
       ],
-      "curated": true,
       "presentation": "atomic",
       "matchLabels": []
     },
@@ -53169,7 +53229,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-plagues-rattlejoint-ague"
+      }
     },
     "death-guard-plagues-scabrous-soulrot": {
       "id": "death-guard-plagues-scabrous-soulrot",
@@ -53202,7 +53267,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-plagues-scabrous-soulrot"
+      }
     },
     "death-guard-plagues-skullsquirm-blight": {
       "id": "death-guard-plagues-skullsquirm-blight",
@@ -53235,7 +53305,12 @@
         "death-guard"
       ],
       "presentation": "article",
-      "matchLabels": []
+      "matchLabels": [],
+      "summarySource": {
+        "documentId": "global-glossary-editorial-contracts",
+        "revision": "editorial-review-2026-09-14",
+        "locator": "death-guard-plagues-skullsquirm-blight"
+      }
     },
     "death-guard-stratagem-aggravus-spasms": {
       "id": "death-guard-stratagem-aggravus-spasms",
@@ -69643,45 +69718,47 @@
         "en": "ADEPTUS MECHANICUS"
       },
       "summary": {
-        "en": "Faction keyword used to identify Adeptus Mechanicus models and units."
+        "en": "ADEPTUS MECHANICUS identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Faction keyword used to identify Adeptus Mechanicus models and units."
+        "en": "The ADEPTUS MECHANICUS keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-datasheet-emanatus-forcefield-aura",
-        "adeptus-mechanicus-datasheet-enginseer",
-        "adeptus-mechanicus-datasheet-mechanicus-bodyguard",
-        "adeptus-mechanicus-datasheet-omnissiahs-blessing",
-        "adeptus-mechanicus-datasheet-vengeance-for-the-omnissiah",
-        "adeptus-mechanicus-detachment-rule-acquisition-at-any-cost",
-        "adeptus-mechanicus-detachment-rule-noospheric-transference",
-        "adeptus-mechanicus-doctrina-imperatives",
         "adeptus-mechanicus-enhancement-autoclavic-denunciation",
         "adeptus-mechanicus-enhancement-belicosa-class-capacitor-vanes",
+        "adeptus-mechanicus-enhancement-cantic-thrallnet",
         "adeptus-mechanicus-enhancement-cognitive-reinforcement",
-        "adeptus-mechanicus-enhancement-emotionless-clarity",
+        "adeptus-mechanicus-enhancement-explorator-dispensation",
+        "adeptus-mechanicus-enhancement-inloaded-lethality",
         "adeptus-mechanicus-enhancement-malphonic-susurrus",
-        "adeptus-mechanicus-enhancement-necromechanic",
+        "adeptus-mechanicus-enhancement-omnicogitator",
+        "adeptus-mechanicus-enhancement-omnissiahs-fury",
         "adeptus-mechanicus-enhancement-peerless-eradicator",
         "adeptus-mechanicus-enhancement-radial-suffusion",
         "adeptus-mechanicus-enhancement-sanctified-ordnance",
-        "adeptus-mechanicus-stratagem-aggressive-impulse",
+        "adeptus-mechanicus-enhancement-stealth-screened-cybercanids-upgrade",
+        "adeptus-mechanicus-enhancement-transoracular-dyad-wafers",
+        "adeptus-mechanicus-enhancement-veiled-hunter",
+        "adeptus-mechanicus-enhancement-vinghs-wafers-of-dynamism",
         "adeptus-mechanicus-stratagem-analytical-divination",
         "adeptus-mechanicus-stratagem-auto-divinatory-targeting",
         "adeptus-mechanicus-stratagem-auto-oracular-retrieval",
         "adeptus-mechanicus-stratagem-baleful-halo",
-        "adeptus-mechanicus-stratagem-benevolence-of-the-omnissiah",
         "adeptus-mechanicus-stratagem-cached-acquisition",
         "adeptus-mechanicus-stratagem-defect-scrutiny",
         "adeptus-mechanicus-stratagem-eradication-protocols",
         "adeptus-mechanicus-stratagem-guided-retreat",
         "adeptus-mechanicus-stratagem-incense-exhausts",
         "adeptus-mechanicus-stratagem-lethal-dosage",
-        "adeptus-mechanicus-stratagem-machine-superiority",
         "adeptus-mechanicus-stratagem-motive-imperative",
-        "adeptus-mechanicus-stratagem-neural-overload"
+        "adeptus-mechanicus-stratagem-neural-overload",
+        "adeptus-mechanicus-stratagem-pre-calibrated-purge-solution",
+        "adeptus-mechanicus-stratagem-priority-reclamation",
+        "adeptus-mechanicus-stratagem-reactive-safeguard",
+        "adeptus-mechanicus-stratagem-servo-driven-charge",
+        "adeptus-mechanicus-stratagem-targeting-override",
+        "adeptus-mechanicus-stratagem-unrelenting-aggression"
       ],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -69715,10 +69792,10 @@
         "en": "AIRCRAFT"
       },
       "summary": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "AIRCRAFT units use Deployment, Movement, Shooting and Charging and Fighting."
       },
       "definition": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "The AIRCRAFT keyword identifies models and units for rules interactions. It applies the following Core Rules: Deployment, Movement, Shooting and Charging and Fighting. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
@@ -69730,7 +69807,7 @@
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "23.01-23.04; pages 74-75"
+        "locator": "02.05, 23.01, 23.02, 23.03, 23.04"
       },
       "status": "verified",
       "sourceRefs": [
@@ -69738,7 +69815,12 @@
       ],
       "mentions": [],
       "references": {
-        "intrinsicRules": [],
+        "intrinsicRules": [
+          "core-rule-23-01-deployment",
+          "core-rule-23-02-movement",
+          "core-rule-23-03-shooting",
+          "core-rule-23-04-charging-and-fighting"
+        ],
         "referencedByRules": [],
         "commonRules": [
           "core-rule-02-05-keywords"
@@ -69746,7 +69828,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic",
+      "presentation": "reference",
       "matchLabels": [
         "Aircraft"
       ]
@@ -69761,19 +69843,23 @@
         "en": "BATTLELINE"
       },
       "summary": {
-        "en": "BATTLELINE units have twice the normal unit limit for the selected battle size."
+        "en": "BATTLELINE identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "When filling an army roster, the unit limit for BATTLELINE units is double the relevant limit shown for the selected battle size. Other rules can also refer to the BATTLELINE keyword when setting eligibility or applying effects."
+        "en": "The BATTLELINE keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "death-guard-ability-numberless-horde",
+        "death-guard-detachment-shamblerot-vectorium",
+        "death-guard-enhancement-tome-of-bounteous-blessings"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "25.03-25.04; pages 87-88"
+        "locator": "02.05"
       },
       "status": "verified",
       "sourceRefs": [
@@ -69788,7 +69874,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-beast": {
@@ -69801,14 +69887,21 @@
         "en": "BEAST"
       },
       "summary": {
-        "en": "BEAST units use TERRAIN AND MOVEMENT, BENEFIT OF COVER and HIDDEN."
+        "en": "BEAST units use Terrain and Movement, Benefit of Cover and Hidden."
       },
       "definition": {
-        "en": "The BEAST keyword identifies models and units for rules interactions. It applies the following Core Rules: TERRAIN AND MOVEMENT, BENEFIT OF COVER and HIDDEN. It is also used as a condition by ABILITIES. Singular and plural forms of the same keyword are treated identically."
+        "en": "The BEAST keyword identifies models and units for rules interactions. It applies the following Core Rules: Terrain and Movement, Benefit of Cover and Hidden. It is also used as a condition by Abilities. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "core-abilities",
+        "core-rule-13-06-terrain-and-movement",
+        "core-rule-13-08-benefit-of-cover",
+        "core-rule-13-09-hidden",
+        "keyword-infantry",
+        "keyword-swarm"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -69837,7 +69930,7 @@
           "keyword-swarm"
         ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-chaos": {
@@ -69850,34 +69943,36 @@
         "en": "CHAOS"
       },
       "summary": {
-        "en": "A faction keyword used by rules that explicitly select CHAOS models or units."
+        "en": "CHAOS units use Keywords."
       },
       "definition": {
-        "en": "CHAOS identifies models and units for any rule whose target or effect explicitly requires the CHAOS keyword."
+        "en": "The CHAOS keyword identifies models and units for rules interactions. It applies the following Core Rules: Keywords. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "core-rule-02-05-keywords"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "02.05 Keywords"
+        "locator": "02.05"
       },
       "status": "verified",
       "sourceRefs": [
         "death-guard"
       ],
       "references": {
-        "intrinsicRules": [],
-        "referencedByRules": [],
-        "commonRules": [
+        "intrinsicRules": [
           "core-rule-02-05-keywords"
         ],
+        "referencedByRules": [],
+        "commonRules": [],
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-character": {
@@ -69890,14 +69985,62 @@
         "en": "CHARACTER"
       },
       "summary": {
-        "en": "CHARACTER units use SAVE ROLLS, MORTAL WOUNDS and PRECISION."
+        "en": "CHARACTER units use Save Rolls, Mortal Wounds and [PRECISION]."
       },
       "definition": {
-        "en": "The CHARACTER keyword identifies models and units for rules interactions. It applies the following Core Rules: SAVE ROLLS, MORTAL WOUNDS and PRECISION. Singular and plural forms of the same keyword are treated identically."
+        "en": "The CHARACTER keyword identifies models and units for rules interactions. It applies the following Core Rules: Save Rolls, Mortal Wounds and [PRECISION]. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "adeptus-mechanicus-enhancement-arch-negator",
+        "adeptus-mechanicus-enhancement-artisan",
+        "adeptus-mechanicus-enhancement-autoclavic-denunciation",
+        "adeptus-mechanicus-enhancement-battle-sphere-uplink",
+        "adeptus-mechanicus-enhancement-belicosa-class-capacitor-vanes",
+        "adeptus-mechanicus-enhancement-cantic-thrallnet",
+        "adeptus-mechanicus-enhancement-clandestine-infiltrator",
+        "adeptus-mechanicus-enhancement-cognitive-reinforcement",
+        "adeptus-mechanicus-enhancement-data-blessed-autosermon",
+        "adeptus-mechanicus-enhancement-electromiasmic-brazier",
+        "adeptus-mechanicus-enhancement-emotionless-clarity",
+        "adeptus-mechanicus-enhancement-explorator-dispensation",
+        "adeptus-mechanicus-enhancement-genetor",
+        "adeptus-mechanicus-enhancement-inloaded-lethality",
+        "adeptus-mechanicus-enhancement-logis",
+        "adeptus-mechanicus-enhancement-lord-of-machines",
+        "adeptus-mechanicus-enhancement-magos",
+        "adeptus-mechanicus-enhancement-malphonic-susurrus",
+        "adeptus-mechanicus-enhancement-mantle-of-the-gnosticarch",
+        "adeptus-mechanicus-enhancement-martial-signatum-amplificator",
+        "adeptus-mechanicus-enhancement-mechanicus-locum",
+        "adeptus-mechanicus-enhancement-necromechanic",
+        "adeptus-mechanicus-enhancement-omnicogitator",
+        "adeptus-mechanicus-enhancement-omnissiahs-fury",
+        "adeptus-mechanicus-enhancement-peerless-eradicator",
+        "adeptus-mechanicus-enhancement-radial-suffusion",
+        "adeptus-mechanicus-enhancement-sanctified-ordnance",
+        "adeptus-mechanicus-enhancement-temporcopia",
+        "adeptus-mechanicus-enhancement-tl-4-9",
+        "adeptus-mechanicus-enhancement-transoracular-dyad-wafers",
+        "adeptus-mechanicus-enhancement-veiled-hunter",
+        "adeptus-mechanicus-enhancement-vinghs-wafers-of-dynamism",
+        "adeptus-mechanicus-enhancement-voltagheist-reliquary",
+        "core-precision",
+        "core-rule-05-03-save-rolls",
+        "core-rule-06-02-mortal-wounds",
+        "death-guard-ability-blistering-fusillade-blightlord-terminators",
+        "death-guard-ability-hypervirulent-strains",
+        "death-guard-ability-silent-bodyguard-deathshroud-terminators",
+        "death-guard-detachment-paragons-of-putrescence",
+        "death-guard-enhancement-final-ingredient",
+        "death-guard-stratagem-aggravus-spasms",
+        "death-guard-stratagem-mobile-vector",
+        "death-guard-stratagem-overwhelming-generosity",
+        "death-guard-stratagem-rabid-infusion",
+        "death-guard-stratagem-simultaneous-contamination",
+        "death-guard-stratagem-territorial-infection"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -69921,7 +70064,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-cult-mechanicus": {
@@ -69934,15 +70077,14 @@
         "en": "CULT MECHANICUS"
       },
       "summary": {
-        "en": "Keyword used to identify Cult Mechanicus models and units for rules interactions."
+        "en": "CULT MECHANICUS identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Cult Mechanicus models and units for rules interactions."
+        "en": "The CULT MECHANICUS keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-detachment-rule-benedictions-of-the-omnissiah",
-        "adeptus-mechanicus-enhancement-mechanicus-locum",
+        "adeptus-mechanicus-enhancement-inloaded-lethality",
         "adeptus-mechanicus-stratagem-chant-of-the-remorseless-fist",
         "adeptus-mechanicus-stratagem-incantation-of-the-iron-soul",
         "adeptus-mechanicus-stratagem-litany-of-the-electromancer",
@@ -69982,34 +70124,36 @@
         "en": "DAEMON"
       },
       "summary": {
-        "en": "A keyword used by rules that explicitly select DAEMON models or units."
+        "en": "DAEMON units use Keywords."
       },
       "definition": {
-        "en": "DAEMON identifies models and units for any rule whose target or effect explicitly requires the DAEMON keyword."
+        "en": "The DAEMON keyword identifies models and units for rules interactions. It applies the following Core Rules: Keywords. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "core-rule-02-05-keywords"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "02.05 Keywords"
+        "locator": "02.05"
       },
       "status": "verified",
       "sourceRefs": [
         "death-guard"
       ],
       "references": {
-        "intrinsicRules": [],
-        "referencedByRules": [],
-        "commonRules": [
+        "intrinsicRules": [
           "core-rule-02-05-keywords"
         ],
+        "referencedByRules": [],
+        "commonRules": [],
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-daemon-prince": {
@@ -70022,10 +70166,10 @@
         "en": "DAEMON PRINCE"
       },
       "summary": {
-        "en": "DAEMON PRINCE keyword."
+        "en": "DAEMON PRINCE identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "DAEMON PRINCE is retained as a canonical keyword identifier for matching and navigation."
+        "en": "The DAEMON PRINCE keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -70049,7 +70193,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-daemon-prince-with-wings": {
@@ -70062,10 +70206,10 @@
         "en": "DAEMON PRINCE WITH WINGS"
       },
       "summary": {
-        "en": "DAEMON PRINCE WITH WINGS keyword."
+        "en": "DAEMON PRINCE WITH WINGS identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "DAEMON PRINCE WITH WINGS is retained as a canonical keyword identifier for matching and navigation."
+        "en": "The DAEMON PRINCE WITH WINGS keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -70089,7 +70233,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-death-guard": {
@@ -70102,10 +70246,10 @@
         "en": "DEATH GUARD"
       },
       "summary": {
-        "en": "Rules that specify DEATH GUARD apply only to models or units with this keyword."
+        "en": "DEATH GUARD identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "DEATH GUARD is a keyword used to identify eligible models and units. It has no universal effect of its own; use the linked rules below for every effect and restriction that specifically requires DEATH GUARD."
+        "en": "The DEATH GUARD keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -70137,11 +70281,29 @@
         "death-guard-enhancement-shriekworm-familiar",
         "death-guard-enhancement-talisman-of-burgeoning",
         "death-guard-enhancement-tendrilous-emissions",
-        "death-guard-plague",
         "death-guard-stratagem-aggravus-spasms",
         "death-guard-stratagem-blessings-of-filth",
         "death-guard-stratagem-blighted-land",
-        "death-guard-stratagem-clutching-corruption"
+        "death-guard-stratagem-clutching-corruption",
+        "death-guard-stratagem-creeping-blight",
+        "death-guard-stratagem-disgustingly-resilient",
+        "death-guard-stratagem-drawn-to-despair",
+        "death-guard-stratagem-eyestinger-storm",
+        "death-guard-stratagem-font-of-filth",
+        "death-guard-stratagem-grotesque-fortitude",
+        "death-guard-stratagem-leechspore-eruption",
+        "death-guard-stratagem-malignance-magnified",
+        "death-guard-stratagem-mobile-vector",
+        "death-guard-stratagem-overwhelming-generosity",
+        "death-guard-stratagem-plaguesurge",
+        "death-guard-stratagem-putrid-detonation",
+        "death-guard-stratagem-rabid-infusion",
+        "death-guard-stratagem-relentless-grind",
+        "death-guard-stratagem-shambling-wall",
+        "death-guard-stratagem-shock-and-horror",
+        "death-guard-stratagem-simultaneous-contamination",
+        "death-guard-stratagem-stinking-mire",
+        "death-guard-stratagem-territorial-infection"
       ],
       "mentions": [],
       "canonicalSource": {
@@ -70175,22 +70337,22 @@
         "en": "DEDICATED TRANSPORT"
       },
       "summary": {
-        "en": "Each DEDICATED TRANSPORT must begin with a friendly unit embarked or it is destroyed; its roster unit limit is doubled, and SCOUTS can let it make a Scout move."
+        "en": "DEDICATED TRANSPORT is used as a condition by SCOUTS."
       },
       "definition": {
-        "en": "A friendly unit must be embarked within each friendly DEDICATED TRANSPORT during Declare Battle Formations; at the end of that step, each such model without an embarked unit is destroyed. Its unit limit is double the normal limit for the selected battle size. SCOUTS can also allow an eligible DEDICATED TRANSPORT to make a Scout move."
+        "en": "The DEDICATED TRANSPORT keyword identifies models and units for rules interactions. It is also used as a condition by SCOUTS. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
       "related": [
-        "core-rule-18-01-transport-capacity",
-        "core-scouts"
+        "core-scouts",
+        "keyword-transport"
       ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "18.01, 24.31 and 25.03-25.04"
+        "locator": "02.05, 24.31"
       },
       "status": "verified",
       "sourceRefs": [
@@ -70209,7 +70371,7 @@
           "keyword-transport"
         ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-electro-priests": {
@@ -70222,16 +70384,15 @@
         "en": "ELECTRO-PRIESTS"
       },
       "summary": {
-        "en": "Keyword used to identify Electro-Priest models and units for rules interactions."
+        "en": "ELECTRO-PRIESTS identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Electro-Priest models and units for rules interactions."
+        "en": "The ELECTRO-PRIESTS keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
         "adeptus-mechanicus-stratagem-chant-of-electrotraction",
         "adeptus-mechanicus-stratagem-echoes-of-the-conduit-wars",
-        "adeptus-mechanicus-stratagem-litany-of-the-electromancer",
         "adeptus-mechanicus-stratagem-momentum-feedback"
       ],
       "canonicalSource": {
@@ -70266,10 +70427,10 @@
         "en": "EPIC HERO"
       },
       "summary": {
-        "en": "Each EPIC HERO has a unit limit of 1 and cannot be given an Enhancement."
+        "en": "EPIC HERO identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "When filling an army roster, every EPIC HERO has a unit limit of 1 regardless of battle size. EPIC HERO models cannot be given Enhancements. Other rules can further restrict or refer to EPIC HERO units."
+        "en": "The EPIC HERO keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -70278,7 +70439,7 @@
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "25.03-25.04; pages 87-88"
+        "locator": "02.05"
       },
       "status": "verified",
       "sourceRefs": [
@@ -70293,7 +70454,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-explosives": {
@@ -70306,17 +70467,17 @@
         "en": "EXPLOSIVES"
       },
       "summary": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "EXPLOSIVES identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "The EXPLOSIVES keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "15.05; page 56"
+        "locator": "02.05"
       },
       "status": "verified",
       "sourceRefs": [
@@ -70332,7 +70493,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-fly": {
@@ -70345,16 +70506,17 @@
         "en": "FLY"
       },
       "summary": {
-        "en": "A FLYING unit can take to the skies for a Normal, Advance, Fall-back or Charge move: reduce its maximum distance by 2\", then ignore vertical distance and move through models and terrain."
+        "en": "FLY units use Terrain and Movement, Flying Models, Movement and Charging and Fighting."
       },
       "definition": {
-        "en": "Models with the FLY keyword, and units containing them, are FLYING. Before such a unit makes a Normal, Advance, Fall-back or Charge move, it can take to the skies. If it does, subtract 2\" from that move?s maximum distance; while moving, FLYING models ignore vertical distance, can move through all models, and can move horizontally and vertically through all terrain categories. FLYING also determines which units can charge or make melee attacks against AIRCRAFT."
+        "en": "The FLY keyword identifies models and units for rules interactions. It applies the following Core Rules: Terrain and Movement, Flying Models, Movement and Charging and Fighting. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [
         "keyword-flying"
       ],
       "related": [
+        "core-rule-13-06-terrain-and-movement",
         "core-rule-21-03-flying-models",
         "core-rule-23-02-movement",
         "core-rule-23-04-charging-and-fighting"
@@ -70383,7 +70545,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-fortifications": {
@@ -70396,91 +70558,10 @@
         "en": "FORTIFICATIONS"
       },
       "summary": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "FORTIFICATIONS identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify models and units for rules interactions."
-      },
-      "aliases": [],
-      "related": [
-        "core-rule-16-01-performing-actions"
-      ],
-      "canonicalSource": {
-        "documentId": "core-rules",
-        "revision": "11e",
-        "locator": "16.01; pages 58-59"
-      },
-      "status": "verified",
-      "sourceRefs": [
-        "core-rules"
-      ],
-      "mentions": [],
-      "references": {
-        "intrinsicRules": [],
-        "referencedByRules": [],
-        "commonRules": [
-          "core-rule-02-05-keywords"
-        ],
-        "factionTerms": [],
-        "relatedKeywords": []
-      },
-      "presentation": "atomic",
-      "matchLabels": []
-    },
-    "keyword-grenades": {
-      "id": "keyword-grenades",
-      "kind": "keyword",
-      "scope": "global",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "GRENADES"
-      },
-      "summary": {
-        "en": "An eligible GRENADES unit can be selected for the EXPLOSIVES Core Stratagem."
-      },
-      "definition": {
-        "en": "GRENADES identifies units that can be selected as the target of the EXPLOSIVES Core Stratagem while they meet that Stratagem's other requirements."
-      },
-      "structured": {},
-      "aliases": [],
-      "related": [],
-      "mentions": [],
-      "canonicalSource": {
-        "documentId": "core-rules",
-        "revision": "11e",
-        "locator": "15.05 EXPLOSIVES"
-      },
-      "status": "verified",
-      "sourceRefs": [
-        "death-guard"
-      ],
-      "references": {
-        "intrinsicRules": [],
-        "referencedByRules": [],
-        "commonRules": [
-          "core-rule-02-05-keywords"
-        ],
-        "factionTerms": [],
-        "relatedKeywords": []
-      },
-      "presentation": "article",
-      "matchLabels": []
-    },
-    "keyword-hastarii": {
-      "id": "keyword-hastarii",
-      "kind": "keyword",
-      "scope": "global",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "HASTARII"
-      },
-      "summary": {
-        "en": "Keyword used to identify Hastarii models and units for rules interactions."
-      },
-      "definition": {
-        "en": "Keyword used to identify Hastarii models and units for rules interactions."
+        "en": "The FORTIFICATIONS keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [],
@@ -70503,7 +70584,90 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
+      "matchLabels": []
+    },
+    "keyword-grenades": {
+      "id": "keyword-grenades",
+      "kind": "keyword",
+      "scope": "global",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "GRENADES"
+      },
+      "summary": {
+        "en": "GRENADES is used as a condition by EXPLOSIVES."
+      },
+      "definition": {
+        "en": "The GRENADES keyword identifies models and units for rules interactions. It is also used as a condition by EXPLOSIVES. Singular and plural forms of the same keyword are treated identically."
+      },
+      "structured": {},
+      "aliases": [],
+      "related": [
+        "core-rule-15-05-explosives"
+      ],
+      "mentions": [],
+      "canonicalSource": {
+        "documentId": "core-rules",
+        "revision": "11e",
+        "locator": "02.05, 15.05"
+      },
+      "status": "verified",
+      "sourceRefs": [
+        "death-guard"
+      ],
+      "references": {
+        "intrinsicRules": [],
+        "referencedByRules": [
+          "core-rule-15-05-explosives"
+        ],
+        "commonRules": [
+          "core-rule-02-05-keywords"
+        ],
+        "factionTerms": [],
+        "relatedKeywords": []
+      },
+      "presentation": "reference",
+      "matchLabels": []
+    },
+    "keyword-hastarii": {
+      "id": "keyword-hastarii",
+      "kind": "keyword",
+      "scope": "global",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "HASTARII"
+      },
+      "summary": {
+        "en": "HASTARII identifies models and units for rules interactions."
+      },
+      "definition": {
+        "en": "The HASTARII keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
+      },
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "core-rules",
+        "revision": "11e",
+        "locator": "02.05"
+      },
+      "status": "verified",
+      "sourceRefs": [
+        "core-rules"
+      ],
+      "mentions": [],
+      "references": {
+        "intrinsicRules": [],
+        "referencedByRules": [],
+        "commonRules": [
+          "core-rule-02-05-keywords"
+        ],
+        "factionTerms": [],
+        "relatedKeywords": []
+      },
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-imperium": {
@@ -70516,14 +70680,22 @@
         "en": "IMPERIUM"
       },
       "summary": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "IMPERIUM identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "The IMPERIUM keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "core-rule-20-02-repositioned-units"
+        "adeptus-mechanicus-enhancement-cantic-thrallnet",
+        "adeptus-mechanicus-enhancement-explorator-dispensation",
+        "adeptus-mechanicus-enhancement-inloaded-lethality",
+        "adeptus-mechanicus-enhancement-omnicogitator",
+        "adeptus-mechanicus-enhancement-omnissiahs-fury",
+        "adeptus-mechanicus-enhancement-stealth-screened-cybercanids-upgrade",
+        "adeptus-mechanicus-enhancement-transoracular-dyad-wafers",
+        "adeptus-mechanicus-enhancement-veiled-hunter",
+        "adeptus-mechanicus-enhancement-vinghs-wafers-of-dynamism"
       ],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -70557,14 +70729,38 @@
         "en": "INFANTRY"
       },
       "summary": {
-        "en": "INFANTRY units use TERRAIN AND MOVEMENT, BENEFIT OF COVER and HIDDEN."
+        "en": "INFANTRY units use Terrain and Movement, Benefit of Cover and Hidden."
       },
       "definition": {
-        "en": "The INFANTRY keyword identifies models and units for rules interactions. It applies the following Core Rules: TERRAIN AND MOVEMENT, BENEFIT OF COVER and HIDDEN. It is also used as a condition by ABILITIES. Singular and plural forms of the same keyword are treated identically."
+        "en": "The INFANTRY keyword identifies models and units for rules interactions. It applies the following Core Rules: Terrain and Movement, Benefit of Cover and Hidden. It is also used as a condition by Abilities. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "adeptus-mechanicus-enhancement-cantic-thrallnet",
+        "adeptus-mechanicus-enhancement-explorator-dispensation",
+        "adeptus-mechanicus-enhancement-inloaded-lethality",
+        "adeptus-mechanicus-enhancement-omnicogitator",
+        "adeptus-mechanicus-enhancement-omnissiahs-fury",
+        "adeptus-mechanicus-enhancement-veiled-hunter",
+        "adeptus-mechanicus-stratagem-analytic-reprisals",
+        "adeptus-mechanicus-stratagem-analytical-divination",
+        "adeptus-mechanicus-stratagem-incense-exhausts",
+        "adeptus-mechanicus-stratagem-programmed-withdrawal",
+        "adeptus-mechanicus-stratagem-reactive-safeguard",
+        "adeptus-mechanicus-stratagem-shroud-protocols",
+        "core-abilities",
+        "core-rule-13-06-terrain-and-movement",
+        "core-rule-13-08-benefit-of-cover",
+        "core-rule-13-09-hidden",
+        "death-guard-ability-death-guard-defenders-daemon-prince-of-nurgle",
+        "death-guard-ability-pestilent-fallout-psychic-malignant-plaguecaster",
+        "death-guard-enhancement-host-of-the-hybridised-pox",
+        "death-guard-enhancement-rejuvenating-swarm",
+        "death-guard-stratagem-creeping-blight",
+        "keyword-beast",
+        "keyword-swarm"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -70593,7 +70789,7 @@
           "keyword-swarm"
         ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-jump-pack": {
@@ -70606,10 +70802,10 @@
         "en": "JUMP PACK"
       },
       "summary": {
-        "en": "Keyword used to identify Jump Pack models and units for rules interactions."
+        "en": "JUMP PACK identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Jump Pack models and units for rules interactions."
+        "en": "The JUMP PACK keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [],
@@ -70632,7 +70828,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-kataphron": {
@@ -70645,15 +70841,13 @@
         "en": "KATAPHRON"
       },
       "summary": {
-        "en": "Keyword used to identify Kataphron models and units for rules interactions."
+        "en": "KATAPHRON identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Kataphron models and units for rules interactions."
+        "en": "The KATAPHRON keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
-      "related": [
-        "adeptus-mechanicus-stratagem-analytical-divination"
-      ],
+      "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
@@ -70686,10 +70880,10 @@
         "en": "LAND RAIDER"
       },
       "summary": {
-        "en": "LAND RAIDER keyword."
+        "en": "LAND RAIDER identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "LAND RAIDER is retained as a canonical keyword identifier for matching and navigation."
+        "en": "The LAND RAIDER keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -70713,7 +70907,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-legio-cybernetica": {
@@ -70726,18 +70920,18 @@
         "en": "LEGIO CYBERNETICA"
       },
       "summary": {
-        "en": "Keyword used to identify Legio Cybernetica models and units for rules interactions."
+        "en": "LEGIO CYBERNETICA identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Legio Cybernetica models and units for rules interactions."
+        "en": "The LEGIO CYBERNETICA keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-detachment-rule-cyber-psalm-programming",
-        "adeptus-mechanicus-enhancement-emotionless-clarity",
-        "adeptus-mechanicus-enhancement-necromechanic",
+        "adeptus-mechanicus-enhancement-transoracular-dyad-wafers",
+        "adeptus-mechanicus-enhancement-vinghs-wafers-of-dynamism",
         "adeptus-mechanicus-stratagem-auto-divinatory-targeting",
         "adeptus-mechanicus-stratagem-benevolence-of-the-omnissiah",
+        "adeptus-mechanicus-stratagem-machine-spirit-resurgent",
         "adeptus-mechanicus-stratagem-machine-superiority",
         "adeptus-mechanicus-stratagem-transcendent-cogitation"
       ],
@@ -70773,14 +70967,27 @@
         "en": "MONSTER"
       },
       "summary": {
-        "en": "MONSTER units use HAZARD ROLLS, CLOSE-QUARTERS SHOOTING, TERRAIN AND MOVEMENT and MOVING MONSTERS AND VEHICLES (+1 more)."
+        "en": "MONSTER units use Hazard Rolls, CLOSE-QUARTERS SHOOTING, Terrain and Movement and Moving Monsters and Vehicles (+1 more)."
       },
       "definition": {
-        "en": "The MONSTER keyword identifies models and units for rules interactions. It applies the following Core Rules: HAZARD ROLLS, CLOSE-QUARTERS SHOOTING, TERRAIN AND MOVEMENT, MOVING MONSTERS AND VEHICLES and SHOOTING AT ENGAGED MONSTERS AND VEHICLES. It is also used as a condition by BLAST. Singular and plural forms of the same keyword are treated identically."
+        "en": "The MONSTER keyword identifies models and units for rules interactions. It applies the following Core Rules: Hazard Rolls, CLOSE-QUARTERS SHOOTING, Terrain and Movement, Moving Monsters and Vehicles and Shooting at Engaged Monsters and Vehicles. It is also used as a condition by [BLAST]. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "core-blast",
+        "core-rule-06-03-hazard-rolls",
+        "core-rule-10-06-close-quarters-shooting",
+        "core-rule-13-06-terrain-and-movement",
+        "core-rule-17-01-moving-monsters-and-vehicles",
+        "core-rule-17-03-shooting-at-engaged-monsters-and-vehicles",
+        "death-guard-ability-curse-of-the-walking-pox-poxwalkers",
+        "death-guard-ability-metalophagic-infection-chaos-predator-annihilator",
+        "death-guard-ability-tank-hunters-myphitic-blight-hauler",
+        "death-guard-stratagem-fleshy-avalanche",
+        "death-guard-stratagem-putrid-detonation",
+        "keyword-vehicle"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -70810,7 +71017,7 @@
           "keyword-vehicle"
         ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-mounted": {
@@ -70823,15 +71030,16 @@
         "en": "MOUNTED"
       },
       "summary": {
-        "en": "Rules that specify MOUNTED apply only to models or units with this keyword."
+        "en": "MOUNTED identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "MOUNTED is a keyword used to identify eligible models and units. It has no universal effect of its own; use the linked rules below for every effect and restriction that specifically requires MOUNTED."
+        "en": "The MOUNTED keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-detachment-rule-stealth-optimisation",
+        "adeptus-mechanicus-enhancement-stealth-screened-cybercanids-upgrade",
+        "adeptus-mechanicus-stratagem-isolate-and-destroy",
         "adeptus-mechanicus-stratagem-programmed-withdrawal"
       ],
       "mentions": [],
@@ -70866,34 +71074,36 @@
         "en": "NURGLE"
       },
       "summary": {
-        "en": "A faction keyword used by rules that explicitly select NURGLE models or units."
+        "en": "NURGLE units use Keywords."
       },
       "definition": {
-        "en": "NURGLE identifies models and units for any rule whose target or effect explicitly requires the NURGLE keyword."
+        "en": "The NURGLE keyword identifies models and units for rules interactions. It applies the following Core Rules: Keywords. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "core-rule-02-05-keywords"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "02.05 Keywords"
+        "locator": "02.05"
       },
       "status": "verified",
       "sourceRefs": [
         "death-guard"
       ],
       "references": {
-        "intrinsicRules": [],
-        "referencedByRules": [],
-        "commonRules": [
+        "intrinsicRules": [
           "core-rule-02-05-keywords"
         ],
+        "referencedByRules": [],
+        "commonRules": [],
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-plague-legions": {
@@ -70906,10 +71116,10 @@
         "en": "PLAGUE LEGIONS"
       },
       "summary": {
-        "en": "Rules that specify PLAGUE LEGIONS apply only to models or units with this keyword."
+        "en": "PLAGUE LEGIONS identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "PLAGUE LEGIONS is a keyword used to identify eligible models and units. It has no universal effect of its own; use the linked rules below for every effect and restriction that specifically requires PLAGUE LEGIONS."
+        "en": "The PLAGUE LEGIONS keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -70960,16 +71170,13 @@
         "en": "POXWALKER"
       },
       "summary": {
-        "en": "Keyword used to identify Poxwalker models and units for Death Guard rules interactions."
+        "en": "POXWALKER identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Poxwalker models and units for Death Guard rules interactions."
+        "en": "The POXWALKER keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
-      "related": [
-        "death-guard-ability-curse-of-the-walking-pox-poxwalkers",
-        "death-guard-enhancement-lord-of-the-walking-pox"
-      ],
+      "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
@@ -71002,10 +71209,10 @@
         "en": "PREDATOR ANNIHILATOR"
       },
       "summary": {
-        "en": "PREDATOR ANNIHILATOR keyword."
+        "en": "PREDATOR ANNIHILATOR identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "PREDATOR ANNIHILATOR is retained as a canonical keyword identifier for matching and navigation."
+        "en": "The PREDATOR ANNIHILATOR keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -71029,7 +71236,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-predator-destructor": {
@@ -71042,10 +71249,10 @@
         "en": "PREDATOR DESTRUCTOR"
       },
       "summary": {
-        "en": "PREDATOR DESTRUCTOR keyword."
+        "en": "PREDATOR DESTRUCTOR identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "PREDATOR DESTRUCTOR is retained as a canonical keyword identifier for matching and navigation."
+        "en": "The PREDATOR DESTRUCTOR keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -71069,7 +71276,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-primarch": {
@@ -71082,10 +71289,10 @@
         "en": "PRIMARCH"
       },
       "summary": {
-        "en": "PRIMARCH keyword."
+        "en": "PRIMARCH identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "PRIMARCH is retained as a canonical keyword identifier for matching and navigation."
+        "en": "The PRIMARCH keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -71109,7 +71316,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-psyker": {
@@ -71122,26 +71329,32 @@
         "en": "PSYKER"
       },
       "summary": {
-        "en": "PSYKER identifies models and units that use or interact with Psychic abilities and weapons."
+        "en": "PSYKER units use Psychic Abilities."
       },
       "definition": {
-        "en": "PSYKER identifies models and units for Psychic abilities, Psychic weapons and any rule whose target or effect explicitly requires a PSYKER."
+        "en": "The PSYKER keyword identifies models and units for rules interactions. It applies the following Core Rules: Psychic Abilities. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "core-rule-22-03-psychic-abilities",
+        "death-guard-ability-eater-plague-psychic-typhus",
+        "death-guard-ability-tocsin-of-misery-aura-noxious-blightbringer"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "22.03 Psychic Abilities"
+        "locator": "02.05, 22.03"
       },
       "status": "verified",
       "sourceRefs": [
         "death-guard"
       ],
       "references": {
-        "intrinsicRules": [],
+        "intrinsicRules": [
+          "core-rule-22-03-psychic-abilities"
+        ],
         "referencedByRules": [],
         "commonRules": [
           "core-rule-02-05-keywords"
@@ -71149,7 +71362,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-pteraxii": {
@@ -71162,16 +71375,16 @@
         "en": "PTERAXII"
       },
       "summary": {
-        "en": "Keyword used to identify Pteraxii models and units for rules interactions."
+        "en": "PTERAXII identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Pteraxii models and units for rules interactions."
+        "en": "The PTERAXII keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-detachment-rule-noospheric-recon",
         "adeptus-mechanicus-stratagem-bionic-endurance",
-        "adeptus-mechanicus-stratagem-clandestine-reposition"
+        "adeptus-mechanicus-stratagem-clandestine-reposition",
+        "adeptus-mechanicus-stratagem-isolate-and-destroy"
       ],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -71205,10 +71418,10 @@
         "en": "RHINO"
       },
       "summary": {
-        "en": "RHINO keyword."
+        "en": "RHINO identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "RHINO is retained as a canonical keyword identifier for matching and navigation."
+        "en": "The RHINO keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -71232,7 +71445,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-secutarii": {
@@ -71245,10 +71458,10 @@
         "en": "SECUTARII"
       },
       "summary": {
-        "en": "Keyword used to identify Secutarii models and units for rules interactions."
+        "en": "SECUTARII identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Secutarii models and units for rules interactions."
+        "en": "The SECUTARII keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [],
@@ -71271,7 +71484,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-sicarian": {
@@ -71284,15 +71497,15 @@
         "en": "SICARIAN"
       },
       "summary": {
-        "en": "Keyword used to identify Sicarian models and units for rules interactions."
+        "en": "SICARIAN identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Sicarian models and units for rules interactions."
+        "en": "The SICARIAN keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-detachment-rule-stealth-optimisation",
         "adeptus-mechanicus-stratagem-bionic-endurance",
+        "adeptus-mechanicus-stratagem-isolate-and-destroy",
         "adeptus-mechanicus-stratagem-precision-onslaught",
         "adeptus-mechanicus-stratagem-programmed-withdrawal"
       ],
@@ -71328,36 +71541,30 @@
         "en": "SKITARII"
       },
       "summary": {
-        "en": "Keyword used to identify Skitarii models and units for rules interactions."
+        "en": "SKITARII identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Skitarii models and units for rules interactions."
+        "en": "The SKITARII keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-datasheet-icon-of-war",
-        "adeptus-mechanicus-datasheet-servo-skull-uplink",
-        "adeptus-mechanicus-detachment-rule-murderous-imperative",
-        "adeptus-mechanicus-detachment-rule-stealth-optimisation",
         "adeptus-mechanicus-enhancement-battle-sphere-uplink",
         "adeptus-mechanicus-enhancement-cantic-thrallnet",
         "adeptus-mechanicus-enhancement-clandestine-infiltrator",
         "adeptus-mechanicus-enhancement-explorator-dispensation",
-        "adeptus-mechanicus-enhancement-martial-signatum-amplificator",
         "adeptus-mechanicus-enhancement-omnicogitator",
         "adeptus-mechanicus-enhancement-omnissiahs-fury",
+        "adeptus-mechanicus-enhancement-stealth-screened-cybercanids-upgrade",
         "adeptus-mechanicus-enhancement-veiled-hunter",
         "adeptus-mechanicus-stratagem-aggressor-imperative",
         "adeptus-mechanicus-stratagem-analytic-reprisals",
         "adeptus-mechanicus-stratagem-binharic-offence",
-        "adeptus-mechanicus-stratagem-bionic-endurance",
         "adeptus-mechanicus-stratagem-bulwark-imperative",
         "adeptus-mechanicus-stratagem-expedited-purge-protocol",
         "adeptus-mechanicus-stratagem-isolate-and-destroy",
         "adeptus-mechanicus-stratagem-programmed-withdrawal",
         "adeptus-mechanicus-stratagem-shroud-protocols",
         "adeptus-mechanicus-stratagem-threat-cogitation-targeters",
-        "adeptus-mechanicus-stratagem-unrelenting-aggression",
         "adeptus-mechanicus-stratagem-unshackled-wrath"
       ],
       "canonicalSource": {
@@ -71392,21 +71599,22 @@
         "en": "SMOKE"
       },
       "summary": {
-        "en": "A friendly SMOKE unit can be targeted by the SMOKESCREEN Core Stratagem to gain the Benefit of Cover against eligible attacks for the phase."
+        "en": "SMOKE is used as a condition by SMOKESCREEN."
       },
       "definition": {
-        "en": "At the start of the opponent?s Shooting phase, SMOKESCREEN can target one friendly SMOKE unit. Until the end of the phase, that unit, and a unit not fully visible to an attacker because of models in that SMOKE unit, has the Benefit of Cover against that attack."
+        "en": "The SMOKE keyword identifies models and units for rules interactions. It is also used as a condition by SMOKESCREEN. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
       "related": [
-        "core-rule-15-01-using-stratagems"
+        "adeptus-mechanicus-stratagem-incense-exhausts",
+        "core-rule-15-10-smokescreen"
       ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "15.10; page 57"
+        "locator": "02.05, 15.10"
       },
       "status": "verified",
       "sourceRefs": [
@@ -71414,14 +71622,16 @@
       ],
       "references": {
         "intrinsicRules": [],
-        "referencedByRules": [],
+        "referencedByRules": [
+          "core-rule-15-10-smokescreen"
+        ],
         "commonRules": [
           "core-rule-02-05-keywords"
         ],
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-summoned": {
@@ -71434,10 +71644,10 @@
         "en": "SUMMONED"
       },
       "summary": {
-        "en": "SUMMONED keyword."
+        "en": "SUMMONED identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "SUMMONED is retained as a canonical keyword identifier for matching and navigation."
+        "en": "The SUMMONED keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
@@ -71461,7 +71671,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-swarm": {
@@ -71474,14 +71684,20 @@
         "en": "SWARM"
       },
       "summary": {
-        "en": "SWARM units use TERRAIN AND MOVEMENT, BENEFIT OF COVER and HIDDEN."
+        "en": "SWARM units use Terrain and Movement, Benefit of Cover and Hidden."
       },
       "definition": {
-        "en": "The SWARM keyword identifies models and units for rules interactions. It applies the following Core Rules: TERRAIN AND MOVEMENT, BENEFIT OF COVER and HIDDEN. Singular and plural forms of the same keyword are treated identically."
+        "en": "The SWARM keyword identifies models and units for rules interactions. It applies the following Core Rules: Terrain and Movement, Benefit of Cover and Hidden. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "core-rule-13-06-terrain-and-movement",
+        "core-rule-13-08-benefit-of-cover",
+        "core-rule-13-09-hidden",
+        "keyword-beast",
+        "keyword-infantry"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -71508,7 +71724,7 @@
           "keyword-beast"
         ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-sydonian": {
@@ -71521,14 +71737,15 @@
         "en": "SYDONIAN"
       },
       "summary": {
-        "en": "Keyword used to identify Sydonian models and units for rules interactions."
+        "en": "SYDONIAN identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Sydonian models and units for rules interactions."
+        "en": "The SYDONIAN keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-stratagem-bionic-endurance"
+        "adeptus-mechanicus-stratagem-bionic-endurance",
+        "adeptus-mechanicus-stratagem-isolate-and-destroy"
       ],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -71562,15 +71779,13 @@
         "en": "TECH-PRIEST"
       },
       "summary": {
-        "en": "Keyword used to identify Tech-Priest models and units for rules interactions."
+        "en": "TECH-PRIEST identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify Tech-Priest models and units for rules interactions."
+        "en": "The TECH-PRIEST keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "adeptus-mechanicus-datasheet-network-override",
-        "adeptus-mechanicus-detachment-rule-war-form-mantles",
         "adeptus-mechanicus-enhancement-arch-negator",
         "adeptus-mechanicus-enhancement-artisan",
         "adeptus-mechanicus-enhancement-data-blessed-autosermon",
@@ -71587,6 +71802,8 @@
         "adeptus-mechanicus-enhancement-necromechanic",
         "adeptus-mechanicus-enhancement-temporcopia",
         "adeptus-mechanicus-enhancement-tl-4-9",
+        "adeptus-mechanicus-enhancement-transoracular-dyad-wafers",
+        "adeptus-mechanicus-enhancement-vinghs-wafers-of-dynamism",
         "adeptus-mechanicus-enhancement-voltagheist-reliquary",
         "adeptus-mechanicus-stratagem-extinction-order",
         "adeptus-mechanicus-stratagem-holy-avarice",
@@ -71626,34 +71843,51 @@
         "en": "TERMINATOR"
       },
       "summary": {
-        "en": "TERMINATOR identifies models whose transport capacity and other rules can be handled differently."
+        "en": "TERMINATOR units use Transport Capacity."
       },
       "definition": {
-        "en": "TERMINATOR identifies models for Transport Capacity restrictions and any other rule whose target or effect explicitly requires a TERMINATOR."
+        "en": "The TERMINATOR keyword identifies models and units for rules interactions. It applies the following Core Rules: Transport Capacity. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "core-rule-18-01-transport-capacity",
+        "death-guard-enhancement-face-of-death",
+        "death-guard-enhancement-helm-of-the-fly-king",
+        "death-guard-enhancement-rejuvenating-swarm",
+        "death-guard-enhancement-vile-vigour",
+        "death-guard-enhancement-warprot-talisman",
+        "death-guard-stratagem-blooming-pestilence",
+        "death-guard-stratagem-grim-reapers",
+        "death-guard-stratagem-mortarions-teachings",
+        "death-guard-stratagem-sickening-impact",
+        "death-guard-stratagem-undying-spite",
+        "keyword-transport"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "18.01 Transport Capacity"
+        "locator": "02.05, 18.01"
       },
       "status": "verified",
       "sourceRefs": [
         "death-guard"
       ],
       "references": {
-        "intrinsicRules": [],
+        "intrinsicRules": [
+          "core-rule-18-01-transport-capacity"
+        ],
         "referencedByRules": [],
         "commonRules": [
           "core-rule-02-05-keywords"
         ],
         "factionTerms": [],
-        "relatedKeywords": []
+        "relatedKeywords": [
+          "keyword-transport"
+        ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-titanic": {
@@ -71666,21 +71900,20 @@
         "en": "TITANIC"
       },
       "summary": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "TITANIC units use SUPER-HEAVY WALKER."
       },
       "definition": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "The TITANIC keyword identifies models and units for rules interactions. It applies the following Core Rules: SUPER-HEAVY WALKER. It is also used as a condition by FIRE OVERWATCH. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
-        "core-rule-16-01-performing-actions",
         "core-stratagem-fire-overwatch",
         "core-super-heavy-walker"
       ],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "15.08, 16.01 and 24.35"
+        "locator": "02.05, 24.35, 15.08"
       },
       "status": "verified",
       "sourceRefs": [
@@ -71688,15 +71921,19 @@
       ],
       "mentions": [],
       "references": {
-        "intrinsicRules": [],
-        "referencedByRules": [],
+        "intrinsicRules": [
+          "core-super-heavy-walker"
+        ],
+        "referencedByRules": [
+          "core-stratagem-fire-overwatch"
+        ],
         "commonRules": [
           "core-rule-02-05-keywords"
         ],
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-towering": {
@@ -71709,10 +71946,10 @@
         "en": "TOWERING"
       },
       "summary": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "TOWERING is used as a condition by Plunging Fire."
       },
       "definition": {
-        "en": "Keyword used to identify models and units for rules interactions."
+        "en": "The TOWERING keyword identifies models and units for rules interactions. It is also used as a condition by Plunging Fire. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [
@@ -71721,7 +71958,7 @@
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "22.05; page 73"
+        "locator": "02.05, 22.05"
       },
       "status": "verified",
       "sourceRefs": [
@@ -71730,14 +71967,16 @@
       "mentions": [],
       "references": {
         "intrinsicRules": [],
-        "referencedByRules": [],
+        "referencedByRules": [
+          "core-rule-22-05-plunging-fire"
+        ],
         "commonRules": [
           "core-rule-02-05-keywords"
         ],
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-transport": {
@@ -71750,14 +71989,28 @@
         "en": "TRANSPORT"
       },
       "summary": {
-        "en": "TRANSPORT units use MOVE UNITS, TRANSPORT CAPACITY, EMBARKING and DISEMBARKING (+5 more)."
+        "en": "TRANSPORT units use Move Units Step, Transport Capacity, Embarking and Disembarking (+5 more)."
       },
       "definition": {
-        "en": "The TRANSPORT keyword identifies models and units for rules interactions. It applies the following Core Rules: MOVE UNITS, TRANSPORT CAPACITY, EMBARKING, DISEMBARKING, DISEMBARK MOVE, EMERGENCY DISEMBARK MOVE, PLACING UNITS IN STRATEGIC RESERVES, INGRESS MOVE and FIRING DECK. Singular and plural forms of the same keyword are treated identically."
+        "en": "The TRANSPORT keyword identifies models and units for rules interactions. It applies the following Core Rules: Move Units Step, Transport Capacity, Embarking, Disembarking, DISEMBARK MOVE, EMERGENCY DISEMBARK MOVE, Placing Units in Strategic Reserves, INGRESS MOVE and FIRING DECK. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "adeptus-mechanicus-stratagem-reactive-safeguard",
+        "core-firing-deck",
+        "core-rule-09-02-move-units",
+        "core-rule-18-01-transport-capacity",
+        "core-rule-18-02-embarking",
+        "core-rule-18-03-disembarking",
+        "core-rule-18-04-disembark-move",
+        "core-rule-18-05-emergency-disembark-move",
+        "core-rule-20-01-placing-units-in-strategic-reserves",
+        "core-rule-20-04-ingress-move",
+        "death-guard-ability-fire-support-chaos-rhino",
+        "keyword-dedicated-transport",
+        "keyword-vehicle"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -71790,7 +72043,7 @@
           "keyword-vehicle"
         ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-vehicle": {
@@ -71803,14 +72056,42 @@
         "en": "VEHICLE"
       },
       "summary": {
-        "en": "VEHICLE units use HAZARD ROLLS, CLOSE-QUARTERS SHOOTING, MOVING MONSTERS AND VEHICLES and SHOOTING AT ENGAGED MONSTERS AND VEHICLES."
+        "en": "VEHICLE units use Hazard Rolls, CLOSE-QUARTERS SHOOTING, Moving Monsters and Vehicles and Shooting at Engaged Monsters and Vehicles."
       },
       "definition": {
-        "en": "The VEHICLE keyword identifies models and units for rules interactions. It applies the following Core Rules: HAZARD ROLLS, CLOSE-QUARTERS SHOOTING, MOVING MONSTERS AND VEHICLES and SHOOTING AT ENGAGED MONSTERS AND VEHICLES. It is also used as a condition by BLAST. Singular and plural forms of the same keyword are treated identically."
+        "en": "The VEHICLE keyword identifies models and units for rules interactions. It applies the following Core Rules: Hazard Rolls, CLOSE-QUARTERS SHOOTING, Moving Monsters and Vehicles and Shooting at Engaged Monsters and Vehicles. It is also used as a condition by [BLAST]. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
-      "related": [],
+      "related": [
+        "adeptus-mechanicus-enhancement-transoracular-dyad-wafers",
+        "adeptus-mechanicus-enhancement-vinghs-wafers-of-dynamism",
+        "adeptus-mechanicus-stratagem-auto-divinatory-targeting",
+        "adeptus-mechanicus-stratagem-benevolence-of-the-omnissiah",
+        "adeptus-mechanicus-stratagem-machine-spirit-resurgent",
+        "adeptus-mechanicus-stratagem-machine-superiority",
+        "adeptus-mechanicus-stratagem-motive-imperative",
+        "adeptus-mechanicus-stratagem-threat-cogitation-targeters",
+        "adeptus-mechanicus-stratagem-transcendent-cogitation",
+        "core-blast",
+        "core-rule-06-03-hazard-rolls",
+        "core-rule-10-06-close-quarters-shooting",
+        "core-rule-17-01-moving-monsters-and-vehicles",
+        "core-rule-17-03-shooting-at-engaged-monsters-and-vehicles",
+        "death-guard-ability-curse-of-the-walking-pox-poxwalkers",
+        "death-guard-ability-metalophagic-infection-chaos-predator-annihilator",
+        "death-guard-ability-tank-hunters-myphitic-blight-hauler",
+        "death-guard-enhancement-tendrilous-emissions",
+        "death-guard-stratagem-blighted-land",
+        "death-guard-stratagem-eyestinger-storm",
+        "death-guard-stratagem-font-of-filth",
+        "death-guard-stratagem-putrid-detonation",
+        "death-guard-stratagem-relentless-grind",
+        "death-guard-stratagem-stinking-mire",
+        "keyword-monster",
+        "keyword-transport",
+        "keyword-walker"
+      ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -71841,7 +72122,7 @@
           "keyword-walker"
         ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-walker": {
@@ -71854,21 +72135,22 @@
         "en": "WALKER"
       },
       "summary": {
-        "en": "A VEHICLE can be selected for HEROIC INTERVENTION only if it is also a CHARACTER or WALKER unit."
+        "en": "WALKER is used as a condition by HEROIC INTERVENTION."
       },
       "definition": {
-        "en": "The HEROIC INTERVENTION Core Stratagem can select an eligible friendly unit at the end of the opponent?s Charge phase. A VEHICLE unit can be selected only if it is a CHARACTER/WALKER unit."
+        "en": "The WALKER keyword identifies models and units for rules interactions. It is also used as a condition by HEROIC INTERVENTION. Singular and plural forms of the same keyword are treated identically."
       },
       "structured": {},
       "aliases": [],
       "related": [
-        "core-rule-15-01-using-stratagems"
+        "core-rule-15-11-heroic-intervention",
+        "keyword-vehicle"
       ],
       "mentions": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "15.11; page 57"
+        "locator": "02.05, 15.11"
       },
       "status": "verified",
       "sourceRefs": [
@@ -71876,7 +72158,9 @@
       ],
       "references": {
         "intrinsicRules": [],
-        "referencedByRules": [],
+        "referencedByRules": [
+          "core-rule-15-11-heroic-intervention"
+        ],
         "commonRules": [
           "core-rule-02-05-keywords"
         ],
@@ -71885,7 +72169,7 @@
           "keyword-vehicle"
         ]
       },
-      "presentation": "article",
+      "presentation": "reference",
       "matchLabels": []
     },
     "keyword-warlord": {
@@ -71898,17 +72182,17 @@
         "en": "WARLORD"
       },
       "summary": {
-        "en": "Keyword used to identify the model selected as an army's Warlord."
+        "en": "WARLORD identifies models and units for rules interactions."
       },
       "definition": {
-        "en": "Keyword used to identify the model selected as an army's Warlord."
+        "en": "The WARLORD keyword identifies models and units for rules interactions. Singular and plural forms of the same keyword are treated identically."
       },
       "aliases": [],
       "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
         "revision": "11e",
-        "locator": "25.04; page 88"
+        "locator": "02.05"
       },
       "status": "verified",
       "sourceRefs": [
@@ -71924,7 +72208,7 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic",
+      "presentation": "reference",
       "matchLabels": []
     },
     "space-marines-ability-aerial-assault": {

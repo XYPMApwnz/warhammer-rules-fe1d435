@@ -82,8 +82,12 @@ function main(){
   const ledger=readJson(path.join(bookRoot,'scripts','related-rules-correction-ledger.json'));
   const enhancementMatrix=readJson(path.join(bookRoot,'sources','enhancement-owner-matrix.json')).enhancements;
   const output=buildCompatibleRules({book,snapshot,ledger,enhancementMatrix});
-  const outputFile=path.join(bookRoot,'generated','compatible-rules.json');
-  fs.mkdirSync(path.dirname(outputFile),{recursive:true});fs.writeFileSync(outputFile,stableStringify(output));
+  const outputFile=path.join(bookRoot,'generated','compatible-rules.json'),value=stableStringify(output);
+  if(process.argv.includes('--check')){
+    if(!fs.existsSync(outputFile)||fs.readFileSync(outputFile,'utf8').replace(/\r\n?/g,'\n')!==value)throw new Error('Death Guard compatible-rules matrix is stale.');
+    console.log('Death Guard compatible-rules matrix is current.');return;
+  }
+  fs.mkdirSync(path.dirname(outputFile),{recursive:true});fs.writeFileSync(outputFile,value);
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)main();

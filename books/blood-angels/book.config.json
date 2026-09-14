@@ -317,5 +317,88 @@
     "codexWargear": "content/blood-angels-codex-wargear.en.json",
     "relatedRules": "content/blood-angels-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
-  }
+  },
+  "generatedOutputs": [
+    {
+      "class": "CANONICAL_PUBLICATION_BUNDLE",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "reader.html",
+        "index.html",
+        "scripts/data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "TARGET_CATALOG",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "scripts/target-data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "ROSTER_CATALOG",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "scripts/roster-data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "GENERATED_BOOK_STYLING",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "styles/book.css"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "GENERATED_RELATED_RULES_MARKUP",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "mobile/related-rules.inc"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "MOBILE_COMPATIBILITY_ROUTES",
+      "producer": "books/blood-angels/mobile/build.mjs",
+      "pattern": "mobile/*.html",
+      "inventoryFrom": "scripts/target-data.js",
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "COMPATIBLE_RULES_MATRIX",
+      "producer": "books/blood-angels/tools/build-compatible-rules.mjs",
+      "paths": [
+        "generated/compatible-rules.json"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "DERIVED_SOURCE_PROJECTION",
+      "producer": "books/blood-angels/tools/build-related-rules.mjs",
+      "paths": [
+        "content/blood-angels-related-rules.en.json"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "EXPLICIT_SOURCE_UPDATE_OUTPUT"
+    }
+  ]
 }

@@ -40,7 +40,7 @@
     "glossary:check": "node glossary/tools/check-glossary.mjs",
     "cache:check": "node tools/cache-revision.mjs --check",
     "wiring:check": "node tests/repository-wiring-consistency-qa.mjs",
-    "publication:check": "node books/shared/tools/publication-inventory.mjs --check && node tools/build-offline-mobile-routes.mjs --check && node tests/publication-inventory-qa.mjs && node tests/offline-mobile-routes-qa.mjs",
+    "publication:check": "node books/shared/tools/publication-inventory.mjs --check && node tools/build-offline-mobile-routes.mjs --check && node tests/publication-inventory-qa.mjs && node tests/offline-mobile-routes-qa.mjs && node tests/generated-output-ownership-qa.mjs",
     "architecture:report": "node tests/architecture-conformance-gate.mjs --report",
     "architecture:check": "node tests/architecture-conformance-gate.mjs",
     "test:cold-offline": "node tests/browser/cold-offline.mjs",

@@ -95,5 +95,78 @@
     "mode": "authoritative-runtime-source",
     "path": "mobile/related-rules.inc"
   },
-  "mobileRelatedRulesSource": false
+  "mobileRelatedRulesSource": false,
+  "generatedOutputs": [
+    {
+      "class": "CANONICAL_PUBLICATION_BUNDLE",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "reader.html",
+        "index.html",
+        "scripts/data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "TARGET_CATALOG",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "scripts/target-data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "ROSTER_CATALOG",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "scripts/roster-data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "MOBILE_COMPATIBILITY_ROUTES",
+      "producer": "books/space-marines/mobile/build.mjs",
+      "pattern": "mobile/*.html",
+      "inventoryFrom": "scripts/target-data.js",
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "COMPATIBLE_RULES_MATRIX",
+      "producer": "books/space-marines/tools/build-compatible-rules.mjs",
+      "paths": [
+        "generated/compatible-rules.json"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "DERIVED_SOURCE_PROJECTION",
+      "producer": "books/space-marines/tools/extract-faction-pack.py",
+      "paths": [
+        "content/space-marines-faction-pack-related-rules.component.json"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "EXPLICIT_SOURCE_UPDATE_OUTPUT"
+    },
+    {
+      "class": "DERIVED_SOURCE_PROJECTION",
+      "producer": "books/space-marines/tools/build-related-rules.mjs",
+      "paths": [
+        "content/space-marines-related-rules.en.json"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    }
+  ]
 }

@@ -51,5 +51,78 @@
     "relatedRules": "content/chaos-space-marines-related-rules.en.json",
     "manifest": "sources/source-manifest.json",
     "codexParity": "content/chaos-space-marines-codex-parity.en.json"
-  }
+  },
+  "generatedOutputs": [
+    {
+      "class": "CANONICAL_PUBLICATION_BUNDLE",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "reader.html",
+        "index.html",
+        "scripts/data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "TARGET_CATALOG",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "scripts/target-data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "ROSTER_CATALOG",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "scripts/roster-data.js"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "GENERATED_BOOK_STYLING",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "styles/book.css"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "GENERATED_RELATED_RULES_MARKUP",
+      "producer": "books/shared/tools/build-army-book.mjs",
+      "paths": [
+        "mobile/related-rules.inc"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "MOBILE_COMPATIBILITY_ROUTES",
+      "producer": "books/chaos-space-marines/mobile/build.mjs",
+      "pattern": "mobile/*.html",
+      "inventoryFrom": "scripts/target-data.js",
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    },
+    {
+      "class": "COMPATIBLE_RULES_MATRIX",
+      "producer": "books/chaos-space-marines/tools/build-compatible-rules.mjs",
+      "paths": [
+        "generated/compatible-rules.json"
+      ],
+      "required": true,
+      "tracked": true,
+      "lifecycle": "NORMAL_BUILD_OUTPUT"
+    }
+  ]
 }

@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 import {buildSourceStatus} from '../books/shared/tools/source-freshness.mjs';
+import {validateGeneratedOutputContract} from '../books/shared/tools/generated-output-contract.mjs';
 import {loadPublicationInventory,selectPublicationBooks,validatePublicationInventory} from '../books/shared/tools/publication-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -68,10 +69,15 @@ const pointsRecomposes=pointsBuilder.includes('readerProfiles=')&&pointsBuilder.
 const glossaryFeedbackReads=['existingRegistry','existingAliases','existingContexts'].filter(token=>glossaryBuilder.includes(token));
 const glossarySelfSeeds=glossaryFeedbackReads.length>0;
 const generatedPointInputs=pointsBuilder.includes('scripts/roster-data.js')&&(pointsBuilder.includes('reader.html')||pointsBuilder.includes('scripts/target-data.js'));
-const outputOwnershipDeclared=config=>Array.isArray(config.generatedOutputs)&&config.generatedOutputs.length>0;
+function generatedOutputOwnership(book){
+  try{
+    const result=validateGeneratedOutputContract({repo:root,configPath:path.join(root,book.config)});
+    return {ok:true,count:result.outputs.length};
+  }catch(error){return {ok:false,error:error.message};}
+}
 
 function rawResults(book){
-  const id=book.id,config=json(book.config),source=sourceByBook.get(id),catalog=loadRosterCatalog(id);
+  const id=book.id,config=json(book.config),source=sourceByBook.get(id),catalog=loadRosterCatalog(id),outputOwnership=generatedOutputOwnership(book);
   const custom=Boolean(config.buildExtension);
   const dependencies=config.dependencies||[];
   const projectedDependencies=(catalog.book?.dependencies||[]).map(item=>item.bookId);
@@ -124,7 +130,7 @@ function rawResults(book){
     EFFECTS:evidence(providerOwnedEffects?'FAIL':'PASS',providerOwnedEffects?'fixed numeric/tag facts remain provider-owned':'canonical effect facts with shared interpreter'),
     GLOSSARY:evidence(glossarySelfSeeds?'FAIL':'PASS',glossarySelfSeeds?'previous generated glossary remains a factual/editorial input':'clean source-owned rebuild'),
     PUBLICATION_INVENTORY:evidence(inventoryErrors.length?'FAIL':'PASS',...(inventoryErrors.length?inventoryErrors:['publication inventory valid and book selected for library'])),
-    GENERATED_OWNERSHIP:evidence(outputOwnershipDeclared(config)&&!generatedPointInputs?'PASS':'FAIL',...(outputOwnershipDeclared(config)?['generated outputs declared by config']:['generated output set/producer is not declared by config']),...(generatedPointInputs?['points consumer reads generated roster/reader target artifacts']:[]))
+    GENERATED_OWNERSHIP:evidence(outputOwnership.ok&&!generatedPointInputs?'PASS':'FAIL',...(outputOwnership.ok?[`generated outputs declared and validated: ${outputOwnership.count}`]:[outputOwnership.error]),...(generatedPointInputs?['points consumer reads generated roster/reader target artifacts']:[]))
   };
   return{config,results};
 }

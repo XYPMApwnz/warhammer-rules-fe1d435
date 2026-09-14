@@ -1,0 +1,1396 @@
+{
+  "schema": "space-marines-related-rules-contracts/v1",
+  "bookId": "space-marines",
+  "sourceBindings": {
+    "faction-pack-canonical": {
+      "path": "content/space-marines-faction-pack.en.json",
+      "sha256": "229d784fcbe568fd380ce671c2f980ed0f4d8d875ca77fc3632e256a08932665",
+      "authority": "VERIFIED_FROZEN"
+    },
+    "faction-pack-v1.2": {
+      "path": "sources/space-marines-faction-pack-v1.2.pdf",
+      "sha256": "f1f96c0a3dda8dfc2d5686b4aa60e7959697651edbc51f5a344439ff6ac1a1f9",
+      "authority": "VERIFIED_FROZEN"
+    },
+    "mfm-v1.3": {
+      "path": "sources/official-mfm-v1.3.json",
+      "sha256": "d5e8765d56fce1445f7718ad7ca4d249d5ac3ffd6d68e8d8abea46e539d0546b",
+      "authority": "VERIFIED_FROZEN"
+    },
+    "pinned-bsdata": {
+      "path": "sources/bsdata-space-marines-11e.json",
+      "sha256": "69ed569896f24bc5158820e0d0e5da6ffe4a9f97580891351fa9db3274fd678e",
+      "authority": "SOURCE_LIMITED",
+      "repositoryCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
+    },
+    "codex-datasheets": {
+      "path": "content/space-marines-codex-datasheets.en.json",
+      "sha256": "df7101146c380fd4052c0cf6500dcb20286c4c87b9e4da5a082df06a00bac6c3",
+      "authority": "SOURCE_LIMITED"
+    },
+    "codex-overlay": {
+      "path": "content/space-marines-current-overlay.en.json",
+      "sha256": "96bdf6780b227875dc1d3337a37a5104e16f866c9f7d65d8e584803934244907",
+      "authority": "SOURCE_LIMITED"
+    },
+    "codex-compatibility-snapshot": {
+      "path": "sources/wahapedia-compatible-rules.snapshot.json",
+      "sha256": "32dee7a9bb9c21290ae4817f6a4563e69c10021ec63175d9ae3d6fe14d748aa1",
+      "authority": "SOURCE_LIMITED"
+    }
+  },
+  "enhancements": [
+    {
+      "id": "spy-skull-data-link",
+      "detachmentId": "ceramite-sentinels",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 10
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "d01a-5940-704d-c0da"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "armour-of-antoninus",
+      "detachmentId": "blade-of-ultramar",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 12
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "03fe-b253-1408-b008"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "avenging-avatar-aura",
+      "detachmentId": "reclamation-force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 28
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "59e0-62c1-7144-edae"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "blackwing-shroud",
+      "detachmentId": "shadowmark-talon",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "INFANTRY"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 22
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "8fff-d705-4319-7795"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "champion-of-the-feast",
+      "detachmentId": "emperor-s-shield",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 20
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "bfbc-8e21-3f2b-067a"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "chogorian-huntmaster",
+      "detachmentId": "spearpoint-task-force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "MOUNTED"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 16
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "b21a-b914-964c-d984"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "coronal-susurrant",
+      "detachmentId": "shadowmark-talon",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "PHOBOS"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 22
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "9b11-0170-0a69-8d92"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "disciple-of-rhetoricus",
+      "detachmentId": "emperor-s-shield",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "TERMINATOR"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 20
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "8862-f27e-7b04-8dcd"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "hunter-s-eye",
+      "detachmentId": "spearpoint-task-force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 16
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "7546-3996-6dcc-4248"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "immolator",
+      "detachmentId": "forgefather-s-seekers",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 18
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "93f5-604f-2378-4afe"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "indomitable-champion",
+      "detachmentId": "emperor-s-shield",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "TERMINATOR"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 20
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "e6b6-1b83-7f74-e6b5"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "iron-laurel",
+      "detachmentId": "hammer-of-avernii",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 14
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "3fdf-50d4-5f80-d2ae"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "liberatum",
+      "detachmentId": "reclamation-force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 28
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "17d2-dbd0-10be-2c07"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "malodraxian-standard",
+      "detachmentId": "emperor-s-shield",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "ANCIENT"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 20
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "4fac-6c59-a3af-8dec"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "medusan-roar-aura",
+      "detachmentId": "hammer-of-avernii",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 14
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "15db-a2e3-6106-f99e"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "oath-of-macragge",
+      "detachmentId": "blade-of-ultramar",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 12
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "9757-8da6-e934-619c"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "scroll-of-proclamation",
+      "detachmentId": "reclamation-force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 28
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "8cce-1121-aae2-c020"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "seals-of-reconquest",
+      "detachmentId": "reclamation-force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 28
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "7017-e70b-cb54-eec3"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "spearpoint-paragon",
+      "detachmentId": "spearpoint-task-force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 16
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "943e-6ac8-df09-16e8"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "spiritus-ferrum",
+      "detachmentId": "hammer-of-avernii",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 14
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "372a-5b3c-34b1-334a"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "steel-font",
+      "detachmentId": "hammer-of-avernii",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "TERMINATOR"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 14
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "4bb9-4e90-f12b-12d0"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "stormseers-wisdom",
+      "detachmentId": "spearpoint-task-force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 16
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "45fb-0afc-f558-c3c5"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "student-of-the-codex",
+      "detachmentId": "blade-of-ultramar",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 12
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "f676-594e-f3c4-65fc"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "umbral-raptor",
+      "detachmentId": "shadowmark-talon",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 22
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "74e0-91bc-3fcb-788f"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "veteran-of-behemoth",
+      "detachmentId": "blade-of-ultramar",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 12
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "0f6d-3963-47b6-4f79"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "bellicose-weapon-spirits",
+      "detachmentId": "fulguris-task-force",
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-land-speeder",
+            "unit-storm-speeder-hailstrike",
+            "unit-storm-speeder-hammerstrike",
+            "unit-storm-speeder-thunderstrike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 3
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "5d2e-4dea-d327-e4c4"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "raptorial-cogitator-core",
+      "detachmentId": "fulguris-task-force",
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-land-speeder",
+            "unit-storm-speeder-hailstrike",
+            "unit-storm-speeder-hammerstrike",
+            "unit-storm-speeder-thunderstrike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 3
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "4853-d5ec-2250-71da"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    },
+    {
+      "id": "death-in-the-dark",
+      "detachmentId": "subversion-assets",
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "INFANTRY",
+            "PHOBOS"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "sourceRefs": [
+        {
+          "sourceId": "faction-pack-v1.2",
+          "locator": {
+            "page": 5
+          }
+        },
+        {
+          "sourceId": "mfm-v1.3",
+          "locator": {
+            "section": "Space Marines Enhancements"
+          }
+        },
+        {
+          "sourceId": "pinned-bsdata",
+          "locator": {
+            "selectionId": "3ec8-4427-1957-16d1"
+          }
+        }
+      ],
+      "confidence": {
+        "identity": "VERIFIED_FROZEN",
+        "detachment": "VERIFIED_FROZEN",
+        "owner": "VERIFIED_FROZEN",
+        "assignment": "SOURCE_LIMITED"
+      }
+    }
+  ]
+}

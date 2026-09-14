@@ -1,30 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import vm from 'node:vm';
-import ruleFacts from '../books/shared/rule-facts.js';
-import {pointTierContract} from '../books/shared/tools/point-tier-contract.mjs';
+import {createPointsCatalog} from './effective-points-catalog.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
-const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
-const bookConfigs=new Map();
-const bookConfig=book=>{if(!bookConfigs.has(book))bookConfigs.set(book,read(`books/${book}/book.config.json`));return bookConfigs.get(book);};
-const readBookSource=(book,key)=>{const source=bookConfig(book).sources?.[key];if(!source)throw new Error(`${book}: missing configured ${key} source`);return read(`books/${book}/${source}`);};
-const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-const rosterCatalogs=new Map();
-const rosterCatalog=book=>{
-  if(!rosterCatalogs.has(book)){
-    const scope={window:{}};
-    vm.runInNewContext(fs.readFileSync(path.join(root,`books/${book}/scripts/roster-data.js`),'utf8'),scope);
-    const catalog=scope.window.WH_BOOK_ROSTER_CATALOG;
-    if(catalog?.schema!=='wh40k-army-roster-catalog/v1'||catalog.book.id!==book)throw new Error(`${book}: invalid canonical roster catalog`);
-    rosterCatalogs.set(book,catalog);
-  }
-  return rosterCatalogs.get(book);
-};
 
-// Reuse the book catalog's canonical IDs, source IDs and Detachment ownership.
-// Prefix/punctuation aliases follow the existing book contract, never titles.
+// Retained as the compatibility resolution API used by focused legality QA.
+// The points builder itself now receives this identity in the effective projection.
 export function resolveEnhancementOwner(enhancement,catalog,contracts={}){
   const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
   const identity=(value,detachmentId='')=>{
@@ -54,189 +36,12 @@ export function resolveEnhancementOwner(enhancement,catalog,contracts={}){
     ...(!owner||canonical.sourceLimited||contract?.sourceLimited?{sourceLimited:true}:{})
   };
 }
-const detachmentRecords=rows=>Object.fromEntries(rows.map(row=>[normalize(row.title),{title:row.title,detachmentPoints:Number(String(row.detachmentPoints??row.dp??0).match(/\d+/)?.[0]||0),forceDisposition:row.forceDisposition||row.disposition||''}]));
-const decode=value=>String(value||'').replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
-const readerProfiles=book=>{
-  const result={};
-  const reader=fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8'),targetPath=path.join(root,`books/${book}/scripts/target-data.js`),targetSource=fs.existsSync(targetPath)?fs.readFileSync(targetPath,'utf8'):'',targetMatch=targetSource.match(/^window\.WH_ARMY_BOOK_TARGETS=Object\.freeze\((\{[\s\S]*\})\);\s*$/),markup=reader.includes('<article class="unit-card')?reader:targetMatch?JSON.parse(targetMatch[1]).html:reader;
-  for(const [tag] of markup.matchAll(/<article class="unit-card\b[^>]*>/g)){
-    const attr=name=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
-    const unitId=attr('id'),title=attr('data-unit-title');
-    const profile=ruleFacts.serializeRuleProfile(ruleFacts.profileFromDataset({
-      ruleFacts:decode(attr('data-rule-facts')),relatedCandidates:decode(attr('data-related-candidates'))
-    },{id:unitId}));
-    if(unitId)result[unitId]=profile;
-    if(title)result[normalize(title)]=profile;
-  }
-  return result;
-};
-const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire'),emperorChildrenProfiles=readerProfiles('emperors-children'),csmProfiles=readerProfiles('chaos-space-marines'),spaceMarinesProfiles=readerProfiles('space-marines'),bloodAngelsProfiles=readerProfiles('blood-angels'),darkAngelsProfiles=readerProfiles('dark-angels');
 
-const deathGuard=read('books/death-guard/content/death-guard-rules.en.json');
-const deathGuardMfm=readBookSource('death-guard','points');
-const dgDetachments=detachmentRecords(deathGuardMfm.detachments);
-const deathGuardPointIdentities=new Map((deathGuardMfm.enhancements||[]).filter(item=>item.id&&item.sourceTitle).map(item=>[item.id,item]));
-const dgUnits={};
-for(const unit of deathGuard.sections.filter(section=>section.kind==='unit')){
-  const pointsBlock=unit.blocks.find(block=>block.type==='points');
-  dgUnits[normalize(unit.title)]={title:unit.title,points:unit.points,wargear:pointsBlock?.wargear||[],...dgProfiles[unit.id]};
-}
-const dgEnhancements={};
-for(const section of deathGuard.sections){
-  for(const subsection of section.subsections||[]){
-    for(const enhancement of (subsection.blocks||[]).filter(block=>block.type==='enhancement')){
-      const match=enhancement.title.match(/^(.*?)\s+[-–—]\s+(\d+)\s*pts$/i);
-      if(!match)throw new Error(`Enhancement points missing: ${enhancement.title}`);
-      const effects={
-        'daemon weapon of nurgle':'critical-hit-5',
-        'furnace of plagues':'furnace',
-        'arch contaminator':'conditional',
-        'revolting regeneration':'persistent',
-        'eye of affliction':'conditional',
-        'bilemaw blight':'plague-wind-range-12',
-        'shriekworm familiar':'persistent',
-        'tendrilous emissions':'conditional',
-        'final ingredient':'once',
-        'visions of virulence':'conditional',
-        'needle of nurgle':'narthecium-d3',
-        'cornucophagus':'setup',
-        'beckoning blight':'persistent',
-        'fell harvester':'melee-a-2',
-        'entropic knell':'conditional',
-        'tome of bounteous blessings':'conditional',
-        'witherbone pipes':'attachment',
-        'lord of the walking pox':'attachment',
-        'sorrowsyphon':'attachment',
-        'talisman of burgeoning':'attachment',
-        'face of death':'persistent',
-        'vile vigour':'attachment',
-        'warprot talisman':'once',
-        'helm of the fly king':'attachment',
-        'parasitic woe reaper':'persistent',
-        'lancet of the worldsore':'mobile',
-        'insectile murmuration':'conditional',
-        'plagueveil':'persistent',
-        'rejuvenating swarm':'conditional',
-        'host of the hybridised pox':'once'
-      };
-      const aliases=(enhancement.tags||[]).includes('UPGRADE')?[`${match[1]} Upgrade`,`${match[1]} (Upgrade)`]:[];
-      const publication=deathGuardPointIdentities.get(enhancement.id);
-      if(publication&&(normalize(publication.sourceTitle)!==normalize(match[1])||Number(publication.value)!==Number(match[2])))throw new Error(`Death Guard point identity mismatch: ${enhancement.id}`);
-      const record={id:enhancement.id,title:match[1],value:Number(match[2]),text:enhancement.text,effect:effects[normalize(match[1])]||'',detachment:publication?.detachment||String(section.id).replace(/^detachment-/,''),...(publication?{canonicalEnhancementId:enhancement.id,canonicalDetachmentId:section.id}:{}),tags:enhancement.tags||[],owner:enhancement.owner||null,assignment:enhancement.assignment||null,aliases};
-      for(const name of [match[1],...aliases])dgEnhancements[normalize(name)]=record;
-    }
-  }
-}
+const {catalog,projections}=await createPointsCatalog(root);
+export {catalog,catalog as rawCatalog,projections};
 
-const mechanicus=read('books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json');
-const mechanicusMfm=readBookSource('adeptus-mechanicus','officialMfm');
-const mechanicusDetachments=detachmentRecords(Object.entries(mechanicusMfm.detachments).map(([title,item])=>({title,detachmentPoints:item.dp,forceDisposition:item.disposition})));
-const mechanicusUnits=Object.fromEntries(mechanicus.units.map(unit=>[normalize(unit.title),{...unit,...mechanicusProfiles[normalize(unit.title)]}]));
-const mechanicusEnhancements=Object.fromEntries(mechanicus.enhancements.flatMap(enhancement=>{
-  const entries=[[normalize(enhancement.title),enhancement]],upgrade=(enhancement.tags||[]).includes('UPGRADE');
-  if(enhancement.title==='Autoclavic Denunciation')entries.push([normalize('Autoclavic Denounciation'),enhancement]);
-  if(enhancement.title==='TL-4Ø9')entries.push([normalize('TL-409'),enhancement]);
-  if(enhancement.title==='Stealth-screened Cybercanids Upgrade')entries.push([normalize('Stealth-screened Cybercanids'),enhancement]);
-  if(upgrade)entries.push([normalize(`${enhancement.title.replace(/\s+Upgrade$/i,'')} (Upgrade)`),enhancement]);
-  return entries;
-}));
-const tyranids=read('books/tyranids/content/tyranids-points.en.json');
-const tyranidsContracts=read('books/tyranids/content/tyranids-related-rules.en.json').enhancements;
-const tyranidsUnits=Object.fromEntries(tyranids.units.map(unit=>[normalize(unit.title),{...unit,wargear:unit.paidWargear||[],...tyranidsProfiles[normalize(unit.title)]}]));
-const tyranidsEnhancements=Object.fromEntries(tyranids.enhancements.flatMap(enhancement=>{
-  const contract=tyranidsContracts[enhancement.id]||tyranidsContracts[enhancement.id?.replace(/^enhancement-/,'')],record={...enhancement,tags:contract?.tags||[],owner:contract?.owner||null,assignment:contract?.assignment||null};
-  const base=enhancement.title.replace(/\s*\(Upgrade\)\s*$/i,'').replace(/\s+Upgrade$/i,'');
-  return[...new Set([enhancement.title,base,`${base} Upgrade`,`${base} (Upgrade)`])].map(name=>[normalize(name),record]);
-}));
-const tau=read('books/tau-empire/content/tau-empire-points.en.json');
-const tauContracts=read('books/tau-empire/content/tau-empire-related-rules.en.json').enhancements;
-const tauUnits=Object.fromEntries(tau.units.map(unit=>[normalize(unit.title),{...unit,wargear:unit.paidWargear||[],...tauProfiles[normalize(unit.title)]}]));
-const tauContractFor=enhancement=>tauContracts[enhancement.id]||tauContracts[enhancement.id?.replace(/^enhancement-/,'')]||({
-  'enhancement-negation-emitters':tauContracts['negation-emitters-upgrade'],
-  'enhancement-unmasking-suite':tauContracts['unmasking-suite-upgrade']
-}[enhancement.id]);
-const tauEnhancements=Object.fromEntries(tau.enhancements.flatMap(enhancement=>{
-  const contract=tauContractFor(enhancement),record={...enhancement,tags:contract?.tags||[],owner:contract?.owner||null,assignment:contract?.assignment||null};
-  const base=enhancement.title.replace(/\s*\(Upgrade\)\s*$/i,'').replace(/\s+Upgrade$/i,'');
-  return [...new Set([enhancement.title,base,`${base} Upgrade`,`${base} (Upgrade)`])].map(name=>[normalize(name),record]);
-}));
-const emperorChildren=read('books/emperors-children/content/emperors-children-points.en.json');
-const emperorChildrenMfm=readBookSource('emperors-children','officialMfm');
-const emperorChildrenContracts=read('books/emperors-children/content/emperors-children-related-rules.en.json').enhancements;
-const emperorChildrenUnits=Object.fromEntries(emperorChildren.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),{...unit,wargear:unit.paidWargear||[],...emperorChildrenProfiles[normalize(unit.title)]}]));
-const emperorChildrenPointIdentities=new Map((emperorChildrenMfm.enhancements||[]).filter(item=>item.id&&item.sourceTitle).map(item=>[`${normalize(item.detachment)}\0${normalize(item.title)}`,item]));
-const emperorChildrenEnhancements=Object.fromEntries(emperorChildren.enhancements.flatMap(enhancement=>{
-  const publication=emperorChildrenPointIdentities.get(`${normalize(enhancement.detachment)}\0${normalize(enhancement.title)}`),identity=resolveEnhancementOwner(publication?{...enhancement,id:publication.id}:enhancement,rosterCatalog('emperors-children'),emperorChildrenContracts),sourceTitle=identity.canonicalEnhancementId?publication?.sourceTitle:null,record={...enhancement,...(sourceTitle?{id:publication.id}:{}),...identity};
-  return [...new Set([enhancement.title,sourceTitle].filter(Boolean))].map(title=>[normalize(title),record]);
-}));
-
-const csm=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
-const csmContracts=read('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json').enhancements;
-const csmUnits=Object.fromEntries(csm.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),{...unit,wargear:unit.paidWargear||[],...csmProfiles[normalize(unit.title)]}]));
-const csmEnhancementGroups=new Map();
-for(const enhancement of csm.enhancements){
-  const record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog('chaos-space-marines'),csmContracts)};
-  const key=normalize(enhancement.title),group=csmEnhancementGroups.get(key)||[];group.push(record);csmEnhancementGroups.set(key,group);
-}
-const csmEnhancements=Object.fromEntries([...csmEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
-
-const bloodAngels=read('books/blood-angels/content/blood-angels-points.en.json');
-const bloodAngelsConfig=bookConfig('blood-angels');
-const darkAngels=read('books/dark-angels/content/dark-angels-points.en.json');
-const darkAngelsConfig=bookConfig('dark-angels');
-const spaceMarines=read('books/space-marines/content/space-marines-points.en.json');
-const spaceMarinesConfig=bookConfig('space-marines');
-const spaceMarinesPack=read('books/space-marines/content/space-marines-faction-pack.en.json');
-const spaceMarinesParity=read('books/space-marines/content/space-marines-current-overlay.en.json');
-const spaceMarinesContracts=read('books/space-marines/content/space-marines-related-rules.en.json').enhancements;
-const bloodAngelsContracts=read('books/blood-angels/content/blood-angels-related-rules.en.json').enhancements;
-const darkAngelsContracts=read('books/dark-angels/content/dark-angels-related-rules.en.json').enhancements||{};
-const spaceMarinesRecord=unit=>{const compatibleChapterKeywords=spaceMarinesConfig.unitCompatibleChapterKeywords?.[unit.id]||[];return {...unit,wargear:unit.paidWargear||[],...(compatibleChapterKeywords.length?{compatibleChapterKeywords:[...compatibleChapterKeywords]}:{}),...(spaceMarinesProfiles[unit.id]||spaceMarinesProfiles[normalize(unit.title)])};};
-const dependencyUnitPointRecord=(unit,config)=>{const override=config.dependencyDatasheets?.pointOverrides?.[unit.id];if(!override)return unit;if(normalize(override.title)!==normalize(unit.title))throw new Error(`${config.id}: dependency point override ${unit.id} title mismatch`);return {...unit,...override};};
-const chapterUnitRecord=(unit,config,profiles,dependency=false)=>{const current=dependency?dependencyUnitPointRecord(unit,config):unit;return {...current,wargear:current.paidWargear||[],...(profiles[current.id]||profiles[normalize(current.title)])};};
-const spaceMarinesUnits=Object.fromEntries(spaceMarines.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),spaceMarinesRecord(unit)]));
-const spaceMarinesEnhancementGroups=new Map();
-for(const enhancement of spaceMarines.enhancements){const record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog('space-marines'),spaceMarinesContracts)},key=normalize(enhancement.title),group=spaceMarinesEnhancementGroups.get(key)||[];group.push(record);spaceMarinesEnhancementGroups.set(key,group);}
-const spaceMarinesEnhancements=Object.fromEntries([...spaceMarinesEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
-const sharedDetachmentTitles=config=>{const chapter=normalize(config.dependencyDetachments.chapterKeyword),current=new Set(spaceMarines.detachments.map(item=>normalize(item.title)));return new Set([...spaceMarinesPack.detachments,...spaceMarinesParity.detachments].filter(item=>{const restriction=item.restriction||spaceMarinesConfig.detachmentChapterRestrictions?.[item.title];return current.has(normalize(item.title))&&(!restriction||normalize(restriction)===chapter);}).map(item=>normalize(item.title)));};
-const bloodAngelsSharedDetachmentTitles=sharedDetachmentTitles(bloodAngelsConfig),darkAngelsSharedDetachmentTitles=sharedDetachmentTitles(darkAngelsConfig);
-const sharedDetachmentRecords=(config,titles)=>{const overrides=new Map(Object.entries(config.dependencyDetachments?.pointOverrides||{}).map(([title,record])=>[normalize(title),record])),rows=spaceMarines.detachments.filter(item=>titles.has(normalize(item.title))).map(item=>({...item,...(overrides.get(normalize(item.title))||{})})),resolved=new Set(rows.map(item=>normalize(item.title)));for(const title of overrides.keys())if(!resolved.has(title))throw new Error(`${config.id}: dependency Detachment override ${title} does not resolve`);return rows;};
-const bloodAngelsSharedDetachments=sharedDetachmentRecords(bloodAngelsConfig,bloodAngelsSharedDetachmentTitles),darkAngelsSharedDetachments=sharedDetachmentRecords(darkAngelsConfig,darkAngelsSharedDetachmentTitles);
-const bloodAngelsProfile=unit=>bloodAngelsProfiles[unit.id]||bloodAngelsProfiles[normalize(unit.title)];
-const bloodAngelsLocal=bloodAngels.units.filter(unit=>unit.status==='Current'&&bloodAngelsProfile(unit));
-const bloodAngelsLocalTitles=new Set(bloodAngelsLocal.map(unit=>normalize(unit.title)));
-const bloodAngelsShared=spaceMarines.units.filter(unit=>unit.status==='Current'&&!bloodAngelsLocalTitles.has(normalize(unit.title))&&bloodAngelsProfile(unit));
-if(bloodAngelsLocal.length!==15||bloodAngelsShared.length!==84)throw new Error(`Blood Angels roster inventory: expected 15 local + 84 shared, got ${bloodAngelsLocal.length} + ${bloodAngelsShared.length}`);
-const bloodAngelsUnits=Object.fromEntries([...bloodAngelsLocal.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,bloodAngelsConfig,bloodAngelsProfiles)]),...bloodAngelsShared.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,bloodAngelsConfig,bloodAngelsProfiles,true)])]);
-const bloodAngelsEnhancementGroups=new Map();
-for(const enhancement of [...bloodAngels.enhancements,...spaceMarines.enhancements.filter(item=>bloodAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){
-  const shared=bloodAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment));
-  const record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog(shared?'space-marines':'blood-angels'),shared?spaceMarinesContracts:bloodAngelsContracts)};
-  const key=normalize(enhancement.title),group=bloodAngelsEnhancementGroups.get(key)||[];group.push(record);bloodAngelsEnhancementGroups.set(key,group);
-}
-const bloodAngelsEnhancements=Object.fromEntries([...bloodAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
-const darkAngelsProfile=unit=>darkAngelsProfiles[unit.id]||darkAngelsProfiles[normalize(unit.title)];
-const darkAngelsLocal=darkAngels.units.filter(unit=>unit.status==='Current'&&darkAngelsProfile(unit)),darkAngelsLocalTitles=new Set(darkAngelsLocal.map(unit=>normalize(unit.title))),darkAngelsShared=spaceMarines.units.filter(unit=>unit.status==='Current'&&!darkAngelsLocalTitles.has(normalize(unit.title))&&darkAngelsProfile(unit));
-if(darkAngelsLocal.length!==16||darkAngelsShared.length!==84)throw new Error(`Dark Angels roster inventory: expected 16 local + 84 shared, got ${darkAngelsLocal.length} + ${darkAngelsShared.length}`);
-const darkAngelsUnits=Object.fromEntries([...darkAngelsLocal.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,darkAngelsConfig,darkAngelsProfiles)]),...darkAngelsShared.map(unit=>[normalize(unit.title),chapterUnitRecord(unit,darkAngelsConfig,darkAngelsProfiles,true)])]),darkAngelsEnhancementGroups=new Map();
-for(const enhancement of [...darkAngels.enhancements,...spaceMarines.enhancements.filter(item=>darkAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){const shared=darkAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment)),record={...enhancement,...resolveEnhancementOwner(enhancement,rosterCatalog(shared?'space-marines':'dark-angels'),shared?spaceMarinesContracts:darkAngelsContracts)},key=normalize(enhancement.title),group=darkAngelsEnhancementGroups.get(key)||[];group.push(record);darkAngelsEnhancementGroups.set(key,group);}
-const darkAngelsEnhancements=Object.fromEntries([...darkAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
-
-const normalizePointUnits=units=>Object.fromEntries(Object.entries(units).map(([key,unit])=>[key,unit.points?.length>1?{...unit,points:pointTierContract.normalizeTiers(unit.points)}:unit]));
-const rawCatalog={
-  'death guard':{units:dgUnits,enhancements:dgEnhancements,detachments:dgDetachments},
-  'adeptus mechanicus':{units:mechanicusUnits,enhancements:mechanicusEnhancements,detachments:mechanicusDetachments},
-  'tyranids':{units:tyranidsUnits,enhancements:tyranidsEnhancements,detachments:detachmentRecords(tyranids.detachments)},
-  't au empire':{units:tauUnits,enhancements:tauEnhancements,detachments:detachmentRecords(tau.detachments)},
-  'emperor s children':{units:emperorChildrenUnits,enhancements:emperorChildrenEnhancements,detachments:detachmentRecords(emperorChildren.detachments)},
-  'chaos space marines':{units:csmUnits,enhancements:csmEnhancements,detachments:detachmentRecords(csm.detachments)},
-  'space marines':{units:spaceMarinesUnits,enhancements:spaceMarinesEnhancements,detachments:detachmentRecords(spaceMarines.detachments)},
-  'blood angels':{units:bloodAngelsUnits,enhancements:bloodAngelsEnhancements,detachments:detachmentRecords([...bloodAngels.detachments,...bloodAngelsSharedDetachments])},
-  'dark angels':{units:darkAngelsUnits,enhancements:darkAngelsEnhancements,detachments:detachmentRecords([...darkAngels.detachments,...darkAngelsSharedDetachments])}
-};
-const catalog=Object.fromEntries(Object.entries(rawCatalog).map(([book,records])=>[book,{...records,units:normalizePointUnits(records.units)}]));
-export {catalog,rawCatalog};
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
-  console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(emperorChildrenUnits).length} Emperor's Children, ${Object.keys(csmUnits).length} Chaos Space Marines, ${Object.keys(spaceMarinesUnits).length} Space Marines, ${Object.keys(bloodAngelsUnits).length} Blood Angels and ${Object.keys(darkAngelsUnits).length} Dark Angels units.`);
+  const unitCounts=[...projections.values()].map(projection=>`${projection.units.length} ${projection.book.title}`);
+  console.log(`Points catalog: ${unitCounts.join(', ')} units.`);
 }

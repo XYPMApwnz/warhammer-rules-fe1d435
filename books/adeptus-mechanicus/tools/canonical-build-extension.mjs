@@ -4,8 +4,10 @@ import {createAdeptusMechanicusCanonicalModel} from './canonical-source-adapter.
 import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,serializeRosterCatalog} from '../../shared/tools/build-roster-catalog.mjs';
 import {createArmyBookTargetBuild} from '../../shared/tools/build-army-book-targets.mjs';
 import {renderUnitArt} from '../../shared/tools/render-unit-art.mjs';
+import {createEffectivePointsProjection} from '../../shared/tools/effective-points-projection.mjs';
+import ruleFactsApi from '../../shared/rule-facts.js';
 
-export async function buildCanonicalBook(context){
+export async function buildCanonicalBook(context,{projectionOnly=false}={}){
 const {root,repo,config,runtimeVersions}=context;
 const {factionRules,source,codex,codexDatasheets,pointsCatalog,unitImages,pointsByUnit,titleKey,slugKey,abilityText,enhancementsByTitle,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds}=createAdeptusMechanicusCanonicalModel(context);
 const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -158,6 +160,24 @@ const abilityKind=item=>{
   if(/^core$/i.test(item.title)||knownCoreTitles.has(coreBaseKey(item.title)))return 'core';
   return 'datasheet';
 };
+const decoratedTermIds=(value,unitId)=>[...decorate(value,unitId).matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]);
+const compileUnitRuleFacts=(unit,renderedTermIds=null)=>{
+  const sourceAbilities=[...unit.abilities],wargearAbilities=unit.wargearAbilities||[],directTermIds=[],textValues=[];
+  for(const item of sourceAbilities){const kind=abilityKind(item);if(kind==='core'&&/^core$/i.test(item.title))textValues.push(abilityText(item));else directTermIds.push(item.termId);if(!['core','faction'].includes(kind))textValues.push(item.openingText,item.text,...(item.options||[]).flatMap(option=>[option.title,option.text]));}
+  for(const item of wargearAbilities)textValues.push(item.openingText,item.text,...(item.options||[]).flatMap(option=>[option.title,option.text]));
+  textValues.push(...(Array.isArray(unit.composition)?[]:[unit.composition]),...(Array.isArray(unit.wargear)?unit.wargear:[unit.wargear]),...(unit.weapons||[]).map(item=>item.abilities));
+  const deadlyDemise=sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(abilityText(item)));
+  const abilityNames=sourceAbilities.flatMap(item=>/^core$/i.test(item.title)?abilityText(item).split(',').map(value=>value.trim().replace(/\.$/,'' )).filter(Boolean).map(value=>/^deadly demise\b/i.test(value)?'DEADLY DEMISE':value):[/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title]);
+  const gatedTermIds=new Set(wargearAbilities.map(item=>item.termId).filter(Boolean));
+  const termIds=[...new Set((renderedTermIds||[...directTermIds,...(unit.weapons||[]).map(item=>item.termId),...textValues.flatMap(value=>decoratedTermIds(value,unit.id))]).filter(id=>id&&!gatedTermIds.has(id)))];
+  const relations=relationGraphs.get(unit.id),mandatory=Object.values(relations).flat().some(relation=>relation.mandatory),canAttach=Object.values(relations).some(items=>items.length);
+  return {id:unit.id,unitId:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:unit.keywords,intrinsicKeywords:unit.keywords,abilities:[...new Set(abilityNames)],termIds,epic:unit.keywords.includes('Epic Hero'),deadlyDemise,attached:mandatory?true:canAttach?null:false,attachmentKnown:mandatory||!canAttach,formationRequired:mandatory,characterCount:unit.keywords.includes('Character')?1:0,twoCharacters:null,warlord:null,relations};
+};
+const compiledUnitRuleFacts=new Map(rules.datasheets.map(unit=>[unit.id,compileUnitRuleFacts(unit)]));
+const compiledUnitRuleProfiles=new Map([...compiledUnitRuleFacts].map(([id,facts])=>[id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(facts))]));
+const detachmentByTitle=new Map(allDetachments.map(item=>[titleKey(item.title),item]));
+const effectivePointsProjection=createEffectivePointsProjection({book:{id:config.id,title:config.title,parentBookId:null},units:rules.datasheets.map(unit=>{const publication=pointsByUnit.get(unit.title.toLowerCase());return{id:unit.id,title:unit.title,sourceBookId:config.id,publicationState:unit.status||'Current',points:publication?.points||[],paidWargear:publication?.wargear||[],ruleProfile:compiledUnitRuleProfiles.get(unit.id),publicationRecord:publication};}),detachments:allDetachments.map(item=>({id:item.id,title:item.title,sourceBookId:config.id,detachmentPoints:Number(String(item.dp||0).match(/\d+/)?.[0]||0),forceDisposition:item.disposition||'',publicationRecord:{title:item.title,detachmentPoints:item.dp,forceDisposition:item.disposition}})),enhancements:pointsCatalog.enhancements.map(item=>{const detachment=detachmentByTitle.get(titleKey(item.detachment));if(!detachment)throw new Error(`Adeptus Mechanicus: ${item.id} references unknown Detachment ${item.detachment}`);return{id:item.canonicalEnhancementId||item.id,sourceId:item.sourceId||null,ruleId:item.canonicalEnhancementId||item.id,legacyKey:item.legacyKey||null,detachmentId:item.canonicalDetachmentId||detachment.id,detachmentTitle:detachment.title,sourceBookId:config.id,title:item.title,value:Number(item.value),owner:item.owner||null,assignment:item.assignment||null,tags:item.tags||[],text:item.text||'',...(item.profile?{profile:item.profile}:{}),...(item.effect?{legacyEffect:item.effect}:{}),publicationRecord:item};})});
+if(projectionOnly)return {effectivePointsProjection};
 const abilityCard=(item,unit,wargearAbilityId='')=>`<article class="ability"${wargearAbilityId?` data-roster-wargear-ability-id="${esc(wargearAbilityId)}"`:''} data-source-field="abilities.${esc(slugKey(item.title))}"><h5 data-source-field="title"><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.openingText?`<p data-source-field="openingText">${decorate(item.openingText,unit.id)}</p>`:''}${(item.options||[]).map(option=>`<div class="ability-option" data-source-field="options.${esc(option.id)}"><h6>${esc(option.title)}</h6><p data-source-field="text">${decorate(option.text,unit.id)}</p></div>`).join('')}${item.text?`<p data-source-field="text">${decorate(item.text,unit.id)}</p>`:''}</article>`;
 const compactAbilities=(title,items,unit)=>items.length?`<div class="shared-ability-group" data-ability-class="${esc(slugKey(title))}"><h5>${title}</h5><div class="keyword-list shared-abilities">${items.map(item=>/^core$/i.test(item.title)?decorate(abilityText(item),unit.id):`<button class="term-button" data-term="${item.termId}" data-source-field="abilities.${esc(slugKey(item.title))}">${esc(item.title)}</button>`).join(' ')}</div></div>`:'';
 const composition=unit=>unit.compositionText
@@ -193,16 +213,9 @@ const unitCard=unit=>{
   const provenance=unit.sourcePages
     ?`<div class="source">${sourceLink(unit.sourcePages)}</div>${transcript(unit.sourcePages)}`
     :unit.source?.url?`<div class="source"><a class="source-link" href="${esc(unit.source.url)}">${esc(unit.source.label||'Pinned Codex transcription')}</a></div>`:'';
-  const sourceAbilities=[...unit.abilities];
-  const deadlyDemise=sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(abilityText(item)));
-  const abilityNames=sourceAbilities.flatMap(item=>{
-    if(/^core$/i.test(item.title))return abilityText(item).split(',').map(value=>value.trim().replace(/\.$/,'' )).filter(Boolean).map(value=>/^deadly demise\b/i.test(value)?'DEADLY DEMISE':value);
-    return [/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title];
-  });
   const gatedTermIds=new Set(wargearAbilities.map(item=>item.termId).filter(Boolean));
   const renderedTermIds=[...sections.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]).filter(id=>!gatedTermIds.has(id));
-  const relations=relationGraphs.get(unit.id),mandatory=Object.values(relations).flat().some(relation=>relation.mandatory),canAttach=Object.values(relations).some(items=>items.length);
-  const ruleFacts={id:unit.id,unitId:unit.id,slug,keywords:unit.keywords,intrinsicKeywords:unit.keywords,abilities:[...new Set(abilityNames)],termIds:[...new Set(renderedTermIds)],epic:unit.keywords.includes('Epic Hero'),deadlyDemise,attached:mandatory?true:canAttach?null:false,attachmentKnown:mandatory||!canAttach,formationRequired:mandatory,characterCount:unit.keywords.includes('Character')?1:0,twoCharacters:null,warlord:null,relations};
+  const ruleFacts=compileUnitRuleFacts(unit,renderedTermIds);
   const art=renderUnitArt({unit,unitImages,escape:esc});
   const artClass=art?(unitImages[unit.id]?.presentation?.mode==='background'?' has-unit-art-background':' has-unit-art'):'';
   return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}${artClass}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div>${art}<div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)}${points==='MULTIPLE COSTS'?'':' PTS'}`:'CODEX'}</div></div><div class="local-nav">${tabs}</div>${sections}${provenance}</article>`;
@@ -262,5 +275,7 @@ return {
     : `Built full Mechanicus project: ${allDetachments.length} detachments, ${rules.datasheets.length} datasheets, root PWA cache`
 };
 }
+
+export async function buildEffectivePointsProjection(context){return (await buildCanonicalBook(context,{projectionOnly:true})).effectivePointsProjection;}
 
 

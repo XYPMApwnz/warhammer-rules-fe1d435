@@ -6,16 +6,16 @@ export const CONTRACT_ORACLE_SCRIPTS=Object.freeze({
   SOURCE_LIFECYCLE:['tests/source-ingestion-contract-qa.mjs','tests/sm-authenticated-bsdata-argument-binding-qa.mjs'],
   SOURCE_ENROLLMENT:['tests/source-enrollment-qa.mjs'],
   CANONICAL_IDENTITY:['tests/canonical-join-architecture-qa.mjs','tests/authoritative-non-id-joins-qa.mjs','tests/persistent-child-identity-qa.mjs','tests/final-d4-canonical-ability-profile-qa.mjs'],
-  FACT_OWNERSHIP:['tests/final-architecture-ownership-qa.mjs','tests/glossary-output-ownership-qa.mjs','tests/generated-output-ownership-qa.mjs','tests/space-marines-related-rules-owner-qa.mjs','tests/tau-related-rules-owner-qa.mjs','tests/am-datasheet-source-ownership-qa.mjs','tests/roster-base-stat-ownership-qa.mjs','tests/roster-gameplay-projection-ownership-qa.mjs'],
-  EFFECTIVE_MODEL:['tests/effective-model-convergence-qa.mjs','tests/enhancement-text-ownership-qa.mjs','tests/roster-base-stat-ownership-qa.mjs','tests/roster-gameplay-projection-ownership-qa.mjs'],
+  FACT_OWNERSHIP:['tests/final-architecture-ownership-qa.mjs','tests/glossary-output-ownership-qa.mjs','tests/generated-output-ownership-qa.mjs','tests/space-marines-related-rules-owner-qa.mjs','tests/tau-related-rules-owner-qa.mjs','tests/am-datasheet-source-ownership-qa.mjs','tests/roster-base-stat-ownership-qa.mjs','tests/roster-gameplay-projection-ownership-qa.mjs','tests/derived-projection-ownership-qa.mjs'],
+  EFFECTIVE_MODEL:['tests/effective-model-convergence-qa.mjs','tests/enhancement-text-ownership-qa.mjs','tests/roster-base-stat-ownership-qa.mjs','tests/roster-gameplay-projection-ownership-qa.mjs','tests/derived-projection-ownership-qa.mjs'],
   DEPENDENCY_PRECEDENCE:['tests/effective-points-projection-qa.mjs'],
-  POINTS:['tests/effective-points-projection-qa.mjs'],
-  ENHANCEMENTS:['tests/enhancement-contract-qa.mjs','tests/canonical-join-architecture-qa.mjs','tests/authoritative-non-id-joins-qa.mjs','tests/enhancement-text-ownership-qa.mjs'],
+  POINTS:['tests/effective-points-projection-qa.mjs','tests/derived-projection-ownership-qa.mjs'],
+  ENHANCEMENTS:['tests/enhancement-contract-qa.mjs','tests/canonical-join-architecture-qa.mjs','tests/authoritative-non-id-joins-qa.mjs','tests/enhancement-text-ownership-qa.mjs','tests/derived-projection-ownership-qa.mjs'],
   STRATAGEMS:['tests/stratagem-architecture-qa.mjs'],
   RELATIONS:['tests/canonical-join-architecture-qa.mjs','tests/dependency-relation-overlay-qa.mjs'],
-  ROSTER:['tests/roster-fixtures-qa.mjs','tests/enhancement-text-ownership-qa.mjs','tests/roster-base-stat-ownership-qa.mjs','tests/roster-gameplay-projection-ownership-qa.mjs'],
+  ROSTER:['tests/roster-fixtures-qa.mjs','tests/enhancement-text-ownership-qa.mjs','tests/roster-base-stat-ownership-qa.mjs','tests/roster-gameplay-projection-ownership-qa.mjs','tests/derived-projection-ownership-qa.mjs'],
   EFFECTS:['tests/effect-contract-ownership-qa.mjs','tests/effect-provider-interpreter-equality-qa.mjs','tests/final-d4-canonical-ability-profile-qa.mjs','tests/roster-gameplay-projection-ownership-qa.mjs'],
-  GLOSSARY:['tests/glossary-output-ownership-qa.mjs','tests/glossary-editorial-contract-qa.mjs','tests/enhancement-text-ownership-qa.mjs'],
+  GLOSSARY:['tests/glossary-output-ownership-qa.mjs','tests/glossary-editorial-contract-qa.mjs','tests/enhancement-text-ownership-qa.mjs','tests/derived-projection-ownership-qa.mjs'],
   PUBLICATION_INVENTORY:['tests/publication-inventory-qa.mjs','tests/offline-mobile-routes-qa.mjs','tests/generated-output-ownership-qa.mjs','tests/rendered-output-qa.mjs'],
   GENERATED_OWNERSHIP:['tests/generated-output-ownership-qa.mjs','tests/effective-points-projection-qa.mjs','tests/glossary-output-ownership-qa.mjs']
 });
@@ -34,7 +34,14 @@ export const ASTRA_ATTACK_SCRIPTS=Object.freeze({
   NEW_ROSTER_STAT_COPY_ATTACK:'tests/roster-base-stat-ownership-qa.mjs',
   NEW_CANONICAL_STAT_DIRECTION_ATTACK:'tests/roster-base-stat-ownership-qa.mjs',
   NEW_WEAPON_ROSTER_COPY_ATTACK:'tests/roster-gameplay-projection-ownership-qa.mjs',
-  NEW_CANONICAL_WEAPON_DIRECTION_ATTACK:'tests/roster-gameplay-projection-ownership-qa.mjs'
+  NEW_CANONICAL_WEAPON_DIRECTION_ATTACK:'tests/roster-gameplay-projection-ownership-qa.mjs',
+  R1_ENHANCEMENT_ASSIGNMENT_COMPAT_POISON:'tests/derived-projection-ownership-qa.mjs',
+  R1_ENHANCEMENT_OWNER_COMPAT_POISON:'tests/derived-projection-ownership-qa.mjs',
+  R1_ENHANCEMENT_TAG_COMPAT_POISON:'tests/derived-projection-ownership-qa.mjs',
+  R1_AM_GLOSSARY_REFERENCE_TITLE_POISON:'tests/derived-projection-ownership-qa.mjs',
+  R1_DG_POPUP_STAT_POISON:'tests/derived-projection-ownership-qa.mjs',
+  R1_DG_POPUP_WEAPON_POISON:'tests/derived-projection-ownership-qa.mjs',
+  R1_ROSTER_DETACHMENT_TEXT_POISON:'tests/derived-projection-ownership-qa.mjs'
 });
 
 const diagnostic=result=>`${result.stdout||''}${result.stderr||''}`.trim();

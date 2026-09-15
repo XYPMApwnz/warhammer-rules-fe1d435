@@ -69,6 +69,7 @@ mutation('UNKNOWN_TARGET_MUTATION',set=>{const operation=set.contracts.flatMap(i
 mutation('DUPLICATE_EFFECT_MUTATION',set=>{set.contracts.push(clone(set.contracts[0]));},/duplicate scoped effect contract/);
 mutation('WRONG_DETACHMENT_MUTATION',set=>{set.contracts.find(item=>item.detachmentId).detachmentId='wrong-detachment';},/unknown Detachment/);
 mutation('WRONG_SELECTOR_MUTATION',set=>{set.contracts[0].selector.unitIds=['unit-unknown'];},/selector references unknown unit/);
+const staleChildMutation=clone(sets.get('space-marines')),staleChildBinding=staleChildMutation.childIdentities.find(item=>item.canonicalId==='unit-captain-wargear-ability-e950f63e04'),staleChildContract=staleChildMutation.contracts.find(item=>item.canonicalRecordId===staleChildBinding.canonicalId),staleChildId=staleChildBinding.referenceIds[0];staleChildContract.canonicalRecordId=staleChildId;staleChildContract.selector.selectedWargearAbilityIds=[staleChildId];assert.throws(()=>validateEffectContractsAgainstCatalog(staleChildMutation,catalogs.get('space-marines')),/must use canonical persistent child/,'STALE_PERSISTENT_CHILD_EFFECT_REFERENCE_MUTATION');
 
 const semantic=value=>JSON.stringify(value);
 const changedParameter=clone(first),changedOperation=changedParameter.contracts.flatMap(item=>item.clauses.flatMap(clause=>clause.operations)).find(item=>typeof item.parameters.delta==='number');changedOperation.parameters.delta=99;
@@ -91,4 +92,4 @@ assert.ok(unknownContract,'unknown conditional state contract');
 const runtimeScope={window:{WH_BOOK_ROSTER_CATALOG:{...am,effectContracts:[unknownContract]}}};vm.runInNewContext(read('books/shared/effect-contract-runtime.js'),runtimeScope);
 assert.match(read('books/shared/effect-contract-runtime.js'),/effect\.state='conditional';effect\.certainty='unknown'/,'unknown conditional state must not become active');
 
-console.log('Effect contract ownership QA: PASS (543 source contracts, 769 effective bindings, 10 operations, runtime factual maps removed, 13 adversarial controls).');
+console.log('Effect contract ownership QA: PASS (543 source contracts, 769 effective bindings, 10 operations, runtime factual maps removed, 14 adversarial controls).');

@@ -182,6 +182,7 @@ export function validateEffectContractsAgainstCatalog(input,catalog,{effectiveBo
   }
   const resolveChild=(contract,id,kind,sourceUnits)=>{
     const resolved=childReferences[kind].get(id);if(!resolved)throw new Error(`${contract.canonicalRecordId}: unknown ${kind} reference ${id}`);
+    if(resolved.binding&&id!==resolved.binding.canonicalId)throw new Error(`${contract.canonicalRecordId}: ${kind} reference ${id} must use canonical persistent child ${resolved.binding.canonicalId}`);
     if(sourceUnits.length&&!sourceUnits.includes(resolved.parentUnitId))throw new Error(`${contract.canonicalRecordId}: ${kind} reference ${id} belongs to wrong parent ${resolved.parentUnitId}`);
     return resolved;
   };

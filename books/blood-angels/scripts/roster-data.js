@@ -42379,7 +42379,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "confidence": "VERIFIED_FROZEN"
     },
     {
-      "canonicalRecordId": "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield",
+      "canonicalRecordId": "unit-ancient-in-terminator-armor-wargear-ability-dd3d05ee01",
       "sourceKind": "selected-wargear",
       "sourceBookId": "space-marines",
       "effectiveBookIds": [
@@ -42394,7 +42394,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-ancient-in-terminator-armor"
         ],
         "selectedWargearAbilityIds": [
-          "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield"
+          "unit-ancient-in-terminator-armor-wargear-ability-dd3d05ee01"
         ]
       },
       "clauses": [
@@ -42424,7 +42424,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "confidence": "SOURCE_LIMITED"
     },
     {
-      "canonicalRecordId": "unit-captain-wargear-ability-relic-shield",
+      "canonicalRecordId": "unit-captain-wargear-ability-e950f63e04",
       "sourceKind": "selected-wargear",
       "sourceBookId": "space-marines",
       "effectiveBookIds": [
@@ -42439,7 +42439,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-captain"
         ],
         "selectedWargearAbilityIds": [
-          "unit-captain-wargear-ability-relic-shield"
+          "unit-captain-wargear-ability-e950f63e04"
         ]
       },
       "clauses": [
@@ -42469,7 +42469,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "confidence": "SOURCE_LIMITED"
     },
     {
-      "canonicalRecordId": "unit-captain-with-jump-pack-wargear-ability-relic-shield",
+      "canonicalRecordId": "unit-captain-with-jump-pack-wargear-ability-e950f63e04",
       "sourceKind": "selected-wargear",
       "sourceBookId": "space-marines",
       "effectiveBookIds": [
@@ -42484,7 +42484,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-captain-with-jump-pack"
         ],
         "selectedWargearAbilityIds": [
-          "unit-captain-with-jump-pack-wargear-ability-relic-shield"
+          "unit-captain-with-jump-pack-wargear-ability-e950f63e04"
         ]
       },
       "clauses": [
@@ -42514,7 +42514,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "confidence": "SOURCE_LIMITED"
     },
     {
-      "canonicalRecordId": "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers",
+      "canonicalRecordId": "unit-centurion-assault-squad-wargear-ability-ca2e5f6883",
       "sourceKind": "selected-wargear",
       "sourceBookId": "space-marines",
       "effectiveBookIds": [
@@ -42529,7 +42529,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-centurion-assault-squad"
         ],
         "selectedWargearAbilityIds": [
-          "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers"
+          "unit-centurion-assault-squad-wargear-ability-ca2e5f6883"
         ]
       },
       "clauses": [
@@ -42557,7 +42557,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "confidence": "SOURCE_LIMITED"
     },
     {
-      "canonicalRecordId": "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield",
+      "canonicalRecordId": "unit-chaplain-in-terminator-armour-wargear-ability-e950f63e04",
       "sourceKind": "selected-wargear",
       "sourceBookId": "space-marines",
       "effectiveBookIds": [
@@ -42572,7 +42572,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-chaplain-in-terminator-armour"
         ],
         "selectedWargearAbilityIds": [
-          "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield"
+          "unit-chaplain-in-terminator-armour-wargear-ability-e950f63e04"
         ]
       },
       "clauses": [
@@ -42602,7 +42602,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "confidence": "SOURCE_LIMITED"
     },
     {
-      "canonicalRecordId": "unit-infiltrator-squad-wargear-ability-helix-gauntlet",
+      "canonicalRecordId": "unit-infiltrator-squad-wargear-ability-a3a027c4e3",
       "sourceKind": "selected-wargear",
       "sourceBookId": "space-marines",
       "effectiveBookIds": [
@@ -42617,7 +42617,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-infiltrator-squad"
         ],
         "selectedWargearAbilityIds": [
-          "unit-infiltrator-squad-wargear-ability-helix-gauntlet"
+          "unit-infiltrator-squad-wargear-ability-a3a027c4e3"
         ]
       },
       "clauses": [
@@ -42648,7 +42648,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "confidence": "SOURCE_LIMITED"
     },
     {
-      "canonicalRecordId": "unit-reiver-squad-wargear-ability-reiver-grav-chute",
+      "canonicalRecordId": "unit-reiver-squad-wargear-ability-51618d459f",
       "sourceKind": "selected-wargear",
       "sourceBookId": "space-marines",
       "effectiveBookIds": [
@@ -42663,7 +42663,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-reiver-squad"
         ],
         "selectedWargearAbilityIds": [
-          "unit-reiver-squad-wargear-ability-reiver-grav-chute"
+          "unit-reiver-squad-wargear-ability-51618d459f"
         ]
       },
       "clauses": [
@@ -42755,7 +42755,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "confidence": "SOURCE_LIMITED"
     },
     {
-      "canonicalRecordId": "unit-terminator-assault-squad-wargear-ability-storm-shield",
+      "canonicalRecordId": "unit-terminator-assault-squad-wargear-ability-7aab29187a",
       "sourceKind": "selected-wargear",
       "sourceBookId": "space-marines",
       "effectiveBookIds": [
@@ -42770,7 +42770,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-terminator-assault-squad"
         ],
         "selectedWargearAbilityIds": [
-          "unit-terminator-assault-squad-wargear-ability-storm-shield"
+          "unit-terminator-assault-squad-wargear-ability-7aab29187a"
         ]
       },
       "clauses": [

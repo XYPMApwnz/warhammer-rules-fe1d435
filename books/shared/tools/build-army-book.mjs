@@ -11,6 +11,7 @@ import {bindRowsToCanonicalIds,canonicalDisplayKey,canonicalSlug,canonicalizeRel
 import {effectiveEffectContracts,validateEffectContractSet,validateEffectContractsAgainstCatalog} from './effect-contract.mjs';
 import {buildEffectiveBook} from './build-effective-book.mjs';
 import {createEffectiveBookModel,EFFECTIVE_BOOK_MODEL_SCHEMA} from './effective-book-model.mjs';
+import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
 
 export async function buildCanonicalBook(context,{projectionOnly=false}={}){
 const {args,check,configPath,root,repo,readJson,config,runtimeVersions}=context;
@@ -19,7 +20,7 @@ if(config.effectiveModel){
   if(projectionOnly)return result;
   return finishCanonicalBuild(context,result.outputs,{normalizeLineEndings:result.normalizeLineEndings===true,summary:result.summary});
 }
-const glossaryTerms=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en.json'),'utf8')).terms;
+const coreFactProjection=createCoreFactProjection({repoRoot:repo});
 const bookMark=config.mark||config.title.split(/\s+/).map(word=>word[0]).join('').slice(0,4).toUpperCase();
 const validateCanonicalIds=(data,sourceConfig)=>{
   // Each canonical source owns unique definitions; dependency/local overlays remain separate.
@@ -50,7 +51,12 @@ const unique=(items,keyOf)=>{const seen=new Set();return items.filter(item=>{con
 const titleKey=value=>clean(value).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const sourceUnitId=value=>{const raw=String(value?.unitId||value?.canonicalId||value?.id||'');return raw?raw.startsWith('unit-')?raw:`unit-${raw}`:null;};
 const coreBaseKey=value=>{const normalized=titleKey(value).replace(/\s+(?:d\d+|\d+)$/,'').trim();return normalized.startsWith('anti ')?'anti':normalized;};
-const canonicalCoreAbilityTerms=new Map(Object.entries(glossaryTerms).filter(([id])=>id.startsWith('core-')).map(([id,term])=>[coreBaseKey(String(term.title?.en||'').replace(/^\[|\]$/g,'')),id]));
+const canonicalCoreAbilityTerms=new Map();
+for(const term of coreFactProjection.abilityIdentityTerms){
+  const key=coreBaseKey(String(term.title||'').replace(/^\[|\]$/g,''));
+  if(canonicalCoreAbilityTerms.has(key))throw new Error(`Ambiguous accepted Core ability label: ${term.title}`);
+  canonicalCoreAbilityTerms.set(key,term.id);
+}
 const unitInventory=layer=>[...(layer.datasheets||[]),...(layer.imperialArmour||[]),...(layer.legends||[])];
 const dependencyCodices=(config.dependencies||[]).map(id=>{
   const dependencyRoot=path.join(repo,'books',id),dependencyConfig=JSON.parse(fs.readFileSync(path.join(dependencyRoot,'book.config.json'),'utf8'));
@@ -244,12 +250,13 @@ const sourceAvailabilityMessage=item=>{
 };
 const sourceAwareText=item=>[clean(item?.text),sourceAvailabilityMessage(item)].filter(Boolean).join(' ');
 const sourceAvailabilityNote=item=>{const message=sourceAvailabilityMessage(item);return message?`<p class="source-availability source-warning" data-source-availability="${esc(item.sourceAvailability.missing)}">${esc(message)}</p>`:'';};
-function addTerm(title,summary,sectionId,kind='faction-term',unitId='',termScope=config.id){
-  const base=`${termScope}-${kind}-${slug(title)}`;let id=base,index=2;while(terms.has(id)&&terms.get(id).summary!==clean(summary))id=`${base}-${index++}`;
-  if(!terms.has(id))terms.set(id,{id,title:clean(title),summary:clean(summary)||`${clean(title)} appears in the ${config.title} reference.`,full:clean(summary),rule:sectionId,glossary:`glossary-${id}`,units:unitId?[unitId]:[]});
-  else if(unitId&&!terms.get(id).units.includes(unitId))terms.get(id).units.push(unitId);
+function addTermTo(target,title,summary,sectionId,kind='faction-term',unitId='',termScope=config.id){
+  const base=`${termScope}-${kind}-${slug(title)}`;let id=base,index=2;while(target.has(id)&&target.get(id).summary!==clean(summary))id=`${base}-${index++}`;
+  if(!target.has(id))target.set(id,{id,title:clean(title),summary:clean(summary)||`${clean(title)} appears in the ${config.title} reference.`,full:clean(summary),rule:sectionId,glossary:`glossary-${id}`,units:unitId?[unitId]:[]});
+  else if(unitId&&!target.get(id).units.includes(unitId))target.get(id).units.push(unitId);
   return id;
 }
+const addTerm=(...args)=>addTermTo(terms,...args);
 const detachmentRuleEntries=det=>{
   if(!det.rule)return [];
   const entries=[{rule:det.rule,anchor:`${det.id}-rule`,additional:false},...(det.rule.additionalRules||[]).map(rule=>({rule,anchor:`${det.id}-rule-${slug(rule.id||rule.title)}`,additional:true}))];
@@ -313,7 +320,7 @@ const resolvedUpdates=[...pack.updates.filter(item=>!resolvedArmyRules.some(rule
 const resolvedCoreRelatedRules=(()=>{if(!config.includeCoreStratagems)return'';const value=fs.readFileSync(path.join(repo,'books','core-rules','content','core-stratagems.related-rules.inc'),'utf8'),start=value.indexOf('<section class="related-detachment related-core"'),next=value.indexOf('<section class="related-detachment',start+1);if(start<0)throw new Error('Core Stratagems source is absent');return next>start?value.slice(start,next):value.slice(start);})();
 const relatedRulesByBook=Object.fromEntries([[config.id,relatedRules],...dependencyCodices.map(dependency=>[dependency.id,dependency.relatedRules])]);
 const unitSourceById=new Map(units.map(unit=>[unit.id,unit])),detachmentSourceById=new Map(detachments.map(item=>[item.id,item])),projectedUnitById=new Map(effectivePointsProjection.units.map(item=>[item.id,item])),projectedDetachmentById=new Map(effectivePointsProjection.detachments.map(item=>[item.id,item]));
-const effectiveModel=createEffectiveBookModel({
+let effectiveModel=createEffectiveBookModel({
   schema:EFFECTIVE_BOOK_MODEL_SCHEMA,
   book:{id:config.id,title:config.title,parentBookId:config.dependencies?.[0]||null,dependencies:(config.dependencies||[]).map(bookId=>({bookId,kind:'effective-book-dependency'}))},
   dependencies:(config.dependencies||[]).map(bookId=>({bookId,kind:'effective-book-dependency'})),
@@ -328,6 +335,7 @@ const effectiveModel=createEffectiveBookModel({
   ruleProfiles:unitRuleProfiles,
   rosterCatalog,
   rosterEnhancements,
+  glossary:[...terms.values()],
   presentation:{mode:'shared-structured'}
 });
 units=effectiveModel.units;
@@ -345,6 +353,26 @@ for(const dependency of dependencyCodices)dependency.relatedRules=effectiveModel
 rosterCatalog=createRosterCatalog({config,units:units.map(unit=>{const publication={...unit};delete publication.ruleFacts;return publication;}),detachments,relationGraphs,enhancementContracts:effectiveModel.rosterCatalog.enhancements,keywordGrants:relatedRules?.keywordGrants||[],effectContracts});
 unitById=indexCanonicalById(units,{label:`${config.id} effective relation unit`});
 presentationUnitByTitle=new Map(units.map(unit=>[titleKey(unit.title),unit]));
+const fixedCategoryOrder=['Epic Heroes','Characters','Battleline','Dedicated Transports','Monsters','Infantry'];
+const categoryLabel=category=>config.datasheetCategoryLabels?.[category]||category;
+const categoriesFor=(sourceUnits,prefix='')=>[...fixedCategoryOrder,...new Set(sourceUnits.map(unit=>categoryLabel(unit.category)).filter(category=>!fixedCategoryOrder.includes(category)&&category!=='Other'&&category!=='Warhammer Legends')),'Other','Warhammer Legends'].map(title=>({title,id:`datasheets-${prefix?`${prefix}-`:''}${slug(title)}`,units:sourceUnits.filter(unit=>title==='Warhammer Legends'?unit.publicationState==='Warhammer Legends':unit.publicationState!=='Warhammer Legends'&&categoryLabel(unit.category)===title)})).filter(group=>group.units.length);
+const groupedDependencyDatasheets=dependencyScope.render!==false&&dependencyScope.groupByBook===true;
+const datasheetLayers=groupedDependencyDatasheets?[{id:`datasheets-${config.id}`,title:config.title,kind:'publication-owned',units:units.filter(unit=>!unit.dependencyBook)},...dependencyCodices.map(dependency=>({id:`datasheets-${dependency.id}`,title:dependency.config.title,kind:'shared',units:units.filter(unit=>unit.dependencyBook===dependency.id)}))].map(layer=>({...layer,categories:categoriesFor(layer.units,layer.kind==='shared'?slug(layer.title):'')})):[];
+const categories=groupedDependencyDatasheets?datasheetLayers.flatMap(layer=>layer.categories):categoriesFor(units);
+const glossaryProjectionTerms=new Map([...terms].map(([id,term])=>[id,structuredClone(term)]));
+for(const det of detachments){
+  for(const item of det.enhancements||[]){
+    const explicit=enhancementContract(item,det),tags=explicit?.tags||item.tags||[];
+    if(enhancementOwnerRecord(item,det)&&!explicit)continue;
+    addTermTo(glossaryProjectionTerms,item.title,tags.includes('UPGRADE')?`UPGRADE. ${item.text}`:item.text,`detachment-${det.id}`,'enhancement','',det.dependencyBook||config.id);
+  }
+  for(const item of det.stratagems||[])addTermTo(glossaryProjectionTerms,item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem','',det.dependencyBook||config.id);
+  for(const {rule,anchor,additional} of detachmentRuleEntries(det))addTermTo(glossaryProjectionTerms,rule.title,sourceAwareText(rule),additional?anchor:`detachment-${det.id}`,'detachment-rule','',det.dependencyBook||config.id);
+}
+for(const unit of categories.flatMap(group=>group.units))for(const model of canonicalRosterModelsFor(unit).filter(model=>model.intrinsicKeywords?.length))addTermTo(glossaryProjectionTerms,model.title,`${model.title} only: ${model.intrinsicKeywords.join(', ')}.`,`${unit.id.replace(/^unit-/,'')}-keywords`,'model-keywords',unit.id,unit.dependencyBook||config.id);
+for(const item of effectiveModel.rules.armyRules)addTermTo(glossaryProjectionTerms,item.title,item.text,item.id,'army-rule','',item.sourceBook||config.id);
+const glossaryProjection=[...glossaryProjectionTerms].map(([id,item])=>({id,title:item.title,summary:item.summary,full:item.full,glossary:item.glossary,...(item.rule?{rule:item.rule}:{}),...(item.units.length?{units:item.units,datasheet:item.units[0],statline:item.units[0].replace(/^unit-/,'')+'-profile'}:{})}));
+effectiveModel=createEffectiveBookModel({...effectiveModel,glossary:glossaryProjection});
 const armyRules=effectiveModel.rules.armyRules,updates=effectiveModel.rules.updates,sharedCoreInc=effectiveModel.rules.coreRelatedRules;
 if(projectionOnly)return {effectivePointsProjection,effectiveBookModel:effectiveModel};
 
@@ -358,12 +386,6 @@ const reviewLabel=config.reviewEntry?manifest.gates?.reviewLabel:'';
 const heroReview=reviewLabel?`<div class="eyebrow">${esc(reviewLabel)}</div>`:'';
 const entryReview=reviewLabel?`<p><strong>${esc(reviewLabel)}</strong></p><p>${esc(manifest.gates.reason)}</p>`:'';
 const unitSourceState=unit=>verificationBuild&&!config.dedicatedMobile?`<div class="unit-source-state">${unit.dependencyBook?`<span>${esc(unit.dependencyTitle)} shared datasheet</span>`:''}<span>Datasheet structure · current 11e catalogue</span><span>${unit.pointsSource?`${esc(unit.pointsSource.label)} · checked ${esc(unit.pointsSource.verifiedAt)}`:'Points · catalogue snapshot'}</span>${unit.wargearSource?'<span>Wargear & composition · current 11e reference</span>':''}${unit.sourcePages?`<span>${unit.dependencyBook?`${esc(unit.dependencyTitle)} `:''}Official Faction Pack overlay · p. ${unit.sourcePages.join('–')}</span>`:''}</div>`:'';
-const fixedCategoryOrder=['Epic Heroes','Characters','Battleline','Dedicated Transports','Monsters','Infantry'];
-const categoryLabel=category=>config.datasheetCategoryLabels?.[category]||category;
-const categoriesFor=(sourceUnits,prefix='')=>[...fixedCategoryOrder,...new Set(sourceUnits.map(unit=>categoryLabel(unit.category)).filter(category=>!fixedCategoryOrder.includes(category)&&category!=='Other'&&category!=='Warhammer Legends')),'Other','Warhammer Legends'].map(title=>({title,id:`datasheets-${prefix?`${prefix}-`:''}${slug(title)}`,units:sourceUnits.filter(unit=>title==='Warhammer Legends'?unit.publicationState==='Warhammer Legends':unit.publicationState!=='Warhammer Legends'&&categoryLabel(unit.category)===title)})).filter(group=>group.units.length);
-const groupedDependencyDatasheets=dependencyScope.render!==false&&dependencyScope.groupByBook===true;
-const datasheetLayers=groupedDependencyDatasheets?[{id:`datasheets-${config.id}`,title:config.title,kind:'publication-owned',units:units.filter(unit=>!unit.dependencyBook)},...dependencyCodices.map(dependency=>({id:`datasheets-${dependency.id}`,title:dependency.config.title,kind:'shared',units:units.filter(unit=>unit.dependencyBook===dependency.id)}))].map(layer=>({...layer,categories:categoriesFor(layer.units,layer.kind==='shared'?slug(layer.title):'')})):[];
-const categories=groupedDependencyDatasheets?datasheetLayers.flatMap(layer=>layer.categories):categoriesFor(units);
 const categoryNav=(group,depth)=>navBranch(group.id,group.title,depth,group.units.map(unit=>navLeaf(unit.id,unit.title,depth+1)).join(''));
 const datasheetNav=groupedDependencyDatasheets?datasheetLayers.map(layer=>navBranch(layer.id,layer.title,2,layer.categories.map(group=>categoryNav(group,3)).join(''))).join(''):categories.map(group=>categoryNav(group,2)).join('');
 const detachmentNav=detachments.map(det=>navBranch(`detachment-${det.id}`,det.title,2,

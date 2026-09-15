@@ -6,11 +6,14 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {editorialReviewHash,validateEditorialContract} from '../glossary/tools/editorial-contract.mjs';
 import {validateGlossaryGraph} from '../glossary/tools/glossary-policies.mjs';
+import {createCanonicalBuildContext} from '../books/shared/tools/canonical-build-contract.mjs';
+import {buildCanonicalBook} from '../books/shared/tools/build-army-book.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const glossaryRoot=path.join(root,'glossary');
 const builderPath=path.join(glossaryRoot,'tools','build-glossary.mjs');
 const contextIds=['core-rules','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels','dark-angels'];
+const publicBookIds=contextIds.filter(id=>id!=='core-rules');
 const outputPaths=[
   path.join(glossaryRoot,'registry.en.json'),
   path.join(glossaryRoot,'aliases.en.json'),
@@ -24,8 +27,10 @@ assert.deepEqual(
   'context output directory must contain exactly the public generated contexts'
 );
 const expected=new Map(outputPaths.map(file=>[file,fs.readFileSync(file)]));
+const bookDataPaths=publicBookIds.map(id=>path.join(root,'books',id,'scripts','data.js'));
+const expectedBookData=new Map(bookDataPaths.map(file=>[file,fs.readFileSync(file)]));
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
-const restore=()=>{for(const [file,bytes] of expected){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);}};
+const restore=()=>{for(const [file,bytes] of [...expected,...expectedBookData]){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);}};
 const build=(...args)=>{
   const result=spawnSync(process.execPath,[builderPath,'--no-cache-write',...args],{cwd:root,encoding:'utf8'});
   assert.equal(result.status,0,result.stderr||result.stdout);
@@ -44,12 +49,49 @@ const probe=(label,change,args=[])=>{
   assertExpected(label);
   console.log(`PASS ${label}`);
 };
+const stable=value=>value instanceof Map?['Map',[...value].sort(([left],[right])=>left.localeCompare(right)).map(([key,item])=>[key,stable(item)])]:Array.isArray(value)?value.map(stable):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,stable(value[key])])):value;
+const factualProjection=async()=>{
+  const books={};
+  for(const id of publicBookIds){
+    const configPath=path.join(root,'books',id,'book.config.json'),context=createCanonicalBuildContext({configPath,args:[]});
+    const {effectiveBookModel:model}=await buildCanonicalBook(context,{projectionOnly:true});
+    books[id]={
+      units:model.units.map(unit=>({id:unit.id,ruleProfile:unit.ruleProfile,points:unit.points})),
+      detachments:model.detachments.map(item=>({id:item.id,detachmentPoints:item.detachmentPoints})),
+      glossary:model.glossary
+    };
+  }
+  return digest(Buffer.from(JSON.stringify(stable(books))));
+};
 
 const builderSource=fs.readFileSync(builderPath,'utf8');
 assert.doesNotMatch(builderSource,/existingRegistry|existingAliases|existingContexts/,'generated glossary feedback variables remain');
 assert.doesNotMatch(builderSource,/readJson\(path\.join\(glossaryRoot,'(?:registry|aliases)\.en\.json'/,'generated glossary registry/aliases remain inputs');
+assert.doesNotMatch(builderSource,/(?:readJson|readFileSync|loadWindow)[^\n]*books[^\n]*scripts[^\n]*data\.js/,'generated Army Book publication data remains a glossary factual input');
+assert.doesNotMatch(builderSource,/(?:readJson|readFileSync|loadWindow)[^\n]*(?:reader\.html|target-data\.js|roster-data\.js|mobile[\\/])/,'rendered Army Book output remains a glossary factual input');
+const sharedBuilderSource=fs.readFileSync(path.join(root,'books','shared','tools','build-army-book.mjs'),'utf8');
+const amAdapterSource=fs.readFileSync(path.join(root,'books','adeptus-mechanicus','tools','canonical-source-adapter.mjs'),'utf8');
+assert.doesNotMatch(sharedBuilderSource,/readFileSync\([^\n]*glossary[^\n]*registry\.en\.json/,'shared canonical/effective build still reads generated registry facts');
+assert.doesNotMatch(amAdapterSource,/globalGlossary|registry\.en\.json/,'Adeptus Mechanicus adapter still reads generated registry facts');
 
+const baselineProjection=await factualProjection();
 try{
+  restore();
+  for(const file of outputPaths)fs.unlinkSync(file);
+  assert.equal(await factualProjection(),baselineProjection,'generated glossary absence changed canonical/effective book facts');
+  console.log('PASS generated glossary absent canonical/effective build');
+
+  restore();
+  const poisonedRegistry=JSON.parse(expected.get(path.join(glossaryRoot,'registry.en.json')).toString('utf8'));
+  const deepStrike=poisonedRegistry.terms['core-deep-strike'];
+  delete poisonedRegistry.terms['core-deep-strike'];
+  poisonedRegistry.terms['core-deep-strike-poison']={...deepStrike,id:'core-deep-strike-poison',summary:{en:'D2_REGISTRY_SUMMARY_POISON'},definition:{en:'D2_REGISTRY_DEFINITION_POISON'}};
+  fs.writeFileSync(path.join(glossaryRoot,'registry.en.json'),JSON.stringify(poisonedRegistry,null,2));
+  assert.equal(await factualProjection(),baselineProjection,'generated registry identity/text poison changed canonical/effective book facts');
+  const points=spawnSync(process.execPath,[path.join(root,'roster-guides','build-points.mjs'),'--check'],{cwd:root,encoding:'utf8'});
+  assert.equal(points.status,0,points.stderr||points.stdout);
+  console.log('PASS generated registry identity, summary, definition, and count-preserving ID poison have zero upstream influence');
+
   probe('registry absent',()=>fs.unlinkSync(path.join(glossaryRoot,'registry.en.json')));
   probe('aliases absent',()=>fs.unlinkSync(path.join(glossaryRoot,'aliases.en.json')));
   probe('contexts absent',()=>contextIds.forEach(id=>fs.unlinkSync(path.join(glossaryRoot,'contexts',`${id}.json`))));
@@ -61,6 +103,25 @@ try{
     fs.writeFileSync(path.join(glossaryRoot,'generated','conflict-report.json'),JSON.stringify({fakeProvenance:true}));
     fs.writeFileSync(path.join(glossaryRoot,'generated','glossary.en.js'),'window.POISON=true;');
   });
+  restore();
+  for(const file of bookDataPaths)fs.unlinkSync(file);
+  build();
+  assertExpected('generated Army Book data absent glossary build');
+  console.log('PASS generated Army Book data absent glossary build');
+
+  restore();
+  for(const file of bookDataPaths)fs.writeFileSync(file,'window.DG_TERMS={"d2-count-preserving-poison":{"title":"D2","summary":"D2_BOOK_DEFINITION_POISON","full":"D2_BOOK_WEAPON_AND_TAG_POISON","tags":["D2_TAG"]}};\n');
+  build();
+  assertExpected('generated Army Book definition/weapon/tag poison');
+  console.log('PASS generated Army Book definition, weapon, and tag poison have zero glossary influence');
+
+  restore();
+  for(const file of [...outputPaths,...bookDataPaths])fs.unlinkSync(file);
+  assert.equal(await factualProjection(),baselineProjection,'both-side output absence changed canonical/effective book facts');
+  build();
+  assertExpected('both-side output absence rebuild');
+  console.log('PASS both generated sides absent rebuild');
+
   restore();
   build();
   assertExpected('first deterministic rebuild');

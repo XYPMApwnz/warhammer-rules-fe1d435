@@ -3,13 +3,14 @@ import {bindRowsToCanonicalIds,canonicalTargetsFromProse} from '../../shared/too
 import {effectiveEffectContracts,validateEffectContractSet} from '../../shared/tools/effect-contract.mjs';
 import {createEffectivePointsProjection} from '../../shared/tools/effective-points-projection.mjs';
 import ruleFactsApi from '../../shared/rule-facts.js';
+import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
 
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const slugKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
 export function createAdeptusMechanicusCanonicalModel(context){
   const {config,readJson}=context,sourcePaths=config.sources||{};
-  const required=['factionRules','sourceTranscript','codexDetachments','codexParity','codexDatasheets','codexWargear','points','officialMfm','unitImages','globalGlossary','manifest'];
+  const required=['factionRules','sourceTranscript','codexDetachments','codexParity','codexDatasheets','codexWargear','points','officialMfm','unitImages','manifest'];
   for(const key of required)if(!sourcePaths[key])throw new Error(`adeptus-mechanicus: sources.${key} is required`);
   const factionRules=readJson(sourcePaths.factionRules);
   const source=readJson(sourcePaths.sourceTranscript);
@@ -20,7 +21,7 @@ export function createAdeptusMechanicusCanonicalModel(context){
   const pointsCatalog=readJson(sourcePaths.points);
   const officialMfm=readJson(sourcePaths.officialMfm);
   const unitImages=readJson(sourcePaths.unitImages).units;
-  const globalGlossary=readJson(sourcePaths.globalGlossary).terms;
+  const coreFactProjection=createCoreFactProjection({repoRoot:context.repo});
   const manifest=readJson(sourcePaths.manifest);
 const boundParityDetachments=bindRowsToCanonicalIds(codexParity.detachments,codexSource.detachments,{label:'Adeptus Mechanicus Codex parity Detachment',rowId:item=>item.id||`detachment-${slugKey(item.title)}`});
 const parityByDetachmentId=new Map(boundParityDetachments.map(item=>[item.canonicalId,item]));
@@ -93,12 +94,12 @@ const allDetachments=[...rules.detachments,...codex.detachments].map(detachment=
   return {...detachment,dp:mfm.dp,disposition:mfm.disposition};
 }).sort((a,b)=>officialOrder.indexOf(a.id)-officialOrder.indexOf(b.id));
 const slugify=value=>String(value).toLowerCase().replaceAll('’','').replaceAll("'",'').replaceAll(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const canonicalCoreTerms=Object.values(globalGlossary).filter(term=>term.kind==='core-ability').map(term=>({
+const canonicalCoreTerms=coreFactProjection.coreAbilities.map(term=>({
   id:term.id,
-  title:term.title.en.replace(/^\[|\]$/g,''),
+  title:term.title.replace(/^\[|\]$/g,''),
   group:'Core abilities',
-  summary:term.summary.en,
-  full:term.definition.en,
+  summary:term.summary,
+  full:term.definition,
   aliases:term.aliases||[],
   fullRulePath:term.fullRulePath,
   unitIds:[]
@@ -146,8 +147,18 @@ for(const unit of rules.datasheets){
 }
 rules.glossary=glossaryTerms;
 rules.audit.glossaryTerms=glossaryTerms.length;
+const allDetachmentById=new Map(allDetachments.map(item=>[item.id,item]));
+const glossaryFacts={
+  runtimeTerms:structuredClone(glossaryTerms),
+  detachmentSources:[
+    {revision:factionRules.version||'Faction Pack v1.0',detachments:factionRules.detachments.map(item=>structuredClone(allDetachmentById.get(item.id)))},
+    {revision:'Codex carry-forward + Faction Pack v1.1',detachments:codexSource.detachments.map(item=>structuredClone(allDetachmentById.get(item.id)))}
+  ],
+  units:structuredClone(codexDatasheets.datasheets),
+  datasheetSource:structuredClone(codexDatasheets.source)
+};
 
-  return {factionRules,source,codex,codexDatasheets,pointsCatalog,officialMfm,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
+  return {factionRules,source,codex,codexDatasheets,pointsCatalog,officialMfm,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,glossaryFacts,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
 }
 
 const escapeRegExp=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -325,7 +336,8 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
     effectContractSet,
     effectContracts,
     effectivePointsProjection,
-    glossary:rules.glossary,
+    glossary:structuredClone(rules.glossary),
+    glossaryFacts:structuredClone(canonicalModel.glossaryFacts),
     sourceMetadata:{manifest,primary:rules.source,transcript:source.meta,codex:codex.source,datasheets:codexDatasheets.source,points:pointsCatalog.source,officialMfm:officialMfm.source||null},
     presentation:{unitImages,sourceTranscript:source,codexSource:codex.source,codexDatasheetsSource:codexDatasheets.source}
   };

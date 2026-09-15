@@ -1,11 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {recordText} from '../../books/core-rules/content/record-content.mjs';
+import {createCoreFactProjection,canonicalCoreRuleId,CORE_GLOSSARY_EXCLUDED_CODES} from '../../books/core-rules/content/core-fact-projection.mjs';
 import {writeCacheRevision} from '../../tools/cache-revision.mjs';
-import {createReaderAnchorValidator,isAutoPublishedRulePath} from './reader-path-contract.mjs';
+import {createCanonicalBuildContext} from '../../books/shared/tools/canonical-build-contract.mjs';
+import {buildCanonicalBook} from '../../books/shared/tools/build-army-book.mjs';
 import {loadEditorialContract} from './editorial-contract.mjs';
 import {applyDeterministicRelatedPolicies,buildKeywordIdentity,deriveKeywordCompatibilityAliases,derivePresentation,keywordRelationsFromEligibility,validateGlossaryGraph} from './glossary-policies.mjs';
 
@@ -13,7 +14,6 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..');
 const glossaryRoot=path.join(root,'glossary');
 const readJson=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const writeJson=(file,value)=>{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(value,null,2)+'\n');};
-const loadWindow=file=>{const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(file,'utf8'),sandbox,{filename:file});return sandbox.window;};
 const slug=value=>String(value).toLowerCase().replace(/[‘’']/g,'').replace(/\[[^\]]+\]/g,m=>m.slice(1,-1)).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const normalTitle=value=>slug(value).replace(/-+/g,'-');
 const clean=value=>String(value||'').replace(/\be\.g\./gi,match=>match[0][0]==='E'?'For example':'for example').replace(/\r/g,'').replace(/\n-\n/g,'-').replace(/[ \t]*\n[ \t]*/g,' ').replace(/([A-Za-z])\s+-\s+([A-Za-z])/g,'$1-$2').replace(/\s*▪\s*/g,'\n• ').replace(/[ \t]{2,}/g,' ').trim();
@@ -68,42 +68,36 @@ function weaponProfile(summary){
   return profile.Range&&profile.A&&(profile.BS||profile.WS)&&profile.S&&profile.AP&&profile.D?profile:null;
 }
 
+const publicBookIds=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels','dark-angels'];
+const effectiveBookModels=new Map();
+for(const id of publicBookIds){
+  const configPath=path.join(root,'books',id,'book.config.json');
+  const context=createCanonicalBuildContext({args:[],configPath,repo:root});
+  const {effectiveBookModel}=await buildCanonicalBook(context,{projectionOnly:true});
+  effectiveBookModels.set(id,effectiveBookModel);
+}
+const runtimeFromGlossary=glossary=>Object.fromEntries(glossary.map(term=>[term.id,{title:term.title,summary:term.summary,full:term.full,glossary:`glossary-${term.id}`,...(term.sectionId?{rule:term.sectionId}:{}),...(term.fullRulePath?{fullRulePath:term.fullRulePath}:{}),...(term.unitIds?.length?{units:term.unitIds,datasheet:term.unitIds[0],statline:`${term.unitIds[0].replace('unit-','')}-profile`}:{})}]));
+
 const dgSource=readJson(path.join(root,'books','death-guard','content','death-guard-rules.en.json'));
 const dgOfficialUpdates=readJson(path.join(root,'books','death-guard','content','official-update-ledger.en.json'));
 const dgUnitsById=new Map(dgSource.sections.filter(section=>section.kind==='unit').map(section=>[section.id,section]));
 const dgEnhancementById=new Map(dgSource.sections.flatMap(section=>(section.subsections||[]).flatMap(subsection=>(subsection.blocks||[]).filter(item=>item.type==='enhancement').map(item=>[item.id,item]))));
-const dgRuntime=loadWindow(path.join(root,'books','death-guard','scripts','data.js')).DG_TERMS;
-const amRuntime=loadWindow(path.join(root,'books','adeptus-mechanicus','scripts','data.js')).DG_TERMS;
-const amFaction=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-rules.en.json'));
-const amCodexDetachments=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-codex-detachments.en.json'));
-const amCodexParity=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-codex-parity.en.json'));
-const amParityByTitle=new Map(amCodexParity.detachments.map(item=>[item.title,item]));
-const amEffectiveCodexDetachments={...amCodexDetachments,detachments:amCodexDetachments.detachments.map(detachment=>{
-  const parity=amParityByTitle.get(detachment.title);
-  if(!parity)throw new Error(`Missing Adeptus Mechanicus Codex parity for ${detachment.title}`);
-  const enhancements=new Map(parity.enhancements.map(item=>[item.title,item.text]));
-  return {...detachment,rule:{...detachment.rule,text:parity.rule.text},enhancements:detachment.enhancements.map(item=>({...item,text:enhancements.get(item.title)||item.text}))};
-})};
-const amDatasheets=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-codex-datasheets.en.json'));
-const allGenericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:true})
-  .filter(entry=>entry.isDirectory())
-  .flatMap(entry=>{
-    const bookRoot=path.join(root,'books',entry.name),configFile=path.join(bookRoot,'book.config.json'),runtimeFile=path.join(bookRoot,'scripts','data.js');
-    if(!fs.existsSync(configFile)||!fs.existsSync(runtimeFile))return[];
-    const config=readJson(configFile),packFile=path.join(bookRoot,config.sources?.factionPack||'');
-    if(!config.sources?.relatedRules||!fs.existsSync(packFile))return[];
-    return [{id:config.id,title:config.title,root:bookRoot,config,runtime:loadWindow(runtimeFile).DG_TERMS,pack:readJson(packFile)}];
-  });
+const dgModel=effectiveBookModels.get('death-guard'),dgRuntime=dgModel.runtime;
+const amModel=effectiveBookModels.get('adeptus-mechanicus'),amRuntime=runtimeFromGlossary(amModel.glossary);
+const amDatasheets={datasheets:amModel.glossaryFacts.units,source:amModel.glossaryFacts.datasheetSource};
+const allGenericArmyBooks=publicBookIds.filter(id=>!['death-guard','adeptus-mechanicus'].includes(id)).map(id=>{
+  const bookRoot=path.join(root,'books',id),config=readJson(path.join(bookRoot,'book.config.json')),model=effectiveBookModels.get(id),packFile=path.join(bookRoot,config.sources.factionPack);
+  return {id,title:config.title,root:bookRoot,config,model,runtime:Object.fromEntries(model.glossary.map(term=>[term.id,term])),pack:readJson(packFile)};
+});
 // Registration publishes source-backed runtime concepts, not arbitrary reader targets.
 // Dependency owners must be registered before their overlay contexts.
 const reverseBookAdapters=process.argv.includes('--reverse-book-adapters');
 const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels','dark-angels'].includes(book.id)).sort((a,b)=>
   (a.config.dependencies?.length||0)-(b.config.dependencies?.length||0)||(reverseBookAdapters?b.id.localeCompare(a.id):a.id.localeCompare(b.id))
 );
-const coreData=loadWindow(path.join(root,'books','core-rules','content','core-rules.en.js')).CORE_RULES;
+const coreFactProjection=createCoreFactProjection({repoRoot:root});
+const {coreData,coreSource,coreDigital,coreRules,coreByTitle,coreIdByCode,digitalCoreId,digitalTitle,coreSectionByNumber}=coreFactProjection;
 const coreCurated=coreData.terms;
-const coreSource=loadWindow(path.join(root,'books','core-rules','content','core-rules.source.en.js')).CORE_PDF_SOURCE;
-const coreDigital=readJson(path.join(root,'books','core-rules','content','core-rules.digital-11e.json'));
 const resolutions=readJson(path.join(glossaryRoot,'resolutions.en.json'));
 const keywordLinks=readJson(path.join(glossaryRoot,'keyword-links.en.json'));
 const coreQuickReferences=readJson(path.join(glossaryRoot,'core-quick-reference.en.json'));
@@ -148,26 +142,8 @@ function addContext(bookId,localId,termId,record={},extra={}){
   contexts[bookId][localId]={termId,navigation:navigationOf(record),...extra};
 }
 
-function coreId(rule){
-  if(rule.code.startsWith('24.'))return `core-${slug(rule.title)}`;
-  return `core-rule-${rule.code.replace('.','-')}-${slug(rule.title)}`;
-}
-
-const coreRules=[];
-for(const [sectionId,rules] of Object.entries(coreSource.rules))for(const rule of rules)coreRules.push({...rule,sectionId});
-const coreByTitle=new Map(coreRules.map(rule=>[normalTitle(rule.title),rule]));
-const coreIdByCode=new Map(coreRules.map(rule=>[rule.code,coreId(rule)]));
-const digitalCanonicalIds={
-  '05.04.04':'core-destroyed',
-  '09.02.03':'core-reinforcements-step',
-  '15.08':'core-stratagem-fire-overwatch'
-};
-const digitalCoreId=rule=>digitalCanonicalIds[rule.code]||coreIdByCode.get(rule.code)||`core-rule-${rule.code.replaceAll('.','-')}-${slug(rule.title)}`;
-const glossaryExcludedCodes=new Set(['03.03.01']);
-const digitalTitleOverrides={'24.37.01':'Torrent Restrictions'};
-const digitalTitle=rule=>digitalTitleOverrides[rule.code]||rule.title.replace(/^\d+\.\s*/, '');
-const coreSections=[coreData.introduction,...coreData.groups.flatMap(group=>group.sections)];
-const coreSectionByNumber=new Map(coreSections.filter(section=>section.number).map(section=>[section.number.padStart(2,'0'),section.id]));
+const coreId=canonicalCoreRuleId;
+const glossaryExcludedCodes=CORE_GLOSSARY_EXCLUDED_CODES;
 
 for(const rule of coreRules){
   const id=coreId(rule);
@@ -393,8 +369,7 @@ function addMechanicusDetachments(source,revision){
   }
 }
 
-addMechanicusDetachments(amFaction,amFaction.version||'Faction Pack v1.0');
-addMechanicusDetachments(amEffectiveCodexDetachments,'Codex carry-forward + Faction Pack v1.1');
+for(const source of amModel.glossaryFacts.detachmentSources)addMechanicusDetachments(source,source.revision);
 
 for(const datasheet of amDatasheets.datasheets||[]){
   const id=`adeptus-mechanicus-unit-${slug(datasheet.title)}`;
@@ -534,7 +509,6 @@ for(const term of registry.values()){
   term.mentions=[...new Set((term.mentions||[]).map(value=>aliases[value]||value).filter(value=>registry.has(value)))];
 }
 
-const hasAnchor=createReaderAnchorValidator(root,fs);
 for(const rule of coreDigital.records){
   if(glossaryExcludedCodes.has(rule.code))continue;
   const section=coreSectionByNumber.get(rule.code.slice(0,2));
@@ -703,13 +677,15 @@ for(const term of registry.values()){
   term.presentation=derivePresentation(term,{contextOnly:contextOnlyTermIds.has(term.id)});
 }
 
+const dgPublishedRuleIds=new Set([
+  ...dgModel.units.map(unit=>unit.id),
+  ...dgModel.detachments.map(detachment=>`${detachment.id.replace(/^detachment-/,'')}-rule`)
+]);
 for(const [bookId,records] of Object.entries(contexts))for(const record of Object.values(records)){
   const rule=record.navigation?.rule;
   if(!rule)continue;
-  const candidate=bookId==='death-guard'?`books/death-guard/reader.html#${rule}`:bookId==='adeptus-mechanicus'?`books/adeptus-mechanicus/index.html#${rule}`:'';
-  if(candidate&&isAutoPublishedRulePath(root,candidate,fs))record.navigation.fullRulePath=candidate;
+  if(bookId==='death-guard'&&dgPublishedRuleIds.has(rule))record.navigation.fullRulePath=`books/death-guard/reader.html#${rule}`;
 }
-for(const term of registry.values())if(term.fullRulePath&&!hasAnchor(term.fullRulePath))throw new Error(`Broken fullRulePath for ${term.id}: ${term.fullRulePath}`);
 const stableRecordOrder=(a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b));
 const aliasCandidates=[...titleIndex.entries()].filter(([,ids])=>new Set(ids).size>1).map(([normalizedTitle,ids])=>({normalizedTitle,termIds:[...new Set(ids)].sort(),status:'review-required'})).sort(stableRecordOrder);
 const duplicateIndex=new Map();

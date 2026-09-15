@@ -6791,9 +6791,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "detachmentId": "elegant-brutes",
       "sourceBookId": "emperors-children",
       "legacyKey": "enhancement-frenzied-ferocity",
-      "canonicalEnhancementId": "enhancement-frenzied-ferocity-upgrade",
-      "canonicalDetachmentId": "elegant-brutes",
-      "sourceLimited": true
+      "canonicalEnhancementId": "enhancement-frenzied-ferocity",
+      "canonicalDetachmentId": "elegant-brutes"
     },
     {
       "title": "Euphoric Crown",
@@ -7594,9 +7593,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "detachmentId": "spectacle-of-slaughter",
       "sourceBookId": "emperors-children",
       "legacyKey": "enhancement-beguiling-grotesquerie",
-      "canonicalEnhancementId": "enhancement-beguiling-grotesquerie-upgrade",
-      "canonicalDetachmentId": "spectacle-of-slaughter",
-      "sourceLimited": true
+      "canonicalEnhancementId": "enhancement-beguiling-grotesquerie",
+      "canonicalDetachmentId": "spectacle-of-slaughter"
     }
   ],
   "effectContracts": [

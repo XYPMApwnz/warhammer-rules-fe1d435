@@ -117,6 +117,15 @@ for(const [label,change] of [
 const multiEnhancement=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:'ec-helper-multiple-enhancements',detachmentIds:['carnival-of-excess','frenzied-host'],factionPrefix:'Chaos - ',units:[{datasheetId:'unit-lord-exultant',instanceId:'parsed-unit-1',enhancementIds:['enhancement-dark-blessings','enhancement-euphoric-crown']}]}),multiParsed=ecSandbox.WHRosterParser.parse(multiEnhancement.record.sourceText);
 assert.deepEqual(Array.from(multiParsed.enhancements,item=>item.name),['Dark Blessings','Euphoric Crown']);
 assert.equal(multiEnhancement.totalPoints,120,'multiple Enhancement costs must come from canonical identities');
+for(const [id,detachmentId,datasheetId,quantity,points] of [
+  ['enhancement-frenzied-ferocity','elegant-brutes','unit-chaos-terminators',5,15],
+  ['enhancement-beguiling-grotesquerie','spectacle-of-slaughter','unit-flawless-blades',3,15],
+]){
+  const upgrade=createRosterFixture({catalog:ecCatalog,pointsCatalog:ecPoints,id:`ec-helper-${id}`,detachmentId,factionPrefix:'Chaos - ',units:[{datasheetId,instanceId:'parsed-unit-1',quantity,enhancementId:id}]});
+  assert.equal(upgrade.units[0].enhancement.id,id,`${id}: canonical Upgrade identity`);
+  assert.equal(upgrade.units[0].enhancement.points,points,`${id}: accepted Upgrade points`);
+  assert.equal(ecSandbox.WHRosterParser.parse(upgrade.record.sourceText).enhancements[0].ownerStatus,'resolved',`${id}: normal roster text must resolve its owner`);
+}
 
 const tyrSandbox=vm.createContext({console,window:{},globalThis:null,addEventListener(){}});tyrSandbox.globalThis=tyrSandbox;tyrSandbox.window=tyrSandbox;
 for(const file of ['books/tyranids/scripts/roster-data.js','roster-guides/points-data.js','books/shared/roster-parser.js','books/shared/effect-contract-runtime.js','books/tyranids/scripts/roster-filter.js'])vm.runInContext(fs.readFileSync(path.join(root,file),'utf8'),tyrSandbox,{filename:file});

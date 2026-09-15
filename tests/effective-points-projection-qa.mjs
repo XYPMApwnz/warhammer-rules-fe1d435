@@ -86,6 +86,21 @@ function assertSupplementControls(projections){
   assertInheritedEnhancementCoverage(da,sm);
 }
 
+function assertEmperorsChildrenUpgradeIdentities(projections,catalog){
+  const projection=projections.get('emperors-children'),published=catalog['emperor s children'];
+  for(const [id,title] of [
+    ['enhancement-frenzied-ferocity','frenzied ferocity'],
+    ['enhancement-beguiling-grotesquerie','beguiling grotesquerie'],
+    ['enhancement-eager-patrons','eager patrons'],
+  ]){
+    const canonical=projection.enhancements.find(item=>item.id===id);
+    assert.ok(canonical,`emperors-children: missing canonical Upgrade ${id}`);
+    assert.equal(canonical.assignment?.maxOwners,3,`emperors-children: ${id} repeatable assignment`);
+    assert.ok(canonical.tags.includes('UPGRADE'),`emperors-children: ${id} Upgrade tag`);
+    assert.equal(published.enhancements[title]?.canonicalEnhancementId,id,`emperors-children: ${id} canonical points lookup`);
+  }
+}
+
 function assertCanonicalPointAuthority(projections){
   for(const [bookId,projection] of projections){
     const single=projection.units.find(unit=>unit.points.length===1&&Array.isArray(unit.publicationRecord?.points));
@@ -129,9 +144,10 @@ assert.equal(JSON.stringify(first.catalog),JSON.stringify(second.catalog),'point
 assert.deepEqual(pointsApi.createPointsCatalogFromProjections(new Map([...projections].reverse())).catalog,catalog,'projection construction order changed points output');
 assert.deepEqual(JSON.parse(JSON.stringify(catalog)),published.catalog,'effective projection changed published points semantics');
 assert.equal(published.source,`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`,'points-data.js is not byte-current');
-assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'dfb174869c4a69807c0e3ad1100869858984c041267b1dfacf30dfc46706935e');
+assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'ddb06864c3e86fc4b8eae4308f360d1cfd782824423ce2cfda81c0228c03d5eb');
 assertProjectionCatalogIdentity(projections,catalog);
 assertSupplementControls(projections);
+assertEmperorsChildrenUpgradeIdentities(projections,catalog);
 assertCanonicalPointAuthority(projections);
 
 const unitRecords=[...projections.values()].reduce((sum,item)=>sum+item.units.length,0);
@@ -139,7 +155,7 @@ const pointTiers=[...projections.values()].reduce((sum,item)=>sum+item.units.red
 const enhancementRecords=[...projections.values()].reduce((sum,item)=>sum+item.enhancements.length,0);
 const enhancementLookupKeys=Object.values(catalog).reduce((sum,item)=>sum+Object.keys(item.enhancements).length,0);
 const detachmentRecords=[...projections.values()].reduce((sum,item)=>sum+item.detachments.length,0);
-assert.deepEqual({books:projections.size,unitRecords,pointTiers,enhancementRecords,enhancementLookupKeys,detachmentRecords},{books:9,unitRecords:540,pointTiers:946,enhancementRecords:474,enhancementLookupKeys:533,detachmentRecords:134});
+assert.deepEqual({books:projections.size,unitRecords,pointTiers,enhancementRecords,enhancementLookupKeys,detachmentRecords},{books:9,unitRecords:540,pointTiers:946,enhancementRecords:474,enhancementLookupKeys:535,detachmentRecords:134});
 
 const base=clone(projections.get('space-marines'));
 const recreate=mutate=>{const value=clone(base);mutate(value);return projectionApi.createEffectivePointsProjection(value);};

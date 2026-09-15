@@ -1,6 +1,656 @@
 {
   "schema": "wh40k-effect-contracts/v1",
   "bookId": "space-marines",
+  "childIdentities": [
+    {
+      "parentUnitId": "unit-ancient-in-terminator-armor",
+      "kind": "wargear-ability",
+      "sourceChildId": "ff00-af01-4169-de2a",
+      "canonicalId": "unit-ancient-in-terminator-armor-wargear-ability-dd3d05ee01",
+      "legacyIds": [
+        "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield"
+      ],
+      "semanticFamilyIds": [
+        "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield"
+      ],
+      "referenceIds": [
+        "unit-ancient-in-terminator-armor-wargear-ability-terminator-storm-shield"
+      ]
+    },
+    {
+      "parentUnitId": "unit-assault-intercessor-squad",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-assault-intercessor-squad-profile-08f1080123",
+      "legacyIds": [
+        "unit-assault-intercessor-squad-profile-plasma-pistol-supercharge-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-assault-intercessor-squad",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-assault-intercessor-squad-profile-d02e622c84",
+      "legacyIds": [
+        "unit-assault-intercessor-squad-profile-plasma-pistol-standard-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-assault-intercessors-with-jump-packs",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-assault-intercessors-with-jump-packs-profile-08f1080123",
+      "legacyIds": [
+        "unit-assault-intercessors-with-jump-packs-profile-plasma-pistol-supercharge-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-assault-intercessors-with-jump-packs",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-assault-intercessors-with-jump-packs-profile-d02e622c84",
+      "legacyIds": [
+        "unit-assault-intercessors-with-jump-packs-profile-plasma-pistol-standard-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-astraeus",
+      "kind": "profile",
+      "sourceChildId": "88ed-cb52-5134-d404",
+      "canonicalId": "unit-astraeus-profile-67c3429bb7",
+      "legacyIds": [
+        "unit-astraeus-profile-plasma-eradicator-standard-ranged-5"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-astraeus",
+      "kind": "profile",
+      "sourceChildId": "fc19-a1ee-33c5-91e0",
+      "canonicalId": "unit-astraeus-profile-c36b6ff22e",
+      "legacyIds": [
+        "unit-astraeus-profile-plasma-eradicator-supercharge-ranged-6"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-bladeguard-veteran-squad",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-bladeguard-veteran-squad-profile-08f1080123",
+      "legacyIds": [
+        "unit-bladeguard-veteran-squad-profile-plasma-pistol-supercharge-ranged-4"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-bladeguard-veteran-squad",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-bladeguard-veteran-squad-profile-d02e622c84",
+      "legacyIds": [
+        "unit-bladeguard-veteran-squad-profile-plasma-pistol-standard-ranged-5"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-captain",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-captain-profile-08f1080123",
+      "legacyIds": [
+        "unit-captain-profile-plasma-pistol-supercharge-ranged-8"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-captain",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-captain-profile-d02e622c84",
+      "legacyIds": [
+        "unit-captain-profile-plasma-pistol-standard-ranged-9"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-captain",
+      "kind": "wargear-ability",
+      "sourceChildId": "d54c-ae42-9d78-71df",
+      "canonicalId": "unit-captain-wargear-ability-e950f63e04",
+      "legacyIds": [
+        "unit-captain-wargear-ability-relic-shield"
+      ],
+      "semanticFamilyIds": [
+        "unit-captain-wargear-ability-relic-shield"
+      ],
+      "referenceIds": [
+        "unit-captain-wargear-ability-relic-shield"
+      ]
+    },
+    {
+      "parentUnitId": "unit-captain-with-jump-pack",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-captain-with-jump-pack-profile-08f1080123",
+      "legacyIds": [
+        "unit-captain-with-jump-pack-profile-plasma-pistol-supercharge-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-captain-with-jump-pack",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-captain-with-jump-pack-profile-d02e622c84",
+      "legacyIds": [
+        "unit-captain-with-jump-pack-profile-plasma-pistol-standard-ranged-4"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-captain-with-jump-pack",
+      "kind": "wargear-ability",
+      "sourceChildId": "d54c-ae42-9d78-71df",
+      "canonicalId": "unit-captain-with-jump-pack-wargear-ability-e950f63e04",
+      "legacyIds": [
+        "unit-captain-with-jump-pack-wargear-ability-relic-shield"
+      ],
+      "semanticFamilyIds": [
+        "unit-captain-with-jump-pack-wargear-ability-relic-shield"
+      ],
+      "referenceIds": [
+        "unit-captain-with-jump-pack-wargear-ability-relic-shield"
+      ]
+    },
+    {
+      "parentUnitId": "unit-centurion-assault-squad",
+      "kind": "wargear-ability",
+      "sourceChildId": "8f13-1a35-b240-3db9",
+      "canonicalId": "unit-centurion-assault-squad-wargear-ability-ca2e5f6883",
+      "legacyIds": [
+        "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers"
+      ],
+      "semanticFamilyIds": [
+        "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers"
+      ],
+      "referenceIds": [
+        "unit-centurion-assault-squad-wargear-ability-centurion-assault-launchers"
+      ]
+    },
+    {
+      "parentUnitId": "unit-chaplain-in-terminator-armour",
+      "kind": "wargear-ability",
+      "sourceChildId": "d54c-ae42-9d78-71df",
+      "canonicalId": "unit-chaplain-in-terminator-armour-wargear-ability-e950f63e04",
+      "legacyIds": [
+        "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield"
+      ],
+      "semanticFamilyIds": [
+        "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield"
+      ],
+      "referenceIds": [
+        "unit-chaplain-in-terminator-armour-wargear-ability-relic-shield"
+      ]
+    },
+    {
+      "parentUnitId": "unit-chaplain-with-jump-pack",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-chaplain-with-jump-pack-profile-08f1080123",
+      "legacyIds": [
+        "unit-chaplain-with-jump-pack-profile-plasma-pistol-supercharge-ranged-6"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-chaplain-with-jump-pack",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-chaplain-with-jump-pack-profile-d02e622c84",
+      "legacyIds": [
+        "unit-chaplain-with-jump-pack-profile-plasma-pistol-standard-ranged-7"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-devastator-squad",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-devastator-squad-profile-08f1080123",
+      "legacyIds": [
+        "unit-devastator-squad-profile-plasma-pistol-supercharge-ranged-14"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-devastator-squad",
+      "kind": "profile",
+      "sourceChildId": "2d27-a709-86e6-ee88",
+      "canonicalId": "unit-devastator-squad-profile-34448b0b0f",
+      "legacyIds": [
+        "unit-devastator-squad-profile-plasma-cannon-supercharge-ranged-9"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-devastator-squad",
+      "kind": "profile",
+      "sourceChildId": "c903-8cbf-c0eb-edf3",
+      "canonicalId": "unit-devastator-squad-profile-77dd772646",
+      "legacyIds": [
+        "unit-devastator-squad-profile-plasma-cannon-standard-ranged-8"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-devastator-squad",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-devastator-squad-profile-d02e622c84",
+      "legacyIds": [
+        "unit-devastator-squad-profile-plasma-pistol-standard-ranged-15"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-dreadnought",
+      "kind": "profile",
+      "sourceChildId": "bf7c-5e35-19a1-d23f",
+      "canonicalId": "unit-dreadnought-profile-90ae45be73",
+      "legacyIds": [
+        "unit-dreadnought-profile-heavy-plasma-cannon-standard-ranged-10"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-dreadnought",
+      "kind": "profile",
+      "sourceChildId": "a906-4a15-497b-1126",
+      "canonicalId": "unit-dreadnought-profile-ef9ba8af9f",
+      "legacyIds": [
+        "unit-dreadnought-profile-heavy-plasma-cannon-ranged-11"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-hellblaster-squad",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-hellblaster-squad-profile-08f1080123",
+      "legacyIds": [
+        "unit-hellblaster-squad-profile-plasma-pistol-supercharge-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-hellblaster-squad",
+      "kind": "profile",
+      "sourceChildId": "a039-cb1b-3837-ba8b",
+      "canonicalId": "unit-hellblaster-squad-profile-3c2b454332",
+      "legacyIds": [
+        "unit-hellblaster-squad-profile-plasma-incinerator-supercharge-ranged-6"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-hellblaster-squad",
+      "kind": "profile",
+      "sourceChildId": "261b-f672-2999-265f",
+      "canonicalId": "unit-hellblaster-squad-profile-5b1d4f267f",
+      "legacyIds": [
+        "unit-hellblaster-squad-profile-plasma-incinerator-standard-ranged-5"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-hellblaster-squad",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-hellblaster-squad-profile-d02e622c84",
+      "legacyIds": [
+        "unit-hellblaster-squad-profile-plasma-pistol-standard-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-inceptor-squad",
+      "kind": "profile",
+      "sourceChildId": "98fc-ec81-28d0-6001",
+      "canonicalId": "unit-inceptor-squad-profile-94b795ddda",
+      "legacyIds": [
+        "unit-inceptor-squad-profile-plasma-exterminators-standard-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-inceptor-squad",
+      "kind": "profile",
+      "sourceChildId": "470f-f223-b33d-a1b0",
+      "canonicalId": "unit-inceptor-squad-profile-babc18b0b0",
+      "legacyIds": [
+        "unit-inceptor-squad-profile-plasma-exterminators-supercharge-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-infiltrator-squad",
+      "kind": "wargear-ability",
+      "sourceChildId": "cd5b-809e-22e9-f34d",
+      "canonicalId": "unit-infiltrator-squad-wargear-ability-a3a027c4e3",
+      "legacyIds": [
+        "unit-infiltrator-squad-wargear-ability-helix-gauntlet"
+      ],
+      "semanticFamilyIds": [
+        "unit-infiltrator-squad-wargear-ability-helix-gauntlet"
+      ],
+      "referenceIds": [
+        "unit-infiltrator-squad-wargear-ability-helix-gauntlet"
+      ]
+    },
+    {
+      "parentUnitId": "unit-intercessor-squad",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-intercessor-squad-profile-08f1080123",
+      "legacyIds": [
+        "unit-intercessor-squad-profile-plasma-pistol-supercharge-ranged-6"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-intercessor-squad",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-intercessor-squad-profile-d02e622c84",
+      "legacyIds": [
+        "unit-intercessor-squad-profile-plasma-pistol-standard-ranged-7"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-lieutenant",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-lieutenant-profile-08f1080123",
+      "legacyIds": [
+        "unit-lieutenant-profile-plasma-pistol-supercharge-ranged-7"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-lieutenant",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-lieutenant-profile-d02e622c84",
+      "legacyIds": [
+        "unit-lieutenant-profile-plasma-pistol-standard-ranged-8"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-redemptor-dreadnought",
+      "kind": "profile",
+      "sourceChildId": "e54-149a-9924-afe",
+      "canonicalId": "unit-redemptor-dreadnought-profile-0b243e1d7c",
+      "legacyIds": [
+        "unit-redemptor-dreadnought-profile-macro-plasma-incinerator-standard-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-redemptor-dreadnought",
+      "kind": "profile",
+      "sourceChildId": "256a-8119-50f8-259",
+      "canonicalId": "unit-redemptor-dreadnought-profile-b03a49fe36",
+      "legacyIds": [
+        "unit-redemptor-dreadnought-profile-macro-plasma-incinerator-supercharge-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-reiver-squad",
+      "kind": "wargear-ability",
+      "sourceChildId": "d035-b128-7039-4b37",
+      "canonicalId": "unit-reiver-squad-wargear-ability-51618d459f",
+      "legacyIds": [
+        "unit-reiver-squad-wargear-ability-reiver-grav-chute-2"
+      ],
+      "semanticFamilyIds": [
+        "unit-reiver-squad-wargear-ability-reiver-grav-chute"
+      ],
+      "referenceIds": [
+        "unit-reiver-squad-wargear-ability-reiver-grav-chute"
+      ]
+    },
+    {
+      "parentUnitId": "unit-repulsor-executioner",
+      "kind": "profile",
+      "sourceChildId": "e54-149a-9924-afe",
+      "canonicalId": "unit-repulsor-executioner-profile-0b243e1d7c",
+      "legacyIds": [
+        "unit-repulsor-executioner-profile-macro-plasma-incinerator-standard-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-repulsor-executioner",
+      "kind": "profile",
+      "sourceChildId": "256a-8119-50f8-259",
+      "canonicalId": "unit-repulsor-executioner-profile-b03a49fe36",
+      "legacyIds": [
+        "unit-repulsor-executioner-profile-macro-plasma-incinerator-supercharge-ranged-4"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-stormraven-gunship",
+      "kind": "profile",
+      "sourceChildId": "fa29-4109-9b58-bfd1",
+      "canonicalId": "unit-stormraven-gunship-profile-516d01741e",
+      "legacyIds": [
+        "unit-stormraven-gunship-profile-twin-heavy-plasma-cannon-standard-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-stormraven-gunship",
+      "kind": "profile",
+      "sourceChildId": "359b-684e-a4-1da5",
+      "canonicalId": "unit-stormraven-gunship-profile-9d488abab4",
+      "legacyIds": [
+        "unit-stormraven-gunship-profile-twin-heavy-plasma-cannon-supercharge-ranged-4"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-tactical-squad",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-tactical-squad-profile-08f1080123",
+      "legacyIds": [
+        "unit-tactical-squad-profile-plasma-pistol-supercharge-ranged-6"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-tactical-squad",
+      "kind": "profile",
+      "sourceChildId": "d269-b979-c324-17a3",
+      "canonicalId": "unit-tactical-squad-profile-1e3f9b192c",
+      "legacyIds": [
+        "unit-tactical-squad-profile-plasma-gun-supercharge-ranged-17"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-tactical-squad",
+      "kind": "profile",
+      "sourceChildId": "2d27-a709-86e6-ee88",
+      "canonicalId": "unit-tactical-squad-profile-34448b0b0f",
+      "legacyIds": [
+        "unit-tactical-squad-profile-plasma-cannon-supercharge-ranged-25"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-tactical-squad",
+      "kind": "profile",
+      "sourceChildId": "c903-8cbf-c0eb-edf3",
+      "canonicalId": "unit-tactical-squad-profile-77dd772646",
+      "legacyIds": [
+        "unit-tactical-squad-profile-plasma-cannon-standard-ranged-24"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-tactical-squad",
+      "kind": "profile",
+      "sourceChildId": "6981-dd4b-abd7-7555",
+      "canonicalId": "unit-tactical-squad-profile-8dbc185d71",
+      "legacyIds": [
+        "unit-tactical-squad-profile-plasma-gun-standard-ranged-16"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-tactical-squad",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-tactical-squad-profile-d02e622c84",
+      "legacyIds": [
+        "unit-tactical-squad-profile-plasma-pistol-standard-ranged-7"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-terminator-assault-squad",
+      "kind": "wargear-ability",
+      "sourceChildId": "946f-e7a9-7d82-a425",
+      "canonicalId": "unit-terminator-assault-squad-wargear-ability-7aab29187a",
+      "legacyIds": [
+        "unit-terminator-assault-squad-wargear-ability-storm-shield"
+      ],
+      "semanticFamilyIds": [
+        "unit-terminator-assault-squad-wargear-ability-storm-shield"
+      ],
+      "referenceIds": [
+        "unit-terminator-assault-squad-wargear-ability-storm-shield"
+      ]
+    },
+    {
+      "parentUnitId": "unit-vanguard-veteran-squad-with-jump-packs",
+      "kind": "profile",
+      "sourceChildId": "4a80-2594-8839-c0bf",
+      "canonicalId": "unit-vanguard-veteran-squad-with-jump-packs-profile-08f1080123",
+      "legacyIds": [
+        "unit-vanguard-veteran-squad-with-jump-packs-profile-plasma-pistol-supercharge-ranged"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-vanguard-veteran-squad-with-jump-packs",
+      "kind": "profile",
+      "sourceChildId": "5edb-fb23-55e8-8415",
+      "canonicalId": "unit-vanguard-veteran-squad-with-jump-packs-profile-d02e622c84",
+      "legacyIds": [
+        "unit-vanguard-veteran-squad-with-jump-packs-profile-plasma-pistol-standard-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    }
+  ],
   "contracts": [
     {
       "canonicalRecordId": "space-marines-ability-unto-the-anvil",

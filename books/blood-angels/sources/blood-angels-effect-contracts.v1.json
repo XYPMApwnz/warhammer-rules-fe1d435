@@ -1,6 +1,20 @@
 {
   "schema": "wh40k-effect-contracts/v1",
   "bookId": "blood-angels",
+  "childIdentities": [
+    {
+      "parentUnitId": "unit-sanguinary-guard",
+      "kind": "wargear-ability",
+      "sourceChildId": "a344-31d1-3cec-1aa4",
+      "canonicalId": "unit-sanguinary-guard-wargear-ability-0a0377fd66",
+      "legacyIds": [
+        "unit-sanguinary-guard-wargear-ability-sanguinary-banner"
+      ],
+      "semanticFamilyIds": [
+        "unit-sanguinary-guard-wargear-ability-0a0377fd66"
+      ]
+    }
+  ],
   "contracts": [
     {
       "canonicalRecordId": "blood-angels-ability-mass-of-doom",

@@ -282,7 +282,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "d5af57cf1e79b0b038133e84e58de334fea852d0",
-      "acceptedHash": "35d9a309d0d350d702e37903c022131c02444f79461f4a3db46ae25916275319",
+      "acceptedHash": "226cd8d7de85d2bf97dbc03b5a5def1f6cc80ed3d1032c94ee24b33ba2d7a60a",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -298,7 +298,7 @@
         {
           "path": "books/blood-angels/content/blood-angels-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "1c7bb534f53e1b648b5787464a9fb15e733413763be38f6600416139fad149c8"
+          "sha256": "a77614bb76e7e253a38c3181f252b8d3bc870809280801eca2468a9c5f2d556a"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -309,7 +309,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "8b9a90712487a816df59fb80849bbb0687a6cd221da3f4ee8bd7c7c6b949e6c6",
+      "acceptedHash": "ef09c2d91c5214ea08069fb67315694c0e1d120861bee058173a7b9d1aac7248",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -320,7 +320,7 @@
         {
           "path": "books/blood-angels/sources/blood-angels-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "8b9a90712487a816df59fb80849bbb0687a6cd221da3f4ee8bd7c7c6b949e6c6"
+          "sha256": "ef09c2d91c5214ea08069fb67315694c0e1d120861bee058173a7b9d1aac7248"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
@@ -564,7 +564,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "b9e4ea58f43bc55139cabfa0b571a036d2ee906273cf33be878f13bba671bae4",
+      "acceptedHash": "d0da2e7e13b265635ae61e2233f5ac65bb1fe66d469653430d248a65046ea063",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -580,7 +580,7 @@
         {
           "path": "books/dark-angels/content/dark-angels-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "8cb82a8dec3706a3f2ed33bb9a0343b9673dc8b04424fa9da8ea64f2216e423b"
+          "sha256": "0347a3e52af5a2fb976e4691e2a0b027ad436bd2243fceceb227fc0fabfa2c6e"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -591,7 +591,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "3c9874fa980860f8a4036089d63789f15852ca9891141d970a673788c1216084",
+      "acceptedHash": "9f1a67d527016497fc9fbbe875e628d87bcaaecd6d310b0714a3f0964f7fb4f2",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -602,7 +602,7 @@
         {
           "path": "books/dark-angels/sources/dark-angels-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "3c9874fa980860f8a4036089d63789f15852ca9891141d970a673788c1216084"
+          "sha256": "9f1a67d527016497fc9fbbe875e628d87bcaaecd6d310b0714a3f0964f7fb4f2"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
@@ -924,7 +924,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "800655d211b2be2c79b9434698918b4ab83a57041a1aa7245692e27f6c37e9ee",
+      "acceptedHash": "8023a884ea59de08545dc5546c2ffc02e0c66b03c67065be41eca33c8b3145b0",
       "lastChecked": "2026-08-08",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -940,7 +940,7 @@
         {
           "path": "books/emperors-children/content/emperors-children-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "3b1560b091d8022e6f2bfa0fc225770dfade3663eb5664d72bcfbbaf74d70d6b"
+          "sha256": "40e6df0628327379c15ba10026a5dab115a490d37100f4c84d40efca6cbb3966"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -995,7 +995,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "c7a85ca74a1a99fffda1b4e08b61988d336702220c96bddf5f382b81c505cbdc",
+      "acceptedHash": "1ba14f7d14762bfbdde75dd4f62546298427485168c9faf7f33e0361e587ce6f",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -1006,7 +1006,7 @@
         {
           "path": "books/emperors-children/sources/emperors-children-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "c7a85ca74a1a99fffda1b4e08b61988d336702220c96bddf5f382b81c505cbdc"
+          "sha256": "1ba14f7d14762bfbdde75dd4f62546298427485168c9faf7f33e0361e587ce6f"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
@@ -1258,7 +1258,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "d324bf796dbebf1e87ffd67c27182c86a20a3caa0fd39ed62f1db1ea830f314c",
+      "acceptedHash": "79ace372551a94d19cbf2b0702f90bdac891702b216eba2f5214870fadef38ca",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -1274,7 +1274,7 @@
         {
           "path": "books/space-marines/content/space-marines-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "2893fd448af30270d7954fcbdda9f42a25cd419e1db7de1a6e34dce54966c4a3"
+          "sha256": "6d3879e2d0ee6f0ce72f86ead2763743fcf621282376db86bcc1126c6270d08a"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -1285,7 +1285,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "2ece6e9002671958f4f8056507976ba8d2b828115ecaedbe9da8ddd010bdc853",
+      "acceptedHash": "4f53f16f5af4fcbfa6bb57c304475ba09cbfd7da1bce5b7c0bbca664c8f8236e",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -1296,7 +1296,7 @@
         {
           "path": "books/space-marines/sources/space-marines-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "2ece6e9002671958f4f8056507976ba8d2b828115ecaedbe9da8ddd010bdc853"
+          "sha256": "4f53f16f5af4fcbfa6bb57c304475ba09cbfd7da1bce5b7c0bbca664c8f8236e"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
@@ -1361,7 +1361,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "v1",
-      "acceptedHash": "eb4dfa4aab8a9aacaf73565d6fdd49d07e694a49bc37449dcdafab771ce37a56",
+      "acceptedHash": "3ec345c925b2c94f615bda283b39baaac3934dbf80cece9ddf50a9ba4a56f866",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -1372,7 +1372,7 @@
         {
           "path": "books/space-marines/sources/space-marines-related-rules-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "eb4dfa4aab8a9aacaf73565d6fdd49d07e694a49bc37449dcdafab771ce37a56"
+          "sha256": "3ec345c925b2c94f615bda283b39baaac3934dbf80cece9ddf50a9ba4a56f866"
         }
       ],
       "notes": "Enrolled factual owner for enhancement-owner-contracts, upgrade-contracts."
@@ -1427,7 +1427,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "00640d2611ba0ce807010cd85462f484e1cc487ea0a057506d649a87b90d2e73",
+      "acceptedHash": "e383ae1870012498e7103543401c884e6fceb096d2555835437119f123c868a6",
       "lastChecked": "2026-07-30",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -1443,7 +1443,7 @@
         {
           "path": "books/tau-empire/content/tau-empire-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "3028ba89f10a1e5bb5515d44ac81971cbeffd6c85926838a48404d5fd70a463e"
+          "sha256": "e4ae1563ebdba4c9583cd0e8196195e0b439c5ead0621b808b9d9ce44b92f80a"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -1520,7 +1520,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "576cebdbaf85c7d559b2b7eca6d2222d6574ed2c8a7211b92d1c1ec16696ec9f",
+      "acceptedHash": "efcdf5ffa4588c0093e2ae054a572694df97a3ab4060d9ed7f9deffbb25a1754",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -1531,7 +1531,7 @@
         {
           "path": "books/tau-empire/sources/tau-empire-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "576cebdbaf85c7d559b2b7eca6d2222d6574ed2c8a7211b92d1c1ec16696ec9f"
+          "sha256": "efcdf5ffa4588c0093e2ae054a572694df97a3ab4060d9ed7f9deffbb25a1754"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
@@ -1618,7 +1618,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "v1",
-      "acceptedHash": "f69186c60fdb330da810eb48a2c01c7d006bdb097fdf62ae48a6dbdd40fcb6a0",
+      "acceptedHash": "f713db1edebacd433e377f0e61f19b8808c467cb77f4c35e1b7f410f65f52999",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -1629,7 +1629,7 @@
         {
           "path": "books/tau-empire/sources/tau-empire-related-rules-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "f69186c60fdb330da810eb48a2c01c7d006bdb097fdf62ae48a6dbdd40fcb6a0"
+          "sha256": "f713db1edebacd433e377f0e61f19b8808c467cb77f4c35e1b7f410f65f52999"
         }
       ],
       "notes": "Enrolled factual owner for related-rule-contracts, enhancement-ownership."

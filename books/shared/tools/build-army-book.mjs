@@ -8,7 +8,7 @@ import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
 import {createCanonicalBuildContext,finishCanonicalBuild} from './canonical-build-contract.mjs';
 import {createEffectivePointsProjection,resolveEffectiveEnhancementContractId,resolveEffectiveEnhancementIdentity} from './effective-points-projection.mjs';
 import {bindRowsToCanonicalIds,canonicalDisplayKey,canonicalSlug,canonicalizeRelationTargets,indexCanonicalById,mergeCanonicalById,mergeExactPointEnhancement,resolveArmyRuleBindings,resolvePointEnhancement} from './canonical-join-contract.mjs';
-import {effectiveEffectContracts,validateEffectContractSet,validateEffectContractsAgainstCatalog} from './effect-contract.mjs';
+import {applyCanonicalChildIdentityContracts,effectiveEffectContracts,validateEffectContractSet,validateEffectContractsAgainstCatalog} from './effect-contract.mjs';
 import {buildEffectiveBook} from './build-effective-book.mjs';
 import {createEffectiveBookModel,EFFECTIVE_BOOK_MODEL_SCHEMA} from './effective-book-model.mjs';
 import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
@@ -129,6 +129,8 @@ let units=[...mergedUnits.values()].map(unit=>{
   const official=officialByUnitId.get(unit.id);
   return official?{...unit,sourcePages:official.sourcePages,provenance:official.provenance,sourceLayer:unit.sourceLayer==='codex'?'faction-pack':unit.sourceLayer}:unit;
 });
+const effectiveEffectContractSets=[effectContractSet,...dependencyCodices.map(item=>item.effectContracts)];
+units=applyCanonicalChildIdentityContracts(units,effectiveEffectContractSets);
 const relationUnits=unique([...units,...dependencyUnits],unit=>unit.id);
 let unitById=indexCanonicalById(relationUnits,{label:`${config.id} relation unit`});
 let presentationUnitByTitle=new Map(relationUnits.map(unit=>[titleKey(unit.title),unit]));
@@ -295,9 +297,9 @@ for(const item of canonicalRosterEnhancements){
   for(const effectiveId of new Set(effectiveIds)){const key=`${item.detachmentId}\0${effectiveId}`;if(canonicalRosterEnhancementByEffectiveId.has(key)&&canonicalRosterEnhancementByEffectiveId.get(key)!==item)throw new Error(`${config.id}: duplicate effective roster Enhancement source ${qualified}`);canonicalRosterEnhancementByEffectiveId.set(key,item);}
 }
 let rosterEnhancements=Object.fromEntries(projectionEnhancementSources.map(({det,item,contract,ownerRecord})=>{const dependencyRecord=Boolean(det.dependencyBook),sourceId=dependencyRecord?item.sourceId:null,facts=dependencyRecord?enhancementDependencyFacts(item):{},record={title:item.title,text:item.text,value:ownerRecord?ownerRecord.points:item.value,detachment:det.title,tags:contract?.tags||item.tags||[],...(sourceId?{sourceId}:{}),...(item.profile?{profile:item.profile}:{}),...facts,owner:contract?.owner||facts.owner||null,assignment:contract?.assignment||facts.assignment||null},configuredExactIdentity=Boolean(config.rosterCatalog?.exactEnhancementIds),builtInExactIdentity=['chaos-space-marines','space-marines','dark-angels','blood-angels'].includes(config.id),exactRecord={...record,ruleId:enhancementRuleId(item,det),detachmentId:det.id};return configuredExactIdentity?[titleKey(item.title),exactRecord]:builtInExactIdentity?[enhancementRuleId(item,det),exactRecord]:[titleKey(item.title),record];}));
-let effectContracts=effectiveEffectContracts([effectContractSet,...dependencyCodices.map(item=>item.effectContracts)],config.id);
+let effectContracts=effectiveEffectContracts(effectiveEffectContractSets,config.id);
 let rosterCatalog=createRosterCatalog({config,units,detachments,relationGraphs,legacyEnhancements:rosterEnhancements,enhancementContracts:canonicalRosterEnhancements,keywordGrants:relatedRules?.keywordGrants||[],effectContracts});
-validateEffectContractsAgainstCatalog(effectContractSet,rosterCatalog);
+for(const contractSet of effectiveEffectContractSets)validateEffectContractsAgainstCatalog(contractSet,rosterCatalog,{effectiveBookId:config.id});
 const unitPointsPublication=unit=>{if(!unit.dependencyBook)return pointsById.get(unit.id);const dependency=dependencyById.get(unit.dependencyBook),inherited=dependency?.pointsById.get(unit.id),override=dependencyPointOverrides[unit.id];return override?{...inherited,...override}:inherited;};
 const effectiveUnitById=indexCanonicalById(units,{label:`${config.id} effective unit`}),pointOrderedUnits=[...(points.units||[]),...dependencyCodices.flatMap(dependency=>dependency.points.units||[])].map(publication=>effectiveUnitById.get(publication.id)).filter((unit,index,items)=>unit&&items.indexOf(unit)===index);
 if(pointOrderedUnits.length!==units.length)throw new Error(`${config.id}: effective points unit ordering did not cover the effective unit inventory`);

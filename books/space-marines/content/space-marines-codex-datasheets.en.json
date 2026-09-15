@@ -76,7 +76,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -87,7 +88,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Heavy Bolt Pistol",
@@ -427,7 +429,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -438,7 +441,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Astartes Chainsword",
@@ -645,7 +649,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -656,7 +661,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Power fist",
@@ -755,7 +761,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Rapid Fire 1"
+          "abilities": "Rapid Fire 1",
+          "sourceChildId": "6981-dd4b-abd7-7555"
         },
         {
           "name": "➤ Plasma gun - supercharge",
@@ -766,7 +773,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Rapid Fire 1, Hazardous"
+          "abilities": "Rapid Fire 1, Hazardous",
+          "sourceChildId": "d269-b979-c324-17a3"
         },
         {
           "name": "Grav-gun",
@@ -843,7 +851,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Blast, Heavy"
+          "abilities": "Blast, Heavy",
+          "sourceChildId": "c903-8cbf-c0eb-edf3"
         },
         {
           "name": "➤ Plasma cannon - supercharge",
@@ -854,7 +863,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Blast, Heavy, Hazardous"
+          "abilities": "Blast, Heavy, Hazardous",
+          "sourceChildId": "2d27-a709-86e6-ee88"
         },
         {
           "name": "Grav-cannon",
@@ -1177,7 +1187,8 @@
       "wargearAbilities": [
         {
           "title": "Terminator Storm Shield",
-          "text": "The bearer has a Wounds characteristic of 6."
+          "text": "The bearer has a Wounds characteristic of 6.",
+          "sourceChildId": "ff00-af01-4169-de2a"
         }
       ],
       "keywords": [
@@ -1658,7 +1669,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -1669,7 +1681,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         }
       ],
       "abilities": [
@@ -1693,7 +1706,8 @@
       "wargearAbilities": [
         {
           "title": "Relic Shield",
-          "text": "Add 1 to the bearer's Wounds characteristic."
+          "text": "Add 1 to the bearer's Wounds characteristic.",
+          "sourceChildId": "d54c-ae42-9d78-71df"
         }
       ],
       "keywords": [
@@ -2214,7 +2228,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -2225,7 +2240,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Astartes Chainsword",
@@ -2297,7 +2313,8 @@
       "wargearAbilities": [
         {
           "title": "Relic Shield",
-          "text": "Add 1 to the bearer's Wounds characteristic."
+          "text": "Add 1 to the bearer's Wounds characteristic.",
+          "sourceChildId": "d54c-ae42-9d78-71df"
         }
       ],
       "keywords": [
@@ -2525,7 +2542,8 @@
       "wargearAbilities": [
         {
           "title": "Relic Shield",
-          "text": "Add 1 to the bearer's Wounds characteristic."
+          "text": "Add 1 to the bearer's Wounds characteristic.",
+          "sourceChildId": "d54c-ae42-9d78-71df"
         }
       ],
       "keywords": [
@@ -2764,7 +2782,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -2775,7 +2794,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Boltgun",
@@ -3516,7 +3536,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -3527,7 +3548,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Master-crafted bolter",
@@ -7197,7 +7219,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -7208,7 +7231,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Heavy Bolt Pistol",
@@ -7397,7 +7421,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -7408,7 +7433,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         }
       ],
       "abilities": [
@@ -7554,7 +7580,8 @@
       "wargearAbilities": [
         {
           "title": "Centurion Assault Launchers",
-          "text": "The bearer has the Grenades keyword."
+          "text": "The bearer has the Grenades keyword.",
+          "sourceChildId": "8f13-1a35-b240-3db9"
         }
       ],
       "keywords": [
@@ -8168,7 +8195,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Blast, Heavy"
+          "abilities": "Blast, Heavy",
+          "sourceChildId": "c903-8cbf-c0eb-edf3"
         },
         {
           "name": "➤ Plasma cannon - supercharge",
@@ -8179,7 +8207,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Blast, Heavy, Hazardous"
+          "abilities": "Blast, Heavy, Hazardous",
+          "sourceChildId": "2d27-a709-86e6-ee88"
         },
         {
           "name": "➤ Missile Launcher - Frag",
@@ -8234,7 +8263,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -8245,7 +8275,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Power fist",
@@ -8799,7 +8830,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -8810,7 +8842,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Close combat weapon",
@@ -8832,7 +8865,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Assault, Heavy"
+          "abilities": "Assault, Heavy",
+          "sourceChildId": "261b-f672-2999-265f"
         },
         {
           "name": "➤ Plasma Incinerator - Supercharge",
@@ -8843,7 +8877,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Assault, Heavy, Hazardous"
+          "abilities": "Assault, Heavy, Hazardous",
+          "sourceChildId": "a039-cb1b-3837-ba8b"
         }
       ],
       "abilities": [
@@ -8959,7 +8994,8 @@
           "s": "7",
           "ap": "-2",
           "d": "2",
-          "abilities": "Assault, Pistol, Twin-linked"
+          "abilities": "Assault, Pistol, Twin-linked",
+          "sourceChildId": "98fc-ec81-28d0-6001"
         },
         {
           "name": "➤ Plasma Exterminators - Supercharge",
@@ -8970,7 +9006,8 @@
           "s": "8",
           "ap": "-3",
           "d": "3",
-          "abilities": "Assault, Pistol, Hazardous, Twin-linked"
+          "abilities": "Assault, Pistol, Hazardous, Twin-linked",
+          "sourceChildId": "470f-f223-b33d-a1b0"
         },
         {
           "name": "Close combat weapon",
@@ -9393,7 +9430,8 @@
       "wargearAbilities": [
         {
           "title": "Helix Gauntlet",
-          "text": "Models in the bearer’s unit have the Feel No Pain 6+ ability."
+          "text": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
+          "sourceChildId": "cd5b-809e-22e9-f34d"
         },
         {
           "title": "Infiltrator Comms Array",
@@ -9549,7 +9587,8 @@
         },
         {
           "title": "Reiver Grav-chute",
-          "text": "The bearer has the Deep Strike ability."
+          "text": "The bearer has the Deep Strike ability.",
+          "sourceChildId": "d035-b128-7039-4b37"
         }
       ],
       "keywords": [
@@ -10205,7 +10244,8 @@
       "wargearAbilities": [
         {
           "title": "Storm Shield",
-          "text": "The bearer has a Wounds characteristic of 4."
+          "text": "The bearer has a Wounds characteristic of 4.",
+          "sourceChildId": "946f-e7a9-7d82-a425"
         }
       ],
       "keywords": [
@@ -10488,7 +10528,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Pistol"
+          "abilities": "Hazardous, Pistol",
+          "sourceChildId": "4a80-2594-8839-c0bf"
         },
         {
           "name": "➤ Plasma pistol - standard",
@@ -10499,7 +10540,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "5edb-fb23-55e8-8415"
         },
         {
           "name": "Inferno Pistol",
@@ -11490,7 +11532,8 @@
           "s": "7",
           "ap": "-2",
           "d": "2",
-          "abilities": "Blast"
+          "abilities": "Blast",
+          "sourceChildId": "bf7c-5e35-19a1-d23f"
         },
         {
           "name": "➤ Heavy Plasma Cannon",
@@ -11501,7 +11544,8 @@
           "s": "8",
           "ap": "-3",
           "d": "3",
-          "abilities": "Blast, Hazardous"
+          "abilities": "Blast, Hazardous",
+          "sourceChildId": "a906-4a15-497b-1126"
         }
       ],
       "abilities": [
@@ -13119,7 +13163,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Blast"
+          "abilities": "Blast",
+          "sourceChildId": "e54-149a-9924-afe"
         },
         {
           "name": "➤ Macro Plasma Incinerator - Supercharge",
@@ -13130,7 +13175,8 @@
           "s": "9",
           "ap": "-4",
           "d": "3",
-          "abilities": "Blast, Hazardous"
+          "abilities": "Blast, Hazardous",
+          "sourceChildId": "256a-8119-50f8-259"
         },
         {
           "name": "Heavy Onslaught Gatling Cannon",
@@ -13469,7 +13515,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Blast"
+          "abilities": "Blast",
+          "sourceChildId": "e54-149a-9924-afe"
         },
         {
           "name": "➤ Macro Plasma Incinerator - Supercharge",
@@ -13480,7 +13527,8 @@
           "s": "9",
           "ap": "-4",
           "d": "3",
-          "abilities": "Blast, Hazardous"
+          "abilities": "Blast, Hazardous",
+          "sourceChildId": "256a-8119-50f8-259"
         },
         {
           "name": "Armoured Hull",
@@ -14198,7 +14246,8 @@
           "s": "7",
           "ap": "-2",
           "d": "2",
-          "abilities": "Blast, Twin-linked"
+          "abilities": "Blast, Twin-linked",
+          "sourceChildId": "fa29-4109-9b58-bfd1"
         },
         {
           "name": "➤ Twin Heavy Plasma Cannon - Supercharge",
@@ -14209,7 +14258,8 @@
           "s": "8",
           "ap": "-3",
           "d": "3",
-          "abilities": "Blast, Hazardous, Twin-linked"
+          "abilities": "Blast, Hazardous, Twin-linked",
+          "sourceChildId": "359b-684e-a4-1da5"
         },
         {
           "name": "Twin assault cannon",
@@ -14822,7 +14872,8 @@
           "s": "7",
           "ap": "-2",
           "d": "2",
-          "abilities": "Blast"
+          "abilities": "Blast",
+          "sourceChildId": "88ed-cb52-5134-d404"
         },
         {
           "name": "➤ Plasma eradicator - supercharge",
@@ -14833,7 +14884,8 @@
           "s": "8",
           "ap": "-3",
           "d": "3",
-          "abilities": "Blast, Hazardous"
+          "abilities": "Blast, Hazardous",
+          "sourceChildId": "fc19-a1ee-33c5-91e0"
         },
         {
           "name": "Armoured hull",

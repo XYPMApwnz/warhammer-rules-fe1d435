@@ -134,11 +134,13 @@
       "wargearAbilities": [
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -317,11 +319,13 @@
       "wargearAbilities": [
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -460,11 +464,13 @@
       "wargearAbilities": [
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -691,7 +697,8 @@
         },
         {
           "title": "Shield Generator",
-          "text": "The bearer has a 4+ invulnerable save."
+          "text": "The bearer has a 4+ invulnerable save.",
+          "sourceChildId": "82af-7e9a-2d1a-5637"
         },
         {
           "title": "Weapon Support System",
@@ -699,11 +706,13 @@
         },
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -918,7 +927,8 @@
         },
         {
           "title": "Shield Generator",
-          "text": "The bearer has a 4+ invulnerable save."
+          "text": "The bearer has a 4+ invulnerable save.",
+          "sourceChildId": "82af-7e9a-2d1a-5637"
         },
         {
           "title": "Weapon Support System",
@@ -926,11 +936,13 @@
         },
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -1057,15 +1069,18 @@
       "wargearAbilities": [
         {
           "title": "Hover Drone",
-          "text": "The bearer can Fly and has a Move characteristic of 10\"."
+          "text": "The bearer can Fly and has a Move characteristic of 10\".",
+          "sourceChildId": "a3bb-77b8-a18f-23e1"
         },
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -2299,7 +2314,8 @@
           "s": "6",
           "ap": "-1",
           "d": "1",
-          "abilities": "Assault, Twin-linked"
+          "abilities": "Assault, Twin-linked",
+          "sourceChildId": "2562-1fae-ed01-bc6c"
         },
         {
           "name": "XV pulse pistol",
@@ -2394,7 +2410,8 @@
       "wargearAbilities": [
         {
           "title": "MV15 Gun Drone",
-          "text": "The bearer is equipped with 1 twin pulse blaster."
+          "text": "The bearer is equipped with 1 twin pulse blaster.",
+          "sourceChildId": "fe48-4217-ee0e-3a42"
         }
       ],
       "keywords": [
@@ -2915,7 +2932,8 @@
           "s": "5",
           "ap": "0",
           "d": "1",
-          "abilities": ""
+          "abilities": "",
+          "sourceChildId": "a2c7-b3a1-dd13-916d"
         },
         {
           "name": "Twin pulse carbine",
@@ -2969,19 +2987,23 @@
         },
         {
           "title": "Pulse Accelerator Drone",
-          "text": "Add 6\" to the Range characteristic of pulse carbines equipped by models in the bearer’s unit."
+          "text": "Add 6\" to the Range characteristic of pulse carbines equipped by models in the bearer’s unit.",
+          "sourceChildId": "3ab8-c70d-b5d8-98b3"
         },
         {
           "title": "Recon Drone",
-          "text": "The bearer is equipped with 1 drone burst cannon and the bearer’s unit has the Infiltrators ability."
+          "text": "The bearer is equipped with 1 drone burst cannon and the bearer’s unit has the Infiltrators ability.",
+          "sourceChildId": "aaac-7647-9ecf-4fd1"
         },
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -3149,7 +3171,8 @@
         },
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         }
       ],
       "keywords": [
@@ -3510,11 +3533,13 @@
         },
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -3677,11 +3702,13 @@
       "wargearAbilities": [
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -3846,11 +3873,13 @@
       "wargearAbilities": [
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -3988,11 +4017,13 @@
       "wargearAbilities": [
         {
           "title": "Marker Drone",
-          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
+          "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+          "sourceChildId": "2026-4469-a453-d24e"
         },
         {
           "title": "Shield Drone",
-          "text": "Add 1 to the bearer’s Wounds characteristic."
+          "text": "Add 1 to the bearer’s Wounds characteristic.",
+          "sourceChildId": "274d-797e-a00f-62"
         },
         {
           "title": "Guardian Drone",
@@ -5904,7 +5935,8 @@
       "wargearAbilities": [
         {
           "title": "Tidewall Defence Platform",
-          "text": "If equipped with a Tidewall defence platform, this FORTIFICATION has a Wounds characteristic of 15."
+          "text": "If equipped with a Tidewall defence platform, this FORTIFICATION has a Wounds characteristic of 15.",
+          "sourceChildId": "6769-2de7-81ba-2a99"
         }
       ],
       "keywords": [

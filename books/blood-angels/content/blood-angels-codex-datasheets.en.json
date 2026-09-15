@@ -1903,7 +1903,8 @@
       "wargearAbilities": [
         {
           "title": "Sanguinary Banner",
-          "text": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+          "text": "Add 1 to the Objective Control characteristic of models in the bearer’s unit.",
+          "sourceChildId": "a344-31d1-3cec-1aa4"
         }
       ],
       "keywords": [

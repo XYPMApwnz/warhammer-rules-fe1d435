@@ -30,6 +30,7 @@ const CONDITION_KINDS=new Set([
   'battle-shock','source-unit-present','unit-keyword','unit-keyword-absent'
 ]);
 const CANONICAL_TARGET_KINDS=new Set(['ability','detachment-rule','enhancement','weapon-class','weapon-family']);
+const CHILD_KINDS=new Set(['profile','wargear-ability']);
 
 const record=value=>value&&typeof value==='object'&&!Array.isArray(value);
 const scalar=(value,label)=>{if(typeof value!=='string'||!value.trim())throw new Error(`${label} must be a non-empty string`);return value;};
@@ -68,6 +69,21 @@ export function validateEffectContractSet(input,{expectedBookId=null}={}){
   const bookId=scalar(input.bookId,'effect contract bookId');
   if(expectedBookId&&bookId!==expectedBookId)throw new Error(`${expectedBookId}: effect contract owner mismatch ${bookId}`);
   if(!BOOKS.has(bookId))throw new Error(`${bookId}: unsupported effect contract book`);
+  const childIdentities=array(input.childIdentities||[],`${bookId}.childIdentities`),seenChildSources=new Set(),seenChildIds=new Set(),seenChildReferences=new Set();
+  for(const [index,binding] of childIdentities.entries()){
+    const label=`${bookId}.childIdentities[${index}]`;if(!record(binding))throw new Error(`${label} must be an object`);
+    for(const key of Object.keys(binding))if(!['parentUnitId','kind','sourceChildId','canonicalId','legacyIds','referenceIds','semanticFamilyIds'].includes(key))throw new Error(`${label}: unknown field ${key}`);
+    const parentUnitId=scalar(binding.parentUnitId,`${label}.parentUnitId`),kind=scalar(binding.kind,`${label}.kind`),sourceChildId=scalar(binding.sourceChildId,`${label}.sourceChildId`),canonicalId=scalar(binding.canonicalId,`${label}.canonicalId`);
+    if(!CHILD_KINDS.has(kind))throw new Error(`${label}: unsupported child kind ${kind}`);
+    if(!canonicalId.startsWith(`${parentUnitId}-${kind}-`))throw new Error(`${label}: canonical child ID must be scoped to ${parentUnitId}/${kind}`);
+    for(const [field,items] of [['legacyIds',binding.legacyIds||[]],['referenceIds',binding.referenceIds||[]],['semanticFamilyIds',binding.semanticFamilyIds||[]]]){
+      array(items,`${label}.${field}`);if(new Set(items).size!==items.length||items.some(item=>typeof item!=='string'||!item.trim()))throw new Error(`${label}.${field} must contain unique non-empty IDs`);
+    }
+    const sourceKey=[parentUnitId,kind,sourceChildId].join('\0'),canonicalKey=[parentUnitId,kind,canonicalId].join('\0');
+    if(seenChildSources.has(sourceKey))throw new Error(`${bookId}: duplicate child source identity ${parentUnitId}/${kind}/${sourceChildId}`);seenChildSources.add(sourceKey);
+    if(seenChildIds.has(canonicalKey))throw new Error(`${bookId}: duplicate child canonical identity ${canonicalId}`);seenChildIds.add(canonicalKey);
+    for(const referenceId of binding.referenceIds||[]){const key=[parentUnitId,kind,referenceId].join('\0');if(seenChildReferences.has(key))throw new Error(`${bookId}: duplicate child reference identity ${parentUnitId}/${kind}/${referenceId}`);seenChildReferences.add(key);}
+  }
   const seenBindings=new Set(),seenOperationIds=new Set(),contracts=array(input.contracts,`${bookId}.contracts`);
   for(const [index,contract] of contracts.entries()){
     const label=`${bookId}.contracts[${index}]`;
@@ -102,6 +118,27 @@ export function validateEffectContractSet(input,{expectedBookId=null}={}){
   return input;
 }
 
+export function applyCanonicalChildIdentityContracts(units,contractSets){
+  const bindings=contractSets.flatMap(set=>validateEffectContractSet(set).childIdentities||[]),bySource=new Map(),byCanonical=new Set(),used=new Map();
+  for(const binding of bindings){
+    const sourceKey=[binding.parentUnitId,binding.kind,binding.sourceChildId].join('\0'),canonicalKey=[binding.parentUnitId,binding.kind,binding.canonicalId].join('\0');
+    if(bySource.has(sourceKey))throw new Error(`duplicate effective child source identity ${binding.parentUnitId}/${binding.kind}/${binding.sourceChildId}`);
+    if(byCanonical.has(canonicalKey))throw new Error(`duplicate effective child canonical identity ${binding.canonicalId}`);
+    bySource.set(sourceKey,binding);byCanonical.add(canonicalKey);used.set(sourceKey,0);
+  }
+  const project=(unit,kind,items)=>items.map(item=>{
+    if(!item?.sourceChildId)return item;
+    const sourceKey=[unit.id,kind,item.sourceChildId].join('\0'),binding=bySource.get(sourceKey);if(!binding)return item;
+    if(item.id&&item.id!==binding.canonicalId)throw new Error(`${unit.id}: source child ${item.sourceChildId} conflicts with canonical ID ${item.id}`);
+    used.set(sourceKey,used.get(sourceKey)+1);
+    return {...item,id:binding.canonicalId,legacyIds:[...(binding.legacyIds||[])],semanticFamilyIds:[...(binding.semanticFamilyIds||[])]};
+  });
+  const output=units.map(unit=>({...unit,weapons:project(unit,'profile',unit.weapons||[]),wargearAbilities:project(unit,'wargear-ability',unit.wargearAbilities||[])}));
+  const missing=[...used].filter(([,count])=>count!==1).map(([key,count])=>`${key.replaceAll('\0','/')} (${count})`);
+  if(missing.length)throw new Error(`persistent child identity bindings must resolve exactly once: ${missing.join(', ')}`);
+  return output;
+}
+
 export function effectiveEffectContracts(contractSets,bookId){
   if(!BOOKS.has(bookId))throw new Error(`Unsupported effective effect book ${bookId}`);
   const records=[];for(const set of contractSets){const validated=validateEffectContractSet(set);for(const contract of validated.contracts)if(contract.effectiveBookIds.includes(bookId))records.push(contract);}
@@ -114,22 +151,45 @@ const catalogIds=catalog=>{
   const enhancements=new Set((catalog.enhancements||[]).flatMap(item=>[item.id,item.ruleId,item.sourceId,item.legacyKey].filter(Boolean)));
   const detachments=new Set((catalog.detachments||[]).map(item=>item.id));
   const detachmentRules=new Map((catalog.detachmentRules||[]).map(item=>[item.id,item]));
-  const abilities=new Map();
+  const abilities=new Map(),children={profile:new Map(),'wargear-ability':new Map()};
   const weaponClasses=new Set(),weaponFamilies=new Set();
-  for(const unit of units.values())for(const item of [...(unit.gameSelections?.abilities||[]),...(unit.gameSelections?.wargearAbilities||[])])abilities.set(item.id,item);
+  const addChild=(unit,kind,item)=>{if(children[kind].has(item.id))throw new Error(`${catalog.book?.id||catalog.bookId}: duplicate ${kind} canonical child identity ${item.id}`);children[kind].set(item.id,{parentUnitId:unit.id,kind,item});};
+  for(const unit of units.values()){
+    for(const item of [...(unit.gameSelections?.abilities||[]),...(unit.gameSelections?.wargearAbilities||[])])abilities.set(item.id,item);
+    for(const item of unit.gameSelections?.wargearAbilities||[])addChild(unit,'wargear-ability',item);
+    for(const item of unit.gameSelections?.weaponProfiles||[])addChild(unit,'profile',item);
+  }
   for(const unit of units.values()){for(const item of unit.gameSelections?.weaponClasses||[])weaponClasses.add(item.id);for(const item of unit.gameSelections?.weaponFamilies||[])weaponFamilies.add(item.id);}
-  return {units,enhancements,detachments,detachmentRules,abilities,weaponClasses,weaponFamilies};
+  return {units,enhancements,detachments,detachmentRules,abilities,children,weaponClasses,weaponFamilies};
 };
 const selectorUnitIds=selector=>['unitIds','excludeUnitIds','noneUnitIds','sourceUnitIds','ownerUnitIds','bodyguardUnitIds','groupContainsUnitIds','groupExcludesUnitIds','allUnitIds'].flatMap(key=>selector?.[key]||[]);
 const walkSelectors=selector=>[selector,...(selector?.all||[]).flatMap(walkSelectors),...(selector?.any||[]).flatMap(walkSelectors),...(selector?.anyOf||[]).flatMap(walkSelectors),...(selector?.selectors||[]).flatMap(walkSelectors),...(selector?.not?[...walkSelectors(selector.not)]:[])];
 
-export function validateEffectContractsAgainstCatalog(input,catalog){
+export function validateEffectContractsAgainstCatalog(input,catalog,{effectiveBookId=input.bookId}={}){
   const validated=validateEffectContractSet(input,{expectedBookId:input.bookId}),ids=catalogIds(catalog);
-  if(catalog.book?.id!==input.bookId)throw new Error(`${input.bookId}: effect catalog owner mismatch ${catalog.book?.id||'<missing>'}`);
+  if(catalog.book?.id!==effectiveBookId)throw new Error(`${input.bookId}: effect catalog owner mismatch ${catalog.book?.id||'<missing>'}`);
+  const childReferences={profile:new Map(ids.children.profile),'wargear-ability':new Map(ids.children['wargear-ability'])};
+  for(const binding of validated.childIdentities||[]){
+    const resolved=ids.children[binding.kind].get(binding.canonicalId);
+    if(!resolved)throw new Error(`${binding.canonicalId}: persistent child identity is absent from ${effectiveBookId}`);
+    if(resolved.parentUnitId!==binding.parentUnitId)throw new Error(`${binding.canonicalId}: persistent child identity belongs to wrong parent ${resolved.parentUnitId}`);
+    childReferences[binding.kind].set(binding.canonicalId,{...resolved,binding});
+    for(const referenceId of binding.referenceIds||[]){
+      if(childReferences[binding.kind].has(referenceId))throw new Error(`${binding.canonicalId}: child reference alias collides with ${referenceId}`);
+      childReferences[binding.kind].set(referenceId,{...resolved,binding});
+    }
+  }
+  const resolveChild=(contract,id,kind,sourceUnits)=>{
+    const resolved=childReferences[kind].get(id);if(!resolved)throw new Error(`${contract.canonicalRecordId}: unknown ${kind} reference ${id}`);
+    if(sourceUnits.length&&!sourceUnits.includes(resolved.parentUnitId))throw new Error(`${contract.canonicalRecordId}: ${kind} reference ${id} belongs to wrong parent ${resolved.parentUnitId}`);
+    return resolved;
+  };
   for(const contract of validated.contracts){
-    if(contract.detachmentId&&!ids.detachments.has(contract.detachmentId))throw new Error(`${contract.canonicalRecordId}: unknown Detachment ${contract.detachmentId}`);
     const sourceUnits=[contract.sourceUnitId,...(contract.sourceUnitIds||[])].filter(Boolean);
-    for(const id of sourceUnits)if(!ids.units.has(id))throw new Error(`${contract.canonicalRecordId}: unknown source unit ${id}`);
+    const dependencyBindingAbsent=input.bookId!==effectiveBookId&&((sourceUnits.length&&!sourceUnits.some(id=>ids.units.has(id)))||(contract.detachmentId&&!ids.detachments.has(contract.detachmentId)));
+    if(dependencyBindingAbsent)continue;
+    if(contract.detachmentId&&!ids.detachments.has(contract.detachmentId))throw new Error(`${contract.canonicalRecordId}: unknown Detachment ${contract.detachmentId}`);
+    for(const id of sourceUnits)if(!ids.units.has(id)&&input.bookId===effectiveBookId)throw new Error(`${contract.canonicalRecordId}: unknown source unit ${id}`);
     if(contract.sourceKind==='enhancement'&&!ids.enhancements.has(contract.canonicalRecordId))throw new Error(`${contract.canonicalRecordId}: unknown canonical Enhancement`);
     if(contract.sourceKind==='detachment-rule'){
       const rule=ids.detachmentRules.get(contract.canonicalRecordId);if(!rule)throw new Error(`${contract.canonicalRecordId}: unknown canonical Detachment rule`);
@@ -139,15 +199,20 @@ export function validateEffectContractsAgainstCatalog(input,catalog){
       if(!ids.abilities.has(contract.canonicalRecordId))throw new Error(`${contract.canonicalRecordId}: unknown canonical ability`);
       if(sourceUnits.length&&!sourceUnits.some(id=>[...(ids.units.get(id)?.gameSelections?.abilities||[]),...(ids.units.get(id)?.gameSelections?.wargearAbilities||[])].some(item=>item.id===contract.canonicalRecordId)))throw new Error(`${contract.canonicalRecordId}: ability is not owned by its declared source unit`);
     }
+    if(contract.sourceKind==='selected-wargear'&&childReferences['wargear-ability'].has(contract.canonicalRecordId))resolveChild(contract,contract.canonicalRecordId,'wargear-ability',sourceUnits);
     for(const clause of contract.clauses){
       for(const selector of [contract.selector,clause.selector,...clause.conditions.flatMap(item=>item.selector?[item.selector]:[])].flatMap(walkSelectors)){
         for(const id of selectorUnitIds(selector))if(!ids.units.has(id))throw new Error(`${contract.canonicalRecordId}: selector references unknown unit ${id}`);
         for(const id of [...(selector?.detachmentIds||[]),selector?.detachmentId].filter(Boolean))if(!ids.detachments.has(id))throw new Error(`${contract.canonicalRecordId}: selector references unknown Detachment ${id}`);
+        for(const id of selector?.selectedWargearAbilityIds||[]){const resolved=resolveChild(contract,id,'wargear-ability',sourceUnits);if(selector.equipmentFamilyId&&resolved.binding&&!resolved.binding.semanticFamilyIds?.includes(selector.equipmentFamilyId))throw new Error(`${contract.canonicalRecordId}: child ${id} is outside equipment family ${selector.equipmentFamilyId}`);}
+        for(const id of selector?.canonicalTargetIds||[])resolveChild(contract,id,'wargear-ability',sourceUnits);
+        for(const id of selector?.selectedProfileIds||[])resolveChild(contract,id,'profile',sourceUnits);
       }
       for(const operation of clause.operations){
         const target=typeof operation.canonicalTarget==='string'?operation.canonicalTarget:operation.canonicalTarget.id,kind=operation.parameters.referenceKind||operation.canonicalTarget?.kind;
         if(kind==='weapon-class'&&!ids.weaponClasses.has(target))throw new Error(`${contract.canonicalRecordId}: unknown canonical weapon class ${target}`);
         if(kind==='weapon-family'&&!ids.weaponFamilies.has(target))throw new Error(`${contract.canonicalRecordId}: unknown canonical weapon family ${target}`);
+        for(const id of operation.parameters.profileIds||[])resolveChild(contract,id,'profile',sourceUnits);
         if(operation.type==='CANONICAL_REFERENCE'){
           const resolved=kind==='enhancement'?ids.enhancements.has(target):kind==='detachment-rule'?ids.detachmentRules.has(target):kind==='ability'?ids.abilities.has(target):false;
           if(!resolved)throw new Error(`${contract.canonicalRecordId}: unknown canonical target ${kind||'<missing>'}/${target}`);

@@ -1,6 +1,386 @@
 {
   "schema": "wh40k-effect-contracts/v1",
   "bookId": "tau-empire",
+  "childIdentities": [
+    {
+      "parentUnitId": "unit-breacher-team",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-breacher-team-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-breacher-team-wargear-ability-marker-drone"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-breacher-team",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-breacher-team-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-breacher-team-wargear-ability-shield-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-broadside-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-broadside-battlesuits-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-broadside-battlesuits-wargear-ability-marker-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-broadside-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-broadside-battlesuits-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-broadside-battlesuits-wargear-ability-shield-drone-3"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-cadre-fireblade",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-cadre-fireblade-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-cadre-fireblade-wargear-ability-marker-drone"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-cadre-fireblade",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-cadre-fireblade-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-cadre-fireblade-wargear-ability-shield-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-commander-in-coldstar-battlesuit",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-commander-in-coldstar-battlesuit-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-commander-in-coldstar-battlesuit-wargear-ability-marker-drone-4"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-commander-in-coldstar-battlesuit",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-commander-in-coldstar-battlesuit-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-drone-5"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-commander-in-coldstar-battlesuit",
+      "kind": "wargear-ability",
+      "sourceChildId": "82af-7e9a-2d1a-5637",
+      "canonicalId": "unit-commander-in-coldstar-battlesuit-wargear-ability-bf1c946221",
+      "legacyIds": [
+        "unit-commander-in-coldstar-battlesuit-wargear-ability-shield-generator-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-generator"
+      ]
+    },
+    {
+      "parentUnitId": "unit-commander-in-enforcer-battlesuit",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-commander-in-enforcer-battlesuit-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-commander-in-enforcer-battlesuit-wargear-ability-marker-drone-4"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-commander-in-enforcer-battlesuit",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-commander-in-enforcer-battlesuit-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-drone-5"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-commander-in-enforcer-battlesuit",
+      "kind": "wargear-ability",
+      "sourceChildId": "82af-7e9a-2d1a-5637",
+      "canonicalId": "unit-commander-in-enforcer-battlesuit-wargear-ability-bf1c946221",
+      "legacyIds": [
+        "unit-commander-in-enforcer-battlesuit-wargear-ability-shield-generator-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-generator"
+      ]
+    },
+    {
+      "parentUnitId": "unit-crisis-fireknife-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-crisis-fireknife-battlesuits-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-crisis-fireknife-battlesuits-wargear-ability-marker-drone"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-crisis-fireknife-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-crisis-fireknife-battlesuits-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-crisis-fireknife-battlesuits-wargear-ability-shield-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-crisis-starscythe-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-crisis-starscythe-battlesuits-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-crisis-starscythe-battlesuits-wargear-ability-marker-drone"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-crisis-starscythe-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-crisis-starscythe-battlesuits-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-crisis-starscythe-battlesuits-wargear-ability-shield-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-crisis-sunforge-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-crisis-sunforge-battlesuits-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-crisis-sunforge-battlesuits-wargear-ability-marker-drone"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-crisis-sunforge-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-crisis-sunforge-battlesuits-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-crisis-sunforge-battlesuits-wargear-ability-shield-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-ethereal",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-ethereal-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-ethereal-wargear-ability-marker-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-ethereal",
+      "kind": "wargear-ability",
+      "sourceChildId": "a3bb-77b8-a18f-23e1",
+      "canonicalId": "unit-ethereal-wargear-ability-66ef7c251c",
+      "legacyIds": [
+        "unit-ethereal-wargear-ability-hover-drone"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-hover-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-ethereal",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-ethereal-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-ethereal-wargear-ability-shield-drone-3"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-pathfinder-team",
+      "kind": "profile",
+      "sourceChildId": "a2c7-b3a1-dd13-916d",
+      "canonicalId": "unit-pathfinder-team-profile-dde20391e8",
+      "legacyIds": [
+        "unit-pathfinder-team-profile-drone-burst-cannon-ranged-9"
+      ]
+    },
+    {
+      "parentUnitId": "unit-pathfinder-team",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-pathfinder-team-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-pathfinder-team-wargear-ability-marker-drone-4"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-pathfinder-team",
+      "kind": "wargear-ability",
+      "sourceChildId": "aaac-7647-9ecf-4fd1",
+      "canonicalId": "unit-pathfinder-team-wargear-ability-5c4f55de99",
+      "legacyIds": [
+        "unit-pathfinder-team-wargear-ability-recon-drone-3"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-recon-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-pathfinder-team",
+      "kind": "wargear-ability",
+      "sourceChildId": "3ab8-c70d-b5d8-98b3",
+      "canonicalId": "unit-pathfinder-team-wargear-ability-6169f4c0aa",
+      "legacyIds": [
+        "unit-pathfinder-team-wargear-ability-pulse-accelerator-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-pulse-accelerator-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-pathfinder-team",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-pathfinder-team-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-pathfinder-team-wargear-ability-shield-drone-5"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-stealth-battlesuits",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-stealth-battlesuits-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-stealth-battlesuits-wargear-ability-marker-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-strike-team",
+      "kind": "wargear-ability",
+      "sourceChildId": "2026-4469-a453-d24e",
+      "canonicalId": "unit-strike-team-wargear-ability-054fa4f2b6",
+      "legacyIds": [
+        "unit-strike-team-wargear-ability-marker-drone"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-marker-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-strike-team",
+      "kind": "wargear-ability",
+      "sourceChildId": "274d-797e-a00f-62",
+      "canonicalId": "unit-strike-team-wargear-ability-bc6aabc321",
+      "legacyIds": [
+        "unit-strike-team-wargear-ability-shield-drone-2"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-shield-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-the-twin-lance",
+      "kind": "profile",
+      "sourceChildId": "2562-1fae-ed01-bc6c",
+      "canonicalId": "unit-the-twin-lance-profile-df5c6e42e9",
+      "legacyIds": [
+        "unit-the-twin-lance-profile-twin-pulse-blaster-ranged-4"
+      ]
+    },
+    {
+      "parentUnitId": "unit-the-twin-lance",
+      "kind": "wargear-ability",
+      "sourceChildId": "fe48-4217-ee0e-3a42",
+      "canonicalId": "unit-the-twin-lance-wargear-ability-1668782923",
+      "legacyIds": [
+        "unit-the-twin-lance-wargear-ability-mv15-gun-drone"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-mv15-gun-drone"
+      ]
+    },
+    {
+      "parentUnitId": "unit-tidewall-shieldline",
+      "kind": "wargear-ability",
+      "sourceChildId": "6769-2de7-81ba-2a99",
+      "canonicalId": "unit-tidewall-shieldline-wargear-ability-44f6788bd4",
+      "legacyIds": [
+        "unit-tidewall-shieldline-wargear-ability-tidewall-defence-platform"
+      ],
+      "semanticFamilyIds": [
+        "tau-empire-equipment-family-tidewall-defence-platform"
+      ]
+    }
+  ],
   "contracts": [
     {
       "canonicalRecordId": "tau-empire-ability-volley-fire",

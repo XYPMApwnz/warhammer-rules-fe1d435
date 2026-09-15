@@ -45,6 +45,11 @@ if(!check&&candidateOnly){
 }
 const sha256=buffer=>crypto.createHash('sha256').update(buffer).digest('hex').toUpperCase();
 const json=value=>`${JSON.stringify(value,null,2)}\n`;
+const persistentChildSourceIds=new Set(config.persistentChildSourceIds||[]);
+if(persistentChildSourceIds.size!==(config.persistentChildSourceIds||[]).length||(config.persistentChildSourceIds||[]).some(id=>typeof id!=='string'||!id.trim()))throw new Error(`${config.faction?.id||'book'}: persistentChildSourceIds must contain unique source IDs`);
+if(config.allowPartialPersistentChildSourceIds!==undefined&&typeof config.allowPartialPersistentChildSourceIds!=='boolean')throw new Error(`${config.faction?.id||'book'}: allowPartialPersistentChildSourceIds must be boolean`);
+const observedPersistentChildSourceIds=new Set();
+const persistentChildIdentity=sourceId=>{if(!persistentChildSourceIds.has(sourceId))return{};observedPersistentChildSourceIds.add(sourceId);return{sourceChildId:sourceId};};
 const textCorrections=new Map(Object.entries(config.textCorrections||{}));
 const keywordCorrections=new Map(Object.entries(config.keywordCorrections||{}).map(([from,to])=>[from.toLowerCase(),to]));
 const clean=value=>{
@@ -349,11 +354,11 @@ function parseDatasheet(link){
   const weapons=resolved.profiles.filter(profile=>['Ranged Weapons','Melee Weapons'].includes(profile.typeName)).map(profile=>{
     const stats=characteristics(profile);
     const ranged=profile.typeName==='Ranged Weapons';
-    return{name:clean(profile.name),mode:ranged?'ranged':'melee',range:stats.Range||'-',a:stats.A||'-',skill:(ranged?stats.BS:stats.WS)||'-',s:stats.S||'-',ap:stats.AP||'-',d:stats.D||'-',abilities:clean(stats.Keywords)==='-'?'':clean(stats.Keywords)};
+    return{name:clean(profile.name),mode:ranged?'ranged':'melee',range:stats.Range||'-',a:stats.A||'-',skill:(ranged?stats.BS:stats.WS)||'-',s:stats.S||'-',ap:stats.AP||'-',d:stats.D||'-',abilities:clean(stats.Keywords)==='-'?'':clean(stats.Keywords),...persistentChildIdentity(profile.id)};
   });
   const abilityRecords=resolved.profileRecords.filter(item=>item.profile.typeName==='Abilities').map(item=>{
     const rawText=(item.profile.characteristics||[]).find(characteristic=>characteristic.name==='Description')?.$text||'';
-    return{title:clean(item.profile.name),text:clean(rawText),rawText,ownerType:item.ownerType,ownerName:item.ownerName,sourceRole:item.sourceRole,sourceKind:item.sourceKind,sourcePath:item.sourcePath};
+    return{title:clean(item.profile.name),text:clean(rawText),rawText,ownerType:item.ownerType,ownerName:item.ownerName,sourceRole:item.sourceRole,sourceKind:item.sourceKind,sourcePath:item.sourcePath,...persistentChildIdentity(item.profile.id)};
   });
   const separateWargear=config.faction?.separateWargearAbilities===true;
   const classifyAbilities=config.faction?.classifyAbilities===true;
@@ -408,6 +413,8 @@ const rootLinks=(faction.entryLinks||[]).filter(link=>{
   return entry&&!excludedCategories.has(key(primaryCategory(entry)));
 });
 const parsed=rootLinks.map(parseDatasheet);
+const missingPersistentChildSourceIds=[...persistentChildSourceIds].filter(id=>!observedPersistentChildSourceIds.has(id));
+if(missingPersistentChildSourceIds.length&&config.allowPartialPersistentChildSourceIds!==true)throw new Error(`${config.faction.id}: persistent child source IDs were not found: ${missingPersistentChildSourceIds.join(', ')}`);
 for(const unit of parsed){
   const correction=config.unitCorrections?.[unit.title];
   if(!correction)continue;

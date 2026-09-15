@@ -108,7 +108,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Rapid Fire 1"
+          "abilities": "Rapid Fire 1",
+          "sourceChildId": "6e76-0a8b-e1a2-580c"
         },
         {
           "name": "➤ Plasma talon - Supercharged",
@@ -119,7 +120,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Rapid Fire 1"
+          "abilities": "Hazardous, Rapid Fire 1",
+          "sourceChildId": "085b-b1cb-bd8f-992b"
         },
         {
           "name": "Black Knight combat weapon",
@@ -814,7 +816,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Pistol"
+          "abilities": "Pistol",
+          "sourceChildId": "708a-4618-fdfd-8775"
         },
         {
           "name": "➤ Fealty - strike",
@@ -952,7 +955,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Blast"
+          "abilities": "Blast",
+          "sourceChildId": "ffde-95ee-4df6-6dea"
         },
         {
           "name": "Twin storm bolter",
@@ -1303,7 +1307,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Blast"
+          "abilities": "Blast",
+          "sourceChildId": "c718-bdaf-b0b4-3f35"
         },
         {
           "name": "➤ Plasma cannon - supercharge",
@@ -1314,7 +1319,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Blast, Hazardous"
+          "abilities": "Blast, Hazardous",
+          "sourceChildId": "33e2-fdb7-dea5-9e36"
         },
         {
           "name": "Assault cannon",
@@ -1565,7 +1571,8 @@
           "s": "8",
           "ap": "-2",
           "d": "2",
-          "abilities": "Blast, Twin-Linked"
+          "abilities": "Blast, Twin-Linked",
+          "sourceChildId": "7850-13a-cdea-60ed"
         },
         {
           "name": "➤ Plasma storm battery - supercharge",
@@ -1576,7 +1583,8 @@
           "s": "9",
           "ap": "-3",
           "d": "3",
-          "abilities": "Blast, Hazardous, Twin-Linked"
+          "abilities": "Blast, Hazardous, Twin-Linked",
+          "sourceChildId": "d5f0-93ae-7ea9-ebd3"
         },
         {
           "name": "Assault cannon",
@@ -1873,7 +1881,8 @@
           "s": "7",
           "ap": "-2",
           "d": "1",
-          "abilities": "Rapid Fire 1"
+          "abilities": "Rapid Fire 1",
+          "sourceChildId": "6e76-0a8b-e1a2-580c"
         },
         {
           "name": "➤ Plasma talon - Supercharged",
@@ -1884,7 +1893,8 @@
           "s": "8",
           "ap": "-3",
           "d": "2",
-          "abilities": "Hazardous, Rapid Fire 1"
+          "abilities": "Hazardous, Rapid Fire 1",
+          "sourceChildId": "085b-b1cb-bd8f-992b"
         },
         {
           "name": "Black Knight combat weapon",

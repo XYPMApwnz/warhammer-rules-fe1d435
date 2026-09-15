@@ -1,6 +1,44 @@
 {
   "schema": "wh40k-effect-contracts/v1",
   "bookId": "emperors-children",
+  "childIdentities": [
+    {
+      "parentUnitId": "unit-daemonettes",
+      "kind": "wargear-ability",
+      "sourceChildId": "dacf-941e-a9f5-1af2",
+      "canonicalId": "unit-daemonettes-wargear-ability-b3dad0463e",
+      "legacyIds": [
+        "unit-daemonettes-wargear-ability-daemonic-icon"
+      ],
+      "semanticFamilyIds": [
+        "emperors-children-equipment-family-daemonic-icon"
+      ]
+    },
+    {
+      "parentUnitId": "unit-keeper-of-secrets",
+      "kind": "wargear-ability",
+      "sourceChildId": "7c36-30a7-b3c1-e8a8",
+      "canonicalId": "unit-keeper-of-secrets-wargear-ability-8c94fe64e9",
+      "legacyIds": [
+        "unit-keeper-of-secrets-wargear-ability-shining-aegis"
+      ],
+      "semanticFamilyIds": [
+        "emperors-children-equipment-family-shining-aegis"
+      ]
+    },
+    {
+      "parentUnitId": "unit-seekers",
+      "kind": "wargear-ability",
+      "sourceChildId": "2f44-0faf-9294-6a0d",
+      "canonicalId": "unit-seekers-wargear-ability-b3dad0463e",
+      "legacyIds": [
+        "unit-seekers-wargear-ability-daemonic-icon"
+      ],
+      "semanticFamilyIds": [
+        "emperors-children-equipment-family-daemonic-icon"
+      ]
+    }
+  ],
   "contracts": [
     {
       "canonicalRecordId": "emperors-children-ability-perfectionists",

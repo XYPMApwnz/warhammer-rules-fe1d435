@@ -177,5 +177,10 @@
       "Combat Elixirs equipped in Current Battle"
     ],
     "reason": "Runtime state and Crucible/service entries are not canonical matched-play datasheets."
-  }
+  },
+  "persistentChildSourceIds": [
+    "2f44-0faf-9294-6a0d",
+    "7c36-30a7-b3c1-e8a8",
+    "dacf-941e-a9f5-1af2"
+  ]
 }

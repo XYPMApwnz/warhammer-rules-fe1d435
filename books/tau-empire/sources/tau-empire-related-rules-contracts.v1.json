@@ -41,7 +41,7 @@
       "authority": "derived-from-pinned-bsdata",
       "role": "canonical-owner-input",
       "path": "content/tau-empire-codex-datasheets.en.json",
-      "sha256": "3028ba89f10a1e5bb5515d44ac81971cbeffd6c85926838a48404d5fd70a463e"
+      "sha256": "e4ae1563ebdba4c9583cd0e8196195e0b439c5ead0621b808b9d9ce44b92f80a"
     }
   },
   "stratagems": [

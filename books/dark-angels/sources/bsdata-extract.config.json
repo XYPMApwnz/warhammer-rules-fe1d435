@@ -78,5 +78,15 @@
         }
       }
     }
-  }
+  },
+  "persistentChildSourceIds": [
+    "085b-b1cb-bd8f-992b",
+    "33e2-fdb7-dea5-9e36",
+    "6e76-0a8b-e1a2-580c",
+    "708a-4618-fdfd-8775",
+    "7850-13a-cdea-60ed",
+    "c718-bdaf-b0b4-3f35",
+    "d5f0-93ae-7ea9-ebd3",
+    "ffde-95ee-4df6-6dea"
+  ]
 }

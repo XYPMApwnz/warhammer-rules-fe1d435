@@ -77,6 +77,9 @@ def absolute_config(config: dict, folder: Path, faction: str) -> Path:
     inputs.insert(0, {"role": "faction", "path": str(faction_path)})
     seen = set()
     config["inputs"] = [item for item in inputs if not (item["path"] in seen or seen.add(item["path"]))]
+    # Each catalogue is extracted independently, so only the merged layer can
+    # prove that the complete configured child-identity set was observed.
+    config["allowPartialPersistentChildSourceIds"] = True
     official_points = config.get("outputs", {}).get("officialPoints")
     config["outputs"] = {
         "snapshot": "snapshot.json",
@@ -97,6 +100,20 @@ def extract(config: dict, folder: Path, faction: str) -> tuple[dict, dict, dict]
     path = absolute_config(config, folder, faction)
     subprocess.run([NODE, str(EXTRACTOR), str(path)], cwd=REPO, check=True)
     return tuple(json.loads((folder / name).read_text(encoding="utf-8")) for name in ("snapshot.json", "datasheets.json", "points.json"))
+
+
+def persistent_child_source_ids(value) -> set[str]:
+    found = set()
+    if isinstance(value, dict):
+        source_id = value.get("sourceChildId")
+        if isinstance(source_id, str):
+            found.add(source_id)
+        for child in value.values():
+            found.update(persistent_child_source_ids(child))
+    elif isinstance(value, list):
+        for child in value:
+            found.update(persistent_child_source_ids(child))
+    return found
 
 
 def apply_faction_pack_facts(datasheets: dict) -> None:
@@ -225,6 +242,17 @@ def build() -> tuple[dict, dict, dict]:
             unit["sourceLayer"] = "faction-pack"
     apply_faction_pack_facts(datasheets)
     apply_accepted_codex_facts(datasheets)
+    expected_child_source_ids = set(config.get("persistentChildSourceIds", []))
+    observed_child_source_ids = persistent_child_source_ids(datasheets)
+    missing_child_source_ids = sorted(expected_child_source_ids - observed_child_source_ids)
+    unexpected_child_source_ids = sorted(observed_child_source_ids - expected_child_source_ids)
+    if missing_child_source_ids or unexpected_child_source_ids:
+        details = []
+        if missing_child_source_ids:
+            details.append(f"missing: {', '.join(missing_child_source_ids)}")
+        if unexpected_child_source_ids:
+            details.append(f"unexpected: {', '.join(unexpected_child_source_ids)}")
+        raise ValueError(f"Space Marines persistent child source identity mismatch ({'; '.join(details)})")
     titus = next(item for item in datasheets["datasheets"] if item["title"] == "Captain Titus")
     titus["sourceLayer"] = "codex"
     weapon_order = ["Bolt pistol", "Master-crafted bolter", "Master-crafted chainsword"]

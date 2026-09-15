@@ -1,6 +1,128 @@
 {
   "schema": "wh40k-effect-contracts/v1",
   "bookId": "dark-angels",
+  "childIdentities": [
+    {
+      "parentUnitId": "unit-deathwing-terminator-squad",
+      "kind": "profile",
+      "sourceChildId": "33e2-fdb7-dea5-9e36",
+      "canonicalId": "unit-deathwing-terminator-squad-profile-04315a456f",
+      "legacyIds": [
+        "unit-deathwing-terminator-squad-profile-plasma-cannon-supercharge-ranged-9"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-deathwing-terminator-squad",
+      "kind": "profile",
+      "sourceChildId": "c718-bdaf-b0b4-3f35",
+      "canonicalId": "unit-deathwing-terminator-squad-profile-30870521c7",
+      "legacyIds": [
+        "unit-deathwing-terminator-squad-profile-plasma-cannon-standard-ranged-8"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-land-speeder-vengeance",
+      "kind": "profile",
+      "sourceChildId": "d5f0-93ae-7ea9-ebd3",
+      "canonicalId": "unit-land-speeder-vengeance-profile-bdac25db78",
+      "legacyIds": [
+        "unit-land-speeder-vengeance-profile-plasma-storm-battery-supercharge-ranged-3"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-land-speeder-vengeance",
+      "kind": "profile",
+      "sourceChildId": "7850-13a-cdea-60ed",
+      "canonicalId": "unit-land-speeder-vengeance-profile-c1e8a4e9a7",
+      "legacyIds": [
+        "unit-land-speeder-vengeance-profile-plasma-storm-battery-standard-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-lion-eljonson",
+      "kind": "profile",
+      "sourceChildId": "708a-4618-fdfd-8775",
+      "canonicalId": "unit-lion-eljonson-profile-2e2d12a64e",
+      "legacyIds": [
+        "unit-lion-eljonson-profile-arma-luminis-plasma-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-ravenwing-black-knights",
+      "kind": "profile",
+      "sourceChildId": "085b-b1cb-bd8f-992b",
+      "canonicalId": "unit-ravenwing-black-knights-profile-5fbb21ba39",
+      "legacyIds": [
+        "unit-ravenwing-black-knights-profile-plasma-talon-supercharged-ranged-5"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-ravenwing-black-knights",
+      "kind": "profile",
+      "sourceChildId": "6e76-0a8b-e1a2-580c",
+      "canonicalId": "unit-ravenwing-black-knights-profile-ea4cc1ffbb",
+      "legacyIds": [
+        "unit-ravenwing-black-knights-profile-plasma-talon-standard-ranged-4"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-ravenwing-command-squad",
+      "kind": "profile",
+      "sourceChildId": "085b-b1cb-bd8f-992b",
+      "canonicalId": "unit-ravenwing-command-squad-profile-5fbb21ba39",
+      "legacyIds": [
+        "unit-ravenwing-command-squad-profile-plasma-talon-supercharged-ranged-5"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-ravenwing-command-squad",
+      "kind": "profile",
+      "sourceChildId": "6e76-0a8b-e1a2-580c",
+      "canonicalId": "unit-ravenwing-command-squad-profile-ea4cc1ffbb",
+      "legacyIds": [
+        "unit-ravenwing-command-squad-profile-plasma-talon-standard-ranged-4"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    },
+    {
+      "parentUnitId": "unit-sammael",
+      "kind": "profile",
+      "sourceChildId": "ffde-95ee-4df6-6dea",
+      "canonicalId": "unit-sammael-profile-3424af3922",
+      "legacyIds": [
+        "unit-sammael-profile-master-crafted-plasma-cannon-ranged-2"
+      ],
+      "semanticFamilyIds": [
+        "weapon-class-plasma"
+      ]
+    }
+  ],
   "contracts": [
     {
       "canonicalRecordId": "dark-angels-ability-exemplar-of-hate",

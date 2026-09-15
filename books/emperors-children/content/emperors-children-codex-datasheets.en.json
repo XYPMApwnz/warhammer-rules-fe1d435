@@ -67,7 +67,8 @@
       "wargearAbilities": [
         {
           "title": "Daemonic Icon",
-          "text": "Models in the bearer's unit have a Leadership characteristic of 6+."
+          "text": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+          "sourceChildId": "dacf-941e-a9f5-1af2"
         },
         {
           "title": "Instrument of Chaos",
@@ -830,7 +831,8 @@
       "wargearAbilities": [
         {
           "title": "Shining aegis",
-          "text": "The bearer has a Save characteristic of 3+."
+          "text": "The bearer has a Save characteristic of 3+.",
+          "sourceChildId": "7c36-30a7-b3c1-e8a8"
         }
       ],
       "keywords": [
@@ -3116,7 +3118,8 @@
       "wargearAbilities": [
         {
           "title": "Daemonic Icon",
-          "text": "Models in the bearer's unit have a Leadership characteristic of 6+."
+          "text": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+          "sourceChildId": "2f44-0faf-9294-6a0d"
         },
         {
           "title": "Instrument of Chaos",

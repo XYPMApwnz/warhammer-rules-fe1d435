@@ -5,7 +5,7 @@ import {spawnSync} from 'node:child_process';
 export const CONTRACT_ORACLE_SCRIPTS=Object.freeze({
   SOURCE_LIFECYCLE:['tests/source-ingestion-contract-qa.mjs','tests/sm-authenticated-bsdata-argument-binding-qa.mjs'],
   SOURCE_ENROLLMENT:['tests/source-enrollment-qa.mjs'],
-  CANONICAL_IDENTITY:['tests/canonical-join-architecture-qa.mjs','tests/authoritative-non-id-joins-qa.mjs'],
+  CANONICAL_IDENTITY:['tests/canonical-join-architecture-qa.mjs','tests/authoritative-non-id-joins-qa.mjs','tests/persistent-child-identity-qa.mjs'],
   FACT_OWNERSHIP:['tests/final-architecture-ownership-qa.mjs','tests/glossary-output-ownership-qa.mjs','tests/generated-output-ownership-qa.mjs','tests/space-marines-related-rules-owner-qa.mjs','tests/tau-related-rules-owner-qa.mjs','tests/am-datasheet-source-ownership-qa.mjs'],
   EFFECTIVE_MODEL:['tests/effective-model-convergence-qa.mjs'],
   DEPENDENCY_PRECEDENCE:['tests/effective-points-projection-qa.mjs'],

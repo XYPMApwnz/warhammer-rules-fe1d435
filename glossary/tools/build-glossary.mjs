@@ -7,6 +7,7 @@ import {createCoreFactProjection,canonicalCoreRuleId,CORE_GLOSSARY_EXCLUDED_CODE
 import {writeCacheRevision} from '../../tools/cache-revision.mjs';
 import {createCanonicalBuildContext} from '../../books/shared/tools/canonical-build-contract.mjs';
 import {buildCanonicalBook} from '../../books/shared/tools/build-army-book.mjs';
+import {projectDeathGuardGlossaryFacts} from '../../books/death-guard/tools/canonical-source-adapter.mjs';
 import {loadEditorialContract} from './editorial-contract.mjs';
 import {projectEffectiveEnhancementSources} from './effective-enhancement-sources.mjs';
 import {applyDeterministicRelatedPolicies,buildKeywordIdentity,deriveKeywordCompatibilityAliases,derivePresentation,keywordRelationsFromEligibility,validateGlossaryGraph} from './glossary-policies.mjs';
@@ -81,8 +82,8 @@ const runtimeFromGlossary=glossary=>Object.fromEntries(glossary.map(term=>[term.
 
 const dgSource=readJson(path.join(root,'books','death-guard','content','death-guard-rules.en.json'));
 const dgOfficialUpdates=readJson(path.join(root,'books','death-guard','content','official-update-ledger.en.json'));
-const dgUnitsById=new Map(dgSource.sections.filter(section=>section.kind==='unit').map(section=>[section.id,section]));
-const dgModel=effectiveBookModels.get('death-guard'),dgRuntime=dgModel.runtime;
+const dgModel=effectiveBookModels.get('death-guard'),dgProjection=projectDeathGuardGlossaryFacts(dgModel,{label:'Death Guard global glossary projection'}),dgRuntime=dgProjection.runtime;
+const dgUnitsById=new Map(dgModel.units.map(unit=>[unit.id,unit]));
 const dgEnhancementById=new Map(dgModel.enhancements.flatMap(item=>[item.id,item.sourceId,item.ruleId,...(item.canonicalEffectRecordIds||[])].filter(Boolean).map(id=>[id,item])));
 const amModel=effectiveBookModels.get('adeptus-mechanicus'),amRuntime=runtimeFromGlossary(amModel.glossary);
 const amBookRoot=path.join(root,'books','adeptus-mechanicus'),amBookConfig=readJson(path.join(amBookRoot,'book.config.json'));
@@ -243,7 +244,7 @@ const dgContagionRangeText=(dgNurglesGiftSection.blocks||[]).map(block=>{
 }).filter(Boolean).join(' ');
 if(!dgContagionRangeText)throw new Error('Incomplete canonical Death Guard Contagion Range source');
 
-for(const entry of dgSource.glossary){
+for(const entry of dgProjection.glossary){
   const enhancement=dgEnhancementById.get(entry.sectionId),upgrade=enhancement?.tags?.includes('UPGRADE');
   let id=dgStableId(entry);
   if(entry.id.startsWith('core-')){
@@ -290,7 +291,7 @@ addTerm({
   canonicalSource:{documentId:'death-guard',revision:dgSource.version||'11e',locator:'Army Rules — Pact of Decay'},status:'verified'
 },'death-guard','pact-of-decay');
 addContext('death-guard','pact-of-decay',pactId,{}, {owners:[],visible:true});
-for(const entry of dgSource.glossary){
+for(const entry of dgProjection.glossary){
   if(!dgEnhancementById.get(entry.sectionId)?.tags?.includes('UPGRADE'))continue;
   const term=registry.get(dgStableId(entry));if(!term)throw new Error(`Missing Death Guard Upgrade term: ${entry.id}`);
   term.structured={...(term.structured||{}),tags:['UPGRADE']};
@@ -349,7 +350,7 @@ function addMechanicusDetachments(source,revision){
     }
 
     for(const enhancement of detachment.enhancements||[]){
-      const id=`adeptus-mechanicus-enhancement-${slug(enhancement.title)}`;
+      const id=`adeptus-mechanicus-${enhancement.canonicalEnhancementId}`;
       const upgrade=(enhancement.tags||[]).includes('UPGRADE'),text=upgrade?`UPGRADE. ${enhancement.text}`:enhancement.text;
       addTerm({
         id,kind:'enhancement',scope:'adeptus-mechanicus',edition:'11e',language:'en',title:{en:enhancement.title},

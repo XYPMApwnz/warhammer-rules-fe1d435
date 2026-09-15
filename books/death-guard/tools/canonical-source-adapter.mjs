@@ -165,6 +165,32 @@ const legacyEnhancementEffects=Object.freeze({
 
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 
+const dgStatFields=['M','T','Sv','W','Ld','OC','Inv'];
+const dgWeaponFields=['Range','A','WS','BS','S','AP','D','Abilities'];
+const dgWeaponValue=(weapon,key)=>key==='Range'?weapon.range:key==='A'?weapon.a:key==='WS'||key==='BS'?(String(weapon.range).toLowerCase()==='melee'?(key==='WS'?weapon.skill:undefined):(key==='BS'?weapon.skill:undefined)):key==='S'?weapon.s:key==='AP'?weapon.ap:key==='D'?weapon.d:key==='Abilities'?weapon.abilities:undefined;
+const dgSummary=facts=>Object.entries(facts).map(([key,value])=>`${key} ${value}`).join(' · ');
+
+export function projectDeathGuardGlossaryFacts(model,{label='Death Guard glossary projection'}={}){
+  const units=new Map((model.units||[]).map(unit=>[unit.id,unit]));
+  if(units.size!==(model.units||[]).length)throw new Error(`${label}: duplicate canonical unit identity`);
+  const weaponsByTerm=new Map();
+  for(const unit of model.units||[])for(const weapon of (unit.blocks||[]).filter(block=>block.type==='weapon')){
+    if(!weapon.termId)continue;
+    const facts=Object.fromEntries(dgWeaponFields.map(key=>[key,dgWeaponValue(weapon,key)]).filter(([,value])=>value!==undefined)),existing=weaponsByTerm.get(weapon.termId);
+    if(existing&&JSON.stringify(existing.facts)!==JSON.stringify(facts))throw new Error(`${label}: conflicting canonical weapon facts for ${weapon.termId}`);
+    if(!existing)weaponsByTerm.set(weapon.termId,{title:weapon.name,facts});
+  }
+  const glossary=(model.glossary||[]).map(entry=>{
+    if(entry.statline){const unit=units.get(entry.sectionId);if(!unit)throw new Error(`${label}: unknown statline owner ${entry.sectionId||'<missing>'}`);const block=(unit.blocks||[]).find(item=>item.type==='statline');if(!block)throw new Error(`${label}: ${unit.id} has no canonical statline`);const statline=Object.fromEntries(dgStatFields.filter(key=>Object.hasOwn(entry.statline,key)).map(key=>[key,block.values?.[key]]));return{...entry,title:unit.title,statline,points:structuredClone(unit.points||[])};}
+    if(entry.weapon){const weapon=weaponsByTerm.get(entry.id);if(!weapon)throw new Error(`${label}: unknown canonical weapon ${entry.id}`);const facts=Object.fromEntries(Object.keys(entry.weapon).map(key=>{if(!dgWeaponFields.includes(key))throw new Error(`${label}: unsupported weapon field ${key}`);return[key,weapon.facts[key]];}));return{...entry,title:weapon.title,weapon:facts};}
+    return structuredClone(entry);
+  });
+  const glossaryById=new Map(glossary.map(entry=>[entry.id,entry])),runtime={};
+  for(const [id,current] of Object.entries(model.runtime||{})){const entry=glossaryById.get(id);if(!entry)throw new Error(`${label}: unknown runtime reference ${id}`);const summary=entry.statline?dgSummary(entry.statline):entry.weapon?dgSummary(entry.weapon):current.summary;runtime[id]={...current,title:entry.title,summary};}
+  if(Object.keys(runtime).length!==glossary.length)throw new Error(`${label}: missing runtime reference`);
+  return{glossary,runtime};
+}
+
 function effectiveEnhancementsFor(context,model,detachments){
   const publicationByEnhancementId=new Map((model.points.enhancements||[]).filter(item=>item.id&&item.sourceTitle).map(item=>[item.id,item])),enhancements=[];
   for(const detachment of detachments)for(const subsection of detachment.subsections||[])for(const item of (subsection.blocks||[]).filter(block=>block.type==='enhancement')){

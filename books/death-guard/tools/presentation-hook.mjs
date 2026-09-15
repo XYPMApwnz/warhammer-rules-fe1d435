@@ -1,4 +1,5 @@
 import {renderUnitArt} from '../../shared/tools/render-unit-art.mjs';
+import {projectDeathGuardGlossaryFacts} from './canonical-source-adapter.mjs';
 
 const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const slug=value=>String(value??'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -92,11 +93,11 @@ export function renderDeathGuardReader(context,model){const {config,runtimeVersi
 }
 
 export function renderEffectiveBook(context,model){
-  const {config,runtimeVersions}=context,readerSource=renderDeathGuardReader(context,model);
+  const {config,runtimeVersions}=context,readerSource=renderDeathGuardReader(context,model),runtime=projectDeathGuardGlossaryFacts(model,{label:'Death Guard publication glossary projection'}).runtime;
   const blocks=model.detachments.flatMap(section=>[...(section.blocks||[]),...(section.subsections||[]).flatMap(part=>part.blocks||[])]),count=type=>blocks.filter(block=>block.type===type).length;
   if(model.units.length!==config.expected.datasheets||model.detachments.length!==config.expected.detachments||count('rule')!==config.expected.stratagems||model.enhancements.length!==config.expected.enhancements||model.coreStratagems.length!==config.expected.coreStratagems||model.glossary.length!==config.expected.glossary)throw new Error('Death Guard canonical inventory mismatch');
   if((readerSource.match(/class="unit-card surface/g)||[]).length!==config.expected.datasheets||(readerSource.match(/data-rule-facts=/g)||[]).length!==config.expected.datasheets)throw new Error('Death Guard rendered Datasheet inventory mismatch');
   for(const match of readerSource.matchAll(/data-term="([^"]+)"/g))if(!model.glossary.some(term=>term.id===match[1])&&!model.coreStratagems.some(record=>model.coreTermIdByCode[record.code]===match[1]))throw new Error(`Generated page references unknown term: ${match[1]}`);
   const indexHtml='<!doctype html>\n<html lang="en" data-canonical-reader="./reader.html" data-canonical-target="start">\n<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Death Guard Rules</title><script src="../shared/mobile-route-redirect.js?v='+runtimeVersions.shared.mobileRouteRedirect+'"></script></head>\n<body><noscript><a href="./reader.html#start">Open Death Guard Rules</a></noscript></body>\n</html>';
-  return {readerSource,indexHtml,dataJs:`window.DG_TERMS=Object.freeze(${JSON.stringify(model.runtime)});\n`,normalizeLineEndings:false,summary:`Death Guard effective-model publication: ${config.expected.detachments} detachments, ${config.expected.datasheets} datasheets, ${config.expected.legends} Legends.`};
+  return {readerSource,indexHtml,dataJs:`window.DG_TERMS=Object.freeze(${JSON.stringify(runtime)});\n`,normalizeLineEndings:false,summary:`Death Guard effective-model publication: ${config.expected.detachments} detachments, ${config.expected.datasheets} datasheets, ${config.expected.legends} Legends.`};
 }

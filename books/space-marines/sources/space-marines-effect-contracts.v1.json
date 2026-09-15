@@ -1842,7 +1842,7 @@
         },
         {
           "selector": {
-            "scope": "bodyguard-members-excluding-source",
+            "scope": "attached-group-excluding-source",
             "excludeSourceOwner": true
           },
           "conditions": [],
@@ -1889,7 +1889,7 @@
       "clauses": [
         {
           "selector": {
-            "scope": "bodyguard-members-excluding-source",
+            "scope": "attached-group-excluding-source",
             "excludeSourceOwner": true
           },
           "conditions": [],

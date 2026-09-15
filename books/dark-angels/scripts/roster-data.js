@@ -35519,7 +35519,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         },
         {
           "selector": {
-            "scope": "bodyguard-members-excluding-source",
+            "scope": "attached-group-excluding-source",
             "excludeSourceOwner": true
           },
           "conditions": [],
@@ -35896,7 +35896,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "clauses": [
         {
           "selector": {
-            "scope": "bodyguard-members-excluding-source",
+            "scope": "attached-group-excluding-source",
             "excludeSourceOwner": true
           },
           "conditions": [],

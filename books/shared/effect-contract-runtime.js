@@ -115,7 +115,8 @@
   });
   const locateSourceUnit=(contract,env)=>{
     const expected=[contract.sourceUnitId,...list(contract.sourceUnitIds),...list(contract.selector?.sourceUnitIds),...list(contract.selector?.unitIds)].filter(Boolean);
-    const candidates=[env.draft,...list(env.group),...list(env.gameUnits)].filter((item,index,items)=>item&&items.indexOf(item)===index);
+    const rosterWide=['roster-reference','roster-unit-pair'].includes(scopeKey(contract.scope));
+    const candidates=[env.draft,...list(env.group),...(rosterWide?list(env.gameUnits):[])].filter((item,index,items)=>item&&items.indexOf(item)===index);
     return candidates.find(unit=>expected.includes(canonicalId(unit)))||null;
   };
   function activation(contract,context,base){

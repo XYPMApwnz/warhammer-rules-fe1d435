@@ -1,17 +1,9 @@
 import {assignCanonicalChildIdentities,requireCanonicalChildIdentity} from './canonical-join-contract.mjs';
+import {canonicalBaseStatsForUnit} from './canonical-unit-stats.mjs';
 
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const slug=value=>String(value||'').toLowerCase().replace(/[\u2019']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const values=value=>Array.isArray(value)?value:[];
-const statRecord=value=>value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).length?value:null;
-const normalizedStatsFor=unit=>{
-  const explicit=statRecord(unit.stats);
-  if(explicit)return {...explicit};
-  const sources=[...values(unit.profiles).map(profile=>statRecord(profile.stats)),...values(unit.blocks).filter(block=>block.type==='statline').map(block=>statRecord(block.values))].filter(Boolean);
-  if(!sources.length)return {};
-  const keys=[...new Set(sources.flatMap(source=>Object.keys(source)))];
-  return Object.fromEntries(keys.filter(key=>sources.every(source=>Object.prototype.hasOwnProperty.call(source,key)&&String(source[key])===String(sources[0][key]))).map(key=>[key,sources[0][key]]));
-};
 const weaponFamilyTitle=value=>{const match=String(value||'').match(/^(.+?)\s+[\u2013\u2014-]\s+(.+)$/);return match?match[1].trim():'';};
 const legacyWeaponProfileId=(unit,profile,index=0)=>`${unit.id}-profile-${slug(profile.name)}-${profile.mode||'weapon'}${index?'-'+(index+1):''}`;
 const legacyWargearAbilityId=(unit,ability,index=0)=>`${unit.id}-wargear-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;
@@ -86,7 +78,7 @@ export const canonicalRosterModelsFor=unit=>assignCanonicalChildIdentities(unit,
   return {id:model.id,title:model.name||'',aliases:[...new Set([model.name,...values(model.aliases)].filter(Boolean))],...(model.legacyIds?.length?{legacyIds:model.legacyIds}:{}),...(keywords===undefined?{}:{intrinsicKeywords:[...keywords]})};
 });
 const gameSelectionsFor=(unit,options={})=>{
-  if(unit.gameSelections)return unit.gameSelections;
+  if(unit.gameSelections)return {...unit.gameSelections,stats:canonicalBaseStatsForUnit(unit)};
   const canonicalWeapons=values(unit.weapons).length?values(unit.weapons):values(unit.blocks).filter(block=>block?.type==='weapon');
   const canonicalWargearAbilities=values(unit.wargearAbilities).length?values(unit.wargearAbilities):values(unit.subsections).filter(section=>normalize(section?.title)==='wargear abilities').flatMap(section=>values(section.blocks).filter(block=>block?.type==='ability'));
   const canonicalAbilities=[...values(unit.abilities),...values(unit.blocks).filter(block=>block?.type==='ability'),...values(unit.subsections).flatMap(section=>values(section?.blocks).filter(block=>block?.type==='ability'))];
@@ -135,7 +127,7 @@ const gameSelectionsFor=(unit,options={})=>{
     if(contract.maxTotalQuantity!==undefined)selection.maxTotalQuantity=contract.maxTotalQuantity;
     if(!existing)selections.push(selection);
   }
-  const stats=normalizedStatsFor(unit);
+  const stats=canonicalBaseStatsForUnit(unit);
   const explicitCounts=new Map();for(const ability of canonicalAbilities){const id=ability.id||ability.termId;if(id)explicitCounts.set(id,(explicitCounts.get(id)||0)+1);}
   const ordinaryAbilityRecords=assignCanonicalChildIdentities(unit,canonicalAbilities.map(ability=>{const id=ability.id||ability.termId;return id&&explicitCounts.get(id)===1?{...ability,id}:ability;}),{kind:'ability',titleOf:ability=>ability.title,semanticOf:abilityIdentityFacts,legacyIdOf:(ability,index)=>ability.termId||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`}).map(ability=>({...canonicalAbilityRecord(unit,ability,ability.id),...(ability.legacyIds?.length?{legacyIds:ability.legacyIds}:{})}));
   assertMatchingAbilityRecords(unit,ordinaryAbilityRecords,wargearAbilities);

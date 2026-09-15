@@ -58,6 +58,26 @@
     "csm:wargear:qa": "node books/chaos-space-marines/tests/wargear-options-qa.mjs",
     "csm:consensus:qa": "node books/chaos-space-marines/tests/secondary-consensus-qa.mjs",
     "gw-update:check": "node tests/gw-2026-08-26-update-qa.mjs",
-    "gw-update:browser": "node tests/browser/gw-2026-08-26-update.mjs"
+    "gw-update:browser": "node tests/browser/gw-2026-08-26-update.mjs",
+    "qa:sm": "node books/space-marines/tests/base-conformance-qa.mjs && node books/space-marines/tests/qa.mjs",
+    "qa:da": "node books/dark-angels/tests/overlay-conformance-qa.mjs && node books/dark-angels/mobile/qa.mjs && node books/dark-angels/tests/unforgiven-discoverability-qa.mjs",
+    "qa:ba": "npm run blood-angels:qa",
+    "qa:dg": "node tests/death-guard-qa.mjs",
+    "qa:am": "node books/adeptus-mechanicus/tests/qa.mjs",
+    "qa:tyranids": "node books/tyranids/tests/qa.mjs && node books/tyranids/tests/compatible-rules-qa.mjs && node books/tyranids/mobile/qa.mjs",
+    "qa:tau": "node books/tau-empire/tests/qa.mjs && node books/tau-empire/tests/compatible-rules-qa.mjs && node books/tau-empire/mobile/qa.mjs",
+    "qa:ec": "node books/emperors-children/tests/compatible-rules-qa.mjs && node books/emperors-children/mobile/qa.mjs && node tests/ec-pledge-dark-glory-condition-qa.mjs",
+    "qa:csm": "node books/chaos-space-marines/tests/compatible-rules-qa.mjs && node books/chaos-space-marines/tests/roster-conformance-qa.mjs && node books/chaos-space-marines/tests/secondary-consensus-qa.mjs && node books/chaos-space-marines/tests/source-availability-qa.mjs && node books/chaos-space-marines/mobile/qa.mjs",
+    "qa:effects": "node tests/effect-contract-ownership-qa.mjs && node tests/effect-provider-interpreter-equality-qa.mjs && node tests/physical-unit-game-effects-qa.mjs && node tests/structured-roster-effects-qa.mjs",
+    "qa:points": "npm run points:check && node tests/point-tier-contract-qa.mjs && node tests/points-consumer-convergence-qa.mjs && node tests/roster-points-qa.mjs",
+    "qa:roster": "node tests/roster-parser-qa.mjs && node tests/shared-roster-context-qa.mjs && node tests/roster-assessment-wiring-qa.mjs && node tests/roster-attachment-roles-qa.mjs && node tests/roster-dom-independent-projection-qa.mjs && node tests/roster-sm-payload-support-qa.mjs && node tests/physical-unit-game-projection-qa.mjs && node tests/roster-points-qa.mjs && node tests/roster-guide-qa.mjs",
+    "qa:glossary": "npm run glossary:check && node tests/glossary-editorial-contract-qa.mjs && node tests/glossary-viewer-qa.mjs && node tests/glossary-navigation-coverage-qa.mjs",
+    "qa:publication": "node tests/publication-inventory-qa.mjs && node tests/offline-mobile-routes-qa.mjs && node tests/rendered-output-qa.mjs",
+    "qa:sources": "npm run source:check",
+    "qa:architecture": "npm run wiring:check",
+    "qa:integration": "node tests/integration-qa.mjs",
+    "qa:workflow": "node tests/codex-workflow-qa.mjs",
+    "qa:help": "node tools/qa-help.mjs",
+    "qa:release": "npm run qa:sm && npm run qa:da && npm run qa:ba && npm run qa:dg && npm run qa:am && npm run qa:tyranids && npm run qa:tau && npm run qa:ec && npm run qa:csm && npm run qa:effects && npm run qa:points && npm run qa:roster && npm run qa:glossary && npm run qa:architecture && npm run qa:integration && npm run publication:check && npm run army-books:sources:check"
   }
 }

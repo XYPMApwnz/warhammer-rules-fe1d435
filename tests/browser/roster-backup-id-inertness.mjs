@@ -109,6 +109,8 @@ async function selectFor(bodyId,adding){
 async function attachmentControls(record,count){
   const [bodyA,bodyB,leaderA,leaderB]=record.roster.units.map(unit=>unit.id);
   await card(record).getByRole('button',{name:'Attachments',exact:true}).click();
+  await page.waitForFunction(()=>Math.abs(document.getElementById('roster-result').getBoundingClientRect().top-92)<3);
+  assert.equal(await page.locator('#roster-result').evaluate(node=>node.getBoundingClientRect().top>document.querySelector('.topbar').getBoundingClientRect().bottom),true,`${record.name}: roster preview must remain below the sticky header`);
   assert.equal(await page.locator('#roster-result .units > li').count(),4,'no physical unit collapse');
   let selects=await page.locator('#roster-result select').evaluateAll(nodes=>nodes.map(node=>({roster:node.dataset.rosterId,body:node.dataset.attachmentBodyguard,values:[...node.options].map(option=>option.value)})));
   assert.deepEqual(selects,[bodyA,bodyB].map(body=>({roster:record.id,body,values:['',leaderA,leaderB]})),'exact select/option identifiers');

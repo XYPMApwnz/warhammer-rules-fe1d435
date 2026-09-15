@@ -1,11 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
-import {assertWeaponProfileIdentityProjection,createRosterCatalog,serializeRosterCatalog} from './build-roster-catalog.mjs';
+import {assertRosterUnitGameplayProjection,assertWeaponProfileIdentityProjection,createRosterCatalog,serializeRosterCatalog} from './build-roster-catalog.mjs';
 import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
 import {validateEffectContractsAgainstCatalog} from './effect-contract.mjs';
 import {runPresentationHook,validateEffectiveBookModel} from './effective-book-model.mjs';
 import {assertRosterBaseStatProjection} from './canonical-unit-stats.mjs';
+import {assertRosterWeaponFactProjection} from './canonical-weapon-profile-facts.mjs';
 
 const moduleFor=async(context,relative,label)=>{
   if(typeof relative!=='string'||!relative.trim())throw new Error(`${context.config.id}: ${label} is required`);
@@ -43,6 +44,8 @@ export async function buildEffectiveBook(context,{projectionOnly=false}={}){
   });
   assertWeaponProfileIdentityProjection(model.units,rosterCatalog.units,{label:`${context.config.id} effective roster projection`});
   assertRosterBaseStatProjection(model.units,rosterCatalog.units,{label:`${context.config.id} effective roster base-stat projection`});
+  assertRosterWeaponFactProjection(model.units,rosterCatalog.units,{label:`${context.config.id} effective roster weapon-fact projection`});
+  assertRosterUnitGameplayProjection(model.units,model.relationGraphs,rosterCatalog.units,{label:`${context.config.id} effective roster unit-gameplay projection`});
   validateEffectContractsAgainstCatalog(model.effectContractSet,rosterCatalog);
 
   const renderer=await moduleFor(context,spec.renderer,'effectiveModel.renderer');

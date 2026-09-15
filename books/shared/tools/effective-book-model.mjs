@@ -2,6 +2,8 @@ import {validateEffectContractSet,EFFECT_SCHEMA} from './effect-contract.mjs';
 import {assertEffectivePointsProjection} from './effective-points-projection.mjs';
 import {pointTierContract} from './point-tier-contract.mjs';
 import {assertRosterBaseStatProjection,projectRosterBaseStats} from './canonical-unit-stats.mjs';
+import {assertRosterWeaponFactProjection,projectRosterWeaponFacts} from './canonical-weapon-profile-facts.mjs';
+import {assertRosterUnitGameplayProjection,projectRosterUnitGameplayFacts} from './build-roster-catalog.mjs';
 
 export const EFFECTIVE_BOOK_MODEL_SCHEMA='wh40k-effective-book-model/v1';
 export const PUBLICATION_STATES=new Set(['Current','Legends','Warhammer Legends']);
@@ -217,11 +219,8 @@ function validateRosterProjection(model,unitIds,detachmentIds,enhancementIds){
   if(!record(catalog)||catalog.book?.id!==model.book.id)throw new Error('roster catalog has a conflicting book identity');
   sameIds(new Set(list(catalog.units,'rosterCatalog.units').map(item=>item.id)),unitIds,'roster unit');
   assertRosterBaseStatProjection(model.units,catalog.units,{label:`${model.book.id} effective roster base-stat projection`});
-  const sourceUnitById=new Map(model.units.map(unit=>[unit.id,unit]));
-  for(const item of catalog.units){
-    const source=sourceUnitById.get(item.id),sourceProfiles=(source.weapons?.length?source.weapons:(source.blocks||[]).filter(block=>block?.type==='weapon'));
-    sameIds(new Set(sourceProfiles.map(profile=>profile.id)),new Set(list(item.gameSelections?.weaponProfiles,`${item.id}.gameSelections.weaponProfiles`).map(profile=>profile.id)),`${item.id} weapon profile`);
-  }
+  assertRosterWeaponFactProjection(model.units,catalog.units,{label:`${model.book.id} effective roster weapon-fact projection`});
+  assertRosterUnitGameplayProjection(model.units,model.relationGraphs,catalog.units,{label:`${model.book.id} effective roster unit-gameplay projection`});
   sameIds(new Set(list(catalog.detachments,'rosterCatalog.detachments').map(item=>item.id)),detachmentIds,'roster Detachment');
   const canonicalByCandidate=new Map();
   for(const item of model.enhancements){
@@ -304,7 +303,12 @@ export function validateEffectiveBookModel(model){
 
 export function createEffectiveBookModel(input){
   const model=structuredClone(input);
-  if(model.rosterCatalog?.units)model.rosterCatalog={...model.rosterCatalog,units:projectRosterBaseStats(model.units,model.rosterCatalog.units,{label:`${model.book?.id||'book'} effective roster base-stat projection`})};
+  if(model.rosterCatalog?.units){
+    let units=projectRosterBaseStats(model.units,model.rosterCatalog.units,{label:`${model.book?.id||'book'} effective roster base-stat projection`});
+    units=projectRosterWeaponFacts(model.units,units,{label:`${model.book?.id||'book'} effective roster weapon-fact projection`});
+    units=projectRosterUnitGameplayFacts(model.units,model.relationGraphs,units,{label:`${model.book?.id||'book'} effective roster unit-gameplay projection`});
+    model.rosterCatalog={...model.rosterCatalog,units};
+  }
   validateEffectiveBookModel(model);
   return model;
 }

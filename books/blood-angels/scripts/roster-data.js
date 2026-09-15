@@ -34658,7 +34658,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "clauses": [
         {
           "selector": {
-            "scope": "bodyguard-members-excluding-source",
+            "scope": "attachment-members-excluding-source",
             "excludeSourceOwner": true
           },
           "conditions": [],

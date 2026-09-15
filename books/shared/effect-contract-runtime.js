@@ -126,7 +126,7 @@
     }else if(contract.sourceKind==='detachment-rule'){
       const required=contract.detachmentId||contract.selector?.detachmentId;if(required&&!env.detachmentIds.has(required))return null;
     }else if(['selected-wargear','wargear-ability'].includes(contract.sourceKind)){
-      const candidates=list(env.group).length?env.group:[env.draft],matched=candidates.find(unit=>matches(contract.selector,env,unit));if(!matched)return null;env.owner=matched;env.sourceUnit=matched;
+      const candidates=list(env.group).length?env.group:[env.draft],matched=candidates.find(unit=>matches(contract.selector,{...env,owner:unit,sourceUnit:unit},unit));if(!matched)return null;env.owner=matched;env.sourceUnit=matched;
     }else if(['ability','datasheet-ability'].includes(contract.sourceKind)){
       env.sourceUnit=locateSourceUnit(contract,env);if(!env.sourceUnit)return null;env.owner=env.sourceUnit;
     }

@@ -10094,8 +10094,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       ],
       "timingState": {
-        "kind": "conditional",
-        "state": "unknown"
+        "kind": "mixed"
       },
       "stackingPolicy": "apply-once-per-source",
       "source": {

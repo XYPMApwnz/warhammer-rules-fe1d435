@@ -151,9 +151,9 @@
       "sourceId": "adeptus-mechanicus-effect-contracts",
       "authority": "structured-contract",
       "sourceType": "structured-contract",
-      "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "b33f3f622e0d9352397942ca2991ef00eeee9947f15582e083df8e1ad33e2dc3",
-      "lastChecked": "2026-09-14",
+      "acceptedRevision": "effect-contracts-v1-2026-09-15",
+      "acceptedHash": "7259a57ef878ab154671657136ab296f32fd9b0f35c1bbb459572feffea05275",
+      "lastChecked": "2026-09-15",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
       "status": "SOURCE_LIMITED",
@@ -163,7 +163,7 @@
         {
           "path": "books/adeptus-mechanicus/sources/adeptus-mechanicus-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "b33f3f622e0d9352397942ca2991ef00eeee9947f15582e083df8e1ad33e2dc3"
+          "sha256": "7259a57ef878ab154671657136ab296f32fd9b0f35c1bbb459572feffea05275"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
@@ -308,9 +308,9 @@
       "sourceId": "blood-angels-effect-contracts",
       "authority": "structured-contract",
       "sourceType": "structured-contract",
-      "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "ef09c2d91c5214ea08069fb67315694c0e1d120861bee058173a7b9d1aac7248",
-      "lastChecked": "2026-09-14",
+      "acceptedRevision": "effect-contracts-v1-2026-09-15",
+      "acceptedHash": "583829d13e81ebe9fb65bd1c3a5a3b68f3f716b91f606b20c8096b5635c4e08a",
+      "lastChecked": "2026-09-15",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
       "status": "SOURCE_LIMITED",
@@ -320,7 +320,7 @@
         {
           "path": "books/blood-angels/sources/blood-angels-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "ef09c2d91c5214ea08069fb67315694c0e1d120861bee058173a7b9d1aac7248"
+          "sha256": "583829d13e81ebe9fb65bd1c3a5a3b68f3f716b91f606b20c8096b5635c4e08a"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."

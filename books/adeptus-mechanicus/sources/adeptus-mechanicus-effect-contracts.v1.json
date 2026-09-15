@@ -1694,8 +1694,7 @@
         }
       ],
       "timingState": {
-        "kind": "conditional",
-        "state": "unknown"
+        "kind": "mixed"
       },
       "stackingPolicy": "apply-once-per-source",
       "source": {

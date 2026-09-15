@@ -428,7 +428,7 @@
       "clauses": [
         {
           "selector": {
-            "scope": "bodyguard-members-excluding-source",
+            "scope": "attachment-members-excluding-source",
             "excludeSourceOwner": true
           },
           "conditions": [],

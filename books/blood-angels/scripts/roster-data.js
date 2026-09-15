@@ -30211,7 +30211,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-prescient-flash",
       "detachmentId": "angelic-inheritors",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-prescient-flash"
+      "legacyKey": "enhancement-prescient-flash",
+      "canonicalEnhancementId": "enhancement-prescient-flash",
+      "canonicalDetachmentId": "angelic-inheritors"
     },
     {
       "title": "Troubling Visions",
@@ -30256,7 +30258,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-troubling-visions",
       "detachmentId": "angelic-inheritors",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-troubling-visions"
+      "legacyKey": "enhancement-troubling-visions",
+      "canonicalEnhancementId": "enhancement-troubling-visions",
+      "canonicalDetachmentId": "angelic-inheritors"
     },
     {
       "title": "Blazing Icon",
@@ -30302,7 +30306,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-blazing-icon",
       "detachmentId": "angelic-inheritors",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-blazing-icon"
+      "legacyKey": "enhancement-blazing-icon",
+      "canonicalEnhancementId": "enhancement-blazing-icon",
+      "canonicalDetachmentId": "angelic-inheritors"
     },
     {
       "title": "Ordained Sacrifice",
@@ -30347,7 +30353,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-ordained-sacrifice",
       "detachmentId": "angelic-inheritors",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-ordained-sacrifice"
+      "legacyKey": "enhancement-ordained-sacrifice",
+      "canonicalEnhancementId": "enhancement-ordained-sacrifice",
+      "canonicalDetachmentId": "angelic-inheritors"
     },
     {
       "title": "Angelic Executioner",
@@ -30393,7 +30401,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-angelic-executioner",
       "detachmentId": "encarmine-speartip",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-angelic-executioner"
+      "legacyKey": "enhancement-angelic-executioner",
+      "canonicalEnhancementId": "enhancement-angelic-executioner",
+      "canonicalDetachmentId": "encarmine-speartip"
     },
     {
       "title": "Shadow of Abomination",
@@ -30439,7 +30449,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-shadow-of-abomination",
       "detachmentId": "encarmine-speartip",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-shadow-of-abomination"
+      "legacyKey": "enhancement-shadow-of-abomination",
+      "canonicalEnhancementId": "enhancement-shadow-of-abomination",
+      "canonicalDetachmentId": "encarmine-speartip"
     },
     {
       "title": "Blood Boil",
@@ -30485,7 +30497,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-blood-boil",
       "detachmentId": "legacy-of-grace",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-blood-boil"
+      "legacyKey": "enhancement-blood-boil",
+      "canonicalEnhancementId": "enhancement-blood-boil",
+      "canonicalDetachmentId": "legacy-of-grace"
     },
     {
       "title": "Aureole of the Angel",
@@ -30530,7 +30544,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-aureole-of-the-angel",
       "detachmentId": "legacy-of-grace",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-aureole-of-the-angel"
+      "legacyKey": "enhancement-aureole-of-the-angel",
+      "canonicalEnhancementId": "enhancement-aureole-of-the-angel",
+      "canonicalDetachmentId": "legacy-of-grace"
     },
     {
       "title": "Gift of Foresight",
@@ -30565,7 +30581,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-gift-of-foresight",
       "detachmentId": "liberator-assault-group",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-gift-of-foresight"
+      "legacyKey": "enhancement-gift-of-foresight",
+      "canonicalEnhancementId": "enhancement-gift-of-foresight",
+      "canonicalDetachmentId": "liberator-assault-group"
     },
     {
       "title": "Icon of the Angel",
@@ -30600,7 +30618,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-icon-of-the-angel",
       "detachmentId": "liberator-assault-group",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-icon-of-the-angel"
+      "legacyKey": "enhancement-icon-of-the-angel",
+      "canonicalEnhancementId": "enhancement-icon-of-the-angel",
+      "canonicalDetachmentId": "liberator-assault-group"
     },
     {
       "title": "Rage-fuelled Warrior",
@@ -30635,7 +30655,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-rage-fuelled-warrior",
       "detachmentId": "liberator-assault-group",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-rage-fuelled-warrior"
+      "legacyKey": "enhancement-rage-fuelled-warrior",
+      "canonicalEnhancementId": "enhancement-rage-fuelled-warrior",
+      "canonicalDetachmentId": "liberator-assault-group"
     },
     {
       "title": "Speed of the Primarch",
@@ -30670,7 +30692,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-speed-of-the-primarch",
       "detachmentId": "liberator-assault-group",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-speed-of-the-primarch"
+      "legacyKey": "enhancement-speed-of-the-primarch",
+      "canonicalEnhancementId": "enhancement-speed-of-the-primarch",
+      "canonicalDetachmentId": "liberator-assault-group"
     },
     {
       "title": "Carmine Reliquary",
@@ -30716,7 +30740,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-carmine-reliquary",
       "detachmentId": "rage-cursed-onslaught",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-carmine-reliquary"
+      "legacyKey": "enhancement-carmine-reliquary",
+      "canonicalEnhancementId": "enhancement-carmine-reliquary",
+      "canonicalDetachmentId": "rage-cursed-onslaught"
     },
     {
       "title": "Master of the Red Thirst",
@@ -30761,7 +30787,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-master-of-the-red-thirst",
       "detachmentId": "rage-cursed-onslaught",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-master-of-the-red-thirst"
+      "legacyKey": "enhancement-master-of-the-red-thirst",
+      "canonicalEnhancementId": "enhancement-master-of-the-red-thirst",
+      "canonicalDetachmentId": "rage-cursed-onslaught"
     },
     {
       "title": "Sanguinary Tear (Aura)",
@@ -30806,7 +30834,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-sanguinary-tear-aura",
       "detachmentId": "rage-cursed-onslaught",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-sanguinary-tear-aura"
+      "legacyKey": "enhancement-sanguinary-tear-aura",
+      "canonicalEnhancementId": "enhancement-sanguinary-tear-aura",
+      "canonicalDetachmentId": "rage-cursed-onslaught"
     },
     {
       "title": "Angel's Fang",
@@ -30851,7 +30881,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-angels-fang",
       "detachmentId": "rage-cursed-onslaught",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-angels-fang"
+      "legacyKey": "enhancement-angels-fang",
+      "canonicalEnhancementId": "enhancement-angels-fang",
+      "canonicalDetachmentId": "rage-cursed-onslaught"
     },
     {
       "title": "Archangel's Shard",
@@ -30887,7 +30919,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-archangels-shard",
       "detachmentId": "the-angelic-host",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-archangels-shard"
+      "legacyKey": "enhancement-archangels-shard",
+      "canonicalEnhancementId": "enhancement-archangels-shard",
+      "canonicalDetachmentId": "the-angelic-host"
     },
     {
       "title": "Artisan of War",
@@ -30923,7 +30957,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-artisan-of-war",
       "detachmentId": "the-angelic-host",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-artisan-of-war"
+      "legacyKey": "enhancement-artisan-of-war",
+      "canonicalEnhancementId": "enhancement-artisan-of-war",
+      "canonicalDetachmentId": "the-angelic-host"
     },
     {
       "title": "Gleaming Pinions",
@@ -30959,7 +30995,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-gleaming-pinions",
       "detachmentId": "the-angelic-host",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-gleaming-pinions"
+      "legacyKey": "enhancement-gleaming-pinions",
+      "canonicalEnhancementId": "enhancement-gleaming-pinions",
+      "canonicalDetachmentId": "the-angelic-host"
     },
     {
       "title": "Visage of Death",
@@ -30995,7 +31033,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-visage-of-death",
       "detachmentId": "the-angelic-host",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-visage-of-death"
+      "legacyKey": "enhancement-visage-of-death",
+      "canonicalEnhancementId": "enhancement-visage-of-death",
+      "canonicalDetachmentId": "the-angelic-host"
     },
     {
       "title": "Blood Shard",
@@ -31031,7 +31071,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-blood-shard",
       "detachmentId": "the-lost-brethren",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-blood-shard"
+      "legacyKey": "enhancement-blood-shard",
+      "canonicalEnhancementId": "enhancement-blood-shard",
+      "canonicalDetachmentId": "the-lost-brethren"
     },
     {
       "title": "Sanguinius' Grace",
@@ -31067,7 +31109,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-sanguinius-grace",
       "detachmentId": "the-lost-brethren",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-sanguinius-grace"
+      "legacyKey": "enhancement-sanguinius-grace",
+      "canonicalEnhancementId": "enhancement-sanguinius-grace",
+      "canonicalDetachmentId": "the-lost-brethren"
     },
     {
       "title": "To Slay The Warmaster",
@@ -31103,7 +31147,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-to-slay-the-warmaster",
       "detachmentId": "the-lost-brethren",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-to-slay-the-warmaster"
+      "legacyKey": "enhancement-to-slay-the-warmaster",
+      "canonicalEnhancementId": "enhancement-to-slay-the-warmaster",
+      "canonicalDetachmentId": "the-lost-brethren"
     },
     {
       "title": "Vengeful Onslaught",
@@ -31139,7 +31185,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-vengeful-onslaught",
       "detachmentId": "the-lost-brethren",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-vengeful-onslaught"
+      "legacyKey": "enhancement-vengeful-onslaught",
+      "canonicalEnhancementId": "enhancement-vengeful-onslaught",
+      "canonicalDetachmentId": "the-lost-brethren"
     },
     {
       "title": "Instinctive Interception",
@@ -31185,7 +31233,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-instinctive-interception",
       "detachmentId": "wrath-of-the-doomed",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-instinctive-interception"
+      "legacyKey": "enhancement-instinctive-interception",
+      "canonicalEnhancementId": "enhancement-instinctive-interception",
+      "canonicalDetachmentId": "wrath-of-the-doomed"
     },
     {
       "title": "On the Archtraitor's Bridge",
@@ -31231,7 +31281,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-on-the-archtraitors-bridge",
       "detachmentId": "wrath-of-the-doomed",
       "sourceBookId": "blood-angels",
-      "legacyKey": "enhancement-on-the-archtraitors-bridge"
+      "legacyKey": "enhancement-on-the-archtraitors-bridge",
+      "canonicalEnhancementId": "enhancement-on-the-archtraitors-bridge",
+      "canonicalDetachmentId": "wrath-of-the-doomed"
     },
     {
       "title": "Avenging Angel",
@@ -31266,7 +31318,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           2
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31276,7 +31327,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-avenging-angel",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-avenging-angel"
+      "legacyKey": "enhancement-avenging-angel",
+      "canonicalEnhancementId": "enhancement-avenging-angel",
+      "canonicalDetachmentId": "vengeful-hosts"
     },
     {
       "title": "Orksbane",
@@ -31333,7 +31386,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-orksbane",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-orksbane"
+      "legacyKey": "enhancement-orksbane",
+      "canonicalEnhancementId": "enhancement-orksbane",
+      "canonicalDetachmentId": "vengeful-hosts"
     },
     {
       "title": "Bellicose Weapon Spirits (Upgrade)",
@@ -31372,7 +31427,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           3
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31382,7 +31436,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-bellicose-weapon-spirits",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-bellicose-weapon-spirits"
+      "legacyKey": "enhancement-bellicose-weapon-spirits",
+      "canonicalEnhancementId": "bellicose-weapon-spirits",
+      "canonicalDetachmentId": "fulguris-task-force"
     },
     {
       "title": "Raptorial Cogitator Core (Upgrade)",
@@ -31421,7 +31477,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           3
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31431,7 +31486,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-raptorial-cogitator-core",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-raptorial-cogitator-core"
+      "legacyKey": "enhancement-raptorial-cogitator-core",
+      "canonicalEnhancementId": "raptorial-cogitator-core",
+      "canonicalDetachmentId": "fulguris-task-force"
     },
     {
       "title": "Celerity",
@@ -31467,7 +31524,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31477,7 +31533,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-celerity",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-celerity"
+      "legacyKey": "enhancement-celerity",
+      "canonicalEnhancementId": "celerity",
+      "canonicalDetachmentId": "librarius-conclave"
     },
     {
       "title": "Fusillade",
@@ -31513,7 +31571,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31523,7 +31580,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-fusillade",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-fusillade"
+      "legacyKey": "enhancement-fusillade",
+      "canonicalEnhancementId": "fusillade",
+      "canonicalDetachmentId": "librarius-conclave"
     },
     {
       "title": "Obfuscation",
@@ -31559,7 +31618,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31569,7 +31627,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-obfuscation",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-obfuscation"
+      "legacyKey": "enhancement-obfuscation",
+      "canonicalEnhancementId": "obfuscation",
+      "canonicalDetachmentId": "librarius-conclave"
     },
     {
       "title": "Prescience",
@@ -31604,7 +31664,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31614,7 +31673,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-prescience",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-prescience"
+      "legacyKey": "enhancement-prescience",
+      "canonicalEnhancementId": "prescience",
+      "canonicalDetachmentId": "librarius-conclave"
     },
     {
       "title": "Temporal Corridor",
@@ -31650,7 +31711,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31660,7 +31720,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-temporal-corridor",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-temporal-corridor"
+      "legacyKey": "enhancement-temporal-corridor",
+      "canonicalEnhancementId": "temporal-corridor",
+      "canonicalDetachmentId": "librarius-conclave"
     },
     {
       "title": "Death in the Dark (Upgrade)",
@@ -31697,7 +31759,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           5
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31707,7 +31768,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-death-in-the-dark",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-death-in-the-dark"
+      "legacyKey": "enhancement-death-in-the-dark",
+      "canonicalEnhancementId": "death-in-the-dark",
+      "canonicalDetachmentId": "subversion-assets"
     },
     {
       "title": "Shroud Field",
@@ -31745,7 +31808,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           5
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31755,7 +31817,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-shroud-field",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-shroud-field"
+      "legacyKey": "enhancement-shroud-field",
+      "canonicalEnhancementId": "shroud-field",
+      "canonicalDetachmentId": "subversion-assets"
     },
     {
       "title": "Armoured Commander",
@@ -31811,7 +31875,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           6
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31821,7 +31884,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-armoured-commander",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-armoured-commander"
+      "legacyKey": "enhancement-armoured-commander",
+      "canonicalEnhancementId": "armoured-commander",
+      "canonicalDetachmentId": "armoured-speartip"
     },
     {
       "title": "Liberator",
@@ -31877,7 +31942,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           6
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31887,7 +31951,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-liberator",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-liberator"
+      "legacyKey": "enhancement-liberator",
+      "canonicalEnhancementId": "liberator",
+      "canonicalDetachmentId": "armoured-speartip"
     },
     {
       "title": "Shock Deployment",
@@ -31926,7 +31992,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           6
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -31936,7 +32001,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-shock-deployment",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-shock-deployment"
+      "legacyKey": "enhancement-shock-deployment",
+      "canonicalEnhancementId": "shock-deployment",
+      "canonicalDetachmentId": "armoured-speartip"
     },
     {
       "title": "Tip of the Spear",
@@ -31992,7 +32059,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           6
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32002,7 +32068,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-tip-of-the-spear",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-tip-of-the-spear"
+      "legacyKey": "enhancement-tip-of-the-spear",
+      "canonicalEnhancementId": "tip-of-the-spear",
+      "canonicalDetachmentId": "armoured-speartip"
     },
     {
       "title": "Astartes Tank Ace",
@@ -32051,7 +32119,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           8
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32061,7 +32128,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-astartes-tank-ace-aura",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-astartes-tank-ace-aura"
+      "legacyKey": "enhancement-astartes-tank-ace-aura",
+      "canonicalEnhancementId": "astartes-tank-ace-aura",
+      "canonicalDetachmentId": "headhunter-task-force"
     },
     {
       "title": "Firestorm Coordinators",
@@ -32110,7 +32179,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           8
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32120,7 +32188,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-firestorm-coordinators",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-firestorm-coordinators"
+      "legacyKey": "enhancement-firestorm-coordinators",
+      "canonicalEnhancementId": "firestorm-coordinators",
+      "canonicalDetachmentId": "headhunter-task-force"
     },
     {
       "title": "Gunnery Honours",
@@ -32169,7 +32239,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           8
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32179,7 +32248,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-gunnery-honours",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-gunnery-honours"
+      "legacyKey": "enhancement-gunnery-honours",
+      "canonicalEnhancementId": "gunnery-honours",
+      "canonicalDetachmentId": "headhunter-task-force"
     },
     {
       "title": "Redoubtable Machine Spirit",
@@ -32228,7 +32299,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           8
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32238,7 +32308,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-redoubtable-machine-spirit",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-redoubtable-machine-spirit"
+      "legacyKey": "enhancement-redoubtable-machine-spirit",
+      "canonicalEnhancementId": "redoubtable-machine-spirit",
+      "canonicalDetachmentId": "headhunter-task-force"
     },
     {
       "title": "Castellum Omnivox",
@@ -32294,7 +32366,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           10
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32304,7 +32375,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-castellum-omnivox",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-castellum-omnivox"
+      "legacyKey": "enhancement-castellum-omnivox",
+      "canonicalEnhancementId": "castellum-omnivox",
+      "canonicalDetachmentId": "ceramite-sentinels"
     },
     {
       "title": "Defensive Mastery",
@@ -32360,7 +32433,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           10
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32370,7 +32442,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-defensive-mastery",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-defensive-mastery"
+      "legacyKey": "enhancement-defensive-mastery",
+      "canonicalEnhancementId": "defensive-mastery",
+      "canonicalDetachmentId": "ceramite-sentinels"
     },
     {
       "title": "Honour Indefatigable",
@@ -32405,7 +32479,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           10
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32415,7 +32488,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-honour-indefatigable",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-honour-indefatigable"
+      "legacyKey": "enhancement-honour-indefatigable",
+      "canonicalEnhancementId": "honour-indefatigable",
+      "canonicalDetachmentId": "ceramite-sentinels"
     },
     {
       "title": "Spy-skull Data Link",
@@ -32453,7 +32528,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           10
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32463,7 +32537,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-spy-skull-data-link",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-spy-skull-data-link"
+      "legacyKey": "enhancement-spy-skull-data-link",
+      "canonicalEnhancementId": "spy-skull-data-link",
+      "canonicalDetachmentId": "ceramite-sentinels"
     },
     {
       "title": "Blades of Valour",
@@ -32519,7 +32595,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           24
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32529,7 +32604,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-blades-of-valour",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-blades-of-valour"
+      "legacyKey": "enhancement-blades-of-valour",
+      "canonicalEnhancementId": "blades-of-valour",
+      "canonicalDetachmentId": "bastion-task-force"
     },
     {
       "title": "Bombast Omnivox",
@@ -32585,7 +32662,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           24
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32595,7 +32671,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-bombast-omnivox",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-bombast-omnivox"
+      "legacyKey": "enhancement-bombast-omnivox",
+      "canonicalEnhancementId": "bombast-omnivox",
+      "canonicalDetachmentId": "bastion-task-force"
     },
     {
       "title": "Eye of the Primarch",
@@ -32651,7 +32729,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           24
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32661,7 +32738,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-eye-of-the-primarch",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-eye-of-the-primarch"
+      "legacyKey": "enhancement-eye-of-the-primarch",
+      "canonicalEnhancementId": "eye-of-the-primarch",
+      "canonicalDetachmentId": "bastion-task-force"
     },
     {
       "title": "Hero of the Chapter",
@@ -32717,7 +32796,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           24
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32727,7 +32805,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-hero-of-the-chapter",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-hero-of-the-chapter"
+      "legacyKey": "enhancement-hero-of-the-chapter",
+      "canonicalEnhancementId": "hero-of-the-chapter",
+      "canonicalDetachmentId": "bastion-task-force"
     },
     {
       "title": "Dedicated Gunship",
@@ -32764,7 +32844,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           26
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32774,7 +32853,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-dedicated-gunship",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-dedicated-gunship"
+      "legacyKey": "enhancement-dedicated-gunship",
+      "canonicalEnhancementId": "dedicated-gunship",
+      "canonicalDetachmentId": "orbital-assault-force"
     },
     {
       "title": "Laurels of Thunder",
@@ -32830,7 +32911,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           26
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32840,7 +32920,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-laurels-of-thunder",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-laurels-of-thunder"
+      "legacyKey": "enhancement-laurels-of-thunder",
+      "canonicalEnhancementId": "laurels-of-thunder",
+      "canonicalDetachmentId": "orbital-assault-force"
     },
     {
       "title": "Orbital Uplink Reliquary",
@@ -32896,7 +32978,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           26
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32906,7 +32987,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-orbital-uplink-reliquary",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-orbital-uplink-reliquary"
+      "legacyKey": "enhancement-orbital-uplink-reliquary",
+      "canonicalEnhancementId": "orbital-uplink-reliquary",
+      "canonicalDetachmentId": "orbital-assault-force"
     },
     {
       "title": "Veteran of the Vanguard",
@@ -32962,7 +33045,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           26
         ]
       },
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -32972,7 +33054,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-veteran-of-the-vanguard",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-veteran-of-the-vanguard"
+      "legacyKey": "enhancement-veteran-of-the-vanguard",
+      "canonicalEnhancementId": "veteran-of-the-vanguard",
+      "canonicalDetachmentId": "orbital-assault-force"
     },
     {
       "title": "The Imperium’s Sword",
@@ -33018,7 +33102,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-the-imperiums-sword",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33028,7 +33111,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-the-imperiums-sword",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-the-imperiums-sword"
+      "legacyKey": "enhancement-the-imperiums-sword",
+      "canonicalEnhancementId": "1st-company-task-force-the-imperiums-sword",
+      "canonicalDetachmentId": "1st-company-task-force"
     },
     {
       "title": "FEAR MADE MANIFEST (AURA)",
@@ -33078,7 +33163,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "1st-company-task-force-fear-made-manifest-aura",
       "detachmentId": "1st-company-task-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "1st-company-task-force-fear-made-manifest-aura"
+      "legacyKey": "1st-company-task-force-fear-made-manifest-aura",
+      "canonicalEnhancementId": "enhancement-fear-made-manifest",
+      "canonicalDetachmentId": "1st-company-task-force",
+      "sourceLimited": true
     },
     {
       "title": "Rites of War",
@@ -33105,7 +33193,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-rites-of-war",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33115,7 +33202,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-rites-of-war",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-rites-of-war"
+      "legacyKey": "enhancement-rites-of-war",
+      "canonicalEnhancementId": "1st-company-task-force-rites-of-war",
+      "canonicalDetachmentId": "1st-company-task-force"
     },
     {
       "title": "Iron Resolve",
@@ -33142,7 +33231,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-iron-resolve",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33152,7 +33240,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-iron-resolve",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-iron-resolve"
+      "legacyKey": "enhancement-iron-resolve",
+      "canonicalEnhancementId": "1st-company-task-force-iron-resolve",
+      "canonicalDetachmentId": "1st-company-task-force"
     },
     {
       "title": "Indomitable Fury",
@@ -33177,7 +33267,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-indomitable-fury",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33187,7 +33276,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-indomitable-fury",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-indomitable-fury"
+      "legacyKey": "enhancement-indomitable-fury",
+      "canonicalEnhancementId": "anvil-siege-force-indomitable-fury",
+      "canonicalDetachmentId": "anvil-siege-force"
     },
     {
       "title": "Fleet Commander",
@@ -33215,7 +33306,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-fleet-commander",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33225,7 +33315,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-fleet-commander",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-fleet-commander"
+      "legacyKey": "enhancement-fleet-commander",
+      "canonicalEnhancementId": "anvil-siege-force-fleet-commander",
+      "canonicalDetachmentId": "anvil-siege-force"
     },
     {
       "title": "Stoic Defender",
@@ -33271,7 +33363,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-stoic-defender",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33281,7 +33372,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-stoic-defender",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-stoic-defender"
+      "legacyKey": "enhancement-stoic-defender",
+      "canonicalEnhancementId": "anvil-siege-force-stoic-defender",
+      "canonicalDetachmentId": "anvil-siege-force"
     },
     {
       "title": "Architect of War",
@@ -33327,7 +33420,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-architect-of-war",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33337,7 +33429,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-architect-of-war",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-architect-of-war"
+      "legacyKey": "enhancement-architect-of-war",
+      "canonicalEnhancementId": "anvil-siege-force-architect-of-war",
+      "canonicalDetachmentId": "anvil-siege-force"
     },
     {
       "title": "Champion of Humanity",
@@ -33370,7 +33464,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-champion-of-humanity",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33380,7 +33473,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-champion-of-humanity",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-champion-of-humanity"
+      "legacyKey": "enhancement-champion-of-humanity",
+      "canonicalEnhancementId": "firestorm-assault-force-champion-of-humanity",
+      "canonicalDetachmentId": "firestorm-assault-force"
     },
     {
       "title": "War-tempered Artifice",
@@ -33425,7 +33520,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-war-tempered-artifice",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33435,7 +33529,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-war-tempered-artifice",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-war-tempered-artifice"
+      "legacyKey": "enhancement-war-tempered-artifice",
+      "canonicalEnhancementId": "firestorm-assault-force-war-tempered-artifice",
+      "canonicalDetachmentId": "firestorm-assault-force"
     },
     {
       "title": "Forged in Battle",
@@ -33481,7 +33577,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-forged-in-battle",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33491,7 +33586,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-forged-in-battle",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-forged-in-battle"
+      "legacyKey": "enhancement-forged-in-battle",
+      "canonicalEnhancementId": "firestorm-assault-force-forged-in-battle",
+      "canonicalDetachmentId": "firestorm-assault-force"
     },
     {
       "title": "Adamantine Mantle",
@@ -33537,7 +33634,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-adamantine-mantle",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33547,7 +33643,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-adamantine-mantle",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-adamantine-mantle"
+      "legacyKey": "enhancement-adamantine-mantle",
+      "canonicalEnhancementId": "firestorm-assault-force-adamantine-mantle",
+      "canonicalDetachmentId": "firestorm-assault-force"
     },
     {
       "title": "Artificer Armour",
@@ -33593,7 +33691,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-artificer-armour",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33603,7 +33700,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-artificer-armour",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-artificer-armour"
+      "legacyKey": "enhancement-artificer-armour",
+      "canonicalEnhancementId": "gladius-task-force-artificer-armour",
+      "canonicalDetachmentId": "gladius-task-force"
     },
     {
       "title": "The Honour Vehement",
@@ -33649,7 +33748,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-the-honour-vehement",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33659,7 +33757,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-the-honour-vehement",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-the-honour-vehement"
+      "legacyKey": "enhancement-the-honour-vehement",
+      "canonicalEnhancementId": "gladius-task-force-the-honour-vehement",
+      "canonicalDetachmentId": "gladius-task-force"
     },
     {
       "title": "Adept of the Codex",
@@ -33687,7 +33787,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-adept-of-the-codex",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33697,7 +33796,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-adept-of-the-codex",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-adept-of-the-codex"
+      "legacyKey": "enhancement-adept-of-the-codex",
+      "canonicalEnhancementId": "gladius-task-force-adept-of-the-codex",
+      "canonicalDetachmentId": "gladius-task-force"
     },
     {
       "title": "Fire Discipline",
@@ -33743,7 +33844,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-fire-discipline",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33753,7 +33853,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-fire-discipline",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-fire-discipline"
+      "legacyKey": "enhancement-fire-discipline",
+      "canonicalEnhancementId": "gladius-task-force-fire-discipline",
+      "canonicalDetachmentId": "gladius-task-force"
     },
     {
       "title": "Target Augury Web",
@@ -33777,7 +33879,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-target-augury-web",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33787,7 +33888,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-target-augury-web",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-target-augury-web"
+      "legacyKey": "enhancement-target-augury-web",
+      "canonicalEnhancementId": "ironstorm-spearhead-target-augury-web",
+      "canonicalDetachmentId": "ironstorm-spearhead"
     },
     {
       "title": "The Flesh Is Weak",
@@ -33833,7 +33936,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-the-flesh-is-weak",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33843,7 +33945,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-the-flesh-is-weak",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-the-flesh-is-weak"
+      "legacyKey": "enhancement-the-flesh-is-weak",
+      "canonicalEnhancementId": "ironstorm-spearhead-the-flesh-is-weak",
+      "canonicalDetachmentId": "ironstorm-spearhead"
     },
     {
       "title": "Adept of the Omnissiah",
@@ -33867,7 +33971,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-adept-of-the-omnissiah",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33877,7 +33980,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-adept-of-the-omnissiah",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-adept-of-the-omnissiah"
+      "legacyKey": "enhancement-adept-of-the-omnissiah",
+      "canonicalEnhancementId": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "canonicalDetachmentId": "ironstorm-spearhead"
     },
     {
       "title": "Master of Machine War",
@@ -33923,7 +34028,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-master-of-machine-war",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33933,7 +34037,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-master-of-machine-war",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-master-of-machine-war"
+      "legacyKey": "enhancement-master-of-machine-war",
+      "canonicalEnhancementId": "ironstorm-spearhead-master-of-machine-war",
+      "canonicalDetachmentId": "ironstorm-spearhead"
     },
     {
       "title": "Fury of the Storm",
@@ -33957,7 +34063,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-fury-of-the-storm",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -33967,7 +34072,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-fury-of-the-storm",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-fury-of-the-storm"
+      "legacyKey": "enhancement-fury-of-the-storm",
+      "canonicalEnhancementId": "stormlance-task-force-fury-of-the-storm",
+      "canonicalDetachmentId": "stormlance-task-force"
     },
     {
       "title": "Portents of Wisdom",
@@ -34013,7 +34120,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-portents-of-wisdom",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -34023,7 +34129,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-portents-of-wisdom",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-portents-of-wisdom"
+      "legacyKey": "enhancement-portents-of-wisdom",
+      "canonicalEnhancementId": "stormlance-task-force-portents-of-wisdom",
+      "canonicalDetachmentId": "stormlance-task-force"
     },
     {
       "title": "Feinting Withdrawal",
@@ -34069,7 +34177,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-feinting-withdrawal",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -34079,7 +34186,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-feinting-withdrawal",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-feinting-withdrawal"
+      "legacyKey": "enhancement-feinting-withdrawal",
+      "canonicalEnhancementId": "stormlance-task-force-feinting-withdrawal",
+      "canonicalDetachmentId": "stormlance-task-force"
     },
     {
       "title": "Hunter’s Instincts",
@@ -34103,7 +34212,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-hunters-instincts",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -34113,7 +34221,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-hunters-instincts",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-hunters-instincts"
+      "legacyKey": "enhancement-hunters-instincts",
+      "canonicalEnhancementId": "stormlance-task-force-hunters-instincts",
+      "canonicalDetachmentId": "stormlance-task-force"
     },
     {
       "title": "The Blade Driven Deep",
@@ -34158,7 +34268,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-the-blade-driven-deep",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -34168,7 +34277,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-the-blade-driven-deep",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-the-blade-driven-deep"
+      "legacyKey": "enhancement-the-blade-driven-deep",
+      "canonicalEnhancementId": "vanguard-spearhead-the-blade-driven-deep",
+      "canonicalDetachmentId": "vanguard-spearhead"
     },
     {
       "title": "Ghostweave Cloak",
@@ -34214,7 +34325,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-ghostweave-cloak",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -34224,7 +34334,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-ghostweave-cloak",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-ghostweave-cloak"
+      "legacyKey": "enhancement-ghostweave-cloak",
+      "canonicalEnhancementId": "vanguard-spearhead-ghostweave-cloak",
+      "canonicalDetachmentId": "vanguard-spearhead"
     },
     {
       "title": "Execute and Redeploy",
@@ -34252,7 +34364,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-execute-and-redeploy",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -34262,7 +34373,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-execute-and-redeploy",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-execute-and-redeploy"
+      "legacyKey": "enhancement-execute-and-redeploy",
+      "canonicalEnhancementId": "vanguard-spearhead-execute-and-redeploy",
+      "canonicalDetachmentId": "vanguard-spearhead"
     },
     {
       "title": "Shadow War Veteran",
@@ -34290,7 +34403,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "enhancement-shadow-war-veteran",
       "sourceAuthority": "secondary",
-      "profile": null,
       "pointsSource": {
         "label": "Official MFM v1.3",
         "url": "https://mfm.warhammer-community.com/en/space-marines",
@@ -34300,7 +34412,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-shadow-war-veteran",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-shadow-war-veteran"
+      "legacyKey": "enhancement-shadow-war-veteran",
+      "canonicalEnhancementId": "vanguard-spearhead-shadow-war-veteran",
+      "canonicalDetachmentId": "vanguard-spearhead"
     }
   ],
   "effectContracts": [

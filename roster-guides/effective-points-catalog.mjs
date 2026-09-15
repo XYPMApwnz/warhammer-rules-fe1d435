@@ -14,11 +14,11 @@ export async function loadEffectivePointsProjection(root,bookId){
 }
 
 const unitRecord=unit=>({...unit.publicationRecord,wargear:unit.paidWargear||[],...(unit.compatibleChapterKeywords?.length?{compatibleChapterKeywords:[...unit.compatibleChapterKeywords]}:{}),...unit.ruleProfile,points:unit.points});
-const detachmentRecord=item=>{const source=item.publicationRecord||{};return{title:source.title||item.title,detachmentPoints:item.detachmentPoints,forceDisposition:source.forceDisposition||source.disposition||item.forceDisposition||''};};
+const detachmentRecord=item=>{const source=item.publicationRecord||{};return{id:item.id,title:source.title||item.title,detachmentPoints:item.detachmentPoints,forceDisposition:source.forceDisposition||source.disposition||item.forceDisposition||''};};
 const identityRecord=item=>({...item.publicationRecord,...item.compatibilityIdentity});
 const groupedEnhancements=(items,recordOf,aliasesOf=()=>[])=>{
   const groups=new Map();
-  for(const item of items){const record={...recordOf(item),value:item.value},keys=[...new Set([record.title,...aliasesOf(item,record)].map(normalize).filter(Boolean))];for(const key of keys){const group=groups.get(key)||[];group.push(record);groups.set(key,group);}}
+  for(const item of items){const compatibility=recordOf(item),id=compatibility.id||item.id,canonicalTags=item.tags||[],record={...compatibility,id,detachmentId:item.detachmentId,title:item.title,value:item.value,text:item.text||'',tags:Object.hasOwn(compatibility,'tags')||canonicalTags.length?canonicalTags:undefined,owner:item.owner||undefined,assignment:item.assignment||undefined,...(item.sourceLimited?{sourceLimited:true}:{})},keys=[...new Set([record.title,...aliasesOf(item,record)].map(normalize).filter(Boolean))];for(const key of keys){const group=groups.get(key)||[];group.push(record);groups.set(key,group);}}
   return Object.fromEntries([...groups].map(([key,records])=>[key,records.length===1?records[0]:records]));
 };
 const upgradeAliases=title=>{const base=String(title||'').replace(/\s*\(Upgrade\)\s*$/i,'').replace(/\s+Upgrade$/i,'');return[...new Set([base,`${base} Upgrade`,`${base} (Upgrade)`])].filter(value=>normalize(value)!==normalize(title));};

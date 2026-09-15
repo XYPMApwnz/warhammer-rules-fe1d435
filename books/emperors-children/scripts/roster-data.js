@@ -6244,7 +6244,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-empyric-suffusion",
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-empyric-suffusion"
+      "legacyKey": "enhancement-empyric-suffusion",
+      "canonicalEnhancementId": "enhancement-empyric-suffusion",
+      "canonicalDetachmentId": "carnival-of-excess"
     },
     {
       "title": "Dark Blessings",
@@ -6281,7 +6283,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-dark-blessings",
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-dark-blessings"
+      "legacyKey": "enhancement-dark-blessings",
+      "canonicalEnhancementId": "enhancement-dark-blessings",
+      "canonicalDetachmentId": "carnival-of-excess"
     },
     {
       "title": "Possessed Blade",
@@ -6318,7 +6322,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-possessed-blade",
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-possessed-blade"
+      "legacyKey": "enhancement-possessed-blade",
+      "canonicalEnhancementId": "enhancement-possessed-blade",
+      "canonicalDetachmentId": "carnival-of-excess"
     },
     {
       "title": "Warp Walker",
@@ -6355,7 +6361,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-warp-walker",
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-warp-walker"
+      "legacyKey": "enhancement-warp-walker",
+      "canonicalEnhancementId": "enhancement-warp-walker",
+      "canonicalDetachmentId": "carnival-of-excess"
     },
     {
       "title": "Pledge of Eternal Servitude",
@@ -6392,7 +6400,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-pledge-of-eternal-servitude",
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-pledge-of-eternal-servitude"
+      "legacyKey": "enhancement-pledge-of-eternal-servitude",
+      "canonicalEnhancementId": "enhancement-pledge-of-eternal-servitude",
+      "canonicalDetachmentId": "coterie-of-the-conceited"
     },
     {
       "title": "Pledge of Dark Glory",
@@ -6429,7 +6439,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-pledge-of-dark-glory",
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-pledge-of-dark-glory"
+      "legacyKey": "enhancement-pledge-of-dark-glory",
+      "canonicalEnhancementId": "enhancement-pledge-of-dark-glory",
+      "canonicalDetachmentId": "coterie-of-the-conceited"
     },
     {
       "title": "Pledge of Mortal Pain",
@@ -6466,7 +6478,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-pledge-of-mortal-pain",
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-pledge-of-mortal-pain"
+      "legacyKey": "enhancement-pledge-of-mortal-pain",
+      "canonicalEnhancementId": "enhancement-pledge-of-mortal-pain",
+      "canonicalDetachmentId": "coterie-of-the-conceited"
     },
     {
       "title": "Pledge of Unholy Fortune",
@@ -6503,7 +6517,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-pledge-of-unholy-fortune",
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-pledge-of-unholy-fortune"
+      "legacyKey": "enhancement-pledge-of-unholy-fortune",
+      "canonicalEnhancementId": "enhancement-pledge-of-unholy-fortune",
+      "canonicalDetachmentId": "coterie-of-the-conceited"
     },
     {
       "title": "Tears of the Phoenix",
@@ -6549,7 +6565,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-tears-of-the-phoenix",
       "detachmentId": "court-of-the-phoenician",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-tears-of-the-phoenix"
+      "legacyKey": "enhancement-tears-of-the-phoenix",
+      "canonicalEnhancementId": "enhancement-tears-of-the-phoenix",
+      "canonicalDetachmentId": "court-of-the-phoenician"
     },
     {
       "title": "Exalted Patron",
@@ -6591,7 +6609,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-exalted-patron",
       "detachmentId": "court-of-the-phoenician",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-exalted-patron"
+      "legacyKey": "enhancement-exalted-patron",
+      "canonicalEnhancementId": "enhancement-exalted-patron",
+      "canonicalDetachmentId": "court-of-the-phoenician"
     },
     {
       "title": "Soulstain Made Manifest",
@@ -6637,7 +6657,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-soulstain-made-manifest",
       "detachmentId": "court-of-the-phoenician",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-soulstain-made-manifest"
+      "legacyKey": "enhancement-soulstain-made-manifest",
+      "canonicalEnhancementId": "enhancement-soulstain-made-manifest",
+      "canonicalDetachmentId": "court-of-the-phoenician"
     },
     {
       "title": "Spiritsliver",
@@ -6679,7 +6701,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-spiritsliver",
       "detachmentId": "court-of-the-phoenician",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-spiritsliver"
+      "legacyKey": "enhancement-spiritsliver",
+      "canonicalEnhancementId": "enhancement-spiritsliver",
+      "canonicalDetachmentId": "court-of-the-phoenician"
     },
     {
       "title": "Cacophonic Accompaniment",
@@ -6721,7 +6745,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-cacophonic-accompaniment",
       "detachmentId": "elegant-brutes",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-cacophonic-accompaniment"
+      "legacyKey": "enhancement-cacophonic-accompaniment",
+      "canonicalEnhancementId": "enhancement-cacophonic-accompaniment",
+      "canonicalDetachmentId": "elegant-brutes"
     },
     {
       "title": "Frenzied Ferocity",
@@ -6764,7 +6790,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-frenzied-ferocity",
       "detachmentId": "elegant-brutes",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-frenzied-ferocity"
+      "legacyKey": "enhancement-frenzied-ferocity",
+      "canonicalEnhancementId": "enhancement-frenzied-ferocity-upgrade",
+      "canonicalDetachmentId": "elegant-brutes",
+      "sourceLimited": true
     },
     {
       "title": "Euphoric Crown",
@@ -6806,7 +6835,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-euphoric-crown",
       "detachmentId": "frenzied-host",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-euphoric-crown"
+      "legacyKey": "enhancement-euphoric-crown",
+      "canonicalEnhancementId": "enhancement-euphoric-crown",
+      "canonicalDetachmentId": "frenzied-host"
     },
     {
       "title": "Howling Plate",
@@ -6848,7 +6879,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-howling-plate",
       "detachmentId": "frenzied-host",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-howling-plate"
+      "legacyKey": "enhancement-howling-plate",
+      "canonicalEnhancementId": "enhancement-howling-plate",
+      "canonicalDetachmentId": "frenzied-host"
     },
     {
       "title": "Steeped in Suffering",
@@ -6885,7 +6918,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-steeped-in-suffering",
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-steeped-in-suffering"
+      "legacyKey": "enhancement-steeped-in-suffering",
+      "canonicalEnhancementId": "enhancement-steeped-in-suffering",
+      "canonicalDetachmentId": "mercurial-host"
     },
     {
       "title": "Intoxicating Musk",
@@ -6922,7 +6957,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-intoxicating-musk",
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-intoxicating-musk"
+      "legacyKey": "enhancement-intoxicating-musk",
+      "canonicalEnhancementId": "enhancement-intoxicating-musk",
+      "canonicalDetachmentId": "mercurial-host"
     },
     {
       "title": "Tactical Perfection",
@@ -6959,7 +6996,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-tactical-perfection",
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-tactical-perfection"
+      "legacyKey": "enhancement-tactical-perfection",
+      "canonicalEnhancementId": "enhancement-tactical-perfection",
+      "canonicalDetachmentId": "mercurial-host"
     },
     {
       "title": "Loathsome Dexterity",
@@ -6996,7 +7035,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-loathsome-dexterity",
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-loathsome-dexterity"
+      "legacyKey": "enhancement-loathsome-dexterity",
+      "canonicalEnhancementId": "enhancement-loathsome-dexterity",
+      "canonicalDetachmentId": "mercurial-host"
     },
     {
       "title": "Faultless Opportunist",
@@ -7033,7 +7074,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-faultless-opportunist",
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-faultless-opportunist"
+      "legacyKey": "enhancement-faultless-opportunist",
+      "canonicalEnhancementId": "enhancement-faultless-opportunist",
+      "canonicalDetachmentId": "peerless-bladesmen"
     },
     {
       "title": "Blinding Speed",
@@ -7070,7 +7113,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-blinding-speed",
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-blinding-speed"
+      "legacyKey": "enhancement-blinding-speed",
+      "canonicalEnhancementId": "enhancement-blinding-speed",
+      "canonicalDetachmentId": "peerless-bladesmen"
     },
     {
       "title": "Distortion",
@@ -7107,7 +7152,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-distortion",
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-distortion"
+      "legacyKey": "enhancement-distortion",
+      "canonicalEnhancementId": "enhancement-distortion",
+      "canonicalDetachmentId": "peerless-bladesmen"
     },
     {
       "title": "Rise to the Challenge",
@@ -7144,7 +7191,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-rise-to-the-challenge",
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-rise-to-the-challenge"
+      "legacyKey": "enhancement-rise-to-the-challenge",
+      "canonicalEnhancementId": "enhancement-rise-to-the-challenge",
+      "canonicalDetachmentId": "peerless-bladesmen"
     },
     {
       "title": "Sublime Prescience",
@@ -7181,7 +7230,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-sublime-prescience",
       "detachmentId": "rapid-evisceration",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-sublime-prescience"
+      "legacyKey": "enhancement-sublime-prescience",
+      "canonicalEnhancementId": "enhancement-sublime-prescience",
+      "canonicalDetachmentId": "rapid-evisceration"
     },
     {
       "title": "Spearhead Striker",
@@ -7218,7 +7269,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-spearhead-striker",
       "detachmentId": "rapid-evisceration",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-spearhead-striker"
+      "legacyKey": "enhancement-spearhead-striker",
+      "canonicalEnhancementId": "enhancement-spearhead-striker",
+      "canonicalDetachmentId": "rapid-evisceration"
     },
     {
       "title": "Accomplished Tactician",
@@ -7255,7 +7308,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-accomplished-tactician",
       "detachmentId": "rapid-evisceration",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-accomplished-tactician"
+      "legacyKey": "enhancement-accomplished-tactician",
+      "canonicalEnhancementId": "enhancement-accomplished-tactician",
+      "canonicalDetachmentId": "rapid-evisceration"
     },
     {
       "title": "Heretek Adept",
@@ -7292,7 +7347,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-heretek-adept",
       "detachmentId": "rapid-evisceration",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-heretek-adept"
+      "legacyKey": "enhancement-heretek-adept",
+      "canonicalEnhancementId": "enhancement-heretek-adept",
+      "canonicalDetachmentId": "rapid-evisceration"
     },
     {
       "title": "Eager to Prove",
@@ -7329,7 +7386,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eager-to-prove",
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-eager-to-prove"
+      "legacyKey": "enhancement-eager-to-prove",
+      "canonicalEnhancementId": "enhancement-eager-to-prove",
+      "canonicalDetachmentId": "slaaneshs-chosen"
     },
     {
       "title": "Repulsed by Weakness",
@@ -7366,7 +7425,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-repulsed-by-weakness",
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-repulsed-by-weakness"
+      "legacyKey": "enhancement-repulsed-by-weakness",
+      "canonicalEnhancementId": "enhancement-repulsed-by-weakness",
+      "canonicalDetachmentId": "slaaneshs-chosen"
     },
     {
       "title": "Proud and Vainglorious",
@@ -7403,7 +7464,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-proud-and-vainglorious",
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-proud-and-vainglorious"
+      "legacyKey": "enhancement-proud-and-vainglorious",
+      "canonicalEnhancementId": "enhancement-proud-and-vainglorious",
+      "canonicalDetachmentId": "slaaneshs-chosen"
     },
     {
       "title": "Slayer of Champions",
@@ -7440,7 +7503,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-slayer-of-champions",
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-slayer-of-champions"
+      "legacyKey": "enhancement-slayer-of-champions",
+      "canonicalEnhancementId": "enhancement-slayer-of-champions",
+      "canonicalDetachmentId": "slaaneshs-chosen"
     },
     {
       "title": "Eager Patrons",
@@ -7483,7 +7548,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eager-patrons",
       "detachmentId": "spectacle-of-slaughter",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-eager-patrons"
+      "legacyKey": "enhancement-eager-patrons",
+      "canonicalEnhancementId": "enhancement-eager-patrons",
+      "canonicalDetachmentId": "spectacle-of-slaughter"
     },
     {
       "title": "Beguiling Grotesquerie",
@@ -7526,7 +7593,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-beguiling-grotesquerie",
       "detachmentId": "spectacle-of-slaughter",
       "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-beguiling-grotesquerie"
+      "legacyKey": "enhancement-beguiling-grotesquerie",
+      "canonicalEnhancementId": "enhancement-beguiling-grotesquerie-upgrade",
+      "canonicalDetachmentId": "spectacle-of-slaughter",
+      "sourceLimited": true
     }
   ],
   "effectContracts": [

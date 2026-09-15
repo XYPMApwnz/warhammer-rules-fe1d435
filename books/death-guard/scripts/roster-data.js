@@ -10162,7 +10162,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-virulent-vectorium",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-daemon-weapon-of-nurgle"
+      "legacyKey": "enhancement-daemon-weapon-of-nurgle",
+      "canonicalEnhancementId": "enhancement-daemon-weapon-of-nurgle",
+      "canonicalDetachmentId": "detachment-virulent-vectorium"
     },
     {
       "type": "enhancement",
@@ -10189,7 +10191,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-virulent-vectorium",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-furnace-of-plagues"
+      "legacyKey": "enhancement-furnace-of-plagues",
+      "canonicalEnhancementId": "enhancement-furnace-of-plagues",
+      "canonicalDetachmentId": "detachment-virulent-vectorium"
     },
     {
       "type": "enhancement",
@@ -10216,7 +10220,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-virulent-vectorium",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-arch-contaminator"
+      "legacyKey": "enhancement-arch-contaminator",
+      "canonicalEnhancementId": "enhancement-arch-contaminator",
+      "canonicalDetachmentId": "detachment-virulent-vectorium"
     },
     {
       "type": "enhancement",
@@ -10243,7 +10249,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-virulent-vectorium",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-revolting-regeneration"
+      "legacyKey": "enhancement-revolting-regeneration",
+      "canonicalEnhancementId": "enhancement-revolting-regeneration",
+      "canonicalDetachmentId": "detachment-virulent-vectorium"
     },
     {
       "type": "enhancement",
@@ -10270,7 +10278,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-mortarions-hammer",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-eye-of-affliction"
+      "legacyKey": "enhancement-eye-of-affliction",
+      "canonicalEnhancementId": "enhancement-eye-of-affliction",
+      "canonicalDetachmentId": "detachment-mortarions-hammer"
     },
     {
       "type": "enhancement",
@@ -10296,7 +10306,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-mortarions-hammer",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-bilemaw-blight"
+      "legacyKey": "enhancement-bilemaw-blight",
+      "canonicalEnhancementId": "enhancement-bilemaw-blight",
+      "canonicalDetachmentId": "detachment-mortarions-hammer"
     },
     {
       "type": "enhancement",
@@ -10323,7 +10335,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-mortarions-hammer",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-shriekworm-familiar"
+      "legacyKey": "enhancement-shriekworm-familiar",
+      "canonicalEnhancementId": "enhancement-shriekworm-familiar",
+      "canonicalDetachmentId": "detachment-mortarions-hammer"
     },
     {
       "type": "enhancement",
@@ -10349,7 +10363,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-mortarions-hammer",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-tendrilous-emissions"
+      "legacyKey": "enhancement-tendrilous-emissions",
+      "canonicalEnhancementId": "enhancement-tendrilous-emissions",
+      "canonicalDetachmentId": "detachment-mortarions-hammer"
     },
     {
       "type": "enhancement",
@@ -10375,7 +10391,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-champions-of-contagion",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-final-ingredient"
+      "legacyKey": "enhancement-final-ingredient",
+      "canonicalEnhancementId": "enhancement-final-ingredient",
+      "canonicalDetachmentId": "detachment-champions-of-contagion"
     },
     {
       "type": "enhancement",
@@ -10401,7 +10419,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-champions-of-contagion",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-visions-of-virulence"
+      "legacyKey": "enhancement-visions-of-virulence",
+      "canonicalEnhancementId": "enhancement-visions-of-virulence",
+      "canonicalDetachmentId": "detachment-champions-of-contagion"
     },
     {
       "type": "enhancement",
@@ -10427,7 +10447,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-champions-of-contagion",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-needle-of-nurgle"
+      "legacyKey": "enhancement-needle-of-nurgle",
+      "canonicalEnhancementId": "enhancement-needle-of-nurgle",
+      "canonicalDetachmentId": "detachment-champions-of-contagion"
     },
     {
       "type": "enhancement",
@@ -10453,7 +10475,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-champions-of-contagion",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-cornucophagus"
+      "legacyKey": "enhancement-cornucophagus",
+      "canonicalEnhancementId": "enhancement-cornucophagus",
+      "canonicalDetachmentId": "detachment-champions-of-contagion"
     },
     {
       "type": "enhancement",
@@ -10480,7 +10504,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-tallyband-summoners",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-beckoning-blight"
+      "legacyKey": "enhancement-beckoning-blight",
+      "canonicalEnhancementId": "enhancement-beckoning-blight",
+      "canonicalDetachmentId": "detachment-tallyband-summoners"
     },
     {
       "type": "enhancement",
@@ -10507,7 +10533,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-tallyband-summoners",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-fell-harvester"
+      "legacyKey": "enhancement-fell-harvester",
+      "canonicalEnhancementId": "enhancement-fell-harvester",
+      "canonicalDetachmentId": "detachment-tallyband-summoners"
     },
     {
       "type": "enhancement",
@@ -10533,7 +10561,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-tallyband-summoners",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-entropic-knell"
+      "legacyKey": "enhancement-entropic-knell",
+      "canonicalEnhancementId": "enhancement-entropic-knell",
+      "canonicalDetachmentId": "detachment-tallyband-summoners"
     },
     {
       "type": "enhancement",
@@ -10559,7 +10589,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-tallyband-summoners",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-tome-of-bounteous-blessings"
+      "legacyKey": "enhancement-tome-of-bounteous-blessings",
+      "canonicalEnhancementId": "enhancement-tome-of-bounteous-blessings",
+      "canonicalDetachmentId": "detachment-tallyband-summoners"
     },
     {
       "type": "enhancement",
@@ -10585,7 +10617,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-shamblerot-vectorium",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-witherbone-pipes"
+      "legacyKey": "enhancement-witherbone-pipes",
+      "canonicalEnhancementId": "enhancement-witherbone-pipes",
+      "canonicalDetachmentId": "detachment-shamblerot-vectorium"
     },
     {
       "type": "enhancement",
@@ -10612,7 +10646,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-shamblerot-vectorium",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-lord-of-the-walking-pox"
+      "legacyKey": "enhancement-lord-of-the-walking-pox",
+      "canonicalEnhancementId": "enhancement-lord-of-the-walking-pox",
+      "canonicalDetachmentId": "detachment-shamblerot-vectorium"
     },
     {
       "type": "enhancement",
@@ -10638,7 +10674,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-shamblerot-vectorium",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-sorrowsyphon"
+      "legacyKey": "enhancement-sorrowsyphon",
+      "canonicalEnhancementId": "enhancement-sorrowsyphon",
+      "canonicalDetachmentId": "detachment-shamblerot-vectorium"
     },
     {
       "type": "enhancement",
@@ -10665,7 +10703,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-shamblerot-vectorium",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-talisman-of-burgeoning"
+      "legacyKey": "enhancement-talisman-of-burgeoning",
+      "canonicalEnhancementId": "enhancement-talisman-of-burgeoning",
+      "canonicalDetachmentId": "detachment-shamblerot-vectorium"
     },
     {
       "type": "enhancement",
@@ -10692,7 +10732,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-death-lords-chosen",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-face-of-death"
+      "legacyKey": "enhancement-face-of-death",
+      "canonicalEnhancementId": "enhancement-face-of-death",
+      "canonicalDetachmentId": "detachment-death-lords-chosen"
     },
     {
       "type": "enhancement",
@@ -10719,7 +10761,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-death-lords-chosen",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-vile-vigour"
+      "legacyKey": "enhancement-vile-vigour",
+      "canonicalEnhancementId": "enhancement-vile-vigour",
+      "canonicalDetachmentId": "detachment-death-lords-chosen"
     },
     {
       "type": "enhancement",
@@ -10746,7 +10790,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-death-lords-chosen",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-warprot-talisman"
+      "legacyKey": "enhancement-warprot-talisman",
+      "canonicalEnhancementId": "enhancement-warprot-talisman",
+      "canonicalDetachmentId": "detachment-death-lords-chosen"
     },
     {
       "type": "enhancement",
@@ -10773,7 +10819,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-death-lords-chosen",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-helm-of-the-fly-king"
+      "legacyKey": "enhancement-helm-of-the-fly-king",
+      "canonicalEnhancementId": "enhancement-helm-of-the-fly-king",
+      "canonicalDetachmentId": "detachment-death-lords-chosen"
     },
     {
       "type": "enhancement",
@@ -10798,7 +10846,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-contagion-engines",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-parasitic-woe-reaper"
+      "legacyKey": "enhancement-parasitic-woe-reaper",
+      "canonicalEnhancementId": "enhancement-parasitic-woe-reaper",
+      "canonicalDetachmentId": "detachment-contagion-engines"
     },
     {
       "type": "enhancement",
@@ -10824,7 +10874,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-contagion-engines",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-lancet-of-the-worldsore"
+      "legacyKey": "enhancement-lancet-of-the-worldsore",
+      "canonicalEnhancementId": "enhancement-lancet-of-the-worldsore",
+      "canonicalDetachmentId": "detachment-contagion-engines"
     },
     {
       "type": "enhancement",
@@ -10849,7 +10901,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-flyblown-host",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-insectile-murmuration"
+      "legacyKey": "enhancement-insectile-murmuration",
+      "canonicalEnhancementId": "enhancement-insectile-murmuration",
+      "canonicalDetachmentId": "detachment-flyblown-host"
     },
     {
       "type": "enhancement",
@@ -10874,7 +10928,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-flyblown-host",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-plagueveil"
+      "legacyKey": "enhancement-plagueveil",
+      "canonicalEnhancementId": "enhancement-plagueveil",
+      "canonicalDetachmentId": "detachment-flyblown-host"
     },
     {
       "type": "enhancement",
@@ -10903,7 +10959,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-paragons-of-putrescence",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-rejuvenating-swarm"
+      "legacyKey": "enhancement-rejuvenating-swarm",
+      "canonicalEnhancementId": "enhancement-rejuvenating-swarm",
+      "canonicalDetachmentId": "detachment-paragons-of-putrescence"
     },
     {
       "type": "enhancement",
@@ -10931,7 +10989,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-paragons-of-putrescence",
       "sourceBookId": "death-guard",
-      "legacyKey": "enhancement-host-of-the-hybridised-pox"
+      "legacyKey": "enhancement-host-of-the-hybridised-pox",
+      "canonicalEnhancementId": "enhancement-host-of-the-hybridised-pox",
+      "canonicalDetachmentId": "detachment-paragons-of-putrescence"
     }
   ],
   "effectContracts": [

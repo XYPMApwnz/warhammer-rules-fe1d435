@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import ruleFactsApi from '../rule-facts.js';
 import {buildRelationGraphs} from './build-relation-graph.mjs';
-import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,persistCanonicalWeaponProfileIdentities,serializeRosterCatalog} from './build-roster-catalog.mjs';
+import {canonicalDetachmentRuleSet,canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,persistCanonicalWeaponProfileIdentities,serializeRosterCatalog} from './build-roster-catalog.mjs';
 import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
 import {createCanonicalBuildContext,finishCanonicalBuild} from './canonical-build-contract.mjs';
 import {createEffectivePointsProjection,resolveEffectiveEnhancementContractId,resolveEffectiveEnhancementIdentity} from './effective-points-projection.mjs';
@@ -299,6 +299,7 @@ for(const item of canonicalRosterEnhancements){
 }
 let rosterEnhancements=Object.fromEntries(projectionEnhancementSources.map(({det,item,contract,ownerRecord})=>{const dependencyRecord=Boolean(det.dependencyBook),sourceId=dependencyRecord?item.sourceId:null,facts=dependencyRecord?enhancementDependencyFacts(item):{},record={title:item.title,text:item.text,value:ownerRecord?ownerRecord.points:item.value,detachment:det.title,tags:contract?.tags||item.tags||[],...(sourceId?{sourceId}:{}),...(item.profile?{profile:item.profile}:{}),...facts,owner:contract?.owner||facts.owner||null,assignment:contract?.assignment||facts.assignment||null},configuredExactIdentity=Boolean(config.rosterCatalog?.exactEnhancementIds),builtInExactIdentity=['chaos-space-marines','space-marines','dark-angels','blood-angels'].includes(config.id),exactRecord={...record,ruleId:enhancementRuleId(item,det),detachmentId:det.id};return configuredExactIdentity?[titleKey(item.title),exactRecord]:builtInExactIdentity?[enhancementRuleId(item,det),exactRecord]:[titleKey(item.title),record];}));
 let effectContracts=effectiveEffectContracts(effectiveEffectContractSets,config.id);
+const canonicalDetachmentRules=canonicalDetachmentRuleSet(detachments,{...config.rosterCatalog,bookId:config.id});
 let rosterCatalog=createRosterCatalog({config,units,detachments,relationGraphs,legacyEnhancements:rosterEnhancements,enhancementContracts:canonicalRosterEnhancements,keywordGrants:relatedRules?.keywordGrants||[],effectContracts});
 for(const contractSet of effectiveEffectContractSets)validateEffectContractsAgainstCatalog(contractSet,rosterCatalog,{effectiveBookId:config.id});
 const unitPointsPublication=unit=>{if(!unit.dependencyBook)return pointsById.get(unit.id);const dependency=dependencyById.get(unit.dependencyBook),inherited=dependency?.pointsById.get(unit.id),override=dependencyPointOverrides[unit.id];return override?{...inherited,...override}:inherited;};
@@ -338,6 +339,7 @@ let effectiveModel=createEffectiveBookModel({
   dependencies:(config.dependencies||[]).map(bookId=>({bookId,kind:'effective-book-dependency'})),
   units:units.map(source=>{const unit=projectedUnitById.get(source.id);return{...unit,...unitSourceById.get(unit.id),sourceBookId:unit.sourceBookId,publicationState:unit.publicationState,points:unit.points,paidWargear:unit.paidWargear,ruleProfile:unit.ruleProfile,ruleFacts:unitRuleFacts.get(unit.id)};}),
   detachments:detachments.map(source=>({...detachmentSourceById.get(source.id),...projectedDetachmentById.get(source.id)})),
+  detachmentRules:canonicalDetachmentRules,
   enhancements:effectiveEnhancements,
   rules:{armyRules:resolvedArmyRules,updates:resolvedUpdates,relatedRulesByBook,enhancementOwners,coreRelatedRules:resolvedCoreRelatedRules},
   relationGraphs,

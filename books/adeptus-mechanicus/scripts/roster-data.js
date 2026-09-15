@@ -8227,7 +8227,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-cohort-acquisitus",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-explorator-dispensation"
+      "legacyKey": "enhancement-explorator-dispensation",
+      "canonicalEnhancementId": "enhancement-explorator-dispensation",
+      "canonicalDetachmentId": "detachment-cohort-acquisitus"
     },
     {
       "title": "Stealth-screened Cybercanids Upgrade",
@@ -8266,7 +8268,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-cohort-acquisitus",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-stealth-screened-cybercanids-upgrade"
+      "legacyKey": "enhancement-stealth-screened-cybercanids-upgrade",
+      "canonicalEnhancementId": "enhancement-stealth-screened-cybercanids-upgrade",
+      "canonicalDetachmentId": "detachment-cohort-acquisitus"
     },
     {
       "title": "Vingh's Wafers of Dynamism",
@@ -8301,7 +8305,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-lords-of-the-forge",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-vinghs-wafers-of-dynamism"
+      "legacyKey": "enhancement-vinghs-wafers-of-dynamism",
+      "canonicalEnhancementId": "enhancement-vinghs-wafers-of-dynamism",
+      "canonicalDetachmentId": "detachment-lords-of-the-forge"
     },
     {
       "title": "TL-4Ø9",
@@ -8339,7 +8345,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-lords-of-the-forge",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-tl-4-9"
+      "legacyKey": "enhancement-tl-4-9",
+      "canonicalEnhancementId": "enhancement-tl-4-9",
+      "canonicalDetachmentId": "detachment-lords-of-the-forge"
     },
     {
       "title": "Voltagheist Reliquary",
@@ -8377,7 +8385,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-luminen-auto-choir",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-voltagheist-reliquary"
+      "legacyKey": "enhancement-voltagheist-reliquary",
+      "canonicalEnhancementId": "enhancement-voltagheist-reliquary",
+      "canonicalDetachmentId": "detachment-luminen-auto-choir"
     },
     {
       "title": "Electromiasmic Brazier",
@@ -8415,7 +8425,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-luminen-auto-choir",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-electromiasmic-brazier"
+      "legacyKey": "enhancement-electromiasmic-brazier",
+      "canonicalEnhancementId": "enhancement-electromiasmic-brazier",
+      "canonicalDetachmentId": "detachment-luminen-auto-choir"
     },
     {
       "title": "Necromechanic",
@@ -8453,7 +8465,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-cohort-cybernetica",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-necromechanic"
+      "legacyKey": "enhancement-necromechanic",
+      "canonicalEnhancementId": "enhancement-necromechanic",
+      "canonicalDetachmentId": "detachment-cohort-cybernetica"
     },
     {
       "title": "Lord of Machines",
@@ -8491,7 +8505,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-cohort-cybernetica",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-lord-of-machines"
+      "legacyKey": "enhancement-lord-of-machines",
+      "canonicalEnhancementId": "enhancement-lord-of-machines",
+      "canonicalDetachmentId": "detachment-cohort-cybernetica"
     },
     {
       "title": "Emotionless Clarity",
@@ -8529,7 +8545,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-cohort-cybernetica",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-emotionless-clarity"
+      "legacyKey": "enhancement-emotionless-clarity",
+      "canonicalEnhancementId": "enhancement-emotionless-clarity",
+      "canonicalDetachmentId": "detachment-cohort-cybernetica"
     },
     {
       "title": "Arch-negator",
@@ -8567,7 +8585,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-cohort-cybernetica",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-arch-negator"
+      "legacyKey": "enhancement-arch-negator",
+      "canonicalEnhancementId": "enhancement-arch-negator",
+      "canonicalDetachmentId": "detachment-cohort-cybernetica"
     },
     {
       "title": "Mechanicus Locum",
@@ -8605,7 +8625,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-data-psalm-conclave",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-mechanicus-locum"
+      "legacyKey": "enhancement-mechanicus-locum",
+      "canonicalEnhancementId": "enhancement-mechanicus-locum",
+      "canonicalDetachmentId": "detachment-data-psalm-conclave"
     },
     {
       "title": "Mantle of the Gnosticarch",
@@ -8643,7 +8665,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-data-psalm-conclave",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-mantle-of-the-gnosticarch"
+      "legacyKey": "enhancement-mantle-of-the-gnosticarch",
+      "canonicalEnhancementId": "enhancement-mantle-of-the-gnosticarch",
+      "canonicalDetachmentId": "detachment-data-psalm-conclave"
     },
     {
       "title": "Data-blessed Autosermon",
@@ -8681,7 +8705,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-data-psalm-conclave",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-data-blessed-autosermon"
+      "legacyKey": "enhancement-data-blessed-autosermon",
+      "canonicalEnhancementId": "enhancement-data-blessed-autosermon",
+      "canonicalDetachmentId": "detachment-data-psalm-conclave"
     },
     {
       "title": "Temporcopia",
@@ -8719,7 +8745,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-data-psalm-conclave",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-temporcopia"
+      "legacyKey": "enhancement-temporcopia",
+      "canonicalEnhancementId": "enhancement-temporcopia",
+      "canonicalDetachmentId": "detachment-data-psalm-conclave"
     },
     {
       "title": "Omnicogitator",
@@ -8754,7 +8782,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-eradication-cohort",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-omnicogitator"
+      "legacyKey": "enhancement-omnicogitator",
+      "canonicalEnhancementId": "enhancement-omnicogitator",
+      "canonicalDetachmentId": "detachment-eradication-cohort"
     },
     {
       "title": "Martial Signatum Amplificator",
@@ -8792,7 +8822,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-eradication-cohort",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-martial-signatum-amplificator"
+      "legacyKey": "enhancement-martial-signatum-amplificator",
+      "canonicalEnhancementId": "enhancement-martial-signatum-amplificator",
+      "canonicalDetachmentId": "detachment-eradication-cohort"
     },
     {
       "title": "Belicosa-class Capacitor Vanes",
@@ -8830,7 +8862,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-eradication-cohort",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-belicosa-class-capacitor-vanes"
+      "legacyKey": "enhancement-belicosa-class-capacitor-vanes",
+      "canonicalEnhancementId": "enhancement-belicosa-class-capacitor-vanes",
+      "canonicalDetachmentId": "detachment-eradication-cohort"
     },
     {
       "title": "Omnissiah's Fury",
@@ -8865,7 +8899,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-eradication-cohort",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-omnissiahs-fury"
+      "legacyKey": "enhancement-omnissiahs-fury",
+      "canonicalEnhancementId": "enhancement-omnissiahs-fury",
+      "canonicalDetachmentId": "detachment-eradication-cohort"
     },
     {
       "title": "Artisan",
@@ -8903,7 +8939,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-explorator-maniple",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-artisan"
+      "legacyKey": "enhancement-artisan",
+      "canonicalEnhancementId": "enhancement-artisan",
+      "canonicalDetachmentId": "detachment-explorator-maniple"
     },
     {
       "title": "Magos",
@@ -8941,7 +8979,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-explorator-maniple",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-magos"
+      "legacyKey": "enhancement-magos",
+      "canonicalEnhancementId": "enhancement-magos",
+      "canonicalDetachmentId": "detachment-explorator-maniple"
     },
     {
       "title": "Logis",
@@ -8979,7 +9019,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-explorator-maniple",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-logis"
+      "legacyKey": "enhancement-logis",
+      "canonicalEnhancementId": "enhancement-logis",
+      "canonicalDetachmentId": "detachment-explorator-maniple"
     },
     {
       "title": "Genetor",
@@ -9017,7 +9059,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-explorator-maniple",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-genetor"
+      "legacyKey": "enhancement-genetor",
+      "canonicalEnhancementId": "enhancement-genetor",
+      "canonicalDetachmentId": "detachment-explorator-maniple"
     },
     {
       "title": "Transoracular Dyad Wafers",
@@ -9052,7 +9096,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-haloscreed-battle-clade",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-transoracular-dyad-wafers"
+      "legacyKey": "enhancement-transoracular-dyad-wafers",
+      "canonicalEnhancementId": "enhancement-transoracular-dyad-wafers",
+      "canonicalDetachmentId": "detachment-haloscreed-battle-clade"
     },
     {
       "title": "Cognitive Reinforcement",
@@ -9091,7 +9137,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-haloscreed-battle-clade",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-cognitive-reinforcement"
+      "legacyKey": "enhancement-cognitive-reinforcement",
+      "canonicalEnhancementId": "enhancement-cognitive-reinforcement",
+      "canonicalDetachmentId": "detachment-haloscreed-battle-clade"
     },
     {
       "title": "Sanctified Ordnance",
@@ -9129,7 +9177,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-haloscreed-battle-clade",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-sanctified-ordnance"
+      "legacyKey": "enhancement-sanctified-ordnance",
+      "canonicalEnhancementId": "enhancement-sanctified-ordnance",
+      "canonicalDetachmentId": "detachment-haloscreed-battle-clade"
     },
     {
       "title": "Inloaded Lethality",
@@ -9169,7 +9219,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-haloscreed-battle-clade",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-inloaded-lethality"
+      "legacyKey": "enhancement-inloaded-lethality",
+      "canonicalEnhancementId": "enhancement-inloaded-lethality",
+      "canonicalDetachmentId": "detachment-haloscreed-battle-clade"
     },
     {
       "title": "Autoclavic Denunciation",
@@ -9207,7 +9259,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-rad-zone-corps",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-autoclavic-denunciation"
+      "legacyKey": "enhancement-autoclavic-denunciation",
+      "canonicalEnhancementId": "enhancement-autoclavic-denunciation",
+      "canonicalDetachmentId": "detachment-rad-zone-corps"
     },
     {
       "title": "Malphonic Susurrus",
@@ -9245,7 +9299,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-rad-zone-corps",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-malphonic-susurrus"
+      "legacyKey": "enhancement-malphonic-susurrus",
+      "canonicalEnhancementId": "enhancement-malphonic-susurrus",
+      "canonicalDetachmentId": "detachment-rad-zone-corps"
     },
     {
       "title": "Peerless Eradicator",
@@ -9283,7 +9339,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-rad-zone-corps",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-peerless-eradicator"
+      "legacyKey": "enhancement-peerless-eradicator",
+      "canonicalEnhancementId": "enhancement-peerless-eradicator",
+      "canonicalDetachmentId": "detachment-rad-zone-corps"
     },
     {
       "title": "Radial Suffusion",
@@ -9321,7 +9379,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-rad-zone-corps",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-radial-suffusion"
+      "legacyKey": "enhancement-radial-suffusion",
+      "canonicalEnhancementId": "enhancement-radial-suffusion",
+      "canonicalDetachmentId": "detachment-rad-zone-corps"
     },
     {
       "title": "Veiled Hunter",
@@ -9356,7 +9416,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-skitarii-hunter-cohort",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-veiled-hunter"
+      "legacyKey": "enhancement-veiled-hunter",
+      "canonicalEnhancementId": "enhancement-veiled-hunter",
+      "canonicalDetachmentId": "detachment-skitarii-hunter-cohort"
     },
     {
       "title": "Clandestine Infiltrator",
@@ -9394,7 +9456,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-skitarii-hunter-cohort",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-clandestine-infiltrator"
+      "legacyKey": "enhancement-clandestine-infiltrator",
+      "canonicalEnhancementId": "enhancement-clandestine-infiltrator",
+      "canonicalDetachmentId": "detachment-skitarii-hunter-cohort"
     },
     {
       "title": "Cantic Thrallnet",
@@ -9429,7 +9493,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-skitarii-hunter-cohort",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-cantic-thrallnet"
+      "legacyKey": "enhancement-cantic-thrallnet",
+      "canonicalEnhancementId": "enhancement-cantic-thrallnet",
+      "canonicalDetachmentId": "detachment-skitarii-hunter-cohort"
     },
     {
       "title": "Battle-sphere Uplink",
@@ -9467,7 +9533,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "detachment-skitarii-hunter-cohort",
       "sourceBookId": "adeptus-mechanicus",
-      "legacyKey": "enhancement-battle-sphere-uplink"
+      "legacyKey": "enhancement-battle-sphere-uplink",
+      "canonicalEnhancementId": "enhancement-battle-sphere-uplink",
+      "canonicalDetachmentId": "detachment-skitarii-hunter-cohort"
     }
   ],
   "effectContracts": [

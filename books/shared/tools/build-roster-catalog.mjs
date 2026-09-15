@@ -202,13 +202,59 @@ export function assertRosterUnitGameplayProjection(units,relationGraphs,catalogU
   return true;
 }
 
-const detachmentRulesFor=(detachment,options={})=>{
+export const canonicalDetachmentRulesFor=(detachment,options={})=>{
   const candidates=[...values(detachment.detachmentRules),...values(detachment.rules)];
   if(detachment.rule)candidates.push(detachment.rule,...values(detachment.rule.additionalRules));
   for(const section of values(detachment.subsections))if(section?.kind==='detachment-rule'||/detachment rule/i.test(section?.title||''))for(const block of values(section.blocks))candidates.push({...block,sectionId:block.sectionId||block.id||section.id});
-  const records=new Map();for(const item of candidates){const id=item?.termId||item?.ruleId||item?.id||(options.inferCanonicalDetachmentRuleIds&&item?.title?`${options.bookId||'book'}-detachment-rule-${slug(item.title)}`:null);if(!id)continue;records.set(id,{id,title:item.title||'',text:item.text||item.full||item.short||'',sectionId:item.sectionId||item.sourceId||item.id||`${detachment.id}-rule`,detachmentId:detachment.id,detachmentTitle:detachment.title,sourceBookId:detachment.dependencyBook||detachment.sourceBookId||null});}
+  const records=new Map();for(const item of candidates){const sectionId=item?.sectionId||item?.sourceId||item?.id||`${detachment.id}-rule`,scopedIds=options.canonicalRuleIdsByScope?.get(`${detachment.id}\0${sectionId}`)||[],scopedId=scopedIds.length===1?scopedIds[0]:null,id=item?.termId||item?.ruleId||item?.id||scopedId||(options.inferCanonicalDetachmentRuleIds&&item?.title?`${options.bookId||'book'}-detachment-rule-${slug(item.title)}`:null);if(!id)continue;const record={id,title:item.title||'',text:item.text||item.full||item.short||'',sectionId,detachmentId:detachment.id,detachmentTitle:detachment.title,sourceBookId:detachment.dependencyBook||detachment.sourceBookId||null},existing=records.get(id);if(existing&&!sameFact(existing,record))throw new Error(`${detachment.id}: conflicting canonical Detachment rule ${id}`);records.set(id,record);}
   return [...records.values()];
 };
+
+export const canonicalDetachmentRuleSet=(detachments,options={})=>values(detachments).flatMap(detachment=>canonicalDetachmentRulesFor(detachment,options).map(rule=>({...rule,sourceBookId:rule.sourceBookId||options.bookId||null})));
+
+export function projectRosterDetachmentRuleFacts(detachments,catalogRules,options={}){
+  const label=options.label||'roster Detachment-rule projection',canonicalRuleIdsByScope=new Map();
+  for(const item of values(catalogRules)){const key=`${item?.detachmentId}\0${item?.sectionId}`;if(!item?.id)throw new Error(`${label}: missing roster Detachment-rule ID`);const ids=canonicalRuleIdsByScope.get(key)||[];ids.push(item.id);canonicalRuleIdsByScope.set(key,ids);}
+  const canonical=options.canonicalRules||canonicalDetachmentRuleSet(detachments,{...options,canonicalRuleIdsByScope}),seenIds=new Set(),seenCanonical=new Set(),projected=values(catalogRules).map(item=>{
+    if(!item?.id||seenIds.has(item.id))throw new Error(`${label}: duplicate or missing roster Detachment-rule ID ${item?.id||'<missing>'}`);seenIds.add(item.id);
+    const exact=canonical.filter(rule=>rule.id===item.id),matches=exact.length?exact:canonical.filter(rule=>rule.detachmentId===item.detachmentId&&rule.sectionId===item.sectionId);
+    if(matches.length!==1)throw new Error(`${label}: ${item.id} must resolve to one canonical Detachment rule; got ${matches.length}`);
+    const rule=matches[0],key=`${rule.detachmentId}\0${rule.id}`;if(seenCanonical.has(key))throw new Error(`${label}: duplicate roster Detachment-rule source ${rule.detachmentId}/${rule.id}`);seenCanonical.add(key);
+    return{...item,...rule,id:item.id};
+  });
+  if(seenCanonical.size!==canonical.length){const missing=canonical.find(rule=>!seenCanonical.has(`${rule.detachmentId}\0${rule.id}`));throw new Error(`${label}: missing roster Detachment rule ${missing?.id}`);}
+  return projected;
+}
+
+export function assertRosterDetachmentRuleProjection(detachments,catalogRules,options={}){
+  const projected=projectRosterDetachmentRuleFacts(detachments,catalogRules,options);
+  if(!sameFact(projected,catalogRules))throw new Error(`${options.label||'roster Detachment-rule projection'}: conflicting canonical Detachment-rule facts`);
+  return true;
+}
+
+const enhancementCandidates=item=>[item?.id,item?.ruleId,item?.sourceId,item?.legacyKey,item?.compatibilityIdentity?.canonicalEnhancementId,...values(item?.canonicalEffectRecordIds)].filter(Boolean);
+export function projectRosterEnhancementFacts(enhancements,catalogEnhancements,{label='roster Enhancement projection'}={}){
+  const byCandidate=new Map();
+  for(const enhancement of values(enhancements))for(const id of enhancementCandidates(enhancement)){const key=`${enhancement.detachmentId}\0${id}`,existing=byCandidate.get(key);if(existing&&existing!==enhancement)throw new Error(`${label}: ambiguous canonical Enhancement identity ${enhancement.detachmentId}/${id}`);byCandidate.set(key,enhancement);}
+  const seen=new Set(),projected=values(catalogEnhancements).map(item=>{
+    const canonical=enhancementCandidates(item).map(id=>byCandidate.get(`${item.detachmentId}\0${id}`)).find(Boolean);
+    if(!canonical)throw new Error(`${label}: unknown canonical Enhancement ${item?.detachmentId||'<missing>'}/${item?.id||'<missing>'}`);
+    const key=`${canonical.detachmentId}\0${canonical.id}`;if(seen.has(key))throw new Error(`${label}: duplicate roster Enhancement projection ${canonical.detachmentId}/${canonical.id}`);seen.add(key);
+    const projected={...item,canonicalEnhancementId:canonical.id,canonicalDetachmentId:canonical.detachmentId,detachmentId:canonical.detachmentId,sourceBookId:canonical.sourceBookId,value:canonical.value,text:canonical.text||'',tags:[...values(canonical.tags)]};
+    for(const field of ['owner','assignment','profile']){if(canonical[field]!=null)projected[field]=structuredClone(canonical[field]);else delete projected[field];}
+    if(canonical.sourceLimited)projected.sourceLimited=true;else delete projected.sourceLimited;
+    return projected;
+  });
+  const canonicalKeys=new Set(values(enhancements).map(item=>`${item.detachmentId}\0${item.id}`));
+  if(seen.size!==canonicalKeys.size){const missing=[...canonicalKeys].find(key=>!seen.has(key));throw new Error(`${label}: missing roster Enhancement ${missing?.replace('\0','/')}`);}
+  return projected;
+}
+
+export function assertRosterEnhancementProjection(enhancements,catalogEnhancements,options={}){
+  const projected=projectRosterEnhancementFacts(enhancements,catalogEnhancements,options);
+  if(!sameFact(projected,catalogEnhancements))throw new Error(`${options.label||'roster Enhancement projection'}: conflicting canonical Enhancement facts`);
+  return true;
+}
 
 export function createRosterCatalog({config,units=[],detachments=[],relationGraphs=new Map(),legacyEnhancements={},enhancementContracts=null,keywordGrants=[],effectContracts=[]}){
   const dependencies=dependencyRecords(config);
@@ -231,7 +277,7 @@ export function createRosterCatalog({config,units=[],detachments=[],relationGrap
   }
   const catalogUnits=units.map(unit=>{const facts=rosterCatalog.includeRuleFacts===false?{}:unit.ruleFacts||unit.facts||{},compatibleChapterKeywords=compatibilityByUnit[unit.id]||[];return {id:unit.id,title:unit.title,sourceBookId:unit.dependencyBook||unit.sourceBookId||config.id,sourceLayer:unit.sourceLayer||unit.status||'current',intrinsicKeywords:[...new Set(values(unit.intrinsicKeywords).length?unit.intrinsicKeywords:values(unit.keywords).length?unit.keywords:values(facts.intrinsicKeywords).length?facts.intrinsicKeywords:values(facts.keywords))],...(compatibleChapterKeywords.length?{compatibleChapterKeywords:[...compatibleChapterKeywords]}:{}),relations:relationsFor(relationGraphs,unit.id),ruleFacts:{...facts,relations:relationsFor(relationGraphs,unit.id)},gameSelections:gameSelectionsFor(unit,rosterCatalog)};});
   const grantByDetachment=new Map(values(keywordGrants).map(record=>[record.detachmentId||record.id,record]));
-  const detachmentRules=detachments.flatMap(detachment=>detachmentRulesFor(detachment,rosterCatalog).map(rule=>({...rule,sourceBookId:rule.sourceBookId||config.id}))),ruleIdsByDetachment=new Map(detachments.map(detachment=>[detachment.id,detachmentRules.filter(rule=>rule.detachmentId===detachment.id).map(rule=>rule.id)]));
+  const detachmentRules=canonicalDetachmentRuleSet(detachments,{...rosterCatalog,bookId:config.id}),ruleIdsByDetachment=new Map(detachments.map(detachment=>[detachment.id,detachmentRules.filter(rule=>rule.detachmentId===detachment.id).map(rule=>rule.id)]));
   const catalogDetachments=detachments.map(detachment=>({id:detachment.id,title:detachment.title,sourceBookId:detachment.dependencyBook||detachment.sourceBookId||config.id,chapterRestriction:detachment.chapterRestriction||detachment.restriction||null,keywordGrants:values(detachment.keywordGrants).length?detachment.keywordGrants:values(grantByDetachment.get(detachment.id)?.grants||grantByDetachment.get(detachment.id)?.keywordGrants),detachmentRuleIds:ruleIdsByDetachment.get(detachment.id)||[]}));
   const legacyEntries=Object.entries(legacyEnhancements||{}),enhancements=[];
   if(Array.isArray(enhancementContracts)){
@@ -241,7 +287,8 @@ export function createRosterCatalog({config,units=[],detachments=[],relationGrap
     for(const detachment of detachments)for(const item of blockEnhancements(detachment)){const legacy=[item.id,item.ruleId,item.sourceId,item.title].filter(Boolean).map(value=>legacyByCompound.get(`${detachment.id}\0${normalize(value)}`)).find(Boolean)||{};enhancements.push({...legacy,...item,id:legacy.ruleId||legacy.id||item.ruleId||item.id,title:item.title||legacy.title,detachmentId:detachment.id,sourceBookId:detachment.dependencyBook||detachment.sourceBookId||config.id,legacyKey:legacy.legacyKey||item.ruleId||item.id});}
     for(const [legacyKey,item] of legacyEntries){if(enhancements.some(record=>record.legacyKey===legacyKey)||rosterCatalog.dedupeLegacyEnhancementsByTitle&&enhancements.some(record=>normalize(record.title)===normalize(item.title)))continue;enhancements.push({...item,id:item.ruleId||item.id||legacyKey,legacyKey,sourceBookId:item.sourceBookId||config.id});}
   }
-  return {schema:'wh40k-army-roster-catalog/v1',book:{id:config.id,title:config.title||config.bookTitle||config.id,factionKeyword:config.factionKeyword||null,parentBookId:dependencies[0]?.bookId||dependencies[0]?.id||null,dependencies:dependencies.map(item=>({bookId:item.bookId||item.id,title:item.title||null}))},units:catalogUnits,detachments:catalogDetachments,detachmentRules,enhancements,effectContracts};
+  const projectedEnhancements=Array.isArray(enhancementContracts)?projectRosterEnhancementFacts(enhancementContracts,enhancements,{label:`${config.id} roster Enhancement projection`}):enhancements;
+  return {schema:'wh40k-army-roster-catalog/v1',book:{id:config.id,title:config.title||config.bookTitle||config.id,factionKeyword:config.factionKeyword||null,parentBookId:dependencies[0]?.bookId||dependencies[0]?.id||null,dependencies:dependencies.map(item=>({bookId:item.bookId||item.id,title:item.title||null}))},units:catalogUnits,detachments:catalogDetachments,detachmentRules,enhancements:projectedEnhancements,effectContracts};
 }
 
 export function serializeRosterCatalog(catalog,legacyEnhancements={}){

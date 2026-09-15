@@ -9456,7 +9456,27 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "ambush-predators",
       "sourceBookId": "tyranids",
-      "legacyKey": "encircling-horrors"
+      "legacyKey": "encircling-horrors",
+      "canonicalEnhancementId": "encircling-horrors",
+      "canonicalDetachmentId": "ambush-predators",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-lictor",
+            "unit-neurolictor",
+            "unit-von-ryans-leapers"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "cryptophotaic-camouflage",
@@ -9482,7 +9502,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "ambush-predators",
       "sourceBookId": "tyranids",
-      "legacyKey": "cryptophotaic-camouflage"
+      "legacyKey": "cryptophotaic-camouflage",
+      "canonicalEnhancementId": "cryptophotaic-camouflage",
+      "canonicalDetachmentId": "ambush-predators",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-von-ryans-leapers"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-biophagic-flow-aura",
@@ -9496,7 +9534,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "assimilation-swarm",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-biophagic-flow-aura"
+      "legacyKey": "enhancement-biophagic-flow-aura",
+      "canonicalEnhancementId": "enhancement-biophagic-flow-aura",
+      "canonicalDetachmentId": "assimilation-swarm",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-instinctive-defense",
@@ -9510,7 +9574,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "assimilation-swarm",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-instinctive-defense"
+      "legacyKey": "enhancement-instinctive-defense",
+      "canonicalEnhancementId": "enhancement-instinctive-defense",
+      "canonicalDetachmentId": "assimilation-swarm",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-parasitic-biomorphology",
@@ -9524,7 +9614,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "assimilation-swarm",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-parasitic-biomorphology"
+      "legacyKey": "enhancement-parasitic-biomorphology",
+      "canonicalEnhancementId": "enhancement-parasitic-biomorphology",
+      "canonicalDetachmentId": "assimilation-swarm",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-regenerating-monstrosity",
@@ -9538,7 +9654,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "assimilation-swarm",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-regenerating-monstrosity"
+      "legacyKey": "enhancement-regenerating-monstrosity",
+      "canonicalEnhancementId": "enhancement-regenerating-monstrosity",
+      "canonicalDetachmentId": "assimilation-swarm",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-parasite-of-mortrex",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-enraged-reserves",
@@ -9552,7 +9690,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "crusher-stampede",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-enraged-reserves"
+      "legacyKey": "enhancement-enraged-reserves",
+      "canonicalEnhancementId": "enhancement-enraged-reserves",
+      "canonicalDetachmentId": "crusher-stampede",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-monstrous-nemesis",
@@ -9566,7 +9726,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "crusher-stampede",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-monstrous-nemesis"
+      "legacyKey": "enhancement-monstrous-nemesis",
+      "canonicalEnhancementId": "enhancement-monstrous-nemesis",
+      "canonicalDetachmentId": "crusher-stampede",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-null-nodules",
@@ -9580,7 +9762,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "crusher-stampede",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-null-nodules"
+      "legacyKey": "enhancement-null-nodules",
+      "canonicalEnhancementId": "enhancement-null-nodules",
+      "canonicalDetachmentId": "crusher-stampede",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-ominous-presence",
@@ -9594,7 +9798,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "crusher-stampede",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-ominous-presence"
+      "legacyKey": "enhancement-ominous-presence",
+      "canonicalEnhancementId": "enhancement-ominous-presence",
+      "canonicalDetachmentId": "crusher-stampede",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-adaptive-biology",
@@ -9608,7 +9834,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "invasion-fleet",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-adaptive-biology"
+      "legacyKey": "enhancement-adaptive-biology",
+      "canonicalEnhancementId": "enhancement-adaptive-biology",
+      "canonicalDetachmentId": "invasion-fleet",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-alien-cunning",
@@ -9622,7 +9874,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "invasion-fleet",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-alien-cunning"
+      "legacyKey": "enhancement-alien-cunning",
+      "canonicalEnhancementId": "enhancement-alien-cunning",
+      "canonicalDetachmentId": "invasion-fleet",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-perfectly-adapted",
@@ -9636,7 +9914,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "invasion-fleet",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-perfectly-adapted"
+      "legacyKey": "enhancement-perfectly-adapted",
+      "canonicalEnhancementId": "enhancement-perfectly-adapted",
+      "canonicalDetachmentId": "invasion-fleet",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-synaptic-linchpin",
@@ -9650,7 +9954,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "invasion-fleet",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-synaptic-linchpin"
+      "legacyKey": "enhancement-synaptic-linchpin",
+      "canonicalEnhancementId": "enhancement-synaptic-linchpin",
+      "canonicalDetachmentId": "invasion-fleet",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "synaptic-strategy",
@@ -9675,7 +10005,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "subterranean-assault",
       "sourceBookId": "tyranids",
-      "legacyKey": "synaptic-strategy"
+      "legacyKey": "synaptic-strategy",
+      "canonicalEnhancementId": "synaptic-strategy",
+      "canonicalDetachmentId": "subterranean-assault",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-trygon"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ],
+          "allKeywords": [
+            "CHARACTER"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "tremor-senses",
@@ -9699,7 +10058,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "subterranean-assault",
       "sourceBookId": "tyranids",
-      "legacyKey": "tremor-senses"
+      "legacyKey": "tremor-senses",
+      "canonicalEnhancementId": "tremor-senses",
+      "canonicalDetachmentId": "subterranean-assault",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-trygon"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ],
+          "allKeywords": [
+            "CHARACTER"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "vanguard-intellect",
@@ -9723,7 +10111,31 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "subterranean-assault",
       "sourceBookId": "tyranids",
-      "legacyKey": "vanguard-intellect"
+      "legacyKey": "vanguard-intellect",
+      "canonicalEnhancementId": "vanguard-intellect",
+      "canonicalDetachmentId": "subterranean-assault",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-parasite-of-mortrex",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-trygon"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ],
+          "allKeywords": [
+            "CHARACTER"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "trygon-prime",
@@ -9747,7 +10159,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "subterranean-assault",
       "sourceBookId": "tyranids",
-      "legacyKey": "trygon-prime"
+      "legacyKey": "trygon-prime",
+      "canonicalEnhancementId": "trygon-prime",
+      "canonicalDetachmentId": "subterranean-assault",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-trygon"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ],
+          "allKeywords": [
+            "CHARACTER"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-power-of-the-hive-mind",
@@ -9761,7 +10194,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "synaptic-nexus",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-power-of-the-hive-mind"
+      "legacyKey": "enhancement-power-of-the-hive-mind",
+      "canonicalEnhancementId": "enhancement-power-of-the-hive-mind",
+      "canonicalDetachmentId": "synaptic-nexus",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-psychostatic-disruption-aura",
@@ -9775,7 +10231,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "synaptic-nexus",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-psychostatic-disruption-aura"
+      "legacyKey": "enhancement-psychostatic-disruption-aura",
+      "canonicalEnhancementId": "enhancement-psychostatic-disruption-aura",
+      "canonicalDetachmentId": "synaptic-nexus",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-synaptic-control",
@@ -9789,7 +10271,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "synaptic-nexus",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-synaptic-control"
+      "legacyKey": "enhancement-synaptic-control",
+      "canonicalEnhancementId": "enhancement-synaptic-control",
+      "canonicalDetachmentId": "synaptic-nexus",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-the-dirgeheart-of-kharis-aura",
@@ -9803,7 +10311,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "synaptic-nexus",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-the-dirgeheart-of-kharis-aura"
+      "legacyKey": "enhancement-the-dirgeheart-of-kharis-aura",
+      "canonicalEnhancementId": "enhancement-the-dirgeheart-of-kharis-aura",
+      "canonicalDetachmentId": "synaptic-nexus",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "destabilising-predation",
@@ -9829,7 +10363,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "talons-of-the-norn-queen",
       "sourceBookId": "tyranids",
-      "legacyKey": "destabilising-predation"
+      "legacyKey": "destabilising-predation",
+      "canonicalEnhancementId": "destabilising-predation",
+      "canonicalDetachmentId": "talons-of-the-norn-queen",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-norn-emissary"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "synaptoprescience",
@@ -9855,7 +10407,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "talons-of-the-norn-queen",
       "sourceBookId": "tyranids",
-      "legacyKey": "synaptoprescience"
+      "legacyKey": "synaptoprescience",
+      "canonicalEnhancementId": "synaptoprescience",
+      "canonicalDetachmentId": "talons-of-the-norn-queen",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-norn-assimilator"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-adrenalised-onslaught",
@@ -9869,7 +10439,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "unending-swarm",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-adrenalised-onslaught"
+      "legacyKey": "enhancement-adrenalised-onslaught",
+      "canonicalEnhancementId": "enhancement-adrenalised-onslaught",
+      "canonicalDetachmentId": "unending-swarm",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-naturalised-camoflage",
@@ -9883,7 +10479,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "unending-swarm",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-naturalised-camoflage"
+      "legacyKey": "enhancement-naturalised-camoflage",
+      "canonicalEnhancementId": "enhancement-naturalised-camoflage",
+      "canonicalDetachmentId": "unending-swarm",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-piercing-talons",
@@ -9897,7 +10519,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "unending-swarm",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-piercing-talons"
+      "legacyKey": "enhancement-piercing-talons",
+      "canonicalEnhancementId": "enhancement-piercing-talons",
+      "canonicalDetachmentId": "unending-swarm",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-relentless-hunger",
@@ -9911,7 +10559,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "unending-swarm",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-relentless-hunger"
+      "legacyKey": "enhancement-relentless-hunger",
+      "canonicalEnhancementId": "enhancement-relentless-hunger",
+      "canonicalDetachmentId": "unending-swarm",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-chameleonic",
@@ -9925,7 +10599,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "vanguard-onslaught",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-chameleonic"
+      "legacyKey": "enhancement-chameleonic",
+      "canonicalEnhancementId": "enhancement-chameleonic",
+      "canonicalDetachmentId": "vanguard-onslaught",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-parasite-of-mortrex",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-hunting-grounds",
@@ -9939,7 +10635,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "vanguard-onslaught",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-hunting-grounds"
+      "legacyKey": "enhancement-hunting-grounds",
+      "canonicalEnhancementId": "enhancement-hunting-grounds",
+      "canonicalDetachmentId": "vanguard-onslaught",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-neuronode",
@@ -9953,7 +10675,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "vanguard-onslaught",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-neuronode"
+      "legacyKey": "enhancement-neuronode",
+      "canonicalEnhancementId": "enhancement-neuronode",
+      "canonicalDetachmentId": "vanguard-onslaught",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "enhancement-stalker",
@@ -9967,7 +10715,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "vanguard-onslaught",
       "sourceBookId": "tyranids",
-      "legacyKey": "enhancement-stalker"
+      "legacyKey": "enhancement-stalker",
+      "canonicalEnhancementId": "enhancement-stalker",
+      "canonicalDetachmentId": "vanguard-onslaught",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-parasite-of-mortrex",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "elevated-might",
@@ -9991,7 +10761,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "warrior-bioform-onslaught",
       "sourceBookId": "tyranids",
-      "legacyKey": "elevated-might"
+      "legacyKey": "elevated-might",
+      "canonicalEnhancementId": "elevated-might",
+      "canonicalDetachmentId": "warrior-bioform-onslaught",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "id": "ocular-adaptation",
@@ -10015,7 +10804,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "detachmentId": "warrior-bioform-onslaught",
       "sourceBookId": "tyranids",
-      "legacyKey": "ocular-adaptation"
+      "legacyKey": "ocular-adaptation",
+      "canonicalEnhancementId": "ocular-adaptation",
+      "canonicalDetachmentId": "warrior-bioform-onslaught",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     }
   ],
   "effectContracts": [

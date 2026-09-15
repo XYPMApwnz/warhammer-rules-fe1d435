@@ -16726,8 +16726,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Cabal of Chaos",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-touched-by-the-warp",
       "points": 10,
       "sourcePages": [
@@ -16748,7 +16746,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-touched-by-the-warp",
       "detachmentId": "cabal-of-chaos",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-touched-by-the-warp"
+      "legacyKey": "enhancement-touched-by-the-warp",
+      "canonicalEnhancementId": "enhancement-touched-by-the-warp",
+      "canonicalDetachmentId": "cabal-of-chaos",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-cultist-firebrand",
+            "unit-dark-apostle",
+            "unit-dark-commune",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Conduit of Chaos",
@@ -16756,8 +16781,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Cabal of Chaos",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-conduit-of-chaos",
       "points": 20,
       "sourcePages": [
@@ -16778,7 +16801,31 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-conduit-of-chaos",
       "detachmentId": "cabal-of-chaos",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-conduit-of-chaos"
+      "legacyKey": "enhancement-conduit-of-chaos",
+      "canonicalEnhancementId": "enhancement-conduit-of-chaos",
+      "canonicalDetachmentId": "cabal-of-chaos",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-mutilators",
+            "unit-obliterators",
+            "unit-possessed",
+            "unit-warp-talons",
+            "unit-defiler",
+            "unit-forgefiend",
+            "unit-heldrake",
+            "unit-maulerfiend",
+            "unit-venomcrawler"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Amulet of Tainted Vigour",
@@ -16786,8 +16833,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Chaos Cult",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-amulet-of-tainted-vigour",
       "restrictions": [
         "DARK APOSTLE model only."
@@ -16822,7 +16867,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-amulet-of-tainted-vigour",
       "detachmentId": "chaos-cult",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-amulet-of-tainted-vigour"
+      "legacyKey": "enhancement-amulet-of-tainted-vigour",
+      "canonicalEnhancementId": "enhancement-amulet-of-tainted-vigour",
+      "canonicalDetachmentId": "chaos-cult",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-dark-apostle"
+          ]
+        }
+      }
     },
     {
       "title": "Cultist's Brand",
@@ -16830,8 +16885,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "Chaos Cult",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-cultists-brand",
       "restrictions": [
         "DARK APOSTLE or DAMNED model only."
@@ -16866,7 +16919,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-cultists-brand",
       "detachmentId": "chaos-cult",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-cultists-brand"
+      "legacyKey": "enhancement-cultists-brand",
+      "canonicalEnhancementId": "enhancement-cultists-brand",
+      "canonicalDetachmentId": "chaos-cult",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "alternatives": [
+            {
+              "unitIds": [
+                "unit-dark-apostle"
+              ]
+            },
+            {
+              "allKeywords": [
+                "CHARACTER",
+                "DAMNED"
+              ],
+              "noneKeywords": [
+                "EPIC HERO"
+              ]
+            }
+          ]
+        }
+      }
     },
     {
       "title": "Incendiary Goad",
@@ -16874,8 +16950,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Chaos Cult",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-incendiary-goad",
       "restrictions": [
         "DARK APOSTLE or DAMNED model only."
@@ -16910,7 +16984,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-incendiary-goad",
       "detachmentId": "chaos-cult",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-incendiary-goad"
+      "legacyKey": "enhancement-incendiary-goad",
+      "canonicalEnhancementId": "enhancement-incendiary-goad",
+      "canonicalDetachmentId": "chaos-cult",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "alternatives": [
+            {
+              "unitIds": [
+                "unit-dark-apostle"
+              ]
+            },
+            {
+              "allKeywords": [
+                "CHARACTER",
+                "DAMNED"
+              ],
+              "noneKeywords": [
+                "EPIC HERO"
+              ]
+            }
+          ]
+        }
+      }
     },
     {
       "title": "Warped Foresight",
@@ -16918,8 +17015,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Chaos Cult",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-warped-foresight",
       "restrictions": [
         "DARK APOSTLE or DAMNED model only."
@@ -16954,7 +17049,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-warped-foresight",
       "detachmentId": "chaos-cult",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-warped-foresight"
+      "legacyKey": "enhancement-warped-foresight",
+      "canonicalEnhancementId": "enhancement-warped-foresight",
+      "canonicalDetachmentId": "chaos-cult",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "alternatives": [
+            {
+              "unitIds": [
+                "unit-dark-apostle"
+              ]
+            },
+            {
+              "allKeywords": [
+                "CHARACTER",
+                "DAMNED"
+              ],
+              "noneKeywords": [
+                "EPIC HERO"
+              ]
+            }
+          ]
+        }
+      }
     },
     {
       "title": "Surgical Precision",
@@ -16962,8 +17080,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Creations of Bile",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-surgical-precision",
       "points": 10,
       "sourcePages": [
@@ -16984,7 +17100,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-surgical-precision",
       "detachmentId": "creations-of-bile",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-surgical-precision"
+      "legacyKey": "enhancement-surgical-precision",
+      "canonicalEnhancementId": "enhancement-surgical-precision",
+      "canonicalDetachmentId": "creations-of-bile",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Living Carapace",
@@ -16992,8 +17133,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Creations of Bile",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-living-carapace",
       "points": 15,
       "sourcePages": [
@@ -17014,7 +17153,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-living-carapace",
       "detachmentId": "creations-of-bile",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-living-carapace"
+      "legacyKey": "enhancement-living-carapace",
+      "canonicalEnhancementId": "enhancement-living-carapace",
+      "canonicalDetachmentId": "creations-of-bile",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Helm of All-seeing",
@@ -17022,8 +17176,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Creations of Bile",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-helm-of-all-seeing",
       "points": 25,
       "sourcePages": [
@@ -17044,7 +17196,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-helm-of-all-seeing",
       "detachmentId": "creations-of-bile",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-helm-of-all-seeing"
+      "legacyKey": "enhancement-helm-of-all-seeing",
+      "canonicalEnhancementId": "enhancement-helm-of-all-seeing",
+      "canonicalDetachmentId": "creations-of-bile",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith",
+            "unit-legionaries",
+            "unit-chaos-terminator-squad",
+            "unit-chosen",
+            "unit-havocs",
+            "unit-mutilators",
+            "unit-nemesis-claw",
+            "unit-obliterators",
+            "unit-possessed",
+            "unit-raptors",
+            "unit-red-corsairs-raiders",
+            "unit-warp-talons"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Prime Test Subject",
@@ -17052,8 +17237,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "detachment": "Creations of Bile",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-prime-test-subject",
       "points": 35,
       "sourcePages": [
@@ -17074,7 +17257,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-prime-test-subject",
       "detachmentId": "creations-of-bile",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-prime-test-subject"
+      "legacyKey": "enhancement-prime-test-subject",
+      "canonicalEnhancementId": "enhancement-prime-test-subject",
+      "canonicalDetachmentId": "creations-of-bile",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith",
+            "unit-legionaries",
+            "unit-chaos-terminator-squad",
+            "unit-chosen",
+            "unit-havocs",
+            "unit-mutilators",
+            "unit-nemesis-claw",
+            "unit-obliterators",
+            "unit-possessed",
+            "unit-raptors",
+            "unit-red-corsairs-raiders",
+            "unit-warp-talons"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Wyredjinn",
@@ -17082,8 +17298,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Cult of the Arkifane",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-wyredjinn",
       "points": 25,
       "sourcePages": [
@@ -17104,7 +17318,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-wyredjinn",
       "detachmentId": "cult-of-the-arkifane",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-wyredjinn"
+      "legacyKey": "enhancement-wyredjinn",
+      "canonicalEnhancementId": "enhancement-wyredjinn",
+      "canonicalDetachmentId": "cult-of-the-arkifane",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Cybinfernal Font",
@@ -17112,8 +17351,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Cult of the Arkifane",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-cybinfernal-font",
       "points": 20,
       "sourcePages": [
@@ -17134,7 +17371,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-cybinfernal-font",
       "detachmentId": "cult-of-the-arkifane",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-cybinfernal-font"
+      "legacyKey": "enhancement-cybinfernal-font",
+      "canonicalEnhancementId": "enhancement-cybinfernal-font",
+      "canonicalDetachmentId": "cult-of-the-arkifane",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Mark of the Soul Forges",
@@ -17142,8 +17404,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Cult of the Arkifane",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-mark-of-the-soul-forges",
       "points": 20,
       "sourcePages": [
@@ -17164,7 +17424,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-mark-of-the-soul-forges",
       "detachmentId": "cult-of-the-arkifane",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-mark-of-the-soul-forges"
+      "legacyKey": "enhancement-mark-of-the-soul-forges",
+      "canonicalEnhancementId": "enhancement-mark-of-the-soul-forges",
+      "canonicalDetachmentId": "cult-of-the-arkifane",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Crown of Worms",
@@ -17172,8 +17457,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Cult of the Arkifane",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-crown-of-worms",
       "points": 15,
       "sourcePages": [
@@ -17194,7 +17477,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-crown-of-worms",
       "detachmentId": "cult-of-the-arkifane",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-crown-of-worms"
+      "legacyKey": "enhancement-crown-of-worms",
+      "canonicalEnhancementId": "enhancement-crown-of-worms",
+      "canonicalDetachmentId": "cult-of-the-arkifane",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Cursed Fang",
@@ -17202,8 +17498,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Deceptors",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-cursed-fang",
       "restrictions": [
         "HERETIC ASTARTES INFANTRY model only."
@@ -17238,7 +17532,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-cursed-fang",
       "detachmentId": "deceptors",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-cursed-fang"
+      "legacyKey": "enhancement-cursed-fang",
+      "canonicalEnhancementId": "enhancement-cursed-fang",
+      "canonicalDetachmentId": "deceptors",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "INFANTRY"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Falsehood",
@@ -17246,8 +17554,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Deceptors",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-falsehood",
       "restrictions": [
         "CHAOS LORD model only (excluding TERMINATOR and JUMP PACK models)."
@@ -17282,7 +17588,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-falsehood",
       "detachmentId": "deceptors",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-falsehood"
+      "legacyKey": "enhancement-falsehood",
+      "canonicalEnhancementId": "enhancement-falsehood",
+      "canonicalDetachmentId": "deceptors",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "CHAOS LORD"
+          ],
+          "noneKeywords": [
+            "EPIC HERO",
+            "TERMINATOR",
+            "JUMP PACK"
+          ]
+        }
+      }
     },
     {
       "title": "Shroud of Obfuscation",
@@ -17290,8 +17612,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Deceptors",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-shroud-of-obfuscation",
       "restrictions": [
         "HERETIC ASTARTES INFANTRY model only."
@@ -17326,7 +17646,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-shroud-of-obfuscation",
       "detachmentId": "deceptors",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-shroud-of-obfuscation"
+      "legacyKey": "enhancement-shroud-of-obfuscation",
+      "canonicalEnhancementId": "enhancement-shroud-of-obfuscation",
+      "canonicalDetachmentId": "deceptors",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "INFANTRY"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Soul Link",
@@ -17334,8 +17668,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 5,
       "detachment": "Deceptors",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-soul-link",
       "restrictions": [
         "HERETIC ASTARTES INFANTRY model only."
@@ -17370,7 +17702,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-soul-link",
       "detachmentId": "deceptors",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-soul-link"
+      "legacyKey": "enhancement-soul-link",
+      "canonicalEnhancementId": "enhancement-soul-link",
+      "canonicalDetachmentId": "deceptors",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "INFANTRY"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Pact of Destruction",
@@ -17378,8 +17724,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Devotees of Destruction",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-pact-of-destruction",
       "points": 15,
       "sourcePages": [
@@ -17400,7 +17744,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-pact-of-destruction",
       "detachmentId": "devotees-of-destruction",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-pact-of-destruction"
+      "legacyKey": "enhancement-pact-of-destruction",
+      "canonicalEnhancementId": "enhancement-pact-of-destruction",
+      "canonicalDetachmentId": "devotees-of-destruction",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Eye of Oblivion",
@@ -17408,8 +17765,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Devotees of Destruction",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-eye-of-oblivion",
       "points": 20,
       "sourcePages": [
@@ -17430,7 +17785,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eye-of-oblivion",
       "detachmentId": "devotees-of-destruction",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-eye-of-oblivion"
+      "legacyKey": "enhancement-eye-of-oblivion",
+      "canonicalEnhancementId": "enhancement-eye-of-oblivion",
+      "canonicalDetachmentId": "devotees-of-destruction",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Eater of Dread",
@@ -17438,8 +17806,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Dread Talons",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-eater-of-dread",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -17474,7 +17840,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eater-of-dread",
       "detachmentId": "dread-talons",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-eater-of-dread"
+      "legacyKey": "enhancement-eater-of-dread",
+      "canonicalEnhancementId": "enhancement-eater-of-dread",
+      "canonicalDetachmentId": "dread-talons",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Night's Shroud",
@@ -17482,8 +17861,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Dread Talons",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-nights-shroud",
       "restrictions": [
         "CHAOS LORD model only.",
@@ -17519,7 +17896,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-nights-shroud",
       "detachmentId": "dread-talons",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-nights-shroud"
+      "legacyKey": "enhancement-nights-shroud",
+      "canonicalEnhancementId": "enhancement-nights-shroud",
+      "canonicalDetachmentId": "dread-talons",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "CHAOS LORD"
+          ],
+          "noneKeywords": [
+            "EPIC HERO",
+            "TERMINATOR"
+          ]
+        }
+      }
     },
     {
       "title": "Warp-fuelled Thrusters",
@@ -17527,8 +17919,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Dread Talons",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-dread-talons-warp-fuelled-thrusters",
       "restrictions": [
         "JUMP PACK CHAOS LORD model only."
@@ -17563,7 +17953,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-dread-talons-warp-fuelled-thrusters",
       "detachmentId": "dread-talons",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-dread-talons-warp-fuelled-thrusters"
+      "legacyKey": "enhancement-dread-talons-warp-fuelled-thrusters",
+      "canonicalEnhancementId": "enhancement-dread-talons-warp-fuelled-thrusters",
+      "canonicalDetachmentId": "dread-talons",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "CHAOS LORD",
+            "JUMP PACK"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Willbreaker",
@@ -17571,8 +17976,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Dread Talons",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-willbreaker",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -17607,7 +18010,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-willbreaker",
       "detachmentId": "dread-talons",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-willbreaker"
+      "legacyKey": "enhancement-willbreaker",
+      "canonicalEnhancementId": "enhancement-willbreaker",
+      "canonicalDetachmentId": "dread-talons",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Bastion Plate",
@@ -17615,8 +18031,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Fellhammer Siege-host",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-bastion-plate",
       "restrictions": [
         "CHAOS LORD model only.",
@@ -17652,7 +18066,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-bastion-plate",
       "detachmentId": "fellhammer-siege-host",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-bastion-plate"
+      "legacyKey": "enhancement-bastion-plate",
+      "canonicalEnhancementId": "enhancement-bastion-plate",
+      "canonicalDetachmentId": "fellhammer-siege-host",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "CHAOS LORD"
+          ],
+          "noneKeywords": [
+            "EPIC HERO",
+            "JUMP PACK"
+          ]
+        }
+      }
     },
     {
       "title": "Iron Artifice",
@@ -17660,8 +18089,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Fellhammer Siege-host",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-iron-artifice",
       "restrictions": [
         "HERETIC ASTARTES INFANTRY model only."
@@ -17696,7 +18123,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-iron-artifice",
       "detachmentId": "fellhammer-siege-host",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-iron-artifice"
+      "legacyKey": "enhancement-iron-artifice",
+      "canonicalEnhancementId": "enhancement-iron-artifice",
+      "canonicalDetachmentId": "fellhammer-siege-host",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "INFANTRY"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Ironbound Enmity",
@@ -17704,8 +18145,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Fellhammer Siege-host",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-ironbound-enmity",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -17740,7 +18179,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-ironbound-enmity",
       "detachmentId": "fellhammer-siege-host",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-ironbound-enmity"
+      "legacyKey": "enhancement-ironbound-enmity",
+      "canonicalEnhancementId": "enhancement-ironbound-enmity",
+      "canonicalDetachmentId": "fellhammer-siege-host",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Warp Tracer",
@@ -17748,8 +18200,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Fellhammer Siege-host",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-warp-tracer",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -17784,7 +18234,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-warp-tracer",
       "detachmentId": "fellhammer-siege-host",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-warp-tracer"
+      "legacyKey": "enhancement-warp-tracer",
+      "canonicalEnhancementId": "enhancement-warp-tracer",
+      "canonicalDetachmentId": "fellhammer-siege-host",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Voice of the Tyrant",
@@ -17792,8 +18255,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "HURON’S MARAUDERS",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-voice-of-the-tyrant",
       "points": 25,
       "sourcePages": [
@@ -17814,7 +18275,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-voice-of-the-tyrant",
       "detachmentId": "huron-s-marauders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-voice-of-the-tyrant"
+      "legacyKey": "enhancement-voice-of-the-tyrant",
+      "canonicalEnhancementId": "enhancement-voice-of-the-tyrant",
+      "canonicalDetachmentId": "huron-s-marauders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Raid Leader",
@@ -17822,8 +18308,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "HURON’S MARAUDERS",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-raid-leader",
       "points": 20,
       "sourcePages": [
@@ -17844,7 +18328,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-raid-leader",
       "detachmentId": "huron-s-marauders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-raid-leader"
+      "legacyKey": "enhancement-raid-leader",
+      "canonicalEnhancementId": "enhancement-raid-leader",
+      "canonicalDetachmentId": "huron-s-marauders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Dread Reputation",
@@ -17852,8 +18361,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "HURON’S MARAUDERS",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-dread-reputation",
       "points": 25,
       "sourcePages": [
@@ -17874,7 +18381,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-dread-reputation",
       "detachmentId": "huron-s-marauders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-dread-reputation"
+      "legacyKey": "enhancement-dread-reputation",
+      "canonicalEnhancementId": "enhancement-dread-reputation",
+      "canonicalDetachmentId": "huron-s-marauders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Eager for Bloodshed",
@@ -17882,8 +18414,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 30,
       "detachment": "HURON’S MARAUDERS",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-eager-for-bloodshed",
       "points": 30,
       "sourcePages": [
@@ -17904,7 +18434,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eager-for-bloodshed",
       "detachmentId": "huron-s-marauders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-eager-for-bloodshed"
+      "legacyKey": "enhancement-eager-for-bloodshed",
+      "canonicalEnhancementId": "enhancement-eager-for-bloodshed",
+      "canonicalDetachmentId": "huron-s-marauders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-cultist-firebrand",
+            "unit-dark-apostle",
+            "unit-dark-commune",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Shadowcowl Talisman",
@@ -17912,8 +18469,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Murdertalon Raiders",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-shadowcowl-talisman",
       "points": 20,
       "sourcePages": [
@@ -17934,7 +18489,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-shadowcowl-talisman",
       "detachmentId": "murdertalon-raiders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-shadowcowl-talisman"
+      "legacyKey": "enhancement-shadowcowl-talisman",
+      "canonicalEnhancementId": "enhancement-shadowcowl-talisman",
+      "canonicalDetachmentId": "murdertalon-raiders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord-with-jump-pack"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Pact of Cursed Pinions",
@@ -17942,8 +18510,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Murdertalon Raiders",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-pact-of-cursed-pinions",
       "points": 20,
       "sourcePages": [
@@ -17964,7 +18530,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-pact-of-cursed-pinions",
       "detachmentId": "murdertalon-raiders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-pact-of-cursed-pinions"
+      "legacyKey": "enhancement-pact-of-cursed-pinions",
+      "canonicalEnhancementId": "enhancement-pact-of-cursed-pinions",
+      "canonicalDetachmentId": "murdertalon-raiders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord-with-jump-pack"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Greyveil Hex",
@@ -17972,8 +18551,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Nightmare Hunt",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-greyveil-hex",
       "points": 25,
       "sourcePages": [
@@ -17994,7 +18571,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-greyveil-hex",
       "detachmentId": "nightmare-hunt",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-greyveil-hex"
+      "legacyKey": "enhancement-greyveil-hex",
+      "canonicalEnhancementId": "enhancement-greyveil-hex",
+      "canonicalDetachmentId": "nightmare-hunt",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-cultist-firebrand",
+            "unit-dark-apostle",
+            "unit-dark-commune",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Warp-fuelled Thrusters",
@@ -18002,8 +18606,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Nightmare Hunt",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-nightmare-hunt-warp-fuelled-thrusters",
       "points": 20,
       "sourcePages": [
@@ -18024,7 +18626,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-nightmare-hunt-warp-fuelled-thrusters",
       "detachmentId": "nightmare-hunt",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-nightmare-hunt-warp-fuelled-thrusters"
+      "legacyKey": "enhancement-nightmare-hunt-warp-fuelled-thrusters",
+      "canonicalEnhancementId": "enhancement-nightmare-hunt-warp-fuelled-thrusters",
+      "canonicalDetachmentId": "nightmare-hunt",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord-with-jump-pack"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Terrorglut Parasite",
@@ -18032,8 +18647,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Nightmare Hunt",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-terrorglut-parasite",
       "points": 20,
       "sourcePages": [
@@ -18054,7 +18667,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-terrorglut-parasite",
       "detachmentId": "nightmare-hunt",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-terrorglut-parasite"
+      "legacyKey": "enhancement-terrorglut-parasite",
+      "canonicalEnhancementId": "enhancement-terrorglut-parasite",
+      "canonicalDetachmentId": "nightmare-hunt",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-cultist-firebrand",
+            "unit-dark-apostle",
+            "unit-dark-commune",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Sorrowscent Vulture",
@@ -18062,8 +18702,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "detachment": "Nightmare Hunt",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-sorrowscent-vulture",
       "points": 35,
       "sourcePages": [
@@ -18084,7 +18722,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-sorrowscent-vulture",
       "detachmentId": "nightmare-hunt",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-sorrowscent-vulture"
+      "legacyKey": "enhancement-sorrowscent-vulture",
+      "canonicalEnhancementId": "enhancement-sorrowscent-vulture",
+      "canonicalDetachmentId": "nightmare-hunt",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord-with-jump-pack"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Eye of Tzeentch",
@@ -18092,8 +18743,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Pactbound Zealots",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-eye-of-tzeentch",
       "restrictions": [
         "HERETIC ASTARTES TZEENTCH model only."
@@ -18128,7 +18777,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eye-of-tzeentch",
       "detachmentId": "pactbound-zealots",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-eye-of-tzeentch"
+      "legacyKey": "enhancement-eye-of-tzeentch",
+      "canonicalEnhancementId": "enhancement-eye-of-tzeentch",
+      "canonicalDetachmentId": "pactbound-zealots",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Intoxicating Elixir",
@@ -18136,8 +18798,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Pactbound Zealots",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-intoxicating-elixir",
       "restrictions": [
         "HERETIC ASTARTES SLAANESH model only."
@@ -18172,7 +18832,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-intoxicating-elixir",
       "detachmentId": "pactbound-zealots",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-intoxicating-elixir"
+      "legacyKey": "enhancement-intoxicating-elixir",
+      "canonicalEnhancementId": "enhancement-intoxicating-elixir",
+      "canonicalDetachmentId": "pactbound-zealots",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Orbs of Unlife",
@@ -18180,8 +18853,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Pactbound Zealots",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-orbs-of-unlife",
       "restrictions": [
         "HERETIC ASTARTES NURGLE model only."
@@ -18216,7 +18887,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-orbs-of-unlife",
       "detachmentId": "pactbound-zealots",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-orbs-of-unlife"
+      "legacyKey": "enhancement-orbs-of-unlife",
+      "canonicalEnhancementId": "enhancement-orbs-of-unlife",
+      "canonicalDetachmentId": "pactbound-zealots",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Talisman of Burning Blood",
@@ -18224,8 +18908,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Pactbound Zealots",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-talisman-of-burning-blood",
       "restrictions": [
         "HERETIC ASTARTES KHORNE model only."
@@ -18260,7 +18942,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-talisman-of-burning-blood",
       "detachmentId": "pactbound-zealots",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-talisman-of-burning-blood"
+      "legacyKey": "enhancement-talisman-of-burning-blood",
+      "canonicalEnhancementId": "enhancement-talisman-of-burning-blood",
+      "canonicalDetachmentId": "pactbound-zealots",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO",
+            "PSYKER"
+          ]
+        }
+      }
     },
     {
       "title": "Despot's Claim",
@@ -18268,8 +18964,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Renegade Raiders",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-despots-claim",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -18304,7 +18998,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-despots-claim",
       "detachmentId": "renegade-raiders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-despots-claim"
+      "legacyKey": "enhancement-despots-claim",
+      "canonicalEnhancementId": "enhancement-despots-claim",
+      "canonicalDetachmentId": "renegade-raiders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Dread Reaver",
@@ -18312,8 +19019,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Renegade Raiders",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-dread-reaver",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -18348,7 +19053,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-dread-reaver",
       "detachmentId": "renegade-raiders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-dread-reaver"
+      "legacyKey": "enhancement-dread-reaver",
+      "canonicalEnhancementId": "enhancement-dread-reaver",
+      "canonicalDetachmentId": "renegade-raiders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Mark of the Hound",
@@ -18356,8 +19074,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Renegade Raiders",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-mark-of-the-hound",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -18392,7 +19108,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-mark-of-the-hound",
       "detachmentId": "renegade-raiders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-mark-of-the-hound"
+      "legacyKey": "enhancement-mark-of-the-hound",
+      "canonicalEnhancementId": "enhancement-mark-of-the-hound",
+      "canonicalDetachmentId": "renegade-raiders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Tyrant's Lash",
@@ -18400,8 +19129,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Renegade Raiders",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-tyrants-lash",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -18436,7 +19163,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-tyrants-lash",
       "detachmentId": "renegade-raiders",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-tyrants-lash"
+      "legacyKey": "enhancement-tyrants-lash",
+      "canonicalEnhancementId": "enhancement-tyrants-lash",
+      "canonicalDetachmentId": "renegade-raiders",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Weaponised Hatred",
@@ -18444,8 +19184,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 35,
       "detachment": "Renegade Warband",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-weaponised-hatred",
       "points": 35,
       "sourcePages": [
@@ -18466,7 +19204,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-weaponised-hatred",
       "detachmentId": "renegade-warband",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-weaponised-hatred"
+      "legacyKey": "enhancement-weaponised-hatred",
+      "canonicalEnhancementId": "enhancement-weaponised-hatred",
+      "canonicalDetachmentId": "renegade-warband",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-cultist-firebrand",
+            "unit-dark-apostle",
+            "unit-dark-commune",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Eyes of the Hunter",
@@ -18474,8 +19239,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Renegade Warband",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-eyes-of-the-hunter",
       "points": 15,
       "sourcePages": [
@@ -18496,7 +19259,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eyes-of-the-hunter",
       "detachmentId": "renegade-warband",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-eyes-of-the-hunter"
+      "legacyKey": "enhancement-eyes-of-the-hunter",
+      "canonicalEnhancementId": "enhancement-eyes-of-the-hunter",
+      "canonicalDetachmentId": "renegade-warband",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-cultist-firebrand",
+            "unit-dark-apostle",
+            "unit-dark-commune",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Fratricidal Trophies",
@@ -18504,8 +19294,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 5,
       "detachment": "Renegade Warband",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-fratricidal-trophies",
       "points": 5,
       "sourcePages": [
@@ -18526,7 +19314,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-fratricidal-trophies",
       "detachmentId": "renegade-warband",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-fratricidal-trophies"
+      "legacyKey": "enhancement-fratricidal-trophies",
+      "canonicalEnhancementId": "enhancement-fratricidal-trophies",
+      "canonicalDetachmentId": "renegade-warband",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-chaos-terminator-squad"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Empyric Symbiote",
@@ -18534,8 +19337,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Renegade Warband",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-empyric-symbiote",
       "points": 15,
       "sourcePages": [
@@ -18556,7 +19357,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-empyric-symbiote",
       "detachmentId": "renegade-warband",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-empyric-symbiote"
+      "legacyKey": "enhancement-empyric-symbiote",
+      "canonicalEnhancementId": "enhancement-empyric-symbiote",
+      "canonicalDetachmentId": "renegade-warband",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-cultist-firebrand",
+            "unit-dark-apostle",
+            "unit-dark-commune",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Forge's Blessing",
@@ -18564,8 +19392,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Soulforged Warpack",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-forges-blessing",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -18600,7 +19426,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-forges-blessing",
       "detachmentId": "soulforged-warpack",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-forges-blessing"
+      "legacyKey": "enhancement-forges-blessing",
+      "canonicalEnhancementId": "enhancement-forges-blessing",
+      "canonicalDetachmentId": "soulforged-warpack",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Invigorated Mechatendrils",
@@ -18608,8 +19447,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Soulforged Warpack",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-invigorated-mechatendrils",
       "restrictions": [
         "WARPSMITH model only."
@@ -18644,7 +19481,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-invigorated-mechatendrils",
       "detachmentId": "soulforged-warpack",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-invigorated-mechatendrils"
+      "legacyKey": "enhancement-invigorated-mechatendrils",
+      "canonicalEnhancementId": "enhancement-invigorated-mechatendrils",
+      "canonicalDetachmentId": "soulforged-warpack",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-warpsmith"
+          ]
+        }
+      }
     },
     {
       "title": "Tempting Addendum",
@@ -18652,8 +19499,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 40,
       "detachment": "Soulforged Warpack",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-tempting-addendum",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -18688,7 +19533,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-tempting-addendum",
       "detachmentId": "soulforged-warpack",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-tempting-addendum"
+      "legacyKey": "enhancement-tempting-addendum",
+      "canonicalEnhancementId": "enhancement-tempting-addendum",
+      "canonicalDetachmentId": "soulforged-warpack",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Soul Harvester",
@@ -18696,8 +19554,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Soulforged Warpack",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-soul-harvester",
       "restrictions": [
         "HERETIC ASTARTES model only."
@@ -18732,7 +19588,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-soul-harvester",
       "detachmentId": "soulforged-warpack",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-soul-harvester"
+      "legacyKey": "enhancement-soul-harvester",
+      "canonicalEnhancementId": "enhancement-soul-harvester",
+      "canonicalDetachmentId": "soulforged-warpack",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Eager for Vengeance",
@@ -18740,8 +19609,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Veterans of the Long War",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-eager-for-vengeance",
       "restrictions": [
         "HERETIC ASTARTES model only.",
@@ -18777,7 +19644,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eager-for-vengeance",
       "detachmentId": "veterans-of-the-long-war",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-eager-for-vengeance"
+      "legacyKey": "enhancement-eager-for-vengeance",
+      "canonicalEnhancementId": "enhancement-eager-for-vengeance",
+      "canonicalDetachmentId": "veterans-of-the-long-war",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO",
+            "DAMNED"
+          ]
+        }
+      }
     },
     {
       "title": "Eye of Abaddon",
@@ -18785,8 +19666,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Veterans of the Long War",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-eye-of-abaddon",
       "restrictions": [
         "HERETIC ASTARTES model only.",
@@ -18822,7 +19701,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eye-of-abaddon",
       "detachmentId": "veterans-of-the-long-war",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-eye-of-abaddon"
+      "legacyKey": "enhancement-eye-of-abaddon",
+      "canonicalEnhancementId": "enhancement-eye-of-abaddon",
+      "canonicalDetachmentId": "veterans-of-the-long-war",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO",
+            "DAMNED"
+          ]
+        }
+      }
     },
     {
       "title": "Mark of Legend",
@@ -18830,8 +19723,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 10,
       "detachment": "Veterans of the Long War",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-mark-of-legend",
       "restrictions": [
         "HERETIC ASTARTES model only.",
@@ -18867,7 +19758,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-mark-of-legend",
       "detachmentId": "veterans-of-the-long-war",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-mark-of-legend"
+      "legacyKey": "enhancement-mark-of-legend",
+      "canonicalEnhancementId": "enhancement-mark-of-legend",
+      "canonicalDetachmentId": "veterans-of-the-long-war",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO",
+            "DAMNED"
+          ]
+        }
+      }
     },
     {
       "title": "Warmaster's Gift",
@@ -18875,8 +19780,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Veterans of the Long War",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-warmasters-gift",
       "restrictions": [
         "CHAOS LORD model only."
@@ -18911,7 +19814,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-warmasters-gift",
       "detachmentId": "veterans-of-the-long-war",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-warmasters-gift"
+      "legacyKey": "enhancement-warmasters-gift",
+      "canonicalEnhancementId": "enhancement-warmasters-gift",
+      "canonicalDetachmentId": "veterans-of-the-long-war",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "CHARACTER",
+            "CHAOS LORD"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Infernal Fulgurite",
@@ -18919,8 +19836,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Warpstrike Champions",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-infernal-fulgurite",
       "points": 20,
       "sourcePages": [
@@ -18941,7 +19856,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-infernal-fulgurite",
       "detachmentId": "warpstrike-champions",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-infernal-fulgurite"
+      "legacyKey": "enhancement-infernal-fulgurite",
+      "canonicalEnhancementId": "enhancement-infernal-fulgurite",
+      "canonicalDetachmentId": "warpstrike-champions",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord",
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-dark-apostle",
+            "unit-heretic-astartes-daemon-prince",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-lord-discordant-on-helstalker",
+            "unit-master-of-executions",
+            "unit-master-of-possession",
+            "unit-red-corsairs-reave-captain",
+            "unit-sorcerer",
+            "unit-sorcerer-in-terminator-armour",
+            "unit-warpsmith"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Eye of the Warp",
@@ -18949,8 +19889,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 15,
       "detachment": "Warpstrike Champions",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-eye-of-the-warp",
       "points": 15,
       "sourcePages": [
@@ -18971,7 +19909,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-eye-of-the-warp",
       "detachmentId": "warpstrike-champions",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-eye-of-the-warp"
+      "legacyKey": "enhancement-eye-of-the-warp",
+      "canonicalEnhancementId": "enhancement-eye-of-the-warp",
+      "canonicalDetachmentId": "warpstrike-champions",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-sorcerer-in-terminator-armour"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Akshur’s Binding Runes",
@@ -18979,8 +19933,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 20,
       "detachment": "Warpstrike Champions",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-akshurs-binding-runes",
       "points": 20,
       "sourcePages": [
@@ -19001,7 +19953,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-akshurs-binding-runes",
       "detachmentId": "warpstrike-champions",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-akshurs-binding-runes"
+      "legacyKey": "enhancement-akshurs-binding-runes",
+      "canonicalEnhancementId": "enhancement-akshurs-binding-runes",
+      "canonicalDetachmentId": "warpstrike-champions",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-sorcerer-in-terminator-armour"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     },
     {
       "title": "Tzagulla",
@@ -19009,8 +19977,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "value": 25,
       "detachment": "Warpstrike Champions",
       "tags": [],
-      "owner": null,
-      "assignment": null,
       "id": "enhancement-tzagulla",
       "points": 25,
       "sourcePages": [
@@ -19031,7 +19997,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "ruleId": "enhancement-tzagulla",
       "detachmentId": "warpstrike-champions",
       "sourceBookId": "chaos-space-marines",
-      "legacyKey": "enhancement-tzagulla"
+      "legacyKey": "enhancement-tzagulla",
+      "canonicalEnhancementId": "enhancement-tzagulla",
+      "canonicalDetachmentId": "warpstrike-champions",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-lord-in-terminator-armour",
+            "unit-chaos-lord-with-jump-pack",
+            "unit-heretic-astartes-daemon-prince-with-wings",
+            "unit-sorcerer-in-terminator-armour"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      }
     }
   ],
   "effectContracts": [

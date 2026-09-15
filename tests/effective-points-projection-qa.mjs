@@ -129,7 +129,7 @@ assert.equal(JSON.stringify(first.catalog),JSON.stringify(second.catalog),'point
 assert.deepEqual(pointsApi.createPointsCatalogFromProjections(new Map([...projections].reverse())).catalog,catalog,'projection construction order changed points output');
 assert.deepEqual(JSON.parse(JSON.stringify(catalog)),published.catalog,'effective projection changed published points semantics');
 assert.equal(published.source,`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`,'points-data.js is not byte-current');
-assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'fe1f62b0e8ca6c4a5367aafa9536ef6a0c389c8b974c6f57e909bfe46988bed8');
+assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'dfb174869c4a69807c0e3ad1100869858984c041267b1dfacf30dfc46706935e');
 assertProjectionCatalogIdentity(projections,catalog);
 assertSupplementControls(projections);
 assertCanonicalPointAuthority(projections);

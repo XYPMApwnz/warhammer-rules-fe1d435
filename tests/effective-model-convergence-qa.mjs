@@ -8,6 +8,7 @@ import {buildCanonicalBook} from '../books/shared/tools/build-army-book.mjs';
 import {runPresentationHook,validateEffectiveBookModel} from '../books/shared/tools/effective-book-model.mjs';
 import {renderDeathGuardReader} from '../books/death-guard/tools/presentation-hook.mjs';
 import {renderEffectiveBook as renderStructuredEffectiveBook} from '../books/shared/tools/render-structured-effective-book.mjs';
+import {loadPublicationInventory,selectPublicationBooks} from '../books/shared/tools/publication-inventory.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const stable=value=>value instanceof Map?['Map',[...value].sort(([a],[b])=>a.localeCompare(b)).map(([key,item])=>[key,stable(item)])]:Array.isArray(value)?value.map(stable):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,stable(value[key])])):value;
@@ -41,6 +42,21 @@ for(const id of Object.keys(expected)){
   assert.equal(idHash(model.enhancements.map(item=>item.id)),want.enhancementHash);
   assert.equal(config.generatedOutputs.filter(item=>item.lifecycle==='NORMAL_BUILD_OUTPUT').every(item=>item.producer==='books/shared/tools/build-army-book.mjs'||item.class==='MOBILE_COMPATIBILITY_ROUTES'||item.class==='COMPATIBLE_RULES_MATRIX'),true);
 }
+
+const publicBooks=selectPublicationBooks(loadPublicationInventory({root}),'library');
+assert.equal(publicBooks.length,9,'effective-model architecture scope');
+const allModels=new Map(Object.entries(first));
+for(const book of publicBooks.filter(book=>!allModels.has(book.id))){
+  const context=createCanonicalBuildContext({configPath:path.join(root,book.config),repo:root,args:['--check']});
+  assert.equal(context.config.buildExtension,undefined,`${book.id}: full semantic buildExtension must be retired`);
+  const {effectiveBookModel:model}=await buildCanonicalBook(context,{projectionOnly:true});
+  validateEffectiveBookModel(model);
+  assert.equal(model.schema,'wh40k-effective-book-model/v1',`${book.id}: shared effective schema`);
+  assert.equal(model.book.id,book.id,`${book.id}: effective model owner`);
+  assert.ok(model.units.length&&model.detachments.length&&model.effectivePointsProjection,`${book.id}: effective factual partitions`);
+  allModels.set(book.id,model);
+}
+assert.deepEqual([...allModels.keys()].sort(),publicBooks.map(book=>book.id).sort(),'all nine public books must enter the validated effective-model lifecycle');
 
 const duplicate=structuredClone(first['death-guard']);duplicate.units.push(structuredClone(duplicate.units[0]));assert.throws(()=>validateEffectiveBookModel(duplicate),/duplicate death-guard unit identity/);
 const unknownRelation=structuredClone(first['adeptus-mechanicus']);unknownRelation.relationGraphs.get(unknownRelation.units[0].id).canLead=[{unitId:'unit-unknown-effective-target'}];assert.throws(()=>validateEffectiveBookModel(unknownRelation),/unknown relation target/);
@@ -119,4 +135,4 @@ assert.doesNotMatch(dgRenderer,/export\s+(?:async\s+)?function\s+buildCanonicalB
 const amRenderer=fs.readFileSync(path.join(root,'books/shared/tools/render-structured-effective-book.mjs'),'utf8');
 assert.doesNotMatch(amRenderer,/createAdeptusMechanicusCanonicalModel|buildAdeptusMechanicusEffectiveModelInput/,'shared structured renderer must consume the effective model');
 
-console.log('Effective model convergence QA: PASS (DG/AM shared schema, effective publication authority, shadow poison isolation, frozen inventories, generated-output independence, fail-closed mutations, presentation isolation, construction-order independence).');
+console.log('Effective model convergence QA: PASS (9/9 validated lifecycle; DG/AM shared schema; effective publication authority; shadow poison isolation; frozen inventories; generated-output independence; fail-closed mutations; presentation isolation; construction-order independence).');

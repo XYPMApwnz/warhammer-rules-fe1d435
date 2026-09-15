@@ -27,10 +27,16 @@ assert.equal([...sets.values()].reduce((sum,set)=>sum+set.contracts.length,0),54
 assert.deepEqual(new Set([...sets.values()].flatMap(set=>set.contracts.flatMap(contract=>contract.clauses.flatMap(clause=>clause.operations.map(operation=>operation.type))))),EFFECT_TYPES,'exact supported effect operation vocabulary');
 
 const localSets=[...sets.values()];
+const assertFullEffectPayload=(actual,expected,label)=>assert.deepEqual(
+  JSON.parse(JSON.stringify(actual)),
+  JSON.parse(JSON.stringify(expected)),
+  `${label}: full source/effective effect payload differs`
+);
 for(const book of books){
   const effective=effectiveEffectContracts(localSets,book),published=catalogs.get(book).effectContracts;
   assert.equal(effective.length,expected[book],`${book}: effective source projection count`);
   assert.deepEqual(effective.map(effectBindingKey),Array.from(published,effectBindingKey),`${book}: generated effective bindings equal source projection`);
+  assertFullEffectPayload(published,effective,book);
   assert.deepEqual(effectiveEffectContracts([...localSets].reverse(),book).map(effectBindingKey),effective.map(effectBindingKey),`${book}: source construction order cannot change effective bindings`);
 }
 assert.equal(Object.values(expected).reduce((sum,value)=>sum+value,0),769,'effective book-scoped bindings');
@@ -44,10 +50,16 @@ const runtimeSources=runtimeFiles.map(file=>[file,read(file)]);
 for(const [file,source] of runtimeSources){
   assert.match(source,/WHEffectContractRuntime/,`${file}: structured runtime delegation`);
   assert.doesNotMatch(source,/(?:smFamilyEffects|detachmentEffects|enhancementEffects|datasheetEffects|structuredRecords|effectCodeMap|legacyEffects)s*=/,`${file}: runtime factual map remains`);
+  assert.doesNotMatch(source,/\b(?:CHARACTERISTIC_ADD|CHARACTERISTIC_SET|WEAPON_CHARACTERISTIC_ADD|WEAPON_TAG_GRANT|WEAPON_PROFILE_GRANT|ABILITY_GRANT|ABILITY_REMOVE|KEYWORD_GRANT|KEYWORD_REMOVE|CANONICAL_REFERENCE)\b|\boperation\s*:\s*['"](?:add|set|grant|remove)['"]/,`${file}: book-specific factual executor emits a gameplay operation`);
 }
 for(const id of ['enhancement-pledge-of-dark-glory','volley-fire','aegis-protocol-toughness','firestorm-assault-force-war-tempered-artifice']){
   assert.equal(runtimeSources.some(([,source])=>source.includes(id)),false,`${id}: factual identity remains in runtime implementation`);
 }
+const factualRuntimeTokens=new Set(localSets.flatMap(set=>set.contracts.flatMap(contract=>[contract.canonicalRecordId,...contract.clauses.flatMap(clause=>clause.operations.flatMap(operation=>{
+  const target=typeof operation.canonicalTarget==='string'?operation.canonicalTarget:operation.canonicalTarget?.id;
+  return [operation.id,...(target?.includes('-')?[target]:[])];
+}))])).filter(token=>typeof token==='string'&&token.length>=5));
+for(const [file,source] of runtimeSources)for(const token of factualRuntimeTokens)assert.equal(source.includes(token),false,`${file}: runtime-only factual executor contains ${token}`);
 
 const first=sets.get('emperors-children'),firstCatalog=catalogs.get('emperors-children');
 const mutation=(label,change,pattern)=>{const changed=clone(first);change(changed);assert.throws(()=>validateEffectContractsAgainstCatalog(changed,firstCatalog),pattern,label);};
@@ -59,8 +71,10 @@ mutation('WRONG_DETACHMENT_MUTATION',set=>{set.contracts.find(item=>item.detachm
 mutation('WRONG_SELECTOR_MUTATION',set=>{set.contracts[0].selector.unitIds=['unit-unknown'];},/selector references unknown unit/);
 
 const semantic=value=>JSON.stringify(value);
-const changedParameter=clone(first);changedParameter.contracts.flatMap(item=>item.clauses.flatMap(clause=>clause.operations)).find(item=>typeof item.parameters.delta==='number').parameters.delta+=1;
+const changedParameter=clone(first),changedOperation=changedParameter.contracts.flatMap(item=>item.clauses.flatMap(clause=>clause.operations)).find(item=>typeof item.parameters.delta==='number');changedOperation.parameters.delta=99;
 assert.notEqual(semantic(changedParameter),semantic(first),'NUMERIC_PARAMETER_MUTATION must change the accepted semantic projection');
+const poisonedEffective=effectiveEffectContracts([changedParameter,...localSets.filter(set=>set.bookId!=='emperors-children')],'emperors-children');
+assert.throws(()=>assertFullEffectPayload(firstCatalog.effectContracts,poisonedEffective,'EFFECT_PLUS_99_ATTACK'),/full source\/effective effect payload differs/,'EFFECT_PLUS_99_ATTACK');
 const changedCondition=clone(first),conditionOwner=changedCondition.contracts.find(item=>item.clauses.some(clause=>clause.conditions.length));conditionOwner.clauses.find(clause=>clause.conditions.length).conditions=[];
 assert.notEqual(semantic(changedCondition),semantic(first),'CONDITION_MUTATION must change the accepted semantic projection');
 const changedTiming=clone(first);changedTiming.contracts[0].timingState={kind:'manual-resolution',state:'unknown'};

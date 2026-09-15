@@ -56,6 +56,17 @@ try{
   };
 
   mutate(manifest('tau-empire'),value=>value.layers=value.layers.filter(source=>source.sourceId!=='tau-codex-wargear'),/actual build source is omitted from manifest/);
+  {
+    const manifestFile=path.join(fixture,manifest('tau-empire')),registryFile=path.join(fixture,'books/source-ingestion-contract.json');
+    const beforeManifest=fs.readFileSync(manifestFile),beforeRegistry=fs.readFileSync(registryFile);
+    try{
+      const manifestValue=JSON.parse(beforeManifest),registryValue=JSON.parse(beforeRegistry);
+      manifestValue.layers=manifestValue.layers.filter(source=>source.sourceId!=='tau-codex-wargear');
+      registryValue.sources=registryValue.sources.filter(source=>source.sourceId!=='tau-codex-wargear');
+      fs.writeFileSync(manifestFile,stable(manifestValue));fs.writeFileSync(registryFile,stable(registryValue));
+      assert.throws(run,/actual build source is omitted from manifest/,'removing a live parser source from both declarations must not yield complete enrollment');
+    }finally{fs.writeFileSync(manifestFile,beforeManifest);fs.writeFileSync(registryFile,beforeRegistry);}
+  }
   mutate('books/source-ingestion-contract.json',value=>delete value.sources.find(source=>source.sourceId==='tau-codex-wargear').status,/source is not classified/);
   mutate('books/source-ingestion-contract.json',value=>{
     const bytes=Buffer.from('{"dead":true}\n');
@@ -95,5 +106,5 @@ try{
   const csm=json(manifest('chaos-space-marines'));
   assert(csm.layers.some(source=>source.sourceId==='csm-codex-secondary-consensus'));
   assert.equal(csm.secondaryConsensus.sourceId,'csm-codex-secondary-consensus');
-  console.log(`Source enrollment QA passed: ${declaredPublicActive} public owners, 3 Orks freshness owners, exact manifest/status/classification equality and 14 adversarial controls.`);
+  console.log(`Source enrollment QA passed: ${declaredPublicActive} public owners, 3 Orks freshness owners, exact manifest/status/classification equality and 15 adversarial controls.`);
 }finally{fs.rmSync(fixture,{recursive:true,force:true});}

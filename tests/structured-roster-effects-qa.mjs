@@ -92,6 +92,14 @@ for(const [bookId,requiredEnhancementId] of books){
     const otherItem={...item,instanceId:otherId,raw:{id:otherId}},otherGameUnit={...gameUnit,identity:{...gameUnit.identity,instanceId:otherId}};
     const other=api.gameEffects({item:otherItem,gameUnit:otherGameUnit,gameUnits:[otherGameUnit],byInstance:new Map([[otherId,otherGameUnit]]),enhancements:[resolved]}).filter(effect=>effect.source?.kind==='enhancement');
     assert.equal(other.length,0,`${bookId}/${enhancement.id}: bearer effect leaked to another physical instance`);
+    if(Number(enhancement.assignment?.maxOwners)>1){
+      const secondId=`${bookId}-physical-owner-2`,secondItem={...item,instanceId:secondId,raw:{id:secondId}},secondGameUnit={...gameUnit,identity:{...gameUnit.identity,instanceId:secondId}},gameUnits=[gameUnit,secondGameUnit],byInstance=new Map(gameUnits.map(unit=>[unit.identity.instanceId,unit])),secondResolved={...resolved,input:{...resolved.input,ownerUnitId:secondId},owner:{status:'resolved',instanceId:secondId}},enhancements=[resolved,secondResolved];
+      const firstEffects=api.gameEffects({item,gameUnit,gameUnits,byInstance,enhancements}).filter(effect=>effect.source?.kind==='enhancement'),secondEffects=api.gameEffects({item:secondItem,gameUnit:secondGameUnit,gameUnits,byInstance,enhancements}).filter(effect=>effect.source?.kind==='enhancement');
+      assert.ok(firstEffects.length>0,`${bookId}/${enhancement.id}: first repeatable owner lost its effect`);
+      assert.ok(secondEffects.length>0,`${bookId}/${enhancement.id}: second repeatable owner lost its effect`);
+      assert.ok(firstEffects.every(effect=>effect.source.ownerInstanceId===ownerId),`${bookId}/${enhancement.id}: first repeatable owner resolved to another physical unit`);
+      assert.ok(secondEffects.every(effect=>effect.source.ownerInstanceId===secondId),`${bookId}/${enhancement.id}: second repeatable owner resolved to another physical unit`);
+    }
     const unresolved=api.gameEffects({item,gameUnit,gameUnits:[gameUnit],byInstance:new Map([[ownerId,gameUnit]]),enhancements:[{...resolved,input:{ownerStatus:'unresolved',ownerUnitId:ownerId},owner:{status:'unresolved',instanceId:ownerId}}]}).filter(effect=>effect.source?.kind==='enhancement');
     assert.equal(unresolved.length,0,`${bookId}/${enhancement.id}: unresolved owner produced a factual effect`);
     if(enhancement.id===requiredEnhancementId){

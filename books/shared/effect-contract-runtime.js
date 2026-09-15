@@ -110,9 +110,12 @@
     if(value==='roster-unit-pair')return true;
     return false;
   };
-  const enhancementResolution=(context,id)=>list(context.enhancements).find(item=>{
-    const record=item?.catalog||{},input=item?.input||{};return input.ownerStatus==='resolved'&&input.ownerUnitId&&[record.id,record.ruleId,record.sourceId,record.legacyKey].includes(id);
-  });
+  const enhancementResolution=(context,id,env)=>{
+    const matches=list(context.enhancements).filter(item=>{
+      const record=item?.catalog||{},input=item?.input||{};return input.ownerStatus==='resolved'&&input.ownerUnitId&&[record.id,record.ruleId,record.sourceId,record.legacyKey].includes(id);
+    }),draftId=instanceId(env.draft),groupIds=new Set(list(env.group).map(instanceId));
+    return matches.find(item=>item.input.ownerUnitId===draftId)||matches.find(item=>groupIds.has(item.input.ownerUnitId))||null;
+  };
   const locateSourceUnit=(contract,env)=>{
     const expected=[contract.sourceUnitId,...list(contract.sourceUnitIds),...list(contract.selector?.sourceUnitIds),...list(contract.selector?.unitIds)].filter(Boolean);
     const rosterWide=['roster-reference','roster-unit-pair'].includes(scopeKey(contract.scope));
@@ -123,7 +126,7 @@
     const env={...base,owner:null,sourceUnit:null,ownerIsLeader:false,sourceIsLeader:false,attachmentState:base.group?'attached':'unattached'};
     if(contract.detachmentId&&!env.detachmentIds.has(contract.detachmentId))return null;
     if(contract.sourceKind==='enhancement'){
-      const resolution=enhancementResolution(context,contract.canonicalRecordId),owner=resolution&&env.byInstance.get(resolution.input.ownerUnitId);if(!owner)return null;env.owner=owner;env.sourceUnit=owner;
+      const resolution=enhancementResolution(context,contract.canonicalRecordId,env),owner=resolution&&env.byInstance.get(resolution.input.ownerUnitId);if(!owner)return null;env.owner=owner;env.sourceUnit=owner;
     }else if(contract.sourceKind==='detachment-rule'){
       const required=contract.detachmentId||contract.selector?.detachmentId;if(required&&!env.detachmentIds.has(required))return null;
     }else if(['selected-wargear','wargear-ability'].includes(contract.sourceKind)){

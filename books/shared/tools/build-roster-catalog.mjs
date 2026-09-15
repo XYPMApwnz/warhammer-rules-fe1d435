@@ -17,8 +17,31 @@ const legacyWeaponProfileId=(unit,profile,index=0)=>`${unit.id}-profile-${slug(p
 const legacyWargearAbilityId=(unit,ability,index=0)=>`${unit.id}-wargear-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;
 const weaponIdentityFacts=profile=>({sourceName:profile.name||'',mode:profile.mode||'weapon',range:profile.range||'',a:profile.a||'',skill:profile.skill||'',s:profile.s||'',ap:profile.ap||'',d:profile.d||'',abilities:profile.abilities||''});
 const abilityIdentityFacts=ability=>({sourceTitle:ability.title||'',text:ability.text||ability.summary||''});
-export const canonicalWeaponProfileId=(unit,profile,index=0)=>requireCanonicalChildIdentity(unit,profile,{kind:'profile',title:profile.name,semantic:weaponIdentityFacts(profile),legacyId:legacyWeaponProfileId(unit,profile,index)}).id;
+export const canonicalWeaponProfileId=(unit,profile)=>{
+  if(!profile?.id)throw new Error(`${unit?.id||'unit'}: weapon profile has no pre-model canonical ID`);
+  if(profile.sourceUnitId!==unit?.id)throw new Error(`${profile.id}: weapon profile belongs to wrong parent ${profile.sourceUnitId||'<missing>'}`);
+  return profile.id;
+};
 export const canonicalWargearAbilityId=(unit,ability,index=0)=>requireCanonicalChildIdentity(unit,ability,{kind:'wargear-ability',title:ability.title,semantic:abilityIdentityFacts(ability),legacyId:legacyWargearAbilityId(unit,ability,index)}).id;
+export const persistCanonicalWeaponProfileIdentities=unit=>{
+  const assign=records=>assignCanonicalChildIdentities(unit,records,{kind:'profile',titleOf:profile=>profile.name,semanticOf:weaponIdentityFacts,legacyIdOf:legacyWeaponProfileId.bind(null,unit)}).map(profile=>({...profile,sourceUnitId:unit.id}));
+  if(values(unit.weapons).length)return {...unit,weapons:assign(unit.weapons)};
+  const blocks=values(unit.blocks),weaponIndexes=blocks.map((block,index)=>block?.type==='weapon'?index:-1).filter(index=>index>=0);
+  if(!weaponIndexes.length)return unit;
+  const assigned=assign(weaponIndexes.map(index=>blocks[index])),byIndex=new Map(weaponIndexes.map((index,offset)=>[index,assigned[offset]]));
+  return {...unit,blocks:blocks.map((block,index)=>byIndex.get(index)||block)};
+};
+
+export function assertWeaponProfileIdentityProjection(units,catalogUnits,{label='weapon profile projection'}={}){
+  const catalogByUnit=new Map(values(catalogUnits).map(unit=>[unit.id,unit]));
+  for(const unit of values(units)){
+    const profiles=values(unit.weapons).length?values(unit.weapons):values(unit.blocks).filter(block=>block?.type==='weapon');
+    const sourceIds=profiles.map(profile=>canonicalWeaponProfileId(unit,profile)),catalog=catalogByUnit.get(unit.id);
+    if(!catalog)throw new Error(`${label}: unknown catalog unit ${unit.id}`);
+    const projectedIds=values(catalog.gameSelections?.weaponProfiles).map(profile=>profile.id);
+    if(JSON.stringify([...sourceIds].sort())!==JSON.stringify([...projectedIds].sort()))throw new Error(`${label}: ${unit.id} has conflicting canonical profile identities`);
+  }
+}
 const relationRecord=record=>({unitId:record?.unitId||record?.id||'',...(Number.isFinite(Number(record?.maxCharacters))?{maxCharacters:Number(record.maxCharacters)}:{}),...(record?.mandatory?{mandatory:true}:{}),...(values(record?.removeKeywords).length?{removeKeywords:[...record.removeKeywords]}:{})});
 const relationsFor=(relations,id)=>{const source=relations instanceof Map?relations.get(id):relations?.[id];return Object.fromEntries(['canLead','canSupport','canBeLedBy','canBeSupportedBy'].map(key=>[key,values(source?.[key]).map(relationRecord)]));};
 const blockEnhancements=detachment=>[...values(detachment?.enhancements),...values(detachment?.blocks).filter(block=>block?.type==='enhancement'),...values(detachment?.subsections).flatMap(section=>values(section?.blocks).filter(block=>block?.type==='enhancement'))];

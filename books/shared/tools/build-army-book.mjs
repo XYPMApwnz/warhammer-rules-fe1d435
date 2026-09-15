@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import ruleFactsApi from '../rule-facts.js';
 import {buildRelationGraphs} from './build-relation-graph.mjs';
-import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,serializeRosterCatalog} from './build-roster-catalog.mjs';
+import {canonicalRosterModelsFor,canonicalWargearAbilityId,canonicalWeaponProfileId,createRosterCatalog,persistCanonicalWeaponProfileIdentities,serializeRosterCatalog} from './build-roster-catalog.mjs';
 import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
 import {createCanonicalBuildContext,finishCanonicalBuild} from './canonical-build-contract.mjs';
 import {createEffectivePointsProjection,resolveEffectiveEnhancementContractId,resolveEffectiveEnhancementIdentity} from './effective-points-projection.mjs';
@@ -131,6 +131,7 @@ let units=[...mergedUnits.values()].map(unit=>{
 });
 const effectiveEffectContractSets=[effectContractSet,...dependencyCodices.map(item=>item.effectContracts)];
 units=applyCanonicalChildIdentityContracts(units,effectiveEffectContractSets);
+units=units.map(persistCanonicalWeaponProfileIdentities);
 const relationUnits=unique([...units,...dependencyUnits],unit=>unit.id);
 let unitById=indexCanonicalById(relationUnits,{label:`${config.id} relation unit`});
 let presentationUnitByTitle=new Map(relationUnits.map(unit=>[titleKey(unit.title),unit]));

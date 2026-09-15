@@ -215,6 +215,11 @@ function validateRosterProjection(model,unitIds,detachmentIds,enhancementIds){
   if(catalog==null)return;
   if(!record(catalog)||catalog.book?.id!==model.book.id)throw new Error('roster catalog has a conflicting book identity');
   sameIds(new Set(list(catalog.units,'rosterCatalog.units').map(item=>item.id)),unitIds,'roster unit');
+  const sourceUnitById=new Map(model.units.map(unit=>[unit.id,unit]));
+  for(const item of catalog.units){
+    const source=sourceUnitById.get(item.id),sourceProfiles=(source.weapons?.length?source.weapons:(source.blocks||[]).filter(block=>block?.type==='weapon'));
+    sameIds(new Set(sourceProfiles.map(profile=>profile.id)),new Set(list(item.gameSelections?.weaponProfiles,`${item.id}.gameSelections.weaponProfiles`).map(profile=>profile.id)),`${item.id} weapon profile`);
+  }
   sameIds(new Set(list(catalog.detachments,'rosterCatalog.detachments').map(item=>item.id)),detachmentIds,'roster Detachment');
   const canonicalByCandidate=new Map();
   for(const item of model.enhancements){
@@ -268,6 +273,8 @@ export function validateEffectiveBookModel(model){
     text(unit.title,`${unit.id}.title`);canonicalId(unit.sourceBookId,`${unit.id}.sourceBookId`);
     if(!allowedOwners.has(unit.sourceBookId))throw new Error(`${unit.id}: unknown source owner ${unit.sourceBookId}`);
     if(!PUBLICATION_STATES.has(unit.publicationState))throw new Error(`${unit.id}: invalid publication state ${unit.publicationState}`);
+    const weaponProfiles=(unit.weapons?.length?unit.weapons:(unit.blocks||[]).filter(block=>block?.type==='weapon'));
+    identitySet(weaponProfiles,(profile,index)=>{const id=canonicalId(profile?.id,`${unit.id}.weaponProfiles[${index}].id`);if(profile.sourceUnitId!==unit.id)throw new Error(`${id}: weapon profile belongs to wrong parent ${profile.sourceUnitId||'<missing>'}`);return id;},`${unit.id} weapon profile`);
     validatePointSchedule(unit,bookId);validateRuleInput(unit,bookId);
   }
   for(const detachment of detachments){

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
-import {createRosterCatalog,serializeRosterCatalog} from './build-roster-catalog.mjs';
+import {assertWeaponProfileIdentityProjection,createRosterCatalog,serializeRosterCatalog} from './build-roster-catalog.mjs';
 import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
 import {validateEffectContractsAgainstCatalog} from './effect-contract.mjs';
 import {runPresentationHook,validateEffectiveBookModel} from './effective-book-model.mjs';
@@ -40,6 +40,7 @@ export async function buildEffectiveBook(context,{projectionOnly=false}={}){
     enhancementContracts:rosterEnhancements,
     effectContracts:model.effectContracts
   });
+  assertWeaponProfileIdentityProjection(model.units,rosterCatalog.units,{label:`${context.config.id} effective roster projection`});
   validateEffectContractsAgainstCatalog(model.effectContractSet,rosterCatalog);
 
   const renderer=await moduleFor(context,spec.renderer,'effectiveModel.renderer');

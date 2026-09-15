@@ -3,6 +3,7 @@ import {pointTierContract} from '../../shared/tools/point-tier-contract.mjs';
 import {canonicalTargetsFromProse} from '../../shared/tools/canonical-join-contract.mjs';
 import {effectiveEffectContracts,validateEffectContractSet} from '../../shared/tools/effect-contract.mjs';
 import {createEffectivePointsProjection} from '../../shared/tools/effective-points-projection.mjs';
+import {persistCanonicalWeaponProfileIdentities} from '../../shared/tools/build-roster-catalog.mjs';
 import {EFFECTIVE_BOOK_MODEL_SCHEMA,createEffectiveBookModel} from '../../shared/tools/effective-book-model.mjs';
 import ruleFactsApi from '../../shared/rule-facts.js';
 
@@ -188,7 +189,7 @@ export function buildDeathGuardEffectiveModelInput(context,canonicalModel=buildD
   const {config}=context,sourceUnits=canonicalModel.book.sections.filter(section=>section.kind==='unit'),sourceDetachments=canonicalModel.book.sections.filter(section=>section.id?.startsWith('detachment-'));
   const relationGraphs=canonicalModel.relationGraphs||new Map(sourceUnits.map(unit=>[unit.id,canonicalModel.ruleFacts.get(unit.id)?.relations||{}]));
   const ruleProfiles=new Map(sourceUnits.map(unit=>[unit.id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(canonicalModel.ruleFacts.get(unit.id)))]));
-  const baseUnits=sourceUnits.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points'),canonical=structuredClone(unit);return {...canonical,sourceBookId:config.id,publicationState:unit.legends?'Legends':'Current',paidWargear:structuredClone(pointsBlock?.wargear||[]),intrinsicKeywords:[...canonicalModel.unitKeywords.get(unit.id)],ruleFacts:structuredClone(canonicalModel.ruleFacts.get(unit.id)),ruleProfile:structuredClone(ruleProfiles.get(unit.id))};});
+  const baseUnits=sourceUnits.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points'),canonical=structuredClone(unit);return persistCanonicalWeaponProfileIdentities({...canonical,sourceBookId:config.id,publicationState:unit.legends?'Legends':'Current',paidWargear:structuredClone(pointsBlock?.wargear||[]),intrinsicKeywords:[...canonicalModel.unitKeywords.get(unit.id)],ruleFacts:structuredClone(canonicalModel.ruleFacts.get(unit.id)),ruleProfile:structuredClone(ruleProfiles.get(unit.id))});});
   const detachments=effectiveDetachmentsFor(context,canonicalModel,sourceDetachments),enhancements=effectiveEnhancementsFor(context,canonicalModel,detachments);
   const effectContractSet=config.sources.effectContracts?validateEffectContractSet(context.readJson(config.sources.effectContracts),{expectedBookId:config.id}):{schema:'wh40k-effect-contracts/v1',bookId:config.id,contracts:[]},effectContracts=effectiveEffectContracts([effectContractSet],config.id);
   const units=baseUnits;

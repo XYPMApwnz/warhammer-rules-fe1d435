@@ -2,6 +2,7 @@ import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
 import {bindRowsToCanonicalIds,canonicalTargetsFromProse} from '../../shared/tools/canonical-join-contract.mjs';
 import {effectiveEffectContracts,validateEffectContractSet} from '../../shared/tools/effect-contract.mjs';
 import {createEffectivePointsProjection} from '../../shared/tools/effective-points-projection.mjs';
+import {persistCanonicalWeaponProfileIdentities} from '../../shared/tools/build-roster-catalog.mjs';
 import ruleFactsApi from '../../shared/rule-facts.js';
 import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
 
@@ -293,7 +294,7 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
   if(enhancements.length!==sourceEnhancements.size)throw new Error(`Adeptus Mechanicus: effective Enhancement inventory ${enhancements.length} does not cover ${sourceEnhancements.size} canonical rules`);
   const units=rules.datasheets.map(unit=>{
     const publication=pointsByUnitId.get(unit.id),ruleFacts=compiledRuleFacts.get(unit.id),ruleProfile=compiledRuleProfiles.get(unit.id);
-    return {...unit,sourceBookId:config.id,publicationState:unit.status==='Warhammer Legends'?'Warhammer Legends':'Current',intrinsicKeywords:[...(unit.keywords||[])],points:publication?.points||[],paidWargear:publication?.wargear||[],ruleFacts,ruleProfile,publicationRecord:publication};
+    return persistCanonicalWeaponProfileIdentities({...unit,sourceBookId:config.id,publicationState:unit.status==='Warhammer Legends'?'Warhammer Legends':'Current',intrinsicKeywords:[...(unit.keywords||[])],points:publication?.points||[],paidWargear:publication?.wargear||[],ruleFacts,ruleProfile,publicationRecord:publication});
   });
   const detachmentOrder=new Map(Object.keys(officialMfm.detachments||{}).map((title,index)=>[`detachment-${slugKey(title)}`,index]));
   const factionDetachmentIds=new Set(factionRules.detachments.map(item=>item.id)),glossarySourceOrder=new Map([...factionRules.detachments,...codex.detachments].map((item,index)=>[item.id,index]));

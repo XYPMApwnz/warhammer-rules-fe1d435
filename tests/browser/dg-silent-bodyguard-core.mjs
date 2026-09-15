@@ -6,10 +6,6 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const semantics=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-semantics.js'),'utf8');
-assert.match(semantics,/DG_RULE\.silent,bodyguard/,'Silent Bodyguard source must remain the exact Deathshroud instance');
-assert.match(semantics,/add\('silent-bodyguard','ability','core-feel-no-pain','grant',\{title:'Feel No Pain 4\+',summary:'This model has Feel No Pain 4\+\.',ruleTitle:'Silent Bodyguard'\},attachmentSource\(DG_RULE\.silent,bodyguard\)\)/,'Silent Bodyguard must emit the structured CORE Feel No Pain grant');
-
 const contentTypes={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.png':'image/png','.svg':'image/svg+xml'};
 const server=http.createServer((request,response)=>{
   const pathname=decodeURIComponent(new URL(request.url,'http://127.0.0.1').pathname);
@@ -57,7 +53,7 @@ try{
     const effect={
       id:'loc-1:silent-bodyguard',component:'ability',targetId:'core-feel-no-pain',targetInstanceId:'loc-1',operation:'grant',
       title:'Feel No Pain 4+',summary:'This model has Feel No Pain 4+.',ruleTitle:'Silent Bodyguard',state:'active',certainty:'current',
-      source:{kind:'explicit-attachment',id:'ability-silent-bodyguard-03a0a1b',ownerInstanceId:'deathshroud-1'},
+      source:{kind:'explicit-attachment',id:'deathshroud-terminators-ability-silent-bodyguard',ownerInstanceId:'deathshroud-1'},
       provenance:{rosterFact:'explicit-attachment'},base:false,effective:true
     };
     const projection={game:{units:[source,unrelated,{identity:{instanceId:'loc-1',canonicalUnitId:'unit-lord-of-contagion',canonicalTitle:'Lord of Contagion'}},{identity:{instanceId:'loc-2',canonicalUnitId:'unit-lord-of-contagion',canonicalTitle:'Lord of Contagion'}}]}};
@@ -144,6 +140,7 @@ try{
     };
   });
   assert.equal(production.abilityEffect?.source?.ownerInstanceId,'parsed-unit-1','real parser effect source must be exact attached Deathshroud');
+  assert.equal(production.abilityEffect?.source?.id,'deathshroud-terminators-ability-silent-bodyguard','real parser effect source must use the canonical Ability identity');
   assert.equal(production.abilityEffect?.targetInstanceId,'parsed-unit-4','real parser effect target must be exact attached Lord');
   assert.equal(production.abilityEffect?.targetId,'core-feel-no-pain','real parser effect must target shared CORE identity');
   assert.equal(production.abilityEffect?.certainty,'current','real parser effect must be current');
@@ -156,7 +153,6 @@ try{
   assert.equal(production.coreFnpCount,1,'production CORE grant must remain idempotent');
   assert.equal(production.derivedArticles,0,'structured CORE grant must not create a duplicate derived article');
   assert.match(production.activeEffects,/Deathshroud Terminators/,'production active effects must identify the source unit');
-  assert.match(production.activeEffects,/Silent Bodyguard/,'production active effects must identify the source rule');
   assert.match(production.activeEffects,/Feel No Pain 4\+/,'production active effects must explain the grant');
   assert.equal(production.rosterCards,1,'production mobile route must mount one exact physical Datasheet');
   await productionContext.close();

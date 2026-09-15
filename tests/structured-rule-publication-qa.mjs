@@ -11,11 +11,16 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const canonical='books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json';
 const builder='books/shared/tools/build-army-book.mjs';
 const masterId='unit-masters-of-the-maelstrom';
-const garlonId=masterId+'-model-garlon-souleater-2';
+const garlonId='unit-masters-of-the-maelstrom-model-e9fcffc8e1';
+const legacyGarlonId=masterId+'-model-garlon-souleater-2';
 const traitorId='unit-traitor-enforcer';
 const traitorKeywords={
   'Traitor Enforcer':['Heretic Astartes','Infantry','Character','Grenades','Chaos','Traitor Enforcer'],
   'Traitor Ogryn':['Heretic Astartes','Infantry','Grenades','Chaos']
+};
+const traitorModelIds={
+  'Traitor Enforcer':'unit-traitor-enforcer-model-8a65f1f14b',
+  'Traitor Ogryn':'unit-traitor-enforcer-model-e85cc6b611'
 };
 const masterRuleId='emperors-children-detachment-rule-master-of-the-pageant';
 // Frozen CSM Faction Pack v1.2, p.25, SHA-256 f3a8d05e...b989a33a495.
@@ -35,12 +40,13 @@ const slice=(catalog,id)=>{const range=catalog.targets[id];assert.ok(range,`targ
 function modelOracle(models,label){
   assert.deepEqual(models.map(m=>m.title),names,`${label}: exactly five named models`);
   assert.equal(models.filter(m=>m.id===garlonId).length,1,`${label}: stable Garlon model identity`);
+  assert.ok(models.find(m=>m.id===garlonId)?.legacyIds?.includes(legacyGarlonId),`${label}: legacy Garlon identity remains a compatibility alias`);
   for(const model of models)assert.deepEqual(model.intrinsicKeywords||[],model.id===garlonId?['PSYKER']:[],`${label}: only Garlon model-scoped PSYKER`);
 }
 
 function traitorModelOracle(models,label){
   assert.deepEqual(models.map(model=>model.title),Object.keys(traitorKeywords),`${label}: both Traitor Enforcer models`);
-  for(const model of models)assert.deepEqual(model.intrinsicKeywords,traitorKeywords[model.title],`${label}: ${model.title} source-scoped keywords`);
+  for(const model of models){assert.equal(model.id,traitorModelIds[model.title],`${label}: ${model.title} persistent canonical identity`);assert.deepEqual(model.intrinsicKeywords,traitorKeywords[model.title],`${label}: ${model.title} source-scoped keywords`);}
 }
 
 // Exercise actual builder functions on synthetic input without importing its CLI entry point.
@@ -72,18 +78,16 @@ function genericPublication(source){
 function providerFixture(book,unitId,detachments,instanceId='ra07-physical',mutate){
   const scope={console,URL,URLSearchParams,location:{pathname:`/books/${book}/reader.html`},document:{documentElement:{dataset:{bookId:book}}}};
   scope.window=scope;scope.globalThis=scope;
-  for(const p of [`books/${book}/scripts/roster-data.js`,'books/shared/book-roster-enhancements.js','books/extensions/book-roster-enhancement-providers.js'])vm.runInNewContext(read(p),scope,{filename:p});
+  for(const p of [`books/${book}/scripts/roster-data.js`,'books/shared/effect-contract-runtime.js','books/shared/book-roster-enhancements.js','books/extensions/book-roster-enhancement-providers.js'])vm.runInNewContext(read(p),scope,{filename:p});
   const unit=scope.WH_BOOK_ROSTER_CATALOG.units.find(x=>x.id===unitId),keywords=unit.intrinsicKeywords,item={instanceId,unitId,raw:{id:instanceId}},gameUnit={identity:{instanceId,canonicalDatasheetId:unitId},rosterState:{detachments,keywordProfile:{intrinsic:keywords,added:[],removed:[],effective:keywords}},selection:{loadout:{selectedWargearAbilityIds:[]}},item:{catalogUnit:unit}};
   const effects=plain(scope.WHBookRosterEnhancements.gameEffects({item,gameUnit,gameUnits:[gameUnit],byInstance:new Map([[instanceId,gameUnit]]),enhancements:[]}));
   return {effects:mutate?mutate(effects):effects};
 }
 
 function providerOracle(mutate){
-  // Reuse the existing, unmodified exact-output assertions, not a weaker title check.
-  const source=read('tests/structured-roster-effects-qa.mjs');
-  const assertions=source.slice(source.indexOf("const masterRuleId='"),source.indexOf("assert.equal(masterReferences(detachmentFixture",source.indexOf("const masterRuleId='")));
-  assert.ok(assertions.includes('must emit exactly once')&&assertions.includes('must not add automatic mutations'));
-  vm.runInNewContext(assertions,{assert,detachmentFixture:(book,id,instance,detachments)=>providerFixture(book,id,detachments,instance,mutate)});
+  const refs=fixture=>fixture.effects.filter(effect=>effect.canonicalReference?.kind==='detachment-rule'&&effect.canonicalReference.id===masterRuleId);
+  const fulgrim=providerFixture('emperors-children','unit-fulgrim',['court-of-the-phoenician'],'ec-fulgrim-a',mutate);
+  assert.deepEqual(refs(fulgrim).map(effect=>({component:effect.component,targetId:effect.targetId,operation:effect.operation,state:effect.state,sourceKind:effect.source?.kind,sourceId:effect.source?.id,owner:effect.source?.ownerInstanceId,rosterFact:effect.provenance?.rosterFact})),[{component:'ability',targetId:masterRuleId,operation:'reference',state:'reference',sourceKind:'detachment',sourceId:'court-of-the-phoenician',owner:null,rosterFact:'canonical-effect-contract'}],'Master of the Pageant remains one exact reference-only effect');
   for(const [unit,det] of [['unit-fulgrim',[]],['unit-fulgrim',['rapid-evisceration']],['unit-seekers',['court-of-the-phoenician']]])assert.equal(providerFixture('emperors-children',unit,det).effects.filter(e=>e.canonicalReference?.id===masterRuleId).length,0,'unchanged negative provider scope');
   assert.equal(providerFixture('chaos-space-marines',masterId,[]).effects.some(e=>/choice-samples|model-keywords|psyker/i.test(JSON.stringify(e))),false,'no automatic Choice Samples or scoped-keyword effects');
 }
@@ -110,8 +114,8 @@ export function runQa(overrides={}){
   modelOracle(unit.gameSelections.models,'generated roster');
   const traitorGenerated=csm.units.find(x=>x.id===traitorId),traitorHtml=slice(targets['chaos-space-marines'],traitorId);
   traitorModelOracle(traitorGenerated.gameSelections.models,'generated Traitor Enforcer roster');
-  for(const [index,[title,keywords]] of Object.entries(traitorKeywords).entries()){
-    const modelId=`${traitorId}-model-${slug(title)}${index?'-'+(index+1):''}`,row=traitorHtml.match(new RegExp(`<p class="model-keywords" data-roster-model-id="${modelId}">[\\s\\S]*?</p>`))?.[0]||'';
+  for(const [title,keywords] of Object.entries(traitorKeywords)){
+    const modelId=traitorModelIds[title],row=traitorHtml.match(new RegExp(`<p class="model-keywords" data-roster-model-id="${modelId}">[\\s\\S]*?</p>`))?.[0]||'';
     for(const keyword of keywords)assert.ok(row.includes(`data-model-keyword="${keyword}"`),`published ${title} scoped keyword ${keyword}`);
   }
   assert.deepEqual(unit.intrinsicKeywords,masters.keywords,'generated unit keywords not flattened');

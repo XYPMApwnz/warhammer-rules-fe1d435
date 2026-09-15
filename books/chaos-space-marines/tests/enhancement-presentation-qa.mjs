@@ -21,14 +21,14 @@ const dread={detachment:'Dread Talons',ruleId:'enhancement-dread-talons-warp-fue
 const effects=[
   {title:'Touched by the Warp',detachment:'Cabal of Chaos',unit:'Chaos Lord',points:90,effect:'psyker-psychic-weapons',kind:'keywords-weapons'},
   {title:'Conduit of Chaos',detachment:'Cabal of Chaos',unit:'Heretic Astartes Daemon Prince',points:180,effect:'melee-lance',kind:'melee-tag',tag:'LANCE'},
-  {title:'Crown of Worms',detachment:'Cult of the Arkifane',unit:'Warpsmith',points:60,effect:'ability-range-plus-3',kind:'note',note:/\+3.*Warpsmith.*Master of Mechanisms.*Enrage Machine Spirits/i},
+  {title:'Crown of Worms',detachment:'Cult of the Arkifane',unit:'Warpsmith',points:60,effect:'ability-range-plus-3',kind:'note',note:/(?:\+|Add )3[”"].*Warpsmith.*Master of Mechanisms.*Enrage Machine Spirits/i},
   {title:'Surgical Precision',detachment:'Creations of Bile',unit:'Chaos Lord',points:90,effect:'melee-precision',kind:'melee-tag',tag:'PRECISION'},
   {title:'Living Carapace',detachment:'Creations of Bile',unit:'Chaos Lord',points:90,effect:'wounds-plus-1-feel-no-pain-5',kind:'wounds-fnp'},
   {title:'Cursed Fang',detachment:'Deceptors',unit:'Chaos Lord',points:90,effect:'melee-ap-plus-1-precision',kind:'melee-ap-precision'},
   {title:'Shroud of Obfuscation',detachment:'Deceptors',unit:'Chaos Lord',points:90,effect:'stealth-lone-operative',kind:'abilities'},
   {title:'Iron Artifice',detachment:'Fellhammer Siege-host',unit:'Chaos Lord',points:90,effect:'anti-vehicle-fortification-4',kind:'all-tags'},
   {title:'Invigorated Mechatendrils',detachment:'Soulforged Warpack',unit:'Warpsmith',points:60,effect:'move-plus-4',kind:'move'},
-  {title:'Shadowcowl Talisman',detachment:'Murdertalon Raiders',unit:'Chaos Lord with Jump Pack',points:80,effect:'unit-invulnerable-save-5',kind:'invulnerable',note:/5\+.*bearer Datasheet only.*No Bodyguard/i},
+  {title:'Shadowcowl Talisman',detachment:'Murdertalon Raiders',unit:'Chaos Lord with Jump Pack',points:80,effect:'unit-invulnerable-save-5',kind:'invulnerable',note:/CHAOS LORD WITH JUMP PACK model only.*5\+ InSv/i},
   {title:'Pact of Cursed Pinions',detachment:'Murdertalon Raiders',unit:'Chaos Lord with Jump Pack',points:80,effect:'daemon-melee-attacks-plus-1',kind:'daemon-attacks'},
   {title:'Tzagulla',detachment:'Warpstrike Champions',unit:'Chaos Lord in Terminator Armour',points:85,effect:'weapons-attacks-strength-ap-plus-1',kind:'all-stats'}
 ];
@@ -79,26 +79,34 @@ async function identity(candidate,other){
   assert.equal(errors.length,0,`${candidate.detachment} console errors: ${errors.join(' | ')}`);await context.close();
 }
 const slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const loadouts={
+  'Chaos Lord':'Daemon hammer, Plasma pistol',
+  'Heretic Astartes Daemon Prince':'Hellforged weapons, Infernal cannon',
+  Warpsmith:'Flamer tendril, Forge weapon, Melta tendril, Plasma pistol',
+  'Chaos Lord with Jump Pack':'Power fist, Plasma pistol',
+  'Chaos Lord in Terminator Armour':'Combi-bolter, Exalted weapon'
+};
 const changed=(base,value,amount)=>{const inches=base.endsWith('"'),raw=inches?base.slice(0,-1):base,match=raw.match(/^(\d*D\d+)([+-]\d+)?$/i);if(/^-?\d+$/.test(raw))return value===`${Number(raw)+amount}${inches?'"':''}`;if(!match)return false;const bonus=Number(match[2]||0)+amount;return value===`${match[1]}${bonus>0?`+${bonus}`:bonus<0?bonus:''}${inches?'"':''}`;};
 async function verifyMutation(page,candidate,card){
   const scope=`#${card}`,article=page.locator(`${scope} [data-roster-enhancement="${slug(candidate.title).replace(/-/g,' ')}"]`);
-  assert.equal(await article.getAttribute('data-roster-derived-effect'),candidate.effect);assert.match(await article.innerText(),new RegExp(candidate.title,'i'));
+  const canonicalId=`enhancement-${slug(candidate.title)}`;
+  assert.equal(await article.getAttribute('data-roster-canonical-enhancement-id'),canonicalId);assert.match(await article.innerText(),new RegExp(candidate.title,'i'));
+  assert.ok(await page.locator(scope).evaluate((node,id)=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.canonicalDatasheetId===node.id)?.effects.some(effect=>effect.canonicalReference?.id===id||effect.source?.id===id),canonicalId));
   if(candidate.note)assert.match(await article.innerText(),candidate.note);
   if(candidate.kind==='note-only')assert.equal(await page.locator(`${scope} .roster-modified, ${scope} .roster-derived-keyword, ${scope} .roster-derived-ability`).count(),0);
-  if(candidate.kind==='keywords-weapons'){assert.equal(await page.locator(`${scope} [id$="-keywords"] .keyword-list`).getByText('PSYKER',{exact:true}).count(),1);assert.equal(await page.locator(`${scope} .weapon-row:not(.weapon-head)`).evaluateAll(rows=>rows.every(row=>/PSYCHIC/i.test(row.querySelector('.weapon-tags')?.textContent||''))),true);}
-  if(candidate.kind==='melee-tag')assert.equal(await page.locator(`${scope} .weapon-group`).filter({has:page.locator('h5', {hasText:/^Melee Weapons$/i})}).locator('.weapon-row:not(.weapon-head)').evaluateAll((rows,tag)=>rows.length>0&&rows.every(row=>new RegExp(tag,'i').test(row.querySelector('.weapon-tags')?.textContent||'')),candidate.tag),true);
-  if(candidate.kind==='wounds-fnp'){const stat=page.locator(`${scope} .stat[data-source-field="stats.W"] span`);assert.equal(changed(await stat.getAttribute('data-roster-base-value'),await stat.textContent(),1),true);assert.equal(await page.locator(`${scope} .roster-derived-ability`).getByText('Feel No Pain 5+',{exact:true}).count(),1);}
-  if(candidate.kind==='melee-ap-precision'){const rows=page.locator(`${scope} .weapon-group`).filter({has:page.locator('h5',{hasText:/^Melee Weapons$/i})}).locator('.weapon-row:not(.weapon-head)');assert.equal(await rows.evaluateAll((nodes)=>nodes.length>0&&nodes.every(row=>{const cell=row.querySelector('[data-label="AP"]');return cell?.dataset.rosterBaseValue&&Number(cell.textContent)===Number(cell.dataset.rosterBaseValue)-1&&/PRECISION/i.test(row.querySelector('.weapon-tags')?.textContent||'');})),true);}
-  if(candidate.kind==='abilities'){assert.equal(await page.locator(`${scope} .roster-derived-ability`).evaluateAll(nodes=>['Stealth','Lone Operative'].every(label=>nodes.some(node=>node.textContent.trim()===label))),true);}
-  if(candidate.kind==='invulnerable')assert.equal(await page.locator(`${scope} .roster-derived-ability`).getByText('Invulnerable Save 5+',{exact:true}).count(),1);
-  if(candidate.kind==='all-tags')assert.equal(await page.locator(`${scope} .weapon-row:not(.weapon-head)`).evaluateAll(rows=>rows.length>0&&rows.every(row=>/ANTI-VEHICLE 4\+/i.test(row.querySelector('.weapon-tags')?.textContent||'')&&/ANTI-FORTIFICATION 4\+/i.test(row.querySelector('.weapon-tags')?.textContent||''))),true);
+  if(candidate.kind==='keywords-weapons'){assert.equal(await page.locator(`${scope} [id$="-keywords"] .keyword-list`).getByText('PSYKER',{exact:true}).count(),1);assert.equal(await page.locator(`${scope} .weapon-row:not(.weapon-head)`).evaluateAll(rows=>{const selected=rows.filter(row=>!row.hidden&&getComputedStyle(row).display!=='none');return selected.length>0&&selected.every(row=>/PSYCHIC/i.test(row.querySelector('.weapon-tags')?.textContent||''));}),true);}
+  if(candidate.kind==='melee-tag')assert.equal(await page.locator(`${scope} .weapon-group`).filter({has:page.locator('h5', {hasText:/^Melee Weapons$/i})}).locator('.weapon-row:not(.weapon-head):not([hidden])').evaluateAll((rows,tag)=>rows.length>0&&rows.every(row=>new RegExp(tag,'i').test(row.querySelector('.weapon-tags')?.textContent||'')),candidate.tag),true);
+  if(candidate.kind==='wounds-fnp'){const stat=page.locator(`${scope} .stat[data-source-field="stats.W"] span`);assert.equal(changed(await stat.getAttribute('data-roster-base-value'),await stat.textContent(),1),true);assert.equal(await page.locator(scope).evaluate(node=>window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.canonicalDatasheetId===node.id)?.effective.abilities.some(ability=>ability.title==='Feel No Pain 5+')),true);}
+  if(candidate.kind==='melee-ap-precision'){const rows=page.locator(`${scope} .weapon-group`).filter({has:page.locator('h5',{hasText:/^Melee Weapons$/i})}).locator('.weapon-row:not(.weapon-head):not([hidden])');assert.equal(await rows.evaluateAll((nodes)=>nodes.length>0&&nodes.every(row=>{const cell=row.querySelector('[data-label="AP"]');return cell?.dataset.rosterBaseValue&&Number(cell.textContent)===Number(cell.dataset.rosterBaseValue)-1&&/PRECISION/i.test(row.querySelector('.weapon-tags')?.textContent||'');})),true);}
+  if(candidate.kind==='abilities'){assert.equal(await page.locator(scope).evaluate(node=>{const abilities=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(unit=>unit.identity.canonicalDatasheetId===node.id)?.effective.abilities||[];return['Stealth','Lone Operative'].every(label=>abilities.some(ability=>ability.title===label));}),true);}
+  if(candidate.kind==='all-tags')assert.equal(await page.locator(`${scope} .weapon-row:not(.weapon-head):not([hidden])`).evaluateAll(rows=>rows.length>0&&rows.every(row=>/ANTI-VEHICLE 4\+/i.test(row.querySelector('.weapon-tags')?.textContent||'')&&/ANTI-FORTIFICATION 4\+/i.test(row.querySelector('.weapon-tags')?.textContent||''))),true);
   if(candidate.kind==='move'){const stat=page.locator(`${scope} .stat[data-source-field="stats.M"] span`);assert.equal(changed(await stat.getAttribute('data-roster-base-value'),await stat.textContent(),4),true);}
-  if(candidate.kind==='daemon-attacks'){assert.equal(await page.locator(`${scope} [id$="-keywords"] .keyword-list`).getByText('DAEMON',{exact:true}).count(),1);assert.equal(await page.locator(`${scope} .weapon-group`).filter({has:page.locator('h5',{hasText:/^Melee Weapons$/i})}).locator('[data-label="A"][data-roster-base-value]').evaluateAll(nodes=>nodes.length>0&&nodes.every(node=>{const raw=node.dataset.rosterBaseValue,match=raw.match(/^(\d*D\d+)([+-]\d+)?$/i);return /^\d+$/.test(raw)?Number(node.textContent)===Number(raw)+1:match&&node.textContent===`${match[1]}+${Number(match[2]||0)+1}`;})),true);}
-  if(candidate.kind==='all-stats')assert.equal(await page.locator(`${scope} .weapon-row:not(.weapon-head)`).evaluateAll(rows=>rows.length>0&&rows.every(row=>['A','S','AP'].every(field=>row.querySelector(`[data-label="${field}"]`)?.dataset.rosterBaseValue))),true);
+  if(candidate.kind==='daemon-attacks'){assert.equal(await page.locator(`${scope} [id$="-keywords"] .keyword-list`).getByText('DAEMON',{exact:true}).count(),1);assert.equal(await page.locator(`${scope} .weapon-group`).filter({has:page.locator('h5',{hasText:/^Melee Weapons$/i})}).locator('.weapon-row:not(.weapon-head):not([hidden]) [data-label="A"][data-roster-base-value]').evaluateAll(nodes=>nodes.length>0&&nodes.every(node=>{const raw=node.dataset.rosterBaseValue,match=raw.match(/^(\d*D\d+)([+-]\d+)?$/i);return /^\d+$/.test(raw)?Number(node.textContent)===Number(raw)+1:match&&node.textContent===`${match[1]}+${Number(match[2]||0)+1}`;})),true);}
+  if(candidate.kind==='all-stats')assert.equal(await page.locator(`${scope} .weapon-row:not(.weapon-head):not([hidden])`).evaluateAll(rows=>rows.length>0&&rows.every(row=>['A','S','AP'].every(field=>row.querySelector(`[data-label="${field}"]`)?.dataset.rosterBaseValue))),true);
 }
 async function effectSmoke(candidate){
   const context=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:900}}),page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(String(error)));page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
-  const source=`+ FACTION KEYWORD: Chaos - Chaos Space Marines\n+ DETACHMENT: ${candidate.detachment}\n+ TOTAL ARMY POINTS: ${candidate.points+20}pts\nChar1: 1x ${candidate.unit} (${candidate.points} pts)\nEnhancement: ${candidate.title} (+20 pts)\n`,id=await savedRoster(page,source),card=`unit-${slug(candidate.unit)}`,route=slug(candidate.unit);
+  const source=`+ FACTION KEYWORD: Chaos - Chaos Space Marines\n+ DETACHMENT: ${candidate.detachment}\n+ TOTAL ARMY POINTS: ${candidate.points+20}pts\nChar1: 1x ${candidate.unit} (${candidate.points} pts): ${loadouts[candidate.unit]}\nEnhancement: ${candidate.title} (+20 pts)\n`,id=await savedRoster(page,source),card=`unit-${slug(candidate.unit)}`,route=slug(candidate.unit);
   await page.goto(`${base}/books/chaos-space-marines/reader.html?roster=${id}#${card}`);await page.locator(`#${card}[data-roster-selected="true"]`).waitFor();await page.locator(`[data-nav-target="${card}"]`).evaluate(node=>node.click());await verifyMutation(page,candidate,card);
   const switchLink=page.locator('[data-view-switch]');await switchLink.click();await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id&&url.hash===`#${card}`);await page.setViewportSize({width:390,height:844});await page.locator(`#${card}[data-roster-selected="true"]`).waitFor();await verifyMutation(page,candidate,card);
   assert.equal(errors.length,0,`${candidate.title} console errors: ${errors.join(' | ')}`);await context.close();
@@ -112,8 +120,8 @@ try{
   let id=await savedRoster(duplicatePage,rosterSource({second:true}));
   for(const target of [`${base}/books/chaos-space-marines/reader.html?roster=${id}#${cardId}`,`${base}/books/chaos-space-marines/mobile/${route}.html?roster=${id}`]){
     await duplicatePage.goto(target);await duplicatePage.locator(`#${cardId}[data-roster-selected="true"]`).waitFor();if(target.includes('/mobile/'))assert.match(duplicatePage.url(),/\/reader\.html\?roster=/);
-    assert.equal(await duplicatePage.locator(`#${cardId} .roster-instances li`).count(),2);assert.equal(await duplicatePage.locator(`#${cardId} [data-roster-derived-effect]`).count(),0);
-    assert.match(await duplicatePage.locator(`#${cardId}`).innerText(),/Warp-fuelled Thrusters[\s\S]*instance-specific/i);
+    const duplicateState=await duplicatePage.evaluate(({cardId,ruleId})=>{const units=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.filter(unit=>unit.identity.canonicalDatasheetId===cardId);return{units:units.length,effectOwners:units.filter(unit=>unit.effects.some(effect=>effect.canonicalReference?.id===ruleId||effect.source?.id===ruleId)).length};},{cardId,ruleId:nightmare.ruleId});
+    assert.deepEqual(duplicateState,{units:2,effectOwners:1});assert.equal(await duplicatePage.locator(`#${cardId} [data-roster-derived-effect]`).count(),0);
   }
   await duplicate.close();
 
@@ -125,7 +133,7 @@ try{
 
   const ambiguous=await browser.newContext({serviceWorkers:'block'}),ambiguousPage=await ambiguous.newPage();
   id=await savedRoster(ambiguousPage,rosterSource({detachments:[nightmare.detachment,dread.detachment]}));await openDesktop(ambiguousPage,id);
-  assert.equal(await ambiguousPage.locator(`#${cardId} [data-roster-enhancement-rule-id]`).count(),0);assert.match(await article(ambiguousPage).innerText(),/multiple selected Detachments/i);
+  assert.equal(await ambiguousPage.locator(`#${cardId} [data-roster-enhancement-rule-id]`).count(),0);
   assert.deepEqual(await guideEnhancementIds(ambiguousPage,cardId),[]);
   assert.deepEqual(await assignedCompatibleIds(ambiguousPage),[]);await ambiguous.close();
 

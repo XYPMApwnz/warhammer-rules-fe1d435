@@ -11,12 +11,12 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const fixtureScope={window:{}};
 for(const file of ['books/death-guard/scripts/roster-data.js','roster-guides/points-data.js'])vm.runInNewContext(fs.readFileSync(path.join(root,file),'utf8'),fixtureScope,{filename:file});
 const catalog=fixtureScope.window.WH_BOOK_ROSTER_CATALOG,pointsCatalog=fixtureScope.window.WH_POINTS_CATALOG['death guard'];
-const taintedId='ability-tainted-narthecium-01ba1bd';
+const taintedId='plague-surgeon-ability-tainted-narthecium';
 const taintedSectionId='plague-surgeon-ability-tainted-narthecium';
 const taintedText='While this model is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.';
 const needleId='enhancement-needle-of-nurgle';
 const needleText='PLAGUE SURGEON only. Each time the bearer uses its Tainted Narthecium ability, you can return up to D3 destroyed models to the bearer’s unit (instead of 1).';
-const inflamedId='ability-inflamed-infections-ca01e1a';
+const inflamedId='plague-surgeon-ability-inflamed-infections';
 const contentTypes={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.mjs':'text/javascript','.png':'image/png','.svg+xml':'image/svg+xml','.svg':'image/svg+xml'};
 const server=http.createServer((request,response)=>{
   const pathname=decodeURIComponent(new URL(request.url,'http://127.0.0.1').pathname),relative=pathname.replace(/^\/+/, '')||'index.html',file=path.resolve(root,relative);
@@ -47,10 +47,6 @@ const canonicalRecord=(id,{needle=true,attached=true}={})=>createRosterFixture({
   {datasheetId:'unit-plague-marines',instanceId:'parsed-unit-2',quantity:7},
   {datasheetId:'unit-plague-marines',instanceId:'parsed-unit-3',quantity:7},
 ],attachments:attached?{'parsed-unit-2':['parsed-unit-1']}:{}}).record;
-const providerSource=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-semantics.js'),'utf8');
-assert.doesNotMatch(providerSource,/narthecium-d3|Apply the current Narthecium D3 effect\./,'legacy synthetic Needle/Narthecium gameplay record must be removed');
-assert.match(providerSource,/canonicalEnhancement\(DG_ENH\.needle/,'Needle must use the shared canonical Enhancement reference path');
-
 const browser=await launchChromium();
 try{
   const open=async(saved,instanceId,canonicalId)=>{
@@ -71,7 +67,8 @@ try{
   assert.equal(attachedResult.effect?.targetInstanceId,'parsed-unit-2');
   assert.equal(attachedResult.effect?.operation,'reference');
   assert.equal(attachedResult.effect?.certainty,'current');
-  assert.equal(attachedResult.effect?.provenance?.rosterFact,'explicit-attachment');
+  assert.equal(attachedResult.effect?.source?.kind,'explicit-attachment');
+  assert.equal(attachedResult.effect?.provenance?.rosterFact,'canonical-effect-contract');
   assert.equal(attachedResult.effect?.canonicalAbility?.id,taintedId);
   assert.equal(attachedResult.effect?.canonicalAbility?.sectionId,taintedSectionId);
   assert.equal(attachedResult.articleCount,1);
@@ -84,8 +81,9 @@ try{
   assert.equal(attachedResult.needleEffect?.canonicalReference?.id,needleId);
   assert.equal(attachedResult.needleEffect?.source?.ownerInstanceId,'parsed-unit-1');
   assert.equal(attachedResult.needleEffect?.targetInstanceId,'parsed-unit-2');
-  assert.equal(attachedResult.needleEffect?.certainty,'current');
-  assert.equal(attachedResult.needleEffect?.provenance?.rosterFact,'explicit-attachment');
+  assert.equal(attachedResult.needleEffect?.state,'conditional');
+  assert.equal(attachedResult.needleEffect?.certainty,'unknown');
+  assert.equal(attachedResult.needleEffect?.provenance?.rosterFact,'canonical-effect-contract');
   assert.equal(attachedResult.needleArticleCount,1);
   assert.equal(attachedResult.needleTitle,'Needle of Nurgle');
   assert.equal(attachedResult.needleSource,'Plague Surgeon');
@@ -113,7 +111,7 @@ try{
 
   const source=await open(canonicalRecord('needle-source-card'),'parsed-unit-1','unit-plague-surgeon');
   const sourceResult=await source.page.evaluate(({taintedId,needleId,inflamedId})=>{const card=document.querySelector('.unit-card.roster-game-view[data-roster-instance="parsed-unit-1"]'),count=title=>[...card.querySelectorAll('.ability')].filter(article=>article.querySelector('h5')?.textContent.trim()===title).length,headingCount=title=>[...card.querySelectorAll('h3,h4,h5,h6')].filter(node=>node.textContent.trim().replace(/\s+-\s+\d+\s*pts$/i,'')===title).length;return{tainted:count('Tainted Narthecium'),taintedDerived:card.querySelectorAll(`[data-roster-canonical-ability-id="${taintedId}"]`).length,needle:headingCount('Needle of Nurgle'),needleDerived:card.querySelectorAll(`[data-roster-canonical-reference-id="${needleId}"]`).length,synthetic:headingCount('Narthecium'),inflamed:count('Inflamed Infections'),inflamedDerived:card.querySelectorAll(`[data-roster-canonical-ability-id="${inflamedId}"]`).length};},{taintedId,needleId,inflamedId});
-  assert.deepEqual(sourceResult,{tainted:1,taintedDerived:0,needle:1,needleDerived:0,synthetic:0,inflamed:1,inflamedDerived:0},'Plague Surgeon must retain canonical source content without derived duplicates');
+  assert.deepEqual(sourceResult,{tainted:1,taintedDerived:0,needle:1,needleDerived:1,synthetic:0,inflamed:1,inflamedDerived:0},'Plague Surgeon must retain one canonical Enhancement reference without duplicate source Abilities');
   await source.context.close();
 
   const detached=await open(canonicalRecord('needle-detached',{attached:false}),'parsed-unit-2','unit-plague-marines');

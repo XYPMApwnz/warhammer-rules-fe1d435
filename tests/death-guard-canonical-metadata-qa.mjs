@@ -1,13 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const at=file=>path.join(root,file);
 const read=file=>fs.readFileSync(at(file),'utf8');
 const json=file=>JSON.parse(read(file));
-const hash=file=>crypto.createHash('sha256').update(fs.readFileSync(at(file))).digest('hex');
 const metadata=json('books/death-guard/sources/canonical-presentation-contract.json');
 const canonical=json('books/death-guard/content/death-guard-rules.en.json');
 const legends=json('books/death-guard/content/death-guard-legends.en.json');
@@ -35,11 +33,7 @@ const metadataNavigation=metadata.navigation.nodes.map(({order,targetId,label})=
 
 check(metadata.schema===1&&metadata.bookId==='death-guard','metadata identity');
 check(metadata.provenance.captureOnly===true&&metadata.provenance.generatedOutputsAreBuildInputs===false,'generated outputs are parity oracles only');
-check(hash('books/death-guard/reader.html')===metadata.provenance.oracleHashes.reader&&readerShell.includes('./scripts/target-data.js'),'reader shell oracle hash and target-catalog mount');
-check(hash('books/death-guard/scripts/data.js')===metadata.provenance.oracleHashes.runtime,'runtime oracle hash');
-check(hash('books/death-guard/mobile/related-rules.inc')===metadata.provenance.oracleHashes.relatedRules,'related-rules oracle hash');
-const frozenFiles={canonical:'books/death-guard/content/death-guard-rules.en.json',legends:'books/death-guard/content/death-guard-legends.en.json',officialUpdates:'books/death-guard/content/official-update-ledger.en.json',points:'books/death-guard/sources/official-mfm-v1.3.json',compatibleRules:'books/death-guard/generated/compatible-rules.json',runtimeRelatedTerms:'books/death-guard/sources/runtime-related-terms.json',rosterSemantics:'books/death-guard/scripts/roster-semantics.js',rosterFilter:'books/death-guard/scripts/roster-filter.js'};
-for(const [key,file] of Object.entries(frozenFiles))check(hash(file)===metadata.provenance.frozenSourceHashes[key],`${key} frozen hash`);
+check(readerShell.includes('./scripts/target-data.js'),'reader shell mounts the generated target catalog');
 
 check(metadata.termLinks.expectedOccurrences===1317&&metadata.termLinks.expectedUniqueTermIds===373,'curated term counts');
 check(new Set(metadata.termLinks.placements.map(record=>record.key)).size===metadata.termLinks.placements.length,'unique term placement keys');

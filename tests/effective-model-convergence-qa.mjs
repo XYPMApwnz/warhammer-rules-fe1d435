@@ -76,7 +76,7 @@ assert.throws(()=>validateEffectiveBookModel(amEnhancementGlossaryPoison),/gloss
 
 const duplicate=structuredClone(first['death-guard']);duplicate.units.push(structuredClone(duplicate.units[0]));assert.throws(()=>validateEffectiveBookModel(duplicate),/duplicate death-guard unit identity/);
 const unknownRelation=structuredClone(first['adeptus-mechanicus']);unknownRelation.relationGraphs.get(unknownRelation.units[0].id).canLead=[{unitId:'unit-unknown-effective-target'}];assert.throws(()=>validateEffectiveBookModel(unknownRelation),/unknown relation target/);
-const substituted=structuredClone(first['death-guard']);substituted.units[0].id='unit-count-preserving-substitution';assert.throws(()=>validateEffectiveBookModel(substituted),/(conflicting unit partitions|canonical rule profile)/);
+const substituted=structuredClone(first['death-guard']);substituted.units[0].id='unit-count-preserving-substitution';assert.throws(()=>validateEffectiveBookModel(substituted),/(conflicting unit partitions|canonical rule profile|weapon profile belongs to wrong parent)/);
 await assert.rejects(()=>runPresentationHook(first['death-guard'],model=>{model.relationGraphs.set('unit-poison',{});return{};}),/semantic mutation/);
 
 const secondAm=(await construct('adeptus-mechanicus')).model,secondDg=(await construct('death-guard')).model;

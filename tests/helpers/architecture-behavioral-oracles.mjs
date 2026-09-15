@@ -5,7 +5,7 @@ import {spawnSync} from 'node:child_process';
 export const CONTRACT_ORACLE_SCRIPTS=Object.freeze({
   SOURCE_LIFECYCLE:['tests/source-ingestion-contract-qa.mjs','tests/sm-authenticated-bsdata-argument-binding-qa.mjs'],
   SOURCE_ENROLLMENT:['tests/source-enrollment-qa.mjs'],
-  CANONICAL_IDENTITY:['tests/canonical-join-architecture-qa.mjs','tests/authoritative-non-id-joins-qa.mjs','tests/persistent-child-identity-qa.mjs'],
+  CANONICAL_IDENTITY:['tests/canonical-join-architecture-qa.mjs','tests/authoritative-non-id-joins-qa.mjs','tests/persistent-child-identity-qa.mjs','tests/final-d4-canonical-ability-profile-qa.mjs'],
   FACT_OWNERSHIP:['tests/final-architecture-ownership-qa.mjs','tests/glossary-output-ownership-qa.mjs','tests/generated-output-ownership-qa.mjs','tests/space-marines-related-rules-owner-qa.mjs','tests/tau-related-rules-owner-qa.mjs','tests/am-datasheet-source-ownership-qa.mjs'],
   EFFECTIVE_MODEL:['tests/effective-model-convergence-qa.mjs','tests/enhancement-text-ownership-qa.mjs'],
   DEPENDENCY_PRECEDENCE:['tests/effective-points-projection-qa.mjs'],
@@ -14,7 +14,7 @@ export const CONTRACT_ORACLE_SCRIPTS=Object.freeze({
   STRATAGEMS:['tests/stratagem-architecture-qa.mjs'],
   RELATIONS:['tests/canonical-join-architecture-qa.mjs','tests/dependency-relation-overlay-qa.mjs'],
   ROSTER:['tests/roster-fixtures-qa.mjs','tests/enhancement-text-ownership-qa.mjs'],
-  EFFECTS:['tests/effect-contract-ownership-qa.mjs','tests/effect-provider-interpreter-equality-qa.mjs'],
+  EFFECTS:['tests/effect-contract-ownership-qa.mjs','tests/effect-provider-interpreter-equality-qa.mjs','tests/final-d4-canonical-ability-profile-qa.mjs'],
   GLOSSARY:['tests/glossary-output-ownership-qa.mjs','tests/glossary-editorial-contract-qa.mjs','tests/enhancement-text-ownership-qa.mjs'],
   PUBLICATION_INVENTORY:['tests/publication-inventory-qa.mjs','tests/offline-mobile-routes-qa.mjs','tests/generated-output-ownership-qa.mjs','tests/rendered-output-qa.mjs'],
   GENERATED_OWNERSHIP:['tests/generated-output-ownership-qa.mjs','tests/effective-points-projection-qa.mjs','tests/glossary-output-ownership-qa.mjs']
@@ -28,7 +28,9 @@ export const ASTRA_ATTACK_SCRIPTS=Object.freeze({
   ASTRA_D5_ATTACK:'tests/sm-authenticated-bsdata-argument-binding-qa.mjs',
   EFFECT_PLUS_99_ATTACK:'tests/effect-contract-ownership-qa.mjs',
   STRATAGEM_COUNT_PRESERVING_ATTACK:'tests/stratagem-architecture-qa.mjs',
-  G1_PROVIDER_PLUS_7_ATTACK:'tests/effect-provider-interpreter-equality-qa.mjs'
+  G1_PROVIDER_PLUS_7_ATTACK:'tests/effect-provider-interpreter-equality-qa.mjs',
+  NEW_D4_ABILITY_COLLISION_ATTACK:'tests/final-d4-canonical-ability-profile-qa.mjs',
+  NEW_D4_WEAPON_RENAME_ATTACK:'tests/final-d4-canonical-ability-profile-qa.mjs'
 });
 
 const diagnostic=result=>`${result.stdout||''}${result.stderr||''}`.trim();

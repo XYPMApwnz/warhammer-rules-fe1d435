@@ -30766,6 +30766,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     {
       "title": "Sanguinary Tear (Aura)",
       "text": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
+      "value": 35,
       "detachment": "Rage-cursed Onslaught",
       "tags": [],
       "owner": {
@@ -30785,7 +30786,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "sanguinary-tear-aura",
+      "id": "enhancement-sanguinary-tear-aura",
       "points": 35,
       "sourcePages": [
         7
@@ -30796,10 +30797,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           7
         ]
       },
-      "ruleId": "sanguinary-tear-aura",
+      "sourceId": "sanguinary-tear-aura",
+      "pointsSource": {
+        "label": "Official MFM v1.3",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-27"
+      },
+      "ruleId": "enhancement-sanguinary-tear-aura",
       "detachmentId": "rage-cursed-onslaught",
       "sourceBookId": "blood-angels",
-      "legacyKey": "sanguinary-tear-aura"
+      "legacyKey": "enhancement-sanguinary-tear-aura"
     },
     {
       "title": "Angel's Fang",
@@ -43039,9 +43046,10 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "ruleId": "enhancement-master-of-the-red-thirst",
     "detachmentId": "rage-cursed-onslaught"
   },
-  "sanguinary-tear-aura": {
+  "enhancement-sanguinary-tear-aura": {
     "title": "Sanguinary Tear (Aura)",
     "text": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
+    "value": 35,
     "detachment": "Rage-cursed Onslaught",
     "tags": [],
     "owner": {
@@ -43061,7 +43069,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "sanguinary-tear-aura",
+    "ruleId": "enhancement-sanguinary-tear-aura",
     "detachmentId": "rage-cursed-onslaught"
   },
   "enhancement-angels-fang": {

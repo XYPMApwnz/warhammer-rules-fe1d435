@@ -119,5 +119,18 @@
       "tracked": true,
       "lifecycle": "QA_CAPTURE_OUTPUT"
     }
-  ]
+  ],
+  "rosterCatalog": {
+    "weaponFamilyMemberships": [
+      {
+        "id": "unit-malignant-plaguecaster-weapon-family-plague-wind",
+        "unitId": "unit-malignant-plaguecaster",
+        "title": "Plague Wind",
+        "profileIds": [
+          "malignant-plaguecaster-weapon-plague-wind-witchfire",
+          "malignant-plaguecaster-weapon-plague-wind-focused-witchfire"
+        ]
+      }
+    ]
+  }
 }

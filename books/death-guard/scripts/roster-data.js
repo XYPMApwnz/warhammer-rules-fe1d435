@@ -11780,7 +11780,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         {
           "selector": {
             "subject": "bearer",
-            "weaponFamilyId": "plague-wind"
+            "weaponFamilyId": "unit-malignant-plaguecaster-weapon-family-plague-wind"
           },
           "conditions": [
             {
@@ -11794,7 +11794,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             {
               "id": "plague-wind-range",
               "type": "WEAPON_CHARACTERISTIC_ADD",
-              "canonicalTarget": "family:plague-wind",
+              "canonicalTarget": {
+                "kind": "weapon-family",
+                "id": "unit-malignant-plaguecaster-weapon-family-plague-wind"
+              },
               "parameters": {
                 "characteristic": "Range",
                 "value": 12
@@ -12759,7 +12762,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "bodyguardUnitIds": [
               "unit-poxwalkers"
             ],
-            "weaponFamilyId": "plague-wind"
+            "weaponFamilyId": "unit-malignant-plaguecaster-weapon-family-plague-wind"
           },
           "conditions": [
             {
@@ -12771,7 +12774,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             {
               "id": "sorrowsyphon",
               "type": "WEAPON_CHARACTERISTIC_ADD",
-              "canonicalTarget": "family:plague-wind",
+              "canonicalTarget": {
+                "kind": "weapon-family",
+                "id": "unit-malignant-plaguecaster-weapon-family-plague-wind"
+              },
               "parameters": {
                 "characteristic": "D",
                 "value": 1

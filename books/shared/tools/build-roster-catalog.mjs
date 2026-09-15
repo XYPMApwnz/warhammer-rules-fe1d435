@@ -71,12 +71,25 @@ const gameSelectionsFor=(unit,options={})=>{
     id:profile.id,...(profile.legacyIds?.length?{legacyIds:profile.legacyIds}:{}),
     title:profile.name||'',mode:profile.mode||'',range:profile.range||'',a:profile.a||'',skill:profile.skill||'',s:profile.s||'',ap:profile.ap||'',d:profile.d||'',abilities:profile.abilities||''
   }));
+  const profileIds=new Set(profileRecords.map(profile=>profile.id));
+  const memberships=(key,label)=>values(options[key]).filter(record=>record.unitId===unit.id).map(record=>{
+    if(!record.id||!Array.isArray(record.profileIds)||!record.profileIds.length)throw new Error(`${unit.id}: ${label} membership requires an ID and profile IDs`);
+    if(new Set(record.profileIds).size!==record.profileIds.length)throw new Error(`${unit.id}: duplicate ${label} profile identity for ${record.id}`);
+    for(const id of record.profileIds)if(!profileIds.has(id))throw new Error(`${unit.id}: ${label} ${record.id} references unknown profile ${id}`);
+    return{...record,profileIds:[...record.profileIds]};
+  });
   const grouped=new Map();
   for(const profile of profileRecords){const key=normalize(profile.title),group=grouped.get(key)||[];group.push(profile);grouped.set(key,group);}
   const selections=[...grouped.values()].map(group=>({id:`${unit.id}-selection-${slug(group[0].title)}`,title:group[0].title,aliases:[group[0].title],kind:'weapon',profileIds:group.map(profile=>profile.id),wargearAbilityIds:[]}));
   const familyGroups=new Map();
   for(const profile of profileRecords){const title=weaponFamilyTitle(profile.title);if(!title)continue;const key=normalize(title),group=familyGroups.get(key)||{title,profiles:[]};group.profiles.push(profile);familyGroups.set(key,group);}
   const weaponFamilies=[...familyGroups.values()].filter(group=>group.profiles.length>1).map(group=>({id:`${unit.id}-weapon-family-${slug(group.title)}`,title:group.title,aliases:[group.title],profileIds:group.profiles.map(profile=>profile.id),ambiguousAlias:grouped.has(normalize(group.title))}));
+  for(const contract of memberships('weaponFamilyMemberships','weapon family')){
+    const {unitId,...membership}=contract,existing=weaponFamilies.find(record=>record.id===membership.id),title=membership.title||existing?.title||membership.id;
+    const exact={...existing,...membership,title,aliases:[...new Set([title,...values(membership.aliases),...values(existing?.aliases)].filter(Boolean))],ambiguousAlias:existing?.ambiguousAlias||false};
+    if(existing)weaponFamilies.splice(weaponFamilies.indexOf(existing),1,exact);else weaponFamilies.push(exact);
+  }
+  const weaponClasses=memberships('weaponClassMemberships','weapon class').map(({unitId,...record})=>record);
   for(const family of weaponFamilies)selections.push({id:`${family.id}-selection`,title:family.title,aliases:[...family.aliases],kind:'weapon',familyId:family.id,profileIds:[...family.profileIds],wargearAbilityIds:[]});
   const declaredWargearSelections=[];
   const wargearAbilities=assignCanonicalChildIdentities(unit,canonicalWargearAbilities,{kind:'wargear-ability',titleOf:ability=>ability.title,semanticOf:abilityIdentityFacts,legacyIdOf:legacyWargearAbilityId.bind(null,unit)}).map(ability=>{const abilityId=ability.id,declared=values(ability.requiredSelections).map(selection=>{const record=typeof selection==='string'?{title:selection}:selection||{},title=record.title||'',id=record.id||`${unit.id}-selection-${slug(title)}`;declaredWargearSelections.push({id,title,aliases:[...new Set([title,...values(record.aliases)].filter(Boolean))],kind:'wargear',profileIds:[],wargearAbilityIds:[abilityId]});return id;});return{...canonicalAbilityRecord(unit,ability,abilityId),...(ability.legacyIds?.length?{legacyIds:ability.legacyIds}:{}),requiredSelectionIds:[...new Set([...values(ability.requiredSelectionIds),...declared])]};});
@@ -104,7 +117,7 @@ const gameSelectionsFor=(unit,options={})=>{
   const ordinaryAbilityRecords=assignCanonicalChildIdentities(unit,canonicalAbilities.map(ability=>{const id=ability.id||ability.termId;return id&&explicitCounts.get(id)===1?{...ability,id}:ability;}),{kind:'ability',titleOf:ability=>ability.title,semanticOf:abilityIdentityFacts,legacyIdOf:(ability,index)=>ability.termId||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`}).map(ability=>({...canonicalAbilityRecord(unit,ability,ability.id),...(ability.legacyIds?.length?{legacyIds:ability.legacyIds}:{})}));
   assertMatchingAbilityRecords(unit,ordinaryAbilityRecords,wargearAbilities);
   const wargearAbilityIds=new Set(wargearAbilities.map(ability=>ability.id)),abilities=ordinaryAbilityRecords.filter(ability=>!wargearAbilityIds.has(ability.id));
-  return {stats:{...stats},abilities,models:canonicalRosterModelsFor(unit),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
+  return {stats:{...stats},abilities,models:canonicalRosterModelsFor(unit),selections,weaponFamilies,...(weaponClasses.length?{weaponClasses}:{}),weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
 };
 
 const detachmentRulesFor=(detachment,options={})=>{
@@ -118,6 +131,16 @@ const detachmentRulesFor=(detachment,options={})=>{
 export function createRosterCatalog({config,units=[],detachments=[],relationGraphs=new Map(),legacyEnhancements={},enhancementContracts=null,keywordGrants=[],effectContracts=[]}){
   const dependencies=dependencyRecords(config);
   const rosterCatalog={bookId:config.id,...config.rosterCatalog};
+  const effectiveUnitIds=new Set(units.map(unit=>unit.id));
+  for(const [key,label] of [['weaponClassMemberships','weapon class'],['weaponFamilyMemberships','weapon family']]){
+    const seen=new Set();
+    for(const record of values(rosterCatalog[key])){
+      if(!effectiveUnitIds.has(record?.unitId))throw new Error(`${config.id}: ${label} ${record?.id||'<missing>'} references unknown unit ${record?.unitId||'<missing>'}`);
+      const identity=`${record.unitId}\0${record.id}`;
+      if(seen.has(identity))throw new Error(`${config.id}: duplicate ${label} membership ${record.unitId}/${record.id}`);
+      seen.add(identity);
+    }
+  }
   const compatibilityByUnit=config.unitCompatibleChapterKeywords||{};
   for(const [unitId,keywords] of Object.entries(compatibilityByUnit)){
     if(units.filter(unit=>unit.id===unitId).length!==1)throw new Error(`${config.id}: unit compatibility ${unitId} must resolve exactly once`);

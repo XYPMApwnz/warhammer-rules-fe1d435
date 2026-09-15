@@ -39,9 +39,15 @@
     "rosterFilter": 6,
     "rosterData": 2
   },
-  "armyRules": [
-    "Dark Pacts",
-    "Cults of the Dark Gods"
+  "armyRuleBindings": [
+    {
+      "id": "army-rule-dark-pacts",
+      "sourceId": "chaos-space-marines-ability-dark-pacts"
+    },
+    {
+      "id": "army-rule-cults-of-the-dark-gods",
+      "sourceId": "army-rule-cults-of-the-dark-gods"
+    }
   ],
   "renderTransportRelations": true,
   "renderSupportRelations": true,

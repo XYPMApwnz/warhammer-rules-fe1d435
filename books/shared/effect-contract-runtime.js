@@ -177,6 +177,11 @@
     delete parameters.characteristic;delete parameters.value;
     if(operation.type==='WEAPON_PROFILE_GRANT'&&!parameters.profile){parameters.profile=profileFor(parameters.profileIds,env,contract);if(!parameters.profile)return null;}
     let targetId=target.id;
+    if(component==='weapon'&&['weapon-class','weapon-family'].includes(target.kind)){
+      const records=list(catalogUnit(env.draft)?.gameSelections?.[target.kind==='weapon-class'?'weaponClasses':'weaponFamilies']),matches=records.filter(record=>record.id===target.id);
+      if(matches.length>1)throw new Error(`${contract.canonicalRecordId}: duplicate canonical ${target.kind} ${target.id}`);
+      parameters.profileIds=matches.length===1?[...list(matches[0].profileIds)]:[];
+    }
     if(targetId==='selected-physical-melee-profiles'){
       const excluded=new Set(list(selector.physicalEquipment?.excludeProfileIds)),selected=selectedIds(env.draft,'selectedProfileIds');
       parameters.profileIds=list(catalogUnit(env.draft)?.gameSelections?.weaponProfiles).filter(profile=>profile.mode==='melee'&&selected.has(profile.id)&&!excluded.has(profile.id)).map(profile=>profile.id);

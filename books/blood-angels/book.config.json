@@ -264,9 +264,16 @@
     "Character": "Characters",
     "Dedicated Transport": "Dedicated Transports"
   },
-  "armyRules": [
-    "Oath of Moment",
-    "The Sons of Sanguinius"
+  "armyRuleBindings": [
+    {
+      "id": "army-rule-oath-of-moment",
+      "sourceId": "oath-of-moment",
+      "termId": "space-marines-army-rule-oath-of-moment"
+    },
+    {
+      "id": "army-rule-the-sons-of-sanguinius",
+      "sourceId": "army-rule-the-sons-of-sanguinius"
+    }
   ],
   "armyRuleTermIds": {
     "Oath of Moment": "space-marines-army-rule-oath-of-moment"

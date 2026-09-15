@@ -7,8 +7,11 @@
   "coverImage": "assets/tau-empire-cover-800.webp",
   "edition": "11E",
   "factionKeyword": "T'AU EMPIRE",
-  "armyRules": [
-    "For the Greater Good"
+  "armyRuleBindings": [
+    {
+      "id": "army-rule-for-the-greater-good",
+      "sourceId": "army-for-the-greater-good"
+    }
   ],
   "compactSharedAbilities": [
     "Anti",

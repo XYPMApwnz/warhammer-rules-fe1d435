@@ -68,6 +68,9 @@ function assertSupplementControls(projections){
   assert.equal(ba.units.some(item=>item.id==='unit-roboute-guilliman'),false);
   assert.equal(da.units.some(item=>item.id==='unit-roboute-guilliman'),false);
   assert.equal(ba.units.find(item=>item.id==='unit-sanguinary-guard')?.sourceBookId,'blood-angels');
+  const sanguinaryTear=ba.enhancements.find(item=>item.id==='enhancement-sanguinary-tear-aura');
+  assert.equal(sanguinaryTear?.value,35,'Blood Angels Sanguinary Tear must retain its exact scoped 35-point identity');
+  assert.ok(sanguinaryTear?.canonicalEffectRecordIds.includes('sanguinary-tear-aura'),'Blood Angels Sanguinary Tear must retain its source compatibility identity');
   assert.equal(da.units.find(item=>item.id==='unit-deathwing-knights')?.sourceBookId,'dark-angels');
   assert.equal(ba.detachments.find(item=>item.id==='gladius-task-force')?.sourceBookId,'space-marines');
   assert.equal(da.detachments.find(item=>item.id==='gladius-task-force')?.sourceBookId,'space-marines');
@@ -126,7 +129,7 @@ assert.equal(JSON.stringify(first.catalog),JSON.stringify(second.catalog),'point
 assert.deepEqual(pointsApi.createPointsCatalogFromProjections(new Map([...projections].reverse())).catalog,catalog,'projection construction order changed points output');
 assert.deepEqual(JSON.parse(JSON.stringify(catalog)),published.catalog,'effective projection changed published points semantics');
 assert.equal(published.source,`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`,'points-data.js is not byte-current');
-assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'57f7891dea828d010a15c2e9038890ba63065938ea79b31db0e3f7d5a18ae846');
+assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'fe1f62b0e8ca6c4a5367aafa9536ef6a0c389c8b974c6f57e909bfe46988bed8');
 assertProjectionCatalogIdentity(projections,catalog);
 assertSupplementControls(projections);
 assertCanonicalPointAuthority(projections);

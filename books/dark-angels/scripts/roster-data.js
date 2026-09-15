@@ -305,6 +305,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-assault-intercessor-squad-profile-08f1080123",
+              "unit-assault-intercessor-squad-profile-d02e622c84"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-assault-intercessor-squad-profile-6149ab9b77",
@@ -1041,6 +1050,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-intercessor-squad-profile-d02e622c84"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-intercessor-squad-profile-08f1080123",
+              "unit-intercessor-squad-profile-d02e622c84"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -1851,6 +1869,19 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-tactical-squad-profile-34448b0b0f"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-tactical-squad-profile-08f1080123",
+              "unit-tactical-squad-profile-d02e622c84",
+              "unit-tactical-squad-profile-8dbc185d71",
+              "unit-tactical-squad-profile-1e3f9b192c",
+              "unit-tactical-squad-profile-77dd772646",
+              "unit-tactical-squad-profile-34448b0b0f"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -3944,6 +3975,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-captain-profile-08f1080123",
+              "unit-captain-profile-d02e622c84"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-captain-profile-8dd496396b",
@@ -5186,6 +5226,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-captain-with-jump-pack-profile-08f1080123",
+              "unit-captain-with-jump-pack-profile-d02e622c84"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-captain-with-jump-pack-profile-3af0810207",
@@ -6253,6 +6302,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-chaplain-with-jump-pack-profile-d02e622c84"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-chaplain-with-jump-pack-profile-08f1080123",
+              "unit-chaplain-with-jump-pack-profile-d02e622c84"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -7905,6 +7963,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-lieutenant-profile-d02e622c84"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-lieutenant-profile-08f1080123",
+              "unit-lieutenant-profile-d02e622c84"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -10533,6 +10600,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-assault-intercessors-with-jump-packs-profile-08f1080123",
+              "unit-assault-intercessors-with-jump-packs-profile-d02e622c84"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-assault-intercessors-with-jump-packs-profile-6149ab9b77",
@@ -10904,6 +10980,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-bladeguard-veteran-squad-profile-d02e622c84"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-bladeguard-veteran-squad-profile-08f1080123",
+              "unit-bladeguard-veteran-squad-profile-d02e622c84"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -12488,6 +12573,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-devastator-squad-profile-77dd772646",
+              "unit-devastator-squad-profile-34448b0b0f",
+              "unit-devastator-squad-profile-08f1080123",
+              "unit-devastator-squad-profile-d02e622c84"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-devastator-squad-profile-f5908e6d59",
@@ -13748,6 +13844,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-hellblaster-squad-profile-08f1080123",
+              "unit-hellblaster-squad-profile-d02e622c84",
+              "unit-hellblaster-squad-profile-5b1d4f267f",
+              "unit-hellblaster-squad-profile-3c2b454332"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-hellblaster-squad-profile-fe394b7985",
@@ -14014,6 +14121,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-inceptor-squad-profile-babc18b0b0"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-inceptor-squad-profile-94b795ddda",
+              "unit-inceptor-squad-profile-babc18b0b0"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -17027,6 +17143,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-vanguard-veteran-squad-with-jump-packs-profile-08f1080123",
+              "unit-vanguard-veteran-squad-with-jump-packs-profile-d02e622c84"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-vanguard-veteran-squad-with-jump-packs-profile-08f1080123",
@@ -18581,6 +18706,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-dreadnought-profile-5926d63a62"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-dreadnought-profile-90ae45be73",
+              "unit-dreadnought-profile-ef9ba8af9f"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -21777,6 +21911,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-redemptor-dreadnought-profile-0b243e1d7c",
+              "unit-redemptor-dreadnought-profile-b03a49fe36"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-redemptor-dreadnought-profile-1fd3cdf704",
@@ -22488,6 +22631,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-repulsor-executioner-profile-b03a49fe36"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-repulsor-executioner-profile-0b243e1d7c",
+              "unit-repulsor-executioner-profile-b03a49fe36"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -23934,6 +24086,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-stormraven-gunship-profile-516d01741e",
+              "unit-stormraven-gunship-profile-9d488abab4"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-stormraven-gunship-profile-43ea7f94c1",
@@ -25103,6 +25264,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-astraeus-profile-67c3429bb7",
+              "unit-astraeus-profile-c36b6ff22e"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-astraeus-profile-1c2e3ce223",
@@ -25838,6 +26008,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-ravenwing-command-squad-profile-5fbb21ba39"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-ravenwing-command-squad-profile-ea4cc1ffbb",
+              "unit-ravenwing-command-squad-profile-5fbb21ba39"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -27337,6 +27516,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-lion-eljonson-profile-2e2d12a64e"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-lion-eljonson-profile-da760601af",
@@ -27570,6 +27757,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           }
         ],
         "weaponFamilies": [],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-sammael-profile-3424af3922"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-sammael-profile-aca6a6d3da",
@@ -28252,6 +28447,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-deathwing-terminator-squad-profile-30870521c7",
+              "unit-deathwing-terminator-squad-profile-04315a456f"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-deathwing-terminator-squad-profile-b481dd8ed7",
@@ -28929,6 +29133,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "ambiguousAlias": false
           }
         ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-land-speeder-vengeance-profile-c1e8a4e9a7",
+              "unit-land-speeder-vengeance-profile-bdac25db78"
+            ]
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-land-speeder-vengeance-profile-496937b625",
@@ -29485,6 +29698,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-ravenwing-black-knights-profile-5fbb21ba39"
             ],
             "ambiguousAlias": false
+          }
+        ],
+        "weaponClasses": [
+          {
+            "id": "weapon-class-plasma",
+            "profileIds": [
+              "unit-ravenwing-black-knights-profile-ea4cc1ffbb",
+              "unit-ravenwing-black-knights-profile-5fbb21ba39"
+            ]
           }
         ],
         "weaponProfiles": [
@@ -38523,7 +38745,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             {
               "type": "WEAPON_CHARACTERISTIC_ADD",
               "id": "dark-angels-detachment-rule-invocations-of-ancient-fury:clause-1-operation-1",
-              "canonicalTarget": "plasma",
+              "canonicalTarget": {
+                "kind": "weapon-class",
+                "id": "weapon-class-plasma"
+              },
               "parameters": {
                 "stat": "S",
                 "delta": 1
@@ -41702,7 +41927,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             {
               "type": "WEAPON_CHARACTERISTIC_ADD",
               "id": "petition-of-stability:clause-1-operation-1",
-              "canonicalTarget": "plasma",
+              "canonicalTarget": {
+                "kind": "weapon-class",
+                "id": "weapon-class-plasma"
+              },
               "parameters": {
                 "stat": "Range",
                 "delta": 6

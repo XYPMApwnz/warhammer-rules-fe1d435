@@ -4,10 +4,7 @@
   const catalogItems=()=>list(root.WH_BOOK_ROSTER_CATALOG?.enhancements);
   const canonicalFor=entry=>{
     const explicit=[entry?.ruleId,entry?.id,entry?.sourceId].filter(Boolean),byId=catalogItems().find(item=>explicit.some(id=>[item.id,item.ruleId,item.sourceId,item.legacyKey].includes(id)));
-    if(byId)return byId;
-    const title=normalize(String(entry?.name||entry?.title||'').replace(/\s+[-–—]\s+\d+\s*pts?\s*$/i,''));
-    const candidates=catalogItems().filter(item=>normalize(item.title)===title);
-    return candidates.length===1?candidates[0]:null;
+    return byId||null;
   };
   const assignments=(roster,units)=>{
     const unitIds=new Set(list(units).map(unit=>unit.id));

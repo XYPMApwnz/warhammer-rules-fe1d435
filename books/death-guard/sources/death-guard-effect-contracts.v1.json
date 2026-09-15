@@ -259,7 +259,7 @@
         {
           "selector": {
             "subject": "bearer",
-            "weaponFamilyId": "plague-wind"
+            "weaponFamilyId": "unit-malignant-plaguecaster-weapon-family-plague-wind"
           },
           "conditions": [
             {
@@ -273,7 +273,10 @@
             {
               "id": "plague-wind-range",
               "type": "WEAPON_CHARACTERISTIC_ADD",
-              "canonicalTarget": "family:plague-wind",
+              "canonicalTarget": {
+                "kind": "weapon-family",
+                "id": "unit-malignant-plaguecaster-weapon-family-plague-wind"
+              },
               "parameters": {
                 "characteristic": "Range",
                 "value": 12
@@ -916,7 +919,7 @@
             "bodyguardUnitIds": [
               "unit-poxwalkers"
             ],
-            "weaponFamilyId": "plague-wind"
+            "weaponFamilyId": "unit-malignant-plaguecaster-weapon-family-plague-wind"
           },
           "conditions": [
             {
@@ -928,7 +931,10 @@
             {
               "id": "sorrowsyphon",
               "type": "WEAPON_CHARACTERISTIC_ADD",
-              "canonicalTarget": "family:plague-wind",
+              "canonicalTarget": {
+                "kind": "weapon-family",
+                "id": "unit-malignant-plaguecaster-weapon-family-plague-wind"
+              },
               "parameters": {
                 "characteristic": "D",
                 "value": 1

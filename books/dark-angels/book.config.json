@@ -13,7 +13,207 @@
   "rosterSupport": true,
   "rosterCatalog": {
     "inferExactWargearAbilitySelections": true,
-    "inferCanonicalDetachmentRuleIds": true
+    "inferCanonicalDetachmentRuleIds": true,
+    "weaponClassMemberships": [
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-assault-intercessor-squad",
+        "profileIds": [
+          "unit-assault-intercessor-squad-profile-08f1080123",
+          "unit-assault-intercessor-squad-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-intercessor-squad",
+        "profileIds": [
+          "unit-intercessor-squad-profile-08f1080123",
+          "unit-intercessor-squad-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-tactical-squad",
+        "profileIds": [
+          "unit-tactical-squad-profile-08f1080123",
+          "unit-tactical-squad-profile-d02e622c84",
+          "unit-tactical-squad-profile-8dbc185d71",
+          "unit-tactical-squad-profile-1e3f9b192c",
+          "unit-tactical-squad-profile-77dd772646",
+          "unit-tactical-squad-profile-34448b0b0f"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-captain",
+        "profileIds": [
+          "unit-captain-profile-08f1080123",
+          "unit-captain-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-captain-with-jump-pack",
+        "profileIds": [
+          "unit-captain-with-jump-pack-profile-08f1080123",
+          "unit-captain-with-jump-pack-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-chaplain-with-jump-pack",
+        "profileIds": [
+          "unit-chaplain-with-jump-pack-profile-08f1080123",
+          "unit-chaplain-with-jump-pack-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-lieutenant",
+        "profileIds": [
+          "unit-lieutenant-profile-08f1080123",
+          "unit-lieutenant-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-assault-intercessors-with-jump-packs",
+        "profileIds": [
+          "unit-assault-intercessors-with-jump-packs-profile-08f1080123",
+          "unit-assault-intercessors-with-jump-packs-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-bladeguard-veteran-squad",
+        "profileIds": [
+          "unit-bladeguard-veteran-squad-profile-08f1080123",
+          "unit-bladeguard-veteran-squad-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-devastator-squad",
+        "profileIds": [
+          "unit-devastator-squad-profile-77dd772646",
+          "unit-devastator-squad-profile-34448b0b0f",
+          "unit-devastator-squad-profile-08f1080123",
+          "unit-devastator-squad-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-hellblaster-squad",
+        "profileIds": [
+          "unit-hellblaster-squad-profile-08f1080123",
+          "unit-hellblaster-squad-profile-d02e622c84",
+          "unit-hellblaster-squad-profile-5b1d4f267f",
+          "unit-hellblaster-squad-profile-3c2b454332"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-inceptor-squad",
+        "profileIds": [
+          "unit-inceptor-squad-profile-94b795ddda",
+          "unit-inceptor-squad-profile-babc18b0b0"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-vanguard-veteran-squad-with-jump-packs",
+        "profileIds": [
+          "unit-vanguard-veteran-squad-with-jump-packs-profile-08f1080123",
+          "unit-vanguard-veteran-squad-with-jump-packs-profile-d02e622c84"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-dreadnought",
+        "profileIds": [
+          "unit-dreadnought-profile-90ae45be73",
+          "unit-dreadnought-profile-ef9ba8af9f"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-redemptor-dreadnought",
+        "profileIds": [
+          "unit-redemptor-dreadnought-profile-0b243e1d7c",
+          "unit-redemptor-dreadnought-profile-b03a49fe36"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-repulsor-executioner",
+        "profileIds": [
+          "unit-repulsor-executioner-profile-0b243e1d7c",
+          "unit-repulsor-executioner-profile-b03a49fe36"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-stormraven-gunship",
+        "profileIds": [
+          "unit-stormraven-gunship-profile-516d01741e",
+          "unit-stormraven-gunship-profile-9d488abab4"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-astraeus",
+        "profileIds": [
+          "unit-astraeus-profile-67c3429bb7",
+          "unit-astraeus-profile-c36b6ff22e"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-ravenwing-command-squad",
+        "profileIds": [
+          "unit-ravenwing-command-squad-profile-ea4cc1ffbb",
+          "unit-ravenwing-command-squad-profile-5fbb21ba39"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-lion-eljonson",
+        "profileIds": [
+          "unit-lion-eljonson-profile-2e2d12a64e"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-sammael",
+        "profileIds": [
+          "unit-sammael-profile-3424af3922"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-deathwing-terminator-squad",
+        "profileIds": [
+          "unit-deathwing-terminator-squad-profile-30870521c7",
+          "unit-deathwing-terminator-squad-profile-04315a456f"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-land-speeder-vengeance",
+        "profileIds": [
+          "unit-land-speeder-vengeance-profile-c1e8a4e9a7",
+          "unit-land-speeder-vengeance-profile-bdac25db78"
+        ]
+      },
+      {
+        "id": "weapon-class-plasma",
+        "unitId": "unit-ravenwing-black-knights",
+        "profileIds": [
+          "unit-ravenwing-black-knights-profile-ea4cc1ffbb",
+          "unit-ravenwing-black-knights-profile-5fbb21ba39"
+        ]
+      }
+    ]
   },
   "assetVersions": {
     "book": 4,
@@ -159,9 +359,16 @@
     "Character": "Characters",
     "Dedicated Transport": "Dedicated Transports"
   },
-  "armyRules": [
-    "Oath of Moment",
-    "The Unforgiven"
+  "armyRuleBindings": [
+    {
+      "id": "army-rule-oath-of-moment",
+      "sourceId": "oath-of-moment",
+      "termId": "space-marines-army-rule-oath-of-moment"
+    },
+    {
+      "id": "army-rule-the-unforgiven",
+      "sourceId": "army-rule-the-unforgiven"
+    }
   ],
   "armyRuleTermIds": {
     "Oath of Moment": "space-marines-army-rule-oath-of-moment"

@@ -591,7 +591,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "4188c7ac89f2173e99fbd4b33298a7e8073414dda2fc4e543ee715c4f04d9128",
+      "acceptedHash": "3c9874fa980860f8a4036089d63789f15852ca9891141d970a673788c1216084",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -602,7 +602,7 @@
         {
           "path": "books/dark-angels/sources/dark-angels-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "4188c7ac89f2173e99fbd4b33298a7e8073414dda2fc4e543ee715c4f04d9128"
+          "sha256": "3c9874fa980860f8a4036089d63789f15852ca9891141d970a673788c1216084"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."
@@ -743,7 +743,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "86bc1a4a699275a59e7f8e20aef714cd2cf62dcdcdc7de7255ada59d9bf8697c",
+      "acceptedHash": "1b05e32b0dadbf96406849ee2ed2404a987b2ea7e0535d10ca2f03a5054c9f9f",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -754,7 +754,7 @@
         {
           "path": "books/death-guard/sources/death-guard-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "86bc1a4a699275a59e7f8e20aef714cd2cf62dcdcdc7de7255ada59d9bf8697c"
+          "sha256": "1b05e32b0dadbf96406849ee2ed2404a987b2ea7e0535d10ca2f03a5054c9f9f"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."

@@ -214,8 +214,8 @@ assert.equal(unforgivenMatches.length,1,'Dark Angels parity must own The Unforgi
 assert.deepEqual({id:unforgivenMatches[0].id,name:unforgivenMatches[0].name,title:unforgivenMatches[0].title,text:unforgivenMatches[0].text},{id:'army-rule-the-unforgiven',name:'The Unforgiven',title:'The Unforgiven',text:unforgivenText});
 
 const daConfig=JSON.parse(pidbReadFileSync(pidbResolve(pidbRoot,'books/dark-angels/book.config.json'),'utf8'));
-assert.equal(daConfig.armyRules.filter(title=>title==='The Unforgiven').length,1,'DA army-rule registration');
-assert.equal(daConfig.armyRules.filter(title=>title==='Oath of Moment').length,1,'Oath of Moment remains registered');
+assert.equal(daConfig.armyRuleBindings.filter(binding=>binding.id==='army-rule-the-unforgiven'&&binding.sourceId==='army-rule-the-unforgiven').length,1,'DA army-rule canonical registration');
+assert.equal(daConfig.armyRuleBindings.filter(binding=>binding.id==='army-rule-oath-of-moment'&&binding.sourceId==='oath-of-moment').length,1,'Oath of Moment remains canonically registered');
 assert.equal(daConfig.armyRuleTermIds?.['The Unforgiven'],undefined,'The Unforgiven must use the standard DA-local Army Book identity');
 assert.equal(daConfig.armyRuleTermIds?.['Oath of Moment'],'space-marines-army-rule-oath-of-moment');
 

@@ -7,9 +7,15 @@
   "factionKeyword": "EMPEROR'S CHILDREN",
   "coverImage": "assets/emperors-children-cover-800.webp",
   "entryCoverImage": "assets/emperors-children-cover-480.webp",
-  "armyRules": [
-    "Thrill Seekers",
-    "Pact of Excess"
+  "armyRuleBindings": [
+    {
+      "id": "army-rule-thrill-seekers",
+      "sourceId": "army-rule-thrill-seekers"
+    },
+    {
+      "id": "army-rule-pact-of-excess",
+      "sourceId": "army-rule-pact-of-excess"
+    }
   ],
   "includeCoreStratagems": true,
   "rosterSupport": true,

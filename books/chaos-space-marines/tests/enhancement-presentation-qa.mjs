@@ -59,6 +59,7 @@ async function assignedCompatibleIds(page){
   const tab=page.locator('.related-rules-layer [data-kind="enhancements"]');if(await tab.isVisible())await tab.click();
   return page.locator('.related-rules-layer .enhancement:not([hidden])').evaluateAll(nodes=>nodes.map(node=>node.dataset.ruleId).sort());
 }
+const guideEnhancementIds=(page,canonicalUnitId)=>page.evaluate(id=>{const guide=window.CSM_ROSTER_GUIDE,instances=new Set((guide?.units||[]).filter(unit=>unit.canonicalDatasheetId===id).map(unit=>unit.instanceId));return(guide?.enhancements||[]).filter(item=>item.active&&instances.has(item.ownerUnitId)).map(item=>item.id);},canonicalUnitId);
 async function identity(candidate,other){
   const context=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:900}}),page=await context.newPage(),errors=[];
   page.on('pageerror',error=>errors.push(String(error)));page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
@@ -67,7 +68,7 @@ async function identity(candidate,other){
   assert.equal(await article(page).getAttribute('data-roster-enhancement-rule-id'),candidate.ruleId);
   assert.match(await article(page).innerText(),/Warp-fuelled Thrusters[\s\S]*20 pts included/i);assert.match(await article(page).innerText(),candidate.text);
   assert.equal(await page.locator(`#${cardId} [data-roster-derived-effect]`).count(),0);
-  assert.deepEqual(await page.evaluate(id=>window.CSM_ROSTER_GUIDE.enhancementRuleIdsByUnitId[id],cardId),[candidate.ruleId]);
+  assert.deepEqual(await guideEnhancementIds(page,cardId),[candidate.ruleId]);
   assert.deepEqual(await assignedCompatibleIds(page),[candidate.ruleId]);
   assert.equal(await page.locator(`.related-rules-layer [data-rule-id="${other.ruleId}"]:visible`).count(),0);
   await page.locator('.related-rules-layer .related-rules-close').click();
@@ -119,13 +120,13 @@ try{
   const safety=await browser.newContext({serviceWorkers:'block'}),safetyPage=await safety.newPage();
   id=await savedRoster(safetyPage,rosterSource({unresolved:true}));await openDesktop(safetyPage,id);
   assert.equal(await article(safetyPage).count(),0);assert.equal(await safetyPage.locator(`#${cardId} [data-roster-derived-effect]`).count(),0);
-  assert.deepEqual(await safetyPage.evaluate(id=>window.CSM_ROSTER_GUIDE.enhancementRuleIdsByUnitId[id],cardId),[]);
+  assert.deepEqual(await guideEnhancementIds(safetyPage,cardId),[]);
   await safety.close();
 
   const ambiguous=await browser.newContext({serviceWorkers:'block'}),ambiguousPage=await ambiguous.newPage();
   id=await savedRoster(ambiguousPage,rosterSource({detachments:[nightmare.detachment,dread.detachment]}));await openDesktop(ambiguousPage,id);
   assert.equal(await ambiguousPage.locator(`#${cardId} [data-roster-enhancement-rule-id]`).count(),0);assert.match(await article(ambiguousPage).innerText(),/multiple selected Detachments/i);
-  assert.deepEqual(await ambiguousPage.evaluate(id=>window.CSM_ROSTER_GUIDE.enhancementRuleIdsByUnitId[id],cardId),[]);
+  assert.deepEqual(await guideEnhancementIds(ambiguousPage,cardId),[]);
   assert.deepEqual(await assignedCompatibleIds(ambiguousPage),[]);await ambiguous.close();
 
   const unassigned=await browser.newContext({serviceWorkers:'block'}),unassignedPage=await unassigned.newPage();

@@ -29,6 +29,7 @@ const CONDITION_KINDS=new Set([
   'acquisition-objective-state','attachment-group-contains','attachment-group-excludes','battle-imperative','battle-protocol','battle-selection',
   'battle-shock','source-unit-present','unit-keyword','unit-keyword-absent'
 ]);
+const CANONICAL_TARGET_KINDS=new Set(['ability','detachment-rule','enhancement','weapon-class','weapon-family']);
 
 const record=value=>value&&typeof value==='object'&&!Array.isArray(value);
 const scalar=(value,label)=>{if(typeof value!=='string'||!value.trim())throw new Error(`${label} must be a non-empty string`);return value;};
@@ -53,7 +54,7 @@ const validateOperation=(operation,label,operationIds)=>{
   if(!record(operation)||!EFFECT_TYPES.has(operation.type))throw new Error(`${label}: unsupported effect type ${operation?.type}`);
   const id=scalar(operation.id,`${label}.id`);if(operationIds.has(id))throw new Error(`${label}: duplicate effect operation ID ${id}`);operationIds.add(id);
   const target=targetId(operation.canonicalTarget);if(!target)throw new Error(`${id}: canonicalTarget must be a string or {kind,id}`);
-  if(record(operation.canonicalTarget)){scalar(operation.canonicalTarget.kind,`${id}.canonicalTarget.kind`);dataOnly(operation.canonicalTarget,`${id}.canonicalTarget`);}
+  if(record(operation.canonicalTarget)){const kind=scalar(operation.canonicalTarget.kind,`${id}.canonicalTarget.kind`);if(!CANONICAL_TARGET_KINDS.has(kind))throw new Error(`${id}: unsupported canonical target kind ${kind}`);dataOnly(operation.canonicalTarget,`${id}.canonicalTarget`);}
   if(!record(operation.parameters))throw new Error(`${id}: parameters must be an object`);dataOnly(operation.parameters,`${id}.parameters`);
   if(operation.type==='CHARACTERISTIC_ADD'&&typeof operation.parameters.delta!=='number'&&typeof operation.parameters.value!=='number')throw new Error(`${id}: CHARACTERISTIC_ADD requires numeric delta`);
   if(operation.type==='CHARACTERISTIC_SET'&&!['number','string'].includes(typeof operation.parameters.to)&&!['number','string'].includes(typeof operation.parameters.value))throw new Error(`${id}: CHARACTERISTIC_SET requires a value`);
@@ -114,8 +115,10 @@ const catalogIds=catalog=>{
   const detachments=new Set((catalog.detachments||[]).map(item=>item.id));
   const detachmentRules=new Map((catalog.detachmentRules||[]).map(item=>[item.id,item]));
   const abilities=new Map();
+  const weaponClasses=new Set(),weaponFamilies=new Set();
   for(const unit of units.values())for(const item of [...(unit.gameSelections?.abilities||[]),...(unit.gameSelections?.wargearAbilities||[])])abilities.set(item.id,item);
-  return {units,enhancements,detachments,detachmentRules,abilities};
+  for(const unit of units.values()){for(const item of unit.gameSelections?.weaponClasses||[])weaponClasses.add(item.id);for(const item of unit.gameSelections?.weaponFamilies||[])weaponFamilies.add(item.id);}
+  return {units,enhancements,detachments,detachmentRules,abilities,weaponClasses,weaponFamilies};
 };
 const selectorUnitIds=selector=>['unitIds','excludeUnitIds','noneUnitIds','sourceUnitIds','ownerUnitIds','bodyguardUnitIds','groupContainsUnitIds','groupExcludesUnitIds','allUnitIds'].flatMap(key=>selector?.[key]||[]);
 const walkSelectors=selector=>[selector,...(selector?.all||[]).flatMap(walkSelectors),...(selector?.any||[]).flatMap(walkSelectors),...(selector?.anyOf||[]).flatMap(walkSelectors),...(selector?.selectors||[]).flatMap(walkSelectors),...(selector?.not?[...walkSelectors(selector.not)]:[])];
@@ -141,10 +144,14 @@ export function validateEffectContractsAgainstCatalog(input,catalog){
         for(const id of selectorUnitIds(selector))if(!ids.units.has(id))throw new Error(`${contract.canonicalRecordId}: selector references unknown unit ${id}`);
         for(const id of [...(selector?.detachmentIds||[]),selector?.detachmentId].filter(Boolean))if(!ids.detachments.has(id))throw new Error(`${contract.canonicalRecordId}: selector references unknown Detachment ${id}`);
       }
-      for(const operation of clause.operations)if(operation.type==='CANONICAL_REFERENCE'){
+      for(const operation of clause.operations){
         const target=typeof operation.canonicalTarget==='string'?operation.canonicalTarget:operation.canonicalTarget.id,kind=operation.parameters.referenceKind||operation.canonicalTarget?.kind;
-        const resolved=kind==='enhancement'?ids.enhancements.has(target):kind==='detachment-rule'?ids.detachmentRules.has(target):kind==='ability'?ids.abilities.has(target):false;
-        if(!resolved)throw new Error(`${contract.canonicalRecordId}: unknown canonical target ${kind||'<missing>'}/${target}`);
+        if(kind==='weapon-class'&&!ids.weaponClasses.has(target))throw new Error(`${contract.canonicalRecordId}: unknown canonical weapon class ${target}`);
+        if(kind==='weapon-family'&&!ids.weaponFamilies.has(target))throw new Error(`${contract.canonicalRecordId}: unknown canonical weapon family ${target}`);
+        if(operation.type==='CANONICAL_REFERENCE'){
+          const resolved=kind==='enhancement'?ids.enhancements.has(target):kind==='detachment-rule'?ids.detachmentRules.has(target):kind==='ability'?ids.abilities.has(target):false;
+          if(!resolved)throw new Error(`${contract.canonicalRecordId}: unknown canonical target ${kind||'<missing>'}/${target}`);
+        }
       }
     }
   }

@@ -6,6 +6,16 @@
   "mark": "TYR",
   "edition": "11E",
   "factionKeyword": "TYRANIDS",
+  "armyRuleBindings": [
+    {
+      "id": "army-rule-shadow-in-the-warp",
+      "sourceId": "army-shadow-in-the-warp"
+    },
+    {
+      "id": "army-rule-synapse",
+      "sourceId": "army-synapse"
+    }
+  ],
   "compactSharedAbilities": [
     "Synapse",
     "Shadow in the Warp",

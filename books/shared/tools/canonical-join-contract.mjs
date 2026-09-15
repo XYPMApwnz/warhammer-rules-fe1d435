@@ -93,6 +93,26 @@ export function resolvePointEnhancement(record,detachmentId,pointRecords,{aliase
   return matches[0]||null;
 }
 
+export function mergeExactPointEnhancement(record,point,{qualified=false}={}){
+  if(!record||!point)throw new Error('Exact Enhancement merge requires source and points records');
+  const sourceId=record.sourceId||point.sourceId||(qualified&&point.id?record.id:null);
+  return {...record,...(qualified&&point.id?{id:point.id}:{}),...(sourceId?{sourceId}:{}),value:point.value,pointsSource:point.pointsSource};
+}
+
+export function resolveArmyRuleBindings(bindings,sources,{label='Army rule'}={}){
+  if(!Array.isArray(bindings)||!bindings.length)throw new Error(`${label} bindings must declare exact canonical identities`);
+  const outputIds=new Set();
+  return bindings.map((binding,index)=>{
+    if(!binding||typeof binding.id!=='string'||!binding.id||typeof binding.sourceId!=='string'||!binding.sourceId)throw new Error(`${label} binding ${index+1} is invalid`);
+    if(outputIds.has(binding.id))throw new Error(`${label} duplicate canonical ID ${binding.id}`);outputIds.add(binding.id);
+    const matches=values(sources).filter(item=>[item?.id,item?.termId].includes(binding.sourceId));
+    if(!matches.length)throw new Error(`${label} unknown source ID ${binding.sourceId}`);
+    const facts=new Map(matches.map(item=>[[item.subject||item.title,item.change||item.summary||item.text].join('\0'),item]));
+    if(facts.size!==1)throw new Error(`${label} conflicting source ID ${binding.sourceId}`);
+    return {binding,source:[...facts.values()][0]};
+  });
+}
+
 export function resolveDeclaredLegacyAlias(alias,aliases,{label='legacy alias'}={}){
   const matches=values(aliases).filter(record=>values(record.aliases).includes(alias));
   if(matches.length!==1)throw new Error(`${label} ${alias} must resolve exactly once; got ${matches.length}`);

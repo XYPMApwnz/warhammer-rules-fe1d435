@@ -33,8 +33,12 @@
       "IMPERIAL FISTS"
     ]
   },
-  "armyRules": [
-    "Oath of Moment"
+  "armyRuleBindings": [
+    {
+      "id": "army-rule-oath-of-moment",
+      "sourceId": "oath-of-moment",
+      "termId": "space-marines-army-rule-oath-of-moment"
+    }
   ],
   "armyRuleTermIds": {
     "Oath of Moment": "space-marines-army-rule-oath-of-moment"

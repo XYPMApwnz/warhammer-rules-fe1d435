@@ -9489,6 +9489,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Biophagic Flow (Aura)",
       "value": 10,
       "text": "TYRANIDS model only. While a friendly HARVESTER model is within 12\" of the bearer, when using the Feed the Swarm ability, that HARVESTER model can Regenerate one friendly TYRANIDS unit that is within 9\" of it, instead of one within 6\".",
+      "pointsSource": {
+        "label": "Official MFM v1.3",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-08-27"
+      },
       "detachmentId": "assimilation-swarm",
       "sourceBookId": "tyranids",
       "legacyKey": "enhancement-biophagic-flow-aura"
@@ -9763,6 +9768,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Psychostatic Disruption",
       "value": 30,
       "text": "TYRANIDS SYNAPSE model only. Enemy units that arrive on the battlefield from Reserves cannot be set up within 12\" of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from Strategic Reserves, the bearer can use this Enhancement. If it does, roll one D6: on a 4+, that enemy unit cannot arrive on the battlefield this turn.",
+      "pointsSource": {
+        "label": "Official MFM v1.3",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-08-27"
+      },
       "detachmentId": "synaptic-nexus",
       "sourceBookId": "tyranids",
       "legacyKey": "enhancement-psychostatic-disruption-aura"
@@ -9786,6 +9796,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "The Dirgeheart of Kharis (Aura)",
       "value": 15,
       "text": "TYRANIDS SYNAPSE model only. While an enemy unit is within 9\" of the bearer, worsen that unit’s Leadership characteristic by 1.",
+      "pointsSource": {
+        "label": "Official MFM v1.3",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-08-27"
+      },
       "detachmentId": "synaptic-nexus",
       "sourceBookId": "tyranids",
       "legacyKey": "enhancement-the-dirgeheart-of-kharis-aura"

@@ -14,7 +14,7 @@ export const CONTRACT_ORACLE_SCRIPTS=Object.freeze({
   STRATAGEMS:['tests/stratagem-architecture-qa.mjs'],
   RELATIONS:['tests/canonical-join-architecture-qa.mjs','tests/dependency-relation-overlay-qa.mjs'],
   ROSTER:['tests/roster-fixtures-qa.mjs'],
-  EFFECTS:['tests/effect-contract-ownership-qa.mjs'],
+  EFFECTS:['tests/effect-contract-ownership-qa.mjs','tests/effect-provider-interpreter-equality-qa.mjs'],
   GLOSSARY:['tests/glossary-output-ownership-qa.mjs','tests/glossary-editorial-contract-qa.mjs'],
   PUBLICATION_INVENTORY:['tests/publication-inventory-qa.mjs','tests/offline-mobile-routes-qa.mjs','tests/generated-output-ownership-qa.mjs','tests/rendered-output-qa.mjs'],
   GENERATED_OWNERSHIP:['tests/generated-output-ownership-qa.mjs','tests/effective-points-projection-qa.mjs','tests/glossary-output-ownership-qa.mjs']
@@ -27,7 +27,8 @@ export const ASTRA_ATTACK_SCRIPTS=Object.freeze({
   ASTRA_D4_ATTACK:'tests/authoritative-non-id-joins-qa.mjs',
   ASTRA_D5_ATTACK:'tests/sm-authenticated-bsdata-argument-binding-qa.mjs',
   EFFECT_PLUS_99_ATTACK:'tests/effect-contract-ownership-qa.mjs',
-  STRATAGEM_COUNT_PRESERVING_ATTACK:'tests/stratagem-architecture-qa.mjs'
+  STRATAGEM_COUNT_PRESERVING_ATTACK:'tests/stratagem-architecture-qa.mjs',
+  G1_PROVIDER_PLUS_7_ATTACK:'tests/effect-provider-interpreter-equality-qa.mjs'
 });
 
 const diagnostic=result=>`${result.stdout||''}${result.stderr||''}`.trim();

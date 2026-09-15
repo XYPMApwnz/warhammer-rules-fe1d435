@@ -20,9 +20,11 @@
   };
   const enhancementRuleId=record=>record?.ruleId||record?.id||'';
   const resolveRosterEnhancementPresentation=(catalog,assignment)=>{
-    const targetId=enhancementRuleId(assignment);
+    const targetId=enhancementRuleId(assignment),detachmentId=assignment?.detachmentId||'';
     if(!targetId||!Array.isArray(catalog?.enhancements))return null;
-    return catalog.enhancements.find(record=>[record?.id,record?.ruleId,record?.sourceId,record?.legacyKey].filter(Boolean).includes(targetId))||null;
+    const matches=catalog.enhancements.filter(record=>(!detachmentId||record?.detachmentId===detachmentId)&&[record?.id,record?.ruleId,record?.sourceId,record?.legacyKey].filter(Boolean).includes(targetId));
+    if(matches.length>1)throw new Error(`Roster Enhancement ${detachmentId||'<unscoped>'}/${targetId} must resolve exactly once`);
+    return matches[0]||null;
   };
   const profile=card=>root.WHRuleFacts.profileFromDataset(card.dataset,{id:card.id});
   const withKeywordGrants=(rule,unit)=>{

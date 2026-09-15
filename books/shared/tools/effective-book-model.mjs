@@ -233,6 +233,7 @@ function validateRosterProjection(model,unitIds,detachmentIds,enhancementIds){
     resolved.add(canonicalKey);
     if(item.value!==canonical.value)throw new Error(`${canonical.id}: conflicting roster Enhancement points`);
     if(item.sourceBookId!==canonical.sourceBookId)throw new Error(`${canonical.id}: conflicting roster Enhancement owner book`);
+    if(item.text!==canonical.text)throw new Error(`${canonical.id}: conflicting roster Enhancement gameplay text`);
     for(const field of ['owner','assignment','tags'])if(item[field]!=null&&canonical[field]!=null&&!sameFact(item[field],canonical[field]))throw new Error(`${canonical.id}: conflicting roster Enhancement ${field}`);
   }
   sameIds(resolved,enhancementIds,'roster Enhancement');
@@ -277,6 +278,7 @@ export function validateEffectiveBookModel(model){
   }
   for(const enhancement of enhancements){
     text(enhancement.title,`${enhancement.id}.title`);canonicalId(enhancement.sourceBookId,`${enhancement.id}.sourceBookId`);
+    text(enhancement.text,`${enhancement.id}.text`);
     if(!allowedOwners.has(enhancement.sourceBookId))throw new Error(`${enhancement.id}: unknown source owner ${enhancement.sourceBookId}`);
     if(!detachmentIds.has(enhancement.detachmentId))throw new Error(`${enhancement.id}: unknown Detachment ${enhancement.detachmentId}`);
     finite(enhancement.value,`${enhancement.id}.value`,{optional:true});

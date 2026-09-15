@@ -3,8 +3,9 @@
   const list=value=>Array.isArray(value)?value:[],normalize=value=>String(value||'').trim().toLowerCase();
   const catalogItems=()=>list(root.WH_BOOK_ROSTER_CATALOG?.enhancements);
   const canonicalFor=entry=>{
-    const explicit=[entry?.ruleId,entry?.id,entry?.sourceId].filter(Boolean),byId=catalogItems().find(item=>explicit.some(id=>[item.id,item.ruleId,item.sourceId,item.legacyKey].includes(id)));
-    return byId||null;
+    const explicit=[entry?.ruleId,entry?.id,entry?.sourceId].filter(Boolean),detachmentId=entry?.detachmentId||'',matches=catalogItems().filter(item=>(!detachmentId||item?.detachmentId===detachmentId)&&explicit.some(id=>[item.id,item.ruleId,item.sourceId,item.legacyKey].includes(id)));
+    if(matches.length>1)throw new Error(`Roster Enhancement ${detachmentId||'<unscoped>'}/${explicit[0]||'<missing>'} must resolve exactly once`);
+    return matches[0]||null;
   };
   const assignments=(roster,units)=>{
     const unitIds=new Set(list(units).map(unit=>unit.id));

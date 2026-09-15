@@ -148,7 +148,7 @@ export function effectiveEffectContracts(contractSets,bookId){
 
 const catalogIds=catalog=>{
   const units=new Map((catalog.units||[]).map(item=>[item.id,item]));
-  const enhancements=new Set((catalog.enhancements||[]).flatMap(item=>[item.id,item.ruleId,item.sourceId,item.legacyKey].filter(Boolean)));
+  const enhancements=new Set((catalog.enhancements||[]).flatMap(item=>[item.id,item.ruleId,item.sourceId,item.legacyKey,...(item.canonicalEffectRecordIds||[])].filter(Boolean)));
   const detachments=new Set((catalog.detachments||[]).map(item=>item.id));
   const detachmentRules=new Map((catalog.detachmentRules||[]).map(item=>[item.id,item]));
   const abilities=new Map(),children={profile:new Map(),'wargear-ability':new Map()};

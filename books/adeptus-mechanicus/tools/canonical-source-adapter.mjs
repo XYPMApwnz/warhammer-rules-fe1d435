@@ -278,7 +278,7 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
       owner,
       assignment,
       tags,
-      text:publication.text||sourceRecord.text||'',
+      text:sourceRecord.text||publication.text||'',
       eligibility:{...(sourceRecord.eligibility||{}),v:sourceRecord.eligibility?.v||1,tags,owner,assignment},
       ...(publication.profile?{profile:publication.profile}:{}),
       ...(publication.effect?{legacyEffect:publication.effect}:{}),
@@ -299,6 +299,7 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
   const factionDetachmentIds=new Set(factionRules.detachments.map(item=>item.id)),glossarySourceOrder=new Map([...factionRules.detachments,...codex.detachments].map((item,index)=>[item.id,index]));
   const detachmentRecord=item=>{const {dp,disposition,...canonical}=item;return {
     ...canonical,
+    enhancements:(canonical.enhancements||[]).map(({text,...enhancement})=>enhancement),
     sourceBookId:config.id,
     detachmentPoints:Number(String(dp||0).match(/\d+/)?.[0]||0),
     forceDisposition:disposition||'',

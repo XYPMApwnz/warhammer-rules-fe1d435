@@ -8,6 +8,7 @@ import {writeCacheRevision} from '../../tools/cache-revision.mjs';
 import {createCanonicalBuildContext} from '../../books/shared/tools/canonical-build-contract.mjs';
 import {buildCanonicalBook} from '../../books/shared/tools/build-army-book.mjs';
 import {loadEditorialContract} from './editorial-contract.mjs';
+import {projectEffectiveEnhancementSources} from './effective-enhancement-sources.mjs';
 import {applyDeterministicRelatedPolicies,buildKeywordIdentity,deriveKeywordCompatibilityAliases,derivePresentation,keywordRelationsFromEligibility,validateGlossaryGraph} from './glossary-policies.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..');
@@ -81,12 +82,13 @@ const runtimeFromGlossary=glossary=>Object.fromEntries(glossary.map(term=>[term.
 const dgSource=readJson(path.join(root,'books','death-guard','content','death-guard-rules.en.json'));
 const dgOfficialUpdates=readJson(path.join(root,'books','death-guard','content','official-update-ledger.en.json'));
 const dgUnitsById=new Map(dgSource.sections.filter(section=>section.kind==='unit').map(section=>[section.id,section]));
-const dgEnhancementById=new Map(dgSource.sections.flatMap(section=>(section.subsections||[]).flatMap(subsection=>(subsection.blocks||[]).filter(item=>item.type==='enhancement').map(item=>[item.id,item]))));
 const dgModel=effectiveBookModels.get('death-guard'),dgRuntime=dgModel.runtime;
+const dgEnhancementById=new Map(dgModel.enhancements.flatMap(item=>[item.id,item.sourceId,item.ruleId,...(item.canonicalEffectRecordIds||[])].filter(Boolean).map(id=>[id,item])));
 const amModel=effectiveBookModels.get('adeptus-mechanicus'),amRuntime=runtimeFromGlossary(amModel.glossary);
 const amBookRoot=path.join(root,'books','adeptus-mechanicus'),amBookConfig=readJson(path.join(amBookRoot,'book.config.json'));
 const amDatasheets=readJson(path.join(amBookRoot,amBookConfig.sources.codexDatasheets));
-const amDetachmentSources=[...new Set(amModel.detachments.map(item=>item.glossarySourceRevision))].map(revision=>({revision,detachments:amModel.detachments.filter(item=>item.glossarySourceRevision===revision).sort((left,right)=>left.glossarySourceOrder-right.glossarySourceOrder)}));
+const amEffectiveDetachmentSources=projectEffectiveEnhancementSources(amModel,{label:'Adeptus Mechanicus glossary Enhancement'});
+const amDetachmentSources=[...new Set(amEffectiveDetachmentSources.map(item=>item.glossarySourceRevision))].map(revision=>({revision,detachments:amEffectiveDetachmentSources.filter(item=>item.glossarySourceRevision===revision).sort((left,right)=>left.glossarySourceOrder-right.glossarySourceOrder)}));
 const allGenericArmyBooks=publicBookIds.filter(id=>!['death-guard','adeptus-mechanicus'].includes(id)).map(id=>{
   const bookRoot=path.join(root,'books',id),config=readJson(path.join(bookRoot,'book.config.json')),model=effectiveBookModels.get(id),packFile=path.join(bookRoot,config.sources.factionPack);
   return {id,title:config.title,root:bookRoot,config,model,runtime:Object.fromEntries(model.glossary.map(term=>[term.id,term])),pack:readJson(packFile)};

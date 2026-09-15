@@ -194,13 +194,17 @@ export function buildDeathGuardEffectiveModelInput(context,canonicalModel=buildD
   const units=baseUnits;
   const detachmentOrder=new Map((canonicalModel.points.detachments||[]).map((item,index)=>[titleKey(item.title),index]));
   const pointsProjectionInput={book:{id:config.id,title:config.title,parentBookId:null},units:units.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points');return{id:unit.id,title:unit.title,sourceBookId:config.id,publicationState:unit.publicationState,points:unit.points||[],paidWargear:pointsBlock?.wargear||[],ruleProfile:unit.ruleProfile,publicationRecord:{title:unit.title,points:unit.points,wargear:pointsBlock?.wargear||[]}};}),detachments:[...detachments].sort((left,right)=>(detachmentOrder.get(titleKey(left.title))??Infinity)-(detachmentOrder.get(titleKey(right.title))??Infinity)).map(detachment=>({id:detachment.id,title:detachment.title,sourceBookId:config.id,detachmentPoints:detachment.detachmentPoints,forceDisposition:detachment.forceDisposition,publicationRecord:detachment.publicationRecord})),enhancements};
-  const effectivePointsProjection=createEffectivePointsProjection(pointsProjectionInput),book={...canonicalModel.book,id:config.id,title:config.title,publicationTitle:canonicalModel.book.title,parentBookId:null};
+  const effectivePointsProjection=createEffectivePointsProjection(pointsProjectionInput),acceptedSourceConflicts=structuredClone(canonicalModel.book.acceptedSourceConflicts||[]),book={...canonicalModel.book,id:config.id,title:config.title,publicationTitle:canonicalModel.book.title,parentBookId:null};
+  delete book.acceptedSourceConflicts;
+  for(const conflict of acceptedSourceConflicts){
+    if(!conflict?.id||!conflict.field||!conflict.canonicalValue||!conflict.productionValue||conflict.status!=='unresolved'||conflict.renderingPolicy!=='preserve-production-until-resolved')throw new Error('Death Guard accepted source conflict contract is invalid');
+  }
   const unitGroups=[];
   for(let index=0;index<canonicalModel.book.sections.length;index++){
     const section=canonicalModel.book.sections[index];if(section.kind!=='unit-group')continue;
     const unitIds=[];for(let next=index+1;next<canonicalModel.book.sections.length&&canonicalModel.book.sections[next].kind==='unit';next++)unitIds.push(canonicalModel.book.sections[next].id);
     unitGroups.push({id:section.id,title:section.title,blocks:structuredClone(section.blocks||[]),unitIds});
   }
-  const rules={armyRule:structuredClone(canonicalModel.book.sections.find(section=>section.id==='army-rule-nurgles-gift')),updates:structuredClone(canonicalModel.book.sections.find(section=>section.id==='rules-updates')),unitGroups};
+  const rules={armyRule:structuredClone(canonicalModel.book.sections.find(section=>section.id==='army-rule-nurgles-gift')),updates:structuredClone(canonicalModel.book.sections.find(section=>section.id==='rules-updates')),unitGroups,acceptedSourceConflicts};
   return createEffectiveBookModel({schema:EFFECTIVE_BOOK_MODEL_SCHEMA,book,units,detachments,enhancements,rules,relationGraphs,effectContractSet,effectContracts,pointsProjectionInput,effectivePointsProjection,ruleFacts:structuredClone(canonicalModel.ruleFacts),ruleProfiles,compiledRuleProfiles:ruleProfiles,glossary:structuredClone(book.glossary),runtime:canonicalModel.runtime,presentation:{metadata:canonicalModel.presentation},unitImages:canonicalModel.unitImages,coreStratagems:canonicalModel.coreStratagems,coreTermIdByCode:canonicalModel.coreTermIdByCode,sourceMetadata:{manifest:canonicalModel.manifest,officialUpdates:canonicalModel.updates,legends:canonicalModel.legends,officialPoints:canonicalModel.points,canonicalJoinContract:canonicalModel.canonicalJoinContract}});
 }

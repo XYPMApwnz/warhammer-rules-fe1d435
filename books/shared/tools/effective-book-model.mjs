@@ -209,6 +209,35 @@ function validateProjection(model,dependencyIds,unitIds,detachmentIds,enhancemen
   }
 }
 
+const sameFact=(left,right)=>JSON.stringify(left)===JSON.stringify(right);
+function validateRosterProjection(model,unitIds,detachmentIds,enhancementIds){
+  const catalog=model.rosterCatalog;
+  if(catalog==null)return;
+  if(!record(catalog)||catalog.book?.id!==model.book.id)throw new Error('roster catalog has a conflicting book identity');
+  sameIds(new Set(list(catalog.units,'rosterCatalog.units').map(item=>item.id)),unitIds,'roster unit');
+  sameIds(new Set(list(catalog.detachments,'rosterCatalog.detachments').map(item=>item.id)),detachmentIds,'roster Detachment');
+  const canonicalByCandidate=new Map();
+  for(const item of model.enhancements){
+    for(const id of [item.id,item.ruleId,item.sourceId,item.legacyKey,item.compatibilityIdentity?.canonicalEnhancementId,...(item.canonicalEffectRecordIds||[])].filter(Boolean)){
+      const key=`${item.detachmentId}\0${id}`,existing=canonicalByCandidate.get(key);
+      if(existing&&existing!==item)throw new Error(`${model.book.id}: ambiguous roster Enhancement compatibility identity ${id}`);
+      canonicalByCandidate.set(key,item);
+    }
+  }
+  const rosterEnhancements=list(catalog.enhancements,'rosterCatalog.enhancements'),resolved=new Set();
+  for(const item of rosterEnhancements){
+    const canonical=canonicalByCandidate.get(`${item.detachmentId}\0${item.id}`);
+    if(!canonical)throw new Error(`${model.book.id}: roster Enhancement ${item.detachmentId||'<missing>'}/${item.id||'<missing>'} has no canonical identity`);
+    const canonicalKey=`${canonical.detachmentId}\0${canonical.id}`;
+    if(resolved.has(canonicalKey))throw new Error(`${model.book.id}: duplicate roster Enhancement projection ${canonicalKey.replace('\0',' / ')}`);
+    resolved.add(canonicalKey);
+    if(item.value!==canonical.value)throw new Error(`${canonical.id}: conflicting roster Enhancement points`);
+    if(item.sourceBookId!==canonical.sourceBookId)throw new Error(`${canonical.id}: conflicting roster Enhancement owner book`);
+    for(const field of ['owner','assignment','tags'])if(item[field]!=null&&canonical[field]!=null&&!sameFact(item[field],canonical[field]))throw new Error(`${canonical.id}: conflicting roster Enhancement ${field}`);
+  }
+  sameIds(resolved,enhancementIds,'roster Enhancement');
+}
+
 function validatePresentation(presentation){
   if(presentation==null)return;
   if(!record(presentation))throw new Error('presentation must be a data object');
@@ -218,6 +247,7 @@ function validatePresentation(presentation){
 
 export function validateEffectiveBookModel(model){
   if(!record(model)||model.schema!==EFFECTIVE_BOOK_MODEL_SCHEMA)throw new Error(`Unsupported effective book model schema: ${model?.schema||'<missing>'}`);
+  if(model.glossaryFacts!=null)throw new Error('glossaryFacts must be derived from the final effective model');
   if(!record(model.book))throw new Error('effective book model requires book identity');
   const bookId=canonicalId(model.book.id,'book.id');text(model.book.title,'book.title');
   const dependencies=dependencyIds(model,bookId),allowedOwners=new Set([bookId,...dependencies]);
@@ -254,6 +284,7 @@ export function validateEffectiveBookModel(model){
   validateRelations(model,unitIds,bookId);
   validateEffects(model,allowedOwners,sourceOwners,new Set(effectEnhancementOwners.keys()),detachmentIds,unitIds);
   validateProjection(model,dependencies,unitIds,detachmentIds,enhancementIds);
+  validateRosterProjection(model,unitIds,detachmentIds,enhancementIds);
   validatePresentation(model.presentation);
   if(model.rules!=null)assertDataOnly(model.rules,'rules');
   assertDataOnly(model,'effective book model');

@@ -147,18 +147,7 @@ for(const unit of rules.datasheets){
 }
 rules.glossary=glossaryTerms;
 rules.audit.glossaryTerms=glossaryTerms.length;
-const allDetachmentById=new Map(allDetachments.map(item=>[item.id,item]));
-const glossaryFacts={
-  runtimeTerms:structuredClone(glossaryTerms),
-  detachmentSources:[
-    {revision:factionRules.version||'Faction Pack v1.0',detachments:factionRules.detachments.map(item=>structuredClone(allDetachmentById.get(item.id)))},
-    {revision:'Codex carry-forward + Faction Pack v1.1',detachments:codexSource.detachments.map(item=>structuredClone(allDetachmentById.get(item.id)))}
-  ],
-  units:structuredClone(codexDatasheets.datasheets),
-  datasheetSource:structuredClone(codexDatasheets.source)
-};
-
-  return {factionRules,source,codex,codexDatasheets,pointsCatalog,officialMfm,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,glossaryFacts,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
+  return {factionRules,source,codex,codexDatasheets,pointsCatalog,officialMfm,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
 }
 
 const escapeRegExp=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -307,11 +296,14 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
     return {...unit,sourceBookId:config.id,publicationState:unit.status==='Warhammer Legends'?'Warhammer Legends':'Current',intrinsicKeywords:[...(unit.keywords||[])],points:publication?.points||[],paidWargear:publication?.wargear||[],ruleFacts,ruleProfile,publicationRecord:publication};
   });
   const detachmentOrder=new Map(Object.keys(officialMfm.detachments||{}).map((title,index)=>[`detachment-${slugKey(title)}`,index]));
+  const factionDetachmentIds=new Set(factionRules.detachments.map(item=>item.id)),glossarySourceOrder=new Map([...factionRules.detachments,...codex.detachments].map((item,index)=>[item.id,index]));
   const detachmentRecord=item=>{const {dp,disposition,...canonical}=item;return {
     ...canonical,
     sourceBookId:config.id,
     detachmentPoints:Number(String(dp||0).match(/\d+/)?.[0]||0),
     forceDisposition:disposition||'',
+    glossarySourceRevision:factionDetachmentIds.has(item.id)?factionRules.version||'Faction Pack v1.0':'Codex carry-forward + Faction Pack v1.1',
+    glossarySourceOrder:glossarySourceOrder.get(item.id),
     publicationRecord:{title:item.title,detachmentPoints:dp,forceDisposition:disposition}
   };};
   const detachments=allDetachments.map(detachmentRecord);
@@ -337,7 +329,6 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
     effectContracts,
     effectivePointsProjection,
     glossary:structuredClone(rules.glossary),
-    glossaryFacts:structuredClone(canonicalModel.glossaryFacts),
     sourceMetadata:{manifest,primary:rules.source,transcript:source.meta,codex:codex.source,datasheets:codexDatasheets.source,points:pointsCatalog.source,officialMfm:officialMfm.source||null},
     presentation:{unitImages,sourceTranscript:source,codexSource:codex.source,codexDatasheetsSource:codexDatasheets.source}
   };

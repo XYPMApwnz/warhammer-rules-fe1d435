@@ -3,6 +3,16 @@
   "version": "death-guard-11ed-v1.1-working",
   "title": "Death Guard - 11th Edition Rules",
   "subtitle": "Death Guard Army Book",
+  "acceptedSourceConflicts": [
+    {
+      "id": "stratagem-leechspore-eruption",
+      "field": "target",
+      "status": "unresolved",
+      "canonicalValue": "TARGET: One DEATH GUARD model from your army that has lost one or more wounds.",
+      "productionValue": "TARGET: One DEATH GUARD model your army that has lost one or more wounds.",
+      "renderingPolicy": "preserve-production-until-resolved"
+    }
+  ],
   "sections": [
     {
       "id": "domain-basic-rules",
@@ -1993,11 +2003,17 @@
               "termId": "ability-lord-of-the-death-guard-90db1c4",
               "title": "Lord of the Death Guard",
               "text": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target).",
+              "choiceOpening": "Once per turn, this model can use one of the following abilities:",
               "choices": [
                 {
                   "id": "mortarion-ability-diseased-influence",
                   "title": "Diseased Influence",
                   "text": "Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\"."
+                },
+                {
+                  "id": null,
+                  "title": "Boon of Death",
+                  "text": "In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play."
                 },
                 {
                   "id": "mortarion-ability-inflamed-reprisal",

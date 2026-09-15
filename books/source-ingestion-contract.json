@@ -672,7 +672,7 @@
       "authority": "accepted-canonical-transcription",
       "sourceType": "accepted-canonical-transcription",
       "acceptedRevision": "accepted-canonical-2026-09-14",
-      "acceptedHash": "edb2998a739b59c5c4bf644e45d232e43f96cf8c6e94daf38690031da5a3831b",
+      "acceptedHash": "541fed1f7e8e99bf2f0631c208f75e83be19039f107be76911bbb169cb512791",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -683,7 +683,7 @@
         {
           "path": "books/death-guard/content/death-guard-rules.en.json",
           "normalization": "lf",
-          "sha256": "49f71d4c0c079ae6bbafab9f8a7077fd958e663f1c05ee8cd95c8ba22f14dd66"
+          "sha256": "3182c5cd85763a3885ce3ad46c80412e18e05b4933271a71cd6c6756a2c45b87"
         },
         {
           "path": "books/death-guard/content/death-guard-legends.en.json",
@@ -836,7 +836,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "capture-v1",
-      "acceptedHash": "e9e5570a309cb3fa28b31dbc37411b076c3f640a72d1783e90175e32e4cbdbe5",
+      "acceptedHash": "de587341013ece8c31b19658af532531c340ef35db96444dc10988215df0687a",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -847,7 +847,7 @@
         {
           "path": "books/death-guard/sources/canonical-presentation-contract.json",
           "normalization": "lf",
-          "sha256": "e9e5570a309cb3fa28b31dbc37411b076c3f640a72d1783e90175e32e4cbdbe5"
+          "sha256": "de587341013ece8c31b19658af532531c340ef35db96444dc10988215df0687a"
         }
       ],
       "notes": "Enrolled factual owner for presentation-policy, serialization-contract."

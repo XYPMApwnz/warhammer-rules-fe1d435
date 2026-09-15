@@ -58,6 +58,22 @@ for(const book of publicBooks.filter(book=>!allModels.has(book.id))){
 }
 assert.deepEqual([...allModels.keys()].sort(),publicBooks.map(book=>book.id).sort(),'all nine public books must enter the validated effective-model lifecycle');
 
+const tauRosterPricePoison=structuredClone(allModels.get('tau-empire'));
+const tauStrike=tauRosterPricePoison.rosterCatalog.enhancements.find(item=>item.id==='enhancement-strike-swiftly');
+assert.ok(tauStrike,'T’au Strike Swiftly roster projection fixture');
+tauStrike.value=987651;
+assert.throws(()=>validateEffectiveBookModel(tauRosterPricePoison),/conflicting roster Enhancement points/,'nested roster Enhancement price remained an independent factual owner');
+const tauRosterIdentityPoison=structuredClone(allModels.get('tau-empire'));
+tauRosterIdentityPoison.rosterCatalog.enhancements.find(item=>item.id==='enhancement-strike-swiftly').id='enhancement-count-preserving-roster-poison';
+assert.throws(()=>validateEffectiveBookModel(tauRosterIdentityPoison),/has no canonical identity/,'nested roster Enhancement identity remained independently mutable');
+
+const amDetachmentGlossaryPoison=structuredClone(first['adeptus-mechanicus']);
+amDetachmentGlossaryPoison.glossaryFacts={detachmentSources:[{revision:'poison',detachments:[{id:amDetachmentGlossaryPoison.detachments[0].id,text:'D1_AM_DETACHMENT_GLOSSARY_POISON'}]}]};
+assert.throws(()=>validateEffectiveBookModel(amDetachmentGlossaryPoison),/glossaryFacts must be derived from the final effective model/,'AM copied Detachment glossary facts remained independently mutable');
+const amEnhancementGlossaryPoison=structuredClone(first['adeptus-mechanicus']);
+amEnhancementGlossaryPoison.glossaryFacts={detachmentSources:[{revision:'poison',detachments:[{id:amEnhancementGlossaryPoison.detachments[0].id,enhancements:[{id:amEnhancementGlossaryPoison.enhancements[0].id,text:'D1_AM_ENHANCEMENT_GLOSSARY_POISON'}]}]}]};
+assert.throws(()=>validateEffectiveBookModel(amEnhancementGlossaryPoison),/glossaryFacts must be derived from the final effective model/,'AM copied Enhancement glossary facts remained independently mutable');
+
 const duplicate=structuredClone(first['death-guard']);duplicate.units.push(structuredClone(duplicate.units[0]));assert.throws(()=>validateEffectiveBookModel(duplicate),/duplicate death-guard unit identity/);
 const unknownRelation=structuredClone(first['adeptus-mechanicus']);unknownRelation.relationGraphs.get(unknownRelation.units[0].id).canLead=[{unitId:'unit-unknown-effective-target'}];assert.throws(()=>validateEffectiveBookModel(unknownRelation),/unknown relation target/);
 const substituted=structuredClone(first['death-guard']);substituted.units[0].id='unit-count-preserving-substitution';assert.throws(()=>validateEffectiveBookModel(substituted),/(conflicting unit partitions|canonical rule profile)/);
@@ -68,6 +84,12 @@ assert.equal(digest(secondAm),digest(first['adeptus-mechanicus']),'adapter const
 assert.equal(digest(secondDg),digest(first['death-guard']),'adapter construction order changed DG');
 
 const dgProbe=await construct('death-guard'),dgBaseline=renderDeathGuardReader(dgProbe.context,dgProbe.model),dgShadow=structuredClone(dgProbe.model);
+const dgChoicePresentationPoison=structuredClone(dgProbe.model);
+dgChoicePresentationPoison.presentation.structuredChoices={'mortarion-ability-lord-of-the-death-guard':{choices:[{id:'poison',title:'Poison',text:'On a 5+'}]}};
+assert.equal(renderDeathGuardReader(dgProbe.context,dgChoicePresentationPoison),dgBaseline,'DG presentation choice text changed published gameplay facts');
+const dgConflictPresentationPoison=structuredClone(dgProbe.model);
+dgConflictPresentationPoison.presentation.sourceConflicts=[{id:'stratagem-leechspore-eruption',productionValue:'seven or more wounds'}];
+assert.equal(renderDeathGuardReader(dgProbe.context,dgConflictPresentationPoison),dgBaseline,'DG presentation conflict replacement changed published gameplay facts');
 const mortarionSection=dgShadow.book.sections.find(item=>item.id==='unit-mortarion'),mortarionPoints=mortarionSection.blocks.find(item=>item.type==='points');
 mortarionPoints.values[0].value=987654;
 dgShadow.book.sections=dgShadow.book.sections.filter(item=>item.id!=='unit-mortarion');
@@ -127,6 +149,36 @@ const tyranidsPublication=await sharedAuthorityProbe('tyranids'),tyranidsPublica
 assert.equal(tyranidsPublicationAgain.digest,tyranidsPublication.digest,'shared effective publication is not deterministic');
 const daDependency=await sharedAuthorityProbe('dark-angels',{dependency:true});
 assert.ok(daDependency.targetUnitId.startsWith('unit-'),'dependency publication did not consume an effective canonical unit');
+
+async function finalProjectionHandoffProbe(bookId){
+  const configPath=path.join(root,'books',bookId,'book.config.json'),context=createCanonicalBuildContext({configPath,args:['--check']}),nativeClone=globalThis.structuredClone;
+  const pointMarker=345671,rosterMarker=345672,glossaryMarker=`D1_FINAL_GLOSSARY_${bookId.toUpperCase().replaceAll('-','_')}`;
+  let modelPass=0,targetUnitId='',targetEnhancementId='',targetDetachmentId='',targetGlossaryId='';
+  globalThis.structuredClone=value=>{
+    const cloned=nativeClone(value);
+    if(value?.schema==='wh40k-effective-book-model/v1'&&value.book?.id===bookId){
+      modelPass+=1;
+      if(modelPass===2){
+        const unit=cloned.units.find(item=>item.points?.length),projectedUnit=unit&&cloned.effectivePointsProjection.units.find(item=>item.id===unit.id);
+        assert.ok(unit&&projectedUnit,`${bookId}: final points handoff fixture`);targetUnitId=unit.id;unit.points[0].value=pointMarker;projectedUnit.points[0].value=pointMarker;
+        const enhancement=cloned.enhancements.find(item=>cloned.rosterCatalog.enhancements.some(roster=>roster.detachmentId===item.detachmentId&&[item.id,item.ruleId,item.sourceId,item.legacyKey,...(item.canonicalEffectRecordIds||[])].filter(Boolean).includes(roster.id)));
+        assert.ok(enhancement,`${bookId}: final roster handoff fixture`);targetEnhancementId=enhancement.id;targetDetachmentId=enhancement.detachmentId;enhancement.value=rosterMarker;
+        cloned.effectivePointsProjection.enhancements.find(item=>item.detachmentId===targetDetachmentId&&item.id===targetEnhancementId).value=rosterMarker;
+        cloned.rosterCatalog.enhancements.find(item=>item.detachmentId===targetDetachmentId&&[enhancement.id,enhancement.ruleId,enhancement.sourceId,enhancement.legacyKey,...(enhancement.canonicalEffectRecordIds||[])].filter(Boolean).includes(item.id)).value=rosterMarker;
+        const glossary=cloned.glossary[0];assert.ok(glossary,`${bookId}: final glossary handoff fixture`);targetGlossaryId=glossary.id;glossary.summary=glossaryMarker;
+      }
+    }
+    return cloned;
+  };
+  let result;
+  try{result=await buildCanonicalBook(context,{projectionOnly:true});}finally{globalThis.structuredClone=nativeClone;}
+  assert.equal(modelPass,2,`${bookId}: expected intermediate and final effective-model passes`);
+  const model=result.effectiveBookModel;
+  assert.equal(result.effectivePointsProjection.units.find(item=>item.id===targetUnitId).points[0].value,pointMarker,`${bookId}: returned early points projection instead of final model projection`);
+  assert.equal(model.rosterCatalog.enhancements.find(item=>item.detachmentId===targetDetachmentId&&item.value===rosterMarker)?.value,rosterMarker,`${bookId}: returned early roster projection instead of final model projection`);
+  assert.equal(model.glossary.find(item=>item.id===targetGlossaryId).summary,glossaryMarker,`${bookId}: returned early glossary projection instead of final model projection`);
+}
+for(const bookId of ['tyranids','space-marines','dark-angels'])await finalProjectionHandoffProbe(bookId);
 
 const sharedBuilder=fs.readFileSync(path.join(root,'books/shared/tools/build-army-book.mjs'),'utf8');
 assert.match(sharedBuilder,/createEffectiveBookModel\(/,'shared seven-book path must validate the same effective model contract');

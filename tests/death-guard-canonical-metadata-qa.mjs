@@ -74,10 +74,12 @@ equal(Object.keys(metadata.runtimeSummaryOverrides),overrideIds,'runtime overrid
 check(overrideIds.every(id=>metadata.runtimeSummaryOverrides[id].summary===runtime[id].summary),'runtime summary parity');
 check(overrideIds.every(id=>metadata.runtimeSummaryOverrides[id].status==='production-override'),'runtime summary conflict status');
 
-const choice=metadata.structuredChoices['mortarion-ability-lord-of-the-death-guard'];
+const findBlock=(value,id)=>{if(Array.isArray(value)){for(const item of value){const found=findBlock(item,id);if(found)return found;}return null;}if(!value||typeof value!=='object')return null;if(value.id===id)return value;for(const child of Object.values(value)){const found=findBlock(child,id);if(found)return found;}return null;};
+const choice=findBlock(canonical.sections,'mortarion-ability-lord-of-the-death-guard');
 equal(choice.choices.map(item=>item.title),['Diseased Influence','Boon of Death','Inflamed Reprisal'],'structured choice titles');
 check(choice.choices[1].id===null&&choice.choices[1].text.length>0,'Boon of Death explicit without invented id');
 check(new Set(choice.choices.map(item=>item.id).filter(Boolean)).size===2,'unique structured choice ids');
+check(!Object.hasOwn(metadata,'structuredChoices'),'presentation metadata does not own Mortarion gameplay choices');
 
 const enhancementBlocks=[];
 const walk=value=>{if(Array.isArray(value)){value.forEach(walk);return;}if(!value||typeof value!=='object')return;if(value.type==='enhancement'&&value.tags?.length)enhancementBlocks.push(value);for(const child of Object.values(value))walk(child);};
@@ -89,6 +91,7 @@ const defiler=canonical.sections.find(section=>section.id==='unit-defiler'),defi
 equal(defilerPointBlock.wargear,defilerMfm.paidWargear,'Defiler authoritative paid wargear');
 check(!Object.hasOwn(metadata,'defilerSurcharges'),'Defiler surcharges are not duplicated in metadata');
 check(canonical.audit.datasheets===36&&canonical.sections.filter(section=>section.kind==='unit').length===36&&legends.units.length===0,'Current and Legends inventory');
-check(metadata.sourceConflicts.length===1&&metadata.sourceConflicts[0].id==='stratagem-leechspore-eruption'&&metadata.sourceConflicts[0].status==='unresolved','explicit unresolved source conflict');
+check(canonical.acceptedSourceConflicts.length===1&&canonical.acceptedSourceConflicts[0].id==='stratagem-leechspore-eruption'&&canonical.acceptedSourceConflicts[0].status==='unresolved','explicit unresolved source conflict');
+check(!Object.hasOwn(metadata,'sourceConflicts'),'presentation metadata does not own conflict replacement gameplay text');
 
 console.log(`Death Guard canonical metadata QA: ${results.length}/${results.length} PASS`);

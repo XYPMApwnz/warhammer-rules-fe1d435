@@ -39674,7 +39674,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "blood-angels"
       ],
       "detachmentId": "anvil-siege-force",
-      "scope": "assigned-enhancement",
+      "scope": "attached-group",
       "selector": {
         "unitIds": [
           "unit-ancient",
@@ -39700,6 +39700,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "unit-lieutenant-in-reiver-armour",
           "unit-lieutenant-with-combi-weapon",
           "unit-techmarine"
+        ],
+        "groupHasEnhancementIds": [
+          "anvil-siege-force-architect-of-war",
+          "enhancement-architect-of-war"
         ]
       },
       "clauses": [

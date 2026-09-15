@@ -13742,6 +13742,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "legacyIds": [
               "unit-wardens-of-ultramar-model-dainal-kornelius-5"
+            ],
+            "intrinsicKeywords": [
+              "Psyker"
             ]
           },
           {
@@ -22157,6 +22160,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "legacyIds": [
               "unit-outrider-squad-model-invader-atv"
+            ],
+            "intrinsicKeywords": [
+              "Mounted",
+              "Grenades",
+              "Imperium",
+              "Invader ATV",
+              "Adeptus Astartes"
             ]
           },
           {

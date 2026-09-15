@@ -62,6 +62,18 @@ const clean=value=>{
 const key=value=>clean(value).toLowerCase().replace(/\s*\[legends]\s*$/i,'');
 const slug=value=>key(value).replace(/['’]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const plural=value=>/s$/i.test(value)?value:/x$/i.test(value)?`${value}es`:`${value}s`;
+const weaponFactKey=weapon=>JSON.stringify([weapon.name,weapon.mode,weapon.range,weapon.a,weapon.skill,weapon.s,weapon.ap,weapon.d,weapon.abilities]);
+const canonicalWeaponFacts=items=>{
+  const output=[],indexByFact=new Map();
+  for(const item of items){
+    const fact=weaponFactKey(item),index=indexByFact.get(fact);
+    if(index===undefined){indexByFact.set(fact,output.length);output.push(item);continue;}
+    const existing=output[index];
+    if(existing.sourceChildId&&item.sourceChildId&&existing.sourceChildId!==item.sourceChildId)throw new Error(`Conflicting persistent weapon profile identities for ${item.name}: ${existing.sourceChildId}, ${item.sourceChildId}`);
+    if(!existing.sourceChildId&&item.sourceChildId)output[index]=item;
+  }
+  return output;
+};
 const unique=(items,marker)=>{
   const seen=new Set();
   return items.filter(item=>{const id=marker(item);if(seen.has(id))return false;seen.add(id);return true;});
@@ -396,7 +408,7 @@ function parseDatasheet(link){
     category:categoryFor(rawTitle,primaryCategory(entry)),
     points:pointRows(entry,composition),
     profiles:unique(statProfiles,item=>`${item.name}:${JSON.stringify(item.stats)}`),
-    weapons:unique(weapons,item=>JSON.stringify(item)),
+    weapons:canonicalWeaponFacts(weapons),
     abilities:allAbilities.map(({rawText,ownerType,ownerName,sourceRole,sourceKind,sourcePath,...ability})=>ability),
     ...(separateWargear||classifyAbilities?{wargearAbilities:unique(wargearAbilities.filter(item=>item.title),item=>`${key(item.title)}:${item.text}`).map(({rawText,ownerType,ownerName,sourceRole,sourceKind,sourcePath,...ability})=>ability)}:{}),
     keywords:categories,

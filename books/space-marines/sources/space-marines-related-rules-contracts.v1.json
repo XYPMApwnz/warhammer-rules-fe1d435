@@ -29,7 +29,7 @@
     },
     "codex-datasheets": {
       "path": "content/space-marines-codex-datasheets.en.json",
-      "sha256": "6d3879e2d0ee6f0ce72f86ead2763743fcf621282376db86bcc1126c6270d08a",
+      "sha256": "c20e891f16fab1d4af43c96444169433a3b70631f454151499be1271050386a8",
       "authority": "SOURCE_LIMITED",
       "normalization": "lf"
     },

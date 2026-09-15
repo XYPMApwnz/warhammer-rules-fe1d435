@@ -1258,7 +1258,7 @@
       "authority": "bsdata-snapshot",
       "sourceType": "bsdata-snapshot",
       "acceptedRevision": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "acceptedHash": "79ace372551a94d19cbf2b0702f90bdac891702b216eba2f5214870fadef38ca",
+      "acceptedHash": "a52a95f6b200b724a35699810fe7654e8a93a2d2c36e6f5c44a00266d0a4778f",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "UNKNOWN",
@@ -1274,7 +1274,7 @@
         {
           "path": "books/space-marines/content/space-marines-codex-datasheets.en.json",
           "normalization": "lf",
-          "sha256": "6d3879e2d0ee6f0ce72f86ead2763743fcf621282376db86bcc1126c6270d08a"
+          "sha256": "c20e891f16fab1d4af43c96444169433a3b70631f454151499be1271050386a8"
         }
       ],
       "notes": "Enrolled factual owner for datasheets, profiles, points-structure."
@@ -1361,7 +1361,7 @@
       "authority": "structured-contract",
       "sourceType": "structured-contract",
       "acceptedRevision": "v1",
-      "acceptedHash": "3ec345c925b2c94f615bda283b39baaac3934dbf80cece9ddf50a9ba4a56f866",
+      "acceptedHash": "964fd459977fa84536c0f8e297409bb385864dee80e17b319b446f73229f4c5c",
       "lastChecked": "2026-09-14",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -1372,7 +1372,7 @@
         {
           "path": "books/space-marines/sources/space-marines-related-rules-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "3ec345c925b2c94f615bda283b39baaac3934dbf80cece9ddf50a9ba4a56f866"
+          "sha256": "964fd459977fa84536c0f8e297409bb385864dee80e17b319b446f73229f4c5c"
         }
       ],
       "notes": "Enrolled factual owner for enhancement-owner-contracts, upgrade-contracts."

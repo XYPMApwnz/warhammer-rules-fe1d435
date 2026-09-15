@@ -8220,6 +8220,32 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-enhancement-death-in-the-dark-upgrade-2",
     "rule": "detachment-subversion-assets"
   },
+  "space-marines-model-keywords-dainal-kornelius": {
+    "id": "space-marines-model-keywords-dainal-kornelius",
+    "title": "Dainal Kornelius",
+    "summary": "Dainal Kornelius only: Psyker.",
+    "full": "Dainal Kornelius only: Psyker.",
+    "glossary": "glossary-space-marines-model-keywords-dainal-kornelius",
+    "rule": "wardens-of-ultramar-keywords",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-model-keywords-invader-atv": {
+    "id": "space-marines-model-keywords-invader-atv",
+    "title": "Invader ATV",
+    "summary": "Invader ATV only: Mounted, Grenades, Imperium, Invader ATV, Adeptus Astartes.",
+    "full": "Invader ATV only: Mounted, Grenades, Imperium, Invader ATV, Adeptus Astartes.",
+    "glossary": "glossary-space-marines-model-keywords-invader-atv",
+    "rule": "outrider-squad-keywords",
+    "units": [
+      "unit-outrider-squad"
+    ],
+    "datasheet": "unit-outrider-squad",
+    "statline": "outrider-squad-profile"
+  },
   "space-marines-army-rule-oath-of-moment": {
     "id": "space-marines-army-rule-oath-of-moment",
     "title": "Oath of Moment",

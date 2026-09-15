@@ -81166,6 +81166,68 @@
       ],
       "mentions": []
     },
+    "space-marines-model-keywords-dainal-kornelius": {
+      "id": "space-marines-model-keywords-dainal-kornelius",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Dainal Kornelius"
+      },
+      "summary": {
+        "en": "Dainal Kornelius only: Psyker."
+      },
+      "definition": {
+        "en": "Dainal Kornelius only: Psyker."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "wardens-of-ultramar-keywords"
+      },
+      "fullRulePath": "books/space-marines/reader.html#wardens-of-ultramar-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
+    "space-marines-model-keywords-invader-atv": {
+      "id": "space-marines-model-keywords-invader-atv",
+      "kind": "datasheet-ability",
+      "scope": "space-marines",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Invader ATV"
+      },
+      "summary": {
+        "en": "Invader ATV only: Mounted, Grenades, Imperium, Invader ATV, Adeptus Astartes."
+      },
+      "definition": {
+        "en": "Invader ATV only: Mounted, Grenades, Imperium, Invader ATV, Adeptus Astartes."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "space-marines-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "outrider-squad-keywords"
+      },
+      "fullRulePath": "books/space-marines/reader.html#outrider-squad-keywords",
+      "status": "provisional",
+      "sourceRefs": [
+        "space-marines"
+      ],
+      "mentions": []
+    },
     "space-marines-stratagem-a-deadly-prize": {
       "id": "space-marines-stratagem-a-deadly-prize",
       "kind": "stratagem",

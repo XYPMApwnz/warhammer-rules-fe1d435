@@ -6857,6 +6857,9 @@
           "max": 1,
           "models": [
             "Dainal Kornelius"
+          ],
+          "intrinsicKeywords": [
+            "Psyker"
           ]
         },
         {
@@ -11085,6 +11088,13 @@
           "max": 1,
           "models": [
             "Invader ATV"
+          ],
+          "intrinsicKeywords": [
+            "Mounted",
+            "Grenades",
+            "Imperium",
+            "Invader ATV",
+            "Adeptus Astartes"
           ]
         },
         {

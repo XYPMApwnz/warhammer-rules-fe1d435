@@ -17648,6 +17648,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ],
             "legacyIds": [
               "unit-outrider-squad-model-invader-atv"
+            ],
+            "intrinsicKeywords": [
+              "Mounted",
+              "Grenades",
+              "Imperium",
+              "Invader ATV",
+              "Adeptus Astartes"
             ]
           },
           {

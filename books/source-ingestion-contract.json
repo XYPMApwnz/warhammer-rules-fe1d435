@@ -308,8 +308,8 @@
       "sourceId": "blood-angels-effect-contracts",
       "authority": "structured-contract",
       "sourceType": "structured-contract",
-      "acceptedRevision": "effect-contracts-v1-2026-09-15",
-      "acceptedHash": "583829d13e81ebe9fb65bd1c3a5a3b68f3f716b91f606b20c8096b5635c4e08a",
+      "acceptedRevision": "effect-contracts-v1-2026-09-15-carmine-scope",
+      "acceptedHash": "6d8e75988d9c37c48c1ed22fb7fd8851bcfc6b6884f8e4f87558ccd40df143f5",
       "lastChecked": "2026-09-15",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
@@ -320,7 +320,7 @@
         {
           "path": "books/blood-angels/sources/blood-angels-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "583829d13e81ebe9fb65bd1c3a5a3b68f3f716b91f606b20c8096b5635c4e08a"
+          "sha256": "6d8e75988d9c37c48c1ed22fb7fd8851bcfc6b6884f8e4f87558ccd40df143f5"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."

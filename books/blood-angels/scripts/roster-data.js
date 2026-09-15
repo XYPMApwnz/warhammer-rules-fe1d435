@@ -39956,7 +39956,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "blood-angels"
       ],
       "detachmentId": "rage-cursed-onslaught",
-      "scope": "assigned-enhancement",
+      "scope": "owner-or-attached-group",
       "selector": {
         "allKeywords": [
           "ADEPTUS ASTARTES",

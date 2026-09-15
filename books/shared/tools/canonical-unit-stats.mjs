@@ -1,27 +1,53 @@
 const values=value=>Array.isArray(value)?value:[];
 const statRecord=value=>value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).length?value:null;
+const characteristicTypes=new Set(['CHARACTERISTIC_ADD','CHARACTERISTIC_SET']);
+const operationTarget=operation=>typeof operation?.canonicalTarget==='string'?operation.canonicalTarget:operation?.canonicalTarget?.id;
+const scopedUnitIds=(contract,clause)=>new Set([
+  contract?.sourceUnitId,
+  ...values(contract?.selector?.sourceUnitIds),...values(contract?.selector?.unitIds),
+  ...values(clause?.selector?.sourceUnitIds),...values(clause?.selector?.unitIds)
+].filter(Boolean));
+const requiredCharacteristicOperations=(unitId,effectContracts)=>values(effectContracts).flatMap(contract=>values(contract?.clauses).flatMap(clause=>{
+  if(!scopedUnitIds(contract,clause).has(unitId))return [];
+  return values(clause?.operations).filter(operation=>characteristicTypes.has(operation?.type)&&operationTarget(operation));
+}));
+const sourceStatsFor=unit=>[
+  ...values(unit?.profiles).map(profile=>statRecord(profile?.stats)),
+  ...values(unit?.blocks).filter(block=>block?.type==='statline').map(block=>statRecord(block?.values))
+].filter(Boolean);
+const deriveRequiredBaseStat=(sources,target,operations)=>{
+  const sourceValues=[...new Set(sources.filter(source=>Object.prototype.hasOwnProperty.call(source,target)).map(source=>String(source[target])))];
+  if(sourceValues.length===1)return sourceValues[0];
+  const setValues=new Set(operations.filter(operation=>operation.type==='CHARACTERISTIC_SET'&&operationTarget(operation)===target).map(operation=>String(operation.parameters?.to??operation.parameters?.value)));
+  const baseValues=sourceValues.filter(value=>!setValues.has(value));
+  return baseValues.length===1?baseValues[0]:null;
+};
 
-export function canonicalBaseStatsForUnit(unit){
+export function canonicalBaseStatsForUnit(unit,{effectContracts=[]}={}){
   const explicit=statRecord(unit?.stats);
   const profileSources=values(unit?.profiles).map(profile=>statRecord(profile?.stats)).filter(Boolean);
   if(explicit){
     if(profileSources.length&&!profileSources.some(source=>canonicalStats(source)===canonicalStats(explicit)))throw new Error(`${unit?.id||'unit'}: canonical unit stats do not resolve to one source profile`);
     return {...explicit};
   }
-  const sources=[
-    ...profileSources,
-    ...values(unit?.blocks).filter(block=>block?.type==='statline').map(block=>statRecord(block?.values))
-  ].filter(Boolean);
+  const sources=sourceStatsFor(unit);
   if(!sources.length)return {};
   const keys=[...new Set(sources.flatMap(source=>Object.keys(source)))];
-  return Object.fromEntries(keys
+  const stats=Object.fromEntries(keys
     .filter(key=>sources.every(source=>Object.prototype.hasOwnProperty.call(source,key)&&String(source[key])===String(sources[0][key])))
     .map(key=>[key,sources[0][key]]));
+  const required=requiredCharacteristicOperations(unit?.id,effectContracts);
+  for(const target of [...new Set(required.map(operationTarget))]){
+    if(stats[target]!=null)continue;
+    const base=deriveRequiredBaseStat(sources,target,required);
+    if(base!=null)stats[target]=base;
+  }
+  return stats;
 }
 
 const canonicalStats=value=>JSON.stringify(Object.entries(value||{}).sort(([left],[right])=>left.localeCompare(right)));
 
-export function projectRosterBaseStats(units,catalogUnits,{label='roster base-stat projection'}={}){
+export function projectRosterBaseStats(units,catalogUnits,{label='roster base-stat projection',effectContracts=[]}={}){
   if(!Array.isArray(units)||!Array.isArray(catalogUnits))throw new Error(`${label}: units and catalogUnits must be arrays`);
   const sourceById=new Map();
   for(const unit of units){
@@ -34,7 +60,7 @@ export function projectRosterBaseStats(units,catalogUnits,{label='roster base-st
     if(typeof item?.id!=='string'||!item.id||!sourceById.has(item.id))throw new Error(`${label}: unknown canonical stat-profile scope ${item?.id||'<missing>'}`);
     if(seen.has(item.id))throw new Error(`${label}: duplicate roster stat-profile identity ${item.id}`);
     seen.add(item.id);
-    return {...item,gameSelections:{...(item.gameSelections||{}),stats:canonicalBaseStatsForUnit(sourceById.get(item.id))}};
+    return {...item,gameSelections:{...(item.gameSelections||{}),stats:canonicalBaseStatsForUnit(sourceById.get(item.id),{effectContracts})}};
   });
   if(seen.size!==sourceById.size){
     const missing=[...sourceById.keys()].find(id=>!seen.has(id));
@@ -43,8 +69,8 @@ export function projectRosterBaseStats(units,catalogUnits,{label='roster base-st
   return projected;
 }
 
-export function assertRosterBaseStatProjection(units,catalogUnits,{label='roster base-stat projection'}={}){
-  const projected=projectRosterBaseStats(units,catalogUnits,{label});
+export function assertRosterBaseStatProjection(units,catalogUnits,{label='roster base-stat projection',effectContracts=[]}={}){
+  const projected=projectRosterBaseStats(units,catalogUnits,{label,effectContracts});
   for(let index=0;index<projected.length;index++){
     const expected=projected[index].gameSelections.stats,actual=catalogUnits[index]?.gameSelections?.stats;
     if(canonicalStats(actual)!==canonicalStats(expected))throw new Error(`${label}: ${projected[index].id} has conflicting canonical base stats`);

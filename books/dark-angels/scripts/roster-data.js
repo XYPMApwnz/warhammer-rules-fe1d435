@@ -16362,7 +16362,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "Sv": "2+",
           "Ld": "6+",
           "OC": "1",
-          "Invulnerable": "4+"
+          "Invulnerable": "4+",
+          "W": "3"
         },
         "abilities": [
           {

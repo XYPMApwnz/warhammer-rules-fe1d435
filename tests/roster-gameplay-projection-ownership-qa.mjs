@@ -23,7 +23,7 @@ let weaponProfiles=0,weaponCells=0,ordinaryAbilities=0,wargearAbilities=0,models
 for(const bookId of books){
   const context=createCanonicalBuildContext({configPath:path.join(root,'books',bookId,'book.config.json'),args:['--check'],repo:root});
   const model=(await buildCanonicalBook(context,{projectionOnly:true})).effectiveBookModel,catalog=model.rosterCatalog||loadCatalog(bookId);
-  assertRosterBaseStatProjection(model.units,catalog.units,{label:`${bookId} production roster base-stat projection`});
+  assertRosterBaseStatProjection(model.units,catalog.units,{label:`${bookId} production roster base-stat projection`,effectContracts:model.effectContracts});
   assertRosterWeaponFactProjection(model.units,catalog.units,{label:`${bookId} production roster weapon-fact projection`});
   assertRosterUnitGameplayProjection(model.units,model.relationGraphs,catalog.units,{label:`${bookId} production roster unit-gameplay projection`});
   for(const unit of catalog.units){

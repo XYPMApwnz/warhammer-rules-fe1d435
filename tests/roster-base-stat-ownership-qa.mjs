@@ -19,12 +19,12 @@ const models=new Map(),catalogs=new Map();
 for(const bookId of books){
   const context=createCanonicalBuildContext({configPath:path.join(root,'books',bookId,'book.config.json'),args:['--check'],repo:root});
   const model=(await buildCanonicalBook(context,{projectionOnly:true})).effectiveBookModel,catalog=model.rosterCatalog||loadCatalog(bookId);
-  assertRosterBaseStatProjection(model.units,catalog.units,{label:`${bookId} production roster base-stat projection`});
+  assertRosterBaseStatProjection(model.units,catalog.units,{label:`${bookId} production roster base-stat projection`,effectContracts:model.effectContracts});
   models.set(bookId,model);catalogs.set(bookId,catalog);
 }
 const statCopies=[...catalogs.values()].flatMap(catalog=>catalog.units.map(unit=>unit.gameSelections.stats));
 assert.equal(statCopies.length,540,'all nine roster base-stat projections');
-assert.equal(statCopies.reduce((sum,stats)=>sum+Object.keys(stats).length,0),3764,'all nine roster base-stat cells');
+assert.equal(statCopies.reduce((sum,stats)=>sum+Object.keys(stats).length,0),3767,'all nine roster base-stat cells');
 
 const tau=models.get('tau-empire'),fireblade=tau.units.find(unit=>unit.id==='unit-cadre-fireblade');
 assert.ok(fireblade&&tau.rosterCatalog,'T’au effective model contains the canonical Fireblade and roster projection');
@@ -88,4 +88,4 @@ assert.ok(otherUnit,'wrong stat-profile scope control unit');
 wrongScope[firebladeIndex].gameSelections.stats=clone(otherUnit.gameSelections.stats);
 assert.throws(()=>assertRosterBaseStatProjection(tau.units,wrongScope),/conflicting canonical base stats/,'wrong-profile stats entered the Fireblade scope');
 
-console.log('Roster base-stat ownership QA: PASS (540 derived maps; 3764 cells; Astra W=99 and canonical W=7 directions killed; actual Shield Drone runtime 4/8).');
+console.log('Roster base-stat ownership QA: PASS (540 derived maps; 3767 cells; Astra W=99 and canonical W=7 directions killed; actual Shield Drone runtime 4/8).');

@@ -218,7 +218,7 @@ function validateRosterProjection(model,unitIds,detachmentIds,enhancementIds){
   if(catalog==null)return;
   if(!record(catalog)||catalog.book?.id!==model.book.id)throw new Error('roster catalog has a conflicting book identity');
   sameIds(new Set(list(catalog.units,'rosterCatalog.units').map(item=>item.id)),unitIds,'roster unit');
-  assertRosterBaseStatProjection(model.units,catalog.units,{label:`${model.book.id} effective roster base-stat projection`});
+  assertRosterBaseStatProjection(model.units,catalog.units,{label:`${model.book.id} effective roster base-stat projection`,effectContracts:model.effectContracts});
   assertRosterWeaponFactProjection(model.units,catalog.units,{label:`${model.book.id} effective roster weapon-fact projection`});
   assertRosterUnitGameplayProjection(model.units,model.relationGraphs,catalog.units,{label:`${model.book.id} effective roster unit-gameplay projection`});
   sameIds(new Set(list(catalog.detachments,'rosterCatalog.detachments').map(item=>item.id)),detachmentIds,'roster Detachment');
@@ -306,7 +306,7 @@ export function validateEffectiveBookModel(model){
 export function createEffectiveBookModel(input){
   const model=structuredClone(input);
   if(model.rosterCatalog?.units){
-    let units=projectRosterBaseStats(model.units,model.rosterCatalog.units,{label:`${model.book?.id||'book'} effective roster base-stat projection`});
+    let units=projectRosterBaseStats(model.units,model.rosterCatalog.units,{label:`${model.book?.id||'book'} effective roster base-stat projection`,effectContracts:model.effectContracts});
     units=projectRosterWeaponFacts(model.units,units,{label:`${model.book?.id||'book'} effective roster weapon-fact projection`});
     units=projectRosterUnitGameplayFacts(model.units,model.relationGraphs,units,{label:`${model.book?.id||'book'} effective roster unit-gameplay projection`});
     const detachmentRules=projectRosterDetachmentRuleFacts(model.detachments,model.rosterCatalog.detachmentRules,{bookId:model.book?.id,canonicalRules:model.detachmentRules,label:`${model.book?.id||'book'} effective roster Detachment-rule projection`});

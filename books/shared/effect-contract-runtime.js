@@ -198,7 +198,7 @@
   };
   const operationAllowed=(operation,contract,env)=>{
     const target=canonicalTarget(operation).id,unit=env.draft,loadout=unit?.selection?.loadout;
-    if(['CHARACTERISTIC_ADD','CHARACTERISTIC_SET'].includes(operation.type)&&catalogUnit(unit)?.gameSelections?.stats?.[target]==null)return false;
+    if(operation.type==='CHARACTERISTIC_ADD'&&catalogUnit(unit)?.gameSelections?.stats?.[target]==null)return false;
     if(contract.stackingPolicy==='best-value'&&operation.type==='CHARACTERISTIC_SET'&&operation.parameters?.direction==='lower-is-better'){
       const current=Number.parseInt(catalogUnit(unit)?.gameSelections?.stats?.[target],10),next=Number.parseInt(operation.parameters.to??operation.parameters.value,10);if(Number.isFinite(current)&&current<=next)return false;
     }

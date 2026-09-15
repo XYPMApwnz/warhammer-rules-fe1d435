@@ -155,7 +155,8 @@ const catalogIds=catalog=>{
   const weaponClasses=new Set(),weaponFamilies=new Set();
   const addChild=(unit,kind,item)=>{if(children[kind].has(item.id))throw new Error(`${catalog.book?.id||catalog.bookId}: duplicate ${kind} canonical child identity ${item.id}`);children[kind].set(item.id,{parentUnitId:unit.id,kind,item});};
   for(const unit of units.values()){
-    for(const item of [...(unit.gameSelections?.abilities||[]),...(unit.gameSelections?.wargearAbilities||[])])abilities.set(item.id,item);
+    const unitAbilityIds=new Set();
+    for(const item of [...(unit.gameSelections?.abilities||[]),...(unit.gameSelections?.wargearAbilities||[])]){if(!item.id)throw new Error(`${unit.id}: ability requires an exact canonical ID`);if(unitAbilityIds.has(item.id))throw new Error(`${unit.id}: duplicate canonical ability ID ${item.id}`);unitAbilityIds.add(item.id);abilities.set(item.id,item);}
     for(const item of unit.gameSelections?.wargearAbilities||[])addChild(unit,'wargear-ability',item);
     for(const item of unit.gameSelections?.weaponProfiles||[])addChild(unit,'profile',item);
   }
@@ -210,6 +211,7 @@ export function validateEffectContractsAgainstCatalog(input,catalog,{effectiveBo
       }
       for(const operation of clause.operations){
         const target=typeof operation.canonicalTarget==='string'?operation.canonicalTarget:operation.canonicalTarget.id,kind=operation.parameters.referenceKind||operation.canonicalTarget?.kind;
+        if(operation.type==='ABILITY_REMOVE'&&!ids.abilities.has(target))throw new Error(`${contract.canonicalRecordId}: unknown canonical ability target ${target}`);
         if(kind==='weapon-class'&&!ids.weaponClasses.has(target))throw new Error(`${contract.canonicalRecordId}: unknown canonical weapon class ${target}`);
         if(kind==='weapon-family'&&!ids.weaponFamilies.has(target))throw new Error(`${contract.canonicalRecordId}: unknown canonical weapon family ${target}`);
         for(const id of operation.parameters.profileIds||[])resolveChild(contract,id,'profile',sourceUnits);

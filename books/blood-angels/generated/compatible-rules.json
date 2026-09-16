@@ -5847,6 +5847,384 @@
         ]
       }
     ],
+    "unit-astraeus": [
+      {
+        "ruleId": "angelic-inheritors-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "angelic-inheritors",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "focused-fury",
+        "kind": "stratagem",
+        "detachmentId": "angelic-inheritors",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "strike-now-for-glory",
+        "kind": "stratagem",
+        "detachmentId": "angelic-inheritors",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "armoured-speartip-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "armoured-speartip",
+        "state": "match"
+      },
+      {
+        "ruleId": "armoured-speartip-purgation-doctrine",
+        "kind": "stratagem",
+        "detachmentId": "armoured-speartip",
+        "state": "match"
+      },
+      {
+        "ruleId": "bastion-task-force-codex-discipline",
+        "kind": "stratagem",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "bastion-task-force-heresy-undone",
+        "kind": "stratagem",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "bastion-task-force-light-of-vengeance",
+        "kind": "stratagem",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-augmented-targeting",
+        "kind": "stratagem",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-stand-to-the-end",
+        "kind": "stratagem",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-unyielding-might",
+        "kind": "stratagem",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "headhunter-task-force-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "headhunter-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "headhunter-task-force-kill-shot",
+        "kind": "stratagem",
+        "detachmentId": "headhunter-task-force",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "headhunter-task-force-machine-vengeance",
+        "kind": "stratagem",
+        "detachmentId": "headhunter-task-force",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "headhunter-task-force-rapid-gunnery",
+        "kind": "stratagem",
+        "detachmentId": "headhunter-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "headhunter-task-force-reactive-repositioning",
+        "kind": "stratagem",
+        "detachmentId": "headhunter-task-force",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "headhunter-task-force-target-weak-point",
+        "kind": "stratagem",
+        "detachmentId": "headhunter-task-force",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "aggressive-onslaught",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "angelic-grace",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "liberator-assault-group-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "red-rampage",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "relentless-assault",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "savage-echoes",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "orbital-assault-force-auto-sense-coordination",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-shock-onslaught",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-suppression-strafing",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-tactical-decapitation",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "a-grim-warning",
+        "kind": "stratagem",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "limb-from-limb",
+        "kind": "stratagem",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "rage-cursed-onslaught-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "red-wrath",
+        "kind": "stratagem",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "the-angelic-host-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "the-angelic-host",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "unbridled-ardour",
+        "kind": "stratagem",
+        "detachmentId": "the-angelic-host",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "the-lost-brethren-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "the-lost-brethren",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "vengeful-hosts-know-no-fear",
+        "kind": "stratagem",
+        "detachmentId": "vengeful-hosts",
+        "state": "match"
+      },
+      {
+        "ruleId": "death-begets-vengeance",
+        "kind": "stratagem",
+        "detachmentId": "wrath-of-the-doomed",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      }
+    ],
     "unit-baal-predator": [
       {
         "ruleId": "angelic-inheritors-armour-of-contempt",
@@ -60496,6 +60874,366 @@
       },
       {
         "ruleId": "vengeful-hosts-purge-by-sectors",
+        "kind": "stratagem",
+        "detachmentId": "vengeful-hosts",
+        "state": "match"
+      },
+      {
+        "ruleId": "death-begets-vengeance",
+        "kind": "stratagem",
+        "detachmentId": "wrath-of-the-doomed",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      }
+    ],
+    "unit-thunderhawk-gunship": [
+      {
+        "ruleId": "angelic-inheritors-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "angelic-inheritors",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "focused-fury",
+        "kind": "stratagem",
+        "detachmentId": "angelic-inheritors",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "strike-now-for-glory",
+        "kind": "stratagem",
+        "detachmentId": "angelic-inheritors",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "armoured-speartip-advanced-deployment",
+        "kind": "stratagem",
+        "detachmentId": "armoured-speartip",
+        "state": "match"
+      },
+      {
+        "ruleId": "armoured-speartip-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "armoured-speartip",
+        "state": "match"
+      },
+      {
+        "ruleId": "armoured-speartip-ceramite-sledgehammer",
+        "kind": "stratagem",
+        "detachmentId": "armoured-speartip",
+        "state": "match"
+      },
+      {
+        "ruleId": "armoured-speartip-purgation-doctrine",
+        "kind": "stratagem",
+        "detachmentId": "armoured-speartip",
+        "state": "match"
+      },
+      {
+        "ruleId": "bastion-task-force-codex-discipline",
+        "kind": "stratagem",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "bastion-task-force-heresy-undone",
+        "kind": "stratagem",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "bastion-task-force-light-of-vengeance",
+        "kind": "stratagem",
+        "detachmentId": "bastion-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-augmented-targeting",
+        "kind": "stratagem",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-stand-to-the-end",
+        "kind": "stratagem",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "ceramite-sentinels-unyielding-might",
+        "kind": "stratagem",
+        "detachmentId": "ceramite-sentinels",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "kind": "stratagem",
+        "scope": "core",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "headhunter-task-force-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "headhunter-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "headhunter-task-force-rapid-gunnery",
+        "kind": "stratagem",
+        "detachmentId": "headhunter-task-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "aggressive-onslaught",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "angelic-grace",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "liberator-assault-group-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "red-rampage",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "relentless-assault",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "savage-echoes",
+        "kind": "stratagem",
+        "detachmentId": "liberator-assault-group",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "orbital-assault-force-auto-sense-coordination",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-onward-for-the-emperor",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "orbital-assault-force-shock-onslaught",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-suppression-strafing",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "orbital-assault-force-tactical-decapitation",
+        "kind": "stratagem",
+        "detachmentId": "orbital-assault-force",
+        "state": "match"
+      },
+      {
+        "ruleId": "a-grim-warning",
+        "kind": "stratagem",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "limb-from-limb",
+        "kind": "stratagem",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "rage-cursed-onslaught-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "red-wrath",
+        "kind": "stratagem",
+        "detachmentId": "rage-cursed-onslaught",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "the-angelic-host-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "the-angelic-host",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "unbridled-ardour",
+        "kind": "stratagem",
+        "detachmentId": "the-angelic-host",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "the-lost-brethren-armour-of-contempt",
+        "kind": "stratagem",
+        "detachmentId": "the-lost-brethren",
+        "state": "conditional",
+        "condition": "battle-state-unknown",
+        "conditions": [
+          "battle-state-unknown"
+        ]
+      },
+      {
+        "ruleId": "vengeful-hosts-know-no-fear",
         "kind": "stratagem",
         "detachmentId": "vengeful-hosts",
         "state": "match"

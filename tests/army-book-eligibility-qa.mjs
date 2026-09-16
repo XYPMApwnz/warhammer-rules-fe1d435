@@ -57,7 +57,7 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
     const dependencyParity=dependencyConfig.sources.codexParity?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexParity),'utf8')):{detachments:[]};
     const dependencyPoints=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.points||`content/${dependencyId}-points.en.json`),'utf8'));
     const key=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),currentTitles=new Set((dependencyPoints.detachments||[]).map(item=>key(item.title))),chapterKey=key(config.dependencyDetachments.chapterKeyword);
-    return [...(dependencyPack.detachments||[]),...(dependencyParity.detachments||[])].filter(item=>{const restriction=item.restriction||dependencyConfig.detachmentChapterRestrictions?.[item.title];return currentTitles.has(key(item.title))&&(!restriction||key(restriction)===chapterKey);});
+    return [...(dependencyPack.detachments||[]),...(dependencyParity.detachments||[])].filter(item=>{const restriction=item.restriction||dependencyConfig.detachmentChapterRestrictionsById?.[item.id];return currentTitles.has(key(item.title))&&(!restriction||key(restriction)===chapterKey);});
   }):[];
   const localDetachments=[...(pack.detachments||[]),...(codexParity.detachments||[])],allDetachments=[...localDetachments,...dependencyDetachments];
   const profiles=profilesFromCatalog(bookRoot),stratagems=allDetachments.flatMap(detachment=>detachment.stratagems||[]);

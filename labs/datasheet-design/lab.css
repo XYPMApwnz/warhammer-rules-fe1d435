@@ -3,3 +3,17 @@ html[data-mode="current"] .panel{border-left-color:var(--bronze)}html[data-mode=
 .lab-header{padding-top:14px;padding-bottom:14px}.lab-shell{padding-top:18px;padding-bottom:40px}.section-tabs{gap:16px;margin-top:14px;margin-bottom:9px}.section-tabs a{padding-top:3px;padding-bottom:6px}.hero-copy{padding-top:28px;padding-bottom:22px}.content-grid{margin-top:16px}.main-column,.side-column{gap:16px}.panel-heading{padding-top:14px;padding-bottom:9px}.panel h3{font-size:1.25rem}.composition{padding-top:11px;padding-bottom:13px}.points-card{padding-top:9px;padding-bottom:11px}.ability-card p,.ability-list p{line-height:1.4}.ability-options{margin-top:10px}.ability-list article{padding-top:11px;padding-bottom:11px}.side-card{padding-top:16px;padding-bottom:16px}.lab-footer{padding-top:14px;padding-bottom:14px}
 @media(max-width:850px){.side-column{gap:10px}}
 @media(max-width:560px){.lab-header{padding-top:11px;padding-bottom:11px}.lab-shell{padding-top:13px;padding-bottom:30px}.section-tabs{gap:12px}.hero-copy{padding-top:17px;padding-bottom:15px}.panel-heading{padding-top:12px;padding-bottom:7px}.panel h3{font-size:1.1rem}.composition{padding-top:9px;padding-bottom:11px}.points-card{padding-top:8px;padding-bottom:8px}.ability-card p,.ability-list p{line-height:1.35}.ability-list article{padding-top:10px;padding-bottom:10px}.side-card{padding-top:13px;padding-bottom:13px}.lab-footer{padding-top:12px;padding-bottom:12px}}
+
+/* Production-composition pass: same dark datasheet framing, with compact single-column flow. */
+.lab-header,.app-header{display:flex}
+.content-grid{display:block;max-width:980px;margin:16px auto 0}
+.main-column,.side-column{display:contents}
+.hero{grid-template-columns:1fr;min-height:0;border-top:3px solid var(--green-deep)}
+.hero-art{height:260px;min-height:0;grid-row:1;background-position:center 28%}
+.hero-copy{grid-row:2;align-self:auto;padding:22px 24px 12px}
+.hero h2{font-size:clamp(2.7rem,7vw,4.8rem);line-height:.9}
+.hero-intro{margin:12px 0;font-size:.92rem}
+.points-card{position:absolute;right:18px;top:18px;margin:0}
+.side-card{margin-top:16px}
+.panel{box-shadow:none}
+@media(max-width:560px){.lab-shell{padding-left:8px;padding-right:8px}.hero-art{height:190px}.hero-copy{padding:17px 15px 10px}.hero h2{font-size:3rem}.hero-intro{font-size:11px}.points-card{right:10px;top:10px;min-width:88px}.content-grid{margin-top:12px}.side-card{margin-top:12px}}

@@ -1,0 +1,1 @@
+(() => { const root=document.documentElement, toggle=document.querySelector('[data-mode-toggle]'); if(!toggle)return; toggle.addEventListener('click',()=>{const experimental=root.dataset.mode!=='experimental';root.dataset.mode=experimental?'experimental':'current';toggle.textContent=experimental?'Current density':'Experimental density';}); })();

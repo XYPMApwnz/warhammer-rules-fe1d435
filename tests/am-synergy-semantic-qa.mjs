@@ -27,14 +27,19 @@ const group=fixture('am-semantic-attached','detachment-haloscreed-battle-clade',
   {datasheetId:'unit-tech-priest-dominus',instanceId:'parsed-unit-3',quantity:1},
   {datasheetId:'unit-technoarcheologist',instanceId:'parsed-unit-4',quantity:1},
   {datasheetId:'unit-skitarii-rangers',instanceId:'parsed-unit-5',quantity:10},
-],{'parsed-unit-2':['parsed-unit-1','parsed-unit-3','parsed-unit-4']});
+],{'parsed-unit-2':['parsed-unit-1','parsed-unit-4']});
 const rangerEffects=effects(group,'parsed-unit-2');
 assert(rangerEffects.some(effect=>effect.id==='galvanic-field'&&effect.tag==='LETHAL HITS'&&effect.source.ownerInstanceId==='parsed-unit-1'));
-assert(rangerEffects.some(effect=>effect.title==='Feel No Pain 5+'&&effect.source.ownerInstanceId==='parsed-unit-3'));
 assert(rangerEffects.some(effect=>effect.id==='technoarcheologist-oc'&&effect.delta===1&&effect.source.ownerInstanceId==='parsed-unit-4'));
 assert(rangerEffects.some(effect=>effect.canonicalReference?.id==='enhancement-sanctified-ordnance'&&effect.source.ownerInstanceId==='parsed-unit-1'),JSON.stringify(rangerEffects));
 assert.equal(effects(group,'parsed-unit-5').length,0,'attachment effects leaked to a duplicate physical unit');
 assert.equal(effects(group,'parsed-unit-2',{attachments:{}}).length,0,'potential attachment activated current effects');
+
+const dominusGroup=fixture('am-semantic-dominus','detachment-haloscreed-battle-clade',[
+  {datasheetId:'unit-skitarii-rangers',instanceId:'parsed-unit-1',quantity:10},
+  {datasheetId:'unit-tech-priest-dominus',instanceId:'parsed-unit-2',quantity:1},
+],{'parsed-unit-1':['parsed-unit-2']});
+assert(effects(dominusGroup,'parsed-unit-1').some(effect=>effect.title==='Feel No Pain 5+'&&effect.source.ownerInstanceId==='parsed-unit-2'));
 
 const robots=fixture('am-semantic-robots','detachment-cohort-cybernetica',[
   {datasheetId:'unit-kastelan-robots',instanceId:'parsed-unit-1',quantity:2},

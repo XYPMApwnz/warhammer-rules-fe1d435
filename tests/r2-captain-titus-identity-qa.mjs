@@ -60,7 +60,12 @@ assert.equal(countExactString(related,oldId),0,'Old Titus related-rule identity'
 assert.equal(countExactString(related,newId),31,'Captain Titus related-rule identity count');
 const provider=read('books/extensions/book-roster-enhancement-providers.js');
 assert.equal(provider.split(oldId).length-1,0,'Old Titus provider identity');
-assert.equal(provider.split(newId).length-1,2,'Captain Titus provider identity count');
+assert.equal(provider.split(newId).length-1,0,'Captain Titus identity must not return to the generic provider');
+const effectContracts=json('books/space-marines/sources/space-marines-effect-contracts.v1.json').contracts,titusContracts=effectContracts.filter(contract=>contract.sourceUnitId===newId);
+assert.equal(titusContracts.length,1,'Captain Titus structured effect owner identity');
+assert.equal(titusContracts[0].canonicalRecordId,'space-marines-ability-press-the-attack','Captain Titus structured effect contract');
+assert.deepEqual(titusContracts[0].selector.sourceUnitIds,[newId],'Captain Titus structured effect selector identity');
+assert.equal(countExactString(effectContracts,oldId),0,'Old Titus structured effect identity');
 const owned=json('tests/fixtures/army-book-owned-datasheets.json');
 assert.equal(countExactString(owned,oldId),0,'Old Titus ownership fixture identity');
 assert.equal(countExactString(owned,newId),1,'Captain Titus ownership fixture identity');
@@ -92,6 +97,7 @@ const activeProductionFiles=[
   'books/space-marines/content/space-marines-points.en.json',
   'books/space-marines/content/space-marines-related-rules.en.json',
   'books/space-marines/sources/wahapedia-compatible-rules.snapshot.json',
+  'books/space-marines/sources/space-marines-effect-contracts.v1.json',
   'books/extensions/book-roster-enhancement-providers.js',
   'books/space-marines/reader.html',
   'books/space-marines/scripts/data.js',

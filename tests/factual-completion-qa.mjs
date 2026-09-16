@@ -121,10 +121,10 @@ const tormentors=ecUnit('unit-tormentors');
 for(const profile of tormentorProfiles)assert.deepEqual(exactWeapon(tormentors,profile.name),profile,`Tormentors ${profile.name}`);
 
 const ecRoster=generatedRoster('emperors-children');
-assertGeneratedProfile(ecRoster,'unit-lord-exultant-profile-power-fist-melee-5',lordPowerFist);
-assertGeneratedProfile(ecRoster,'unit-tormentors-profile-bolt-pistol-ranged',tormentorProfiles[0]);
-assertGeneratedProfile(ecRoster,'unit-tormentors-profile-plasma-pistol-standard-ranged-2',tormentorProfiles[1]);
-assertGeneratedProfile(ecRoster,'unit-tormentors-profile-plasma-pistol-supercharge-ranged-3',tormentorProfiles[2]);
+assertGeneratedProfile(ecRoster,'unit-lord-exultant-profile-079648680a',lordPowerFist);
+assertGeneratedProfile(ecRoster,'unit-tormentors-profile-c7fd584746',tormentorProfiles[0]);
+assertGeneratedProfile(ecRoster,'unit-tormentors-profile-5e8cf8a6f1',tormentorProfiles[1]);
+assertGeneratedProfile(ecRoster,'unit-tormentors-profile-9b78ec6e49',tormentorProfiles[2]);
 
 const ecGenerated=generatedBook('emperors-children');
 for(const unitId of ['unit-lord-exultant','unit-tormentors'])assert.ok(ecGenerated.targets[unitId],`${unitId}: generated target card`);

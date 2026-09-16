@@ -20,8 +20,8 @@ for(const id of registryIds)assert.equal(registry[id].id,id,`${id}: registry key
 assert.equal(api.counts.terms,registryIds.length,'generated glossary term count differs from the canonical registry');
 assert.equal(api.counts.aliases,aliasIds.length,'generated glossary alias count differs from the canonical aliases');
 assert.match(api.contentHash,/^[a-f0-9]{64}$/,'generated glossary content hash is not deterministic');
-assert.equal(registryIds.length,3261,'current canonical glossary inventory changed unexpectedly');
-assert.equal(crypto.createHash('sha256').update([...registryIds].sort().join('\n')).digest('hex'),'54a3d77b7f59fb42b9cf598664119399ac6500f2175d2617ae6f52fc7060a2db','current canonical glossary identity set changed unexpectedly');
+assert.equal(registryIds.length,3263,'current canonical glossary inventory changed unexpectedly');
+assert.equal(crypto.createHash('sha256').update([...registryIds].sort().join('\n')).digest('hex'),'4f08a69a251e58f63de459fbef0cc1461efbafc30ae86192893774eadb1f473d','current canonical glossary identity set changed unexpectedly');
 for(const id of [
   'space-marines-enhancement-bellicose-weapon-spirits-upgrade-2',
   'space-marines-enhancement-raptorial-cogitator-core-upgrade-2',

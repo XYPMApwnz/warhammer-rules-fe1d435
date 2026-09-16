@@ -1,10 +1,8 @@
 (() => {
   const frame=document.querySelector('#production-sheet');
   const toggle=document.querySelector('[data-mode-toggle]');
-  const css=`@media (max-width:480px){.section-title{font-size:34px!important}.unit-part{padding-top:20px!important}}`; 
+  const css=`@media (max-width:480px){html[data-lab-mode="experimental"] .section-title{font-size:34px!important}html[data-lab-mode="experimental"] .unit-part{padding-top:20px!important}}`;
   let style;
-  function apply(){if(!frame.contentDocument)return;if(style)style.remove();if(document.documentElement.dataset.mode==='experimental'){style=frame.contentDocument.createElement('style');style.textContent=css;frame.contentDocument.head.appendChild(style);toggle.textContent='Experimental spacing'}else toggle.textContent='Experimental spacing'}
+  function apply(){const doc=frame.contentDocument;if(!doc)return;doc.documentElement.dataset.labMode=document.documentElement.dataset.mode;if(style)style.remove();style=doc.createElement('style');style.textContent=css;doc.head.appendChild(style);toggle.textContent=document.documentElement.dataset.mode==='experimental'?'Current spacing':'Experimental spacing'}
   frame.addEventListener('load',apply);toggle.disabled=false;toggle.addEventListener('click',()=>{document.documentElement.dataset.mode=document.documentElement.dataset.mode==='experimental'?'current':'experimental';apply()});
 })();
-
-

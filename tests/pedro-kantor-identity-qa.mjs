@@ -60,9 +60,10 @@ for(const book of ['dark angels','blood angels'])assert.equal(Object.values(poin
 
 const runtime={console,URL,URLSearchParams,CustomEvent:class{constructor(type,init={}){this.type=type;this.detail=init.detail;}},dispatchEvent(){},location:{pathname:'/books/space-marines/reader.html',search:''},document:{documentElement:{dataset:{bookId:'space-marines'}}}};
 runtime.window=runtime;runtime.globalThis=runtime;runtime.WHBookRosterEnhancements={registerProvider(provider){runtime.provider=provider;}};
-for(const file of ['books/space-marines/scripts/roster-data.js','books/shared/roster-context.js','books/extensions/book-roster-enhancement-providers.js'])vm.runInNewContext(read(file),runtime,{filename:file});
-const roster={faction:'Space Marines',units:[{id:'pedro-physical-1',canonicalUnitId:unitId,name:'Pedro Kantor',quantity:1,wargear:''},{id:'sternguard-physical-1',canonicalUnitId:'unit-sternguard-veteran-squad',name:'Sternguard Veteran Squad',quantity:5,wargear:''}],detachments:[],enhancements:[]};
-const game=runtime.WHArmyRosterContext.project({catalog:runtime.WH_BOOK_ROSTER_CATALOG,provider:runtime.provider,roster,record:{id:'pedro-qa',attachments:{}}}).game;
+for(const file of ['books/space-marines/scripts/roster-data.js','books/shared/roster-context.js','books/shared/effect-contract-runtime.js','books/extensions/book-roster-enhancement-providers.js'])vm.runInNewContext(read(file),runtime,{filename:file});
+const catalog=runtime.WH_BOOK_ROSTER_CATALOG,rawUnit=(instanceId,canonicalUnitId,quantity=1)=>{const unit=catalog.units.find(item=>item.id===canonicalUnitId);assert.ok(unit,`Unknown fixture unit ${canonicalUnitId}`);return{id:instanceId,canonicalUnitId,name:unit.title,quantity,wargear:''};};
+const project=(id,units,attachments={})=>runtime.WHArmyRosterContext.project({catalog,provider:runtime.provider,roster:{faction:'Space Marines',units,detachments:[],enhancements:[]},record:{id,attachments}}).game;
+const pedro=rawUnit('pedro-physical-1',unitId),sternguardInput=rawUnit('sternguard-physical-1','unit-sternguard-veteran-squad',5),game=project('pedro-qa',[pedro,sternguardInput],{'sternguard-physical-1':['pedro-physical-1']});
 assert.deepEqual([...game.units].map(unit=>unit.identity.instanceId),['pedro-physical-1','sternguard-physical-1'],'Physical instance identities must remain distinct');
 const projectedPedro=game.units.find(unit=>unit.identity.canonicalDatasheetId===unitId),projectedKeywords=normalized(projectedPedro.rosterState.keywordProfile.intrinsic||[]);
 assert.equal(projectedKeywords.includes(crimson),true,'Runtime Pedro intrinsic CRIMSON FISTS');
@@ -75,5 +76,25 @@ assert.equal(inspiring[0].operation,'reference','Inspiring Commander must remain
 assert.equal(inspiring[0].canonicalReference.kind,'ability','Inspiring Commander canonical reference kind');
 assert.equal(inspiring[0].source.ownerInstanceId,'pedro-physical-1','Inspiring Commander must remain instance-scoped to Pedro');
 assert.equal(inspiring[0].targetInstanceId,'sternguard-physical-1','Inspiring Commander target instance');
+assert.notEqual(inspiring[0].source.ownerInstanceId,inspiring[0].targetInstanceId,'Sternguard Bodyguard must not become the Inspiring Commander source');
+const inspiringAbility=rosterPedro.gameSelections.abilities.find(item=>item.id==='space-marines-ability-inspiring-commander-5');
+assert.equal(inspiring[0].canonicalReference.text,inspiringAbility.text,'Inspiring Commander runtime text must resolve from Pedro canonical ability');
+assert.match(inspiring[0].canonicalReference.text,/Objective Control characteristic of 2 while they are not Battle-shocked/i,'Inspiring Commander accepted gameplay result');
+const withoutPedro=project('pedro-absent',[rawUnit('sternguard-alone','unit-sternguard-veteran-squad',5)]).units[0];
+assert.equal(withoutPedro.effects.some(effect=>effect.canonicalReference?.id==='space-marines-ability-inspiring-commander-5'),false,'Inspiring Commander must remain inactive when Pedro is absent');
+const unrelated=project('pedro-unrelated',[rawUnit('pedro-unrelated-source',unitId),rawUnit('intercessor-unrelated','unit-intercessor-squad',5)]).units.find(unit=>unit.identity.instanceId==='intercessor-unrelated');
+assert.equal(unrelated.effects.some(effect=>effect.source?.id==='space-marines-ability-inspiring-commander-5'),false,'Unrelated unit must not satisfy the Pedro target binding');
 
-console.log('Pedro Kantor identity/compatibility QA: PASS');
+const explicitSourceContracts=catalog.effectContracts.filter(contract=>contract.sourceUnitId||contract.sourceUnitIds?.length||contract.selector?.sourceUnitId||contract.selector?.sourceUnitIds?.length);
+const collisionProne=explicitSourceContracts.filter(contract=>{const declared=new Set([contract.sourceUnitId,...(contract.sourceUnitIds||[]),contract.selector?.sourceUnitId,...(contract.selector?.sourceUnitIds||[])].filter(Boolean));return (contract.selector?.unitIds||[]).some(id=>!declared.has(id));});
+assert.equal(collisionProne.length,7,'Explicit source/target collision-family inventory drift');
+for(const [index,contract] of collisionProne.entries()){
+  const sourceId=contract.sourceUnitId||(contract.sourceUnitIds||[])[0]||contract.selector?.sourceUnitId||(contract.selector?.sourceUnitIds||[])[0],targetId=contract.selector.unitIds[0],sourceInstance=`owner-${index}`,targetInstance=`target-${index}`,projected=project(`explicit-source-${index}`,[rawUnit(sourceInstance,sourceId),rawUnit(targetInstance,targetId)]),target=projected.units.find(unit=>unit.identity.instanceId===targetInstance),operationIds=new Set(contract.clauses.flatMap(clause=>clause.operations.map(operation=>operation.id))),effects=target.effects.filter(effect=>operationIds.has(effect.id));
+  assert.ok(effects.length,`${contract.canonicalRecordId}: explicit source fixture emitted no effects`);
+  assert.ok(effects.every(effect=>effect.source.ownerInstanceId===sourceInstance),`${contract.canonicalRecordId}: target displaced explicit source owner`);
+  assert.ok(effects.every(effect=>effect.source.ownerInstanceId!==targetInstance),`${contract.canonicalRecordId}: target became its own factual source`);
+  const absent=project(`explicit-source-absent-${index}`,[rawUnit(`target-only-${index}`,targetId)]).units[0];
+  assert.equal(absent.effects.some(effect=>operationIds.has(effect.id)),false,`${contract.canonicalRecordId}: effect remained active without explicit source`);
+}
+
+console.log(`Pedro Kantor identity/compatibility QA: PASS (${explicitSourceContracts.length} explicit source paths examined; ${collisionProne.length} collision-prone paths behaviorally controlled)`);

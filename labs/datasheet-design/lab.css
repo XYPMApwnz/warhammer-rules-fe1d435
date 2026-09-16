@@ -17,3 +17,13 @@ html[data-mode="current"] .panel{border-left-color:var(--bronze)}html[data-mode=
 .side-card{margin-top:16px}
 .panel{box-shadow:none}
 @media(max-width:560px){.lab-shell{padding-left:8px;padding-right:8px}.hero-art{height:190px}.hero-copy{padding:17px 15px 10px}.hero h2{font-size:3rem}.hero-intro{font-size:11px}.points-card{right:10px;top:10px;min-width:88px}.content-grid{margin-top:12px}.side-card{margin-top:12px}}
+@media(max-width:560px){
+  .weapon-table-wrap{overflow:visible;padding:0 14px 12px}
+  .weapon-table{display:block;min-width:0;width:100%;font-size:10px}
+  .weapon-table thead{display:none}
+  .weapon-table tbody,.weapon-table tr{display:block}
+  .weapon-table tr{padding:9px 0;border-bottom:1px solid var(--soft-line)}
+  .weapon-table tbody th{display:block;padding:0 0 5px;border:0;font-size:11px;white-space:normal}
+  .weapon-table td{display:inline-block;padding:2px 8px 2px 0;border:0;white-space:nowrap;color:var(--ink)}
+  .weapon-table td:last-child{display:block;padding-top:4px;color:var(--blue)}
+}

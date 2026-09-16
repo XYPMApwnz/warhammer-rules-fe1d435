@@ -116,8 +116,9 @@
     }),draftId=instanceId(env.draft),groupIds=new Set(list(env.group).map(instanceId));
     return matches.find(item=>item.input.ownerUnitId===draftId)||matches.find(item=>groupIds.has(item.input.ownerUnitId))||null;
   };
+  const declaredSourceUnitIds=contract=>[contract.sourceUnitId,...list(contract.sourceUnitIds),contract.selector?.sourceUnitId,...list(contract.selector?.sourceUnitIds)].filter(Boolean);
   const locateSourceUnit=(contract,env)=>{
-    const expected=[contract.sourceUnitId,...list(contract.sourceUnitIds),...list(contract.selector?.sourceUnitIds),...list(contract.selector?.unitIds)].filter(Boolean);
+    const declared=declaredSourceUnitIds(contract),expected=declared.length?declared:list(contract.selector?.unitIds);
     const rosterWide=['roster-reference','roster-unit-pair'].includes(scopeKey(contract.scope));
     const candidates=[env.draft,...list(env.group),...(rosterWide?list(env.gameUnits):[])].filter((item,index,items)=>item&&items.indexOf(item)===index);
     return candidates.find(unit=>expected.includes(canonicalId(unit)))||null;
@@ -140,6 +141,8 @@
     const rootUnit=['ability','datasheet-ability'].includes(contract.sourceKind)
       ?env.sourceUnit
       :contract.sourceKind==='enhancement'||['selected-wargear','wargear-ability'].includes(contract.sourceKind)?env.owner:env.draft;
+    const declared=declaredSourceUnitIds(contract),targetUnitIds=declared.length?list(contract.selector?.unitIds).filter(id=>!declared.includes(id)):[];
+    if(targetUnitIds.length){const sourceSelector={...(contract.selector||{})};delete sourceSelector.unitIds;if(!matches(sourceSelector,env,rootUnit)||!matches({unitIds:targetUnitIds},env,env.draft))return null;return env;}
     return matches(contract.selector,env,rootUnit)?env:null;
   }
   const conditionState=(conditions,env)=>{

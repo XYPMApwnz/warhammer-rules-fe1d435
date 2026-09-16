@@ -11,11 +11,12 @@ const catalog=scope.window.WH_BOOK_ROSTER_CATALOG,semantics=scope.window.TYRANID
 assert.equal(catalog.units.length,52);
 assert.equal(catalog.enhancements.length,34,'canonical Enhancement catalog must not retain legacy title duplicates');
 assert.equal(catalog.detachmentRules.length,10);
-assert.deepEqual(new Set(catalog.detachmentRules.map(rule=>rule.id)),new Set(Object.values(semantics.detachmentRuleIds)));
-assert.equal(semantics.schema,'tyranids-roster-semantics/v1');
+assert.deepEqual(new Set(catalog.detachmentRules.map(rule=>rule.id)),new Set(catalog.detachments.flatMap(detachment=>detachment.detachmentRuleIds)));
+assert.equal(semantics.schema,'wh40k-structured-effect-provider/v1');
 assert.ok(typeof semantics.gameEffects==='function');
 for(const phrase of ['Derived rule:','Derived profiles:','Apply the current','no Bodyguard Datasheet is mutated','Effect could not be applied automatically'])assert.equal(provider.includes(phrase),false,`synthetic gameplay summary remains: ${phrase}`);
-for(const id of ['elevated-might','enhancement-adaptive-biology','enhancement-parasitic-biomorphology','enhancement-relentless-hunger','tyranids-ability-vicious-insight','tyranids-ability-guardian-organism'])assert.ok(provider.includes(id),`missing curated canonical mapping: ${id}`);
+const effectContractIds=new Set(catalog.effectContracts.map(contract=>contract.canonicalRecordId));
+for(const id of ['elevated-might','enhancement-adaptive-biology','enhancement-parasitic-biomorphology','enhancement-relentless-hunger','tyranids-ability-vicious-insight','tyranids-ability-guardian-organism'])assert.ok(effectContractIds.has(id),`missing canonical effect contract: ${id}`);
 assert.ok(!provider.includes('querySelector')&&!provider.includes('innerHTML')&&!provider.includes('textContent'),'Tyranids provider must not own presentation or gameplay prose');
 assert.ok(fs.existsSync(root));
 console.log('Tyranids canonical Enhancement/provider contract: PASS.');

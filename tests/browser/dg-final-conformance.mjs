@@ -58,7 +58,8 @@ try{
     assert.equal(result.effect?.targetInstanceId,'parsed-unit-2',id);
     assert.equal(result.effect?.canonicalReference?.kind,'enhancement',id);
     assert.equal(result.effect?.provenance?.kind,'curated-provider',id);
-    assert.equal(result.effect?.provenance?.rosterFact,'explicit-attachment',id);
+    assert.equal(result.effect?.source?.kind,'explicit-attachment',id);
+    assert.equal(result.effect?.provenance?.rosterFact,'canonical-effect-contract',id);
     assert.equal(result.other,0,id);
     assert.equal(result.title,item.title.replace(/\s+-\s+\d+\s*pts$/i,''),id);
     assert.equal(result.text,item.text,id);
@@ -91,14 +92,14 @@ try{
 
   const plagueveilId='enhancement-plagueveil',plagueveil=byEnhancement(plagueveilId),plagueveilPage=await open(fixture('dg-plagueveil',plagueveil.detachmentId,[{datasheetId:'unit-plague-marines',instanceId:'parsed-unit-1',quantity:5,enhancementId:plagueveilId}]),'parsed-unit-1','unit-plague-marines');
   const plagueveilResult=await plagueveilPage.page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-1');return{effects:unit.effects.filter(item=>item.id==='plagueveil'||item.canonicalReference?.id===id).length,headings:[...document.querySelectorAll('h3,h4,h5')].filter(node=>node.textContent.trim().replace(/\s+-\s+\d+\s*pts$/i,'')==='Plagueveil').length};},plagueveilId);
-  assert.equal(plagueveilResult.effects,0);
+  assert.equal(plagueveilResult.effects,1);
   assert.equal(plagueveilResult.headings,1);
   await plagueveilPage.context.close();
 
-  const plaguebearers=byUnit('unit-plaguebearers'),instrumentId='plaguebearers-ability-instrument-of-chaos',instrumentPage=await open(fixture('dg-instrument',null,[{datasheetId:'unit-plaguebearers',instanceId:'parsed-unit-1',quantity:10,selectionIds:['unit-plaguebearers-selection-instrument-of-chaos']}]),'parsed-unit-1','unit-plaguebearers');
-  const instrumentResult=await instrumentPage.page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-1'),effect=unit.effects.find(item=>item.canonicalReference?.id===id),article=document.querySelector(`[data-roster-canonical-reference-id="${id}"]`);return{effect,count:document.querySelectorAll(`[data-roster-canonical-reference-id="${id}"]`).length,title:article?.querySelector('h5')?.textContent.trim()||'',text:article?.querySelector('p')?.textContent.trim()||''};},instrumentId);
+  const plaguebearers=byUnit('unit-plaguebearers'),instrumentId='plaguebearers-ability-instrument-of-chaos',instrumentSaved={id:'dg-instrument',roster:{faction:catalog.book.title,units:[{id:'parsed-unit-1',canonicalUnitId:'unit-plaguebearers',name:plaguebearers.title,quantity:10,models:[{name:'Plagueridden',quantity:1,wargear:'Instrument of Chaos, Plaguesword'},{name:'Plaguebearer',quantity:9,wargear:'Plaguesword'}]}],detachments:[],enhancements:[],warnings:[]},attachments:{}},instrumentPage=await open(instrumentSaved,'parsed-unit-1','unit-plaguebearers');
+  const instrumentResult=await instrumentPage.page.evaluate(id=>{const unit=window.WH_ARMY_ROSTER_GAME_PROJECTION.units.find(item=>item.identity.instanceId==='parsed-unit-1'),article=document.querySelector(`[data-roster-canonical-reference-id="${id}"]`);return{selected:unit.selection.loadout.selectedWargearAbilityIds.includes(id),count:document.querySelectorAll(`[data-roster-canonical-reference-id="${id}"]`).length,title:article?.querySelector('h5')?.textContent.trim()||'',text:article?.querySelector('p')?.textContent.trim()||''};},instrumentId);
   const canonicalInstrument=plaguebearers.gameSelections.wargearAbilities.find(item=>item.id===instrumentId);
-  assert.equal(instrumentResult.effect?.source?.kind,'selected-wargear');
+  assert.equal(instrumentResult.selected,true);
   assert.equal(instrumentResult.count,1);
   assert.equal(instrumentResult.title,canonicalInstrument.title);
   assert.equal(instrumentResult.text,canonicalInstrument.text);

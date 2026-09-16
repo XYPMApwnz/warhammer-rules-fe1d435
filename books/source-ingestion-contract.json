@@ -1284,9 +1284,9 @@
       "sourceId": "space-marines-effect-contracts",
       "authority": "structured-contract",
       "sourceType": "structured-contract",
-      "acceptedRevision": "effect-contracts-v1-2026-09-14",
-      "acceptedHash": "4f53f16f5af4fcbfa6bb57c304475ba09cbfd7da1bce5b7c0bbca664c8f8236e",
-      "lastChecked": "2026-09-14",
+      "acceptedRevision": "effect-contracts-v1-2026-09-16",
+      "acceptedHash": "6950ec87127fa602fcb2d9f010da5e382e3421a9bc65cc32c4dbb8bf2b5e1950",
+      "lastChecked": "2026-09-16",
       "upstreamUpdateKnown": false,
       "upstreamCurrentness": "N/A",
       "status": "SOURCE_LIMITED",
@@ -1296,7 +1296,7 @@
         {
           "path": "books/space-marines/sources/space-marines-effect-contracts.v1.json",
           "normalization": "lf",
-          "sha256": "4f53f16f5af4fcbfa6bb57c304475ba09cbfd7da1bce5b7c0bbca664c8f8236e"
+          "sha256": "6950ec87127fa602fcb2d9f010da5e382e3421a9bc65cc32c4dbb8bf2b5e1950"
         }
       ],
       "notes": "Accepted structured ownership for source-derived gameplay effect contracts; per-record confidence remains authoritative."

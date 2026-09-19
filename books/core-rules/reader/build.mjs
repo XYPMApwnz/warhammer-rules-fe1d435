@@ -258,7 +258,10 @@ function pageLabel(pages){
   return pages.length===1?`page ${pages[0]}`:`pages ${pages[0]}–${pages.at(-1)}`;
 }
 function sourceLabel(record){
-  if(record.currentOfficialOverride)return `Official GW update &middot; <a href="${escapeHtml(record.currentOfficialOverride.sourceArtifact)}" target="_blank" rel="noreferrer">Source ↗</a>`;
+  if(record.currentOfficialOverride){
+    const label=record.currentOfficialOverride.sourceClass==='GW_CURRENT_OFFICIAL'?'Official GW update':record.currentOfficialOverride.operation==='compatibility-alias'?'Official PDF · secondary-corroborated alias':'Secondary wording · GW gameplay corroborated';
+    return `${label} &middot; <a href="${escapeHtml(record.currentOfficialOverride.sourceArtifact)}" target="_blank" rel="noreferrer">Source ↗</a>`;
+  }
   return parity.verifiedCodes.has(record.code)?`Official PDF &middot; page ${parity.pages.get(record.code)}`:'Digital 11E';
 }
 

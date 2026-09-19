@@ -147,7 +147,8 @@ for(const [code,wording] of julyContracts){
 for(const record of digital.records){
   const start=generatedReader.indexOf(`data-rule-code="${record.code}"`);
   assert(start>=0,`${record.code} has no rendered source label`);
-  const label=effectiveDigital.records.find(rule=>rule.code===record.code)?.currentOfficialOverride?'Official GW update':parity.verifiedCodes.has(record.code)?`Official PDF &middot; page ${parity.pages.get(record.code)}`:'Digital 11E';
+  const override=effectiveDigital.records.find(rule=>rule.code===record.code)?.currentOfficialOverride;
+  const label=override?(override.sourceClass==='GW_CURRENT_OFFICIAL'?'Official GW update':override.operation==='compatibility-alias'?'Official PDF · secondary-corroborated alias':'Secondary wording · GW gameplay corroborated'):parity.verifiedCodes.has(record.code)?`Official PDF &middot; page ${parity.pages.get(record.code)}`:'Digital 11E';
   assert(generatedReader.slice(start,start+1200).includes(label),`${record.code} has an unverified source label`);
 }
 for(const artifact of ['1&quot;&quot;','modified to ‘-’ Profiles','start an action Actions','Select Battle Size table Select Battle Size'])assert(!generatedReader.includes(artifact),`visible text corruption remains: ${artifact}`);

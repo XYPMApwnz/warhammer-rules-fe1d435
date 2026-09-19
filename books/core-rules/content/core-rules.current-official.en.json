@@ -1,0 +1,92 @@
+{
+  "schema": "wh40k-core-current-official/v1",
+  "asOf": "2026-09-19",
+  "ruleOverrides": [
+    {
+      "code": "01.02.03",
+      "partition": "ERRATA",
+      "operation": "replace-line-by-prefix",
+      "linePrefix": "If a leader or support model in an attached unit is destroyed and subsequently revived,",
+      "currentLine": "If a leader or support model in an attached unit is destroyed and subsequently revived, it returns on its own as a unit of one, rather than returning as part of its attached unit.",
+      "sourceClass": "GW_CURRENT_OFFICIAL",
+      "sourceArtifact": "https://www.warhammer-community.com/en-gb/articles/rgqanids/warhammer-40000-july-update-what-you-need-to-know/",
+      "sourceDate": "2026-07-22",
+      "overrides": "Older attached-unit return semantics in the secondary digital snapshot",
+      "confidence": "OFFICIAL_SEMANTICS_CONFIRMED"
+    },
+    {
+      "code": "08.02.01",
+      "partition": "ERRATA",
+      "operation": "ensure-line-by-prefix",
+      "linePrefix": "You can only generate a single extra CP per battle round.",
+      "currentLine": "You can only generate a single extra CP per battle round.",
+      "sourceClass": "GW_CURRENT_OFFICIAL",
+      "sourceArtifact": "https://www.warhammer-community.com/en-gb/articles/rgqanids/warhammer-40000-july-update-what-you-need-to-know/",
+      "sourceDate": "2026-07-22",
+      "overrides": "Older secondary snapshot without the additional CP cap",
+      "confidence": "OFFICIAL_SEMANTICS_CONFIRMED"
+    },
+    {
+      "code": "15.06",
+      "partition": "ERRATA",
+      "operation": "compatibility-alias",
+      "canonicalTitle": "CRUSHING IMPACT",
+      "aliases": ["Tank Shock"],
+      "sourceClass": "GW_CURRENT_OFFICIAL",
+      "sourceArtifact": "https://www.warhammer-community.com/en-gb/articles/1j6efpun/warhammer-40000-faction-focus-adeptus-custodes/",
+      "sourceDate": "2026-05-14",
+      "overrides": "Former Tank Shock stratagem name",
+      "confidence": "OFFICIAL_EXPLICIT_EQUIVALENCE"
+    }
+  ],
+  "universalRulesUpdates": [
+    {
+      "id": "uru-2026-07-22-stratagem-cp-cost",
+      "partition": "UNIVERSAL_RULE_UPDATE",
+      "title": "Modifying a Stratagem's CP Cost",
+      "text": "If a rule lets you target a friendly unit with an unnamed Stratagem for 0CP, it instead reduces the CP cost of that use by 1CP.",
+      "sourceClass": "GW_CURRENT_OFFICIAL",
+      "sourceArtifact": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_universal_rules_updates-coltxp7ngi-3kvdfxwyon.pdf",
+      "sourceDate": "2026-07-22",
+      "sourceLocator": "page 1, Modifying a Stratagem's CP Cost",
+      "overrides": "Generic unnamed 0CP Stratagem effects",
+      "confidence": "OFFICIAL_EXACT_SEMANTICS"
+    },
+    {
+      "id": "uru-2026-07-22-stratagem-reuse",
+      "partition": "UNIVERSAL_RULE_UPDATE",
+      "title": "Stratagems That Can Be Used More Than Once per Phase or Turn",
+      "text": "Parts of a rule permitting a Stratagem to be used after another unit was targeted with it in the same phase apply only if that rule explicitly names the Stratagem. The same requirement applies to bypassing a Stratagem's one-use-per-player limit per turn, battle round or battle.",
+      "sourceClass": "GW_CURRENT_OFFICIAL",
+      "sourceArtifact": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_universal_rules_updates-coltxp7ngi-3kvdfxwyon.pdf",
+      "sourceDate": "2026-07-22",
+      "sourceLocator": "page 1, Stratagems That Can Be Used More Than Once per Phase/Turn",
+      "overrides": "Generic unnamed Stratagem reuse permissions",
+      "confidence": "OFFICIAL_EXACT_SEMANTICS"
+    },
+    {
+      "id": "uru-2026-07-22-defensive-stratagem-range",
+      "partition": "UNIVERSAL_RULE_UPDATE",
+      "title": "Stratagems That Prevent Units from Being Targeted",
+      "text": "If a Stratagem prevents ranged attacks against its target unless the attacking model is within 12 inches, that distance becomes 18 inches for either form of this restriction specified in the official update.",
+      "sourceClass": "GW_CURRENT_OFFICIAL",
+      "sourceArtifact": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_universal_rules_updates-coltxp7ngi-3kvdfxwyon.pdf",
+      "sourceDate": "2026-07-22",
+      "sourceLocator": "page 1, Stratagems That Prevent Units from Being Targeted",
+      "overrides": "Specified 12-inch ranged-target restrictions on Stratagems",
+      "confidence": "OFFICIAL_EXACT_SEMANTICS"
+    },
+    {
+      "id": "uru-2026-07-22-identical-destroyed-unit",
+      "partition": "UNIVERSAL_RULE_UPDATE",
+      "title": "Stratagems That Add New Units to Your Army",
+      "text": "A Stratagem that adds a new unit identical to one of your destroyed units gains a once-per-battle use restriction.",
+      "sourceClass": "GW_CURRENT_OFFICIAL",
+      "sourceArtifact": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_universal_rules_updates-coltxp7ngi-3kvdfxwyon.pdf",
+      "sourceDate": "2026-07-22",
+      "sourceLocator": "page 1, Stratagems That Add New Units to Your Army",
+      "overrides": "Unrestricted repeated use of qualifying unit-replacement Stratagems",
+      "confidence": "OFFICIAL_EXACT_SEMANTICS"
+    }
+  ]
+}

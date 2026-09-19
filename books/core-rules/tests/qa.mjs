@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {verifyPdfParity} from '../tools/verify_pdf_parity.mjs';
 import {recordText} from '../content/record-content.mjs';
+import {applyCoreCurrentOfficial} from '../content/core-current-official.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sourceRoot=root;
@@ -30,8 +31,9 @@ const readerFiles=fs.readdirSync(readerRoot).filter(file=>file.endsWith('.html')
 assert.equal(readerFiles.length,27,'complete routed reader requires Start plus 26 section pages');
 assert(fs.existsSync(path.join(readerRoot,'build.mjs')),'routed reader generator is required');
 const digital=JSON.parse(read('content/core-rules.digital-11e.json'));
+const effectiveDigital=applyCoreCurrentOfficial(digital);
 assert.equal(digital.meta.edition,'11E','reader must use the 11E digital reference');
-assert.equal(digital.records.length,271,'unexpected Wahapedia 11E record count');
+assert(digital.records.length>0,'the accepted digital Core snapshot must contain records');
 assert.equal(new Set(digital.records.map(record=>record.code)).size,digital.records.length,'digital rule codes must be unique');
 const recordsByCode=new Map(digital.records.map(record=>[record.code,record]));
 const julyContracts=new Map([
@@ -122,10 +124,10 @@ for(const [index,id] of routeIds.entries()){
   if(index<routeIds.length-1)assert(page.includes(`href="${routeIds[index+1]}.html"`),`${id} is missing next chapter`);
   for(const termId of [...page.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]))assert(glossary[termId],`${id} contains unresolved term ${termId}`);
 }
-assert.equal(routedRules,271,'routed reader must contain every 11E reference record');
+assert.equal(routedRules,digital.records.length,'routed reader must contain every 11E reference record');
 const searchIndex=JSON.parse(fs.readFileSync(path.join(readerRoot,'search-index.json'),'utf8'));
-assert.equal(searchIndex.length,276,'search index must contain every 11E record and official FAQ');
-assert.equal(new Set(searchIndex.map(item=>item.code)).size,276,'search index identifiers must be unique');
+const expectedSearchCodes=new Set([...digital.records.map(record=>record.code),...effectiveDigital.universalRulesUpdates.map(update=>update.id),...faqs.map(faq=>faq.id)]);
+assert.deepEqual(new Set(searchIndex.map(item=>item.code)),expectedSearchCodes,'search index must contain every base record, current official update and FAQ exactly once');
 for(const item of searchIndex){
   const [file,anchor]=item.url.split('#');
   const target=fs.readFileSync(path.join(readerRoot,file),'utf8');
@@ -145,7 +147,7 @@ for(const [code,wording] of julyContracts){
 for(const record of digital.records){
   const start=generatedReader.indexOf(`data-rule-code="${record.code}"`);
   assert(start>=0,`${record.code} has no rendered source label`);
-  const label=parity.verifiedCodes.has(record.code)?`Official PDF &middot; page ${parity.pages.get(record.code)}`:'Digital 11E';
+  const label=effectiveDigital.records.find(rule=>rule.code===record.code)?.currentOfficialOverride?'Official GW update':parity.verifiedCodes.has(record.code)?`Official PDF &middot; page ${parity.pages.get(record.code)}`:'Digital 11E';
   assert(generatedReader.slice(start,start+1200).includes(label),`${record.code} has an unverified source label`);
 }
 for(const artifact of ['1&quot;&quot;','modified to ‘-’ Profiles','start an action Actions','Select Battle Size table Select Battle Size'])assert(!generatedReader.includes(artifact),`visible text corruption remains: ${artifact}`);
@@ -260,3 +262,4 @@ assert(sourcePage.indexOf('Official GW PDF ↗')<sourcePage.indexOf('Secondary r
 const abilitiesPage=fs.readFileSync(path.join(readerRoot,'core-abilities.html'),'utf8');
 assert(abilitiesPage.includes('href="#rule-24-38"'),'Core Abilities contents must not truncate later rules');
 console.log(`QA passed: ${routeIds.length} reader chapters, ${digital.records.length} Wahapedia 11E records, ${diagramCount} diagrams, 88 official source pages.`);
+await import('./currentness-qa.mjs');

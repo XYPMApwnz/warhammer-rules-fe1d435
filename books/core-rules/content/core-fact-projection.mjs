@@ -3,6 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {recordText} from './record-content.mjs';
+import {applyCoreCurrentOfficial} from './core-current-official.mjs';
 
 const coreRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const defaultRepoRoot=path.resolve(coreRoot,'..','..');
@@ -24,7 +25,7 @@ export function createCoreFactProjection({repoRoot=defaultRepoRoot}={}){
   const contentRoot=path.join(repoRoot,'books','core-rules','content'),glossaryRoot=path.join(repoRoot,'glossary');
   const coreData=loadWindow(path.join(contentRoot,'core-rules.en.js')).CORE_RULES;
   const coreSource=loadWindow(path.join(contentRoot,'core-rules.source.en.js')).CORE_PDF_SOURCE;
-  const coreDigital=readJson(path.join(contentRoot,'core-rules.digital-11e.json'));
+  const coreDigital=applyCoreCurrentOfficial(readJson(path.join(contentRoot,'core-rules.digital-11e.json')));
   const quickReferences=readJson(path.join(glossaryRoot,'core-quick-reference.en.json'));
   const resolutions=readJson(path.join(glossaryRoot,'resolutions.en.json'));
   const supplemental=readJson(path.join(glossaryRoot,'supplemental-terms.en.json'));
@@ -102,5 +103,5 @@ export function createCoreFactProjection({repoRoot=defaultRepoRoot}={}){
   for(const term of terms.values())term.aliases=Object.entries(aliases).filter(([,target])=>target===term.id).map(([alias])=>alias).filter(alias=>alias!==term.id).sort();
   const coreAbilities=[...terms.values()].filter(term=>term.kind==='core-ability').sort((left,right)=>left.id.localeCompare(right.id));
   const abilityIdentityTerms=[...coreAbilities,...['core-attached-unit','core-bodyguard'].map(id=>terms.get(id)).filter(Boolean)].sort((left,right)=>left.id.localeCompare(right.id));
-  return Object.freeze({terms:Object.freeze([...terms.values()].map(term=>Object.freeze(term))),coreAbilities:Object.freeze(coreAbilities),abilityIdentityTerms:Object.freeze(abilityIdentityTerms),aliases:Object.freeze(aliases),coreRules:Object.freeze(coreRules),coreDigital,coreData,coreSource,coreByTitle,coreIdByCode,digitalCoreId,digitalTitle,coreSectionByNumber});
+  return Object.freeze({terms:Object.freeze([...terms.values()].map(term=>Object.freeze(term))),coreAbilities:Object.freeze(coreAbilities),abilityIdentityTerms:Object.freeze(abilityIdentityTerms),aliases:Object.freeze(aliases),coreRules:Object.freeze(coreRules),coreDigital,coreUniversalUpdates:Object.freeze(coreDigital.universalRulesUpdates),coreData,coreSource,coreByTitle,coreIdByCode,digitalCoreId,digitalTitle,coreSectionByNumber});
 }

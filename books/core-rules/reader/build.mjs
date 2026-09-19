@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {verifyPdfParity} from '../tools/verify_pdf_parity.mjs';
 import {recordText} from '../content/record-content.mjs';
+import {applyCoreCurrentOfficial} from '../content/core-current-official.mjs';
 
 const root=path.dirname(fileURLToPath(import.meta.url));
 const bookRoot=path.dirname(root);
@@ -20,8 +21,9 @@ const modules=[
   {id:'introduction',title:'Introduction',sections:[data.introduction.id]},
   ...data.groups.map(group=>({id:group.id,title:group.title,sections:group.sections.map(section=>section.id)}))
 ];
-const digital=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','core-rules.digital-11e.json'),'utf8'));
-const parity=verifyPdfParity(pdf,digital);
+const baseDigital=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','core-rules.digital-11e.json'),'utf8'));
+const parity=verifyPdfParity(pdf,baseDigital);
+const digital=applyCoreCurrentOfficial(baseDigital);
 const registry=JSON.parse(fs.readFileSync(path.join(repoRoot,'glossary','registry.en.json'),'utf8'));
 const sections=[data.introduction,...data.groups.flatMap(group=>group.sections)];
 const byId=new Map(sections.map(section=>[section.id,section]));
@@ -256,6 +258,7 @@ function pageLabel(pages){
   return pages.length===1?`page ${pages[0]}`:`pages ${pages[0]}–${pages.at(-1)}`;
 }
 function sourceLabel(record){
+  if(record.currentOfficialOverride)return `Official GW update &middot; <a href="${escapeHtml(record.currentOfficialOverride.sourceArtifact)}" target="_blank" rel="noreferrer">Source ↗</a>`;
   return parity.verifiedCodes.has(record.code)?`Official PDF &middot; page ${parity.pages.get(record.code)}`:'Digital 11E';
 }
 
@@ -345,6 +348,12 @@ function introductionArticle(){
   return `<article class="rule kind-introduction" id="introduction-overview"><header class="rule-head"><h3>Welcome to Warhammer 40,000</h3><span class="page">Introduction</span></header><div class="rule-body">${paragraphs}</div></article>`;
 }
 
+function universalUpdateCards(){
+  const updates=digital.universalRulesUpdates||[];
+  if(!updates.length)return '';
+  return `<section class="universal-updates" aria-label="Universal Rules Updates"><h2>Universal Rules Updates</h2><p>Current official updates to rules with a broader scope than individual Faction Packs. <a href="${escapeHtml(updates[0].sourceArtifact)}" target="_blank" rel="noreferrer">GW source ↗</a></p><div class="rules">${updates.map(update=>`<article class="rule" id="${escapeHtml(update.id)}" data-update-id="${escapeHtml(update.id)}"><header class="rule-head"><h3>${escapeHtml(update.title)}</h3><span class="page">Official GW update</span></header><div class="rule-body"><p>${escapeHtml(update.text)}</p></div></article>`).join('')}</div></section>`;
+}
+
 function sectionPage(id,index){
   const section=byId.get(id);
   const pages=pdf.sections[id]||[];
@@ -358,7 +367,7 @@ function sectionPage(id,index){
     const parents=records.filter(record=>record.code.split('.').length===2);
     if(id==='stratagems'){
       const overview=parents.filter(record=>record.code==='15.01').map(record=>mainRule(record,records.filter(child=>child.code.startsWith(`${record.code}.`)))).join('');
-      cards=`${overview}<div class="core-stratagem-grid">${parents.filter(record=>record.code!=='15.01').map(stratagemCard).join('')}</div>`;
+      cards=`${overview}<div class="core-stratagem-grid">${parents.filter(record=>record.code!=='15.01').map(stratagemCard).join('')}</div>${universalUpdateCards()}`;
     }else cards=parents.map(record=>mainRule(record,records.filter(child=>child.code.startsWith(`${record.code}.`)))).join('');
   }
   const anchors=id==='introduction'?[]:records.filter(record=>record.code.split('.').length===2).map(record=>({id:`rule-${slug(record.code)}`,title:record.title}));
@@ -378,8 +387,9 @@ fs.writeFileSync(path.join(root,'index.html'),shell({title:'Core Rules Reference
 for(const [index,id] of order.entries())fs.writeFileSync(path.join(root,fileFor(id)),sectionPage(id,index));
 const searchIndex=digital.records.map(record=>{
   const sectionId=sectionByNumber.get(record.code.slice(0,2));
-  return {code:record.code,title:record.title,chapter:byId.get(sectionId)?.title||'',text:normalize(recordText(record)),url:`${fileFor(sectionId)}#rule-${slug(record.code)}`};
+  return {code:record.code,title:record.title,chapter:byId.get(sectionId)?.title||'',text:normalize(`${recordText(record)} ${(record.compatibilityAliases||[]).join(' ')}`),url:`${fileFor(sectionId)}#rule-${slug(record.code)}`};
 });
+for(const update of digital.universalRulesUpdates||[])searchIndex.push({code:update.id,title:update.title,chapter:'Stratagems',text:update.text,url:`stratagems.html#${update.id}`});
 for(const faq of faqs){
   const sectionId=sectionByNumber.get(faq.primaryRule.slice(0,2));
   searchIndex.push({code:faq.id,title:faq.question,chapter:byId.get(sectionId)?.title||'',text:faq.answer,url:`${fileFor(sectionId)}#${faq.id}`});
@@ -387,4 +397,4 @@ for(const faq of faqs){
 fs.writeFileSync(path.join(root,'search-index.json'),JSON.stringify(searchIndex));
 const stale=path.join(root,'rules-appendix.html');
 if(fs.existsSync(stale))fs.unlinkSync(stale);
-console.log(`Core Rules Reader built: ${order.length} chapters, ${digital.records.length} Wahapedia 11E records, ${Object.values(digital.images).flat().length} diagrams.`);
+console.log(`Core Rules Reader built: ${order.length} chapters, ${digital.records.length} base 11E records, ${digital.universalRulesUpdates.length} current official universal updates, ${Object.values(digital.images).flat().length} diagrams.`);

@@ -29,14 +29,25 @@
   let termOpener;
   let drawerScrollY = 0;
 
-  function showTerm(trigger) {
+  const glossaryReady=window.WH40K_GLOSSARY?Promise.resolve(window.WH40K_GLOSSARY):new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    script.src='../../../glossary/generated/glossary.en.js';
+    script.onload=()=>window.WH40K_GLOSSARY?resolve(window.WH40K_GLOSSARY):reject(new Error('Glossary runtime did not initialize'));
+    script.onerror=()=>reject(new Error('Glossary runtime failed to load'));
+    document.head.append(script);
+  });
+
+  async function showTerm(trigger) {
+    const api=await glossaryReady.catch(()=>null);
+    const term=api?.resolveView?.('core-rules',trigger.dataset.term);
+    if(!term)return;
     termOpener = trigger;
-    title.textContent = trigger.dataset.termTitle || trigger.textContent.trim();
-    summary.textContent = trigger.dataset.termSummary;
-    full.href = `../../../glossary/index.html#${trigger.dataset.term}`;
-    rule.hidden = !trigger.dataset.fullRulePath;
-    if (trigger.dataset.fullRulePath) rule.href = window.WHGlossaryReturn.href(trigger.dataset.fullRulePath);
-    dialog.dataset.openTerm = trigger.dataset.term;
+    title.textContent = term.title;
+    summary.textContent = term.definition;
+    full.href = `../../../glossary/index.html#${term.id}`;
+    rule.hidden = !term.fullRulePath;
+    if (term.fullRulePath) rule.href = window.WHGlossaryReturn.href(term.fullRulePath);
+    dialog.dataset.openTerm = term.id;
     dialog.showModal();
   }
 

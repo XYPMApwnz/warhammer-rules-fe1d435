@@ -1,0 +1,184 @@
+{
+  "schema": "warhammer-source-manifest/v2",
+  "verifiedAt": "2026-09-22",
+  "layers": [
+    {
+      "id": "event-companion-v1.1",
+      "sourceId": "wh40k-11e-event-companion-v1.1-2026-07-22",
+      "authority": "official",
+      "role": "event-mission-and-layout-source",
+      "title": "Warhammer 40,000 Event Companion",
+      "version": "1.1",
+      "date": "2026-07-22",
+      "retrievedAt": "2026-09-22",
+      "frozenAt": "2026-09-22",
+      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_event_companion-alyapl19us-b2drgwkji4.pdf",
+      "localFile": "warhammer-40000-event-companion-v1.1-2026-07-22.pdf",
+      "localPath": "missions/sources/warhammer-40000-event-companion-v1.1-2026-07-22.pdf",
+      "sha256": "97AE5591BE2E58BDB636E97127EAC0877F9BF28B29FC607ED4EAD4D377FB8F20",
+      "pageCount": 93,
+      "scope": "EVENT_ONLY",
+      "currentStatus": "CURRENT_PUBLIC_DOWNLOAD_WITH_NEWER_APP_CHANGES_UNCAPTURED",
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "coverage": {
+        "eventMissionSequence": "complete for v1.1",
+        "eventScoringFramework": "complete for v1.1",
+        "chapterApprovedErrataAndFaq": "complete as published in v1.1",
+        "eventLayouts": 45,
+        "forceDispositionPairings": 15,
+        "layoutVariantsPerPairing": 3,
+        "crossChannelCurrentness": "partial: official August update announces later layout adjustments not present in the public v1.1 PDF"
+      },
+      "factsOwned": [
+        "versioned-v1.1-event-mission-sequence",
+        "versioned-v1.1-event-layout-relationships",
+        "versioned-v1.1-event-deployment-geometry",
+        "versioned-v1.1-event-objective-placement",
+        "versioned-v1.1-event-terrain-footprints-and-categories",
+        "event-base-size-guidance"
+      ],
+      "knownGaps": [
+        "Authenticated August 2026 app layout adjustments",
+        "Standard-play Deployment cards",
+        "Twist cards",
+        "Full Primary Mission card bodies",
+        "Full Secondary Mission card bodies",
+        "Standard casual terrain and objective maps"
+      ],
+      "consumers": [
+        "FUTURE_VERSIONED_EVENT_MISSION_MODEL",
+        "FUTURE_VERSIONED_EVENT_LAYOUT_MODEL",
+        "SOURCE_VERIFICATION"
+      ],
+      "paths": [
+        "missions/sources/warhammer-40000-event-companion-v1.1-2026-07-22.pdf",
+        "docs/rules-universe/STANDARD_MISSIONS_SOURCE_ACQUISITION_2026-09-22.md"
+      ],
+      "supersedes": [
+        "wh40k-11e-event-companion-v1.0-2026-06-12"
+      ],
+      "supersededBy": []
+    },
+    {
+      "id": "event-companion-v1.0",
+      "sourceId": "wh40k-11e-event-companion-v1.0-2026-06-12",
+      "authority": "official",
+      "role": "historical-event-mission-and-layout-source",
+      "title": "Warhammer 40,000 Event Companion",
+      "version": "1.0",
+      "date": "2026-06-12",
+      "retrievedAt": "2026-09-22",
+      "frozenAt": "2026-09-22",
+      "url": "https://assets.warhammer-community.com/eng_12-06_warhammer40000_event_companion-s3bfb5f9s1-ivswuij3fo.pdf",
+      "localFile": "warhammer-40000-event-companion-v1.0-2026-06-12.pdf",
+      "localPath": "missions/sources/warhammer-40000-event-companion-v1.0-2026-06-12.pdf",
+      "sha256": "0E26F6586929E7EC4C50C6A17D240ED794BB7B6C654D1D9664FB908ABC606A19",
+      "pageCount": 93,
+      "scope": "EVENT_ONLY",
+      "currentStatus": "SUPERSEDED",
+      "sourceType": "official-pdf",
+      "lifecycle": "SUPERSEDED_SOURCE",
+      "coverage": "Historical v1.0 event sequence and 45-layout snapshot",
+      "factsOwned": [
+        "historical-v1.0-event-layout-snapshot"
+      ],
+      "consumers": [
+        "SOURCE_SUPERSESSION_VERIFICATION"
+      ],
+      "paths": [
+        "missions/sources/warhammer-40000-event-companion-v1.0-2026-06-12.pdf"
+      ],
+      "supersedes": [],
+      "supersededBy": [
+        "wh40k-11e-event-companion-v1.1-2026-07-22"
+      ]
+    },
+    {
+      "id": "chapter-approved-2026-27",
+      "sourceId": "wh40k-11e-chapter-approved-2026-27",
+      "authority": "official",
+      "role": "standard-mission-source",
+      "title": "Warhammer 40,000: Chapter Approved Mission Deck 2026-27",
+      "date": "2026-06-13",
+      "url": "https://www.warhammer.com/shop/warhammer-40k-chapter-approved-mission-deck-2026-eng",
+      "releaseUrl": "https://www.warhammer-community.com/en-gb/articles/adciuo3f/saturday-pre-orders-new40k-rules-card-packs-and-more/",
+      "scope": "STANDARD_11E",
+      "currentStatus": "CURRENT",
+      "sourceType": "official-physical-product",
+      "lifecycle": "EVIDENCE_PENDING",
+      "active": true,
+      "coverage": "Product identity and included card families authenticated; complete card and reference-booklet contents unavailable",
+      "factsOwned": [
+        "primary-missions",
+        "secondary-objectives",
+        "deployment-cards",
+        "force-disposition-cards",
+        "twists",
+        "standard-mission-sequence-and-scoring",
+        "standard-terrain-and-objective-maps"
+      ],
+      "knownGaps": [
+        "Full Primary Mission card bodies and scoring conditions",
+        "Full Secondary Objective identities, conditions and scoring",
+        "Complete Deployment identities, geometry and measurements",
+        "Complete Twist identities and text",
+        "Complete instruction/reference booklet",
+        "Complete standard casual terrain and objective maps"
+      ],
+      "consumers": [
+        "FUTURE_STANDARD_MISSION_MODEL",
+        "SOURCE_VERIFICATION"
+      ],
+      "paths": [
+        "docs/rules-universe/STANDARD_MISSIONS_SOURCE_ACQUISITION_2026-09-22.md"
+      ],
+      "supersedes": [
+        "chapter-approved-2025-26"
+      ],
+      "supersededBy": []
+    },
+    {
+      "id": "chapter-approved-system-overview",
+      "sourceId": "wh40k-11e-chapter-approved-system-overview-2026-05-28",
+      "authority": "official",
+      "role": "supporting-system-evidence",
+      "title": "The Chapter Approved Deck - What is it and how does it work?",
+      "date": "2026-05-28",
+      "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+      "scope": "STANDARD_11E",
+      "currentStatus": "CURRENT",
+      "sourceType": "official-rules-article",
+      "lifecycle": "ACCEPTED_CORROBORATION",
+      "factsOwned": [
+        "system-shape-and-counts-only"
+      ],
+      "knownGaps": [
+        "Not accepted as a substitute for card text or geometry"
+      ],
+      "supersedes": [],
+      "supersededBy": []
+    },
+    {
+      "id": "chapter-approved-mission-overview",
+      "sourceId": "wh40k-11e-force-disposition-mission-overview-2026-04-03",
+      "authority": "official",
+      "role": "supporting-sequence-and-scoring-evidence",
+      "title": "New40k - How your army affects your mission",
+      "date": "2026-04-03",
+      "url": "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+      "scope": "STANDARD_11E",
+      "currentStatus": "CURRENT",
+      "sourceType": "official-rules-article",
+      "lifecycle": "ACCEPTED_CORROBORATION",
+      "factsOwned": [
+        "public-system-overview-only"
+      ],
+      "knownGaps": [
+        "Not accepted as a substitute for complete cards or reference booklet"
+      ],
+      "supersedes": [],
+      "supersededBy": []
+    }
+  ]
+}

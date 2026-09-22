@@ -7705,6 +7705,68 @@
         }
       ],
       "label": "End-of-battle scoring timing FAQ"
+    },
+    {
+      "id": "faq-operation-marker-status-removal",
+      "targetId": "mission-reference-operation-markers",
+      "operation": "APPEND_CLARIFICATION",
+      "clarification": {
+        "type": "REMOVING_OPERATION_MARKER_REMOVES_APPLIED_STATUS",
+        "sourceQuestion": "When a mission action places an operation marker and applies a status (e.g. 'decoyed'), does removing that operation marker also remove that status?",
+        "sourceText": "Yes."
+      },
+      "applicableScopes": [
+        "EVENT_PLAY"
+      ],
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "faq-operation-marker-status-removal",
+        "contentLocator": "Event Companion v1.2 p4",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "FAQ_OVERLAY",
+      "aliases": [],
+      "references": [
+        {
+          "id": "mission-reference-operation-markers",
+          "relationType": "OVERLAY_TARGET"
+        }
+      ],
+      "label": "Operation-marker status removal FAQ"
+    },
+    {
+      "id": "faq-primary-operation-marker-removal",
+      "targetId": "mission-reference-operation-markers",
+      "operation": "APPEND_CLARIFICATION",
+      "clarification": {
+        "type": "PRIMARY_OPERATION_MARKERS_REMOVABLE_ONLY_WHEN_CARD_SPECIFIES",
+        "sourceQuestion": "Some Primary Mission cards let a player place operation markers on the battlefield. Can I remove these?",
+        "sourceText": "Your Primary Mission card will specify how and when you can remove operation markers from the battlefield. If it doesn’t, you cannot remove operation markers."
+      },
+      "applicableScopes": [
+        "EVENT_PLAY"
+      ],
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "faq-primary-operation-marker-removal",
+        "contentLocator": "Event Companion v1.2 p4",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "FAQ_OVERLAY",
+      "aliases": [],
+      "references": [
+        {
+          "id": "mission-reference-operation-markers",
+          "relationType": "OVERLAY_TARGET"
+        }
+      ],
+      "label": "Primary operation-marker removal FAQ"
     }
   ],
   "forceDispositionMatchups": [
@@ -8723,7 +8785,7 @@
       ],
       "provenance": {
         "profileId": "provenance-event-companion-v1-2-official",
-        "sourceRecordId": "event-mission-sequence-v1.2",
+        "sourceRecordId": "event-determine-layout-v1.2",
         "contentLocator": "Event Companion v1.2 pp1-2",
         "applicableScopes": [
           "EVENT_PLAY"
@@ -8747,6 +8809,112 @@
         }
       ],
       "label": "Event Companion v1.2 Determine a Layout sequence"
+    },
+    {
+      "id": "event-sequence-determine-mission-v1-2",
+      "operation": "REPLACE_SEQUENCE_STAGES",
+      "replacesSequenceRuleIds": [
+        "mission-sequence-determine-mission"
+      ],
+      "replacementRule": {
+        "id": "event-mission-sequence-determine-mission",
+        "label": "Determine Mission",
+        "order": 2,
+        "requirements": [
+          {
+            "type": "USE_PRESELECTED_FORCE_DISPOSITION_CARD"
+          },
+          {
+            "type": "FIND_OPPONENT_FORCE_DISPOSITION_SYMBOL_ON_OWN_CARD"
+          },
+          {
+            "type": "ASSIGN_LISTED_PRIMARY_MISSION_TO_PLAYER"
+          }
+        ],
+        "coreRuleRefs": [],
+        "recordType": "MISSION_SEQUENCE_RULE",
+        "aliases": [],
+        "references": []
+      },
+      "applicableScopes": [
+        "EVENT_PLAY"
+      ],
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-determine-mission-v1.2",
+        "contentLocator": "Event Companion v1.2 p1 / Step 2 Determine Mission",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "EVENT_SEQUENCE_OVERLAY",
+      "aliases": [],
+      "references": [
+        {
+          "id": "mission-sequence-determine-mission",
+          "relationType": "REPLACED_SEQUENCE_RULE"
+        }
+      ],
+      "label": "Event Companion v1.2 Determine Mission sequence"
+    },
+    {
+      "id": "event-sequence-muster-armies-v1-2",
+      "operation": "REPLACE_SEQUENCE_STAGES",
+      "replacesSequenceRuleIds": [
+        "mission-sequence-muster-armies"
+      ],
+      "replacementRule": {
+        "id": "event-mission-sequence-muster-armies",
+        "label": "Muster Armies",
+        "order": 1,
+        "requirements": [
+          {
+            "type": "MUSTER_ARMIES_AS_DESCRIBED_IN_WARHAMMER_40000_APP"
+          },
+          {
+            "type": "AFTER_MUSTERING_SELECT_ONE_AVAILABLE_FORCE_DISPOSITION"
+          },
+          {
+            "type": "RECORD_SELECTED_FORCE_DISPOSITION_ON_ROSTER"
+          },
+          {
+            "type": "COMPLETE_BEFORE_ATTENDING_EVENT"
+          }
+        ],
+        "coreRuleRefs": [
+          "core-rule-muster-armies"
+        ],
+        "recordType": "MISSION_SEQUENCE_RULE",
+        "aliases": [],
+        "references": [
+          {
+            "id": "core-rule-muster-armies",
+            "relationType": "CORE_RULE"
+          }
+        ]
+      },
+      "applicableScopes": [
+        "EVENT_PLAY"
+      ],
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-muster-force-disposition-roster-preselection-v1.2",
+        "contentLocator": "Event Companion v1.2 p1 / Step 1 Muster Armies",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "EVENT_SEQUENCE_OVERLAY",
+      "aliases": [],
+      "references": [
+        {
+          "id": "mission-sequence-muster-armies",
+          "relationType": "REPLACED_SEQUENCE_RULE"
+        }
+      ],
+      "label": "Event Companion v1.2 Muster Armies sequence"
     }
   ],
   "terrainLayouts": [
@@ -13220,6 +13388,49 @@
         ]
       },
       "recordType": "MISSION_REFERENCE_RULE",
+      "references": []
+    },
+    {
+      "id": "mission-reference-event-generating-command-points",
+      "label": "Generating Command Points",
+      "ruleBody": {
+        "type": "COMMAND_POINT_GAIN_LIMIT",
+        "governedCommandPointSourceScope": "ALL_NON_CORE_CP_SOURCES",
+        "excludedCoreGain": "CORE_RULE_START_OF_COMMAND_PHASE_CP",
+        "maximumAdditionalCommandPointsPerPlayerPerBattleRound": 1,
+        "secondaryMissionDiscardCpCountsTowardLimit": true
+      },
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-generating-command-points-v1.2",
+        "contentLocator": "Event Companion v1.2 p1 / Generating Command Points",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_REFERENCE_RULE",
+      "aliases": [],
+      "references": []
+    },
+    {
+      "id": "mission-reference-operation-markers",
+      "label": "Primary Mission Operation Markers",
+      "ruleBody": {
+        "subject": "PRIMARY_MISSION_OPERATION_MARKERS",
+        "purpose": "MISSION_WIDE_FAQ_TARGET"
+      },
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-operation-marker-faqs-v1.2",
+        "contentLocator": "Event Companion v1.2 p4 / Chapter Approved Mission Deck FAQs",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_REFERENCE_RULE",
+      "aliases": [],
       "references": []
     }
   ]

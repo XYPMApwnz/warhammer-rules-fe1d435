@@ -36,7 +36,8 @@ function canonicalRecordIds(facts) {
 function sourceEvidenceIds() {
   return new Set([
     ...Object.values(evidence.records).flat().map(({id}) => id),
-    ...evidence.faqOverlays.map(({id}) => id)
+    ...evidence.faqOverlays.map(({id}) => id),
+    ...evidence.eventMissionSemantics.map(({id}) => id)
   ]);
 }
 
@@ -69,7 +70,7 @@ assert.equal(new Set(ids).size, ids.length, 'canonical IDs must be globally uniq
 assert.equal(canonical.importCoverage, 'FULL_CURRENT_CORPUS');
 
 const evidenceIds = sourceEvidenceIds();
-for (const partition of ['forceDispositions', 'primaryMissions', 'secondaryMissions', 'deployments', 'twists', 'missionSequenceRules', 'missionReferenceRules', 'faqOverlays']) {
+for (const partition of ['forceDispositions', 'primaryMissions', 'secondaryMissions', 'deployments', 'twists', 'missionSequenceRules', 'missionReferenceRules', 'faqOverlays', 'eventSequenceOverlays']) {
   for (const record of canonical[partition]) {
     assert.ok(
       evidenceIds.has(record.provenance.sourceRecordId)

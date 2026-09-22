@@ -32,8 +32,10 @@ function assertFullCounts(facts) {
   assert.equal(facts.deployments.length, 6);
   assert.equal(facts.twists.length, 6);
   assert.equal(facts.missionSequenceRules.length, 18);
-  assert.equal(facts.missionReferenceRules.length, 5);
+  assert.equal(facts.missionReferenceRules.length, 7);
+  assert.equal(facts.faqOverlays.length, 8);
   assert.equal(facts.forceDispositionMatchups.length, 15);
+  assert.equal(facts.eventSequenceOverlays.length, 3);
   assert.equal(facts.terrainLayouts.length, 45);
 }
 
@@ -50,11 +52,26 @@ function assertSourceCoverage(facts) {
     for (const id of record.provenance.supportingSourceRecordIds ?? []) modeled.add(id);
   }
   for (const deployment of facts.deployments) modeled.add(deployment.geometry.deploymentCardKeySourceRecordId);
-  const accepted = new Set(Object.values(evidence.records).flat().map(({id}) => id));
+  const accepted = new Set([
+    ...Object.values(evidence.records).flat().map(({id}) => id),
+    ...evidence.eventMissionSemantics.map(({id}) => id)
+  ]);
   const missing = [...accepted].filter((id) => !modeled.has(id));
   assert.deepEqual(missing, [], `unmodeled accepted source records: ${missing.join(', ')}`);
   const overlayIds = new Set(facts.faqOverlays.map(({id}) => id));
   assert.deepEqual(evidence.faqOverlays.map(({id}) => id).filter((id) => !overlayIds.has(id)), []);
+  const canonicalIds = new Set(allRecords(facts).map(({record}) => record.id));
+  for (const item of evidence.eventMissionSemantics) assert.ok(canonicalIds.has(item.canonicalRecordId), `${item.id}: canonical Event fact is missing`);
+  const primaryEvidenceById = new Map(evidence.records.primaryMissions.map((record) => [record.id, record]));
+  for (const primary of facts.primaryMissions) {
+    const sourceRecord = primaryEvidenceById.get(primary.id);
+    assert.ok(sourceRecord, `${primary.id}: accepted Primary source record is missing`);
+    assert.deepEqual(
+      [primary.playerForceDispositionId, primary.opponentForceDispositionId],
+      [sourceRecord.playerForceDispositionId, sourceRecord.opponentForceDispositionId],
+      `${primary.id}: canonical Force Disposition relation differs from accepted source evidence`
+    );
+  }
 }
 
 function assertGlossaryReady(record, partition) {
@@ -179,7 +196,7 @@ assert.deepEqual([
   event.catalog.secondaryMissions.length, event.catalog.deployments.length,
   event.catalog.twists.length, event.catalog.missionReferenceRules.length,
   event.catalog.terrainLayouts.length
-], [5, 25, 18, 0, 0, 5, 45]);
+], [5, 25, 18, 0, 0, 7, 45]);
 assert.ok(event.getById('event-mission-sequence-determine-layout'));
 assert.equal(standard.getById('event-mission-sequence-determine-layout'), null);
 assert.deepEqual(

@@ -152,6 +152,15 @@ function validate(data,{sourceManifest=manifest,gdmEvidence=gdm,booklet=bookletE
   assert.equal(eventSource.byteSize,10665731);
   const pdf=fs.readFileSync(path.join(root,eventSource.localPath));
   assert.equal(pdf.length,eventSource.byteSize);assert.equal(sha256(pdf),eventSource.sha256);
+  assert.equal(data.faqOverlays.length,8);
+  assert.deepEqual(data.faqOverlays.map(({id})=>id).sort(),[
+    'faq-beacon-reselection','faq-death-trap-terrain-area-timing','faq-end-of-battle-scoring-timing',
+    'faq-operation-marker-status-removal','faq-plunder-terrain-area-requirement',
+    'faq-primary-operation-marker-removal','faq-surveil-the-foe-marker-removal',
+    'faq-vital-link-central-objectives'
+  ]);
+  assert.equal(data.eventMissionSemantics.length,5);
+  for(const item of data.eventMissionSemantics){assert.equal(item.sourceId,eventSource.id);assert.equal(item.authority,'official');assert.equal(item.evidenceClass,'OFFICIAL_AUTHENTICATED');assert.equal(item.currentness,'CURRENT_AT_2026_09_22');assert([1,4].includes(item.page));assert(item.canonicalRecordId);}
 
   const chapterLayer=sourceManifest.layers.find(layer=>layer.id==='chapter-approved-2026-27');
   const corpusLayer=sourceManifest.layers.find(layer=>layer.id==='chapter-approved-2026-27-public-evidence-corpus');

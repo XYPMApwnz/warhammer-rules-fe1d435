@@ -33,9 +33,86 @@ const FULL_CURRENT_COUNTS = Object.freeze({
   secondaryMissions: 18,
   deployments: 6,
   twists: 6,
-  missionReferenceRules: 5,
+  missionSequenceRules: 18,
+  missionReferenceRules: 7,
+  faqOverlays: 8,
   forceDispositionMatchups: 15,
+  eventSequenceOverlays: 3,
   terrainLayouts: 45
+});
+const FULL_CURRENT_REQUIRED_IDS = Object.freeze({
+  missionSequenceRules: Object.freeze([
+    'mission-sequence-muster-armies',
+    'mission-sequence-determine-mission',
+    'mission-sequence-determine-deployment',
+    'mission-sequence-optional-twist',
+    'mission-sequence-create-battlefield',
+    'mission-sequence-determine-attacker-defender',
+    'mission-sequence-select-secondary-missions',
+    'mission-sequence-fixed-secondary-procedure',
+    'mission-sequence-tactical-secondary-procedure',
+    'mission-sequence-achieve-secondary-missions',
+    'mission-sequence-declare-battle-formations',
+    'mission-sequence-deploy-armies',
+    'mission-sequence-redeploy-units',
+    'mission-sequence-determine-first-turn',
+    'mission-sequence-resolve-pre-battle-rules',
+    'mission-sequence-begin-battle',
+    'mission-sequence-end-battle',
+    'mission-sequence-determine-victor'
+  ]),
+  missionReferenceRules: Object.freeze([
+    'mission-reference-cumulative-and-or-conditions',
+    'mission-reference-event-generating-command-points',
+    'mission-reference-leaves-the-battlefield',
+    'mission-reference-one',
+    'mission-reference-operation-markers',
+    'mission-reference-vp-up-to-a-limit',
+    'mission-reference-when-drawn'
+  ]),
+  faqOverlays: Object.freeze([
+    'faq-beacon-reselection',
+    'faq-death-trap-terrain-area-timing',
+    'faq-end-of-battle-scoring-timing',
+    'faq-operation-marker-status-removal',
+    'faq-plunder-terrain-area-requirement',
+    'faq-primary-operation-marker-removal',
+    'faq-surveil-the-foe-marker-removal',
+    'faq-vital-link-central-objectives'
+  ]),
+  eventSequenceOverlays: Object.freeze([
+    'event-sequence-determine-layout-v1-2',
+    'event-sequence-determine-mission-v1-2',
+    'event-sequence-muster-armies-v1-2'
+  ])
+});
+const FULL_CURRENT_REQUIRED_FAQ_TARGETS = Object.freeze({
+  'faq-beacon-reselection': 'secondary-beacon',
+  'faq-death-trap-terrain-area-timing': 'primary-death-trap',
+  'faq-end-of-battle-scoring-timing': 'mission-sequence-determine-victor',
+  'faq-operation-marker-status-removal': 'mission-reference-operation-markers',
+  'faq-plunder-terrain-area-requirement': 'secondary-plunder',
+  'faq-primary-operation-marker-removal': 'mission-reference-operation-markers',
+  'faq-surveil-the-foe-marker-removal': 'primary-surveil-the-foe',
+  'faq-vital-link-central-objectives': 'primary-vital-link'
+});
+const FULL_CURRENT_REQUIRED_EVENT_SEQUENCE_TARGETS = Object.freeze({
+  'event-sequence-determine-layout-v1-2': Object.freeze({
+    replaces: Object.freeze([
+      'mission-sequence-determine-deployment',
+      'mission-sequence-optional-twist',
+      'mission-sequence-create-battlefield'
+    ]),
+    replacementRuleId: 'event-mission-sequence-determine-layout'
+  }),
+  'event-sequence-determine-mission-v1-2': Object.freeze({
+    replaces: Object.freeze(['mission-sequence-determine-mission']),
+    replacementRuleId: 'event-mission-sequence-determine-mission'
+  }),
+  'event-sequence-muster-armies-v1-2': Object.freeze({
+    replaces: Object.freeze(['mission-sequence-muster-armies']),
+    replacementRuleId: 'event-mission-sequence-muster-armies'
+  })
 });
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -53,6 +130,21 @@ function assertUniqueIds(records, context) {
     seen.add(record.id);
   }
   return seen;
+}
+
+function assertExactIds(records, expectedIds, context) {
+  const actual = records.map(({id}) => id).sort();
+  const expected = [...expectedIds].sort();
+  invariant(
+    actual.length === expected.length && actual.every((id, index) => id === expected[index]),
+    `${context}: FULL_CURRENT_CORPUS required IDs do not match`
+  );
+}
+
+function sameStringSet(actual, expected) {
+  const sortedActual = [...actual].sort();
+  const sortedExpected = [...expected].sort();
+  return sortedActual.length === sortedExpected.length && sortedActual.every((value, index) => value === sortedExpected[index]);
 }
 
 function assertScopes(scopes, context) {
@@ -194,6 +286,11 @@ export function validateCanonicalMissionFacts(facts) {
     );
   }
   const allIds = assertUniqueIds(records.map(({record}) => record), 'mission records');
+  if (isFullCorpus) {
+    for (const [partition, requiredIds] of Object.entries(FULL_CURRENT_REQUIRED_IDS)) {
+      assertExactIds(facts[partition], requiredIds, partition);
+    }
+  }
   for (const {record, partition} of records) assertProvenance(record, profileIds, `${partition}.${record.id}`);
 
   const forceIds = new Set(facts.forceDispositions.map(({id}) => id));
@@ -201,22 +298,45 @@ export function validateCanonicalMissionFacts(facts) {
   const secondaryIds = new Set(facts.secondaryMissions.map(({id}) => id));
   const matchupIds = new Set(facts.forceDispositionMatchups.map(({id}) => id));
   const layoutIds = new Set(facts.terrainLayouts.map(({id}) => id));
+  const layoutById = new Map(facts.terrainLayouts.map((layout) => [layout.id, layout]));
   const sequenceIds = new Set(facts.missionSequenceRules.map(({id}) => id));
   const referenceRuleIds = new Set(facts.missionReferenceRules.map(({id}) => id));
+  const directedKey = (playerId, opponentId) => `${playerId}\0${opponentId}`;
+  const primaryByDirectedPair = new Map();
 
-  for (const forceDisposition of facts.forceDispositions) {
-    invariant(Array.isArray(forceDisposition.missionMatrixRelations), `${forceDisposition.id}: missionMatrixRelations must be an array`);
-    for (const relation of forceDisposition.missionMatrixRelations) {
-      invariant(forceIds.has(relation.opponentForceDispositionId), `${forceDisposition.id}: unknown opponent Force Disposition`);
-      if (isFullCorpus) invariant(relation.resolvedInRepresentativeCatalog !== false, `${forceDisposition.id}: full corpus cannot retain an unresolved representative relation`);
-      if (relation.resolvedInRepresentativeCatalog !== false) invariant(primaryIds.has(relation.primaryMissionId), `${forceDisposition.id}: unresolved Primary ${relation.primaryMissionId}`);
-    }
-  }
   for (const primary of facts.primaryMissions) {
     invariant(forceIds.has(primary.playerForceDispositionId), `${primary.id}: unknown player Force Disposition`);
     invariant(forceIds.has(primary.opponentForceDispositionId), `${primary.id}: unknown opponent Force Disposition`);
+    const key = directedKey(primary.playerForceDispositionId, primary.opponentForceDispositionId);
+    invariant(!primaryByDirectedPair.has(key), `${primary.id}: duplicate directed Primary relation`);
+    primaryByDirectedPair.set(key, primary);
     invariant(primary.ruleBody && Array.isArray(primary.ruleBody.scoringClauses), `${primary.id}: structured ruleBody required`);
     if (primary.ruleBody.objectiveAction) assertId(primary.ruleBody.objectiveAction.id, `${primary.id}.objectiveAction`);
+  }
+  const matrixPrimaryIds = new Set();
+  for (const forceDisposition of facts.forceDispositions) {
+    invariant(Array.isArray(forceDisposition.missionMatrixRelations), `${forceDisposition.id}: missionMatrixRelations must be an array`);
+    const opponentIds = new Set();
+    for (const relation of forceDisposition.missionMatrixRelations) {
+      invariant(forceIds.has(relation.opponentForceDispositionId), `${forceDisposition.id}: unknown opponent Force Disposition`);
+      invariant(!opponentIds.has(relation.opponentForceDispositionId), `${forceDisposition.id}: duplicate opponent Force Disposition relation`);
+      opponentIds.add(relation.opponentForceDispositionId);
+      if (isFullCorpus) invariant(relation.resolvedInRepresentativeCatalog !== false, `${forceDisposition.id}: full corpus cannot retain an unresolved representative relation`);
+      if (relation.resolvedInRepresentativeCatalog !== false) {
+        invariant(primaryIds.has(relation.primaryMissionId), `${forceDisposition.id}: unresolved Primary ${relation.primaryMissionId}`);
+        const primary = primaryByDirectedPair.get(directedKey(forceDisposition.id, relation.opponentForceDispositionId));
+        invariant(primary?.id === relation.primaryMissionId, `${forceDisposition.id}: Primary matrix relation is cross-wired`);
+        matrixPrimaryIds.add(relation.primaryMissionId);
+      }
+    }
+    if (isFullCorpus) invariant(opponentIds.size === forceIds.size, `${forceDisposition.id}: incomplete Primary matrix row`);
+  }
+  if (isFullCorpus) {
+    invariant(primaryByDirectedPair.size === 25, 'FULL_CURRENT_CORPUS requires 25 unique directed Primary records');
+    invariant(
+      matrixPrimaryIds.size === primaryIds.size && [...primaryIds].every((id) => matrixPrimaryIds.has(id)),
+      'FULL_CURRENT_CORPUS requires every Primary exactly once in the matrix'
+    );
   }
   for (const secondary of facts.secondaryMissions) {
     invariant(secondary.ruleBody && Array.isArray(secondary.ruleBody.scoringClauses), `${secondary.id}: structured ruleBody required`);
@@ -234,18 +354,40 @@ export function validateCanonicalMissionFacts(facts) {
     invariant(layout.visualReferences?.factualAuthority === false, `${layout.id}: visual reference cannot own facts`);
     invariant(layout.visualReferences?.authorityClass === 'SECONDARY_VISUAL_REFERENCE', `${layout.id}: visual reference authority class is required`);
   }
+  const layoutOwnerCounts = new Map();
   for (const matchup of facts.forceDispositionMatchups) {
     invariant(matchup.unordered === true && matchup.reverseOrderEquivalent === true, `${matchup.id}: matchup must be unordered`);
     invariant(matchup.memberForceDispositionIds.length === 2, `${matchup.id}: matchup needs two members`);
     invariant(matchup.memberForceDispositionIds.every((id) => forceIds.has(id)), `${matchup.id}: unknown Force Disposition member`);
     invariant(matchup.id === canonicalMatchupId(...matchup.memberForceDispositionIds), `${matchup.id}: ID does not match unordered members`);
     invariant(matchup.layoutIds.length === 3 && matchup.layoutIds.every((id) => layoutIds.has(id)), `${matchup.id}: exactly three valid layouts required`);
-    invariant(new Set(matchup.layoutIds.map((id) => facts.terrainLayouts.find((layout) => layout.id === id).variant)).size === 3, `${matchup.id}: layouts A/B/C required`);
+    invariant(new Set(matchup.layoutIds.map((id) => layoutById.get(id).variant)).size === 3, `${matchup.id}: layouts A/B/C required`);
+    for (const layoutId of matchup.layoutIds) {
+      invariant(layoutById.get(layoutId).matchupId === matchup.id, `${matchup.id}: layout relation is cross-wired`);
+      layoutOwnerCounts.set(layoutId, (layoutOwnerCounts.get(layoutId) ?? 0) + 1);
+    }
+    const [left, right] = matchup.memberForceDispositionIds;
+    const expectedPairs = new Set([directedKey(left, right)]);
+    if (left !== right) expectedPairs.add(directedKey(right, left));
+    invariant(Array.isArray(matchup.directedPrimaryRelations), `${matchup.id}: directedPrimaryRelations must be an array`);
+    invariant(matchup.directedPrimaryRelations.length === expectedPairs.size, `${matchup.id}: incomplete directed Primary relations`);
+    const seenPairs = new Set();
     for (const relation of matchup.directedPrimaryRelations) {
       invariant(forceIds.has(relation.playerForceDispositionId) && forceIds.has(relation.opponentForceDispositionId), `${matchup.id}: invalid directed relation`);
+      const key = directedKey(relation.playerForceDispositionId, relation.opponentForceDispositionId);
+      invariant(expectedPairs.has(key), `${matchup.id}: directed relation does not match matchup members`);
+      invariant(!seenPairs.has(key), `${matchup.id}: duplicate directed relation`);
+      seenPairs.add(key);
       if (isFullCorpus) invariant(relation.resolvedInRepresentativeCatalog !== false, `${matchup.id}: full corpus cannot retain an unresolved representative relation`);
-      if (relation.resolvedInRepresentativeCatalog !== false) invariant(primaryIds.has(relation.primaryMissionId), `${matchup.id}: unresolved Primary ${relation.primaryMissionId}`);
+      if (relation.resolvedInRepresentativeCatalog !== false) {
+        const primary = primaryByDirectedPair.get(key);
+        invariant(primary?.id === relation.primaryMissionId, `${matchup.id}: directed Primary relation is cross-wired`);
+      }
     }
+    invariant(seenPairs.size === expectedPairs.size, `${matchup.id}: incomplete directed Primary relation set`);
+  }
+  for (const layout of facts.terrainLayouts) {
+    invariant(layoutOwnerCounts.get(layout.id) === 1, `${layout.id}: layout must be owned exactly once by its declared matchup`);
   }
   for (const referenceRule of facts.missionReferenceRules) {
     invariant(referenceRule.ruleBody && typeof referenceRule.ruleBody === 'object', `${referenceRule.id}: structured ruleBody required`);
@@ -260,12 +402,40 @@ export function validateCanonicalMissionFacts(facts) {
       `${overlay.id}: unknown FAQ target`
     );
     assertScopes(overlay.applicableScopes, overlay.id);
+    if (isFullCorpus) {
+      invariant(
+        overlay.targetId === FULL_CURRENT_REQUIRED_FAQ_TARGETS[overlay.id],
+        `${overlay.id}: FULL_CURRENT_CORPUS FAQ target is cross-wired`
+      );
+    }
   }
+  const replacementRuleIds = new Set();
+  const replacedSequenceIds = new Set();
   for (const overlay of facts.eventSequenceOverlays) {
     invariant(overlay.operation === 'REPLACE_SEQUENCE_STAGES', `${overlay.id}: unsupported event sequence operation`);
     invariant(overlay.applicableScopes.length === 1 && overlay.applicableScopes[0] === 'EVENT_PLAY', `${overlay.id}: event overlay scope leak`);
     invariant(overlay.replacesSequenceRuleIds.every((id) => sequenceIds.has(id)), `${overlay.id}: unknown replaced sequence stage`);
+    for (const id of overlay.replacesSequenceRuleIds) {
+      invariant(!replacedSequenceIds.has(id), `${overlay.id}: sequence stage replaced more than once`);
+      replacedSequenceIds.add(id);
+    }
     assertId(overlay.replacementRule?.id, `${overlay.id}.replacementRule`);
+    invariant(!allIds.has(overlay.replacementRule.id), `${overlay.id}: replacement rule ID collides with canonical record`);
+    invariant(!replacementRuleIds.has(overlay.replacementRule.id), `${overlay.id}: duplicate replacement rule ID`);
+    replacementRuleIds.add(overlay.replacementRule.id);
+    invariant(overlay.replacementRule.recordType === 'MISSION_SEQUENCE_RULE', `${overlay.id}: replacement rule must be a mission sequence rule`);
+    invariant(Array.isArray(overlay.replacementRule.requirements), `${overlay.id}: replacement rule requirements must be an array`);
+    if (isFullCorpus) {
+      const expected = FULL_CURRENT_REQUIRED_EVENT_SEQUENCE_TARGETS[overlay.id];
+      invariant(
+        expected && sameStringSet(overlay.replacesSequenceRuleIds, expected.replaces),
+        `${overlay.id}: FULL_CURRENT_CORPUS Event sequence target is cross-wired`
+      );
+      invariant(
+        overlay.replacementRule.id === expected.replacementRuleId,
+        `${overlay.id}: FULL_CURRENT_CORPUS Event replacement identity is cross-wired`
+      );
+    }
   }
 
   invariant(allIds.size === records.length, 'Mission record IDs must be globally unique');

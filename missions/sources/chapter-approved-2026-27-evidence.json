@@ -3053,6 +3053,24 @@
       "authority": "official",
       "evidenceClass": "OFFICIAL_AUTHENTICATED",
       "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "faq-operation-marker-status-removal",
+      "targetScope": "MISSION_WIDE_OPERATION_MARKERS",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "faq-primary-operation-marker-removal",
+      "targetScope": "MISSION_WIDE_OPERATION_MARKERS",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
     }
   ],
   "unresolvedContentClaims": [],
@@ -3062,5 +3080,52 @@
     "standardCasualTerrainLayoutCorpusEnrolled": false,
     "gdmRemainsEvidenceOnly": true,
     "eventCompanionDoesNotOwnStandardCards": true
-  }
+  },
+  "eventMissionSemantics": [
+    {
+      "id": "event-determine-layout-v1.2",
+      "canonicalRecordId": "event-sequence-determine-layout-v1-2",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 1,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "event-generating-command-points-v1.2",
+      "canonicalRecordId": "mission-reference-event-generating-command-points",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 1,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "event-muster-force-disposition-roster-preselection-v1.2",
+      "canonicalRecordId": "event-sequence-muster-armies-v1-2",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 1,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "event-determine-mission-v1.2",
+      "canonicalRecordId": "event-sequence-determine-mission-v1-2",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 1,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "event-operation-marker-faqs-v1.2",
+      "canonicalRecordId": "mission-reference-operation-markers",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    }
+  ]
 }

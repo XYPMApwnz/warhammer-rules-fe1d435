@@ -134,6 +134,3 @@ export function createEffectiveCoreCatalog({root=contentRoot,base,coreSource,cor
   validateEffectiveCoreCatalog(catalog);
   return freeze(catalog);
 }
-
-
-

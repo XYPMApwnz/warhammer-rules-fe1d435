@@ -1,30 +1,25 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {verifyPdfParity} from '../tools/verify_pdf_parity.mjs';
 import {recordText} from '../content/record-content.mjs';
-import {applyCoreCurrentOfficial} from '../content/core-current-official.mjs';
+import {createCoreFactProjection} from '../content/core-fact-projection.mjs';
 
 const root=path.dirname(fileURLToPath(import.meta.url));
 const bookRoot=path.dirname(root);
 const repoRoot=path.resolve(bookRoot,'..','..');
 const runtimeVersions=JSON.parse(fs.readFileSync(path.join(repoRoot,'books','shared','runtime-asset-versions.json'),'utf8'));
-const context={window:{}};
-for(const file of ['content/core-rules.source.en.js','content/core-rules.en.js']){
-  vm.runInNewContext(fs.readFileSync(path.join(bookRoot,file),'utf8'),context);
-}
-
-const data=context.window.CORE_RULES;
-const pdf=context.window.CORE_PDF_SOURCE;
+const projection=createCoreFactProjection({repoRoot});
+const catalog=projection.catalog;
+const data=catalog.presentation.reader;
+const pdf=projection.coreSource;
 const modules=[
   {id:'introduction',title:'Introduction',sections:[data.introduction.id]},
   ...data.groups.map(group=>({id:group.id,title:group.title,sections:group.sections.map(section=>section.id)}))
 ];
 const baseDigital=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','core-rules.digital-11e.json'),'utf8'));
 const parity=verifyPdfParity(pdf,baseDigital);
-const digital=applyCoreCurrentOfficial(baseDigital);
-const registry=JSON.parse(fs.readFileSync(path.join(repoRoot,'glossary','registry.en.json'),'utf8'));
+const digital={meta:catalog.presentation.baseMeta,images:catalog.presentation.images,records:catalog.mainRules,universalRulesUpdates:catalog.universalUpdates};
 const sections=[data.introduction,...data.groups.flatMap(group=>group.sections)];
 const byId=new Map(sections.map(section=>[section.id,section]));
 const order=modules.flatMap(module=>module.sections);
@@ -51,10 +46,9 @@ const diagramRules={
 const diagramLabels={'ex9.png':'Resolving attack dice','ex10.png':'Resolving other attacks'};
 const diagrams=Object.values(digital.images).flat();
 const ruleReferences={
-  '01.02.01':['core-starting-strength','core-half-strength','core-below-half-strength','core-below-starting-strength'],
-  '01.03':['core-player-turn']
+  '01.03':['core-active-player']
 };
-const faqs=pdf.faqs||[];
+const faqs=catalog.faqs;
 const faqsByPrimary=new Map();
 for(const faq of faqs)faqsByPrimary.set(faq.primaryRule,[...(faqsByPrimary.get(faq.primaryRule)||[]),faq]);
 
@@ -64,24 +58,15 @@ const normalizeLabel=value=>String(value||'').replace(/[‘’]/g,"'").replace(/
 const escapeRegExp=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const slug=value=>String(value).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
-const termsByCode=new Map();
-for(const term of Object.values(registry.terms)){
-  if(term.canonicalSource?.documentId!=='core-rules'||term.kind==='keyword')continue;
-  const code=String(term.canonicalSource.locator||'').match(/^(\d{2}\.\d{2}(?:\.\d{2})?)/)?.[1];
-  if(code)termsByCode.set(code,[...(termsByCode.get(code)||[]),term]);
-}
-const termByCode=new Map(digital.records.map(rule=>{
-  const title=rule.title.replace(/^\d+\.\s*/,'').trim().toLowerCase();
-  const matches=termsByCode.get(rule.code)||[];
-  return [rule.code,matches.find(term=>term.title.en.trim().toLowerCase()===title)||matches[0]];
-}).filter(([,term])=>term));
+const coreTermById=new Map(projection.terms.map(term=>[term.id,{...term,title:{en:term.title},summary:{en:term.summary},definition:{en:term.definition},scope:'global',matchLabels:[term.code,...(term.aliases||[])].filter(Boolean)}]));
+const termByCode=new Map([...coreTermById.values()].filter(term=>term.code).map(term=>[term.code,term]));
 const displayTitleOverrides={'24.37.01':'Torrent Restrictions'};
 const displayTitle=rule=>displayTitleOverrides[rule.code]||rule.title;
 const sectionReferences=new Map([
   ['16.00',{label:'Actions',term:termByCode.get('16.01')}],
-  ['23.00',{label:'Aircraft',term:registry.terms['keyword-aircraft']}],
+  ['23.00',{label:'Aircraft',term:termByCode.get('23.01')}],
   ['17.00',{label:'Monsters and Vehicles',term:termByCode.get('17.01')}],
-  ['20.00',{label:'Strategic Reserves',term:registry.terms['core-strategic-reserves']}],
+  ['20.00',{label:'Strategic Reserves',term:termByCode.get('20.01')}],
   ['18.00',{label:'Transports',term:termByCode.get('18.01')}]
 ]);
 const chapterReferences=new Map([
@@ -90,29 +75,28 @@ const chapterReferences=new Map([
   ['05',{label:'Attack Sequence',term:termByCode.get('05.01')}],
   ['15',{label:'Stratagems',term:termByCode.get('15.01')}],
   ['16',{label:'Actions',term:termByCode.get('16.01')}],
-  ['24',{label:'Abilities',term:registry.terms['core-abilities']}]
+  ['24',{label:'Abilities',term:termByCode.get('24.01')}]
 ]);
 
 const ignoredAutolinkLabels=new Set(['you','attacks','within','weapons','destroyed','dice','set up','keywords','shoot','shooting','dense']);
 const characteristicTerms=new Map([
-  ['Move','core-characteristic-move'],
-  ['Toughness','core-characteristic-toughness'],
-  ['Save','core-characteristic-save'],
-  ['Invulnerable Save','core-characteristic-invulnerable-save'],
-  ['Wounds','core-characteristic-wounds'],
-  ['Leadership','core-characteristic-leadership'],
-  ['Objective Control','core-objective-control'],
-  ['Range','core-characteristic-range'],
-  ['Attacks','core-characteristic-attacks'],
-  ['Ballistic Skill','core-characteristic-ballistic-skill'],
-  ['Weapon Skill','core-characteristic-weapon-skill'],
-  ['Strength','core-characteristic-strength'],
-  ['Armour Penetration','core-characteristic-armour-penetration'],
-  ['Damage','core-characteristic-damage']
+  ['Move','02.02'],
+  ['Toughness','02.02'],
+  ['Save','02.02'],
+  ['Invulnerable Save','02.02'],
+  ['Wounds','02.02'],
+  ['Leadership','02.02'],
+  ['Objective Control','02.02'],
+  ['Range','02.04'],
+  ['Attacks','02.04'],
+  ['Ballistic Skill','02.04'],
+  ['Weapon Skill','02.04'],
+  ['Strength','02.04'],
+  ['Armour Penetration','02.04'],
+  ['Damage','02.04']
 ]);
 const candidates=new Map();
-for(const term of Object.values(registry.terms)){
-  if(term.scope!=='global'&&term.canonicalSource?.documentId!=='core-rules'&&!(term.sourceRefs||[]).includes('core-rules'))continue;
+for(const term of coreTermById.values()){
   for(const label of [term.title?.en,...(term.aliases||[]),...(term.matchLabels||[])]){
     const token=normalizeLabel(label);
     if(token.length<3||ignoredAutolinkLabels.has(token))continue;
@@ -127,7 +111,7 @@ const matcher=new RegExp(`(^|[^A-Za-z0-9])(${[...terms.keys()].sort((a,b)=>b.len
 
 function termButton(term,label,extraClass=''){
   if(!term)return escapeHtml(label);
-  return `<button class="term${extraClass?` ${extraClass}`:''}" type="button" data-term="${escapeHtml(term.id)}" data-term-title="${escapeHtml(term.title?.en||label)}" data-term-summary="${escapeHtml(term.summary?.en||term.definition?.en||'Open the complete glossary entry for this term.')}"${term.fullRulePath?` data-full-rule-path="${escapeHtml(term.fullRulePath)}"`:''} aria-haspopup="dialog">${escapeHtml(label)}</button>`;
+  return `<button class="term${extraClass?` ${extraClass}`:''}" type="button" data-term="${escapeHtml(term.id)}" data-term-title="${escapeHtml(term.title?.en||label)}" data-term-summary="${escapeHtml(term.summary?.en||'')}" data-term-definition="${escapeHtml(term.definition?.en||term.summary?.en||'')}"${term.fullRulePath?` data-full-rule-path="${escapeHtml(term.fullRulePath)}"`:''} aria-haspopup="dialog">${escapeHtml(label)}</button>`;
 }
 
 function linkedTerms(text,seen,excludedId){
@@ -152,7 +136,7 @@ function linkedText(value,seen=new Set(),excludedId=''){
   const characteristic=text.match(/^(Move|Toughness|Save|Invulnerable Save|Wounds|Leadership|Objective Control|Range|Attacks|Ballistic Skill|Weapon Skill|Strength|Armour Penetration|Damage) \((M|T|Sv|InSv|W|Ld|OC|R|A|BS|WS|S|AP|D)\):\s*/i);
   if(characteristic){
     const [label,id]=[...characteristicTerms].find(([label])=>label.toLowerCase()===characteristic[1].toLowerCase())||[];
-    const term=registry.terms[id];
+    const term=termByCode.get(id);
     if(term){
       seen.add(id);
       return `${termButton(term,label)} ${escapeHtml(`(${characteristic[2]}):`)} ${linkedText(text.slice(characteristic[0].length),seen,excludedId)}`;
@@ -298,7 +282,7 @@ function ruleVisuals(code){
 }
 
 function referenceStrip(code,seen=new Set()){
-  const items=(ruleReferences[code]||[]).map(id=>registry.terms[id]).filter(term=>term&&!seen.has(term.id));
+  const items=(ruleReferences[code]||[]).map(id=>coreTermById.get(id)).filter(term=>term&&!seen.has(term.id));
   if(!items.length)return '';
   items.forEach(term=>seen.add(term.id));
   return `<nav class="rule-references" aria-label="Glossary concepts for ${escapeHtml(code)}"><span>Glossary concepts</span>${items.map(term=>termButton(term,term.title.en)).join('')}</nav>`;

@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {verifyPdfParity} from '../tools/verify_pdf_parity.mjs';
 import {recordText} from '../content/record-content.mjs';
 import {applyCoreCurrentOfficial} from '../content/core-current-official.mjs';
+import {createCoreFactProjection} from '../content/core-fact-projection.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sourceRoot=root;
@@ -36,13 +37,14 @@ assert.equal(digital.meta.edition,'11E','reader must use the 11E digital referen
 assert(digital.records.length>0,'the accepted digital Core snapshot must contain records');
 assert.equal(new Set(digital.records.map(record=>record.code)).size,digital.records.length,'digital rule codes must be unique');
 const recordsByCode=new Map(digital.records.map(record=>[record.code,record]));
+const effectiveRecordsByCode=new Map(effectiveDigital.records.map(record=>[record.code,record]));
 const julyContracts=new Map([
   ['01.02.03','returns on its own as a unit of one'],
   ['08.02.01','only generate a single extra CP per battle round'],
   ['09.05.01','cannot make more than one Normal Move in a phase']
 ]);
-for(const [code,wording] of julyContracts)assert(recordText(recordsByCode.get(code)).includes(wording),`${code} is missing its confirmed July 2026 Core update`);
-assert(!recordText(recordsByCode.get('01.02.03')).includes('still part of that attached unit'),'revived Leader/Support must not rejoin its attached unit');
+for(const [code,wording] of julyContracts)assert(recordText(effectiveRecordsByCode.get(code)).includes(wording),`${code} is missing its confirmed July 2026 Core update`);
+assert(!recordText(effectiveRecordsByCode.get('01.02.03')).includes('still part of that attached unit'),'revived Leader/Support must not rejoin its attached unit');
 const structuredTypes=new Set(['comparison-table','matrix','procedure','named-stages','heading']);
 for(const code of ['01.02.01','05.02','05.03','19.04','03.03','16.01','09.04','10.04','12.05']){
   const record=recordsByCode.get(code);
@@ -86,7 +88,8 @@ assert(recordsByCode.get('02.02.01')?.title==='Modifiers','02.02.01 must remain 
 assert(recordsByCode.get('02.02.01')?.text.includes('WHAT ARE MODIFIERS?')&&recordsByCode.get('02.02.01')?.text.includes('When Modifying Characteristics'),'Modifiers must include its introduction and characteristic rules');
 assert(recordsByCode.get('24.37.01')?.title==='Torrent Restrictions','24.37.01 needs a semantic title');
 for(const artifact of ['STARTING STRENGTH OF 1STARTING STRENGTH','SOURCE OF ABILITY/RULEAPPLIES','INCURSION1000222'])assert(!digital.records.some(record=>recordText(record).includes(artifact)),`collapsed table leaked into source: ${artifact}`);
-const glossary=JSON.parse(fs.readFileSync(path.resolve(root,'..','..','glossary','registry.en.json'),'utf8')).terms;
+const coreProjection=createCoreFactProjection({repoRoot:path.resolve(root,'..','..')});
+const glossary=Object.fromEntries(coreProjection.terms.map(term=>[term.id,{...term,title:{en:term.title},summary:{en:term.summary},definition:{en:term.definition},matchLabels:[term.code,...(term.aliases||[])].filter(Boolean)}]));
 const glossaryExcludedCodes=new Set(['03.03.01']);
 const coreTermsByCode=new Map();
 for(const term of Object.values(glossary).filter(term=>term.canonicalSource?.documentId==='core-rules'&&term.kind!=='keyword')){
@@ -113,9 +116,9 @@ for(const [index,id] of routeIds.entries()){
       routedRules++;
       continue;
     }
-    assert(term,`${rule.code} has no canonical Mega Glossary article`);
+    assert(term,`${rule.code} has no effective Core presentation fact`);
     assert(term.summary?.en?.trim(),`${rule.code} has no popup summary`);
-    assert(term.definition?.en?.trim(),`${rule.code} has no full glossary article`);
+    assert(term.definition?.en?.trim(),`${rule.code} has no effective Core definition`);
     assert.equal(term.canonicalSource?.locator,rule.code,`${rule.code} glossary article is not aligned with its Core Rules source`);
     assert(term.matchLabels?.includes(rule.code),`${rule.code} is not a hidden glossary match label`);
     routedRules++;
@@ -142,7 +145,7 @@ assert(!generatedReader.includes('Introduction 2')&&!generatedReader.includes('I
 const visibleReader=generatedReader.replace(/<script[\s\S]*?<\/script>/g,' ').replace(/<style[\s\S]*?<\/style>/g,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');
 for(const [code,wording] of julyContracts){
   assert(visibleReader.includes(wording),`${code} July 2026 update is missing from the routed reader`);
-  assert(Object.values(glossary).some(term=>term.canonicalSource?.locator===code&&term.definition?.en?.includes(wording)),`${code} July 2026 update is missing from Mega Glossary`);
+  assert(Object.values(glossary).some(term=>term.canonicalSource?.locator===code&&term.definition?.en?.includes(wording)),`${code} July 2026 update is missing from the effective Core projection`);
 }
 for(const record of digital.records){
   const start=generatedReader.indexOf(`data-rule-code="${record.code}"`);
@@ -159,8 +162,8 @@ for(const faq of faqs){
   assert(generatedReader.includes('Official FAQ &middot; Rules Appendix &middot; page 88'),'official FAQ source label is missing');
   const searchItem=searchIndex.find(item=>item.code===faq.id);
   assert(searchItem&&searchItem.title===faq.question&&searchItem.text===faq.answer,`${faq.id} is missing from search`);
-  const term=glossary[faq.id];
-  assert(term&&term.title.en===faq.question&&term.definition.en&&term.canonicalSource.locator==='Rules Appendix; page 88',`${faq.id} is missing from Mega Glossary`);
+  const term=coreProjection.catalog.getById(faq.id);
+  assert(term&&term.title===faq.question&&term.semanticContent&&term.provenance.sourceLocator===`Rules Appendix; page ${faq.page}`,`${faq.id} is missing from the effective Core catalog`);
 }
 assert(!/\b\d{2}\.\d{2}(?:\.\d{2})?\b/.test(visibleReader),'technical rule codes must stay out of visible reader text');
 assert(!/\((?:03|04|05|15|16|24)\)/.test(visibleReader),'chapter references must use clickable names instead of numeric codes');
@@ -192,22 +195,10 @@ for(const parent of digital.records.filter(record=>record.code.split('.').length
 }
 assert(generatedReader.includes('class="term rule-reference" type="button" data-term="core-rule-02-02-01-modifiers"')&&generatedReader.includes('>Modified Characteristics</button>'),'See also keeps source labels clickable');
 const datasheetsReader=fs.readFileSync(path.join(readerRoot,'datasheets.html'),'utf8');
-for(const [id,label] of Object.entries({
-  'core-characteristic-move':'Move',
-  'core-characteristic-toughness':'Toughness',
-  'core-characteristic-save':'Save',
-  'core-characteristic-invulnerable-save':'Invulnerable Save',
-  'core-characteristic-wounds':'Wounds',
-  'core-characteristic-leadership':'Leadership',
-  'core-objective-control':'Objective Control',
-  'core-characteristic-range':'Range',
-  'core-characteristic-attacks':'Attacks',
-  'core-characteristic-ballistic-skill':'Ballistic Skill',
-  'core-characteristic-weapon-skill':'Weapon Skill',
-  'core-characteristic-strength':'Strength',
-  'core-characteristic-armour-penetration':'Armour Penetration',
-  'core-characteristic-damage':'Damage'
-}))assert(new RegExp(`data-term="${id}"[^>]*>${label}<\\/button> \\([^)]*\\):`).test(datasheetsReader),`${label} definition must open its glossary article`);
+for(const [id,label] of [
+  ...['Move','Toughness','Save','Invulnerable Save','Wounds','Leadership','Objective Control'].map(label=>['core-rule-02-02-profiles',label]),
+  ...['Range','Attacks','Ballistic Skill','Weapon Skill','Strength','Armour Penetration','Damage'].map(label=>['core-rule-02-04-weapons',label])
+])assert(new RegExp(`data-term="${id}"[^>]*>${label}<\\/button> \\([^)]*\\):`).test(datasheetsReader),`${label} definition must resolve to its effective Core owner`);
 assert(!datasheetsReader.includes('aria-label="Glossary concepts for 02.02"')&&!datasheetsReader.includes('aria-label="Glossary concepts for 02.03"')&&!datasheetsReader.includes('aria-label="Glossary concepts for 02.04"'),'characteristics belong on their inline definitions, not in a detached glossary strip');
 const conceptsReader=fs.readFileSync(path.join(readerRoot,'core-concepts.html'),'utf8');
 const unitsArticle=conceptsReader.slice(conceptsReader.indexOf('id="rule-01-02"'),conceptsReader.indexOf('id="rule-01-03"'));
@@ -215,16 +206,16 @@ const unitsSeeAlso=unitsArticle.match(/<h4 class="see-also">See also<\/h4><ul>([
 for(const child of digital.records.filter(record=>record.code.startsWith('01.02.'))){
   assert(!unitsSeeAlso.includes(`>${child.title}</button>`),`Units and Models See also duplicates its local ${child.title} subrule`);
   assert(unitsArticle.includes(`id="rule-${child.code.replaceAll('.','-')}"`),`Units and Models is missing the full ${child.title} subrule`);
-  assert(Object.values(glossary).some(term=>term.title?.en===child.title),`Mega Glossary is missing ${child.title}`);
+  assert(Object.values(glossary).some(term=>term.title?.en===child.title),`effective Core projection is missing ${child.title}`);
 }
 assert(unitsSeeAlso.includes('>Frame</button>'),'Units and Models See also is missing external rule Frame');
 assert.equal(glossary['core-rule-03-03-01-what-is-coherency'],undefined,'What Is Coherency must not duplicate the Coherency glossary article');
 assert(!glossary['core-rule-03-03-coherency'].definition.en.includes('WHAT IS COHERENCY'),'Coherency glossary article must contain the rule without the duplicate explainer');
-assert(glossary['core-lethal-hits'].summary.en.includes('automatically wounds')&&glossary['core-lethal-hits'].summary.en.includes('No Wound roll'),'Lethal Hits popup must explain the mechanic');
-assert(glossary['core-devastating-wounds'].summary.en.includes('mortal wounds equal')&&glossary['core-devastating-wounds'].summary.en.includes('Excess mortal wounds are lost'),'Devastating Wounds popup must explain the mechanic');
-assert(!generatedReader.includes('PhaseAbility_'),'decorative phase icons must not render as rule diagrams');
-assert(!generatedReader.includes('types are marked with this icon'),'orphaned phase-icon captions must not render');
-assert.equal((generatedReader.match(/data-term="core-characteristic-attacks"[^>]*>Attacks<\/button>/g)||[]).length,1,'Attacks is linked only at its characteristic definition');
+assert(glossary['core-lethal-hits'].definition.en.includes('automatically wound')&&glossary['core-lethal-hits'].definition.en.includes('no wound roll'),'Lethal Hits effective definition must explain the mechanic');
+assert(glossary['core-devastating-wounds'].definition.en.includes('mortal wounds equal')&&glossary['core-devastating-wounds'].definition.en.includes('remaining mortal wounds inflicted by that attack are lost'),'Devastating Wounds effective definition must explain the mechanic');
+assert(!visibleReader.includes('PhaseAbility_'),'decorative phase icons must not render as rule diagrams');
+assert(!visibleReader.includes('types are marked with this icon'),'orphaned phase-icon captions must not render');
+assert.equal((generatedReader.match(/data-term="core-rule-02-04-weapons"[^>]*>Attacks<\/button>/g)||[]).length,1,'Attacks is linked only at its characteristic definition');
 const ignoredLabels=new Set(['you','within','weapons','destroyed','dice','set up','keywords','shoot','shooting','dense']);
 for(const button of generatedReader.matchAll(/<button class="([^"]*\bterm\b[^"]*)"[^>]*>([^<]+)<\/button>/g))if(!button[1].includes('rule-reference'))assert(!ignoredLabels.has(button[2].trim().toLowerCase()),`${button[2]} must not clutter prose`);
 for(const artifact of ['ST ARTS','EFFEC T','BLUEBLUE','REDRED','Object ives','Adv ance','Dama ge','Sa ve','W ound','How man y','Each t ime','RULES APPENDIXOBJECTIVES'])assert(!generatedReader.includes(artifact),`PDF extraction artifact leaked into reader: ${artifact}`);

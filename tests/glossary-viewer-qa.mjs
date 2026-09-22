@@ -52,7 +52,7 @@ assert.match(viewer,/searchAliases=aliases\.filter/,'technical IDs must not floo
 assert.match(viewer,/!repeatsDefinition\(summaryText,definitionText\)/,'repeated Quick Rule prefixes must remain suppressed');
 assert.match(viewer,/term\.presentation!=='profile'\)detail\.append\(sectionLabel\(normalize\(definitionText\)===normalize\(summaryText\)\?'Rule':'Full rule'\)/,'a meaningful non-profile definition must always render once');
 assert.doesNotMatch(viewer,/term\.presentation!=='profile'&&normalize\(definitionText\)!==normalize\(summaryText\)/,'equal summary and definition must not suppress both text blocks');
-assert.match(viewer,/popupSummary\.textContent=term\.summary\?\.en\|\|term\.definition\?\.en/,'popups must retain summaries');
+assert.match(viewer,/popupSummary\.textContent=term\.definition\?\.en\|\|''/,'popups must use the same effective definition as the full entry');
 
 const searchable=values.filter(term=>term.presentation!=='metadata');
 const contextOnlyTermIds=new Set([

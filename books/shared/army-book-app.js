@@ -9,7 +9,7 @@
     else document.documentElement.removeAttribute('data-view');
     const runtimeContext=Object.freeze({root,config,params,phoneMode});
 
-    const terms={...(root.WH40K_GLOSSARY?.forBook(config.bookId)||{}),...(root.DG_TERMS||{})};
+    const terms=root.WH40K_GLOSSARY?.forBook(config.bookId)||{};
     const documentRoot=document.querySelector('.document');
     const fullEntry=new root.DGFullEntry(root.WH40K_GLOSSARY);
     const popups=new root.DGPopups(terms,fullEntry);

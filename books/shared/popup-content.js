@@ -14,15 +14,6 @@
     .trim()
     .toUpperCase();
 
-  function findAbilityTerm(label,terms){
-    const wanted=normalize(label);
-    const base=wanted.startsWith('ANTI-')?'ANTI':wanted.replace(/\s+\d+\+?$/,'');
-    return Object.entries(terms||{}).find(([,term])=>{
-      const title=normalize(term.title);
-      return title===wanted||title===base;
-    })?.[0]||'';
-  }
-
   function parseWeapon(summary){
     const parts=splitParts(summary);
     if(parts.length<6)return null;
@@ -47,7 +38,7 @@
     return{mode,abilities,stats:[['Range',values.Range],['A',values.A],[skill,values[skill]],['S',values.S],['AP',values.AP],['D',values.D]]};
   }
 
-  function renderWeapon(profile,terms){
+  function renderWeapon(profile){
     const wrap=document.createElement('div');wrap.className='popup-weapon-profile';
     const kind=document.createElement('div');kind.className='popup-profile-kind';kind.textContent=profile.mode.toUpperCase()+' WEAPON';
     const table=document.createElement('table');table.className='popup-weapon-table';table.setAttribute('aria-label',profile.mode+' weapon characteristics');
@@ -63,10 +54,8 @@
       const label=document.createElement('span');label.className='popup-abilities-label';label.textContent='Abilities';
       const list=document.createElement('div');list.className='popup-ability-list';
       profile.abilities.forEach(ability=>{
-        const termId=findAbilityTerm(ability,terms);
-        const chip=document.createElement(termId?'button':'span');
+        const chip=document.createElement('span');
         chip.className='popup-ability-chip';chip.textContent=ability;
-        if(termId){chip.type='button';chip.dataset.term=termId;}
         list.append(chip);
       });
       row.append(label,list);wrap.append(row);
@@ -84,22 +73,28 @@
     return list;
   }
 
+  function structuredWeapon(weapon){
+    if(!weapon||typeof weapon!=='object')return null;
+    const skill=weapon.BS!=null?'BS':weapon.WS!=null?'WS':'';
+    if(weapon.Range==null||weapon.A==null||!skill||weapon.S==null||weapon.AP==null||weapon.D==null)return null;
+    const abilities=Array.isArray(weapon.Abilities)?weapon.Abilities:String(weapon.Abilities||'').split(/\s*,\s*/).filter(Boolean);
+    return{mode:String(weapon.Range).toLowerCase()==='melee'||skill==='WS'?'Melee':'Ranged',abilities,stats:[['Range',weapon.Range],['A',weapon.A],[skill,weapon[skill]],['S',weapon.S],['AP',weapon.AP],['D',weapon.D]]};
+  }
+
+  function structuredUnit(statline){
+    if(!statline||typeof statline!=='object')return null;
+    const parts=['M','T','Sv','W','Ld','OC','Inv'].filter(key=>statline[key]!=null).map(key=>`${key} ${statline[key]}`);
+    return parts.length>=5?renderUnit(parts):null;
+  }
+
   function render(term,terms){
-    if(term.profiles?.length){
-      const set=document.createElement('div');set.className='popup-weapon-set';
-      term.profiles.forEach(item=>{
-        const section=document.createElement('section'),title=document.createElement('h4'),profile=parseWeapon(item.summary);
-        title.textContent=item.title;section.append(title);if(profile)section.append(renderWeapon(profile,terms));set.append(section);
-      });
-      return{node:set,classes:['popup-profile','popup-weapon','popup-weapon-group']};
-    }
-    const weapon=parseWeapon(term.summary);
-    if(weapon)return{node:renderWeapon(weapon,terms),classes:['popup-profile','popup-weapon']};
-    const unit=renderUnit(splitParts(term.summary));
+    const weapon=structuredWeapon(term.structured?.weapon);
+    if(weapon)return{node:renderWeapon(weapon),classes:['popup-profile','popup-weapon']};
+    const unit=structuredUnit(term.structured?.statline);
     if(unit)return{node:unit,classes:['popup-profile','popup-statline']};
-    const paragraph=document.createElement('p');paragraph.textContent=term.kind==='stratagem'?term.definition:term.summary;
+    const paragraph=document.createElement('p');paragraph.textContent=term.definition;
     return{node:paragraph,classes:[]};
   }
 
-  window.WHPopupContent=Object.freeze({parseWeapon,render});
+  window.WHPopupContent=Object.freeze({parseWeapon,structuredWeapon,render});
 }());

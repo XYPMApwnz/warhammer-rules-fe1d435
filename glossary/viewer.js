@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   const api=window.WH40K_GLOSSARY;
-  const terms=Object.keys(api.forBook('death-guard')).filter(id=>api.resolve(id)===id).map(id=>api.get(id)).filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
+  const terms=api.entries().filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
   const search=document.getElementById('search'),filters=document.getElementById('filters'),list=document.getElementById('termList'),detail=document.getElementById('termDetail'),resultCount=document.getElementById('resultCount'),libraryBack=document.getElementById('libraryBack'),popup=document.getElementById('termPopup'),popupTitle=document.getElementById('termPopupTitle'),popupSummary=document.getElementById('termPopupSummary'),popupFull=document.getElementById('termPopupFull');
   let category='all',selected='',visibleLimit=120,searchTimer=0;
   const returnRecord=window.WHGlossaryReturn?.read();
@@ -112,7 +112,7 @@
   function select(id){const term=api.get(id);if(!term)return;const url=new URL(location.href);url.hash=term.id;if(location.hash.slice(1)!==encodeURIComponent(term.id))history.pushState(null,'',url);renderTerm(term.id,{scrollToArticle:true});}
   function showCatalogue(focus=false,push=false){selected='';document.body.classList.remove('article-open');detail.replaceChildren(Object.assign(document.createElement('p'),{className:'empty',textContent:'Select a term from the archive.'}));renderList();if(push){const url=new URL(location.href);url.hash='';history.pushState(null,'',url);}if(focus){search.focus();document.querySelector('.catalogue')?.scrollIntoView({block:'start'});}}
   function syncFromUrl(){const id=decodeURIComponent(location.hash.slice(1));const term=api.get(id);if(term)renderTerm(term.id);else showCatalogue(false);}
-  function openPopup(id){const term=api.get(id);if(!term)return;popup.dataset.term=term.id;popupTitle.textContent=displayTitle(term);popupSummary.textContent=term.summary?.en||term.definition?.en||'';popup.showModal();}
+  function openPopup(id){const term=api.get(id);if(!term)return;popup.dataset.term=term.id;popupTitle.textContent=displayTitle(term);popupSummary.textContent=term.definition?.en||'';popup.showModal();}
   detail.addEventListener('click',event=>{const trigger=event.target.closest('[data-autolink][data-term]');if(!trigger)return;event.preventDefault();openPopup(trigger.dataset.term);});
   document.getElementById('termPopupClose').addEventListener('click',()=>popup.close());
   popup.addEventListener('click',event=>{if(event.target===popup)popup.close();});

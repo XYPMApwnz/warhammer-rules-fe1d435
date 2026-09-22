@@ -37,7 +37,7 @@ The printed original Core lacks 01.02.06, 18.06, 18.07, 22.03.01, 24.11.01 and 2
 
 Five launch FAQs are `OFFICIAL_GW_CONFIRMED`: no-ranged-weapons shooting/action eligibility; two distinct Blast/engaged Monster-or-Vehicle cases; Overrun Fight eligibility; Scout move followed by Embark. They retain their original page-88 FAQ identities and are not rewritten as main rules.
 
-The following 23 later/current FAQ candidates remain global `EVIDENCE_PENDING` rather than being attributed to the official app. Tacoma and Event Companion corroborations have only their declared event scopes. GDM v931 reports twelve new FAQ answers, while Waha FAQ blocks include apparent third-party editorial prose, so neither is a reliable verbatim GW app capture.
+Of the following 23 later/current FAQ candidates, 17 remain global `EVIDENCE_PENDING` rather than being attributed to the official app. Six are `CURRENT_SECONDARY_CORROBORATED`: their current secondary answers add no new semantics and are fully entailed by the applicable global GW Core text. They remain clarifications of their existing main-rule owners rather than new FAQ records. Tacoma and Event Companion corroborations have only their declared event scopes. GDM v931 reports twelve new FAQ answers, while Waha FAQ blocks include apparent third-party editorial prose, so neither is treated as a reliable verbatim GW app capture.
 
 | FAQ family | Direct GW evidence, if any | Current global FAQ disposition |
 | --- | --- | --- |
@@ -47,21 +47,21 @@ The following 23 later/current FAQ candidates remain global `EVIDENCE_PENDING` r
 | Leader attachment: MFM vs datasheet | Current online MFM lists attachments | Pending precedence FAQ |
 | Unit Coherency / mission objective | Original main rules | Pending exact FAQ |
 | Targeting: visible model vs model in range | Original targeting/visibility | Pending exact FAQ |
-| Critical Hits / Snap Shooting | Original Snap Shooting | Pending exact FAQ |
-| Insane Bravery on already Battle-shocked unit | Original main rule/Stratagem | Pending exact FAQ |
+| Critical Hits / Snap Shooting | Original 15.09 says Snap Shooting attacks only hit on an unmodified 6 | `CURRENT_SECONDARY_CORROBORATED`; the current answer is fully entailed by 15.09, with no separate FAQ record |
+| Insane Bravery on already Battle-shocked unit | Original 01.07 prevents Stratagem targeting of Battle-shocked units; 15.04 is used before the roll | `CURRENT_SECONDARY_CORROBORATED`; the current answer is fully entailed by 01.07/15.04, with no separate FAQ record |
 | Embarked abilities / Not On Battlefield | Tacoma p5 only | Event-only answer; global pending |
 | Attached Unit destroyed-model keywords | Tacoma p5 only | Event-only answer; global pending |
-| Strategic Reserves pre-battle 50% cap | Original p68 §20.01 confirms the **main rule** | Pending any later exception/FAQ, no duplicate main rule |
+| Strategic Reserves pre-battle 50% cap | Original p68 §20.01 places the 50% restriction in pre-battle Declare Battle Formations | `CURRENT_SECONDARY_CORROBORATED`; the current answers are fully entailed by 20.01, with no duplicate main rule |
 | Lone Operative X | Original main ability confirms X form | Pending exact FAQ |
-| Hazardous allocation | Original attack/hazard rules | Pending exact FAQ |
+| Hazardous allocation | Original 06.02/06.03 and 24.15 assign hazard rolls and mortal wounds to the unit, with allocation governed by 06.02 | `CURRENT_SECONDARY_CORROBORATED`; the current answers are fully entailed by those rules, excluding secondary editorial examples |
 | Scouts sequencing between players | Event Companion p2 alternates event pre-battle abilities; launch FAQ concerns the distinct Scout-then-Embark question | Global sequencing FAQ pending |
-| Feel No Pain timing | Original main ability | Pending exact FAQ |
+| Feel No Pain timing | Original 05.04 resolves wound loss; 24.12 triggers when a model would lose a wound | `CURRENT_SECONDARY_CORROBORATED`; the current answer is fully entailed by 05.04/24.12, with no separate FAQ record |
 | Fight on Death vs Deadly Demise | Tacoma p6 confirms Fight-on-Death models stay on the board; it does **not** answer the Deadly Demise ordering | Exact ordering pending |
 | Anti-Non-X | Original Anti ability | Pending exact FAQ |
 | Upgrade + Enhancement | Tacoma p4; GW September Space Marines article prints an Upgrade under Enhancements | Exact global FAQ pending; subtype relationship corroborated |
 | Charge targets after roll modifiers | Secondary app-data diff v931 | Pending exact FAQ |
 | Objective marker versus objective | Secondary app-data diff v931 | Pending exact FAQ |
-| Line of sight from any model part | Secondary app-data diff v931 | Pending exact FAQ |
+| Line of sight from any model part | Original Visibility rule defines line of sight from any part of the observing model to any part of the observed model | `CURRENT_SECONDARY_CORROBORATED`; the current answer is fully entailed by the original global rule, with no separate FAQ record |
 | Flying Take to the Skies timing | Secondary app-data diff v931 | Pending exact FAQ |
 | Whether every disembark move counts as disembarking that turn | Current Waha FAQ only | Pending exact FAQ |
 

@@ -171,21 +171,72 @@ The GDM measurement assets do not become authoritative through that parity. All 
 
 The third-party image bytes are not stored in the repository because no existing source-storage or licensing policy authorizes mass redistribution. The evidence manifest preserves each URL, HTTP result, byte size, SHA-256, retrieval date and parity conclusion. GDM remains a reconstruction and QA aid for a future structured terrain renderer; its artwork is not approved for production UI.
 
-## Minimum physical-capture checklist
+## Public evidence resolution
 
-Nine photographs are still required to close the strict physical-source gaps identified by the bounded web reconstruction:
+The former nine-group physical-capture checklist was checked against current public evidence:
 
-1. One straight-on photograph containing all six Deployment fronts: Tipping Point, Sweeping Engagement, Search and Destroy, Hammer and Anvil, Dawn of War, and Crucible of Battle.
-2. One positively identified Deployment-card reverse.
-3. One straight-on photograph containing the Nowhere to Hide, Scrambled Communications, and Ruinscape Twist fronts.
-4. One positively identified Twist-card reverse.
-5. Reference booklet pages 1-2.
-6. Reference booklet pages 3-4.
-7. Reference booklet pages 5-6.
-8. Reference booklet pages 7-8.
-9. Reference booklet pages 9-10.
+```text
+FORMER_CAPTURE_GROUPS=9
+PUBLICLY_RESOLVED=7
+STILL_REQUIRES_CAPTURE=2
+DEPLOYMENT_FRONTS=RESOLVED_PUBLIC
+DEPLOYMENT_REVERSE=RESOLVED_PUBLIC
+TWIST_FRONTS=RESOLVED_PUBLIC
+TWIST_REVERSE=RESOLVED_PUBLIC
+BOOKLET_PAGES_1_10=PARTIAL; PAIRS 3-4 AND 9-10 REMAIN
+USER_CAPTURE_REQUIRED=YES
+```
 
-Every photograph must be square-on, glare-free and uncropped, with all text and measurements readable. If a grouped photograph is not sharp enough, supply close-ups. Mirrored World, Martial Pride and Night Fighting already have readable official GW fronts and do not need to be photographed again.
+| Source | Type / authority | Version proof and accepted use |
+|---|---|---|
+| [Warhammer 40,000: Armageddon Unboxing - Everything else](https://www.warhammer-community.com/en-gb/articles/rzocwxgt/warhammer-40000-armageddon-unboxing-everything-else/), 2026-05-01 | Official GW article and product image / `OFFICIAL` | Section title says Chapter Approved 26-27 Mission Deck; pictured box says Mission Deck 2026-27. Product identity and physical card-back designs. |
+| [New40k - How your army affects your mission](https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/), 2026-04-03 | Official GW rules article / `OFFICIAL` | Explicit new-edition mission sequence. Card-family icon meanings and named Deployment examples. |
+| [The Chapter Approved deck - What is it and how does it work?](https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/), 2026-05-28 | Official GW rules article / `OFFICIAL` | Explicit new-edition Chapter Approved deck. Six-card Twist family and readable official fronts for Mirrored World, Martial Pride and Night Fighting. |
+| [How to use Chapter Approved, full review](https://youtu.be/sp6n_Bl6MJ0), 2026-07-17 | Public physical product video / `PHYSICAL_CARD_IMAGE_AUTHENTICATED` | Presenter explicitly distinguishes the shown 11th-edition 2026-27 product from 2025-26; physical fronts and booklet pages inspected at the timestamps below. |
+| [Mission Deck 2026-27](https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/) | Current 11E transcription and visual reference / `SECONDARY` | Page heading and source table identify Warhammer 40,000 11th edition and Chapter Approved 2026-27. Used only for independent corroboration. |
+
+All sources and linked assets were retrieved or rechecked on 2026-09-22.
+
+The public [Look Out, Sir! review](https://youtu.be/sp6n_Bl6MJ0), *How to use Chapter Approved, full review*, was published on 2026-07-17. Its [searchable transcript](https://www.buzzsprout.com/195242/episodes/19509209-243-how-to-use-chapter-approved-2026-27-full-review?t=0) identifies Chapter Approved 2026-27. At `00:02:06-00:03:04` the presenter identifies the new 11th-edition product, separates it from the old 2025-26 deck, and switches to a second camera showing the physical contents. Frames were inspected at 1280x720 on 2026-09-22; no video bytes or frames are stored in the repository.
+
+| Former group | Public evidence | Result |
+|---|---|---|
+| All six Deployment fronts | Physical cards are readable at Crucible of Battle `00:11:16`, Sweeping Engagement `00:11:28`, Dawn of War `00:11:49`, Tipping Point `00:12:24`, and Search and Destroy plus Hammer and Anvil `00:12:48-00:13:19`. The current 11E image set below independently matches identity, orientation, geometry, measurements and objective/territory symbols. | `RESOLVED_PUBLIC`, high confidence |
+| Representative Deployment reverse | The official current-edition mission-sequence graphic assigns the four-arrow diamond to Deployment; the official 2026-27 product image shows that symbol on the physical card backs. | `RESOLVED_PUBLIC`, official authority, high confidence |
+| Nowhere to Hide, Scrambled Communications and Ruinscape fronts | Physical fronts and rules are readable at Ruinscape `01:22:17`, Scrambled Communications `01:24:17`, and Nowhere to Hide `01:27:32`; the current 11E transcription independently agrees. | `RESOLVED_PUBLIC`, high confidence |
+| Representative Twist reverse | The official current-edition mission-sequence graphic assigns paired bent arrows to Twist; the official 2026-27 product image shows that symbol on the physical card backs. | `RESOLVED_PUBLIC`, official authority, high confidence |
+| Booklet pages 1-2 | Physical spread readable at `00:03:04-00:03:20`. | `RESOLVED_PUBLIC`, high confidence |
+| Booklet pages 3-4 | Physical spread shown at `01:20:50-01:20:52` and `01:31:31-01:31:40`; fingers obscure lower page-4 bullet text in every inspected frame. The spoken walkthrough and current transcription corroborate the rule, but are not a complete page-faithful image. | `STILL_REQUIRES_USER_CAPTURE` |
+| Booklet pages 5-6 | Physical spread readable during `01:34:38-01:39:50`. | `RESOLVED_PUBLIC`, high confidence |
+| Booklet pages 7-8 | Physical spread readable during `01:39:50-01:41:40`. | `RESOLVED_PUBLIC`, high confidence |
+| Booklet pages 9-10 | Physical spread shown during `01:41:40-01:45:40`; fingers obscure the bottom of the final page-10 `WHEN DRAWN` paragraph in every inspected frame. The spoken walkthrough and current transcription corroborate the surrounding Appendix, but are not a complete page-faithful image. | `STILL_REQUIRES_USER_CAPTURE` |
+
+The official [mission-sequence graphic](https://assets.warhammer-community.com/40k_missions-apr3-boxout2-oy62krxcif.jpg) is 600x617 pixels, SHA-256 `E9E1E75E109E7319600214154014A0918965A2B07D8B0F4C2AD783FAD4B30D97`. The official [Chapter Approved 26-27 product image](https://assets.warhammer-community.com/image2-01-05-wmvtgppphd.jpg) is 1000x1000 pixels, 359,941 bytes, SHA-256 `F777D7EE3367029B9029512429941408851C7A770F31F517E6F692A382DD85BA`. These jointly resolve both representative-reverse groups without inferring a reverse from a deployment face's duplicated upside-down title.
+
+The current [Mission Deck 2026-27 page](https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/) identifies itself as Warhammer 40,000 11th edition and binds its content to Chapter Approved 2026-27. It remains secondary evidence only. Its six Deployment image references, retrieved on 2026-09-22, are:
+
+| Deployment | Dimensions | Bytes | SHA-256 |
+|---|---:|---:|---|
+| [Tipping Point](https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_TippingPoint.png) | 694x907 | 254,957 | `91B838AEC7485D8615F737FF44D404153D2CC8557D9B632B70989FFE32D023BE` |
+| [Sweeping Engagement](https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_SweepingEngagement.png) | 698x892 | 277,932 | `8B0FC63135851D6219900134CE65D6CA9C420417873FA0E425CF39FFC1B94803` |
+| [Search and Destroy](https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_SearchAndDestroy.png) | 699x806 | 277,853 | `24537E963D8A525D6570B7B76C93B7A73DEAB6DA52D113E198CDCF7CD1D7CE5D` |
+| [Hammer and Anvil](https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_HammerAndAnvil.png) | 596x907 | 239,657 | `95919E4277BD4ED944DE02251D2BCF899E695F8B28A6AFFAD11186D0F00063BB` |
+| [Dawn of War](https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_DawnOfWar.png) | 699x806 | 275,428 | `C43AC6488122B69E33DAA984DCAAED44E117662996FB7DEBB7C9AD375EE202AF` |
+| [Crucible of Battle](https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_CrucibleOfBattle.png) | 687x907 | 259,526 | `61DDFCFEE6A270E103DC773E0A1F45FF8D495B7722A5170AACE7B0B26E98EC42` |
+
+Search results from Warhammer 40,000 10th edition, Chapter Approved 2025-26, Chapter Approved: Leviathan (2023), Pariah Nexus and Tactical Deployment (2020) were rejected. Reused names and similar geometry were not treated as currentness proof. Event Companion v1.2 remains event-only and expressly omits standard Deployment and Twist cards.
+
+The minimal remaining request is two glare-free, uncropped photographs: booklet pages 3-4 and booklet pages 9-10, with the currently obscured lower text readable. Mirrored World, Martial Pride and Night Fighting remain covered by readable official GW fronts.
+
+```text
+OFFICIAL_SOURCES=3 current GW articles/images
+PHYSICAL_VIDEO_SOURCES=1 current physical review with exact frame ranges
+SECONDARY_SOURCES=1 current 11E transcription/visual reference
+VERSION_MISMATCHES_REJECTED=10E; Chapter Approved 2025-26; Leviathan 2023; Pariah Nexus; Tactical Deployment 2020
+CONFLICTS=0
+UNRESOLVED=2 booklet spreads with partially occluded text
+THIRD_PARTY_IMAGE_BYTES_COMMITTED=NO
+```
 
 ## Source ownership
 

@@ -1,10 +1,10 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 3263,
-    "aliases": 626,
+    "terms": 3268,
+    "aliases": 630,
     "definitionCandidates": 60,
-    "summaryCandidates": 62,
+    "summaryCandidates": 60,
     "semanticWarnings": 8,
     "aliasCandidates": 230,
     "duplicateCandidates": 116,
@@ -450,9 +450,9 @@
     {
       "termId": "core-assault",
       "candidateSource": "adeptus-mechanicus",
-      "candidateSummary": "An unengaged unit that Advanced this turn can shoot using only its [ASSAULT] weapons. After shooting, it cannot start an Action until the end of the phase.",
+      "candidateSummary": "Folding stocks, shortened barrels or lightweight construction enable some weapons to be easily fired on the move. Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting.",
       "finalSummary": "An unengaged unit that Advanced this turn can shoot using only its [ASSAULT] weapons. After shooting, it cannot start an Action until the end of the phase.",
-      "resolution": "selected"
+      "resolution": "rejected"
     },
     {
       "termId": "core-assault",
@@ -464,29 +464,15 @@
     {
       "termId": "core-blast",
       "candidateSource": "adeptus-mechanicus",
-      "candidateSummary": "When gathering attack dice, add 1 attack die for every full 5 models in the target unit. [BLAST X] adds X attack dice instead.",
+      "candidateSummary": "High-explosive rounds can fell several warriors in a single blast, but firing them too close to comrades is unwise. Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets…",
       "finalSummary": "When gathering attack dice, add 1 attack die for every full 5 models in the target unit. [BLAST X] adds X attack dice instead.",
-      "resolution": "selected"
+      "resolution": "rejected"
     },
     {
       "termId": "core-blast",
       "candidateSource": "core-rules",
       "candidateSummary": "Adds attack dice according to the number of models in the target unit.",
       "finalSummary": "When gathering attack dice, add 1 attack die for every full 5 models in the target unit. [BLAST X] adds X attack dice instead.",
-      "resolution": "normalized"
-    },
-    {
-      "termId": "core-cleave",
-      "candidateSource": "adeptus-mechanicus",
-      "candidateSummary": "When gathering attack dice, if all of this weapon's attacks target one unit, add X attack dice for every full 5 models in that unit.",
-      "finalSummary": "When gathering attack dice, if all of this weapon's attacks target one unit, add X attack dice for every full 5 models in that unit.",
-      "resolution": "selected"
-    },
-    {
-      "termId": "core-cleave",
-      "candidateSource": "core-rules",
-      "candidateSummary": "With sufficient might or skill, warriors may sweep blades or talons through their foes in long lethal arcs. This ability always takes the form [CLEAVE X].…",
-      "finalSummary": "When gathering attack dice, if all of this weapon's attacks target one unit, add X attack dice for every full 5 models in that unit.",
       "resolution": "normalized"
     },
     {
@@ -534,9 +520,9 @@
     {
       "termId": "core-devastating-wounds",
       "candidateSource": "adeptus-mechanicus",
-      "candidateSummary": "When an attack with DEVASTATING WOUNDS scores a Critical Wound, the target suffers mortal wounds equal to the weapon's Damage characteristic. Excess mortal wounds are lost.",
+      "candidateSummary": "The most potent weapons strike with such power that they make a mockery of armour and can cleave through several foes. Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a…",
       "finalSummary": "When an attack with DEVASTATING WOUNDS scores a Critical Wound, the target suffers mortal wounds equal to the weapon's Damage characteristic. Excess mortal wounds are lost.",
-      "resolution": "selected"
+      "resolution": "rejected"
     },
     {
       "termId": "core-devastating-wounds",
@@ -688,9 +674,9 @@
     {
       "termId": "core-lethal-hits",
       "candidateSource": "adeptus-mechanicus",
-      "candidateSummary": "When an attack with LETHAL HITS scores a Critical Hit, it automatically wounds. No Wound roll is made, so that attack cannot score a Critical Wound.",
+      "candidateSummary": "Many deadly weapons can inflict fatal injuries on any foe, no matter their resilience. Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. Designer’s Note:…",
       "finalSummary": "When an attack with LETHAL HITS scores a Critical Hit, it automatically wounds. No Wound roll is made, so that attack cannot score a Critical Wound.",
-      "resolution": "selected"
+      "resolution": "rejected"
     },
     {
       "termId": "core-lethal-hits",

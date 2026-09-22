@@ -22,13 +22,10 @@ export const DIGITAL_CORE_TITLE_OVERRIDES=Object.freeze({'24.37.01':'Torrent Res
 export const canonicalCoreRuleId=rule=>rule.code.startsWith('24.')?`core-${slug(rule.title)}`:`core-rule-${rule.code.replace('.','-')}-${slug(rule.title)}`;
 
 export function createCoreFactProjection({repoRoot=defaultRepoRoot}={}){
-  const contentRoot=path.join(repoRoot,'books','core-rules','content'),glossaryRoot=path.join(repoRoot,'glossary');
+  const contentRoot=path.join(repoRoot,'books','core-rules','content');
   const coreData=loadWindow(path.join(contentRoot,'core-rules.en.js')).CORE_RULES;
   const coreSource=loadWindow(path.join(contentRoot,'core-rules.source.en.js')).CORE_PDF_SOURCE;
   const coreDigital=applyCoreCurrentOfficial(readJson(path.join(contentRoot,'core-rules.digital-11e.json')));
-  const quickReferences=readJson(path.join(glossaryRoot,'core-quick-reference.en.json'));
-  const resolutions=readJson(path.join(glossaryRoot,'resolutions.en.json'));
-  const supplemental=readJson(path.join(glossaryRoot,'supplemental-terms.en.json'));
   const coreRules=[];
   for(const [sectionId,rules] of Object.entries(coreSource.rules))for(const rule of rules)coreRules.push({...rule,sectionId});
   const coreByTitle=new Map(coreRules.map(rule=>[normalTitle(rule.title),rule]));
@@ -52,21 +49,30 @@ export function createCoreFactProjection({repoRoot=defaultRepoRoot}={}){
     if(!terms.has(id))terms.set(id,{id,kind:'core-concept',title:entry.title,summary:concise(entry.summary),definition:clean(entry.summary),aliases:[],canonicalSource:{documentId:'core-rules',revision:'11e',locator:entry.rule}});
     aliases[localId]=id;terms.get(id).summary=concise(entry.summary);
   }
-  for(const entry of supplemental.terms||[])if(entry.id.startsWith('core-')&&!terms.has(entry.id))terms.set(entry.id,{id:entry.id,kind:entry.kind,title:entry.title,summary:concise(entry.summary),definition:clean(entry.definition||entry.summary),aliases:[],canonicalSource:{documentId:'core-rules',revision:'11e',locator:entry.locator||'curated glossary supplement'}});
-  for(const [alias,target] of Object.entries(supplemental.aliases||{}))if(terms.has(target))aliases[alias]=target;
-  for(const [alias,resolution] of Object.entries(resolutions.aliases||{}))if(terms.has(resolution.target))aliases[alias]=resolution.target;
-  for(const [id,reference] of Object.entries(quickReferences)){
-    const term=terms.get(id);if(!term)continue;
-    term.summary=concise(reference.summary);term.definition=clean(reference.definition);
+  // Bodyguard is owned by the accepted Forming Attached Units rule. Preserve
+  // its established public identity without feeding glossary content back
+  // into canonical Army Book construction.
+  if(!terms.has('core-bodyguard')){
+    const owner=coreDigital.records.find(rule=>rule.code==='19.01');
+    if(!owner)throw new Error('Missing accepted Core Bodyguard owner: 19.01');
+    terms.set('core-bodyguard',{id:'core-bodyguard',code:owner.code,kind:'core-concept',title:'Bodyguard',summary:concise(recordText(owner)),definition:cleanRuleText(recordText(owner)),aliases:[],canonicalSource:{documentId:'core-rules',revision:'11e',locator:owner.code}});
   }
   for(const rule of coreDigital.records){
     if(CORE_GLOSSARY_EXCLUDED_CODES.has(rule.code))continue;
     const term=terms.get(digitalCoreId(rule));if(!term)throw new Error(`Missing canonical Core fact ${rule.code}`);
     term.code=rule.code;term.title=digitalTitle(rule);term.kind=rule.kind==='stratagem'?'stratagem':rule.code.startsWith('24.')?'core-ability':'core-rule';
     const text=recordText(rule),definition=rule.code==='03.03'?text.split('\nWHAT IS COHERENCY?')[0]:text;
-    term.definition=cleanRuleText(definition);if(!quickReferences[term.id])term.summary=concise(text);
+    term.definition=cleanRuleText(definition);term.summary=concise(text);
     term.canonicalSource={documentId:'core-rules',revision:'11e',locator:rule.code};
     const section=coreSectionByNumber.get(rule.code.slice(0,2));if(section)term.fullRulePath=`books/core-rules/reader/${section}.html#rule-${slug(rule.code)}`;
+  }
+  for(const rule of coreDigital.records){
+    if(CORE_GLOSSARY_EXCLUDED_CODES.has(rule.code))continue;
+    const target=digitalCoreId(rule);
+    for(const alias of rule.compatibilityAliases||[]){
+      const key=slug(alias);
+      if(key&&key!==target)aliases[key]=target;
+    }
   }
   const coreTermsByCode=new Map([...terms.values()].filter(term=>term.code).map(term=>[term.code,term]));
   const coreCodes=[...coreTermsByCode.keys()].sort((left,right)=>right.length-left.length||left.localeCompare(right));

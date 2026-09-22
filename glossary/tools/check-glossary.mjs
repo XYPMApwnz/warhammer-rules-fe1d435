@@ -13,6 +13,7 @@ const errors=[];
 const hasAnchor=createReaderAnchorValidator(repoRoot);
 const ids=new Set(Object.keys(registry.terms));
 const presentations=new Set(['atomic','article','profile','reference','metadata']);
+const entryClasses=new Set(['UPSTREAM_PROJECTED','GLOSSARY_NATIVE','PRESENTATION_ONLY']);
 const publicScopes=new Set(['global','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','blood-angels','dark-angels']);
 const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
 function semanticAnomalies(value){
@@ -42,6 +43,10 @@ function checkFullRulePath(owner,value){
 for(const [id,term] of Object.entries(registry.terms)){
   if(!publicScopes.has(term.scope))errors.push(`${id}: unpublished scope ${term.scope} leaked into the public registry`);
   for(const field of ['id','kind','scope','edition','language','title','summary','definition','canonicalSource','status'])if(term[field]==null)errors.push(`${id}: missing ${field}`);
+  if(!entryClasses.has(term.entryClass))errors.push(`${id}: invalid entryClass ${term.entryClass}`);
+  if(!term.ownerType||!term.ownerId)errors.push(`${id}: incomplete factual owner binding`);
+  if(!term.sourceRef?.documentId||!term.sourceRef?.revision||!term.sourceRef?.locator)errors.push(`${id}: incomplete sourceRef`);
+  if(term.entryClass==='GLOSSARY_NATIVE'&&term.canonicalSource?.documentId!=='glossary-native')errors.push(`${id}: glossary-native entry lacks glossary-native provenance`);
   const summary=String(term.summary?.en||'').replace(/\s+/g,' ').trim();
   const definition=String(term.definition?.en||'').replace(/\s+/g,' ').trim();
   if(!summary)errors.push(`${id}: empty popup summary`);
@@ -70,6 +75,7 @@ if(ids.has('keyword-flying'))errors.push('keyword-flying: FLYING must resolve to
 if(aliases['keyword-flying']!=='keyword-fly')errors.push('keyword-flying: missing legacy alias to keyword-fly');
 for(const [alias,target] of Object.entries(aliases)){
   if(alias===target)errors.push(`${alias}: alias points to itself`);
+  if(ids.has(alias))errors.push(`${alias}: alias shadows a canonical term`);
   if(!ids.has(target))errors.push(`${alias}: unknown alias target ${target}`);
   if(aliases[target])errors.push(`${alias}: alias chain through ${target}`);
 }

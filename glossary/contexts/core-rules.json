@@ -969,6 +969,26 @@
       "navigation": {
         "rule": "core-concepts"
       }
+    },
+    "uru-2026-07-22-stratagem-cp-cost": {
+      "termId": "uru-2026-07-22-stratagem-cp-cost",
+      "navigation": {}
+    },
+    "uru-2026-07-22-stratagem-reuse": {
+      "termId": "uru-2026-07-22-stratagem-reuse",
+      "navigation": {}
+    },
+    "uru-2026-07-22-defensive-stratagem-range": {
+      "termId": "uru-2026-07-22-defensive-stratagem-range",
+      "navigation": {}
+    },
+    "uru-2026-07-22-identical-destroyed-unit": {
+      "termId": "uru-2026-07-22-identical-destroyed-unit",
+      "navigation": {}
+    },
+    "uru-2026-08-26-disembark-move-types": {
+      "termId": "uru-2026-08-26-disembark-move-types",
+      "navigation": {}
     }
   }
 }

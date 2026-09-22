@@ -102,6 +102,7 @@ export function validateGlossaryGraph({registry,aliases,contexts,bookDependencie
   for(const [alias,target] of Object.entries(aliases)){
     if(!ids.has(target))throw new Error(`Glossary alias ${alias} references unknown target ${target}`);
     if(alias===target)throw new Error(`Glossary alias ${alias} points to itself`);
+    if(ids.has(alias))throw new Error(`Glossary alias ${alias} shadows a canonical term`);
     if(aliases[target])throw new Error(`Glossary alias ${alias} chains through ${target}`);
   }
   for(const [bookId,records] of Object.entries(contexts))for(const [localId,record] of Object.entries(records)){

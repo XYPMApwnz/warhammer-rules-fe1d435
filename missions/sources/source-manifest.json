@@ -215,9 +215,9 @@
       "scope": "STANDARD_11E",
       "currentStatus": "CURRENT",
       "sourceType": "official-physical-product",
-      "lifecycle": "EVIDENCE_PENDING",
+      "lifecycle": "ACCEPTED_SOURCE",
       "active": true,
-      "coverage": "Product identity and included card families authenticated; complete card and reference-booklet contents unavailable",
+      "coverage": "Official current physical owner for the complete 88-card and 10-page reference corpus; accepted public evidence is enrolled separately with per-record authority",
       "factsOwned": [
         "primary-missions",
         "secondary-objectives",
@@ -228,23 +228,60 @@
         "standard-terrain-and-objective-maps"
       ],
       "knownGaps": [
-        "Full Primary Mission card bodies and scoring conditions",
-        "Full Secondary Objective identities, conditions and scoring",
-        "Complete Deployment identities, geometry and measurements",
-        "Complete Twist identities and text",
-        "Complete instruction/reference booklet",
-        "Complete standard casual terrain and objective maps"
+        "Complete first-party physical or digital capture is not public",
+        "Complete standard casual terrain and objective maps outside the 88-card and booklet corpus"
       ],
       "consumers": [
         "FUTURE_STANDARD_MISSION_MODEL",
         "SOURCE_VERIFICATION"
       ],
       "paths": [
+        "missions/sources/chapter-approved-2026-27-evidence.json",
         "docs/rules-universe/STANDARD_MISSIONS_SOURCE_ACQUISITION_2026-09-22.md"
       ],
       "supersedes": [
         "chapter-approved-2025-26"
       ],
+      "supersededBy": []
+    },
+    {
+      "id": "chapter-approved-2026-27-public-evidence-corpus",
+      "sourceId": "wh40k-11e-chapter-approved-2026-27-public-evidence",
+      "authority": "mixed-per-record",
+      "role": "accepted-source-evidence-corpus",
+      "title": "Chapter Approved 2026-27 public source evidence corpus",
+      "date": "2026-09-22",
+      "retrievedAt": "2026-09-22",
+      "scope": "STANDARD_11E",
+      "currentStatus": "CURRENT_AT_2026_09_22",
+      "sourceType": "corroborated-source-evidence",
+      "lifecycle": "ACCEPTED_SOURCE_EVIDENCE",
+      "classification": "CORROBORATED_SOURCE_EVIDENCE",
+      "coverage": {
+        "physicalCards": 88,
+        "primaryMissions": 25,
+        "primaryPhysicalCards": 30,
+        "secondaryObjectives": 18,
+        "secondaryPhysicalCards": 36,
+        "forceDispositions": 5,
+        "forceDispositionPhysicalCards": 10,
+        "deployments": 6,
+        "twists": 6,
+        "referenceBookletPages": 10,
+        "eventLayoutsReferenced": 45,
+        "chapterApprovedRulesContent": "COMPLETE_FOR_MODELING"
+      },
+      "factsOwned": [],
+      "authorityBoundary": "The official physical Chapter Approved product owns the facts. This evidence corpus records per-record official, physical-corroborated and secondary-content evidence without promoting secondary material to official authority.",
+      "consumers": [
+        "FUTURE_STANDARD_MISSION_MODEL",
+        "SOURCE_VERIFICATION"
+      ],
+      "paths": [
+        "missions/sources/chapter-approved-2026-27-evidence.json",
+        "docs/rules-universe/STANDARD_MISSIONS_SOURCE_ACQUISITION_2026-09-22.md"
+      ],
+      "supersedes": [],
       "supersededBy": []
     },
     {

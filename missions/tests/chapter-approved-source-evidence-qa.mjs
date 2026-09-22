@@ -1,0 +1,126 @@
+import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const read=relative=>fs.readFileSync(path.join(root,relative),'utf8');
+const json=relative=>JSON.parse(read(relative));
+const clone=value=>structuredClone(value);
+const evidence=json('missions/sources/chapter-approved-2026-27-evidence.json');
+const manifest=json('missions/sources/source-manifest.json');
+const gdm=json('missions/sources/game-data-missions-terrain-reference-2026-09-22.json');
+const acquisition=read('docs/rules-universe/STANDARD_MISSIONS_SOURCE_ACQUISITION_2026-09-22.md');
+const universe=read('docs/rules-universe/RULES_UNIVERSE_2026-09-22.md');
+const expectedDeployments=['deployment-crucible-of-battle','deployment-dawn-of-war','deployment-hammer-and-anvil','deployment-search-and-destroy','deployment-sweeping-engagement','deployment-tipping-point'];
+const expectedTwists=['twist-martial-pride','twist-mirrored-world','twist-night-fighting','twist-nowhere-to-hide','twist-ruinscape','twist-scrambled-communications'];
+const acceptedClasses=new Set(['OFFICIAL_AUTHENTICATED','PHYSICAL_SOURCE_CORROBORATED','HIGH_CONFIDENCE_CORROBORATED','SECONDARY_CONTENT_SOURCE']);
+const sha256=bytes=>crypto.createHash('sha256').update(bytes).digest('hex').toUpperCase();
+const sum=(rows,key)=>rows.reduce((total,row)=>total+row[key],0);
+
+function validate(data,{sourceManifest=manifest,gdmEvidence=gdm}={}){
+  assert.equal(data.schema,'warhammer-chapter-approved-source-evidence/v1');
+  assert.equal(data.edition,'Warhammer 40,000 11th Edition');
+  assert.equal(data.cutoff,'2026-09-22');
+  assert.equal(data.currentness,'CURRENT_AT_2026_09_22');
+  assert.equal(data.lifecycle,'ACCEPTED_SOURCE_EVIDENCE');
+  assert.deepEqual(data.contentStatus,{chapterApprovedRulesContent:'COMPLETE_FOR_MODELING',contentGap:false,userSourceNeeded:false,physicalPrimaryAuthorityComplete:false,pageFaithfulBookletReconstructionRequired:false});
+
+  const {forceDispositions,primaryMissions,secondaryObjectives,deployments,twists,referenceSections}=data.records;
+  assert.equal(primaryMissions.length,25);assert.equal(sum(primaryMissions,'physicalMultiplicity'),30);
+  assert.equal(primaryMissions.filter(record=>record.physicalMultiplicity===2).length,5);
+  assert.equal(primaryMissions.filter(record=>record.objectiveAction).length,11);
+  assert.equal(sum(primaryMissions.filter(record=>record.objectiveAction),'physicalMultiplicity'),13);
+  assert(primaryMissions.every(record=>record.scoringContentAvailable&&record.timingContentAvailable&&record.capsContentAvailable));
+  assert.equal(secondaryObjectives.length,18);assert.equal(sum(secondaryObjectives,'physicalMultiplicity'),36);
+  assert(secondaryObjectives.every(record=>record.physicalMultiplicity===2&&record.presentationCopies.join('|')==='ATTACKER|DEFENDER'&&!record.presentationCopiesAreSeparateSemantics));
+  assert.equal(secondaryObjectives.filter(record=>record.fixedEligible).length,4);
+  assert.equal(secondaryObjectives.filter(record=>record.objectiveAction).length,2);
+  assert(secondaryObjectives.every(record=>record.scoringContentAvailable&&record.timingContentAvailable&&record.capsContentAvailable));
+  assert.equal(forceDispositions.length,5);assert.equal(sum(forceDispositions,'physicalMultiplicity'),10);
+  assert.equal(deployments.length,6);assert.equal(sum(deployments,'physicalMultiplicity'),6);
+  assert.deepEqual(deployments.map(record=>record.id).sort(),expectedDeployments);
+  assert(deployments.every(record=>record.geometryAvailable&&record.measurementsAvailable&&record.orientationAvailable&&record.objectiveAndTerritoryMarkersAvailable&&record.geometryEvidence?.sha256?.length===64));
+  assert.equal(twists.length,6);assert.equal(sum(twists,'physicalMultiplicity'),6);
+  assert.deepEqual(twists.map(record=>record.id).sort(),expectedTwists);
+  assert.equal(referenceSections.length,10);
+  assert.deepEqual(referenceSections.map(record=>record.physicalPage),[1,2,3,4,5,6,7,8,9,10]);
+  assert(referenceSections.every(record=>record.pageFaithfulOfficialSourceAvailable===false));
+  assert.equal(sum([primaryMissions,secondaryObjectives,forceDispositions,deployments,twists].flat(),'physicalMultiplicity'),88);
+
+  const records=[forceDispositions,primaryMissions,secondaryObjectives,deployments,twists,referenceSections].flat();
+  assert.equal(new Set(records.map(record=>record.id)).size,records.length,'source record IDs must be globally unique');
+  const sourceIds=new Set(data.sources.map(source=>source.id));
+  assert.equal(sourceIds.size,data.sources.length);
+  for(const record of records){
+    assert.equal(record.edition,data.edition,`${record.id}: wrong edition`);
+    assert.equal(record.cutoff,data.cutoff,`${record.id}: wrong cutoff`);
+    assert.equal(record.currentness,'CURRENT_AT_2026_09_22',`${record.id}: wrong currentness`);
+    assert.equal(record.sourceAcceptedForContent,true,`${record.id}: content not accepted`);
+    assert.equal(record.fullRulesContentAvailable,true,`${record.id}: rules content unavailable`);
+    assert(acceptedClasses.has(record.evidenceClass),`${record.id}: invalid evidence class`);
+    assert(record.provenanceSourceIds.length>0,`${record.id}: missing provenance`);
+    assert(record.sourceUrls.length>0&&record.sourceUrls.every(url=>url.startsWith('https://')),`${record.id}: missing source URLs`);
+    for(const sourceId of [...record.provenanceSourceIds,...record.officialCorroborationSourceIds,...record.secondarySourceIds])assert(sourceIds.has(sourceId),`${record.id}: unknown source ${sourceId}`);
+    if(record.evidenceClass==='SECONDARY_CONTENT_SOURCE'||record.authority==='secondary')assert.notEqual(record.authority,'official',`${record.id}: secondary evidence promoted to official`);
+  }
+  for(const source of data.sources){
+    assert(source.url?.startsWith('https://'),`${source.id}: missing source URL`);
+    if(source.evidenceClass==='SECONDARY_CONTENT_SOURCE'||source.evidenceClass==='PHYSICAL_SOURCE_CORROBORATED')assert.notEqual(source.authority,'official',`${source.id}: secondary source promoted to official`);
+  }
+
+  const dispositionIds=new Set(forceDispositions.map(record=>record.id));
+  const primaryIds=new Set(primaryMissions.map(record=>record.id));
+  assert.equal(data.directedPrimaryMatrix.length,25);
+  const directedKeys=data.directedPrimaryMatrix.map(entry=>`${entry.playerForceDispositionId}|${entry.opponentForceDispositionId}`);
+  assert.equal(new Set(directedKeys).size,25,'directed Force Disposition pairs must be unique');
+  for(const entry of data.directedPrimaryMatrix){assert(dispositionIds.has(entry.playerForceDispositionId));assert(dispositionIds.has(entry.opponentForceDispositionId));assert(primaryIds.has(entry.primaryMissionId));}
+  assert.equal(new Set(data.directedPrimaryMatrix.map(entry=>[entry.playerForceDispositionId,entry.opponentForceDispositionId].sort().join('|'))).size,15);
+  assert.equal(data.eventLayoutReference.unorderedForceDispositionPairings,15);
+  assert.equal(data.eventLayoutReference.layoutsPerPairing,3);
+  assert.equal(data.eventLayoutReference.eventLayouts,45);
+
+  const eventSource=data.sources.find(source=>source.id==='event-companion-v1.2-2026-08-26');
+  assert(eventSource);assert.equal(eventSource.version,'1.2');assert.equal(eventSource.date,'2026-08-26');
+  assert.equal(eventSource.currentness,'CURRENT_AT_2026_09_22');
+  assert.equal(eventSource.sha256,'1F44D9FA0297F60BE6C4367041A65D1A98710C68B221D8C8E22ECD1674E7525E');
+  assert.equal(eventSource.byteSize,10665731);
+  const pdf=fs.readFileSync(path.join(root,eventSource.localPath));
+  assert.equal(pdf.length,eventSource.byteSize);assert.equal(sha256(pdf),eventSource.sha256);
+
+  const chapterLayer=sourceManifest.layers.find(layer=>layer.id==='chapter-approved-2026-27');
+  const corpusLayer=sourceManifest.layers.find(layer=>layer.id==='chapter-approved-2026-27-public-evidence-corpus');
+  const gdmLayer=sourceManifest.layers.find(layer=>layer.id==='gdm-11e-event-terrain-layout-reference');
+  assert.equal(chapterLayer.lifecycle,'ACCEPTED_SOURCE');assert(chapterLayer.paths.includes('missions/sources/chapter-approved-2026-27-evidence.json'));
+  assert.equal(corpusLayer.lifecycle,'ACCEPTED_SOURCE_EVIDENCE');assert.equal(corpusLayer.authority,'mixed-per-record');assert.deepEqual(corpusLayer.factsOwned,[]);
+  assert.equal(gdmLayer.classification,'SECONDARY_VISUAL_REFERENCE');assert.deepEqual(gdmLayer.factsOwned,[]);
+  assert.equal(gdmEvidence.classification,'SECONDARY_VISUAL_REFERENCE');assert.equal(gdmEvidence.source.authority,'secondary');
+  assert.equal(gdmEvidence.counts.forceDispositions,5);assert.equal(gdmEvidence.counts.unorderedMatchups,15);assert.equal(gdmEvidence.counts.layouts,45);assert.equal(gdmEvidence.counts.conflicts,0);
+  assert.equal(data.eventLayoutReference.gdmOwnsFacts,false);
+
+  const recordIds=new Set(records.map(record=>record.id));
+  for(const overlay of data.faqOverlays){assert.equal(overlay.sourceId,eventSource.id);assert.equal(overlay.authority,'official');if(overlay.targetRecordId)assert(recordIds.has(overlay.targetRecordId),`${overlay.id}: unknown target`);}
+  assert.deepEqual(data.unresolvedContentClaims,[]);assert.equal(data.boundaries.productionMissionModelCreated,false);
+}
+
+validate(evidence);
+assert.match(acquisition,/CHAPTER_APPROVED_RULES_CONTENT=COMPLETE_FOR_MODELING/);assert.match(acquisition,/USER_SOURCE_NEEDED=NO/);
+for(const domain of ['PRIMARY_MISSIONS','SECONDARIES','DEPLOYMENT','FORCE_DISPOSITION_CARD_CORPUS','TWISTS','MISSION_SEQUENCE_AND_SCORING','REFERENCE_BOOKLET'])assert.match(acquisition,new RegExp(`${domain}=READY_FOR_FACTUAL_MODELING`));
+assert.doesNotMatch(acquisition,/source-acquisition result remains `BLOCKED_PHYSICAL_SOURCE_GAP`/);
+assert.match(universe,/SOURCE EVIDENCE COMPLETE FOR MODELING; production model MISSING/);
+
+const mutated=(change,pattern,options)=>{const value=clone(evidence);change(value);assert.throws(()=>validate(value,options),pattern);};
+mutated(value=>value.records.twists[1].id=value.records.twists[0].id,/deep-equal|globally unique/);
+mutated(value=>value.records.primaryMissions[0].physicalMultiplicity=1,/30/);
+mutated(value=>value.records.secondaryObjectives[0].authority='official',/promoted to official/);
+mutated(value=>value.records.deployments[0].provenanceSourceIds=[],/missing provenance/);
+mutated(value=>value.records.twists[0].cutoff='2026-09-21',/wrong cutoff/);
+mutated(value=>value.directedPrimaryMatrix[0].playerForceDispositionId='force-disposition-unknown',/falsy/);
+mutated(value=>value.directedPrimaryMatrix[1]={...value.directedPrimaryMatrix[0]},/must be unique/);
+mutated(value=>value.sources.find(source=>source.id==='event-companion-v1.2-2026-08-26').sha256='0'.repeat(64),/Expected values to be strictly equal/);
+const poisonedManifest=clone(manifest);poisonedManifest.layers.find(layer=>layer.id==='gdm-11e-event-terrain-layout-reference').factsOwned=['event-layout-geometry'];
+assert.throws(()=>validate(evidence,{sourceManifest:poisonedManifest,gdmEvidence:gdm}),/Expected values to be strictly deep-equal/);
+
+const classCounts=[...evidence.records.forceDispositions,...evidence.records.primaryMissions,...evidence.records.secondaryObjectives,...evidence.records.deployments,...evidence.records.twists,...evidence.records.referenceSections].reduce((counts,record)=>{counts[record.evidenceClass]=(counts[record.evidenceClass]??0)+1;return counts;},{});
+console.log(`Chapter Approved source evidence QA passed: 88 physical cards, 70 semantic evidence records, 25 directed/15 unordered Primary relationships, 45 referenced Event layouts, evidence classes ${JSON.stringify(classCounts)}, and 9 adversarial controls.`);

@@ -1,0 +1,3045 @@
+{
+  "schema": "warhammer-chapter-approved-source-evidence/v1",
+  "id": "chapter-approved-2026-27-evidence",
+  "title": "Warhammer 40,000: Chapter Approved Mission Deck 2026-27 source evidence corpus",
+  "edition": "Warhammer 40,000 11th Edition",
+  "cutoff": "2026-09-22",
+  "retrievedAt": "2026-09-22",
+  "currentness": "CURRENT_AT_2026_09_22",
+  "lifecycle": "ACCEPTED_SOURCE_EVIDENCE",
+  "purpose": "Source and evidence enrollment for later canonical factual extraction; this is not a production Missions model.",
+  "authorityPolicy": "The physical Chapter Approved product owns standard mission facts. Per-record evidence authority and usability are separate. Secondary content never becomes official by corroboration and never overrides a newer applicable official source.",
+  "contentStatus": {
+    "chapterApprovedRulesContent": "COMPLETE_FOR_MODELING",
+    "contentGap": false,
+    "userSourceNeeded": false,
+    "physicalPrimaryAuthorityComplete": false,
+    "pageFaithfulBookletReconstructionRequired": false
+  },
+  "physicalAccounting": {
+    "primaryMissionCards": 30,
+    "secondaryObjectiveCards": 36,
+    "forceDispositionCards": 10,
+    "deploymentCards": 6,
+    "twistCards": 6,
+    "totalCards": 88,
+    "referenceBookletPages": 10
+  },
+  "semanticAccounting": {
+    "primaryMissions": 25,
+    "secondaryObjectives": 18,
+    "forceDispositions": 5,
+    "deployments": 6,
+    "twists": 6,
+    "referenceSections": 10,
+    "objectiveActionPrimaryIdentities": 11,
+    "eventLayoutsReferenced": 45
+  },
+  "sources": [
+    {
+      "id": "official-chapter-approved-product-2026-06-13",
+      "title": "Warhammer 40,000: Chapter Approved Mission Deck 2026-27",
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "url": "https://www.warhammer.com/shop/warhammer-40k-chapter-approved-mission-deck-2026-eng",
+      "edition": "Warhammer 40,000 11th Edition",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "official-chapter-approved-overview-2026-05-28",
+      "title": "The Chapter Approved Deck - What is it and how does it work?",
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "url": "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+      "date": "2026-05-28",
+      "edition": "Warhammer 40,000 11th Edition",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "official-force-disposition-overview-2026-04-03",
+      "title": "New40k - How your army affects your mission",
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "url": "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+      "date": "2026-04-03",
+      "edition": "Warhammer 40,000 11th Edition",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "event-companion-v1.2-2026-08-26",
+      "title": "Warhammer 40,000 Event Companion v1.2",
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "url": "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf",
+      "date": "2026-08-26",
+      "version": "1.2",
+      "edition": "Warhammer 40,000 11th Edition",
+      "currentness": "CURRENT_AT_2026_09_22",
+      "localPath": "missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+      "sha256": "1F44D9FA0297F60BE6C4367041A65D1A98710C68B221D8C8E22ECD1674E7525E",
+      "byteSize": 10665731,
+      "pageCount": 93
+    },
+    {
+      "id": "physical-review-2026-07-17",
+      "title": "How to use Chapter Approved 2026-27, full review",
+      "authority": "secondary",
+      "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+      "url": "https://youtu.be/sp6n_Bl6MJ0",
+      "transcriptUrl": "https://www.buzzsprout.com/195242/episodes/19509209-243-how-to-use-chapter-approved-2026-27-full-review?t=0",
+      "date": "2026-07-17",
+      "edition": "Warhammer 40,000 11th Edition",
+      "currentness": "CURRENT_PRODUCT_CORROBORATION_AT_2026_09_22"
+    },
+    {
+      "id": "wahapedia-mission-deck-2026-27",
+      "title": "Mission Deck 2026-27",
+      "authority": "secondary",
+      "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+      "url": "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+      "retrievedAt": "2026-09-22",
+      "edition": "Warhammer 40,000 11th Edition",
+      "currentness": "CURRENT_AT_2026_09_22",
+      "capture": {
+        "byteSize": 477202,
+        "sha256": "501D4C541D1880EB7B4C42D5B3AD3553FA98B54313537AECA6E230947EFE5377",
+        "storedInRepository": false
+      },
+      "authorityBoundary": "Accepted for complete rules content and corroboration. It is not official authority and cannot override a newer applicable official source."
+    }
+  ],
+  "records": {
+    "forceDispositions": [
+      {
+        "id": "force-disposition-take-and-hold",
+        "class": "FORCE_DISPOSITION",
+        "name": "Take and Hold",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Force Dispositions / Take and Hold",
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ]
+      },
+      {
+        "id": "force-disposition-purge-the-foe",
+        "class": "FORCE_DISPOSITION",
+        "name": "Purge the Foe",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Force Dispositions / Purge the Foe",
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ]
+      },
+      {
+        "id": "force-disposition-disruption",
+        "class": "FORCE_DISPOSITION",
+        "name": "Disruption",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Force Dispositions / Disruption",
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ]
+      },
+      {
+        "id": "force-disposition-reconnaissance",
+        "class": "FORCE_DISPOSITION",
+        "name": "Reconnaissance",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Force Dispositions / Reconnaissance",
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ]
+      },
+      {
+        "id": "force-disposition-priority-assets",
+        "class": "FORCE_DISPOSITION",
+        "name": "Priority Assets",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Force Dispositions / Priority Assets",
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ]
+      }
+    ],
+    "primaryMissions": [
+      {
+        "id": "primary-battlefield-dominance",
+        "class": "PRIMARY_MISSION",
+        "name": "Battlefield Dominance",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Battlefield Dominance",
+        "playerForceDispositionId": "force-disposition-take-and-hold",
+        "opponentForceDispositionId": "force-disposition-take-and-hold",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-immovable-object",
+        "class": "PRIMARY_MISSION",
+        "name": "Immovable Object",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Immovable Object",
+        "playerForceDispositionId": "force-disposition-take-and-hold",
+        "opponentForceDispositionId": "force-disposition-purge-the-foe",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-determined-acquisition",
+        "class": "PRIMARY_MISSION",
+        "name": "Determined Acquisition",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Determined Acquisition",
+        "playerForceDispositionId": "force-disposition-take-and-hold",
+        "opponentForceDispositionId": "force-disposition-disruption",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-purge-and-secure",
+        "class": "PRIMARY_MISSION",
+        "name": "Purge and Secure",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Purge and Secure",
+        "playerForceDispositionId": "force-disposition-take-and-hold",
+        "opponentForceDispositionId": "force-disposition-reconnaissance",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-inescapable-dominion",
+        "class": "PRIMARY_MISSION",
+        "name": "Inescapable Dominion",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Inescapable Dominion",
+        "playerForceDispositionId": "force-disposition-take-and-hold",
+        "opponentForceDispositionId": "force-disposition-priority-assets",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-unstoppable-force",
+        "class": "PRIMARY_MISSION",
+        "name": "Unstoppable Force",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Unstoppable Force",
+        "playerForceDispositionId": "force-disposition-purge-the-foe",
+        "opponentForceDispositionId": "force-disposition-take-and-hold",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-meatgrinder",
+        "class": "PRIMARY_MISSION",
+        "name": "Meatgrinder",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Meatgrinder",
+        "playerForceDispositionId": "force-disposition-purge-the-foe",
+        "opponentForceDispositionId": "force-disposition-purge-the-foe",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-punishment",
+        "class": "PRIMARY_MISSION",
+        "name": "Punishment",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Punishment",
+        "playerForceDispositionId": "force-disposition-purge-the-foe",
+        "opponentForceDispositionId": "force-disposition-disruption",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-consecrate",
+        "class": "PRIMARY_MISSION",
+        "name": "Consecrate",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Consecrate",
+        "playerForceDispositionId": "force-disposition-purge-the-foe",
+        "opponentForceDispositionId": "force-disposition-reconnaissance",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-destroyers-wrath",
+        "class": "PRIMARY_MISSION",
+        "name": "Destroyer's Wrath",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Destroyer's Wrath",
+        "playerForceDispositionId": "force-disposition-purge-the-foe",
+        "opponentForceDispositionId": "force-disposition-priority-assets",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-death-trap",
+        "class": "PRIMARY_MISSION",
+        "name": "Death Trap",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Death Trap",
+        "playerForceDispositionId": "force-disposition-disruption",
+        "opponentForceDispositionId": "force-disposition-take-and-hold",
+        "objectiveAction": {
+          "id": "objective-action-booby-trap",
+          "name": "Booby Trap",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [
+          "faq-death-trap-terrain-area-timing"
+        ],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-delaying-action",
+        "class": "PRIMARY_MISSION",
+        "name": "Delaying Action",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Delaying Action",
+        "playerForceDispositionId": "force-disposition-disruption",
+        "opponentForceDispositionId": "force-disposition-purge-the-foe",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-outmanoeuvre",
+        "class": "PRIMARY_MISSION",
+        "name": "Outmanoeuvre",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Outmanoeuvre",
+        "playerForceDispositionId": "force-disposition-disruption",
+        "opponentForceDispositionId": "force-disposition-disruption",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-smoke-and-mirrors",
+        "class": "PRIMARY_MISSION",
+        "name": "Smoke and Mirrors",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Smoke and Mirrors",
+        "playerForceDispositionId": "force-disposition-disruption",
+        "opponentForceDispositionId": "force-disposition-reconnaissance",
+        "objectiveAction": {
+          "id": "objective-action-decoy",
+          "name": "Decoy",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-locate-and-deny",
+        "class": "PRIMARY_MISSION",
+        "name": "Locate and Deny",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Locate and Deny",
+        "playerForceDispositionId": "force-disposition-disruption",
+        "opponentForceDispositionId": "force-disposition-priority-assets",
+        "objectiveAction": {
+          "id": "objective-action-sensor-sweep",
+          "name": "Sensor Sweep",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-reconnaissance-sweep",
+        "class": "PRIMARY_MISSION",
+        "name": "Reconnaissance Sweep",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Reconnaissance Sweep",
+        "playerForceDispositionId": "force-disposition-reconnaissance",
+        "opponentForceDispositionId": "force-disposition-take-and-hold",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-triangulation",
+        "class": "PRIMARY_MISSION",
+        "name": "Triangulation",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Triangulation",
+        "playerForceDispositionId": "force-disposition-reconnaissance",
+        "opponentForceDispositionId": "force-disposition-purge-the-foe",
+        "objectiveAction": {
+          "id": "objective-action-triangulate",
+          "name": "Triangulate",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-surveil-the-foe",
+        "class": "PRIMARY_MISSION",
+        "name": "Surveil the Foe",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Surveil the Foe",
+        "playerForceDispositionId": "force-disposition-reconnaissance",
+        "opponentForceDispositionId": "force-disposition-disruption",
+        "objectiveAction": {
+          "id": "objective-action-surveil-the-foe",
+          "name": "Surveil the Foe",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [
+          "faq-surveil-the-foe-marker-removal"
+        ],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-gather-intel",
+        "class": "PRIMARY_MISSION",
+        "name": "Gather Intel",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Gather Intel",
+        "playerForceDispositionId": "force-disposition-reconnaissance",
+        "opponentForceDispositionId": "force-disposition-reconnaissance",
+        "objectiveAction": {
+          "id": "objective-action-extract-intelligence",
+          "name": "Extract Intelligence",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-search-and-scour",
+        "class": "PRIMARY_MISSION",
+        "name": "Search and Scour",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Search and Scour",
+        "playerForceDispositionId": "force-disposition-reconnaissance",
+        "opponentForceDispositionId": "force-disposition-priority-assets",
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-secure-asset",
+        "class": "PRIMARY_MISSION",
+        "name": "Secure Asset",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Secure Asset",
+        "playerForceDispositionId": "force-disposition-priority-assets",
+        "opponentForceDispositionId": "force-disposition-take-and-hold",
+        "objectiveAction": {
+          "id": "objective-action-secure-asset",
+          "name": "Secure Asset",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-vital-link",
+        "class": "PRIMARY_MISSION",
+        "name": "Vital Link",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Vital Link",
+        "playerForceDispositionId": "force-disposition-priority-assets",
+        "opponentForceDispositionId": "force-disposition-purge-the-foe",
+        "objectiveAction": {
+          "id": "objective-action-maintain-control",
+          "name": "Maintain Control",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [
+          "faq-vital-link-central-objectives"
+        ],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-extract-relic",
+        "class": "PRIMARY_MISSION",
+        "name": "Extract Relic",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Extract Relic",
+        "playerForceDispositionId": "force-disposition-priority-assets",
+        "opponentForceDispositionId": "force-disposition-disruption",
+        "objectiveAction": {
+          "id": "objective-action-sensor-sweep",
+          "name": "Sensor Sweep",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-vanguard-operation",
+        "class": "PRIMARY_MISSION",
+        "name": "Vanguard Operation",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Vanguard Operation",
+        "playerForceDispositionId": "force-disposition-priority-assets",
+        "opponentForceDispositionId": "force-disposition-reconnaissance",
+        "objectiveAction": {
+          "id": "objective-action-vanguard-operation",
+          "name": "Vanguard Operation",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "primary-sabotage",
+        "class": "PRIMARY_MISSION",
+        "name": "Sabotage",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Primary Missions / Sabotage",
+        "playerForceDispositionId": "force-disposition-priority-assets",
+        "opponentForceDispositionId": "force-disposition-priority-assets",
+        "objectiveAction": {
+          "id": "objective-action-sabotage",
+          "name": "Sabotage",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      }
+    ],
+    "secondaryObjectives": [
+      {
+        "id": "secondary-no-prisoners",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "No Prisoners",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / No Prisoners",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-overwhelming-force",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Overwhelming Force",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Overwhelming Force",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-plunder",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Plunder",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Plunder",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": {
+          "id": "objective-action-plunder",
+          "name": "Plunder",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [
+          "faq-plunder-terrain-area-requirement"
+        ],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-display-of-might",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Display of Might",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Display of Might",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-outflank",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Outflank",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Outflank",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-beacon",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Beacon",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Beacon",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [
+          "faq-beacon-reselection"
+        ],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-cleanse",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Cleanse",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Cleanse",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": {
+          "id": "objective-action-cleanse",
+          "name": "Cleanse",
+          "sourceSide": "reverse"
+        },
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-a-grievous-blow",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "A Grievous Blow",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / A Grievous Blow",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": true,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-defend-stronghold",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Defend Stronghold",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Defend Stronghold",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-engage-on-all-fronts",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Engage on All Fronts",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Engage on All Fronts",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": true,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-secure-no-mans-land",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Secure No Man’s Land",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Secure No Man’s Land",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-forward-position",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Forward Position",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Forward Position",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-centre-ground",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Centre Ground",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Centre Ground",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-assassination",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Assassination",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Assassination",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": true,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-a-tempting-target",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "A Tempting Target",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / A Tempting Target",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-behind-enemy-lines",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Behind Enemy Lines",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Behind Enemy Lines",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-bring-it-down",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Bring It Down",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Bring It Down",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": true,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      },
+      {
+        "id": "secondary-burden-of-trust",
+        "class": "SECONDARY_OBJECTIVE",
+        "name": "Burden of Trust",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 2,
+        "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "wahapedia-mission-deck-2026-27",
+          "physical-review-2026-07-17"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "event-companion-v1.2-2026-08-26"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+        "contentLocator": "Secondary Missions / Burden of Trust",
+        "presentationCopies": [
+          "ATTACKER",
+          "DEFENDER"
+        ],
+        "presentationCopiesAreSeparateSemantics": false,
+        "tacticalEligible": true,
+        "fixedEligible": false,
+        "objectiveAction": null,
+        "faqOverlayIds": [],
+        "sourceUrls": [
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf"
+        ],
+        "scoringContentAvailable": true,
+        "timingContentAvailable": true,
+        "capsContentAvailable": true
+      }
+    ],
+    "deployments": [
+      {
+        "id": "deployment-tipping-point",
+        "class": "DEPLOYMENT",
+        "name": "Tipping Point",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "geometryAvailable": true,
+        "contentLocator": "Deployment / Tipping Point",
+        "geometryEvidence": {
+          "url": "https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_TippingPoint.png",
+          "width": 694,
+          "height": 907,
+          "byteSize": 254957,
+          "sha256": "91B838AEC7485D8615F737FF44D404153D2CC8557D9B632B70989FFE32D023BE"
+        },
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ],
+        "measurementsAvailable": true,
+        "orientationAvailable": true,
+        "objectiveAndTerritoryMarkersAvailable": true
+      },
+      {
+        "id": "deployment-sweeping-engagement",
+        "class": "DEPLOYMENT",
+        "name": "Sweeping Engagement",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "geometryAvailable": true,
+        "contentLocator": "Deployment / Sweeping Engagement",
+        "geometryEvidence": {
+          "url": "https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_SweepingEngagement.png",
+          "width": 698,
+          "height": 892,
+          "byteSize": 277932,
+          "sha256": "8B0FC63135851D6219900134CE65D6CA9C420417873FA0E425CF39FFC1B94803"
+        },
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ],
+        "measurementsAvailable": true,
+        "orientationAvailable": true,
+        "objectiveAndTerritoryMarkersAvailable": true
+      },
+      {
+        "id": "deployment-search-and-destroy",
+        "class": "DEPLOYMENT",
+        "name": "Search and Destroy",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "geometryAvailable": true,
+        "contentLocator": "Deployment / Search and Destroy",
+        "geometryEvidence": {
+          "url": "https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_SearchAndDestroy.png",
+          "width": 699,
+          "height": 806,
+          "byteSize": 277853,
+          "sha256": "24537E963D8A525D6570B7B76C93B7A73DEAB6DA52D113E198CDCF7CD1D7CE5D"
+        },
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ],
+        "measurementsAvailable": true,
+        "orientationAvailable": true,
+        "objectiveAndTerritoryMarkersAvailable": true
+      },
+      {
+        "id": "deployment-hammer-and-anvil",
+        "class": "DEPLOYMENT",
+        "name": "Hammer and Anvil",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "geometryAvailable": true,
+        "contentLocator": "Deployment / Hammer and Anvil",
+        "geometryEvidence": {
+          "url": "https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_HammerAndAnvil.png",
+          "width": 596,
+          "height": 907,
+          "byteSize": 239657,
+          "sha256": "95919E4277BD4ED944DE02251D2BCF899E695F8B28A6AFFAD11186D0F00063BB"
+        },
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ],
+        "measurementsAvailable": true,
+        "orientationAvailable": true,
+        "objectiveAndTerritoryMarkersAvailable": true
+      },
+      {
+        "id": "deployment-dawn-of-war",
+        "class": "DEPLOYMENT",
+        "name": "Dawn of War",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "geometryAvailable": true,
+        "contentLocator": "Deployment / Dawn of War",
+        "geometryEvidence": {
+          "url": "https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_DawnOfWar.png",
+          "width": 699,
+          "height": 806,
+          "byteSize": 275428,
+          "sha256": "C43AC6488122B69E33DAA984DCAAED44E117662996FB7DEBB7C9AD375EE202AF"
+        },
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ],
+        "measurementsAvailable": true,
+        "orientationAvailable": true,
+        "objectiveAndTerritoryMarkersAvailable": true
+      },
+      {
+        "id": "deployment-crucible-of-battle",
+        "class": "DEPLOYMENT",
+        "name": "Crucible of Battle",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "geometryAvailable": true,
+        "contentLocator": "Deployment / Crucible of Battle",
+        "geometryEvidence": {
+          "url": "https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_CrucibleOfBattle.png",
+          "width": 687,
+          "height": 907,
+          "byteSize": 259526,
+          "sha256": "61DDFCFEE6A270E103DC773E0A1F45FF8D495B7722A5170AACE7B0B26E98EC42"
+        },
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ],
+        "measurementsAvailable": true,
+        "orientationAvailable": true,
+        "objectiveAndTerritoryMarkersAvailable": true
+      }
+    ],
+    "twists": [
+      {
+        "id": "twist-nowhere-to-hide",
+        "class": "TWIST",
+        "name": "Nowhere to Hide",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "contentLocator": "Twists / Nowhere to Hide",
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+        ]
+      },
+      {
+        "id": "twist-mirrored-world",
+        "class": "TWIST",
+        "name": "Mirrored World",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "OFFICIAL_AUTHENTICATED",
+        "authority": "official",
+        "provenanceSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "secondarySourceIds": [],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "contentLocator": "Twists / Mirrored World",
+        "sourceUrls": [
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+        ]
+      },
+      {
+        "id": "twist-scrambled-communications",
+        "class": "TWIST",
+        "name": "Scrambled Communications",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "contentLocator": "Twists / Scrambled Communications",
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+        ]
+      },
+      {
+        "id": "twist-martial-pride",
+        "class": "TWIST",
+        "name": "Martial Pride",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "OFFICIAL_AUTHENTICATED",
+        "authority": "official",
+        "provenanceSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "secondarySourceIds": [],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "contentLocator": "Twists / Martial Pride",
+        "sourceUrls": [
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+        ]
+      },
+      {
+        "id": "twist-ruinscape",
+        "class": "TWIST",
+        "name": "Ruinscape",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "contentLocator": "Twists / Ruinscape",
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+        ]
+      },
+      {
+        "id": "twist-night-fighting",
+        "class": "TWIST",
+        "name": "Night Fighting",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 1,
+        "evidenceClass": "OFFICIAL_AUTHENTICATED",
+        "authority": "official",
+        "provenanceSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28"
+        ],
+        "secondarySourceIds": [],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "contentLocator": "Twists / Night Fighting",
+        "sourceUrls": [
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/"
+        ]
+      }
+    ],
+    "referenceSections": [
+      {
+        "id": "reference-page-01-introduction-contents",
+        "class": "REFERENCE_SECTION",
+        "name": "Chapter Approved Battles: introduction and contents",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 1,
+        "contentLocator": "Chapter Approved Battles / page 1",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-02-muster-determine-mission",
+        "class": "REFERENCE_SECTION",
+        "name": "Muster Armies and Determine Mission",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 2,
+        "contentLocator": "Chapter Approved Battles / page 2",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-03-deployment-twist",
+        "class": "REFERENCE_SECTION",
+        "name": "Determine Deployment and optional Twist",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 3,
+        "contentLocator": "Chapter Approved Battles / page 3",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-04-create-battlefield",
+        "class": "REFERENCE_SECTION",
+        "name": "Create the Battlefield",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 4,
+        "contentLocator": "Chapter Approved Battles / page 4",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-05-attacker-secondary-selection",
+        "class": "REFERENCE_SECTION",
+        "name": "Determine Attacker and Defender; Select Secondary Missions",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 5,
+        "contentLocator": "Chapter Approved Battles / page 5",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-06-fixed-tactical-achievement",
+        "class": "REFERENCE_SECTION",
+        "name": "Fixed and Tactical missions; achieving and discarding",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 6,
+        "contentLocator": "Chapter Approved Battles / page 6",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-07-formations-deployment-prebattle",
+        "class": "REFERENCE_SECTION",
+        "name": "Steps 7-11: formations through pre-battle rules",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 7,
+        "contentLocator": "Chapter Approved Battles / page 7",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-08-battle-victor-scoring",
+        "class": "REFERENCE_SECTION",
+        "name": "Steps 12-14: battle, victor and scoring limits",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 8,
+        "contentLocator": "Chapter Approved Battles / page 8",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-09-appendix",
+        "class": "REFERENCE_SECTION",
+        "name": "Appendix terminology",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 9,
+        "contentLocator": "Chapter Approved Battles / page 9",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      },
+      {
+        "id": "reference-page-10-deployment-card-key",
+        "class": "REFERENCE_SECTION",
+        "name": "Deployment card legend",
+        "edition": "Warhammer 40,000 11th Edition",
+        "cutoff": "2026-09-22",
+        "currentness": "CURRENT_AT_2026_09_22",
+        "physicalMultiplicity": 0,
+        "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+        "authority": "secondary",
+        "provenanceSourceIds": [
+          "physical-review-2026-07-17",
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "officialCorroborationSourceIds": [
+          "official-chapter-approved-overview-2026-05-28",
+          "official-force-disposition-overview-2026-04-03"
+        ],
+        "secondarySourceIds": [
+          "wahapedia-mission-deck-2026-27"
+        ],
+        "fullRulesContentAvailable": true,
+        "sourceAcceptedForContent": true,
+        "physicalPage": 10,
+        "contentLocator": "Chapter Approved Battles / page 10",
+        "pageFaithfulOfficialSourceAvailable": false,
+        "sourceUrls": [
+          "https://youtu.be/sp6n_Bl6MJ0",
+          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
+          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
+          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+        ]
+      }
+    ]
+  },
+  "directedPrimaryMatrix": [
+    {
+      "playerForceDispositionId": "force-disposition-take-and-hold",
+      "opponentForceDispositionId": "force-disposition-take-and-hold",
+      "primaryMissionId": "primary-battlefield-dominance"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-take-and-hold",
+      "opponentForceDispositionId": "force-disposition-purge-the-foe",
+      "primaryMissionId": "primary-immovable-object"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-take-and-hold",
+      "opponentForceDispositionId": "force-disposition-disruption",
+      "primaryMissionId": "primary-determined-acquisition"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-take-and-hold",
+      "opponentForceDispositionId": "force-disposition-reconnaissance",
+      "primaryMissionId": "primary-purge-and-secure"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-take-and-hold",
+      "opponentForceDispositionId": "force-disposition-priority-assets",
+      "primaryMissionId": "primary-inescapable-dominion"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-purge-the-foe",
+      "opponentForceDispositionId": "force-disposition-take-and-hold",
+      "primaryMissionId": "primary-unstoppable-force"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-purge-the-foe",
+      "opponentForceDispositionId": "force-disposition-purge-the-foe",
+      "primaryMissionId": "primary-meatgrinder"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-purge-the-foe",
+      "opponentForceDispositionId": "force-disposition-disruption",
+      "primaryMissionId": "primary-punishment"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-purge-the-foe",
+      "opponentForceDispositionId": "force-disposition-reconnaissance",
+      "primaryMissionId": "primary-consecrate"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-purge-the-foe",
+      "opponentForceDispositionId": "force-disposition-priority-assets",
+      "primaryMissionId": "primary-destroyers-wrath"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-disruption",
+      "opponentForceDispositionId": "force-disposition-take-and-hold",
+      "primaryMissionId": "primary-death-trap"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-disruption",
+      "opponentForceDispositionId": "force-disposition-purge-the-foe",
+      "primaryMissionId": "primary-delaying-action"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-disruption",
+      "opponentForceDispositionId": "force-disposition-disruption",
+      "primaryMissionId": "primary-outmanoeuvre"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-disruption",
+      "opponentForceDispositionId": "force-disposition-reconnaissance",
+      "primaryMissionId": "primary-smoke-and-mirrors"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-disruption",
+      "opponentForceDispositionId": "force-disposition-priority-assets",
+      "primaryMissionId": "primary-locate-and-deny"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-reconnaissance",
+      "opponentForceDispositionId": "force-disposition-take-and-hold",
+      "primaryMissionId": "primary-reconnaissance-sweep"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-reconnaissance",
+      "opponentForceDispositionId": "force-disposition-purge-the-foe",
+      "primaryMissionId": "primary-triangulation"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-reconnaissance",
+      "opponentForceDispositionId": "force-disposition-disruption",
+      "primaryMissionId": "primary-surveil-the-foe"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-reconnaissance",
+      "opponentForceDispositionId": "force-disposition-reconnaissance",
+      "primaryMissionId": "primary-gather-intel"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-reconnaissance",
+      "opponentForceDispositionId": "force-disposition-priority-assets",
+      "primaryMissionId": "primary-search-and-scour"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-priority-assets",
+      "opponentForceDispositionId": "force-disposition-take-and-hold",
+      "primaryMissionId": "primary-secure-asset"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-priority-assets",
+      "opponentForceDispositionId": "force-disposition-purge-the-foe",
+      "primaryMissionId": "primary-vital-link"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-priority-assets",
+      "opponentForceDispositionId": "force-disposition-disruption",
+      "primaryMissionId": "primary-extract-relic"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-priority-assets",
+      "opponentForceDispositionId": "force-disposition-reconnaissance",
+      "primaryMissionId": "primary-vanguard-operation"
+    },
+    {
+      "playerForceDispositionId": "force-disposition-priority-assets",
+      "opponentForceDispositionId": "force-disposition-priority-assets",
+      "primaryMissionId": "primary-sabotage"
+    }
+  ],
+  "eventLayoutReference": {
+    "sourceId": "event-companion-v1.2-2026-08-26",
+    "localPath": "missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+    "unorderedForceDispositionPairings": 15,
+    "layoutsPerPairing": 3,
+    "eventLayouts": 45,
+    "explicitlyUpdatedLayouts": 27,
+    "gdmEvidencePath": "missions/sources/game-data-missions-terrain-reference-2026-09-22.json",
+    "gdmClassification": "SECONDARY_VISUAL_REFERENCE",
+    "gdmOwnsFacts": false
+  },
+  "faqOverlays": [
+    {
+      "id": "faq-death-trap-terrain-area-timing",
+      "targetRecordId": "primary-death-trap",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "faq-surveil-the-foe-marker-removal",
+      "targetRecordId": "primary-surveil-the-foe",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "faq-vital-link-central-objectives",
+      "targetRecordId": "primary-vital-link",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "faq-plunder-terrain-area-requirement",
+      "targetRecordId": "secondary-plunder",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "faq-beacon-reselection",
+      "targetRecordId": "secondary-beacon",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "faq-end-of-battle-scoring-timing",
+      "targetScope": "MISSION_WIDE_SCORING",
+      "sourceId": "event-companion-v1.2-2026-08-26",
+      "page": 4,
+      "authority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "currentness": "CURRENT_AT_2026_09_22"
+    }
+  ],
+  "unresolvedContentClaims": [],
+  "boundaries": {
+    "productionMissionModelCreated": false,
+    "digitalAppProjectionAvailable": false,
+    "standardCasualTerrainLayoutCorpusEnrolled": false,
+    "gdmRemainsEvidenceOnly": true,
+    "eventCompanionDoesNotOwnStandardCards": true
+  }
+}

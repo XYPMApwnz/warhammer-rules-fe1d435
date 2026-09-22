@@ -90,16 +90,18 @@ The v1.2 `WHAT'S NEW` section updates the Determine a Layout step and Chapter Ap
 
 | Family | Status | Accepted evidence | Boundary |
 |---|---|---|---|
-| Primary Missions | PARTIAL | Official Event layout headings authenticate all 25 directed identities/mappings; Event FAQ authenticates limited fragments | Full rules and individual scoring bodies require physical cards |
-| Secondary Objectives | PARTIAL | Official articles and Event Companion authenticate Fixed/Tactical workflow and shared caps | Full identities, conditions and VP bodies unavailable |
-| Deployment cards | UNAVAILABLE | Product/release pages confirm the card family and app projection | Complete identities, geometry, measurements and mappings unavailable |
-| Force Disposition cards | PARTIAL | MFM and Event Companion authenticate disposition identities and event relationships | Complete authoritative card corpus unavailable |
-| Twists | PARTIAL | Official sources authenticate the optional system and examples | Full identities and text unavailable |
-| Standard mission sequence | PARTIAL | Official mission article exposes the public setup flow | Complete standard reference booklet unavailable |
-| Standard scoring rules | PARTIAL | Public 45 VP source caps, 15 VP per-round caps and Fixed/Tactical mechanics | Card-specific scoring and complete standard reference unavailable |
-| Force Disposition to Primary mapping | COMPLETE | Official Event Companion layout headings | Identity relationship complete; Primary bodies remain partial |
+| Primary Missions | READY_FOR_FACTUAL_MODELING | 25 complete semantic bodies from the accepted secondary content source; official Event headings authenticate the 5x5 directed identity matrix; physical review authenticates multiplicity and reverse/action structure | Content is complete, but the complete first-party physical card corpus is not public |
+| Secondary Objectives | READY_FOR_FACTUAL_MODELING | 18 complete semantic bodies; physical review corroborates 36 Attacker/Defender presentation copies, Fixed eligibility and Objective Actions | Secondary transcription is accepted for content, not promoted to official authority |
+| Deployment cards | READY_FOR_FACTUAL_MODELING | Six complete current identities and geometry records, physically corroborated and independently imaged | Event geometry remains separately scoped and does not replace standard cards |
+| Force Disposition cards | READY_FOR_FACTUAL_MODELING | Five complete identities; official articles/Event Companion corroborate the directed Primary relationships | Ten physical cards collapse to five semantic records |
+| Twists | READY_FOR_FACTUAL_MODELING | Six complete records; three readable official fronts and three physically corroborated secondary transcriptions | Evidence class is preserved per record |
+| Standard mission sequence | READY_FOR_FACTUAL_MODELING | Ten reference sections reconstructed from the physical booklet and accepted secondary transcription | Rules content is complete; page-faithful official reconstruction is unavailable and not required |
+| Standard scoring rules | READY_FOR_FACTUAL_MODELING | Complete standard reference content plus current official Event Companion FAQ overlays | Event-only modifications remain separately scoped |
+| Force Disposition to Primary mapping | COMPLETE | Official Event Companion layout headings | Identity relationship and enrolled Primary bodies complete for later factual modeling |
 | Event mission sequence | COMPLETE | Event Companion pp. 1-3 | Event-only |
 | Event scoring framework | COMPLETE | Event Companion pp. 1-3 | Event-only |
+
+The machine-readable source enrollment is `missions/sources/chapter-approved-2026-27-evidence.json`. It records 88 physical cards as 25 Primary, 18 Secondary, five Force Disposition, six Deployment and six Twist semantic records, plus ten booklet sections. Authority and content usability are separate fields: accepted secondary content remains secondary and cannot override a newer applicable official source.
 
 The official product/release confirmation is:
 https://www.warhammer-community.com/en-gb/articles/adciuo3f/saturday-pre-orders-new40k-rules-card-packs-and-more/
@@ -136,7 +138,7 @@ Each layout page supplies:
 
 The PDF defines the footprint inventory as four 6x4-inch, two 10x2.5-inch, four 6x2-inch, four 7x11.5-inch, and two 8x11.5-inch polygon terrain areas.
 
-The Event Companion expressly excludes standard Deployment and Twist cards. Event layouts therefore do not close the standard-play source gaps. Version 1.2 closes the August event-layout gap only; it does not supply the complete Chapter Approved standard mission corpus.
+The Event Companion expressly excludes standard Deployment and Twist cards. Event layouts therefore do not own standard-play card facts. Version 1.2 closes the August event-layout gap and supplies official identity/current-FAQ corroboration; the separate accepted evidence corpus supplies the complete standard card and booklet content needed for later factual modeling.
 
 ## Secondary GDM terrain-layout reference
 
@@ -257,106 +259,93 @@ PROVENANCE=Official articles confirm mission generation, layout/deployment prese
 
 No authenticated downloadable payload or reliably capturable endpoint was found. No further reverse engineering was attempted.
 
-## Physical-only source requirement
+## Physical authority boundary
 
 ```text
 PHYSICAL_PRODUCT=YES
 PRODUCT_NAME=Warhammer 40,000: Chapter Approved Mission Deck 2026-27
 CURRENT_OFFICIAL_EXISTENCE_CONFIRMED=YES
-FULL_CONTENT_PUBLICLY_ACCESSIBLE=NO
-USER_SOURCE_NEEDED=YES
+CHAPTER_APPROVED_RULES_CONTENT=COMPLETE_FOR_MODELING
+PHYSICAL_PRIMARY_AUTHORITY_COMPLETE=NO
+CONTENT_GAP=NO
+USER_SOURCE_NEEDED=NO
 ```
 
-To close the standard corpus, provide complete legible scans/photos or an official PDF containing:
-
-- both faces where applicable of every Primary Mission card;
-- every Secondary Objective card;
-- every Deployment card;
-- every Force Disposition card;
-- every Twist card;
-- every page of the instruction/reference booklet;
-- all standard casual terrain/objective maps;
-- packaging/product identification sufficient to authenticate the capture.
-
-Promotional crops, community transcriptions and fuzzy screenshots are not accepted substitutes.
+The complete first-party physical/app corpus is still not publicly available. That limits primary-authority completeness, but it no longer creates a rules-content blocker: the official product/currentness evidence, official Event Companion overlays, physical current-product review and accepted secondary transcription form a complete, conflict-free evidence chain for the 88 cards and ten booklet sections. Page-faithful reconstruction is not a product requirement. The unavailable official app payload remains a non-blocking acquisition gap.
 
 ## Exact gap ledger
 
-### GAP-CA-PRIMARY-BODIES
+### GAP-CA-PRIMARY-BODIES — CLOSED FOR CONTENT
 
 ```text
 DOMAIN=PRIMARY_MISSIONS
-CONTENT=Full rules, conditions, timing and scoring for all current Primary cards
-EXPECTED_OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Primary cards
-BEST_AVAILABLE_EVIDENCE=25 identities/mappings in official Event layouts plus limited FAQ fragments
-WHY_NOT_ACCEPTED=Identity headings do not contain the complete gameplay body
-WHAT_WOULD_CLOSE_GAP=Complete legible current Primary cards
+CONTENT=25 complete current Primary semantic bodies, 30-card physical multiplicity and 11 Objective Action-backed identities
+OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Primary cards
+ACCEPTED_EVIDENCE=Secondary content source plus official Event identity matrix and physical-product corroboration
+STATUS=CLOSED_FOR_CONTENT
 ```
 
-### GAP-CA-SECONDARY-CORPUS
+### GAP-CA-SECONDARY-CORPUS — CLOSED FOR CONTENT
 
 ```text
 DOMAIN=SECONDARY_OBJECTIVES
-CONTENT=Complete identities, conditions, timing and scoring
-EXPECTED_OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Secondary cards
-BEST_AVAILABLE_EVIDENCE=Official Fixed/Tactical workflow and scoring caps
-WHY_NOT_ACCEPTED=No complete official public card corpus
-WHAT_WOULD_CLOSE_GAP=Complete legible current Secondary cards
+CONTENT=18 complete semantic bodies represented by 36 Attacker/Defender physical cards
+OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Secondary cards
+ACCEPTED_EVIDENCE=Secondary content source, physical review and official workflow/FAQ corroboration
+STATUS=CLOSED_FOR_CONTENT
 ```
 
-### GAP-CA-DEPLOYMENT
+### GAP-CA-DEPLOYMENT — CLOSED FOR CONTENT
 
 ```text
 DOMAIN=DEPLOYMENT
-CONTENT=Identities, geometry, measurements, orientation, objectives and compatibility
-EXPECTED_OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Deployment cards
-BEST_AVAILABLE_EVIDENCE=Official confirmation of the card family and app projection
-WHY_NOT_ACCEPTED=Event geometry is event-owned and cannot substitute for standard cards
-WHAT_WOULD_CLOSE_GAP=Complete legible current Deployment cards
+CONTENT=Six identities with complete geometry, measurements, orientation, objectives and territory markings
+OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Deployment cards
+ACCEPTED_EVIDENCE=Physical current-product review plus independently hashed current 11E geometry images
+STATUS=CLOSED_FOR_CONTENT
 ```
 
-### GAP-CA-FORCE-DISPOSITIONS
+### GAP-CA-FORCE-DISPOSITIONS — CLOSED FOR CONTENT
 
 ```text
 DOMAIN=FORCE_DISPOSITION_CARDS
-CONTENT=Complete authoritative rules, relationships and presentation for all current Force Disposition cards
-EXPECTED_OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Force Disposition cards
-BEST_AVAILABLE_EVIDENCE=MFM identities plus Event Companion mission/layout relationships
-WHY_NOT_ACCEPTED=The complete authoritative Force Disposition card corpus is not publicly accessible
-WHAT_WOULD_CLOSE_GAP=Complete legible current Force Disposition cards
+CONTENT=Five semantic Force Dispositions, ten physical cards and complete directed Primary relationships
+OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Force Disposition cards
+ACCEPTED_EVIDENCE=Secondary content source plus MFM, official article and Event Companion corroboration
+STATUS=CLOSED_FOR_CONTENT
 ```
 
-### GAP-CA-TWISTS
+### GAP-CA-TWISTS — CLOSED FOR CONTENT
 
 ```text
 DOMAIN=TWISTS
-CONTENT=Complete identities, conditions and gameplay text
-EXPECTED_OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Twist cards
-BEST_AVAILABLE_EVIDENCE=Official optional-system description and isolated examples
-WHY_NOT_ACCEPTED=Examples do not establish the complete corpus
-WHAT_WOULD_CLOSE_GAP=Complete legible current Twist cards
+CONTENT=Six complete identities and gameplay bodies
+OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Twist cards
+ACCEPTED_EVIDENCE=Three official readable fronts plus three physically corroborated secondary transcriptions
+STATUS=CLOSED_FOR_CONTENT
 ```
 
-### GAP-CA-REFERENCE
+### GAP-CA-REFERENCE — CLOSED FOR CONTENT
 
 ```text
 DOMAIN=MISSION_SEQUENCE_AND_SCORING
-CONTENT=Complete standard setup sequence, shared procedures and scoring
-EXPECTED_OFFICIAL_OWNER=Chapter Approved 2026-27 instruction/reference booklet
-BEST_AVAILABLE_EVIDENCE=Official articles plus the distinct event sequence
-WHY_NOT_ACCEPTED=Event adjustments and promotional summaries are not the full standard reference
-WHAT_WOULD_CLOSE_GAP=Every page of the current reference booklet
+CONTENT=Complete standard setup sequence, shared procedures and scoring across ten semantic page sections
+OFFICIAL_OWNER=Chapter Approved 2026-27 instruction/reference booklet
+ACCEPTED_EVIDENCE=Physical booklet walkthrough plus accepted complete secondary transcription
+PAGE_FAITHFUL_OFFICIAL_SOURCE=NOT_AVAILABLE_NOT_REQUIRED
+STATUS=CLOSED_FOR_CONTENT
 ```
 
-### GAP-CA-STANDARD-LAYOUTS
+### GAP-CA-STANDARD-LAYOUTS — OUTSIDE ENROLLED CARD CORPUS
 
 ```text
 DOMAIN=STANDARD_TERRAIN_AND_OBJECTIVE_PLACEMENT
 CONTENT=Complete casual recommended maps and their Deployment relationships
 EXPECTED_OFFICIAL_OWNER=Chapter Approved 2026-27 cards/reference material and authenticated app projection
 BEST_AVAILABLE_EVIDENCE=Official articles confirm their existence; Event layouts are complete but separately scoped
-WHY_NOT_ACCEPTED=No complete standard map corpus is publicly accessible
-WHAT_WOULD_CLOSE_GAP=All standard casual terrain/objective maps with associated card identities
+STATUS=OPEN_NON_BLOCKING_FOR_FUTURE_STANDARD_CASUAL_LAYOUT_MODEL
+BOUNDARY=Not part of the authenticated 88-card plus 10-page rules-content completeness claim
+WHAT_WOULD_CLOSE_GAP=All standard casual terrain/objective maps with associated card identities or authenticated app projection
 ```
 
 ### GAP-EVENT-AUGUST-LAYOUTS — CLOSED
@@ -386,15 +375,16 @@ WHAT_WOULD_CLOSE_GAP=Sanctioned complete app export/capture; physical corpus is 
 ## Modeling readiness
 
 ```text
-PRIMARY_MISSIONS=NO
-SECONDARIES=NO
-DEPLOYMENT=NO
-FORCE_DISPOSITION_CARD_CORPUS=NO
-TWISTS=NO
+PRIMARY_MISSIONS=READY_FOR_FACTUAL_MODELING
+SECONDARIES=READY_FOR_FACTUAL_MODELING
+DEPLOYMENT=READY_FOR_FACTUAL_MODELING
+FORCE_DISPOSITION_CARD_CORPUS=READY_FOR_FACTUAL_MODELING
+TWISTS=READY_FOR_FACTUAL_MODELING
 EVENT_LAYOUTS=YES_FOR_CURRENT_V1_2_AT_2026_09_22
-TERRAIN_PLACEMENT=YES_FOR_CURRENT_EVENT_V1_2 / NO_STANDARD
-OBJECTIVE_PLACEMENT=YES_FOR_CURRENT_EVENT_V1_2 / NO_STANDARD
-MISSION_SEQUENCE_AND_SCORING=YES_EVENT / NO_STANDARD
+TERRAIN_PLACEMENT=READY_FOR_DEPLOYMENT_CARDS_AND_CURRENT_EVENT_V1_2 / STANDARD_CASUAL_LAYOUT_SET_NOT_ENROLLED
+OBJECTIVE_PLACEMENT=READY_FOR_DEPLOYMENT_CARDS_AND_CURRENT_EVENT_V1_2 / STANDARD_CASUAL_LAYOUT_SET_NOT_ENROLLED
+MISSION_SEQUENCE_AND_SCORING=READY_FOR_FACTUAL_MODELING
+REFERENCE_BOOKLET=READY_FOR_FACTUAL_MODELING
 ```
 
-The source-acquisition result remains `BLOCKED_PHYSICAL_SOURCE_GAP` for the complete standard mission corpus. Event v1.2 is authenticated as the current Event Companion at the 2026-09-22 cutoff and is ready for explicitly scoped event modeling. Complete Chapter Approved Primary, Secondary, Deployment, Force Disposition, Twist, reference, scoring and standard-layout sources remain unavailable.
+The source-acquisition result is `CHAPTER_APPROVED_RULES_CONTENT=COMPLETE_FOR_MODELING` with `USER_SOURCE_NEEDED=NO`. This does not claim that every record is official-authenticated: the physical product is the factual owner, while the evidence manifest preserves official, physical-corroborated and secondary-content classifications per record. Event v1.2 remains the authenticated current Event Companion. The production Missions model is still intentionally absent and belongs to a later task.

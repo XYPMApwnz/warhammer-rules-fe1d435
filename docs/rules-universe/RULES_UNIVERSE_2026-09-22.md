@@ -8,12 +8,12 @@ This is a source and factual-ownership inventory outside the already accepted Co
 ## Executive findings
 
 - The Munitorum Field Manual (MFM) is an independent mutable factual domain. It owns points, cost tiers, paid upgrades, Leader/Support eligibility, Detachment Points, Force Dispositions, current priced inventory, and some live list-building qualifiers.
-- The current standard mission source is the **Chapter Approved Mission Deck 2026–27**. The complete physical/app card corpus is not publicly accessible in the repository or inspected public pages.
+- The current standard mission source is the **Chapter Approved Mission Deck 2026–27**. Its complete 88-card and ten-page rules content is enrolled for factual modeling through per-record official, physical-corroborated and accepted secondary evidence; the complete first-party physical/app corpus remains unavailable.
 - Standard play keeps mission, Deployment card, optional Twist, and terrain choice modular. The Event Companion instead publishes 45 composed layouts embedding deployment zones, objectives, and terrain.
 - Core owns terrain and objective-marker semantics. Mission/layout sources own selection, geometry, placement, and scoring facts.
 - Event, Doubles, Teams, and Dominatus companions are scoped overlays and must never become standard-game defaults.
 - Dominatus, Combat Patrol, current Boarding Actions material, Apocalypse, Armoured Gauntlet, and current narrative campaigns are separate modes/domains.
-- Glossary V2 can start with accepted Core and effective Army facts. Missing mission/mode corpora block an all-modes glossary, not that bounded foundation.
+- Glossary V2 can start with accepted Core and effective Army facts. The Chapter Approved source corpus is now ready for later mission modeling; other missing mode corpora still block an all-modes glossary, not that bounded foundation.
 
 ## Official artifact registry
 
@@ -24,9 +24,9 @@ This is a source and factual-ownership inventory outside the already accepted Co
 | `mfm-july` | July Update | 2026-07-22, SUPERSEDED | Points, DP, disposition changes | https://www.warhammer-community.com/en-gb/articles/rgqanids/warhammer-40000-july-update-what-you-need-to-know/ | Partial dated captures |
 | `mfm-august` | August Update | 2026-08-26, current for supported nine at cutoff | Global MFM/balance state | https://www.warhammer-community.com/en-gb/articles/b4zj2o7u/the-warhammer-40000-august-update-everything-you-need-to-know/ | Nine v1.3 captures |
 | `mfm-september` | Orks points live | 2026-09-02, CURRENT global mutation | Orks points, Legends support, Orks dispositions | https://www.warhammer-community.com/en-gb/articles/x82yzzth/codex-orks-points-are-live-on-the-munitorum-field-manual/ | Orks intentionally unsupported; no current accepted capture |
-| `ca-2026-27` | Chapter Approved Mission Deck 2026–27 | 2026-06-13, CURRENT | Standard Primaries, Secondaries, Deployment, Twists, setup/scoring | https://www.warhammer.com/shop/warhammer-40k-chapter-approved-mission-deck-2026-eng | MISSING |
-| `ca-overview` | Chapter Approved deck overview | 2026-06, CURRENT context | Fixed/Tactical Secondaries, score caps, card relationships | https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/ | MISSING |
-| `mission-dispositions` | How your army affects your mission | 2026-06, CURRENT context | Five dispositions and directed Primary generation | https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/ | MISSING |
+| `ca-2026-27` | Chapter Approved Mission Deck 2026–27 | 2026-06-13, CURRENT | Standard Primaries, Secondaries, Deployment, Twists, setup/scoring | https://www.warhammer.com/shop/warhammer-40k-chapter-approved-mission-deck-2026-eng | SOURCE EVIDENCE COMPLETE FOR MODELING; production model MISSING |
+| `ca-overview` | Chapter Approved deck overview | 2026-05-28, CURRENT context | Fixed/Tactical Secondaries, score caps, card relationships | https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/ | ACCEPTED CORROBORATION |
+| `mission-dispositions` | How your army affects your mission | 2026-04-03, CURRENT context | Five dispositions and directed Primary generation | https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/ | ACCEPTED CORROBORATION |
 | `war-journal` | 11E War Journal/app | 2026-06, CURRENT projection | Mission generator, scoring, layouts, mustering views | https://www.warhammer-community.com/en-gb/articles/dv1aslrr/new40k-new-app-for-a-new-edition/ | App payload inaccessible |
 | `terrain-update` | Updated terrain rules | 2026-06, CURRENT | Terrain semantics; owner remains Core | https://www.warhammer-community.com/en-gb/articles/xlppkx5s/new40k-take-cover-with-updated-terrain-rules/ | Core model present |
 | `terrain-objectives` | Terrain & Objectives / Area Set | 2026-06, CURRENT play aid | Sixteen standard footprints in five types | https://www.warhammer-community.com/en-gb/articles/lxzwueun/new40k-terrain-objectives-make-the-battlefield-your-mission/ | Layout model MISSING |
@@ -57,8 +57,8 @@ The official 11E launch explicitly carries recent campaign supplements forward: 
 | Domain | Authoritative source | Facts | Independent | Repository status |
 |---|---|---|---|---|
 | MFM army construction | Live official MFM | Points/tiers/upgrades, relations, DP, disposition, current qualifiers/inventory | YES | PARTIAL globally; main numeric projection present for nine books |
-| Standard missions | CA 2026–27 cards | Setup, Primaries, Secondaries, Twists, scoring | YES | MISSING |
-| Deployment | CA Deployment cards; Event layouts in event scope | Zone identity/geometry/orientation/compatibility | YES | MISSING |
+| Standard missions | CA 2026–27 cards | Setup, Primaries, Secondaries, Twists, scoring | YES | SOURCE READY; production model MISSING |
+| Deployment | CA Deployment cards; Event layouts in event scope | Zone identity/geometry/orientation/compatibility | YES | SOURCE READY; production model MISSING |
 | Terrain layouts | Event Companion and CA recommendations | Battlefield, footprints, positions, light/dense categories | YES | MISSING |
 | Objective layout | Relevant Deployment/layout artifact | Positions/designation; Core owns marker semantics | Source-owned subdomain, not proven global reusable entity | MISSING |
 | Event overlays | Four companions and named FAQs | Sequence, selection, scoring, pairing, construction, FAQ, base guidance | YES, scoped | MISSING |
@@ -103,7 +103,7 @@ The five dispositions are Take and Hold, Purge the Foe, Disruption, Reconnaissan
 
 The 15 unordered disposition pairs each have three A/B/C Event layouts, yielding 45. Primary and Secondary scoring cap at 45 VP each; Battle Ready adds 10 VP in the event sequence. Standard play uses separate Deployment cards and optional Twists. Event layouts embed deployment and objective placement and exclude those cards.
 
-The full Secondary set, exhaustive Deployment geometry, Twist text, and full Primary rules are not available in the inspected public corpus. They must be captured from an accepted official artifact, not reconstructed from articles or images.
+The enrolled evidence corpus contains all 25 Primary, 18 Secondary, six Deployment, five Force Disposition and six Twist semantic records, plus ten booklet sections. It accounts for all 88 physical cards and preserves the 5x5 directed Primary matrix, 11 Objective Action-backed Primary identities, current official FAQ overlays and all six Deployment geometries. The physical Chapter Approved product remains the factual owner; accepted secondary content remains explicitly secondary and does not override official sources.
 
 ## Observed mission/layout relationship
 
@@ -160,15 +160,15 @@ Event Companion v1.0 is superseded by v1.1, which is superseded by v1.2. The off
 
 **Present with factual model:** Core terrain/objective semantics; nine-book MFM points, costs, Enhancement prices, DP and disposition projections.
 
-**Partial:** global MFM corpus/history; MFM relations/qualifiers/grouping; base metadata and event provenance. Current Event Companion v1.2 is authenticated as source evidence but has no production layout model.
+**Partial:** global MFM corpus/history; MFM relations/qualifiers/grouping; base metadata and event provenance. Current Event Companion v1.2 and Chapter Approved 2026–27 are enrolled as source evidence but have no production mission/layout model.
 
-**Missing:** CA mission/card model, Deployment model, terrain/event layouts, Doubles/Teams/Dominatus overlays, Dominatus deck facts, Combat Patrol, current Boarding Actions/campaigns/Apocalypse/Armoured Gauntlet, and a non-Core/non-Army source registry.
+**Missing:** CA production mission/card model, Deployment model, standard casual terrain layouts, production event layouts, Doubles/Teams/Dominatus overlays, Dominatus deck facts, Combat Patrol, current Boarding Actions/campaigns/Apocalypse/Armoured Gauntlet, and a general non-Core/non-Army source registry beyond the current missions source manifest.
 
 Recommended order:
 
-1. Create a source registry with artifact identity, retrieval date/hash, scope and supersession.
-2. Obtain and capture the complete official CA 2026–27 corpus; do not infer missing cards.
-3. Model missions, then reusable Deployment records and source-owned relationships.
+1. Extend the existing source registry pattern to other non-Core/non-Army domains with artifact identity, retrieval date/hash, scope and supersession.
+2. Treat the enrolled CA 2026–27 evidence corpus as the bounded accepted input; retain its per-record authority and do not upgrade secondary evidence to official.
+3. Model missions, then reusable Deployment records and source-owned relationships in a separate production task.
 4. Model the authenticated Event v1.2 snapshot as the current-at-cutoff event deployment/objective/terrain composition; retain v1.1 and v1.0 only as versioned history.
 5. Add scoped Event, Doubles and Teams overlays.
 6. Run a separate bounded MFM convergence for relations and live qualifiers without reopening this inventory.
@@ -181,4 +181,4 @@ Recommended order:
 
 `GLOSSARY_V2_SAFE_TO_START_NOW=YES` with a strict initial boundary: accepted effective Core plus the nine effective Army Books. Missing domains block a universal all-modes 11E glossary, not the Core/Army glossary foundation. Provenance and scope must be explicit so later mission/event/campaign terms cannot be mistaken for standard/Core facts.
 
-Before claiming a complete all-modes glossary, obtain the full CA card corpus, Event/layout facts, full Dominatus deck, app-only Combat Patrol facts, and accepted current separate-mode sources.
+Before claiming a complete all-modes glossary, model the enrolled CA/Event facts and obtain the full Dominatus deck, app-only Combat Patrol facts, and accepted current separate-mode sources.

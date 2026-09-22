@@ -138,6 +138,55 @@ The PDF defines the footprint inventory as four 6x4-inch, two 10x2.5-inch, four 
 
 The Event Companion expressly excludes standard Deployment and Twist cards. Event layouts therefore do not close the standard-play source gaps. Version 1.2 closes the August event-layout gap only; it does not supply the complete Chapter Approved standard mission corpus.
 
+## Secondary GDM terrain-layout reference
+
+The live [Game Data Missions 11E layout index](https://game-datamissions.com/11th/layouts) was captured as reference metadata on 2026-09-22. Its own interface says that the visual layouts come from Battlemaster. It is therefore registered as `SECONDARY_VISUAL_REFERENCE`, not as a factual owner.
+
+The complete reference mapping is stored in `missions/sources/game-data-missions-terrain-reference-2026-09-22.json`:
+
+```text
+FORCE_DISPOSITIONS=5
+UNORDERED_MATCHUPS=15
+LAYOUTS_PER_MATCHUP=3
+LAYOUT_IDENTITIES=45
+PLAIN_ASSET_REFERENCES=45
+MEASUREMENT_ASSET_REFERENCES=45
+TOTAL_ASSET_REFERENCES=90
+FETCH_HTTP_200=90
+ASSET_DIMENSIONS=1653x2833 PNG
+```
+
+The 25 ordered UI choices are viewing directions over 15 unordered factual pairings. Reversing A and B does not create another matchup or another set of three layouts.
+
+Every official Event Companion v1.2 layout on PDF pages 9-53 was compared with its GDM counterpart. Official A/B/C maps directly to GDM 1/2/3. All 45 match in identity, deployment orientation, objective placement and terrain footprint arrangement without rotation:
+
+```text
+BASE_LAYOUT_PARITY_CONFIRMED=45
+VISUALLY_EQUIVALENT_ROTATED=0
+CONFLICTS=0
+UNRESOLVED=0
+```
+
+The GDM measurement assets do not become authoritative through that parity. All 45 add secondary setup guidance: edge-anchored coordinate callouts, attacker/defender edge labels, layout labels, legends and board summaries. Some values are derived or rounded; for example, an official `16.25"` annotation is displayed as `16.3`, and the corresponding GDM overlay includes an additional `17.5"` edge coordinate. The underlying layout remains visually equivalent, but Event Companion v1.2 is the sole accepted owner of geometry and measurements.
+
+The third-party image bytes are not stored in the repository because no existing source-storage or licensing policy authorizes mass redistribution. The evidence manifest preserves each URL, HTTP result, byte size, SHA-256, retrieval date and parity conclusion. GDM remains a reconstruction and QA aid for a future structured terrain renderer; its artwork is not approved for production UI.
+
+## Minimum physical-capture checklist
+
+Nine photographs are still required to close the strict physical-source gaps identified by the bounded web reconstruction:
+
+1. One straight-on photograph containing all six Deployment fronts: Tipping Point, Sweeping Engagement, Search and Destroy, Hammer and Anvil, Dawn of War, and Crucible of Battle.
+2. One positively identified Deployment-card reverse.
+3. One straight-on photograph containing the Nowhere to Hide, Scrambled Communications, and Ruinscape Twist fronts.
+4. One positively identified Twist-card reverse.
+5. Reference booklet pages 1-2.
+6. Reference booklet pages 3-4.
+7. Reference booklet pages 5-6.
+8. Reference booklet pages 7-8.
+9. Reference booklet pages 9-10.
+
+Every photograph must be square-on, glare-free and uncropped, with all text and measurements readable. If a grouped photograph is not sharp enough, supply close-ups. Mirrored World, Martial Pride and Night Fighting already have readable official GW fronts and do not need to be photographed again.
+
 ## Source ownership
 
 - Core Rules own terrain feature and objective-marker semantics.

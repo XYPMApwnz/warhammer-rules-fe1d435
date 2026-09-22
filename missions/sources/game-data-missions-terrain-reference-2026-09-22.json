@@ -1,0 +1,2637 @@
+{
+  "schema": "warhammer-secondary-visual-reference/v1",
+  "id": "gdm-11e-event-terrain-layouts-2026-09-22",
+  "title": "Game Data Missions 11E terrain layout visual references",
+  "edition": "Warhammer 40,000 11th Edition",
+  "cutoff": "2026-09-22",
+  "retrievedAt": "2026-09-22",
+  "classification": "SECONDARY_VISUAL_REFERENCE",
+  "source": {
+    "indexUrl": "https://game-datamissions.com/11th/layouts",
+    "publisher": "Game Data Missions",
+    "displayedVisualSourceCredit": "Battlemaster",
+    "authority": "secondary",
+    "role": "visual reference, parity QA, and reconstruction aid only"
+  },
+  "officialAuthority": {
+    "sourceId": "wh40k-11e-event-companion-v1.2-2026-08-26",
+    "title": "Warhammer 40,000 Event Companion",
+    "version": "1.2",
+    "date": "2026-08-26",
+    "localPath": "missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+    "sha256": "1F44D9FA0297F60BE6C4367041A65D1A98710C68B221D8C8E22ECD1674E7525E",
+    "layoutPages": {
+      "first": 9,
+      "last": 53
+    },
+    "precedence": "GDM never overrides official v1.2 identity, geometry, objectives, terrain footprints, orientation, or measurements."
+  },
+  "preservation": {
+    "assetBytesStoredInRepository": false,
+    "reason": "No repository policy was found authorizing redistribution of 90 third-party image assets.",
+    "reproducibility": "URLs, HTTP status, content type, pixel dimensions, byte sizes, SHA-256 hashes, retrieval date, and official parity are recorded."
+  },
+  "counts": {
+    "forceDispositions": 5,
+    "unorderedMatchups": 15,
+    "layouts": 45,
+    "plainAssets": 45,
+    "measurementAssets": 45,
+    "totalAssetReferences": 90,
+    "parityConfirmed": 45,
+    "visuallyEquivalentRotated": 0,
+    "measurementSecondaryExtraGuidance": 45,
+    "conflicts": 0,
+    "unresolved": 0
+  },
+  "notes": [
+    "The 25 ordered UI selections collapse to 15 unordered factual matchups; A+B and B+A are not separate matchup facts.",
+    "Every matchup has three layouts. Official A/B/C maps to GDM 1/2/3.",
+    "All GDM assets were fetched successfully as 1653x2833 PNG files on 2026-09-22.",
+    "The live host is game-datamissions.com while its embedded canonical metadata names gdmissions.app; the recorded asset URLs use the requested live host.",
+    "A -portrait filename means attacker-left/defender-right presentation; it does not indicate a rotation discrepancy from official v1.2.",
+    "The GDM measurement overlays include derived coordinate-style guidance and occasional decimal rounding, so official v1.2 remains the measurement authority."
+  ],
+  "matchups": [
+    {
+      "id": "take-and-hold--mirror",
+      "forceDispositionA": "Take and Hold",
+      "forceDispositionB": "Take and Hold",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/take-and-hold/take-and-hold",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "take-and-hold--mirror--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 9,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "take-and-hold",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 9"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-mirror-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 274719,
+              "sha256": "BC73CE34A26B435CF970112D650955779B40CD2A945D03514B9D54A7762B7122",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-mirror-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 358509,
+              "sha256": "8CFAD8BE54D9CD2985CC2DF81636A9D4C12C77FB2AAFB53C952002422992FDC4",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--mirror--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 10,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "take-and-hold",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 10"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-mirror-2-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 374701,
+              "sha256": "A6A409A2BA21662D5466D6C445006FE33122CA73D5839438338A20C47B76BAF1",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-mirror-2-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 453373,
+              "sha256": "C78C89B67094C194CA513829D71182761506E629B411413E059E8E60D5483639",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--mirror--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 11,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "take-and-hold",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 11"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-mirror-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 362902,
+              "sha256": "A4A7900E3BCDC3069B285F8B44DCFB9519DC56A4EB5E96CF52C99A6E38AEC0D9",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-mirror-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 438136,
+              "sha256": "B503B52CE33F0CEC78660E8A1BB80835DF7163F777C728997A5109E8ED43095C",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "take-and-hold--purge-the-foe",
+      "forceDispositionA": "Take and Hold",
+      "forceDispositionB": "Purge the Foe",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/take-and-hold/purge-the-foe",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "take-and-hold--purge-the-foe--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 12,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 12"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-purge-the-foe-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 383690,
+              "sha256": "915FF603B10838BBD0F4E3640C0BE6E8DFC8C0E3AF32579E4663A147114FA925",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-purge-the-foe-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 462604,
+              "sha256": "F88A5AE3A38746C3F350EA1BFE8C8835E07C82328404921690D6DA3B3ADEEF19",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--purge-the-foe--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 13,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 13"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-purge-the-foe-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 343493,
+              "sha256": "329EC8D23512B5EF5D5CFF89D324F1ACF35F6A0C25001FE1C9D3912FF81106C5",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-purge-the-foe-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 416157,
+              "sha256": "80FF6EDC486A535C18E5D53F39E6A0BC3BAC274D8FBA732031E3CED207695208",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--purge-the-foe--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 14,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 14"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-purge-the-foe-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 324317,
+              "sha256": "09DD763D657CD5503A2521A1C05DA89C26D5611EEECEF02E070CE93B4722ABBB",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-purge-the-foe-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 401370,
+              "sha256": "B374C2394989959CB3CFE1B63C99404B50A3A5C900DBCA316F64ACC5797F6F39",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "take-and-hold--disruption",
+      "forceDispositionA": "Take and Hold",
+      "forceDispositionB": "Disruption",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/take-and-hold/disruption",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "take-and-hold--disruption--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 15,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "disruption",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 15"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-disruption-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 378391,
+              "sha256": "B57000E1CEB1A88569C99D6E558686EE81CA9A6F8B7E7010E7D06E4F7248DE70",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-disruption-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 452598,
+              "sha256": "0E1179C7B864FA1C609400898831D5A2F6AA3841D9568E7DDE26D8330F52D0E0",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--disruption--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 16,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "disruption",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 16"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-disruption-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 377618,
+              "sha256": "715732D4AAD03235B4B30D672D1CCAD5C537579B94BD28AE5F063C59548CEA0F",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-disruption-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 457739,
+              "sha256": "048D997C0FD740490F303CE890FC1180C31602E5C75073B466D507A311946190",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--disruption--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 17,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "disruption",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 17"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-disruption-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 275631,
+              "sha256": "4F0FCD7A2C9C078BFC6A9C6C87BAC1082CB3EFE44199941CD1028B45C9E7EA5B",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-disruption-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 342642,
+              "sha256": "9A523B9C7A95A1D78D9AE856E42D8840DADF9B394203F70E2361388155CE399B",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "take-and-hold--reconnaissance",
+      "forceDispositionA": "Take and Hold",
+      "forceDispositionB": "Reconnaissance",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/take-and-hold/reconnaissance",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "take-and-hold--reconnaissance--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 18,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 18"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-reconnaissance-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 278943,
+              "sha256": "EF4DBD22438F5F28940B1B934950B1F29ACC17EC11E8D0C5C53A4373D6AF51CD",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-reconnaissance-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 357067,
+              "sha256": "2F946F0B021F1C2558B02EB70BD7F771BE1B77C8B982CE461B54B479688D11C1",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--reconnaissance--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 19,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 19"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-reconnaissance-2-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 377118,
+              "sha256": "E0839A7951B086986C90467BFA4AE27026C5368943E61C2CEAF6E7BBB7A4B0F0",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-reconnaissance-2-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 453508,
+              "sha256": "5E75A7E311EB0592A828C072E933D40FC283B24AC632993877982EDE4013CA00",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--reconnaissance--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 20,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 20"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-reconnaissance-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 349286,
+              "sha256": "B44E8FDAF3DE45D17241A70B56884026E1E701EE52511985D443EC24442E08F1",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-reconnaissance-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 423709,
+              "sha256": "E4F9F5DD2307EAB213F8FAE60E294848434B7933A79B9C36880FD4AA60AF51E4",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "take-and-hold--priority-assets",
+      "forceDispositionA": "Take and Hold",
+      "forceDispositionB": "Priority Assets",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/take-and-hold/priority-assets",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "take-and-hold--priority-assets--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 21,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "priority-assets",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 21"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-priority-assets-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 385460,
+              "sha256": "0B4574718139AA876828F661FAD9E2D3CB2701E59B76E79EB9B15782EEAC1A5A",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-priority-assets-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 462544,
+              "sha256": "E95E87E398074BD220D9799D9097A9B30E9FF7914F349E7617097D9AEE49AF60",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--priority-assets--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 22,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "priority-assets",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 22"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-priority-assets-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 298930,
+              "sha256": "06D41BB1462133876B293147FBAF3679BA118DD94C112D32F0B3B52110599408",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-priority-assets-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 375398,
+              "sha256": "40D9671B0CD2D92C784567067AC1B898EABEECA4BE20D42E38DF0BC5E06B2316",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "take-and-hold--priority-assets--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 23,
+          "gdmViewingDirection": {
+            "home": "take-and-hold",
+            "opponent": "priority-assets",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 23"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-priority-assets-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 397864,
+              "sha256": "4700FA1774E09E73E408E558510FA4A68D948AF2DBAD99F680C7561462A3C3CA",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-priority-assets-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 473424,
+              "sha256": "B1090E45852C4EB1A2D71F37A1D2109A362409B9CC2C0513F913F1D3E99787A8",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "purge-the-foe--mirror",
+      "forceDispositionA": "Purge the Foe",
+      "forceDispositionB": "Purge the Foe",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/purge-the-foe/purge-the-foe",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "purge-the-foe--mirror--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 24,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 24"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-mirror-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 352640,
+              "sha256": "6CD9C7E8DED4993C82ABD9D75046D5280B41BA7BF394568ED3D8F7F8A8FA241D",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-mirror-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 435264,
+              "sha256": "4B862FDDC7077097FA799F254325B14D23A4C7EBED28DC7F18F3E40ED9E77C48",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "purge-the-foe--mirror--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 25,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 25"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-mirror-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 320193,
+              "sha256": "EA96EB97DBF47C076972F23B6BF241822F37E83351D6D1D6C0A7AA9132239166",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-mirror-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 401100,
+              "sha256": "B12CD6003B849CB43628A65BC05104F13F707F869A19000EBCBB3A76F9645735",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "purge-the-foe--mirror--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 26,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 26"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-mirror-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 382229,
+              "sha256": "7A8E0A76F58A8C2945294CF2C1B890ACF30B55DE94E06D5A313D549B5A8E267E",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-mirror-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 456253,
+              "sha256": "E5AC36EF4B0B0B904FC422B18066A8AFC95A97180C5AE7F84A7CCDD049B5232C",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "disruption--purge-the-foe",
+      "forceDispositionA": "Disruption",
+      "forceDispositionB": "Purge the Foe",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/disruption/purge-the-foe",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "disruption--purge-the-foe--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 27,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 27"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-purge-the-foe-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 350781,
+              "sha256": "DCBFCC6D7670DDD8F5539D5232C550BCEB855BD44C35677F54026AA1512DF87C",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-purge-the-foe-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 427777,
+              "sha256": "A758546623C55015D1C604FC23F9341D7FF64B82D7A38EE3DD5628B455285C37",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "disruption--purge-the-foe--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 28,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 28"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-purge-the-foe-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 303977,
+              "sha256": "F7AEAAD4D77C266DB45040B363D0B680255D2809ABF88F6BB0BF7C514E3FF44C",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-purge-the-foe-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 381752,
+              "sha256": "B243668EC3691C6B21156B6C4114558900BCC542DB4EAE267D7DA989549785AC",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "disruption--purge-the-foe--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 29,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "purge-the-foe",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 29"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-purge-the-foe-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 420589,
+              "sha256": "E3BCDC1E0BB235D48D01DED0C62B6E074AE5C11C90032DC286BE156D15C44E26",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-purge-the-foe-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 498271,
+              "sha256": "5CFE686CAD1F4893DC279B4C4A136EC8F979C7DC406783FBA6321EA2BC28A472",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "purge-the-foe--reconnaissance",
+      "forceDispositionA": "Purge the Foe",
+      "forceDispositionB": "Reconnaissance",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/purge-the-foe/reconnaissance",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "purge-the-foe--reconnaissance--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 30,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 30"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-vs-reconnaissance-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 294019,
+              "sha256": "4D33863BF00BAE706FAFDC78ACA30F088FBD5305A9585F3CC231CFA19B811CCF",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-vs-reconnaissance-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 366949,
+              "sha256": "6441A3414E8D3687D0A9FC41347DD6AD7CDBC3BBE1EE69035FB54259864B8620",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "purge-the-foe--reconnaissance--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 31,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 31"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-vs-reconnaissance-2-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 383096,
+              "sha256": "BD9DE7F4F0958C9A125466FBF7A1780D0D5FADE54971D369EDD75776D9373FE3",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-vs-reconnaissance-2-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 468663,
+              "sha256": "8CC9B78F5D556A2EB08249B7A7D73C967715B3D68154A4EB1AC13B92861079CA",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "purge-the-foe--reconnaissance--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 32,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 32"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-vs-reconnaissance-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 382768,
+              "sha256": "86B0F6AE5475A7AC477D1F77335773552D7C0EEF9A198F808C5699A444FF89F5",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-vs-reconnaissance-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 467597,
+              "sha256": "721BAA8F8DDC55EBCED45A9D0EDA1A1ED06A97C9E1DE46C62E10E2C0E391E836",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "purge-the-foe--priority-assets",
+      "forceDispositionA": "Purge the Foe",
+      "forceDispositionB": "Priority Assets",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/purge-the-foe/priority-assets",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "purge-the-foe--priority-assets--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 33,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "priority-assets",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 33"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-vs-priority-assets-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 377834,
+              "sha256": "9CACFC78C91F93B045647A94D333443CDC6BE28E7A5C38AC87A26D62CD8231C4",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-vs-priority-assets-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 454433,
+              "sha256": "CB6CF676E7219361FB7C2400E076E75160C3EAC1E420E85E4C2351B4434C3A76",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "purge-the-foe--priority-assets--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 34,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "priority-assets",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 34"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-vs-priority-assets-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 328603,
+              "sha256": "CC53C0210E8CB4E0E09AD8510C013EDEAF6B7C9CAC6CAC9DFDB4D9B646EFB8AC",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-vs-priority-assets-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 402740,
+              "sha256": "D15BD1EA59C2E8B87FA403EA0790ED6E44053349591D6EBF26D646A3EA760960",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "purge-the-foe--priority-assets--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 35,
+          "gdmViewingDirection": {
+            "home": "purge-the-foe",
+            "opponent": "priority-assets",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 35"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/purge-the-foe-vs-priority-assets-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 296160,
+              "sha256": "5313CD20DF49CFB4CA0348696A66B2E265A573B6471C6C8AEAD65970014A9C57",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/purge-the-foe-vs-priority-assets-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 366881,
+              "sha256": "E283446F19FB06748D25040AE09871B9A2D1BCD3A6034BE830D78C33C3FA0747",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "disruption--mirror",
+      "forceDispositionA": "Disruption",
+      "forceDispositionB": "Disruption",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/disruption/disruption",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "disruption--mirror--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 36,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "disruption",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 36"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-mirror-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 377530,
+              "sha256": "C4E4D9727301D46E818912EDDEBBADCCB976AE0B9FC35BC59D200EC032DD959D",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-mirror-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 459683,
+              "sha256": "2DB83D051BE6F9B44F1CD9E4EF60437B5DC4617D0C890C6598080DEBD291081F",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "disruption--mirror--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 37,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "disruption",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 37"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-mirror-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 301533,
+              "sha256": "60F7CE9CB31BE17C33C84B8BA9AF2D907FB7344E287BAFE23A76566A7F051B82",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-mirror-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 384834,
+              "sha256": "D64A26BA0B819428525FD1E48F76F4C6B6DEE1DF0206305DDAFD3418BF907047",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "disruption--mirror--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 38,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "disruption",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 38"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-mirror-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 339427,
+              "sha256": "0EB42C55A2DB6C6CC1BFEDE22DE2E1851A7D02EEE684DD0D26EE03FDC42D5DEC",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-mirror-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 421447,
+              "sha256": "21C1C773530AE4BB7809BEB65EBF0AE1D456D0A84D5450B5022F0A40E51199A3",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "disruption--reconnaissance",
+      "forceDispositionA": "Disruption",
+      "forceDispositionB": "Reconnaissance",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/disruption/reconnaissance",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "disruption--reconnaissance--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 39,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 39"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-reconnaissance-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 330890,
+              "sha256": "10A4AA908AB059F464F65C61F4633B571ED7D8EB6F3292D83237A8415458E2D6",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-reconnaissance-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 420225,
+              "sha256": "0571F2B7A4BA495CC845BF3D16001B8BE83A5442A803E2F201BFD1C1C298395C",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "disruption--reconnaissance--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 40,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 40"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-reconnaissance-2-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 411117,
+              "sha256": "0BAB0C117E227AF04809BE18F5684048110EDEC802D8C396DB9BA4C5A192EEF8",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-reconnaissance-2-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 484632,
+              "sha256": "22A40B793052BBD78E6297D304CC14D4F9C6CDCDC476607218120F585C4A74E2",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "disruption--reconnaissance--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 41,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 41"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-reconnaissance-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 355713,
+              "sha256": "C3F907385B70EA79C39A8BEDE7730AE3E7BA8DA5E374453FA52AA0C9F58B910F",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-reconnaissance-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 425511,
+              "sha256": "0CD8910CE6DCA7B8E67856200312907F265437FA508C3F5DB5E2FF0C5AE8A163",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "disruption--priority-assets",
+      "forceDispositionA": "Disruption",
+      "forceDispositionB": "Priority Assets",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/disruption/priority-assets",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "disruption--priority-assets--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 42,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "priority-assets",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 42"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-priority-assets-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 360474,
+              "sha256": "BA43885FE4E33B84FFEAE8889C365A27BFE145F96C44D585E0D72A100318549F",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-priority-assets-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 440757,
+              "sha256": "416ED1E96150A4708103DB4588741D98C5CE80B07F944A4D756532EAE4481E12",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "disruption--priority-assets--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 43,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "priority-assets",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 43"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-priority-assets-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 320390,
+              "sha256": "E07E6A8EA5D799F78D809639DBA95F54212E6274AFB2C4DB668B874ECF3769B1",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-priority-assets-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 399394,
+              "sha256": "2B1BD273569C8F97F8FB48417B3C1CC4E2E4D3550805168352D1C01CBE3088D9",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "disruption--priority-assets--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 44,
+          "gdmViewingDirection": {
+            "home": "disruption",
+            "opponent": "priority-assets",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 44"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/disruption-vs-priority-assets-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 350860,
+              "sha256": "91BBE0E65389CA6B72E984023D3025C5CD9D85D2E9ED8A666059CB5E935EB8B9",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/disruption-vs-priority-assets-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 428403,
+              "sha256": "8C0678BB56C59615549207CA3764CD615EA56BBFD7AAFBB2596984E5E42260A5",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "reconnaissance--mirror",
+      "forceDispositionA": "Reconnaissance",
+      "forceDispositionB": "Reconnaissance",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/reconnaissance/reconnaissance",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "reconnaissance--mirror--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 45,
+          "gdmViewingDirection": {
+            "home": "reconnaissance",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 45"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/reconnaissance-mirror-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 352975,
+              "sha256": "3C526DD91AA7DF9CF38C860A88384B6A86CE75AB44984AA7FD5CC065F3468FAA",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/reconnaissance-mirror-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 433003,
+              "sha256": "A7DA3E29D86B538284BF00261B026B7281CE9434B3971EC9A5D4952FC6753D7E",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "reconnaissance--mirror--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 46,
+          "gdmViewingDirection": {
+            "home": "reconnaissance",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 46"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/reconnaissance-mirror-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 388344,
+              "sha256": "713B6C1102CF9851851503289CE55CD57EF5BC57224E82E00736D3742F36E73C",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/reconnaissance-mirror-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 464451,
+              "sha256": "ACCDFE0435CF2580784E63DA7B7A24C80EFE47F9F0BC9EEAFD5ABA8934ADE8D5",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "reconnaissance--mirror--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 47,
+          "gdmViewingDirection": {
+            "home": "reconnaissance",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 47"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/reconnaissance-mirror-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 331221,
+              "sha256": "DE56E8C6A7886CC45BF31D885A198152D436CEA3BE6324E5F836B4B3E4EF4B3C",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/reconnaissance-mirror-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 409340,
+              "sha256": "0471EE520797E3A2245BA10C148DD01C217C0AA2A7F706BF0A8C85991C8CAAC8",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "priority-assets--reconnaissance",
+      "forceDispositionA": "Priority Assets",
+      "forceDispositionB": "Reconnaissance",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/priority-assets/reconnaissance",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "priority-assets--reconnaissance--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 48,
+          "gdmViewingDirection": {
+            "home": "priority-assets",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 48"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/priority-assets-vs-reconnaissance-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 350917,
+              "sha256": "2A5076C2C317973123E68FBB1ACF23A2C43669EBB53E95DFEA99A8356D640F11",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/priority-assets-vs-reconnaissance-1.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 426304,
+              "sha256": "75B93D6A2BD6BB2EA853B8F6A76649158DDD2377CC3AF607A91DA26F33AD188D",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "priority-assets--reconnaissance--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 49,
+          "gdmViewingDirection": {
+            "home": "priority-assets",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 49"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/priority-assets-vs-reconnaissance-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 293115,
+              "sha256": "191CEC49ED6461C1A695117B221244AAF1E89F570C44137B1E83A742944DA220",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/priority-assets-vs-reconnaissance-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 362574,
+              "sha256": "F6D688B9349D42F19B8AB88B6E4D6CDEE68899F3530E81AF909D44ECFB6D67AE",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "priority-assets--reconnaissance--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 50,
+          "gdmViewingDirection": {
+            "home": "priority-assets",
+            "opponent": "reconnaissance",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 50"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/priority-assets-vs-reconnaissance-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 346221,
+              "sha256": "8DAFD13A094EDA6D27BF085AB13B8E653A2ACE8E050C79B3E9F338E4A1A62A60",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/priority-assets-vs-reconnaissance-3-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 432305,
+              "sha256": "FA20DD32340E5EC8D48C3DEAF021ED67DB25B9BD2172031704B48FCC2F2D2D5B",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "priority-assets--mirror",
+      "forceDispositionA": "Priority Assets",
+      "forceDispositionB": "Priority Assets",
+      "unordered": true,
+      "gdmPageUrl": "https://game-datamissions.com/11th/layouts/priority-assets/priority-assets",
+      "reverseViewingDirectionIsNotADistinctMatchup": true,
+      "layouts": [
+        {
+          "id": "priority-assets--mirror--layout-a",
+          "layoutNumber": 1,
+          "officialLayoutIdentity": "A",
+          "officialPdfPage": 51,
+          "gdmViewingDirection": {
+            "home": "priority-assets",
+            "opponent": "priority-assets",
+            "orientation": "attacker-left-defender-right"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 51"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/priority-assets-mirror-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 354594,
+              "sha256": "FF35915656BEB934879A7A63F0125FCC5F59C7777E97D9EEFF86D07AF4A156B4",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/priority-assets-mirror-1-portrait.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 429078,
+              "sha256": "F153873B6DA897B3A7C72CCC0F54F3BA04D8FAD3D75715F184079FCA7C463E81",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "priority-assets--mirror--layout-b",
+          "layoutNumber": 2,
+          "officialLayoutIdentity": "B",
+          "officialPdfPage": 52,
+          "gdmViewingDirection": {
+            "home": "priority-assets",
+            "opponent": "priority-assets",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 52"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/priority-assets-mirror-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 373953,
+              "sha256": "8436158053513D27A180FC956E0C13AD9652A0FEA5F40A132C617DDADCE09DB8",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/priority-assets-mirror-2.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 452567,
+              "sha256": "C9505706ACAFF90E65E92B7A83F15E82EFADDF24B7727E1B0B14C5764527CFBA",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        },
+        {
+          "id": "priority-assets--mirror--layout-c",
+          "layoutNumber": 3,
+          "officialLayoutIdentity": "C",
+          "officialPdfPage": 53,
+          "gdmViewingDirection": {
+            "home": "priority-assets",
+            "opponent": "priority-assets",
+            "orientation": "attacker-top-defender-bottom"
+          },
+          "parity": {
+            "classification": "PARITY_CONFIRMED",
+            "identityMatch": true,
+            "terrainFootprintMatch": true,
+            "deploymentOrientationMatch": true,
+            "rotationRequired": false,
+            "objectivePlacementMatch": true,
+            "materialDiscrepancy": null,
+            "comparedAgainst": "Event Companion v1.2 printed/PDF page 53"
+          },
+          "setupDistanceAssessment": {
+            "classification": "SECONDARY_EXTRA_GUIDANCE",
+            "officialGeometryRemainsAuthoritative": true,
+            "note": "GDM recasts official placement into edge-anchored coordinate callouts and adds labels/legend; some displayed values are rounded. It is QA/reconstruction guidance, not an official measurement owner."
+          },
+          "assets": {
+            "plain": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/priority-assets-mirror-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 311348,
+              "sha256": "3DF60C57B86683F55EBDD37F4357219250ED56E5449EDC040E6BEA7B3B5617A2",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            },
+            "measurements": {
+              "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/priority-assets-mirror-3.png",
+              "fetchedHttpStatus": 200,
+              "contentType": "image/png",
+              "pixelDimensions": {
+                "width": 1653,
+                "height": 2833
+              },
+              "byteSize": 385491,
+              "sha256": "1C4A3B98FA7F879AD2ACC961803C413E5E5F00D1BD6A41AE7E52920C20C0403D",
+              "retrievedAt": "2026-09-22",
+              "storedInRepository": false
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

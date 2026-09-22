@@ -161,6 +161,49 @@
       ]
     },
     {
+      "id": "gdm-11e-event-terrain-layout-reference",
+      "sourceId": "gdm-11e-event-terrain-layouts-2026-09-22",
+      "authority": "secondary",
+      "role": "secondary-visual-reference",
+      "title": "Game Data Missions 11E Terrain Layouts",
+      "date": "2026-09-22",
+      "retrievedAt": "2026-09-22",
+      "url": "https://game-datamissions.com/11th/layouts",
+      "scope": "EVENT_ONLY_REFERENCE",
+      "currentStatus": "CURRENT_AT_2026_09_22",
+      "sourceType": "third-party-visual-reference-index",
+      "lifecycle": "EVIDENCE_ONLY",
+      "classification": "SECONDARY_VISUAL_REFERENCE",
+      "coverage": {
+        "forceDispositionPairings": 15,
+        "layoutVariantsPerPairing": 3,
+        "eventLayouts": 45,
+        "plainAssetReferences": 45,
+        "measurementAssetReferences": 45,
+        "baseLayoutParityConfirmedAgainstOfficialV1.2": 45,
+        "measurementOverlaysWithSecondaryExtraGuidance": 45
+      },
+      "factsOwned": [],
+      "authorityBoundary": "Visual reference, parity QA and reconstruction aid only. Event Companion v1.2 remains authoritative for event layout identity, geometry, orientation, objectives, terrain footprints and measurements.",
+      "doesNotOverride": [
+        "wh40k-11e-event-companion-v1.2-2026-08-26"
+      ],
+      "assetStorage": {
+        "bytesStored": false,
+        "reason": "No repository policy authorizes redistribution of the 90 third-party image assets; URLs and integrity metadata are retained instead."
+      },
+      "consumers": [
+        "SOURCE_VERIFICATION",
+        "FUTURE_EVENT_LAYOUT_QA"
+      ],
+      "paths": [
+        "missions/sources/game-data-missions-terrain-reference-2026-09-22.json",
+        "docs/rules-universe/STANDARD_MISSIONS_SOURCE_ACQUISITION_2026-09-22.md"
+      ],
+      "supersedes": [],
+      "supersededBy": []
+    },
+    {
       "id": "chapter-approved-2026-27",
       "sourceId": "wh40k-11e-chapter-approved-2026-27",
       "authority": "official",

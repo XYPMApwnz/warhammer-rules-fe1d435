@@ -1,0 +1,1439 @@
+{
+  "schema": "wh40k-canonical-mission-facts/v1",
+  "id": "canonical-standard-missions-2026-09-22-representative",
+  "edition": "Warhammer 40,000 11th Edition",
+  "cutoff": "2026-09-22",
+  "currentness": "CURRENT_AT_2026_09_22",
+  "importCoverage": "REPRESENTATIVE_FOUNDATION",
+  "sourceEvidenceManifest": "missions/sources/chapter-approved-2026-27-evidence.json",
+  "sourceManifest": "missions/sources/source-manifest.json",
+  "authorityPolicy": "The official physical Chapter Approved product owns standard-play facts. Per-record evidence authority remains distinct. The official Event Companion owns event-only sequence and terrain layout facts. GDM is a non-authoritative visual reference.",
+  "provenanceProfiles": [
+    {
+      "id": "provenance-chapter-approved-secondary-corroborated",
+      "factOwnerSourceId": "wh40k-11e-chapter-approved-2026-27",
+      "factOwnerAuthority": "official",
+      "contentEvidenceSourceId": "wahapedia-mission-deck-2026-27",
+      "contentEvidenceAuthority": "secondary",
+      "evidenceClass": "SECONDARY_CONTENT_SOURCE",
+      "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+      "version": "2026-27",
+      "effectiveDate": "2026-06-13",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "provenance-chapter-approved-physical-corroborated",
+      "factOwnerSourceId": "wh40k-11e-chapter-approved-2026-27",
+      "factOwnerAuthority": "official",
+      "contentEvidenceSourceId": "physical-review-2026-07-17",
+      "contentEvidenceAuthority": "secondary",
+      "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+      "corroborationClass": "HIGH_CONFIDENCE_CORROBORATED",
+      "version": "2026-27",
+      "effectiveDate": "2026-06-13",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "provenance-chapter-approved-official",
+      "factOwnerSourceId": "wh40k-11e-chapter-approved-2026-27",
+      "factOwnerAuthority": "official",
+      "contentEvidenceSourceId": "wh40k-11e-chapter-approved-system-overview-2026-05-28",
+      "contentEvidenceAuthority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "corroborationClass": "OFFICIAL_AUTHENTICATED",
+      "version": "2026-27",
+      "effectiveDate": "2026-06-13",
+      "currentness": "CURRENT_AT_2026_09_22"
+    },
+    {
+      "id": "provenance-event-companion-v1-2-official",
+      "factOwnerSourceId": "wh40k-11e-event-companion-v1.2-2026-08-26",
+      "factOwnerAuthority": "official",
+      "contentEvidenceSourceId": "wh40k-11e-event-companion-v1.2-2026-08-26",
+      "contentEvidenceAuthority": "official",
+      "evidenceClass": "OFFICIAL_AUTHENTICATED",
+      "corroborationClass": "OFFICIAL_AUTHENTICATED",
+      "version": "1.2",
+      "effectiveDate": "2026-08-26",
+      "currentness": "CURRENT_AT_2026_09_22"
+    }
+  ],
+  "forceDispositions": [
+    {
+      "id": "force-disposition-take-and-hold",
+      "label": "Take and Hold",
+      "aliases": [],
+      "physicalMultiplicity": 2,
+      "missionMatrixRelations": [
+        {
+          "opponentForceDispositionId": "force-disposition-take-and-hold",
+          "primaryMissionId": "primary-battlefield-dominance"
+        },
+        {
+          "opponentForceDispositionId": "force-disposition-disruption",
+          "primaryMissionId": "primary-determined-acquisition",
+          "resolvedInRepresentativeCatalog": false
+        }
+      ],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-secondary-corroborated",
+        "sourceRecordId": "force-disposition-take-and-hold",
+        "contentLocator": "Force Dispositions / Take and Hold",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "FORCE_DISPOSITION",
+      "references": [
+        {
+          "id": "force-disposition-take-and-hold",
+          "relationType": "OPPONENT_FORCE_DISPOSITION"
+        },
+        {
+          "id": "primary-battlefield-dominance",
+          "relationType": "DIRECTED_PRIMARY_MISSION"
+        },
+        {
+          "id": "force-disposition-disruption",
+          "relationType": "OPPONENT_FORCE_DISPOSITION"
+        },
+        {
+          "id": "primary-determined-acquisition",
+          "relationType": "DIRECTED_PRIMARY_MISSION"
+        }
+      ]
+    },
+    {
+      "id": "force-disposition-disruption",
+      "label": "Disruption",
+      "aliases": [],
+      "physicalMultiplicity": 2,
+      "missionMatrixRelations": [
+        {
+          "opponentForceDispositionId": "force-disposition-take-and-hold",
+          "primaryMissionId": "primary-death-trap"
+        }
+      ],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-secondary-corroborated",
+        "sourceRecordId": "force-disposition-disruption",
+        "contentLocator": "Force Dispositions / Disruption",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "FORCE_DISPOSITION",
+      "references": [
+        {
+          "id": "force-disposition-take-and-hold",
+          "relationType": "OPPONENT_FORCE_DISPOSITION"
+        },
+        {
+          "id": "primary-death-trap",
+          "relationType": "DIRECTED_PRIMARY_MISSION"
+        }
+      ]
+    }
+  ],
+  "primaryMissions": [
+    {
+      "id": "primary-battlefield-dominance",
+      "label": "Battlefield Dominance",
+      "aliases": [],
+      "physicalMultiplicity": 2,
+      "playerForceDispositionId": "force-disposition-take-and-hold",
+      "opponentForceDispositionId": "force-disposition-take-and-hold",
+      "ruleBody": {
+        "summary": "Score for controlling more objectives early and for objective control from battle round two onward.",
+        "scoringClauses": [
+          {
+            "id": "battlefield-dominance-control-more",
+            "battleRounds": [
+              1,
+              2
+            ],
+            "timing": "END_OF_YOUR_TURN",
+            "condition": {
+              "type": "CONTROL_MORE_OBJECTIVES_THAN_OPPONENT"
+            },
+            "victoryPoints": 2
+          },
+          {
+            "id": "battlefield-dominance-control-objectives",
+            "battleRounds": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "timing": "END_OF_COMMAND_PHASE_OR_END_OF_TURN_IN_ROUND_5",
+            "condition": {
+              "type": "PER_CONTROLLED_OBJECTIVE"
+            },
+            "victoryPoints": 3
+          },
+          {
+            "id": "battlefield-dominance-forward-control-bonus",
+            "battleRounds": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "timing": "SAME_AS_PARENT_CLAUSE",
+            "condition": {
+              "type": "PER_CONTROLLED_NON_HOME_OBJECTIVE_WHILE_HOME_CONTROLLED",
+              "parentClauseId": "battlefield-dominance-control-objectives"
+            },
+            "victoryPoints": 2,
+            "stacking": "CUMULATIVE"
+          }
+        ],
+        "objectiveAction": null,
+        "coreRuleRefs": [
+          "core-rule-objectives",
+          "core-rule-command-phase"
+        ]
+      },
+      "provenance": {
+        "profileId": "provenance-chapter-approved-secondary-corroborated",
+        "sourceRecordId": "primary-battlefield-dominance",
+        "contentLocator": "Primary Missions / Battlefield Dominance",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "PRIMARY_MISSION",
+      "references": [
+        {
+          "id": "force-disposition-take-and-hold",
+          "relationType": "PLAYER_FORCE_DISPOSITION"
+        },
+        {
+          "id": "force-disposition-take-and-hold",
+          "relationType": "OPPONENT_FORCE_DISPOSITION"
+        },
+        {
+          "id": "core-rule-objectives",
+          "relationType": "CORE_RULE"
+        },
+        {
+          "id": "core-rule-command-phase",
+          "relationType": "CORE_RULE"
+        }
+      ]
+    },
+    {
+      "id": "primary-death-trap",
+      "label": "Death Trap",
+      "aliases": [],
+      "physicalMultiplicity": 1,
+      "playerForceDispositionId": "force-disposition-disruption",
+      "opponentForceDispositionId": "force-disposition-take-and-hold",
+      "ruleBody": {
+        "summary": "Trap terrain areas, destroy enemies in trapped terrain, and hold non-home objectives.",
+        "scoringClauses": [
+          {
+            "id": "death-trap-newly-trapped-area",
+            "battleRounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "timing": "END_OF_YOUR_TURN",
+            "condition": {
+              "type": "PER_TERRAIN_AREA_TRAPPED_THIS_TURN"
+            },
+            "victoryPoints": 2
+          },
+          {
+            "id": "death-trap-objective-terrain-bonus",
+            "battleRounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "timing": "SAME_AS_PARENT_CLAUSE",
+            "condition": {
+              "type": "PER_NEWLY_TRAPPED_TERRAIN_AREA_THAT_IS_OBJECTIVE",
+              "parentClauseId": "death-trap-newly-trapped-area"
+            },
+            "victoryPoints": 3,
+            "stacking": "CUMULATIVE"
+          },
+          {
+            "id": "death-trap-destroy-in-trapped-area",
+            "battleRounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "timing": "END_OF_YOUR_TURN",
+            "condition": {
+              "type": "ENEMY_STARTED_TURN_IN_AREA_AND_WAS_DESTROYED_AND_AREA_IS_TRAPPED"
+            },
+            "victoryPoints": 3
+          },
+          {
+            "id": "death-trap-control-non-home",
+            "battleRounds": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "timing": "END_OF_COMMAND_PHASE_OR_END_OF_TURN_IN_ROUND_5",
+            "condition": {
+              "type": "CONTROL_ONE_OR_MORE_NON_HOME_OBJECTIVES"
+            },
+            "victoryPoints": 4
+          }
+        ],
+        "objectiveAction": {
+          "id": "objective-action-booby-trap",
+          "label": "Booby Trap",
+          "sourceSide": "REVERSE",
+          "starts": "YOUR_SHOOTING_PHASE",
+          "unitSelector": {
+            "type": "ONE_FRIENDLY_UNIT",
+            "locationAnyOf": [
+              {
+                "type": "WITHIN_RANGE_OF_NON_HOME_OBJECTIVE"
+              },
+              {
+                "type": "WITHIN_UNTRAPPED_TERRAIN_AREA_OUTSIDE_OWN_DEPLOYMENT_ZONE"
+              }
+            ]
+          },
+          "useLimit": {
+            "type": "UNLIMITED",
+            "perPhaseDistinctBy": "TERRAIN_AREA"
+          },
+          "completes": "IMMEDIATELY",
+          "effect": {
+            "type": "MARK_TERRAIN_AREA_TRAPPED",
+            "markerType": "OPERATION_MARKER"
+          }
+        },
+        "coreRuleRefs": [
+          "core-rule-objectives",
+          "core-rule-objective-actions"
+        ]
+      },
+      "provenance": {
+        "profileId": "provenance-chapter-approved-secondary-corroborated",
+        "sourceRecordId": "primary-death-trap",
+        "contentLocator": "Primary Missions / Death Trap",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": [
+          "faq-death-trap-terrain-area-timing"
+        ]
+      },
+      "recordType": "PRIMARY_MISSION",
+      "references": [
+        {
+          "id": "force-disposition-disruption",
+          "relationType": "PLAYER_FORCE_DISPOSITION"
+        },
+        {
+          "id": "force-disposition-take-and-hold",
+          "relationType": "OPPONENT_FORCE_DISPOSITION"
+        },
+        {
+          "id": "core-rule-objectives",
+          "relationType": "CORE_RULE"
+        },
+        {
+          "id": "core-rule-objective-actions",
+          "relationType": "CORE_RULE"
+        }
+      ]
+    }
+  ],
+  "secondaryMissions": [
+    {
+      "id": "secondary-plunder",
+      "label": "Plunder",
+      "aliases": [],
+      "physicalMultiplicity": 2,
+      "presentationCopies": [
+        "ATTACKER",
+        "DEFENDER"
+      ],
+      "presentationCopiesAreSeparateSemantics": false,
+      "eligibility": {
+        "fixed": false,
+        "tactical": true
+      },
+      "ruleBody": {
+        "summary": "Plunder a terrain area outside your territory and score at the end of your turn.",
+        "whenDrawn": {
+          "condition": {
+            "type": "SECONDARY_ACTIVE",
+            "secondaryMissionId": "secondary-cleanse"
+          },
+          "option": "DRAW_REPLACEMENT_AND_SHUFFLE_THIS_BACK"
+        },
+        "objectiveAction": {
+          "id": "objective-action-plunder",
+          "label": "Plunder",
+          "sourceSide": "REVERSE",
+          "starts": "YOUR_SHOOTING_PHASE",
+          "unitSelector": {
+            "type": "ONE_UNIT_WITHIN_TERRAIN_AREA",
+            "terrainAreaCondition": "OUTSIDE_YOUR_TERRITORY"
+          },
+          "useLimit": {
+            "type": "ONCE_PER_TURN"
+          },
+          "completes": "IMMEDIATELY",
+          "effect": {
+            "type": "MARK_TERRAIN_AREA_PLUNDERED"
+          }
+        },
+        "scoringClauses": [
+          {
+            "id": "plunder-area-this-turn",
+            "battleRounds": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "timing": "END_OF_YOUR_TURN",
+            "condition": {
+              "type": "A_TERRAIN_AREA_WAS_PLUNDERED_THIS_TURN"
+            },
+            "victoryPoints": 5
+          }
+        ],
+        "caps": {
+          "perCard": 20,
+          "appliesWhen": "FIXED_ONLY"
+        },
+        "coreRuleRefs": [
+          "core-rule-objective-actions"
+        ]
+      },
+      "provenance": {
+        "profileId": "provenance-chapter-approved-secondary-corroborated",
+        "sourceRecordId": "secondary-plunder",
+        "contentLocator": "Secondary Missions / Plunder",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": [
+          "faq-plunder-terrain-area-requirement"
+        ]
+      },
+      "recordType": "SECONDARY_MISSION",
+      "references": [
+        {
+          "id": "core-rule-objective-actions",
+          "relationType": "CORE_RULE"
+        },
+        {
+          "id": "secondary-cleanse",
+          "relationType": "WHEN_DRAWN_RELATED_SECONDARY"
+        }
+      ]
+    }
+  ],
+  "deployments": [
+    {
+      "id": "deployment-dawn-of-war",
+      "label": "Dawn of War",
+      "aliases": [],
+      "physicalMultiplicity": 1,
+      "geometry": {
+        "kind": "DEPLOYMENT_GEOMETRY",
+        "digitizationStatus": "SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION",
+        "coordinateSystem": {
+          "unit": "INCH",
+          "origin": "TOP_LEFT",
+          "xAxis": "RIGHT",
+          "yAxis": "DOWN",
+          "battlefield": {
+            "width": 60,
+            "height": 44
+          }
+        },
+        "zones": [],
+        "objectives": [],
+        "terrainAreas": [],
+        "measurements": [],
+        "sourceRegistration": {
+          "type": "AUTHENTICATED_RASTER_REFERENCE",
+          "url": "https://wahapedia.ru/wh40k11ed/img/maps/cards/CA7_DawnOfWar.png",
+          "pixelDimensions": {
+            "width": 699,
+            "height": 806
+          },
+          "byteSize": 275428,
+          "sha256": "C43AC6488122B69E33DAA984DCAAED44E117662996FB7DEBB7C9AD375EE202AF"
+        },
+        "requiredVerifiedLayers": [
+          "DEPLOYMENT_ZONES",
+          "TERRITORIES",
+          "OBJECTIVE_POSITIONS",
+          "TERRAIN_AREAS",
+          "MEASUREMENTS"
+        ]
+      },
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "deployment-dawn-of-war",
+        "contentLocator": "Deployment / Dawn of War",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "DEPLOYMENT",
+      "references": []
+    }
+  ],
+  "twists": [
+    {
+      "id": "twist-night-fighting",
+      "label": "Night Fighting",
+      "aliases": [],
+      "physicalMultiplicity": 1,
+      "ruleBody": {
+        "summary": "Darkness limits visibility and indirect-fire targeting to nearby enemy models.",
+        "operations": [
+          {
+            "type": "VISIBILITY_RANGE_LIMIT",
+            "subject": "EACH_UNIT",
+            "enemyModelMaximumDistanceInches": 18
+          },
+          {
+            "type": "INDIRECT_FIRE_TARGETING_RANGE_LIMIT",
+            "subject": "EACH_UNIT",
+            "attackingModelMaximumDistanceInches": 18
+          }
+        ],
+        "designersNote": "Recommended for battlefields with limited terrain; retained as rules-relevant presentation context."
+      },
+      "provenance": {
+        "profileId": "provenance-chapter-approved-official",
+        "sourceRecordId": "twist-night-fighting",
+        "contentLocator": "Twists / Night Fighting",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "TWIST",
+      "references": []
+    }
+  ],
+  "missionSequenceRules": [
+    {
+      "id": "mission-sequence-determine-mission",
+      "label": "Determine Mission",
+      "order": 2,
+      "requirements": [
+        {
+          "type": "SECRET_FORCE_DISPOSITION_SELECTION"
+        },
+        {
+          "type": "SIMULTANEOUS_REVEAL"
+        },
+        {
+          "type": "DIRECTED_PRIMARY_MATRIX_LOOKUP"
+        }
+      ],
+      "coreRuleRefs": [],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-02-muster-determine-mission",
+        "contentLocator": "Chapter Approved Battles / 2 Determine Mission",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": []
+    },
+    {
+      "id": "mission-sequence-determine-deployment",
+      "label": "Determine Deployment",
+      "order": 3,
+      "requirements": [
+        {
+          "type": "SHUFFLE_AND_DRAW_ONE_DEPLOYMENT_CARD"
+        }
+      ],
+      "coreRuleRefs": [],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-03-deployment-twist",
+        "contentLocator": "Chapter Approved Battles / 3 Determine Deployment",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": []
+    },
+    {
+      "id": "mission-sequence-optional-twist",
+      "label": "Optional Twist",
+      "order": 3.1,
+      "requirements": [
+        {
+          "type": "MUTUAL_AGREEMENT_REQUIRED"
+        },
+        {
+          "type": "CHOOSE_ONE_TWIST"
+        }
+      ],
+      "coreRuleRefs": [],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-03-deployment-twist",
+        "contentLocator": "Chapter Approved Battles / Optional Step Twist",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": []
+    },
+    {
+      "id": "mission-sequence-create-battlefield",
+      "label": "Create the Battlefield",
+      "order": 4,
+      "requirements": [
+        {
+          "type": "BATTLEFIELD_SIZE",
+          "widthInches": 60,
+          "heightInches": 44
+        },
+        {
+          "type": "CENTRAL_OBJECTIVE_ROLL",
+          "singleOnResults": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "doubleOnResults": [
+            6
+          ],
+          "doubleOffsetInches": 6
+        },
+        {
+          "type": "ALTERNATING_TERRAIN_PLACEMENT_AFTER_ROLL_OFF"
+        }
+      ],
+      "coreRuleRefs": [
+        "core-rule-terrain-features"
+      ],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-04-create-battlefield",
+        "contentLocator": "Chapter Approved Battles / 4 Create the Battlefield",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": [
+        {
+          "id": "core-rule-terrain-features",
+          "relationType": "CORE_RULE"
+        }
+      ]
+    },
+    {
+      "id": "mission-sequence-determine-attacker-defender",
+      "label": "Determine Attacker and Defender",
+      "order": 5,
+      "requirements": [
+        {
+          "type": "AGREE_BATTLEFIELD_EDGE_MAPPING"
+        },
+        {
+          "type": "ROLL_OFF_WINNER_CHOOSES_ROLE"
+        }
+      ],
+      "coreRuleRefs": [],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-05-attacker-secondary-selection",
+        "contentLocator": "Chapter Approved Battles / 5 Determine Attacker and Defender",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": []
+    },
+    {
+      "id": "mission-sequence-select-secondaries",
+      "label": "Select Secondary Missions",
+      "order": 6,
+      "requirements": [
+        {
+          "type": "SECRET_FIXED_OR_TACTICAL_SELECTION"
+        },
+        {
+          "type": "FIXED_SELECT_TWO_AND_REVEAL"
+        },
+        {
+          "type": "TACTICAL_SHUFFLE_DECK"
+        },
+        {
+          "type": "ATTACKER_DEFENDER_DECKS_SEMANTICALLY_IDENTICAL"
+        }
+      ],
+      "coreRuleRefs": [],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-05-attacker-secondary-selection",
+        "contentLocator": "Chapter Approved Battles / 6 Select Secondary Missions",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": []
+    },
+    {
+      "id": "mission-sequence-tactical-secondary-procedure",
+      "label": "Tactical Secondary Procedure",
+      "order": 6.1,
+      "requirements": [
+        {
+          "type": "DRAW_AT_COMMAND_PHASE_START",
+          "count": 2
+        },
+        {
+          "type": "ONCE_PER_BATTLE_REPLACE_AT_COMMAND_PHASE_END",
+          "commandPointCost": 1
+        },
+        {
+          "type": "END_OF_EACH_TURN_SCORE_THEN_DISCARD_ACHIEVED"
+        },
+        {
+          "type": "OWN_TURN_OPTIONAL_DISCARD_FOR_CP",
+          "commandPointsGained": 1
+        }
+      ],
+      "coreRuleRefs": [
+        "core-rule-command-phase"
+      ],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-06-fixed-tactical-achievement",
+        "contentLocator": "Chapter Approved Battles / Tactical and Achieving Secondary Missions",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": [
+        {
+          "id": "core-rule-command-phase",
+          "relationType": "CORE_RULE"
+        }
+      ]
+    },
+    {
+      "id": "mission-sequence-deploy-armies",
+      "label": "Deploy Armies",
+      "order": 8,
+      "requirements": [
+        {
+          "type": "ALTERNATING_UNIT_DEPLOYMENT",
+          "firstRole": "DEFENDER"
+        },
+        {
+          "type": "WHOLLY_WITHIN_DEPLOYMENT_ZONE"
+        },
+        {
+          "type": "TITANIC_SKIPS_NEXT_DEPLOYMENT_TURN"
+        }
+      ],
+      "coreRuleRefs": [
+        "core-rule-strategic-reserves"
+      ],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-07-formations-deployment-prebattle",
+        "contentLocator": "Chapter Approved Battles / 8 Deploy Armies",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": [
+        {
+          "id": "core-rule-strategic-reserves",
+          "relationType": "CORE_RULE"
+        }
+      ]
+    },
+    {
+      "id": "mission-sequence-determine-first-turn",
+      "label": "Determine First Turn",
+      "order": 10,
+      "requirements": [
+        {
+          "type": "ROLL_OFF_WINNER_TAKES_FIRST_TURN"
+        }
+      ],
+      "coreRuleRefs": [],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-07-formations-deployment-prebattle",
+        "contentLocator": "Chapter Approved Battles / 10 Determine First Turn",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": []
+    },
+    {
+      "id": "mission-sequence-determine-victor",
+      "label": "Determine Victor",
+      "order": 14,
+      "requirements": [
+        {
+          "type": "BATTLE_READY_VP",
+          "victoryPoints": 10
+        },
+        {
+          "type": "PRIMARY_VP_CAP",
+          "maximum": 45,
+          "perBattleRoundMaximum": 15
+        },
+        {
+          "type": "SECONDARY_VP_CAP",
+          "maximum": 45,
+          "perBattleRoundMaximum": 15,
+          "fixedPerCardMaximum": 20
+        },
+        {
+          "type": "END_OF_BATTLE_SCORING_OUTSIDE_PER_ROUND_CAP"
+        }
+      ],
+      "coreRuleRefs": [],
+      "provenance": {
+        "profileId": "provenance-chapter-approved-physical-corroborated",
+        "sourceRecordId": "reference-page-08-battle-victor-scoring",
+        "contentLocator": "Chapter Approved Battles / 14 Determine Victor",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": [
+          "faq-end-of-battle-scoring-timing"
+        ]
+      },
+      "recordType": "MISSION_SEQUENCE_RULE",
+      "aliases": [],
+      "references": []
+    }
+  ],
+  "faqOverlays": [
+    {
+      "id": "faq-death-trap-terrain-area-timing",
+      "targetId": "primary-death-trap",
+      "operation": "APPEND_CLARIFICATION",
+      "clarification": {
+        "type": "TERRAIN_AREA_NEED_NOT_BE_TRAPPED_AT_DESTRUCTION_TIME",
+        "appliesToClauseId": "death-trap-destroy-in-trapped-area"
+      },
+      "applicableScopes": [
+        "STANDARD_MATCHED_PLAY",
+        "EVENT_PLAY"
+      ],
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "faq-death-trap-terrain-area-timing",
+        "contentLocator": "Event Companion v1.2 p4",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "FAQ_OVERLAY",
+      "aliases": [],
+      "references": [
+        {
+          "id": "primary-death-trap",
+          "relationType": "OVERLAY_TARGET"
+        }
+      ],
+      "label": "Death Trap terrain-area timing FAQ"
+    },
+    {
+      "id": "faq-plunder-terrain-area-requirement",
+      "targetId": "secondary-plunder",
+      "operation": "APPEND_CLARIFICATION",
+      "clarification": {
+        "type": "OUTSIDE_TERRITORY_QUALIFIES_TERRAIN_AREA_NOT_UNIT"
+      },
+      "applicableScopes": [
+        "STANDARD_MATCHED_PLAY",
+        "EVENT_PLAY"
+      ],
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "faq-plunder-terrain-area-requirement",
+        "contentLocator": "Event Companion v1.2 p4",
+        "applicableScopes": [
+          "STANDARD_MATCHED_PLAY",
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "FAQ_OVERLAY",
+      "aliases": [],
+      "references": [
+        {
+          "id": "secondary-plunder",
+          "relationType": "OVERLAY_TARGET"
+        }
+      ],
+      "label": "Plunder terrain-area requirement FAQ"
+    }
+  ],
+  "forceDispositionMatchups": [
+    {
+      "id": "force-disposition-matchup-disruption--take-and-hold",
+      "memberForceDispositionIds": [
+        "force-disposition-disruption",
+        "force-disposition-take-and-hold"
+      ],
+      "unordered": true,
+      "reverseOrderEquivalent": true,
+      "directedPrimaryRelations": [
+        {
+          "playerForceDispositionId": "force-disposition-disruption",
+          "opponentForceDispositionId": "force-disposition-take-and-hold",
+          "primaryMissionId": "primary-death-trap"
+        },
+        {
+          "playerForceDispositionId": "force-disposition-take-and-hold",
+          "opponentForceDispositionId": "force-disposition-disruption",
+          "primaryMissionId": "primary-determined-acquisition",
+          "resolvedInRepresentativeCatalog": false
+        }
+      ],
+      "layoutIds": [
+        "terrain-layout-disruption--take-and-hold-a",
+        "terrain-layout-disruption--take-and-hold-b",
+        "terrain-layout-disruption--take-and-hold-c"
+      ],
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-layout-matchup-take-and-hold--disruption",
+        "contentLocator": "Event Companion v1.2 pp15-17",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "FORCE_DISPOSITION_MATCHUP",
+      "aliases": [],
+      "references": [
+        {
+          "id": "force-disposition-disruption",
+          "relationType": "MATCHUP_MEMBER"
+        },
+        {
+          "id": "force-disposition-take-and-hold",
+          "relationType": "MATCHUP_MEMBER"
+        },
+        {
+          "id": "terrain-layout-disruption--take-and-hold-a",
+          "relationType": "EVENT_LAYOUT"
+        },
+        {
+          "id": "terrain-layout-disruption--take-and-hold-b",
+          "relationType": "EVENT_LAYOUT"
+        },
+        {
+          "id": "terrain-layout-disruption--take-and-hold-c",
+          "relationType": "EVENT_LAYOUT"
+        },
+        {
+          "id": "primary-death-trap",
+          "relationType": "DIRECTED_PRIMARY_MISSION"
+        },
+        {
+          "id": "primary-determined-acquisition",
+          "relationType": "DIRECTED_PRIMARY_MISSION"
+        }
+      ],
+      "label": "Disruption and Take and Hold"
+    }
+  ],
+  "eventSequenceOverlays": [
+    {
+      "id": "event-sequence-determine-layout-v1-2",
+      "operation": "REPLACE_SEQUENCE_STAGES",
+      "replacesSequenceRuleIds": [
+        "mission-sequence-determine-deployment",
+        "mission-sequence-optional-twist",
+        "mission-sequence-create-battlefield"
+      ],
+      "replacementRule": {
+        "id": "event-mission-sequence-determine-layout",
+        "label": "Determine a Layout",
+        "order": 3,
+        "requirements": [
+          {
+            "type": "SELECT_LAYOUT_BY_FORCE_DISPOSITION_MATCHUP",
+            "variants": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          {
+            "type": "ORGANIZER_SPECIFIES_OR_RANDOMLY_DETERMINES_VARIANT"
+          },
+          {
+            "type": "SET_UP_OFFICIAL_TERRAIN_AREAS_AND_FEATURES"
+          }
+        ],
+        "coreRuleRefs": []
+      },
+      "applicableScopes": [
+        "EVENT_PLAY"
+      ],
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-mission-sequence-v1.2",
+        "contentLocator": "Event Companion v1.2 pp1-2",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "EVENT_SEQUENCE_OVERLAY",
+      "aliases": [],
+      "references": [
+        {
+          "id": "mission-sequence-determine-deployment",
+          "relationType": "REPLACED_SEQUENCE_RULE"
+        },
+        {
+          "id": "mission-sequence-optional-twist",
+          "relationType": "REPLACED_SEQUENCE_RULE"
+        },
+        {
+          "id": "mission-sequence-create-battlefield",
+          "relationType": "REPLACED_SEQUENCE_RULE"
+        }
+      ],
+      "label": "Event Companion v1.2 Determine a Layout sequence"
+    }
+  ],
+  "terrainLayouts": [
+    {
+      "id": "terrain-layout-disruption--take-and-hold-a",
+      "label": "Disruption vs Take and Hold — Layout A",
+      "matchupId": "force-disposition-matchup-disruption--take-and-hold",
+      "variant": "A",
+      "geometry": {
+        "kind": "TERRAIN_LAYOUT_GEOMETRY",
+        "digitizationStatus": "SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION",
+        "coordinateSystem": {
+          "unit": "INCH",
+          "origin": "TOP_LEFT",
+          "xAxis": "RIGHT",
+          "yAxis": "DOWN",
+          "battlefield": {
+            "width": 44,
+            "height": 60
+          }
+        },
+        "zones": [],
+        "objectives": [],
+        "terrainAreas": [],
+        "measurements": [
+          {
+            "id": "layout-a-battlefield-width",
+            "constraintType": "BETWEEN_BATTLEFIELD_EDGES",
+            "fromRef": "BATTLEFIELD_LEFT_EDGE",
+            "toRef": "BATTLEFIELD_RIGHT_EDGE",
+            "distanceInches": 44
+          },
+          {
+            "id": "layout-a-battlefield-height",
+            "constraintType": "BETWEEN_BATTLEFIELD_EDGES",
+            "fromRef": "BATTLEFIELD_TOP_EDGE",
+            "toRef": "BATTLEFIELD_BOTTOM_EDGE",
+            "distanceInches": 60
+          }
+        ],
+        "sourceMeasurementValuesInches": [
+          18,
+          5,
+          4,
+          22,
+          7,
+          5,
+          9,
+          24,
+          10,
+          5,
+          24.25,
+          3,
+          17,
+          6,
+          4,
+          7,
+          11,
+          5,
+          15,
+          15,
+          17
+        ],
+        "sourceRegistration": {
+          "type": "OFFICIAL_PDF_VECTOR_PAGE",
+          "pdfPath": "missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+          "page": 15,
+          "battlefieldBoundsPdfPoints": {
+            "x": 127.7,
+            "y": 276.7,
+            "width": 340.7,
+            "height": 464.8
+          }
+        },
+        "requiredVerifiedLayers": [
+          "TERRAIN_FOOTPRINT_POLYGONS",
+          "TERRAIN_POSITIONS",
+          "OBJECTIVE_POSITIONS",
+          "MEASUREMENT_ENDPOINT_BINDINGS"
+        ],
+        "sourceComponentCodes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ]
+      },
+      "visualReferences": {
+        "factualAuthority": false,
+        "authorityClass": "SECONDARY_VISUAL_REFERENCE",
+        "plain": {
+          "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-disruption-1-portrait.png",
+          "sha256": "B57000E1CEB1A88569C99D6E558686EE81CA9A6F8B7E7010E7D06E4F7248DE70"
+        },
+        "measurements": {
+          "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-disruption-1-portrait.png",
+          "sha256": "0E1179C7B864FA1C609400898831D5A2F6AA3841D9568E7DDE26D8330F52D0E0"
+        }
+      },
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-layout-take-and-hold--disruption-a",
+        "contentLocator": "Event Companion v1.2 p15",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "TERRAIN_LAYOUT",
+      "aliases": [],
+      "references": [
+        {
+          "id": "force-disposition-matchup-disruption--take-and-hold",
+          "relationType": "FORCE_DISPOSITION_MATCHUP"
+        }
+      ]
+    },
+    {
+      "id": "terrain-layout-disruption--take-and-hold-b",
+      "label": "Disruption vs Take and Hold — Layout B",
+      "matchupId": "force-disposition-matchup-disruption--take-and-hold",
+      "variant": "B",
+      "geometry": {
+        "kind": "TERRAIN_LAYOUT_GEOMETRY",
+        "digitizationStatus": "SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION",
+        "coordinateSystem": {
+          "unit": "INCH",
+          "origin": "TOP_LEFT",
+          "xAxis": "RIGHT",
+          "yAxis": "DOWN",
+          "battlefield": {
+            "width": 44,
+            "height": 60
+          }
+        },
+        "zones": [],
+        "objectives": [],
+        "terrainAreas": [],
+        "measurements": [
+          {
+            "id": "layout-b-battlefield-width",
+            "constraintType": "BETWEEN_BATTLEFIELD_EDGES",
+            "fromRef": "BATTLEFIELD_LEFT_EDGE",
+            "toRef": "BATTLEFIELD_RIGHT_EDGE",
+            "distanceInches": 44
+          },
+          {
+            "id": "layout-b-battlefield-height",
+            "constraintType": "BETWEEN_BATTLEFIELD_EDGES",
+            "fromRef": "BATTLEFIELD_TOP_EDGE",
+            "toRef": "BATTLEFIELD_BOTTOM_EDGE",
+            "distanceInches": 60
+          }
+        ],
+        "sourceMeasurementValuesInches": [
+          15,
+          15,
+          24.25,
+          17,
+          16,
+          14,
+          5,
+          4,
+          8,
+          7,
+          5,
+          17,
+          4,
+          4,
+          9,
+          24,
+          23,
+          4,
+          17,
+          14,
+          9
+        ],
+        "sourceRegistration": {
+          "type": "OFFICIAL_PDF_VECTOR_PAGE",
+          "pdfPath": "missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+          "page": 16,
+          "battlefieldBoundsPdfPoints": {
+            "x": 127.7,
+            "y": 276.7,
+            "width": 340.7,
+            "height": 464.8
+          }
+        },
+        "requiredVerifiedLayers": [
+          "TERRAIN_FOOTPRINT_POLYGONS",
+          "TERRAIN_POSITIONS",
+          "OBJECTIVE_POSITIONS",
+          "MEASUREMENT_ENDPOINT_BINDINGS"
+        ],
+        "sourceComponentCodes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ]
+      },
+      "visualReferences": {
+        "factualAuthority": false,
+        "authorityClass": "SECONDARY_VISUAL_REFERENCE",
+        "plain": {
+          "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-disruption-2.png",
+          "sha256": "715732D4AAD03235B4B30D672D1CCAD5C537579B94BD28AE5F063C59548CEA0F"
+        },
+        "measurements": {
+          "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-disruption-2.png",
+          "sha256": "048D997C0FD740490F303CE890FC1180C31602E5C75073B466D507A311946190"
+        }
+      },
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-layout-take-and-hold--disruption-b",
+        "contentLocator": "Event Companion v1.2 p16",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "TERRAIN_LAYOUT",
+      "aliases": [],
+      "references": [
+        {
+          "id": "force-disposition-matchup-disruption--take-and-hold",
+          "relationType": "FORCE_DISPOSITION_MATCHUP"
+        }
+      ]
+    },
+    {
+      "id": "terrain-layout-disruption--take-and-hold-c",
+      "label": "Disruption vs Take and Hold — Layout C",
+      "matchupId": "force-disposition-matchup-disruption--take-and-hold",
+      "variant": "C",
+      "geometry": {
+        "kind": "TERRAIN_LAYOUT_GEOMETRY",
+        "digitizationStatus": "SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION",
+        "coordinateSystem": {
+          "unit": "INCH",
+          "origin": "TOP_LEFT",
+          "xAxis": "RIGHT",
+          "yAxis": "DOWN",
+          "battlefield": {
+            "width": 44,
+            "height": 60
+          }
+        },
+        "zones": [],
+        "objectives": [],
+        "terrainAreas": [],
+        "measurements": [
+          {
+            "id": "layout-c-battlefield-width",
+            "constraintType": "BETWEEN_BATTLEFIELD_EDGES",
+            "fromRef": "BATTLEFIELD_LEFT_EDGE",
+            "toRef": "BATTLEFIELD_RIGHT_EDGE",
+            "distanceInches": 44
+          },
+          {
+            "id": "layout-c-battlefield-height",
+            "constraintType": "BETWEEN_BATTLEFIELD_EDGES",
+            "fromRef": "BATTLEFIELD_TOP_EDGE",
+            "toRef": "BATTLEFIELD_BOTTOM_EDGE",
+            "distanceInches": 60
+          }
+        ],
+        "sourceMeasurementValuesInches": [
+          24.25,
+          11,
+          17,
+          4,
+          10,
+          4,
+          11,
+          24,
+          5,
+          11,
+          17,
+          2,
+          2,
+          19,
+          16,
+          11,
+          10,
+          10,
+          19,
+          5,
+          18,
+          18
+        ],
+        "sourceRegistration": {
+          "type": "OFFICIAL_PDF_VECTOR_PAGE",
+          "pdfPath": "missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+          "page": 17,
+          "battlefieldBoundsPdfPoints": {
+            "x": 127.7,
+            "y": 276.7,
+            "width": 340.7,
+            "height": 464.8
+          }
+        },
+        "requiredVerifiedLayers": [
+          "TERRAIN_FOOTPRINT_POLYGONS",
+          "TERRAIN_POSITIONS",
+          "OBJECTIVE_POSITIONS",
+          "MEASUREMENT_ENDPOINT_BINDINGS"
+        ],
+        "sourceComponentCodes": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H"
+        ]
+      },
+      "visualReferences": {
+        "factualAuthority": false,
+        "authorityClass": "SECONDARY_VISUAL_REFERENCE",
+        "plain": {
+          "url": "https://game-datamissions.com/assets/11th/layouts/no-measurements/take-and-hold-vs-disruption-3.png",
+          "sha256": "4F0FCD7A2C9C078BFC6A9C6C87BAC1082CB3EFE44199941CD1028B45C9E7EA5B"
+        },
+        "measurements": {
+          "url": "https://game-datamissions.com/assets/11th/layouts/with-measurements/take-and-hold-vs-disruption-3.png",
+          "sha256": "9A523B9C7A95A1D78D9AE856E42D8840DADF9B394203F70E2361388155CE399B"
+        }
+      },
+      "provenance": {
+        "profileId": "provenance-event-companion-v1-2-official",
+        "sourceRecordId": "event-layout-take-and-hold--disruption-c",
+        "contentLocator": "Event Companion v1.2 p17",
+        "applicableScopes": [
+          "EVENT_PLAY"
+        ],
+        "amendmentIds": []
+      },
+      "recordType": "TERRAIN_LAYOUT",
+      "aliases": [],
+      "references": [
+        {
+          "id": "force-disposition-matchup-disruption--take-and-hold",
+          "relationType": "FORCE_DISPOSITION_MATCHUP"
+        }
+      ]
+    }
+  ]
+}

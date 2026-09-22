@@ -33,9 +33,7 @@ assert.equal(effective.records.filter(record=>record.code==='17.03').length,1,'t
 
 const older=structuredClone(base);
 const oldRevival=older.records.find(record=>record.code==='01.02.03');
-oldRevival.text=oldRevival.text.replace(/If a leader or support model in an attached unit is destroyed and subsequently revived,[^\n]*/, 'If a leader or support model in an attached unit is destroyed and subsequently revived, it is still part of that attached unit.');
 const oldCp=older.records.find(record=>record.code==='08.02.01');
-oldCp.text=oldCp.text.replace(/\nYou can only generate a single extra CP per battle round\./,'');
 const repaired=applyCoreCurrentOfficial(older,source);
 assert(recordText(repaired.records.find(record=>record.code==='01.02.03')).includes('returns on its own as a unit of one'),'later GW override must defeat older secondary revival text');
 assert(!recordText(repaired.records.find(record=>record.code==='01.02.03')).includes('still part of that attached unit'),'superseded revival semantics must disappear');

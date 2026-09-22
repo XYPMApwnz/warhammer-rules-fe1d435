@@ -5,8 +5,7 @@
     {
       "code": "01.02.03",
       "partition": "ERRATA",
-      "operation": "replace-line-by-prefix",
-      "linePrefix": "If a leader or support model in an attached unit is destroyed and subsequently revived,",
+      "operation": "replace-exact-line",
       "currentLine": "If a leader or support model in an attached unit is destroyed and subsequently revived, it returns on its own as a unit of one, rather than returning as part of its attached unit.",
       "sourceClass": "GW_CURRENT_OFFICIAL",
       "sourceId": "gw-july-update-2026-07-22",
@@ -14,13 +13,14 @@
       "sourceDate": "2026-07-22",
       "sourceLocator": "article, revival of an attached Leader or Support model",
       "overrides": "Older attached-unit return semantics in the secondary digital snapshot",
-      "confidence": "OFFICIAL_SEMANTICS_CONFIRMED"
+      "confidence": "OFFICIAL_SEMANTICS_CONFIRMED",
+      "id": "core-errata-01-02-03",
+      "previousLine": "If a leader or support model in an attached unit is destroyed and subsequently revived, they are still part of that attached unit and they must be returned to it if possible."
     },
     {
       "code": "08.02.01",
       "partition": "ERRATA",
-      "operation": "ensure-line-by-prefix",
-      "linePrefix": "You can only generate a single extra CP per battle round.",
+      "operation": "append-line",
       "currentLine": "You can only generate a single extra CP per battle round.",
       "sourceClass": "GW_CURRENT_OFFICIAL",
       "sourceId": "gw-july-update-2026-07-22",
@@ -28,14 +28,18 @@
       "sourceDate": "2026-07-22",
       "sourceLocator": "article, extra Command Point limit",
       "overrides": "Older secondary snapshot without the additional CP cap",
-      "confidence": "OFFICIAL_SEMANTICS_CONFIRMED"
+      "confidence": "OFFICIAL_SEMANTICS_CONFIRMED",
+      "id": "core-errata-08-02-01"
     },
     {
       "code": "15.05",
       "partition": "ERRATA",
       "operation": "compatibility-alias",
       "canonicalTitle": "EXPLOSIVES",
-      "aliases": ["Grenade Stratagem", "Grenades Stratagem"],
+      "aliases": [
+        "Grenade Stratagem",
+        "Grenades Stratagem"
+      ],
       "sourceClass": "CURRENT_SECONDARY_CORROBORATED",
       "sourceId": "waha-core-live-2026-09-20",
       "sourceArtifact": "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/",
@@ -44,27 +48,30 @@
       "officialCorroboration": "gw-core-original-2026-06-01",
       "additionalOfficialCorroboration": "gw-tacoma-faq-2026-07-17",
       "overrides": "Former Grenade Stratagem references resolve to the Explosives identity; Core Stratagem text is unchanged",
-      "confidence": "CURRENT_SECONDARY_CORROBORATED"
+      "confidence": "CURRENT_SECONDARY_CORROBORATED",
+      "id": "core-errata-15-05"
     },
     {
       "code": "15.06",
       "partition": "ERRATA",
       "operation": "compatibility-alias",
       "canonicalTitle": "CRUSHING IMPACT",
-      "aliases": ["Tank Shock"],
+      "aliases": [
+        "Tank Shock"
+      ],
       "sourceClass": "GW_CURRENT_OFFICIAL",
       "sourceId": "gw-custodes-article-2026-05-14",
       "sourceArtifact": "https://www.warhammer-community.com/en-gb/articles/1j6efpun/warhammer-40000-faction-focus-adeptus-custodes/",
       "sourceDate": "2026-05-14",
       "sourceLocator": "article, Crushing Impact formerly Tank Shock",
       "overrides": "Former Tank Shock stratagem name",
-      "confidence": "OFFICIAL_EXPLICIT_EQUIVALENCE"
+      "confidence": "OFFICIAL_EXPLICIT_EQUIVALENCE",
+      "id": "core-errata-15-06"
     },
     {
       "code": "17.03",
       "partition": "ERRATA",
-      "operation": "replace-line-by-prefix",
-      "linePrefix": "In your Shooting phase, enemy MONSTER/VEHICLE units that are engaged can be selected as targets of ranged attacks.",
+      "operation": "replace-exact-line",
       "currentLine": "In your Shooting phase, enemy MONSTER/VEHICLE units that are engaged can be selected as targets of ranged attacks (excluding attacks made with [BLAST] weapons).",
       "sourceClass": "CURRENT_SECONDARY_CORROBORATED",
       "sourceId": "waha-core-live-2026-09-20",
@@ -73,7 +80,9 @@
       "sourceLocator": "17.03, Change to First Sentence erratum",
       "officialCorroboration": "gw-core-launch-faq-2026-06-01",
       "overrides": "Original main-rule sentence omits the Blast exception already confirmed by the GW launch FAQ",
-      "confidence": "CURRENT_SECONDARY_CORROBORATED"
+      "confidence": "CURRENT_SECONDARY_CORROBORATED",
+      "id": "core-errata-17-03",
+      "previousLine": "In your Shooting phase, enemy MONSTER/VEHICLE units that are engaged can be selected as targets of ranged attacks."
     }
   ],
   "universalRulesUpdates": [
@@ -134,7 +143,10 @@
       "partition": "UNIVERSAL_RULE_UPDATE",
       "title": "Move Types for Disembarking Units",
       "text": "If a rule allows a unit to declare a charge after disembarking from a TRANSPORT that made a normal move that turn, the unit makes an assault disembark move instead of a disembark move. If a rule allows a unit to disembark from a TRANSPORT that made an advance move that turn, the unit makes a shock disembark move instead of a disembark move.",
-      "canonicalReferences": ["18.06", "18.07"],
+      "canonicalReferences": [
+        "18.06",
+        "18.07"
+      ],
       "sourceClass": "GW_CURRENT_OFFICIAL",
       "sourceId": "gw-universal-rules-updates-2026-08-26-v1-1",
       "sourceArtifact": "https://assets.warhammer-community.com/eng_wh40k_core&key_universal_rules_updates-lu3grocned-rphh78bl6k.pdf",

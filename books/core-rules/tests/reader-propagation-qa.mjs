@@ -34,41 +34,57 @@ function buildAndRead(mutate){
 }
 
 const mainMarker='SYNTHETIC_READER_MAIN_PROPAGATION';
+let oldMain='';
 const main=buildAndRead(({core})=>{
   const file=path.join(core,'content','core-rules.digital-11e.json');
   const data=JSON.parse(fs.readFileSync(file,'utf8'));
-  data.records.find(record=>record.code==='02.01').text+=`\n${mainMarker}`;
+  const record=data.records.find(record=>record.code==='24.05');
+  oldMain=record.text;
+  record.text=mainMarker;
   fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');
 });
-assert(main.html.includes(mainMarker)&&main.search.includes(mainMarker),'ordinary MAIN_RULE mutation did not reach Reader card/search/popup projection');
+assert(main.html.includes(mainMarker)&&main.search.includes(mainMarker),'ordinary MAIN_RULE mutation did not reach Reader card/search');
+assert(new RegExp(`data-term="core-blast"[^>]*data-term-definition="${mainMarker}"`).test(main.html),'ordinary MAIN_RULE mutation did not reach Reader popup projection');
+assert(!main.html.includes(oldMain)&&!main.search.includes(oldMain),'stale ordinary MAIN_RULE survived the effective Reader projection');
 
 const overrideMarker='SYNTHETIC_READER_OVERRIDE_PROPAGATION';
+let oldOverride='';
 const override=buildAndRead(({core})=>{
   const file=path.join(core,'content','core-rules.current-official.en.json');
   const data=JSON.parse(fs.readFileSync(file,'utf8'));
-  data.ruleOverrides.find(record=>record.code==='01.02.03').currentLine+=` ${overrideMarker}`;
+  const record=data.ruleOverrides.find(record=>record.code==='17.03');
+  oldOverride=record.currentLine;
+  record.currentLine=overrideMarker;
   fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');
 });
-assert(override.html.includes(overrideMarker)&&override.search.includes(overrideMarker),'official override mutation did not reach Reader card/search/popup projection');
+assert(override.html.includes(overrideMarker)&&override.search.includes(overrideMarker),'official override mutation did not reach Reader card/search');
+assert(new RegExp(`data-term="core-rule-17-03-shooting-at-engaged-monsters-and-vehicles"[^>]*data-term-definition="[^"]*${overrideMarker}`).test(override.html),'official override mutation did not reach Reader popup projection');
+assert(!override.html.includes(oldOverride)&&!override.search.includes(oldOverride),'stale official override survived the effective Reader projection');
 
 const faqMarker='SYNTHETIC_READER_FAQ_PROPAGATION';
+let oldFaq='';
 const faq=buildAndRead(({core})=>{
   const file=path.join(core,'content','core-rules.source.en.js');
   const source=windowValue(file,'CORE_PDF_SOURCE');
   const answer=source.faqs[0].answer;
+  oldFaq=answer;
   const script=fs.readFileSync(file,'utf8');
   assert(script.includes(answer),'FAQ mutation fixture could not locate accepted answer');
-  fs.writeFileSync(file,script.replace(answer,`${answer} ${faqMarker}`));
+  fs.writeFileSync(file,script.replace(answer,faqMarker));
 });
 assert(faq.html.includes(faqMarker)&&faq.search.includes(faqMarker),'FAQ mutation did not reach Reader card/search');
+assert(!faq.html.includes(oldFaq)&&!faq.search.includes(oldFaq),'stale FAQ answer survived the effective Reader projection');
 
 const uruMarker='SYNTHETIC_READER_URU_PROPAGATION';
+let oldUru='';
 const uru=buildAndRead(({core})=>{
   const file=path.join(core,'content','core-rules.current-official.en.json');
   const data=JSON.parse(fs.readFileSync(file,'utf8'));
-  data.universalRulesUpdates[0].text+=` ${uruMarker}`;
+  oldUru=data.universalRulesUpdates[0].text;
+  data.universalRulesUpdates[0].text=uruMarker;
   fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');
 });
 assert(uru.html.includes(uruMarker)&&uru.search.includes(uruMarker),'Universal Rules Update mutation did not reach Reader card/search');
+assert(!uru.html.includes(oldUru)&&!uru.search.includes(oldUru),'stale Universal Rules Update survived the effective Reader projection');
 
 console.log('Core Reader propagation QA passed: MAIN_RULE, official override, FAQ and URU mutations reach generated Reader facts without a Glossary tree.');

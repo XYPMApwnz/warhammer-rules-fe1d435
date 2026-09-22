@@ -29,18 +29,9 @@
   let termOpener;
   let drawerScrollY = 0;
 
-  const glossaryReady=window.WH40K_GLOSSARY?Promise.resolve(window.WH40K_GLOSSARY):new Promise((resolve,reject)=>{
-    const script=document.createElement('script');
-    script.src='../../../glossary/generated/glossary.en.js';
-    script.onload=()=>window.WH40K_GLOSSARY?resolve(window.WH40K_GLOSSARY):reject(new Error('Glossary runtime did not initialize'));
-    script.onerror=()=>reject(new Error('Glossary runtime failed to load'));
-    document.head.append(script);
-  });
-
-  async function showTerm(trigger) {
-    const api=await glossaryReady.catch(()=>null);
-    const term=api?.resolveView?.('core-rules',trigger.dataset.term);
-    if(!term)return;
+  function showTerm(trigger) {
+    const term={id:trigger.dataset.term,title:trigger.dataset.termTitle,definition:trigger.dataset.termDefinition,fullRulePath:trigger.dataset.fullRulePath};
+    if(!term.id||!term.title||!term.definition)return;
     termOpener = trigger;
     title.textContent = term.title;
     summary.textContent = term.definition;

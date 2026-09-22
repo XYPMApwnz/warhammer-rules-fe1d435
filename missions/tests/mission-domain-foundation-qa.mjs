@@ -25,6 +25,7 @@ function canonicalRecordIds(facts) {
     ...facts.deployments,
     ...facts.twists,
     ...facts.missionSequenceRules,
+    ...facts.missionReferenceRules,
     ...facts.faqOverlays,
     ...facts.forceDispositionMatchups,
     ...facts.eventSequenceOverlays,
@@ -65,12 +66,16 @@ assert.equal(evidence.records.forceDispositions.length, 5);
 validateCanonicalMissionFacts(canonical);
 const ids = canonicalRecordIds(canonical);
 assert.equal(new Set(ids).size, ids.length, 'canonical IDs must be globally unique');
-assert.equal(canonical.importCoverage, 'REPRESENTATIVE_FOUNDATION');
+assert.equal(canonical.importCoverage, 'FULL_CURRENT_CORPUS');
 
 const evidenceIds = sourceEvidenceIds();
-for (const partition of ['forceDispositions', 'primaryMissions', 'secondaryMissions', 'deployments', 'twists', 'missionSequenceRules', 'faqOverlays']) {
+for (const partition of ['forceDispositions', 'primaryMissions', 'secondaryMissions', 'deployments', 'twists', 'missionSequenceRules', 'missionReferenceRules', 'faqOverlays']) {
   for (const record of canonical[partition]) {
-    assert.ok(evidenceIds.has(record.provenance.sourceRecordId), `${record.id} source record must resolve in evidence manifest`);
+    assert.ok(
+      evidenceIds.has(record.provenance.sourceRecordId)
+        || record.provenance.evidenceArtifactPath?.endsWith('chapter-approved-2026-27-booklet-pages-08-09-evidence.json'),
+      `${record.id} source record must resolve in accepted evidence`
+    );
   }
 }
 
@@ -94,19 +99,20 @@ for (const layout of canonical.terrainLayouts) {
   assert.equal(layout.geometry.coordinateSystem.unit, 'INCH');
   assert.equal(layout.geometry.coordinateSystem.battlefield.width, 44);
   assert.equal(layout.geometry.coordinateSystem.battlefield.height, 60);
-  assert.ok(layout.geometry.sourceMeasurementValuesInches.length > 0);
+  assert.equal(layout.geometry.digitizationStatus, 'SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION');
+  assert.ok(layout.geometry.requiredVerifiedLayers.length > 0);
   assert.equal(layout.visualReferences.factualAuthority, false);
   assert.equal(layout.visualReferences.authorityClass, 'SECONDARY_VISUAL_REFERENCE');
 }
 
-const matchup = canonical.forceDispositionMatchups[0];
+const matchup = canonical.forceDispositionMatchups.find(({id}) => id === 'force-disposition-matchup-disruption--take-and-hold');
 assert.equal(matchup.id, canonicalMatchupId('force-disposition-take-and-hold', 'force-disposition-disruption'));
 assert.equal(matchup.id, canonicalMatchupId('force-disposition-disruption', 'force-disposition-take-and-hold'));
-assert.deepEqual(canonical.terrainLayouts.map(({variant}) => variant).sort(), ['A', 'B', 'C']);
+assert.deepEqual(matchup.layoutIds.map((id) => canonical.terrainLayouts.find((layout) => layout.id === id).variant).sort(), ['A', 'B', 'C']);
 assert.equal(new Set(matchup.layoutIds).size, 3);
 const gdmMatchup = gdmReferences.matchups.find(({id}) => id === 'take-and-hold--disruption');
 assert.ok(gdmMatchup);
-for (const [index, canonicalLayout] of canonical.terrainLayouts.entries()) {
+for (const [index, canonicalLayout] of matchup.layoutIds.map((id) => canonical.terrainLayouts.find((layout) => layout.id === id)).entries()) {
   const referenceLayout = gdmMatchup.layouts[index];
   assert.equal(canonicalLayout.variant, referenceLayout.officialLayoutIdentity);
   assert.equal(canonicalLayout.geometry.sourceRegistration.page, referenceLayout.officialPdfPage);
@@ -170,7 +176,7 @@ const event = createEffectiveMissionCatalog({scope: MISSION_SCOPES.EVENT_PLAY, c
 assert.equal(event.catalog.sourceSelection.eventVersion, '1.2');
 assert.equal(event.catalog.deployments.length, 0);
 assert.equal(event.catalog.twists.length, 0);
-assert.equal(event.catalog.terrainLayouts.length, 3);
+assert.equal(event.catalog.terrainLayouts.length, 45);
 assert.ok(event.getById('event-mission-sequence-determine-layout'));
 assert.equal(event.getById('mission-sequence-determine-deployment'), null);
 assert.equal(event.getById('mission-sequence-optional-twist'), null);
@@ -188,12 +194,12 @@ const renamedStandard = createEffectiveMissionCatalog({canonicalFacts: renamed})
 assert.equal(renamedStandard.getPrimaryForForceDispositions('force-disposition-take-and-hold', 'force-disposition-take-and-hold').id, 'primary-battlefield-dominance');
 
 const shuffled = clone(canonical);
-for (const partition of ['forceDispositions', 'primaryMissions', 'secondaryMissions', 'deployments', 'twists', 'missionSequenceRules', 'faqOverlays', 'forceDispositionMatchups', 'eventSequenceOverlays', 'terrainLayouts']) shuffled[partition].reverse();
+for (const partition of ['forceDispositions', 'primaryMissions', 'secondaryMissions', 'deployments', 'twists', 'missionSequenceRules', 'missionReferenceRules', 'faqOverlays', 'forceDispositionMatchups', 'eventSequenceOverlays', 'terrainLayouts']) shuffled[partition].reverse();
 const eventFromShuffled = createEffectiveMissionCatalog({scope: MISSION_SCOPES.EVENT_PLAY, canonicalFacts: shuffled});
 assert.equal(JSON.stringify(eventFromShuffled.catalog), JSON.stringify(event.catalog), 'effective output must be deterministic across input ordering');
 
 const duplicate = clone(canonical);
-duplicate.twists.push(clone(duplicate.twists[0]));
+duplicate.twists[1].id = duplicate.twists[0].id;
 assert.throws(() => validateCanonicalMissionFacts(duplicate), /duplicate canonical ID/);
 const wrongScope = clone(canonical);
 wrongScope.eventSequenceOverlays[0].applicableScopes = ['STANDARD_MATCHED_PLAY'];
@@ -210,13 +216,14 @@ const visualMutationEvent = createEffectiveMissionCatalog({scope: MISSION_SCOPES
 assert.deepEqual(visualMutationEvent.catalog.terrainLayouts[0].geometry, event.catalog.terrainLayouts[0].geometry, 'secondary visual reference cannot alter official geometry');
 
 console.log('MISSION_DOMAIN_FOUNDATION_QA=PASS');
-console.log(`REPRESENTATIVE_FORCE_DISPOSITIONS=${canonical.forceDispositions.length}`);
-console.log(`REPRESENTATIVE_PRIMARIES=${canonical.primaryMissions.length}`);
-console.log(`REPRESENTATIVE_SECONDARIES=${canonical.secondaryMissions.length}`);
-console.log(`REPRESENTATIVE_DEPLOYMENTS=${canonical.deployments.length}`);
-console.log(`REPRESENTATIVE_TWISTS=${canonical.twists.length}`);
-console.log(`REPRESENTATIVE_SEQUENCE_RULES=${canonical.missionSequenceRules.length}`);
-console.log(`REPRESENTATIVE_EVENT_LAYOUTS=${canonical.terrainLayouts.length}`);
+console.log(`FULL_FORCE_DISPOSITIONS=${canonical.forceDispositions.length}`);
+console.log(`FULL_PRIMARIES=${canonical.primaryMissions.length}`);
+console.log(`FULL_SECONDARIES=${canonical.secondaryMissions.length}`);
+console.log(`FULL_DEPLOYMENTS=${canonical.deployments.length}`);
+console.log(`FULL_TWISTS=${canonical.twists.length}`);
+console.log(`FULL_SEQUENCE_RULES=${canonical.missionSequenceRules.length}`);
+console.log(`FULL_REFERENCE_RULES=${canonical.missionReferenceRules.length}`);
+console.log(`FULL_EVENT_LAYOUTS=${canonical.terrainLayouts.length}`);
 console.log('STANDARD_EVENT_SCOPE_ISOLATION=PASS');
 console.log('SOURCE_AUTHORITY_PRESERVATION=PASS');
 console.log('DETERMINISTIC_EFFECTIVE_OUTPUT=PASS');

@@ -1,6 +1,6 @@
 # Mission factual domain contract
 
-This directory defines the first canonical factual model for current Warhammer 40,000 11th Edition standard missions at the 2026-09-22 cutoff. It is intentionally a representative foundation, not a complete import of the 88 physical cards or 45 Event layouts.
+This directory defines the canonical factual model for the current Warhammer 40,000 11th Edition standard mission corpus at the 2026-09-22 cutoff. The contract supports both `REPRESENTATIVE_FOUNDATION` fixtures and the production `FULL_CURRENT_CORPUS` snapshot.
 
 ## Lifecycle
 
@@ -23,6 +23,7 @@ The canonical model keeps these partitions separate:
 - `deployments`: standard-play battlefield setup entities with their own geometry contract.
 - `twists`: optional standard-play rules, tables/options and rules-relevant Designer's Notes.
 - `missionSequenceRules`: normalized mission stages rather than a copied booklet blob.
+- `missionReferenceRules`: Appendix/reference rules that apply across missions, including scoring terminology and mission-wide reference semantics.
 - `forceDispositionMatchups`: unordered Event-layout identity. Directed Primary selection remains separate.
 - `terrainLayouts`: Event-only A/B/C records, official source registration and a machine-geometry envelope.
 - FAQ and Event sequence overlays: typed operations applied without mutating canonical records.
@@ -57,7 +58,7 @@ The geometry envelope uses inches and an explicit origin, axes and battlefield d
 - endpoint-bound measurement constraints;
 - authenticated raster/PDF registration metadata.
 
-The representative Event pages and Dawn of War card are source-registered, but irregular footprint polygons and measurement endpoints are marked `SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION`. This is deliberate: the repository currently has verified source pages and visual parity evidence, not an accepted vector digitization. No approximate GDM coordinates are promoted into canonical facts.
+All six Deployment cards and all 45 Event v1.2 layout pages are source-registered, but deployment zones, objective positions, irregular terrain-footprint polygons and measurement endpoints are marked `SOURCE_REGISTERED_PENDING_VERIFIED_DIGITIZATION`. This is deliberate: the repository has authenticated source rasters and visual parity evidence, not an accepted vector digitization. No approximate GDM coordinates are promoted into canonical facts.
 
 GDM assets are stored only in `visualReferences` with `factualAuthority: false`. Official Event Companion geometry wins on every conflict.
 
@@ -71,3 +72,7 @@ GDM assets are stored only in `visualReferences` with `factualAuthority: false`.
 - `getLayoutsForMatchup(forceDispositionA, forceDispositionB)`.
 
 The assembler never mutates canonical input and never joins by display title.
+
+## Current corpus coverage
+
+`FULL_CURRENT_CORPUS` contains 5 Force Dispositions, 25 semantic Primary Missions, 18 semantic Secondary Missions, 6 Deployments, 6 Twists, 18 normalized mission-sequence components, 5 Appendix/reference rules, 15 unordered Force-Disposition matchups and 45 Event Companion v1.2 layouts. The 30 physical Primary cards, 36 physical Secondary cards, 10 physical Force-Disposition cards, 6 Deployment cards and 6 Twist cards account for all 88 cards without turning physical duplicates or card backs into duplicate semantic identities.

@@ -7,6 +7,7 @@ const RECORD_PARTITIONS = [
   'deployments',
   'twists',
   'missionSequenceRules',
+  'missionReferenceRules',
   'faqOverlays',
   'forceDispositionMatchups',
   'eventSequenceOverlays',
@@ -20,10 +21,21 @@ const RECORD_TYPES = Object.freeze({
   deployments: 'DEPLOYMENT',
   twists: 'TWIST',
   missionSequenceRules: 'MISSION_SEQUENCE_RULE',
+  missionReferenceRules: 'MISSION_REFERENCE_RULE',
   faqOverlays: 'FAQ_OVERLAY',
   forceDispositionMatchups: 'FORCE_DISPOSITION_MATCHUP',
   eventSequenceOverlays: 'EVENT_SEQUENCE_OVERLAY',
   terrainLayouts: 'TERRAIN_LAYOUT'
+});
+const FULL_CURRENT_COUNTS = Object.freeze({
+  forceDispositions: 5,
+  primaryMissions: 25,
+  secondaryMissions: 18,
+  deployments: 6,
+  twists: 6,
+  missionReferenceRules: 5,
+  forceDispositionMatchups: 15,
+  terrainLayouts: 45
 });
 function invariant(condition, message) {
   if (!condition) throw new Error(message);
@@ -125,7 +137,8 @@ function assertGeometry(geometry, context) {
   if (geometry.sourceMeasurementValuesInches !== undefined) {
     invariant(Array.isArray(geometry.sourceMeasurementValuesInches) && geometry.sourceMeasurementValuesInches.length > 0, `${context}: source measurement values must be a non-empty array`);
     invariant(geometry.sourceMeasurementValuesInches.every((value) => Number.isFinite(value) && value > 0), `${context}: source measurement values must be positive`);
-  }  if (geometry.digitizationStatus === 'VERIFIED_MACHINE_GEOMETRY') {
+  }
+  if (geometry.digitizationStatus === 'VERIFIED_MACHINE_GEOMETRY') {
     invariant(geometry.sourceRegistration, `${context}: verified geometry needs source registration`);
     invariant(geometry.terrainAreas.every((area) => area.footprint), `${context}: verified terrain geometry cannot omit footprints`);
   } else {
@@ -145,7 +158,11 @@ export function validateCanonicalMissionFacts(facts) {
   invariant(facts?.schema === 'wh40k-canonical-mission-facts/v1', 'Unsupported mission fact schema');
   invariant(facts.edition === 'Warhammer 40,000 11th Edition', 'Only Warhammer 40,000 11th Edition is supported');
   invariant(facts.cutoff === '2026-09-22', 'Unexpected currentness cutoff');
-  invariant(facts.importCoverage === 'REPRESENTATIVE_FOUNDATION', 'Foundation must declare representative coverage');
+  invariant(
+    ['REPRESENTATIVE_FOUNDATION', 'FULL_CURRENT_CORPUS'].includes(facts.importCoverage),
+    'Unknown mission import coverage'
+  );
+  const isFullCorpus = facts.importCoverage === 'FULL_CURRENT_CORPUS';
 
   const profileIds = assertUniqueIds(facts.provenanceProfiles ?? [], 'provenanceProfiles');
   for (const profile of facts.provenanceProfiles) {
@@ -167,6 +184,15 @@ export function validateCanonicalMissionFacts(facts) {
       records.push({record, partition});
     }
   }
+  if (isFullCorpus) {
+    for (const [partition, expectedCount] of Object.entries(FULL_CURRENT_COUNTS)) {
+      invariant(facts[partition].length === expectedCount, `${partition}: FULL_CURRENT_CORPUS requires ${expectedCount} records`);
+    }
+    invariant(
+      facts.forceDispositions.reduce((sum, record) => sum + (record.missionMatrixRelations?.length ?? 0), 0) === 25,
+      'FULL_CURRENT_CORPUS requires the complete 25-cell Primary mission matrix'
+    );
+  }
   const allIds = assertUniqueIds(records.map(({record}) => record), 'mission records');
   for (const {record, partition} of records) assertProvenance(record, profileIds, `${partition}.${record.id}`);
 
@@ -176,14 +202,17 @@ export function validateCanonicalMissionFacts(facts) {
   const matchupIds = new Set(facts.forceDispositionMatchups.map(({id}) => id));
   const layoutIds = new Set(facts.terrainLayouts.map(({id}) => id));
   const sequenceIds = new Set(facts.missionSequenceRules.map(({id}) => id));
+  const referenceRuleIds = new Set(facts.missionReferenceRules.map(({id}) => id));
 
   for (const forceDisposition of facts.forceDispositions) {
     invariant(Array.isArray(forceDisposition.missionMatrixRelations), `${forceDisposition.id}: missionMatrixRelations must be an array`);
     for (const relation of forceDisposition.missionMatrixRelations) {
       invariant(forceIds.has(relation.opponentForceDispositionId), `${forceDisposition.id}: unknown opponent Force Disposition`);
+      if (isFullCorpus) invariant(relation.resolvedInRepresentativeCatalog !== false, `${forceDisposition.id}: full corpus cannot retain an unresolved representative relation`);
       if (relation.resolvedInRepresentativeCatalog !== false) invariant(primaryIds.has(relation.primaryMissionId), `${forceDisposition.id}: unresolved Primary ${relation.primaryMissionId}`);
     }
-  }  for (const primary of facts.primaryMissions) {
+  }
+  for (const primary of facts.primaryMissions) {
     invariant(forceIds.has(primary.playerForceDispositionId), `${primary.id}: unknown player Force Disposition`);
     invariant(forceIds.has(primary.opponentForceDispositionId), `${primary.id}: unknown opponent Force Disposition`);
     invariant(primary.ruleBody && Array.isArray(primary.ruleBody.scoringClauses), `${primary.id}: structured ruleBody required`);
@@ -214,12 +243,22 @@ export function validateCanonicalMissionFacts(facts) {
     invariant(new Set(matchup.layoutIds.map((id) => facts.terrainLayouts.find((layout) => layout.id === id).variant)).size === 3, `${matchup.id}: layouts A/B/C required`);
     for (const relation of matchup.directedPrimaryRelations) {
       invariant(forceIds.has(relation.playerForceDispositionId) && forceIds.has(relation.opponentForceDispositionId), `${matchup.id}: invalid directed relation`);
+      if (isFullCorpus) invariant(relation.resolvedInRepresentativeCatalog !== false, `${matchup.id}: full corpus cannot retain an unresolved representative relation`);
       if (relation.resolvedInRepresentativeCatalog !== false) invariant(primaryIds.has(relation.primaryMissionId), `${matchup.id}: unresolved Primary ${relation.primaryMissionId}`);
     }
   }
+  for (const referenceRule of facts.missionReferenceRules) {
+    invariant(referenceRule.ruleBody && typeof referenceRule.ruleBody === 'object', `${referenceRule.id}: structured ruleBody required`);
+  }
   for (const overlay of facts.faqOverlays) {
     invariant(overlay.operation === 'APPEND_CLARIFICATION', `${overlay.id}: unsupported FAQ operation`);
-    invariant(primaryIds.has(overlay.targetId) || secondaryIds.has(overlay.targetId), `${overlay.id}: unknown FAQ target`);
+    invariant(
+      primaryIds.has(overlay.targetId)
+        || secondaryIds.has(overlay.targetId)
+        || sequenceIds.has(overlay.targetId)
+        || referenceRuleIds.has(overlay.targetId),
+      `${overlay.id}: unknown FAQ target`
+    );
     assertScopes(overlay.applicableScopes, overlay.id);
   }
   for (const overlay of facts.eventSequenceOverlays) {

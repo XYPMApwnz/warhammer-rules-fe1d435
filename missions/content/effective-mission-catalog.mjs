@@ -32,7 +32,7 @@ function selectBaseRecords(facts, partition, scope) {
 
 function buildRecordIndex(catalog) {
   const index = new Map();
-  for (const partition of ['forceDispositions', 'primaryMissions', 'secondaryMissions', 'deployments', 'twists', 'missionSequenceRules', 'forceDispositionMatchups', 'terrainLayouts']) {
+  for (const partition of ['forceDispositions', 'primaryMissions', 'secondaryMissions', 'deployments', 'twists', 'missionSequenceRules', 'missionReferenceRules', 'forceDispositionMatchups', 'terrainLayouts']) {
     for (const record of catalog[partition]) index.set(record.id, record);
   }
   return index;
@@ -93,6 +93,7 @@ export function createEffectiveMissionCatalog({
     deployments: selectBaseRecords(canonicalFacts, 'deployments', scope),
     twists: selectBaseRecords(canonicalFacts, 'twists', scope),
     missionSequenceRules: selectBaseRecords(canonicalFacts, 'missionSequenceRules', scope),
+    missionReferenceRules: selectBaseRecords(canonicalFacts, 'missionReferenceRules', scope),
     forceDispositionMatchups: selectBaseRecords(canonicalFacts, 'forceDispositionMatchups', scope),
     terrainLayouts: selectBaseRecords(canonicalFacts, 'terrainLayouts', scope)
   };

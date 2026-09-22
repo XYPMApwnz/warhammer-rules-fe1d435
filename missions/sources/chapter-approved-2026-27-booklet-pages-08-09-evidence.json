@@ -1,0 +1,465 @@
+{
+  "schema": "warhammer-physical-booklet-evidence/v1",
+  "id": "chapter-approved-2026-27-booklet-pages-08-09",
+  "edition": "Warhammer 40,000 11th Edition",
+  "cutoff": "2026-09-22",
+  "currentness": "CURRENT_AT_2026_09_22",
+  "authority": "secondary",
+  "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
+  "source": {
+    "sourceId": "physical-review-2026-07-17",
+    "title": "How to use Chapter Approved 2026-27, full review",
+    "publisher": "Look Out, Sir!",
+    "videoUrl": "https://youtu.be/sp6n_Bl6MJ0",
+    "videoId": "sp6n_Bl6MJ0",
+    "transcriptUrl": "https://www.buzzsprout.com/195242/episodes/19509209-243-how-to-use-chapter-approved-2026-27-full-review?t=0",
+    "transcriptEpisodeId": "19509209",
+    "publicationDate": "2026-07-17",
+    "retrievedAt": "2026-09-22"
+  },
+  "sourceIdentity": {
+    "product": "Warhammer 40,000: Chapter Approved Mission Deck 2026-27",
+    "edition": "Warhammer 40,000 11th Edition",
+    "physicalBookletPagesOnCamera": true,
+    "reviewPublishedAfterProductRelease": true,
+    "productReleaseDate": "2026-06-13"
+  },
+  "currentnessAssessment": {
+    "baselineBookletCurrentAtCutoff": true,
+    "laterBaselineReplacementKnownAtCutoff": false,
+    "laterOfficialFaqAndEventCompanionRemainSeparateOverlays": true
+  },
+  "captureEvidence": {
+    "transcriptPage": {
+      "byteSize": 1399626,
+      "sha256": "8B1064289CAE912561F384E696A705AA12638730E9667926BE19BA70654AFA54",
+      "storedInRepository": false
+    },
+    "video": {
+      "bytesStored": false,
+      "frameBytesStored": false,
+      "readableFrameRange": {
+        "start": "01:45:34",
+        "end": "01:45:36",
+        "resolution": {
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "reason": "The repository stores bounded structured evidence and locators, not the copyrighted video or frames."
+    }
+  },
+  "pageCoverage": [
+    {
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "physicalPage": 8,
+      "status": "COMPLETE",
+      "requiredClaimIds": [
+        "page08-step12-begin-battle",
+        "page08-step13-end-battle",
+        "page08-step14-determine-victor",
+        "page08-battle-ready-vp",
+        "page08-primary-total-cap",
+        "page08-primary-per-round-cap",
+        "page08-secondary-total-cap",
+        "page08-secondary-per-round-cap",
+        "page08-fixed-secondary-per-card-cap",
+        "page08-excess-vp-ignored"
+      ],
+      "resolvedClaimIds": [
+        "page08-step12-begin-battle",
+        "page08-step13-end-battle",
+        "page08-step14-determine-victor",
+        "page08-battle-ready-vp",
+        "page08-primary-total-cap",
+        "page08-primary-per-round-cap",
+        "page08-secondary-total-cap",
+        "page08-secondary-per-round-cap",
+        "page08-fixed-secondary-per-card-cap",
+        "page08-excess-vp-ignored"
+      ],
+      "unresolvedClaimIds": [],
+      "primaryLocator": {
+        "sourceId": "physical-review-2026-07-17",
+        "start": "01:41:49",
+        "end": "01:45:36"
+      }
+    },
+    {
+      "pageRecordId": "reference-page-09-appendix",
+      "physicalPage": 9,
+      "status": "COMPLETE",
+      "requiredClaimIds": [
+        "page09-cumulative-condition",
+        "page09-or-condition",
+        "page09-leaves-the-battlefield",
+        "page09-underlined-one",
+        "page09-vp-up-to-a-limit",
+        "page09-when-drawn"
+      ],
+      "resolvedClaimIds": [
+        "page09-cumulative-condition",
+        "page09-or-condition",
+        "page09-leaves-the-battlefield",
+        "page09-underlined-one",
+        "page09-vp-up-to-a-limit",
+        "page09-when-drawn"
+      ],
+      "unresolvedClaimIds": [],
+      "primaryLocator": {
+        "sourceId": "physical-review-2026-07-17",
+        "start": "01:45:29",
+        "end": "01:46:00"
+      }
+    }
+  ],
+  "claims": [
+    {
+      "id": "page08-step12-begin-battle",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "sequenceStep": 12,
+        "label": "Begin the Battle",
+        "operation": "FIRST_BATTLE_ROUND_BEGINS"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:41:49",
+          "end": "01:41:52"
+        }
+      ]
+    },
+    {
+      "id": "page08-step13-end-battle",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "sequenceStep": 13,
+        "label": "End the Battle",
+        "battleRounds": 5,
+        "playContinuesWhenArmyHasNoModelsAtTurnStart": true,
+        "completion": "PLAYERS_CONTINUE_TURNS_UNTIL_BATTLE_ENDS"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:41:52",
+          "end": "01:42:02"
+        }
+      ]
+    },
+    {
+      "id": "page08-step14-determine-victor",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "sequenceStep": 14,
+        "label": "Determine Victor",
+        "winner": "PLAYER_WITH_MOST_VP",
+        "tie": "DRAW"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:42:26",
+          "end": "01:43:32"
+        }
+      ]
+    },
+    {
+      "id": "page08-battle-ready-vp",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "source": "BATTLE_READY_ARMY",
+        "maximumVictoryPoints": 10
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:42:28",
+          "end": "01:42:34"
+        }
+      ]
+    },
+    {
+      "id": "page08-primary-total-cap",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "source": "PRIMARY_MISSION",
+        "maximumVictoryPoints": 45
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:43:44",
+          "end": "01:43:52"
+        }
+      ]
+    },
+    {
+      "id": "page08-primary-per-round-cap",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "source": "PRIMARY_MISSION",
+        "perBattleRoundMaximumVictoryPoints": 15
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:43:47",
+          "end": "01:43:52"
+        }
+      ]
+    },
+    {
+      "id": "page08-secondary-total-cap",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "source": "SECONDARY_MISSIONS",
+        "maximumVictoryPoints": 45
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:43:52",
+          "end": "01:43:58"
+        }
+      ]
+    },
+    {
+      "id": "page08-secondary-per-round-cap",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "source": "SECONDARY_MISSIONS",
+        "perBattleRoundMaximumVictoryPoints": 15
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:43:52",
+          "end": "01:43:58"
+        }
+      ]
+    },
+    {
+      "id": "page08-fixed-secondary-per-card-cap",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "source": "FIXED_SECONDARY_MISSION_CARD",
+        "perCardMaximumVictoryPoints": 20
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:43:58",
+          "end": "01:44:07"
+        }
+      ]
+    },
+    {
+      "id": "page08-excess-vp-ignored",
+      "pageRecordId": "reference-page-08-battle-victor-scoring",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "operation": "IGNORE_VP_ABOVE_PRINTED_MAXIMUMS"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:43:32",
+          "end": "01:43:43"
+        }
+      ]
+    },
+    {
+      "id": "page09-cumulative-condition",
+      "pageRecordId": "reference-page-09-appendix",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "term": "CUMULATIVE",
+        "operation": "IF_CUMULATIVE_CONDITION_ACHIEVED_GAIN_BOTH_CUMULATIVE_AND_PRECEDING_NORMAL_CONDITION_VP"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        }
+      ]
+    },
+    {
+      "id": "page09-or-condition",
+      "pageRecordId": "reference-page-09-appendix",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "term": "OR CONDITIONS",
+        "operation": "GAIN_VP_FOR_ONLY_ONE_OR_CONDITION_OR_THE_PRECEDING_NORMAL_CONDITION"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        }
+      ]
+    },
+    {
+      "id": "page09-leaves-the-battlefield",
+      "pageRecordId": "reference-page-09-appendix",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "term": "LEAVES THE BATTLEFIELD",
+        "qualifyingEvents": [
+          "UNIT_DESTROYED",
+          "UNIT_EMBARKS_ON_TRANSPORT",
+          "RULE_REMOVES_UNIT_FROM_BATTLEFIELD"
+        ]
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        },
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "TIMESTAMPED_PUBLIC_TRANSCRIPT_AND_SPOKEN_WALKTHROUGH",
+          "start": "01:45:29",
+          "end": "01:46:00"
+        }
+      ]
+    },
+    {
+      "id": "page09-underlined-one",
+      "pageRecordId": "reference-page-09-appendix",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "term": "UNDERLINED_ONE",
+        "meaning": "EXACTLY_ONE_NOT_ONE_OR_MORE"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        }
+      ]
+    },
+    {
+      "id": "page09-vp-up-to-a-limit",
+      "pageRecordId": "reference-page-09-appendix",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "term": "VP UP TO A LIMIT",
+        "operation": "IGNORE_VP_ABOVE_STATED_LIMIT"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        }
+      ]
+    },
+    {
+      "id": "page09-when-drawn",
+      "pageRecordId": "reference-page-09-appendix",
+      "status": "AUTHENTICATED",
+      "fact": {
+        "term": "WHEN DRAWN",
+        "appliesOnlyTo": "TACTICAL_SECONDARY_MISSIONS"
+      },
+      "locators": [
+        {
+          "sourceId": "physical-review-2026-07-17",
+          "kind": "READABLE_PHYSICAL_BOOKLET_FRAME",
+          "start": "01:45:34",
+          "end": "01:45:36"
+        }
+      ]
+    }
+  ]
+}

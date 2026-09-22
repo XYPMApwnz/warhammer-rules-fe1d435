@@ -9,6 +9,7 @@ const read=relative=>fs.readFileSync(path.join(root,relative),'utf8');
 const json=relative=>JSON.parse(read(relative));
 const clone=value=>structuredClone(value);
 const evidence=json('missions/sources/chapter-approved-2026-27-evidence.json');
+const bookletEvidence=json('missions/sources/chapter-approved-2026-27-booklet-pages-08-09-evidence.json');
 const manifest=json('missions/sources/source-manifest.json');
 const gdm=json('missions/sources/game-data-missions-terrain-reference-2026-09-22.json');
 const acquisition=read('docs/rules-universe/STANDARD_MISSIONS_SOURCE_ACQUISITION_2026-09-22.md');
@@ -18,8 +19,54 @@ const expectedTwists=['twist-martial-pride','twist-mirrored-world','twist-night-
 const acceptedClasses=new Set(['OFFICIAL_AUTHENTICATED','PHYSICAL_SOURCE_CORROBORATED','HIGH_CONFIDENCE_CORROBORATED','SECONDARY_CONTENT_SOURCE']);
 const sha256=bytes=>crypto.createHash('sha256').update(bytes).digest('hex').toUpperCase();
 const sum=(rows,key)=>rows.reduce((total,row)=>total+row[key],0);
+const bookletArtifactPath='missions/sources/chapter-approved-2026-27-booklet-pages-08-09-evidence.json';
+const requiredBookletClaims={
+  'reference-page-08-battle-victor-scoring':['page08-step12-begin-battle','page08-step13-end-battle','page08-step14-determine-victor','page08-battle-ready-vp','page08-primary-total-cap','page08-primary-per-round-cap','page08-secondary-total-cap','page08-secondary-per-round-cap','page08-fixed-secondary-per-card-cap','page08-excess-vp-ignored'],
+  'reference-page-09-appendix':['page09-cumulative-condition','page09-or-condition','page09-leaves-the-battlefield','page09-underlined-one','page09-vp-up-to-a-limit','page09-when-drawn']
+};
 
-function validate(data,{sourceManifest=manifest,gdmEvidence=gdm}={}){
+function validateBookletEvidence(booklet){
+  assert.equal(booklet.schema,'warhammer-physical-booklet-evidence/v1');
+  assert.equal(booklet.id,'chapter-approved-2026-27-booklet-pages-08-09');
+  assert.equal(booklet.edition,'Warhammer 40,000 11th Edition');
+  assert.equal(booklet.cutoff,'2026-09-22');
+  assert.equal(booklet.currentness,'CURRENT_AT_2026_09_22');
+  assert.equal(booklet.authority,'secondary');
+  assert.equal(booklet.evidenceClass,'PHYSICAL_SOURCE_CORROBORATED');
+  assert.equal(booklet.source.sourceId,'physical-review-2026-07-17');
+  assert.equal(booklet.source.videoId,'sp6n_Bl6MJ0');
+  assert.equal(booklet.source.publicationDate,'2026-07-17');
+  assert.equal(booklet.sourceIdentity.productReleaseDate,'2026-06-13');
+  assert.equal(booklet.sourceIdentity.reviewPublishedAfterProductRelease,true);
+  assert.equal(booklet.currentnessAssessment.baselineBookletCurrentAtCutoff,true);
+  assert.equal(booklet.currentnessAssessment.laterBaselineReplacementKnownAtCutoff,false);
+  assert.equal(booklet.currentnessAssessment.laterOfficialFaqAndEventCompanionRemainSeparateOverlays,true);
+  assert.equal(booklet.captureEvidence.video.bytesStored,false);
+  assert.equal(booklet.captureEvidence.video.frameBytesStored,false);
+  assert.equal(booklet.captureEvidence.transcriptPage.byteSize,1399626);
+  assert.equal(booklet.captureEvidence.transcriptPage.sha256,'8B1064289CAE912561F384E696A705AA12638730E9667926BE19BA70654AFA54');
+  const claimIds=new Set(booklet.claims.map(claim=>claim.id));
+  assert.equal(claimIds.size,booklet.claims.length,'booklet claim IDs must be unique');
+  for(const [pageRecordId,required] of Object.entries(requiredBookletClaims)){
+    const page=booklet.pageCoverage.find(entry=>entry.pageRecordId===pageRecordId);
+    assert(page,`missing booklet page coverage ${pageRecordId}`);
+    assert.equal(page.status,'COMPLETE',`${pageRecordId}: page is not complete`);
+    assert.deepEqual(page.requiredClaimIds,required);
+    assert.deepEqual(page.resolvedClaimIds,required);
+    assert.deepEqual(page.unresolvedClaimIds,[]);
+    for(const id of required){
+      assert(claimIds.has(id),`missing required evidence claim ${id}`);
+      const claim=booklet.claims.find(entry=>entry.id===id);
+      assert.equal(claim.pageRecordId,pageRecordId,`${id}: wrong page`);
+      assert.equal(claim.status,'AUTHENTICATED',`${id}: not authenticated`);
+      assert(claim.fact&&Object.keys(claim.fact).length>0,`${id}: missing structured fact`);
+      assert(claim.locators?.length>0&&claim.locators.every(locator=>locator.sourceId==='physical-review-2026-07-17'),`${id}: invalid source locator`);
+    }
+  }
+}
+
+function validate(data,{sourceManifest=manifest,gdmEvidence=gdm,booklet=bookletEvidence}={}){
+  validateBookletEvidence(booklet);
   assert.equal(data.schema,'warhammer-chapter-approved-source-evidence/v1');
   assert.equal(data.edition,'Warhammer 40,000 11th Edition');
   assert.equal(data.cutoff,'2026-09-22');
@@ -47,6 +94,16 @@ function validate(data,{sourceManifest=manifest,gdmEvidence=gdm}={}){
   assert.equal(referenceSections.length,10);
   assert.deepEqual(referenceSections.map(record=>record.physicalPage),[1,2,3,4,5,6,7,8,9,10]);
   assert(referenceSections.every(record=>record.pageFaithfulOfficialSourceAvailable===false));
+  for(const [pageRecordId,required] of Object.entries(requiredBookletClaims)){
+    const page=referenceSections.find(record=>record.id===pageRecordId);
+    assert.equal(page.evidenceArtifactPath,bookletArtifactPath);
+    assert.equal(page.evidenceStatus,'COMPLETE');
+    assert.equal(page.fullRulesContentAvailable,page.evidenceStatus==='COMPLETE');
+    assert.deepEqual(page.requiredEvidenceItemIds,required);
+    assert.deepEqual(page.provenanceSourceIds,['physical-review-2026-07-17']);
+    assert.deepEqual(page.secondarySourceIds,[]);
+    assert(!page.sourceUrls.some(url=>url.includes('wahapedia.ru')),`${pageRecordId}: Wahapedia must not prove missing booklet content`);
+  }
   assert.equal(sum([primaryMissions,secondaryObjectives,forceDispositions,deployments,twists].flat(),'physicalMultiplicity'),88);
 
   const records=[forceDispositions,primaryMissions,secondaryObjectives,deployments,twists,referenceSections].flat();
@@ -65,8 +122,15 @@ function validate(data,{sourceManifest=manifest,gdmEvidence=gdm}={}){
     for(const sourceId of [...record.provenanceSourceIds,...record.officialCorroborationSourceIds,...record.secondarySourceIds])assert(sourceIds.has(sourceId),`${record.id}: unknown source ${sourceId}`);
     if(record.evidenceClass==='SECONDARY_CONTENT_SOURCE'||record.authority==='secondary')assert.notEqual(record.authority,'official',`${record.id}: secondary evidence promoted to official`);
   }
+  const wahapediaSource=data.sources.find(source=>source.id==='wahapedia-mission-deck-2026-27');
+  assert.equal(wahapediaSource.capture.byteSize,477202);
+  assert.equal(wahapediaSource.capture.sha256,'501D4C541D1880EB7B4C42D5B3AD3553FA98B54313537AECA6E230947EFE5377');
+  assert.match(wahapediaSource.authorityBoundary,/does not contain Steps 12-14 or the Appendix/);
+  const physicalReview=data.sources.find(source=>source.id==='physical-review-2026-07-17');
+  assert.equal(physicalReview.evidenceArtifactPath,bookletArtifactPath);
+  assert.equal(physicalReview.transcriptCapture.sha256,bookletEvidence.captureEvidence.transcriptPage.sha256);
   for(const source of data.sources){
-    assert(source.url?.startsWith('https://'),`${source.id}: missing source URL`);
+    assert(source.url?.startsWith('https://'),source.id+': missing source URL');
     if(source.evidenceClass==='SECONDARY_CONTENT_SOURCE'||source.evidenceClass==='PHYSICAL_SOURCE_CORROBORATED')assert.notEqual(source.authority,'official',`${source.id}: secondary source promoted to official`);
   }
 
@@ -94,6 +158,7 @@ function validate(data,{sourceManifest=manifest,gdmEvidence=gdm}={}){
   const gdmLayer=sourceManifest.layers.find(layer=>layer.id==='gdm-11e-event-terrain-layout-reference');
   assert.equal(chapterLayer.lifecycle,'ACCEPTED_SOURCE');assert(chapterLayer.paths.includes('missions/sources/chapter-approved-2026-27-evidence.json'));
   assert.equal(corpusLayer.lifecycle,'ACCEPTED_SOURCE_EVIDENCE');assert.equal(corpusLayer.authority,'mixed-per-record');assert.deepEqual(corpusLayer.factsOwned,[]);
+  assert(corpusLayer.paths.includes(bookletArtifactPath));assert.equal(corpusLayer.coverage.referencePage08,'COMPLETE_PHYSICAL_SOURCE_CORROBORATED');assert.equal(corpusLayer.coverage.referencePage09,'COMPLETE_PHYSICAL_SOURCE_CORROBORATED');
   assert.equal(gdmLayer.classification,'SECONDARY_VISUAL_REFERENCE');assert.deepEqual(gdmLayer.factsOwned,[]);
   assert.equal(gdmEvidence.classification,'SECONDARY_VISUAL_REFERENCE');assert.equal(gdmEvidence.source.authority,'secondary');
   assert.equal(gdmEvidence.counts.forceDispositions,5);assert.equal(gdmEvidence.counts.unorderedMatchups,15);assert.equal(gdmEvidence.counts.layouts,45);assert.equal(gdmEvidence.counts.conflicts,0);
@@ -121,6 +186,10 @@ mutated(value=>value.directedPrimaryMatrix[1]={...value.directedPrimaryMatrix[0]
 mutated(value=>value.sources.find(source=>source.id==='event-companion-v1.2-2026-08-26').sha256='0'.repeat(64),/Expected values to be strictly equal/);
 const poisonedManifest=clone(manifest);poisonedManifest.layers.find(layer=>layer.id==='gdm-11e-event-terrain-layout-reference').factsOwned=['event-layout-geometry'];
 assert.throws(()=>validate(evidence,{sourceManifest:poisonedManifest,gdmEvidence:gdm}),/Expected values to be strictly deep-equal/);
+const poisonedPage08Booklet=clone(bookletEvidence);poisonedPage08Booklet.claims=poisonedPage08Booklet.claims.filter(claim=>claim.id!=='page08-step12-begin-battle');
+assert.throws(()=>validate(evidence,{booklet:poisonedPage08Booklet}),/missing required evidence claim page08-step12-begin-battle/);
+const poisonedBooklet=clone(bookletEvidence);poisonedBooklet.claims=poisonedBooklet.claims.filter(claim=>claim.id!=='page09-or-condition');
+assert.throws(()=>validate(evidence,{booklet:poisonedBooklet}),/missing required evidence claim page09-or-condition/);
 
 const classCounts=[...evidence.records.forceDispositions,...evidence.records.primaryMissions,...evidence.records.secondaryObjectives,...evidence.records.deployments,...evidence.records.twists,...evidence.records.referenceSections].reduce((counts,record)=>{counts[record.evidenceClass]=(counts[record.evidenceClass]??0)+1;return counts;},{});
-console.log(`Chapter Approved source evidence QA passed: 88 physical cards, 70 semantic evidence records, 25 directed/15 unordered Primary relationships, 45 referenced Event layouts, evidence classes ${JSON.stringify(classCounts)}, and 9 adversarial controls.`);
+console.log(`Chapter Approved source evidence QA passed: 88 physical cards, 70 semantic evidence records, 25 directed/15 unordered Primary relationships, 45 referenced Event layouts, evidence classes ${JSON.stringify(classCounts)}, and 11 adversarial controls.`);

@@ -89,7 +89,14 @@
       "transcriptUrl": "https://www.buzzsprout.com/195242/episodes/19509209-243-how-to-use-chapter-approved-2026-27-full-review?t=0",
       "date": "2026-07-17",
       "edition": "Warhammer 40,000 11th Edition",
-      "currentness": "CURRENT_PRODUCT_CORROBORATION_AT_2026_09_22"
+      "currentness": "CURRENT_PRODUCT_CORROBORATION_AT_2026_09_22",
+      "evidenceArtifactPath": "missions/sources/chapter-approved-2026-27-booklet-pages-08-09-evidence.json",
+      "transcriptCapture": {
+        "retrievedAt": "2026-09-22",
+        "byteSize": 1399626,
+        "sha256": "8B1064289CAE912561F384E696A705AA12638730E9667926BE19BA70654AFA54",
+        "storedInRepository": false
+      }
     },
     {
       "id": "wahapedia-mission-deck-2026-27",
@@ -105,7 +112,7 @@
         "sha256": "501D4C541D1880EB7B4C42D5B3AD3553FA98B54313537AECA6E230947EFE5377",
         "storedInRepository": false
       },
-      "authorityBoundary": "Accepted for complete rules content and corroboration. It is not official authority and cannot override a newer applicable official source."
+      "authorityBoundary": "Accepted for card content and the Chapter Approved Battles sequence through Resolve Pre-battle Rules (Steps 1-11). The authenticated capture does not contain Steps 12-14 or the Appendix and is not evidence for reference pages 8-9. It is not official authority and cannot override a newer applicable official source."
     }
   ],
   "records": {
@@ -2750,16 +2757,13 @@
         "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
         "authority": "secondary",
         "provenanceSourceIds": [
-          "physical-review-2026-07-17",
-          "wahapedia-mission-deck-2026-27"
+          "physical-review-2026-07-17"
         ],
         "officialCorroborationSourceIds": [
           "official-chapter-approved-overview-2026-05-28",
           "official-force-disposition-overview-2026-04-03"
         ],
-        "secondarySourceIds": [
-          "wahapedia-mission-deck-2026-27"
-        ],
+        "secondarySourceIds": [],
         "fullRulesContentAvailable": true,
         "sourceAcceptedForContent": true,
         "physicalPage": 8,
@@ -2767,9 +2771,21 @@
         "pageFaithfulOfficialSourceAvailable": false,
         "sourceUrls": [
           "https://youtu.be/sp6n_Bl6MJ0",
-          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
-          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
-          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+          "https://www.buzzsprout.com/195242/episodes/19509209-243-how-to-use-chapter-approved-2026-27-full-review?t=0"
+        ],
+        "evidenceArtifactPath": "missions/sources/chapter-approved-2026-27-booklet-pages-08-09-evidence.json",
+        "evidenceStatus": "COMPLETE",
+        "requiredEvidenceItemIds": [
+          "page08-step12-begin-battle",
+          "page08-step13-end-battle",
+          "page08-step14-determine-victor",
+          "page08-battle-ready-vp",
+          "page08-primary-total-cap",
+          "page08-primary-per-round-cap",
+          "page08-secondary-total-cap",
+          "page08-secondary-per-round-cap",
+          "page08-fixed-secondary-per-card-cap",
+          "page08-excess-vp-ignored"
         ]
       },
       {
@@ -2783,16 +2799,13 @@
         "evidenceClass": "PHYSICAL_SOURCE_CORROBORATED",
         "authority": "secondary",
         "provenanceSourceIds": [
-          "physical-review-2026-07-17",
-          "wahapedia-mission-deck-2026-27"
+          "physical-review-2026-07-17"
         ],
         "officialCorroborationSourceIds": [
           "official-chapter-approved-overview-2026-05-28",
           "official-force-disposition-overview-2026-04-03"
         ],
-        "secondarySourceIds": [
-          "wahapedia-mission-deck-2026-27"
-        ],
+        "secondarySourceIds": [],
         "fullRulesContentAvailable": true,
         "sourceAcceptedForContent": true,
         "physicalPage": 9,
@@ -2800,9 +2813,17 @@
         "pageFaithfulOfficialSourceAvailable": false,
         "sourceUrls": [
           "https://youtu.be/sp6n_Bl6MJ0",
-          "https://wahapedia.ru/wh40k11ed/the-rules/mission-deck-2026-27/",
-          "https://www.warhammer-community.com/en-gb/articles/p3i6aa3h/the-chapter-approved-deck-what-is-it-and-how-does-it-work/",
-          "https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army-affects-your-mission/"
+          "https://www.buzzsprout.com/195242/episodes/19509209-243-how-to-use-chapter-approved-2026-27-full-review?t=0"
+        ],
+        "evidenceArtifactPath": "missions/sources/chapter-approved-2026-27-booklet-pages-08-09-evidence.json",
+        "evidenceStatus": "COMPLETE",
+        "requiredEvidenceItemIds": [
+          "page09-cumulative-condition",
+          "page09-or-condition",
+          "page09-leaves-the-battlefield",
+          "page09-underlined-one",
+          "page09-vp-up-to-a-limit",
+          "page09-when-drawn"
         ]
       },
       {

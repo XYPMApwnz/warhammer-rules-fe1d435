@@ -84957,7 +84957,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-adeptus-mechanicus",
       "status": "verified",
       "sourceRefs": [
@@ -85008,7 +85008,7 @@
         "locator": "02.05, 23.01, 23.02, 23.03, 23.04"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-aircraft",
       "status": "verified",
       "sourceRefs": [
@@ -85332,7 +85332,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-cult-mechanicus",
       "status": "verified",
       "sourceRefs": [
@@ -85676,7 +85676,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-electro-priests",
       "status": "verified",
       "sourceRefs": [
@@ -85769,7 +85769,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-explosives",
       "status": "verified",
       "sourceRefs": [
@@ -85874,7 +85874,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-fortifications",
       "status": "verified",
       "sourceRefs": [
@@ -85971,7 +85971,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-hastarii",
       "status": "verified",
       "sourceRefs": [
@@ -86027,7 +86027,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-imperium",
       "status": "verified",
       "sourceRefs": [
@@ -86153,7 +86153,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-jump-pack",
       "status": "verified",
       "sourceRefs": [
@@ -86199,7 +86199,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-kataphron",
       "status": "verified",
       "sourceRefs": [
@@ -86300,7 +86300,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-legio-cybernetica",
       "status": "verified",
       "sourceRefs": [
@@ -86577,7 +86577,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "ARMY_BOOK_FACT",
       "ownerId": "keyword-poxwalker",
       "status": "verified",
       "sourceRefs": [
@@ -86821,7 +86821,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-pteraxii",
       "status": "verified",
       "sourceRefs": [
@@ -86914,7 +86914,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-secutarii",
       "status": "verified",
       "sourceRefs": [
@@ -86965,7 +86965,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-sicarian",
       "status": "verified",
       "sourceRefs": [
@@ -87030,7 +87030,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-skitarii",
       "status": "verified",
       "sourceRefs": [
@@ -87238,7 +87238,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-sydonian",
       "status": "verified",
       "sourceRefs": [
@@ -87309,7 +87309,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-tech-priest",
       "status": "verified",
       "sourceRefs": [
@@ -87422,7 +87422,7 @@
         "locator": "02.05, 24.35, 15.08"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-titanic",
       "status": "verified",
       "sourceRefs": [
@@ -87474,7 +87474,7 @@
         "locator": "02.05, 22.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-towering",
       "status": "verified",
       "sourceRefs": [
@@ -87736,7 +87736,7 @@
         "locator": "02.05"
       },
       "entryClass": "UPSTREAM_PROJECTED",
-      "ownerType": "GLOSSARY_NATIVE",
+      "ownerType": "CORE_FACT",
       "ownerId": "keyword-warlord",
       "status": "verified",
       "sourceRefs": [

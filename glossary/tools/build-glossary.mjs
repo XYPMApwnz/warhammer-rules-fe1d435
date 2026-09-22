@@ -707,7 +707,11 @@ for(const term of registry.values())term.aliases=[...new Set([...(term.aliases||
 for(const id of contextOnlyTermIds)if(!registry.has(id))throw new Error(`Missing confirmed context-only term: ${id}`);
 for(const term of registry.values()){
   term.presentation=derivePresentation(term,{contextOnly:contextOnlyTermIds.has(term.id)});
-  if(term.entryClass==='GLOSSARY_NATIVE'&&term.canonicalSource?.documentId!=='glossary-native')term.entryClass='UPSTREAM_PROJECTED';
+  if(term.entryClass==='GLOSSARY_NATIVE'&&term.canonicalSource?.documentId!=='glossary-native'){
+    term.entryClass='UPSTREAM_PROJECTED';
+    term.ownerType=term.scope==='global'?'CORE_FACT':'ARMY_BOOK_FACT';
+    term.ownerId=term.id;
+  }
   if(!term.entryClass)term.entryClass=term.presentation==='metadata'?'PRESENTATION_ONLY':'UPSTREAM_PROJECTED';
   if(!term.ownerType)term.ownerType=term.entryClass==='PRESENTATION_ONLY'?'PRESENTATION_METADATA':term.scope==='global'?'CORE_FACT':'ARMY_BOOK_FACT';
   if(!term.ownerId)term.ownerId=term.id;

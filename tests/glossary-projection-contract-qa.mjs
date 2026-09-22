@@ -18,6 +18,7 @@ for(const [id,term] of Object.entries(terms)){
   assert(term.ownerType&&term.ownerId,`${id}: missing factual owner`);
   assert(term.sourceRef?.documentId&&term.sourceRef?.revision&&term.sourceRef?.locator,`${id}: missing source reference`);
   if(term.entryClass==='GLOSSARY_NATIVE')assert.equal(term.sourceRef.documentId,'glossary-native',`${id}: native entry lacks native provenance`);
+  if(term.entryClass==='UPSTREAM_PROJECTED')assert.notEqual(term.ownerType,'GLOSSARY_NATIVE',`${id}: upstream projection retains glossary-native ownership`);
 }
 assert.equal(aliasDocument.schema,2,'Alias projection schema must expose alias-only records');
 assert.equal(aliasDocument.entries.length,Object.keys(aliases).length,'Every alias must have one alias-only record');

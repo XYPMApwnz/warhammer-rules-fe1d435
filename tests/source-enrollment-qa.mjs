@@ -46,7 +46,9 @@ try{
   }
   assert(baseline.rows.filter(row=>row.status==='LEGACY_UNVERIFIABLE').every(row=>['UNKNOWN','UPDATE_AVAILABLE'].includes(row.upstreamCurrentness)));
   assert.equal(baseline.rows.find(row=>row.sourceId==='tau-mfm-v1.3').upstreamCurrentness,'UPDATE_AVAILABLE');
-  assert(!baseline.rows.some(row=>row.upstreamCurrentness==='CURRENT'));
+  const currentMfm=baseline.rows.filter(row=>row.sourceId.endsWith('-mfm-v1.4'));
+  assert.equal(currentMfm.length,9);
+  assert(currentMfm.every(row=>row.upstreamCurrentness==='CURRENT'));
 
   const manifest=book=>`books/${book}/sources/source-manifest.json`;
   const mutate=(relative,change,pattern)=>{

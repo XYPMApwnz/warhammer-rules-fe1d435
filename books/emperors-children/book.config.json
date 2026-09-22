@@ -70,7 +70,8 @@
     "enhancementOwners": "sources/enhancement-owner-matrix.json",
     "officialMfm": "sources/official-mfm-v1.3.json",
     "manifest": "sources/source-manifest.json",
-    "effectContracts": "sources/emperors-children-effect-contracts.v1.json"
+    "effectContracts": "sources/emperors-children-effect-contracts.v1.json",
+    "mfmCurrentCapture": "sources/official-mfm-v1.4.json"
   },
   "compactSharedAbilities": [
     "Anti",

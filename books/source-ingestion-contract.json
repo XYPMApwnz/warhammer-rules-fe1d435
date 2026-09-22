@@ -207,9 +207,9 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
       "acceptedHash": "0dc97447d215380f23e7c59b58a514227c3f423269ae90aa9667e33cc211358f",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": false,
-      "upstreamCurrentness": "UNKNOWN",
+      "lastChecked": "2026-09-22",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "VERIFIED_FROZEN",
       "rawOrigin": "RETAINED_CAPTURE",
       "reproducible": "repository-artifact",
@@ -359,9 +359,9 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
       "acceptedHash": "1a11a1b2b5e080ee60d00b116eb63a8a0f9dd890064f2fabb8d9dcb6b7d376de",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": false,
-      "upstreamCurrentness": "UNKNOWN",
+      "lastChecked": "2026-09-22",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "LEGACY_UNVERIFIABLE",
       "rawOrigin": "UNAVAILABLE",
       "reproducible": "normalized-artifacts-only",
@@ -494,9 +494,9 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
       "acceptedHash": "0a2e7310e62d2608e41c6569ceb8b4415f9d03822f3c5c14c27cbc625e0114e0",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": false,
-      "upstreamCurrentness": "UNKNOWN",
+      "lastChecked": "2026-09-22",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "LEGACY_UNVERIFIABLE",
       "rawOrigin": "UNAVAILABLE",
       "reproducible": "normalized-artifacts-only",
@@ -646,9 +646,9 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
       "acceptedHash": "a01d6a6a9a68265ff0a9c8190dc4628ed8a7c832f4f385a42324535d051659b4",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": false,
-      "upstreamCurrentness": "UNKNOWN",
+      "lastChecked": "2026-09-22",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "LEGACY_UNVERIFIABLE",
       "rawOrigin": "UNAVAILABLE",
       "reproducible": "normalized-artifacts-only",
@@ -815,9 +815,9 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3-capture-2026-08-27",
       "acceptedHash": "133142da78862684fba85c1df534593d6eaf382146b6175c037ff2e8bc6d7f1f",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": false,
-      "upstreamCurrentness": "UNKNOWN",
+      "lastChecked": "2026-09-22",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "VERIFIED_FROZEN",
       "rawOrigin": "RETAINED_CAPTURE",
       "reproducible": "repository-artifact",
@@ -1067,9 +1067,9 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
       "acceptedHash": "d0d3bdc50d120a4670e538098587dc28432d5e501fa7d603c9f0f139a5f9e6e0",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": false,
-      "upstreamCurrentness": "UNKNOWN",
+      "lastChecked": "2026-09-22",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "LEGACY_UNVERIFIABLE",
       "rawOrigin": "UNAVAILABLE",
       "reproducible": "normalized-artifacts-only",
@@ -1335,9 +1335,9 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
       "acceptedHash": "7a46ec945b302bed4aa8cb5e8f2dbfc49ce1897bf35b0c89faa9efdff09bcc8d",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": false,
-      "upstreamCurrentness": "UNKNOWN",
+      "lastChecked": "2026-09-22",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "VERIFIED_FROZEN",
       "rawOrigin": "RETAINED_CAPTURE",
       "reproducible": "repository-artifact",
@@ -1592,7 +1592,7 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
       "acceptedHash": "4115272bdeda16c59680ccafafdca868f7bde38a248439324935d7474f9567e6",
-      "lastChecked": "2026-08-27",
+      "lastChecked": "2026-09-22",
       "upstreamUpdateKnown": true,
       "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "LEGACY_UNVERIFIABLE",
@@ -1827,9 +1827,9 @@
       "sourceType": "official-json-capture",
       "acceptedRevision": "v1.3",
       "acceptedHash": "439abb1259844c67692987a13b83ae29f3e8786d1165185a9168b1a03970adc6",
-      "lastChecked": "2026-08-27",
-      "upstreamUpdateKnown": false,
-      "upstreamCurrentness": "UNKNOWN",
+      "lastChecked": "2026-09-22",
+      "upstreamUpdateKnown": true,
+      "upstreamCurrentness": "UPDATE_AVAILABLE",
       "status": "VERIFIED_FROZEN",
       "rawOrigin": "RETAINED_CAPTURE",
       "reproducible": "repository-artifact",
@@ -1890,6 +1890,336 @@
         }
       ],
       "notes": "Enrolled factual owner for related-rules-runtime-markup."
+    },
+    {
+      "book": "death-guard",
+      "sourceId": "death-guard-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "f101b4de178b8c026e26360f3bab3f1c95b15a7e7532d0fc6ce96d16d836f7a8",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/death-guard/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "54362a17f4142bdacd5e7978a1b4b4a12298c8cee1c3f83bf0e7e7ec4c001ec3"
+        },
+        {
+          "path": "books/death-guard/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "c2d2520048ed720a1cdb9414c871fb6b45bd0200cafd519d862f6805d086a9b0"
+        },
+        {
+          "path": "books/death-guard/sources/official-mfm-v1.4-legends.html",
+          "normalization": "bytes",
+          "sha256": "f9a0d23ae1504ecbe573b4a2bb3537aa2accd7ad90879c22d8f784cfeb943d23"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "0f73891db8fd88efb655d310a97a0a9c2a83837b86bb7cb0e827968663006d9a",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "ef6fe1bf536cc7aa41172647cb0050c51f98f5352565e6c6cf661490713b5adf"
+        },
+        {
+          "path": "books/adeptus-mechanicus/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "4425984bb723b328bc6cb01a3f7d9a3952f31ed3e8cd707760fb7d4ddaf5828e"
+        },
+        {
+          "path": "books/adeptus-mechanicus/sources/official-mfm-v1.4-legends.html",
+          "normalization": "bytes",
+          "sha256": "f2998122aea7c86dba200ba4630d78b0fe972de0c95cc0c6e48efe47f6be2791"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "tyranids",
+      "sourceId": "tyranids-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "ed56e8856dafc2c4d6c8b66f9f46c361deaacabca6ef7bfafd619f111155a916",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/tyranids/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "9dd69ee5845130f73beb493cc2933a436cdd230f9d86cfb3561444c83537290a"
+        },
+        {
+          "path": "books/tyranids/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "9659a7b1d33b201500f91413bc3be8ae55baa760a21d29aa195701870278c5e1"
+        },
+        {
+          "path": "books/tyranids/sources/official-mfm-v1.4-legends.html",
+          "normalization": "bytes",
+          "sha256": "5e9b4a1bff1f79d4ba2286456825e8a8cf7fe7e5732bf7f26272d32ed9a70c1d"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-empire-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "0b1fdbf1ee8df774789bae764b4571055f2b8f6bcb1e480e08a36003cabfbd58",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "88c1abf3f6e636b75e48ef8619c6edaf94ef1b1b18353fe443fdb895e291e65b"
+        },
+        {
+          "path": "books/tau-empire/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "e25bbb41d45e6883fe6df3df2e8629bc863b4a82db3c0e0e2b829e89f1e8d692"
+        },
+        {
+          "path": "books/tau-empire/sources/official-mfm-v1.4-legends.html",
+          "normalization": "bytes",
+          "sha256": "be8639d91bdf58e9bb42f247cad9409fe6f9f1d90a4936fc099c4f45e6c2f282"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "emperors-children",
+      "sourceId": "emperors-children-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "acf7411e3e097f6f16c31aa4f98b548e890817a2bf5b4003509d34e768d9ed4c",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/emperors-children/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "dcb06cb908fe96ca33fc3ef93f48630d81669355945b9b78eadbe7c98a8d26e5"
+        },
+        {
+          "path": "books/emperors-children/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "43a7d4df73d4242be47df4fe8897161402723d89c842f19c2fb7e06b2e898aff"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "chaos-space-marines",
+      "sourceId": "chaos-space-marines-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "0ebc787612e1df3e264c704921141877b43ecbc6c1c3dc4a896521a3be28cc06",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/chaos-space-marines/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "41b6857cc78fa5d8d851b21e38154460b9221f6b4c64569907c42973b9096ae2"
+        },
+        {
+          "path": "books/chaos-space-marines/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "ac06480a7b8e35b85905908a2aa364402835279bd2faf8aadef21acc9e2edebe"
+        },
+        {
+          "path": "books/chaos-space-marines/sources/official-mfm-v1.4-legends.html",
+          "normalization": "bytes",
+          "sha256": "f5f95c9ec81d41f7537a8483f06a8a3d2c7c88c9ed4c8c89597368867e52d921"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "space-marines",
+      "sourceId": "space-marines-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "9ef249f8cf788a4aa48755a99b0242f85f61f86d24aa2c939970613aa5c5b60d",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/space-marines/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "629d1e84e99011a205ec7048a4c896b3061204cd3732ad8a32fd740822133da6"
+        },
+        {
+          "path": "books/space-marines/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "f1a72264d245511b1d7d910043439ce9ad0aa7ca61d97fbb5fe8af3259953494"
+        },
+        {
+          "path": "books/space-marines/sources/official-mfm-v1.4-legends.html",
+          "normalization": "bytes",
+          "sha256": "fcf3a34c5803209186e8825b3af626a4081c2791caec3fdb574449e045517dcb"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "dark-angels",
+      "sourceId": "dark-angels-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "9c8915d6bcee7d22a924054062114b8710392b56dbf18d2b22952c3e3167e498",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/dark-angels/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "0c6fb187ac5989b820ffafdad790d2443abb5a82d9bef3a73a7729953b6a8af9"
+        },
+        {
+          "path": "books/dark-angels/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "d974d4918b3111632062e4ca3e710cefa5d2bde1773f2698aa2947810bfc9c91"
+        },
+        {
+          "path": "books/dark-angels/sources/official-mfm-v1.4-legends.html",
+          "normalization": "bytes",
+          "sha256": "7514250d5bfe5aad22178f0c3f3c497e668f7f7a42de0550a4dc0ca38ff0fe62"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "blood-angels",
+      "sourceId": "blood-angels-mfm-v1.4",
+      "authority": "official-live-mfm",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4",
+      "acceptedHash": "8ca879176ce5d37ca066f4603e2b110c664581e7b9ac2e03dc0c333b1fae8da9",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/blood-angels/sources/official-mfm-v1.4.json",
+          "normalization": "lf",
+          "sha256": "7ebacbe809a7319b4fa7101375823fe0f51c894b8e67fb1d2b44ba60c4e03aa7"
+        },
+        {
+          "path": "books/blood-angels/sources/official-mfm-v1.4.html",
+          "normalization": "bytes",
+          "sha256": "e6e7640600036cfe0d61082d7c99b62afe7ab353b561075dd77b4fc8ebf2349a"
+        },
+        {
+          "path": "books/blood-angels/sources/official-mfm-v1.4-legends.html",
+          "normalization": "bytes",
+          "sha256": "714bed077941a19e8f389dcd126262ec1dcdbbfdaf9fa7bb73a5f83014d76fcd"
+        }
+      ],
+      "notes": "Current official MFM v1.4 capture at the 2026-09-22 cutoff. Raw server-rendered HTML is retained because the official application exposed no public structured payload endpoint."
+    },
+    {
+      "book": "shared",
+      "sourceId": "shared-mfm-v1.4-currentness",
+      "authority": "official-games-workshop",
+      "sourceType": "official-web-capture",
+      "acceptedRevision": "v1.4-current-at-2026-09-22",
+      "acceptedHash": "1048d98d37d26589acda26a4d8a7a50aa92ba64f9d7fda7121fb117b92ea2628",
+      "lastChecked": "2026-09-22",
+      "upstreamObservedAt": "2026-09-22",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "CURRENT",
+      "status": "VERIFIED_CURRENT",
+      "rawOrigin": "RETAINED_OFFICIAL_WEB_CAPTURE",
+      "reproducible": "repository-artifact",
+      "extractor": "books/shared/tools/capture-current-mfm.mjs",
+      "artifacts": [
+        {
+          "path": "books/shared/sources/mfm-v1.4/currentness.json",
+          "normalization": "lf",
+          "sha256": "cb593501c0992744820b3b3bd63300f6b46fca1058b73785b0ac9a0a813c802d"
+        },
+        {
+          "path": "books/shared/sources/mfm-v1.4/warhammer-40000-downloads.html",
+          "normalization": "bytes",
+          "sha256": "4e056b22fbac74f229097d0bb163ef10eac9fda96b9f1e2d7e282ef978b859e9"
+        }
+      ],
+      "notes": "Official Warhammer Community Downloads currentness evidence: MFM updated 2026-09-02; all nine supported live pages reported v1.4 at the 2026-09-22 cutoff."
     }
   ],
   "dormantLiveTools": [

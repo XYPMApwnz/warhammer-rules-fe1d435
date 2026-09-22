@@ -30,7 +30,9 @@ assert.deepEqual(freshness.summary.BOOKS_WITH_COMPLETE_SOURCE_ENROLLMENT,['death
 assert.deepEqual(freshness.summary.BOOKS_WITH_PARTIAL_SOURCE_ENROLLMENT,[]);
 assert.deepEqual(freshness.summary.BOOKS_WITH_NO_SOURCE_ENROLLMENT,[]);
 assert.equal(freshness.sources.find(source=>source.SOURCE_ID==='tau-mfm-v1.3').UPSTREAM_OBSERVATION.status,'UPDATE_AVAILABLE');
-assert(freshness.sources.filter(source=>source.BOOK!=='shared').every(source=>source.UPSTREAM_OBSERVATION.status!=='CURRENT'),'Unknown currentness must not be promoted to CURRENT');
+const currentMfm=freshness.sources.filter(source=>source.BOOK!=='shared'&&source.SOURCE_ID.endsWith('-mfm-v1.4'));
+assert.equal(currentMfm.length,9);
+assert(currentMfm.every(source=>source.UPSTREAM_OBSERVATION.status==='CURRENT'),'Only authenticated v1.4 MFM captures may claim currentness');
 const active=[
   ['books/space-marines/tools/extract-codex-details.cjs','space-marines-codex-details'],
   ['books/chaos-space-marines/tools/extract-mfm.cjs','csm-mfm-v1.3'],

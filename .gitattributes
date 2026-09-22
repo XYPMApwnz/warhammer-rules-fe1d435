@@ -7,3 +7,5 @@
 *.svg text eol=lf
 *.txt text eol=lf
 *.webmanifest text eol=lf
+books/*/sources/official-mfm-v1.4*.html -diff
+books/shared/sources/mfm-v1.4/*.html -diff

@@ -1,7 +1,7 @@
 {
   "schema": "warhammer-source-manifest/v2",
   "bookId": "death-guard",
-  "verifiedAt": "2026-09-14",
+  "verifiedAt": "2026-09-22",
   "publicationStatus": "source-limited",
   "sources": [
     {
@@ -205,6 +205,41 @@
       ],
       "paths": [
         "books/death-guard/sources/death-guard-effect-contracts.v1.json"
+      ]
+    },
+    {
+      "id": "death-guard-mfm-v1.4",
+      "sourceId": "death-guard-mfm-v1.4",
+      "active": true,
+      "sourceType": "official-web-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "title": "Munitorum Field Manual v1.4 current official capture",
+      "authority": "official-live-mfm",
+      "version": "v1.4",
+      "updated": "2026-09-02",
+      "capturedAt": "2026-09-22",
+      "currentnessCutoff": "2026-09-22",
+      "url": "https://mfm.warhammer-community.com/en/death-guard",
+      "role": "current-mfm-source-capture",
+      "factsOwned": [
+        "unit-points",
+        "model-count-schedules",
+        "paid-wargear",
+        "enhancement-prices",
+        "leader-eligibility",
+        "support-eligibility",
+        "detachment-points",
+        "force-dispositions",
+        "qualifier-tags",
+        "legends-pricing"
+      ],
+      "consumers": [
+        "SOURCE_FRESHNESS"
+      ],
+      "paths": [
+        "books/death-guard/sources/official-mfm-v1.4.json",
+        "books/death-guard/sources/official-mfm-v1.4.html",
+        "books/death-guard/sources/official-mfm-v1.4-legends.html"
       ]
     }
   ],

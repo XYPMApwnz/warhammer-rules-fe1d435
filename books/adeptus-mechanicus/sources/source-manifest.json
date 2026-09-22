@@ -1,6 +1,6 @@
 {
   "schema": "warhammer-source-manifest/v2",
-  "verifiedAt": "2026-09-14",
+  "verifiedAt": "2026-09-22",
   "layers": [
     {
       "id": "adeptus-mechanicus-faction-pack-v1.2",
@@ -182,6 +182,41 @@
       ],
       "paths": [
         "books/adeptus-mechanicus/sources/adeptus-mechanicus-effect-contracts.v1.json"
+      ]
+    },
+    {
+      "id": "adeptus-mechanicus-mfm-v1.4",
+      "sourceId": "adeptus-mechanicus-mfm-v1.4",
+      "active": true,
+      "sourceType": "official-web-capture",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "title": "Munitorum Field Manual v1.4 current official capture",
+      "authority": "official-live-mfm",
+      "version": "v1.4",
+      "updated": "2026-09-02",
+      "capturedAt": "2026-09-22",
+      "currentnessCutoff": "2026-09-22",
+      "url": "https://mfm.warhammer-community.com/en/adeptus-mechanicus",
+      "role": "current-mfm-source-capture",
+      "factsOwned": [
+        "unit-points",
+        "model-count-schedules",
+        "paid-wargear",
+        "enhancement-prices",
+        "leader-eligibility",
+        "support-eligibility",
+        "detachment-points",
+        "force-dispositions",
+        "qualifier-tags",
+        "legends-pricing"
+      ],
+      "consumers": [
+        "SOURCE_FRESHNESS"
+      ],
+      "paths": [
+        "books/adeptus-mechanicus/sources/official-mfm-v1.4.json",
+        "books/adeptus-mechanicus/sources/official-mfm-v1.4.html",
+        "books/adeptus-mechanicus/sources/official-mfm-v1.4-legends.html"
       ]
     }
   ],

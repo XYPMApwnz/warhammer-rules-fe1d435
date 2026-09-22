@@ -332,7 +332,8 @@
     "codexWargear": "content/blood-angels-codex-wargear.en.json",
     "relatedRules": "content/blood-angels-related-rules.en.json",
     "manifest": "sources/source-manifest.json",
-    "effectContracts": "sources/blood-angels-effect-contracts.v1.json"
+    "effectContracts": "sources/blood-angels-effect-contracts.v1.json",
+    "mfmCurrentCapture": "sources/official-mfm-v1.4.json"
   },
   "generatedOutputs": [
     {

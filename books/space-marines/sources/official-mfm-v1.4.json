@@ -1,0 +1,5238 @@
+{
+  "schema": "warhammer-mfm-live-capture/v1",
+  "title": "Munitorum Field Manual",
+  "edition": "Warhammer 40,000 11th Edition",
+  "factionId": "space-marines",
+  "factionLabel": "Space Marines",
+  "version": "v1.4",
+  "sourceUpdatedAt": "2026-09-02",
+  "capturedAt": "2026-09-22",
+  "currentnessCutoff": "2026-09-22",
+  "currentness": "CURRENT",
+  "authority": "OFFICIAL_GAMES_WORKSHOP_LIVE_MFM",
+  "url": "https://mfm.warhammer-community.com/en/space-marines",
+  "currentnessEvidence": {
+    "downloadsUrl": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+    "downloadsUpdatedAt": "2026-09-02",
+    "liveVersion": "v1.4"
+  },
+  "rawArtifacts": [
+    {
+      "path": "official-mfm-v1.4.html",
+      "sha256": "F1A72264D245511B1D7D910043439CE9AD0AA7CA61D97FBB5FE8AF3259953494",
+      "bytes": 537128,
+      "state": "CURRENT"
+    },
+    {
+      "path": "official-mfm-v1.4-legends.html",
+      "sha256": "FCF3A34C5803209186E8825B3AF626A4081C2791CAEC3FDB574449E045517DCB",
+      "bytes": 572548,
+      "state": "LEGENDS_VISIBLE"
+    }
+  ],
+  "sourceGroups": [
+    "UNITS",
+    "IMPERIAL FISTS",
+    "IRON HANDS",
+    "SALAMANDERS",
+    "RAVEN GUARD",
+    "ULTRAMARINES",
+    "WHITE SCARS",
+    "LEGENDS"
+  ],
+  "counts": {
+    "currentUnits": 103,
+    "legendsUnits": 76,
+    "totalPricedUnits": 179,
+    "pointSchedules": 215,
+    "pointRows": 262,
+    "paidOptions": 7,
+    "leaderRecords": 34,
+    "leaderEdges": 199,
+    "supportRecords": 17,
+    "supportEdges": 92,
+    "detachments": 23,
+    "enhancements": 87,
+    "detachmentQualifierRecords": 0,
+    "enhancementQualifierRecords": 0
+  },
+  "units": [
+    {
+      "title": "AGGRESSOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 80
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 165
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 90
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ANCIENT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 40
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "CRUSADER SQUAD",
+          "DEATHWATCH VETERANS",
+          "DECIMUS KILL TEAM",
+          "DESOLATION SQUAD",
+          "DEVASTATOR SQUAD",
+          "FORTIS KILL TEAM",
+          "HELLBLASTER SQUAD",
+          "INFERNUS SQUAD",
+          "INNER CIRCLE COMPANIONS",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "SWORD BRETHREN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "ANCIENT IN TERMINATOR ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 65
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "DEATHWATCH TERMINATOR SQUAD",
+          "DEATHWING KNIGHTS",
+          "DEATHWING TERMINATOR SQUAD",
+          "TERMINATOR ASSAULT SQUAD",
+          "TERMINATOR SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "APOTHECARY",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 40
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "CRUSADER SQUAD",
+          "DEATHWATCH VETERANS",
+          "DECIMUS KILL TEAM",
+          "DESOLATION SQUAD",
+          "DEVASTATOR SQUAD",
+          "FORTIS KILL TEAM",
+          "HELLBLASTER SQUAD",
+          "INFERNUS SQUAD",
+          "INNER CIRCLE COMPANIONS",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "SWORD BRETHREN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "APOTHECARY BIOLOGIS",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "AGGRESSOR SQUAD",
+          "ERADICATOR SQUAD",
+          "HEAVY INTERCESSOR SQUAD",
+          "INDOMITOR KILL TEAM"
+        ]
+      }
+    },
+    {
+      "title": "ASSAULT INTERCESSOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 75
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ASSAULT INTERCESSORS WITH JUMP PACKS",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 85
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 160
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 95
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 170
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ASTRAEUS",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST UNIT COSTS",
+          "minCopies": 1,
+          "maxCopies": 1,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 525
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 2ND + UNIT COSTS",
+          "minCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 575
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "BALLISTUS DREADNOUGHT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 150
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "BLADEGUARD ANCIENT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 40
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "BLADEGUARD VETERAN SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "BLADEGUARD VETERAN SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 80
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 160
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 90
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 170
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "BRUTALIS DREADNOUGHT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 150
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CAPTAIN",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "CRUSADER SQUAD",
+          "DEATHWATCH VETERANS",
+          "DECIMUS KILL TEAM",
+          "FORTIS KILL TEAM",
+          "HELLBLASTER SQUAD",
+          "INFERNUS SQUAD",
+          "INNER CIRCLE COMPANIONS",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "SWORD BRETHREN SQUAD",
+          "TACTICAL SQUAD",
+          "VICTRIX HONOUR GUARD"
+        ]
+      }
+    },
+    {
+      "title": "CAPTAIN IN GRAVIS ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "AGGRESSOR SQUAD",
+          "ERADICATOR SQUAD",
+          "HEAVY INTERCESSOR SQUAD",
+          "INDOMITOR KILL TEAM"
+        ]
+      }
+    },
+    {
+      "title": "CAPTAIN IN PHOBOS ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ELIMINATOR SQUAD",
+          "INCURSOR SQUAD",
+          "INFILTRATOR SQUAD",
+          "REIVER SQUAD",
+          "SCOUT SQUAD",
+          "SPECTRUS KILL TEAM"
+        ]
+      }
+    },
+    {
+      "title": "CAPTAIN IN TERMINATOR ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 85
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "DEATHWATCH TERMINATOR SQUAD",
+          "DEATHWING KNIGHTS",
+          "DEATHWING TERMINATOR SQUAD",
+          "TERMINATOR ASSAULT SQUAD",
+          "TERMINATOR SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "CAPTAIN WITH JUMP PACK",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 75
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSORS WITH JUMP PACKS",
+          "SANGUINARY GUARD",
+          "TALONSTRIKE KILL TEAM",
+          "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
+        ]
+      }
+    },
+    {
+      "title": "CENTURION ASSAULT SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 150
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CENTURION DEVASTATOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 175
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 365
+            }
+          ]
+        }
+      ],
+      "paidOptions": [
+        {
+          "sourceLabel": "per Twin lascannon",
+          "title": "Twin lascannon",
+          "value": 5,
+          "sourceGroup": "WARGEAR OPTIONS"
+        }
+      ]
+    },
+    {
+      "title": "CHAPLAIN",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 60
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "CRUSADER SQUAD",
+          "DEATH COMPANY MARINES",
+          "DEATH COMPANY MARINES WITH BOLT RIFLES",
+          "DEATHWATCH VETERANS",
+          "DECIMUS KILL TEAM",
+          "FORTIS KILL TEAM",
+          "HELLBLASTER SQUAD",
+          "INFERNUS SQUAD",
+          "INNER CIRCLE COMPANIONS",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "SWORD BRETHREN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "CHAPLAIN IN TERMINATOR ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 75
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "DEATHWATCH TERMINATOR SQUAD",
+          "DEATHWING KNIGHTS",
+          "DEATHWING TERMINATOR SQUAD",
+          "TERMINATOR ASSAULT SQUAD",
+          "TERMINATOR SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "CHAPLAIN ON BIKE",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "OUTRIDER SQUAD",
+          "RAVENWING BLACK KNIGHTS"
+        ]
+      }
+    },
+    {
+      "title": "CHAPLAIN WITH JUMP PACK",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 75
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSORS WITH JUMP PACKS",
+          "DEATH COMPANY MARINES WITH JUMP PACKS",
+          "TALONSTRIKE KILL TEAM",
+          "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
+        ]
+      }
+    },
+    {
+      "title": "COMPANY HEROES",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "4 models",
+              "minModels": 4,
+              "maxModels": 4,
+              "value": 105
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DESOLATION SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST UNIT COSTS",
+          "minCopies": 1,
+          "maxCopies": 1,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 180
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 2ND + UNIT COSTS",
+          "minCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 210
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DEVASTATOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 120
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DREADNOUGHT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 135
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DROP POD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 3RD UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 60
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 4TH + UNIT COSTS",
+          "minCopies": 4,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ELIMINATOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ERADICATOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 90
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 180
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 100
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 190
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ERADICATOR SQUAD WITH HEAVY BOLTERS",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FIRESTRIKE SERVO-TURRETS",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 75
+            },
+            {
+              "sourceLabel": "2 models",
+              "minModels": 2,
+              "maxModels": 2,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "GLADIATOR LANCER",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 170
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "GLADIATOR REAPER",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 170
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "GLADIATOR VALIANT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 150
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "HAMMERFALL BUNKER",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "HEAVY INTERCESSOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 100
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "HELLBLASTER SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 110
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 220
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "IMPULSOR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 3RD UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 4TH + UNIT COSTS",
+          "minCopies": 4,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "INCEPTOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 125
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 250
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 140
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 265
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "INCURSOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 85
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 150
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 95
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "INFERNUS SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 85
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "INFILTRATOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 110
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 180
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 120
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 190
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "INTERCESSOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 80
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "INVADER ATV",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 60
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "INVICTOR TACTICAL WARSUIT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 125
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "JUDICIAR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 55
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "CRUSADER SQUAD",
+          "DEATHWATCH VETERANS",
+          "DECIMUS KILL TEAM",
+          "FORTIS KILL TEAM",
+          "INFERNUS SQUAD",
+          "INNER CIRCLE COMPANIONS",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "SWORD BRETHREN SQUAD",
+          "TACTICAL SQUAD"
+        ],
+        "support": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "INFERNUS SQUAD",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "LAND RAIDER",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 220
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND RAIDER CRUSADER",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 220
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND RAIDER REDEEMER",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 260
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 280
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND SPEEDER",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 105
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LIBRARIAN",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "DEATHWATCH VETERANS",
+          "DECIMUS KILL TEAM",
+          "DESOLATION SQUAD",
+          "DEVASTATOR SQUAD",
+          "FORTIS KILL TEAM",
+          "HELLBLASTER SQUAD",
+          "INFERNUS SQUAD",
+          "INNER CIRCLE COMPANIONS",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "LIBRARIAN IN PHOBOS ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ELIMINATOR SQUAD",
+          "INCURSOR SQUAD",
+          "INFILTRATOR SQUAD",
+          "REIVER SQUAD",
+          "SPECTRUS KILL TEAM"
+        ]
+      }
+    },
+    {
+      "title": "LIBRARIAN IN TERMINATOR ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 85
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "DEATHWATCH TERMINATOR SQUAD",
+          "DEATHWING KNIGHTS",
+          "DEATHWING TERMINATOR SQUAD",
+          "TERMINATOR ASSAULT SQUAD",
+          "TERMINATOR SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "LIEUTENANT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 45
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "CRUSADER SQUAD",
+          "DEATHWATCH VETERANS",
+          "DECIMUS KILL TEAM",
+          "FORTIS KILL TEAM",
+          "HELLBLASTER SQUAD",
+          "INFERNUS SQUAD",
+          "INNER CIRCLE COMPANIONS",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "SWORD BRETHREN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "LIEUTENANT IN PHOBOS ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 45
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "INCURSOR SQUAD",
+          "INFILTRATOR SQUAD",
+          "REIVER SQUAD",
+          "SPECTRUS KILL TEAM"
+        ]
+      }
+    },
+    {
+      "title": "LIEUTENANT IN REIVER ARMOUR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 45
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "REIVER SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "LIEUTENANT WITH COMBI-WEAPON",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "OUTRIDER SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 70
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 140
+            }
+          ]
+        }
+      ],
+      "paidOptions": [
+        {
+          "sourceLabel": "+ 1 Invader ATV",
+          "title": "1 Invader ATV",
+          "value": 60,
+          "sourceGroup": "YOUR UNIT COSTS"
+        }
+      ]
+    },
+    {
+      "title": "PREDATOR ANNIHILATOR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 135
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 145
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "PREDATOR DESTRUCTOR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 140
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "RAZORBACK",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 3RD UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 85
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 4TH + UNIT COSTS",
+          "minCopies": 4,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "REDEMPTOR DREADNOUGHT",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 195
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 210
+            }
+          ]
+        }
+      ],
+      "paidOptions": [
+        {
+          "sourceLabel": "per Macro plasma incinerator",
+          "title": "Macro plasma incinerator",
+          "value": 10,
+          "sourceGroup": "WARGEAR OPTIONS"
+        }
+      ]
+    },
+    {
+      "title": "REIVER SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 75
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "REPULSOR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 170
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 190
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "REPULSOR EXECUTIONER",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 255
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 275
+            }
+          ]
+        }
+      ],
+      "paidOptions": [
+        {
+          "sourceLabel": "per Heavy laser destroyer",
+          "title": "Heavy laser destroyer",
+          "value": 10,
+          "sourceGroup": "WARGEAR OPTIONS"
+        }
+      ]
+    },
+    {
+      "title": "RHINO",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 3RD UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 65
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 4TH + UNIT COSTS",
+          "minCopies": 4,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SCOUT SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 65
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 120
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 75
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 130
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STERNGUARD VETERAN SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 100
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STORMHAWK INTERCEPTOR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 155
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STORMRAVEN GUNSHIP",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST UNIT COSTS",
+          "minCopies": 1,
+          "maxCopies": 1,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 280
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 2ND + UNIT COSTS",
+          "minCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STORM SPEEDER HAILSTRIKE",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 105
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 115
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STORM SPEEDER HAMMERSTRIKE",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 140
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STORM SPEEDER THUNDERSTRIKE",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 135
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 145
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STORMTALON GUNSHIP",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 165
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SUPPRESSOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TACTICAL SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TECHMARINE",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 55
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "CRUSADER SQUAD",
+          "DECIMUS KILL TEAM",
+          "DESOLATION SQUAD",
+          "DEVASTATOR SQUAD",
+          "FORTIS KILL TEAM",
+          "INTERCESSOR SQUAD",
+          "SWORD BRETHREN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "TERMINATOR ASSAULT SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 155
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 310
+            }
+          ]
+        }
+      ],
+      "paidOptions": [
+        {
+          "sourceLabel": "per Thunder Hammer",
+          "title": "Thunder Hammer",
+          "value": 5,
+          "sourceGroup": "WARGEAR OPTIONS"
+        }
+      ]
+    },
+    {
+      "title": "TERMINATOR SQUAD",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 160
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "THUNDERHAWK GUNSHIP",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 840
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "VANGUARD VETERAN SQUAD WITH JUMP PACKS",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 105
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 210
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 115
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 220
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "VINDICATOR",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST TO 2ND UNITS COST",
+          "minCopies": 1,
+          "maxCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 185
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 3RD + UNIT COSTS",
+          "minCopies": 3,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "WHIRLWIND",
+      "sourceGroup": "UNITS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST UNIT COSTS",
+          "minCopies": 1,
+          "maxCopies": 1,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 175
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 2ND + UNIT COSTS",
+          "minCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 195
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DARNATH LYSANDER",
+      "sourceGroup": "IMPERIAL FISTS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 100
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "TERMINATOR ASSAULT SQUAD",
+          "TERMINATOR SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "PEDRO KANTOR",
+      "sourceGroup": "IMPERIAL FISTS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "TOR GARADON",
+      "sourceGroup": "IMPERIAL FISTS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "AGGRESSOR SQUAD",
+          "ERADICATOR SQUAD",
+          "HEAVY INTERCESSOR SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "CAANOK VAR",
+      "sourceGroup": "IRON HANDS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 90
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "TERMINATOR ASSAULT SQUAD",
+          "TERMINATOR SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "IRON FATHER FEIRROS",
+      "sourceGroup": "IRON HANDS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 85
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "AGGRESSOR SQUAD",
+          "ERADICATOR SQUAD",
+          "HEAVY INTERCESSOR SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "ADRAX AGATONE",
+      "sourceGroup": "SALAMANDERS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "INFERNUS SQUAD",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "VULKAN HE’STAN",
+      "sourceGroup": "SALAMANDERS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 95
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "COMPANY HEROES",
+          "INFERNUS SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "AETHON SHAAN",
+      "sourceGroup": "RAVEN GUARD",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KAYVAAN SHRIKE",
+      "sourceGroup": "RAVEN GUARD",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 100
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSORS WITH JUMP PACKS",
+          "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
+        ]
+      }
+    },
+    {
+      "title": "CAPTAIN TITUS",
+      "sourceGroup": "ULTRAMARINES",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 100
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "HELLBLASTER SQUAD",
+          "INFERNUS SQUAD",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "VICTRIX HONOUR GUARD",
+          "WARDENS OF ULTRAMAR"
+        ]
+      }
+    },
+    {
+      "title": "CATO SICARIUS",
+      "sourceGroup": "ULTRAMARINES",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 105
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "VICTRIX HONOUR GUARD"
+        ]
+      }
+    },
+    {
+      "title": "CHIEF LIBRARIAN TIGURIUS",
+      "sourceGroup": "ULTRAMARINES",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 85
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "DESOLATION SQUAD",
+          "DEVASTATOR SQUAD",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "MARNEUS CALGAR IN ARMOUR OF ANTILOCHUS",
+      "sourceGroup": "ULTRAMARINES",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 155
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "AGGRESSOR SQUAD",
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "ERADICATOR SQUAD STERNGUARD VETERAN SQUAD TERMINATOR SQUAD",
+          "HEAVY INTERCESSOR SQUAD",
+          "INFERNUS SQUAD",
+          "INTERCESSOR SQUAD",
+          "TACTICAL SQUAD",
+          "TERMINATOR ASSAULT SQUAD",
+          "TERMINATOR SQUAD",
+          "VICTRIX HONOUR GUARD"
+        ]
+      }
+    },
+    {
+      "title": "ROBOUTE GUILLIMAN",
+      "sourceGroup": "ULTRAMARINES",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 355
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "URIEL VENTRIS",
+      "sourceGroup": "ULTRAMARINES",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 105
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD",
+          "VICTRIX HONOUR GUARD"
+        ]
+      }
+    },
+    {
+      "title": "VICTRIX HONOUR GUARD",
+      "sourceGroup": "ULTRAMARINES",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR 1ST UNIT COSTS",
+          "minCopies": 1,
+          "maxCopies": 1,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 110
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 230
+            }
+          ]
+        },
+        {
+          "sourceLabel": "YOUR 2ND + UNIT COSTS",
+          "minCopies": 2,
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 130
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 250
+            }
+          ]
+        }
+      ],
+      "paidOptions": [
+        {
+          "sourceLabel": "per Banner of Macragge",
+          "title": "Banner of Macragge",
+          "value": 15,
+          "sourceGroup": "WARGEAR OPTIONS"
+        },
+        {
+          "sourceLabel": "per Blades of honour",
+          "title": "Blades of honour",
+          "value": 10,
+          "sourceGroup": "WARGEAR OPTIONS"
+        }
+      ]
+    },
+    {
+      "title": "WARDENS OF ULTRAMAR",
+      "sourceGroup": "ULTRAMARINES",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 120
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "KOR’SARRO KHAN",
+      "sourceGroup": "WHITE SCARS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 55
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMPANY HEROES",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "SUBODEN KHAN",
+      "sourceGroup": "WHITE SCARS",
+      "status": "CURRENT",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 90
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "OUTRIDER SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "ANCIENT ON BIKE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 90
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "BIKE SQUAD",
+          "COMPANY VETERANS ON BIKES",
+          "OUTRIDER SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "APOTHECARY ON BIKE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 65
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "BIKE SQUAD",
+          "COMPANY VETERANS ON BIKES",
+          "OUTRIDER SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "ASSAULT SQUAD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 95
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 190
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ASSAULT SQUAD WITH JUMP PACKS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 115
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 230
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ASTARTES SERVITORS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "4 models",
+              "minModels": 4,
+              "maxModels": 4,
+              "value": 55
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ATTACK BIKE SQUAD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 55
+            },
+            {
+              "sourceLabel": "2 models",
+              "minModels": 2,
+              "maxModels": 2,
+              "value": 110
+            },
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 165
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "BIKE SQUAD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 55
+            },
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 80
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CAESTUS ASSAULT RAM",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 215
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CAPTAIN ON BIKE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 95
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "BIKE SQUAD",
+          "COMPANY VETERANS ON BIKES",
+          "OUTRIDER SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "CARAB CULLN THE RISEN",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CERBERUS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 270
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CHAPLAIN CASSIUS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT SQUAD",
+          "COMMAND SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD",
+          "TYRANNIC WAR VETERANS",
+          "VANGUARD VETERAN SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "CHAPLAIN VENERABLE DREADNOUGHT",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "COMMAND SQUAD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 165
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "COMPANY CHAMPION ON BIKE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 60
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "BIKE SQUAD",
+          "COMPANY VETERANS ON BIKES",
+          "OUTRIDER SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "COMPANY VETERANS ON BIKES",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "2 models",
+              "minModels": 2,
+              "maxModels": 2,
+              "value": 110
+            },
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 275
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DEATHSTORM DROP POD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DEIMOS PREDATOR",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 115
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DEREDEO DREADNOUGHT",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "DREADNOUGHT DROP POD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FALCHION",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 420
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FELLBLADE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 480
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "FERREN AERIOS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "ASSAULT SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "COMMAND SQUAD",
+          "COMPANY HEROES",
+          "HELLBLASTER SQUAD",
+          "INFERNUS SQUAD",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "TACTICAL SQUAD",
+          "VANGUARD VETERAN SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "FIRE RAPTOR GUNSHIP",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 290
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "HUNTER",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "IMPERIAL SPACE MARINE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 40
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "ASSAULT SQUAD",
+          "COMMAND SQUAD",
+          "DEVASTATOR SQUAD",
+          "TACTICAL SQUAD",
+          "VANGUARD VETERAN SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "IRONCLAD DREADNOUGHT",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "JAVELIN ATTACK SPEEDER",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 110
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "KRATOS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND RAIDER ACHILLES",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 230
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND RAIDER EXCELSIOR",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND RAIDER HELIOS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 220
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND RAIDER PROMETHEUS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND RAIDER PROTEUS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 220
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND SPEEDER STORM",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND SPEEDER TEMPEST",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND SPEEDER TORNADO",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LAND SPEEDER TYPHOON",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LEVIATHAN DREADNOUGHT",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LIBRARIAN ON BIKE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "BIKE SQUAD",
+          "COMPANY VETERANS ON BIKES",
+          "OUTRIDER SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "LIBRARIAN WITH JUMP PACK",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 75
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "ASSAULT SQUAD WITH JUMP PACKS",
+          "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
+        ]
+      }
+    },
+    {
+      "title": "MASTODON",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 540
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "MORTIS DREADNOUGHT",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 130
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "PRIMARIS COMPANY CHAMPION",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 55
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "ASSAULT INTERCESSOR SQUAD",
+          "ASSAULT SQUAD",
+          "BLADEGUARD VETERAN SQUAD",
+          "INFERNUS SQUAD",
+          "INTERCESSOR SQUAD",
+          "STERNGUARD VETERAN SQUAD",
+          "VANGUARD VETERAN SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "RAPIER CARRIER",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "RELIC CONTEMPTOR DREADNOUGHT",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "RELIC RAZORBACK",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 105
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "RELIC TERMINATOR SQUAD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 200
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "RHINO PRIMARIS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 95
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SCOUT BIKE SQUAD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 75
+            },
+            {
+              "sourceLabel": "6 models",
+              "minModels": 6,
+              "maxModels": 6,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SCOUT SNIPER SQUAD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 75
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 150
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SERGEANT CHRONUS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 75
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SERGEANT TELION",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "leader": [
+          "SCOUT SNIPER SQUAD",
+          "SCOUT SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "SICARAN ARCUS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SICARAN BATTLE TANK",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SICARAN OMEGA",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SICARAN PUNISHER",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SICARAN VENATOR",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SOKAR-PATTERN STORMBIRD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SPARTAN",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 300
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STALKER",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 140
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "STORM EAGLE GUNSHIP",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 250
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TARANTULA AIR DEFENCE BATTERY",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 70
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TARANTULA SENTRY BATTERY",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 30
+            },
+            {
+              "sourceLabel": "2 models",
+              "minModels": 2,
+              "maxModels": 2,
+              "value": 60
+            },
+            {
+              "sourceLabel": "3 models",
+              "minModels": 3,
+              "maxModels": 3,
+              "value": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TECHMARINE ON BIKE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 110
+            }
+          ]
+        }
+      ],
+      "relations": {
+        "support": [
+          "BIKE SQUAD",
+          "COMPANY VETERANS ON BIKES",
+          "OUTRIDER SQUAD"
+        ]
+      }
+    },
+    {
+      "title": "TERMINUS ULTRA",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 285
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TERRAX-PATTERN TERMITE",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "THUNDERFIRE CANNON",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "2 models",
+              "minModels": 2,
+              "maxModels": 2,
+              "value": 90
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "THUNDERHAWK TRANSPORTER",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 495
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TYPHON",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TYRANNIC WAR VETERANS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 85
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "VANGUARD VETERAN SQUAD",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "5 models",
+              "minModels": 5,
+              "maxModels": 5,
+              "value": 120
+            },
+            {
+              "sourceLabel": "10 models",
+              "minModels": 10,
+              "maxModels": 10,
+              "value": 240
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "VENERABLE DREADNOUGHT",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 165
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "VINDICATOR LASER DESTROYER",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "WHIRLWIND SCORPIUS",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 115
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "XIPHON INTERCEPTOR",
+      "sourceGroup": "LEGENDS",
+      "status": "LEGENDS",
+      "pointSchedules": [
+        {
+          "sourceLabel": "YOUR UNIT COSTS",
+          "entries": [
+            {
+              "sourceLabel": "1 model",
+              "minModels": 1,
+              "maxModels": 1,
+              "value": 115
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "detachments": [
+    {
+      "title": "1ST COMPANY TASK FORCE",
+      "detachmentPoints": 2,
+      "forceDisposition": "PURGE THE FOE",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Fear Made Manifest",
+          "value": 30,
+          "qualifiers": []
+        },
+        {
+          "title": "Iron Resolve",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Rites of War",
+          "value": 10,
+          "qualifiers": []
+        },
+        {
+          "title": "The Imperium’s Sword",
+          "value": 25,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "ANVIL SIEGE FORCE",
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Architect of War",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Fleet Commander",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Indomitable Fury",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Stoic Defender",
+          "value": 15,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "ARMOURED SPEARTIP",
+      "detachmentPoints": 3,
+      "forceDisposition": "TAKE AND HOLD",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Armoured Commander",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Liberator",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Shock Deployment",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Tip of the Spear",
+          "value": 40,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "BASTION TASK FORCE",
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Blades of Valour",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Bombast Omnivox",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Eye of the Primarch",
+          "value": 10,
+          "qualifiers": []
+        },
+        {
+          "title": "Hero of the Chapter",
+          "value": 20,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "BLADE OF ULTRAMAR",
+      "detachmentPoints": 3,
+      "forceDisposition": "PRIORITY ASSETS",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Armour of Antoninus",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Oath of Macragge",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Student of the Codex",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Veteran of Behemoth",
+          "value": 25,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "CERAMITE SENTINELS",
+      "detachmentPoints": 3,
+      "forceDisposition": "TAKE AND HOLD",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Castellum Omnivox",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Defensive Mastery",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Honour Indefatigable",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Spy-skull Data Link",
+          "value": 15,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "EMPEROR’S SHIELD",
+      "detachmentPoints": 2,
+      "forceDisposition": "PURGE THE FOE",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Champion of the Feast",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Disciple of Rhetoricus",
+          "value": 10,
+          "qualifiers": []
+        },
+        {
+          "title": "Indomitable Champion",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Malodraxian Standard",
+          "value": 20,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "FIRESTORM ASSAULT FORCE",
+      "detachmentPoints": 2,
+      "forceDisposition": "PRIORITY ASSETS",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Adamantine Mantle",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Champion of Humanity",
+          "value": 10,
+          "qualifiers": []
+        },
+        {
+          "title": "Forged in Battle",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "War-tempered Artifice",
+          "value": 25,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "FORGEFATHER’S SEEKERS",
+      "detachmentPoints": 2,
+      "forceDisposition": "PRIORITY ASSETS",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Adamantine Mantle",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Forged in Battle",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Immolator",
+          "value": 10,
+          "qualifiers": []
+        },
+        {
+          "title": "War-tempered Artifice",
+          "value": 25,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "FULGURIS TASK FORCE",
+      "detachmentPoints": 1,
+      "forceDisposition": "RECONNAISSANCE",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Bellicose Weapon Spirits (Upgrade)",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Raptorial Cogitator Core (Upgrade)",
+          "value": 15,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "GLADIUS TASK FORCE",
+      "detachmentPoints": 3,
+      "forceDisposition": "PRIORITY ASSETS",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Adept of the Codex",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Artificer Armour",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Fire Discipline",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "The Honour Vehement",
+          "value": 15,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "HAMMER OF AVERNII",
+      "detachmentPoints": 2,
+      "forceDisposition": "PURGE THE FOE",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Iron Laurel",
+          "value": 10,
+          "qualifiers": []
+        },
+        {
+          "title": "Medusan Roar",
+          "value": 30,
+          "qualifiers": []
+        },
+        {
+          "title": "Spiritus Ferrum",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Steel Font",
+          "value": 15,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "HEADHUNTER TASK FORCE",
+      "detachmentPoints": 2,
+      "forceDisposition": "PRIORITY ASSETS",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Astartes Tank Ace",
+          "value": 40,
+          "qualifiers": []
+        },
+        {
+          "title": "Firestorm Coordinators",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Gunnery Honours",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Redoubtable Machine Spirit",
+          "value": 25,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "IRONSTORM SPEARHEAD",
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Adept of the Omnissiah",
+          "value": 35,
+          "qualifiers": []
+        },
+        {
+          "title": "Master of Machine War",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Target Augury Web",
+          "value": 30,
+          "qualifiers": []
+        },
+        {
+          "title": "The Flesh Is Weak",
+          "value": 20,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "LIBRARIUS CONCLAVE",
+      "detachmentPoints": 1,
+      "forceDisposition": "RECONNAISSANCE",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Celerity",
+          "value": 35,
+          "qualifiers": []
+        },
+        {
+          "title": "Fusillade",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Obfuscation",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Prescience",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Temporal Corridor",
+          "value": 25,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "ORBITAL ASSAULT FORCE",
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Dedicated Gunship",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Laurels of Thunder",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Orbital Uplink Reliquary",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Veteran of the Vanguard",
+          "value": 20,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "RECLAMATION FORCE",
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Avenging Avatar",
+          "value": 10,
+          "qualifiers": []
+        },
+        {
+          "title": "Liberatum",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Scroll of Proclamation",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Seals of Reconquest",
+          "value": 20,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "SHADOWMARK TALON",
+      "detachmentPoints": 2,
+      "forceDisposition": "DISRUPTION",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Blackwing Shroud",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Coronal Susurrant",
+          "value": 30,
+          "qualifiers": []
+        },
+        {
+          "title": "Hunter’s Instincts",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Umbral Raptor",
+          "value": 15,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "SPEARPOINT TASK FORCE",
+      "detachmentPoints": 2,
+      "forceDisposition": "DISRUPTION",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Chogorian Huntmaster",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Hunter’s Eye",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Spearpoint Paragon",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Stormseers' Wisdom",
+          "value": 15,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "STORMLANCE TASK FORCE",
+      "detachmentPoints": 3,
+      "forceDisposition": "DISRUPTION",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Feinting Withdrawal",
+          "value": 10,
+          "qualifiers": []
+        },
+        {
+          "title": "Fury of the Storm",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Hunter’s Instincts",
+          "value": 25,
+          "qualifiers": []
+        },
+        {
+          "title": "Portents of Wisdom",
+          "value": 15,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "SUBVERSION ASSETS",
+      "detachmentPoints": 1,
+      "forceDisposition": "DISRUPTION",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Death in the Dark (Upgrade)",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Shroud Field",
+          "value": 20,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "VANGUARD SPEARHEAD",
+      "detachmentPoints": 2,
+      "forceDisposition": "RECONNAISSANCE",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Execute and Redeploy",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Ghostweave Cloak",
+          "value": 15,
+          "qualifiers": []
+        },
+        {
+          "title": "Shadow War Veteran",
+          "value": 30,
+          "qualifiers": []
+        },
+        {
+          "title": "The Blade Driven Deep",
+          "value": 25,
+          "qualifiers": []
+        }
+      ]
+    },
+    {
+      "title": "VENGEFUL HOSTS",
+      "detachmentPoints": 1,
+      "forceDisposition": "TAKE AND HOLD",
+      "qualifiers": [],
+      "enhancements": [
+        {
+          "title": "Avenging Angel",
+          "value": 20,
+          "qualifiers": []
+        },
+        {
+          "title": "Orksbane",
+          "value": 20,
+          "qualifiers": []
+        }
+      ]
+    }
+  ],
+  "captureSha256": "4B82384A3BE68EE082563A72EB793802D3D592C116ADC4B5EF0E1945D83F606D"
+}

@@ -24,6 +24,31 @@ Missing:
 ## Newly authenticated artifacts
 
 ```text
+SOURCE_ID=wh40k-11e-event-companion-v1.2-2026-08-26
+TITLE=Warhammer 40,000 Event Companion
+PUBLISHER=Games Workshop
+VERSION=1.2
+DATE=2026-08-26
+SOURCE_CLASS=official-pdf
+SCOPE=EVENT_ONLY
+OFFICIAL_URL=https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf
+OFFICIAL_CATALOG=https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/
+OFFICIAL_CATALOG_API=POST https://www.warhammer-community.com/api/search/downloads/
+CATALOG_RECORD_LAST_UPDATED=2026-08-26
+LOCAL_ARTIFACT=missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf
+HASH_SHA256=1F44D9FA0297F60BE6C4367041A65D1A98710C68B221D8C8E22ECD1674E7525E
+BYTE_SIZE=10665731
+RETRIEVED_AT=2026-09-22
+CURRENT_STATUS=CURRENT_AT_2026_09_22
+SUPERSEDES=wh40k-11e-event-companion-v1.1-2026-07-22
+SUPERSEDED_BY=
+PAGES=93
+DOCUMENT_VERSION_MARKER=VERSION 1.2
+EVENT_LAYOUTS=45
+EXPLICITLY_UPDATED_LAYOUTS=27
+```
+
+```text
 SOURCE_ID=wh40k-11e-event-companion-v1.1-2026-07-22
 TITLE=Warhammer 40,000 Event Companion
 PUBLISHER=Games Workshop
@@ -34,9 +59,9 @@ OFFICIAL_URL=https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_e
 LOCAL_ARTIFACT=missions/sources/warhammer-40000-event-companion-v1.1-2026-07-22.pdf
 HASH_SHA256=97AE5591BE2E58BDB636E97127EAC0877F9BF28B29FC607ED4EAD4D377FB8F20
 RETRIEVED_AT=2026-09-22
-CURRENT_STATUS=CURRENT_PUBLIC_DOWNLOAD_WITH_NEWER_APP_CHANGES_UNCAPTURED
+CURRENT_STATUS=SUPERSEDED
 SUPERSEDES=wh40k-11e-event-companion-v1.0-2026-06-12
-SUPERSEDED_BY=
+SUPERSEDED_BY=wh40k-11e-event-companion-v1.2-2026-08-26
 PAGES=93
 ```
 
@@ -57,7 +82,9 @@ SUPERSEDED_BY=wh40k-11e-event-companion-v1.1-2026-07-22
 PAGES=93
 ```
 
-The current public download is v1.1. Its `WHAT'S NEW` section changes eight layouts relative to v1.0. The official August Update later announces further recommended-layout adjustments, but no v1.2 public PDF was found and the app projection was inaccessible.
+The official Warhammer Community Downloads catalog returned v1.2 as the current Warhammer Event Companion at the 2026-09-22 cutoff. The PDF identifies itself as `VERSION 1.2`; the official catalog record is dated 2026-08-26. No official v1.3 or later replacement applicable by the cutoff was found. The organiser-resources page still links to v1.1, but that historical link does not override the newer live Downloads catalog record.
+
+The v1.2 `WHAT'S NEW` section updates the Determine a Layout step and Chapter Approved errata/FAQs. Printed page 7 lists 27 updated layouts. The document recommends cycling layouts A, B and C sequentially and repeating that sequence as needed for the number of event rounds.
 
 ## Chapter Approved 2026-27 completeness
 
@@ -66,6 +93,7 @@ The current public download is v1.1. Its `WHAT'S NEW` section changes eight layo
 | Primary Missions | PARTIAL | Official Event layout headings authenticate all 25 directed identities/mappings; Event FAQ authenticates limited fragments | Full rules and individual scoring bodies require physical cards |
 | Secondary Objectives | PARTIAL | Official articles and Event Companion authenticate Fixed/Tactical workflow and shared caps | Full identities, conditions and VP bodies unavailable |
 | Deployment cards | UNAVAILABLE | Product/release pages confirm the card family and app projection | Complete identities, geometry, measurements and mappings unavailable |
+| Force Disposition cards | PARTIAL | MFM and Event Companion authenticate disposition identities and event relationships | Complete authoritative card corpus unavailable |
 | Twists | PARTIAL | Official sources authenticate the optional system and examples | Full identities and text unavailable |
 | Standard mission sequence | PARTIAL | Official mission article exposes the public setup flow | Complete standard reference booklet unavailable |
 | Standard scoring rules | PARTIAL | Public 45 VP source caps, 15 VP per-round caps and Fixed/Tactical mechanics | Card-specific scoring and complete standard reference unavailable |
@@ -82,16 +110,18 @@ https://www.warhammer-community.com/en-gb/articles/oefzq9fg/new40k-how-your-army
 
 ## Event layout authentication
 
-The current public Event Companion v1.1 contains a complete versioned layout snapshot:
+The current Event Companion v1.2 contains the complete event layout snapshot applicable at the cutoff:
 
 ```text
-EVENT_LAYOUT_ARTIFACT_V1_1=COMPLETE_45
+EVENT_LAYOUT_ARTIFACT_V1_2=COMPLETE_45
+CURRENT_AT_CUTOFF=2026-09-22
+EXPLICITLY_UPDATED_LAYOUTS=27
 UNORDERED_FORCE_DISPOSITION_PAIRINGS=15
 VARIANTS_PER_PAIRING=A,B,C
 BATTLEFIELD=44 by 60 inches
 LAYOUT_PAGES=printed pages 9-53
 RELATIONSHIPS_VERIFIED=YES
-CURRENT_2026_09_22_CROSS_CHANNEL_CORPUS=PARTIAL_UNVERIFIED
+CURRENT_2026_09_22_EVENT_CORPUS=AUTHENTICATED
 ```
 
 Each layout page supplies:
@@ -106,7 +136,7 @@ Each layout page supplies:
 
 The PDF defines the footprint inventory as four 6x4-inch, two 10x2.5-inch, four 6x2-inch, four 7x11.5-inch, and two 8x11.5-inch polygon terrain areas.
 
-The Event Companion expressly excludes standard Deployment and Twist cards. Event layouts therefore do not close the standard-play source gaps. The v1.1 snapshot is complete internally, but the official August announcement prevents it from being claimed as the complete current cross-channel state.
+The Event Companion expressly excludes standard Deployment and Twist cards. Event layouts therefore do not close the standard-play source gaps. Version 1.2 closes the August event-layout gap only; it does not supply the complete Chapter Approved standard mission corpus.
 
 ## Source ownership
 
@@ -184,6 +214,17 @@ WHY_NOT_ACCEPTED=Event geometry is event-owned and cannot substitute for standar
 WHAT_WOULD_CLOSE_GAP=Complete legible current Deployment cards
 ```
 
+### GAP-CA-FORCE-DISPOSITIONS
+
+```text
+DOMAIN=FORCE_DISPOSITION_CARDS
+CONTENT=Complete authoritative rules, relationships and presentation for all current Force Disposition cards
+EXPECTED_OFFICIAL_OWNER=Chapter Approved Mission Deck 2026-27 Force Disposition cards
+BEST_AVAILABLE_EVIDENCE=MFM identities plus Event Companion mission/layout relationships
+WHY_NOT_ACCEPTED=The complete authoritative Force Disposition card corpus is not publicly accessible
+WHAT_WOULD_CLOSE_GAP=Complete legible current Force Disposition cards
+```
+
 ### GAP-CA-TWISTS
 
 ```text
@@ -217,15 +258,17 @@ WHY_NOT_ACCEPTED=No complete standard map corpus is publicly accessible
 WHAT_WOULD_CLOSE_GAP=All standard casual terrain/objective maps with associated card identities
 ```
 
-### GAP-EVENT-AUGUST-LAYOUTS
+### GAP-EVENT-AUGUST-LAYOUTS — CLOSED
 
 ```text
 DOMAIN=EVENT_LAYOUTS
 CONTENT=Layout geometry changes announced in the official August 2026 update
 EXPECTED_OFFICIAL_OWNER=Current Warhammer 40,000 app/Event Companion revision
-BEST_AVAILABLE_EVIDENCE=Complete official v1.1 PDF plus official August announcement that later map adjustments exist
-WHY_NOT_ACCEPTED=The organiser page still serves v1.1; no v1.2 PDF or authenticated app geometry was accessible
-WHAT_WOULD_CLOSE_GAP=Authenticated export/screenshots of every changed August layout or a later official downloadable companion
+ACCEPTED_EVIDENCE=Official Event Companion v1.2 PDF from the live Warhammer Community Downloads catalog
+CURRENTNESS=Current at the 2026-09-22 cutoff; catalog last updated 2026-08-26; no later official replacement found
+LAYOUTS=45
+EXPLICITLY_UPDATED_LAYOUTS=27
+STATUS=CLOSED
 ```
 
 ### GAP-CA-DIGITAL
@@ -245,11 +288,12 @@ WHAT_WOULD_CLOSE_GAP=Sanctioned complete app export/capture; physical corpus is 
 PRIMARY_MISSIONS=NO
 SECONDARIES=NO
 DEPLOYMENT=NO
+FORCE_DISPOSITION_CARD_CORPUS=NO
 TWISTS=NO
-EVENT_LAYOUTS=YES_FOR_VERSIONED_V1_1 / NO_FOR_CURRENT_2026_09_22
-TERRAIN_PLACEMENT=YES_FOR_EVENT_V1_1 / NO_FOR_CURRENT_EVENT / NO_STANDARD
-OBJECTIVE_PLACEMENT=YES_FOR_EVENT_V1_1 / NO_FOR_CURRENT_EVENT / NO_STANDARD
+EVENT_LAYOUTS=YES_FOR_CURRENT_V1_2_AT_2026_09_22
+TERRAIN_PLACEMENT=YES_FOR_CURRENT_EVENT_V1_2 / NO_STANDARD
+OBJECTIVE_PLACEMENT=YES_FOR_CURRENT_EVENT_V1_2 / NO_STANDARD
 MISSION_SEQUENCE_AND_SCORING=YES_EVENT / NO_STANDARD
 ```
 
-The source-acquisition result is `BLOCKED_PHYSICAL_SOURCE_GAP` for the complete standard mission corpus. Event v1.1 is authenticated and ready for explicitly versioned modeling, but the current September event-layout state remains blocked by the uncaptured August app changes.
+The source-acquisition result remains `BLOCKED_PHYSICAL_SOURCE_GAP` for the complete standard mission corpus. Event v1.2 is authenticated as the current Event Companion at the 2026-09-22 cutoff and is ready for explicitly scoped event modeling. Complete Chapter Approved Primary, Secondary, Deployment, Force Disposition, Twist, reference, scoring and standard-layout sources remain unavailable.

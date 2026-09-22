@@ -30,7 +30,7 @@ This is a source and factual-ownership inventory outside the already accepted Co
 | `war-journal` | 11E War Journal/app | 2026-06, CURRENT projection | Mission generator, scoring, layouts, mustering views | https://www.warhammer-community.com/en-gb/articles/dv1aslrr/new40k-new-app-for-a-new-edition/ | App payload inaccessible |
 | `terrain-update` | Updated terrain rules | 2026-06, CURRENT | Terrain semantics; owner remains Core | https://www.warhammer-community.com/en-gb/articles/xlppkx5s/new40k-take-cover-with-updated-terrain-rules/ | Core model present |
 | `terrain-objectives` | Terrain & Objectives / Area Set | 2026-06, CURRENT play aid | Sixteen standard footprints in five types | https://www.warhammer-community.com/en-gb/articles/lxzwueun/new40k-terrain-objectives-make-the-battlefield-your-mission/ | Layout model MISSING |
-| `event-companion` | Event Companion v1.1 | 2026-07-22, EVENT_ONLY; complete public v1.1 snapshot, newer August app layout changes uncaptured | Sequence, card FAQ/errata, 45 layouts, terrain, objectives, deployment, base-size guide | https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_event_companion-alyapl19us-b2drgwkji4.pdf | v1.1 and superseded v1.0 authenticated locally; current cross-channel layout model MISSING |
+| `event-companion` | Event Companion v1.2 | 2026-08-26, CURRENT EVENT_ONLY at 2026-09-22 cutoff | Sequence, card FAQ/errata, 45 layouts including 27 explicitly updated layouts, terrain, objectives, deployment, base-size guide | https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf | v1.2, superseded v1.1 and v1.0 authenticated locally; production layout model MISSING |
 | `doubles-companion` | Doubles Event Companion v1.0 | 2026-06-12, EVENT_ONLY | Shared force, CP/VP/turns, cross-army semantics/restrictions | https://assets.warhammer-community.com/eng_12-06_warhammer40000_doubles_event_companion-xyapytrwkz-9a6fljmnob.pdf | MISSING |
 | `teams-companion` | Teams Event Companion v1.0 | 2026-06-12, EVENT_ONLY | Pairing modules, faction/disposition frequency, layout choice, ranking | https://assets.warhammer-community.com/eng_12-06_warhammer40000_teams_event_companion-3pq1qxo6kv-96smptwn3u.pdf | MISSING |
 | `dominatus-event` | Dominatus Event Companion v1.0 | 2026-06-12, EVENT_ONLY | Event adaptation, pairings, phase timing, upgrade limits | https://assets.warhammer-community.com/eng_12-06_warhammer40000_dominatus_event_companion-i9vapqcbqf-zuit0tso2r.pdf | MISSING |
@@ -147,20 +147,20 @@ Mission, Deployment, and terrain layout are reusable many-to-many entities in st
 Leviathan -> Pariah Nexus -> CA 2025–26 -> LEGACY_PREVIOUS_EDITION
 CA 2026–27 -> CURRENT standard mission pack
 
-Event v1.0 -> Event v1.1 public PDF -> August app layout changes not captured
+Event v1.0 -> Event v1.1 -> Event v1.2 current at 2026-09-22 cutoff
 Doubles/Teams/Dominatus Event v1.0 -> CURRENT scoped overlays at cutoff
 
 Boarding Actions Compendium 2024 -> previous-edition root
 Dread Incursions 2026 -> current optional updated/reprinted Boarding Actions source
 ```
 
-Event Companion v1.0 is superseded by v1.1. The official August update announces later layout changes that are not exposed in the current public PDF; those changes remain a source gap. Named event FAQs remain bounded to their event/date.
+Event Companion v1.0 is superseded by v1.1, which is superseded by v1.2. The official Warhammer Community Downloads catalog identifies v1.2 as updated on 2026-08-26, and no official v1.3 or later replacement applicable by the 2026-09-22 cutoff was found. Version 1.2 contains all 45 event layouts and identifies 27 as updated. Named event FAQs remain bounded to their event/date.
 
 ## Repository gaps and implementation order
 
 **Present with factual model:** Core terrain/objective semantics; nine-book MFM points, costs, Enhancement prices, DP and disposition projections.
 
-**Partial:** global MFM corpus/history; MFM relations/qualifiers/grouping; base metadata and event provenance; event PDFs registered only as evidence.
+**Partial:** global MFM corpus/history; MFM relations/qualifiers/grouping; base metadata and event provenance. Current Event Companion v1.2 is authenticated as source evidence but has no production layout model.
 
 **Missing:** CA mission/card model, Deployment model, terrain/event layouts, Doubles/Teams/Dominatus overlays, Dominatus deck facts, Combat Patrol, current Boarding Actions/campaigns/Apocalypse/Armoured Gauntlet, and a non-Core/non-Army source registry.
 
@@ -169,7 +169,7 @@ Recommended order:
 1. Create a source registry with artifact identity, retrieval date/hash, scope and supersession.
 2. Obtain and capture the complete official CA 2026–27 corpus; do not infer missing cards.
 3. Model missions, then reusable Deployment records and source-owned relationships.
-4. Model the authenticated Event v1.1 snapshot as a versioned deployment/objective/terrain composition; do not label it current-to-cutoff until the August app changes are captured.
+4. Model the authenticated Event v1.2 snapshot as the current-at-cutoff event deployment/objective/terrain composition; retain v1.1 and v1.0 only as versioned history.
 5. Add scoped Event, Doubles and Teams overlays.
 6. Run a separate bounded MFM convergence for relations and live qualifiers without reopening this inventory.
 7. Add event-scoped base metadata.

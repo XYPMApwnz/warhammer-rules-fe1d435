@@ -3,10 +3,75 @@
   "verifiedAt": "2026-09-22",
   "layers": [
     {
+      "id": "event-companion-v1.2",
+      "sourceId": "wh40k-11e-event-companion-v1.2-2026-08-26",
+      "authority": "official",
+      "role": "event-mission-and-layout-source",
+      "title": "Warhammer 40,000 Event Companion",
+      "version": "1.2",
+      "date": "2026-08-26",
+      "retrievedAt": "2026-09-22",
+      "frozenAt": "2026-09-22",
+      "url": "https://assets.warhammer-community.com/eng_wh40k_event_companion-pl87i44rzn-a7ieny8i9x.pdf",
+      "catalogUrl": "https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/",
+      "catalogApi": "POST https://www.warhammer-community.com/api/search/downloads/",
+      "catalogRecordLastUpdated": "2026-08-26",
+      "localFile": "warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+      "localPath": "missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+      "sha256": "1F44D9FA0297F60BE6C4367041A65D1A98710C68B221D8C8E22ECD1674E7525E",
+      "byteSize": 10665731,
+      "pageCount": 93,
+      "documentVersionMarker": "VERSION 1.2",
+      "scope": "EVENT_ONLY",
+      "currentStatus": "CURRENT_AT_2026_09_22",
+      "sourceType": "official-pdf",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "coverage": {
+        "eventMissionSequence": "complete for v1.2",
+        "eventScoringFramework": "complete for v1.2",
+        "chapterApprovedErrataAndFaq": "complete as published in v1.2",
+        "eventLayouts": 45,
+        "explicitlyUpdatedLayouts": 27,
+        "forceDispositionPairings": 15,
+        "layoutVariantsPerPairing": 3,
+        "crossChannelCurrentness": "current official public Event Companion at the 2026-09-22 cutoff"
+      },
+      "factsOwned": [
+        "current-v1.2-event-mission-sequence",
+        "current-v1.2-event-layout-relationships",
+        "current-v1.2-event-deployment-geometry",
+        "current-v1.2-event-objective-placement",
+        "current-v1.2-event-terrain-footprints-and-categories",
+        "event-base-size-guidance"
+      ],
+      "knownGaps": [
+        "Standard-play Deployment cards",
+        "Force Disposition card corpus",
+        "Twist cards",
+        "Full Primary Mission card bodies",
+        "Full Secondary Mission card bodies",
+        "Standard mission sequence and scoring reference",
+        "Standard casual terrain and objective maps"
+      ],
+      "consumers": [
+        "FUTURE_CURRENT_EVENT_MISSION_MODEL",
+        "FUTURE_CURRENT_EVENT_LAYOUT_MODEL",
+        "SOURCE_VERIFICATION"
+      ],
+      "paths": [
+        "missions/sources/warhammer-40000-event-companion-v1.2-2026-08-26.pdf",
+        "docs/rules-universe/STANDARD_MISSIONS_SOURCE_ACQUISITION_2026-09-22.md"
+      ],
+      "supersedes": [
+        "wh40k-11e-event-companion-v1.1-2026-07-22"
+      ],
+      "supersededBy": []
+    },
+    {
       "id": "event-companion-v1.1",
       "sourceId": "wh40k-11e-event-companion-v1.1-2026-07-22",
       "authority": "official",
-      "role": "event-mission-and-layout-source",
+      "role": "historical-event-mission-and-layout-source",
       "title": "Warhammer 40,000 Event Companion",
       "version": "1.1",
       "date": "2026-07-22",
@@ -18,9 +83,9 @@
       "sha256": "97AE5591BE2E58BDB636E97127EAC0877F9BF28B29FC607ED4EAD4D377FB8F20",
       "pageCount": 93,
       "scope": "EVENT_ONLY",
-      "currentStatus": "CURRENT_PUBLIC_DOWNLOAD_WITH_NEWER_APP_CHANGES_UNCAPTURED",
+      "currentStatus": "SUPERSEDED",
       "sourceType": "official-pdf",
-      "lifecycle": "ACCEPTED_SOURCE",
+      "lifecycle": "SUPERSEDED_SOURCE",
       "coverage": {
         "eventMissionSequence": "complete for v1.1",
         "eventScoringFramework": "complete for v1.1",
@@ -28,7 +93,7 @@
         "eventLayouts": 45,
         "forceDispositionPairings": 15,
         "layoutVariantsPerPairing": 3,
-        "crossChannelCurrentness": "partial: official August update announces later layout adjustments not present in the public v1.1 PDF"
+        "crossChannelCurrentness": "historical v1.1 snapshot superseded by official v1.2 on 2026-08-26"
       },
       "factsOwned": [
         "versioned-v1.1-event-mission-sequence",
@@ -39,7 +104,6 @@
         "event-base-size-guidance"
       ],
       "knownGaps": [
-        "Authenticated August 2026 app layout adjustments",
         "Standard-play Deployment cards",
         "Twist cards",
         "Full Primary Mission card bodies",
@@ -58,7 +122,9 @@
       "supersedes": [
         "wh40k-11e-event-companion-v1.0-2026-06-12"
       ],
-      "supersededBy": []
+      "supersededBy": [
+        "wh40k-11e-event-companion-v1.2-2026-08-26"
+      ]
     },
     {
       "id": "event-companion-v1.0",

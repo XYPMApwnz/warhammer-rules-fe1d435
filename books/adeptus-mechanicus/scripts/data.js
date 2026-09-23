@@ -15,21 +15,21 @@ window.DG_TERMS={
   },
   "core-assault": {
     "title": "ASSAULT",
-    "summary": "An unengaged unit that Advanced this turn can shoot using only its [ASSAULT] weapons. After shooting, it cannot start an Action until the end of the phase.",
+    "summary": "Folding stocks, shortened barrels or lightweight construction enable some weapons to be easily fired on the move. Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting.",
     "full": "Folding stocks, shortened barrels or lightweight construction enable some weapons to be easily fired on the move. Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting.",
     "glossary": "glossary-core-assault",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-04"
   },
   "core-blast": {
     "title": "BLAST",
-    "summary": "When gathering attack dice, add 1 attack die for every full 5 models in the target unit. [BLAST X] adds X attack dice instead.",
+    "summary": "High-explosive rounds can fell several warriors in a single blast, but firing them too close to comrades is unwise. Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets…",
     "full": "High-explosive rounds can fell several warriors in a single blast, but firing them too close to comrades is unwise. Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).",
     "glossary": "glossary-core-blast",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-05"
   },
   "core-cleave": {
     "title": "CLEAVE",
-    "summary": "When gathering attack dice, if all of this weapon's attacks target one unit, add X attack dice for every full 5 models in that unit.",
+    "summary": "With sufficient might or skill, warriors may sweep blades or talons through their foes in long lethal arcs. This ability always takes the form [CLEAVE X].…",
     "full": "With sufficient might or skill, warriors may sweep blades or talons through their foes in long lethal arcs. This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).",
     "glossary": "glossary-core-cleave",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-06"
@@ -78,7 +78,7 @@ window.DG_TERMS={
   },
   "core-devastating-wounds": {
     "title": "DEVASTATING WOUNDS",
-    "summary": "When an attack with DEVASTATING WOUNDS scores a Critical Wound, the target suffers mortal wounds equal to the weapon's Damage characteristic. Excess mortal wounds are lost.",
+    "summary": "The most potent weapons strike with such power that they make a mockery of armour and can cleave through several foes. Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a…",
     "full": "The most potent weapons strike with such power that they make a mockery of armour and can cleave through several foes. Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.",
     "glossary": "glossary-core-devastating-wounds",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-10"
@@ -93,7 +93,7 @@ window.DG_TERMS={
   "core-extra-attacks": {
     "title": "EXTRA ATTACKS",
     "summary": "Some warriors ride to battle atop trusty mounts that gore and trample nearby foes. Others wield combat weapons that deliver a frenzy of additional blows.…",
-    "full": "Some warriors ride to battle atop trusty mounts that gore and trample nearby foes. Others wield combat weapons that deliver a frenzy of additional blows. Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step Select Weapons, for each of those models, you must select: • All of that model’s [EXTRA ATTACKS] weapons. • One of that model’s other melee weapons, if possible.",
+    "full": "Some warriors ride to battle atop trusty mounts that gore and trample nearby foes. Others wield combat weapons that deliver a frenzy of additional blows. Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (Select Weapons), for each of those models, you must select: • All of that model’s [EXTRA ATTACKS] weapons. • One of that model’s other melee weapons, if possible.",
     "glossary": "glossary-core-extra-attacks",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-11"
   },
@@ -118,8 +118,8 @@ window.DG_TERMS={
   },
   "core-fights-first": {
     "title": "FIGHTS FIRST",
-    "summary": "Those possessed of lightning-fast reactions may strike before the opponent can react. While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase Fight Step.",
-    "full": "Those possessed of lightning-fast reactions may strike before the opponent can react. While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase Fight Step.",
+    "summary": "Those possessed of lightning-fast reactions may strike before the opponent can react. While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase (Fight Step).",
+    "full": "Those possessed of lightning-fast reactions may strike before the opponent can react. While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase (Fight Step).",
     "glossary": "glossary-core-fights-first",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-13"
   },
@@ -151,8 +151,8 @@ window.DG_TERMS={
   },
   "core-hover": {
     "title": "HOVER",
-    "summary": "Some airborne vehicles can use vectored thrusters or anti-gravity technology to hover and skim over the battlefield, the better to hunt their prey or deploy embarked troops. Each time this unit takes to the skies Flying Models, do not subtract 2\" from the maximum distance.",
-    "full": "Some airborne vehicles can use vectored thrusters or anti-gravity technology to hover and skim over the battlefield, the better to hunt their prey or deploy embarked troops. Each time this unit takes to the skies Flying Models, do not subtract 2\" from the maximum distance.",
+    "summary": "Some airborne vehicles can use vectored thrusters or anti-gravity technology to hover and skim over the battlefield, the better to hunt their prey or deploy embarked troops. Each time this unit takes to the skies (Flying Models), do not subtract 2\" from the maximum distance.",
+    "full": "Some airborne vehicles can use vectored thrusters or anti-gravity technology to hover and skim over the battlefield, the better to hunt their prey or deploy embarked troops. Each time this unit takes to the skies (Flying Models), do not subtract 2\" from the maximum distance.",
     "glossary": "glossary-core-hover",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-17",
     "units": [
@@ -163,8 +163,8 @@ window.DG_TERMS={
   },
   "core-ignores-cover": {
     "title": "IGNORES COVER",
-    "summary": "Some weapons are designed to root enemy formations out of entrenched positions. Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack Benefit of Cover, including from rules that give a model or unit the…",
-    "full": "Some weapons are designed to root enemy formations out of entrenched positions. Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack Benefit of Cover, including from rules that give a model or unit the benefit of cover (for example Stealth).",
+    "summary": "Some weapons are designed to root enemy formations out of entrenched positions. Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (Benefit of Cover), including from rules that give a model or unit the…",
+    "full": "Some weapons are designed to root enemy formations out of entrenched positions. Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (Benefit of Cover), including from rules that give a model or unit the benefit of cover (for example Stealth).",
     "glossary": "glossary-core-ignores-cover",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-18"
   },
@@ -210,7 +210,7 @@ window.DG_TERMS={
   },
   "core-lethal-hits": {
     "title": "LETHAL HITS",
-    "summary": "When an attack with LETHAL HITS scores a Critical Hit, it automatically wounds. No Wound roll is made, so that attack cannot score a Critical Wound.",
+    "summary": "Many deadly weapons can inflict fatal injuries on any foe, no matter their resilience. Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. Designer’s Note:…",
     "full": "Many deadly weapons can inflict fatal injuries on any foe, no matter their resilience. Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].",
     "glossary": "glossary-core-lethal-hits",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-23"
@@ -250,8 +250,8 @@ window.DG_TERMS={
   },
   "core-precision": {
     "title": "PRECISION",
-    "summary": "Precision attacks can pick high-value targets out in a crowd. While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step Save Rolls, if the target unit contains one or more CHARACTER models visible to one or more of the attacking…",
-    "full": "Precision attacks can pick high-value targets out in a crowd. While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step Save Rolls, if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.",
+    "summary": "Precision attacks can pick high-value targets out in a crowd. While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (Save Rolls), if the target unit contains one or more CHARACTER models visible to one or more of the…",
+    "full": "Precision attacks can pick high-value targets out in a crowd. While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (Save Rolls), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.",
     "glossary": "glossary-core-precision",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-28"
   },
@@ -333,8 +333,8 @@ window.DG_TERMS={
   },
   "core-stealth": {
     "title": "STEALTH",
-    "summary": "The stealthiest warriors can evade the attentions, and the bullets, of their foes. If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack Benefit of Cover.",
-    "full": "The stealthiest warriors can evade the attentions, and the bullets, of their foes. If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack Benefit of Cover.",
+    "summary": "The stealthiest warriors can evade the attentions, and the bullets, of their foes. If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (Benefit of Cover).",
+    "full": "The stealthiest warriors can evade the attentions, and the bullets, of their foes. If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (Benefit of Cover).",
     "glossary": "glossary-core-stealth",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-33",
     "units": [
@@ -350,7 +350,7 @@ window.DG_TERMS={
   "core-super-heavy-walker": {
     "title": "SUPER-HEAVY WALKER",
     "summary": "Monstrous creatures and gigantic engines of war loom over the battlefield like gods given form, striding over combatants and smashing through almost any obstacle that bars their passage. Each time a unit with this ability makes a normal, advance or fall-back move:…",
-    "full": "Monstrous creatures and gigantic engines of war loom over the battlefield like gods given form, striding over combatants and smashing through almost any obstacle that bars their passage. Each time a unit with this ability makes a normal, advance or fall-back move: • Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. • Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features Terrain and Movement.",
+    "full": "Monstrous creatures and gigantic engines of war loom over the battlefield like gods given form, striding over combatants and smashing through almost any obstacle that bars their passage. Each time a unit with this ability makes a normal, advance or fall-back move: • Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. • Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (Terrain and Movement).",
     "glossary": "glossary-core-super-heavy-walker",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-35"
   },

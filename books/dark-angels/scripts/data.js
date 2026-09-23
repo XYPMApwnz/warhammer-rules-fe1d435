@@ -63,101 +63,69 @@ window.DG_TERMS={
     "glossary": "glossary-dark-angels-stratagem-hunters-trail",
     "rule": "detachment-company-of-hunters"
   },
-  "dark-angels-detachment-rule-invocations-of-ancient-fury": {
-    "id": "dark-angels-detachment-rule-invocations-of-ancient-fury",
-    "title": "Invocations of Ancient Fury",
-    "summary": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "full": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "glossary": "glossary-dark-angels-detachment-rule-invocations-of-ancient-fury",
-    "rule": "detachment-dark-age-arsenal"
+  "dark-angels-detachment-rule-grim-resolve": {
+    "id": "dark-angels-detachment-rule-grim-resolve",
+    "title": "Grim Resolve",
+    "summary": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'. In your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
+    "full": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'. In your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
+    "glossary": "glossary-dark-angels-detachment-rule-grim-resolve",
+    "rule": "detachment-unforgiven-task-force"
   },
-  "dark-angels-enhancement-petition-of-stability": {
-    "id": "dark-angels-enhancement-petition-of-stability",
-    "title": "Petition of Stability",
-    "summary": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
-    "full": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
-    "glossary": "glossary-dark-angels-enhancement-petition-of-stability",
-    "rule": "detachment-dark-age-arsenal"
+  "dark-angels-enhancement-pennant-of-remembrance": {
+    "id": "dark-angels-enhancement-pennant-of-remembrance",
+    "title": "Pennant of Remembrance",
+    "summary": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+    "full": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+    "glossary": "glossary-dark-angels-enhancement-pennant-of-remembrance",
+    "rule": "detachment-unforgiven-task-force"
   },
-  "dark-angels-enhancement-entreaty-of-perpetual-ardour": {
-    "id": "dark-angels-enhancement-entreaty-of-perpetual-ardour",
-    "title": "Entreaty of Perpetual Ardour",
-    "summary": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
-    "full": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
-    "glossary": "glossary-dark-angels-enhancement-entreaty-of-perpetual-ardour",
-    "rule": "detachment-dark-age-arsenal"
+  "dark-angels-enhancement-shroud-of-heroes": {
+    "id": "dark-angels-enhancement-shroud-of-heroes",
+    "title": "Shroud of Heroes",
+    "summary": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
+    "full": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
+    "glossary": "glossary-dark-angels-enhancement-shroud-of-heroes",
+    "rule": "detachment-unforgiven-task-force"
   },
-  "dark-angels-stratagem-searing-bursts": {
-    "id": "dark-angels-stratagem-searing-bursts",
-    "title": "Searing Bursts",
-    "summary": "Your Shooting phase, when a friendly HELLBLASTER SQUAD unit has shot. That HELLBLASTER SQUAD unit. Select one enemy unit hit by your unit’s plasma ranged attacks. That enemy unit is seared until the start of your next turn: ▪ While a unit is seared, that unit has ‑2\" M.",
-    "full": "Your Shooting phase, when a friendly HELLBLASTER SQUAD unit has shot. That HELLBLASTER SQUAD unit. Select one enemy unit hit by your unit’s plasma ranged attacks. That enemy unit is seared until the start of your next turn: ▪ While a unit is seared, that unit has ‑2\" M.",
-    "glossary": "glossary-dark-angels-stratagem-searing-bursts",
-    "rule": "detachment-dark-age-arsenal"
+  "dark-angels-enhancement-stubborn-tenacity": {
+    "id": "dark-angels-enhancement-stubborn-tenacity",
+    "title": "Stubborn Tenacity",
+    "summary": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
+    "full": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
+    "glossary": "glossary-dark-angels-enhancement-stubborn-tenacity",
+    "rule": "detachment-unforgiven-task-force"
   },
-  "dark-angels-stratagem-no-sacrifice-too-great": {
-    "id": "dark-angels-stratagem-no-sacrifice-too-great",
-    "title": "No Sacrifice Too Great",
-    "summary": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot. That ADEPTUS ASTARTES unit. Your unit’s [HAZARDOUS] plasma ranged attacks have +1 S.",
-    "full": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot. That ADEPTUS ASTARTES unit. Your unit’s [HAZARDOUS] plasma ranged attacks have +1 S.",
-    "glossary": "glossary-dark-angels-stratagem-no-sacrifice-too-great",
-    "rule": "detachment-dark-age-arsenal"
+  "dark-angels-enhancement-weapons-of-the-first-legion": {
+    "id": "dark-angels-enhancement-weapons-of-the-first-legion",
+    "title": "Weapons of the First Legion",
+    "summary": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
+    "full": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
+    "glossary": "glossary-dark-angels-enhancement-weapons-of-the-first-legion",
+    "rule": "detachment-unforgiven-task-force"
   },
-  "dark-angels-stratagem-revelation-of-guilt": {
-    "id": "dark-angels-stratagem-revelation-of-guilt",
-    "title": "Revelation of Guilt",
-    "summary": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot. That ADEPTUS ASTARTES unit. Your unit’s plasma ranged attacks have +1 to hit rolls. MANY ARE THE SECRETS OF PLASMA WEAPONRY THAT THE DARK ANGELS HARBOUR",
-    "full": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot. That ADEPTUS ASTARTES unit. Your unit’s plasma ranged attacks have +1 to hit rolls. MANY ARE THE SECRETS OF PLASMA WEAPONRY THAT THE DARK ANGELS HARBOUR",
-    "glossary": "glossary-dark-angels-stratagem-revelation-of-guilt",
-    "rule": "detachment-dark-age-arsenal"
+  "dark-angels-stratagem-unbreakable-lines": {
+    "id": "dark-angels-stratagem-unbreakable-lines",
+    "title": "Unbreakable Lines",
+    "summary": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move. One ADEPTUS ASTARTES unit from your army within Engagement Range of that enemy unit. Until the end of the turn, each time an attack targets your unit, subtract 1 from the Wound roll.",
+    "full": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move. One ADEPTUS ASTARTES unit from your army within Engagement Range of that enemy unit. Until the end of the turn, each time an attack targets your unit, subtract 1 from the Wound roll.",
+    "glossary": "glossary-dark-angels-stratagem-unbreakable-lines",
+    "rule": "detachment-unforgiven-task-force"
   },
-  "dark-angels-detachment-rule-black-winged-vigilance": {
-    "id": "dark-angels-detachment-rule-black-winged-vigilance",
-    "title": "Black-winged Vigilance",
-    "summary": "The anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "full": "The anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "glossary": "glossary-dark-angels-detachment-rule-black-winged-vigilance",
-    "rule": "detachment-darkflight-pursuit"
+  "dark-angels-stratagem-unforgiven-fury": {
+    "id": "dark-angels-stratagem-unforgiven-fury",
+    "title": "Unforgiven Fury",
+    "summary": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more ADEPTUS ASTARTES units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+    "full": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more ADEPTUS ASTARTES units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+    "glossary": "glossary-dark-angels-stratagem-unforgiven-fury",
+    "rule": "detachment-unforgiven-task-force"
   },
-  "dark-angels-enhancement-thundercowl-turbines": {
-    "id": "dark-angels-enhancement-thundercowl-turbines",
-    "title": "Thundercowl Turbines",
-    "summary": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
-    "full": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
-    "glossary": "glossary-dark-angels-enhancement-thundercowl-turbines",
-    "rule": "detachment-darkflight-pursuit"
-  },
-  "dark-angels-enhancement-nightforged-battery": {
-    "id": "dark-angels-enhancement-nightforged-battery",
-    "title": "Nightforged Battery",
-    "summary": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
-    "full": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
-    "glossary": "glossary-dark-angels-enhancement-nightforged-battery",
-    "rule": "detachment-darkflight-pursuit"
-  },
-  "dark-angels-stratagem-skyborne-surveillance": {
-    "id": "dark-angels-stratagem-skyborne-surveillance",
-    "title": "Skyborne Surveillance",
-    "summary": "Your Shooting phase, when a friendly RAVENWING FLY unit has shot. That RAVENWING FLY unit. Visible enemy units within 6\" of your unit have +3\" detection range.",
-    "full": "Your Shooting phase, when a friendly RAVENWING FLY unit has shot. That RAVENWING FLY unit. Visible enemy units within 6\" of your unit have +3\" detection range.",
-    "glossary": "glossary-dark-angels-stratagem-skyborne-surveillance",
-    "rule": "detachment-darkflight-pursuit"
-  },
-  "dark-angels-stratagem-wings-of-shadow": {
-    "id": "dark-angels-stratagem-wings-of-shadow",
-    "title": "Wings of Shadow",
-    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly RAVENWING FLY unit. That RAVENWING FLY unit. Your unit has Stealth.",
-    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly RAVENWING FLY unit. That RAVENWING FLY unit. Your unit has Stealth.",
-    "glossary": "glossary-dark-angels-stratagem-wings-of-shadow",
-    "rule": "detachment-darkflight-pursuit"
-  },
-  "dark-angels-stratagem-we-are-vengeance": {
-    "id": "dark-angels-stratagem-we-are-vengeance",
-    "title": "We Are Vengeance",
-    "summary": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged RAVENWING FLY unit has shot. That RAVENWING FLY unit. Your unit can make a normal move of up to D3+3\". BLACK‑ARMOURED COMBAT CRAFT HUNT THEIR PREY UPON WINGS OF DARK FURY",
-    "full": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged RAVENWING FLY unit has shot. That RAVENWING FLY unit. Your unit can make a normal move of up to D3+3\". BLACK‑ARMOURED COMBAT CRAFT HUNT THEIR PREY UPON WINGS OF DARK FURY",
-    "glossary": "glossary-dark-angels-stratagem-we-are-vengeance",
-    "rule": "detachment-darkflight-pursuit"
+  "dark-angels-stratagem-grim-retribution": {
+    "id": "dark-angels-stratagem-grim-retribution",
+    "title": "Grim Retribution",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has shot. One ADEPTUS ASTARTES unit from your army that had one or more models destroyed as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but it must target the enemy unit that just attacked it, and can only do so if that enemy unit is an eligible target.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has shot. One ADEPTUS ASTARTES unit from your army that had one or more models destroyed as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but it must target the enemy unit that just attacked it, and can only do so if that enemy unit is an eligible target.",
+    "glossary": "glossary-dark-angels-stratagem-grim-retribution",
+    "rule": "detachment-unforgiven-task-force"
   },
   "dark-angels-detachment-rule-vowed-target": {
     "id": "dark-angels-detachment-rule-vowed-target",
@@ -230,54 +198,6 @@ window.DG_TERMS={
     "full": "Fight phase, just after an enemy unit has selected its targets. One DEATHWING unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 if your unit is within range of your Vowed objective marker. On a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
     "glossary": "glossary-dark-angels-stratagem-duty-unto-death",
     "rule": "detachment-inner-circle-task-force"
-  },
-  "dark-angels-detachment-rule-dread-catechism": {
-    "id": "dark-angels-detachment-rule-dread-catechism",
-    "title": "Dread Catechism",
-    "summary": "When the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "full": "When the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "glossary": "glossary-dark-angels-detachment-rule-dread-catechism",
-    "rule": "detachment-interrogation-conclave"
-  },
-  "dark-angels-enhancement-limitless-zeal": {
-    "id": "dark-angels-enhancement-limitless-zeal",
-    "title": "Limitless Zeal",
-    "summary": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
-    "full": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
-    "glossary": "glossary-dark-angels-enhancement-limitless-zeal",
-    "rule": "detachment-interrogation-conclave"
-  },
-  "dark-angels-enhancement-inescapable-interrogation": {
-    "id": "dark-angels-enhancement-inescapable-interrogation",
-    "title": "Inescapable Interrogation",
-    "summary": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
-    "full": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
-    "glossary": "glossary-dark-angels-enhancement-inescapable-interrogation",
-    "rule": "detachment-interrogation-conclave"
-  },
-  "dark-angels-stratagem-exacting-punishment": {
-    "id": "dark-angels-stratagem-exacting-punishment",
-    "title": "Exacting Punishment",
-    "summary": "Your Shooting phase or the Fight phase, when a friendly CHAPLAIN unit is selected to attack. That CHAPLAIN unit. Your unit’s attacks have [PRECISION].",
-    "full": "Your Shooting phase or the Fight phase, when a friendly CHAPLAIN unit is selected to attack. That CHAPLAIN unit. Your unit’s attacks have [PRECISION].",
-    "glossary": "glossary-dark-angels-stratagem-exacting-punishment",
-    "rule": "detachment-interrogation-conclave"
-  },
-  "dark-angels-stratagem-terrifying-zeal": {
-    "id": "dark-angels-stratagem-terrifying-zeal",
-    "title": "Terrifying Zeal",
-    "summary": "Your Charge phase, when a friendly CHAPLAIN unit ends a charge move. That CHAPLAIN unit. Select one enemy unit (excluding MONSTER/VEHICLE units) engaged with your unit. That enemy unit makes a leadership roll: ▪ If that leadership roll fails, that enemy unit’s attacks have ‑1 to hit rolls until the end of the turn.",
-    "full": "Your Charge phase, when a friendly CHAPLAIN unit ends a charge move. That CHAPLAIN unit. Select one enemy unit (excluding MONSTER/VEHICLE units) engaged with your unit. That enemy unit makes a leadership roll: ▪ If that leadership roll fails, that enemy unit’s attacks have ‑1 to hit rolls until the end of the turn.",
-    "glossary": "glossary-dark-angels-stratagem-terrifying-zeal",
-    "rule": "detachment-interrogation-conclave"
-  },
-  "dark-angels-stratagem-wages-of-cowardice": {
-    "id": "dark-angels-stratagem-wages-of-cowardice",
-    "title": "Wages of Cowardice",
-    "summary": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly CHAPLAIN unit ends a fall-back move, if that CHAPLAIN unit is unengaged. That CHAPLAIN unit. Your unit can make a normal move of up to D3+3\". MASTERS OF PRECISION EXCRUCIATION LEAD THE DARK ANGELS IN CONDEMNATORY STRIKES",
-    "full": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly CHAPLAIN unit ends a fall-back move, if that CHAPLAIN unit is unengaged. That CHAPLAIN unit. Your unit can make a normal move of up to D3+3\". MASTERS OF PRECISION EXCRUCIATION LEAD THE DARK ANGELS IN CONDEMNATORY STRIKES",
-    "glossary": "glossary-dark-angels-stratagem-wages-of-cowardice",
-    "rule": "detachment-interrogation-conclave"
   },
   "dark-angels-detachment-rule-in-the-lions-claws": {
     "id": "dark-angels-detachment-rule-in-the-lions-claws",
@@ -367,69 +287,101 @@ window.DG_TERMS={
     "glossary": "glossary-dark-angels-stratagem-inescapable-wrath",
     "rule": "detachment-lion-s-blade-task-force"
   },
-  "dark-angels-detachment-rule-grim-resolve": {
-    "id": "dark-angels-detachment-rule-grim-resolve",
-    "title": "Grim Resolve",
-    "summary": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'. In your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
-    "full": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'. In your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
-    "glossary": "glossary-dark-angels-detachment-rule-grim-resolve",
-    "rule": "detachment-unforgiven-task-force"
+  "dark-angels-detachment-rule-black-winged-vigilance": {
+    "id": "dark-angels-detachment-rule-black-winged-vigilance",
+    "title": "Black-winged Vigilance",
+    "summary": "The anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "full": "The anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "glossary": "glossary-dark-angels-detachment-rule-black-winged-vigilance",
+    "rule": "detachment-darkflight-pursuit"
   },
-  "dark-angels-enhancement-pennant-of-remembrance": {
-    "id": "dark-angels-enhancement-pennant-of-remembrance",
-    "title": "Pennant of Remembrance",
-    "summary": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
-    "full": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit is Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
-    "glossary": "glossary-dark-angels-enhancement-pennant-of-remembrance",
-    "rule": "detachment-unforgiven-task-force"
+  "dark-angels-enhancement-thundercowl-turbines": {
+    "id": "dark-angels-enhancement-thundercowl-turbines",
+    "title": "Thundercowl Turbines",
+    "summary": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
+    "full": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
+    "glossary": "glossary-dark-angels-enhancement-thundercowl-turbines",
+    "rule": "detachment-darkflight-pursuit"
   },
-  "dark-angels-enhancement-shroud-of-heroes": {
-    "id": "dark-angels-enhancement-shroud-of-heroes",
-    "title": "Shroud of Heroes",
-    "summary": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
-    "full": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
-    "glossary": "glossary-dark-angels-enhancement-shroud-of-heroes",
-    "rule": "detachment-unforgiven-task-force"
+  "dark-angels-enhancement-nightforged-battery": {
+    "id": "dark-angels-enhancement-nightforged-battery",
+    "title": "Nightforged Battery",
+    "summary": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+    "full": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+    "glossary": "glossary-dark-angels-enhancement-nightforged-battery",
+    "rule": "detachment-darkflight-pursuit"
   },
-  "dark-angels-enhancement-stubborn-tenacity": {
-    "id": "dark-angels-enhancement-stubborn-tenacity",
-    "title": "Stubborn Tenacity",
-    "summary": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
-    "full": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
-    "glossary": "glossary-dark-angels-enhancement-stubborn-tenacity",
-    "rule": "detachment-unforgiven-task-force"
+  "dark-angels-stratagem-skyborne-surveillance": {
+    "id": "dark-angels-stratagem-skyborne-surveillance",
+    "title": "Skyborne Surveillance",
+    "summary": "Your Shooting phase, when a friendly RAVENWING FLY unit has shot. That RAVENWING FLY unit. Visible enemy units within 6\" of your unit have +3\" detection range.",
+    "full": "Your Shooting phase, when a friendly RAVENWING FLY unit has shot. That RAVENWING FLY unit. Visible enemy units within 6\" of your unit have +3\" detection range.",
+    "glossary": "glossary-dark-angels-stratagem-skyborne-surveillance",
+    "rule": "detachment-darkflight-pursuit"
   },
-  "dark-angels-enhancement-weapons-of-the-first-legion": {
-    "id": "dark-angels-enhancement-weapons-of-the-first-legion",
-    "title": "Weapons of the First Legion",
-    "summary": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
-    "full": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
-    "glossary": "glossary-dark-angels-enhancement-weapons-of-the-first-legion",
-    "rule": "detachment-unforgiven-task-force"
+  "dark-angels-stratagem-wings-of-shadow": {
+    "id": "dark-angels-stratagem-wings-of-shadow",
+    "title": "Wings of Shadow",
+    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly RAVENWING FLY unit. That RAVENWING FLY unit. Your unit has Stealth.",
+    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly RAVENWING FLY unit. That RAVENWING FLY unit. Your unit has Stealth.",
+    "glossary": "glossary-dark-angels-stratagem-wings-of-shadow",
+    "rule": "detachment-darkflight-pursuit"
   },
-  "dark-angels-stratagem-unbreakable-lines": {
-    "id": "dark-angels-stratagem-unbreakable-lines",
-    "title": "Unbreakable Lines",
-    "summary": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move. One ADEPTUS ASTARTES unit from your army within Engagement Range of that enemy unit. Until the end of the turn, each time an attack targets your unit, subtract 1 from the Wound roll.",
-    "full": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move. One ADEPTUS ASTARTES unit from your army within Engagement Range of that enemy unit. Until the end of the turn, each time an attack targets your unit, subtract 1 from the Wound roll.",
-    "glossary": "glossary-dark-angels-stratagem-unbreakable-lines",
-    "rule": "detachment-unforgiven-task-force"
+  "dark-angels-stratagem-we-are-vengeance": {
+    "id": "dark-angels-stratagem-we-are-vengeance",
+    "title": "We Are Vengeance",
+    "summary": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged RAVENWING FLY unit has shot. That RAVENWING FLY unit. Your unit can make a normal move of up to D3+3\". BLACK‑ARMOURED COMBAT CRAFT HUNT THEIR PREY UPON WINGS OF DARK FURY",
+    "full": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged RAVENWING FLY unit has shot. That RAVENWING FLY unit. Your unit can make a normal move of up to D3+3\". BLACK‑ARMOURED COMBAT CRAFT HUNT THEIR PREY UPON WINGS OF DARK FURY",
+    "glossary": "glossary-dark-angels-stratagem-we-are-vengeance",
+    "rule": "detachment-darkflight-pursuit"
   },
-  "dark-angels-stratagem-unforgiven-fury": {
-    "id": "dark-angels-stratagem-unforgiven-fury",
-    "title": "Unforgiven Fury",
-    "summary": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more ADEPTUS ASTARTES units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
-    "full": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more ADEPTUS ASTARTES units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
-    "glossary": "glossary-dark-angels-stratagem-unforgiven-fury",
-    "rule": "detachment-unforgiven-task-force"
+  "dark-angels-detachment-rule-dread-catechism": {
+    "id": "dark-angels-detachment-rule-dread-catechism",
+    "title": "Dread Catechism",
+    "summary": "When the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "full": "When the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "glossary": "glossary-dark-angels-detachment-rule-dread-catechism",
+    "rule": "detachment-interrogation-conclave"
   },
-  "dark-angels-stratagem-grim-retribution": {
-    "id": "dark-angels-stratagem-grim-retribution",
-    "title": "Grim Retribution",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has shot. One ADEPTUS ASTARTES unit from your army that had one or more models destroyed as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but it must target the enemy unit that just attacked it, and can only do so if that enemy unit is an eligible target.",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has shot. One ADEPTUS ASTARTES unit from your army that had one or more models destroyed as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but it must target the enemy unit that just attacked it, and can only do so if that enemy unit is an eligible target.",
-    "glossary": "glossary-dark-angels-stratagem-grim-retribution",
-    "rule": "detachment-unforgiven-task-force"
+  "dark-angels-enhancement-limitless-zeal": {
+    "id": "dark-angels-enhancement-limitless-zeal",
+    "title": "Limitless Zeal",
+    "summary": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
+    "full": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
+    "glossary": "glossary-dark-angels-enhancement-limitless-zeal",
+    "rule": "detachment-interrogation-conclave"
+  },
+  "dark-angels-enhancement-inescapable-interrogation": {
+    "id": "dark-angels-enhancement-inescapable-interrogation",
+    "title": "Inescapable Interrogation",
+    "summary": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
+    "full": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
+    "glossary": "glossary-dark-angels-enhancement-inescapable-interrogation",
+    "rule": "detachment-interrogation-conclave"
+  },
+  "dark-angels-stratagem-exacting-punishment": {
+    "id": "dark-angels-stratagem-exacting-punishment",
+    "title": "Exacting Punishment",
+    "summary": "Your Shooting phase or the Fight phase, when a friendly CHAPLAIN unit is selected to attack. That CHAPLAIN unit. Your unit’s attacks have [PRECISION].",
+    "full": "Your Shooting phase or the Fight phase, when a friendly CHAPLAIN unit is selected to attack. That CHAPLAIN unit. Your unit’s attacks have [PRECISION].",
+    "glossary": "glossary-dark-angels-stratagem-exacting-punishment",
+    "rule": "detachment-interrogation-conclave"
+  },
+  "dark-angels-stratagem-terrifying-zeal": {
+    "id": "dark-angels-stratagem-terrifying-zeal",
+    "title": "Terrifying Zeal",
+    "summary": "Your Charge phase, when a friendly CHAPLAIN unit ends a charge move. That CHAPLAIN unit. Select one enemy unit (excluding MONSTER/VEHICLE units) engaged with your unit. That enemy unit makes a leadership roll: ▪ If that leadership roll fails, that enemy unit’s attacks have ‑1 to hit rolls until the end of the turn.",
+    "full": "Your Charge phase, when a friendly CHAPLAIN unit ends a charge move. That CHAPLAIN unit. Select one enemy unit (excluding MONSTER/VEHICLE units) engaged with your unit. That enemy unit makes a leadership roll: ▪ If that leadership roll fails, that enemy unit’s attacks have ‑1 to hit rolls until the end of the turn.",
+    "glossary": "glossary-dark-angels-stratagem-terrifying-zeal",
+    "rule": "detachment-interrogation-conclave"
+  },
+  "dark-angels-stratagem-wages-of-cowardice": {
+    "id": "dark-angels-stratagem-wages-of-cowardice",
+    "title": "Wages of Cowardice",
+    "summary": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly CHAPLAIN unit ends a fall-back move, if that CHAPLAIN unit is unengaged. That CHAPLAIN unit. Your unit can make a normal move of up to D3+3\". MASTERS OF PRECISION EXCRUCIATION LEAD THE DARK ANGELS IN CONDEMNATORY STRIKES",
+    "full": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly CHAPLAIN unit ends a fall-back move, if that CHAPLAIN unit is unengaged. That CHAPLAIN unit. Your unit can make a normal move of up to D3+3\". MASTERS OF PRECISION EXCRUCIATION LEAD THE DARK ANGELS IN CONDEMNATORY STRIKES",
+    "glossary": "glossary-dark-angels-stratagem-wages-of-cowardice",
+    "rule": "detachment-interrogation-conclave"
   },
   "dark-angels-detachment-rule-dutiful-tenacity": {
     "id": "dark-angels-detachment-rule-dutiful-tenacity",
@@ -510,6 +462,54 @@ window.DG_TERMS={
     "full": "End of your opponent’s Charge phase. One Adeptus Astartes unit from your army within 3\" of one or more enemy units, or one Deathwing unit from your army within 6\" of one or more enemy units. Your unit now declares a charge that only targets one or more of those enemy units, and you resolve that charge. Note that even if this charge is successful, your unit does not receive any Charge bonus this turn. 2CP 1CP 1CP 1CP 1CP 1CP",
     "glossary": "glossary-dark-angels-stratagem-leonine-aggression",
     "rule": "detachment-wrath-of-the-rock"
+  },
+  "dark-angels-detachment-rule-invocations-of-ancient-fury": {
+    "id": "dark-angels-detachment-rule-invocations-of-ancient-fury",
+    "title": "Invocations of Ancient Fury",
+    "summary": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "full": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "glossary": "glossary-dark-angels-detachment-rule-invocations-of-ancient-fury",
+    "rule": "detachment-dark-age-arsenal"
+  },
+  "dark-angels-enhancement-petition-of-stability": {
+    "id": "dark-angels-enhancement-petition-of-stability",
+    "title": "Petition of Stability",
+    "summary": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
+    "full": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
+    "glossary": "glossary-dark-angels-enhancement-petition-of-stability",
+    "rule": "detachment-dark-age-arsenal"
+  },
+  "dark-angels-enhancement-entreaty-of-perpetual-ardour": {
+    "id": "dark-angels-enhancement-entreaty-of-perpetual-ardour",
+    "title": "Entreaty of Perpetual Ardour",
+    "summary": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+    "full": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+    "glossary": "glossary-dark-angels-enhancement-entreaty-of-perpetual-ardour",
+    "rule": "detachment-dark-age-arsenal"
+  },
+  "dark-angels-stratagem-searing-bursts": {
+    "id": "dark-angels-stratagem-searing-bursts",
+    "title": "Searing Bursts",
+    "summary": "Your Shooting phase, when a friendly HELLBLASTER SQUAD unit has shot. That HELLBLASTER SQUAD unit. Select one enemy unit hit by your unit’s plasma ranged attacks. That enemy unit is seared until the start of your next turn: ▪ While a unit is seared, that unit has ‑2\" M.",
+    "full": "Your Shooting phase, when a friendly HELLBLASTER SQUAD unit has shot. That HELLBLASTER SQUAD unit. Select one enemy unit hit by your unit’s plasma ranged attacks. That enemy unit is seared until the start of your next turn: ▪ While a unit is seared, that unit has ‑2\" M.",
+    "glossary": "glossary-dark-angels-stratagem-searing-bursts",
+    "rule": "detachment-dark-age-arsenal"
+  },
+  "dark-angels-stratagem-no-sacrifice-too-great": {
+    "id": "dark-angels-stratagem-no-sacrifice-too-great",
+    "title": "No Sacrifice Too Great",
+    "summary": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot. That ADEPTUS ASTARTES unit. Your unit’s [HAZARDOUS] plasma ranged attacks have +1 S.",
+    "full": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot. That ADEPTUS ASTARTES unit. Your unit’s [HAZARDOUS] plasma ranged attacks have +1 S.",
+    "glossary": "glossary-dark-angels-stratagem-no-sacrifice-too-great",
+    "rule": "detachment-dark-age-arsenal"
+  },
+  "dark-angels-stratagem-revelation-of-guilt": {
+    "id": "dark-angels-stratagem-revelation-of-guilt",
+    "title": "Revelation of Guilt",
+    "summary": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot. That ADEPTUS ASTARTES unit. Your unit’s plasma ranged attacks have +1 to hit rolls. MANY ARE THE SECRETS OF PLASMA WEAPONRY THAT THE DARK ANGELS HARBOUR",
+    "full": "Your Shooting phase, when a friendly ADEPTUS ASTARTES unit is selected to shoot. That ADEPTUS ASTARTES unit. Your unit’s plasma ranged attacks have +1 to hit rolls. MANY ARE THE SECRETS OF PLASMA WEAPONRY THAT THE DARK ANGELS HARBOUR",
+    "glossary": "glossary-dark-angels-stratagem-revelation-of-guilt",
+    "rule": "detachment-dark-age-arsenal"
   },
   "space-marines-detachment-rule-imperator-unleashed": {
     "id": "space-marines-detachment-rule-imperator-unleashed",
@@ -8069,38 +8069,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-ravenwing-darkshroud",
     "statline": "ravenwing-darkshroud-profile"
-  },
-  "dark-angels-enhancement-petition-of-stability-2": {
-    "id": "dark-angels-enhancement-petition-of-stability-2",
-    "title": "Petition of Stability",
-    "summary": "UPGRADE. With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
-    "full": "UPGRADE. With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
-    "glossary": "glossary-dark-angels-enhancement-petition-of-stability-2",
-    "rule": "detachment-dark-age-arsenal"
-  },
-  "dark-angels-enhancement-entreaty-of-perpetual-ardour-2": {
-    "id": "dark-angels-enhancement-entreaty-of-perpetual-ardour-2",
-    "title": "Entreaty of Perpetual Ardour",
-    "summary": "UPGRADE. By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
-    "full": "UPGRADE. By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
-    "glossary": "glossary-dark-angels-enhancement-entreaty-of-perpetual-ardour-2",
-    "rule": "detachment-dark-age-arsenal"
-  },
-  "dark-angels-enhancement-thundercowl-turbines-2": {
-    "id": "dark-angels-enhancement-thundercowl-turbines-2",
-    "title": "Thundercowl Turbines",
-    "summary": "UPGRADE. These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
-    "full": "UPGRADE. These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
-    "glossary": "glossary-dark-angels-enhancement-thundercowl-turbines-2",
-    "rule": "detachment-darkflight-pursuit"
-  },
-  "dark-angels-enhancement-nightforged-battery-2": {
-    "id": "dark-angels-enhancement-nightforged-battery-2",
-    "title": "Nightforged Battery",
-    "summary": "UPGRADE. Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
-    "full": "UPGRADE. Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
-    "glossary": "glossary-dark-angels-enhancement-nightforged-battery-2",
-    "rule": "detachment-darkflight-pursuit"
   },
   "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2": {
     "id": "space-marines-enhancement-bellicose-weapon-spirits-upgrade-2",

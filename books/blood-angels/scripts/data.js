@@ -2,145 +2,9 @@ window.DG_TERMS={
   "blood-angels-detachment-rule-legacy-of-the-angel": {
     "id": "blood-angels-detachment-rule-legacy-of-the-angel",
     "title": "Legacy of the Angel",
-    "summary": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
-    "full": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
-    "glossary": "glossary-blood-angels-detachment-rule-legacy-of-the-angel",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-enhancement-prescient-flash": {
-    "id": "blood-angels-enhancement-prescient-flash",
-    "title": "Prescient Flash",
-    "summary": "A flash of foresight and clarity sings through this warrior’s blood and guides his steps into battle. Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
-    "full": "A flash of foresight and clarity sings through this warrior’s blood and guides his steps into battle. Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
-    "glossary": "glossary-blood-angels-enhancement-prescient-flash",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-enhancement-troubling-visions": {
-    "id": "blood-angels-enhancement-troubling-visions",
-    "title": "Troubling Visions",
-    "summary": "In the long run, these strange and intrusive visions of bloodshed bode terribly ill for this champion of the Blood Angels. In this instance, though, they bring him closer than ever to the glory of his gene‑sire. Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this Enhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities (see left) are active for the bearer’s unit, instead of only two of them.",
-    "full": "In the long run, these strange and intrusive visions of bloodshed bode terribly ill for this champion of the Blood Angels. In this instance, though, they bring him closer than ever to the glory of his gene‑sire. Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this Enhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities (see left) are active for the bearer’s unit, instead of only two of them.",
-    "glossary": "glossary-blood-angels-enhancement-troubling-visions",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-enhancement-blazing-icon": {
-    "id": "blood-angels-enhancement-blazing-icon",
-    "title": "Blazing Icon",
-    "summary": "What was before merely a decorative blood drop pendant now shines with a seemingly miraculous light as bright as any star. The foe are forced to avert their gaze from its wrathful magnificence. Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
-    "full": "What was before merely a decorative blood drop pendant now shines with a seemingly miraculous light as bright as any star. The foe are forced to avert their gaze from its wrathful magnificence. Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
-    "glossary": "glossary-blood-angels-enhancement-blazing-icon",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-enhancement-ordained-sacrifice": {
-    "id": "blood-angels-enhancement-ordained-sacrifice",
-    "title": "Ordained Sacrifice",
-    "summary": "Knowing only too well the desperate and vital nature of the battle before him, this scion of Sanguinius echoes his Primarch’s resolute determination to fight on even beyond what seems the doors of certain death. Adeptus Astartes model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ■ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining.",
-    "full": "Knowing only too well the desperate and vital nature of the battle before him, this scion of Sanguinius echoes his Primarch’s resolute determination to fight on even beyond what seems the doors of certain death. Adeptus Astartes model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ■ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining.",
-    "glossary": "glossary-blood-angels-enhancement-ordained-sacrifice",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-stratagem-armour-of-contempt": {
-    "id": "blood-angels-stratagem-armour-of-contempt",
-    "title": "Armour of Contempt",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-    "glossary": "glossary-blood-angels-stratagem-armour-of-contempt",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-stratagem-focused-fury": {
-    "id": "blood-angels-stratagem-focused-fury",
-    "title": "Focused Fury",
-    "summary": "Fight phase. One Adeptus Astartes unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Character unit, until the end of the phase, those weapons have the [LANCE] ability as well.",
-    "full": "Fight phase. One Adeptus Astartes unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Character unit, until the end of the phase, those weapons have the [LANCE] ability as well.",
-    "glossary": "glossary-blood-angels-stratagem-focused-fury",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-stratagem-instant-of-grace": {
-    "id": "blood-angels-stratagem-instant-of-grace",
-    "title": "Instant of Grace",
-    "summary": "Your Command phase. One Adeptus Astartes Infantry unit from your army. Select one non-Character model in your unit. Until the start of your next Command phase, your model has the Character keyword. Designer’s Note: While in effect, your model’s unit is therefore a Character unit, meaning it can interact with the Legacy of the Angel Detachment rule, in addition to other rules that interact with Character units.",
-    "full": "Your Command phase. One Adeptus Astartes Infantry unit from your army. Select one non-Character model in your unit. Until the start of your next Command phase, your model has the Character keyword. Designer’s Note: While in effect, your model’s unit is therefore a Character unit, meaning it can interact with the Legacy of the Angel Detachment rule, in addition to other rules that interact with Character units.",
-    "glossary": "glossary-blood-angels-stratagem-instant-of-grace",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-stratagem-strike-now-for-glory": {
-    "id": "blood-angels-stratagem-strike-now-for-glory",
-    "title": "Strike Now for Glory",
-    "summary": "Your Shooting phase. One Adeptus Astartes unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
-    "full": "Your Shooting phase. One Adeptus Astartes unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
-    "glossary": "glossary-blood-angels-stratagem-strike-now-for-glory",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-stratagem-in-the-shadow-of-great-wings": {
-    "id": "blood-angels-stratagem-in-the-shadow-of-great-wings",
-    "title": "In the Shadow of Great Wings",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Character unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Character unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
-    "glossary": "glossary-blood-angels-stratagem-in-the-shadow-of-great-wings",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-stratagem-unto-the-burning-skies": {
-    "id": "blood-angels-stratagem-unto-the-burning-skies",
-    "title": "Unto the Burning Skies",
-    "summary": "End of your opponent’s Fight phase. One Adeptus Astartes Jump Pack unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units, unless it is The Sanguinor. Remove your unit from the battlefield and place it into Strategic Reserves.",
-    "full": "End of your opponent’s Fight phase. One Adeptus Astartes Jump Pack unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units, unless it is The Sanguinor. Remove your unit from the battlefield and place it into Strategic Reserves.",
-    "glossary": "glossary-blood-angels-stratagem-unto-the-burning-skies",
-    "rule": "detachment-angelic-inheritors"
-  },
-  "blood-angels-detachment-rule-wrath-of-angels": {
-    "id": "blood-angels-detachment-rule-wrath-of-angels",
-    "title": "Wrath of Angels",
-    "summary": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "full": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "glossary": "glossary-blood-angels-detachment-rule-wrath-of-angels",
-    "rule": "detachment-encarmine-speartip"
-  },
-  "blood-angels-enhancement-angelic-executioner": {
-    "id": "blood-angels-enhancement-angelic-executioner",
-    "title": "Angelic Executioner",
-    "summary": "This deadly duellist leads his battle‑brothers in masterful strikes capable of carving through their armoured or swarming foes with breathtaking fluidity. ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have: ▪ [LETHAL HITS]. ▪ Or: [SUSTAINED HITS 1].",
-    "full": "This deadly duellist leads his battle‑brothers in masterful strikes capable of carving through their armoured or swarming foes with breathtaking fluidity. ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have: ▪ [LETHAL HITS]. ▪ Or: [SUSTAINED HITS 1].",
-    "glossary": "glossary-blood-angels-enhancement-angelic-executioner",
-    "rule": "detachment-encarmine-speartip"
-  },
-  "blood-angels-enhancement-shadow-of-abomination": {
-    "id": "blood-angels-enhancement-shadow-of-abomination",
-    "title": "Shadow of Abomination",
-    "summary": "Granted a glimmer of foresight by his genetic inheritance, this Son of Sanguinius has identified a foe whose future is drenched in the blood of the Imperium. Such an enemy cannot be allowed to live. ADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D.",
-    "full": "Granted a glimmer of foresight by his genetic inheritance, this Son of Sanguinius has identified a foe whose future is drenched in the blood of the Imperium. Such an enemy cannot be allowed to live. ADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D.",
-    "glossary": "glossary-blood-angels-enhancement-shadow-of-abomination",
-    "rule": "detachment-encarmine-speartip"
-  },
-  "blood-angels-stratagem-judgement-of-the-golden-host": {
-    "id": "blood-angels-stratagem-judgement-of-the-golden-host",
-    "title": "Judgement of the Golden Host",
-    "summary": "Your Charge phase, when a friendly SANGUINARY GUARD unit from your army ends a charge move. That SANGUINARY GUARD unit. Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit: ▪ For each 3+, that enemy unit suffers 1 mortal wound.",
-    "full": "Your Charge phase, when a friendly SANGUINARY GUARD unit from your army ends a charge move. That SANGUINARY GUARD unit. Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit: ▪ For each 3+, that enemy unit suffers 1 mortal wound.",
-    "glossary": "glossary-blood-angels-stratagem-judgement-of-the-golden-host",
-    "rule": "detachment-encarmine-speartip"
-  },
-  "blood-angels-stratagem-inexorable-valour": {
-    "id": "blood-angels-stratagem-inexorable-valour",
-    "title": "Inexorable Valour",
-    "summary": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall‑back move, if that SANGUINARY GUARD unit is unengaged. That SANGUINARY GUARD unit. Your unit can make a normal move of up to D3+3\".",
-    "full": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall‑back move, if that SANGUINARY GUARD unit is unengaged. That SANGUINARY GUARD unit. Your unit can make a normal move of up to D3+3\".",
-    "glossary": "glossary-blood-angels-stratagem-inexorable-valour",
-    "rule": "detachment-encarmine-speartip"
-  },
-  "blood-angels-stratagem-blinding-blurs-of-vengeance": {
-    "id": "blood-angels-stratagem-blinding-blurs-of-vengeance",
-    "title": "Blinding Blurs of Vengeance",
-    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit. That SANGUINARY GUARD unit. Your unit has Stealth.",
-    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit. That SANGUINARY GUARD unit. Your unit has Stealth.",
-    "glossary": "glossary-blood-angels-stratagem-blinding-blurs-of-vengeance",
-    "rule": "detachment-encarmine-speartip"
-  },
-  "blood-angels-detachment-rule-legacy-of-the-angel-2": {
-    "id": "blood-angels-detachment-rule-legacy-of-the-angel-2",
-    "title": "Legacy of the Angel",
     "summary": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds and led by their champions of noble bearing. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Friendly BLOOD ANGELS INFANTRY CHARACTER units (excluding COMMANDER DANTE units) have +1 to advance rolls and charge rolls. This detachment has the GRACE tag and cannot be taken with another GRACE detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
     "full": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds and led by their champions of noble bearing. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Friendly BLOOD ANGELS INFANTRY CHARACTER units (excluding COMMANDER DANTE units) have +1 to advance rolls and charge rolls. This detachment has the GRACE tag and cannot be taken with another GRACE detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "glossary": "glossary-blood-angels-detachment-rule-legacy-of-the-angel-2",
+    "glossary": "glossary-blood-angels-detachment-rule-legacy-of-the-angel",
     "rule": "detachment-legacy-of-grace"
   },
   "blood-angels-enhancement-blood-boil": {
@@ -231,12 +95,12 @@ window.DG_TERMS={
     "glossary": "glossary-blood-angels-stratagem-angelic-grace",
     "rule": "detachment-liberator-assault-group"
   },
-  "blood-angels-stratagem-armour-of-contempt-2": {
-    "id": "blood-angels-stratagem-armour-of-contempt-2",
+  "blood-angels-stratagem-armour-of-contempt": {
+    "id": "blood-angels-stratagem-armour-of-contempt",
     "title": "Armour of Contempt",
     "summary": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
     "full": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-    "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-2",
+    "glossary": "glossary-blood-angels-stratagem-armour-of-contempt",
     "rule": "detachment-liberator-assault-group"
   },
   "blood-angels-stratagem-savage-echoes": {
@@ -270,174 +134,6 @@ window.DG_TERMS={
     "full": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Fell Back.",
     "glossary": "glossary-blood-angels-stratagem-relentless-assault",
     "rule": "detachment-liberator-assault-group"
-  },
-  "blood-angels-detachment-rule-maddened-ferocity": {
-    "id": "blood-angels-detachment-rule-maddened-ferocity",
-    "title": "Maddened Ferocity",
-    "summary": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
-    "full": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
-    "glossary": "glossary-blood-angels-detachment-rule-maddened-ferocity",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-enhancement-carmine-reliquary": {
-    "id": "blood-angels-enhancement-carmine-reliquary",
-    "title": "Carmine Reliquary",
-    "summary": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result.",
-    "full": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result.",
-    "glossary": "glossary-blood-angels-enhancement-carmine-reliquary",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-enhancement-master-of-the-red-thirst": {
-    "id": "blood-angels-enhancement-master-of-the-red-thirst",
-    "title": "Master of the Red Thirst",
-    "summary": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle. Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
-    "full": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle. Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
-    "glossary": "glossary-blood-angels-enhancement-master-of-the-red-thirst",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-enhancement-sanguinary-tear-aura": {
-    "id": "blood-angels-enhancement-sanguinary-tear-aura",
-    "title": "Sanguinary Tear (Aura)",
-    "summary": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
-    "full": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
-    "glossary": "glossary-blood-angels-enhancement-sanguinary-tear-aura",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-enhancement-angels-fang": {
-    "id": "blood-angels-enhancement-angels-fang",
-    "title": "Angel's Fang",
-    "summary": "This artificer ‑crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine‑spirit’s desire to drink the blood of the mightiest foes. Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character, Monster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability.",
-    "full": "This artificer ‑crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine‑spirit’s desire to drink the blood of the mightiest foes. Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character, Monster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability.",
-    "glossary": "glossary-blood-angels-enhancement-angels-fang",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-stratagem-a-grim-warning": {
-    "id": "blood-angels-stratagem-a-grim-warning",
-    "title": "A Grim Warning",
-    "summary": "Any phase. One Blood Angel s unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed. Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-    "full": "Any phase. One Blood Angel s unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed. Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-    "glossary": "glossary-blood-angels-stratagem-a-grim-warning",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-stratagem-insensate-rampage": {
-    "id": "blood-angels-stratagem-insensate-rampage",
-    "title": "Insensate Rampage",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
-    "glossary": "glossary-blood-angels-stratagem-insensate-rampage",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-stratagem-limb-from-limb": {
-    "id": "blood-angels-stratagem-limb-from-limb",
-    "title": "Limb from Limb",
-    "summary": "Fight phase. One Adeptus Astartes unit from your army that made a Charge move this turn. Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit.",
-    "full": "Fight phase. One Adeptus Astartes unit from your army that made a Charge move this turn. Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit.",
-    "glossary": "glossary-blood-angels-stratagem-limb-from-limb",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-stratagem-deathless-duty": {
-    "id": "blood-angels-stratagem-deathless-duty",
-    "title": "Deathless Duty",
-    "summary": "Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
-    "full": "Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
-    "glossary": "glossary-blood-angels-stratagem-deathless-duty",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-stratagem-red-wrath": {
-    "id": "blood-angels-stratagem-red-wrath",
-    "title": "Red Wrath",
-    "summary": "Your Movement phase, just after an Adeptus Astartes unit from your army Advances. That Adeptus Astartes unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
-    "full": "Your Movement phase, just after an Adeptus Astartes unit from your army Advances. That Adeptus Astartes unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
-    "glossary": "glossary-blood-angels-stratagem-red-wrath",
-    "rule": "detachment-rage-cursed-onslaught"
-  },
-  "blood-angels-detachment-rule-upon-wings-of-fire": {
-    "id": "blood-angels-detachment-rule-upon-wings-of-fire",
-    "title": "Upon Wings of Fire",
-    "summary": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "full": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-    "glossary": "glossary-blood-angels-detachment-rule-upon-wings-of-fire",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-enhancement-archangels-shard": {
-    "id": "blood-angels-enhancement-archangels-shard",
-    "title": "Archangel's Shard",
-    "summary": "ADEPTUS ASTARTES JUMP PACK model only. The bearer's melee weapons have [ANTI-CHAOS 5+] and [LANCE].",
-    "full": "ADEPTUS ASTARTES JUMP PACK model only. The bearer's melee weapons have [ANTI-CHAOS 5+] and [LANCE].",
-    "glossary": "glossary-blood-angels-enhancement-archangels-shard",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-enhancement-artisan-of-war": {
-    "id": "blood-angels-enhancement-artisan-of-war",
-    "title": "Artisan of War",
-    "summary": "ADEPTUS ASTARTES JUMP PACK model only. Improve the Armour Penetration characteristic of the bearer's weapons by 1, and the bearer has a Save characteristic of 2+.",
-    "full": "ADEPTUS ASTARTES JUMP PACK model only. Improve the Armour Penetration characteristic of the bearer's weapons by 1, and the bearer has a Save characteristic of 2+.",
-    "glossary": "glossary-blood-angels-enhancement-artisan-of-war",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-enhancement-gleaming-pinions": {
-    "id": "blood-angels-enhancement-gleaming-pinions",
-    "title": "Gleaming Pinions",
-    "summary": "ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8\\\" of this unit and this unit is unengaged, this unit can make a Normal move of up to 6\\\".",
-    "full": "ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8\\\" of this unit and this unit is unengaged, this unit can make a Normal move of up to 6\\\".",
-    "glossary": "glossary-blood-angels-enhancement-gleaming-pinions",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-enhancement-visage-of-death": {
-    "id": "blood-angels-enhancement-visage-of-death",
-    "title": "Visage of Death",
-    "summary": "ADEPTUS ASTARTES JUMP PACK model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer must take a Battle-shock test.",
-    "full": "ADEPTUS ASTARTES JUMP PACK model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer must take a Battle-shock test.",
-    "glossary": "glossary-blood-angels-enhancement-visage-of-death",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-stratagem-unbridled-ardour": {
-    "id": "blood-angels-stratagem-unbridled-ardour",
-    "title": "Unbridled Ardour",
-    "summary": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls.",
-    "full": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls.",
-    "glossary": "glossary-blood-angels-stratagem-unbridled-ardour",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-stratagem-armour-of-contempt-3": {
-    "id": "blood-angels-stratagem-armour-of-contempt-3",
-    "title": "Armour of Contempt",
-    "summary": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army selected as a target. Until the attacking unit has finished, worsen the Armour Penetration characteristic of attacks targeting your unit by 1.",
-    "full": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army selected as a target. Until the attacking unit has finished, worsen the Armour Penetration characteristic of attacks targeting your unit by 1.",
-    "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-3",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-stratagem-angels-sacrifice": {
-    "id": "blood-angels-stratagem-angels-sacrifice",
-    "title": "Angel's Sacrifice",
-    "summary": "Start of the Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army. Until the end of the phase, each enemy model within Engagement Range of your unit must target your unit with all of its attacks.",
-    "full": "Start of the Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army. Until the end of the phase, each enemy model within Engagement Range of your unit must target your unit with all of its attacks.",
-    "glossary": "glossary-blood-angels-stratagem-angels-sacrifice",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-stratagem-martial-exemplars": {
-    "id": "blood-angels-stratagem-martial-exemplars",
-    "title": "Martial Exemplars",
-    "summary": "Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army that has not fought. Until the end of the phase, melee weapons equipped by models in your unit have [LETHAL HITS] and [PRECISION].",
-    "full": "Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army that has not fought. Until the end of the phase, melee weapons equipped by models in your unit have [LETHAL HITS] and [PRECISION].",
-    "glossary": "glossary-blood-angels-stratagem-martial-exemplars",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-stratagem-descent-of-angels": {
-    "id": "blood-angels-stratagem-descent-of-angels",
-    "title": "Descent of Angels",
-    "summary": "Your Movement phase. One ADEPTUS ASTARTES JUMP PACK unit arriving using Deep Strike. Your unit can be set up more than 6\\\" horizontally away from all enemy models. That unit is not eligible to declare a charge in the same turn.",
-    "full": "Your Movement phase. One ADEPTUS ASTARTES JUMP PACK unit arriving using Deep Strike. Your unit can be set up more than 6\\\" horizontally away from all enemy models. That unit is not eligible to declare a charge in the same turn.",
-    "glossary": "glossary-blood-angels-stratagem-descent-of-angels",
-    "rule": "detachment-the-angelic-host"
-  },
-  "blood-angels-stratagem-death-from-the-skies": {
-    "id": "blood-angels-stratagem-death-from-the-skies",
-    "title": "Death From The Skies",
-    "summary": "Your Movement phase, just after an ADEPTUS ASTARTES JUMP PACK unit Advances or Falls Back. That ADEPTUS ASTARTES JUMP PACK unit. Until the end of the turn, your unit can shoot and declare a charge after Advancing or Falling Back.",
-    "full": "Your Movement phase, just after an ADEPTUS ASTARTES JUMP PACK unit Advances or Falls Back. That ADEPTUS ASTARTES JUMP PACK unit. Until the end of the turn, your unit can shoot and declare a charge after Advancing or Falling Back.",
-    "glossary": "glossary-blood-angels-stratagem-death-from-the-skies",
-    "rule": "detachment-the-angelic-host"
   },
   "blood-angels-detachment-rule-a-noble-death-in-combat": {
     "id": "blood-angels-detachment-rule-a-noble-death-in-combat",
@@ -487,12 +183,12 @@ window.DG_TERMS={
     "glossary": "glossary-blood-angels-stratagem-glorious-sacrifice",
     "rule": "detachment-the-lost-brethren"
   },
-  "blood-angels-stratagem-armour-of-contempt-4": {
-    "id": "blood-angels-stratagem-armour-of-contempt-4",
+  "blood-angels-stratagem-armour-of-contempt-2": {
+    "id": "blood-angels-stratagem-armour-of-contempt-2",
     "title": "Armour of Contempt",
     "summary": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as a target. Until the attacking unit has finished making its attacks, worsen the Armour Penetration characteristic of attacks targeting your unit by 1.",
     "full": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as a target. Until the attacking unit has finished making its attacks, worsen the Armour Penetration characteristic of attacks targeting your unit by 1.",
-    "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-4",
+    "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-2",
     "rule": "detachment-the-lost-brethren"
   },
   "blood-angels-stratagem-final-retribution": {
@@ -574,6 +270,310 @@ window.DG_TERMS={
     "full": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged DEATH COMPANY unit has shot. That DEATH COMPANY unit. Your unit can make a surge move of up to D6\".",
     "glossary": "glossary-blood-angels-stratagem-rage-fuelled-response",
     "rule": "detachment-wrath-of-the-doomed"
+  },
+  "blood-angels-detachment-rule-legacy-of-the-angel-2": {
+    "id": "blood-angels-detachment-rule-legacy-of-the-angel-2",
+    "title": "Legacy of the Angel",
+    "summary": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+    "full": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+    "glossary": "glossary-blood-angels-detachment-rule-legacy-of-the-angel-2",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-enhancement-prescient-flash": {
+    "id": "blood-angels-enhancement-prescient-flash",
+    "title": "Prescient Flash",
+    "summary": "A flash of foresight and clarity sings through this warrior’s blood and guides his steps into battle. Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+    "full": "A flash of foresight and clarity sings through this warrior’s blood and guides his steps into battle. Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+    "glossary": "glossary-blood-angels-enhancement-prescient-flash",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-enhancement-troubling-visions": {
+    "id": "blood-angels-enhancement-troubling-visions",
+    "title": "Troubling Visions",
+    "summary": "In the long run, these strange and intrusive visions of bloodshed bode terribly ill for this champion of the Blood Angels. In this instance, though, they bring him closer than ever to the glory of his gene‑sire. Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this Enhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities (see left) are active for the bearer’s unit, instead of only two of them.",
+    "full": "In the long run, these strange and intrusive visions of bloodshed bode terribly ill for this champion of the Blood Angels. In this instance, though, they bring him closer than ever to the glory of his gene‑sire. Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this Enhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities (see left) are active for the bearer’s unit, instead of only two of them.",
+    "glossary": "glossary-blood-angels-enhancement-troubling-visions",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-enhancement-blazing-icon": {
+    "id": "blood-angels-enhancement-blazing-icon",
+    "title": "Blazing Icon",
+    "summary": "What was before merely a decorative blood drop pendant now shines with a seemingly miraculous light as bright as any star. The foe are forced to avert their gaze from its wrathful magnificence. Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+    "full": "What was before merely a decorative blood drop pendant now shines with a seemingly miraculous light as bright as any star. The foe are forced to avert their gaze from its wrathful magnificence. Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+    "glossary": "glossary-blood-angels-enhancement-blazing-icon",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-enhancement-ordained-sacrifice": {
+    "id": "blood-angels-enhancement-ordained-sacrifice",
+    "title": "Ordained Sacrifice",
+    "summary": "Knowing only too well the desperate and vital nature of the battle before him, this scion of Sanguinius echoes his Primarch’s resolute determination to fight on even beyond what seems the doors of certain death. Adeptus Astartes model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ■ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining.",
+    "full": "Knowing only too well the desperate and vital nature of the battle before him, this scion of Sanguinius echoes his Primarch’s resolute determination to fight on even beyond what seems the doors of certain death. Adeptus Astartes model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ■ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining.",
+    "glossary": "glossary-blood-angels-enhancement-ordained-sacrifice",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-stratagem-armour-of-contempt-3": {
+    "id": "blood-angels-stratagem-armour-of-contempt-3",
+    "title": "Armour of Contempt",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+    "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-3",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-stratagem-focused-fury": {
+    "id": "blood-angels-stratagem-focused-fury",
+    "title": "Focused Fury",
+    "summary": "Fight phase. One Adeptus Astartes unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Character unit, until the end of the phase, those weapons have the [LANCE] ability as well.",
+    "full": "Fight phase. One Adeptus Astartes unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Character unit, until the end of the phase, those weapons have the [LANCE] ability as well.",
+    "glossary": "glossary-blood-angels-stratagem-focused-fury",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-stratagem-instant-of-grace": {
+    "id": "blood-angels-stratagem-instant-of-grace",
+    "title": "Instant of Grace",
+    "summary": "Your Command phase. One Adeptus Astartes Infantry unit from your army. Select one non-Character model in your unit. Until the start of your next Command phase, your model has the Character keyword. Designer’s Note: While in effect, your model’s unit is therefore a Character unit, meaning it can interact with the Legacy of the Angel Detachment rule, in addition to other rules that interact with Character units.",
+    "full": "Your Command phase. One Adeptus Astartes Infantry unit from your army. Select one non-Character model in your unit. Until the start of your next Command phase, your model has the Character keyword. Designer’s Note: While in effect, your model’s unit is therefore a Character unit, meaning it can interact with the Legacy of the Angel Detachment rule, in addition to other rules that interact with Character units.",
+    "glossary": "glossary-blood-angels-stratagem-instant-of-grace",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-stratagem-strike-now-for-glory": {
+    "id": "blood-angels-stratagem-strike-now-for-glory",
+    "title": "Strike Now for Glory",
+    "summary": "Your Shooting phase. One Adeptus Astartes unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
+    "full": "Your Shooting phase. One Adeptus Astartes unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
+    "glossary": "glossary-blood-angels-stratagem-strike-now-for-glory",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-stratagem-in-the-shadow-of-great-wings": {
+    "id": "blood-angels-stratagem-in-the-shadow-of-great-wings",
+    "title": "In the Shadow of Great Wings",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Character unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Character unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+    "glossary": "glossary-blood-angels-stratagem-in-the-shadow-of-great-wings",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-stratagem-unto-the-burning-skies": {
+    "id": "blood-angels-stratagem-unto-the-burning-skies",
+    "title": "Unto the Burning Skies",
+    "summary": "End of your opponent’s Fight phase. One Adeptus Astartes Jump Pack unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units, unless it is The Sanguinor. Remove your unit from the battlefield and place it into Strategic Reserves.",
+    "full": "End of your opponent’s Fight phase. One Adeptus Astartes Jump Pack unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units, unless it is The Sanguinor. Remove your unit from the battlefield and place it into Strategic Reserves.",
+    "glossary": "glossary-blood-angels-stratagem-unto-the-burning-skies",
+    "rule": "detachment-angelic-inheritors"
+  },
+  "blood-angels-detachment-rule-upon-wings-of-fire": {
+    "id": "blood-angels-detachment-rule-upon-wings-of-fire",
+    "title": "Upon Wings of Fire",
+    "summary": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "full": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "glossary": "glossary-blood-angels-detachment-rule-upon-wings-of-fire",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-enhancement-archangels-shard": {
+    "id": "blood-angels-enhancement-archangels-shard",
+    "title": "Archangel's Shard",
+    "summary": "ADEPTUS ASTARTES JUMP PACK model only. The bearer's melee weapons have [ANTI-CHAOS 5+] and [LANCE].",
+    "full": "ADEPTUS ASTARTES JUMP PACK model only. The bearer's melee weapons have [ANTI-CHAOS 5+] and [LANCE].",
+    "glossary": "glossary-blood-angels-enhancement-archangels-shard",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-enhancement-artisan-of-war": {
+    "id": "blood-angels-enhancement-artisan-of-war",
+    "title": "Artisan of War",
+    "summary": "ADEPTUS ASTARTES JUMP PACK model only. Improve the Armour Penetration characteristic of the bearer's weapons by 1, and the bearer has a Save characteristic of 2+.",
+    "full": "ADEPTUS ASTARTES JUMP PACK model only. Improve the Armour Penetration characteristic of the bearer's weapons by 1, and the bearer has a Save characteristic of 2+.",
+    "glossary": "glossary-blood-angels-enhancement-artisan-of-war",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-enhancement-gleaming-pinions": {
+    "id": "blood-angels-enhancement-gleaming-pinions",
+    "title": "Gleaming Pinions",
+    "summary": "ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8\\\" of this unit and this unit is unengaged, this unit can make a Normal move of up to 6\\\".",
+    "full": "ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8\\\" of this unit and this unit is unengaged, this unit can make a Normal move of up to 6\\\".",
+    "glossary": "glossary-blood-angels-enhancement-gleaming-pinions",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-enhancement-visage-of-death": {
+    "id": "blood-angels-enhancement-visage-of-death",
+    "title": "Visage of Death",
+    "summary": "ADEPTUS ASTARTES JUMP PACK model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer must take a Battle-shock test.",
+    "full": "ADEPTUS ASTARTES JUMP PACK model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer must take a Battle-shock test.",
+    "glossary": "glossary-blood-angels-enhancement-visage-of-death",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-stratagem-unbridled-ardour": {
+    "id": "blood-angels-stratagem-unbridled-ardour",
+    "title": "Unbridled Ardour",
+    "summary": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls.",
+    "full": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls.",
+    "glossary": "glossary-blood-angels-stratagem-unbridled-ardour",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-stratagem-armour-of-contempt-4": {
+    "id": "blood-angels-stratagem-armour-of-contempt-4",
+    "title": "Armour of Contempt",
+    "summary": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army selected as a target. Until the attacking unit has finished, worsen the Armour Penetration characteristic of attacks targeting your unit by 1.",
+    "full": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army selected as a target. Until the attacking unit has finished, worsen the Armour Penetration characteristic of attacks targeting your unit by 1.",
+    "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-4",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-stratagem-angels-sacrifice": {
+    "id": "blood-angels-stratagem-angels-sacrifice",
+    "title": "Angel's Sacrifice",
+    "summary": "Start of the Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army. Until the end of the phase, each enemy model within Engagement Range of your unit must target your unit with all of its attacks.",
+    "full": "Start of the Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army. Until the end of the phase, each enemy model within Engagement Range of your unit must target your unit with all of its attacks.",
+    "glossary": "glossary-blood-angels-stratagem-angels-sacrifice",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-stratagem-martial-exemplars": {
+    "id": "blood-angels-stratagem-martial-exemplars",
+    "title": "Martial Exemplars",
+    "summary": "Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army that has not fought. Until the end of the phase, melee weapons equipped by models in your unit have [LETHAL HITS] and [PRECISION].",
+    "full": "Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army that has not fought. Until the end of the phase, melee weapons equipped by models in your unit have [LETHAL HITS] and [PRECISION].",
+    "glossary": "glossary-blood-angels-stratagem-martial-exemplars",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-stratagem-descent-of-angels": {
+    "id": "blood-angels-stratagem-descent-of-angels",
+    "title": "Descent of Angels",
+    "summary": "Your Movement phase. One ADEPTUS ASTARTES JUMP PACK unit arriving using Deep Strike. Your unit can be set up more than 6\\\" horizontally away from all enemy models. That unit is not eligible to declare a charge in the same turn.",
+    "full": "Your Movement phase. One ADEPTUS ASTARTES JUMP PACK unit arriving using Deep Strike. Your unit can be set up more than 6\\\" horizontally away from all enemy models. That unit is not eligible to declare a charge in the same turn.",
+    "glossary": "glossary-blood-angels-stratagem-descent-of-angels",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-stratagem-death-from-the-skies": {
+    "id": "blood-angels-stratagem-death-from-the-skies",
+    "title": "Death From The Skies",
+    "summary": "Your Movement phase, just after an ADEPTUS ASTARTES JUMP PACK unit Advances or Falls Back. That ADEPTUS ASTARTES JUMP PACK unit. Until the end of the turn, your unit can shoot and declare a charge after Advancing or Falling Back.",
+    "full": "Your Movement phase, just after an ADEPTUS ASTARTES JUMP PACK unit Advances or Falls Back. That ADEPTUS ASTARTES JUMP PACK unit. Until the end of the turn, your unit can shoot and declare a charge after Advancing or Falling Back.",
+    "glossary": "glossary-blood-angels-stratagem-death-from-the-skies",
+    "rule": "detachment-the-angelic-host"
+  },
+  "blood-angels-detachment-rule-maddened-ferocity": {
+    "id": "blood-angels-detachment-rule-maddened-ferocity",
+    "title": "Maddened Ferocity",
+    "summary": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+    "full": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+    "glossary": "glossary-blood-angels-detachment-rule-maddened-ferocity",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-enhancement-carmine-reliquary": {
+    "id": "blood-angels-enhancement-carmine-reliquary",
+    "title": "Carmine Reliquary",
+    "summary": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result.",
+    "full": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result.",
+    "glossary": "glossary-blood-angels-enhancement-carmine-reliquary",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-enhancement-master-of-the-red-thirst": {
+    "id": "blood-angels-enhancement-master-of-the-red-thirst",
+    "title": "Master of the Red Thirst",
+    "summary": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle. Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+    "full": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle. Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+    "glossary": "glossary-blood-angels-enhancement-master-of-the-red-thirst",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-enhancement-sanguinary-tear-aura": {
+    "id": "blood-angels-enhancement-sanguinary-tear-aura",
+    "title": "Sanguinary Tear (Aura)",
+    "summary": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
+    "full": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
+    "glossary": "glossary-blood-angels-enhancement-sanguinary-tear-aura",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-enhancement-angels-fang": {
+    "id": "blood-angels-enhancement-angels-fang",
+    "title": "Angel's Fang",
+    "summary": "This artificer ‑crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine‑spirit’s desire to drink the blood of the mightiest foes. Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character, Monster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability.",
+    "full": "This artificer ‑crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine‑spirit’s desire to drink the blood of the mightiest foes. Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character, Monster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability.",
+    "glossary": "glossary-blood-angels-enhancement-angels-fang",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-stratagem-a-grim-warning": {
+    "id": "blood-angels-stratagem-a-grim-warning",
+    "title": "A Grim Warning",
+    "summary": "Any phase. One Blood Angel s unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed. Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "full": "Any phase. One Blood Angel s unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed. Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "glossary": "glossary-blood-angels-stratagem-a-grim-warning",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-stratagem-insensate-rampage": {
+    "id": "blood-angels-stratagem-insensate-rampage",
+    "title": "Insensate Rampage",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+    "glossary": "glossary-blood-angels-stratagem-insensate-rampage",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-stratagem-limb-from-limb": {
+    "id": "blood-angels-stratagem-limb-from-limb",
+    "title": "Limb from Limb",
+    "summary": "Fight phase. One Adeptus Astartes unit from your army that made a Charge move this turn. Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit.",
+    "full": "Fight phase. One Adeptus Astartes unit from your army that made a Charge move this turn. Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit.",
+    "glossary": "glossary-blood-angels-stratagem-limb-from-limb",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-stratagem-deathless-duty": {
+    "id": "blood-angels-stratagem-deathless-duty",
+    "title": "Deathless Duty",
+    "summary": "Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+    "full": "Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+    "glossary": "glossary-blood-angels-stratagem-deathless-duty",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-stratagem-red-wrath": {
+    "id": "blood-angels-stratagem-red-wrath",
+    "title": "Red Wrath",
+    "summary": "Your Movement phase, just after an Adeptus Astartes unit from your army Advances. That Adeptus Astartes unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+    "full": "Your Movement phase, just after an Adeptus Astartes unit from your army Advances. That Adeptus Astartes unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+    "glossary": "glossary-blood-angels-stratagem-red-wrath",
+    "rule": "detachment-rage-cursed-onslaught"
+  },
+  "blood-angels-detachment-rule-wrath-of-angels": {
+    "id": "blood-angels-detachment-rule-wrath-of-angels",
+    "title": "Wrath of Angels",
+    "summary": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "full": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "glossary": "glossary-blood-angels-detachment-rule-wrath-of-angels",
+    "rule": "detachment-encarmine-speartip"
+  },
+  "blood-angels-enhancement-angelic-executioner": {
+    "id": "blood-angels-enhancement-angelic-executioner",
+    "title": "Angelic Executioner",
+    "summary": "This deadly duellist leads his battle‑brothers in masterful strikes capable of carving through their armoured or swarming foes with breathtaking fluidity. ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have: ▪ [LETHAL HITS]. ▪ Or: [SUSTAINED HITS 1].",
+    "full": "This deadly duellist leads his battle‑brothers in masterful strikes capable of carving through their armoured or swarming foes with breathtaking fluidity. ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have: ▪ [LETHAL HITS]. ▪ Or: [SUSTAINED HITS 1].",
+    "glossary": "glossary-blood-angels-enhancement-angelic-executioner",
+    "rule": "detachment-encarmine-speartip"
+  },
+  "blood-angels-enhancement-shadow-of-abomination": {
+    "id": "blood-angels-enhancement-shadow-of-abomination",
+    "title": "Shadow of Abomination",
+    "summary": "Granted a glimmer of foresight by his genetic inheritance, this Son of Sanguinius has identified a foe whose future is drenched in the blood of the Imperium. Such an enemy cannot be allowed to live. ADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D.",
+    "full": "Granted a glimmer of foresight by his genetic inheritance, this Son of Sanguinius has identified a foe whose future is drenched in the blood of the Imperium. Such an enemy cannot be allowed to live. ADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D.",
+    "glossary": "glossary-blood-angels-enhancement-shadow-of-abomination",
+    "rule": "detachment-encarmine-speartip"
+  },
+  "blood-angels-stratagem-judgement-of-the-golden-host": {
+    "id": "blood-angels-stratagem-judgement-of-the-golden-host",
+    "title": "Judgement of the Golden Host",
+    "summary": "Your Charge phase, when a friendly SANGUINARY GUARD unit from your army ends a charge move. That SANGUINARY GUARD unit. Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit: ▪ For each 3+, that enemy unit suffers 1 mortal wound.",
+    "full": "Your Charge phase, when a friendly SANGUINARY GUARD unit from your army ends a charge move. That SANGUINARY GUARD unit. Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit: ▪ For each 3+, that enemy unit suffers 1 mortal wound.",
+    "glossary": "glossary-blood-angels-stratagem-judgement-of-the-golden-host",
+    "rule": "detachment-encarmine-speartip"
+  },
+  "blood-angels-stratagem-inexorable-valour": {
+    "id": "blood-angels-stratagem-inexorable-valour",
+    "title": "Inexorable Valour",
+    "summary": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall‑back move, if that SANGUINARY GUARD unit is unengaged. That SANGUINARY GUARD unit. Your unit can make a normal move of up to D3+3\".",
+    "full": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall‑back move, if that SANGUINARY GUARD unit is unengaged. That SANGUINARY GUARD unit. Your unit can make a normal move of up to D3+3\".",
+    "glossary": "glossary-blood-angels-stratagem-inexorable-valour",
+    "rule": "detachment-encarmine-speartip"
+  },
+  "blood-angels-stratagem-blinding-blurs-of-vengeance": {
+    "id": "blood-angels-stratagem-blinding-blurs-of-vengeance",
+    "title": "Blinding Blurs of Vengeance",
+    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit. That SANGUINARY GUARD unit. Your unit has Stealth.",
+    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit. That SANGUINARY GUARD unit. Your unit has Stealth.",
+    "glossary": "glossary-blood-angels-stratagem-blinding-blurs-of-vengeance",
+    "rule": "detachment-encarmine-speartip"
   },
   "space-marines-detachment-rule-imperator-unleashed": {
     "id": "space-marines-detachment-rule-imperator-unleashed",

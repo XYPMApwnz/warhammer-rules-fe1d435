@@ -7,6 +7,7 @@ import vm from 'node:vm';
 
 const json=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const plain=value=>JSON.parse(JSON.stringify(value));
+const orderedWargear=value=>plain(value).sort((left,right)=>`${left.name}\0${left.value}`.localeCompare(`${right.name}\0${right.value}`));
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const loadWindow=(file,key)=>{const context={window:{}};vm.runInNewContext(fs.readFileSync(file,'utf8'),context,{filename:file});return context.window[key];};
 const catalog=loadWindow('roster-guides/points-data.js','WH_POINTS_CATALOG');
@@ -80,7 +81,7 @@ assert.ok(visibleText(targetHtml('blood-angels')).includes(normalize('Stormlance
 for(const [book,catalogKey] of [['tau-empire','t au empire'],['tyranids','tyranids']]){
   const config=json(`books/${book}/book.config.json`),source=pointsSource(book,config),paid=source.units.filter(unit=>unit.paidWargear?.length);
   assert.ok(paid.length,`${book} paid-wargear source inventory`);
-  for(const unit of paid)assert.deepEqual(plain(catalog[catalogKey].units[normalize(unit.title)].wargear),unit.paidWargear,`${book} ${unit.title} paidWargear must normalize to catalog wargear`);
+  for(const unit of paid)assert.deepEqual(orderedWargear(catalog[catalogKey].units[normalize(unit.title)].wargear),orderedWargear(unit.paidWargear),`${book} ${unit.title} paidWargear must normalize to catalog wargear`);
 }
 
 assert.deepEqual(plain(catalog['t au empire'].units['crisis starscythe battlesuits'].points.map(row=>row.value)),[100,110],'Starscythe factual catalog schedule remains 100/110; model-count resolution stays in Package 3');
@@ -89,7 +90,8 @@ assert.match(producer,/createPointsCatalog/,'Roster Guides must consume the effe
 assert.match(projectionProducer,/buildSharedCanonicalBook\(context,\{projectionOnly:true\}\)/,'all books must expose effective points through the shared effective-model build');
 assert.match(dgAdapter,/buildDeathGuardCanonicalModel/,'Death Guard points must follow its configured canonical model');
 assert.match(amAdapter,/createAdeptusMechanicusCanonicalModel/,'Adeptus Mechanicus points must follow its configured canonical model');
-assert.match(amAdapter,/readJson\(sourcePaths\.officialMfm\)/,'Adeptus Mechanicus Detachment order must follow its configured MFM owner');
+assert.match(amAdapter,/createEffectiveMfmArmyProjection\(config\.id\)/,'Adeptus Mechanicus facts must follow the centralized effective MFM owner');
+assert.doesNotMatch(amAdapter,/readJson\(sourcePaths\.officialMfm\)/,'Adeptus Mechanicus must not retain its per-book MFM snapshot as factual authority');
 assert.doesNotMatch(`${producer}\n${projectionProducer}`,/scripts[\\/]roster-data\.js|scripts[\\/]target-data\.js|reader\.html|mobile[\\/](?:generated|scripts)[\\/]/i,'points generation must not read generated consumer artifacts');
 
 console.log('Package 2 points consumer convergence QA: PASS');

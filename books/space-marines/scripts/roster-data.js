@@ -85,6 +85,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           },
@@ -155,6 +159,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -794,6 +802,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           },
@@ -860,6 +872,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -6532,7 +6548,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           }
         ],
-        "canSupport": [],
+        "canSupport": [
+          {
+            "unitId": "unit-assault-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-infernus-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          }
+        ],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
@@ -6564,7 +6601,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             }
           ],
-          "canSupport": [],
+          "canSupport": [
+            {
+              "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-infernus-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad",
+              "maxCharacters": 2
+            }
+          ],
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
@@ -14957,6 +15015,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           },
@@ -15019,6 +15081,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-bladeguard-ancient",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -18714,6 +18780,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           }
@@ -18764,6 +18834,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -19966,6 +20040,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           },
@@ -20032,6 +20110,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -30212,48 +30294,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   ],
   "detachments": [
     {
-      "id": "1st-company-task-force",
-      "title": "1st Company Task Force",
+      "id": "spearpoint-task-force",
+      "title": "SPEARPOINT TASK FORCE",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
-        "1st-company-task-force-extremis-level-threat"
-      ]
-    },
-    {
-      "id": "anvil-siege-force",
-      "title": "Anvil Siege Force",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "anvil-siege-force-shield-of-the-imperium"
-      ]
-    },
-    {
-      "id": "armoured-speartip",
-      "title": "Armoured Speartip",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "armoured-speartip-rapid-deployment"
-      ]
-    },
-    {
-      "id": "bastion-task-force",
-      "title": "Bastion Task Force",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "bastion-task-force-interlocking-tactics"
+        "spearpoint-task-force-storm-swift-onslaught"
       ]
     },
     {
       "id": "blade-of-ultramar",
-      "title": "Blade of Ultramar",
+      "title": "BLADE OF ULTRAMAR",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -30262,8 +30314,168 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ]
     },
     {
+      "id": "subversion-assets",
+      "title": "SUBVERSION ASSETS",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "subversion-assets-nowhere-to-hide"
+      ]
+    },
+    {
+      "id": "stormlance-task-force",
+      "title": "STORMLANCE TASK FORCE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "stormlance-task-force-lightning-assault"
+      ]
+    },
+    {
+      "id": "ironstorm-spearhead",
+      "title": "IRONSTORM SPEARHEAD",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "ironstorm-spearhead-armoured-wrath"
+      ]
+    },
+    {
+      "id": "fulguris-task-force",
+      "title": "FULGURIS TASK FORCE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "fulguris-task-force-skystrike"
+      ]
+    },
+    {
+      "id": "librarius-conclave",
+      "title": "LIBRARIUS CONCLAVE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "librarius-conclave-psychic-disciplines"
+      ]
+    },
+    {
+      "id": "hammer-of-avernii",
+      "title": "HAMMER OF AVERNII",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "hammer-of-avernii-calculated-annihilation"
+      ]
+    },
+    {
+      "id": "reclamation-force",
+      "title": "RECLAMATION FORCE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "reclamation-force-oath-of-reclamation"
+      ]
+    },
+    {
+      "id": "gladius-task-force",
+      "title": "GLADIUS TASK FORCE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "gladius-task-force-combat-doctrines"
+      ]
+    },
+    {
+      "id": "shadowmark-talon",
+      "title": "SHADOWMARK TALON",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "shadowmark-talon-masters-of-shadow"
+      ]
+    },
+    {
+      "id": "bastion-task-force",
+      "title": "BASTION TASK FORCE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "bastion-task-force-interlocking-tactics"
+      ]
+    },
+    {
+      "id": "forgefather-s-seekers",
+      "title": "FORGEFATHER’S SEEKERS",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "forgefather-s-seekers-vulkan-s-quest"
+      ]
+    },
+    {
+      "id": "vanguard-spearhead",
+      "title": "VANGUARD SPEARHEAD",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "vanguard-spearhead-shadow-masters"
+      ]
+    },
+    {
+      "id": "headhunter-task-force",
+      "title": "HEADHUNTER TASK FORCE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "headhunter-task-force-target-sighted"
+      ]
+    },
+    {
+      "id": "1st-company-task-force",
+      "title": "1ST COMPANY TASK FORCE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "1st-company-task-force-extremis-level-threat"
+      ]
+    },
+    {
+      "id": "orbital-assault-force",
+      "title": "ORBITAL ASSAULT FORCE",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "orbital-assault-force-rapid-drop-deployment"
+      ]
+    },
+    {
+      "id": "vengeful-hosts",
+      "title": "VENGEFUL HOSTS",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "vengeful-hosts-imperator-unleashed"
+      ]
+    },
+    {
       "id": "ceramite-sentinels",
-      "title": "Ceramite Sentinels",
+      "title": "CERAMITE SENTINELS",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -30283,7 +30495,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     },
     {
       "id": "firestorm-assault-force",
-      "title": "Firestorm Assault Force",
+      "title": "FIRESTORM ASSAULT FORCE",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -30292,191 +30504,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ]
     },
     {
-      "id": "forgefather-s-seekers",
-      "title": "FORGEFATHER’S SEEKERS",
+      "id": "armoured-speartip",
+      "title": "ARMOURED SPEARTIP",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
-        "forgefather-s-seekers-vulkan-s-quest"
+        "armoured-speartip-rapid-deployment"
       ]
     },
     {
-      "id": "fulguris-task-force",
-      "title": "Fulguris Task Force",
+      "id": "anvil-siege-force",
+      "title": "ANVIL SIEGE FORCE",
       "sourceBookId": "space-marines",
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
-        "fulguris-task-force-skystrike"
-      ]
-    },
-    {
-      "id": "gladius-task-force",
-      "title": "Gladius Task Force",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "gladius-task-force-combat-doctrines"
-      ]
-    },
-    {
-      "id": "hammer-of-avernii",
-      "title": "Hammer of Avernii",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "hammer-of-avernii-calculated-annihilation"
-      ]
-    },
-    {
-      "id": "headhunter-task-force",
-      "title": "Headhunter Task Force",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "headhunter-task-force-target-sighted"
-      ]
-    },
-    {
-      "id": "ironstorm-spearhead",
-      "title": "Ironstorm Spearhead",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "ironstorm-spearhead-armoured-wrath"
-      ]
-    },
-    {
-      "id": "librarius-conclave",
-      "title": "Librarius Conclave",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "librarius-conclave-psychic-disciplines"
-      ]
-    },
-    {
-      "id": "orbital-assault-force",
-      "title": "Orbital Assault Force",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "orbital-assault-force-rapid-drop-deployment"
-      ]
-    },
-    {
-      "id": "reclamation-force",
-      "title": "Reclamation Force",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "reclamation-force-oath-of-reclamation"
-      ]
-    },
-    {
-      "id": "spearpoint-task-force",
-      "title": "Spearpoint Task Force",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "spearpoint-task-force-storm-swift-onslaught"
-      ]
-    },
-    {
-      "id": "stormlance-task-force",
-      "title": "Stormlance Task Force",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "stormlance-task-force-lightning-assault"
-      ]
-    },
-    {
-      "id": "shadowmark-talon",
-      "title": "Shadowmark Talon",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "shadowmark-talon-masters-of-shadow"
-      ]
-    },
-    {
-      "id": "subversion-assets",
-      "title": "Subversion Assets",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "subversion-assets-nowhere-to-hide"
-      ]
-    },
-    {
-      "id": "vanguard-spearhead",
-      "title": "Vanguard Spearhead",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "vanguard-spearhead-shadow-masters"
-      ]
-    },
-    {
-      "id": "vengeful-hosts",
-      "title": "Vengeful Hosts",
-      "sourceBookId": "space-marines",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "vengeful-hosts-imperator-unleashed"
+        "anvil-siege-force-shield-of-the-imperium"
       ]
     }
   ],
   "detachmentRules": [
     {
-      "id": "1st-company-task-force-extremis-level-threat",
-      "title": "EXTREMIS-LEVEL THREAT",
-      "text": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
-      "sectionId": "1st-company-task-force-extremis-level-threat",
-      "detachmentId": "1st-company-task-force",
-      "detachmentTitle": "1st Company Task Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "anvil-siege-force-shield-of-the-imperium",
-      "title": "SHIELD OF THE IMPERIUM",
-      "text": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.",
-      "sectionId": "anvil-siege-force-shield-of-the-imperium",
-      "detachmentId": "anvil-siege-force",
-      "detachmentTitle": "Anvil Siege Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "armoured-speartip-rapid-deployment",
-      "title": "Rapid Deployment",
-      "text": "Each time an Adeptus Astartes unit from your army disembarks from a Transport (excluding Fly) that made a Normal or Advance move this phase (excluding those that arrived from Strategic Reserves), that disembarked unit can make a Normal move of up to D6\", or a Normal move of up to D3+3\" instead if that Transport is a Heavy Transport (see below). KEYWORDS Adeptus Astartes Transport units from your army (excluding Fly) that have a Wounds characteristic of 14+ have the Heavy Transport keyword.",
-      "sectionId": "armoured-speartip-rapid-deployment",
-      "detachmentId": "armoured-speartip",
-      "detachmentTitle": "Armoured Speartip",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "bastion-task-force-interlocking-tactics",
-      "title": "Interlocking Tactics",
-      "text": "Adeptus Astartes Battleline units from your army: ■ Are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back. ■ Are eligible to start to perform an Action in a turn in which they Advanced or Fell Back. Each time an Adeptus Astartes Battleline unit from your army is selected to attack, after resolving those attacks, select one enemy unit hit by one or more of those attacks. Until the end of the turn, that enemy unit is auspex scanned. Each time an Adeptus Astartes model from your army makes an attack that targets an auspex scanned unit, re‑roll a Hit roll of 1.",
-      "sectionId": "bastion-task-force-interlocking-tactics",
-      "detachmentId": "bastion-task-force",
-      "detachmentTitle": "Bastion Task Force",
+      "id": "spearpoint-task-force-storm-swift-onslaught",
+      "title": "Storm-Swift Onslaught",
+      "text": "Adeptus Astartes units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back. WRATH OF THE FIRST KHAN As swift and violent as a raging tempest, Suboden Khan drives into and through the heart of the enemy like a thrust lance. At the end of the Fight phase, if a Suboden Khan unit from your army destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\".",
+      "sectionId": "spearpoint-task-force-storm-swift-onslaught",
+      "detachmentId": "spearpoint-task-force",
+      "detachmentTitle": "SPEARPOINT TASK FORCE",
       "sourceBookId": "space-marines"
     },
     {
@@ -30485,7 +30540,151 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "At the start of up to three of your Command phases, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all Adeptus Astartes units from your army. You cannot select a Combat Doctrine you have already selected this battle, unless a friendly Marneus Calgar model is on the battlefield. Devastator Doctrine The Codex Astartes details the strategic value of overwhelming firepower. This unit is eligible to shoot in a turn in which it Advanced. Tactical Doctrine The Codex lays out strategies for seizing the initiative. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Assault Doctrine The Codex Astartes leaves no doubt that the killing blow must be delivered with a decisive close‑quarters strike. This unit is eligible to declare a charge in a turn in which it Advanced.",
       "sectionId": "blade-of-ultramar-mastered-doctrines",
       "detachmentId": "blade-of-ultramar",
-      "detachmentTitle": "Blade of Ultramar",
+      "detachmentTitle": "BLADE OF ULTRAMAR",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "subversion-assets-nowhere-to-hide",
+      "title": "Nowhere to Hide",
+      "text": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: ▪ While a unit is detected, that unit has +3\" detection range.",
+      "sectionId": "subversion-assets-nowhere-to-hide",
+      "detachmentId": "subversion-assets",
+      "detachmentTitle": "SUBVERSION ASSETS",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "stormlance-task-force-lightning-assault",
+      "title": "LIGHTNING ASSAULT",
+      "text": "ADEPTUS ASTARTES units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+      "sectionId": "stormlance-task-force-lightning-assault",
+      "detachmentId": "stormlance-task-force",
+      "detachmentTitle": "STORMLANCE TASK FORCE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "ironstorm-spearhead-armoured-wrath",
+      "title": "ARMOURED WRATH",
+      "text": "Once per phase for each ADEPTUS ASTARTES unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
+      "sectionId": "ironstorm-spearhead-armoured-wrath",
+      "detachmentId": "ironstorm-spearhead",
+      "detachmentTitle": "IRONSTORM SPEARHEAD",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "fulguris-task-force-skystrike",
+      "title": "Skystrike",
+      "text": "▪ Friendly LAND SPEEDER/STORM SPEEDER HAILSTRIKE/STORM SPEEDER HAMMERSTRIKE/STORM SPEEDER THUNDERSTRIKE units have SPEEDER. ▪ In your first Movement phase, friendly SPEEDER units can make an ingress move.",
+      "sectionId": "fulguris-task-force-skystrike",
+      "detachmentId": "fulguris-task-force",
+      "detachmentTitle": "FULGURIS TASK FORCE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "librarius-conclave-psychic-disciplines",
+      "title": "Psychic Disciplines",
+      "text": "At the start of the battle round, select one of the following Psychic Disciplines abilities. Friendly ADEPTUS ASTARTES PSYKER units have that ability until the end of the battle round. ▪ Biomancy Discipline: This unit has +2\" M. ▪ Divination Discipline: This unit’s attacks can: ▫ Re-roll hit rolls of 1. ▫ Re-roll wound rolls of 1. ▪ Pyromancy Discipline: This unit’s ranged attacks that target an enemy unit within 12\" of this unit have +1 AP. ▪ Telekinesis Discipline: Ranged attacks that target this unit have -1 S. ▪ Telepathy Discipline: This unit’s attacks can ignore modifiers to BS, WS and hit rolls.",
+      "sectionId": "librarius-conclave-psychic-disciplines",
+      "detachmentId": "librarius-conclave",
+      "detachmentTitle": "LIBRARIUS CONCLAVE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "hammer-of-avernii-calculated-annihilation",
+      "title": "Calculated Annihilation",
+      "text": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re‑roll a Wound roll of 1. RECALCULATING Caanok Var ensures every bolt shell is directed where it serves the greatest purpose. Once per battle round, after your Oath of Moment target is destroyed, if a Caanok Var model from your army is on the battlefield, select one enemy unit visible to that model. That enemy unit becomes your Oath of Moment target until you select a new one.",
+      "sectionId": "hammer-of-avernii-calculated-annihilation",
+      "detachmentId": "hammer-of-avernii",
+      "detachmentTitle": "HAMMER OF AVERNII",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "reclamation-force-oath-of-reclamation",
+      "title": "Oath of Reclamation",
+      "text": "■ Each time an Adeptus Astartes model from your army makes a melee attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1. ■ Each time an attack targets an Adeptus Astartes unit from your army, if your unit is within range of an objective marker that you controlled at the start of the phase and if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit or your unit has the Titus keyword, subtract 1 from the Wound roll.",
+      "sectionId": "reclamation-force-oath-of-reclamation",
+      "detachmentId": "reclamation-force",
+      "detachmentTitle": "RECLAMATION FORCE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "gladius-task-force-combat-doctrines",
+      "title": "COMBAT DOCTRINES",
+      "text": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Combat Doctrine once per battle.",
+      "sectionId": "gladius-task-force-combat-doctrines",
+      "detachmentId": "gladius-task-force",
+      "detachmentTitle": "GLADIUS TASK FORCE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "shadowmark-talon-masters-of-shadow",
+      "title": "Masters of Shadow",
+      "text": "Each time a ranged attack targets an Adeptus Astartes unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack. UNPARALLELED TACTICIAN A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle‑brothers to pull the enemy out of formation. Once per battle round, if an Aethon Shaan model from your army is on the battlefield, you can use the Into Darkness Stratagem for 0CP .",
+      "sectionId": "shadowmark-talon-masters-of-shadow",
+      "detachmentId": "shadowmark-talon",
+      "detachmentTitle": "SHADOWMARK TALON",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "bastion-task-force-interlocking-tactics",
+      "title": "Interlocking Tactics",
+      "text": "Adeptus Astartes Battleline units from your army: ■ Are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back. ■ Are eligible to start to perform an Action in a turn in which they Advanced or Fell Back. Each time an Adeptus Astartes Battleline unit from your army is selected to attack, after resolving those attacks, select one enemy unit hit by one or more of those attacks. Until the end of the turn, that enemy unit is auspex scanned. Each time an Adeptus Astartes model from your army makes an attack that targets an auspex scanned unit, re‑roll a Hit roll of 1.",
+      "sectionId": "bastion-task-force-interlocking-tactics",
+      "detachmentId": "bastion-task-force",
+      "detachmentTitle": "BASTION TASK FORCE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "forgefather-s-seekers-vulkan-s-quest",
+      "title": "Vulkan's Quest",
+      "text": "Ranged weapons equipped by Adeptus Astartes models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack. SEEKER’S COMPANIONS If your army includes Vulkan He’stan , during your turn, each Infernus Squad unit from your army is eligible to do one of the following: ■ Start to perform an Action in a turn in which it Advanced. ■ Shoot in a turn in which it started to perform an Action.",
+      "sectionId": "forgefather-s-seekers-vulkan-s-quest",
+      "detachmentId": "forgefather-s-seekers",
+      "detachmentTitle": "FORGEFATHER’S SEEKERS",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "vanguard-spearhead-shadow-masters",
+      "title": "SHADOW MASTERS",
+      "text": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
+      "sectionId": "vanguard-spearhead-shadow-masters",
+      "detachmentId": "vanguard-spearhead",
+      "detachmentTitle": "VANGUARD SPEARHEAD",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "headhunter-task-force-target-sighted",
+      "title": "Target Sighted",
+      "text": "Each time a Tank Ace unit from your army (see below) Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a Tank Ace unit from your army shoots in your Shooting phase, if that unit did not Advance this turn, you can re‑roll the Damage roll. KEYWORDS Adeptus Astartes Vehicle units from your army (excluding Fortifications , Drop Pods, Walkers and units that can Fly) have the Tank Ace keyword. In the Muster Armies step, you can select up to three Tank Ace units from your army to gain the Character keyword. Designer’s Note: This means that the selected units can be given Enhancements, and one of them can be selected as your Warlord .",
+      "sectionId": "headhunter-task-force-target-sighted",
+      "detachmentId": "headhunter-task-force",
+      "detachmentTitle": "HEADHUNTER TASK FORCE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "1st-company-task-force-extremis-level-threat",
+      "title": "EXTREMIS-LEVEL THREAT",
+      "text": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
+      "sectionId": "1st-company-task-force-extremis-level-threat",
+      "detachmentId": "1st-company-task-force",
+      "detachmentTitle": "1ST COMPANY TASK FORCE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "orbital-assault-force-rapid-drop-deployment",
+      "title": "Rapid-drop Deployment",
+      "text": "At the start of the Declare Battle Formations step, select a number of Adeptus Astartes units (excluding Titanic units) from your army based on the battle size, as shown below. Models in those units have the Deep Strike ability. BATTLE SIZE NUMBER OF UNITS Incursion 2 Strike Force 3 Onslaught 4 Each time an Adeptus Astartes model from your army makes an attack, if it was set up on the battlefield this turn, re‑roll a Wound roll of 1. If it disembarked from a Drop Pod this turn, re‑roll a Hit roll of 1 as well.",
+      "sectionId": "orbital-assault-force-rapid-drop-deployment",
+      "detachmentId": "orbital-assault-force",
+      "detachmentTitle": "ORBITAL ASSAULT FORCE",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "id": "vengeful-hosts-imperator-unleashed",
+      "title": "Imperator Unleashed",
+      "text": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.",
+      "sectionId": "vengeful-hosts-imperator-unleashed",
+      "detachmentId": "vengeful-hosts",
+      "detachmentTitle": "VENGEFUL HOSTS",
       "sourceBookId": "space-marines"
     },
     {
@@ -30494,7 +30693,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Each time an Adeptus Astartes model from your army makes an attack, if that model’s unit is within a terrain feature, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Adeptus Astartes units from your army gain the Entrenched keyword while all of the following are true: ■ That unit is within a terrain feature. ■ That unit was not set up on the battlefield this turn. ■ No model in that unit has moved more than 3” this turn.",
       "sectionId": "ceramite-sentinels-adaptive-defence",
       "detachmentId": "ceramite-sentinels",
-      "detachmentTitle": "Ceramite Sentinels",
+      "detachmentTitle": "CERAMITE SENTINELS",
       "sourceBookId": "space-marines"
     },
     {
@@ -30512,179 +30711,45 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
       "sectionId": "firestorm-assault-force-close-range-eradication",
       "detachmentId": "firestorm-assault-force",
-      "detachmentTitle": "Firestorm Assault Force",
+      "detachmentTitle": "FIRESTORM ASSAULT FORCE",
       "sourceBookId": "space-marines"
     },
     {
-      "id": "forgefather-s-seekers-vulkan-s-quest",
-      "title": "Vulkan's Quest",
-      "text": "Ranged weapons equipped by Adeptus Astartes models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack. SEEKER’S COMPANIONS If your army includes Vulkan He’stan , during your turn, each Infernus Squad unit from your army is eligible to do one of the following: ■ Start to perform an Action in a turn in which it Advanced. ■ Shoot in a turn in which it started to perform an Action.",
-      "sectionId": "forgefather-s-seekers-vulkan-s-quest",
-      "detachmentId": "forgefather-s-seekers",
-      "detachmentTitle": "FORGEFATHER’S SEEKERS",
+      "id": "armoured-speartip-rapid-deployment",
+      "title": "Rapid Deployment",
+      "text": "Each time an Adeptus Astartes unit from your army disembarks from a Transport (excluding Fly) that made a Normal or Advance move this phase (excluding those that arrived from Strategic Reserves), that disembarked unit can make a Normal move of up to D6\", or a Normal move of up to D3+3\" instead if that Transport is a Heavy Transport (see below). KEYWORDS Adeptus Astartes Transport units from your army (excluding Fly) that have a Wounds characteristic of 14+ have the Heavy Transport keyword.",
+      "sectionId": "armoured-speartip-rapid-deployment",
+      "detachmentId": "armoured-speartip",
+      "detachmentTitle": "ARMOURED SPEARTIP",
       "sourceBookId": "space-marines"
     },
     {
-      "id": "fulguris-task-force-skystrike",
-      "title": "Skystrike",
-      "text": "▪ Friendly LAND SPEEDER/STORM SPEEDER HAILSTRIKE/STORM SPEEDER HAMMERSTRIKE/STORM SPEEDER THUNDERSTRIKE units have SPEEDER. ▪ In your first Movement phase, friendly SPEEDER units can make an ingress move.",
-      "sectionId": "fulguris-task-force-skystrike",
-      "detachmentId": "fulguris-task-force",
-      "detachmentTitle": "Fulguris Task Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "gladius-task-force-combat-doctrines",
-      "title": "COMBAT DOCTRINES",
-      "text": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Combat Doctrine once per battle.",
-      "sectionId": "gladius-task-force-combat-doctrines",
-      "detachmentId": "gladius-task-force",
-      "detachmentTitle": "Gladius Task Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "hammer-of-avernii-calculated-annihilation",
-      "title": "Calculated Annihilation",
-      "text": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re‑roll a Wound roll of 1. RECALCULATING Caanok Var ensures every bolt shell is directed where it serves the greatest purpose. Once per battle round, after your Oath of Moment target is destroyed, if a Caanok Var model from your army is on the battlefield, select one enemy unit visible to that model. That enemy unit becomes your Oath of Moment target until you select a new one.",
-      "sectionId": "hammer-of-avernii-calculated-annihilation",
-      "detachmentId": "hammer-of-avernii",
-      "detachmentTitle": "Hammer of Avernii",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "headhunter-task-force-target-sighted",
-      "title": "Target Sighted",
-      "text": "Each time a Tank Ace unit from your army (see below) Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a Tank Ace unit from your army shoots in your Shooting phase, if that unit did not Advance this turn, you can re‑roll the Damage roll. KEYWORDS Adeptus Astartes Vehicle units from your army (excluding Fortifications , Drop Pods, Walkers and units that can Fly) have the Tank Ace keyword. In the Muster Armies step, you can select up to three Tank Ace units from your army to gain the Character keyword. Designer’s Note: This means that the selected units can be given Enhancements, and one of them can be selected as your Warlord .",
-      "sectionId": "headhunter-task-force-target-sighted",
-      "detachmentId": "headhunter-task-force",
-      "detachmentTitle": "Headhunter Task Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "ironstorm-spearhead-armoured-wrath",
-      "title": "ARMOURED WRATH",
-      "text": "Once per phase for each ADEPTUS ASTARTES unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
-      "sectionId": "ironstorm-spearhead-armoured-wrath",
-      "detachmentId": "ironstorm-spearhead",
-      "detachmentTitle": "Ironstorm Spearhead",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "librarius-conclave-psychic-disciplines",
-      "title": "Psychic Disciplines",
-      "text": "At the start of the battle round, select one of the following Psychic Disciplines abilities. Friendly ADEPTUS ASTARTES PSYKER units have that ability until the end of the battle round. ▪ Biomancy Discipline: This unit has +2\" M. ▪ Divination Discipline: This unit’s attacks can: ▫ Re-roll hit rolls of 1. ▫ Re-roll wound rolls of 1. ▪ Pyromancy Discipline: This unit’s ranged attacks that target an enemy unit within 12\" of this unit have +1 AP. ▪ Telekinesis Discipline: Ranged attacks that target this unit have -1 S. ▪ Telepathy Discipline: This unit’s attacks can ignore modifiers to BS, WS and hit rolls.",
-      "sectionId": "librarius-conclave-psychic-disciplines",
-      "detachmentId": "librarius-conclave",
-      "detachmentTitle": "Librarius Conclave",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "orbital-assault-force-rapid-drop-deployment",
-      "title": "Rapid-drop Deployment",
-      "text": "At the start of the Declare Battle Formations step, select a number of Adeptus Astartes units (excluding Titanic units) from your army based on the battle size, as shown below. Models in those units have the Deep Strike ability. BATTLE SIZE NUMBER OF UNITS Incursion 2 Strike Force 3 Onslaught 4 Each time an Adeptus Astartes model from your army makes an attack, if it was set up on the battlefield this turn, re‑roll a Wound roll of 1. If it disembarked from a Drop Pod this turn, re‑roll a Hit roll of 1 as well.",
-      "sectionId": "orbital-assault-force-rapid-drop-deployment",
-      "detachmentId": "orbital-assault-force",
-      "detachmentTitle": "Orbital Assault Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "reclamation-force-oath-of-reclamation",
-      "title": "Oath of Reclamation",
-      "text": "■ Each time an Adeptus Astartes model from your army makes a melee attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1. ■ Each time an attack targets an Adeptus Astartes unit from your army, if your unit is within range of an objective marker that you controlled at the start of the phase and if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit or your unit has the Titus keyword, subtract 1 from the Wound roll.",
-      "sectionId": "reclamation-force-oath-of-reclamation",
-      "detachmentId": "reclamation-force",
-      "detachmentTitle": "Reclamation Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "spearpoint-task-force-storm-swift-onslaught",
-      "title": "Storm-Swift Onslaught",
-      "text": "Adeptus Astartes units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back. WRATH OF THE FIRST KHAN As swift and violent as a raging tempest, Suboden Khan drives into and through the heart of the enemy like a thrust lance. At the end of the Fight phase, if a Suboden Khan unit from your army destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\".",
-      "sectionId": "spearpoint-task-force-storm-swift-onslaught",
-      "detachmentId": "spearpoint-task-force",
-      "detachmentTitle": "Spearpoint Task Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "stormlance-task-force-lightning-assault",
-      "title": "LIGHTNING ASSAULT",
-      "text": "ADEPTUS ASTARTES units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
-      "sectionId": "stormlance-task-force-lightning-assault",
-      "detachmentId": "stormlance-task-force",
-      "detachmentTitle": "Stormlance Task Force",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "shadowmark-talon-masters-of-shadow",
-      "title": "Masters of Shadow",
-      "text": "Each time a ranged attack targets an Adeptus Astartes unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack. UNPARALLELED TACTICIAN A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle‑brothers to pull the enemy out of formation. Once per battle round, if an Aethon Shaan model from your army is on the battlefield, you can use the Into Darkness Stratagem for 0CP .",
-      "sectionId": "shadowmark-talon-masters-of-shadow",
-      "detachmentId": "shadowmark-talon",
-      "detachmentTitle": "Shadowmark Talon",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "subversion-assets-nowhere-to-hide",
-      "title": "Nowhere to Hide",
-      "text": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: ▪ While a unit is detected, that unit has +3\" detection range.",
-      "sectionId": "subversion-assets-nowhere-to-hide",
-      "detachmentId": "subversion-assets",
-      "detachmentTitle": "Subversion Assets",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "vanguard-spearhead-shadow-masters",
-      "title": "SHADOW MASTERS",
-      "text": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
-      "sectionId": "vanguard-spearhead-shadow-masters",
-      "detachmentId": "vanguard-spearhead",
-      "detachmentTitle": "Vanguard Spearhead",
-      "sourceBookId": "space-marines"
-    },
-    {
-      "id": "vengeful-hosts-imperator-unleashed",
-      "title": "Imperator Unleashed",
-      "text": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.",
-      "sectionId": "vengeful-hosts-imperator-unleashed",
-      "detachmentId": "vengeful-hosts",
-      "detachmentTitle": "Vengeful Hosts",
+      "id": "anvil-siege-force-shield-of-the-imperium",
+      "title": "SHIELD OF THE IMPERIUM",
+      "text": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.",
+      "sectionId": "anvil-siege-force-shield-of-the-imperium",
+      "detachmentId": "anvil-siege-force",
+      "detachmentTitle": "ANVIL SIEGE FORCE",
       "sourceBookId": "space-marines"
     }
   ],
   "enhancements": [
     {
-      "title": "THE IMPERIUM’S SWORD",
-      "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+      "title": "Chogorian Huntmaster",
+      "text": "Adeptus Astartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
       "value": 25,
-      "detachment": "1st Company Task Force",
+      "detachment": "SPEARPOINT TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "MOUNTED"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
@@ -30693,26 +30758,446 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "1st-company-task-force-the-imperiums-sword",
-      "sourceAuthority": "secondary",
-      "sourceId": "1st-company-task-force-the-imperiums-sword",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
+      "id": "chogorian-huntmaster",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        16
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          16
+        ]
       },
-      "ruleId": "1st-company-task-force-the-imperiums-sword",
-      "detachmentId": "1st-company-task-force",
+      "sourceId": "chogorian-huntmaster",
+      "ruleId": "chogorian-huntmaster",
+      "detachmentId": "spearpoint-task-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "1st-company-task-force-the-imperiums-sword",
-      "canonicalEnhancementId": "1st-company-task-force-the-imperiums-sword",
-      "canonicalDetachmentId": "1st-company-task-force"
+      "legacyKey": "chogorian-huntmaster",
+      "canonicalEnhancementId": "chogorian-huntmaster",
+      "canonicalDetachmentId": "spearpoint-task-force"
     },
     {
-      "title": "FEAR MADE MANIFEST (AURA)",
-      "text": "ADEPTUS ASTARTES model only. While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
-      "value": 30,
-      "detachment": "1st Company Task Force",
+      "title": "Hunter’s Eye",
+      "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
+      "value": 20,
+      "detachment": "SPEARPOINT TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "hunter-s-eye",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        16
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          16
+        ]
+      },
+      "sourceId": "hunter-s-eye",
+      "ruleId": "hunter-s-eye",
+      "detachmentId": "spearpoint-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "hunter-s-eye",
+      "canonicalEnhancementId": "hunter-s-eye",
+      "canonicalDetachmentId": "spearpoint-task-force"
+    },
+    {
+      "title": "Spearpoint Paragon",
+      "text": "Adeptus Astartes model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.",
+      "value": 25,
+      "detachment": "SPEARPOINT TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "spearpoint-paragon",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        16
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          16
+        ]
+      },
+      "sourceId": "spearpoint-paragon",
+      "ruleId": "spearpoint-paragon",
+      "detachmentId": "spearpoint-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "spearpoint-paragon",
+      "canonicalEnhancementId": "spearpoint-paragon",
+      "canonicalDetachmentId": "spearpoint-task-force"
+    },
+    {
+      "title": "Stormseers' Wisdom",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit.",
+      "value": 15,
+      "detachment": "SPEARPOINT TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "stormseers-wisdom",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        16
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          16
+        ]
+      },
+      "sourceId": "stormseers-wisdom",
+      "ruleId": "stormseers-wisdom",
+      "detachmentId": "spearpoint-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "stormseers-wisdom",
+      "canonicalEnhancementId": "stormseers-wisdom",
+      "canonicalDetachmentId": "spearpoint-task-force"
+    },
+    {
+      "title": "Armour of Antoninus",
+      "text": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+      "value": 20,
+      "detachment": "BLADE OF ULTRAMAR",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "armour-of-antoninus",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        12
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          12
+        ]
+      },
+      "sourceId": "armour-of-antoninus",
+      "ruleId": "armour-of-antoninus",
+      "detachmentId": "blade-of-ultramar",
+      "sourceBookId": "space-marines",
+      "legacyKey": "armour-of-antoninus",
+      "canonicalEnhancementId": "armour-of-antoninus",
+      "canonicalDetachmentId": "blade-of-ultramar"
+    },
+    {
+      "title": "Oath of Macragge",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
+      "value": 15,
+      "detachment": "BLADE OF ULTRAMAR",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "oath-of-macragge",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        12
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          12
+        ]
+      },
+      "sourceId": "oath-of-macragge",
+      "ruleId": "oath-of-macragge",
+      "detachmentId": "blade-of-ultramar",
+      "sourceBookId": "space-marines",
+      "legacyKey": "oath-of-macragge",
+      "canonicalEnhancementId": "oath-of-macragge",
+      "canonicalDetachmentId": "blade-of-ultramar"
+    },
+    {
+      "title": "Student of the Codex",
+      "text": "Adeptus Astartes model only. At the start of your Command phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, until the start of your next Command phase, the Tactical Doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army).",
+      "value": 20,
+      "detachment": "BLADE OF ULTRAMAR",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "student-of-the-codex",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        12
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          12
+        ]
+      },
+      "sourceId": "student-of-the-codex",
+      "ruleId": "student-of-the-codex",
+      "detachmentId": "blade-of-ultramar",
+      "sourceBookId": "space-marines",
+      "legacyKey": "student-of-the-codex",
+      "canonicalEnhancementId": "student-of-the-codex",
+      "canonicalDetachmentId": "blade-of-ultramar"
+    },
+    {
+      "title": "Veteran of Behemoth",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can re‑roll Advance rolls made for that unit.",
+      "value": 25,
+      "detachment": "BLADE OF ULTRAMAR",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "veteran-of-behemoth",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        12
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          12
+        ]
+      },
+      "sourceId": "veteran-of-behemoth",
+      "ruleId": "veteran-of-behemoth",
+      "detachmentId": "blade-of-ultramar",
+      "sourceBookId": "space-marines",
+      "legacyKey": "veteran-of-behemoth",
+      "canonicalEnhancementId": "veteran-of-behemoth",
+      "canonicalDetachmentId": "blade-of-ultramar"
+    },
+    {
+      "title": "Death in the Dark (Upgrade)",
+      "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
+      "value": 15,
+      "detachment": "SUBVERSION ASSETS",
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "INFANTRY",
+            "PHOBOS"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "death-in-the-dark",
+      "kind": "Upgrade",
+      "points": 15,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          5
+        ]
+      },
+      "sourceId": "death-in-the-dark",
+      "ruleId": "death-in-the-dark",
+      "detachmentId": "subversion-assets",
+      "sourceBookId": "space-marines",
+      "legacyKey": "death-in-the-dark",
+      "canonicalEnhancementId": "death-in-the-dark",
+      "canonicalDetachmentId": "subversion-assets"
+    },
+    {
+      "title": "Shroud Field",
+      "text": "PHOBOS model only. This model has: ▪ Lone Operative. ▪ Stealth.",
+      "value": 20,
+      "detachment": "SUBVERSION ASSETS",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "shroud-field",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          5
+        ]
+      },
+      "sourceId": "shroud-field",
+      "ruleId": "shroud-field",
+      "detachmentId": "subversion-assets",
+      "sourceBookId": "space-marines",
+      "legacyKey": "shroud-field",
+      "canonicalEnhancementId": "shroud-field",
+      "canonicalDetachmentId": "subversion-assets"
+    },
+    {
+      "title": "FURY OF THE STORM",
+      "text": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
+      "value": 25,
+      "detachment": "STORMLANCE TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-chaplain-on-bike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "stormlance-task-force-fury-of-the-storm",
+      "sourceAuthority": "secondary",
+      "sourceId": "stormlance-task-force-fury-of-the-storm",
+      "ruleId": "stormlance-task-force-fury-of-the-storm",
+      "detachmentId": "stormlance-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "stormlance-task-force-fury-of-the-storm",
+      "canonicalEnhancementId": "stormlance-task-force-fury-of-the-storm",
+      "canonicalDetachmentId": "stormlance-task-force"
+    },
+    {
+      "title": "PORTENTS OF WISDOM",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
+      "value": 15,
+      "detachment": "STORMLANCE TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -30749,30 +31234,737 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "1st-company-task-force-fear-made-manifest-aura",
+      "id": "stormlance-task-force-portents-of-wisdom",
       "sourceAuthority": "secondary",
-      "ruleId": "1st-company-task-force-fear-made-manifest-aura",
-      "detachmentId": "1st-company-task-force",
+      "sourceId": "stormlance-task-force-portents-of-wisdom",
+      "ruleId": "stormlance-task-force-portents-of-wisdom",
+      "detachmentId": "stormlance-task-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "1st-company-task-force-fear-made-manifest-aura",
-      "canonicalEnhancementId": "enhancement-fear-made-manifest",
-      "canonicalDetachmentId": "1st-company-task-force",
+      "legacyKey": "stormlance-task-force-portents-of-wisdom",
+      "canonicalEnhancementId": "stormlance-task-force-portents-of-wisdom",
+      "canonicalDetachmentId": "stormlance-task-force"
+    },
+    {
+      "title": "FEINTING WITHDRAWAL",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
+      "value": 10,
+      "detachment": "STORMLANCE TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "stormlance-task-force-feinting-withdrawal",
+      "sourceAuthority": "secondary",
+      "sourceId": "stormlance-task-force-feinting-withdrawal",
+      "ruleId": "stormlance-task-force-feinting-withdrawal",
+      "detachmentId": "stormlance-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "stormlance-task-force-feinting-withdrawal",
+      "canonicalEnhancementId": "stormlance-task-force-feinting-withdrawal",
+      "canonicalDetachmentId": "stormlance-task-force"
+    },
+    {
+      "title": "HUNTER’S INSTINCTS",
+      "text": "ADEPTUS ASTARTES MOUNTED model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "value": 25,
+      "detachment": "STORMLANCE TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-chaplain-on-bike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "stormlance-task-force-hunters-instincts",
+      "sourceAuthority": "secondary",
+      "sourceId": "stormlance-task-force-hunters-instincts",
+      "ruleId": "stormlance-task-force-hunters-instincts",
+      "detachmentId": "stormlance-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "stormlance-task-force-hunters-instincts",
+      "canonicalEnhancementId": "stormlance-task-force-hunters-instincts",
+      "canonicalDetachmentId": "stormlance-task-force"
+    },
+    {
+      "title": "TARGET AUGURY WEB",
+      "text": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
+      "value": 30,
+      "detachment": "IRONSTORM SPEARHEAD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "ironstorm-spearhead-target-augury-web",
+      "sourceAuthority": "secondary",
+      "sourceId": "ironstorm-spearhead-target-augury-web",
+      "ruleId": "ironstorm-spearhead-target-augury-web",
+      "detachmentId": "ironstorm-spearhead",
+      "sourceBookId": "space-marines",
+      "legacyKey": "ironstorm-spearhead-target-augury-web",
+      "canonicalEnhancementId": "ironstorm-spearhead-target-augury-web",
+      "canonicalDetachmentId": "ironstorm-spearhead"
+    },
+    {
+      "title": "THE FLESH IS WEAK",
+      "text": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
+      "value": 20,
+      "detachment": "IRONSTORM SPEARHEAD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "ironstorm-spearhead-the-flesh-is-weak",
+      "sourceAuthority": "secondary",
+      "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
+      "ruleId": "ironstorm-spearhead-the-flesh-is-weak",
+      "detachmentId": "ironstorm-spearhead",
+      "sourceBookId": "space-marines",
+      "legacyKey": "ironstorm-spearhead-the-flesh-is-weak",
+      "canonicalEnhancementId": "ironstorm-spearhead-the-flesh-is-weak",
+      "canonicalDetachmentId": "ironstorm-spearhead"
+    },
+    {
+      "title": "ADEPT OF THE OMNISSIAH",
+      "text": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+      "value": 35,
+      "detachment": "IRONSTORM SPEARHEAD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "sourceAuthority": "secondary",
+      "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "ruleId": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "detachmentId": "ironstorm-spearhead",
+      "sourceBookId": "space-marines",
+      "legacyKey": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "canonicalEnhancementId": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "canonicalDetachmentId": "ironstorm-spearhead"
+    },
+    {
+      "title": "MASTER OF MACHINE WAR",
+      "text": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
+      "value": 20,
+      "detachment": "IRONSTORM SPEARHEAD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "ironstorm-spearhead-master-of-machine-war",
+      "sourceAuthority": "secondary",
+      "sourceId": "ironstorm-spearhead-master-of-machine-war",
+      "ruleId": "ironstorm-spearhead-master-of-machine-war",
+      "detachmentId": "ironstorm-spearhead",
+      "sourceBookId": "space-marines",
+      "legacyKey": "ironstorm-spearhead-master-of-machine-war",
+      "canonicalEnhancementId": "ironstorm-spearhead-master-of-machine-war",
+      "canonicalDetachmentId": "ironstorm-spearhead"
+    },
+    {
+      "title": "Bellicose Weapon Spirits (Upgrade)",
+      "text": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
+      "value": 15,
+      "detachment": "FULGURIS TASK FORCE",
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-land-speeder",
+            "unit-storm-speeder-hailstrike",
+            "unit-storm-speeder-hammerstrike",
+            "unit-storm-speeder-thunderstrike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "bellicose-weapon-spirits",
+      "kind": "Upgrade",
+      "points": 15,
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          3
+        ]
+      },
+      "sourceId": "bellicose-weapon-spirits",
+      "ruleId": "bellicose-weapon-spirits",
+      "detachmentId": "fulguris-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "bellicose-weapon-spirits",
+      "canonicalEnhancementId": "bellicose-weapon-spirits",
+      "canonicalDetachmentId": "fulguris-task-force"
+    },
+    {
+      "title": "Raptorial Cogitator Core (Upgrade)",
+      "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
+      "value": 15,
+      "detachment": "FULGURIS TASK FORCE",
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-land-speeder",
+            "unit-storm-speeder-hailstrike",
+            "unit-storm-speeder-hammerstrike",
+            "unit-storm-speeder-thunderstrike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "raptorial-cogitator-core",
+      "kind": "Upgrade",
+      "points": 15,
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          3
+        ]
+      },
+      "sourceId": "raptorial-cogitator-core",
+      "ruleId": "raptorial-cogitator-core",
+      "detachmentId": "fulguris-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "raptorial-cogitator-core",
+      "canonicalEnhancementId": "raptorial-cogitator-core",
+      "canonicalDetachmentId": "fulguris-task-force"
+    },
+    {
+      "title": "Celerity",
+      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
+      "value": 35,
+      "detachment": "LIBRARIUS CONCLAVE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "celerity",
+      "kind": "Enhancement",
+      "points": 35,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "celerity",
+      "ruleId": "celerity",
+      "detachmentId": "librarius-conclave",
+      "sourceBookId": "space-marines",
+      "legacyKey": "celerity",
+      "canonicalEnhancementId": "celerity",
+      "canonicalDetachmentId": "librarius-conclave"
+    },
+    {
+      "title": "Fusillade",
+      "text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [LETHAL HITS] ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
+      "value": 25,
+      "detachment": "LIBRARIUS CONCLAVE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "fusillade",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "fusillade",
+      "ruleId": "fusillade",
+      "detachmentId": "librarius-conclave",
+      "sourceBookId": "space-marines",
+      "legacyKey": "fusillade",
+      "canonicalEnhancementId": "fusillade",
+      "canonicalDetachmentId": "librarius-conclave"
+    },
+    {
+      "title": "Obfuscation",
+      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ Enemy units cannot target this unit with snap shooting attacks. ▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
+      "value": 25,
+      "detachment": "LIBRARIUS CONCLAVE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "obfuscation",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "obfuscation",
+      "ruleId": "obfuscation",
+      "detachmentId": "librarius-conclave",
+      "sourceBookId": "space-marines",
+      "legacyKey": "obfuscation",
+      "canonicalEnhancementId": "obfuscation",
+      "canonicalDetachmentId": "librarius-conclave"
+    },
+    {
+      "title": "Prescience",
+      "text": "ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of: ▪ Up to D6\". ▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
+      "value": 20,
+      "detachment": "LIBRARIUS CONCLAVE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "prescience",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "prescience",
+      "ruleId": "prescience",
+      "detachmentId": "librarius-conclave",
+      "sourceBookId": "space-marines",
+      "legacyKey": "prescience",
+      "canonicalEnhancementId": "prescience",
+      "canonicalDetachmentId": "librarius-conclave"
+    },
+    {
+      "title": "Temporal Corridor",
+      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. ▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn).",
+      "value": 25,
+      "detachment": "LIBRARIUS CONCLAVE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "temporal-corridor",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "temporal-corridor",
+      "ruleId": "temporal-corridor",
+      "detachmentId": "librarius-conclave",
+      "sourceBookId": "space-marines",
+      "legacyKey": "temporal-corridor",
+      "canonicalEnhancementId": "temporal-corridor",
+      "canonicalDetachmentId": "librarius-conclave"
+    },
+    {
+      "title": "Iron Laurel",
+      "text": "Adeptus Astartes model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+      "value": 10,
+      "detachment": "HAMMER OF AVERNII",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "iron-laurel",
+      "kind": "Enhancement",
+      "points": 10,
+      "sourcePages": [
+        14
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          14
+        ]
+      },
+      "sourceId": "iron-laurel",
+      "ruleId": "iron-laurel",
+      "detachmentId": "hammer-of-avernii",
+      "sourceBookId": "space-marines",
+      "legacyKey": "iron-laurel",
+      "canonicalEnhancementId": "iron-laurel",
+      "canonicalDetachmentId": "hammer-of-avernii"
+    },
+    {
+      "title": "Medusan Roar",
+      "text": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles ) is within 6\" of the bearer, each time that unit fails a Battle‑shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle‑shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+      "value": 30,
+      "detachment": "HAMMER OF AVERNII",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "medusan-roar-aura",
+      "kind": "Enhancement",
+      "points": 30,
+      "sourcePages": [
+        14
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          14
+        ]
+      },
+      "sourceId": "medusan-roar-aura",
+      "ruleId": "medusan-roar-aura",
+      "detachmentId": "hammer-of-avernii",
+      "sourceBookId": "space-marines",
+      "legacyKey": "medusan-roar-aura",
+      "canonicalEnhancementId": "enhancement-medusan-roar",
+      "canonicalDetachmentId": "hammer-of-avernii",
       "sourceLimited": true
     },
     {
-      "title": "RITES OF WAR",
-      "text": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+      "title": "Spiritus Ferrum",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+      "value": 25,
+      "detachment": "HAMMER OF AVERNII",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "spiritus-ferrum",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        14
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          14
+        ]
+      },
+      "sourceId": "spiritus-ferrum",
+      "ruleId": "spiritus-ferrum",
+      "detachmentId": "hammer-of-avernii",
+      "sourceBookId": "space-marines",
+      "legacyKey": "spiritus-ferrum",
+      "canonicalEnhancementId": "spiritus-ferrum",
+      "canonicalDetachmentId": "hammer-of-avernii"
+    },
+    {
+      "title": "Steel Font",
+      "text": "Adeptus Astartes Terminator model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
+      "value": 15,
+      "detachment": "HAMMER OF AVERNII",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "TERMINATOR"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "steel-font",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        14
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          14
+        ]
+      },
+      "sourceId": "steel-font",
+      "ruleId": "steel-font",
+      "detachmentId": "hammer-of-avernii",
+      "sourceBookId": "space-marines",
+      "legacyKey": "steel-font",
+      "canonicalEnhancementId": "steel-font",
+      "canonicalDetachmentId": "hammer-of-avernii"
+    },
+    {
+      "title": "Avenging Avatar",
+      "text": "Adeptus Astartes model only. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle‑shock test.",
       "value": 10,
-      "detachment": "1st Company Task Force",
+      "detachment": "RECLAMATION FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
-          "unitIds": [
-            "unit-ancient-in-terminator-armor",
-            "unit-captain-in-terminator-armour",
-            "unit-chaplain-in-terminator-armour",
-            "unit-librarian-in-terminator-armour"
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
@@ -30781,35 +31973,84 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "1st-company-task-force-rites-of-war",
-      "sourceAuthority": "secondary",
-      "sourceId": "1st-company-task-force-rites-of-war",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
+      "id": "avenging-avatar-aura",
+      "kind": "Enhancement",
+      "points": 10,
+      "sourcePages": [
+        28
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          28
+        ]
       },
-      "ruleId": "1st-company-task-force-rites-of-war",
-      "detachmentId": "1st-company-task-force",
+      "sourceId": "avenging-avatar-aura",
+      "ruleId": "avenging-avatar-aura",
+      "detachmentId": "reclamation-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "1st-company-task-force-rites-of-war",
-      "canonicalEnhancementId": "1st-company-task-force-rites-of-war",
-      "canonicalDetachmentId": "1st-company-task-force"
+      "legacyKey": "avenging-avatar-aura",
+      "canonicalEnhancementId": "avenging-avatar-aura",
+      "canonicalDetachmentId": "reclamation-force"
     },
     {
-      "title": "IRON RESOLVE",
-      "text": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
+      "title": "Liberatum",
+      "text": "Adeptus Astartes model only. Each time the bearer makes an attack that targets an enemy unit, if the target is within range of an objective marker, you can re‑roll the Hit roll and you can re‑roll the Wound roll.",
+      "value": 25,
+      "detachment": "RECLAMATION FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "liberatum",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        28
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          28
+        ]
+      },
+      "sourceId": "liberatum",
+      "ruleId": "liberatum",
+      "detachmentId": "reclamation-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "liberatum",
+      "canonicalEnhancementId": "liberatum",
+      "canonicalDetachmentId": "reclamation-force"
+    },
+    {
+      "title": "Scroll of Proclamation",
+      "text": "Adeptus Astartes model only. When this unit declares a charge, if an enemy unit within range of an objective is within 12\" of this unit, you can use this enhancement. If you do: ■ This unit can re‑roll that charge roll. ■ This unit must end that charge move engaged with one or more of those enemy units.",
       "value": 15,
-      "detachment": "1st Company Task Force",
+      "detachment": "RECLAMATION FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
-          "unitIds": [
-            "unit-ancient-in-terminator-armor",
-            "unit-captain-in-terminator-armour",
-            "unit-chaplain-in-terminator-armour",
-            "unit-librarian-in-terminator-armour"
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
@@ -30818,33 +32059,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "1st-company-task-force-iron-resolve",
-      "sourceAuthority": "secondary",
-      "sourceId": "1st-company-task-force-iron-resolve",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
+      "id": "scroll-of-proclamation",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        28
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          28
+        ]
       },
-      "ruleId": "1st-company-task-force-iron-resolve",
-      "detachmentId": "1st-company-task-force",
+      "sourceId": "scroll-of-proclamation",
+      "ruleId": "scroll-of-proclamation",
+      "detachmentId": "reclamation-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "1st-company-task-force-iron-resolve",
-      "canonicalEnhancementId": "1st-company-task-force-iron-resolve",
-      "canonicalDetachmentId": "1st-company-task-force"
+      "legacyKey": "scroll-of-proclamation",
+      "canonicalEnhancementId": "scroll-of-proclamation",
+      "canonicalDetachmentId": "reclamation-force"
     },
     {
-      "title": "INDOMITABLE FURY",
-      "text": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+      "title": "Seals of Reconquest",
+      "text": "Adeptus Astartes model only. Models in the bearer’s unit have a 5+ invulnerable save.",
       "value": 20,
-      "detachment": "Anvil Siege Force",
+      "detachment": "RECLAMATION FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
-          "unitIds": [
-            "unit-apothecary-biologis",
-            "unit-captain-in-gravis-armour"
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
@@ -30853,26 +32102,133 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "anvil-siege-force-indomitable-fury",
-      "sourceAuthority": "secondary",
-      "sourceId": "anvil-siege-force-indomitable-fury",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
+      "id": "seals-of-reconquest",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        28
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          28
+        ]
       },
-      "ruleId": "anvil-siege-force-indomitable-fury",
-      "detachmentId": "anvil-siege-force",
+      "sourceId": "seals-of-reconquest",
+      "ruleId": "seals-of-reconquest",
+      "detachmentId": "reclamation-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "anvil-siege-force-indomitable-fury",
-      "canonicalEnhancementId": "anvil-siege-force-indomitable-fury",
-      "canonicalDetachmentId": "anvil-siege-force"
+      "legacyKey": "seals-of-reconquest",
+      "canonicalEnhancementId": "seals-of-reconquest",
+      "canonicalDetachmentId": "reclamation-force"
     },
     {
-      "title": "FLEET COMMANDER",
-      "text": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+      "title": "ARTIFICER ARMOUR",
+      "text": "ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+      "value": 20,
+      "detachment": "GLADIUS TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "gladius-task-force-artificer-armour",
+      "sourceAuthority": "secondary",
+      "sourceId": "gladius-task-force-artificer-armour",
+      "ruleId": "gladius-task-force-artificer-armour",
+      "detachmentId": "gladius-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "gladius-task-force-artificer-armour",
+      "canonicalEnhancementId": "gladius-task-force-artificer-armour",
+      "canonicalDetachmentId": "gladius-task-force"
+    },
+    {
+      "title": "THE HONOUR VEHEMENT",
+      "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
       "value": 15,
-      "detachment": "Anvil Siege Force",
+      "detachment": "GLADIUS TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "gladius-task-force-the-honour-vehement",
+      "sourceAuthority": "secondary",
+      "sourceId": "gladius-task-force-the-honour-vehement",
+      "ruleId": "gladius-task-force-the-honour-vehement",
+      "detachmentId": "gladius-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "gladius-task-force-the-honour-vehement",
+      "canonicalEnhancementId": "gladius-task-force-the-honour-vehement",
+      "canonicalDetachmentId": "gladius-task-force"
+    },
+    {
+      "title": "ADEPT OF THE CODEX",
+      "text": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
+      "value": 20,
+      "detachment": "GLADIUS TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -30891,82 +32247,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "anvil-siege-force-fleet-commander",
+      "id": "gladius-task-force-adept-of-the-codex",
       "sourceAuthority": "secondary",
-      "sourceId": "anvil-siege-force-fleet-commander",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "anvil-siege-force-fleet-commander",
-      "detachmentId": "anvil-siege-force",
+      "sourceId": "gladius-task-force-adept-of-the-codex",
+      "ruleId": "gladius-task-force-adept-of-the-codex",
+      "detachmentId": "gladius-task-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "anvil-siege-force-fleet-commander",
-      "canonicalEnhancementId": "anvil-siege-force-fleet-commander",
-      "canonicalDetachmentId": "anvil-siege-force"
+      "legacyKey": "gladius-task-force-adept-of-the-codex",
+      "canonicalEnhancementId": "gladius-task-force-adept-of-the-codex",
+      "canonicalDetachmentId": "gladius-task-force"
     },
     {
-      "title": "STOIC DEFENDER",
-      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
-      "value": 15,
-      "detachment": "Anvil Siege Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "anvil-siege-force-stoic-defender",
-      "sourceAuthority": "secondary",
-      "sourceId": "anvil-siege-force-stoic-defender",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "anvil-siege-force-stoic-defender",
-      "detachmentId": "anvil-siege-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "anvil-siege-force-stoic-defender",
-      "canonicalEnhancementId": "anvil-siege-force-stoic-defender",
-      "canonicalDetachmentId": "anvil-siege-force"
-    },
-    {
-      "title": "ARCHITECT OF WAR",
-      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+      "title": "FIRE DISCIPLINE",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
       "value": 25,
-      "detachment": "Anvil Siege Force",
+      "detachment": "GLADIUS TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -31003,54 +32298,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "anvil-siege-force-architect-of-war",
+      "id": "gladius-task-force-fire-discipline",
       "sourceAuthority": "secondary",
-      "sourceId": "anvil-siege-force-architect-of-war",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "anvil-siege-force-architect-of-war",
-      "detachmentId": "anvil-siege-force",
+      "sourceId": "gladius-task-force-fire-discipline",
+      "ruleId": "gladius-task-force-fire-discipline",
+      "detachmentId": "gladius-task-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "anvil-siege-force-architect-of-war",
-      "canonicalEnhancementId": "anvil-siege-force-architect-of-war",
-      "canonicalDetachmentId": "anvil-siege-force"
+      "legacyKey": "gladius-task-force-fire-discipline",
+      "canonicalEnhancementId": "gladius-task-force-fire-discipline",
+      "canonicalDetachmentId": "gladius-task-force"
     },
     {
-      "title": "Armoured Commander",
-      "text": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "title": "Blackwing Shroud",
+      "text": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
       "value": 25,
-      "detachment": "Armoured Speartip",
+      "detachment": "SHADOWMARK TALON",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "INFANTRY"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
@@ -31059,64 +32332,42 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "armoured-commander",
+      "id": "blackwing-shroud",
       "kind": "Enhancement",
       "points": 25,
       "sourcePages": [
-        6
+        22
       ],
       "provenance": {
         "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
-          6
+          22
         ]
       },
-      "sourceId": "armoured-commander",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "armoured-commander",
-      "detachmentId": "armoured-speartip",
+      "sourceId": "blackwing-shroud",
+      "ruleId": "blackwing-shroud",
+      "detachmentId": "shadowmark-talon",
       "sourceBookId": "space-marines",
-      "legacyKey": "armoured-commander",
-      "canonicalEnhancementId": "armoured-commander",
-      "canonicalDetachmentId": "armoured-speartip"
+      "legacyKey": "blackwing-shroud",
+      "canonicalEnhancementId": "blackwing-shroud",
+      "canonicalDetachmentId": "shadowmark-talon"
     },
     {
-      "title": "Liberator",
-      "text": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase, and the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-      "value": 15,
-      "detachment": "Armoured Speartip",
+      "title": "Coronal Susurrant",
+      "text": "Phobos model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP .",
+      "value": 30,
+      "detachment": "SHADOWMARK TALON",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "PHOBOS"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
@@ -31125,151 +32376,113 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "liberator",
+      "id": "coronal-susurrant",
+      "kind": "Enhancement",
+      "points": 30,
+      "sourcePages": [
+        22
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          22
+        ]
+      },
+      "sourceId": "coronal-susurrant",
+      "ruleId": "coronal-susurrant",
+      "detachmentId": "shadowmark-talon",
+      "sourceBookId": "space-marines",
+      "legacyKey": "coronal-susurrant",
+      "canonicalEnhancementId": "coronal-susurrant",
+      "canonicalDetachmentId": "shadowmark-talon"
+    },
+    {
+      "title": "Hunter's Instincts",
+      "text": "Adeptus Astartes model only. In your Movement phase, if the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "value": 25,
+      "detachment": "SHADOWMARK TALON",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-chaplain-on-bike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "hunter-s-instincts",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        22
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          22
+        ]
+      },
+      "sourceId": "hunter-s-instincts",
+      "ruleId": "hunter-s-instincts",
+      "detachmentId": "shadowmark-talon",
+      "sourceBookId": "space-marines",
+      "legacyKey": "hunter-s-instincts",
+      "canonicalEnhancementId": "hunter-s-instincts",
+      "canonicalDetachmentId": "shadowmark-talon"
+    },
+    {
+      "title": "Umbral Raptor",
+      "text": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative abilities.",
+      "value": 15,
+      "detachment": "SHADOWMARK TALON",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "umbral-raptor",
       "kind": "Enhancement",
       "points": 15,
       "sourcePages": [
-        6
+        22
       ],
       "provenance": {
         "sourceId": "space-marines-faction-pack-v1.2",
         "sourcePages": [
-          6
+          22
         ]
       },
-      "sourceId": "liberator",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "liberator",
-      "detachmentId": "armoured-speartip",
+      "sourceId": "umbral-raptor",
+      "ruleId": "umbral-raptor",
+      "detachmentId": "shadowmark-talon",
       "sourceBookId": "space-marines",
-      "legacyKey": "liberator",
-      "canonicalEnhancementId": "liberator",
-      "canonicalDetachmentId": "armoured-speartip"
-    },
-    {
-      "title": "Shock Deployment",
-      "text": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
-      "value": 20,
-      "detachment": "Armoured Speartip",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary-biologis",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-chaplain-in-terminator-armour",
-            "unit-librarian-in-terminator-armour"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "shock-deployment",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        6
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          6
-        ]
-      },
-      "sourceId": "shock-deployment",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "shock-deployment",
-      "detachmentId": "armoured-speartip",
-      "sourceBookId": "space-marines",
-      "legacyKey": "shock-deployment",
-      "canonicalEnhancementId": "shock-deployment",
-      "canonicalDetachmentId": "armoured-speartip"
-    },
-    {
-      "title": "Tip of the Spear",
-      "text": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport , that Transport has the Scouts 6\" ability.",
-      "value": 40,
-      "detachment": "Armoured Speartip",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "tip-of-the-spear",
-      "kind": "Enhancement",
-      "points": 40,
-      "sourcePages": [
-        6
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          6
-        ]
-      },
-      "sourceId": "tip-of-the-spear",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "tip-of-the-spear",
-      "detachmentId": "armoured-speartip",
-      "sourceBookId": "space-marines",
-      "legacyKey": "tip-of-the-spear",
-      "canonicalEnhancementId": "tip-of-the-spear",
-      "canonicalDetachmentId": "armoured-speartip"
+      "legacyKey": "umbral-raptor",
+      "canonicalEnhancementId": "umbral-raptor",
+      "canonicalDetachmentId": "shadowmark-talon"
     },
     {
       "title": "Blades of Valour",
       "text": "Adeptus Astartes model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1.",
       "value": 15,
-      "detachment": "Bastion Task Force",
+      "detachment": "BASTION TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -31319,11 +32532,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "blades-of-valour",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "blades-of-valour",
       "detachmentId": "bastion-task-force",
       "sourceBookId": "space-marines",
@@ -31335,7 +32543,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Bombast Omnivox",
       "text": "Adeptus Astartes model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP .",
       "value": 15,
-      "detachment": "Bastion Task Force",
+      "detachment": "BASTION TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -31385,11 +32593,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "bombast-omnivox",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "bombast-omnivox",
       "detachmentId": "bastion-task-force",
       "sourceBookId": "space-marines",
@@ -31401,7 +32604,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Eye of the Primarch",
       "text": "Adeptus Astartes model only. Ranged weapons equipped by the bearer and Battleline models in the bearer’s unit have the [PRECISION] ability.",
       "value": 10,
-      "detachment": "Bastion Task Force",
+      "detachment": "BASTION TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -31451,11 +32654,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "eye-of-the-primarch",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "eye-of-the-primarch",
       "detachmentId": "bastion-task-force",
       "sourceBookId": "space-marines",
@@ -31467,7 +32665,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Hero of the Chapter",
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword.",
       "value": 20,
-      "detachment": "Bastion Task Force",
+      "detachment": "BASTION TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -31517,839 +32715,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "hero-of-the-chapter",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "hero-of-the-chapter",
       "detachmentId": "bastion-task-force",
       "sourceBookId": "space-marines",
       "legacyKey": "hero-of-the-chapter",
       "canonicalEnhancementId": "hero-of-the-chapter",
       "canonicalDetachmentId": "bastion-task-force"
-    },
-    {
-      "title": "Armour of Antoninus",
-      "text": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
-      "value": 20,
-      "detachment": "Blade of Ultramar",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "armour-of-antoninus",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        12
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          12
-        ]
-      },
-      "sourceId": "armour-of-antoninus",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "armour-of-antoninus",
-      "detachmentId": "blade-of-ultramar",
-      "sourceBookId": "space-marines",
-      "legacyKey": "armour-of-antoninus",
-      "canonicalEnhancementId": "armour-of-antoninus",
-      "canonicalDetachmentId": "blade-of-ultramar"
-    },
-    {
-      "title": "Oath of Macragge",
-      "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
-      "value": 15,
-      "detachment": "Blade of Ultramar",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "oath-of-macragge",
-      "kind": "Enhancement",
-      "points": 15,
-      "sourcePages": [
-        12
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          12
-        ]
-      },
-      "sourceId": "oath-of-macragge",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "oath-of-macragge",
-      "detachmentId": "blade-of-ultramar",
-      "sourceBookId": "space-marines",
-      "legacyKey": "oath-of-macragge",
-      "canonicalEnhancementId": "oath-of-macragge",
-      "canonicalDetachmentId": "blade-of-ultramar"
-    },
-    {
-      "title": "Student of the Codex",
-      "text": "Adeptus Astartes model only. At the start of your Command phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, until the start of your next Command phase, the Tactical Doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army).",
-      "value": 20,
-      "detachment": "Blade of Ultramar",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "student-of-the-codex",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        12
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          12
-        ]
-      },
-      "sourceId": "student-of-the-codex",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "student-of-the-codex",
-      "detachmentId": "blade-of-ultramar",
-      "sourceBookId": "space-marines",
-      "legacyKey": "student-of-the-codex",
-      "canonicalEnhancementId": "student-of-the-codex",
-      "canonicalDetachmentId": "blade-of-ultramar"
-    },
-    {
-      "title": "Veteran of Behemoth",
-      "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can re‑roll Advance rolls made for that unit.",
-      "value": 25,
-      "detachment": "Blade of Ultramar",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "veteran-of-behemoth",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        12
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          12
-        ]
-      },
-      "sourceId": "veteran-of-behemoth",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "veteran-of-behemoth",
-      "detachmentId": "blade-of-ultramar",
-      "sourceBookId": "space-marines",
-      "legacyKey": "veteran-of-behemoth",
-      "canonicalEnhancementId": "veteran-of-behemoth",
-      "canonicalDetachmentId": "blade-of-ultramar"
-    },
-    {
-      "title": "Castellum Omnivox",
-      "text": "Adeptus Astartes model only. Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: ■ That unit is eligible to perform an Action in a turn in which it Fell Back. ■ That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-      "value": 20,
-      "detachment": "Ceramite Sentinels",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "castellum-omnivox",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        10
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          10
-        ]
-      },
-      "sourceId": "castellum-omnivox",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "castellum-omnivox",
-      "detachmentId": "ceramite-sentinels",
-      "sourceBookId": "space-marines",
-      "legacyKey": "castellum-omnivox",
-      "canonicalEnhancementId": "castellum-omnivox",
-      "canonicalDetachmentId": "ceramite-sentinels"
-    },
-    {
-      "title": "Defensive Mastery",
-      "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-      "value": 25,
-      "detachment": "Ceramite Sentinels",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "defensive-mastery",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        10
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          10
-        ]
-      },
-      "sourceId": "defensive-mastery",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "defensive-mastery",
-      "detachmentId": "ceramite-sentinels",
-      "sourceBookId": "space-marines",
-      "legacyKey": "defensive-mastery",
-      "canonicalEnhancementId": "defensive-mastery",
-      "canonicalDetachmentId": "ceramite-sentinels"
-    },
-    {
-      "title": "Honour Indefatigable",
-      "text": "Gravis model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
-      "value": 25,
-      "detachment": "Ceramite Sentinels",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-apothecary-biologis",
-            "unit-captain-in-gravis-armour"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "honour-indefatigable",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        10
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          10
-        ]
-      },
-      "sourceId": "honour-indefatigable",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "honour-indefatigable",
-      "detachmentId": "ceramite-sentinels",
-      "sourceBookId": "space-marines",
-      "legacyKey": "honour-indefatigable",
-      "canonicalEnhancementId": "honour-indefatigable",
-      "canonicalDetachmentId": "ceramite-sentinels"
-    },
-    {
-      "title": "Spy-skull Data Link",
-      "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
-      "value": 15,
-      "detachment": "Ceramite Sentinels",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "spy-skull-data-link",
-      "kind": "Enhancement",
-      "points": 15,
-      "sourcePages": [
-        10
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          10
-        ]
-      },
-      "sourceId": "spy-skull-data-link",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "spy-skull-data-link",
-      "detachmentId": "ceramite-sentinels",
-      "sourceBookId": "space-marines",
-      "legacyKey": "spy-skull-data-link",
-      "canonicalEnhancementId": "spy-skull-data-link",
-      "canonicalDetachmentId": "ceramite-sentinels"
-    },
-    {
-      "title": "Champion of the Feast",
-      "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by other models in the bearer’s unit as well.",
-      "value": 25,
-      "detachment": "EMPEROR’S SHIELD",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "champion-of-the-feast",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        20
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          20
-        ]
-      },
-      "sourceId": "champion-of-the-feast",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "champion-of-the-feast",
-      "detachmentId": "emperor-s-shield",
-      "sourceBookId": "space-marines",
-      "legacyKey": "champion-of-the-feast",
-      "canonicalEnhancementId": "champion-of-the-feast",
-      "canonicalDetachmentId": "emperor-s-shield"
-    },
-    {
-      "title": "Disciple of Rhetoricus",
-      "text": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of other models in the bearer’s unit as well.",
-      "value": 10,
-      "detachment": "EMPEROR’S SHIELD",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER",
-            "TERMINATOR"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "disciple-of-rhetoricus",
-      "kind": "Enhancement",
-      "points": 10,
-      "sourcePages": [
-        20
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          20
-        ]
-      },
-      "sourceId": "disciple-of-rhetoricus",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "disciple-of-rhetoricus",
-      "detachmentId": "emperor-s-shield",
-      "sourceBookId": "space-marines",
-      "legacyKey": "disciple-of-rhetoricus",
-      "canonicalEnhancementId": "disciple-of-rhetoricus",
-      "canonicalDetachmentId": "emperor-s-shield"
-    },
-    {
-      "title": "Indomitable Champion",
-      "text": "Adeptus Astartes Terminator model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
-      "value": 20,
-      "detachment": "EMPEROR’S SHIELD",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER",
-            "TERMINATOR"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "indomitable-champion",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        20
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          20
-        ]
-      },
-      "sourceId": "indomitable-champion",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "indomitable-champion",
-      "detachmentId": "emperor-s-shield",
-      "sourceBookId": "space-marines",
-      "legacyKey": "indomitable-champion",
-      "canonicalEnhancementId": "indomitable-champion",
-      "canonicalDetachmentId": "emperor-s-shield"
-    },
-    {
-      "title": "Malodraxian Standard",
-      "text": "Adeptus Astartes Ancient model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll.",
-      "value": 20,
-      "detachment": "EMPEROR’S SHIELD",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER",
-            "ANCIENT"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "malodraxian-standard",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        20
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          20
-        ]
-      },
-      "sourceId": "malodraxian-standard",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "malodraxian-standard",
-      "detachmentId": "emperor-s-shield",
-      "sourceBookId": "space-marines",
-      "legacyKey": "malodraxian-standard",
-      "canonicalEnhancementId": "malodraxian-standard",
-      "canonicalDetachmentId": "emperor-s-shield"
-    },
-    {
-      "title": "CHAMPION OF HUMANITY",
-      "text": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
-      "value": 10,
-      "detachment": "Firestorm Assault Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-apothecary",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-lieutenant",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "firestorm-assault-force-champion-of-humanity",
-      "sourceAuthority": "secondary",
-      "sourceId": "firestorm-assault-force-champion-of-humanity",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "firestorm-assault-force-champion-of-humanity",
-      "detachmentId": "firestorm-assault-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-assault-force-champion-of-humanity",
-      "canonicalEnhancementId": "firestorm-assault-force-champion-of-humanity",
-      "canonicalDetachmentId": "firestorm-assault-force"
-    },
-    {
-      "title": "WAR-TEMPERED ARTIFICE",
-      "text": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
-      "value": 25,
-      "detachment": "Firestorm Assault Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "firestorm-assault-force-war-tempered-artifice",
-      "sourceAuthority": "secondary",
-      "sourceId": "firestorm-assault-force-war-tempered-artifice",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "firestorm-assault-force-war-tempered-artifice",
-      "detachmentId": "firestorm-assault-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-assault-force-war-tempered-artifice",
-      "canonicalEnhancementId": "firestorm-assault-force-war-tempered-artifice",
-      "canonicalDetachmentId": "firestorm-assault-force"
-    },
-    {
-      "title": "FORGED IN BATTLE",
-      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
-      "value": 15,
-      "detachment": "Firestorm Assault Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "firestorm-assault-force-forged-in-battle",
-      "sourceAuthority": "secondary",
-      "sourceId": "firestorm-assault-force-forged-in-battle",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "firestorm-assault-force-forged-in-battle",
-      "detachmentId": "firestorm-assault-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-assault-force-forged-in-battle",
-      "canonicalEnhancementId": "firestorm-assault-force-forged-in-battle",
-      "canonicalDetachmentId": "firestorm-assault-force"
-    },
-    {
-      "title": "ADAMANTINE MANTLE",
-      "text": "ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
-      "value": 20,
-      "detachment": "Firestorm Assault Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "firestorm-assault-force-adamantine-mantle",
-      "sourceAuthority": "secondary",
-      "sourceId": "firestorm-assault-force-adamantine-mantle",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "firestorm-assault-force-adamantine-mantle",
-      "detachmentId": "firestorm-assault-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-assault-force-adamantine-mantle",
-      "canonicalEnhancementId": "firestorm-assault-force-adamantine-mantle",
-      "canonicalDetachmentId": "firestorm-assault-force"
     },
     {
       "title": "Adamantine Mantle",
@@ -32509,11 +32880,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "immolator",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "immolator",
       "detachmentId": "forgefather-s-seekers",
       "sourceBookId": "space-marines",
@@ -32582,258 +32948,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "canonicalDetachmentId": "forgefather-s-seekers"
     },
     {
-      "title": "Bellicose Weapon Spirits (Upgrade)",
-      "text": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
-      "value": 15,
-      "detachment": "Fulguris Task Force",
-      "tags": [
-        "UPGRADE"
-      ],
-      "owner": {
-        "subject": "unit",
-        "selector": {
-          "unitIds": [
-            "unit-land-speeder",
-            "unit-storm-speeder-hailstrike",
-            "unit-storm-speeder-hammerstrike",
-            "unit-storm-speeder-thunderstrike"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "bellicose-weapon-spirits",
-      "kind": "Upgrade",
-      "points": 15,
-      "sourcePages": [
-        3
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          3
-        ]
-      },
-      "sourceId": "bellicose-weapon-spirits",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "bellicose-weapon-spirits",
-      "detachmentId": "fulguris-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "bellicose-weapon-spirits",
-      "canonicalEnhancementId": "bellicose-weapon-spirits",
-      "canonicalDetachmentId": "fulguris-task-force"
-    },
-    {
-      "title": "Raptorial Cogitator Core (Upgrade)",
-      "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
-      "value": 15,
-      "detachment": "Fulguris Task Force",
-      "tags": [
-        "UPGRADE"
-      ],
-      "owner": {
-        "subject": "unit",
-        "selector": {
-          "unitIds": [
-            "unit-land-speeder",
-            "unit-storm-speeder-hailstrike",
-            "unit-storm-speeder-hammerstrike",
-            "unit-storm-speeder-thunderstrike"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "raptorial-cogitator-core",
-      "kind": "Upgrade",
-      "points": 15,
-      "sourcePages": [
-        3
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          3
-        ]
-      },
-      "sourceId": "raptorial-cogitator-core",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "raptorial-cogitator-core",
-      "detachmentId": "fulguris-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "raptorial-cogitator-core",
-      "canonicalEnhancementId": "raptorial-cogitator-core",
-      "canonicalDetachmentId": "fulguris-task-force"
-    },
-    {
-      "title": "ARTIFICER ARMOUR",
-      "text": "ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
-      "value": 20,
-      "detachment": "Gladius Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "gladius-task-force-artificer-armour",
-      "sourceAuthority": "secondary",
-      "sourceId": "gladius-task-force-artificer-armour",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "gladius-task-force-artificer-armour",
-      "detachmentId": "gladius-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "gladius-task-force-artificer-armour",
-      "canonicalEnhancementId": "gladius-task-force-artificer-armour",
-      "canonicalDetachmentId": "gladius-task-force"
-    },
-    {
-      "title": "THE HONOUR VEHEMENT",
-      "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
-      "value": 15,
-      "detachment": "Gladius Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "gladius-task-force-the-honour-vehement",
-      "sourceAuthority": "secondary",
-      "sourceId": "gladius-task-force-the-honour-vehement",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "gladius-task-force-the-honour-vehement",
-      "detachmentId": "gladius-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "gladius-task-force-the-honour-vehement",
-      "canonicalEnhancementId": "gladius-task-force-the-honour-vehement",
-      "canonicalDetachmentId": "gladius-task-force"
-    },
-    {
-      "title": "ADEPT OF THE CODEX",
-      "text": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
-      "value": 20,
-      "detachment": "Gladius Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "gladius-task-force-adept-of-the-codex",
-      "sourceAuthority": "secondary",
-      "sourceId": "gladius-task-force-adept-of-the-codex",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "gladius-task-force-adept-of-the-codex",
-      "detachmentId": "gladius-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "gladius-task-force-adept-of-the-codex",
-      "canonicalEnhancementId": "gladius-task-force-adept-of-the-codex",
-      "canonicalDetachmentId": "gladius-task-force"
-    },
-    {
-      "title": "FIRE DISCIPLINE",
-      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
+      "title": "THE BLADE DRIVEN DEEP",
+      "text": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
       "value": 25,
-      "detachment": "Gladius Task Force",
+      "detachment": "VANGUARD SPEARHEAD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "vanguard-spearhead-the-blade-driven-deep",
+      "sourceAuthority": "secondary",
+      "sourceId": "vanguard-spearhead-the-blade-driven-deep",
+      "ruleId": "vanguard-spearhead-the-blade-driven-deep",
+      "detachmentId": "vanguard-spearhead",
+      "sourceBookId": "space-marines",
+      "legacyKey": "vanguard-spearhead-the-blade-driven-deep",
+      "canonicalEnhancementId": "vanguard-spearhead-the-blade-driven-deep",
+      "canonicalDetachmentId": "vanguard-spearhead"
+    },
+    {
+      "title": "GHOSTWEAVE CLOAK",
+      "text": "ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
+      "value": 15,
+      "detachment": "VANGUARD SPEARHEAD",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -32870,36 +33038,31 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "gladius-task-force-fire-discipline",
+      "id": "vanguard-spearhead-ghostweave-cloak",
       "sourceAuthority": "secondary",
-      "sourceId": "gladius-task-force-fire-discipline",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "gladius-task-force-fire-discipline",
-      "detachmentId": "gladius-task-force",
+      "sourceId": "vanguard-spearhead-ghostweave-cloak",
+      "ruleId": "vanguard-spearhead-ghostweave-cloak",
+      "detachmentId": "vanguard-spearhead",
       "sourceBookId": "space-marines",
-      "legacyKey": "gladius-task-force-fire-discipline",
-      "canonicalEnhancementId": "gladius-task-force-fire-discipline",
-      "canonicalDetachmentId": "gladius-task-force"
+      "legacyKey": "vanguard-spearhead-ghostweave-cloak",
+      "canonicalEnhancementId": "vanguard-spearhead-ghostweave-cloak",
+      "canonicalDetachmentId": "vanguard-spearhead"
     },
     {
-      "title": "Iron Laurel",
-      "text": "Adeptus Astartes model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
-      "value": 10,
-      "detachment": "Hammer of Avernii",
+      "title": "EXECUTE AND REDEPLOY",
+      "text": "PHOBOS model only. In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer’s unit to move more than once in your Shooting phase.",
+      "value": 20,
+      "detachment": "VANGUARD SPEARHEAD",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon"
           ]
         }
       },
@@ -32908,46 +33071,31 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "iron-laurel",
-      "kind": "Enhancement",
-      "points": 10,
-      "sourcePages": [
-        14
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          14
-        ]
-      },
-      "sourceId": "iron-laurel",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "iron-laurel",
-      "detachmentId": "hammer-of-avernii",
+      "id": "vanguard-spearhead-execute-and-redeploy",
+      "sourceAuthority": "secondary",
+      "sourceId": "vanguard-spearhead-execute-and-redeploy",
+      "ruleId": "vanguard-spearhead-execute-and-redeploy",
+      "detachmentId": "vanguard-spearhead",
       "sourceBookId": "space-marines",
-      "legacyKey": "iron-laurel",
-      "canonicalEnhancementId": "iron-laurel",
-      "canonicalDetachmentId": "hammer-of-avernii"
+      "legacyKey": "vanguard-spearhead-execute-and-redeploy",
+      "canonicalEnhancementId": "vanguard-spearhead-execute-and-redeploy",
+      "canonicalDetachmentId": "vanguard-spearhead"
     },
     {
-      "title": "Medusan Roar",
-      "text": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles ) is within 6\" of the bearer, each time that unit fails a Battle‑shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle‑shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+      "title": "SHADOW WAR VETERAN",
+      "text": "PHOBOS model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
       "value": 30,
-      "detachment": "Hammer of Avernii",
+      "detachment": "VANGUARD SPEARHEAD",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon"
           ]
         }
       },
@@ -32956,134 +33104,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "medusan-roar-aura",
-      "kind": "Enhancement",
-      "points": 30,
-      "sourcePages": [
-        14
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          14
-        ]
-      },
-      "sourceId": "medusan-roar-aura",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "medusan-roar-aura",
-      "detachmentId": "hammer-of-avernii",
+      "id": "vanguard-spearhead-shadow-war-veteran",
+      "sourceAuthority": "secondary",
+      "sourceId": "vanguard-spearhead-shadow-war-veteran",
+      "ruleId": "vanguard-spearhead-shadow-war-veteran",
+      "detachmentId": "vanguard-spearhead",
       "sourceBookId": "space-marines",
-      "legacyKey": "medusan-roar-aura",
-      "canonicalEnhancementId": "enhancement-medusan-roar",
-      "canonicalDetachmentId": "hammer-of-avernii",
-      "sourceLimited": true
-    },
-    {
-      "title": "Spiritus Ferrum",
-      "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
-      "value": 25,
-      "detachment": "Hammer of Avernii",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "spiritus-ferrum",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        14
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          14
-        ]
-      },
-      "sourceId": "spiritus-ferrum",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "spiritus-ferrum",
-      "detachmentId": "hammer-of-avernii",
-      "sourceBookId": "space-marines",
-      "legacyKey": "spiritus-ferrum",
-      "canonicalEnhancementId": "spiritus-ferrum",
-      "canonicalDetachmentId": "hammer-of-avernii"
-    },
-    {
-      "title": "Steel Font",
-      "text": "Adeptus Astartes Terminator model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
-      "value": 15,
-      "detachment": "Hammer of Avernii",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER",
-            "TERMINATOR"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "steel-font",
-      "kind": "Enhancement",
-      "points": 15,
-      "sourcePages": [
-        14
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          14
-        ]
-      },
-      "sourceId": "steel-font",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "steel-font",
-      "detachmentId": "hammer-of-avernii",
-      "sourceBookId": "space-marines",
-      "legacyKey": "steel-font",
-      "canonicalEnhancementId": "steel-font",
-      "canonicalDetachmentId": "hammer-of-avernii"
+      "legacyKey": "vanguard-spearhead-shadow-war-veteran",
+      "canonicalEnhancementId": "vanguard-spearhead-shadow-war-veteran",
+      "canonicalDetachmentId": "vanguard-spearhead"
     },
     {
       "title": "Astartes Tank Ace",
       "text": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes Vehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
       "value": 40,
-      "detachment": "Headhunter Task Force",
+      "detachment": "HEADHUNTER TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33126,11 +33161,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "astartes-tank-ace-aura",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "astartes-tank-ace-aura",
       "detachmentId": "headhunter-task-force",
       "sourceBookId": "space-marines",
@@ -33142,7 +33172,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Firestorm Coordinators",
       "text": "Adeptus Astartes Vehicle model only. Ranged weapons equipped by the bearer have the [SUSTAINED HITS 1] ability.",
       "value": 20,
-      "detachment": "Headhunter Task Force",
+      "detachment": "HEADHUNTER TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33185,11 +33215,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "firestorm-coordinators",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "firestorm-coordinators",
       "detachmentId": "headhunter-task-force",
       "sourceBookId": "space-marines",
@@ -33201,7 +33226,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Gunnery Honours",
       "text": "Adeptus Astartes Vehicle model only. Once per phase, you can re‑roll one Hit roll, one Wound roll and one Damage roll for the bearer.",
       "value": 20,
-      "detachment": "Headhunter Task Force",
+      "detachment": "HEADHUNTER TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33244,11 +33269,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "gunnery-honours",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "gunnery-honours",
       "detachmentId": "headhunter-task-force",
       "sourceBookId": "space-marines",
@@ -33260,7 +33280,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Redoubtable Machine Spirit",
       "text": "Adeptus Astartes Vehicle model only. The bearer has a 5+ invulnerable save and, at the end of your Command phase, the bearer regains 1 lost wound.",
       "value": 25,
-      "detachment": "Headhunter Task Force",
+      "detachment": "HEADHUNTER TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33303,11 +33323,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "redoubtable-machine-spirit",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "redoubtable-machine-spirit",
       "detachmentId": "headhunter-task-force",
       "sourceBookId": "space-marines",
@@ -33316,44 +33331,61 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "canonicalDetachmentId": "headhunter-task-force"
     },
     {
-      "title": "TARGET AUGURY WEB",
-      "text": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
+      "title": "THE IMPERIUM’S SWORD",
+      "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+      "value": 25,
+      "detachment": "1ST COMPANY TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "1st-company-task-force-the-imperiums-sword",
+      "sourceAuthority": "secondary",
+      "sourceId": "1st-company-task-force-the-imperiums-sword",
+      "ruleId": "1st-company-task-force-the-imperiums-sword",
+      "detachmentId": "1st-company-task-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "1st-company-task-force-the-imperiums-sword",
+      "canonicalEnhancementId": "1st-company-task-force-the-imperiums-sword",
+      "canonicalDetachmentId": "1st-company-task-force"
+    },
+    {
+      "title": "FEAR MADE MANIFEST (AURA)",
+      "text": "ADEPTUS ASTARTES model only. While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
       "value": 30,
-      "detachment": "Ironstorm Spearhead",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "ironstorm-spearhead-target-augury-web",
-      "sourceAuthority": "secondary",
-      "sourceId": "ironstorm-spearhead-target-augury-web",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "ironstorm-spearhead-target-augury-web",
-      "detachmentId": "ironstorm-spearhead",
-      "sourceBookId": "space-marines",
-      "legacyKey": "ironstorm-spearhead-target-augury-web",
-      "canonicalEnhancementId": "ironstorm-spearhead-target-augury-web",
-      "canonicalDetachmentId": "ironstorm-spearhead"
-    },
-    {
-      "title": "THE FLESH IS WEAK",
-      "text": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
-      "value": 20,
-      "detachment": "Ironstorm Spearhead",
+      "detachment": "1ST COMPANY TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33390,88 +33422,30 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "ironstorm-spearhead-the-flesh-is-weak",
+      "id": "1st-company-task-force-fear-made-manifest-aura",
       "sourceAuthority": "secondary",
-      "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "ironstorm-spearhead-the-flesh-is-weak",
-      "detachmentId": "ironstorm-spearhead",
+      "ruleId": "1st-company-task-force-fear-made-manifest-aura",
+      "detachmentId": "1st-company-task-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "ironstorm-spearhead-the-flesh-is-weak",
-      "canonicalEnhancementId": "ironstorm-spearhead-the-flesh-is-weak",
-      "canonicalDetachmentId": "ironstorm-spearhead"
+      "legacyKey": "1st-company-task-force-fear-made-manifest-aura",
+      "canonicalEnhancementId": "enhancement-fear-made-manifest",
+      "canonicalDetachmentId": "1st-company-task-force",
+      "sourceLimited": true
     },
     {
-      "title": "ADEPT OF THE OMNISSIAH",
-      "text": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
-      "value": 35,
-      "detachment": "Ironstorm Spearhead",
+      "title": "RITES OF WAR",
+      "text": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+      "value": 10,
+      "detachment": "1ST COMPANY TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
           "unitIds": [
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "ironstorm-spearhead-adept-of-the-omnissiah",
-      "sourceAuthority": "secondary",
-      "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "ironstorm-spearhead-adept-of-the-omnissiah",
-      "detachmentId": "ironstorm-spearhead",
-      "sourceBookId": "space-marines",
-      "legacyKey": "ironstorm-spearhead-adept-of-the-omnissiah",
-      "canonicalEnhancementId": "ironstorm-spearhead-adept-of-the-omnissiah",
-      "canonicalDetachmentId": "ironstorm-spearhead"
-    },
-    {
-      "title": "MASTER OF MACHINE WAR",
-      "text": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
-      "value": 20,
-      "detachment": "Ironstorm Spearhead",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
             "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
             "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
             "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
+            "unit-librarian-in-terminator-armour"
           ]
         }
       },
@@ -33480,33 +33454,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "ironstorm-spearhead-master-of-machine-war",
+      "id": "1st-company-task-force-rites-of-war",
       "sourceAuthority": "secondary",
-      "sourceId": "ironstorm-spearhead-master-of-machine-war",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "ironstorm-spearhead-master-of-machine-war",
-      "detachmentId": "ironstorm-spearhead",
+      "sourceId": "1st-company-task-force-rites-of-war",
+      "ruleId": "1st-company-task-force-rites-of-war",
+      "detachmentId": "1st-company-task-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "ironstorm-spearhead-master-of-machine-war",
-      "canonicalEnhancementId": "ironstorm-spearhead-master-of-machine-war",
-      "canonicalDetachmentId": "ironstorm-spearhead"
+      "legacyKey": "1st-company-task-force-rites-of-war",
+      "canonicalEnhancementId": "1st-company-task-force-rites-of-war",
+      "canonicalDetachmentId": "1st-company-task-force"
     },
     {
-      "title": "Celerity",
-      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
-      "value": 35,
-      "detachment": "Librarius Conclave",
+      "title": "IRON RESOLVE",
+      "text": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
+      "value": 15,
+      "detachment": "1ST COMPANY TASK FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
           "unitIds": [
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
+            "unit-ancient-in-terminator-armor",
+            "unit-captain-in-terminator-armour",
+            "unit-chaplain-in-terminator-armour",
             "unit-librarian-in-terminator-armour"
           ]
         }
@@ -33516,219 +33486,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "celerity",
-      "kind": "Enhancement",
-      "points": 35,
-      "sourcePages": [
-        4
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          4
-        ]
-      },
-      "sourceId": "celerity",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "celerity",
-      "detachmentId": "librarius-conclave",
+      "id": "1st-company-task-force-iron-resolve",
+      "sourceAuthority": "secondary",
+      "sourceId": "1st-company-task-force-iron-resolve",
+      "ruleId": "1st-company-task-force-iron-resolve",
+      "detachmentId": "1st-company-task-force",
       "sourceBookId": "space-marines",
-      "legacyKey": "celerity",
-      "canonicalEnhancementId": "celerity",
-      "canonicalDetachmentId": "librarius-conclave"
-    },
-    {
-      "title": "Fusillade",
-      "text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [LETHAL HITS] ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
-      "value": 25,
-      "detachment": "Librarius Conclave",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "fusillade",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        4
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          4
-        ]
-      },
-      "sourceId": "fusillade",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "fusillade",
-      "detachmentId": "librarius-conclave",
-      "sourceBookId": "space-marines",
-      "legacyKey": "fusillade",
-      "canonicalEnhancementId": "fusillade",
-      "canonicalDetachmentId": "librarius-conclave"
-    },
-    {
-      "title": "Obfuscation",
-      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ Enemy units cannot target this unit with snap shooting attacks. ▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
-      "value": 25,
-      "detachment": "Librarius Conclave",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "obfuscation",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        4
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          4
-        ]
-      },
-      "sourceId": "obfuscation",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "obfuscation",
-      "detachmentId": "librarius-conclave",
-      "sourceBookId": "space-marines",
-      "legacyKey": "obfuscation",
-      "canonicalEnhancementId": "obfuscation",
-      "canonicalDetachmentId": "librarius-conclave"
-    },
-    {
-      "title": "Prescience",
-      "text": "ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of: ▪ Up to D6\". ▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
-      "value": 20,
-      "detachment": "Librarius Conclave",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "prescience",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        4
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          4
-        ]
-      },
-      "sourceId": "prescience",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "prescience",
-      "detachmentId": "librarius-conclave",
-      "sourceBookId": "space-marines",
-      "legacyKey": "prescience",
-      "canonicalEnhancementId": "prescience",
-      "canonicalDetachmentId": "librarius-conclave"
-    },
-    {
-      "title": "Temporal Corridor",
-      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. ▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn).",
-      "value": 25,
-      "detachment": "Librarius Conclave",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "temporal-corridor",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        4
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          4
-        ]
-      },
-      "sourceId": "temporal-corridor",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "temporal-corridor",
-      "detachmentId": "librarius-conclave",
-      "sourceBookId": "space-marines",
-      "legacyKey": "temporal-corridor",
-      "canonicalEnhancementId": "temporal-corridor",
-      "canonicalDetachmentId": "librarius-conclave"
+      "legacyKey": "1st-company-task-force-iron-resolve",
+      "canonicalEnhancementId": "1st-company-task-force-iron-resolve",
+      "canonicalDetachmentId": "1st-company-task-force"
     },
     {
       "title": "Dedicated Gunship",
       "text": "Adeptus Astartes Terminator model only. Once per battle, at the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
       "value": 15,
-      "detachment": "Orbital Assault Force",
+      "detachment": "ORBITAL ASSAULT FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33759,11 +33531,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "dedicated-gunship",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "dedicated-gunship",
       "detachmentId": "orbital-assault-force",
       "sourceBookId": "space-marines",
@@ -33775,7 +33542,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Laurels of Thunder",
       "text": "Adeptus Astartes model only. You can re‑roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield.",
       "value": 15,
-      "detachment": "Orbital Assault Force",
+      "detachment": "ORBITAL ASSAULT FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33825,11 +33592,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "laurels-of-thunder",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "laurels-of-thunder",
       "detachmentId": "orbital-assault-force",
       "sourceBookId": "space-marines",
@@ -33841,7 +33603,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Orbital Uplink Reliquary",
       "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "value": 25,
-      "detachment": "Orbital Assault Force",
+      "detachment": "ORBITAL ASSAULT FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33891,11 +33653,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "orbital-uplink-reliquary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "orbital-uplink-reliquary",
       "detachmentId": "orbital-assault-force",
       "sourceBookId": "space-marines",
@@ -33907,7 +33664,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Veteran of the Vanguard",
       "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
       "value": 20,
-      "detachment": "Orbital Assault Force",
+      "detachment": "ORBITAL ASSAULT FORCE",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -33957,11 +33714,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "veteran-of-the-vanguard",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "veteran-of-the-vanguard",
       "detachmentId": "orbital-assault-force",
       "sourceBookId": "space-marines",
@@ -33970,1042 +33722,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "canonicalDetachmentId": "orbital-assault-force"
     },
     {
-      "title": "Avenging Avatar",
-      "text": "Adeptus Astartes model only. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle‑shock test.",
-      "value": 10,
-      "detachment": "Reclamation Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "avenging-avatar-aura",
-      "kind": "Enhancement",
-      "points": 10,
-      "sourcePages": [
-        28
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          28
-        ]
-      },
-      "sourceId": "avenging-avatar-aura",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "avenging-avatar-aura",
-      "detachmentId": "reclamation-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "avenging-avatar-aura",
-      "canonicalEnhancementId": "avenging-avatar-aura",
-      "canonicalDetachmentId": "reclamation-force"
-    },
-    {
-      "title": "Liberatum",
-      "text": "Adeptus Astartes model only. Each time the bearer makes an attack that targets an enemy unit, if the target is within range of an objective marker, you can re‑roll the Hit roll and you can re‑roll the Wound roll.",
-      "value": 25,
-      "detachment": "Reclamation Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "liberatum",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        28
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          28
-        ]
-      },
-      "sourceId": "liberatum",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "liberatum",
-      "detachmentId": "reclamation-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "liberatum",
-      "canonicalEnhancementId": "liberatum",
-      "canonicalDetachmentId": "reclamation-force"
-    },
-    {
-      "title": "Scroll of Proclamation",
-      "text": "Adeptus Astartes model only. When this unit declares a charge, if an enemy unit within range of an objective is within 12\" of this unit, you can use this enhancement. If you do: ■ This unit can re‑roll that charge roll. ■ This unit must end that charge move engaged with one or more of those enemy units.",
-      "value": 15,
-      "detachment": "Reclamation Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "scroll-of-proclamation",
-      "kind": "Enhancement",
-      "points": 15,
-      "sourcePages": [
-        28
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          28
-        ]
-      },
-      "sourceId": "scroll-of-proclamation",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "scroll-of-proclamation",
-      "detachmentId": "reclamation-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "scroll-of-proclamation",
-      "canonicalEnhancementId": "scroll-of-proclamation",
-      "canonicalDetachmentId": "reclamation-force"
-    },
-    {
-      "title": "Seals of Reconquest",
-      "text": "Adeptus Astartes model only. Models in the bearer’s unit have a 5+ invulnerable save.",
-      "value": 20,
-      "detachment": "Reclamation Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "seals-of-reconquest",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        28
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          28
-        ]
-      },
-      "sourceId": "seals-of-reconquest",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "seals-of-reconquest",
-      "detachmentId": "reclamation-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "seals-of-reconquest",
-      "canonicalEnhancementId": "seals-of-reconquest",
-      "canonicalDetachmentId": "reclamation-force"
-    },
-    {
-      "title": "Chogorian Huntmaster",
-      "text": "Adeptus Astartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
-      "value": 25,
-      "detachment": "Spearpoint Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER",
-            "MOUNTED"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "chogorian-huntmaster",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        16
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          16
-        ]
-      },
-      "sourceId": "chogorian-huntmaster",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "chogorian-huntmaster",
-      "detachmentId": "spearpoint-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "chogorian-huntmaster",
-      "canonicalEnhancementId": "chogorian-huntmaster",
-      "canonicalDetachmentId": "spearpoint-task-force"
-    },
-    {
-      "title": "Hunter’s Eye",
-      "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
-      "value": 20,
-      "detachment": "Spearpoint Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "hunter-s-eye",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        16
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          16
-        ]
-      },
-      "sourceId": "hunter-s-eye",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "hunter-s-eye",
-      "detachmentId": "spearpoint-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "hunter-s-eye",
-      "canonicalEnhancementId": "hunter-s-eye",
-      "canonicalDetachmentId": "spearpoint-task-force"
-    },
-    {
-      "title": "Spearpoint Paragon",
-      "text": "Adeptus Astartes model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.",
-      "value": 25,
-      "detachment": "Spearpoint Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "spearpoint-paragon",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        16
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          16
-        ]
-      },
-      "sourceId": "spearpoint-paragon",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "spearpoint-paragon",
-      "detachmentId": "spearpoint-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "spearpoint-paragon",
-      "canonicalEnhancementId": "spearpoint-paragon",
-      "canonicalDetachmentId": "spearpoint-task-force"
-    },
-    {
-      "title": "Stormseers' Wisdom",
-      "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit.",
-      "value": 15,
-      "detachment": "Spearpoint Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "stormseers-wisdom",
-      "kind": "Enhancement",
-      "points": 15,
-      "sourcePages": [
-        16
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          16
-        ]
-      },
-      "sourceId": "stormseers-wisdom",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "stormseers-wisdom",
-      "detachmentId": "spearpoint-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "stormseers-wisdom",
-      "canonicalEnhancementId": "stormseers-wisdom",
-      "canonicalDetachmentId": "spearpoint-task-force"
-    },
-    {
-      "title": "FURY OF THE STORM",
-      "text": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
-      "value": 25,
-      "detachment": "Stormlance Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-chaplain-on-bike"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "stormlance-task-force-fury-of-the-storm",
-      "sourceAuthority": "secondary",
-      "sourceId": "stormlance-task-force-fury-of-the-storm",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "stormlance-task-force-fury-of-the-storm",
-      "detachmentId": "stormlance-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "stormlance-task-force-fury-of-the-storm",
-      "canonicalEnhancementId": "stormlance-task-force-fury-of-the-storm",
-      "canonicalDetachmentId": "stormlance-task-force"
-    },
-    {
-      "title": "PORTENTS OF WISDOM",
-      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
-      "value": 15,
-      "detachment": "Stormlance Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "stormlance-task-force-portents-of-wisdom",
-      "sourceAuthority": "secondary",
-      "sourceId": "stormlance-task-force-portents-of-wisdom",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "stormlance-task-force-portents-of-wisdom",
-      "detachmentId": "stormlance-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "stormlance-task-force-portents-of-wisdom",
-      "canonicalEnhancementId": "stormlance-task-force-portents-of-wisdom",
-      "canonicalDetachmentId": "stormlance-task-force"
-    },
-    {
-      "title": "FEINTING WITHDRAWAL",
-      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
-      "value": 10,
-      "detachment": "Stormlance Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "stormlance-task-force-feinting-withdrawal",
-      "sourceAuthority": "secondary",
-      "sourceId": "stormlance-task-force-feinting-withdrawal",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "stormlance-task-force-feinting-withdrawal",
-      "detachmentId": "stormlance-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "stormlance-task-force-feinting-withdrawal",
-      "canonicalEnhancementId": "stormlance-task-force-feinting-withdrawal",
-      "canonicalDetachmentId": "stormlance-task-force"
-    },
-    {
-      "title": "HUNTER’S INSTINCTS",
-      "text": "ADEPTUS ASTARTES MOUNTED model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
-      "value": 25,
-      "detachment": "Stormlance Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-chaplain-on-bike"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "stormlance-task-force-hunters-instincts",
-      "sourceAuthority": "secondary",
-      "sourceId": "stormlance-task-force-hunters-instincts",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "stormlance-task-force-hunters-instincts",
-      "detachmentId": "stormlance-task-force",
-      "sourceBookId": "space-marines",
-      "legacyKey": "stormlance-task-force-hunters-instincts",
-      "canonicalEnhancementId": "stormlance-task-force-hunters-instincts",
-      "canonicalDetachmentId": "stormlance-task-force"
-    },
-    {
-      "title": "Blackwing Shroud",
-      "text": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
-      "value": 25,
-      "detachment": "Shadowmark Talon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER",
-            "INFANTRY"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "blackwing-shroud",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        22
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          22
-        ]
-      },
-      "sourceId": "blackwing-shroud",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "blackwing-shroud",
-      "detachmentId": "shadowmark-talon",
-      "sourceBookId": "space-marines",
-      "legacyKey": "blackwing-shroud",
-      "canonicalEnhancementId": "blackwing-shroud",
-      "canonicalDetachmentId": "shadowmark-talon"
-    },
-    {
-      "title": "Coronal Susurrant",
-      "text": "Phobos model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP .",
-      "value": 30,
-      "detachment": "Shadowmark Talon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER",
-            "PHOBOS"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "coronal-susurrant",
-      "kind": "Enhancement",
-      "points": 30,
-      "sourcePages": [
-        22
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          22
-        ]
-      },
-      "sourceId": "coronal-susurrant",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "coronal-susurrant",
-      "detachmentId": "shadowmark-talon",
-      "sourceBookId": "space-marines",
-      "legacyKey": "coronal-susurrant",
-      "canonicalEnhancementId": "coronal-susurrant",
-      "canonicalDetachmentId": "shadowmark-talon"
-    },
-    {
-      "title": "Hunter's Instincts",
-      "text": "Adeptus Astartes model only. In your Movement phase, if the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
-      "value": 25,
-      "detachment": "Shadowmark Talon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-chaplain-on-bike"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "hunter-s-instincts",
-      "kind": "Enhancement",
-      "points": 25,
-      "sourcePages": [
-        22
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          22
-        ]
-      },
-      "sourceId": "hunter-s-instincts",
-      "ruleId": "hunter-s-instincts",
-      "detachmentId": "shadowmark-talon",
-      "sourceBookId": "space-marines",
-      "legacyKey": "hunter-s-instincts",
-      "canonicalEnhancementId": "hunter-s-instincts",
-      "canonicalDetachmentId": "shadowmark-talon"
-    },
-    {
-      "title": "Umbral Raptor",
-      "text": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative abilities.",
-      "value": 15,
-      "detachment": "Shadowmark Talon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES",
-            "CHARACTER"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "umbral-raptor",
-      "kind": "Enhancement",
-      "points": 15,
-      "sourcePages": [
-        22
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          22
-        ]
-      },
-      "sourceId": "umbral-raptor",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "umbral-raptor",
-      "detachmentId": "shadowmark-talon",
-      "sourceBookId": "space-marines",
-      "legacyKey": "umbral-raptor",
-      "canonicalEnhancementId": "umbral-raptor",
-      "canonicalDetachmentId": "shadowmark-talon"
-    },
-    {
-      "title": "Death in the Dark (Upgrade)",
-      "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
-      "value": 15,
-      "detachment": "Subversion Assets",
-      "tags": [
-        "UPGRADE"
-      ],
-      "owner": {
-        "subject": "unit",
-        "selector": {
-          "allKeywords": [
-            "INFANTRY",
-            "PHOBOS"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "death-in-the-dark",
-      "kind": "Upgrade",
-      "points": 15,
-      "sourcePages": [
-        5
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          5
-        ]
-      },
-      "sourceId": "death-in-the-dark",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "death-in-the-dark",
-      "detachmentId": "subversion-assets",
-      "sourceBookId": "space-marines",
-      "legacyKey": "death-in-the-dark",
-      "canonicalEnhancementId": "death-in-the-dark",
-      "canonicalDetachmentId": "subversion-assets"
-    },
-    {
-      "title": "Shroud Field",
-      "text": "PHOBOS model only. This model has: ▪ Lone Operative. ▪ Stealth.",
-      "value": 20,
-      "detachment": "Subversion Assets",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-captain-in-phobos-armour",
-            "unit-librarian-in-phobos-armour",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "shroud-field",
-      "kind": "Enhancement",
-      "points": 20,
-      "sourcePages": [
-        5
-      ],
-      "provenance": {
-        "sourceId": "space-marines-faction-pack-v1.2",
-        "sourcePages": [
-          5
-        ]
-      },
-      "sourceId": "shroud-field",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "shroud-field",
-      "detachmentId": "subversion-assets",
-      "sourceBookId": "space-marines",
-      "legacyKey": "shroud-field",
-      "canonicalEnhancementId": "shroud-field",
-      "canonicalDetachmentId": "subversion-assets"
-    },
-    {
-      "title": "THE BLADE DRIVEN DEEP",
-      "text": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
-      "value": 25,
-      "detachment": "Vanguard Spearhead",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "vanguard-spearhead-the-blade-driven-deep",
-      "sourceAuthority": "secondary",
-      "sourceId": "vanguard-spearhead-the-blade-driven-deep",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "vanguard-spearhead-the-blade-driven-deep",
-      "detachmentId": "vanguard-spearhead",
-      "sourceBookId": "space-marines",
-      "legacyKey": "vanguard-spearhead-the-blade-driven-deep",
-      "canonicalEnhancementId": "vanguard-spearhead-the-blade-driven-deep",
-      "canonicalDetachmentId": "vanguard-spearhead"
-    },
-    {
-      "title": "GHOSTWEAVE CLOAK",
-      "text": "ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
-      "value": 15,
-      "detachment": "Vanguard Spearhead",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-ancient",
-            "unit-ancient-in-terminator-armor",
-            "unit-apothecary",
-            "unit-apothecary-biologis",
-            "unit-bladeguard-ancient",
-            "unit-captain",
-            "unit-captain-in-gravis-armour",
-            "unit-captain-in-phobos-armour",
-            "unit-captain-in-terminator-armour",
-            "unit-captain-with-jump-pack",
-            "unit-chaplain",
-            "unit-chaplain-in-terminator-armour",
-            "unit-chaplain-on-bike",
-            "unit-chaplain-with-jump-pack",
-            "unit-judiciar",
-            "unit-librarian",
-            "unit-librarian-in-phobos-armour",
-            "unit-librarian-in-terminator-armour",
-            "unit-lieutenant",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon",
-            "unit-techmarine"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "vanguard-spearhead-ghostweave-cloak",
-      "sourceAuthority": "secondary",
-      "sourceId": "vanguard-spearhead-ghostweave-cloak",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "vanguard-spearhead-ghostweave-cloak",
-      "detachmentId": "vanguard-spearhead",
-      "sourceBookId": "space-marines",
-      "legacyKey": "vanguard-spearhead-ghostweave-cloak",
-      "canonicalEnhancementId": "vanguard-spearhead-ghostweave-cloak",
-      "canonicalDetachmentId": "vanguard-spearhead"
-    },
-    {
-      "title": "EXECUTE AND REDEPLOY",
-      "text": "PHOBOS model only. In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer’s unit to move more than once in your Shooting phase.",
-      "value": 20,
-      "detachment": "Vanguard Spearhead",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-captain-in-phobos-armour",
-            "unit-librarian-in-phobos-armour",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "vanguard-spearhead-execute-and-redeploy",
-      "sourceAuthority": "secondary",
-      "sourceId": "vanguard-spearhead-execute-and-redeploy",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "vanguard-spearhead-execute-and-redeploy",
-      "detachmentId": "vanguard-spearhead",
-      "sourceBookId": "space-marines",
-      "legacyKey": "vanguard-spearhead-execute-and-redeploy",
-      "canonicalEnhancementId": "vanguard-spearhead-execute-and-redeploy",
-      "canonicalDetachmentId": "vanguard-spearhead"
-    },
-    {
-      "title": "SHADOW WAR VETERAN",
-      "text": "PHOBOS model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
-      "value": 30,
-      "detachment": "Vanguard Spearhead",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-captain-in-phobos-armour",
-            "unit-librarian-in-phobos-armour",
-            "unit-lieutenant-in-phobos-armour",
-            "unit-lieutenant-in-reiver-armour",
-            "unit-lieutenant-with-combi-weapon"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "vanguard-spearhead-shadow-war-veteran",
-      "sourceAuthority": "secondary",
-      "sourceId": "vanguard-spearhead-shadow-war-veteran",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "vanguard-spearhead-shadow-war-veteran",
-      "detachmentId": "vanguard-spearhead",
-      "sourceBookId": "space-marines",
-      "legacyKey": "vanguard-spearhead-shadow-war-veteran",
-      "canonicalEnhancementId": "vanguard-spearhead-shadow-war-veteran",
-      "canonicalDetachmentId": "vanguard-spearhead"
-    },
-    {
       "title": "Avenging Angel",
       "text": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
       "value": 20,
-      "detachment": "Vengeful Hosts",
+      "detachment": "VENGEFUL HOSTS",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -35034,11 +33754,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "enhancement-avenging-angel",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-avenging-angel",
       "detachmentId": "vengeful-hosts",
       "sourceBookId": "space-marines",
@@ -35050,21 +33765,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Orksbane",
       "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2 3",
       "value": 20,
-      "detachment": "Vengeful Hosts",
+      "detachment": "VENGEFUL HOSTS",
       "tags": [],
-      "profile": {
-        "name": "Orksbane",
-        "type": "Melee Weapons",
-        "characteristics": {
-          "Range": "Melee",
-          "A": "4",
-          "WS": "2+",
-          "S": "8",
-          "AP": "-2",
-          "D": "3",
-          "Keywords": "Cleave 2"
-        }
-      },
       "owner": {
         "subject": "model",
         "selector": {
@@ -35092,17 +33794,974 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "enhancement-orksbane",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-orksbane",
       "detachmentId": "vengeful-hosts",
       "sourceBookId": "space-marines",
       "legacyKey": "enhancement-orksbane",
       "canonicalEnhancementId": "enhancement-orksbane",
       "canonicalDetachmentId": "vengeful-hosts"
+    },
+    {
+      "title": "Castellum Omnivox",
+      "text": "Adeptus Astartes model only. Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: ■ That unit is eligible to perform an Action in a turn in which it Fell Back. ■ That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "value": 20,
+      "detachment": "CERAMITE SENTINELS",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "castellum-omnivox",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          10
+        ]
+      },
+      "sourceId": "castellum-omnivox",
+      "ruleId": "castellum-omnivox",
+      "detachmentId": "ceramite-sentinels",
+      "sourceBookId": "space-marines",
+      "legacyKey": "castellum-omnivox",
+      "canonicalEnhancementId": "castellum-omnivox",
+      "canonicalDetachmentId": "ceramite-sentinels"
+    },
+    {
+      "title": "Defensive Mastery",
+      "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "value": 25,
+      "detachment": "CERAMITE SENTINELS",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "defensive-mastery",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          10
+        ]
+      },
+      "sourceId": "defensive-mastery",
+      "ruleId": "defensive-mastery",
+      "detachmentId": "ceramite-sentinels",
+      "sourceBookId": "space-marines",
+      "legacyKey": "defensive-mastery",
+      "canonicalEnhancementId": "defensive-mastery",
+      "canonicalDetachmentId": "ceramite-sentinels"
+    },
+    {
+      "title": "Honour Indefatigable",
+      "text": "Gravis model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+      "value": 25,
+      "detachment": "CERAMITE SENTINELS",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-apothecary-biologis",
+            "unit-captain-in-gravis-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "honour-indefatigable",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          10
+        ]
+      },
+      "sourceId": "honour-indefatigable",
+      "ruleId": "honour-indefatigable",
+      "detachmentId": "ceramite-sentinels",
+      "sourceBookId": "space-marines",
+      "legacyKey": "honour-indefatigable",
+      "canonicalEnhancementId": "honour-indefatigable",
+      "canonicalDetachmentId": "ceramite-sentinels"
+    },
+    {
+      "title": "Spy-skull Data Link",
+      "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+      "value": 15,
+      "detachment": "CERAMITE SENTINELS",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "spy-skull-data-link",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          10
+        ]
+      },
+      "sourceId": "spy-skull-data-link",
+      "ruleId": "spy-skull-data-link",
+      "detachmentId": "ceramite-sentinels",
+      "sourceBookId": "space-marines",
+      "legacyKey": "spy-skull-data-link",
+      "canonicalEnhancementId": "spy-skull-data-link",
+      "canonicalDetachmentId": "ceramite-sentinels"
+    },
+    {
+      "title": "Champion of the Feast",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by other models in the bearer’s unit as well.",
+      "value": 25,
+      "detachment": "EMPEROR’S SHIELD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "champion-of-the-feast",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        20
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          20
+        ]
+      },
+      "sourceId": "champion-of-the-feast",
+      "ruleId": "champion-of-the-feast",
+      "detachmentId": "emperor-s-shield",
+      "sourceBookId": "space-marines",
+      "legacyKey": "champion-of-the-feast",
+      "canonicalEnhancementId": "champion-of-the-feast",
+      "canonicalDetachmentId": "emperor-s-shield"
+    },
+    {
+      "title": "Disciple of Rhetoricus",
+      "text": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of other models in the bearer’s unit as well.",
+      "value": 10,
+      "detachment": "EMPEROR’S SHIELD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "TERMINATOR"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "disciple-of-rhetoricus",
+      "kind": "Enhancement",
+      "points": 10,
+      "sourcePages": [
+        20
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          20
+        ]
+      },
+      "sourceId": "disciple-of-rhetoricus",
+      "ruleId": "disciple-of-rhetoricus",
+      "detachmentId": "emperor-s-shield",
+      "sourceBookId": "space-marines",
+      "legacyKey": "disciple-of-rhetoricus",
+      "canonicalEnhancementId": "disciple-of-rhetoricus",
+      "canonicalDetachmentId": "emperor-s-shield"
+    },
+    {
+      "title": "Indomitable Champion",
+      "text": "Adeptus Astartes Terminator model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
+      "value": 20,
+      "detachment": "EMPEROR’S SHIELD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "TERMINATOR"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "indomitable-champion",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        20
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          20
+        ]
+      },
+      "sourceId": "indomitable-champion",
+      "ruleId": "indomitable-champion",
+      "detachmentId": "emperor-s-shield",
+      "sourceBookId": "space-marines",
+      "legacyKey": "indomitable-champion",
+      "canonicalEnhancementId": "indomitable-champion",
+      "canonicalDetachmentId": "emperor-s-shield"
+    },
+    {
+      "title": "Malodraxian Standard",
+      "text": "Adeptus Astartes Ancient model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll.",
+      "value": 20,
+      "detachment": "EMPEROR’S SHIELD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES",
+            "CHARACTER",
+            "ANCIENT"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "malodraxian-standard",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        20
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          20
+        ]
+      },
+      "sourceId": "malodraxian-standard",
+      "ruleId": "malodraxian-standard",
+      "detachmentId": "emperor-s-shield",
+      "sourceBookId": "space-marines",
+      "legacyKey": "malodraxian-standard",
+      "canonicalEnhancementId": "malodraxian-standard",
+      "canonicalDetachmentId": "emperor-s-shield"
+    },
+    {
+      "title": "CHAMPION OF HUMANITY",
+      "text": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
+      "value": 10,
+      "detachment": "FIRESTORM ASSAULT FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-apothecary",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-lieutenant",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "firestorm-assault-force-champion-of-humanity",
+      "sourceAuthority": "secondary",
+      "sourceId": "firestorm-assault-force-champion-of-humanity",
+      "ruleId": "firestorm-assault-force-champion-of-humanity",
+      "detachmentId": "firestorm-assault-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "firestorm-assault-force-champion-of-humanity",
+      "canonicalEnhancementId": "firestorm-assault-force-champion-of-humanity",
+      "canonicalDetachmentId": "firestorm-assault-force"
+    },
+    {
+      "title": "WAR-TEMPERED ARTIFICE",
+      "text": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
+      "value": 25,
+      "detachment": "FIRESTORM ASSAULT FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "firestorm-assault-force-war-tempered-artifice",
+      "sourceAuthority": "secondary",
+      "sourceId": "firestorm-assault-force-war-tempered-artifice",
+      "ruleId": "firestorm-assault-force-war-tempered-artifice",
+      "detachmentId": "firestorm-assault-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "firestorm-assault-force-war-tempered-artifice",
+      "canonicalEnhancementId": "firestorm-assault-force-war-tempered-artifice",
+      "canonicalDetachmentId": "firestorm-assault-force"
+    },
+    {
+      "title": "FORGED IN BATTLE",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
+      "value": 15,
+      "detachment": "FIRESTORM ASSAULT FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "firestorm-assault-force-forged-in-battle",
+      "sourceAuthority": "secondary",
+      "sourceId": "firestorm-assault-force-forged-in-battle",
+      "ruleId": "firestorm-assault-force-forged-in-battle",
+      "detachmentId": "firestorm-assault-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "firestorm-assault-force-forged-in-battle",
+      "canonicalEnhancementId": "firestorm-assault-force-forged-in-battle",
+      "canonicalDetachmentId": "firestorm-assault-force"
+    },
+    {
+      "title": "ADAMANTINE MANTLE",
+      "text": "ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
+      "value": 20,
+      "detachment": "FIRESTORM ASSAULT FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "firestorm-assault-force-adamantine-mantle",
+      "sourceAuthority": "secondary",
+      "sourceId": "firestorm-assault-force-adamantine-mantle",
+      "ruleId": "firestorm-assault-force-adamantine-mantle",
+      "detachmentId": "firestorm-assault-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "firestorm-assault-force-adamantine-mantle",
+      "canonicalEnhancementId": "firestorm-assault-force-adamantine-mantle",
+      "canonicalDetachmentId": "firestorm-assault-force"
+    },
+    {
+      "title": "Armoured Commander",
+      "text": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "value": 25,
+      "detachment": "ARMOURED SPEARTIP",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "armoured-commander",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        6
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          6
+        ]
+      },
+      "sourceId": "armoured-commander",
+      "ruleId": "armoured-commander",
+      "detachmentId": "armoured-speartip",
+      "sourceBookId": "space-marines",
+      "legacyKey": "armoured-commander",
+      "canonicalEnhancementId": "armoured-commander",
+      "canonicalDetachmentId": "armoured-speartip"
+    },
+    {
+      "title": "Liberator",
+      "text": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase, and the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+      "value": 15,
+      "detachment": "ARMOURED SPEARTIP",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "liberator",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        6
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          6
+        ]
+      },
+      "sourceId": "liberator",
+      "ruleId": "liberator",
+      "detachmentId": "armoured-speartip",
+      "sourceBookId": "space-marines",
+      "legacyKey": "liberator",
+      "canonicalEnhancementId": "liberator",
+      "canonicalDetachmentId": "armoured-speartip"
+    },
+    {
+      "title": "Shock Deployment",
+      "text": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+      "value": 20,
+      "detachment": "ARMOURED SPEARTIP",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary-biologis",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-chaplain-in-terminator-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "shock-deployment",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        6
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          6
+        ]
+      },
+      "sourceId": "shock-deployment",
+      "ruleId": "shock-deployment",
+      "detachmentId": "armoured-speartip",
+      "sourceBookId": "space-marines",
+      "legacyKey": "shock-deployment",
+      "canonicalEnhancementId": "shock-deployment",
+      "canonicalDetachmentId": "armoured-speartip"
+    },
+    {
+      "title": "Tip of the Spear",
+      "text": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport , that Transport has the Scouts 6\" ability.",
+      "value": 40,
+      "detachment": "ARMOURED SPEARTIP",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "tip-of-the-spear",
+      "kind": "Enhancement",
+      "points": 40,
+      "sourcePages": [
+        6
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.2",
+        "sourcePages": [
+          6
+        ]
+      },
+      "sourceId": "tip-of-the-spear",
+      "ruleId": "tip-of-the-spear",
+      "detachmentId": "armoured-speartip",
+      "sourceBookId": "space-marines",
+      "legacyKey": "tip-of-the-spear",
+      "canonicalEnhancementId": "tip-of-the-spear",
+      "canonicalDetachmentId": "armoured-speartip"
+    },
+    {
+      "title": "INDOMITABLE FURY",
+      "text": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+      "value": 20,
+      "detachment": "ANVIL SIEGE FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-apothecary-biologis",
+            "unit-captain-in-gravis-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "anvil-siege-force-indomitable-fury",
+      "sourceAuthority": "secondary",
+      "sourceId": "anvil-siege-force-indomitable-fury",
+      "ruleId": "anvil-siege-force-indomitable-fury",
+      "detachmentId": "anvil-siege-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "anvil-siege-force-indomitable-fury",
+      "canonicalEnhancementId": "anvil-siege-force-indomitable-fury",
+      "canonicalDetachmentId": "anvil-siege-force"
+    },
+    {
+      "title": "FLEET COMMANDER",
+      "text": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+      "value": 15,
+      "detachment": "ANVIL SIEGE FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "anvil-siege-force-fleet-commander",
+      "sourceAuthority": "secondary",
+      "sourceId": "anvil-siege-force-fleet-commander",
+      "ruleId": "anvil-siege-force-fleet-commander",
+      "detachmentId": "anvil-siege-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "anvil-siege-force-fleet-commander",
+      "canonicalEnhancementId": "anvil-siege-force-fleet-commander",
+      "canonicalDetachmentId": "anvil-siege-force"
+    },
+    {
+      "title": "STOIC DEFENDER",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
+      "value": 15,
+      "detachment": "ANVIL SIEGE FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "anvil-siege-force-stoic-defender",
+      "sourceAuthority": "secondary",
+      "sourceId": "anvil-siege-force-stoic-defender",
+      "ruleId": "anvil-siege-force-stoic-defender",
+      "detachmentId": "anvil-siege-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "anvil-siege-force-stoic-defender",
+      "canonicalEnhancementId": "anvil-siege-force-stoic-defender",
+      "canonicalDetachmentId": "anvil-siege-force"
+    },
+    {
+      "title": "ARCHITECT OF WAR",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+      "value": 25,
+      "detachment": "ANVIL SIEGE FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "anvil-siege-force-architect-of-war",
+      "sourceAuthority": "secondary",
+      "sourceId": "anvil-siege-force-architect-of-war",
+      "ruleId": "anvil-siege-force-architect-of-war",
+      "detachmentId": "anvil-siege-force",
+      "sourceBookId": "space-marines",
+      "legacyKey": "anvil-siege-force-architect-of-war",
+      "canonicalEnhancementId": "anvil-siege-force-architect-of-war",
+      "canonicalDetachmentId": "anvil-siege-force"
     }
   ],
   "effectContracts": [
@@ -42611,39 +42270,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   ]
 });
 window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
-  "1st-company-task-force-the-imperiums-sword": {
-    "title": "THE IMPERIUM’S SWORD",
-    "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+  "chogorian-huntmaster": {
+    "title": "Chogorian Huntmaster",
+    "text": "Adeptus Astartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
     "value": 25,
-    "detachment": "1st Company Task Force",
+    "detachment": "SPEARPOINT TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER",
+          "MOUNTED"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
         ]
       }
     },
@@ -42652,115 +42294,24 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "1st-company-task-force-the-imperiums-sword",
-    "detachmentId": "1st-company-task-force"
+    "ruleId": "chogorian-huntmaster",
+    "detachmentId": "spearpoint-task-force"
   },
-  "1st-company-task-force-fear-made-manifest-aura": {
-    "title": "FEAR MADE MANIFEST (AURA)",
-    "text": "ADEPTUS ASTARTES model only. While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
-    "value": 30,
-    "detachment": "1st Company Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "1st-company-task-force-fear-made-manifest-aura",
-    "detachmentId": "1st-company-task-force"
-  },
-  "1st-company-task-force-rites-of-war": {
-    "title": "RITES OF WAR",
-    "text": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
-    "value": 10,
-    "detachment": "1st Company Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient-in-terminator-armor",
-          "unit-captain-in-terminator-armour",
-          "unit-chaplain-in-terminator-armour",
-          "unit-librarian-in-terminator-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "1st-company-task-force-rites-of-war",
-    "detachmentId": "1st-company-task-force"
-  },
-  "1st-company-task-force-iron-resolve": {
-    "title": "IRON RESOLVE",
-    "text": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
-    "value": 15,
-    "detachment": "1st Company Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient-in-terminator-armor",
-          "unit-captain-in-terminator-armour",
-          "unit-chaplain-in-terminator-armour",
-          "unit-librarian-in-terminator-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "1st-company-task-force-iron-resolve",
-    "detachmentId": "1st-company-task-force"
-  },
-  "anvil-siege-force-indomitable-fury": {
-    "title": "INDOMITABLE FURY",
-    "text": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+  "hunter-s-eye": {
+    "title": "Hunter’s Eye",
+    "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
     "value": 20,
-    "detachment": "Anvil Siege Force",
+    "detachment": "SPEARPOINT TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
-        "unitIds": [
-          "unit-apothecary-biologis",
-          "unit-captain-in-gravis-armour"
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
         ]
       }
     },
@@ -42769,14 +42320,955 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "anvil-siege-force-indomitable-fury",
-    "detachmentId": "anvil-siege-force"
+    "ruleId": "hunter-s-eye",
+    "detachmentId": "spearpoint-task-force"
   },
-  "anvil-siege-force-fleet-commander": {
-    "title": "FLEET COMMANDER",
-    "text": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+  "spearpoint-paragon": {
+    "title": "Spearpoint Paragon",
+    "text": "Adeptus Astartes model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.",
+    "value": 25,
+    "detachment": "SPEARPOINT TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "spearpoint-paragon",
+    "detachmentId": "spearpoint-task-force"
+  },
+  "stormseers-wisdom": {
+    "title": "Stormseers' Wisdom",
+    "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit.",
     "value": 15,
-    "detachment": "Anvil Siege Force",
+    "detachment": "SPEARPOINT TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "stormseers-wisdom",
+    "detachmentId": "spearpoint-task-force"
+  },
+  "armour-of-antoninus": {
+    "title": "Armour of Antoninus",
+    "text": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+    "value": 20,
+    "detachment": "BLADE OF ULTRAMAR",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "armour-of-antoninus",
+    "detachmentId": "blade-of-ultramar"
+  },
+  "oath-of-macragge": {
+    "title": "Oath of Macragge",
+    "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
+    "value": 15,
+    "detachment": "BLADE OF ULTRAMAR",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "oath-of-macragge",
+    "detachmentId": "blade-of-ultramar"
+  },
+  "student-of-the-codex": {
+    "title": "Student of the Codex",
+    "text": "Adeptus Astartes model only. At the start of your Command phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, until the start of your next Command phase, the Tactical Doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army).",
+    "value": 20,
+    "detachment": "BLADE OF ULTRAMAR",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "student-of-the-codex",
+    "detachmentId": "blade-of-ultramar"
+  },
+  "veteran-of-behemoth": {
+    "title": "Veteran of Behemoth",
+    "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can re‑roll Advance rolls made for that unit.",
+    "value": 25,
+    "detachment": "BLADE OF ULTRAMAR",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "veteran-of-behemoth",
+    "detachmentId": "blade-of-ultramar"
+  },
+  "death-in-the-dark": {
+    "title": "Death in the Dark (Upgrade)",
+    "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
+    "value": 15,
+    "detachment": "SUBVERSION ASSETS",
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "allKeywords": [
+          "INFANTRY",
+          "PHOBOS"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "death-in-the-dark",
+    "detachmentId": "subversion-assets"
+  },
+  "shroud-field": {
+    "title": "Shroud Field",
+    "text": "PHOBOS model only. This model has: ▪ Lone Operative. ▪ Stealth.",
+    "value": 20,
+    "detachment": "SUBVERSION ASSETS",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-captain-in-phobos-armour",
+          "unit-librarian-in-phobos-armour",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "shroud-field",
+    "detachmentId": "subversion-assets"
+  },
+  "stormlance-task-force-fury-of-the-storm": {
+    "title": "FURY OF THE STORM",
+    "text": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
+    "value": 25,
+    "detachment": "STORMLANCE TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-chaplain-on-bike"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "stormlance-task-force-fury-of-the-storm",
+    "detachmentId": "stormlance-task-force"
+  },
+  "stormlance-task-force-portents-of-wisdom": {
+    "title": "PORTENTS OF WISDOM",
+    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
+    "value": 15,
+    "detachment": "STORMLANCE TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "stormlance-task-force-portents-of-wisdom",
+    "detachmentId": "stormlance-task-force"
+  },
+  "stormlance-task-force-feinting-withdrawal": {
+    "title": "FEINTING WITHDRAWAL",
+    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
+    "value": 10,
+    "detachment": "STORMLANCE TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "stormlance-task-force-feinting-withdrawal",
+    "detachmentId": "stormlance-task-force"
+  },
+  "stormlance-task-force-hunters-instincts": {
+    "title": "HUNTER’S INSTINCTS",
+    "text": "ADEPTUS ASTARTES MOUNTED model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+    "value": 25,
+    "detachment": "STORMLANCE TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-chaplain-on-bike"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "stormlance-task-force-hunters-instincts",
+    "detachmentId": "stormlance-task-force"
+  },
+  "ironstorm-spearhead-target-augury-web": {
+    "title": "TARGET AUGURY WEB",
+    "text": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
+    "value": 30,
+    "detachment": "IRONSTORM SPEARHEAD",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "ironstorm-spearhead-target-augury-web",
+    "detachmentId": "ironstorm-spearhead"
+  },
+  "ironstorm-spearhead-the-flesh-is-weak": {
+    "title": "THE FLESH IS WEAK",
+    "text": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
+    "value": 20,
+    "detachment": "IRONSTORM SPEARHEAD",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "ironstorm-spearhead-the-flesh-is-weak",
+    "detachmentId": "ironstorm-spearhead"
+  },
+  "ironstorm-spearhead-adept-of-the-omnissiah": {
+    "title": "ADEPT OF THE OMNISSIAH",
+    "text": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+    "value": 35,
+    "detachment": "IRONSTORM SPEARHEAD",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "ironstorm-spearhead-adept-of-the-omnissiah",
+    "detachmentId": "ironstorm-spearhead"
+  },
+  "ironstorm-spearhead-master-of-machine-war": {
+    "title": "MASTER OF MACHINE WAR",
+    "text": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
+    "value": 20,
+    "detachment": "IRONSTORM SPEARHEAD",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "ironstorm-spearhead-master-of-machine-war",
+    "detachmentId": "ironstorm-spearhead"
+  },
+  "bellicose-weapon-spirits": {
+    "title": "Bellicose Weapon Spirits (Upgrade)",
+    "text": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
+    "value": 15,
+    "detachment": "FULGURIS TASK FORCE",
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-land-speeder",
+          "unit-storm-speeder-hailstrike",
+          "unit-storm-speeder-hammerstrike",
+          "unit-storm-speeder-thunderstrike"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "bellicose-weapon-spirits",
+    "detachmentId": "fulguris-task-force"
+  },
+  "raptorial-cogitator-core": {
+    "title": "Raptorial Cogitator Core (Upgrade)",
+    "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
+    "value": 15,
+    "detachment": "FULGURIS TASK FORCE",
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-land-speeder",
+          "unit-storm-speeder-hailstrike",
+          "unit-storm-speeder-hammerstrike",
+          "unit-storm-speeder-thunderstrike"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "raptorial-cogitator-core",
+    "detachmentId": "fulguris-task-force"
+  },
+  "celerity": {
+    "title": "Celerity",
+    "text": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
+    "value": 35,
+    "detachment": "LIBRARIUS CONCLAVE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "celerity",
+    "detachmentId": "librarius-conclave"
+  },
+  "fusillade": {
+    "title": "Fusillade",
+    "text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [LETHAL HITS] ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
+    "value": 25,
+    "detachment": "LIBRARIUS CONCLAVE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "fusillade",
+    "detachmentId": "librarius-conclave"
+  },
+  "obfuscation": {
+    "title": "Obfuscation",
+    "text": "ADEPTUS ASTARTES PSYKER model only. ▪ Enemy units cannot target this unit with snap shooting attacks. ▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
+    "value": 25,
+    "detachment": "LIBRARIUS CONCLAVE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "obfuscation",
+    "detachmentId": "librarius-conclave"
+  },
+  "prescience": {
+    "title": "Prescience",
+    "text": "ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of: ▪ Up to D6\". ▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
+    "value": 20,
+    "detachment": "LIBRARIUS CONCLAVE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "prescience",
+    "detachmentId": "librarius-conclave"
+  },
+  "temporal-corridor": {
+    "title": "Temporal Corridor",
+    "text": "ADEPTUS ASTARTES PSYKER model only. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. ▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn).",
+    "value": 25,
+    "detachment": "LIBRARIUS CONCLAVE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "temporal-corridor",
+    "detachmentId": "librarius-conclave"
+  },
+  "iron-laurel": {
+    "title": "Iron Laurel",
+    "text": "Adeptus Astartes model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+    "value": 10,
+    "detachment": "HAMMER OF AVERNII",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "iron-laurel",
+    "detachmentId": "hammer-of-avernii"
+  },
+  "medusan-roar-aura": {
+    "title": "Medusan Roar",
+    "text": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles ) is within 6\" of the bearer, each time that unit fails a Battle‑shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle‑shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+    "value": 30,
+    "detachment": "HAMMER OF AVERNII",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "medusan-roar-aura",
+    "detachmentId": "hammer-of-avernii"
+  },
+  "spiritus-ferrum": {
+    "title": "Spiritus Ferrum",
+    "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+    "value": 25,
+    "detachment": "HAMMER OF AVERNII",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "spiritus-ferrum",
+    "detachmentId": "hammer-of-avernii"
+  },
+  "steel-font": {
+    "title": "Steel Font",
+    "text": "Adeptus Astartes Terminator model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
+    "value": 15,
+    "detachment": "HAMMER OF AVERNII",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER",
+          "TERMINATOR"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "steel-font",
+    "detachmentId": "hammer-of-avernii"
+  },
+  "avenging-avatar-aura": {
+    "title": "Avenging Avatar",
+    "text": "Adeptus Astartes model only. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle‑shock test.",
+    "value": 10,
+    "detachment": "RECLAMATION FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "avenging-avatar-aura",
+    "detachmentId": "reclamation-force"
+  },
+  "liberatum": {
+    "title": "Liberatum",
+    "text": "Adeptus Astartes model only. Each time the bearer makes an attack that targets an enemy unit, if the target is within range of an objective marker, you can re‑roll the Hit roll and you can re‑roll the Wound roll.",
+    "value": 25,
+    "detachment": "RECLAMATION FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "liberatum",
+    "detachmentId": "reclamation-force"
+  },
+  "scroll-of-proclamation": {
+    "title": "Scroll of Proclamation",
+    "text": "Adeptus Astartes model only. When this unit declares a charge, if an enemy unit within range of an objective is within 12\" of this unit, you can use this enhancement. If you do: ■ This unit can re‑roll that charge roll. ■ This unit must end that charge move engaged with one or more of those enemy units.",
+    "value": 15,
+    "detachment": "RECLAMATION FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "scroll-of-proclamation",
+    "detachmentId": "reclamation-force"
+  },
+  "seals-of-reconquest": {
+    "title": "Seals of Reconquest",
+    "text": "Adeptus Astartes model only. Models in the bearer’s unit have a 5+ invulnerable save.",
+    "value": 20,
+    "detachment": "RECLAMATION FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "seals-of-reconquest",
+    "detachmentId": "reclamation-force"
+  },
+  "gladius-task-force-artificer-armour": {
+    "title": "ARTIFICER ARMOUR",
+    "text": "ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+    "value": 20,
+    "detachment": "GLADIUS TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "gladius-task-force-artificer-armour",
+    "detachmentId": "gladius-task-force"
+  },
+  "gladius-task-force-the-honour-vehement": {
+    "title": "THE HONOUR VEHEMENT",
+    "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
+    "value": 15,
+    "detachment": "GLADIUS TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "gladius-task-force-the-honour-vehement",
+    "detachmentId": "gladius-task-force"
+  },
+  "gladius-task-force-adept-of-the-codex": {
+    "title": "ADEPT OF THE CODEX",
+    "text": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
+    "value": 20,
+    "detachment": "GLADIUS TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -42795,58 +43287,14 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "anvil-siege-force-fleet-commander",
-    "detachmentId": "anvil-siege-force"
+    "ruleId": "gladius-task-force-adept-of-the-codex",
+    "detachmentId": "gladius-task-force"
   },
-  "anvil-siege-force-stoic-defender": {
-    "title": "STOIC DEFENDER",
-    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
-    "value": 15,
-    "detachment": "Anvil Siege Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "anvil-siege-force-stoic-defender",
-    "detachmentId": "anvil-siege-force"
-  },
-  "anvil-siege-force-architect-of-war": {
-    "title": "ARCHITECT OF WAR",
-    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+  "gladius-task-force-fire-discipline": {
+    "title": "FIRE DISCIPLINE",
+    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
     "value": 25,
-    "detachment": "Anvil Siege Force",
+    "detachment": "GLADIUS TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -42883,42 +43331,25 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "anvil-siege-force-architect-of-war",
-    "detachmentId": "anvil-siege-force"
+    "ruleId": "gladius-task-force-fire-discipline",
+    "detachmentId": "gladius-task-force"
   },
-  "armoured-commander": {
-    "title": "Armoured Commander",
-    "text": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
+  "blackwing-shroud": {
+    "title": "Blackwing Shroud",
+    "text": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
     "value": 25,
-    "detachment": "Armoured Speartip",
+    "detachment": "SHADOWMARK TALON",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER",
+          "INFANTRY"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
         ]
       }
     },
@@ -42927,42 +43358,73 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "armoured-commander",
-    "detachmentId": "armoured-speartip"
+    "ruleId": "blackwing-shroud",
+    "detachmentId": "shadowmark-talon"
   },
-  "liberator": {
-    "title": "Liberator",
-    "text": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase, and the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+  "coronal-susurrant": {
+    "title": "Coronal Susurrant",
+    "text": "Phobos model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP .",
+    "value": 30,
+    "detachment": "SHADOWMARK TALON",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER",
+          "PHOBOS"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "coronal-susurrant",
+    "detachmentId": "shadowmark-talon"
+  },
+  "hunter-s-instincts": {
+    "title": "Hunter's Instincts",
+    "text": "Adeptus Astartes model only. In your Movement phase, if the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+    "value": 25,
+    "detachment": "SHADOWMARK TALON",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-chaplain-on-bike"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "hunter-s-instincts",
+    "detachmentId": "shadowmark-talon"
+  },
+  "umbral-raptor": {
+    "title": "Umbral Raptor",
+    "text": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative abilities.",
     "value": 15,
-    "detachment": "Armoured Speartip",
+    "detachment": "SHADOWMARK TALON",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
         ]
       }
     },
@@ -42971,85 +43433,14 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "liberator",
-    "detachmentId": "armoured-speartip"
-  },
-  "shock-deployment": {
-    "title": "Shock Deployment",
-    "text": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
-    "value": 20,
-    "detachment": "Armoured Speartip",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary-biologis",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-chaplain-in-terminator-armour",
-          "unit-librarian-in-terminator-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "shock-deployment",
-    "detachmentId": "armoured-speartip"
-  },
-  "tip-of-the-spear": {
-    "title": "Tip of the Spear",
-    "text": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport , that Transport has the Scouts 6\" ability.",
-    "value": 40,
-    "detachment": "Armoured Speartip",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "tip-of-the-spear",
-    "detachmentId": "armoured-speartip"
+    "ruleId": "umbral-raptor",
+    "detachmentId": "shadowmark-talon"
   },
   "blades-of-valour": {
     "title": "Blades of Valour",
     "text": "Adeptus Astartes model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1.",
     "value": 15,
-    "detachment": "Bastion Task Force",
+    "detachment": "BASTION TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43093,7 +43484,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Bombast Omnivox",
     "text": "Adeptus Astartes model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP .",
     "value": 15,
-    "detachment": "Bastion Task Force",
+    "detachment": "BASTION TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43137,7 +43528,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Eye of the Primarch",
     "text": "Adeptus Astartes model only. Ranged weapons equipped by the bearer and Battleline models in the bearer’s unit have the [PRECISION] ability.",
     "value": 10,
-    "detachment": "Bastion Task Force",
+    "detachment": "BASTION TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43181,7 +43572,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Hero of the Chapter",
     "text": "Adeptus Astartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword.",
     "value": 20,
-    "detachment": "Bastion Task Force",
+    "detachment": "BASTION TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43220,516 +43611,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     },
     "ruleId": "hero-of-the-chapter",
     "detachmentId": "bastion-task-force"
-  },
-  "armour-of-antoninus": {
-    "title": "Armour of Antoninus",
-    "text": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
-    "value": 20,
-    "detachment": "Blade of Ultramar",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "armour-of-antoninus",
-    "detachmentId": "blade-of-ultramar"
-  },
-  "oath-of-macragge": {
-    "title": "Oath of Macragge",
-    "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
-    "value": 15,
-    "detachment": "Blade of Ultramar",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "oath-of-macragge",
-    "detachmentId": "blade-of-ultramar"
-  },
-  "student-of-the-codex": {
-    "title": "Student of the Codex",
-    "text": "Adeptus Astartes model only. At the start of your Command phase, if the bearer is on the battlefield, it can use this Enhancement. If it does, until the start of your next Command phase, the Tactical Doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army).",
-    "value": 20,
-    "detachment": "Blade of Ultramar",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "student-of-the-codex",
-    "detachmentId": "blade-of-ultramar"
-  },
-  "veteran-of-behemoth": {
-    "title": "Veteran of Behemoth",
-    "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can re‑roll Advance rolls made for that unit.",
-    "value": 25,
-    "detachment": "Blade of Ultramar",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "veteran-of-behemoth",
-    "detachmentId": "blade-of-ultramar"
-  },
-  "castellum-omnivox": {
-    "title": "Castellum Omnivox",
-    "text": "Adeptus Astartes model only. Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: ■ That unit is eligible to perform an Action in a turn in which it Fell Back. ■ That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-    "value": 20,
-    "detachment": "Ceramite Sentinels",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "castellum-omnivox",
-    "detachmentId": "ceramite-sentinels"
-  },
-  "defensive-mastery": {
-    "title": "Defensive Mastery",
-    "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "value": 25,
-    "detachment": "Ceramite Sentinels",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "defensive-mastery",
-    "detachmentId": "ceramite-sentinels"
-  },
-  "honour-indefatigable": {
-    "title": "Honour Indefatigable",
-    "text": "Gravis model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
-    "value": 25,
-    "detachment": "Ceramite Sentinels",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-apothecary-biologis",
-          "unit-captain-in-gravis-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "honour-indefatigable",
-    "detachmentId": "ceramite-sentinels"
-  },
-  "spy-skull-data-link": {
-    "title": "Spy-skull Data Link",
-    "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
-    "value": 15,
-    "detachment": "Ceramite Sentinels",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "spy-skull-data-link",
-    "detachmentId": "ceramite-sentinels"
-  },
-  "champion-of-the-feast": {
-    "title": "Champion of the Feast",
-    "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by other models in the bearer’s unit as well.",
-    "value": 25,
-    "detachment": "EMPEROR’S SHIELD",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "champion-of-the-feast",
-    "detachmentId": "emperor-s-shield"
-  },
-  "disciple-of-rhetoricus": {
-    "title": "Disciple of Rhetoricus",
-    "text": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of other models in the bearer’s unit as well.",
-    "value": 10,
-    "detachment": "EMPEROR’S SHIELD",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER",
-          "TERMINATOR"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "disciple-of-rhetoricus",
-    "detachmentId": "emperor-s-shield"
-  },
-  "indomitable-champion": {
-    "title": "Indomitable Champion",
-    "text": "Adeptus Astartes Terminator model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
-    "value": 20,
-    "detachment": "EMPEROR’S SHIELD",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER",
-          "TERMINATOR"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "indomitable-champion",
-    "detachmentId": "emperor-s-shield"
-  },
-  "malodraxian-standard": {
-    "title": "Malodraxian Standard",
-    "text": "Adeptus Astartes Ancient model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll.",
-    "value": 20,
-    "detachment": "EMPEROR’S SHIELD",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER",
-          "ANCIENT"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "malodraxian-standard",
-    "detachmentId": "emperor-s-shield"
-  },
-  "firestorm-assault-force-champion-of-humanity": {
-    "title": "CHAMPION OF HUMANITY",
-    "text": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
-    "value": 10,
-    "detachment": "Firestorm Assault Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-apothecary",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-lieutenant",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "firestorm-assault-force-champion-of-humanity",
-    "detachmentId": "firestorm-assault-force"
-  },
-  "firestorm-assault-force-war-tempered-artifice": {
-    "title": "WAR-TEMPERED ARTIFICE",
-    "text": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
-    "value": 25,
-    "detachment": "Firestorm Assault Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "firestorm-assault-force-war-tempered-artifice",
-    "detachmentId": "firestorm-assault-force"
-  },
-  "firestorm-assault-force-forged-in-battle": {
-    "title": "FORGED IN BATTLE",
-    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
-    "value": 15,
-    "detachment": "Firestorm Assault Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "firestorm-assault-force-forged-in-battle",
-    "detachmentId": "firestorm-assault-force"
-  },
-  "firestorm-assault-force-adamantine-mantle": {
-    "title": "ADAMANTINE MANTLE",
-    "text": "ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
-    "value": 20,
-    "detachment": "Firestorm Assault Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "firestorm-assault-force-adamantine-mantle",
-    "detachmentId": "firestorm-assault-force"
   },
   "adamantine-mantle": {
     "title": "Adamantine Mantle",
@@ -43888,1378 +43769,11 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "ruleId": "war-tempered-artifice",
     "detachmentId": "forgefather-s-seekers"
   },
-  "bellicose-weapon-spirits": {
-    "title": "Bellicose Weapon Spirits (Upgrade)",
-    "text": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
-    "value": 15,
-    "detachment": "Fulguris Task Force",
-    "tags": [
-      "UPGRADE"
-    ],
-    "owner": {
-      "subject": "unit",
-      "selector": {
-        "unitIds": [
-          "unit-land-speeder",
-          "unit-storm-speeder-hailstrike",
-          "unit-storm-speeder-hammerstrike",
-          "unit-storm-speeder-thunderstrike"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 3,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "bellicose-weapon-spirits",
-    "detachmentId": "fulguris-task-force"
-  },
-  "raptorial-cogitator-core": {
-    "title": "Raptorial Cogitator Core (Upgrade)",
-    "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
-    "value": 15,
-    "detachment": "Fulguris Task Force",
-    "tags": [
-      "UPGRADE"
-    ],
-    "owner": {
-      "subject": "unit",
-      "selector": {
-        "unitIds": [
-          "unit-land-speeder",
-          "unit-storm-speeder-hailstrike",
-          "unit-storm-speeder-hammerstrike",
-          "unit-storm-speeder-thunderstrike"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 3,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "raptorial-cogitator-core",
-    "detachmentId": "fulguris-task-force"
-  },
-  "gladius-task-force-artificer-armour": {
-    "title": "ARTIFICER ARMOUR",
-    "text": "ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
-    "value": 20,
-    "detachment": "Gladius Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "gladius-task-force-artificer-armour",
-    "detachmentId": "gladius-task-force"
-  },
-  "gladius-task-force-the-honour-vehement": {
-    "title": "THE HONOUR VEHEMENT",
-    "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
-    "value": 15,
-    "detachment": "Gladius Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "gladius-task-force-the-honour-vehement",
-    "detachmentId": "gladius-task-force"
-  },
-  "gladius-task-force-adept-of-the-codex": {
-    "title": "ADEPT OF THE CODEX",
-    "text": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
-    "value": 20,
-    "detachment": "Gladius Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "gladius-task-force-adept-of-the-codex",
-    "detachmentId": "gladius-task-force"
-  },
-  "gladius-task-force-fire-discipline": {
-    "title": "FIRE DISCIPLINE",
-    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
-    "value": 25,
-    "detachment": "Gladius Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "gladius-task-force-fire-discipline",
-    "detachmentId": "gladius-task-force"
-  },
-  "iron-laurel": {
-    "title": "Iron Laurel",
-    "text": "Adeptus Astartes model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
-    "value": 10,
-    "detachment": "Hammer of Avernii",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "iron-laurel",
-    "detachmentId": "hammer-of-avernii"
-  },
-  "medusan-roar-aura": {
-    "title": "Medusan Roar",
-    "text": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles ) is within 6\" of the bearer, each time that unit fails a Battle‑shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle‑shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
-    "value": 30,
-    "detachment": "Hammer of Avernii",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "medusan-roar-aura",
-    "detachmentId": "hammer-of-avernii"
-  },
-  "spiritus-ferrum": {
-    "title": "Spiritus Ferrum",
-    "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
-    "value": 25,
-    "detachment": "Hammer of Avernii",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "spiritus-ferrum",
-    "detachmentId": "hammer-of-avernii"
-  },
-  "steel-font": {
-    "title": "Steel Font",
-    "text": "Adeptus Astartes Terminator model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
-    "value": 15,
-    "detachment": "Hammer of Avernii",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER",
-          "TERMINATOR"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "steel-font",
-    "detachmentId": "hammer-of-avernii"
-  },
-  "astartes-tank-ace-aura": {
-    "title": "Astartes Tank Ace",
-    "text": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes Vehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
-    "value": 40,
-    "detachment": "Headhunter Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-firestrike-servo-turrets",
-          "unit-gladiator-lancer",
-          "unit-gladiator-reaper",
-          "unit-gladiator-valiant",
-          "unit-impulsor",
-          "unit-land-raider",
-          "unit-land-raider-crusader",
-          "unit-land-raider-redeemer",
-          "unit-predator-annihilator",
-          "unit-predator-destructor",
-          "unit-razorback",
-          "unit-repulsor",
-          "unit-repulsor-executioner",
-          "unit-rhino",
-          "unit-vindicator",
-          "unit-whirlwind"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "astartes-tank-ace-aura",
-    "detachmentId": "headhunter-task-force"
-  },
-  "firestorm-coordinators": {
-    "title": "Firestorm Coordinators",
-    "text": "Adeptus Astartes Vehicle model only. Ranged weapons equipped by the bearer have the [SUSTAINED HITS 1] ability.",
-    "value": 20,
-    "detachment": "Headhunter Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-firestrike-servo-turrets",
-          "unit-gladiator-lancer",
-          "unit-gladiator-reaper",
-          "unit-gladiator-valiant",
-          "unit-impulsor",
-          "unit-land-raider",
-          "unit-land-raider-crusader",
-          "unit-land-raider-redeemer",
-          "unit-predator-annihilator",
-          "unit-predator-destructor",
-          "unit-razorback",
-          "unit-repulsor",
-          "unit-repulsor-executioner",
-          "unit-rhino",
-          "unit-vindicator",
-          "unit-whirlwind"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "firestorm-coordinators",
-    "detachmentId": "headhunter-task-force"
-  },
-  "gunnery-honours": {
-    "title": "Gunnery Honours",
-    "text": "Adeptus Astartes Vehicle model only. Once per phase, you can re‑roll one Hit roll, one Wound roll and one Damage roll for the bearer.",
-    "value": 20,
-    "detachment": "Headhunter Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-firestrike-servo-turrets",
-          "unit-gladiator-lancer",
-          "unit-gladiator-reaper",
-          "unit-gladiator-valiant",
-          "unit-impulsor",
-          "unit-land-raider",
-          "unit-land-raider-crusader",
-          "unit-land-raider-redeemer",
-          "unit-predator-annihilator",
-          "unit-predator-destructor",
-          "unit-razorback",
-          "unit-repulsor",
-          "unit-repulsor-executioner",
-          "unit-rhino",
-          "unit-vindicator",
-          "unit-whirlwind"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "gunnery-honours",
-    "detachmentId": "headhunter-task-force"
-  },
-  "redoubtable-machine-spirit": {
-    "title": "Redoubtable Machine Spirit",
-    "text": "Adeptus Astartes Vehicle model only. The bearer has a 5+ invulnerable save and, at the end of your Command phase, the bearer regains 1 lost wound.",
-    "value": 25,
-    "detachment": "Headhunter Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-firestrike-servo-turrets",
-          "unit-gladiator-lancer",
-          "unit-gladiator-reaper",
-          "unit-gladiator-valiant",
-          "unit-impulsor",
-          "unit-land-raider",
-          "unit-land-raider-crusader",
-          "unit-land-raider-redeemer",
-          "unit-predator-annihilator",
-          "unit-predator-destructor",
-          "unit-razorback",
-          "unit-repulsor",
-          "unit-repulsor-executioner",
-          "unit-rhino",
-          "unit-vindicator",
-          "unit-whirlwind"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "redoubtable-machine-spirit",
-    "detachmentId": "headhunter-task-force"
-  },
-  "ironstorm-spearhead-target-augury-web": {
-    "title": "TARGET AUGURY WEB",
-    "text": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
-    "value": 30,
-    "detachment": "Ironstorm Spearhead",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "ironstorm-spearhead-target-augury-web",
-    "detachmentId": "ironstorm-spearhead"
-  },
-  "ironstorm-spearhead-the-flesh-is-weak": {
-    "title": "THE FLESH IS WEAK",
-    "text": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
-    "value": 20,
-    "detachment": "Ironstorm Spearhead",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "ironstorm-spearhead-the-flesh-is-weak",
-    "detachmentId": "ironstorm-spearhead"
-  },
-  "ironstorm-spearhead-adept-of-the-omnissiah": {
-    "title": "ADEPT OF THE OMNISSIAH",
-    "text": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
-    "value": 35,
-    "detachment": "Ironstorm Spearhead",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "ironstorm-spearhead-adept-of-the-omnissiah",
-    "detachmentId": "ironstorm-spearhead"
-  },
-  "ironstorm-spearhead-master-of-machine-war": {
-    "title": "MASTER OF MACHINE WAR",
-    "text": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
-    "value": 20,
-    "detachment": "Ironstorm Spearhead",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "ironstorm-spearhead-master-of-machine-war",
-    "detachmentId": "ironstorm-spearhead"
-  },
-  "celerity": {
-    "title": "Celerity",
-    "text": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
-    "value": 35,
-    "detachment": "Librarius Conclave",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "celerity",
-    "detachmentId": "librarius-conclave"
-  },
-  "fusillade": {
-    "title": "Fusillade",
-    "text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [LETHAL HITS] ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
-    "value": 25,
-    "detachment": "Librarius Conclave",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "fusillade",
-    "detachmentId": "librarius-conclave"
-  },
-  "obfuscation": {
-    "title": "Obfuscation",
-    "text": "ADEPTUS ASTARTES PSYKER model only. ▪ Enemy units cannot target this unit with snap shooting attacks. ▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
-    "value": 25,
-    "detachment": "Librarius Conclave",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "obfuscation",
-    "detachmentId": "librarius-conclave"
-  },
-  "prescience": {
-    "title": "Prescience",
-    "text": "ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of: ▪ Up to D6\". ▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
-    "value": 20,
-    "detachment": "Librarius Conclave",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "prescience",
-    "detachmentId": "librarius-conclave"
-  },
-  "temporal-corridor": {
-    "title": "Temporal Corridor",
-    "text": "ADEPTUS ASTARTES PSYKER model only. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. ▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn).",
-    "value": 25,
-    "detachment": "Librarius Conclave",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "temporal-corridor",
-    "detachmentId": "librarius-conclave"
-  },
-  "dedicated-gunship": {
-    "title": "Dedicated Gunship",
-    "text": "Adeptus Astartes Terminator model only. Once per battle, at the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
-    "value": 15,
-    "detachment": "Orbital Assault Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient-in-terminator-armor",
-          "unit-captain-in-terminator-armour",
-          "unit-chaplain-in-terminator-armour",
-          "unit-librarian-in-terminator-armour"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "dedicated-gunship",
-    "detachmentId": "orbital-assault-force"
-  },
-  "laurels-of-thunder": {
-    "title": "Laurels of Thunder",
-    "text": "Adeptus Astartes model only. You can re‑roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield.",
-    "value": 15,
-    "detachment": "Orbital Assault Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "laurels-of-thunder",
-    "detachmentId": "orbital-assault-force"
-  },
-  "orbital-uplink-reliquary": {
-    "title": "Orbital Uplink Reliquary",
-    "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
-    "value": 25,
-    "detachment": "Orbital Assault Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "orbital-uplink-reliquary",
-    "detachmentId": "orbital-assault-force"
-  },
-  "veteran-of-the-vanguard": {
-    "title": "Veteran of the Vanguard",
-    "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
-    "value": 20,
-    "detachment": "Orbital Assault Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "veteran-of-the-vanguard",
-    "detachmentId": "orbital-assault-force"
-  },
-  "avenging-avatar-aura": {
-    "title": "Avenging Avatar",
-    "text": "Adeptus Astartes model only. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle‑shock test.",
-    "value": 10,
-    "detachment": "Reclamation Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "avenging-avatar-aura",
-    "detachmentId": "reclamation-force"
-  },
-  "liberatum": {
-    "title": "Liberatum",
-    "text": "Adeptus Astartes model only. Each time the bearer makes an attack that targets an enemy unit, if the target is within range of an objective marker, you can re‑roll the Hit roll and you can re‑roll the Wound roll.",
-    "value": 25,
-    "detachment": "Reclamation Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "liberatum",
-    "detachmentId": "reclamation-force"
-  },
-  "scroll-of-proclamation": {
-    "title": "Scroll of Proclamation",
-    "text": "Adeptus Astartes model only. When this unit declares a charge, if an enemy unit within range of an objective is within 12\" of this unit, you can use this enhancement. If you do: ■ This unit can re‑roll that charge roll. ■ This unit must end that charge move engaged with one or more of those enemy units.",
-    "value": 15,
-    "detachment": "Reclamation Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "scroll-of-proclamation",
-    "detachmentId": "reclamation-force"
-  },
-  "seals-of-reconquest": {
-    "title": "Seals of Reconquest",
-    "text": "Adeptus Astartes model only. Models in the bearer’s unit have a 5+ invulnerable save.",
-    "value": 20,
-    "detachment": "Reclamation Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "seals-of-reconquest",
-    "detachmentId": "reclamation-force"
-  },
-  "chogorian-huntmaster": {
-    "title": "Chogorian Huntmaster",
-    "text": "Adeptus Astartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
-    "value": 25,
-    "detachment": "Spearpoint Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER",
-          "MOUNTED"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "chogorian-huntmaster",
-    "detachmentId": "spearpoint-task-force"
-  },
-  "hunter-s-eye": {
-    "title": "Hunter’s Eye",
-    "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
-    "value": 20,
-    "detachment": "Spearpoint Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "hunter-s-eye",
-    "detachmentId": "spearpoint-task-force"
-  },
-  "spearpoint-paragon": {
-    "title": "Spearpoint Paragon",
-    "text": "Adeptus Astartes model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.",
-    "value": 25,
-    "detachment": "Spearpoint Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "spearpoint-paragon",
-    "detachmentId": "spearpoint-task-force"
-  },
-  "stormseers-wisdom": {
-    "title": "Stormseers' Wisdom",
-    "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit.",
-    "value": 15,
-    "detachment": "Spearpoint Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "stormseers-wisdom",
-    "detachmentId": "spearpoint-task-force"
-  },
-  "stormlance-task-force-fury-of-the-storm": {
-    "title": "FURY OF THE STORM",
-    "text": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
-    "value": 25,
-    "detachment": "Stormlance Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-chaplain-on-bike"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "stormlance-task-force-fury-of-the-storm",
-    "detachmentId": "stormlance-task-force"
-  },
-  "stormlance-task-force-portents-of-wisdom": {
-    "title": "PORTENTS OF WISDOM",
-    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
-    "value": 15,
-    "detachment": "Stormlance Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "stormlance-task-force-portents-of-wisdom",
-    "detachmentId": "stormlance-task-force"
-  },
-  "stormlance-task-force-feinting-withdrawal": {
-    "title": "FEINTING WITHDRAWAL",
-    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
-    "value": 10,
-    "detachment": "Stormlance Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-ancient",
-          "unit-ancient-in-terminator-armor",
-          "unit-apothecary",
-          "unit-apothecary-biologis",
-          "unit-bladeguard-ancient",
-          "unit-captain",
-          "unit-captain-in-gravis-armour",
-          "unit-captain-in-phobos-armour",
-          "unit-captain-in-terminator-armour",
-          "unit-captain-with-jump-pack",
-          "unit-chaplain",
-          "unit-chaplain-in-terminator-armour",
-          "unit-chaplain-on-bike",
-          "unit-chaplain-with-jump-pack",
-          "unit-judiciar",
-          "unit-librarian",
-          "unit-librarian-in-phobos-armour",
-          "unit-librarian-in-terminator-armour",
-          "unit-lieutenant",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon",
-          "unit-techmarine"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "stormlance-task-force-feinting-withdrawal",
-    "detachmentId": "stormlance-task-force"
-  },
-  "stormlance-task-force-hunters-instincts": {
-    "title": "HUNTER’S INSTINCTS",
-    "text": "ADEPTUS ASTARTES MOUNTED model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
-    "value": 25,
-    "detachment": "Stormlance Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-chaplain-on-bike"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "stormlance-task-force-hunters-instincts",
-    "detachmentId": "stormlance-task-force"
-  },
-  "blackwing-shroud": {
-    "title": "Blackwing Shroud",
-    "text": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
-    "value": 25,
-    "detachment": "Shadowmark Talon",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER",
-          "INFANTRY"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "blackwing-shroud",
-    "detachmentId": "shadowmark-talon"
-  },
-  "coronal-susurrant": {
-    "title": "Coronal Susurrant",
-    "text": "Phobos model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP .",
-    "value": 30,
-    "detachment": "Shadowmark Talon",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER",
-          "PHOBOS"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "coronal-susurrant",
-    "detachmentId": "shadowmark-talon"
-  },
-  "hunter-s-instincts": {
-    "title": "Hunter's Instincts",
-    "text": "Adeptus Astartes model only. In your Movement phase, if the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
-    "value": 25,
-    "detachment": "Shadowmark Talon",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-chaplain-on-bike"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "hunter-s-instincts",
-    "detachmentId": "shadowmark-talon"
-  },
-  "umbral-raptor": {
-    "title": "Umbral Raptor",
-    "text": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative abilities.",
-    "value": 15,
-    "detachment": "Shadowmark Talon",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES",
-          "CHARACTER"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "umbral-raptor",
-    "detachmentId": "shadowmark-talon"
-  },
-  "death-in-the-dark": {
-    "title": "Death in the Dark (Upgrade)",
-    "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
-    "value": 15,
-    "detachment": "Subversion Assets",
-    "tags": [
-      "UPGRADE"
-    ],
-    "owner": {
-      "subject": "unit",
-      "selector": {
-        "allKeywords": [
-          "INFANTRY",
-          "PHOBOS"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 3,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "death-in-the-dark",
-    "detachmentId": "subversion-assets"
-  },
-  "shroud-field": {
-    "title": "Shroud Field",
-    "text": "PHOBOS model only. This model has: ▪ Lone Operative. ▪ Stealth.",
-    "value": 20,
-    "detachment": "Subversion Assets",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-captain-in-phobos-armour",
-          "unit-librarian-in-phobos-armour",
-          "unit-lieutenant-in-phobos-armour",
-          "unit-lieutenant-in-reiver-armour",
-          "unit-lieutenant-with-combi-weapon"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "shroud-field",
-    "detachmentId": "subversion-assets"
-  },
   "vanguard-spearhead-the-blade-driven-deep": {
     "title": "THE BLADE DRIVEN DEEP",
     "text": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
     "value": 25,
-    "detachment": "Vanguard Spearhead",
+    "detachment": "VANGUARD SPEARHEAD",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -45302,7 +43816,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "GHOSTWEAVE CLOAK",
     "text": "ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
     "value": 15,
-    "detachment": "Vanguard Spearhead",
+    "detachment": "VANGUARD SPEARHEAD",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -45346,7 +43860,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "EXECUTE AND REDEPLOY",
     "text": "PHOBOS model only. In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer’s unit to move more than once in your Shooting phase.",
     "value": 20,
-    "detachment": "Vanguard Spearhead",
+    "detachment": "VANGUARD SPEARHEAD",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -45372,7 +43886,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "SHADOW WAR VETERAN",
     "text": "PHOBOS model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
     "value": 30,
-    "detachment": "Vanguard Spearhead",
+    "detachment": "VANGUARD SPEARHEAD",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -45394,11 +43908,454 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "ruleId": "vanguard-spearhead-shadow-war-veteran",
     "detachmentId": "vanguard-spearhead"
   },
+  "astartes-tank-ace-aura": {
+    "title": "Astartes Tank Ace",
+    "text": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes Vehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+    "value": 40,
+    "detachment": "HEADHUNTER TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-firestrike-servo-turrets",
+          "unit-gladiator-lancer",
+          "unit-gladiator-reaper",
+          "unit-gladiator-valiant",
+          "unit-impulsor",
+          "unit-land-raider",
+          "unit-land-raider-crusader",
+          "unit-land-raider-redeemer",
+          "unit-predator-annihilator",
+          "unit-predator-destructor",
+          "unit-razorback",
+          "unit-repulsor",
+          "unit-repulsor-executioner",
+          "unit-rhino",
+          "unit-vindicator",
+          "unit-whirlwind"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "astartes-tank-ace-aura",
+    "detachmentId": "headhunter-task-force"
+  },
+  "firestorm-coordinators": {
+    "title": "Firestorm Coordinators",
+    "text": "Adeptus Astartes Vehicle model only. Ranged weapons equipped by the bearer have the [SUSTAINED HITS 1] ability.",
+    "value": 20,
+    "detachment": "HEADHUNTER TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-firestrike-servo-turrets",
+          "unit-gladiator-lancer",
+          "unit-gladiator-reaper",
+          "unit-gladiator-valiant",
+          "unit-impulsor",
+          "unit-land-raider",
+          "unit-land-raider-crusader",
+          "unit-land-raider-redeemer",
+          "unit-predator-annihilator",
+          "unit-predator-destructor",
+          "unit-razorback",
+          "unit-repulsor",
+          "unit-repulsor-executioner",
+          "unit-rhino",
+          "unit-vindicator",
+          "unit-whirlwind"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "firestorm-coordinators",
+    "detachmentId": "headhunter-task-force"
+  },
+  "gunnery-honours": {
+    "title": "Gunnery Honours",
+    "text": "Adeptus Astartes Vehicle model only. Once per phase, you can re‑roll one Hit roll, one Wound roll and one Damage roll for the bearer.",
+    "value": 20,
+    "detachment": "HEADHUNTER TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-firestrike-servo-turrets",
+          "unit-gladiator-lancer",
+          "unit-gladiator-reaper",
+          "unit-gladiator-valiant",
+          "unit-impulsor",
+          "unit-land-raider",
+          "unit-land-raider-crusader",
+          "unit-land-raider-redeemer",
+          "unit-predator-annihilator",
+          "unit-predator-destructor",
+          "unit-razorback",
+          "unit-repulsor",
+          "unit-repulsor-executioner",
+          "unit-rhino",
+          "unit-vindicator",
+          "unit-whirlwind"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "gunnery-honours",
+    "detachmentId": "headhunter-task-force"
+  },
+  "redoubtable-machine-spirit": {
+    "title": "Redoubtable Machine Spirit",
+    "text": "Adeptus Astartes Vehicle model only. The bearer has a 5+ invulnerable save and, at the end of your Command phase, the bearer regains 1 lost wound.",
+    "value": 25,
+    "detachment": "HEADHUNTER TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-firestrike-servo-turrets",
+          "unit-gladiator-lancer",
+          "unit-gladiator-reaper",
+          "unit-gladiator-valiant",
+          "unit-impulsor",
+          "unit-land-raider",
+          "unit-land-raider-crusader",
+          "unit-land-raider-redeemer",
+          "unit-predator-annihilator",
+          "unit-predator-destructor",
+          "unit-razorback",
+          "unit-repulsor",
+          "unit-repulsor-executioner",
+          "unit-rhino",
+          "unit-vindicator",
+          "unit-whirlwind"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "redoubtable-machine-spirit",
+    "detachmentId": "headhunter-task-force"
+  },
+  "1st-company-task-force-the-imperiums-sword": {
+    "title": "THE IMPERIUM’S SWORD",
+    "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+    "value": 25,
+    "detachment": "1ST COMPANY TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "1st-company-task-force-the-imperiums-sword",
+    "detachmentId": "1st-company-task-force"
+  },
+  "1st-company-task-force-fear-made-manifest-aura": {
+    "title": "FEAR MADE MANIFEST (AURA)",
+    "text": "ADEPTUS ASTARTES model only. While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+    "value": 30,
+    "detachment": "1ST COMPANY TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "1st-company-task-force-fear-made-manifest-aura",
+    "detachmentId": "1st-company-task-force"
+  },
+  "1st-company-task-force-rites-of-war": {
+    "title": "RITES OF WAR",
+    "text": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+    "value": 10,
+    "detachment": "1ST COMPANY TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "1st-company-task-force-rites-of-war",
+    "detachmentId": "1st-company-task-force"
+  },
+  "1st-company-task-force-iron-resolve": {
+    "title": "IRON RESOLVE",
+    "text": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
+    "value": 15,
+    "detachment": "1ST COMPANY TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "1st-company-task-force-iron-resolve",
+    "detachmentId": "1st-company-task-force"
+  },
+  "dedicated-gunship": {
+    "title": "Dedicated Gunship",
+    "text": "Adeptus Astartes Terminator model only. Once per battle, at the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+    "value": 15,
+    "detachment": "ORBITAL ASSAULT FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "dedicated-gunship",
+    "detachmentId": "orbital-assault-force"
+  },
+  "laurels-of-thunder": {
+    "title": "Laurels of Thunder",
+    "text": "Adeptus Astartes model only. You can re‑roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield.",
+    "value": 15,
+    "detachment": "ORBITAL ASSAULT FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "laurels-of-thunder",
+    "detachmentId": "orbital-assault-force"
+  },
+  "orbital-uplink-reliquary": {
+    "title": "Orbital Uplink Reliquary",
+    "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+    "value": 25,
+    "detachment": "ORBITAL ASSAULT FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "orbital-uplink-reliquary",
+    "detachmentId": "orbital-assault-force"
+  },
+  "veteran-of-the-vanguard": {
+    "title": "Veteran of the Vanguard",
+    "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+    "value": 20,
+    "detachment": "ORBITAL ASSAULT FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "veteran-of-the-vanguard",
+    "detachmentId": "orbital-assault-force"
+  },
   "enhancement-avenging-angel": {
     "title": "Avenging Angel",
     "text": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
     "value": 20,
-    "detachment": "Vengeful Hosts",
+    "detachment": "VENGEFUL HOSTS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -45421,21 +44378,8 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Orksbane",
     "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2 3",
     "value": 20,
-    "detachment": "Vengeful Hosts",
+    "detachment": "VENGEFUL HOSTS",
     "tags": [],
-    "profile": {
-      "name": "Orksbane",
-      "type": "Melee Weapons",
-      "characteristics": {
-        "Range": "Melee",
-        "A": "4",
-        "WS": "2+",
-        "S": "8",
-        "AP": "-2",
-        "D": "3",
-        "Keywords": "Cleave 2"
-      }
-    },
     "owner": {
       "subject": "model",
       "selector": {
@@ -45452,5 +44396,707 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     },
     "ruleId": "enhancement-orksbane",
     "detachmentId": "vengeful-hosts"
+  },
+  "castellum-omnivox": {
+    "title": "Castellum Omnivox",
+    "text": "Adeptus Astartes model only. Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: ■ That unit is eligible to perform an Action in a turn in which it Fell Back. ■ That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+    "value": 20,
+    "detachment": "CERAMITE SENTINELS",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "castellum-omnivox",
+    "detachmentId": "ceramite-sentinels"
+  },
+  "defensive-mastery": {
+    "title": "Defensive Mastery",
+    "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "value": 25,
+    "detachment": "CERAMITE SENTINELS",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "defensive-mastery",
+    "detachmentId": "ceramite-sentinels"
+  },
+  "honour-indefatigable": {
+    "title": "Honour Indefatigable",
+    "text": "Gravis model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+    "value": 25,
+    "detachment": "CERAMITE SENTINELS",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-apothecary-biologis",
+          "unit-captain-in-gravis-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "honour-indefatigable",
+    "detachmentId": "ceramite-sentinels"
+  },
+  "spy-skull-data-link": {
+    "title": "Spy-skull Data Link",
+    "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+    "value": 15,
+    "detachment": "CERAMITE SENTINELS",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "spy-skull-data-link",
+    "detachmentId": "ceramite-sentinels"
+  },
+  "champion-of-the-feast": {
+    "title": "Champion of the Feast",
+    "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by other models in the bearer’s unit as well.",
+    "value": 25,
+    "detachment": "EMPEROR’S SHIELD",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "champion-of-the-feast",
+    "detachmentId": "emperor-s-shield"
+  },
+  "disciple-of-rhetoricus": {
+    "title": "Disciple of Rhetoricus",
+    "text": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of other models in the bearer’s unit as well.",
+    "value": 10,
+    "detachment": "EMPEROR’S SHIELD",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER",
+          "TERMINATOR"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "disciple-of-rhetoricus",
+    "detachmentId": "emperor-s-shield"
+  },
+  "indomitable-champion": {
+    "title": "Indomitable Champion",
+    "text": "Adeptus Astartes Terminator model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
+    "value": 20,
+    "detachment": "EMPEROR’S SHIELD",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER",
+          "TERMINATOR"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "indomitable-champion",
+    "detachmentId": "emperor-s-shield"
+  },
+  "malodraxian-standard": {
+    "title": "Malodraxian Standard",
+    "text": "Adeptus Astartes Ancient model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll.",
+    "value": 20,
+    "detachment": "EMPEROR’S SHIELD",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ADEPTUS ASTARTES",
+          "CHARACTER",
+          "ANCIENT"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "malodraxian-standard",
+    "detachmentId": "emperor-s-shield"
+  },
+  "firestorm-assault-force-champion-of-humanity": {
+    "title": "CHAMPION OF HUMANITY",
+    "text": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
+    "value": 10,
+    "detachment": "FIRESTORM ASSAULT FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-apothecary",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-lieutenant",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "firestorm-assault-force-champion-of-humanity",
+    "detachmentId": "firestorm-assault-force"
+  },
+  "firestorm-assault-force-war-tempered-artifice": {
+    "title": "WAR-TEMPERED ARTIFICE",
+    "text": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
+    "value": 25,
+    "detachment": "FIRESTORM ASSAULT FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "firestorm-assault-force-war-tempered-artifice",
+    "detachmentId": "firestorm-assault-force"
+  },
+  "firestorm-assault-force-forged-in-battle": {
+    "title": "FORGED IN BATTLE",
+    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
+    "value": 15,
+    "detachment": "FIRESTORM ASSAULT FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "firestorm-assault-force-forged-in-battle",
+    "detachmentId": "firestorm-assault-force"
+  },
+  "firestorm-assault-force-adamantine-mantle": {
+    "title": "ADAMANTINE MANTLE",
+    "text": "ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
+    "value": 20,
+    "detachment": "FIRESTORM ASSAULT FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "firestorm-assault-force-adamantine-mantle",
+    "detachmentId": "firestorm-assault-force"
+  },
+  "armoured-commander": {
+    "title": "Armoured Commander",
+    "text": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
+    "value": 25,
+    "detachment": "ARMOURED SPEARTIP",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "armoured-commander",
+    "detachmentId": "armoured-speartip"
+  },
+  "liberator": {
+    "title": "Liberator",
+    "text": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase, and the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "value": 15,
+    "detachment": "ARMOURED SPEARTIP",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "liberator",
+    "detachmentId": "armoured-speartip"
+  },
+  "shock-deployment": {
+    "title": "Shock Deployment",
+    "text": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+    "value": 20,
+    "detachment": "ARMOURED SPEARTIP",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary-biologis",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-chaplain-in-terminator-armour",
+          "unit-librarian-in-terminator-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "shock-deployment",
+    "detachmentId": "armoured-speartip"
+  },
+  "tip-of-the-spear": {
+    "title": "Tip of the Spear",
+    "text": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport , that Transport has the Scouts 6\" ability.",
+    "value": 40,
+    "detachment": "ARMOURED SPEARTIP",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "tip-of-the-spear",
+    "detachmentId": "armoured-speartip"
+  },
+  "anvil-siege-force-indomitable-fury": {
+    "title": "INDOMITABLE FURY",
+    "text": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+    "value": 20,
+    "detachment": "ANVIL SIEGE FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-apothecary-biologis",
+          "unit-captain-in-gravis-armour"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "anvil-siege-force-indomitable-fury",
+    "detachmentId": "anvil-siege-force"
+  },
+  "anvil-siege-force-fleet-commander": {
+    "title": "FLEET COMMANDER",
+    "text": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+    "value": 15,
+    "detachment": "ANVIL SIEGE FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "anvil-siege-force-fleet-commander",
+    "detachmentId": "anvil-siege-force"
+  },
+  "anvil-siege-force-stoic-defender": {
+    "title": "STOIC DEFENDER",
+    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
+    "value": 15,
+    "detachment": "ANVIL SIEGE FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "anvil-siege-force-stoic-defender",
+    "detachmentId": "anvil-siege-force"
+  },
+  "anvil-siege-force-architect-of-war": {
+    "title": "ARCHITECT OF WAR",
+    "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+    "value": 25,
+    "detachment": "ANVIL SIEGE FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-ancient",
+          "unit-ancient-in-terminator-armor",
+          "unit-apothecary",
+          "unit-apothecary-biologis",
+          "unit-bladeguard-ancient",
+          "unit-captain",
+          "unit-captain-in-gravis-armour",
+          "unit-captain-in-phobos-armour",
+          "unit-captain-in-terminator-armour",
+          "unit-captain-with-jump-pack",
+          "unit-chaplain",
+          "unit-chaplain-in-terminator-armour",
+          "unit-chaplain-on-bike",
+          "unit-chaplain-with-jump-pack",
+          "unit-judiciar",
+          "unit-librarian",
+          "unit-librarian-in-phobos-armour",
+          "unit-librarian-in-terminator-armour",
+          "unit-lieutenant",
+          "unit-lieutenant-in-phobos-armour",
+          "unit-lieutenant-in-reiver-armour",
+          "unit-lieutenant-with-combi-weapon",
+          "unit-techmarine"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "anvil-siege-force-architect-of-war",
+    "detachmentId": "anvil-siege-force"
   }
 });

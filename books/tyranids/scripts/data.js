@@ -47,93 +47,93 @@ window.DG_TERMS={
     "glossary": "glossary-tyranids-stratagem-scanner-gheist",
     "rule": "detachment-ambush-predators"
   },
-  "tyranids-detachment-rule-feed-the-swarm": {
-    "id": "tyranids-detachment-rule-feed-the-swarm",
-    "title": "Feed the Swarm",
-    "summary": "In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following: One model in that unit regains up to D3+1 lost wounds. One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
-    "full": "In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following: One model in that unit regains up to D3+1 lost wounds. One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
-    "glossary": "glossary-tyranids-detachment-rule-feed-the-swarm",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-detachment-rule-surprise-assault": {
+    "id": "tyranids-detachment-rule-surprise-assault",
+    "title": "Surprise Assault",
+    "summary": "Each time a Tyranids model from your army makes an attack, re-roll a Hit roll of 1. Each time a Burrower unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units. In the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units. If an enemy model (excluding Aircraft) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.",
+    "full": "Each time a Tyranids model from your army makes an attack, re-roll a Hit roll of 1. Each time a Burrower unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units. In the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units. If an enemy model (excluding Aircraft) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.",
+    "glossary": "glossary-tyranids-detachment-rule-surprise-assault",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-enhancement-biophagic-flow-aura": {
-    "id": "tyranids-enhancement-biophagic-flow-aura",
-    "title": "Biophagic Flow (Aura)",
-    "summary": "TYRANIDS model only. While a friendly HARVESTER model is within 12\" of the bearer, when using the Feed the Swarm ability, that HARVESTER model can Regenerate one friendly TYRANIDS unit that is within 9\" of it, instead of one within 6\".",
-    "full": "TYRANIDS model only. While a friendly HARVESTER model is within 12\" of the bearer, when using the Feed the Swarm ability, that HARVESTER model can Regenerate one friendly TYRANIDS unit that is within 9\" of it, instead of one within 6\".",
-    "glossary": "glossary-tyranids-enhancement-biophagic-flow-aura",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-enhancement-synaptic-strategy": {
+    "id": "tyranids-enhancement-synaptic-strategy",
+    "title": "Synaptic Strategy",
+    "summary": "Tyranids model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+    "full": "Tyranids model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+    "glossary": "glossary-tyranids-enhancement-synaptic-strategy",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-enhancement-instinctive-defence": {
-    "id": "tyranids-enhancement-instinctive-defence",
-    "title": "Instinctive Defence",
-    "summary": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.",
-    "full": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.",
-    "glossary": "glossary-tyranids-enhancement-instinctive-defence",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-enhancement-tremor-senses": {
+    "id": "tyranids-enhancement-tremor-senses",
+    "title": "Tremor Senses",
+    "summary": "Tyranids model only. After both players have deployed their armies, select up to three friendly Tyranids units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "full": "Tyranids model only. After both players have deployed their armies, select up to three friendly Tyranids units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "glossary": "glossary-tyranids-enhancement-tremor-senses",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-enhancement-parasitic-biomorphology": {
-    "id": "tyranids-enhancement-parasitic-biomorphology",
-    "title": "Parasitic Biomorphology",
-    "summary": "TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
-    "full": "TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
-    "glossary": "glossary-tyranids-enhancement-parasitic-biomorphology",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-enhancement-vanguard-intellect": {
+    "id": "tyranids-enhancement-vanguard-intellect",
+    "title": "Vanguard Intellect",
+    "summary": "Tyranids model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+    "full": "Tyranids model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+    "glossary": "glossary-tyranids-enhancement-vanguard-intellect",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-enhancement-regenerating-monstrosity": {
-    "id": "tyranids-enhancement-regenerating-monstrosity",
-    "title": "Regenerating Monstrosity",
-    "summary": "TYRANIDS model only (excluding MONSTER models). The bearer’s unit can be regenerated up to twice per phase, instead of once.",
-    "full": "TYRANIDS model only (excluding MONSTER models). The bearer’s unit can be regenerated up to twice per phase, instead of once.",
-    "glossary": "glossary-tyranids-enhancement-regenerating-monstrosity",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-enhancement-trygon-prime": {
+    "id": "tyranids-enhancement-trygon-prime",
+    "title": "Trygon Prime",
+    "summary": "Trygon model only. The bearer gains the Synapse keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1.",
+    "full": "Trygon model only. The bearer gains the Synapse keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1.",
+    "glossary": "glossary-tyranids-enhancement-trygon-prime",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-stratagem-ablative-carapace": {
-    "id": "tyranids-stratagem-ablative-carapace",
-    "title": "ABLATIVE CARAPACE",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One HARVESTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One HARVESTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead.",
-    "glossary": "glossary-tyranids-stratagem-ablative-carapace",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-stratagem-adaptive-optimisation": {
+    "id": "tyranids-stratagem-adaptive-optimisation",
+    "title": "Adaptive Optimisation",
+    "summary": "Command phase. One Mawloc or Trygon unit from your army. Until the start of your next Command phase, your unit has the Synapse keyword.",
+    "full": "Command phase. One Mawloc or Trygon unit from your army. Until the start of your next Command phase, your unit has the Synapse keyword.",
+    "glossary": "glossary-tyranids-stratagem-adaptive-optimisation",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-stratagem-broodguard-impulse": {
-    "id": "tyranids-stratagem-broodguard-impulse",
-    "title": "BROODGUARD IMPULSE",
-    "summary": "Any phase. One HARVESTER unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just destroyed your HARVESTER unit, add 1 to the Wound roll.",
-    "full": "Any phase. One HARVESTER unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just destroyed your HARVESTER unit, add 1 to the Wound roll.",
-    "glossary": "glossary-tyranids-stratagem-broodguard-impulse",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-stratagem-replenishing-swarms": {
+    "id": "tyranids-stratagem-replenishing-swarms",
+    "title": "Replenishing Swarms",
+    "summary": "Your Movement phase. One Tyranids unit from your army, wholly within 9\" of one or more Tunnel Markers you placed. One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead.",
+    "full": "Your Movement phase. One Tyranids unit from your army, wholly within 9\" of one or more Tunnel Markers you placed. One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead.",
+    "glossary": "glossary-tyranids-stratagem-replenishing-swarms",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-stratagem-rapacious-hunger": {
-    "id": "tyranids-stratagem-rapacious-hunger",
-    "title": "RAPACIOUS HUNGER",
-    "summary": "Your Fight phase. One TYRANIDS unit from your army that just destroyed an enemy unit. Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a HARVESTER unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead.",
-    "full": "Your Fight phase. One TYRANIDS unit from your army that just destroyed an enemy unit. Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a HARVESTER unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead.",
-    "glossary": "glossary-tyranids-stratagem-rapacious-hunger",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-stratagem-enfilading-emergence": {
+    "id": "tyranids-stratagem-enfilading-emergence",
+    "title": "Enfilading Emergence",
+    "summary": "End of your Movement phase. One Tyranids unit from your army that was set up as Reinforcements this turn. Until the end of your next Fight phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
+    "full": "End of your Movement phase. One Tyranids unit from your army that was set up as Reinforcements this turn. Until the end of your next Fight phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
+    "glossary": "glossary-tyranids-stratagem-enfilading-emergence",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-stratagem-reclaim-biomass": {
-    "id": "tyranids-stratagem-reclaim-biomass",
-    "title": "RECLAIM BIOMASS",
-    "summary": "Any phase, when a TYRANIDS unit from your army is destroyed, before the last model in it is removed from play. One HARVESTER unit from your army that is within 6\" of that destroyed unit. Regenerate one friendly TYRANIDS unit within 6\" of your HARVESTER unit (See Feed the Swarm).",
-    "full": "Any phase, when a TYRANIDS unit from your army is destroyed, before the last model in it is removed from play. One HARVESTER unit from your army that is within 6\" of that destroyed unit. Regenerate one friendly TYRANIDS unit within 6\" of your HARVESTER unit (See Feed the Swarm).",
-    "glossary": "glossary-tyranids-stratagem-reclaim-biomass",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-stratagem-tunnel-network": {
+    "id": "tyranids-stratagem-tunnel-network",
+    "title": "Tunnel Network",
+    "summary": "End of your Movement phase. One Tyranids unit from your army that is wholly within 9\" of one or more of your Tunnel Markers and not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units.",
+    "full": "End of your Movement phase. One Tyranids unit from your army that is wholly within 9\" of one or more of your Tunnel Markers and not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units.",
+    "glossary": "glossary-tyranids-stratagem-tunnel-network",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-stratagem-secure-biomass": {
-    "id": "tyranids-stratagem-secure-biomass",
-    "title": "SECURE BIOMASS",
-    "summary": "Fight phase. One TYRANIDS unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a HARVESTER unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well.",
-    "full": "Fight phase. One TYRANIDS unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a HARVESTER unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well.",
-    "glossary": "glossary-tyranids-stratagem-secure-biomass",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-stratagem-swarming-assault": {
+    "id": "tyranids-stratagem-swarming-assault",
+    "title": "Swarming Assault",
+    "summary": "Your Charge phase. One Tyranids Monster unit from your army that was set up as Reinforcements this turn. Until the end of the phase, friendly Tyranids units within 6\" of your unit can re-roll Charge rolls.",
+    "full": "Your Charge phase. One Tyranids Monster unit from your army that was set up as Reinforcements this turn. Until the end of the phase, friendly Tyranids units within 6\" of your unit can re-roll Charge rolls.",
+    "glossary": "glossary-tyranids-stratagem-swarming-assault",
+    "rule": "detachment-subterranean-assault"
   },
-  "tyranids-stratagem-tyrannoformed": {
-    "id": "tyranids-stratagem-tyrannoformed",
-    "title": "TYRANNOFORMED",
-    "summary": "Command phase. One HARVESTER unit from your army that is within range of an objective marker you control. That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
-    "full": "Command phase. One HARVESTER unit from your army that is within range of an objective marker you control. That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
-    "glossary": "glossary-tyranids-stratagem-tyrannoformed",
-    "rule": "detachment-assimilation-swarm"
+  "tyranids-stratagem-retreat-below": {
+    "id": "tyranids-stratagem-retreat-below",
+    "title": "Retreat Below",
+    "summary": "End of your opponent’s Fight phase. One Tyranids unit or up to two Burrower units from your army that are not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
+    "full": "End of your opponent’s Fight phase. One Tyranids unit or up to two Burrower units from your army that are not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
+    "glossary": "glossary-tyranids-stratagem-retreat-below",
+    "rule": "detachment-subterranean-assault"
   },
   "tyranids-detachment-rule-enraged-behemoths": {
     "id": "tyranids-detachment-rule-enraged-behemoths",
@@ -223,6 +223,94 @@ window.DG_TERMS={
     "glossary": "glossary-tyranids-stratagem-untrammelled-ferocity",
     "rule": "detachment-crusher-stampede"
   },
+  "tyranids-detachment-rule-questing-tendrils": {
+    "id": "tyranids-detachment-rule-questing-tendrils",
+    "title": "Questing Tendrils",
+    "summary": "TYRANIDS units with this ability are eligible to charge in a turn in which they Fell Back. VANGUARD INVADER units with this ability are eligible to charge in a turn in which they Advanced.",
+    "full": "TYRANIDS units with this ability are eligible to charge in a turn in which they Fell Back. VANGUARD INVADER units with this ability are eligible to charge in a turn in which they Advanced.",
+    "glossary": "glossary-tyranids-detachment-rule-questing-tendrils",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-enhancement-chameleonic": {
+    "id": "tyranids-enhancement-chameleonic",
+    "title": "Chameleonic",
+    "summary": "VANGUARD INVADER model only. This unit has Stealth.",
+    "full": "VANGUARD INVADER model only. This unit has Stealth.",
+    "glossary": "glossary-tyranids-enhancement-chameleonic",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-enhancement-hunting-grounds": {
+    "id": "tyranids-enhancement-hunting-grounds",
+    "title": "Hunting Grounds",
+    "summary": "TYRANIDS model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test.",
+    "full": "TYRANIDS model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test.",
+    "glossary": "glossary-tyranids-enhancement-hunting-grounds",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-enhancement-neuronode": {
+    "id": "tyranids-enhancement-neuronode",
+    "title": "Neuronode",
+    "summary": "TYRANIDS model only. After both players have deployed their armies, you can select up to three VANGUARD INVADER units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "full": "TYRANIDS model only. After both players have deployed their armies, you can select up to three VANGUARD INVADER units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "glossary": "glossary-tyranids-enhancement-neuronode",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-enhancement-stalker": {
+    "id": "tyranids-enhancement-stalker",
+    "title": "Stalker",
+    "summary": "VANGUARD INVADER model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+    "full": "VANGUARD INVADER model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+    "glossary": "glossary-tyranids-enhancement-stalker",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-stratagem-assassin-beasts": {
+    "id": "tyranids-stratagem-assassin-beasts",
+    "title": "ASSASSIN BEASTS",
+    "summary": "Fight phase. One VANGUARD INVADER INFANTRY unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+    "full": "Fight phase. One VANGUARD INVADER INFANTRY unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+    "glossary": "glossary-tyranids-stratagem-assassin-beasts",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-stratagem-hypersensory-scillia": {
+    "id": "tyranids-stratagem-hypersensory-scillia",
+    "title": "HYPERSENSORY SCILLIA",
+    "summary": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\". You cannot target units that are within Engagement Range of one or more enemy units.",
+    "full": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\". You cannot target units that are within Engagement Range of one or more enemy units.",
+    "glossary": "glossary-tyranids-stratagem-hypersensory-scillia",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-stratagem-invisible-hunter": {
+    "id": "tyranids-stratagem-invisible-hunter",
+    "title": "INVISIBLE HUNTER",
+    "summary": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves. The targeted units must be more than 3\" away from all enemy units.",
+    "full": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves. The targeted units must be more than 3\" away from all enemy units.",
+    "glossary": "glossary-tyranids-stratagem-invisible-hunter",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-stratagem-seeded-broods": {
+    "id": "tyranids-stratagem-seeded-broods",
+    "title": "SEEDED BROODS",
+    "summary": "Your Movement phase. One TYRANIDS unit from your army that is in Reserves, or up to two VANGUARD INVADER units from your army that are in Reserves. Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is.",
+    "full": "Your Movement phase. One TYRANIDS unit from your army that is in Reserves, or up to two VANGUARD INVADER units from your army that are in Reserves. Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is.",
+    "glossary": "glossary-tyranids-stratagem-seeded-broods",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-stratagem-surprise-assault": {
+    "id": "tyranids-stratagem-surprise-assault",
+    "title": "SURPRISE ASSAULT",
+    "summary": "Your Shooting phase or the Fight phase, just after a VANGUARD INVADER unit from your army has selected its targets. That VANGUARD INVADER unit. Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a Battle-shock test. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the Hit roll. If the Battle-shock test was failed, add 1 to the Wound roll as well.",
+    "full": "Your Shooting phase or the Fight phase, just after a VANGUARD INVADER unit from your army has selected its targets. That VANGUARD INVADER unit. Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a Battle-shock test. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the Hit roll. If the Battle-shock test was failed, add 1 to the Wound roll as well.",
+    "glossary": "glossary-tyranids-stratagem-surprise-assault",
+    "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-stratagem-unseen-lurkers": {
+    "id": "tyranids-stratagem-unseen-lurkers",
+    "title": "UNSEEN LURKERS",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One VANGUARD INVADER unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\" or, if your unit has the Lone Operative ability, if the attacking model is within 6\". Your opponent can select new targets for the attacking unit’s attacks.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One VANGUARD INVADER unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\" or, if your unit has the Lone Operative ability, if the attacking model is within 6\". Your opponent can select new targets for the attacking unit’s attacks.",
+    "glossary": "glossary-tyranids-stratagem-unseen-lurkers",
+    "rule": "detachment-vanguard-onslaught"
+  },
   "tyranids-detachment-rule-hyper-adaptations": {
     "id": "tyranids-detachment-rule-hyper-adaptations",
     "title": "Hyper-adaptations",
@@ -310,94 +398,6 @@ window.DG_TERMS={
     "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One TYRANIDS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 6+ ability. If your unit is within Synapse Range of your army, models in your unit have the Feel No Pain 5+ ability instead.",
     "glossary": "glossary-tyranids-stratagem-rapid-regeneration",
     "rule": "detachment-invasion-fleet"
-  },
-  "tyranids-detachment-rule-surprise-assault": {
-    "id": "tyranids-detachment-rule-surprise-assault",
-    "title": "Surprise Assault",
-    "summary": "Each time a Tyranids model from your army makes an attack, re-roll a Hit roll of 1. Each time a Burrower unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units. In the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units. If an enemy model (excluding Aircraft) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.",
-    "full": "Each time a Tyranids model from your army makes an attack, re-roll a Hit roll of 1. Each time a Burrower unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units. In the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units. If an enemy model (excluding Aircraft) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.",
-    "glossary": "glossary-tyranids-detachment-rule-surprise-assault",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-enhancement-synaptic-strategy": {
-    "id": "tyranids-enhancement-synaptic-strategy",
-    "title": "Synaptic Strategy",
-    "summary": "Tyranids model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
-    "full": "Tyranids model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
-    "glossary": "glossary-tyranids-enhancement-synaptic-strategy",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-enhancement-tremor-senses": {
-    "id": "tyranids-enhancement-tremor-senses",
-    "title": "Tremor Senses",
-    "summary": "Tyranids model only. After both players have deployed their armies, select up to three friendly Tyranids units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "full": "Tyranids model only. After both players have deployed their armies, select up to three friendly Tyranids units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "glossary": "glossary-tyranids-enhancement-tremor-senses",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-enhancement-vanguard-intellect": {
-    "id": "tyranids-enhancement-vanguard-intellect",
-    "title": "Vanguard Intellect",
-    "summary": "Tyranids model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
-    "full": "Tyranids model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
-    "glossary": "glossary-tyranids-enhancement-vanguard-intellect",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-enhancement-trygon-prime": {
-    "id": "tyranids-enhancement-trygon-prime",
-    "title": "Trygon Prime",
-    "summary": "Trygon model only. The bearer gains the Synapse keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1.",
-    "full": "Trygon model only. The bearer gains the Synapse keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1.",
-    "glossary": "glossary-tyranids-enhancement-trygon-prime",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-stratagem-adaptive-optimisation": {
-    "id": "tyranids-stratagem-adaptive-optimisation",
-    "title": "Adaptive Optimisation",
-    "summary": "Command phase. One Mawloc or Trygon unit from your army. Until the start of your next Command phase, your unit has the Synapse keyword.",
-    "full": "Command phase. One Mawloc or Trygon unit from your army. Until the start of your next Command phase, your unit has the Synapse keyword.",
-    "glossary": "glossary-tyranids-stratagem-adaptive-optimisation",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-stratagem-replenishing-swarms": {
-    "id": "tyranids-stratagem-replenishing-swarms",
-    "title": "Replenishing Swarms",
-    "summary": "Your Movement phase. One Tyranids unit from your army, wholly within 9\" of one or more Tunnel Markers you placed. One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead.",
-    "full": "Your Movement phase. One Tyranids unit from your army, wholly within 9\" of one or more Tunnel Markers you placed. One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead.",
-    "glossary": "glossary-tyranids-stratagem-replenishing-swarms",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-stratagem-enfilading-emergence": {
-    "id": "tyranids-stratagem-enfilading-emergence",
-    "title": "Enfilading Emergence",
-    "summary": "End of your Movement phase. One Tyranids unit from your army that was set up as Reinforcements this turn. Until the end of your next Fight phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
-    "full": "End of your Movement phase. One Tyranids unit from your army that was set up as Reinforcements this turn. Until the end of your next Fight phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
-    "glossary": "glossary-tyranids-stratagem-enfilading-emergence",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-stratagem-tunnel-network": {
-    "id": "tyranids-stratagem-tunnel-network",
-    "title": "Tunnel Network",
-    "summary": "End of your Movement phase. One Tyranids unit from your army that is wholly within 9\" of one or more of your Tunnel Markers and not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units.",
-    "full": "End of your Movement phase. One Tyranids unit from your army that is wholly within 9\" of one or more of your Tunnel Markers and not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units.",
-    "glossary": "glossary-tyranids-stratagem-tunnel-network",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-stratagem-swarming-assault": {
-    "id": "tyranids-stratagem-swarming-assault",
-    "title": "Swarming Assault",
-    "summary": "Your Charge phase. One Tyranids Monster unit from your army that was set up as Reinforcements this turn. Until the end of the phase, friendly Tyranids units within 6\" of your unit can re-roll Charge rolls.",
-    "full": "Your Charge phase. One Tyranids Monster unit from your army that was set up as Reinforcements this turn. Until the end of the phase, friendly Tyranids units within 6\" of your unit can re-roll Charge rolls.",
-    "glossary": "glossary-tyranids-stratagem-swarming-assault",
-    "rule": "detachment-subterranean-assault"
-  },
-  "tyranids-stratagem-retreat-below": {
-    "id": "tyranids-stratagem-retreat-below",
-    "title": "Retreat Below",
-    "summary": "End of your opponent’s Fight phase. One Tyranids unit or up to two Burrower units from your army that are not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
-    "full": "End of your opponent’s Fight phase. One Tyranids unit or up to two Burrower units from your army that are not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
-    "glossary": "glossary-tyranids-stratagem-retreat-below",
-    "rule": "detachment-subterranean-assault"
   },
   "tyranids-detachment-rule-synaptic-imperatives": {
     "id": "tyranids-detachment-rule-synaptic-imperatives",
@@ -535,6 +535,54 @@ window.DG_TERMS={
     "glossary": "glossary-tyranids-stratagem-tanglestrike-rounds",
     "rule": "detachment-talons-of-the-norn-queen"
   },
+  "tyranids-detachment-rule-leader-beasts": {
+    "id": "tyranids-detachment-rule-leader-beasts",
+    "title": "Leader-beasts",
+    "summary": "Friendly TYRANID WARRIORS WITH RANGED BIO-WEAPONS/TYRANID WARRIORS WITH MELEE BIO-WEAPONS units have TYRANID WARRIORS and BATTLELINE. TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME models from your army have 5+ InSv.",
+    "full": "Friendly TYRANID WARRIORS WITH RANGED BIO-WEAPONS/TYRANID WARRIORS WITH MELEE BIO-WEAPONS units have TYRANID WARRIORS and BATTLELINE. TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME models from your army have 5+ InSv.",
+    "glossary": "glossary-tyranids-detachment-rule-leader-beasts",
+    "rule": "detachment-warrior-bioform-onslaught"
+  },
+  "tyranids-enhancement-elevated-might": {
+    "id": "tyranids-enhancement-elevated-might",
+    "title": "Elevated Might",
+    "summary": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This model’s melee attacks can re-roll wound rolls and have +1 AP.",
+    "full": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This model’s melee attacks can re-roll wound rolls and have +1 AP.",
+    "glossary": "glossary-tyranids-enhancement-elevated-might",
+    "rule": "detachment-warrior-bioform-onslaught"
+  },
+  "tyranids-enhancement-ocular-adaptation": {
+    "id": "tyranids-enhancement-ocular-adaptation",
+    "title": "Ocular Adaptation",
+    "summary": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls.",
+    "full": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls.",
+    "glossary": "glossary-tyranids-enhancement-ocular-adaptation",
+    "rule": "detachment-warrior-bioform-onslaught"
+  },
+  "tyranids-stratagem-alien-physiology": {
+    "id": "tyranids-stratagem-alien-physiology",
+    "title": "Alien Physiology",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly TYRANID WARRIORS unit. That TYRANID WARRIORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly TYRANID WARRIORS unit. That TYRANID WARRIORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
+    "glossary": "glossary-tyranids-stratagem-alien-physiology",
+    "rule": "detachment-warrior-bioform-onslaught"
+  },
+  "tyranids-stratagem-synaptic-micronodes": {
+    "id": "tyranids-stratagem-synaptic-micronodes",
+    "title": "Synaptic Micronodes",
+    "summary": "End of your Movement phase. One friendly TYRANID WARRIORS unit. Select one objective your unit is controlling. That objective is secured.",
+    "full": "End of your Movement phase. One friendly TYRANID WARRIORS unit. Select one objective your unit is controlling. That objective is secured.",
+    "glossary": "glossary-tyranids-stratagem-synaptic-micronodes",
+    "rule": "detachment-warrior-bioform-onslaught"
+  },
+  "tyranids-stratagem-parasitic-payload": {
+    "id": "tyranids-stratagem-parasitic-payload",
+    "title": "Parasitic Payload",
+    "summary": "Your Shooting phase, when a friendly TYRANID WARRIORS unit is selected to shoot. That TYRANID WARRIORS unit. Your unit’s ranged attacks have [IGNORE COVER].",
+    "full": "Your Shooting phase, when a friendly TYRANID WARRIORS unit is selected to shoot. That TYRANID WARRIORS unit. Your unit’s ranged attacks have [IGNORE COVER].",
+    "glossary": "glossary-tyranids-stratagem-parasitic-payload",
+    "rule": "detachment-warrior-bioform-onslaught"
+  },
   "tyranids-detachment-rule-insurmountable-odds": {
     "id": "tyranids-detachment-rule-insurmountable-odds",
     "title": "Insurmountable Odds",
@@ -623,141 +671,93 @@ window.DG_TERMS={
     "glossary": "glossary-tyranids-stratagem-unending-waves",
     "rule": "detachment-unending-swarm"
   },
-  "tyranids-detachment-rule-questing-tendrils": {
-    "id": "tyranids-detachment-rule-questing-tendrils",
-    "title": "Questing Tendrils",
-    "summary": "TYRANIDS units with this ability are eligible to charge in a turn in which they Fell Back. VANGUARD INVADER units with this ability are eligible to charge in a turn in which they Advanced.",
-    "full": "TYRANIDS units with this ability are eligible to charge in a turn in which they Fell Back. VANGUARD INVADER units with this ability are eligible to charge in a turn in which they Advanced.",
-    "glossary": "glossary-tyranids-detachment-rule-questing-tendrils",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-detachment-rule-feed-the-swarm": {
+    "id": "tyranids-detachment-rule-feed-the-swarm",
+    "title": "Feed the Swarm",
+    "summary": "In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following: One model in that unit regains up to D3+1 lost wounds. One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
+    "full": "In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following: One model in that unit regains up to D3+1 lost wounds. One destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
+    "glossary": "glossary-tyranids-detachment-rule-feed-the-swarm",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-enhancement-chameleonic": {
-    "id": "tyranids-enhancement-chameleonic",
-    "title": "Chameleonic",
-    "summary": "VANGUARD INVADER model only. This unit has Stealth.",
-    "full": "VANGUARD INVADER model only. This unit has Stealth.",
-    "glossary": "glossary-tyranids-enhancement-chameleonic",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-enhancement-biophagic-flow-aura": {
+    "id": "tyranids-enhancement-biophagic-flow-aura",
+    "title": "Biophagic Flow (Aura)",
+    "summary": "TYRANIDS model only. While a friendly HARVESTER model is within 12\" of the bearer, when using the Feed the Swarm ability, that HARVESTER model can Regenerate one friendly TYRANIDS unit that is within 9\" of it, instead of one within 6\".",
+    "full": "TYRANIDS model only. While a friendly HARVESTER model is within 12\" of the bearer, when using the Feed the Swarm ability, that HARVESTER model can Regenerate one friendly TYRANIDS unit that is within 9\" of it, instead of one within 6\".",
+    "glossary": "glossary-tyranids-enhancement-biophagic-flow-aura",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-enhancement-hunting-grounds": {
-    "id": "tyranids-enhancement-hunting-grounds",
-    "title": "Hunting Grounds",
-    "summary": "TYRANIDS model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test.",
-    "full": "TYRANIDS model only. While the bearer is on the battlefield, each time your opponent sets up a Reserves unit on the battlefield, roll one D6: on a 2+, that unit must take a Battle-shock test.",
-    "glossary": "glossary-tyranids-enhancement-hunting-grounds",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-enhancement-instinctive-defence": {
+    "id": "tyranids-enhancement-instinctive-defence",
+    "title": "Instinctive Defence",
+    "summary": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.",
+    "full": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.",
+    "glossary": "glossary-tyranids-enhancement-instinctive-defence",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-enhancement-neuronode": {
-    "id": "tyranids-enhancement-neuronode",
-    "title": "Neuronode",
-    "summary": "TYRANIDS model only. After both players have deployed their armies, you can select up to three VANGUARD INVADER units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "full": "TYRANIDS model only. After both players have deployed their armies, you can select up to three VANGUARD INVADER units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-    "glossary": "glossary-tyranids-enhancement-neuronode",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-enhancement-parasitic-biomorphology": {
+    "id": "tyranids-enhancement-parasitic-biomorphology",
+    "title": "Parasitic Biomorphology",
+    "summary": "TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
+    "full": "TYRANIDS model only. Add 1 to the Strength characteristic of melee weapons equipped by models in the bearer’s unit. The first time the bearer’s unit destroys an enemy unit in the Fight phase while the bearer is within 6\" of one or more friendly HARVESTER units, until the end of the battle, add 1 to the Attacks characteristic of melee weapons equipped by models in the bearer’s unit.",
+    "glossary": "glossary-tyranids-enhancement-parasitic-biomorphology",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-enhancement-stalker": {
-    "id": "tyranids-enhancement-stalker",
-    "title": "Stalker",
-    "summary": "VANGUARD INVADER model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll.",
-    "full": "VANGUARD INVADER model only. At the start of the battle, select one enemy unit. Each time the bearer makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll.",
-    "glossary": "glossary-tyranids-enhancement-stalker",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-enhancement-regenerating-monstrosity": {
+    "id": "tyranids-enhancement-regenerating-monstrosity",
+    "title": "Regenerating Monstrosity",
+    "summary": "TYRANIDS model only (excluding MONSTER models). The bearer’s unit can be regenerated up to twice per phase, instead of once.",
+    "full": "TYRANIDS model only (excluding MONSTER models). The bearer’s unit can be regenerated up to twice per phase, instead of once.",
+    "glossary": "glossary-tyranids-enhancement-regenerating-monstrosity",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-stratagem-assassin-beasts": {
-    "id": "tyranids-stratagem-assassin-beasts",
-    "title": "ASSASSIN BEASTS",
-    "summary": "Fight phase. One VANGUARD INVADER INFANTRY unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
-    "full": "Fight phase. One VANGUARD INVADER INFANTRY unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
-    "glossary": "glossary-tyranids-stratagem-assassin-beasts",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-stratagem-ablative-carapace": {
+    "id": "tyranids-stratagem-ablative-carapace",
+    "title": "ABLATIVE CARAPACE",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One HARVESTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One HARVESTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit is within range of an objective marker you control, until the end of the phase models in your unit have the Feel No Pain 4+ ability instead.",
+    "glossary": "glossary-tyranids-stratagem-ablative-carapace",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-stratagem-hypersensory-scillia": {
-    "id": "tyranids-stratagem-hypersensory-scillia",
-    "title": "HYPERSENSORY SCILLIA",
-    "summary": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\". You cannot target units that are within Engagement Range of one or more enemy units.",
-    "full": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\". You cannot target units that are within Engagement Range of one or more enemy units.",
-    "glossary": "glossary-tyranids-stratagem-hypersensory-scillia",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-stratagem-broodguard-impulse": {
+    "id": "tyranids-stratagem-broodguard-impulse",
+    "title": "BROODGUARD IMPULSE",
+    "summary": "Any phase. One HARVESTER unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just destroyed your HARVESTER unit, add 1 to the Wound roll.",
+    "full": "Any phase. One HARVESTER unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly TYRANIDS model makes an attack that targets the enemy unit that just destroyed your HARVESTER unit, add 1 to the Wound roll.",
+    "glossary": "glossary-tyranids-stratagem-broodguard-impulse",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-stratagem-invisible-hunter": {
-    "id": "tyranids-stratagem-invisible-hunter",
-    "title": "INVISIBLE HUNTER",
-    "summary": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves. The targeted units must be more than 3\" away from all enemy units.",
-    "full": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves. The targeted units must be more than 3\" away from all enemy units.",
-    "glossary": "glossary-tyranids-stratagem-invisible-hunter",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-stratagem-rapacious-hunger": {
+    "id": "tyranids-stratagem-rapacious-hunger",
+    "title": "RAPACIOUS HUNGER",
+    "summary": "Your Fight phase. One TYRANIDS unit from your army that just destroyed an enemy unit. Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a HARVESTER unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead.",
+    "full": "Your Fight phase. One TYRANIDS unit from your army that just destroyed an enemy unit. Your unit immediately Regenerates (See Feed the Swarm). When doing so, if your unit is a HARVESTER unit and you choose for one model to regain up to D3 lost wounds, that model regains up to 3 lost wounds instead.",
+    "glossary": "glossary-tyranids-stratagem-rapacious-hunger",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-stratagem-seeded-broods": {
-    "id": "tyranids-stratagem-seeded-broods",
-    "title": "SEEDED BROODS",
-    "summary": "Your Movement phase. One TYRANIDS unit from your army that is in Reserves, or up to two VANGUARD INVADER units from your army that are in Reserves. Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is.",
-    "full": "Your Movement phase. One TYRANIDS unit from your army that is in Reserves, or up to two VANGUARD INVADER units from your army that are in Reserves. Until the end of the phase, for the purposes of setting up those selected units on the battlefield, treat the current battle round number as being one higher than it actually is.",
-    "glossary": "glossary-tyranids-stratagem-seeded-broods",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-stratagem-reclaim-biomass": {
+    "id": "tyranids-stratagem-reclaim-biomass",
+    "title": "RECLAIM BIOMASS",
+    "summary": "Any phase, when a TYRANIDS unit from your army is destroyed, before the last model in it is removed from play. One HARVESTER unit from your army that is within 6\" of that destroyed unit. Regenerate one friendly TYRANIDS unit within 6\" of your HARVESTER unit (See Feed the Swarm).",
+    "full": "Any phase, when a TYRANIDS unit from your army is destroyed, before the last model in it is removed from play. One HARVESTER unit from your army that is within 6\" of that destroyed unit. Regenerate one friendly TYRANIDS unit within 6\" of your HARVESTER unit (See Feed the Swarm).",
+    "glossary": "glossary-tyranids-stratagem-reclaim-biomass",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-stratagem-surprise-assault": {
-    "id": "tyranids-stratagem-surprise-assault",
-    "title": "SURPRISE ASSAULT",
-    "summary": "Your Shooting phase or the Fight phase, just after a VANGUARD INVADER unit from your army has selected its targets. That VANGUARD INVADER unit. Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a Battle-shock test. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the Hit roll. If the Battle-shock test was failed, add 1 to the Wound roll as well.",
-    "full": "Your Shooting phase or the Fight phase, just after a VANGUARD INVADER unit from your army has selected its targets. That VANGUARD INVADER unit. Select one enemy unit that was selected as the target of one or more of your unit’s attacks. That enemy unit must take a Battle-shock test. Until the end of the phase, each time a model in your unit makes an attack that targets that enemy unit, add 1 to the Hit roll. If the Battle-shock test was failed, add 1 to the Wound roll as well.",
-    "glossary": "glossary-tyranids-stratagem-surprise-assault",
-    "rule": "detachment-vanguard-onslaught"
+  "tyranids-stratagem-secure-biomass": {
+    "id": "tyranids-stratagem-secure-biomass",
+    "title": "SECURE BIOMASS",
+    "summary": "Fight phase. One TYRANIDS unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a HARVESTER unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well.",
+    "full": "Fight phase. One TYRANIDS unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a HARVESTER unit, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit as well.",
+    "glossary": "glossary-tyranids-stratagem-secure-biomass",
+    "rule": "detachment-assimilation-swarm"
   },
-  "tyranids-stratagem-unseen-lurkers": {
-    "id": "tyranids-stratagem-unseen-lurkers",
-    "title": "UNSEEN LURKERS",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One VANGUARD INVADER unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\" or, if your unit has the Lone Operative ability, if the attacking model is within 6\". Your opponent can select new targets for the attacking unit’s attacks.",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One VANGUARD INVADER unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\" or, if your unit has the Lone Operative ability, if the attacking model is within 6\". Your opponent can select new targets for the attacking unit’s attacks.",
-    "glossary": "glossary-tyranids-stratagem-unseen-lurkers",
-    "rule": "detachment-vanguard-onslaught"
-  },
-  "tyranids-detachment-rule-leader-beasts": {
-    "id": "tyranids-detachment-rule-leader-beasts",
-    "title": "Leader-beasts",
-    "summary": "Friendly TYRANID WARRIORS WITH RANGED BIO-WEAPONS/TYRANID WARRIORS WITH MELEE BIO-WEAPONS units have TYRANID WARRIORS and BATTLELINE. TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME models from your army have 5+ InSv.",
-    "full": "Friendly TYRANID WARRIORS WITH RANGED BIO-WEAPONS/TYRANID WARRIORS WITH MELEE BIO-WEAPONS units have TYRANID WARRIORS and BATTLELINE. TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME models from your army have 5+ InSv.",
-    "glossary": "glossary-tyranids-detachment-rule-leader-beasts",
-    "rule": "detachment-warrior-bioform-onslaught"
-  },
-  "tyranids-enhancement-elevated-might": {
-    "id": "tyranids-enhancement-elevated-might",
-    "title": "Elevated Might",
-    "summary": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This model’s melee attacks can re-roll wound rolls and have +1 AP.",
-    "full": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This model’s melee attacks can re-roll wound rolls and have +1 AP.",
-    "glossary": "glossary-tyranids-enhancement-elevated-might",
-    "rule": "detachment-warrior-bioform-onslaught"
-  },
-  "tyranids-enhancement-ocular-adaptation": {
-    "id": "tyranids-enhancement-ocular-adaptation",
-    "title": "Ocular Adaptation",
-    "summary": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls.",
-    "full": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls.",
-    "glossary": "glossary-tyranids-enhancement-ocular-adaptation",
-    "rule": "detachment-warrior-bioform-onslaught"
-  },
-  "tyranids-stratagem-alien-physiology": {
-    "id": "tyranids-stratagem-alien-physiology",
-    "title": "Alien Physiology",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly TYRANID WARRIORS unit. That TYRANID WARRIORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly TYRANID WARRIORS unit. That TYRANID WARRIORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
-    "glossary": "glossary-tyranids-stratagem-alien-physiology",
-    "rule": "detachment-warrior-bioform-onslaught"
-  },
-  "tyranids-stratagem-synaptic-micronodes": {
-    "id": "tyranids-stratagem-synaptic-micronodes",
-    "title": "Synaptic Micronodes",
-    "summary": "End of your Movement phase. One friendly TYRANID WARRIORS unit. Select one objective your unit is controlling. That objective is secured.",
-    "full": "End of your Movement phase. One friendly TYRANID WARRIORS unit. Select one objective your unit is controlling. That objective is secured.",
-    "glossary": "glossary-tyranids-stratagem-synaptic-micronodes",
-    "rule": "detachment-warrior-bioform-onslaught"
-  },
-  "tyranids-stratagem-parasitic-payload": {
-    "id": "tyranids-stratagem-parasitic-payload",
-    "title": "Parasitic Payload",
-    "summary": "Your Shooting phase, when a friendly TYRANID WARRIORS unit is selected to shoot. That TYRANID WARRIORS unit. Your unit’s ranged attacks have [IGNORE COVER].",
-    "full": "Your Shooting phase, when a friendly TYRANID WARRIORS unit is selected to shoot. That TYRANID WARRIORS unit. Your unit’s ranged attacks have [IGNORE COVER].",
-    "glossary": "glossary-tyranids-stratagem-parasitic-payload",
-    "rule": "detachment-warrior-bioform-onslaught"
+  "tyranids-stratagem-tyrannoformed": {
+    "id": "tyranids-stratagem-tyrannoformed",
+    "title": "TYRANNOFORMED",
+    "summary": "Command phase. One HARVESTER unit from your army that is within range of an objective marker you control. That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+    "full": "Command phase. One HARVESTER unit from your army that is within range of an objective marker you control. That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+    "glossary": "glossary-tyranids-stratagem-tyrannoformed",
+    "rule": "detachment-assimilation-swarm"
   },
   "tyranids-ability-winged-swarm": {
     "id": "tyranids-ability-winged-swarm",

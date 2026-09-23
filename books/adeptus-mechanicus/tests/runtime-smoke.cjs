@@ -2,14 +2,16 @@ const { chromium } = require('playwright');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const {pathToFileURL} = require('node:url');
 const codexDatasheets=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-codex-datasheets.en.json')).datasheets;
 const codexWargear=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-codex-wargear.en.json')).units;
 const factionRules=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-rules.en.json'));
-const pointsCatalog=require(path.resolve(__dirname,'..','content','adeptus-mechanicus-points.en.json'));
-const enginseerPoints=pointsCatalog.units.find(unit=>unit.title==='Tech-Priest Enginseer').points[0].value;
-const necromechanicPoints=pointsCatalog.enhancements.find(item=>item.id==='enhancement-necromechanic').value;
 
 async function main() {
+const {createEffectiveMfmArmyProjection}=await import(pathToFileURL(path.resolve(__dirname,'..','..','shared','tools','effective-mfm-army-projection.mjs')).href);
+const pointsCatalog=createEffectiveMfmArmyProjection('adeptus-mechanicus').pointsForArmyBook('adeptus-mechanicus');
+const enginseerPoints=pointsCatalog.units.find(unit=>unit.id==='unit-tech-priest-enginseer').points[0].value;
+const necromechanicPoints=pointsCatalog.enhancements.find(item=>item.id==='enhancement-necromechanic').value;
 const base = process.env.AM_TEST_BASE || 'http://127.0.0.1:8766';
 const executablePath = process.env.BROWSER_EXECUTABLE;
 const output = path.resolve(__dirname, '..', '..', '..', 'tmp', 'mechanicus-runtime');
@@ -116,7 +118,7 @@ assert.deepEqual(await roster.locator('.unit-card[data-roster-selected="true"]')
 const enhancementCard=await roster.locator('#unit-tech-priest-enginseer .roster-enhancement').innerText();
 assert.match(enhancementCard,/TECH-PRIEST model only/i,'Personal reader must show the canonical Enhancement restriction');
 assert.match(enhancementCard,/20 pts included/i,'Personal reader must show the current Enhancement cost');
-assert.equal(clean(await roster.locator('#start .source').textContent()),`Faction Pack v${factionRules.source.version} · Munitorum Field Manual ${pointsCatalog.source.officialVersion}`,'Personal reader must expose its current authenticated points source');
+assert.equal(clean(await roster.locator('#start .source').textContent()),`Faction Pack v${factionRules.source.version} · Munitorum Field Manual ${pointsCatalog.source.version}`,'Personal reader must expose its current authenticated points source');
 assert.match(await roster.locator('#unit-tech-priest-enginseer .roster-game-exported-cost').innerText(),new RegExp(`Exported points · source roster · matches current\\s+${enginseerPoints} pts`,'i'),'Personal reader must show a matching current-points validation');
 await assertNoHorizontalOverflow(roster,'roster iPad');
 

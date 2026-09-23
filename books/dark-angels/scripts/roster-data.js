@@ -78,6 +78,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           }
@@ -132,6 +136,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -744,6 +752,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           }
@@ -798,6 +810,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -6580,7 +6596,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           }
         ],
-        "canSupport": [],
+        "canSupport": [
+          {
+            "unitId": "unit-assault-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-infernus-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-intercessor-squad",
+            "maxCharacters": 2
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad",
+            "maxCharacters": 2
+          }
+        ],
         "canBeLedBy": [],
         "canBeSupportedBy": []
       },
@@ -6616,7 +6653,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 2
             }
           ],
-          "canSupport": [],
+          "canSupport": [
+            {
+              "unitId": "unit-assault-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-infernus-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-intercessor-squad",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad",
+              "maxCharacters": 2
+            }
+          ],
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
@@ -10799,6 +10857,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           }
@@ -10845,6 +10907,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-bladeguard-ancient",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -14496,6 +14562,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           }
@@ -14546,6 +14616,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -15737,6 +15811,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 2
           },
           {
+            "unitId": "unit-judiciar",
+            "maxCharacters": 2
+          },
+          {
             "unitId": "unit-lieutenant",
             "maxCharacters": 2
           }
@@ -15787,6 +15865,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             },
             {
               "unitId": "unit-apothecary",
+              "maxCharacters": 2
+            },
+            {
+              "unitId": "unit-judiciar",
               "maxCharacters": 2
             },
             {
@@ -30182,7 +30264,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   "detachments": [
     {
       "id": "company-of-hunters",
-      "title": "Company of Hunters",
+      "title": "COMPANY OF HUNTERS",
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -30191,58 +30273,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ]
     },
     {
-      "id": "dark-age-arsenal",
-      "title": "Dark Age Arsenal",
-      "sourceBookId": "dark-angels",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "dark-angels-detachment-rule-invocations-of-ancient-fury"
-      ]
-    },
-    {
-      "id": "darkflight-pursuit",
-      "title": "Darkflight Pursuit",
-      "sourceBookId": "dark-angels",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "dark-angels-detachment-rule-black-winged-vigilance"
-      ]
-    },
-    {
-      "id": "inner-circle-task-force",
-      "title": "Inner Circle Task Force",
-      "sourceBookId": "dark-angels",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "dark-angels-detachment-rule-vowed-target"
-      ]
-    },
-    {
-      "id": "interrogation-conclave",
-      "title": "Interrogation Conclave",
-      "sourceBookId": "dark-angels",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "dark-angels-detachment-rule-dread-catechism"
-      ]
-    },
-    {
-      "id": "lion-s-blade-task-force",
-      "title": "Lion's Blade Task Force",
-      "sourceBookId": "dark-angels",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "dark-angels-detachment-rule-in-the-lions-claws"
-      ]
-    },
-    {
       "id": "unforgiven-task-force",
-      "title": "Unforgiven Task Force",
+      "title": "UNFORGIVEN TASK FORCE",
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -30251,13 +30283,63 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ]
     },
     {
+      "id": "inner-circle-task-force",
+      "title": "INNER CIRCLE TASK FORCE",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-vowed-target"
+      ]
+    },
+    {
+      "id": "lion-s-blade-task-force",
+      "title": "LION’S BLADE TASK FORCE",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-in-the-lions-claws"
+      ]
+    },
+    {
+      "id": "darkflight-pursuit",
+      "title": "DARKFLIGHT PURSUIT",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-black-winged-vigilance"
+      ]
+    },
+    {
+      "id": "interrogation-conclave",
+      "title": "INTERROGATION CONCLAVE",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-dread-catechism"
+      ]
+    },
+    {
       "id": "wrath-of-the-rock",
-      "title": "Wrath of the Rock",
+      "title": "WRATH OF THE ROCK",
       "sourceBookId": "dark-angels",
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
         "dark-angels-detachment-rule-dutiful-tenacity"
+      ]
+    },
+    {
+      "id": "dark-age-arsenal",
+      "title": "DARK AGE ARSENAL",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "dark-angels-detachment-rule-invocations-of-ancient-fury"
       ]
     },
     {
@@ -30428,52 +30510,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Friendly ADEPTUS ASTARTES have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot.\nFriendly ADEPTUS ASTARTES MOUNTED have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.\nKeywords: OUTRIDER SQUAD units from your army gain the BATTLELINE keyword.",
       "sectionId": "dark-angels-detachment-rule-masters-of-manoeuvre",
       "detachmentId": "company-of-hunters",
-      "detachmentTitle": "Company of Hunters",
-      "sourceBookId": "dark-angels"
-    },
-    {
-      "id": "dark-angels-detachment-rule-invocations-of-ancient-fury",
-      "title": "Invocations of Ancient Fury",
-      "text": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-      "sectionId": "dark-age-arsenal-rule",
-      "detachmentId": "dark-age-arsenal",
-      "detachmentTitle": "Dark Age Arsenal",
-      "sourceBookId": "dark-angels"
-    },
-    {
-      "id": "dark-angels-detachment-rule-black-winged-vigilance",
-      "title": "Black-winged Vigilance",
-      "text": "The anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-      "sectionId": "darkflight-pursuit-rule",
-      "detachmentId": "darkflight-pursuit",
-      "detachmentTitle": "Darkflight Pursuit",
-      "sourceBookId": "dark-angels"
-    },
-    {
-      "id": "dark-angels-detachment-rule-vowed-target",
-      "title": "Vowed Target",
-      "text": "At the start of your Movement phase, select one of the following:\n▪ Defensive Footing: Select one objective you control. Until the start of your next Movement phase, that objective is your Vowed objective.\n▪ Aggressive Push: Select one or more objective you do not control. Until the start of your next Movement phase, each of those objectives is one of your Vowed objectives. If a rule refers to a unit or model being within range of your Vowed objective, that rule takes effect if that unit or model is within range of one or more of your Vowed objectives. Each time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objectives, add 1 to the Wound roll.",
-      "sectionId": "dark-angels-detachment-rule-vowed-target",
-      "detachmentId": "inner-circle-task-force",
-      "detachmentTitle": "Inner Circle Task Force",
-      "sourceBookId": "dark-angels"
-    },
-    {
-      "id": "dark-angels-detachment-rule-dread-catechism",
-      "title": "Dread Catechism",
-      "text": "When the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
-      "sectionId": "interrogation-conclave-rule",
-      "detachmentId": "interrogation-conclave",
-      "detachmentTitle": "Interrogation Conclave",
-      "sourceBookId": "dark-angels"
-    },
-    {
-      "id": "dark-angels-detachment-rule-in-the-lions-claws",
-      "title": "In the Lion’s Claws",
-      "text": "Those unfortunate enough to be caught between the devastating speed of the Ravenwing and the adamantine might of the Deathwing are pinned in place and torn to shreds by their combined fury. ■ Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more Ravenwing units from your army Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of those tests. ■ Each time a Deathwing unit from your army declares a charge, if one or more targets of that charge are within Engagement Range of one or more Ravenwing units from your army, add 2 to the Charge roll. RESTRICTIONS Your army can include Dark Angels units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
-      "sectionId": "lion-s-blade-task-force-rule",
-      "detachmentId": "lion-s-blade-task-force",
-      "detachmentTitle": "Lion's Blade Task Force",
+      "detachmentTitle": "COMPANY OF HUNTERS",
       "sourceBookId": "dark-angels"
     },
     {
@@ -30482,7 +30519,43 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
       "sectionId": "dark-angels-detachment-rule-grim-resolve",
       "detachmentId": "unforgiven-task-force",
-      "detachmentTitle": "Unforgiven Task Force",
+      "detachmentTitle": "UNFORGIVEN TASK FORCE",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-vowed-target",
+      "title": "Vowed Target",
+      "text": "At the start of your Movement phase, select one of the following:\n▪ Defensive Footing: Select one objective you control. Until the start of your next Movement phase, that objective is your Vowed objective.\n▪ Aggressive Push: Select one or more objective you do not control. Until the start of your next Movement phase, each of those objectives is one of your Vowed objectives. If a rule refers to a unit or model being within range of your Vowed objective, that rule takes effect if that unit or model is within range of one or more of your Vowed objectives. Each time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objectives, add 1 to the Wound roll.",
+      "sectionId": "dark-angels-detachment-rule-vowed-target",
+      "detachmentId": "inner-circle-task-force",
+      "detachmentTitle": "INNER CIRCLE TASK FORCE",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-in-the-lions-claws",
+      "title": "In the Lion’s Claws",
+      "text": "Those unfortunate enough to be caught between the devastating speed of the Ravenwing and the adamantine might of the Deathwing are pinned in place and torn to shreds by their combined fury. ■ Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more Ravenwing units from your army Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of those tests. ■ Each time a Deathwing unit from your army declares a charge, if one or more targets of that charge are within Engagement Range of one or more Ravenwing units from your army, add 2 to the Charge roll. RESTRICTIONS Your army can include Dark Angels units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
+      "sectionId": "lion-s-blade-task-force-rule",
+      "detachmentId": "lion-s-blade-task-force",
+      "detachmentTitle": "LION’S BLADE TASK FORCE",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-black-winged-vigilance",
+      "title": "Black-winged Vigilance",
+      "text": "The anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "darkflight-pursuit-rule",
+      "detachmentId": "darkflight-pursuit",
+      "detachmentTitle": "DARKFLIGHT PURSUIT",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-dread-catechism",
+      "title": "Dread Catechism",
+      "text": "When the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "interrogation-conclave-rule",
+      "detachmentId": "interrogation-conclave",
+      "detachmentTitle": "INTERROGATION CONCLAVE",
       "sourceBookId": "dark-angels"
     },
     {
@@ -30491,7 +30564,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Even amongst the Adeptus Astartes, the battle‑brothers of the Dark Angels are renowned for their tenacity and resilience on the battlefield. When ordered to war, they are utterly relentless in pursuing their objectives, wading into fields of withering fire and shrugging off blows that would slay mortal warriors outright. Each time an attack targets an Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
       "sectionId": "wrath-of-the-rock-rule",
       "detachmentId": "wrath-of-the-rock",
-      "detachmentTitle": "Wrath of the Rock",
+      "detachmentTitle": "WRATH OF THE ROCK",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "id": "dark-angels-detachment-rule-invocations-of-ancient-fury",
+      "title": "Invocations of Ancient Fury",
+      "text": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+      "sectionId": "dark-age-arsenal-rule",
+      "detachmentId": "dark-age-arsenal",
+      "detachmentTitle": "DARK AGE ARSENAL",
       "sourceBookId": "dark-angels"
     },
     {
@@ -30663,11 +30745,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-master-of-manoeuvre",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "detachmentId": "company-of-hunters",
       "ruleId": "enhancement-master-of-manoeuvre",
       "sourceId": "enhancement-master-of-manoeuvre",
@@ -30699,11 +30776,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-master-crafted-weapon",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "detachmentId": "company-of-hunters",
       "ruleId": "enhancement-master-crafted-weapon",
       "sourceId": "enhancement-master-crafted-weapon",
@@ -30735,11 +30807,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-mounted-strategist",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "detachmentId": "company-of-hunters",
       "ruleId": "enhancement-mounted-strategist",
       "sourceId": "enhancement-mounted-strategist",
@@ -30771,11 +30838,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-recon-hunter",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-27"
-      },
       "detachmentId": "company-of-hunters",
       "ruleId": "enhancement-recon-hunter",
       "sourceId": "enhancement-recon-hunter",
@@ -30785,185 +30847,128 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "canonicalDetachmentId": "company-of-hunters"
     },
     {
-      "title": "Petition of Stability",
-      "text": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
-      "value": 15,
-      "detachment": "Dark Age Arsenal",
-      "tags": [
-        "UPGRADE"
-      ],
+      "title": "Pennant of Remembrance",
+      "text": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit\nis Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+      "value": 10,
+      "detachment": "Unforgiven Task Force",
+      "tags": [],
       "owner": {
-        "subject": "unit",
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ANCIENT"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-pennant-of-remembrance",
+      "detachmentId": "unforgiven-task-force",
+      "ruleId": "enhancement-pennant-of-remembrance",
+      "sourceId": "enhancement-pennant-of-remembrance",
+      "sourceBookId": "dark-angels",
+      "legacyKey": "enhancement-pennant-of-remembrance",
+      "canonicalEnhancementId": "enhancement-pennant-of-remembrance",
+      "canonicalDetachmentId": "unforgiven-task-force"
+    },
+    {
+      "title": "Shroud of Heroes",
+      "text": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
+      "value": 25,
+      "detachment": "Unforgiven Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
         "selector": {
           "allKeywords": [
             "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
       "assignment": {
-        "maxOwners": 3,
+        "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "petition-of-stability",
-      "points": 15,
-      "sourcePages": [
-        2
-      ],
-      "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.2",
-        "sourcePages": [
-          2
-        ]
-      },
-      "sourceId": "petition-of-stability",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "petition-of-stability",
-      "detachmentId": "dark-age-arsenal",
+      "id": "enhancement-shroud-of-heroes",
+      "detachmentId": "unforgiven-task-force",
+      "ruleId": "enhancement-shroud-of-heroes",
+      "sourceId": "enhancement-shroud-of-heroes",
       "sourceBookId": "dark-angels",
-      "legacyKey": "petition-of-stability",
-      "canonicalEnhancementId": "petition-of-stability",
-      "canonicalDetachmentId": "dark-age-arsenal"
+      "legacyKey": "enhancement-shroud-of-heroes",
+      "canonicalEnhancementId": "enhancement-shroud-of-heroes",
+      "canonicalDetachmentId": "unforgiven-task-force"
     },
     {
-      "title": "Entreaty of Perpetual Ardour",
-      "text": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+      "title": "Stubborn Tenacity",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
       "value": 15,
-      "detachment": "Dark Age Arsenal",
-      "tags": [
-        "UPGRADE"
-      ],
+      "detachment": "Unforgiven Task Force",
+      "tags": [],
       "owner": {
-        "subject": "unit",
-        "selector": {
-          "unitIds": [
-            "unit-hellblaster-squad"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "entreaty-of-perpetual-ardour",
-      "points": 15,
-      "sourcePages": [
-        2
-      ],
-      "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.2",
-        "sourcePages": [
-          2
-        ]
-      },
-      "sourceId": "entreaty-of-perpetual-ardour",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "entreaty-of-perpetual-ardour",
-      "detachmentId": "dark-age-arsenal",
-      "sourceBookId": "dark-angels",
-      "legacyKey": "entreaty-of-perpetual-ardour",
-      "canonicalEnhancementId": "entreaty-of-perpetual-ardour",
-      "canonicalDetachmentId": "dark-age-arsenal"
-    },
-    {
-      "title": "Thundercowl Turbines",
-      "text": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
-      "value": 15,
-      "detachment": "Darkflight Pursuit",
-      "tags": [
-        "UPGRADE"
-      ],
-      "owner": {
-        "subject": "unit",
+        "subject": "model",
         "selector": {
           "allKeywords": [
-            "RAVENWING",
-            "FLY"
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
       "assignment": {
-        "maxOwners": 3,
+        "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "thundercowl-turbines",
-      "points": 15,
-      "sourcePages": [
-        3
-      ],
-      "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.2",
-        "sourcePages": [
-          3
-        ]
-      },
-      "sourceId": "thundercowl-turbines",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "thundercowl-turbines",
-      "detachmentId": "darkflight-pursuit",
+      "id": "enhancement-stubborn-tenacity",
+      "detachmentId": "unforgiven-task-force",
+      "ruleId": "enhancement-stubborn-tenacity",
+      "sourceId": "enhancement-stubborn-tenacity",
       "sourceBookId": "dark-angels",
-      "legacyKey": "thundercowl-turbines",
-      "canonicalEnhancementId": "thundercowl-turbines",
-      "canonicalDetachmentId": "darkflight-pursuit"
+      "legacyKey": "enhancement-stubborn-tenacity",
+      "canonicalEnhancementId": "enhancement-stubborn-tenacity",
+      "canonicalDetachmentId": "unforgiven-task-force"
     },
     {
-      "title": "Nightforged Battery",
-      "text": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+      "title": "Weapons of the First Legion",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
       "value": 15,
-      "detachment": "Darkflight Pursuit",
-      "tags": [
-        "UPGRADE"
-      ],
+      "detachment": "Unforgiven Task Force",
+      "tags": [],
       "owner": {
-        "subject": "unit",
+        "subject": "model",
         "selector": {
-          "unitIds": [
-            "unit-land-speeder-vengeance"
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
           ]
         }
       },
       "assignment": {
-        "maxOwners": 3,
+        "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       },
-      "id": "nightforged-battery",
-      "points": 15,
-      "sourcePages": [
-        3
-      ],
-      "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.2",
-        "sourcePages": [
-          3
-        ]
-      },
-      "sourceId": "nightforged-battery",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "nightforged-battery",
-      "detachmentId": "darkflight-pursuit",
+      "id": "enhancement-weapons-of-the-first-legion",
+      "detachmentId": "unforgiven-task-force",
+      "ruleId": "enhancement-weapons-of-the-first-legion",
+      "sourceId": "enhancement-weapons-of-the-first-legion",
       "sourceBookId": "dark-angels",
-      "legacyKey": "nightforged-battery",
-      "canonicalEnhancementId": "nightforged-battery",
-      "canonicalDetachmentId": "darkflight-pursuit"
+      "legacyKey": "enhancement-weapons-of-the-first-legion",
+      "canonicalEnhancementId": "enhancement-weapons-of-the-first-legion",
+      "canonicalDetachmentId": "unforgiven-task-force"
     },
     {
       "title": "Champion of the Deathwing",
@@ -30988,11 +30993,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-champion-of-the-deathwing",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "detachmentId": "inner-circle-task-force",
       "ruleId": "enhancement-champion-of-the-deathwing",
       "sourceId": "enhancement-champion-of-the-deathwing",
@@ -31027,11 +31027,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-inner-circle-task-force-deathwing-assault",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "detachmentId": "inner-circle-task-force",
       "ruleId": "enhancement-inner-circle-task-force-deathwing-assault",
       "sourceId": "enhancement-inner-circle-task-force-deathwing-assault",
@@ -31063,11 +31058,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-eye-of-the-unseen",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "detachmentId": "inner-circle-task-force",
       "ruleId": "enhancement-eye-of-the-unseen",
       "sourceId": "enhancement-eye-of-the-unseen",
@@ -31099,11 +31089,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-singular-will",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "detachmentId": "inner-circle-task-force",
       "ruleId": "enhancement-singular-will",
       "sourceId": "enhancement-singular-will",
@@ -31113,103 +31098,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "canonicalDetachmentId": "inner-circle-task-force"
     },
     {
-      "title": "Limitless Zeal",
-      "text": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
-      "value": 10,
-      "detachment": "Interrogation Conclave",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "CHAPLAIN"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "limitless-zeal",
-      "points": 10,
-      "sourcePages": [
-        4
-      ],
-      "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.2",
-        "sourcePages": [
-          4
-        ]
-      },
-      "sourceId": "limitless-zeal",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "limitless-zeal",
-      "detachmentId": "interrogation-conclave",
-      "sourceBookId": "dark-angels",
-      "legacyKey": "limitless-zeal",
-      "canonicalEnhancementId": "limitless-zeal",
-      "canonicalDetachmentId": "interrogation-conclave"
-    },
-    {
-      "title": "Inescapable Interrogation",
-      "text": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
-      "value": 20,
-      "detachment": "Interrogation Conclave",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "CHAPLAIN"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "inescapable-interrogation",
-      "points": 20,
-      "sourcePages": [
-        4
-      ],
-      "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.2",
-        "sourcePages": [
-          4
-        ]
-      },
-      "sourceId": "inescapable-interrogation",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "inescapable-interrogation",
-      "detachmentId": "interrogation-conclave",
-      "sourceBookId": "dark-angels",
-      "legacyKey": "inescapable-interrogation",
-      "canonicalEnhancementId": "inescapable-interrogation",
-      "canonicalDetachmentId": "interrogation-conclave"
-    },
-    {
       "title": "Calibanite Armaments",
       "text": "The eldest relic weapons of the Dark Angels trace their lineage to ancient Caliban and are wielded only by the greatest champions of the Unforgiven. Adeptus Astartes model only. Add 1 to the Damage characteristic of the bearer’s melee weapons.",
       "value": 15,
-      "detachment": "Lion's Blade Task Force",
+      "detachment": "LION’S BLADE TASK FORCE",
       "tags": [],
+      "id": "calibanite-armaments",
+      "points": 15,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "sourcePages": [
+          5
+        ]
+      },
+      "sourceId": "calibanite-armaments",
+      "ruleId": "calibanite-armaments",
+      "detachmentId": "lion-s-blade-task-force",
+      "sourceBookId": "dark-angels",
+      "legacyKey": "calibanite-armaments",
+      "canonicalEnhancementId": "calibanite-armaments",
+      "canonicalDetachmentId": "lion-s-blade-task-force",
       "owner": {
         "subject": "model",
         "selector": {
@@ -31225,8 +31136,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "id": "calibanite-armaments",
+      }
+    },
+    {
+      "title": "Lord of the Hunt",
+      "text": "This veteran of the Ravenwing has spent mortal lifetimes in the saddle, leading mechanised cavalry to battle on countless worlds. Ravenwing model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back and you can re‑roll Desperate Escape tests taken for models in the bearer’s unit.",
+      "value": 15,
+      "detachment": "LION’S BLADE TASK FORCE",
+      "tags": [],
+      "id": "lord-of-the-hunt",
       "points": 15,
       "sourcePages": [
         5
@@ -31237,25 +31155,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           5
         ]
       },
-      "sourceId": "calibanite-armaments",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "calibanite-armaments",
+      "sourceId": "lord-of-the-hunt",
+      "ruleId": "lord-of-the-hunt",
       "detachmentId": "lion-s-blade-task-force",
       "sourceBookId": "dark-angels",
-      "legacyKey": "calibanite-armaments",
-      "canonicalEnhancementId": "calibanite-armaments",
-      "canonicalDetachmentId": "lion-s-blade-task-force"
-    },
-    {
-      "title": "Lord of the Hunt",
-      "text": "This veteran of the Ravenwing has spent mortal lifetimes in the saddle, leading mechanised cavalry to battle on countless worlds. Ravenwing model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back and you can re‑roll Desperate Escape tests taken for models in the bearer’s unit.",
-      "value": 15,
-      "detachment": "Lion's Blade Task Force",
-      "tags": [],
+      "legacyKey": "lord-of-the-hunt",
+      "canonicalEnhancementId": "lord-of-the-hunt",
+      "canonicalDetachmentId": "lion-s-blade-task-force",
       "owner": {
         "subject": "model",
         "selector": {
@@ -31271,9 +31177,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "id": "lord-of-the-hunt",
-      "points": 15,
+      }
+    },
+    {
+      "title": "Stalwart Champion",
+      "text": "Possessed of obdurate will, this warrior champion instils an indomitable resolve and absolute refusal to cede ground within his brothers. Captain, Chaplain or Lieutenant model only. While the bearer’s unit is not Battle‑shocked, add 1 to the Objective Control characteristic of models in the bearer’s unit.",
+      "value": 15,
+      "detachment": "LION’S BLADE TASK FORCE",
+      "tags": [],
+      "id": "stalwart-champion",
+      "points": 25,
       "sourcePages": [
         5
       ],
@@ -31283,25 +31196,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           5
         ]
       },
-      "sourceId": "lord-of-the-hunt",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "lord-of-the-hunt",
+      "sourceId": "stalwart-champion",
+      "ruleId": "stalwart-champion",
       "detachmentId": "lion-s-blade-task-force",
       "sourceBookId": "dark-angels",
-      "legacyKey": "lord-of-the-hunt",
-      "canonicalEnhancementId": "lord-of-the-hunt",
-      "canonicalDetachmentId": "lion-s-blade-task-force"
-    },
-    {
-      "title": "Stalwart Champion",
-      "text": "Possessed of obdurate will, this warrior champion instils an indomitable resolve and absolute refusal to cede ground within his brothers. Captain, Chaplain or Lieutenant model only. While the bearer’s unit is not Battle‑shocked, add 1 to the Objective Control characteristic of models in the bearer’s unit.",
-      "value": 15,
-      "detachment": "Lion's Blade Task Force",
-      "tags": [],
+      "legacyKey": "stalwart-champion",
+      "canonicalEnhancementId": "stalwart-champion",
+      "canonicalDetachmentId": "lion-s-blade-task-force",
       "owner": {
         "subject": "model",
         "selector": {
@@ -31319,9 +31220,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "id": "stalwart-champion",
-      "points": 25,
+      }
+    },
+    {
+      "title": "Fulgus Magna",
+      "text": "This ancient teleport homer projects a powerful narrow‑band signal, enabling the teleportarium chambers of orbiting vessels to lock on to the bearer even amid severe atmospheric or empyric disturbances. Deathwing model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+      "value": 20,
+      "detachment": "LION’S BLADE TASK FORCE",
+      "tags": [],
+      "id": "fulgus-magna",
+      "points": 20,
       "sourcePages": [
         5
       ],
@@ -31331,25 +31239,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           5
         ]
       },
-      "sourceId": "stalwart-champion",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "stalwart-champion",
+      "sourceId": "fulgus-magna",
+      "ruleId": "fulgus-magna",
       "detachmentId": "lion-s-blade-task-force",
       "sourceBookId": "dark-angels",
-      "legacyKey": "stalwart-champion",
-      "canonicalEnhancementId": "stalwart-champion",
-      "canonicalDetachmentId": "lion-s-blade-task-force"
-    },
-    {
-      "title": "Fulgus Magna",
-      "text": "This ancient teleport homer projects a powerful narrow‑band signal, enabling the teleportarium chambers of orbiting vessels to lock on to the bearer even amid severe atmospheric or empyric disturbances. Deathwing model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
-      "value": 20,
-      "detachment": "Lion's Blade Task Force",
-      "tags": [],
+      "legacyKey": "fulgus-magna",
+      "canonicalEnhancementId": "fulgus-magna",
+      "canonicalDetachmentId": "lion-s-blade-task-force",
       "owner": {
         "subject": "model",
         "selector": {
@@ -31365,42 +31261,114 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "id": "fulgus-magna",
-      "points": 20,
+      }
+    },
+    {
+      "title": "Thundercowl Turbines",
+      "text": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
+      "value": 15,
+      "detachment": "DARKFLIGHT PURSUIT",
+      "tags": [],
+      "id": "thundercowl-turbines",
+      "points": 15,
       "sourcePages": [
-        5
+        3
       ],
       "provenance": {
         "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
-          5
+          3
         ]
       },
-      "sourceId": "fulgus-magna",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "fulgus-magna",
-      "detachmentId": "lion-s-blade-task-force",
+      "sourceId": "thundercowl-turbines",
+      "ruleId": "thundercowl-turbines",
+      "detachmentId": "darkflight-pursuit",
       "sourceBookId": "dark-angels",
-      "legacyKey": "fulgus-magna",
-      "canonicalEnhancementId": "fulgus-magna",
-      "canonicalDetachmentId": "lion-s-blade-task-force"
+      "legacyKey": "thundercowl-turbines",
+      "canonicalEnhancementId": "thundercowl-turbines",
+      "canonicalDetachmentId": "darkflight-pursuit",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "RAVENWING",
+            "FLY"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
-      "title": "Pennant of Remembrance",
-      "text": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit\nis Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+      "title": "Nightforged Battery",
+      "text": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+      "value": 15,
+      "detachment": "DARKFLIGHT PURSUIT",
+      "tags": [],
+      "id": "nightforged-battery",
+      "points": 15,
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "sourcePages": [
+          3
+        ]
+      },
+      "sourceId": "nightforged-battery",
+      "ruleId": "nightforged-battery",
+      "detachmentId": "darkflight-pursuit",
+      "sourceBookId": "dark-angels",
+      "legacyKey": "nightforged-battery",
+      "canonicalEnhancementId": "nightforged-battery",
+      "canonicalDetachmentId": "darkflight-pursuit",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-land-speeder-vengeance"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "title": "Limitless Zeal",
+      "text": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
       "value": 10,
-      "detachment": "Unforgiven Task Force",
+      "detachment": "INTERROGATION CONCLAVE",
       "tags": [],
+      "id": "limitless-zeal",
+      "points": 10,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "limitless-zeal",
+      "ruleId": "limitless-zeal",
+      "detachmentId": "interrogation-conclave",
+      "sourceBookId": "dark-angels",
+      "legacyKey": "limitless-zeal",
+      "canonicalEnhancementId": "limitless-zeal",
+      "canonicalDetachmentId": "interrogation-conclave",
       "owner": {
         "subject": "model",
         "selector": {
           "allKeywords": [
-            "ANCIENT"
+            "CHAPLAIN"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -31411,32 +31379,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "id": "enhancement-pennant-of-remembrance",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "detachmentId": "unforgiven-task-force",
-      "ruleId": "enhancement-pennant-of-remembrance",
-      "sourceId": "enhancement-pennant-of-remembrance",
-      "sourceBookId": "dark-angels",
-      "legacyKey": "enhancement-pennant-of-remembrance",
-      "canonicalEnhancementId": "enhancement-pennant-of-remembrance",
-      "canonicalDetachmentId": "unforgiven-task-force"
+      }
     },
     {
-      "title": "Shroud of Heroes",
-      "text": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
-      "value": 25,
-      "detachment": "Unforgiven Task Force",
+      "title": "Inescapable Interrogation",
+      "text": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
+      "value": 20,
+      "detachment": "INTERROGATION CONCLAVE",
       "tags": [],
+      "id": "inescapable-interrogation",
+      "points": 20,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "inescapable-interrogation",
+      "ruleId": "inescapable-interrogation",
+      "detachmentId": "interrogation-conclave",
+      "sourceBookId": "dark-angels",
+      "legacyKey": "inescapable-interrogation",
+      "canonicalEnhancementId": "inescapable-interrogation",
+      "canonicalDetachmentId": "interrogation-conclave",
       "owner": {
         "subject": "model",
         "selector": {
           "allKeywords": [
-            "ADEPTUS ASTARTES"
+            "CHAPLAIN"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -31447,115 +31420,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "id": "enhancement-shroud-of-heroes",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "detachmentId": "unforgiven-task-force",
-      "ruleId": "enhancement-shroud-of-heroes",
-      "sourceId": "enhancement-shroud-of-heroes",
-      "sourceBookId": "dark-angels",
-      "legacyKey": "enhancement-shroud-of-heroes",
-      "canonicalEnhancementId": "enhancement-shroud-of-heroes",
-      "canonicalDetachmentId": "unforgiven-task-force"
-    },
-    {
-      "title": "Stubborn Tenacity",
-      "text": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
-      "value": 15,
-      "detachment": "Unforgiven Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-stubborn-tenacity",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "detachmentId": "unforgiven-task-force",
-      "ruleId": "enhancement-stubborn-tenacity",
-      "sourceId": "enhancement-stubborn-tenacity",
-      "sourceBookId": "dark-angels",
-      "legacyKey": "enhancement-stubborn-tenacity",
-      "canonicalEnhancementId": "enhancement-stubborn-tenacity",
-      "canonicalDetachmentId": "unforgiven-task-force"
-    },
-    {
-      "title": "Weapons of the First Legion",
-      "text": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
-      "value": 15,
-      "detachment": "Unforgiven Task Force",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-weapons-of-the-first-legion",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "detachmentId": "unforgiven-task-force",
-      "ruleId": "enhancement-weapons-of-the-first-legion",
-      "sourceId": "enhancement-weapons-of-the-first-legion",
-      "sourceBookId": "dark-angels",
-      "legacyKey": "enhancement-weapons-of-the-first-legion",
-      "canonicalEnhancementId": "enhancement-weapons-of-the-first-legion",
-      "canonicalDetachmentId": "unforgiven-task-force"
+      }
     },
     {
       "title": "Tempered in Battle (Aura)",
       "text": "A veteran of the Inner Circle, this warrior inspires those around them to hold the line amidst the heat and chaos of battle. Adeptus Astartes model only. While a friendly Adeptus Astartes unit is within 6\" of this model, you can re‑roll Battle‑shock and Leadership tests taken for that unit.",
       "value": 10,
-      "detachment": "Wrath of the Rock",
+      "detachment": "WRATH OF THE ROCK",
       "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "allKeywords": [
-            "ADEPTUS ASTARTES"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
       "id": "tempered-in-battle-aura",
       "points": 10,
       "sourcePages": [
@@ -31568,24 +31440,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "tempered-in-battle-aura",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "ruleId": "tempered-in-battle-aura",
       "detachmentId": "wrath-of-the-rock",
       "sourceBookId": "dark-angels",
       "legacyKey": "tempered-in-battle-aura",
       "canonicalEnhancementId": "tempered-in-battle-aura",
-      "canonicalDetachmentId": "wrath-of-the-rock"
-    },
-    {
-      "title": "Ancient Weapons",
-      "text": "The vaults of the Dark Angels contain many relics from Humanity’s distant past. This soldier has been granted the honour of bearing such a weapon to battle. Adeptus Astartes model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
-      "value": 25,
-      "detachment": "Wrath of the Rock",
-      "tags": [],
+      "canonicalDetachmentId": "wrath-of-the-rock",
       "owner": {
         "subject": "model",
         "selector": {
@@ -31601,7 +31461,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
+      }
+    },
+    {
+      "title": "Ancient Weapons",
+      "text": "The vaults of the Dark Angels contain many relics from Humanity’s distant past. This soldier has been granted the honour of bearing such a weapon to battle. Adeptus Astartes model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
+      "value": 25,
+      "detachment": "WRATH OF THE ROCK",
+      "tags": [],
       "id": "ancient-weapons",
       "points": 25,
       "sourcePages": [
@@ -31614,24 +31481,53 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         ]
       },
       "sourceId": "ancient-weapons",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
       "ruleId": "ancient-weapons",
       "detachmentId": "wrath-of-the-rock",
       "sourceBookId": "dark-angels",
       "legacyKey": "ancient-weapons",
       "canonicalEnhancementId": "ancient-weapons",
-      "canonicalDetachmentId": "wrath-of-the-rock"
+      "canonicalDetachmentId": "wrath-of-the-rock",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "title": "Deathwing Assault",
       "text": "A veteran inductee of the Inner Circle, this champion has served amongst the Deathwing for centuries and become an unmatched master of teleportarium insertions. Deathwing model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
       "value": 15,
-      "detachment": "Wrath of the Rock",
+      "detachment": "WRATH OF THE ROCK",
       "tags": [],
+      "id": "deathwing-assault",
+      "points": 15,
+      "sourcePages": [
+        7
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "sourcePages": [
+          7
+        ]
+      },
+      "sourceId": "deathwing-assault",
+      "ruleId": "deathwing-assault",
+      "detachmentId": "wrath-of-the-rock",
+      "sourceBookId": "dark-angels",
+      "legacyKey": "deathwing-assault",
+      "canonicalEnhancementId": "deathwing-assault",
+      "canonicalDetachmentId": "wrath-of-the-rock",
       "owner": {
         "subject": "model",
         "selector": {
@@ -31650,9 +31546,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "id": "deathwing-assault",
-      "points": 15,
+      }
+    },
+    {
+      "title": "Lord of the Ravenwing",
+      "text": "This commander has mastered the art of cavalry combat, instinctively noticing the opportune position to strike and navigating the chaos of battle with preternatural precision. Ravenwing model only. Y ou can re‑roll Advance and Charge rolls made for the bearer’s unit.",
+      "value": 10,
+      "detachment": "WRATH OF THE ROCK",
+      "tags": [],
+      "id": "lord-of-the-ravenwing",
+      "points": 10,
       "sourcePages": [
         7
       ],
@@ -31662,25 +31565,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           7
         ]
       },
-      "sourceId": "deathwing-assault",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "deathwing-assault",
+      "sourceId": "lord-of-the-ravenwing",
+      "ruleId": "lord-of-the-ravenwing",
       "detachmentId": "wrath-of-the-rock",
       "sourceBookId": "dark-angels",
-      "legacyKey": "deathwing-assault",
-      "canonicalEnhancementId": "deathwing-assault",
-      "canonicalDetachmentId": "wrath-of-the-rock"
-    },
-    {
-      "title": "Lord of the Ravenwing",
-      "text": "This commander has mastered the art of cavalry combat, instinctively noticing the opportune position to strike and navigating the chaos of battle with preternatural precision. Ravenwing model only. Y ou can re‑roll Advance and Charge rolls made for the bearer’s unit.",
-      "value": 10,
-      "detachment": "Wrath of the Rock",
-      "tags": [],
+      "legacyKey": "lord-of-the-ravenwing",
+      "canonicalEnhancementId": "lord-of-the-ravenwing",
+      "canonicalDetachmentId": "wrath-of-the-rock",
       "owner": {
         "subject": "model",
         "selector": {
@@ -31696,36 +31587,89 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "maxOwners": 1,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
-      },
-      "id": "lord-of-the-ravenwing",
-      "points": 10,
+      }
+    },
+    {
+      "title": "Petition of Stability",
+      "text": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
+      "value": 15,
+      "detachment": "DARK AGE ARSENAL",
+      "tags": [],
+      "id": "petition-of-stability",
+      "points": 15,
       "sourcePages": [
-        7
+        2
       ],
       "provenance": {
         "sourceId": "dark-angels-faction-pack-v1.2",
         "sourcePages": [
-          7
+          2
         ]
       },
-      "sourceId": "lord-of-the-ravenwing",
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/dark-angels",
-        "verifiedAt": "2026-08-11"
-      },
-      "ruleId": "lord-of-the-ravenwing",
-      "detachmentId": "wrath-of-the-rock",
+      "sourceId": "petition-of-stability",
+      "ruleId": "petition-of-stability",
+      "detachmentId": "dark-age-arsenal",
       "sourceBookId": "dark-angels",
-      "legacyKey": "lord-of-the-ravenwing",
-      "canonicalEnhancementId": "lord-of-the-ravenwing",
-      "canonicalDetachmentId": "wrath-of-the-rock"
+      "legacyKey": "petition-of-stability",
+      "canonicalEnhancementId": "petition-of-stability",
+      "canonicalDetachmentId": "dark-age-arsenal",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "allKeywords": [
+            "ADEPTUS ASTARTES"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "title": "Entreaty of Perpetual Ardour",
+      "text": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+      "value": 15,
+      "detachment": "DARK AGE ARSENAL",
+      "tags": [],
+      "id": "entreaty-of-perpetual-ardour",
+      "points": 15,
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.2",
+        "sourcePages": [
+          2
+        ]
+      },
+      "sourceId": "entreaty-of-perpetual-ardour",
+      "ruleId": "entreaty-of-perpetual-ardour",
+      "detachmentId": "dark-age-arsenal",
+      "sourceBookId": "dark-angels",
+      "legacyKey": "entreaty-of-perpetual-ardour",
+      "canonicalEnhancementId": "entreaty-of-perpetual-ardour",
+      "canonicalDetachmentId": "dark-age-arsenal",
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-hellblaster-squad"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     {
       "title": "Avenging Angel",
       "text": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
       "value": 20,
-      "detachment": "Vengeful Hosts",
+      "detachment": "VENGEFUL HOSTS",
       "tags": [],
       "sourceId": "enhancement-avenging-angel",
       "owner": {
@@ -31754,39 +31698,23 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           2
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "enhancement-avenging-angel",
       "detachmentId": "vengeful-hosts",
+      "canonicalDetachmentId": "vengeful-hosts",
+      "mfmRecordId": "mfm-enhancement-ebebae91ffcbd849",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-avenging-angel",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-avenging-angel",
-      "canonicalEnhancementId": "enhancement-avenging-angel",
-      "canonicalDetachmentId": "vengeful-hosts"
+      "legacyKey": "enhancement-avenging-angel"
     },
     {
       "title": "Orksbane",
       "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2 3",
       "value": 20,
-      "detachment": "Vengeful Hosts",
+      "detachment": "VENGEFUL HOSTS",
       "tags": [],
       "sourceId": "enhancement-orksbane",
-      "profile": {
-        "name": "Orksbane",
-        "type": "Melee Weapons",
-        "characteristics": {
-          "Range": "Melee",
-          "A": "4",
-          "WS": "2+",
-          "S": "8",
-          "AP": "-2",
-          "D": "3",
-          "Keywords": "Cleave 2"
-        }
-      },
       "owner": {
         "subject": "model",
         "selector": {
@@ -31813,24 +31741,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           2
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "enhancement-orksbane",
       "detachmentId": "vengeful-hosts",
+      "canonicalDetachmentId": "vengeful-hosts",
+      "mfmRecordId": "mfm-enhancement-aed1449dd81dd2b5",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "enhancement-orksbane",
       "sourceBookId": "space-marines",
-      "legacyKey": "enhancement-orksbane",
-      "canonicalEnhancementId": "enhancement-orksbane",
-      "canonicalDetachmentId": "vengeful-hosts"
+      "legacyKey": "enhancement-orksbane"
     },
     {
       "title": "Bellicose Weapon Spirits (Upgrade)",
       "text": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
       "value": 15,
-      "detachment": "Fulguris Task Force",
+      "detachment": "FULGURIS TASK FORCE",
       "tags": [
         "UPGRADE"
       ],
@@ -31863,24 +31788,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           3
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "bellicose-weapon-spirits",
       "detachmentId": "fulguris-task-force",
+      "canonicalDetachmentId": "fulguris-task-force",
+      "mfmRecordId": "mfm-enhancement-d3f2149d9e84803f",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "bellicose-weapon-spirits",
       "sourceBookId": "space-marines",
-      "legacyKey": "bellicose-weapon-spirits",
-      "canonicalEnhancementId": "bellicose-weapon-spirits",
-      "canonicalDetachmentId": "fulguris-task-force"
+      "legacyKey": "bellicose-weapon-spirits"
     },
     {
       "title": "Raptorial Cogitator Core (Upgrade)",
       "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
       "value": 15,
-      "detachment": "Fulguris Task Force",
+      "detachment": "FULGURIS TASK FORCE",
       "tags": [
         "UPGRADE"
       ],
@@ -31913,24 +31835,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           3
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "raptorial-cogitator-core",
       "detachmentId": "fulguris-task-force",
+      "canonicalDetachmentId": "fulguris-task-force",
+      "mfmRecordId": "mfm-enhancement-54e6211e0a10e780",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "raptorial-cogitator-core",
       "sourceBookId": "space-marines",
-      "legacyKey": "raptorial-cogitator-core",
-      "canonicalEnhancementId": "raptorial-cogitator-core",
-      "canonicalDetachmentId": "fulguris-task-force"
+      "legacyKey": "raptorial-cogitator-core"
     },
     {
       "title": "Celerity",
       "text": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
       "value": 35,
-      "detachment": "Librarius Conclave",
+      "detachment": "LIBRARIUS CONCLAVE",
       "tags": [],
       "sourceId": "celerity",
       "owner": {
@@ -31960,24 +31879,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "celerity",
       "detachmentId": "librarius-conclave",
+      "canonicalDetachmentId": "librarius-conclave",
+      "mfmRecordId": "mfm-enhancement-d4175a021098dd2c",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "celerity",
       "sourceBookId": "space-marines",
-      "legacyKey": "celerity",
-      "canonicalEnhancementId": "celerity",
-      "canonicalDetachmentId": "librarius-conclave"
+      "legacyKey": "celerity"
     },
     {
       "title": "Fusillade",
       "text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [LETHAL HITS] ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
       "value": 25,
-      "detachment": "Librarius Conclave",
+      "detachment": "LIBRARIUS CONCLAVE",
       "tags": [],
       "sourceId": "fusillade",
       "owner": {
@@ -32007,24 +31923,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "fusillade",
       "detachmentId": "librarius-conclave",
+      "canonicalDetachmentId": "librarius-conclave",
+      "mfmRecordId": "mfm-enhancement-7aa4709e360008d6",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "fusillade",
       "sourceBookId": "space-marines",
-      "legacyKey": "fusillade",
-      "canonicalEnhancementId": "fusillade",
-      "canonicalDetachmentId": "librarius-conclave"
+      "legacyKey": "fusillade"
     },
     {
       "title": "Obfuscation",
       "text": "ADEPTUS ASTARTES PSYKER model only. ▪ Enemy units cannot target this unit with snap shooting attacks. ▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
       "value": 25,
-      "detachment": "Librarius Conclave",
+      "detachment": "LIBRARIUS CONCLAVE",
       "tags": [],
       "sourceId": "obfuscation",
       "owner": {
@@ -32054,24 +31967,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "obfuscation",
       "detachmentId": "librarius-conclave",
+      "canonicalDetachmentId": "librarius-conclave",
+      "mfmRecordId": "mfm-enhancement-3b9eb2ae17b991bf",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "obfuscation",
       "sourceBookId": "space-marines",
-      "legacyKey": "obfuscation",
-      "canonicalEnhancementId": "obfuscation",
-      "canonicalDetachmentId": "librarius-conclave"
+      "legacyKey": "obfuscation"
     },
     {
       "title": "Prescience",
       "text": "ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of: ▪ Up to D6\". ▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
       "value": 20,
-      "detachment": "Librarius Conclave",
+      "detachment": "LIBRARIUS CONCLAVE",
       "tags": [],
       "sourceId": "prescience",
       "owner": {
@@ -32100,24 +32010,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "prescience",
       "detachmentId": "librarius-conclave",
+      "canonicalDetachmentId": "librarius-conclave",
+      "mfmRecordId": "mfm-enhancement-e5d14eb0343244a2",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "prescience",
       "sourceBookId": "space-marines",
-      "legacyKey": "prescience",
-      "canonicalEnhancementId": "prescience",
-      "canonicalDetachmentId": "librarius-conclave"
+      "legacyKey": "prescience"
     },
     {
       "title": "Temporal Corridor",
       "text": "ADEPTUS ASTARTES PSYKER model only. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. ▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn).",
       "value": 25,
-      "detachment": "Librarius Conclave",
+      "detachment": "LIBRARIUS CONCLAVE",
       "tags": [],
       "sourceId": "temporal-corridor",
       "owner": {
@@ -32147,24 +32054,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "temporal-corridor",
       "detachmentId": "librarius-conclave",
+      "canonicalDetachmentId": "librarius-conclave",
+      "mfmRecordId": "mfm-enhancement-002489d09e91e15f",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "temporal-corridor",
       "sourceBookId": "space-marines",
-      "legacyKey": "temporal-corridor",
-      "canonicalEnhancementId": "temporal-corridor",
-      "canonicalDetachmentId": "librarius-conclave"
+      "legacyKey": "temporal-corridor"
     },
     {
       "title": "Death in the Dark (Upgrade)",
       "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
       "value": 15,
-      "detachment": "Subversion Assets",
+      "detachment": "SUBVERSION ASSETS",
       "tags": [
         "UPGRADE"
       ],
@@ -32195,24 +32099,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           5
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "death-in-the-dark",
       "detachmentId": "subversion-assets",
+      "canonicalDetachmentId": "subversion-assets",
+      "mfmRecordId": "mfm-enhancement-c0df913724d356cc",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "death-in-the-dark",
       "sourceBookId": "space-marines",
-      "legacyKey": "death-in-the-dark",
-      "canonicalEnhancementId": "death-in-the-dark",
-      "canonicalDetachmentId": "subversion-assets"
+      "legacyKey": "death-in-the-dark"
     },
     {
       "title": "Shroud Field",
       "text": "PHOBOS model only. This model has: ▪ Lone Operative. ▪ Stealth.",
       "value": 20,
-      "detachment": "Subversion Assets",
+      "detachment": "SUBVERSION ASSETS",
       "tags": [],
       "sourceId": "shroud-field",
       "owner": {
@@ -32244,24 +32145,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           5
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "shroud-field",
       "detachmentId": "subversion-assets",
+      "canonicalDetachmentId": "subversion-assets",
+      "mfmRecordId": "mfm-enhancement-1425e600efa5c019",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "shroud-field",
       "sourceBookId": "space-marines",
-      "legacyKey": "shroud-field",
-      "canonicalEnhancementId": "shroud-field",
-      "canonicalDetachmentId": "subversion-assets"
+      "legacyKey": "shroud-field"
     },
     {
       "title": "Armoured Commander",
       "text": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
       "value": 25,
-      "detachment": "Armoured Speartip",
+      "detachment": "ARMOURED SPEARTIP",
       "tags": [],
       "sourceId": "armoured-commander",
       "owner": {
@@ -32311,24 +32209,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           6
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "armoured-commander",
       "detachmentId": "armoured-speartip",
+      "canonicalDetachmentId": "armoured-speartip",
+      "mfmRecordId": "mfm-enhancement-661ae638f9f529cb",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "armoured-commander",
       "sourceBookId": "space-marines",
-      "legacyKey": "armoured-commander",
-      "canonicalEnhancementId": "armoured-commander",
-      "canonicalDetachmentId": "armoured-speartip"
+      "legacyKey": "armoured-commander"
     },
     {
       "title": "Liberator",
       "text": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase, and the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
       "value": 15,
-      "detachment": "Armoured Speartip",
+      "detachment": "ARMOURED SPEARTIP",
       "tags": [],
       "sourceId": "liberator",
       "owner": {
@@ -32378,24 +32273,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           6
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "liberator",
       "detachmentId": "armoured-speartip",
+      "canonicalDetachmentId": "armoured-speartip",
+      "mfmRecordId": "mfm-enhancement-c80498bd3759c60f",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "liberator",
       "sourceBookId": "space-marines",
-      "legacyKey": "liberator",
-      "canonicalEnhancementId": "liberator",
-      "canonicalDetachmentId": "armoured-speartip"
+      "legacyKey": "liberator"
     },
     {
       "title": "Shock Deployment",
       "text": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
       "value": 20,
-      "detachment": "Armoured Speartip",
+      "detachment": "ARMOURED SPEARTIP",
       "tags": [],
       "sourceId": "shock-deployment",
       "owner": {
@@ -32428,24 +32320,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           6
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "shock-deployment",
       "detachmentId": "armoured-speartip",
+      "canonicalDetachmentId": "armoured-speartip",
+      "mfmRecordId": "mfm-enhancement-8db7de232da1cd2f",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "shock-deployment",
       "sourceBookId": "space-marines",
-      "legacyKey": "shock-deployment",
-      "canonicalEnhancementId": "shock-deployment",
-      "canonicalDetachmentId": "armoured-speartip"
+      "legacyKey": "shock-deployment"
     },
     {
       "title": "Tip of the Spear",
       "text": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport , that Transport has the Scouts 6\" ability.",
       "value": 40,
-      "detachment": "Armoured Speartip",
+      "detachment": "ARMOURED SPEARTIP",
       "tags": [],
       "sourceId": "tip-of-the-spear",
       "owner": {
@@ -32495,24 +32384,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           6
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "tip-of-the-spear",
       "detachmentId": "armoured-speartip",
+      "canonicalDetachmentId": "armoured-speartip",
+      "mfmRecordId": "mfm-enhancement-dc59106f64f504af",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "tip-of-the-spear",
       "sourceBookId": "space-marines",
-      "legacyKey": "tip-of-the-spear",
-      "canonicalEnhancementId": "tip-of-the-spear",
-      "canonicalDetachmentId": "armoured-speartip"
+      "legacyKey": "tip-of-the-spear"
     },
     {
       "title": "Astartes Tank Ace",
       "text": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes Vehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
       "value": 40,
-      "detachment": "Headhunter Task Force",
+      "detachment": "HEADHUNTER TASK FORCE",
       "tags": [],
       "sourceId": "astartes-tank-ace-aura",
       "owner": {
@@ -32555,24 +32441,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           8
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "astartes-tank-ace-aura",
       "detachmentId": "headhunter-task-force",
+      "canonicalDetachmentId": "headhunter-task-force",
+      "mfmRecordId": "mfm-enhancement-b6fc3161300aea74",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "astartes-tank-ace-aura",
       "sourceBookId": "space-marines",
-      "legacyKey": "astartes-tank-ace-aura",
-      "canonicalEnhancementId": "astartes-tank-ace-aura",
-      "canonicalDetachmentId": "headhunter-task-force"
+      "legacyKey": "astartes-tank-ace-aura"
     },
     {
       "title": "Firestorm Coordinators",
       "text": "Adeptus Astartes Vehicle model only. Ranged weapons equipped by the bearer have the [SUSTAINED HITS 1] ability.",
       "value": 20,
-      "detachment": "Headhunter Task Force",
+      "detachment": "HEADHUNTER TASK FORCE",
       "tags": [],
       "sourceId": "firestorm-coordinators",
       "owner": {
@@ -32615,24 +32498,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           8
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "firestorm-coordinators",
       "detachmentId": "headhunter-task-force",
+      "canonicalDetachmentId": "headhunter-task-force",
+      "mfmRecordId": "mfm-enhancement-5b5aa1843029743d",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "firestorm-coordinators",
       "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-coordinators",
-      "canonicalEnhancementId": "firestorm-coordinators",
-      "canonicalDetachmentId": "headhunter-task-force"
+      "legacyKey": "firestorm-coordinators"
     },
     {
       "title": "Gunnery Honours",
       "text": "Adeptus Astartes Vehicle model only. Once per phase, you can re‑roll one Hit roll, one Wound roll and one Damage roll for the bearer.",
       "value": 20,
-      "detachment": "Headhunter Task Force",
+      "detachment": "HEADHUNTER TASK FORCE",
       "tags": [],
       "sourceId": "gunnery-honours",
       "owner": {
@@ -32675,24 +32555,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           8
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "gunnery-honours",
       "detachmentId": "headhunter-task-force",
+      "canonicalDetachmentId": "headhunter-task-force",
+      "mfmRecordId": "mfm-enhancement-78a1dd6c7df0bcf7",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "gunnery-honours",
       "sourceBookId": "space-marines",
-      "legacyKey": "gunnery-honours",
-      "canonicalEnhancementId": "gunnery-honours",
-      "canonicalDetachmentId": "headhunter-task-force"
+      "legacyKey": "gunnery-honours"
     },
     {
       "title": "Redoubtable Machine Spirit",
       "text": "Adeptus Astartes Vehicle model only. The bearer has a 5+ invulnerable save and, at the end of your Command phase, the bearer regains 1 lost wound.",
       "value": 25,
-      "detachment": "Headhunter Task Force",
+      "detachment": "HEADHUNTER TASK FORCE",
       "tags": [],
       "sourceId": "redoubtable-machine-spirit",
       "owner": {
@@ -32735,24 +32612,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           8
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "redoubtable-machine-spirit",
       "detachmentId": "headhunter-task-force",
+      "canonicalDetachmentId": "headhunter-task-force",
+      "mfmRecordId": "mfm-enhancement-4fea48b70da2e668",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "redoubtable-machine-spirit",
       "sourceBookId": "space-marines",
-      "legacyKey": "redoubtable-machine-spirit",
-      "canonicalEnhancementId": "redoubtable-machine-spirit",
-      "canonicalDetachmentId": "headhunter-task-force"
+      "legacyKey": "redoubtable-machine-spirit"
     },
     {
       "title": "Castellum Omnivox",
       "text": "Adeptus Astartes model only. Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: ■ That unit is eligible to perform an Action in a turn in which it Fell Back. ■ That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
       "value": 20,
-      "detachment": "Ceramite Sentinels",
+      "detachment": "CERAMITE SENTINELS",
       "tags": [],
       "sourceId": "castellum-omnivox",
       "owner": {
@@ -32802,24 +32676,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           10
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "castellum-omnivox",
       "detachmentId": "ceramite-sentinels",
+      "canonicalDetachmentId": "ceramite-sentinels",
+      "mfmRecordId": "mfm-enhancement-74c5e1925342e11e",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "castellum-omnivox",
       "sourceBookId": "space-marines",
-      "legacyKey": "castellum-omnivox",
-      "canonicalEnhancementId": "castellum-omnivox",
-      "canonicalDetachmentId": "ceramite-sentinels"
+      "legacyKey": "castellum-omnivox"
     },
     {
       "title": "Defensive Mastery",
       "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
       "value": 25,
-      "detachment": "Ceramite Sentinels",
+      "detachment": "CERAMITE SENTINELS",
       "tags": [],
       "sourceId": "defensive-mastery",
       "owner": {
@@ -32869,24 +32740,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           10
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "defensive-mastery",
       "detachmentId": "ceramite-sentinels",
+      "canonicalDetachmentId": "ceramite-sentinels",
+      "mfmRecordId": "mfm-enhancement-22f002a2cb81bd0e",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "defensive-mastery",
       "sourceBookId": "space-marines",
-      "legacyKey": "defensive-mastery",
-      "canonicalEnhancementId": "defensive-mastery",
-      "canonicalDetachmentId": "ceramite-sentinels"
+      "legacyKey": "defensive-mastery"
     },
     {
       "title": "Honour Indefatigable",
       "text": "Gravis model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
       "value": 25,
-      "detachment": "Ceramite Sentinels",
+      "detachment": "CERAMITE SENTINELS",
       "tags": [],
       "sourceId": "honour-indefatigable",
       "owner": {
@@ -32915,18 +32783,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           10
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "honour-indefatigable",
       "detachmentId": "ceramite-sentinels",
+      "canonicalDetachmentId": "ceramite-sentinels",
+      "mfmRecordId": "mfm-enhancement-3b971b54d287f25e",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "honour-indefatigable",
       "sourceBookId": "space-marines",
-      "legacyKey": "honour-indefatigable",
-      "canonicalEnhancementId": "honour-indefatigable",
-      "canonicalDetachmentId": "ceramite-sentinels"
+      "legacyKey": "honour-indefatigable"
     },
     {
       "title": "Spy-skull Data Link",
@@ -32964,24 +32829,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           10
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "spy-skull-data-link",
       "detachmentId": "ceramite-sentinels",
+      "canonicalDetachmentId": "ceramite-sentinels",
+      "mfmRecordId": "mfm-enhancement-ae5724b151b35dfd",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "spy-skull-data-link",
       "sourceBookId": "space-marines",
-      "legacyKey": "spy-skull-data-link",
-      "canonicalEnhancementId": "spy-skull-data-link",
-      "canonicalDetachmentId": "ceramite-sentinels"
+      "legacyKey": "spy-skull-data-link"
     },
     {
       "title": "Blades of Valour",
       "text": "Adeptus Astartes model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1.",
       "value": 15,
-      "detachment": "Bastion Task Force",
+      "detachment": "BASTION TASK FORCE",
       "tags": [],
       "sourceId": "blades-of-valour",
       "owner": {
@@ -33031,24 +32893,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           24
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "blades-of-valour",
       "detachmentId": "bastion-task-force",
+      "canonicalDetachmentId": "bastion-task-force",
+      "mfmRecordId": "mfm-enhancement-6379effe893cc0fa",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "blades-of-valour",
       "sourceBookId": "space-marines",
-      "legacyKey": "blades-of-valour",
-      "canonicalEnhancementId": "blades-of-valour",
-      "canonicalDetachmentId": "bastion-task-force"
+      "legacyKey": "blades-of-valour"
     },
     {
       "title": "Bombast Omnivox",
       "text": "Adeptus Astartes model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP .",
       "value": 15,
-      "detachment": "Bastion Task Force",
+      "detachment": "BASTION TASK FORCE",
       "tags": [],
       "sourceId": "bombast-omnivox",
       "owner": {
@@ -33098,24 +32957,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           24
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "bombast-omnivox",
       "detachmentId": "bastion-task-force",
+      "canonicalDetachmentId": "bastion-task-force",
+      "mfmRecordId": "mfm-enhancement-7f08c6a0fcae0ec0",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "bombast-omnivox",
       "sourceBookId": "space-marines",
-      "legacyKey": "bombast-omnivox",
-      "canonicalEnhancementId": "bombast-omnivox",
-      "canonicalDetachmentId": "bastion-task-force"
+      "legacyKey": "bombast-omnivox"
     },
     {
       "title": "Eye of the Primarch",
       "text": "Adeptus Astartes model only. Ranged weapons equipped by the bearer and Battleline models in the bearer’s unit have the [PRECISION] ability.",
       "value": 10,
-      "detachment": "Bastion Task Force",
+      "detachment": "BASTION TASK FORCE",
       "tags": [],
       "sourceId": "eye-of-the-primarch",
       "owner": {
@@ -33165,24 +33021,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           24
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "eye-of-the-primarch",
       "detachmentId": "bastion-task-force",
+      "canonicalDetachmentId": "bastion-task-force",
+      "mfmRecordId": "mfm-enhancement-4c439153a46d4dcc",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "eye-of-the-primarch",
       "sourceBookId": "space-marines",
-      "legacyKey": "eye-of-the-primarch",
-      "canonicalEnhancementId": "eye-of-the-primarch",
-      "canonicalDetachmentId": "bastion-task-force"
+      "legacyKey": "eye-of-the-primarch"
     },
     {
       "title": "Hero of the Chapter",
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword.",
       "value": 20,
-      "detachment": "Bastion Task Force",
+      "detachment": "BASTION TASK FORCE",
       "tags": [],
       "sourceId": "hero-of-the-chapter",
       "owner": {
@@ -33232,24 +33085,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           24
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "hero-of-the-chapter",
       "detachmentId": "bastion-task-force",
+      "canonicalDetachmentId": "bastion-task-force",
+      "mfmRecordId": "mfm-enhancement-3ffb99d5e1743483",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "hero-of-the-chapter",
       "sourceBookId": "space-marines",
-      "legacyKey": "hero-of-the-chapter",
-      "canonicalEnhancementId": "hero-of-the-chapter",
-      "canonicalDetachmentId": "bastion-task-force"
+      "legacyKey": "hero-of-the-chapter"
     },
     {
       "title": "Dedicated Gunship",
       "text": "Adeptus Astartes Terminator model only. Once per battle, at the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
       "value": 15,
-      "detachment": "Orbital Assault Force",
+      "detachment": "ORBITAL ASSAULT FORCE",
       "tags": [],
       "sourceId": "dedicated-gunship",
       "owner": {
@@ -33280,24 +33130,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           26
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "dedicated-gunship",
       "detachmentId": "orbital-assault-force",
+      "canonicalDetachmentId": "orbital-assault-force",
+      "mfmRecordId": "mfm-enhancement-f9e53d266d510747",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "dedicated-gunship",
       "sourceBookId": "space-marines",
-      "legacyKey": "dedicated-gunship",
-      "canonicalEnhancementId": "dedicated-gunship",
-      "canonicalDetachmentId": "orbital-assault-force"
+      "legacyKey": "dedicated-gunship"
     },
     {
       "title": "Laurels of Thunder",
       "text": "Adeptus Astartes model only. You can re‑roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield.",
       "value": 15,
-      "detachment": "Orbital Assault Force",
+      "detachment": "ORBITAL ASSAULT FORCE",
       "tags": [],
       "sourceId": "laurels-of-thunder",
       "owner": {
@@ -33347,24 +33194,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           26
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "laurels-of-thunder",
       "detachmentId": "orbital-assault-force",
+      "canonicalDetachmentId": "orbital-assault-force",
+      "mfmRecordId": "mfm-enhancement-4025b48431b59795",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "laurels-of-thunder",
       "sourceBookId": "space-marines",
-      "legacyKey": "laurels-of-thunder",
-      "canonicalEnhancementId": "laurels-of-thunder",
-      "canonicalDetachmentId": "orbital-assault-force"
+      "legacyKey": "laurels-of-thunder"
     },
     {
       "title": "Orbital Uplink Reliquary",
       "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "value": 25,
-      "detachment": "Orbital Assault Force",
+      "detachment": "ORBITAL ASSAULT FORCE",
       "tags": [],
       "sourceId": "orbital-uplink-reliquary",
       "owner": {
@@ -33414,24 +33258,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           26
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "orbital-uplink-reliquary",
       "detachmentId": "orbital-assault-force",
+      "canonicalDetachmentId": "orbital-assault-force",
+      "mfmRecordId": "mfm-enhancement-bb3b30daf147f1f6",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "orbital-uplink-reliquary",
       "sourceBookId": "space-marines",
-      "legacyKey": "orbital-uplink-reliquary",
-      "canonicalEnhancementId": "orbital-uplink-reliquary",
-      "canonicalDetachmentId": "orbital-assault-force"
+      "legacyKey": "orbital-uplink-reliquary"
     },
     {
       "title": "Veteran of the Vanguard",
       "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
       "value": 20,
-      "detachment": "Orbital Assault Force",
+      "detachment": "ORBITAL ASSAULT FORCE",
       "tags": [],
       "sourceId": "veteran-of-the-vanguard",
       "owner": {
@@ -33481,18 +33322,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           26
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "veteran-of-the-vanguard",
       "detachmentId": "orbital-assault-force",
+      "canonicalDetachmentId": "orbital-assault-force",
+      "mfmRecordId": "mfm-enhancement-160ad796b0c5e8b4",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "veteran-of-the-vanguard",
       "sourceBookId": "space-marines",
-      "legacyKey": "veteran-of-the-vanguard",
-      "canonicalEnhancementId": "veteran-of-the-vanguard",
-      "canonicalDetachmentId": "orbital-assault-force"
+      "legacyKey": "veteran-of-the-vanguard"
     },
     {
       "title": "The Imperium’s Sword",
@@ -33538,18 +33376,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "1st-company-task-force-the-imperiums-sword",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "1st-company-task-force-the-imperiums-sword",
       "detachmentId": "1st-company-task-force",
+      "canonicalDetachmentId": "1st-company-task-force",
+      "mfmRecordId": "mfm-enhancement-88cbf75bc04f53da",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "1st-company-task-force-the-imperiums-sword",
       "sourceBookId": "space-marines",
-      "legacyKey": "1st-company-task-force-the-imperiums-sword",
-      "canonicalEnhancementId": "1st-company-task-force-the-imperiums-sword",
-      "canonicalDetachmentId": "1st-company-task-force"
+      "legacyKey": "1st-company-task-force-the-imperiums-sword"
     },
     {
       "title": "FEAR MADE MANIFEST (AURA)",
@@ -33608,7 +33443,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Rites of War",
       "text": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
       "value": 10,
-      "detachment": "1st Company Task Force",
+      "detachment": "1ST COMPANY TASK FORCE",
       "tags": [],
       "sourceId": "1st-company-task-force-rites-of-war",
       "owner": {
@@ -33629,24 +33464,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "1st-company-task-force-rites-of-war",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "1st-company-task-force-rites-of-war",
       "detachmentId": "1st-company-task-force",
+      "canonicalDetachmentId": "1st-company-task-force",
+      "mfmRecordId": "mfm-enhancement-425ff5bca42a19e8",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "1st-company-task-force-rites-of-war",
       "sourceBookId": "space-marines",
-      "legacyKey": "1st-company-task-force-rites-of-war",
-      "canonicalEnhancementId": "1st-company-task-force-rites-of-war",
-      "canonicalDetachmentId": "1st-company-task-force"
+      "legacyKey": "1st-company-task-force-rites-of-war"
     },
     {
       "title": "Iron Resolve",
       "text": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
       "value": 15,
-      "detachment": "1st Company Task Force",
+      "detachment": "1ST COMPANY TASK FORCE",
       "tags": [],
       "sourceId": "1st-company-task-force-iron-resolve",
       "owner": {
@@ -33667,24 +33499,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "1st-company-task-force-iron-resolve",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "1st-company-task-force-iron-resolve",
       "detachmentId": "1st-company-task-force",
+      "canonicalDetachmentId": "1st-company-task-force",
+      "mfmRecordId": "mfm-enhancement-019579671ff7685d",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "1st-company-task-force-iron-resolve",
       "sourceBookId": "space-marines",
-      "legacyKey": "1st-company-task-force-iron-resolve",
-      "canonicalEnhancementId": "1st-company-task-force-iron-resolve",
-      "canonicalDetachmentId": "1st-company-task-force"
+      "legacyKey": "1st-company-task-force-iron-resolve"
     },
     {
       "title": "Indomitable Fury",
       "text": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
       "value": 20,
-      "detachment": "Anvil Siege Force",
+      "detachment": "ANVIL SIEGE FORCE",
       "tags": [],
       "sourceId": "anvil-siege-force-indomitable-fury",
       "owner": {
@@ -33703,24 +33532,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "anvil-siege-force-indomitable-fury",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "anvil-siege-force-indomitable-fury",
       "detachmentId": "anvil-siege-force",
+      "canonicalDetachmentId": "anvil-siege-force",
+      "mfmRecordId": "mfm-enhancement-be6a945d4c257ce1",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "anvil-siege-force-indomitable-fury",
       "sourceBookId": "space-marines",
-      "legacyKey": "anvil-siege-force-indomitable-fury",
-      "canonicalEnhancementId": "anvil-siege-force-indomitable-fury",
-      "canonicalDetachmentId": "anvil-siege-force"
+      "legacyKey": "anvil-siege-force-indomitable-fury"
     },
     {
       "title": "Fleet Commander",
       "text": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
       "value": 15,
-      "detachment": "Anvil Siege Force",
+      "detachment": "ANVIL SIEGE FORCE",
       "tags": [],
       "sourceId": "anvil-siege-force-fleet-commander",
       "owner": {
@@ -33742,24 +33568,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "anvil-siege-force-fleet-commander",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "anvil-siege-force-fleet-commander",
       "detachmentId": "anvil-siege-force",
+      "canonicalDetachmentId": "anvil-siege-force",
+      "mfmRecordId": "mfm-enhancement-5f4d6ae6f3269e24",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "anvil-siege-force-fleet-commander",
       "sourceBookId": "space-marines",
-      "legacyKey": "anvil-siege-force-fleet-commander",
-      "canonicalEnhancementId": "anvil-siege-force-fleet-commander",
-      "canonicalDetachmentId": "anvil-siege-force"
+      "legacyKey": "anvil-siege-force-fleet-commander"
     },
     {
       "title": "Stoic Defender",
       "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within an objective you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to \"-\".",
       "value": 15,
-      "detachment": "Anvil Siege Force",
+      "detachment": "ANVIL SIEGE FORCE",
       "tags": [],
       "sourceId": "anvil-siege-force-stoic-defender",
       "owner": {
@@ -33799,24 +33622,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "anvil-siege-force-stoic-defender",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "anvil-siege-force-stoic-defender",
       "detachmentId": "anvil-siege-force",
+      "canonicalDetachmentId": "anvil-siege-force",
+      "mfmRecordId": "mfm-enhancement-5bf3ab836b0bb471",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "anvil-siege-force-stoic-defender",
       "sourceBookId": "space-marines",
-      "legacyKey": "anvil-siege-force-stoic-defender",
-      "canonicalEnhancementId": "anvil-siege-force-stoic-defender",
-      "canonicalDetachmentId": "anvil-siege-force"
+      "legacyKey": "anvil-siege-force-stoic-defender"
     },
     {
       "title": "Architect of War",
       "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
       "value": 25,
-      "detachment": "Anvil Siege Force",
+      "detachment": "ANVIL SIEGE FORCE",
       "tags": [],
       "sourceId": "anvil-siege-force-architect-of-war",
       "owner": {
@@ -33856,24 +33676,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "anvil-siege-force-architect-of-war",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "anvil-siege-force-architect-of-war",
       "detachmentId": "anvil-siege-force",
+      "canonicalDetachmentId": "anvil-siege-force",
+      "mfmRecordId": "mfm-enhancement-7c9bdfcccf668135",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "anvil-siege-force-architect-of-war",
       "sourceBookId": "space-marines",
-      "legacyKey": "anvil-siege-force-architect-of-war",
-      "canonicalEnhancementId": "anvil-siege-force-architect-of-war",
-      "canonicalDetachmentId": "anvil-siege-force"
+      "legacyKey": "anvil-siege-force-architect-of-war"
     },
     {
       "title": "Champion of Humanity",
       "text": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
       "value": 10,
-      "detachment": "Firestorm Assault Force",
+      "detachment": "FIRESTORM ASSAULT FORCE",
       "tags": [],
       "sourceId": "firestorm-assault-force-champion-of-humanity",
       "owner": {
@@ -33900,24 +33717,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "firestorm-assault-force-champion-of-humanity",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "firestorm-assault-force-champion-of-humanity",
       "detachmentId": "firestorm-assault-force",
+      "canonicalDetachmentId": "firestorm-assault-force",
+      "mfmRecordId": "mfm-enhancement-876e68a922eab9ea",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "firestorm-assault-force-champion-of-humanity",
       "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-assault-force-champion-of-humanity",
-      "canonicalEnhancementId": "firestorm-assault-force-champion-of-humanity",
-      "canonicalDetachmentId": "firestorm-assault-force"
+      "legacyKey": "firestorm-assault-force-champion-of-humanity"
     },
     {
       "title": "War-tempered Artifice",
       "text": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
       "value": 25,
-      "detachment": "Firestorm Assault Force",
+      "detachment": "FIRESTORM ASSAULT FORCE",
       "tags": [],
       "sourceId": "firestorm-assault-force-war-tempered-artifice",
       "owner": {
@@ -33956,24 +33770,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "firestorm-assault-force-war-tempered-artifice",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "firestorm-assault-force-war-tempered-artifice",
       "detachmentId": "firestorm-assault-force",
+      "canonicalDetachmentId": "firestorm-assault-force",
+      "mfmRecordId": "mfm-enhancement-189c45f00a77bcd8",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "firestorm-assault-force-war-tempered-artifice",
       "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-assault-force-war-tempered-artifice",
-      "canonicalEnhancementId": "firestorm-assault-force-war-tempered-artifice",
-      "canonicalDetachmentId": "firestorm-assault-force"
+      "legacyKey": "firestorm-assault-force-war-tempered-artifice"
     },
     {
       "title": "Forged in Battle",
       "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
       "value": 15,
-      "detachment": "Firestorm Assault Force",
+      "detachment": "FIRESTORM ASSAULT FORCE",
       "tags": [],
       "sourceId": "firestorm-assault-force-forged-in-battle",
       "owner": {
@@ -34013,24 +33824,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "firestorm-assault-force-forged-in-battle",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "firestorm-assault-force-forged-in-battle",
       "detachmentId": "firestorm-assault-force",
+      "canonicalDetachmentId": "firestorm-assault-force",
+      "mfmRecordId": "mfm-enhancement-f208ddebbcd9badf",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "firestorm-assault-force-forged-in-battle",
       "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-assault-force-forged-in-battle",
-      "canonicalEnhancementId": "firestorm-assault-force-forged-in-battle",
-      "canonicalDetachmentId": "firestorm-assault-force"
+      "legacyKey": "firestorm-assault-force-forged-in-battle"
     },
     {
       "title": "Adamantine Mantle",
       "text": "ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
       "value": 20,
-      "detachment": "Firestorm Assault Force",
+      "detachment": "FIRESTORM ASSAULT FORCE",
       "tags": [],
       "sourceId": "firestorm-assault-force-adamantine-mantle",
       "owner": {
@@ -34070,24 +33878,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "firestorm-assault-force-adamantine-mantle",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "firestorm-assault-force-adamantine-mantle",
       "detachmentId": "firestorm-assault-force",
+      "canonicalDetachmentId": "firestorm-assault-force",
+      "mfmRecordId": "mfm-enhancement-eff316324d5a4345",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "firestorm-assault-force-adamantine-mantle",
       "sourceBookId": "space-marines",
-      "legacyKey": "firestorm-assault-force-adamantine-mantle",
-      "canonicalEnhancementId": "firestorm-assault-force-adamantine-mantle",
-      "canonicalDetachmentId": "firestorm-assault-force"
+      "legacyKey": "firestorm-assault-force-adamantine-mantle"
     },
     {
       "title": "Artificer Armour",
       "text": "ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
       "value": 20,
-      "detachment": "Gladius Task Force",
+      "detachment": "GLADIUS TASK FORCE",
       "tags": [],
       "sourceId": "gladius-task-force-artificer-armour",
       "owner": {
@@ -34127,24 +33932,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "gladius-task-force-artificer-armour",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "gladius-task-force-artificer-armour",
       "detachmentId": "gladius-task-force",
+      "canonicalDetachmentId": "gladius-task-force",
+      "mfmRecordId": "mfm-enhancement-f6872f26009e1538",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "gladius-task-force-artificer-armour",
       "sourceBookId": "space-marines",
-      "legacyKey": "gladius-task-force-artificer-armour",
-      "canonicalEnhancementId": "gladius-task-force-artificer-armour",
-      "canonicalDetachmentId": "gladius-task-force"
+      "legacyKey": "gladius-task-force-artificer-armour"
     },
     {
       "title": "The Honour Vehement",
       "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
       "value": 15,
-      "detachment": "Gladius Task Force",
+      "detachment": "GLADIUS TASK FORCE",
       "tags": [],
       "sourceId": "gladius-task-force-the-honour-vehement",
       "owner": {
@@ -34184,24 +33986,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "gladius-task-force-the-honour-vehement",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "gladius-task-force-the-honour-vehement",
       "detachmentId": "gladius-task-force",
+      "canonicalDetachmentId": "gladius-task-force",
+      "mfmRecordId": "mfm-enhancement-740f86e0026f15ce",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "gladius-task-force-the-honour-vehement",
       "sourceBookId": "space-marines",
-      "legacyKey": "gladius-task-force-the-honour-vehement",
-      "canonicalEnhancementId": "gladius-task-force-the-honour-vehement",
-      "canonicalDetachmentId": "gladius-task-force"
+      "legacyKey": "gladius-task-force-the-honour-vehement"
     },
     {
       "title": "Adept of the Codex",
       "text": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
       "value": 20,
-      "detachment": "Gladius Task Force",
+      "detachment": "GLADIUS TASK FORCE",
       "tags": [],
       "sourceId": "gladius-task-force-adept-of-the-codex",
       "owner": {
@@ -34223,24 +34022,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "gladius-task-force-adept-of-the-codex",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "gladius-task-force-adept-of-the-codex",
       "detachmentId": "gladius-task-force",
+      "canonicalDetachmentId": "gladius-task-force",
+      "mfmRecordId": "mfm-enhancement-a772d3846d20d777",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "gladius-task-force-adept-of-the-codex",
       "sourceBookId": "space-marines",
-      "legacyKey": "gladius-task-force-adept-of-the-codex",
-      "canonicalEnhancementId": "gladius-task-force-adept-of-the-codex",
-      "canonicalDetachmentId": "gladius-task-force"
+      "legacyKey": "gladius-task-force-adept-of-the-codex"
     },
     {
       "title": "Fire Discipline",
       "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
       "value": 25,
-      "detachment": "Gladius Task Force",
+      "detachment": "GLADIUS TASK FORCE",
       "tags": [],
       "sourceId": "gladius-task-force-fire-discipline",
       "owner": {
@@ -34280,24 +34076,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "gladius-task-force-fire-discipline",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "gladius-task-force-fire-discipline",
       "detachmentId": "gladius-task-force",
+      "canonicalDetachmentId": "gladius-task-force",
+      "mfmRecordId": "mfm-enhancement-9633a04f08f70a9b",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "gladius-task-force-fire-discipline",
       "sourceBookId": "space-marines",
-      "legacyKey": "gladius-task-force-fire-discipline",
-      "canonicalEnhancementId": "gladius-task-force-fire-discipline",
-      "canonicalDetachmentId": "gladius-task-force"
+      "legacyKey": "gladius-task-force-fire-discipline"
     },
     {
       "title": "Target Augury Web",
       "text": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
       "value": 30,
-      "detachment": "Ironstorm Spearhead",
+      "detachment": "IRONSTORM SPEARHEAD",
       "tags": [],
       "sourceId": "ironstorm-spearhead-target-augury-web",
       "owner": {
@@ -34315,24 +34108,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "ironstorm-spearhead-target-augury-web",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "ironstorm-spearhead-target-augury-web",
       "detachmentId": "ironstorm-spearhead",
+      "canonicalDetachmentId": "ironstorm-spearhead",
+      "mfmRecordId": "mfm-enhancement-d77abd7905996d6d",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "ironstorm-spearhead-target-augury-web",
       "sourceBookId": "space-marines",
-      "legacyKey": "ironstorm-spearhead-target-augury-web",
-      "canonicalEnhancementId": "ironstorm-spearhead-target-augury-web",
-      "canonicalDetachmentId": "ironstorm-spearhead"
+      "legacyKey": "ironstorm-spearhead-target-augury-web"
     },
     {
       "title": "The Flesh Is Weak",
       "text": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
       "value": 20,
-      "detachment": "Ironstorm Spearhead",
+      "detachment": "IRONSTORM SPEARHEAD",
       "tags": [],
       "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
       "owner": {
@@ -34372,24 +34162,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "ironstorm-spearhead-the-flesh-is-weak",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "ironstorm-spearhead-the-flesh-is-weak",
       "detachmentId": "ironstorm-spearhead",
+      "canonicalDetachmentId": "ironstorm-spearhead",
+      "mfmRecordId": "mfm-enhancement-d321eb87671a4e65",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "ironstorm-spearhead-the-flesh-is-weak",
       "sourceBookId": "space-marines",
-      "legacyKey": "ironstorm-spearhead-the-flesh-is-weak",
-      "canonicalEnhancementId": "ironstorm-spearhead-the-flesh-is-weak",
-      "canonicalDetachmentId": "ironstorm-spearhead"
+      "legacyKey": "ironstorm-spearhead-the-flesh-is-weak"
     },
     {
       "title": "Adept of the Omnissiah",
       "text": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
       "value": 35,
-      "detachment": "Ironstorm Spearhead",
+      "detachment": "IRONSTORM SPEARHEAD",
       "tags": [],
       "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
       "owner": {
@@ -34407,18 +34194,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "ironstorm-spearhead-adept-of-the-omnissiah",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "ironstorm-spearhead-adept-of-the-omnissiah",
       "detachmentId": "ironstorm-spearhead",
+      "canonicalDetachmentId": "ironstorm-spearhead",
+      "mfmRecordId": "mfm-enhancement-35d3005ebc90f979",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "ironstorm-spearhead-adept-of-the-omnissiah",
       "sourceBookId": "space-marines",
-      "legacyKey": "ironstorm-spearhead-adept-of-the-omnissiah",
-      "canonicalEnhancementId": "ironstorm-spearhead-adept-of-the-omnissiah",
-      "canonicalDetachmentId": "ironstorm-spearhead"
+      "legacyKey": "ironstorm-spearhead-adept-of-the-omnissiah"
     },
     {
       "title": "Master of Machine War",
@@ -34464,24 +34248,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "ironstorm-spearhead-master-of-machine-war",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "ironstorm-spearhead-master-of-machine-war",
       "detachmentId": "ironstorm-spearhead",
+      "canonicalDetachmentId": "ironstorm-spearhead",
+      "mfmRecordId": "mfm-enhancement-2bcf306aa6fcd7c6",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "ironstorm-spearhead-master-of-machine-war",
       "sourceBookId": "space-marines",
-      "legacyKey": "ironstorm-spearhead-master-of-machine-war",
-      "canonicalEnhancementId": "ironstorm-spearhead-master-of-machine-war",
-      "canonicalDetachmentId": "ironstorm-spearhead"
+      "legacyKey": "ironstorm-spearhead-master-of-machine-war"
     },
     {
       "title": "Fury of the Storm",
       "text": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
       "value": 25,
-      "detachment": "Stormlance Task Force",
+      "detachment": "STORMLANCE TASK FORCE",
       "tags": [],
       "sourceId": "stormlance-task-force-fury-of-the-storm",
       "owner": {
@@ -34499,24 +34280,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "stormlance-task-force-fury-of-the-storm",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "stormlance-task-force-fury-of-the-storm",
       "detachmentId": "stormlance-task-force",
+      "canonicalDetachmentId": "stormlance-task-force",
+      "mfmRecordId": "mfm-enhancement-d576a63c8bdf39b6",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "stormlance-task-force-fury-of-the-storm",
       "sourceBookId": "space-marines",
-      "legacyKey": "stormlance-task-force-fury-of-the-storm",
-      "canonicalEnhancementId": "stormlance-task-force-fury-of-the-storm",
-      "canonicalDetachmentId": "stormlance-task-force"
+      "legacyKey": "stormlance-task-force-fury-of-the-storm"
     },
     {
       "title": "Portents of Wisdom",
       "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
       "value": 15,
-      "detachment": "Stormlance Task Force",
+      "detachment": "STORMLANCE TASK FORCE",
       "tags": [],
       "sourceId": "stormlance-task-force-portents-of-wisdom",
       "owner": {
@@ -34556,24 +34334,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "stormlance-task-force-portents-of-wisdom",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "stormlance-task-force-portents-of-wisdom",
       "detachmentId": "stormlance-task-force",
+      "canonicalDetachmentId": "stormlance-task-force",
+      "mfmRecordId": "mfm-enhancement-ffe60f9f8d0cda51",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "stormlance-task-force-portents-of-wisdom",
       "sourceBookId": "space-marines",
-      "legacyKey": "stormlance-task-force-portents-of-wisdom",
-      "canonicalEnhancementId": "stormlance-task-force-portents-of-wisdom",
-      "canonicalDetachmentId": "stormlance-task-force"
+      "legacyKey": "stormlance-task-force-portents-of-wisdom"
     },
     {
       "title": "Feinting Withdrawal",
       "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
       "value": 10,
-      "detachment": "Stormlance Task Force",
+      "detachment": "STORMLANCE TASK FORCE",
       "tags": [],
       "sourceId": "stormlance-task-force-feinting-withdrawal",
       "owner": {
@@ -34613,18 +34388,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "stormlance-task-force-feinting-withdrawal",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "stormlance-task-force-feinting-withdrawal",
       "detachmentId": "stormlance-task-force",
+      "canonicalDetachmentId": "stormlance-task-force",
+      "mfmRecordId": "mfm-enhancement-a3bef3e3d2a5a8d3",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "stormlance-task-force-feinting-withdrawal",
       "sourceBookId": "space-marines",
-      "legacyKey": "stormlance-task-force-feinting-withdrawal",
-      "canonicalEnhancementId": "stormlance-task-force-feinting-withdrawal",
-      "canonicalDetachmentId": "stormlance-task-force"
+      "legacyKey": "stormlance-task-force-feinting-withdrawal"
     },
     {
       "title": "Hunter’s Instincts",
@@ -34648,24 +34420,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "stormlance-task-force-hunters-instincts",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "stormlance-task-force-hunters-instincts",
       "detachmentId": "stormlance-task-force",
+      "canonicalDetachmentId": "stormlance-task-force",
+      "mfmRecordId": "mfm-enhancement-8b7280e583a363e2",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "stormlance-task-force-hunters-instincts",
       "sourceBookId": "space-marines",
-      "legacyKey": "stormlance-task-force-hunters-instincts",
-      "canonicalEnhancementId": "stormlance-task-force-hunters-instincts",
-      "canonicalDetachmentId": "stormlance-task-force"
+      "legacyKey": "stormlance-task-force-hunters-instincts"
     },
     {
       "title": "The Blade Driven Deep",
       "text": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
       "value": 25,
-      "detachment": "Vanguard Spearhead",
+      "detachment": "VANGUARD SPEARHEAD",
       "tags": [],
       "sourceId": "vanguard-spearhead-the-blade-driven-deep",
       "owner": {
@@ -34704,24 +34473,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "vanguard-spearhead-the-blade-driven-deep",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "vanguard-spearhead-the-blade-driven-deep",
       "detachmentId": "vanguard-spearhead",
+      "canonicalDetachmentId": "vanguard-spearhead",
+      "mfmRecordId": "mfm-enhancement-1d2314e213d48075",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "vanguard-spearhead-the-blade-driven-deep",
       "sourceBookId": "space-marines",
-      "legacyKey": "vanguard-spearhead-the-blade-driven-deep",
-      "canonicalEnhancementId": "vanguard-spearhead-the-blade-driven-deep",
-      "canonicalDetachmentId": "vanguard-spearhead"
+      "legacyKey": "vanguard-spearhead-the-blade-driven-deep"
     },
     {
       "title": "Ghostweave Cloak",
       "text": "ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
       "value": 15,
-      "detachment": "Vanguard Spearhead",
+      "detachment": "VANGUARD SPEARHEAD",
       "tags": [],
       "sourceId": "vanguard-spearhead-ghostweave-cloak",
       "owner": {
@@ -34761,24 +34527,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "vanguard-spearhead-ghostweave-cloak",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "vanguard-spearhead-ghostweave-cloak",
       "detachmentId": "vanguard-spearhead",
+      "canonicalDetachmentId": "vanguard-spearhead",
+      "mfmRecordId": "mfm-enhancement-91b4e2571bffce75",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "vanguard-spearhead-ghostweave-cloak",
       "sourceBookId": "space-marines",
-      "legacyKey": "vanguard-spearhead-ghostweave-cloak",
-      "canonicalEnhancementId": "vanguard-spearhead-ghostweave-cloak",
-      "canonicalDetachmentId": "vanguard-spearhead"
+      "legacyKey": "vanguard-spearhead-ghostweave-cloak"
     },
     {
       "title": "Execute and Redeploy",
       "text": "PHOBOS model only. In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer’s unit to move more than once in your Shooting phase.",
       "value": 20,
-      "detachment": "Vanguard Spearhead",
+      "detachment": "VANGUARD SPEARHEAD",
       "tags": [],
       "sourceId": "vanguard-spearhead-execute-and-redeploy",
       "owner": {
@@ -34800,24 +34563,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "vanguard-spearhead-execute-and-redeploy",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "vanguard-spearhead-execute-and-redeploy",
       "detachmentId": "vanguard-spearhead",
+      "canonicalDetachmentId": "vanguard-spearhead",
+      "mfmRecordId": "mfm-enhancement-b8fb07eb0294b996",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "vanguard-spearhead-execute-and-redeploy",
       "sourceBookId": "space-marines",
-      "legacyKey": "vanguard-spearhead-execute-and-redeploy",
-      "canonicalEnhancementId": "vanguard-spearhead-execute-and-redeploy",
-      "canonicalDetachmentId": "vanguard-spearhead"
+      "legacyKey": "vanguard-spearhead-execute-and-redeploy"
     },
     {
       "title": "Shadow War Veteran",
       "text": "PHOBOS model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
       "value": 30,
-      "detachment": "Vanguard Spearhead",
+      "detachment": "VANGUARD SPEARHEAD",
       "tags": [],
       "sourceId": "vanguard-spearhead-shadow-war-veteran",
       "owner": {
@@ -34839,18 +34599,15 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "id": "vanguard-spearhead-shadow-war-veteran",
       "sourceAuthority": "secondary",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/space-marines",
-        "verifiedAt": "2026-08-27"
-      },
+      "canonicalEnhancementId": "vanguard-spearhead-shadow-war-veteran",
       "detachmentId": "vanguard-spearhead",
+      "canonicalDetachmentId": "vanguard-spearhead",
+      "mfmRecordId": "mfm-enhancement-2eaf77bfb7bb6c50",
+      "mfmQualifiers": [],
       "dependencyBook": "space-marines",
       "ruleId": "vanguard-spearhead-shadow-war-veteran",
       "sourceBookId": "space-marines",
-      "legacyKey": "vanguard-spearhead-shadow-war-veteran",
-      "canonicalEnhancementId": "vanguard-spearhead-shadow-war-veteran",
-      "canonicalDetachmentId": "vanguard-spearhead"
+      "legacyKey": "vanguard-spearhead-shadow-war-veteran"
     }
   ],
   "effectContracts": [
@@ -43363,7 +43120,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Master of Manoeuvre",
     "text": "RAVENWING model only. If the bearer's unit starts the battle in Strategic Reserves, its points value does not count towards the combined points limit for units from your army that are in Strategic Reserve, and for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
     "value": 15,
-    "detachment": "Company of Hunters",
+    "detachment": "COMPANY OF HUNTERS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43388,7 +43145,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Master-crafted Weapon",
     "text": "RAVENWING model only. Melee weapons equipped by the bearer have the Precision ability.",
     "value": 10,
-    "detachment": "Company of Hunters",
+    "detachment": "COMPANY OF HUNTERS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43413,7 +43170,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Mounted Strategist",
     "text": "RAVENWING model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
     "value": 30,
-    "detachment": "Company of Hunters",
+    "detachment": "COMPANY OF HUNTERS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43438,7 +43195,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Recon Hunter",
     "text": "RAVENWING model only. Models in the bearer's unit have the Scouts 9\" ability.",
     "value": 30,
-    "detachment": "Company of Hunters",
+    "detachment": "COMPANY OF HUNTERS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43459,108 +43216,111 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "ruleId": "enhancement-recon-hunter",
     "detachmentId": "company-of-hunters"
   },
-  "petition-of-stability": {
-    "title": "Petition of Stability",
-    "text": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
-    "value": 15,
-    "detachment": "Dark Age Arsenal",
-    "tags": [
-      "UPGRADE"
-    ],
+  "enhancement-pennant-of-remembrance": {
+    "title": "Pennant of Remembrance",
+    "text": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit\nis Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+    "value": 10,
+    "detachment": "UNFORGIVEN TASK FORCE",
+    "tags": [],
     "owner": {
-      "subject": "unit",
+      "subject": "model",
+      "selector": {
+        "allKeywords": [
+          "ANCIENT"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-pennant-of-remembrance",
+    "detachmentId": "unforgiven-task-force"
+  },
+  "enhancement-shroud-of-heroes": {
+    "title": "Shroud of Heroes",
+    "text": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
+    "value": 25,
+    "detachment": "UNFORGIVEN TASK FORCE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
       "selector": {
         "allKeywords": [
           "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
         ]
       }
     },
     "assignment": {
-      "maxOwners": 3,
+      "maxOwners": 1,
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "petition-of-stability",
-    "detachmentId": "dark-age-arsenal"
+    "ruleId": "enhancement-shroud-of-heroes",
+    "detachmentId": "unforgiven-task-force"
   },
-  "entreaty-of-perpetual-ardour": {
-    "title": "Entreaty of Perpetual Ardour",
-    "text": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+  "enhancement-stubborn-tenacity": {
+    "title": "Stubborn Tenacity",
+    "text": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
     "value": 15,
-    "detachment": "Dark Age Arsenal",
-    "tags": [
-      "UPGRADE"
-    ],
+    "detachment": "UNFORGIVEN TASK FORCE",
+    "tags": [],
     "owner": {
-      "subject": "unit",
-      "selector": {
-        "unitIds": [
-          "unit-hellblaster-squad"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 3,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "entreaty-of-perpetual-ardour",
-    "detachmentId": "dark-age-arsenal"
-  },
-  "thundercowl-turbines": {
-    "title": "Thundercowl Turbines",
-    "text": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
-    "value": 15,
-    "detachment": "Darkflight Pursuit",
-    "tags": [
-      "UPGRADE"
-    ],
-    "owner": {
-      "subject": "unit",
+      "subject": "model",
       "selector": {
         "allKeywords": [
-          "RAVENWING",
-          "FLY"
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
         ]
       }
     },
     "assignment": {
-      "maxOwners": 3,
+      "maxOwners": 1,
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "thundercowl-turbines",
-    "detachmentId": "darkflight-pursuit"
+    "ruleId": "enhancement-stubborn-tenacity",
+    "detachmentId": "unforgiven-task-force"
   },
-  "nightforged-battery": {
-    "title": "Nightforged Battery",
-    "text": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+  "enhancement-weapons-of-the-first-legion": {
+    "title": "Weapons of the First Legion",
+    "text": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
     "value": 15,
-    "detachment": "Darkflight Pursuit",
-    "tags": [
-      "UPGRADE"
-    ],
+    "detachment": "UNFORGIVEN TASK FORCE",
+    "tags": [],
     "owner": {
-      "subject": "unit",
+      "subject": "model",
       "selector": {
-        "unitIds": [
-          "unit-land-speeder-vengeance"
+        "allKeywords": [
+          "ADEPTUS ASTARTES"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
         ]
       }
     },
     "assignment": {
-      "maxOwners": 3,
+      "maxOwners": 1,
       "enhancementChoices": 1,
       "payPointsPerOwner": true
     },
-    "ruleId": "nightforged-battery",
-    "detachmentId": "darkflight-pursuit"
+    "ruleId": "enhancement-weapons-of-the-first-legion",
+    "detachmentId": "unforgiven-task-force"
   },
   "enhancement-champion-of-the-deathwing": {
     "title": "Champion of the Deathwing",
     "text": "Deathwing model only. Melee weapons equipped by the bearer have the [LETHAL HITS] ability, and each time the bearer makes a melee attack, if it is within range of your Vowed objective marker, a Critical Hit is scored on an unmodified Hit roll of 5+.",
     "value": 15,
-    "detachment": "Inner Circle Task Force",
+    "detachment": "INNER CIRCLE TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43585,7 +43345,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Deathwing Assault",
     "text": "Deathwing model with the Deep Strike ability only. The bearer's unit can set up using the Deep Strike ability in the Reinforcement step of your first, second or third Movement phase, regardless of any mission rules.",
     "value": 30,
-    "detachment": "Inner Circle Task Force",
+    "detachment": "INNER CIRCLE TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43613,7 +43373,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Eye of the Unseen",
     "text": "Deathwing model only. Each time you target the bearer's unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+ you gain 1CP.",
     "value": 10,
-    "detachment": "Inner Circle Task Force",
+    "detachment": "INNER CIRCLE TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43638,7 +43398,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Singular Will",
     "text": "Deathwing model only. Each time the bearer's unit Pile In or Consolidates, models in that unit can move an additional 3\".",
     "value": 20,
-    "detachment": "Inner Circle Task Force",
+    "detachment": "INNER CIRCLE TASK FORCE",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -43659,78 +43419,14 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "ruleId": "enhancement-singular-will",
     "detachmentId": "inner-circle-task-force"
   },
-  "limitless-zeal": {
-    "title": "Limitless Zeal",
-    "text": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
-    "value": 10,
-    "detachment": "Interrogation Conclave",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "CHAPLAIN"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "limitless-zeal",
-    "detachmentId": "interrogation-conclave"
-  },
-  "inescapable-interrogation": {
-    "title": "Inescapable Interrogation",
-    "text": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
-    "value": 20,
-    "detachment": "Interrogation Conclave",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "CHAPLAIN"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "inescapable-interrogation",
-    "detachmentId": "interrogation-conclave"
-  },
   "calibanite-armaments": {
     "title": "Calibanite Armaments",
     "text": "The eldest relic weapons of the Dark Angels trace their lineage to ancient Caliban and are wielded only by the greatest champions of the Unforgiven. Adeptus Astartes model only. Add 1 to the Damage characteristic of the bearer’s melee weapons.",
     "value": 15,
-    "detachment": "Lion's Blade Task Force",
+    "detachment": "LION’S BLADE TASK FORCE",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
+    "owner": null,
+    "assignment": null,
     "ruleId": "calibanite-armaments",
     "detachmentId": "lion-s-blade-task-force"
   },
@@ -43738,24 +43434,10 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Lord of the Hunt",
     "text": "This veteran of the Ravenwing has spent mortal lifetimes in the saddle, leading mechanised cavalry to battle on countless worlds. Ravenwing model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back and you can re‑roll Desperate Escape tests taken for models in the bearer’s unit.",
     "value": 15,
-    "detachment": "Lion's Blade Task Force",
+    "detachment": "LION’S BLADE TASK FORCE",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "RAVENWING"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
+    "owner": null,
+    "assignment": null,
     "ruleId": "lord-of-the-hunt",
     "detachmentId": "lion-s-blade-task-force"
   },
@@ -43763,26 +43445,10 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Stalwart Champion",
     "text": "Possessed of obdurate will, this warrior champion instils an indomitable resolve and absolute refusal to cede ground within his brothers. Captain, Chaplain or Lieutenant model only. While the bearer’s unit is not Battle‑shocked, add 1 to the Objective Control characteristic of models in the bearer’s unit.",
     "value": 15,
-    "detachment": "Lion's Blade Task Force",
+    "detachment": "LION’S BLADE TASK FORCE",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "anyKeywords": [
-          "CAPTAIN",
-          "CHAPLAIN",
-          "LIEUTENANT"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
+    "owner": null,
+    "assignment": null,
     "ruleId": "stalwart-champion",
     "detachmentId": "lion-s-blade-task-force"
   },
@@ -43790,149 +43456,65 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Fulgus Magna",
     "text": "This ancient teleport homer projects a powerful narrow‑band signal, enabling the teleportarium chambers of orbiting vessels to lock on to the bearer even amid severe atmospheric or empyric disturbances. Deathwing model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
     "value": 20,
-    "detachment": "Lion's Blade Task Force",
+    "detachment": "LION’S BLADE TASK FORCE",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "DEATHWING"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
+    "owner": null,
+    "assignment": null,
     "ruleId": "fulgus-magna",
     "detachmentId": "lion-s-blade-task-force"
   },
-  "enhancement-pennant-of-remembrance": {
-    "title": "Pennant of Remembrance",
-    "text": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit\nis Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+  "thundercowl-turbines": {
+    "title": "Thundercowl Turbines",
+    "text": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
+    "value": 15,
+    "detachment": "DARKFLIGHT PURSUIT",
+    "tags": [],
+    "owner": null,
+    "assignment": null,
+    "ruleId": "thundercowl-turbines",
+    "detachmentId": "darkflight-pursuit"
+  },
+  "nightforged-battery": {
+    "title": "Nightforged Battery",
+    "text": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+    "value": 15,
+    "detachment": "DARKFLIGHT PURSUIT",
+    "tags": [],
+    "owner": null,
+    "assignment": null,
+    "ruleId": "nightforged-battery",
+    "detachmentId": "darkflight-pursuit"
+  },
+  "limitless-zeal": {
+    "title": "Limitless Zeal",
+    "text": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
     "value": 10,
-    "detachment": "Unforgiven Task Force",
+    "detachment": "INTERROGATION CONCLAVE",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ANCIENT"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-pennant-of-remembrance",
-    "detachmentId": "unforgiven-task-force"
+    "owner": null,
+    "assignment": null,
+    "ruleId": "limitless-zeal",
+    "detachmentId": "interrogation-conclave"
   },
-  "enhancement-shroud-of-heroes": {
-    "title": "Shroud of Heroes",
-    "text": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
-    "value": 25,
-    "detachment": "Unforgiven Task Force",
+  "inescapable-interrogation": {
+    "title": "Inescapable Interrogation",
+    "text": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
+    "value": 20,
+    "detachment": "INTERROGATION CONCLAVE",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-shroud-of-heroes",
-    "detachmentId": "unforgiven-task-force"
-  },
-  "enhancement-stubborn-tenacity": {
-    "title": "Stubborn Tenacity",
-    "text": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
-    "value": 15,
-    "detachment": "Unforgiven Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-stubborn-tenacity",
-    "detachmentId": "unforgiven-task-force"
-  },
-  "enhancement-weapons-of-the-first-legion": {
-    "title": "Weapons of the First Legion",
-    "text": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
-    "value": 15,
-    "detachment": "Unforgiven Task Force",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-weapons-of-the-first-legion",
-    "detachmentId": "unforgiven-task-force"
+    "owner": null,
+    "assignment": null,
+    "ruleId": "inescapable-interrogation",
+    "detachmentId": "interrogation-conclave"
   },
   "tempered-in-battle-aura": {
     "title": "Tempered in Battle (Aura)",
     "text": "A veteran of the Inner Circle, this warrior inspires those around them to hold the line amidst the heat and chaos of battle. Adeptus Astartes model only. While a friendly Adeptus Astartes unit is within 6\" of this model, you can re‑roll Battle‑shock and Leadership tests taken for that unit.",
     "value": 10,
-    "detachment": "Wrath of the Rock",
+    "detachment": "WRATH OF THE ROCK",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
+    "owner": null,
+    "assignment": null,
     "ruleId": "tempered-in-battle-aura",
     "detachmentId": "wrath-of-the-rock"
   },
@@ -43940,24 +43522,10 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Ancient Weapons",
     "text": "The vaults of the Dark Angels contain many relics from Humanity’s distant past. This soldier has been granted the honour of bearing such a weapon to battle. Adeptus Astartes model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
     "value": 25,
-    "detachment": "Wrath of the Rock",
+    "detachment": "WRATH OF THE ROCK",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "ADEPTUS ASTARTES"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
+    "owner": null,
+    "assignment": null,
     "ruleId": "ancient-weapons",
     "detachmentId": "wrath-of-the-rock"
   },
@@ -43965,27 +43533,10 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Deathwing Assault",
     "text": "A veteran inductee of the Inner Circle, this champion has served amongst the Deathwing for centuries and become an unmatched master of teleportarium insertions. Deathwing model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
     "value": 15,
-    "detachment": "Wrath of the Rock",
+    "detachment": "WRATH OF THE ROCK",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "DEATHWING"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ],
-        "allAbilities": [
-          "core-deep-strike"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
+    "owner": null,
+    "assignment": null,
     "ruleId": "deathwing-assault",
     "detachmentId": "wrath-of-the-rock"
   },
@@ -43993,26 +43544,34 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Lord of the Ravenwing",
     "text": "This commander has mastered the art of cavalry combat, instinctively noticing the opportune position to strike and navigating the chaos of battle with preternatural precision. Ravenwing model only. Y ou can re‑roll Advance and Charge rolls made for the bearer’s unit.",
     "value": 10,
-    "detachment": "Wrath of the Rock",
+    "detachment": "WRATH OF THE ROCK",
     "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "allKeywords": [
-          "RAVENWING"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
+    "owner": null,
+    "assignment": null,
     "ruleId": "lord-of-the-ravenwing",
     "detachmentId": "wrath-of-the-rock"
+  },
+  "petition-of-stability": {
+    "title": "Petition of Stability",
+    "text": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
+    "value": 15,
+    "detachment": "DARK AGE ARSENAL",
+    "tags": [],
+    "owner": null,
+    "assignment": null,
+    "ruleId": "petition-of-stability",
+    "detachmentId": "dark-age-arsenal"
+  },
+  "entreaty-of-perpetual-ardour": {
+    "title": "Entreaty of Perpetual Ardour",
+    "text": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+    "value": 15,
+    "detachment": "DARK AGE ARSENAL",
+    "tags": [],
+    "owner": null,
+    "assignment": null,
+    "ruleId": "entreaty-of-perpetual-ardour",
+    "detachmentId": "dark-age-arsenal"
   },
   "enhancement-avenging-angel": {
     "title": "Avenging Angel",
@@ -44045,19 +43604,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "detachment": "Vengeful Hosts",
     "tags": [],
     "sourceId": "enhancement-orksbane",
-    "profile": {
-      "name": "Orksbane",
-      "type": "Melee Weapons",
-      "characteristics": {
-        "Range": "Melee",
-        "A": "4",
-        "WS": "2+",
-        "S": "8",
-        "AP": "-2",
-        "D": "3",
-        "Keywords": "Cleave 2"
-      }
-    },
     "owner": {
       "subject": "model",
       "selector": {

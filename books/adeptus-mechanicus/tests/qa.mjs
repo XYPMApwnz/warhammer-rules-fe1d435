@@ -293,7 +293,7 @@ check('responsive reader owns one in-place view switch',((html.match(/data-view-
 check('responsive no-roster keeps All Detachments',appSource.includes("storageKey:'adeptus-mechanicus-detachment-filter'")&&sharedRelatedRulesSource.includes("'All detachments'"));
 check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.filter(unit=>unit.status!=='Warhammer Legends').length+2);
 check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('34 indexed datasheets'));
-check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.3')&&/Dated repository capture verified \d{4}-\d{2}-\d{2}; all 34 current Enhancement costs and all non-Legends unit point rows match the official live source\./.test(markup)&&markup.includes('>Open official MFM</a>'));
+check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.4')&&/Dated repository capture verified \d{4}-\d{2}-\d{2}; all 34 current Enhancement costs and all non-Legends unit point rows match the official live source\./.test(markup)&&markup.includes('>Open official MFM</a>'));
 check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.2')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
 check('generated hero contains no technical placeholders',!read('tools/build-full-content.mjs').includes('Technical placeholder')&&!html.includes('Technical placeholder')&&markup.includes('11th Edition Army Book')&&markup.includes('Adeptus Mechanicus emblem'));
 check('Stratagem restrictions render as a separate field',markup.includes('<b>Restrictions</b>')&&markup.includes('Programmed Withdrawal'));
@@ -444,11 +444,11 @@ check('every Enhancement has a detachment and current cost',json('content/adeptu
 const canonicalEnhancements=allDetachments.flatMap(detachment=>(detachment.enhancements||[]).map(item=>({id:item.id,detachmentId:detachment.id})));
 const uniquePublishedEnhancements=[...new Map(Object.values(publishedMechanicusPoints).map(item=>[JSON.stringify(item),item])).values()];
 check('Enhancement points preserve exact canonical identity',canonicalEnhancements.length===34&&uniquePublishedEnhancements.length===34&&canonicalEnhancements.every(item=>uniquePublishedEnhancements.filter(point=>point.id===item.id&&point.canonicalEnhancementId===item.id&&point.canonicalDetachmentId===item.detachmentId&&Number.isFinite(Number(point.value))).length===1));
-check('Enhancement points aliases preserve one canonical identity',[
-  ['autoclavic denounciation','autoclavic denunciation'],
-  ['tl 409','tl 4 9'],
-  ['stealth screened cybercanids','stealth screened cybercanids upgrade']
-].every(([alias,canonical])=>JSON.stringify(publishedMechanicusPoints[alias])===JSON.stringify(publishedMechanicusPoints[canonical])&&publishedMechanicusPoints[alias]?.canonicalEnhancementId));
+check('Enhancement points aliases preserve one canonical identity',
+  JSON.stringify(publishedMechanicusPoints['autoclavic denounciation'])===JSON.stringify(publishedMechanicusPoints['autoclavic denunciation'])&&
+  publishedMechanicusPoints['autoclavic denounciation']?.canonicalEnhancementId==='enhancement-autoclavic-denunciation'&&
+  publishedMechanicusPoints['tl 4 9']?.canonicalEnhancementId==='enhancement-tl-4-9'&&
+  publishedMechanicusPoints['stealth screened cybercanids upgrade']?.canonicalEnhancementId==='enhancement-stealth-screened-cybercanids-upgrade');
 const build=spawnSync(node,[path.join(root,'tools','build-full-content.mjs'),'--check'],{encoding:'utf8'});
 check('generated project artifacts are current',build.status===0,(build.stderr||build.stdout).trim());
 const mobileBuild=spawnSync(node,[path.join(root,'mobile','build.mjs'),'--check'],{encoding:'utf8'});

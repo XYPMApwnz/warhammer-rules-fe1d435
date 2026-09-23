@@ -5,13 +5,14 @@ import {createEffectivePointsProjection} from '../../shared/tools/effective-poin
 import {persistCanonicalWeaponProfileIdentities} from '../../shared/tools/build-roster-catalog.mjs';
 import ruleFactsApi from '../../shared/rule-facts.js';
 import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
+import {createEffectiveMfmArmyProjection} from '../../shared/tools/effective-mfm-army-projection.mjs';
 
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const slugKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 
 export function createAdeptusMechanicusCanonicalModel(context){
   const {config,readJson}=context,sourcePaths=config.sources||{};
-  const required=['factionRules','sourceTranscript','codexDetachments','codexParity','codexDatasheets','codexWargear','points','officialMfm','unitImages','manifest'];
+  const required=['factionRules','sourceTranscript','codexDetachments','codexParity','codexDatasheets','codexWargear','points','unitImages','manifest'];
   for(const key of required)if(!sourcePaths[key])throw new Error(`adeptus-mechanicus: sources.${key} is required`);
   const factionRules=readJson(sourcePaths.factionRules);
   const source=readJson(sourcePaths.sourceTranscript);
@@ -19,8 +20,9 @@ export function createAdeptusMechanicusCanonicalModel(context){
   const codexParity=readJson(sourcePaths.codexParity);
   const codexDatasheets=readJson(sourcePaths.codexDatasheets);
   const codexWargear=readJson(sourcePaths.codexWargear);
-  const pointsCatalog=readJson(sourcePaths.points);
-  const officialMfm=readJson(sourcePaths.officialMfm);
+  const mfmProjection=createEffectiveMfmArmyProjection(config.id),mfmPoints=mfmProjection.pointsForArmyBook(config.id),compatibilityPoints=readJson(sourcePaths.points);
+  const compatibilityEnhancements=new Map(compatibilityPoints.enhancements.map(item=>[`${item.canonicalDetachmentId}\0${item.canonicalEnhancementId||item.id}`,item]));
+  const pointsCatalog={...mfmPoints,source:{...mfmPoints.source,officialVersion:mfmPoints.source.version,officialUrl:compatibilityPoints.source.officialUrl},units:mfmPoints.units.map(item=>({...item,wargear:item.paidWargear})),enhancements:mfmPoints.enhancements.map(item=>{const compatibility=compatibilityEnhancements.get(`${item.canonicalDetachmentId}\0${item.canonicalEnhancementId}`);return{...item,...(compatibility?.profile?{profile:compatibility.profile}:{}),...(compatibility?.effect?{effect:compatibility.effect}:{})};})};
   const unitImages=readJson(sourcePaths.unitImages).units;
   const coreFactProjection=createCoreFactProjection({repoRoot:context.repo});
   const manifest=readJson(sourcePaths.manifest);
@@ -84,15 +86,16 @@ for(const bodyguard of rules.datasheets){
 const unitById=new Map(rules.datasheets.map(unit=>[unit.id,unit]));
 for(const id of Object.keys(unitImages))if(!unitById.has(id))throw new Error(`Unknown presentation unit image target: ${id}`);
 for(const edge of attachments)if(edge.sourceId==='unit-cybernetica-datasmith'&&edge.targetId==='unit-kastelan-robots')Object.assign(edge,{mandatory:true,removeKeywords:['INFANTRY']});
-const relationGraphs=buildRelationGraphs(rules.datasheets,attachments);
+const attachmentById=new Map(attachments.map(edge=>[[edge.role,edge.sourceId,edge.targetId].join('\0'),edge]));
+const mfmRelationEdges=mfmProjection.relationEdges({effectiveUnitIds:rules.datasheets.map(unit=>unit.id),armyEdges:attachments});
+const relationGraphs=buildRelationGraphs(rules.datasheets,mfmRelationEdges.map(edge=>({...edge,...attachmentById.get([edge.role,edge.sourceId,edge.targetId].join('\0'))})));
 const officialOrder=config.detachmentOrder;
-const mfmDetachmentRows=Object.entries(officialMfm.detachments||{}).map(([title,value])=>({...value,title,id:`detachment-${slugKey(title)}`}));
 const detachmentOwners=[...rules.detachments,...codex.detachments];
-const mfmDetachments=new Map(bindRowsToCanonicalIds(mfmDetachmentRows,detachmentOwners,{label:'Adeptus Mechanicus MFM Detachment'}).map(item=>[item.canonicalId,item]));
+const mfmDetachments=new Map(pointsCatalog.detachments.map(item=>[item.id,item]));
 const allDetachments=[...rules.detachments,...codex.detachments].map(detachment=>{
   const mfm=mfmDetachments.get(detachment.id);
   if(!mfm)throw new Error(`${detachment.title}: official MFM Detachment Points are missing`);
-  return {...detachment,dp:mfm.dp,disposition:mfm.disposition};
+  return {...detachment,dp:mfm.dp,disposition:mfm.disposition,mfmRecordId:mfm.mfmRecordId,mfmForceDispositionId:mfm.mfmForceDispositionId,missionForceDispositionId:mfm.missionForceDispositionId,forceDispositionId:mfm.forceDispositionId,mfmQualifiers:mfm.mfmQualifiers||[]};
 }).sort((a,b)=>officialOrder.indexOf(a.id)-officialOrder.indexOf(b.id));
 const slugify=value=>String(value).toLowerCase().replaceAll('’','').replaceAll("'",'').replaceAll(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const canonicalCoreTerms=coreFactProjection.coreAbilities.map(term=>({
@@ -148,7 +151,7 @@ for(const unit of rules.datasheets){
 }
 rules.glossary=glossaryTerms;
 rules.audit.glossaryTerms=glossaryTerms.length;
-  return {factionRules,source,codex,codexDatasheets,pointsCatalog,officialMfm,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
+  return {factionRules,source,codex,codexDatasheets,pointsCatalog,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
 }
 
 const escapeRegExp=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -218,7 +221,7 @@ const ruleFactsFor=(unit,{abilityText,knownCoreTitles,coreBaseKey,relationGraphs
 
 export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel=createAdeptusMechanicusCanonicalModel(context)){
   const {config}=context;
-  const {factionRules,source,codex,codexDatasheets,pointsCatalog,officialMfm,manifest,boundPointUnits,unitImages,pointsByUnitId,slugKey,abilityText,rules,relationGraphs,allDetachments,coreBaseKey,knownCoreTitles}=canonicalModel;
+  const {factionRules,source,codex,codexDatasheets,pointsCatalog,manifest,boundPointUnits,unitImages,pointsByUnitId,slugKey,abilityText,rules,relationGraphs,allDetachments,coreBaseKey,knownCoreTitles}=canonicalModel;
   const decoratedTermIds=createTermResolver(rules.glossary);
   const abilityKind=item=>{
     if(/^doctrina imperatives$/i.test(item.title))return 'faction';
@@ -281,6 +284,8 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
       tags,
       text:sourceRecord.text||publication.text||'',
       eligibility:{...(sourceRecord.eligibility||{}),v:sourceRecord.eligibility?.v||1,tags,owner,assignment},
+      mfmRecordId:publication.mfmRecordId||null,
+      mfmQualifiers:publication.mfmQualifiers||[],
       ...(publication.profile?{profile:publication.profile}:{}),
       ...(publication.effect?{legacyEffect:publication.effect}:{}),
       publicationRecord:publication
@@ -296,7 +301,7 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
     const publication=pointsByUnitId.get(unit.id),ruleFacts=compiledRuleFacts.get(unit.id),ruleProfile=compiledRuleProfiles.get(unit.id);
     return persistCanonicalWeaponProfileIdentities({...unit,sourceBookId:config.id,publicationState:unit.status==='Warhammer Legends'?'Warhammer Legends':'Current',intrinsicKeywords:[...(unit.keywords||[])],points:publication?.points||[],paidWargear:publication?.wargear||[],ruleFacts,ruleProfile,publicationRecord:publication});
   });
-  const detachmentOrder=new Map(Object.keys(officialMfm.detachments||{}).map((title,index)=>[`detachment-${slugKey(title)}`,index]));
+  const detachmentOrder=new Map(pointsCatalog.detachments.map((item,index)=>[item.id,index]));
   const factionDetachmentIds=new Set(factionRules.detachments.map(item=>item.id)),glossarySourceOrder=new Map([...factionRules.detachments,...codex.detachments].map((item,index)=>[item.id,index]));
   const detachmentRecord=item=>{const {dp,disposition,...canonical}=item;return {
     ...canonical,
@@ -306,6 +311,11 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
     forceDisposition:disposition||'',
     glossarySourceRevision:factionDetachmentIds.has(item.id)?factionRules.version||'Faction Pack v1.0':'Codex carry-forward + Faction Pack v1.1',
     glossarySourceOrder:glossarySourceOrder.get(item.id),
+    mfmRecordId:item.mfmRecordId,
+    mfmForceDispositionId:item.mfmForceDispositionId,
+    missionForceDispositionId:item.missionForceDispositionId,
+    forceDispositionId:item.forceDispositionId,
+    mfmQualifiers:item.mfmQualifiers||[],
     publicationRecord:{title:item.title,detachmentPoints:dp,forceDisposition:disposition}
   };};
   const detachments=allDetachments.map(detachmentRecord);
@@ -331,7 +341,7 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
     effectContracts,
     effectivePointsProjection,
     glossary:structuredClone(rules.glossary),
-    sourceMetadata:{manifest,primary:rules.source,transcript:source.meta,codex:codex.source,datasheets:codexDatasheets.source,points:pointsCatalog.source,officialMfm:officialMfm.source||null},
+    sourceMetadata:{manifest,primary:rules.source,transcript:source.meta,codex:codex.source,datasheets:codexDatasheets.source,points:pointsCatalog.source,officialMfm:pointsCatalog.source},
     presentation:{unitImages,sourceTranscript:source,codexSource:codex.source,codexDatasheetsSource:codexDatasheets.source}
   };
 }

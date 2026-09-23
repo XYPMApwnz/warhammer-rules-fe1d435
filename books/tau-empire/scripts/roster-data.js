@@ -11839,38 +11839,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   ],
   "detachments": [
     {
-      "id": "advanced-acquisition-cadre",
-      "title": "Advanced Acquisition Cadre",
-      "sourceBookId": "tau-empire",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "tau-empire-detachment-rule-expert-fieldcraft"
-      ]
-    },
-    {
-      "id": "auxiliary-cadre",
-      "title": "Auxiliary Cadre",
-      "sourceBookId": "tau-empire",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "tau-empire-detachment-rule-integrated-command-structure"
-      ]
-    },
-    {
-      "id": "experimental-prototype-cadre",
-      "title": "Experimental Prototype Cadre",
-      "sourceBookId": "tau-empire",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "tau-empire-detachment-rule-superior-craftsmanship"
-      ]
-    },
-    {
       "id": "kauyon",
-      "title": "Kauyon",
+      "title": "KAUYON",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -11879,18 +11849,38 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ]
     },
     {
-      "id": "kroot-hunting-pack",
-      "title": "Kroot Hunting Pack",
+      "id": "experimental-prototype-cadre",
+      "title": "EXPERIMENTAL PROTOTYPE CADRE",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
-        "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters"
+        "tau-empire-detachment-rule-superior-craftsmanship"
+      ]
+    },
+    {
+      "id": "advanced-acquisition-cadre",
+      "title": "ADVANCED ACQUISITION CADRE",
+      "sourceBookId": "tau-empire",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-expert-fieldcraft"
+      ]
+    },
+    {
+      "id": "retaliation-cadre",
+      "title": "RETALIATION CADRE",
+      "sourceBookId": "tau-empire",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-bonded-heroes"
       ]
     },
     {
       "id": "montka",
-      "title": "Mont'ka",
+      "title": "MONT’KA",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -11899,33 +11889,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ]
     },
     {
-      "id": "retaliation-cadre",
-      "title": "Retaliation Cadre",
+      "id": "kroot-hunting-pack",
+      "title": "KROOT HUNTING PACK",
       "sourceBookId": "tau-empire",
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
-        "tau-empire-detachment-rule-bonded-heroes"
+        "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters"
+      ]
+    },
+    {
+      "id": "auxiliary-cadre",
+      "title": "AUXILIARY CADRE",
+      "sourceBookId": "tau-empire",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "tau-empire-detachment-rule-integrated-command-structure"
       ]
     }
   ],
   "detachmentRules": [
     {
-      "id": "tau-empire-detachment-rule-expert-fieldcraft",
-      "title": "Expert Fieldcraft",
-      "text": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
-      "sectionId": "advanced-acquisition-cadre-rule",
-      "detachmentId": "advanced-acquisition-cadre",
-      "detachmentTitle": "Advanced Acquisition Cadre",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "id": "tau-empire-detachment-rule-integrated-command-structure",
-      "title": "Integrated Command Structure",
-      "text": "Friendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.",
-      "sectionId": "auxiliary-cadre-rule",
-      "detachmentId": "auxiliary-cadre",
-      "detachmentTitle": "Auxiliary Cadre",
+      "id": "tau-empire-detachment-rule-patient-hunter",
+      "title": "Patient Hunter",
+      "text": "During the third, fourth and fifth battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack’s Ballistic skill characteristics and/or all modifiers to the Hit roll.",
+      "sectionId": "kauyon-rule",
+      "detachmentId": "kauyon",
+      "detachmentTitle": "KAUYON",
       "sourceBookId": "tau-empire"
     },
     {
@@ -11934,34 +11925,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Friendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R. This detachment has the RETALIATION tag and cannot be taken with another RETALIATION detachment.",
       "sectionId": "experimental-prototype-cadre-rule",
       "detachmentId": "experimental-prototype-cadre",
-      "detachmentTitle": "Experimental Prototype Cadre",
+      "detachmentTitle": "EXPERIMENTAL PROTOTYPE CADRE",
       "sourceBookId": "tau-empire"
     },
     {
-      "id": "tau-empire-detachment-rule-patient-hunter",
-      "title": "Patient Hunter",
-      "text": "During the third, fourth and fifth battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack’s Ballistic skill characteristics and/or all modifiers to the Hit roll.",
-      "sectionId": "kauyon-rule",
-      "detachmentId": "kauyon",
-      "detachmentTitle": "Kauyon",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "id": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
-      "title": "Hunter's Instincts & Skirmish Fighters",
-      "text": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.\n\nKROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
-      "sectionId": "kroot-hunting-pack-rule",
-      "detachmentId": "kroot-hunting-pack",
-      "detachmentTitle": "Kroot Hunting Pack",
-      "sourceBookId": "tau-empire"
-    },
-    {
-      "id": "tau-empire-detachment-rule-killing-blow",
-      "title": "Killing Blow",
-      "text": "During the first, second and third battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [ASSAULT] ability. During the first, second and third battle rounds, while a unit is a Guided unit (see For the Greater Good), its ranged weapons have the [LETHAL HITS] ability.",
-      "sectionId": "montka-rule",
-      "detachmentId": "montka",
-      "detachmentTitle": "Mont'ka",
+      "id": "tau-empire-detachment-rule-expert-fieldcraft",
+      "title": "Expert Fieldcraft",
+      "text": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
+      "sectionId": "advanced-acquisition-cadre-rule",
+      "detachmentId": "advanced-acquisition-cadre",
+      "detachmentTitle": "ADVANCED ACQUISITION CADRE",
       "sourceBookId": "tau-empire"
     },
     {
@@ -11970,133 +11943,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
       "sectionId": "retaliation-cadre-rule",
       "detachmentId": "retaliation-cadre",
-      "detachmentTitle": "Retaliation Cadre",
+      "detachmentTitle": "RETALIATION CADRE",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-killing-blow",
+      "title": "Killing Blow",
+      "text": "During the first, second and third battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [ASSAULT] ability. During the first, second and third battle rounds, while a unit is a Guided unit (see For the Greater Good), its ranged weapons have the [LETHAL HITS] ability.",
+      "sectionId": "montka-rule",
+      "detachmentId": "montka",
+      "detachmentTitle": "MONT’KA",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+      "title": "Hunter's Instincts & Skirmish Fighters",
+      "text": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.\n\nKROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
+      "sectionId": "kroot-hunting-pack-rule",
+      "detachmentId": "kroot-hunting-pack",
+      "detachmentTitle": "KROOT HUNTING PACK",
+      "sourceBookId": "tau-empire"
+    },
+    {
+      "id": "tau-empire-detachment-rule-integrated-command-structure",
+      "title": "Integrated Command Structure",
+      "text": "Friendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.",
+      "sectionId": "auxiliary-cadre-rule",
+      "detachmentId": "auxiliary-cadre",
+      "detachmentTitle": "AUXILIARY CADRE",
       "sourceBookId": "tau-empire"
     }
   ],
   "enhancements": [
     {
-      "id": "negation-emitters-upgrade",
-      "title": "Negation Emitters Upgrade",
-      "text": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
-      "sourcePages": [
-        2
-      ],
-      "provenance": {
-        "sourceId": "tau-empire-faction-pack-v1.1",
-        "sourcePages": [
-          2
-        ]
-      },
-      "tags": [
-        "UPGRADE"
-      ],
-      "value": 15,
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "advanced-acquisition-cadre",
-      "sourceBookId": "tau-empire",
-      "legacyKey": "negation-emitters-upgrade",
-      "canonicalEnhancementId": "negation-emitters-upgrade",
-      "canonicalDetachmentId": "advanced-acquisition-cadre",
-      "owner": {
-        "subject": "unit",
-        "selector": {
-          "unitIds": [
-            "unit-stealth-battlesuits"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    {
-      "id": "unmasking-suite-upgrade",
-      "title": "Unmasking Suite Upgrade",
-      "text": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
-      "sourcePages": [
-        2
-      ],
-      "provenance": {
-        "sourceId": "tau-empire-faction-pack-v1.1",
-        "sourcePages": [
-          2
-        ]
-      },
-      "tags": [
-        "UPGRADE"
-      ],
-      "value": 15,
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "advanced-acquisition-cadre",
-      "sourceBookId": "tau-empire",
-      "legacyKey": "unmasking-suite-upgrade",
-      "canonicalEnhancementId": "unmasking-suite-upgrade",
-      "canonicalDetachmentId": "advanced-acquisition-cadre",
-      "owner": {
-        "subject": "unit",
-        "selector": {
-          "unitIds": [
-            "unit-pathfinder-team",
-            "unit-stealth-battlesuits",
-            "unit-ghostkeel-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    {
-      "id": "student-of-kauyon",
-      "title": "Student of Kauyon",
-      "text": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
-      "sourcePages": [
-        3
-      ],
-      "provenance": {
-        "sourceId": "tau-empire-faction-pack-v1.1",
-        "sourcePages": [
-          3
-        ]
-      },
-      "tags": [],
+      "id": "enhancement-exemplar-of-the-kauyon",
+      "title": "Exemplar of the Kauyon",
       "value": 20,
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "auxiliary-cadre",
+      "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of from the third.",
+      "detachmentId": "kauyon",
       "sourceBookId": "tau-empire",
-      "legacyKey": "student-of-kauyon",
-      "canonicalEnhancementId": "student-of-kauyon",
-      "canonicalDetachmentId": "auxiliary-cadre",
+      "legacyKey": "enhancement-exemplar-of-the-kauyon",
+      "canonicalEnhancementId": "enhancement-exemplar-of-the-kauyon",
+      "canonicalDetachmentId": "kauyon",
+      "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
           "unitIds": [
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper"
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -12110,30 +12010,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
-      "id": "admired-leader",
-      "title": "Admired Leader",
-      "text": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
-      "sourcePages": [
-        3
-      ],
-      "provenance": {
-        "sourceId": "tau-empire-faction-pack-v1.1",
-        "sourcePages": [
-          3
-        ]
-      },
-      "tags": [],
-      "value": 20,
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "auxiliary-cadre",
+      "id": "enhancement-precision-of-the-patient-hunter",
+      "title": "Precision of the Patient Hunter",
+      "value": 15,
+      "text": "T’AU EMPIRE model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well.",
+      "detachmentId": "kauyon",
       "sourceBookId": "tau-empire",
-      "legacyKey": "admired-leader",
-      "canonicalEnhancementId": "admired-leader",
-      "canonicalDetachmentId": "auxiliary-cadre",
+      "legacyKey": "enhancement-precision-of-the-patient-hunter",
+      "canonicalEnhancementId": "enhancement-precision-of-the-patient-hunter",
+      "canonicalDetachmentId": "kauyon",
+      "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
@@ -12143,6 +12029,81 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "unit-commander-in-enforcer-battlesuit",
             "unit-ethereal",
             "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "id": "enhancement-solid-image-projection-unit",
+      "title": "Solid-image Projection Unit",
+      "value": 20,
+      "text": "T’AU EMPIRE model only. After both players have deployed their armies, select up to three T’AU EMPIRE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+      "detachmentId": "kauyon",
+      "sourceBookId": "tau-empire",
+      "legacyKey": "enhancement-solid-image-projection-unit",
+      "canonicalEnhancementId": "enhancement-solid-image-projection-unit",
+      "canonicalDetachmentId": "kauyon",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "id": "enhancement-through-unity-devastation",
+      "title": "Through Unity, Devastation",
+      "value": 30,
+      "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit.",
+      "detachmentId": "kauyon",
+      "sourceBookId": "tau-empire",
+      "legacyKey": "enhancement-through-unity-devastation",
+      "canonicalEnhancementId": "enhancement-through-unity-devastation",
+      "canonicalDetachmentId": "kauyon",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
             "unit-commander-in-crisis-battlesuit"
           ],
           "noneKeywords": [
@@ -12171,11 +12132,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "tags": [],
       "value": 15,
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
       "detachmentId": "experimental-prototype-cadre",
       "sourceBookId": "tau-empire",
       "legacyKey": "thermoneutronic-projector",
@@ -12215,11 +12171,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "tags": [],
       "value": 20,
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
       "detachmentId": "experimental-prototype-cadre",
       "sourceBookId": "tau-empire",
       "legacyKey": "plasma-accelerator-rifle",
@@ -12259,11 +12210,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       },
       "tags": [],
       "value": 15,
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
       "detachmentId": "experimental-prototype-cadre",
       "sourceBookId": "tau-empire",
       "legacyKey": "supernova-launcher",
@@ -12289,74 +12235,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
-      "id": "enhancement-exemplar-of-the-kauyon",
-      "title": "Exemplar of the Kauyon",
-      "value": 20,
-      "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of from the third.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
+      "id": "negation-emitters-upgrade",
+      "title": "Negation Emitters Upgrade",
+      "text": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "tau-empire-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
       },
-      "detachmentId": "kauyon",
-      "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-exemplar-of-the-kauyon",
-      "canonicalEnhancementId": "enhancement-exemplar-of-the-kauyon",
-      "canonicalDetachmentId": "kauyon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-lone-spear",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    {
-      "id": "enhancement-precision-of-the-patient-hunter",
-      "title": "Precision of the Patient Hunter",
+      "tags": [
+        "UPGRADE"
+      ],
       "value": 15,
-      "text": "T’AU EMPIRE model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "kauyon",
+      "detachmentId": "advanced-acquisition-cadre",
       "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-precision-of-the-patient-hunter",
-      "canonicalEnhancementId": "enhancement-precision-of-the-patient-hunter",
-      "canonicalDetachmentId": "kauyon",
-      "tags": [],
+      "legacyKey": "negation-emitters-upgrade",
+      "canonicalEnhancementId": "negation-emitters-upgrade",
+      "canonicalDetachmentId": "advanced-acquisition-cadre",
       "owner": {
-        "subject": "model",
+        "subject": "unit",
         "selector": {
           "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-lone-spear",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper",
-            "unit-commander-in-crisis-battlesuit"
+            "unit-stealth-battlesuits"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -12364,113 +12268,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "assignment": {
-        "maxOwners": 1,
+        "maxOwners": 3,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       }
     },
     {
-      "id": "enhancement-solid-image-projection-unit",
-      "title": "Solid-image Projection Unit",
-      "value": 20,
-      "text": "T’AU EMPIRE model only. After both players have deployed their armies, select up to three T’AU EMPIRE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
+      "id": "unmasking-suite-upgrade",
+      "title": "Unmasking Suite Upgrade",
+      "text": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "tau-empire-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
       },
-      "detachmentId": "kauyon",
-      "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-solid-image-projection-unit",
-      "canonicalEnhancementId": "enhancement-solid-image-projection-unit",
-      "canonicalDetachmentId": "kauyon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-lone-spear",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    {
-      "id": "enhancement-through-unity-devastation",
-      "title": "Through Unity, Devastation",
-      "value": 30,
-      "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "kauyon",
-      "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-through-unity-devastation",
-      "canonicalEnhancementId": "enhancement-through-unity-devastation",
-      "canonicalDetachmentId": "kauyon",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-cadre-fireblade",
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-ethereal",
-            "unit-firesight-team",
-            "unit-kroot-lone-spear",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    {
-      "id": "enhancement-borthrod-gland",
-      "title": "Borthrod Gland",
+      "tags": [
+        "UPGRADE"
+      ],
       "value": 15,
-      "text": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "kroot-hunting-pack",
+      "detachmentId": "advanced-acquisition-cadre",
       "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-borthrod-gland",
-      "canonicalEnhancementId": "enhancement-borthrod-gland",
-      "canonicalDetachmentId": "kroot-hunting-pack",
-      "tags": [],
+      "legacyKey": "unmasking-suite-upgrade",
+      "canonicalEnhancementId": "unmasking-suite-upgrade",
+      "canonicalDetachmentId": "advanced-acquisition-cadre",
       "owner": {
-        "subject": "model",
+        "subject": "unit",
         "selector": {
           "unitIds": [
-            "unit-kroot-flesh-shaper"
+            "unit-pathfinder-team",
+            "unit-stealth-battlesuits",
+            "unit-ghostkeel-battlesuit"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -12478,68 +12309,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "assignment": {
-        "maxOwners": 1,
+        "maxOwners": 3,
         "enhancementChoices": 1,
         "payPointsPerOwner": true
       }
     },
     {
-      "id": "enhancement-kroothawk-flock",
-      "title": "Kroothawk Flock",
-      "value": 10,
-      "text": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "kroot-hunting-pack",
-      "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-kroothawk-flock",
-      "canonicalEnhancementId": "enhancement-kroothawk-flock",
-      "canonicalDetachmentId": "kroot-hunting-pack",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-kroot-flesh-shaper",
-            "unit-kroot-lone-spear",
-            "unit-kroot-trail-shaper",
-            "unit-kroot-war-shaper"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    {
-      "id": "enhancement-nomadic-hunter",
-      "title": "Nomadic Hunter",
+      "id": "enhancement-internal-grenade-racks",
+      "title": "Internal Grenade Racks",
       "value": 20,
-      "text": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "kroot-hunting-pack",
+      "text": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+      "detachmentId": "retaliation-cadre",
       "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-nomadic-hunter",
-      "canonicalEnhancementId": "enhancement-nomadic-hunter",
-      "canonicalDetachmentId": "kroot-hunting-pack",
+      "legacyKey": "enhancement-internal-grenade-racks",
+      "canonicalEnhancementId": "enhancement-internal-grenade-racks",
+      "canonicalDetachmentId": "retaliation-cadre",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
           "unitIds": [
-            "unit-kroot-trail-shaper"
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -12553,26 +12345,83 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
-      "id": "enhancement-root-carved-weapons",
-      "title": "Root-carved Weapons",
-      "value": 10,
-      "text": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "kroot-hunting-pack",
+      "id": "enhancement-prototype-weapon-system",
+      "title": "Prototype Weapon System",
+      "value": 15,
+      "text": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
+      "detachmentId": "retaliation-cadre",
       "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-root-carved-weapons",
-      "canonicalEnhancementId": "enhancement-root-carved-weapons",
-      "canonicalDetachmentId": "kroot-hunting-pack",
+      "legacyKey": "enhancement-prototype-weapon-system",
+      "canonicalEnhancementId": "enhancement-prototype-weapon-system",
+      "canonicalDetachmentId": "retaliation-cadre",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
           "unitIds": [
-            "unit-kroot-war-shaper"
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "id": "enhancement-puretide-engram-neurochip",
+      "title": "Puretide Engram Neurochip",
+      "value": 15,
+      "text": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
+      "detachmentId": "retaliation-cadre",
+      "sourceBookId": "tau-empire",
+      "legacyKey": "enhancement-puretide-engram-neurochip",
+      "canonicalEnhancementId": "enhancement-puretide-engram-neurochip",
+      "canonicalDetachmentId": "retaliation-cadre",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "id": "enhancement-starflare-ignition-system",
+      "title": "Starflare Ignition System",
+      "value": 20,
+      "text": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
+      "detachmentId": "retaliation-cadre",
+      "sourceBookId": "tau-empire",
+      "legacyKey": "enhancement-starflare-ignition-system",
+      "canonicalEnhancementId": "enhancement-starflare-ignition-system",
+      "canonicalDetachmentId": "retaliation-cadre",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-commander-in-crisis-battlesuit"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -12590,11 +12439,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Coordinated Exploitation",
       "value": 30,
       "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [SUSTAINED HITS 1] ability while targeting their Spotted unit.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
       "detachmentId": "montka",
       "sourceBookId": "tau-empire",
       "legacyKey": "enhancement-coordinated-exploitation",
@@ -12629,11 +12473,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Exemplar of the Mont’ka",
       "value": 10,
       "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Killing Blow Detachment rule applies to that unit during the fourth battle round as well.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
       "detachmentId": "montka",
       "sourceBookId": "tau-empire",
       "legacyKey": "enhancement-exemplar-of-the-montka",
@@ -12668,11 +12507,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Strategic Conqueror",
       "value": 15,
       "text": "T’AU EMPIRE model only. At the start of the first battle round, before the first turn begins, select one objective marker on the battlefield. While a friendly T’AU EMPIRE model is within range of that objective marker and the bearer is on the battlefield, add 1 to that friendly model’s Objective Control characteristic.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
       "detachmentId": "montka",
       "sourceBookId": "tau-empire",
       "legacyKey": "enhancement-strategic-conqueror",
@@ -12710,11 +12544,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Strike Swiftly",
       "value": 45,
       "text": "In the Resolve Pre-battle Abilities step, you can select up to two friendly T’AU EMPIRE units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
       "detachmentId": "montka",
       "sourceBookId": "tau-empire",
       "legacyKey": "enhancement-strike-swiftly",
@@ -12748,63 +12577,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
-      "id": "enhancement-internal-grenade-racks",
-      "title": "Internal Grenade Racks",
-      "value": 20,
-      "text": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "retaliation-cadre",
-      "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-internal-grenade-racks",
-      "canonicalEnhancementId": "enhancement-internal-grenade-racks",
-      "canonicalDetachmentId": "retaliation-cadre",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      }
-    },
-    {
-      "id": "enhancement-prototype-weapon-system",
-      "title": "Prototype Weapon System",
+      "id": "enhancement-borthrod-gland",
+      "title": "Borthrod Gland",
       "value": 15,
-      "text": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "retaliation-cadre",
+      "text": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+      "detachmentId": "kroot-hunting-pack",
       "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-prototype-weapon-system",
-      "canonicalEnhancementId": "enhancement-prototype-weapon-system",
-      "canonicalDetachmentId": "retaliation-cadre",
+      "legacyKey": "enhancement-borthrod-gland",
+      "canonicalEnhancementId": "enhancement-borthrod-gland",
+      "canonicalDetachmentId": "kroot-hunting-pack",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
           "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
+            "unit-kroot-flesh-shaper"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -12818,28 +12605,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
-      "id": "enhancement-puretide-engram-neurochip",
-      "title": "Puretide Engram Neurochip",
-      "value": 15,
-      "text": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "retaliation-cadre",
+      "id": "enhancement-kroothawk-flock",
+      "title": "Kroothawk Flock",
+      "value": 10,
+      "text": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
+      "detachmentId": "kroot-hunting-pack",
       "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-puretide-engram-neurochip",
-      "canonicalEnhancementId": "enhancement-puretide-engram-neurochip",
-      "canonicalDetachmentId": "retaliation-cadre",
+      "legacyKey": "enhancement-kroothawk-flock",
+      "canonicalEnhancementId": "enhancement-kroothawk-flock",
+      "canonicalDetachmentId": "kroot-hunting-pack",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
           "unitIds": [
-            "unit-commander-in-coldstar-battlesuit",
-            "unit-commander-in-enforcer-battlesuit",
-            "unit-commander-in-crisis-battlesuit"
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -12853,27 +12636,129 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       }
     },
     {
-      "id": "enhancement-starflare-ignition-system",
-      "title": "Starflare Ignition System",
+      "id": "enhancement-nomadic-hunter",
+      "title": "Nomadic Hunter",
       "value": 20,
-      "text": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-08-27"
-      },
-      "detachmentId": "retaliation-cadre",
+      "text": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+      "detachmentId": "kroot-hunting-pack",
       "sourceBookId": "tau-empire",
-      "legacyKey": "enhancement-starflare-ignition-system",
-      "canonicalEnhancementId": "enhancement-starflare-ignition-system",
-      "canonicalDetachmentId": "retaliation-cadre",
+      "legacyKey": "enhancement-nomadic-hunter",
+      "canonicalEnhancementId": "enhancement-nomadic-hunter",
+      "canonicalDetachmentId": "kroot-hunting-pack",
       "tags": [],
       "owner": {
         "subject": "model",
         "selector": {
           "unitIds": [
+            "unit-kroot-trail-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "id": "enhancement-root-carved-weapons",
+      "title": "Root-carved Weapons",
+      "value": 10,
+      "text": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
+      "detachmentId": "kroot-hunting-pack",
+      "sourceBookId": "tau-empire",
+      "legacyKey": "enhancement-root-carved-weapons",
+      "canonicalEnhancementId": "enhancement-root-carved-weapons",
+      "canonicalDetachmentId": "kroot-hunting-pack",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-war-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "id": "student-of-kauyon",
+      "title": "Student of Kauyon",
+      "text": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "tau-empire-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      },
+      "tags": [],
+      "value": 20,
+      "detachmentId": "auxiliary-cadre",
+      "sourceBookId": "tau-empire",
+      "legacyKey": "student-of-kauyon",
+      "canonicalEnhancementId": "student-of-kauyon",
+      "canonicalDetachmentId": "auxiliary-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
+    },
+    {
+      "id": "admired-leader",
+      "title": "Admired Leader",
+      "text": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "tau-empire-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      },
+      "tags": [],
+      "value": 20,
+      "detachmentId": "auxiliary-cadre",
+      "sourceBookId": "tau-empire",
+      "legacyKey": "admired-leader",
+      "canonicalEnhancementId": "admired-leader",
+      "canonicalDetachmentId": "auxiliary-cadre",
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
             "unit-commander-in-coldstar-battlesuit",
             "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
             "unit-commander-in-crisis-battlesuit"
           ],
           "noneKeywords": [
@@ -14573,191 +14458,11 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   ]
 });
 window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
-  "negation emitters upgrade": {
-    "title": "Negation Emitters Upgrade",
-    "text": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
-    "value": 15,
-    "detachment": "Advanced Acquisition Cadre",
-    "tags": [
-      "UPGRADE"
-    ],
-    "owner": {
-      "subject": "unit",
-      "selector": {
-        "unitIds": [
-          "unit-stealth-battlesuits"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 3,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
-  "unmasking suite upgrade": {
-    "title": "Unmasking Suite Upgrade",
-    "text": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
-    "value": 15,
-    "detachment": "Advanced Acquisition Cadre",
-    "tags": [
-      "UPGRADE"
-    ],
-    "owner": {
-      "subject": "unit",
-      "selector": {
-        "unitIds": [
-          "unit-pathfinder-team",
-          "unit-stealth-battlesuits",
-          "unit-ghostkeel-battlesuit"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 3,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
-  "student of kauyon": {
-    "title": "Student of Kauyon",
-    "text": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
-    "value": 20,
-    "detachment": "Auxiliary Cadre",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-kroot-flesh-shaper",
-          "unit-kroot-trail-shaper",
-          "unit-kroot-war-shaper"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
-  "admired leader": {
-    "title": "Admired Leader",
-    "text": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
-    "value": 20,
-    "detachment": "Auxiliary Cadre",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-cadre-fireblade",
-          "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-enforcer-battlesuit",
-          "unit-ethereal",
-          "unit-firesight-team",
-          "unit-commander-in-crisis-battlesuit"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
-  "thermoneutronic projector": {
-    "title": "Thermoneutronic Projector",
-    "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have: +2 S; +1 AP and D.",
-    "value": 15,
-    "detachment": "Experimental Prototype Cadre",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-enforcer-battlesuit",
-          "unit-commander-in-crisis-battlesuit"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
-  "plasma accelerator rifle": {
-    "title": "Plasma Accelerator Rifle",
-    "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have: +2 S; +1 A, AP and D.",
-    "value": 20,
-    "detachment": "Experimental Prototype Cadre",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-enforcer-battlesuit",
-          "unit-commander-in-crisis-battlesuit"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
-  "supernova launcher": {
-    "title": "Supernova Launcher",
-    "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have: +3 S; +1 AP and D.",
-    "value": 15,
-    "detachment": "Experimental Prototype Cadre",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-enforcer-battlesuit",
-          "unit-commander-in-crisis-battlesuit"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
   "exemplar of the kauyon": {
     "title": "Exemplar of the Kauyon",
     "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of from the third.",
     "value": 20,
-    "detachment": "Kauyon",
+    "detachment": "KAUYON",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -14786,7 +14491,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Precision of the Patient Hunter",
     "text": "T’AU EMPIRE model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well.",
     "value": 15,
-    "detachment": "Kauyon",
+    "detachment": "KAUYON",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -14818,7 +14523,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Solid-image Projection Unit",
     "text": "T’AU EMPIRE model only. After both players have deployed their armies, select up to three T’AU EMPIRE units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
     "value": 20,
-    "detachment": "Kauyon",
+    "detachment": "KAUYON",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -14850,7 +14555,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Through Unity, Devastation",
     "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit.",
     "value": 30,
-    "detachment": "Kauyon",
+    "detachment": "KAUYON",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -14875,17 +14580,19 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "payPointsPerOwner": true
     }
   },
-  "borthrod gland": {
-    "title": "Borthrod Gland",
-    "text": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+  "thermoneutronic projector": {
+    "title": "Thermoneutronic Projector",
+    "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have: +2 S; +1 AP and D.",
     "value": 15,
-    "detachment": "Kroot Hunting Pack",
+    "detachment": "EXPERIMENTAL PROTOTYPE CADRE",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
         "unitIds": [
-          "unit-kroot-flesh-shaper"
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -14898,43 +14605,19 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "payPointsPerOwner": true
     }
   },
-  "kroothawk flock": {
-    "title": "Kroothawk Flock",
-    "text": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
-    "value": 10,
-    "detachment": "Kroot Hunting Pack",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-kroot-flesh-shaper",
-          "unit-kroot-lone-spear",
-          "unit-kroot-trail-shaper",
-          "unit-kroot-war-shaper"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
-  "nomadic hunter": {
-    "title": "Nomadic Hunter",
-    "text": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+  "plasma accelerator rifle": {
+    "title": "Plasma Accelerator Rifle",
+    "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have: +2 S; +1 A, AP and D.",
     "value": 20,
-    "detachment": "Kroot Hunting Pack",
+    "detachment": "EXPERIMENTAL PROTOTYPE CADRE",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
         "unitIds": [
-          "unit-kroot-trail-shaper"
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -14947,17 +14630,171 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "payPointsPerOwner": true
     }
   },
-  "root carved weapons": {
-    "title": "Root-carved Weapons",
-    "text": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
-    "value": 10,
-    "detachment": "Kroot Hunting Pack",
+  "supernova launcher": {
+    "title": "Supernova Launcher",
+    "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have: +3 S; +1 AP and D.",
+    "value": 15,
+    "detachment": "EXPERIMENTAL PROTOTYPE CADRE",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
         "unitIds": [
-          "unit-kroot-war-shaper"
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-commander-in-crisis-battlesuit"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "negation emitters upgrade": {
+    "title": "Negation Emitters Upgrade",
+    "text": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
+    "value": 15,
+    "detachment": "ADVANCED ACQUISITION CADRE",
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-stealth-battlesuits"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "unmasking suite upgrade": {
+    "title": "Unmasking Suite Upgrade",
+    "text": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
+    "value": 15,
+    "detachment": "ADVANCED ACQUISITION CADRE",
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-pathfinder-team",
+          "unit-stealth-battlesuits",
+          "unit-ghostkeel-battlesuit"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "internal grenade racks": {
+    "title": "Internal Grenade Racks",
+    "text": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+    "value": 20,
+    "detachment": "RETALIATION CADRE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-commander-in-crisis-battlesuit"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "prototype weapon system": {
+    "title": "Prototype Weapon System",
+    "text": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
+    "value": 15,
+    "detachment": "RETALIATION CADRE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-commander-in-crisis-battlesuit"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "puretide engram neurochip": {
+    "title": "Puretide Engram Neurochip",
+    "text": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
+    "value": 15,
+    "detachment": "RETALIATION CADRE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-commander-in-crisis-battlesuit"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "starflare ignition system": {
+    "title": "Starflare Ignition System",
+    "text": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
+    "value": 20,
+    "detachment": "RETALIATION CADRE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -14974,7 +14811,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Coordinated Exploitation",
     "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [SUSTAINED HITS 1] ability while targeting their Spotted unit.",
     "value": 30,
-    "detachment": "Mont'ka",
+    "detachment": "MONT’KA",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -15003,7 +14840,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Exemplar of the Mont’ka",
     "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, the Killing Blow Detachment rule applies to that unit during the fourth battle round as well.",
     "value": 10,
-    "detachment": "Mont'ka",
+    "detachment": "MONT’KA",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -15032,7 +14869,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Strategic Conqueror",
     "text": "T’AU EMPIRE model only. At the start of the first battle round, before the first turn begins, select one objective marker on the battlefield. While a friendly T’AU EMPIRE model is within range of that objective marker and the bearer is on the battlefield, add 1 to that friendly model’s Objective Control characteristic.",
     "value": 15,
-    "detachment": "Mont'ka",
+    "detachment": "MONT’KA",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -15064,7 +14901,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Strike Swiftly",
     "text": "In the Resolve Pre-battle Abilities step, you can select up to two friendly T’AU EMPIRE units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability.",
     "value": 45,
-    "detachment": "Mont'ka",
+    "detachment": "MONT’KA",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -15092,44 +14929,17 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "payPointsPerOwner": true
     }
   },
-  "internal grenade racks": {
-    "title": "Internal Grenade Racks",
-    "text": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
-    "value": 20,
-    "detachment": "Retaliation Cadre",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-enforcer-battlesuit",
-          "unit-commander-in-crisis-battlesuit"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    }
-  },
-  "prototype weapon system": {
-    "title": "Prototype Weapon System",
-    "text": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
+  "borthrod gland": {
+    "title": "Borthrod Gland",
+    "text": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
     "value": 15,
-    "detachment": "Retaliation Cadre",
+    "detachment": "KROOT HUNTING PACK",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
         "unitIds": [
-          "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-enforcer-battlesuit",
-          "unit-commander-in-crisis-battlesuit"
+          "unit-kroot-flesh-shaper"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -15142,19 +14952,20 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "payPointsPerOwner": true
     }
   },
-  "puretide engram neurochip": {
-    "title": "Puretide Engram Neurochip",
-    "text": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
-    "value": 15,
-    "detachment": "Retaliation Cadre",
+  "kroothawk flock": {
+    "title": "Kroothawk Flock",
+    "text": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
+    "value": 10,
+    "detachment": "KROOT HUNTING PACK",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
         "unitIds": [
-          "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-enforcer-battlesuit",
-          "unit-commander-in-crisis-battlesuit"
+          "unit-kroot-flesh-shaper",
+          "unit-kroot-lone-spear",
+          "unit-kroot-trail-shaper",
+          "unit-kroot-war-shaper"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -15167,18 +14978,92 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
       "payPointsPerOwner": true
     }
   },
-  "starflare ignition system": {
-    "title": "Starflare Ignition System",
-    "text": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
+  "nomadic hunter": {
+    "title": "Nomadic Hunter",
+    "text": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
     "value": 20,
-    "detachment": "Retaliation Cadre",
+    "detachment": "KROOT HUNTING PACK",
     "tags": [],
     "owner": {
       "subject": "model",
       "selector": {
         "unitIds": [
+          "unit-kroot-trail-shaper"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "root carved weapons": {
+    "title": "Root-carved Weapons",
+    "text": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
+    "value": 10,
+    "detachment": "KROOT HUNTING PACK",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-kroot-war-shaper"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "student of kauyon": {
+    "title": "Student of Kauyon",
+    "text": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
+    "value": 20,
+    "detachment": "AUXILIARY CADRE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-kroot-flesh-shaper",
+          "unit-kroot-trail-shaper",
+          "unit-kroot-war-shaper"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
+  },
+  "admired leader": {
+    "title": "Admired Leader",
+    "text": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
+    "value": 20,
+    "detachment": "AUXILIARY CADRE",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
           "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [

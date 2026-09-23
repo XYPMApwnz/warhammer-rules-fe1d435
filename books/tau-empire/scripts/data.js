@@ -1,140 +1,4 @@
 window.DG_TERMS={
-  "tau-empire-detachment-rule-expert-fieldcraft": {
-    "id": "tau-empire-detachment-rule-expert-fieldcraft",
-    "title": "Expert Fieldcraft",
-    "summary": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
-    "full": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
-    "glossary": "glossary-tau-empire-detachment-rule-expert-fieldcraft",
-    "rule": "detachment-advanced-acquisition-cadre"
-  },
-  "tau-empire-enhancement-negation-emitters-upgrade": {
-    "id": "tau-empire-enhancement-negation-emitters-upgrade",
-    "title": "Negation Emitters Upgrade",
-    "summary": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
-    "full": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
-    "glossary": "glossary-tau-empire-enhancement-negation-emitters-upgrade",
-    "rule": "detachment-advanced-acquisition-cadre"
-  },
-  "tau-empire-enhancement-unmasking-suite-upgrade": {
-    "id": "tau-empire-enhancement-unmasking-suite-upgrade",
-    "title": "Unmasking Suite Upgrade",
-    "summary": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
-    "full": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
-    "glossary": "glossary-tau-empire-enhancement-unmasking-suite-upgrade",
-    "rule": "detachment-advanced-acquisition-cadre"
-  },
-  "tau-empire-stratagem-marker-beacon": {
-    "id": "tau-empire-stratagem-marker-beacon",
-    "title": "Marker Beacon",
-    "summary": "End of your Movement phase. One friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit. Select one objective your unit is controlling. That objective is secured.",
-    "full": "End of your Movement phase. One friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit. Select one objective your unit is controlling. That objective is secured.",
-    "glossary": "glossary-tau-empire-stratagem-marker-beacon",
-    "rule": "detachment-advanced-acquisition-cadre"
-  },
-  "tau-empire-stratagem-microdrone-support": {
-    "id": "tau-empire-stratagem-microdrone-support",
-    "title": "Microdrone Support",
-    "summary": "Your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit starts an action. That PATHFINDER TEAM/STEALTH BATTLESUITS unit. That action does not prevent your unit from being eligible to shoot.",
-    "full": "Your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit starts an action. That PATHFINDER TEAM/STEALTH BATTLESUITS unit. That action does not prevent your unit from being eligible to shoot.",
-    "glossary": "glossary-tau-empire-stratagem-microdrone-support",
-    "rule": "detachment-advanced-acquisition-cadre"
-  },
-  "tau-empire-stratagem-autoreactive-camouflage": {
-    "id": "tau-empire-stratagem-autoreactive-camouflage",
-    "title": "Autoreactive Camouflage",
-    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit, if that friendly unit is hidden. That PATHFINDER TEAM/STEALTH BATTLESUITS unit. Your unit has +1 Sv.",
-    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit, if that friendly unit is hidden. That PATHFINDER TEAM/STEALTH BATTLESUITS unit. Your unit has +1 Sv.",
-    "glossary": "glossary-tau-empire-stratagem-autoreactive-camouflage",
-    "rule": "detachment-advanced-acquisition-cadre"
-  },
-  "tau-empire-detachment-rule-integrated-command-structure": {
-    "id": "tau-empire-detachment-rule-integrated-command-structure",
-    "title": "Integrated Command Structure",
-    "summary": "Friendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.",
-    "full": "Friendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.",
-    "glossary": "glossary-tau-empire-detachment-rule-integrated-command-structure",
-    "rule": "detachment-auxiliary-cadre"
-  },
-  "tau-empire-enhancement-student-of-kauyon": {
-    "id": "tau-empire-enhancement-student-of-kauyon",
-    "title": "Student of Kauyon",
-    "summary": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
-    "full": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
-    "glossary": "glossary-tau-empire-enhancement-student-of-kauyon",
-    "rule": "detachment-auxiliary-cadre"
-  },
-  "tau-empire-enhancement-admired-leader": {
-    "id": "tau-empire-enhancement-admired-leader",
-    "title": "Admired Leader",
-    "summary": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
-    "full": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
-    "glossary": "glossary-tau-empire-enhancement-admired-leader",
-    "rule": "detachment-auxiliary-cadre"
-  },
-  "tau-empire-stratagem-experimental-modifications": {
-    "id": "tau-empire-stratagem-experimental-modifications",
-    "title": "Experimental Modifications",
-    "summary": "Your Shooting phase or the Fight phase, when a friendly KROOT/VESPID STINGWINGS unit is selected to attack. That KROOT/VESPID STINGWINGS unit. Your unit’s attacks have +1 AP.",
-    "full": "Your Shooting phase or the Fight phase, when a friendly KROOT/VESPID STINGWINGS unit is selected to attack. That KROOT/VESPID STINGWINGS unit. Your unit’s attacks have +1 AP.",
-    "glossary": "glossary-tau-empire-stratagem-experimental-modifications",
-    "rule": "detachment-auxiliary-cadre"
-  },
-  "tau-empire-stratagem-alien-expertise": {
-    "id": "tau-empire-stratagem-alien-expertise",
-    "title": "Alien Expertise",
-    "summary": "Your Movement phase, when a friendly KROOT/VESPID STINGWINGS unit is selected to make an advance move. That KROOT/VESPID STINGWINGS unit. That move does not prevent your unit from being eligible to declare a charge.",
-    "full": "Your Movement phase, when a friendly KROOT/VESPID STINGWINGS unit is selected to make an advance move. That KROOT/VESPID STINGWINGS unit. That move does not prevent your unit from being eligible to declare a charge.",
-    "glossary": "glossary-tau-empire-stratagem-alien-expertise",
-    "rule": "detachment-auxiliary-cadre"
-  },
-  "tau-empire-stratagem-guided-by-unity": {
-    "id": "tau-empire-stratagem-guided-by-unity",
-    "title": "Guided by Unity",
-    "summary": "Your Shooting phase, when a friendly T’AU EMPIRE unit (excluding KROOT/VESPID STINGWINGS units) is selected to shoot. That T’AU EMPIRE unit. Your unit’s ranged attacks that target a unit within 9\" of a friendly KROOT/VESPID STINGWINGS unit have [LETHAL HITS].",
-    "full": "Your Shooting phase, when a friendly T’AU EMPIRE unit (excluding KROOT/VESPID STINGWINGS units) is selected to shoot. That T’AU EMPIRE unit. Your unit’s ranged attacks that target a unit within 9\" of a friendly KROOT/VESPID STINGWINGS unit have [LETHAL HITS].",
-    "glossary": "glossary-tau-empire-stratagem-guided-by-unity",
-    "rule": "detachment-auxiliary-cadre"
-  },
-  "tau-empire-detachment-rule-superior-craftsmanship": {
-    "id": "tau-empire-detachment-rule-superior-craftsmanship",
-    "title": "Superior Craftsmanship",
-    "summary": "Friendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R. This detachment has the RETALIATION tag and cannot be taken with another RETALIATION detachment.",
-    "full": "Friendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R. This detachment has the RETALIATION tag and cannot be taken with another RETALIATION detachment.",
-    "glossary": "glossary-tau-empire-detachment-rule-superior-craftsmanship",
-    "rule": "detachment-experimental-prototype-cadre"
-  },
-  "tau-empire-enhancement-thermoneutronic-projector": {
-    "id": "tau-empire-enhancement-thermoneutronic-projector",
-    "title": "Thermoneutronic Projector",
-    "summary": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have: +2 S; +1 AP and D.",
-    "full": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have: +2 S; +1 AP and D.",
-    "glossary": "glossary-tau-empire-enhancement-thermoneutronic-projector",
-    "rule": "detachment-experimental-prototype-cadre"
-  },
-  "tau-empire-enhancement-plasma-accelerator-rifle": {
-    "id": "tau-empire-enhancement-plasma-accelerator-rifle",
-    "title": "Plasma Accelerator Rifle",
-    "summary": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have: +2 S; +1 A, AP and D.",
-    "full": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have: +2 S; +1 A, AP and D.",
-    "glossary": "glossary-tau-empire-enhancement-plasma-accelerator-rifle",
-    "rule": "detachment-experimental-prototype-cadre"
-  },
-  "tau-empire-enhancement-supernova-launcher": {
-    "id": "tau-empire-enhancement-supernova-launcher",
-    "title": "Supernova Launcher",
-    "summary": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have: +3 S; +1 AP and D.",
-    "full": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have: +3 S; +1 AP and D.",
-    "glossary": "glossary-tau-empire-enhancement-supernova-launcher",
-    "rule": "detachment-experimental-prototype-cadre"
-  },
-  "tau-empire-stratagem-experimental-ammunition": {
-    "id": "tau-empire-stratagem-experimental-ammunition",
-    "title": "Experimental Ammunition",
-    "summary": "Your Shooting phase, when a friendly BATTLESUIT CHARACTER unit is selected to shoot. That BATTLESUIT CHARACTER unit. Your unit’s ranged attacks have: +1 S; OR: +1 S, AP and [HAZARDOUS].",
-    "full": "Your Shooting phase, when a friendly BATTLESUIT CHARACTER unit is selected to shoot. That BATTLESUIT CHARACTER unit. Your unit’s ranged attacks have: +1 S; OR: +1 S, AP and [HAZARDOUS].",
-    "glossary": "glossary-tau-empire-stratagem-experimental-ammunition",
-    "rule": "detachment-experimental-prototype-cadre"
-  },
   "tau-empire-detachment-rule-patient-hunter": {
     "id": "tau-empire-detachment-rule-patient-hunter",
     "title": "Patient Hunter",
@@ -223,93 +87,181 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-stratagem-wall-of-mirrors",
     "rule": "detachment-kauyon"
   },
-  "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters": {
-    "id": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
-    "title": "Hunter's Instincts & Skirmish Fighters",
-    "summary": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength. KROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
-    "full": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength. KROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
-    "glossary": "glossary-tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-detachment-rule-superior-craftsmanship": {
+    "id": "tau-empire-detachment-rule-superior-craftsmanship",
+    "title": "Superior Craftsmanship",
+    "summary": "Friendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R. This detachment has the RETALIATION tag and cannot be taken with another RETALIATION detachment.",
+    "full": "Friendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R. This detachment has the RETALIATION tag and cannot be taken with another RETALIATION detachment.",
+    "glossary": "glossary-tau-empire-detachment-rule-superior-craftsmanship",
+    "rule": "detachment-experimental-prototype-cadre"
   },
-  "tau-empire-enhancement-borthrod-gland": {
-    "id": "tau-empire-enhancement-borthrod-gland",
-    "title": "Borthrod Gland",
-    "summary": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-    "full": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-    "glossary": "glossary-tau-empire-enhancement-borthrod-gland",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-enhancement-thermoneutronic-projector": {
+    "id": "tau-empire-enhancement-thermoneutronic-projector",
+    "title": "Thermoneutronic Projector",
+    "summary": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have: +2 S; +1 AP and D.",
+    "full": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have: +2 S; +1 AP and D.",
+    "glossary": "glossary-tau-empire-enhancement-thermoneutronic-projector",
+    "rule": "detachment-experimental-prototype-cadre"
   },
-  "tau-empire-enhancement-kroothawk-flock": {
-    "id": "tau-empire-enhancement-kroothawk-flock",
-    "title": "Kroothawk Flock",
-    "summary": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
-    "full": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
-    "glossary": "glossary-tau-empire-enhancement-kroothawk-flock",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-enhancement-plasma-accelerator-rifle": {
+    "id": "tau-empire-enhancement-plasma-accelerator-rifle",
+    "title": "Plasma Accelerator Rifle",
+    "summary": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have: +2 S; +1 A, AP and D.",
+    "full": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have: +2 S; +1 A, AP and D.",
+    "glossary": "glossary-tau-empire-enhancement-plasma-accelerator-rifle",
+    "rule": "detachment-experimental-prototype-cadre"
   },
-  "tau-empire-enhancement-nomadic-hunter": {
-    "id": "tau-empire-enhancement-nomadic-hunter",
-    "title": "Nomadic Hunter",
-    "summary": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
-    "full": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
-    "glossary": "glossary-tau-empire-enhancement-nomadic-hunter",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-enhancement-supernova-launcher": {
+    "id": "tau-empire-enhancement-supernova-launcher",
+    "title": "Supernova Launcher",
+    "summary": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have: +3 S; +1 AP and D.",
+    "full": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have: +3 S; +1 AP and D.",
+    "glossary": "glossary-tau-empire-enhancement-supernova-launcher",
+    "rule": "detachment-experimental-prototype-cadre"
   },
-  "tau-empire-enhancement-root-carved-weapons": {
-    "id": "tau-empire-enhancement-root-carved-weapons",
-    "title": "Root-carved Weapons",
-    "summary": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
-    "full": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
-    "glossary": "glossary-tau-empire-enhancement-root-carved-weapons",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-stratagem-experimental-ammunition": {
+    "id": "tau-empire-stratagem-experimental-ammunition",
+    "title": "Experimental Ammunition",
+    "summary": "Your Shooting phase, when a friendly BATTLESUIT CHARACTER unit is selected to shoot. That BATTLESUIT CHARACTER unit. Your unit’s ranged attacks have: +1 S; OR: +1 S, AP and [HAZARDOUS].",
+    "full": "Your Shooting phase, when a friendly BATTLESUIT CHARACTER unit is selected to shoot. That BATTLESUIT CHARACTER unit. Your unit’s ranged attacks have: +1 S; OR: +1 S, AP and [HAZARDOUS].",
+    "glossary": "glossary-tau-empire-stratagem-experimental-ammunition",
+    "rule": "detachment-experimental-prototype-cadre"
   },
-  "tau-empire-stratagem-a-trap-well-laid": {
-    "id": "tau-empire-stratagem-a-trap-well-laid",
-    "title": "A TRAP WELL LAID",
-    "summary": "Your Shooting phase or the Fight phase. One KROOT unit from your army that has not been selected to shoot or fight this phase. After your unit has resolved its attacks this phase, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, each time a KROOT model from your army makes an attack that targets that enemy unit, unless the attacking unit is Battle-shocked, improve the Armour Penetration characteristic of that attack by 1.",
-    "full": "Your Shooting phase or the Fight phase. One KROOT unit from your army that has not been selected to shoot or fight this phase. After your unit has resolved its attacks this phase, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, each time a KROOT model from your army makes an attack that targets that enemy unit, unless the attacking unit is Battle-shocked, improve the Armour Penetration characteristic of that attack by 1.",
-    "glossary": "glossary-tau-empire-stratagem-a-trap-well-laid",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-detachment-rule-expert-fieldcraft": {
+    "id": "tau-empire-detachment-rule-expert-fieldcraft",
+    "title": "Expert Fieldcraft",
+    "summary": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
+    "full": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
+    "glossary": "glossary-tau-empire-detachment-rule-expert-fieldcraft",
+    "rule": "detachment-advanced-acquisition-cadre"
   },
-  "tau-empire-stratagem-emp-grenades": {
-    "id": "tau-empire-stratagem-emp-grenades",
-    "title": "EMP GRENADES",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy VEHICLE unit is selected to shoot or fight. One KROOT GRENADES unit from your army within 8\" of that enemy VEHICLE unit. Until the end of the phase, worsen the Weapon Skill and Ballistic Skill characteristics of that enemy VEHICLE unit’s weapons by 1.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy VEHICLE unit is selected to shoot or fight. One KROOT GRENADES unit from your army within 8\" of that enemy VEHICLE unit. Until the end of the phase, worsen the Weapon Skill and Ballistic Skill characteristics of that enemy VEHICLE unit’s weapons by 1.",
-    "glossary": "glossary-tau-empire-stratagem-emp-grenades",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-enhancement-negation-emitters-upgrade": {
+    "id": "tau-empire-enhancement-negation-emitters-upgrade",
+    "title": "Negation Emitters Upgrade",
+    "summary": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
+    "full": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
+    "glossary": "glossary-tau-empire-enhancement-negation-emitters-upgrade",
+    "rule": "detachment-advanced-acquisition-cadre"
   },
-  "tau-empire-stratagem-guerrilla-warriors": {
-    "id": "tau-empire-stratagem-guerrilla-warriors",
-    "title": "GUERRILLA WARRIORS",
-    "summary": "Your Movement phase, just after a KROOT unit from your army Falls Back. That KROOT unit. Until the end of the turn, your unit is eligible to shoot and declare a charge.",
-    "full": "Your Movement phase, just after a KROOT unit from your army Falls Back. That KROOT unit. Until the end of the turn, your unit is eligible to shoot and declare a charge.",
-    "glossary": "glossary-tau-empire-stratagem-guerrilla-warriors",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-enhancement-unmasking-suite-upgrade": {
+    "id": "tau-empire-enhancement-unmasking-suite-upgrade",
+    "title": "Unmasking Suite Upgrade",
+    "summary": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
+    "full": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
+    "glossary": "glossary-tau-empire-enhancement-unmasking-suite-upgrade",
+    "rule": "detachment-advanced-acquisition-cadre"
   },
-  "tau-empire-stratagem-hidden-hunters": {
-    "id": "tau-empire-stratagem-hidden-hunters",
-    "title": "HIDDEN HUNTERS",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One KROOT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One KROOT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
-    "glossary": "glossary-tau-empire-stratagem-hidden-hunters",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-stratagem-marker-beacon": {
+    "id": "tau-empire-stratagem-marker-beacon",
+    "title": "Marker Beacon",
+    "summary": "End of your Movement phase. One friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit. Select one objective your unit is controlling. That objective is secured.",
+    "full": "End of your Movement phase. One friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit. Select one objective your unit is controlling. That objective is secured.",
+    "glossary": "glossary-tau-empire-stratagem-marker-beacon",
+    "rule": "detachment-advanced-acquisition-cadre"
   },
-  "tau-empire-stratagem-join-the-hunt": {
-    "id": "tau-empire-stratagem-join-the-hunt",
-    "title": "JOIN THE HUNT",
-    "summary": "Any phase. One KROOT INFANTRY or KROOT HOUNDS unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength. This Stratagem cannot be used to return destroyed CHARACTER units to Attached units. You can only use this Stratagem once per battle.",
-    "full": "Any phase. One KROOT INFANTRY or KROOT HOUNDS unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength. This Stratagem cannot be used to return destroyed CHARACTER units to Attached units. You can only use this Stratagem once per battle.",
-    "glossary": "glossary-tau-empire-stratagem-join-the-hunt",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-stratagem-microdrone-support": {
+    "id": "tau-empire-stratagem-microdrone-support",
+    "title": "Microdrone Support",
+    "summary": "Your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit starts an action. That PATHFINDER TEAM/STEALTH BATTLESUITS unit. That action does not prevent your unit from being eligible to shoot.",
+    "full": "Your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit starts an action. That PATHFINDER TEAM/STEALTH BATTLESUITS unit. That action does not prevent your unit from being eligible to shoot.",
+    "glossary": "glossary-tau-empire-stratagem-microdrone-support",
+    "rule": "detachment-advanced-acquisition-cadre"
   },
-  "tau-empire-stratagem-the-grisly-feast": {
-    "id": "tau-empire-stratagem-the-grisly-feast",
-    "title": "THE GRISLY FEAST",
-    "summary": "Fight phase. One KROOT unit from your army that destroyed one or more enemy units this phase. In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
-    "full": "Fight phase. One KROOT unit from your army that destroyed one or more enemy units this phase. In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
-    "glossary": "glossary-tau-empire-stratagem-the-grisly-feast",
-    "rule": "detachment-kroot-hunting-pack"
+  "tau-empire-stratagem-autoreactive-camouflage": {
+    "id": "tau-empire-stratagem-autoreactive-camouflage",
+    "title": "Autoreactive Camouflage",
+    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit, if that friendly unit is hidden. That PATHFINDER TEAM/STEALTH BATTLESUITS unit. Your unit has +1 Sv.",
+    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit, if that friendly unit is hidden. That PATHFINDER TEAM/STEALTH BATTLESUITS unit. Your unit has +1 Sv.",
+    "glossary": "glossary-tau-empire-stratagem-autoreactive-camouflage",
+    "rule": "detachment-advanced-acquisition-cadre"
+  },
+  "tau-empire-detachment-rule-bonded-heroes": {
+    "id": "tau-empire-detachment-rule-bonded-heroes",
+    "title": "Bonded Heroes",
+    "summary": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+    "full": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+    "glossary": "glossary-tau-empire-detachment-rule-bonded-heroes",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-enhancement-internal-grenade-racks": {
+    "id": "tau-empire-enhancement-internal-grenade-racks",
+    "title": "Internal Grenade Racks",
+    "summary": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+    "full": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+    "glossary": "glossary-tau-empire-enhancement-internal-grenade-racks",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-enhancement-prototype-weapon-system": {
+    "id": "tau-empire-enhancement-prototype-weapon-system",
+    "title": "Prototype Weapon System",
+    "summary": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
+    "full": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
+    "glossary": "glossary-tau-empire-enhancement-prototype-weapon-system",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-enhancement-puretide-engram-neurochip": {
+    "id": "tau-empire-enhancement-puretide-engram-neurochip",
+    "title": "Puretide Engram Neurochip",
+    "summary": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
+    "full": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
+    "glossary": "glossary-tau-empire-enhancement-puretide-engram-neurochip",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-enhancement-starflare-ignition-system": {
+    "id": "tau-empire-enhancement-starflare-ignition-system",
+    "title": "Starflare Ignition System",
+    "summary": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
+    "full": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
+    "glossary": "glossary-tau-empire-enhancement-starflare-ignition-system",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-stratagem-fail-safe-detonator": {
+    "id": "tau-empire-stratagem-fail-safe-detonator",
+    "title": "FAIL-SAFE DETONATOR",
+    "summary": "Any phase, just after a T’AU EMPIRE BATTLESUIT model from your army is destroyed. That destroyed model’s unit. You can use this Stratagem on that unit even if that unit was just destroyed. Before removing your model from play, if it has the Deadly Demise ability, do not roll for that ability; instead, you can choose whether the result of that roll is a 1 or a 6. If your model does not have the Deadly Demise ability, roll one D6 for each unit within 6\" of it: on a 4+, that unit suffers D3 mortal wounds.",
+    "full": "Any phase, just after a T’AU EMPIRE BATTLESUIT model from your army is destroyed. That destroyed model’s unit. You can use this Stratagem on that unit even if that unit was just destroyed. Before removing your model from play, if it has the Deadly Demise ability, do not roll for that ability; instead, you can choose whether the result of that roll is a 1 or a 6. If your model does not have the Deadly Demise ability, roll one D6 for each unit within 6\" of it: on a 4+, that unit suffers D3 mortal wounds.",
+    "glossary": "glossary-tau-empire-stratagem-fail-safe-detonator",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-stratagem-grav-inhibitor-field": {
+    "id": "tau-empire-stratagem-grav-inhibitor-field",
+    "title": "GRAV-INHIBITOR FIELD",
+    "summary": "Your opponent’s Charge phase, just after an enemy unit has declared a charge. One T’AU EMPIRE BATTLESUIT unit from your army that was selected as a target of that charge. That enemy unit must immediately take a Battle-shock test and you must roll one D6 for each model in that enemy unit: for each 6, that enemy unit suffers 1 mortal wound.",
+    "full": "Your opponent’s Charge phase, just after an enemy unit has declared a charge. One T’AU EMPIRE BATTLESUIT unit from your army that was selected as a target of that charge. That enemy unit must immediately take a Battle-shock test and you must roll one D6 for each model in that enemy unit: for each 6, that enemy unit suffers 1 mortal wound.",
+    "glossary": "glossary-tau-empire-stratagem-grav-inhibitor-field",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-stratagem-stimm-injectors": {
+    "id": "tau-empire-stratagem-stimm-injectors",
+    "title": "STIMM INJECTORS",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One T’AU EMPIRE BATTLESUIT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 6+ ability.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One T’AU EMPIRE BATTLESUIT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 6+ ability.",
+    "glossary": "glossary-tau-empire-stratagem-stimm-injectors",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-stratagem-the-arrokon-protocol": {
+    "id": "tau-empire-stratagem-the-arrokon-protocol",
+    "title": "THE ARRO’KON PROTOCOL",
+    "summary": "Your Shooting phase. One T’AU EMPIRE BATTLESUIT unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that contains 6 or more models, that attack has the [SUSTAINED HITS 1] ability. If that attack targets an enemy unit that contains 11 or more models, it has the [SUSTAINED HITS 2] ability instead.",
+    "full": "Your Shooting phase. One T’AU EMPIRE BATTLESUIT unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that contains 6 or more models, that attack has the [SUSTAINED HITS 1] ability. If that attack targets an enemy unit that contains 11 or more models, it has the [SUSTAINED HITS 2] ability instead.",
+    "glossary": "glossary-tau-empire-stratagem-the-arrokon-protocol",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-stratagem-the-shortened-blade": {
+    "id": "tau-empire-stratagem-the-shortened-blade",
+    "title": "THE SHORTENED BLADE",
+    "summary": "Your Movement phase. One T’AU EMPIRE BATTLESUIT unit from your army that is arriving using the Deep Strike ability this phase. Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models. A unit targeted with this Stratagem is not eligible to declare a charge in the same turn.",
+    "full": "Your Movement phase. One T’AU EMPIRE BATTLESUIT unit from your army that is arriving using the Deep Strike ability this phase. Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models. A unit targeted with this Stratagem is not eligible to declare a charge in the same turn.",
+    "glossary": "glossary-tau-empire-stratagem-the-shortened-blade",
+    "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-stratagem-the-torchstar-gambit": {
+    "id": "tau-empire-stratagem-the-torchstar-gambit",
+    "title": "THE TORCHSTAR GAMBIT",
+    "summary": "Your Shooting phase. One T’AU EMPIRE BATTLESUIT unit from your army that can FLY whose attacks have been resolved this phase. If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move. If it does, your unit cannot declare a charge this turn",
+    "full": "Your Shooting phase. One T’AU EMPIRE BATTLESUIT unit from your army that can FLY whose attacks have been resolved this phase. If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move. If it does, your unit cannot declare a charge this turn",
+    "glossary": "glossary-tau-empire-stratagem-the-torchstar-gambit",
+    "rule": "detachment-retaliation-cadre"
   },
   "tau-empire-detachment-rule-killing-blow": {
     "id": "tau-empire-detachment-rule-killing-blow",
@@ -399,93 +351,141 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-stratagem-pulse-onslaught",
     "rule": "detachment-montka"
   },
-  "tau-empire-detachment-rule-bonded-heroes": {
-    "id": "tau-empire-detachment-rule-bonded-heroes",
-    "title": "Bonded Heroes",
-    "summary": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
-    "full": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
-    "glossary": "glossary-tau-empire-detachment-rule-bonded-heroes",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters": {
+    "id": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+    "title": "Hunter's Instincts & Skirmish Fighters",
+    "summary": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength. KROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
+    "full": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength. KROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
+    "glossary": "glossary-tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-enhancement-internal-grenade-racks": {
-    "id": "tau-empire-enhancement-internal-grenade-racks",
-    "title": "Internal Grenade Racks",
-    "summary": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
-    "full": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
-    "glossary": "glossary-tau-empire-enhancement-internal-grenade-racks",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-enhancement-borthrod-gland": {
+    "id": "tau-empire-enhancement-borthrod-gland",
+    "title": "Borthrod Gland",
+    "summary": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+    "full": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+    "glossary": "glossary-tau-empire-enhancement-borthrod-gland",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-enhancement-prototype-weapon-system": {
-    "id": "tau-empire-enhancement-prototype-weapon-system",
-    "title": "Prototype Weapon System",
-    "summary": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
-    "full": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
-    "glossary": "glossary-tau-empire-enhancement-prototype-weapon-system",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-enhancement-kroothawk-flock": {
+    "id": "tau-empire-enhancement-kroothawk-flock",
+    "title": "Kroothawk Flock",
+    "summary": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
+    "full": "KROOT model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
+    "glossary": "glossary-tau-empire-enhancement-kroothawk-flock",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-enhancement-puretide-engram-neurochip": {
-    "id": "tau-empire-enhancement-puretide-engram-neurochip",
-    "title": "Puretide Engram Neurochip",
-    "summary": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
-    "full": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
-    "glossary": "glossary-tau-empire-enhancement-puretide-engram-neurochip",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-enhancement-nomadic-hunter": {
+    "id": "tau-empire-enhancement-nomadic-hunter",
+    "title": "Nomadic Hunter",
+    "summary": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+    "full": "KROOT TRAIL SHAPER model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+    "glossary": "glossary-tau-empire-enhancement-nomadic-hunter",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-enhancement-starflare-ignition-system": {
-    "id": "tau-empire-enhancement-starflare-ignition-system",
-    "title": "Starflare Ignition System",
-    "summary": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
-    "full": "T’AU EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
-    "glossary": "glossary-tau-empire-enhancement-starflare-ignition-system",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-enhancement-root-carved-weapons": {
+    "id": "tau-empire-enhancement-root-carved-weapons",
+    "title": "Root-carved Weapons",
+    "summary": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
+    "full": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
+    "glossary": "glossary-tau-empire-enhancement-root-carved-weapons",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-stratagem-fail-safe-detonator": {
-    "id": "tau-empire-stratagem-fail-safe-detonator",
-    "title": "FAIL-SAFE DETONATOR",
-    "summary": "Any phase, just after a T’AU EMPIRE BATTLESUIT model from your army is destroyed. That destroyed model’s unit. You can use this Stratagem on that unit even if that unit was just destroyed. Before removing your model from play, if it has the Deadly Demise ability, do not roll for that ability; instead, you can choose whether the result of that roll is a 1 or a 6. If your model does not have the Deadly Demise ability, roll one D6 for each unit within 6\" of it: on a 4+, that unit suffers D3 mortal wounds.",
-    "full": "Any phase, just after a T’AU EMPIRE BATTLESUIT model from your army is destroyed. That destroyed model’s unit. You can use this Stratagem on that unit even if that unit was just destroyed. Before removing your model from play, if it has the Deadly Demise ability, do not roll for that ability; instead, you can choose whether the result of that roll is a 1 or a 6. If your model does not have the Deadly Demise ability, roll one D6 for each unit within 6\" of it: on a 4+, that unit suffers D3 mortal wounds.",
-    "glossary": "glossary-tau-empire-stratagem-fail-safe-detonator",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-stratagem-a-trap-well-laid": {
+    "id": "tau-empire-stratagem-a-trap-well-laid",
+    "title": "A TRAP WELL LAID",
+    "summary": "Your Shooting phase or the Fight phase. One KROOT unit from your army that has not been selected to shoot or fight this phase. After your unit has resolved its attacks this phase, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, each time a KROOT model from your army makes an attack that targets that enemy unit, unless the attacking unit is Battle-shocked, improve the Armour Penetration characteristic of that attack by 1.",
+    "full": "Your Shooting phase or the Fight phase. One KROOT unit from your army that has not been selected to shoot or fight this phase. After your unit has resolved its attacks this phase, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, each time a KROOT model from your army makes an attack that targets that enemy unit, unless the attacking unit is Battle-shocked, improve the Armour Penetration characteristic of that attack by 1.",
+    "glossary": "glossary-tau-empire-stratagem-a-trap-well-laid",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-stratagem-grav-inhibitor-field": {
-    "id": "tau-empire-stratagem-grav-inhibitor-field",
-    "title": "GRAV-INHIBITOR FIELD",
-    "summary": "Your opponent’s Charge phase, just after an enemy unit has declared a charge. One T’AU EMPIRE BATTLESUIT unit from your army that was selected as a target of that charge. That enemy unit must immediately take a Battle-shock test and you must roll one D6 for each model in that enemy unit: for each 6, that enemy unit suffers 1 mortal wound.",
-    "full": "Your opponent’s Charge phase, just after an enemy unit has declared a charge. One T’AU EMPIRE BATTLESUIT unit from your army that was selected as a target of that charge. That enemy unit must immediately take a Battle-shock test and you must roll one D6 for each model in that enemy unit: for each 6, that enemy unit suffers 1 mortal wound.",
-    "glossary": "glossary-tau-empire-stratagem-grav-inhibitor-field",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-stratagem-emp-grenades": {
+    "id": "tau-empire-stratagem-emp-grenades",
+    "title": "EMP GRENADES",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy VEHICLE unit is selected to shoot or fight. One KROOT GRENADES unit from your army within 8\" of that enemy VEHICLE unit. Until the end of the phase, worsen the Weapon Skill and Ballistic Skill characteristics of that enemy VEHICLE unit’s weapons by 1.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy VEHICLE unit is selected to shoot or fight. One KROOT GRENADES unit from your army within 8\" of that enemy VEHICLE unit. Until the end of the phase, worsen the Weapon Skill and Ballistic Skill characteristics of that enemy VEHICLE unit’s weapons by 1.",
+    "glossary": "glossary-tau-empire-stratagem-emp-grenades",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-stratagem-stimm-injectors": {
-    "id": "tau-empire-stratagem-stimm-injectors",
-    "title": "STIMM INJECTORS",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One T’AU EMPIRE BATTLESUIT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 6+ ability.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One T’AU EMPIRE BATTLESUIT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 6+ ability.",
-    "glossary": "glossary-tau-empire-stratagem-stimm-injectors",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-stratagem-guerrilla-warriors": {
+    "id": "tau-empire-stratagem-guerrilla-warriors",
+    "title": "GUERRILLA WARRIORS",
+    "summary": "Your Movement phase, just after a KROOT unit from your army Falls Back. That KROOT unit. Until the end of the turn, your unit is eligible to shoot and declare a charge.",
+    "full": "Your Movement phase, just after a KROOT unit from your army Falls Back. That KROOT unit. Until the end of the turn, your unit is eligible to shoot and declare a charge.",
+    "glossary": "glossary-tau-empire-stratagem-guerrilla-warriors",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-stratagem-the-arrokon-protocol": {
-    "id": "tau-empire-stratagem-the-arrokon-protocol",
-    "title": "THE ARRO’KON PROTOCOL",
-    "summary": "Your Shooting phase. One T’AU EMPIRE BATTLESUIT unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that contains 6 or more models, that attack has the [SUSTAINED HITS 1] ability. If that attack targets an enemy unit that contains 11 or more models, it has the [SUSTAINED HITS 2] ability instead.",
-    "full": "Your Shooting phase. One T’AU EMPIRE BATTLESUIT unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that contains 6 or more models, that attack has the [SUSTAINED HITS 1] ability. If that attack targets an enemy unit that contains 11 or more models, it has the [SUSTAINED HITS 2] ability instead.",
-    "glossary": "glossary-tau-empire-stratagem-the-arrokon-protocol",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-stratagem-hidden-hunters": {
+    "id": "tau-empire-stratagem-hidden-hunters",
+    "title": "HIDDEN HUNTERS",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One KROOT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One KROOT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+    "glossary": "glossary-tau-empire-stratagem-hidden-hunters",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-stratagem-the-shortened-blade": {
-    "id": "tau-empire-stratagem-the-shortened-blade",
-    "title": "THE SHORTENED BLADE",
-    "summary": "Your Movement phase. One T’AU EMPIRE BATTLESUIT unit from your army that is arriving using the Deep Strike ability this phase. Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models. A unit targeted with this Stratagem is not eligible to declare a charge in the same turn.",
-    "full": "Your Movement phase. One T’AU EMPIRE BATTLESUIT unit from your army that is arriving using the Deep Strike ability this phase. Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy models. A unit targeted with this Stratagem is not eligible to declare a charge in the same turn.",
-    "glossary": "glossary-tau-empire-stratagem-the-shortened-blade",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-stratagem-join-the-hunt": {
+    "id": "tau-empire-stratagem-join-the-hunt",
+    "title": "JOIN THE HUNT",
+    "summary": "Any phase. One KROOT INFANTRY or KROOT HOUNDS unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength. This Stratagem cannot be used to return destroyed CHARACTER units to Attached units. You can only use this Stratagem once per battle.",
+    "full": "Any phase. One KROOT INFANTRY or KROOT HOUNDS unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength. This Stratagem cannot be used to return destroyed CHARACTER units to Attached units. You can only use this Stratagem once per battle.",
+    "glossary": "glossary-tau-empire-stratagem-join-the-hunt",
+    "rule": "detachment-kroot-hunting-pack"
   },
-  "tau-empire-stratagem-the-torchstar-gambit": {
-    "id": "tau-empire-stratagem-the-torchstar-gambit",
-    "title": "THE TORCHSTAR GAMBIT",
-    "summary": "Your Shooting phase. One T’AU EMPIRE BATTLESUIT unit from your army that can FLY whose attacks have been resolved this phase. If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move. If it does, your unit cannot declare a charge this turn",
-    "full": "Your Shooting phase. One T’AU EMPIRE BATTLESUIT unit from your army that can FLY whose attacks have been resolved this phase. If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move. If it does, your unit cannot declare a charge this turn",
-    "glossary": "glossary-tau-empire-stratagem-the-torchstar-gambit",
-    "rule": "detachment-retaliation-cadre"
+  "tau-empire-stratagem-the-grisly-feast": {
+    "id": "tau-empire-stratagem-the-grisly-feast",
+    "title": "THE GRISLY FEAST",
+    "summary": "Fight phase. One KROOT unit from your army that destroyed one or more enemy units this phase. In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+    "full": "Fight phase. One KROOT unit from your army that destroyed one or more enemy units this phase. In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+    "glossary": "glossary-tau-empire-stratagem-the-grisly-feast",
+    "rule": "detachment-kroot-hunting-pack"
+  },
+  "tau-empire-detachment-rule-integrated-command-structure": {
+    "id": "tau-empire-detachment-rule-integrated-command-structure",
+    "title": "Integrated Command Structure",
+    "summary": "Friendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.",
+    "full": "Friendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.",
+    "glossary": "glossary-tau-empire-detachment-rule-integrated-command-structure",
+    "rule": "detachment-auxiliary-cadre"
+  },
+  "tau-empire-enhancement-student-of-kauyon": {
+    "id": "tau-empire-enhancement-student-of-kauyon",
+    "title": "Student of Kauyon",
+    "summary": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
+    "full": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
+    "glossary": "glossary-tau-empire-enhancement-student-of-kauyon",
+    "rule": "detachment-auxiliary-cadre"
+  },
+  "tau-empire-enhancement-admired-leader": {
+    "id": "tau-empire-enhancement-admired-leader",
+    "title": "Admired Leader",
+    "summary": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
+    "full": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
+    "glossary": "glossary-tau-empire-enhancement-admired-leader",
+    "rule": "detachment-auxiliary-cadre"
+  },
+  "tau-empire-stratagem-experimental-modifications": {
+    "id": "tau-empire-stratagem-experimental-modifications",
+    "title": "Experimental Modifications",
+    "summary": "Your Shooting phase or the Fight phase, when a friendly KROOT/VESPID STINGWINGS unit is selected to attack. That KROOT/VESPID STINGWINGS unit. Your unit’s attacks have +1 AP.",
+    "full": "Your Shooting phase or the Fight phase, when a friendly KROOT/VESPID STINGWINGS unit is selected to attack. That KROOT/VESPID STINGWINGS unit. Your unit’s attacks have +1 AP.",
+    "glossary": "glossary-tau-empire-stratagem-experimental-modifications",
+    "rule": "detachment-auxiliary-cadre"
+  },
+  "tau-empire-stratagem-alien-expertise": {
+    "id": "tau-empire-stratagem-alien-expertise",
+    "title": "Alien Expertise",
+    "summary": "Your Movement phase, when a friendly KROOT/VESPID STINGWINGS unit is selected to make an advance move. That KROOT/VESPID STINGWINGS unit. That move does not prevent your unit from being eligible to declare a charge.",
+    "full": "Your Movement phase, when a friendly KROOT/VESPID STINGWINGS unit is selected to make an advance move. That KROOT/VESPID STINGWINGS unit. That move does not prevent your unit from being eligible to declare a charge.",
+    "glossary": "glossary-tau-empire-stratagem-alien-expertise",
+    "rule": "detachment-auxiliary-cadre"
+  },
+  "tau-empire-stratagem-guided-by-unity": {
+    "id": "tau-empire-stratagem-guided-by-unity",
+    "title": "Guided by Unity",
+    "summary": "Your Shooting phase, when a friendly T’AU EMPIRE unit (excluding KROOT/VESPID STINGWINGS units) is selected to shoot. That T’AU EMPIRE unit. Your unit’s ranged attacks that target a unit within 9\" of a friendly KROOT/VESPID STINGWINGS unit have [LETHAL HITS].",
+    "full": "Your Shooting phase, when a friendly T’AU EMPIRE unit (excluding KROOT/VESPID STINGWINGS units) is selected to shoot. That T’AU EMPIRE unit. Your unit’s ranged attacks that target a unit within 9\" of a friendly KROOT/VESPID STINGWINGS unit have [LETHAL HITS].",
+    "glossary": "glossary-tau-empire-stratagem-guided-by-unity",
+    "rule": "detachment-auxiliary-cadre"
   },
   "tau-empire-ability-breach-and-clear": {
     "id": "tau-empire-ability-breach-and-clear",

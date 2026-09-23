@@ -6007,7 +6007,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
   "detachments": [
     {
       "id": "carnival-of-excess",
-      "title": "Carnival of Excess",
+      "title": "CARNIVAL OF EXCESS",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -6017,7 +6017,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     },
     {
       "id": "coterie-of-the-conceited",
-      "title": "Coterie of the Conceited",
+      "title": "COTERIE OF THE CONCEITED",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -6026,39 +6026,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ]
     },
     {
-      "id": "court-of-the-phoenician",
-      "title": "Court of the Phoenician",
-      "sourceBookId": "emperors-children",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "emperors-children-detachment-rule-sensational-performance",
-        "emperors-children-detachment-rule-master-of-the-pageant"
-      ]
-    },
-    {
-      "id": "elegant-brutes",
-      "title": "Elegant Brutes",
-      "sourceBookId": "emperors-children",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "emperors-children-detachment-rule-eager-to-kill"
-      ]
-    },
-    {
-      "id": "frenzied-host",
-      "title": "Frenzied Host",
-      "sourceBookId": "emperors-children",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "emperors-children-detachment-rule-frantic-focus"
-      ]
-    },
-    {
       "id": "mercurial-host",
-      "title": "Mercurial Host",
+      "title": "MERCURIAL HOST",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
@@ -6068,22 +6037,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
     },
     {
       "id": "peerless-bladesmen",
-      "title": "Peerless Bladesmen",
+      "title": "PEERLESS BLADESMEN",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
         "emperors-children-detachment-rule-exquisite-swordsmanship"
-      ]
-    },
-    {
-      "id": "rapid-evisceration",
-      "title": "Rapid Evisceration",
-      "sourceBookId": "emperors-children",
-      "chapterRestriction": null,
-      "keywordGrants": [],
-      "detachmentRuleIds": [
-        "emperors-children-detachment-rule-mechanised-murder"
       ]
     },
     {
@@ -6097,13 +6056,54 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       ]
     },
     {
+      "id": "rapid-evisceration",
+      "title": "RAPID EVISCERATION",
+      "sourceBookId": "emperors-children",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-mechanised-murder"
+      ]
+    },
+    {
+      "id": "frenzied-host",
+      "title": "FRENZIED HOST",
+      "sourceBookId": "emperors-children",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-frantic-focus"
+      ]
+    },
+    {
+      "id": "court-of-the-phoenician",
+      "title": "COURT OF THE PHOENICIAN",
+      "sourceBookId": "emperors-children",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-sensational-performance",
+        "emperors-children-detachment-rule-master-of-the-pageant"
+      ]
+    },
+    {
       "id": "spectacle-of-slaughter",
-      "title": "Spectacle of Slaughter",
+      "title": "SPECTACLE OF SLAUGHTER",
       "sourceBookId": "emperors-children",
       "chapterRestriction": null,
       "keywordGrants": [],
       "detachmentRuleIds": [
         "emperors-children-detachment-rule-entitled-to-victory"
+      ]
+    },
+    {
+      "id": "elegant-brutes",
+      "title": "ELEGANT BRUTES",
+      "sourceBookId": "emperors-children",
+      "chapterRestriction": null,
+      "keywordGrants": [],
+      "detachmentRuleIds": [
+        "emperors-children-detachment-rule-eager-to-kill"
       ]
     }
   ],
@@ -6114,7 +6114,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "While an EMPEROR’S CHILDREN unit from your army is within 6\" of one or more friendly LEGIONS OF EXCESS units, it is Empowered.While a LEGIONS OF EXCESS unit from your army is within 6\" of one or more friendly EMPEROR’S CHILDREN units, it is Empowered.While a unit from your army is Empowered, weapons equipped by models in that unit have the [sustained hits 1] ability. If such a weapon already has that ability, each time an attack is made with that weapon, an unmodified Hit roll of 5+ scores a Critical Hit.LEGIONS OF EXCESSYou can include LEGIONS OF EXCESS units in your army, even though they do not have the EMPEROR’S CHILDREN Faction keyword. The combined points cost of such units you can include in your army is:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo LEGIONS OF EXCESS models from your army can be your WARLORD.",
       "sectionId": "carnival-of-excess-rule",
       "detachmentId": "carnival-of-excess",
-      "detachmentTitle": "Carnival of Excess",
+      "detachmentTitle": "CARNIVAL OF EXCESS",
       "sourceBookId": "emperors-children"
     },
     {
@@ -6123,43 +6123,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "At the start of the battle round, if your WARLORD is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your WARLORD model suffers D3 mortal wounds.EMPEROR’S CHILDREN units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).PACT POINTSBONUS1+Each time a model in this unit makes an attack, re-roll a Hit roll of 1.3+Each time a model in this unit makes an attack, re-roll a Wound roll of 1.5+Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAINED HITS 1] abilities.7+Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.",
       "sectionId": "coterie-of-the-conceited-rule",
       "detachmentId": "coterie-of-the-conceited",
-      "detachmentTitle": "Coterie of the Conceited",
-      "sourceBookId": "emperors-children"
-    },
-    {
-      "id": "emperors-children-detachment-rule-sensational-performance",
-      "title": "Sensational Performance",
-      "text": "EMPEROR’S CHILDREN units from your army have the following ability: Sensational Performance: Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase: This unit cannot target a unit it was within Engagement Range of at the start of the turn. This unit cannot target a unit that was the target of another unit’s attack this phase. Improve the Strength and Armour Penetration characteristics of this unit’s melee weapons by 1.",
-      "sectionId": "court-of-the-phoenician-rule",
-      "detachmentId": "court-of-the-phoenician",
-      "detachmentTitle": "Court of the Phoenician",
-      "sourceBookId": "emperors-children"
-    },
-    {
-      "id": "emperors-children-detachment-rule-master-of-the-pageant",
-      "title": "Master of the Pageant",
-      "text": "Once per battle round, when you target a FULGRIM unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.",
-      "sectionId": "court-of-the-phoenician-rule",
-      "detachmentId": "court-of-the-phoenician",
-      "detachmentTitle": "Court of the Phoenician",
-      "sourceBookId": "emperors-children"
-    },
-    {
-      "id": "emperors-children-detachment-rule-eager-to-kill",
-      "title": "Eager to Kill",
-      "text": "When a friendly EMPEROR’S CHILDREN TERMINATOR unit is set up, that unit has +1 to charge rolls until the end of the turn.",
-      "sectionId": "elegant-brutes-rule",
-      "detachmentId": "elegant-brutes",
-      "detachmentTitle": "Elegant Brutes",
-      "sourceBookId": "emperors-children"
-    },
-    {
-      "id": "emperors-children-detachment-rule-frantic-focus",
-      "title": "Frantic Focus",
-      "text": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn.",
-      "sectionId": "frenzied-host-rule",
-      "detachmentId": "frenzied-host",
-      "detachmentTitle": "Frenzied Host",
+      "detachmentTitle": "COTERIE OF THE CONCEITED",
       "sourceBookId": "emperors-children"
     },
     {
@@ -6168,7 +6132,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "You can re-roll Advance rolls made for EMPEROR’S CHILDREN units from your army.",
       "sectionId": "mercurial-host-rule",
       "detachmentId": "mercurial-host",
-      "detachmentTitle": "Mercurial Host",
+      "detachmentTitle": "MERCURIAL HOST",
       "sourceBookId": "emperors-children"
     },
     {
@@ -6177,16 +6141,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "text": "Each time an EMPEROR’S CHILDREN unit from your army is selected to fight, if it made a Charge move this turn, select one of the abilities below. While resolving those attacks, melee weapons equipped by models in that unit have that ability:[LETHAL HITS][SUSTAINED HITS 1]",
       "sectionId": "peerless-bladesmen-rule",
       "detachmentId": "peerless-bladesmen",
-      "detachmentTitle": "Peerless Bladesmen",
-      "sourceBookId": "emperors-children"
-    },
-    {
-      "id": "emperors-children-detachment-rule-mechanised-murder",
-      "title": "Mechanised Murder",
-      "text": "Each time an EMPEROR’S CHILDREN model from your army makes an attack, if it is a TRANSPORT model or disembarked from a TRANSPORT this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
-      "sectionId": "rapid-evisceration-rule",
-      "detachmentId": "rapid-evisceration",
-      "detachmentTitle": "Rapid Evisceration",
+      "detachmentTitle": "PEERLESS BLADESMEN",
       "sourceBookId": "emperors-children"
     },
     {
@@ -6199,12 +6154,57 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "sourceBookId": "emperors-children"
     },
     {
+      "id": "emperors-children-detachment-rule-mechanised-murder",
+      "title": "Mechanised Murder",
+      "text": "Each time an EMPEROR’S CHILDREN model from your army makes an attack, if it is a TRANSPORT model or disembarked from a TRANSPORT this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+      "sectionId": "rapid-evisceration-rule",
+      "detachmentId": "rapid-evisceration",
+      "detachmentTitle": "RAPID EVISCERATION",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-frantic-focus",
+      "title": "Frantic Focus",
+      "text": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn.",
+      "sectionId": "frenzied-host-rule",
+      "detachmentId": "frenzied-host",
+      "detachmentTitle": "FRENZIED HOST",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-sensational-performance",
+      "title": "Sensational Performance",
+      "text": "EMPEROR’S CHILDREN units from your army have the following ability: Sensational Performance: Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase: This unit cannot target a unit it was within Engagement Range of at the start of the turn. This unit cannot target a unit that was the target of another unit’s attack this phase. Improve the Strength and Armour Penetration characteristics of this unit’s melee weapons by 1.",
+      "sectionId": "court-of-the-phoenician-rule",
+      "detachmentId": "court-of-the-phoenician",
+      "detachmentTitle": "COURT OF THE PHOENICIAN",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-master-of-the-pageant",
+      "title": "Master of the Pageant",
+      "text": "Once per battle round, when you target a FULGRIM unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.",
+      "sectionId": "court-of-the-phoenician-rule",
+      "detachmentId": "court-of-the-phoenician",
+      "detachmentTitle": "COURT OF THE PHOENICIAN",
+      "sourceBookId": "emperors-children"
+    },
+    {
       "id": "emperors-children-detachment-rule-entitled-to-victory",
       "title": "Entitled to Victory",
       "text": "Friendly FLAWLESS BLADES units have Fights First.",
       "sectionId": "spectacle-of-slaughter-rule",
       "detachmentId": "spectacle-of-slaughter",
-      "detachmentTitle": "Spectacle of Slaughter",
+      "detachmentTitle": "SPECTACLE OF SLAUGHTER",
+      "sourceBookId": "emperors-children"
+    },
+    {
+      "id": "emperors-children-detachment-rule-eager-to-kill",
+      "title": "Eager to Kill",
+      "text": "When a friendly EMPEROR’S CHILDREN TERMINATOR unit is set up, that unit has +1 to charge rolls until the end of the turn.",
+      "sectionId": "elegant-brutes-rule",
+      "detachmentId": "elegant-brutes",
+      "detachmentTitle": "ELEGANT BRUTES",
       "sourceBookId": "emperors-children"
     }
   ],
@@ -6213,7 +6213,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Empyric Suffusion",
       "text": "EMPEROR’S CHILDREN model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
       "value": 15,
-      "detachment": "Carnival of Excess",
+      "detachment": "CARNIVAL OF EXCESS",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6236,11 +6236,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-empyric-suffusion",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-empyric-suffusion",
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
@@ -6252,7 +6247,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Dark Blessings",
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, just after an enemy unit has selected its targets, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer has a 3+ invulnerable save.",
       "value": 10,
-      "detachment": "Carnival of Excess",
+      "detachment": "CARNIVAL OF EXCESS",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6275,11 +6270,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-dark-blessings",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-dark-blessings",
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
@@ -6291,7 +6281,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Possessed Blade",
       "text": "EMPEROR’S CHILDREN model only. At the start of the battle, select one melee weapon equipped by the bearer; add 1 to the Attacks characteristic of that weapon. In addition, each time the bearer is selected to fight, it can use this Enhancement. If it does, while resolving those attacks, add 1 to the Damage characteristic of that weapon and that weapon has the [devastating wounds] and [hazardous] abilities.",
       "value": 35,
-      "detachment": "Carnival of Excess",
+      "detachment": "CARNIVAL OF EXCESS",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6314,11 +6304,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-possessed-blade",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-possessed-blade",
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
@@ -6330,7 +6315,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Warp Walker",
       "text": "EMPEROR’S CHILDREN or KEEPER OF SECRETS model only. Each time the bearer’s unit Advances, do not make an Advance roll . Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
       "value": 35,
-      "detachment": "Carnival of Excess",
+      "detachment": "CARNIVAL OF EXCESS",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6353,11 +6338,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-warp-walker",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-warp-walker",
       "detachmentId": "carnival-of-excess",
       "sourceBookId": "emperors-children",
@@ -6369,7 +6349,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Pledge of Eternal Servitude",
       "text": "EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).",
       "value": 25,
-      "detachment": "Coterie of the Conceited",
+      "detachment": "COTERIE OF THE CONCEITED",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6392,11 +6372,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-pledge-of-eternal-servitude",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-pledge-of-eternal-servitude",
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
@@ -6408,7 +6383,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Pledge of Dark Glory",
       "text": "EMPEROR’S CHILDREN model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1.",
       "value": 25,
-      "detachment": "Coterie of the Conceited",
+      "detachment": "COTERIE OF THE CONCEITED",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6431,11 +6406,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-pledge-of-dark-glory",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-pledge-of-dark-glory",
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
@@ -6447,7 +6417,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Pledge of Mortal Pain",
       "text": "EMPEROR’S CHILDREN model only. At the start of your Shooting phase , select one enemy unit within 12\" of and visible to the bearer. That unit must take a Leadership test , subtracting 2 from the result if it is Battle-shocked : if failed, that enemy unit suffers 3 mortal wounds .",
       "value": 15,
-      "detachment": "Coterie of the Conceited",
+      "detachment": "COTERIE OF THE CONCEITED",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6470,11 +6440,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-pledge-of-mortal-pain",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-pledge-of-mortal-pain",
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
@@ -6486,7 +6451,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Pledge of Unholy Fortune",
       "text": "EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll , a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked , it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
       "value": 30,
-      "detachment": "Coterie of the Conceited",
+      "detachment": "COTERIE OF THE CONCEITED",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6509,11 +6474,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-pledge-of-unholy-fortune",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-pledge-of-unholy-fortune",
       "detachmentId": "coterie-of-the-conceited",
       "sourceBookId": "emperors-children",
@@ -6522,371 +6482,10 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "canonicalDetachmentId": "coterie-of-the-conceited"
     },
     {
-      "title": "Tears of the Phoenix",
-      "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a melee attack, you can ignore any or all modifiers to that attack’s Weapon Skill characteristic and any or all modifiers to the Hit roll and Wound roll.",
-      "value": 25,
-      "detachment": "Court of the Phoenician",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-daemon-prince-of-slaanesh",
-            "unit-daemon-prince-of-slaanesh-with-wings",
-            "unit-lord-exultant",
-            "unit-lord-kakophonist",
-            "unit-sorcerer"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-tears-of-the-phoenix",
-      "sourcePages": [
-        5
-      ],
-      "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.1",
-        "sourcePages": [
-          5
-        ]
-      },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-tears-of-the-phoenix",
-      "detachmentId": "court-of-the-phoenician",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-tears-of-the-phoenix",
-      "canonicalEnhancementId": "enhancement-tears-of-the-phoenix",
-      "canonicalDetachmentId": "court-of-the-phoenician"
-    },
-    {
-      "title": "Exalted Patron",
-      "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
-      "value": 15,
-      "detachment": "Court of the Phoenician",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-lord-exultant"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-exalted-patron",
-      "sourcePages": [
-        5
-      ],
-      "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.1",
-        "sourcePages": [
-          5
-        ]
-      },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-exalted-patron",
-      "detachmentId": "court-of-the-phoenician",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-exalted-patron",
-      "canonicalEnhancementId": "enhancement-exalted-patron",
-      "canonicalDetachmentId": "court-of-the-phoenician"
-    },
-    {
-      "title": "Soulstain Made Manifest",
-      "text": "EMPEROR’S CHILDREN model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle-shock test, subtracting 1 from the result.",
-      "value": 15,
-      "detachment": "Court of the Phoenician",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-daemon-prince-of-slaanesh",
-            "unit-daemon-prince-of-slaanesh-with-wings",
-            "unit-lord-exultant",
-            "unit-lord-kakophonist",
-            "unit-sorcerer"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-soulstain-made-manifest",
-      "sourcePages": [
-        5
-      ],
-      "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.1",
-        "sourcePages": [
-          5
-        ]
-      },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-soulstain-made-manifest",
-      "detachmentId": "court-of-the-phoenician",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-soulstain-made-manifest",
-      "canonicalEnhancementId": "enhancement-soulstain-made-manifest",
-      "canonicalDetachmentId": "court-of-the-phoenician"
-    },
-    {
-      "title": "Spiritsliver",
-      "text": "EMPEROR’S CHILDREN DAEMON PRINCE model only. Add 1 to the Strength and Attacks characteristics of the bearer’s melee weapons.",
-      "value": 20,
-      "detachment": "Court of the Phoenician",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-daemon-prince-of-slaanesh"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-spiritsliver",
-      "sourcePages": [
-        5
-      ],
-      "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.1",
-        "sourcePages": [
-          5
-        ]
-      },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-spiritsliver",
-      "detachmentId": "court-of-the-phoenician",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-spiritsliver",
-      "canonicalEnhancementId": "enhancement-spiritsliver",
-      "canonicalDetachmentId": "court-of-the-phoenician"
-    },
-    {
-      "title": "Cacophonic Accompaniment",
-      "text": "LORD KAKOPHONIST model only. This model has Deep Strike. This unit’s ranged attacks have [IGNORES COVER].",
-      "value": 20,
-      "detachment": "Elegant Brutes",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-lord-kakophonist"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-cacophonic-accompaniment",
-      "sourcePages": [
-        2
-      ],
-      "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.1",
-        "sourcePages": [
-          2
-        ]
-      },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-cacophonic-accompaniment",
-      "detachmentId": "elegant-brutes",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-cacophonic-accompaniment",
-      "canonicalEnhancementId": "enhancement-cacophonic-accompaniment",
-      "canonicalDetachmentId": "elegant-brutes"
-    },
-    {
-      "title": "Frenzied Ferocity",
-      "text": "EMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks have [SUSTAINED HITS 1].",
-      "value": 15,
-      "detachment": "Elegant Brutes",
-      "tags": [
-        "UPGRADE"
-      ],
-      "owner": {
-        "subject": "unit",
-        "selector": {
-          "unitIds": [
-            "unit-chaos-terminators"
-          ],
-          "noneKeywords": []
-        }
-      },
-      "assignment": {
-        "maxOwners": 3,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-frenzied-ferocity",
-      "kind": "upgrade",
-      "sourcePages": [
-        2
-      ],
-      "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.1",
-        "sourcePages": [
-          2
-        ]
-      },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-frenzied-ferocity",
-      "detachmentId": "elegant-brutes",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-frenzied-ferocity",
-      "canonicalEnhancementId": "enhancement-frenzied-ferocity",
-      "canonicalDetachmentId": "elegant-brutes"
-    },
-    {
-      "title": "Euphoric Crown",
-      "text": "LORD EXULTANT model only. This model’s melee attacks have +1 S.",
-      "value": 20,
-      "detachment": "Frenzied Host",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-lord-exultant"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-euphoric-crown",
-      "sourcePages": [
-        3
-      ],
-      "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.1",
-        "sourcePages": [
-          3
-        ]
-      },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-euphoric-crown",
-      "detachmentId": "frenzied-host",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-euphoric-crown",
-      "canonicalEnhancementId": "enhancement-euphoric-crown",
-      "canonicalDetachmentId": "frenzied-host"
-    },
-    {
-      "title": "Howling Plate",
-      "text": "LORD EXULTANT model only. This unit’s ranged attacks have +1 AP.",
-      "value": 20,
-      "detachment": "Frenzied Host",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-lord-exultant"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-howling-plate",
-      "sourcePages": [
-        3
-      ],
-      "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.1",
-        "sourcePages": [
-          3
-        ]
-      },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-howling-plate",
-      "detachmentId": "frenzied-host",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-howling-plate",
-      "canonicalEnhancementId": "enhancement-howling-plate",
-      "canonicalDetachmentId": "frenzied-host"
-    },
-    {
       "title": "Steeped in Suffering",
       "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit below its Starting Strength , add 1 to the Hit roll . If that target is also Below Half-strength , add 1 to the Wound roll as well.",
       "value": 20,
-      "detachment": "Mercurial Host",
+      "detachment": "MERCURIAL HOST",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6909,11 +6508,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-steeped-in-suffering",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-steeped-in-suffering",
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
@@ -6925,7 +6519,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Intoxicating Musk",
       "text": "EMPEROR’S CHILDREN model only. Each time a melee attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll .",
       "value": 20,
-      "detachment": "Mercurial Host",
+      "detachment": "MERCURIAL HOST",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6948,11 +6542,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-intoxicating-musk",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-intoxicating-musk",
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
@@ -6964,7 +6553,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Tactical Perfection",
       "text": "EMPEROR’S CHILDREN model only. After both players have deployed their armies, select up to two EMPEROR’S CHILDREN units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "value": 15,
-      "detachment": "Mercurial Host",
+      "detachment": "MERCURIAL HOST",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -6987,11 +6576,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-tactical-perfection",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-tactical-perfection",
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
@@ -7003,7 +6587,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Loathsome Dexterity",
       "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
       "value": 10,
-      "detachment": "Mercurial Host",
+      "detachment": "MERCURIAL HOST",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -7026,11 +6610,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-loathsome-dexterity",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-loathsome-dexterity",
       "detachmentId": "mercurial-host",
       "sourceBookId": "emperors-children",
@@ -7042,7 +6621,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Faultless Opportunist",
       "text": "EMPEROR’S CHILDREN model only. You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase.",
       "value": 15,
-      "detachment": "Peerless Bladesmen",
+      "detachment": "PEERLESS BLADESMEN",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -7065,11 +6644,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-faultless-opportunist",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-faultless-opportunist",
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
@@ -7081,7 +6655,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Blinding Speed",
       "text": "EMPEROR’S CHILDREN model only. Once per battle, at the start of the Fight phase , the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
       "value": 25,
-      "detachment": "Peerless Bladesmen",
+      "detachment": "PEERLESS BLADESMEN",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -7104,11 +6678,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-blinding-speed",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-blinding-speed",
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
@@ -7120,7 +6689,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Distortion",
       "text": "EMPEROR’S CHILDREN model only. Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer.",
       "value": 25,
-      "detachment": "Peerless Bladesmen",
+      "detachment": "PEERLESS BLADESMEN",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -7143,11 +6712,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-distortion",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-distortion",
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
@@ -7159,7 +6723,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Rise to the Challenge",
       "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, at the end of the Fight phase , if the bearer is within Engagement Range of three or more enemy models, it can use this Enhancement. If it does, the bearer can fight one additional time. When doing so, you can select one ability using the Exquisite Swordsmanship Detachment rule to apply to those attacks.",
       "value": 30,
-      "detachment": "Peerless Bladesmen",
+      "detachment": "PEERLESS BLADESMEN",
       "tags": [],
       "owner": {
         "subject": "model",
@@ -7182,173 +6746,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-rise-to-the-challenge",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-rise-to-the-challenge",
       "detachmentId": "peerless-bladesmen",
       "sourceBookId": "emperors-children",
       "legacyKey": "enhancement-rise-to-the-challenge",
       "canonicalEnhancementId": "enhancement-rise-to-the-challenge",
       "canonicalDetachmentId": "peerless-bladesmen"
-    },
-    {
-      "title": "Sublime Prescience",
-      "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your Movement phase , the bearer can use this Enhancement. If it does, select one friendly EMPEROR’S CHILDREN TRANSPORT that is in Strategic Reserves . Until the end of the phase, for the purposes of setting up that TRANSPORT on the battlefield, treat the current battle round number as being one higher than it actually is.",
-      "value": 25,
-      "detachment": "Rapid Evisceration",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-daemon-prince-of-slaanesh",
-            "unit-daemon-prince-of-slaanesh-with-wings",
-            "unit-lord-exultant",
-            "unit-lord-kakophonist",
-            "unit-sorcerer"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-sublime-prescience",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-sublime-prescience",
-      "detachmentId": "rapid-evisceration",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-sublime-prescience",
-      "canonicalEnhancementId": "enhancement-sublime-prescience",
-      "canonicalDetachmentId": "rapid-evisceration"
-    },
-    {
-      "title": "Spearhead Striker",
-      "text": "EMPEROR’S CHILDREN INFANTRY model only. Each time the bearer disembarks from a TRANSPORT , until the end of the turn, you can re-roll Charge rolls made for the bearer’s unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
-      "value": 20,
-      "detachment": "Rapid Evisceration",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-daemon-prince-of-slaanesh",
-            "unit-daemon-prince-of-slaanesh-with-wings",
-            "unit-lord-exultant",
-            "unit-lord-kakophonist",
-            "unit-sorcerer"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-spearhead-striker",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-spearhead-striker",
-      "detachmentId": "rapid-evisceration",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-spearhead-striker",
-      "canonicalEnhancementId": "enhancement-spearhead-striker",
-      "canonicalDetachmentId": "rapid-evisceration"
-    },
-    {
-      "title": "Accomplished Tactician",
-      "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your opponent’s Shooting phase , just after an enemy unit has shot, you can select one friendly EMPEROR’S CHILDREN unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly TRANSPORT that unit is wholly within 6\" of and is able to embark within. That EMPEROR’S CHILDREN unit can embark within that Transport.",
-      "value": 35,
-      "detachment": "Rapid Evisceration",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-daemon-prince-of-slaanesh",
-            "unit-daemon-prince-of-slaanesh-with-wings",
-            "unit-lord-exultant",
-            "unit-lord-kakophonist",
-            "unit-sorcerer"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-accomplished-tactician",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-accomplished-tactician",
-      "detachmentId": "rapid-evisceration",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-accomplished-tactician",
-      "canonicalEnhancementId": "enhancement-accomplished-tactician",
-      "canonicalDetachmentId": "rapid-evisceration"
-    },
-    {
-      "title": "Heretek Adept",
-      "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle round , when a saving throw is failed for a friendly EMPEROR’S CHILDREN VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
-      "value": 35,
-      "detachment": "Rapid Evisceration",
-      "tags": [],
-      "owner": {
-        "subject": "model",
-        "selector": {
-          "unitIds": [
-            "unit-daemon-prince-of-slaanesh",
-            "unit-daemon-prince-of-slaanesh-with-wings",
-            "unit-lord-exultant",
-            "unit-lord-kakophonist",
-            "unit-sorcerer"
-          ],
-          "noneKeywords": [
-            "EPIC HERO"
-          ]
-        }
-      },
-      "assignment": {
-        "maxOwners": 1,
-        "enhancementChoices": 1,
-        "payPointsPerOwner": true
-      },
-      "id": "enhancement-heretek-adept",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
-      "ruleId": "enhancement-heretek-adept",
-      "detachmentId": "rapid-evisceration",
-      "sourceBookId": "emperors-children",
-      "legacyKey": "enhancement-heretek-adept",
-      "canonicalEnhancementId": "enhancement-heretek-adept",
-      "canonicalDetachmentId": "rapid-evisceration"
     },
     {
       "title": "Eager to Prove",
@@ -7377,11 +6780,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-eager-to-prove",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-eager-to-prove",
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
@@ -7416,11 +6814,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-repulsed-by-weakness",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-repulsed-by-weakness",
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
@@ -7455,11 +6848,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-proud-and-vainglorious",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-proud-and-vainglorious",
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
@@ -7494,11 +6882,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "payPointsPerOwner": true
       },
       "id": "enhancement-slayer-of-champions",
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-slayer-of-champions",
       "detachmentId": "slaaneshs-chosen",
       "sourceBookId": "emperors-children",
@@ -7507,10 +6890,388 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "canonicalDetachmentId": "slaaneshs-chosen"
     },
     {
+      "title": "Sublime Prescience",
+      "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your Movement phase , the bearer can use this Enhancement. If it does, select one friendly EMPEROR’S CHILDREN TRANSPORT that is in Strategic Reserves . Until the end of the phase, for the purposes of setting up that TRANSPORT on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "value": 25,
+      "detachment": "RAPID EVISCERATION",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-daemon-prince-of-slaanesh",
+            "unit-daemon-prince-of-slaanesh-with-wings",
+            "unit-lord-exultant",
+            "unit-lord-kakophonist",
+            "unit-sorcerer"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-sublime-prescience",
+      "ruleId": "enhancement-sublime-prescience",
+      "detachmentId": "rapid-evisceration",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-sublime-prescience",
+      "canonicalEnhancementId": "enhancement-sublime-prescience",
+      "canonicalDetachmentId": "rapid-evisceration"
+    },
+    {
+      "title": "Spearhead Striker",
+      "text": "EMPEROR’S CHILDREN INFANTRY model only. Each time the bearer disembarks from a TRANSPORT , until the end of the turn, you can re-roll Charge rolls made for the bearer’s unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+      "value": 20,
+      "detachment": "RAPID EVISCERATION",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-daemon-prince-of-slaanesh",
+            "unit-daemon-prince-of-slaanesh-with-wings",
+            "unit-lord-exultant",
+            "unit-lord-kakophonist",
+            "unit-sorcerer"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-spearhead-striker",
+      "ruleId": "enhancement-spearhead-striker",
+      "detachmentId": "rapid-evisceration",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-spearhead-striker",
+      "canonicalEnhancementId": "enhancement-spearhead-striker",
+      "canonicalDetachmentId": "rapid-evisceration"
+    },
+    {
+      "title": "Accomplished Tactician",
+      "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your opponent’s Shooting phase , just after an enemy unit has shot, you can select one friendly EMPEROR’S CHILDREN unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly TRANSPORT that unit is wholly within 6\" of and is able to embark within. That EMPEROR’S CHILDREN unit can embark within that Transport.",
+      "value": 35,
+      "detachment": "RAPID EVISCERATION",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-daemon-prince-of-slaanesh",
+            "unit-daemon-prince-of-slaanesh-with-wings",
+            "unit-lord-exultant",
+            "unit-lord-kakophonist",
+            "unit-sorcerer"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-accomplished-tactician",
+      "ruleId": "enhancement-accomplished-tactician",
+      "detachmentId": "rapid-evisceration",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-accomplished-tactician",
+      "canonicalEnhancementId": "enhancement-accomplished-tactician",
+      "canonicalDetachmentId": "rapid-evisceration"
+    },
+    {
+      "title": "Heretek Adept",
+      "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle round , when a saving throw is failed for a friendly EMPEROR’S CHILDREN VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+      "value": 35,
+      "detachment": "RAPID EVISCERATION",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-daemon-prince-of-slaanesh",
+            "unit-daemon-prince-of-slaanesh-with-wings",
+            "unit-lord-exultant",
+            "unit-lord-kakophonist",
+            "unit-sorcerer"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-heretek-adept",
+      "ruleId": "enhancement-heretek-adept",
+      "detachmentId": "rapid-evisceration",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-heretek-adept",
+      "canonicalEnhancementId": "enhancement-heretek-adept",
+      "canonicalDetachmentId": "rapid-evisceration"
+    },
+    {
+      "title": "Euphoric Crown",
+      "text": "LORD EXULTANT model only. This model’s melee attacks have +1 S.",
+      "value": 20,
+      "detachment": "FRENZIED HOST",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-lord-exultant"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-euphoric-crown",
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "emperors-children-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      },
+      "ruleId": "enhancement-euphoric-crown",
+      "detachmentId": "frenzied-host",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-euphoric-crown",
+      "canonicalEnhancementId": "enhancement-euphoric-crown",
+      "canonicalDetachmentId": "frenzied-host"
+    },
+    {
+      "title": "Howling Plate",
+      "text": "LORD EXULTANT model only. This unit’s ranged attacks have +1 AP.",
+      "value": 20,
+      "detachment": "FRENZIED HOST",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-lord-exultant"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-howling-plate",
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "emperors-children-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      },
+      "ruleId": "enhancement-howling-plate",
+      "detachmentId": "frenzied-host",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-howling-plate",
+      "canonicalEnhancementId": "enhancement-howling-plate",
+      "canonicalDetachmentId": "frenzied-host"
+    },
+    {
+      "title": "Tears of the Phoenix",
+      "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a melee attack, you can ignore any or all modifiers to that attack’s Weapon Skill characteristic and any or all modifiers to the Hit roll and Wound roll.",
+      "value": 25,
+      "detachment": "COURT OF THE PHOENICIAN",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-daemon-prince-of-slaanesh",
+            "unit-daemon-prince-of-slaanesh-with-wings",
+            "unit-lord-exultant",
+            "unit-lord-kakophonist",
+            "unit-sorcerer"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-tears-of-the-phoenix",
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "emperors-children-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "ruleId": "enhancement-tears-of-the-phoenix",
+      "detachmentId": "court-of-the-phoenician",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-tears-of-the-phoenix",
+      "canonicalEnhancementId": "enhancement-tears-of-the-phoenix",
+      "canonicalDetachmentId": "court-of-the-phoenician"
+    },
+    {
+      "title": "Exalted Patron",
+      "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
+      "value": 15,
+      "detachment": "COURT OF THE PHOENICIAN",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-lord-exultant"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-exalted-patron",
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "emperors-children-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "ruleId": "enhancement-exalted-patron",
+      "detachmentId": "court-of-the-phoenician",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-exalted-patron",
+      "canonicalEnhancementId": "enhancement-exalted-patron",
+      "canonicalDetachmentId": "court-of-the-phoenician"
+    },
+    {
+      "title": "Soulstain Made Manifest",
+      "text": "EMPEROR’S CHILDREN model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle-shock test, subtracting 1 from the result.",
+      "value": 15,
+      "detachment": "COURT OF THE PHOENICIAN",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-daemon-prince-of-slaanesh",
+            "unit-daemon-prince-of-slaanesh-with-wings",
+            "unit-lord-exultant",
+            "unit-lord-kakophonist",
+            "unit-sorcerer"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-soulstain-made-manifest",
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "emperors-children-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "ruleId": "enhancement-soulstain-made-manifest",
+      "detachmentId": "court-of-the-phoenician",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-soulstain-made-manifest",
+      "canonicalEnhancementId": "enhancement-soulstain-made-manifest",
+      "canonicalDetachmentId": "court-of-the-phoenician"
+    },
+    {
+      "title": "Spiritsliver",
+      "text": "EMPEROR’S CHILDREN DAEMON PRINCE model only. Add 1 to the Strength and Attacks characteristics of the bearer’s melee weapons.",
+      "value": 20,
+      "detachment": "COURT OF THE PHOENICIAN",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-daemon-prince-of-slaanesh"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-spiritsliver",
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "emperors-children-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "ruleId": "enhancement-spiritsliver",
+      "detachmentId": "court-of-the-phoenician",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-spiritsliver",
+      "canonicalEnhancementId": "enhancement-spiritsliver",
+      "canonicalDetachmentId": "court-of-the-phoenician"
+    },
+    {
       "title": "Eager Patrons",
       "text": "FLAWLESS BLADES unit only. This unit has +2\" M.",
       "value": 20,
-      "detachment": "Spectacle of Slaughter",
+      "detachment": "SPECTACLE OF SLAUGHTER",
       "tags": [
         "UPGRADE"
       ],
@@ -7539,11 +7300,6 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-eager-patrons",
       "detachmentId": "spectacle-of-slaughter",
       "sourceBookId": "emperors-children",
@@ -7555,7 +7311,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "title": "Beguiling Grotesquerie",
       "text": "FLAWLESS BLADES unit only. Enemy units cannot target this unit with snap shooting attacks.",
       "value": 15,
-      "detachment": "Spectacle of Slaughter",
+      "detachment": "SPECTACLE OF SLAUGHTER",
       "tags": [
         "UPGRADE"
       ],
@@ -7584,17 +7340,91 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           4
         ]
       },
-      "pointsSource": {
-        "label": "Official MFM v1.3",
-        "url": "https://mfm.warhammer-community.com/en/emperors-children",
-        "verifiedAt": "2026-08-27"
-      },
       "ruleId": "enhancement-beguiling-grotesquerie",
       "detachmentId": "spectacle-of-slaughter",
       "sourceBookId": "emperors-children",
       "legacyKey": "enhancement-beguiling-grotesquerie",
       "canonicalEnhancementId": "enhancement-beguiling-grotesquerie",
       "canonicalDetachmentId": "spectacle-of-slaughter"
+    },
+    {
+      "title": "Cacophonic Accompaniment",
+      "text": "LORD KAKOPHONIST model only. This model has Deep Strike. This unit’s ranged attacks have [IGNORES COVER].",
+      "value": 20,
+      "detachment": "ELEGANT BRUTES",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-lord-kakophonist"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-cacophonic-accompaniment",
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "emperors-children-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
+      },
+      "ruleId": "enhancement-cacophonic-accompaniment",
+      "detachmentId": "elegant-brutes",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-cacophonic-accompaniment",
+      "canonicalEnhancementId": "enhancement-cacophonic-accompaniment",
+      "canonicalDetachmentId": "elegant-brutes"
+    },
+    {
+      "title": "Frenzied Ferocity",
+      "text": "EMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks have [SUSTAINED HITS 1].",
+      "value": 15,
+      "detachment": "ELEGANT BRUTES",
+      "tags": [
+        "UPGRADE"
+      ],
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-chaos-terminators"
+          ],
+          "noneKeywords": []
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "id": "enhancement-frenzied-ferocity",
+      "kind": "upgrade",
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "emperors-children-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
+      },
+      "ruleId": "enhancement-frenzied-ferocity",
+      "detachmentId": "elegant-brutes",
+      "sourceBookId": "emperors-children",
+      "legacyKey": "enhancement-frenzied-ferocity",
+      "canonicalEnhancementId": "enhancement-frenzied-ferocity",
+      "canonicalDetachmentId": "elegant-brutes"
     }
   ],
   "effectContracts": [
@@ -9276,7 +9106,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Empyric Suffusion",
     "text": "EMPEROR’S CHILDREN model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
     "value": 15,
-    "detachment": "Carnival of Excess",
+    "detachment": "CARNIVAL OF EXCESS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9305,7 +9135,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Dark Blessings",
     "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, just after an enemy unit has selected its targets, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer has a 3+ invulnerable save.",
     "value": 10,
-    "detachment": "Carnival of Excess",
+    "detachment": "CARNIVAL OF EXCESS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9334,7 +9164,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Possessed Blade",
     "text": "EMPEROR’S CHILDREN model only. At the start of the battle, select one melee weapon equipped by the bearer; add 1 to the Attacks characteristic of that weapon. In addition, each time the bearer is selected to fight, it can use this Enhancement. If it does, while resolving those attacks, add 1 to the Damage characteristic of that weapon and that weapon has the [devastating wounds] and [hazardous] abilities.",
     "value": 35,
-    "detachment": "Carnival of Excess",
+    "detachment": "CARNIVAL OF EXCESS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9363,7 +9193,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Warp Walker",
     "text": "EMPEROR’S CHILDREN or KEEPER OF SECRETS model only. Each time the bearer’s unit Advances, do not make an Advance roll . Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
     "value": 35,
-    "detachment": "Carnival of Excess",
+    "detachment": "CARNIVAL OF EXCESS",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9392,7 +9222,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Pledge of Eternal Servitude",
     "text": "EMPEROR’S CHILDREN model only. The first time the bearer is destroyed, take a Leadership test for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).",
     "value": 25,
-    "detachment": "Coterie of the Conceited",
+    "detachment": "COTERIE OF THE CONCEITED",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9421,7 +9251,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Pledge of Dark Glory",
     "text": "EMPEROR’S CHILDREN model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1.",
     "value": 25,
-    "detachment": "Coterie of the Conceited",
+    "detachment": "COTERIE OF THE CONCEITED",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9450,7 +9280,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Pledge of Mortal Pain",
     "text": "EMPEROR’S CHILDREN model only. At the start of your Shooting phase , select one enemy unit within 12\" of and visible to the bearer. That unit must take a Leadership test , subtracting 2 from the result if it is Battle-shocked : if failed, that enemy unit suffers 3 mortal wounds .",
     "value": 15,
-    "detachment": "Coterie of the Conceited",
+    "detachment": "COTERIE OF THE CONCEITED",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9479,7 +9309,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Pledge of Unholy Fortune",
     "text": "EMPEROR’S CHILDREN model only. Once per turn, just after making a Hit roll , a Wound roll or a saving throw for a model in the bearer’s unit, if the bearer is not Battle-shocked , it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.",
     "value": 30,
-    "detachment": "Coterie of the Conceited",
+    "detachment": "COTERIE OF THE CONCEITED",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9504,219 +9334,11 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "ruleId": "enhancement-pledge-of-unholy-fortune",
     "detachmentId": "coterie-of-the-conceited"
   },
-  "tears of the phoenix": {
-    "title": "Tears of the Phoenix",
-    "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a melee attack, you can ignore any or all modifiers to that attack’s Weapon Skill characteristic and any or all modifiers to the Hit roll and Wound roll.",
-    "value": 25,
-    "detachment": "Court of the Phoenician",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-daemon-prince-of-slaanesh",
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-sorcerer"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-tears-of-the-phoenix",
-    "detachmentId": "court-of-the-phoenician"
-  },
-  "exalted patron": {
-    "title": "Exalted Patron",
-    "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
-    "value": 15,
-    "detachment": "Court of the Phoenician",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-lord-exultant"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-exalted-patron",
-    "detachmentId": "court-of-the-phoenician"
-  },
-  "soulstain made manifest": {
-    "title": "Soulstain Made Manifest",
-    "text": "EMPEROR’S CHILDREN model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle-shock test, subtracting 1 from the result.",
-    "value": 15,
-    "detachment": "Court of the Phoenician",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-daemon-prince-of-slaanesh",
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-sorcerer"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-soulstain-made-manifest",
-    "detachmentId": "court-of-the-phoenician"
-  },
-  "spiritsliver": {
-    "title": "Spiritsliver",
-    "text": "EMPEROR’S CHILDREN DAEMON PRINCE model only. Add 1 to the Strength and Attacks characteristics of the bearer’s melee weapons.",
-    "value": 20,
-    "detachment": "Court of the Phoenician",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-daemon-prince-of-slaanesh"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-spiritsliver",
-    "detachmentId": "court-of-the-phoenician"
-  },
-  "cacophonic accompaniment": {
-    "title": "Cacophonic Accompaniment",
-    "text": "LORD KAKOPHONIST model only. This model has Deep Strike. This unit’s ranged attacks have [IGNORES COVER].",
-    "value": 20,
-    "detachment": "Elegant Brutes",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-lord-kakophonist"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-cacophonic-accompaniment",
-    "detachmentId": "elegant-brutes"
-  },
-  "frenzied ferocity": {
-    "title": "Frenzied Ferocity",
-    "text": "EMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks have [SUSTAINED HITS 1].",
-    "value": null,
-    "detachment": "Elegant Brutes",
-    "tags": [
-      "UPGRADE"
-    ],
-    "owner": {
-      "subject": "unit",
-      "selector": {
-        "unitIds": [
-          "unit-chaos-terminators"
-        ],
-        "noneKeywords": []
-      }
-    },
-    "assignment": {
-      "maxOwners": 3,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-frenzied-ferocity",
-    "detachmentId": "elegant-brutes"
-  },
-  "euphoric crown": {
-    "title": "Euphoric Crown",
-    "text": "LORD EXULTANT model only. This model’s melee attacks have +1 S.",
-    "value": 20,
-    "detachment": "Frenzied Host",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-lord-exultant"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-euphoric-crown",
-    "detachmentId": "frenzied-host"
-  },
-  "howling plate": {
-    "title": "Howling Plate",
-    "text": "LORD EXULTANT model only. This unit’s ranged attacks have +1 AP.",
-    "value": 20,
-    "detachment": "Frenzied Host",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-lord-exultant"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-howling-plate",
-    "detachmentId": "frenzied-host"
-  },
   "steeped in suffering": {
     "title": "Steeped in Suffering",
     "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes an attack that targets an enemy unit below its Starting Strength , add 1 to the Hit roll . If that target is also Below Half-strength , add 1 to the Wound roll as well.",
     "value": 20,
-    "detachment": "Mercurial Host",
+    "detachment": "MERCURIAL HOST",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9745,7 +9367,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Intoxicating Musk",
     "text": "EMPEROR’S CHILDREN model only. Each time a melee attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll .",
     "value": 20,
-    "detachment": "Mercurial Host",
+    "detachment": "MERCURIAL HOST",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9774,7 +9396,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Tactical Perfection",
     "text": "EMPEROR’S CHILDREN model only. After both players have deployed their armies, select up to two EMPEROR’S CHILDREN units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
     "value": 15,
-    "detachment": "Mercurial Host",
+    "detachment": "MERCURIAL HOST",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9803,7 +9425,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Loathsome Dexterity",
     "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a Normal , Advance or Fall Back move , it can move through enemy models. When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
     "value": 10,
-    "detachment": "Mercurial Host",
+    "detachment": "MERCURIAL HOST",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9832,7 +9454,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Faultless Opportunist",
     "text": "EMPEROR’S CHILDREN model only. You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: That use is -1 CP. That use does not prevent any uses of that stratagem on other units this phase.",
     "value": 15,
-    "detachment": "Peerless Bladesmen",
+    "detachment": "PEERLESS BLADESMEN",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9861,7 +9483,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Blinding Speed",
     "text": "EMPEROR’S CHILDREN model only. Once per battle, at the start of the Fight phase , the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
     "value": 25,
-    "detachment": "Peerless Bladesmen",
+    "detachment": "PEERLESS BLADESMEN",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9890,7 +9512,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Distortion",
     "text": "EMPEROR’S CHILDREN model only. Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer.",
     "value": 25,
-    "detachment": "Peerless Bladesmen",
+    "detachment": "PEERLESS BLADESMEN",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9919,7 +9541,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Rise to the Challenge",
     "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle, at the end of the Fight phase , if the bearer is within Engagement Range of three or more enemy models, it can use this Enhancement. If it does, the bearer can fight one additional time. When doing so, you can select one ability using the Exquisite Swordsmanship Detachment rule to apply to those attacks.",
     "value": 30,
-    "detachment": "Peerless Bladesmen",
+    "detachment": "PEERLESS BLADESMEN",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -9943,122 +9565,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     },
     "ruleId": "enhancement-rise-to-the-challenge",
     "detachmentId": "peerless-bladesmen"
-  },
-  "sublime prescience": {
-    "title": "Sublime Prescience",
-    "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your Movement phase , the bearer can use this Enhancement. If it does, select one friendly EMPEROR’S CHILDREN TRANSPORT that is in Strategic Reserves . Until the end of the phase, for the purposes of setting up that TRANSPORT on the battlefield, treat the current battle round number as being one higher than it actually is.",
-    "value": 25,
-    "detachment": "Rapid Evisceration",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-daemon-prince-of-slaanesh",
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-sorcerer"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-sublime-prescience",
-    "detachmentId": "rapid-evisceration"
-  },
-  "spearhead striker": {
-    "title": "Spearhead Striker",
-    "text": "EMPEROR’S CHILDREN INFANTRY model only. Each time the bearer disembarks from a TRANSPORT , until the end of the turn, you can re-roll Charge rolls made for the bearer’s unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
-    "value": 20,
-    "detachment": "Rapid Evisceration",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-daemon-prince-of-slaanesh",
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-sorcerer"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-spearhead-striker",
-    "detachmentId": "rapid-evisceration"
-  },
-  "accomplished tactician": {
-    "title": "Accomplished Tactician",
-    "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your opponent’s Shooting phase , just after an enemy unit has shot, you can select one friendly EMPEROR’S CHILDREN unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly TRANSPORT that unit is wholly within 6\" of and is able to embark within. That EMPEROR’S CHILDREN unit can embark within that Transport.",
-    "value": 35,
-    "detachment": "Rapid Evisceration",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-daemon-prince-of-slaanesh",
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-sorcerer"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-accomplished-tactician",
-    "detachmentId": "rapid-evisceration"
-  },
-  "heretek adept": {
-    "title": "Heretek Adept",
-    "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle round , when a saving throw is failed for a friendly EMPEROR’S CHILDREN VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
-    "value": 35,
-    "detachment": "Rapid Evisceration",
-    "tags": [],
-    "owner": {
-      "subject": "model",
-      "selector": {
-        "unitIds": [
-          "unit-daemon-prince-of-slaanesh",
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-sorcerer"
-        ],
-        "noneKeywords": [
-          "EPIC HERO"
-        ]
-      }
-    },
-    "assignment": {
-      "maxOwners": 1,
-      "enhancementChoices": 1,
-      "payPointsPerOwner": true
-    },
-    "ruleId": "enhancement-heretek-adept",
-    "detachmentId": "rapid-evisceration"
   },
   "eager to prove": {
     "title": "Eager to Prove",
@@ -10176,11 +9682,285 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "ruleId": "enhancement-slayer-of-champions",
     "detachmentId": "slaaneshs-chosen"
   },
+  "sublime prescience": {
+    "title": "Sublime Prescience",
+    "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your Movement phase , the bearer can use this Enhancement. If it does, select one friendly EMPEROR’S CHILDREN TRANSPORT that is in Strategic Reserves . Until the end of the phase, for the purposes of setting up that TRANSPORT on the battlefield, treat the current battle round number as being one higher than it actually is.",
+    "value": 25,
+    "detachment": "RAPID EVISCERATION",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-daemon-prince-of-slaanesh",
+          "unit-daemon-prince-of-slaanesh-with-wings",
+          "unit-lord-exultant",
+          "unit-lord-kakophonist",
+          "unit-sorcerer"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-sublime-prescience",
+    "detachmentId": "rapid-evisceration"
+  },
+  "spearhead striker": {
+    "title": "Spearhead Striker",
+    "text": "EMPEROR’S CHILDREN INFANTRY model only. Each time the bearer disembarks from a TRANSPORT , until the end of the turn, you can re-roll Charge rolls made for the bearer’s unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+    "value": 20,
+    "detachment": "RAPID EVISCERATION",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-daemon-prince-of-slaanesh",
+          "unit-daemon-prince-of-slaanesh-with-wings",
+          "unit-lord-exultant",
+          "unit-lord-kakophonist",
+          "unit-sorcerer"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-spearhead-striker",
+    "detachmentId": "rapid-evisceration"
+  },
+  "accomplished tactician": {
+    "title": "Accomplished Tactician",
+    "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per turn, in your opponent’s Shooting phase , just after an enemy unit has shot, you can select one friendly EMPEROR’S CHILDREN unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly TRANSPORT that unit is wholly within 6\" of and is able to embark within. That EMPEROR’S CHILDREN unit can embark within that Transport.",
+    "value": 35,
+    "detachment": "RAPID EVISCERATION",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-daemon-prince-of-slaanesh",
+          "unit-daemon-prince-of-slaanesh-with-wings",
+          "unit-lord-exultant",
+          "unit-lord-kakophonist",
+          "unit-sorcerer"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-accomplished-tactician",
+    "detachmentId": "rapid-evisceration"
+  },
+  "heretek adept": {
+    "title": "Heretek Adept",
+    "text": "EMPEROR’S CHILDREN INFANTRY model only. Once per battle round , when a saving throw is failed for a friendly EMPEROR’S CHILDREN VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+    "value": 35,
+    "detachment": "RAPID EVISCERATION",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-daemon-prince-of-slaanesh",
+          "unit-daemon-prince-of-slaanesh-with-wings",
+          "unit-lord-exultant",
+          "unit-lord-kakophonist",
+          "unit-sorcerer"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-heretek-adept",
+    "detachmentId": "rapid-evisceration"
+  },
+  "euphoric crown": {
+    "title": "Euphoric Crown",
+    "text": "LORD EXULTANT model only. This model’s melee attacks have +1 S.",
+    "value": 20,
+    "detachment": "FRENZIED HOST",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-lord-exultant"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-euphoric-crown",
+    "detachmentId": "frenzied-host"
+  },
+  "howling plate": {
+    "title": "Howling Plate",
+    "text": "LORD EXULTANT model only. This unit’s ranged attacks have +1 AP.",
+    "value": 20,
+    "detachment": "FRENZIED HOST",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-lord-exultant"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-howling-plate",
+    "detachmentId": "frenzied-host"
+  },
+  "tears of the phoenix": {
+    "title": "Tears of the Phoenix",
+    "text": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a melee attack, you can ignore any or all modifiers to that attack’s Weapon Skill characteristic and any or all modifiers to the Hit roll and Wound roll.",
+    "value": 25,
+    "detachment": "COURT OF THE PHOENICIAN",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-daemon-prince-of-slaanesh",
+          "unit-daemon-prince-of-slaanesh-with-wings",
+          "unit-lord-exultant",
+          "unit-lord-kakophonist",
+          "unit-sorcerer"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-tears-of-the-phoenix",
+    "detachmentId": "court-of-the-phoenician"
+  },
+  "exalted patron": {
+    "title": "Exalted Patron",
+    "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
+    "value": 15,
+    "detachment": "COURT OF THE PHOENICIAN",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-lord-exultant"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-exalted-patron",
+    "detachmentId": "court-of-the-phoenician"
+  },
+  "soulstain made manifest": {
+    "title": "Soulstain Made Manifest",
+    "text": "EMPEROR’S CHILDREN model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle-shock test, subtracting 1 from the result.",
+    "value": 15,
+    "detachment": "COURT OF THE PHOENICIAN",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-daemon-prince-of-slaanesh",
+          "unit-daemon-prince-of-slaanesh-with-wings",
+          "unit-lord-exultant",
+          "unit-lord-kakophonist",
+          "unit-sorcerer"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-soulstain-made-manifest",
+    "detachmentId": "court-of-the-phoenician"
+  },
+  "spiritsliver": {
+    "title": "Spiritsliver",
+    "text": "EMPEROR’S CHILDREN DAEMON PRINCE model only. Add 1 to the Strength and Attacks characteristics of the bearer’s melee weapons.",
+    "value": 20,
+    "detachment": "COURT OF THE PHOENICIAN",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-daemon-prince-of-slaanesh"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-spiritsliver",
+    "detachmentId": "court-of-the-phoenician"
+  },
   "eager patrons": {
     "title": "Eager Patrons",
     "text": "FLAWLESS BLADES unit only. This unit has +2\" M.",
     "value": null,
-    "detachment": "Spectacle of Slaughter",
+    "detachment": "SPECTACLE OF SLAUGHTER",
     "tags": [
       "UPGRADE"
     ],
@@ -10205,7 +9985,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     "title": "Beguiling Grotesquerie",
     "text": "FLAWLESS BLADES unit only. Enemy units cannot target this unit with snap shooting attacks.",
     "value": null,
-    "detachment": "Spectacle of Slaughter",
+    "detachment": "SPECTACLE OF SLAUGHTER",
     "tags": [
       "UPGRADE"
     ],
@@ -10225,5 +10005,55 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
     },
     "ruleId": "enhancement-beguiling-grotesquerie",
     "detachmentId": "spectacle-of-slaughter"
+  },
+  "cacophonic accompaniment": {
+    "title": "Cacophonic Accompaniment",
+    "text": "LORD KAKOPHONIST model only. This model has Deep Strike. This unit’s ranged attacks have [IGNORES COVER].",
+    "value": 20,
+    "detachment": "ELEGANT BRUTES",
+    "tags": [],
+    "owner": {
+      "subject": "model",
+      "selector": {
+        "unitIds": [
+          "unit-lord-kakophonist"
+        ],
+        "noneKeywords": [
+          "EPIC HERO"
+        ]
+      }
+    },
+    "assignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-cacophonic-accompaniment",
+    "detachmentId": "elegant-brutes"
+  },
+  "frenzied ferocity": {
+    "title": "Frenzied Ferocity",
+    "text": "EMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks have [SUSTAINED HITS 1].",
+    "value": null,
+    "detachment": "ELEGANT BRUTES",
+    "tags": [
+      "UPGRADE"
+    ],
+    "owner": {
+      "subject": "unit",
+      "selector": {
+        "unitIds": [
+          "unit-chaos-terminators"
+        ],
+        "noneKeywords": []
+      }
+    },
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "ruleId": "enhancement-frenzied-ferocity",
+    "detachmentId": "elegant-brutes"
   }
 });

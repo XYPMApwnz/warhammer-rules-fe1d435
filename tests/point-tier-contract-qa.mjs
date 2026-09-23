@@ -37,11 +37,10 @@ for(const [book,records] of Object.entries(rawCatalog))for(const [key,unit] of O
 
 assert.equal(multiUnits.length,285,'multi-tier unit inventory');
 assert.equal(tierCount,691,'multi-tier row inventory');
-assert.equal(structuredBefore,250,'pre-normalization structured unit inventory');
+assert.equal(structuredBefore,268,'pre-normalization structured unit inventory');
 assert.deepEqual(plain(Object.fromEntries(normalizedByBook)),{
   'death guard':{units:17,tiers:38},
-  'adeptus mechanicus':{units:18,tiers:52},
-},'only the proven DG and AM inventories require normalization');
+},'only the Death Guard compatibility inventory requires normalization');
 
 assert.throws(()=>tiers.normalizeTiers([
   {label:'1-2 models',value:10},
@@ -94,4 +93,4 @@ console.log('MISSING_STRUCTURED_BOUND_MUTATION: KILLED');
 console.log('WRONG_MODEL_BOUND_MUTATION: KILLED');
 console.log('WRONG_COPY_BOUND_MUTATION: KILLED');
 console.log('LABEL_STRUCTURED_DISAGREEMENT_MUTATION: KILLED');
-console.log('Point-tier contract QA: 285/285 units, 691/691 tiers PASS; 250 -> 285 structured units; DG 17/38 and AM 18/52 normalized.');
+console.log('Point-tier contract QA: 285/285 units, 691/691 tiers PASS; 268 -> 285 structured units; DG 17/38 normalized.');

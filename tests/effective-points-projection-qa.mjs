@@ -144,7 +144,7 @@ assert.equal(JSON.stringify(first.catalog),JSON.stringify(second.catalog),'point
 assert.deepEqual(pointsApi.createPointsCatalogFromProjections(new Map([...projections].reverse())).catalog,catalog,'projection construction order changed points output');
 assert.deepEqual(JSON.parse(JSON.stringify(catalog)),published.catalog,'effective projection changed published points semantics');
 assert.equal(published.source,`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`,'points-data.js is not byte-current');
-assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'ddb06864c3e86fc4b8eae4308f360d1cfd782824423ce2cfda81c0228c03d5eb');
+assert.equal(crypto.createHash('sha256').update(published.source).digest('hex'),'aed6c3e184c6990053d9197abb4ebf44128b48336c6d25d9c607f736d34d974f');
 assertProjectionCatalogIdentity(projections,catalog);
 assertSupplementControls(projections);
 assertEmperorsChildrenUpgradeIdentities(projections,catalog);
@@ -155,7 +155,7 @@ const pointTiers=[...projections.values()].reduce((sum,item)=>sum+item.units.red
 const enhancementRecords=[...projections.values()].reduce((sum,item)=>sum+item.enhancements.length,0);
 const enhancementLookupKeys=Object.values(catalog).reduce((sum,item)=>sum+Object.keys(item.enhancements).length,0);
 const detachmentRecords=[...projections.values()].reduce((sum,item)=>sum+item.detachments.length,0);
-assert.deepEqual({books:projections.size,unitRecords,pointTiers,enhancementRecords,enhancementLookupKeys,detachmentRecords},{books:9,unitRecords:540,pointTiers:946,enhancementRecords:474,enhancementLookupKeys:535,detachmentRecords:134});
+assert.deepEqual({books:projections.size,unitRecords,pointTiers,enhancementRecords,enhancementLookupKeys,detachmentRecords},{books:9,unitRecords:540,pointTiers:946,enhancementRecords:474,enhancementLookupKeys:534,detachmentRecords:134});
 
 const base=clone(projections.get('space-marines'));
 const recreate=mutate=>{const value=clone(base);mutate(value);return projectionApi.createEffectivePointsProjection(value);};

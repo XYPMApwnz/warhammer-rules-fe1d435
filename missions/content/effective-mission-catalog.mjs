@@ -1,6 +1,8 @@
 import fs from 'node:fs';
 import {fileURLToPath} from 'node:url';
+import {createEffectiveCoreCatalog} from '../../books/core-rules/content/effective-core-catalog.mjs';
 import {canonicalMatchupId, MISSION_SCOPES, validateCanonicalMissionFacts} from './mission-model-contract.mjs';
+import {validateMissionCoreReferences} from './mission-core-reference-contract.mjs';
 
 const DEFAULT_FACTS_PATH = fileURLToPath(new URL('./chapter-approved-2026-27.canonical.json', import.meta.url));
 
@@ -70,11 +72,13 @@ function applyEventSequence(facts, catalog, scope) {
 export function createEffectiveMissionCatalog({
   scope = MISSION_SCOPES.STANDARD_MATCHED_PLAY,
   asOf = '2026-09-22',
-  canonicalFacts = loadDefaultFacts()
+  canonicalFacts = loadDefaultFacts(),
+  coreCatalog = createEffectiveCoreCatalog()
 } = {}) {
   if (!Object.values(MISSION_SCOPES).includes(scope)) throw new Error(`Unknown mission catalog scope ${scope}`);
   if (asOf !== canonicalFacts.cutoff) throw new Error(`No accepted mission snapshot for cutoff ${asOf}`);
   validateCanonicalMissionFacts(canonicalFacts);
+  validateMissionCoreReferences(canonicalFacts, coreCatalog);
 
   const catalog = {
     schema: 'wh40k-effective-mission-catalog/v1',

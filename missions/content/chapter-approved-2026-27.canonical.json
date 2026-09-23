@@ -557,11 +557,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -635,8 +635,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -676,11 +676,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -754,8 +754,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -795,11 +795,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -873,8 +873,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -914,11 +914,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -1011,8 +1011,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -1052,11 +1052,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -1149,8 +1149,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -1190,11 +1190,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -1287,8 +1287,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -1328,11 +1328,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -1425,8 +1425,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -1466,11 +1466,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -1569,8 +1569,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -1610,11 +1610,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -1732,8 +1732,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -1773,11 +1773,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -1870,8 +1870,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -1913,15 +1913,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -2031,9 +2031,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -2073,11 +2073,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -2151,8 +2151,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -2192,11 +2192,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -2289,8 +2289,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -2330,15 +2330,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -2448,9 +2448,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -2490,15 +2490,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -2614,9 +2614,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -2656,11 +2656,11 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -2753,8 +2753,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -2794,15 +2794,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -2931,9 +2931,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -2975,15 +2975,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -3099,9 +3099,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -3141,15 +3141,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -3278,9 +3278,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -3320,7 +3320,7 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -3413,7 +3413,7 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase"
+          "core-rule-08-05-end-of-command-phase"
         ]
       }
     },
@@ -3453,15 +3453,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -3571,9 +3571,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -3615,15 +3615,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -3752,9 +3752,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -3794,15 +3794,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -3931,9 +3931,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -3973,15 +3973,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -4091,9 +4091,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -4133,15 +4133,15 @@
           "relationType": "OPPONENT_FORCE_DISPOSITION"
         },
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -4232,9 +4232,9 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-command-phase",
-          "core-rule-objectives",
-          "core-rule-shooting-phase"
+          "core-rule-08-05-end-of-command-phase",
+          "core-rule-14-02-level-of-control",
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     }
@@ -4336,7 +4336,7 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -4379,7 +4379,7 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-objectives"
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -4413,7 +4413,7 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -4479,7 +4479,7 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-shooting-phase"
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -4511,11 +4511,11 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-aircraft",
+          "id": "core-rule-23-01-deployment",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-battle-shock",
+          "id": "core-rule-08-03-battle-shock",
           "relationType": "CORE_RULE"
         }
       ],
@@ -4577,8 +4577,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-aircraft",
-          "core-rule-battle-shock"
+          "core-rule-23-01-deployment",
+          "core-rule-08-03-battle-shock"
         ]
       }
     },
@@ -4610,11 +4610,11 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-aircraft",
+          "id": "core-rule-23-01-deployment",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-battle-shock",
+          "id": "core-rule-08-03-battle-shock",
           "relationType": "CORE_RULE"
         }
       ],
@@ -4676,8 +4676,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-aircraft",
-          "core-rule-battle-shock"
+          "core-rule-23-01-deployment",
+          "core-rule-08-03-battle-shock"
         ]
       }
     },
@@ -4711,7 +4711,7 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-transports",
+          "id": "core-rule-18-01-transport-capacity",
           "relationType": "CORE_RULE"
         }
       ],
@@ -4779,7 +4779,7 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-transports"
+          "core-rule-18-01-transport-capacity"
         ]
       }
     },
@@ -4811,7 +4811,7 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-shooting-phase",
+          "id": "core-rule-10-01-start-of-shooting-phase",
           "relationType": "CORE_RULE"
         }
       ],
@@ -4896,7 +4896,7 @@
         },
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-shooting-phase"
+          "core-rule-10-01-start-of-shooting-phase"
         ]
       }
     },
@@ -5011,7 +5011,7 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -5079,7 +5079,7 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-objectives"
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -5111,11 +5111,11 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-aircraft",
+          "id": "core-rule-23-01-deployment",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-battle-shock",
+          "id": "core-rule-08-03-battle-shock",
           "relationType": "CORE_RULE"
         }
       ],
@@ -5199,8 +5199,8 @@
           "fixedModePerCardMaximumVictoryPoints": 20
         },
         "coreRuleRefs": [
-          "core-rule-aircraft",
-          "core-rule-battle-shock"
+          "core-rule-23-01-deployment",
+          "core-rule-08-03-battle-shock"
         ]
       }
     },
@@ -5232,7 +5232,7 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -5275,7 +5275,7 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-objectives"
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -5381,11 +5381,11 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-aircraft",
+          "id": "core-rule-23-01-deployment",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-battle-shock",
+          "id": "core-rule-08-03-battle-shock",
           "relationType": "CORE_RULE"
         }
       ],
@@ -5447,8 +5447,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-aircraft",
-          "core-rule-battle-shock"
+          "core-rule-23-01-deployment",
+          "core-rule-08-03-battle-shock"
         ]
       }
     },
@@ -5588,7 +5588,7 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -5637,7 +5637,7 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-objectives"
+          "core-rule-14-02-level-of-control"
         ]
       }
     },
@@ -5669,11 +5669,11 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-aircraft",
+          "id": "core-rule-23-01-deployment",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-battle-shock",
+          "id": "core-rule-08-03-battle-shock",
           "relationType": "CORE_RULE"
         }
       ],
@@ -5722,8 +5722,8 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-aircraft",
-          "core-rule-battle-shock"
+          "core-rule-23-01-deployment",
+          "core-rule-08-03-battle-shock"
         ]
       }
     },
@@ -5838,7 +5838,7 @@
       "recordType": "SECONDARY_MISSION",
       "references": [
         {
-          "id": "core-rule-objectives",
+          "id": "core-rule-14-02-level-of-control",
           "relationType": "CORE_RULE"
         }
       ],
@@ -5887,7 +5887,7 @@
         "objectiveAction": null,
         "caps": null,
         "coreRuleRefs": [
-          "core-rule-objectives"
+          "core-rule-14-02-level-of-control"
         ]
       }
     }
@@ -6408,7 +6408,7 @@
         "operations": [
           {
             "type": "REMOVE_TERRAIN_RULE",
-            "canonicalTarget": "terrain-rule-solid"
+            "canonicalTarget": "core-rule-13-11-solid"
           }
         ],
         "options": [],
@@ -6725,7 +6725,7 @@
         }
       ],
       "coreRuleRefs": [
-        "core-rule-muster-armies"
+        "core-rule-25-01-start-your-army-roster"
       ],
       "provenance": {
         "profileId": "provenance-chapter-approved-physical-corroborated",
@@ -6755,7 +6755,7 @@
       "aliases": [],
       "references": [
         {
-          "id": "core-rule-muster-armies",
+          "id": "core-rule-25-01-start-your-army-roster",
           "relationType": "CORE_RULE"
         }
       ]
@@ -6907,8 +6907,8 @@
         }
       ],
       "coreRuleRefs": [
-        "core-rule-terrain-features",
-        "core-rule-terrain-objectives"
+        "core-rule-13-01-placing-terrain",
+        "core-rule-14-01-terrain-objectives"
       ],
       "provenance": {
         "profileId": "provenance-chapter-approved-physical-corroborated",
@@ -6935,11 +6935,11 @@
       "aliases": [],
       "references": [
         {
-          "id": "core-rule-terrain-features",
+          "id": "core-rule-13-01-placing-terrain",
           "relationType": "CORE_RULE"
         },
         {
-          "id": "core-rule-terrain-objectives",
+          "id": "core-rule-14-01-terrain-objectives",
           "relationType": "CORE_RULE"
         }
       ]
@@ -7086,7 +7086,7 @@
         }
       ],
       "coreRuleRefs": [
-        "core-rule-command-phase"
+        "core-rule-08-05-end-of-command-phase"
       ],
       "provenance": {
         "profileId": "provenance-chapter-approved-physical-corroborated",
@@ -7114,7 +7114,7 @@
       "aliases": [],
       "references": [
         {
-          "id": "core-rule-command-phase",
+          "id": "core-rule-08-05-end-of-command-phase",
           "relationType": "CORE_RULE"
         }
       ]
@@ -7180,7 +7180,7 @@
         }
       ],
       "coreRuleRefs": [
-        "core-rule-strategic-reserves"
+        "core-rule-20-01-placing-units-in-strategic-reserves"
       ],
       "provenance": {
         "profileId": "provenance-chapter-approved-physical-corroborated",
@@ -7208,7 +7208,7 @@
       "aliases": [],
       "references": [
         {
-          "id": "core-rule-strategic-reserves",
+          "id": "core-rule-20-01-placing-units-in-strategic-reserves",
           "relationType": "CORE_RULE"
         }
       ]
@@ -7235,7 +7235,7 @@
         }
       ],
       "coreRuleRefs": [
-        "core-rule-strategic-reserves"
+        "core-rule-20-01-placing-units-in-strategic-reserves"
       ],
       "provenance": {
         "profileId": "provenance-chapter-approved-physical-corroborated",
@@ -7263,7 +7263,7 @@
       "aliases": [],
       "references": [
         {
-          "id": "core-rule-strategic-reserves",
+          "id": "core-rule-20-01-placing-units-in-strategic-reserves",
           "relationType": "CORE_RULE"
         }
       ]
@@ -7284,7 +7284,7 @@
         }
       ],
       "coreRuleRefs": [
-        "core-rule-strategic-reserves"
+        "core-rule-20-01-placing-units-in-strategic-reserves"
       ],
       "provenance": {
         "profileId": "provenance-chapter-approved-physical-corroborated",
@@ -7312,7 +7312,7 @@
       "aliases": [],
       "references": [
         {
-          "id": "core-rule-strategic-reserves",
+          "id": "core-rule-20-01-placing-units-in-strategic-reserves",
           "relationType": "CORE_RULE"
         }
       ]
@@ -8883,13 +8883,13 @@
           }
         ],
         "coreRuleRefs": [
-          "core-rule-muster-armies"
+          "core-rule-25-01-start-your-army-roster"
         ],
         "recordType": "MISSION_SEQUENCE_RULE",
         "aliases": [],
         "references": [
           {
-            "id": "core-rule-muster-armies",
+            "id": "core-rule-25-01-start-your-army-roster",
             "relationType": "CORE_RULE"
           }
         ]

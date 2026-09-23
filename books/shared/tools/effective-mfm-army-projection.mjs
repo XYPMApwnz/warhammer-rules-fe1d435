@@ -31,6 +31,11 @@ const retiredArmyRelationEdges=new Set([
   'leader\0unit-huron-blackheart\0unit-masters-of-the-maelstrom'
 ]);
 
+const deathGuardPaidUpgradePresentationOrder=new Map([
+  'mfm-paid-upgrade-6365f3bff9597ebb',
+  'mfm-paid-upgrade-0ec4e0c282a806f6'
+].map((id,index)=>[id,index]));
+
 const tyranidScheduleOverlays=Object.freeze({
   'unit-hormagaunts':new Map(['20:20'].map(key=>[key,{minModels:11,maxModels:20,label:'11-20 models'}])),
   'unit-termagants':new Map(['20:20'].map(key=>[key,{minModels:11,maxModels:20,label:'11-20 models'}])),
@@ -85,9 +90,9 @@ export function createEffectiveMfmArmyProjection(bookId){
   const deathGuardPoints=()=>{
     const current=pointsForArmyBook('death-guard'),enhancementsByDetachment=new Map();
     for(const item of current.enhancements){const values=enhancementsByDetachment.get(item.detachmentId)||[];values.push({id:item.id,title:item.title,value:item.value,mfmRecordId:item.mfmRecordId});enhancementsByDetachment.set(item.detachmentId,values);}
-    const units=boundUnitRecords.filter(({reference})=>reference.armyBinding.armyBookId==='death-guard').map(({point,reference})=>({unitId:reference.armyBinding.armyUnitId,title:point.label,sourceGroup:point.sourceGroup,schedules:point.pointSchedules.map(schedule=>({label:schedule.sourceLabel,values:schedule.entries.map(entry=>({label:entry.sourceLabel,value:entry.value}))})),paidWargear:(paidByPoint.get(point.id)||[]).map(item=>({label:item.sourceLabel,value:item.value,mfmRecordId:item.id})),mfmRecordId:point.id}));
-    const detachments=current.detachments.map(item=>({title:item.title,id:item.id,detachmentPoints:item.detachmentPoints,dp:`${item.detachmentPoints}DP`,disposition:item.disposition,mfmRecordId:item.mfmRecordId,mfmForceDispositionId:item.mfmForceDispositionId,missionForceDispositionId:item.missionForceDispositionId,forceDispositionId:item.forceDispositionId,mfmQualifiers:item.mfmQualifiers,enhancements:enhancementsByDetachment.get(item.id)||[]}));
-    const enhancements=current.enhancements.map(item=>({id:item.id,title:item.title,detachment:item.detachment,value:item.value,mfmRecordId:item.mfmRecordId,mfmQualifiers:item.mfmQualifiers}));
+    const units=current.units.map(item=>({...clone(item),points:item.points.map(point=>({...point,label:point.label.replace(' · ',': ')})),paidWargear:[...(paidByPoint.get(item.mfmRecordId)||[])].sort((left,right)=>(deathGuardPaidUpgradePresentationOrder.get(left.id)??Infinity)-(deathGuardPaidUpgradePresentationOrder.get(right.id)??Infinity)).map(upgrade=>({label:upgrade.sourceLabel,value:upgrade.value,mfmRecordId:upgrade.id}))}));
+    const detachments=current.detachments.map(item=>({...clone(item),dp:`${item.detachmentPoints}DP`,enhancements:enhancementsByDetachment.get(item.id)||[]}));
+    const enhancements=current.enhancements.map(item=>clone(item));
     return {schema:1,source:sourceMetadata,units,detachments,enhancements,counts:{units:units.length,detachments:detachments.length,enhancements:enhancements.length,pricedOptions:units.reduce((total,item)=>total+item.paidWargear.length,0)}};
   };
   const relationEdges=({effectiveUnitIds,armyEdges=[]})=>{

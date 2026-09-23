@@ -1,5 +1,4 @@
 import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
-import {pointTierContract} from '../../shared/tools/point-tier-contract.mjs';
 import {canonicalTargetsFromProse} from '../../shared/tools/canonical-join-contract.mjs';
 import {effectiveEffectContracts,validateEffectContractSet} from '../../shared/tools/effect-contract.mjs';
 import {createEffectivePointsProjection} from '../../shared/tools/effective-points-projection.mjs';
@@ -13,7 +12,6 @@ const keywordId=value=>`keyword-${slug(value)}`;
 const plainKeywordNames=new Set(['CHAOS LORD','CULTISTS','POSSESSED','SORCERER']);
 export const coreTermIdByCode=Object.freeze({'15.02':'core-rule-15-02-command-re-roll','15.03':'core-rule-15-03-epic-challenge','15.04':'core-rule-15-04-insane-bravery','15.05':'core-rule-15-05-explosives','15.06':'core-rule-15-06-crushing-impact','15.07':'core-rule-15-07-rapid-ingress','15.08':'core-stratagem-fire-overwatch','15.10':'core-rule-15-10-smokescreen','15.11':'core-rule-15-11-heroic-intervention','15.12':'core-rule-15-12-counteroffensive'});
 
-const normalizeFactText=value=>String(value??'').normalize('NFKC').replace(/[\u2010-\u2015]/g,'-').replace(/\s+/g,' ').trim().toLowerCase();
 const uniqueIndex=(items,keyFor,label)=>{
   if(!Array.isArray(items))throw new Error(`Death Guard MFM ownership: ${label} is not an array`);
   const index=new Map();
@@ -24,43 +22,12 @@ const assertSameIdentities=(canonical,official,label)=>{
   const missing=[...canonical.keys()].filter(key=>!official.has(key)),extra=[...official.keys()].filter(key=>!canonical.has(key));
   if(missing.length||extra.length)throw new Error(`Death Guard MFM ownership: ${label} identity mismatch; missing [${missing.join(', ')}], extra [${extra.join(', ')}]`);
 };
-const mfmTierKey=label=>{
-  const bounds=pointTierContract.parseTierLabel(label);
-  if(bounds.minModels!==undefined||bounds.minCopies===undefined&&normalizeFactText(label).replace(/^your\s+/,'').replace(/\s+costs?$/,'')!=='unit')throw new Error(`Death Guard MFM ownership: unsupported official schedule label ${label}`);
-  return pointTierContract.boundsKey(bounds);
+const pointRows=unit=>{
+  if(!Array.isArray(unit.points)||!unit.points.length)throw new Error(`Death Guard MFM ownership: ${unit.unitId} has an empty official schedule`);
+  return unit.points.map(point=>({label:point.label,value:point.value}));
 };
-const canonicalPointKey=label=>{
-  const bounds=pointTierContract.parseTierLabel(label);
-  if(bounds.minModels===undefined)throw new Error(`Death Guard MFM ownership: unsupported canonical point label ${label}`);
-  return pointTierContract.boundsKey(bounds);
-};
-const officialPointRows=unit=>{
-  const rows=[];
-  for(const schedule of unit.schedules||[]){const tier=mfmTierKey(schedule.label);if(!Array.isArray(schedule.values)||!schedule.values.length)throw new Error(`Death Guard MFM ownership: ${unit.unitId} has an empty official schedule`);for(const point of schedule.values){const model=pointTierContract.parseTierLabel(point.label);if(model.minModels===undefined||model.minCopies!==undefined)throw new Error(`Death Guard MFM ownership: unsupported official model label ${point.label}`);rows.push({key:pointTierContract.boundsKey({...model,...pointTierContract.parseTierLabel(schedule.label)}),value:point.value});}}
-  return rows;
-};
-const reconcilePointRows=(canonicalRows,officialRows,label)=>{
-  const canonical=uniqueIndex(canonicalRows,row=>canonicalPointKey(row.label),`${label} canonical brackets`),official=uniqueIndex(officialRows,row=>row.key,`${label} official brackets`);
-  assertSameIdentities(canonical,official,`${label} brackets`);
-  for(const [key,row] of canonical)if(row.value!==official.get(key).value)throw new Error(`Death Guard MFM ownership: ${label} value mismatch for ${key}: canonical ${row.value}, official ${official.get(key).value}`);
-  return canonicalRows.map(row=>({...row,value:official.get(canonicalPointKey(row.label)).value}));
-};
-const reconcileNamedRows=(canonicalRows,officialRows,label)=>{
-  const canonical=uniqueIndex(canonicalRows||[],row=>normalizeFactText(row.label),`${label} canonical records`),official=uniqueIndex(officialRows||[],row=>normalizeFactText(row.label),`${label} official records`);
-  assertSameIdentities(canonical,official,label);
-  for(const [key,row] of canonical)if(row.value!==official.get(key).value)throw new Error(`Death Guard MFM ownership: ${label} value mismatch for ${key}: canonical ${row.value}, official ${official.get(key).value}`);
-  return (canonicalRows||[]).map(row=>({...row,value:official.get(normalizeFactText(row.label)).value}));
-};
-const enhancementIdentity=(detachmentId,title)=>`${detachmentId}|enhancement-${slug(String(title).replace(/\s*\(Upgrade\)\s*$/i,''))}`;
-const officialEnhancements=points=>{
-  const nested=[];
-  for(const detachment of points.detachments||[]){const detachmentId=`detachment-${slug(detachment.title)}`;for(const enhancement of detachment.enhancements||[])nested.push({...enhancement,detachmentId,key:enhancementIdentity(detachmentId,enhancement.title),upgrade:/\(Upgrade\)\s*$/i.test(enhancement.title)});}
-  const nestedIndex=uniqueIndex(nested,item=>item.key,'official Detachment Enhancements');
-  const flatIndex=uniqueIndex((points.enhancements||[]).map(item=>{const detachmentId=`detachment-${slug(item.detachment)}`;return {...item,detachmentId,key:enhancementIdentity(detachmentId,item.title)};}),item=>item.key,'official Enhancement inventory');
-  assertSameIdentities(nestedIndex,flatIndex,'official Enhancement inventories');
-  for(const [key,item] of nestedIndex)if(item.value!==flatIndex.get(key).value)throw new Error(`Death Guard MFM ownership: official Enhancement inventory value mismatch for ${key}`);
-  return nestedIndex;
-};
+const enhancementKey=item=>`${item.detachmentId}\0${item.id}`;
+const displayForceDisposition=value=>String(value||'').toLowerCase().replace(/(^|\s)(\p{L})/gu,(_,space,letter)=>space+letter.toUpperCase()).replace(/\b(And|Of|The)\b/g,word=>word.toLowerCase());
 
 export function applyDeathGuardMfmOwnership(book,points,expected={}){
   if(points?.schema!==1||!Array.isArray(points.units)||!Array.isArray(points.detachments)||!Array.isArray(points.enhancements))throw new Error('Death Guard MFM ownership: invalid official source schema');
@@ -70,32 +37,32 @@ export function applyDeathGuardMfmOwnership(book,points,expected={}){
   for(const [unitId,unit] of canonicalUnits){
     const official=officialUnits.get(unitId),pointBlocks=(unit.blocks||[]).filter(block=>block.type==='points');
     if(pointBlocks.length!==1)throw new Error(`Death Guard MFM ownership: ${unitId} must have exactly one canonical points block`);
-    const rows=officialPointRows(official),pointBlock=pointBlocks[0];
-    unit.points=reconcilePointRows(unit.points||[],rows,`${unitId} section points`);
-    pointBlock.values=reconcilePointRows(pointBlock.values||[],rows,`${unitId} point block`);
-    pointBlock.wargear=reconcileNamedRows(pointBlock.wargear||[],official.paidWargear||[],`${unitId} paid wargear`);
+    const rows=pointRows(official),pointBlock=pointBlocks[0],paidWargear=(official.paidWargear||[]).map(item=>{if(!item.mfmRecordId)throw new Error(`Death Guard MFM ownership: ${unitId} paid wargear has no stable MFM identity`);return{label:item.label,value:item.value,mfmRecordId:item.mfmRecordId};});
+    uniqueIndex(paidWargear,item=>item.mfmRecordId,`${unitId} official paid wargear`);
+    unit.points=structuredClone(rows);
+    pointBlock.values=structuredClone(rows);
+    pointBlock.wargear=paidWargear;
   }
-  const canonicalDetachments=uniqueIndex(book.sections.filter(section=>section.id?.startsWith('detachment-')),section=>section.id,'canonical Detachments'),officialDetachments=uniqueIndex(points.detachments,item=>`detachment-${slug(item.title)}`,'official Detachments');
+  const canonicalDetachments=uniqueIndex(book.sections.filter(section=>section.id?.startsWith('detachment-')),section=>section.id,'canonical Detachments'),officialDetachments=uniqueIndex(points.detachments,item=>item.id,'official Detachments');
   assertSameIdentities(canonicalDetachments,officialDetachments,'Detachment');
   if(points.counts?.detachments!==officialDetachments.size||expected.detachments!==undefined&&expected.detachments!==officialDetachments.size)throw new Error('Death Guard MFM ownership: Detachment count metadata mismatch');
-  const enhancements=officialEnhancements(points),canonicalEnhancements=new Map();
+  const enhancements=uniqueIndex(points.enhancements,enhancementKey,'official scoped Enhancements'),canonicalEnhancements=new Map();
   for(const [detachmentId,section] of canonicalDetachments){
     const official=officialDetachments.get(detachmentId),factBlocks=(section.blocks||[]).filter(block=>block.type==='p'&&/Force Disposition:/i.test(block.text||''));
-    if(normalizeFactText(section.title)!==normalizeFactText(official.title))throw new Error(`Death Guard MFM ownership: ${detachmentId} title mismatch`);
     if(factBlocks.length!==1)throw new Error(`Death Guard MFM ownership: ${detachmentId} must have exactly one factual metadata block`);
-    const match=/Force Disposition:\s*([^.]+)\.\s*Detachment Points:\s*([^.]+)\./i.exec(factBlocks[0].text||'');
-    if(!match||normalizeFactText(match[1])!==normalizeFactText(official.disposition)||normalizeFactText(match[2])!==normalizeFactText(official.dp))throw new Error(`Death Guard MFM ownership: ${detachmentId} factual metadata mismatch`);
+    const trailing=String(factBlocks[0].text||'').replace(/^.*?Force Disposition:\s*[^.]+\.\s*Detachment Points:\s*[^.]+\.\s*/i,'');
+    factBlocks[0].text=`Force Disposition: ${displayForceDisposition(official.forceDisposition)}. Detachment Points: ${official.detachmentPoints}DP.${trailing?` ${trailing}`:''}`;
     const parts=(section.subsections||[]).filter(part=>part.title==='Enhancements');
     if(parts.length!==1)throw new Error(`Death Guard MFM ownership: ${detachmentId} must have exactly one Enhancement section`);
     for(const block of parts[0].blocks||[]){
-      const titleMatch=/^(.*?)\s+-\s+(\d+)\s+pts$/i.exec(block.title||'');
-      if(!titleMatch)throw new Error(`Death Guard MFM ownership: invalid canonical Enhancement title ${block.title}`);
-      const key=`${detachmentId}|${block.id}`;
+      const title=String(block.title||'').replace(/\s+[-–—]\s+\d+\s*pts$/i,'');
+      if(!title)throw new Error(`Death Guard MFM ownership: invalid canonical Enhancement title ${block.title}`);
+      const key=`${detachmentId}\0${block.id}`;
       if(canonicalEnhancements.has(key))throw new Error(`Death Guard MFM ownership: duplicate canonical Enhancement identity ${key}`);
       canonicalEnhancements.set(key,block);
-      const source=enhancements.get(key),upgrade=(block.tags||[]).map(normalizeFactText).includes('upgrade');
-      if(!source||normalizeFactText(titleMatch[1])!==normalizeFactText(String(source.title).replace(/\s*\(Upgrade\)\s*$/i,''))||Number(titleMatch[2])!==source.value||upgrade!==source.upgrade)throw new Error(`Death Guard MFM ownership: Enhancement mismatch for ${key}`);
-      block.title=`${titleMatch[1]} - ${source.value} pts`;
+      const source=enhancements.get(key);
+      if(!source)throw new Error(`Death Guard MFM ownership: Enhancement identity missing for ${key}`);
+      block.title=`${title} - ${source.value} pts`;
     }
   }
   assertSameIdentities(canonicalEnhancements,enhancements,'Enhancement');
@@ -194,14 +161,15 @@ export function projectDeathGuardGlossaryFacts(model,{label='Death Guard glossar
 }
 
 function effectiveEnhancementsFor(context,model,detachments){
-  const publicationByEnhancementId=new Map((model.points.enhancements||[]).filter(item=>item.id).map(item=>[item.id,item])),enhancements=[];
+  const publicationByEnhancementId=uniqueIndex((model.points.enhancements||[]).filter(item=>item.id),enhancementKey,'effective scoped Enhancements'),enhancements=[];
   for(const detachment of detachments)for(const subsection of detachment.subsections||[])for(const item of (subsection.blocks||[]).filter(block=>block.type==='enhancement')){
     const match=item.title.match(/^(.*?)\s+[-–—]\s+(\d+)\s*pts$/i);
     if(!match)throw new Error(`Enhancement points missing: ${item.title}`);
-    const publication=publicationByEnhancementId.get(item.id),title=match[1],value=Number(publication?.value??match[2]),aliases=(item.tags||[]).includes('UPGRADE')?[`${title} Upgrade`,`${title} (Upgrade)`]:[];
-    if(!publication||titleKey(String(publication.title).replace(/\s*\(Upgrade\)\s*$/i,''))!==titleKey(title)||Number(match[2])!==value)throw new Error(`Death Guard point identity mismatch: ${item.id}`);
+    const publication=publicationByEnhancementId.get(`${detachment.id}\0${item.id}`),title=match[1];
+    if(!publication)throw new Error(`Death Guard MFM Enhancement identity missing: ${detachment.id}/${item.id}`);
+    const value=Number(publication.value),aliases=(item.tags||[]).includes('UPGRADE')?[`${title} Upgrade`,`${title} (Upgrade)`]:[];
     const legacyEffect=legacyEnhancementEffects[titleKey(title)]||'',detachmentTitle=publication?.detachment||detachment.title;
-    enhancements.push({...structuredClone(item),id:item.id,sourceId:item.sourceId||null,ruleId:item.id,legacyKey:null,detachmentId:detachment.id,detachmentTitle,sourceBookId:context.config.id,title,value,runtimeTitle:item.title,owner:structuredClone(item.owner||null),assignment:structuredClone(item.assignment||null),tags:[...(item.tags||[])],text:item.text||'',legacyEffect,aliases,mfmRecordId:publication.mfmRecordId,mfmQualifiers:publication.mfmQualifiers||[],publicationRecord:{id:item.id,title,value,text:item.text,effect:legacyEffect,detachment:publication?.detachment||String(detachment.id).replace(/^detachment-/,''),...(publication?{canonicalEnhancementId:item.id,canonicalDetachmentId:detachment.id}:{}),tags:[...(item.tags||[])],owner:structuredClone(item.owner||null),assignment:structuredClone(item.assignment||null),aliases}});
+    enhancements.push({...structuredClone(item),id:item.id,sourceId:item.sourceId||null,ruleId:item.id,legacyKey:null,detachmentId:detachment.id,detachmentTitle,sourceBookId:context.config.id,title,value,runtimeTitle:`${title} - ${value} pts`,owner:structuredClone(item.owner||null),assignment:structuredClone(item.assignment||null),tags:[...(item.tags||[])],text:item.text||'',legacyEffect,aliases,mfmRecordId:publication.mfmRecordId,mfmQualifiers:publication.mfmQualifiers||[],publicationRecord:{id:item.id,title,value,text:item.text,effect:legacyEffect,detachment:publication?.detachment||String(detachment.id).replace(/^detachment-/,''),canonicalEnhancementId:item.id,canonicalDetachmentId:detachment.id,tags:[...(item.tags||[])],owner:structuredClone(item.owner||null),assignment:structuredClone(item.assignment||null),aliases}});
   }
   return enhancements;
 }
@@ -218,12 +186,12 @@ export function buildDeathGuardEffectiveModelInput(context,canonicalModel=buildD
   const {config}=context,sourceUnits=canonicalModel.book.sections.filter(section=>section.kind==='unit'),sourceDetachments=canonicalModel.book.sections.filter(section=>section.id?.startsWith('detachment-'));
   const relationGraphs=canonicalModel.relationGraphs||new Map(sourceUnits.map(unit=>[unit.id,canonicalModel.ruleFacts.get(unit.id)?.relations||{}]));
   const ruleProfiles=new Map(sourceUnits.map(unit=>[unit.id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(canonicalModel.ruleFacts.get(unit.id)))]));
-  const baseUnits=sourceUnits.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points'),canonical=structuredClone(unit);return persistCanonicalWeaponProfileIdentities({...canonical,sourceBookId:config.id,publicationState:unit.legends?'Legends':'Current',paidWargear:structuredClone(pointsBlock?.wargear||[]),intrinsicKeywords:[...canonicalModel.unitKeywords.get(unit.id)],ruleFacts:structuredClone(canonicalModel.ruleFacts.get(unit.id)),ruleProfile:structuredClone(ruleProfiles.get(unit.id))});});
+  const baseUnits=sourceUnits.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points'),canonical=structuredClone(unit),paidWargear=(pointsBlock?.wargear||[]).map(({label,value})=>({label,value}));return persistCanonicalWeaponProfileIdentities({...canonical,sourceBookId:config.id,publicationState:unit.legends?'Legends':'Current',paidWargear,intrinsicKeywords:[...canonicalModel.unitKeywords.get(unit.id)],ruleFacts:structuredClone(canonicalModel.ruleFacts.get(unit.id)),ruleProfile:structuredClone(ruleProfiles.get(unit.id))});});
   const detachments=effectiveDetachmentsFor(context,canonicalModel,sourceDetachments),enhancements=effectiveEnhancementsFor(context,canonicalModel,detachments);
   const effectContractSet=config.sources.effectContracts?validateEffectContractSet(context.readJson(config.sources.effectContracts),{expectedBookId:config.id}):{schema:'wh40k-effect-contracts/v1',bookId:config.id,contracts:[]},effectContracts=effectiveEffectContracts([effectContractSet],config.id);
   const units=baseUnits;
-  const detachmentOrder=new Map((canonicalModel.points.detachments||[]).map((item,index)=>[titleKey(item.title),index]));
-  const pointsProjectionInput={book:{id:config.id,title:config.title,parentBookId:null},units:units.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points'),publication=(canonicalModel.points.units||[]).find(item=>item.unitId===unit.id);return{id:unit.id,title:unit.title,sourceBookId:config.id,publicationState:unit.publicationState,points:unit.points||[],paidWargear:pointsBlock?.wargear||[],pointsSource:canonicalModel.points.source,mfmRecordId:publication?.mfmRecordId||null,ruleProfile:unit.ruleProfile,publicationRecord:{title:unit.title,points:unit.points,wargear:pointsBlock?.wargear||[]}};}),detachments:[...detachments].sort((left,right)=>(detachmentOrder.get(titleKey(left.title))??Infinity)-(detachmentOrder.get(titleKey(right.title))??Infinity)).map(detachment=>({id:detachment.id,title:detachment.title,sourceBookId:config.id,detachmentPoints:detachment.detachmentPoints,forceDisposition:detachment.forceDisposition,mfmRecordId:detachment.mfmRecordId,mfmForceDispositionId:detachment.mfmForceDispositionId,missionForceDispositionId:detachment.missionForceDispositionId,forceDispositionId:detachment.forceDispositionId,mfmQualifiers:detachment.mfmQualifiers||[],publicationRecord:detachment.publicationRecord})),enhancements};
+  const detachmentOrder=new Map((canonicalModel.points.detachments||[]).map((item,index)=>[item.id,index]));
+  const pointsProjectionInput={book:{id:config.id,title:config.title,parentBookId:null},units:units.map(unit=>{const pointsBlock=unit.blocks.find(block=>block.type==='points'),publication=(canonicalModel.points.units||[]).find(item=>item.unitId===unit.id),paidWargear=(pointsBlock?.wargear||[]).map(({label,value})=>({label,value}));return{id:unit.id,title:unit.title,sourceBookId:config.id,publicationState:unit.publicationState,points:unit.points||[],paidWargear,pointsSource:canonicalModel.points.source,mfmRecordId:publication?.mfmRecordId||null,ruleProfile:unit.ruleProfile,publicationRecord:{title:unit.title,points:unit.points,wargear:paidWargear}};}),detachments:[...detachments].sort((left,right)=>(detachmentOrder.get(left.id)??Infinity)-(detachmentOrder.get(right.id)??Infinity)).map(detachment=>({id:detachment.id,title:detachment.title,sourceBookId:config.id,detachmentPoints:detachment.detachmentPoints,forceDisposition:detachment.forceDisposition,mfmRecordId:detachment.mfmRecordId,mfmForceDispositionId:detachment.mfmForceDispositionId,missionForceDispositionId:detachment.missionForceDispositionId,forceDispositionId:detachment.forceDispositionId,mfmQualifiers:detachment.mfmQualifiers||[],publicationRecord:detachment.publicationRecord})),enhancements};
   const effectivePointsProjection=createEffectivePointsProjection(pointsProjectionInput),acceptedSourceConflicts=structuredClone(canonicalModel.book.acceptedSourceConflicts||[]),book={...canonicalModel.book,id:config.id,title:config.title,publicationTitle:canonicalModel.book.title,parentBookId:null};
   delete book.acceptedSourceConflicts;
   for(const conflict of acceptedSourceConflicts){

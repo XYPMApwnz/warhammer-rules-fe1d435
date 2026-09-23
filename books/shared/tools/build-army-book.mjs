@@ -7,7 +7,7 @@ import {canonicalDetachmentRuleSet,canonicalRosterModelsFor,canonicalWargearAbil
 import {createArmyBookTargetBuild} from './build-army-book-targets.mjs';
 import {createCanonicalBuildContext,finishCanonicalBuild} from './canonical-build-contract.mjs';
 import {createEffectivePointsProjection,resolveEffectiveEnhancementContractId,resolveEffectiveEnhancementIdentity} from './effective-points-projection.mjs';
-import {bindRowsToCanonicalIds,canonicalDisplayKey,canonicalSlug,canonicalizeRelationTargets,indexCanonicalById,mergeCanonicalById,mergeExactPointEnhancement,resolveArmyRuleBindings,resolvePointEnhancement} from './canonical-join-contract.mjs';
+import {bindRowsToCanonicalIds,canonicalDisplayKey,canonicalSlug,indexCanonicalById,mergeCanonicalById,mergeExactPointEnhancement,resolveArmyRuleBindings,resolvePointEnhancement} from './canonical-join-contract.mjs';
 import {applyCanonicalChildIdentityContracts,effectiveEffectContracts,validateEffectContractSet,validateEffectContractsAgainstCatalog} from './effect-contract.mjs';
 import {buildEffectiveBook} from './build-effective-book.mjs';
 import {createEffectiveBookModel,EFFECTIVE_BOOK_MODEL_SCHEMA} from './effective-book-model.mjs';
@@ -235,8 +235,7 @@ const stratagemEligibility=item=>{
   return explicit;
 };
 
-const armyRelationEdges=canonicalizeRelationTargets(units,{bookId:config.id,dispositions:config.relationTargetDispositions||[]});
-const relationEdges=mfmProjection.relationEdges({effectiveUnitIds:relationUnits.map(unit=>unit.id),armyEdges:armyRelationEdges});
+const relationEdges=mfmProjection.relationEdges({effectiveUnitIds:relationUnits.map(unit=>unit.id)});
 const mfmRelationKeys=new Set(relationEdges.map(edge=>`${edge.role}\0${edge.sourceId}\0${edge.targetId}`));
 let relationGraphs=buildRelationGraphs(relationUnits,relationEdges,{
   bookId:config.id,

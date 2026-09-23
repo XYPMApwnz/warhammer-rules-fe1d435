@@ -49,8 +49,9 @@ const relationUnits=[{id:'unit-leader',title:'Leader',relations:{leader:[{target
 assert.deepEqual(canonicalizeRelationTargets(relationUnits,{bookId:'qa'}),[{role:'leader',sourceId:'unit-leader',targetId:'unit-target'}]);
 const targetRenamed=structuredClone(relationUnits);targetRenamed[1].title='Renamed target';
 assert.deepEqual(canonicalizeRelationTargets(targetRenamed,{bookId:'qa'}),[{role:'leader',sourceId:'unit-leader',targetId:'unit-target'}]);
-throws(()=>canonicalizeRelationTargets([{id:'unit-source',title:'Source',relations:{leader:['Same']}},{id:'unit-a',title:'Same'},{id:'unit-b',title:'Same'}],{bookId:'qa'}),/exactly once/);
+throws(()=>canonicalizeRelationTargets([{id:'unit-source',title:'Source',relations:{leader:['Same']}},{id:'unit-a',title:'Same'},{id:'unit-b',title:'Same'}],{bookId:'qa'}),/requires an explicit canonical ID/);
 throws(()=>canonicalizeRelationTargets([{id:'unit-source',title:'Source',relations:{leader:[{targetId:'unit-missing'}]}}],{bookId:'qa'}),/unknown/);
+throws(()=>canonicalizeRelationTargets([{id:'unit-source',title:'Source',relations:{leader:[{targetId:'unit-target'},{targetId:'unit-target'}]}},{id:'unit-target',title:'Target'}],{bookId:'qa'}),/duplicate leader relation/);
 assert.deepEqual(canonicalTargetsFromProse('May join Foetid Bloat-drone with Heavy Blight Launcher.',[
   {id:'unit-short',title:'Foetid Bloat-drone'},
   {id:'unit-long',title:'Foetid Bloat-drone with Heavy Blight Launcher'}

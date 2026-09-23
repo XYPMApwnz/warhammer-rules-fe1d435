@@ -121,22 +121,17 @@ export function resolveDeclaredLegacyAlias(alias,aliases,{label='legacy alias'}=
 }
 
 export function canonicalizeRelationTargets(units,{bookId='book',dispositions=[]}={}){
-  const byId=indexCanonicalById(units,{label:`${bookId} relation unit`}),byTitle=new Map(),usedDispositions=new Set();
-  const dispositionRecords=values(dispositions).map((record,index)=>{if(!record||typeof record!=='object'||!record.title||!record.disposition)throw new Error(`${bookId}: relation disposition ${index+1} is invalid`);return{...record,key:[record.sourceId||'*',record.role||'*',canonicalDisplayKey(record.title)].join('\0')};});
-  if(new Set(dispositionRecords.map(record=>record.key)).size!==dispositionRecords.length)throw new Error(`${bookId}: duplicate relation target disposition`);
-  const dispositionByKey=new Map(dispositionRecords.map(record=>[record.key,record]));
-  for(const unit of units){const key=canonicalDisplayKey(unit.title),group=byTitle.get(key)||[];group.push(unit.id);byTitle.set(key,group);}
+  const byId=indexCanonicalById(units,{label:`${bookId} relation unit`});
+  if(values(dispositions).length)throw new Error(`${bookId}: legacy title-based relation target dispositions are unsupported`);
   const edges=[],edgeKeys=new Set();
   for(const source of units)for(const [role,targets] of [['leader',source.relations?.leader],['support',source.relations?.support]])for(const raw of values(targets)){
-    const records=typeof raw==='object'&&raw?([raw.targetId||raw.unitId||raw.id].filter(Boolean).map(targetId=>({targetId}))):String(raw).split(/[;,]/).map(value=>({title:value.trim()})).filter(record=>record.title);
-    for(const record of records){
-      let targetId=record.targetId;
-      if(targetId&&!byId.has(targetId))throw new Error(`${bookId}: ${source.id} references unknown ${role} target ID ${targetId}`);
-      if(!targetId){const matches=byTitle.get(canonicalDisplayKey(record.title))||[];if(matches.length!==1){const keys=[[source.id,role,canonicalDisplayKey(record.title)].join('\0'),[source.id,'*',canonicalDisplayKey(record.title)].join('\0'),['*',role,canonicalDisplayKey(record.title)].join('\0'),['*','*',canonicalDisplayKey(record.title)].join('\0')],disposition=keys.map(key=>dispositionByKey.get(key)).find(Boolean);if(matches.length===0&&disposition){usedDispositions.add(disposition.key);continue;}throw new Error(`${bookId}: ${source.id} ${role} target ${record.title} must resolve exactly once; got ${matches.length}`);}targetId=matches[0];}
-      const edgeKey=[source.id,role,targetId].join('\0');if(edgeKeys.has(edgeKey))continue;edgeKeys.add(edgeKey);edges.push({role,sourceId:source.id,targetId});
-    }
+    if(!raw||typeof raw!=='object')throw new Error(`${bookId}: ${source.id} ${role} target requires an explicit canonical ID`);
+    const targetId=raw.targetId||raw.unitId||raw.id;
+    if(!targetId||!byId.has(targetId))throw new Error(`${bookId}: ${source.id} references unknown ${role} target ID ${targetId||'(missing)'}`);
+    const edgeKey=[source.id,role,targetId].join('\0');
+    if(edgeKeys.has(edgeKey))throw new Error(`${bookId}: duplicate ${role} relation ${source.id} -> ${targetId}`);
+    edgeKeys.add(edgeKey);edges.push({role,sourceId:source.id,targetId});
   }
-  const unused=dispositionRecords.filter(record=>!usedDispositions.has(record.key));if(unused.length)throw new Error(`${bookId}: unused relation target dispositions: ${unused.map(record=>record.key.replaceAll('\0','/')).join(', ')}`);
   return edges;
 }
 

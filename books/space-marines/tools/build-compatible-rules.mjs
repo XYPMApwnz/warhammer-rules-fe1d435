@@ -3,7 +3,7 @@ import path from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import ruleFacts from '../../shared/rule-facts.js';
 import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
-import {canonicalizeRelationTargets} from '../../shared/tools/canonical-join-contract.mjs';
+import {createEffectiveMfmArmyProjection} from '../../shared/tools/effective-mfm-army-projection.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8')),stable=value=>`${JSON.stringify(value,null,2)}\n`;
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),keyword=value=>ruleFacts.normalizeKeyword(value);
@@ -30,7 +30,7 @@ function potentialAttachmentOnly(contract,unit,relations){
 export function build(){
   const config=read('book.config.json'),codex=read('content/space-marines-codex-datasheets.en.json'),snapshot=read('sources/wahapedia-compatible-rules.snapshot.json'),related=read('content/space-marines-related-rules.en.json'),known=new Set(codex.datasheets.map(item=>item.id));
   if(known.size!==101||Object.keys(snapshot.units).length!==101)throw new Error('Space Marines Compatible Rules must cover exactly 101 Datasheets.');
-  const unitById=new Map(codex.datasheets.map(unit=>[unit.id,unit])),relations=buildRelationGraphs(codex.datasheets,canonicalizeRelationTargets(codex.datasheets,{bookId:'space-marines compatible rules',dispositions:config.relationTargetDispositions||[]}));
+  const unitById=new Map(codex.datasheets.map(unit=>[unit.id,unit])),relationEdges=createEffectiveMfmArmyProjection('space-marines').relationEdges({effectiveUnitIds:codex.datasheets.map(unit=>unit.id)}),relations=buildRelationGraphs(codex.datasheets,relationEdges);
   const units={};
   for(const [unitId,rows] of Object.entries(snapshot.units)){
     if(!known.has(unitId))throw new Error(`Unknown Space Marines Datasheet ${unitId}`);

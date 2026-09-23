@@ -41,11 +41,10 @@ assert.deepEqual(Array.from(huronRelations.canLead, (relation) => relation.unitI
   'unit-chaos-terminator-squad',
   'unit-chosen',
   'unit-legionaries',
-  'unit-masters-of-the-maelstrom',
   'unit-red-corsairs-raiders',
-], 'current Huron Leader targets must retain the source-backed Masters relation');
+], 'current Huron Leader targets must follow effective MFM eligibility');
 assert.deepEqual(Array.from(catalogUnit('Masters of the Maelstrom').relations.canBeLedBy, (relation) => relation.unitId),
-  ['unit-huron-blackheart'], 'Masters must retain the inverse Huron Leader relation');
+  [], 'Faction Pack-only Huron conflict must not become an effective MFM relation');
 for (const title of ['Chaos Terminator Squad', 'Chosen', 'Legionaries', 'Red Corsairs Raiders']) {
   assert.equal(catalogUnit(title).relations.canBeLedBy.filter((relation) => relation.unitId === 'unit-huron-blackheart').length, 1,
     `${title}: source-backed Huron inverse relation changed`);

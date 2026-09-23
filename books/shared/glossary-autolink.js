@@ -22,7 +22,7 @@
 
   function configure(bookId){
     activeBook=bookId||activeBook;
-    preferredByToken=window.WH40K_GLOSSARY_MATCHES||{};
+    preferredByToken=window.WH40K_GLOSSARY?.preferredMatches?.(activeBook)||{};
     const entries=window.WH40K_GLOSSARY?.linkables?.(activeBook)||[];
     termsByToken=new Map();
     for(const entry of entries){
@@ -56,7 +56,7 @@
       const entry=candidates.find(candidate=>unitId&&(candidate.owners||[]).includes(unitId))
         ||candidates.find(candidate=>glossaryId===`glossary-${candidate.id}`)
         ||candidates.find(candidate=>contextTermId===candidate.id)
-        ||candidates.find(candidate=>candidate.termId===preferredByToken[normalize(label)])
+        ||candidates.find(candidate=>candidate.id===preferredByToken[normalize(label)])
         ||(candidates.length===1?candidates[0]:null);
       const display=/^\d{2}\.\d{2}(?:\.\d{2})?$/.test(label)?entry?.title||label:label;
       found.push({start,end:start+label.length,label,display,id:entry?.id||'',ambiguous:!entry,candidates:candidates.map(candidate=>candidate.id)});

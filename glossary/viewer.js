@@ -1,7 +1,8 @@
 (function(){
   'use strict';
   const api=window.WH40K_GLOSSARY;
-  const terms=api.entries().filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
+  const allTerms=api.entries().filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
+  const terms=api.standaloneEntries().filter(term=>term&&term.presentation!=='metadata').sort((a,b)=>a.title.en.localeCompare(b.title.en));
   const search=document.getElementById('search'),filters=document.getElementById('filters'),list=document.getElementById('termList'),detail=document.getElementById('termDetail'),resultCount=document.getElementById('resultCount'),libraryBack=document.getElementById('libraryBack'),popup=document.getElementById('termPopup'),popupTitle=document.getElementById('termPopupTitle'),popupSummary=document.getElementById('termPopupSummary'),popupFull=document.getElementById('termPopupFull');
   let category='all',selected='',visibleLimit=120,searchTimer=0;
   const returnRecord=window.WHGlossaryReturn?.read();
@@ -9,20 +10,20 @@
   const kindLabels={
     ability:'Ability','army-rules':'Army rules',characteristic:'Characteristic','core-ability':'Core ability','core-concept':'Core concept','core-rule':'Core rule','core-rules-11e':'Core rules',detachment:'Detachment','detachment-rule':'Detachment rule',enhancement:'Enhancement','faction-concept':'Faction concept','faction-term':'Faction term','game-state':'Game state',keyword:'Keyword',phase:'Phase',plagues:'Plague',step:'Step',stratagem:'Stratagem',unit:'Unit',weapon:'Weapon profile'
   };
-  const scopeLabels={global:'Core Rules','death-guard':'Death Guard','adeptus-mechanicus':'Adeptus Mechanicus'};
+  const scopeLabels={global:'Core Rules',missions:'Missions','death-guard':'Death Guard','adeptus-mechanicus':'Adeptus Mechanicus','tau-empire':"T'au Empire",tyranids:'Tyranids','emperors-children':"Emperor's Children",'chaos-space-marines':'Chaos Space Marines','space-marines':'Space Marines','dark-angels':'Dark Angels','blood-angels':'Blood Angels'};
   const humanize=value=>String(value||'').replaceAll('-',' ').replace(/\b\w/g,letter=>letter.toUpperCase());
   const kindLabel=term=>kindLabels[term.kind]||humanize(term.kind);
   const scopeLabel=term=>scopeLabels[term.scope]||humanize(term.scope);
   const displayTitle=term=>term.title.en.replace(/^\[(.+)\]$/,'$1');
   const normalize=value=>String(value||'').toLocaleLowerCase().replace(/\s+/g,' ').trim();
   const titleCounts=new Map();
-  for(const term of terms){const title=normalize(displayTitle(term));titleCounts.set(title,(titleCounts.get(title)||0)+1);}
+  for(const term of allTerms){const title=normalize(displayTitle(term));titleCounts.set(title,(titleCounts.get(title)||0)+1);}
   const technicalAlias=/(?:^|-)(unit|weapon|ability|stratagem|enhancement|detachment)-/;
   const repeatsDefinition=(summary,definition)=>{const quick=normalize(summary),full=normalize(definition);return quick&&full.startsWith(quick);};
   const presentationPriority=term=>term.presentation==='profile'?1:0;
-  const duplicateQualifier=term=>{const same=terms.filter(other=>normalize(displayTitle(other))===normalize(displayTitle(term)));if(new Set(same.map(other=>other.scope)).size>1)return scopeLabel(term);return humanize(String(term.canonicalSource?.locator||kindLabel(term)).replace(/^unit-/,''));};
+  const duplicateQualifier=term=>{const same=allTerms.filter(other=>normalize(displayTitle(other))===normalize(displayTitle(term)));if(new Set(same.map(other=>other.scope)).size>1)return scopeLabel(term);const parent=term.parent?.canonicalId||term.contexts?.find(context=>context.parentUnitId)?.parentUnitId;return parent?`${scopeLabel(term)} · ${humanize(parent.replace(/^unit-|^detachment-/,''))}`:humanize(String(term.canonicalSource?.locator||kindLabel(term)).replace(/^unit-/,''));};
   if(returnRecord){libraryBack.href=returnRecord.path;libraryBack.textContent='← Return to popup';libraryBack.addEventListener('click',()=>window.WHGlossaryReturn?.setRestoreMode('automatic'));}
-  document.getElementById('termCount').textContent=api.counts.terms;
+  document.getElementById('termCount').textContent=api.counts.standalone;
   document.getElementById('aliasCount').textContent=api.counts.aliases;
   const categories=['all',...new Set(terms.map(term=>term.kind))];
 
@@ -30,7 +31,8 @@
   function renderFilters(){filters.replaceChildren(...categories.map(filterButton));}
   function score(term,query){
     if(!query)return 0;
-    const title=normalize(displayTitle(term)),aliases=(term.aliases||[]).map(normalize),searchAliases=aliases.filter(alias=>!technicalAlias.test(alias)||query.includes('-')),words=query.split(' ').filter(Boolean),summary=normalize(term.summary?.en),definition=normalize(term.definition?.en);
+    const title=normalize(displayTitle(term)),aliases=(term.aliases||[]).map(normalize),preferred=(term.matchLabels||[]).map(normalize),searchAliases=aliases.filter(alias=>!technicalAlias.test(alias)||query.includes('-')),words=query.split(' ').filter(Boolean),summary=normalize(term.summary?.en),definition=normalize(term.definition?.en);
+    if(preferred.includes(query))return -1;
     if(title===query)return 0;
     if(title.startsWith(query))return 1;
     if(aliases.includes(query))return 2;
@@ -40,7 +42,7 @@
     if(definition.includes(query))return 6;
     return Number.POSITIVE_INFINITY;
   }
-  function visibleTerms(){const query=normalize(search.value),ranked=terms.map(term=>({term,score:score(term,query)})).filter(item=>(category==='all'||item.term.kind===category)&&Number.isFinite(item.score));const titleMatches=ranked.filter(item=>item.score<5);return(query&&titleMatches.length?titleMatches:ranked).sort((a,b)=>a.score-b.score||presentationPriority(a.term)-presentationPriority(b.term)||displayTitle(a.term).localeCompare(displayTitle(b.term))).map(item=>item.term);}
+  function visibleTerms(){const query=normalize(search.value),source=query?allTerms:terms,ranked=source.map(term=>({term,score:score(term,query)})).filter(item=>(category==='all'||item.term.kind===category)&&Number.isFinite(item.score));const titleMatches=ranked.filter(item=>item.score<5);return(query&&titleMatches.length?titleMatches:ranked).sort((a,b)=>a.score-b.score||presentationPriority(a.term)-presentationPriority(b.term)||displayTitle(a.term).localeCompare(displayTitle(b.term))).map(item=>item.term);}
   function renderList(){
     const visible=visibleTerms(),shown=visible.slice(0,visibleLimit);
     resultCount.textContent=`${shown.length} of ${visible.length} entries shown`;

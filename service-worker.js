@@ -66,7 +66,9 @@ const APP_SHELL = [
   "./glossary/viewer-profiles.css?v=2",
   "./glossary/viewer-progressive.css?v=3",
   "./glossary/viewer-popup.css?v=1",
-  "./glossary/viewer.js?v=13",
+  "./glossary/v2/generated/index.en.js?v=1",
+  "./glossary/v2/runtime/glossary-v2-runtime.js?v=1",
+  "./glossary/viewer.js?v=14",
   "./books/death-guard/",
   DEATH_GUARD_FALLBACK,
   "./books/death-guard/reader.html",
@@ -82,7 +84,7 @@ const APP_SHELL = [
   "./books/shared/datasheet-system.css?v=8",
   "./books/shared/unit-art.css?v=1",
   "./books/shared/popup-content.js?v=3",
-  "./books/shared/glossary-autolink.js?v=8",
+  "./books/shared/glossary-autolink.js?v=9",
   "./books/shared/rule-facts.js?v=5",
   "./books/core-rules/assets/diagrams/BattleShockExamples1.webp",
   "./books/core-rules/assets/diagrams/BattleShockExamples2.webp",
@@ -273,7 +275,6 @@ const APP_SHELL = [
   ,"./books/tyranids/generated/compatible-rules.json"
   ,"./books/tyranids/scripts/app.js?v=11"
   ,"./books/tyranids/mobile/related-rules.inc?v=4"
-  ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
   ,TAU_EMPIRE_ENTRY_FALLBACK
   ,TAU_EMPIRE_DESKTOP_FALLBACK
@@ -369,7 +370,7 @@ const APP_SHELL = [
   ,"./books/shared/army-related-rules.js?v=18"
   ,"./books/shared/roster-context.js?v=20"
   ,"./books/shared/roster-game-presentation.js?v=21"
-,"./books/shared/army-book-app.js?v=19"
+,"./books/shared/army-book-app.js?v=20"
   ,"./books/shared/offline-status.js?v=4"
   ,"./books/shared/styles/offline-status.css?v=2"
   // BEGIN GENERATED OFFLINE MOBILE ROUTES

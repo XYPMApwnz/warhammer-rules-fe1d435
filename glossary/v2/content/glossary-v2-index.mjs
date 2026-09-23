@@ -150,6 +150,27 @@ function addRequiredEffectiveArmyGlossaryFacts(entries,model){
   }
 }
 
+function addDeathGuardArmyRuleComponents(entries,model,lookups){
+  if(model.book.id!=='death-guard')return;
+  const ownerId='army-rule-nurgles-gift',owner=lookups.armyRule.get(`${model.book.id}::${ownerId}`),rule=(model.rules?.armyRules||[]).find(record=>record.id===ownerId)||model.rules?.armyRule;
+  if(!owner||rule?.id!==ownerId)throw new Error('death-guard: Nurgle\u2019s Gift factual owner is unavailable');
+  const rangeTable=(rule.blocks||[]).find(block=>block.type==='table'&&block.columns?.includes('Contagion Range'));
+  const rangeCap=(rule.blocks||[]).find(block=>block.id==='contagion-range-cap');
+  if(!rangeTable||!rangeCap)throw new Error('death-guard: Contagion Range structured facts are incomplete');
+  const components=[
+    {id:'contagion-range',title:'Contagion Range',blocks:[rangeTable,rangeCap]},
+    ...['afflicted','skullsquirm-blight','rattlejoint-ague','scabrous-soulrot'].map(id=>{
+      const subsection=(rule.subsections||[]).find(record=>record.id===id);
+      if(!subsection)throw new Error(`death-guard: Nurgle\u2019s Gift component ${id} is unavailable`);
+      return subsection;
+    })
+  ];
+  for(const component of components)addArmyEntry(entries,model,'ARMY_RULE_COMPONENT',component,{
+    parentId:ownerId,
+    references:[{domain:'ARMY',id:owner.id,canonicalId:ownerId,relationType:'PARENT_ARMY_RULE'}]
+  });
+}
+
 function addArmyEntries(entries,models){
   const lookups={unit:new Map(),detachment:new Map(),enhancement:new Map(),armyRule:new Map()};
   for(const model of models){
@@ -177,6 +198,7 @@ function addArmyEntries(entries,models){
     }
     for(const rule of model.rules?.armyRules||[]){const entry=addArmyEntry(entries,model,'ARMY_RULE',rule,{ownerBookId:rule.source==='dependency'&&rule.sourceBook?rule.sourceBook:null});for(const id of [rule.id,rule.termId].filter(Boolean))lookups.armyRule.set(`${model.book.id}::${id}`,entry);}
     if(model.rules?.armyRule?.id){const rule=model.rules.armyRule,entry=addArmyEntry(entries,model,'ARMY_RULE',rule,{ownerBookId:rule.source==='dependency'&&rule.sourceBook?rule.sourceBook:null});for(const id of [rule.id,rule.termId].filter(Boolean))lookups.armyRule.set(`${model.book.id}::${id}`,entry);}
+    addDeathGuardArmyRuleComponents(entries,model,lookups);
     addRequiredEffectiveArmyGlossaryFacts(entries,model);
     const updates=Array.isArray(model.rules?.updates)?model.rules.updates:model.rules?.updates?[model.rules.updates]:[];
     for(const update of updates)if(update.id)addArmyEntry(entries,model,'UPDATE',update);

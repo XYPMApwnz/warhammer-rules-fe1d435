@@ -24,21 +24,23 @@
   const searchInput = document.getElementById('searchInput');
   const searchStatus = document.getElementById('searchStatus');
   const searchResults = document.getElementById('searchResults');
-  let searchIndex;
-  let searchIndexPromise;
+  const glossary = window.WH40K_GLOSSARY;
+  const searchIndex = glossary.entries().filter(term => term.domain === 'CORE');
   let termOpener;
   let drawerScrollY = 0;
 
   function showTerm(trigger) {
-    const term={id:trigger.dataset.term,title:trigger.dataset.termTitle,definition:trigger.dataset.termDefinition,fullRulePath:trigger.dataset.fullRulePath};
-    if(!term.id||!term.title||!term.definition)return;
+    const term=glossary.resolveView('core-rules',trigger.dataset.term);
+    if(!term)return;
     termOpener = trigger;
     title.textContent = term.title;
     summary.textContent = term.definition;
-    full.href = `../../../glossary/index.html#${term.id}`;
-    rule.hidden = !term.fullRulePath;
-    if (term.fullRulePath) rule.href = window.WHGlossaryReturn.href(term.fullRulePath);
+    full.href = `../../../glossary/index.html#${encodeURIComponent(term.id)}`;
+    const fullRulePath=trigger.dataset.fullRulePath;
+    rule.hidden = !fullRulePath;
+    if (fullRulePath) rule.href = window.WHGlossaryReturn.href(fullRulePath);
     dialog.dataset.openTerm = term.id;
+    dialog.dataset.sourceTerm = trigger.dataset.term;
     dialog.showModal();
   }
 
@@ -94,7 +96,7 @@
 
   function rememberPopup(){
     const triggers=[...document.querySelectorAll('[data-term]')];
-    window.WHGlossaryReturn?.save({termId:dialog.dataset.openTerm,triggerIndex:termOpener?triggers.indexOf(termOpener):-1});
+    window.WHGlossaryReturn?.save({termId:dialog.dataset.sourceTerm,glossaryEntryId:dialog.dataset.openTerm,triggerIndex:termOpener?triggers.indexOf(termOpener):-1});
     return window.WHGlossaryReturn?.read();
   }
   full.addEventListener('click',rememberPopup);
@@ -113,25 +115,9 @@
   imageClose.addEventListener('click', () => imageDialog.close());
   imageDialog.addEventListener('click', event => { if (event.target === imageDialog) imageDialog.close(); });
 
-  async function openSearch() {
+  function openSearch() {
     if (!searchDialog.open) searchDialog.showModal();
     searchInput.focus();
-    if (!searchIndex) {
-      searchStatus.textContent = 'Loading search index…';
-      if (!searchIndexPromise) searchIndexPromise = fetch('search-index.json')
-        .then(response => {
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          return response.json();
-        })
-        .then(index => { searchIndex = index; return index; })
-        .catch(error => { searchIndexPromise = null; throw error; });
-      try {
-        await searchIndexPromise;
-        searchStatus.textContent = 'Type at least two characters.';
-      } catch {
-        searchStatus.textContent = 'Search unavailable. Close and try again.';
-      }
-    }
   }
 
   searchButton.addEventListener('click', openSearch);
@@ -139,15 +125,20 @@
   searchResults.addEventListener('click', event => { if (event.target.closest('a')) searchDialog.close(); });
   searchInput.addEventListener('input', () => {
     const query = normalizeSearch(searchInput.value);
-    if (!searchIndex) return;
     if (query.length < 2) {
       searchStatus.textContent = 'Type at least two characters.';
       searchResults.replaceChildren();
       return;
     }
-    const matches = searchIndex.filter(item => normalizeSearch(`${item.code} ${item.title} ${item.chapter} ${item.text}`).includes(query)).sort((a,b)=>Number(!normalizeSearch(a.title).includes(query))-Number(!normalizeSearch(b.title).includes(query))).slice(0, 40);
+    const matches = searchIndex.filter(item => normalizeSearch(`${item.label} ${(item.aliases||[]).join(' ')} ${item.searchableContent}`).includes(query)).sort((a,b)=>Number(!normalizeSearch(a.label).includes(query))-Number(!normalizeSearch(b.label).includes(query))).slice(0, 40);
     searchStatus.textContent = matches.length ? `${matches.length}${matches.length === 40 ? '+' : ''} results` : 'No matching rules.';
-    searchResults.innerHTML = matches.map(item => `<a href="${item.url}"><small>${item.chapter}</small><strong>${item.title}</strong><span>${item.text.slice(0, 180)}</span></a>`).join('');
+    searchResults.replaceChildren(...matches.map(item=>{
+      const link=document.createElement('a');link.href=`../../../glossary/index.html#${encodeURIComponent(item.id)}`;
+      const kind=document.createElement('small');kind.textContent=item.recordType.replaceAll('_',' ');
+      const heading=document.createElement('strong');heading.textContent=item.label;
+      const excerpt=document.createElement('span');excerpt.textContent=item.definition.en.slice(0,180);
+      link.append(kind,heading,excerpt);return link;
+    }));
   });
   addEventListener('keydown', event => {
     if (event.key === 'Escape' && body.classList.contains('nav-open')) {

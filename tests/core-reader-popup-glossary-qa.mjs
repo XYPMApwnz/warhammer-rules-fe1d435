@@ -11,9 +11,9 @@ const app=fs.readFileSync(path.join(root,'books/core-rules/reader/app.js'),'utf8
 const projection=createCoreFactProjection({repoRoot:root}),projectionById=new Map(projection.terms.map(term=>[term.id,term]));
 const expected=projectionById.get('core-blast');
 assert(expected?.definition,'effective Core projection must expose the Blast definition');
-assert.match(app,/definition:trigger\.dataset\.termDefinition/,'Core Reader popup must consume its generated effective-Core definition');
+assert.match(app,/glossary\.resolveView\('core-rules',trigger\.dataset\.term\)/,'Core Reader popup must resolve the canonical V2 entry');
 assert.match(app,/summary\.textContent = term\.definition/,'Core Reader popup must render the generated effective-Core definition');
-assert.doesNotMatch(app,/WH40K_GLOSSARY|glossary\.en\.js|dataset\.termSummary/,'Core Reader popup must not retain a Glossary or legacy-summary factual dependency');
+assert.doesNotMatch(app,/dataset\.termDefinition|dataset\.termSummary|glossary\/generated\/glossary\.en\.js/,'Core Reader popup must not retain generated DOM or legacy Glossary factual dependencies');
 const decode=value=>value.replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','&');
 const generatedHtml=fs.readdirSync(path.join(root,'books/core-rules/reader')).filter(file=>file.endsWith('.html')).map(file=>fs.readFileSync(path.join(root,'books/core-rules/reader',file),'utf8')).join('\n');
 let projectedButtons=0;
@@ -37,26 +37,25 @@ const browser=await launchChromium(),base=`http://127.0.0.1:${server.address().p
 try{
   for(const viewport of [{width:390,height:844},{width:1440,height:900}]){
     const context=await browser.newContext({viewport,serviceWorkers:'block'}),page=await context.newPage();
-    await context.addInitScript(()=>{window.WH40K_GLOSSARY={resolveView:()=>({id:'POISON_ID',title:'POISON GLOSSARY TITLE',definition:'POISON GLOSSARY DEFINITION'})};});
     page.on('pageerror',error=>errors.push(`${viewport.width}: ${error.message}`));
     page.on('request',request=>requests.push(request.url()));
     await page.goto(`${base}/books/core-rules/reader/monsters-vehicles.html`);
     const trigger=page.locator('[data-term="core-blast"]').first();
     assert.equal(await trigger.getAttribute('data-term-title'),expected.title,`${viewport.width}: generated title differs from effective Core`);
     assert.equal(await trigger.getAttribute('data-term-definition'),expected.definition,`${viewport.width}: generated definition differs from effective Core`);
-    await trigger.evaluate(node=>{node.dataset.termSummary='POISON LEGACY SUMMARY';});
+    await trigger.evaluate(node=>{node.dataset.termSummary='POISON LEGACY SUMMARY';node.dataset.termDefinition='POISON GENERATED DEFINITION';});
     await trigger.click();
     await page.locator('#termDialog[open]').waitFor();
     assert.equal(await page.locator('#termTitle').innerText(),expected.title,`${viewport.width}: popup title bypassed generated effective Core`);
     assert.equal(await page.locator('#termSummary').innerText(),expected.definition,`${viewport.width}: popup definition bypassed generated effective Core`);
-    assert.equal(await page.locator('#termDialog').getAttribute('data-open-term'),expected.id,`${viewport.width}: popup identity drift`);
+    assert.equal(await page.locator('#termDialog').getAttribute('data-open-term'),`core::${expected.id}`,`${viewport.width}: popup identity drift`);
     assert.notEqual(await page.locator('#termSummary').innerText(),'POISON LEGACY SUMMARY',`${viewport.width}: legacy summary remained authoritative`);
-    assert.notEqual(await page.locator('#termSummary').innerText(),'POISON GLOSSARY DEFINITION',`${viewport.width}: generated Glossary remained authoritative`);
+    assert.notEqual(await page.locator('#termSummary').innerText(),'POISON GENERATED DEFINITION',`${viewport.width}: generated DOM definition remained authoritative`);
     await page.locator('#termClose').click();
     await context.close();
   }
   assert.deepEqual(errors,[],'Core Reader popup browser errors');
-  assert(!requests.some(url=>url.includes('/glossary/generated/')),`Core Reader popup requested generated Glossary facts: ${requests.find(url=>url.includes('/glossary/generated/'))}`);
+  assert(!requests.some(url=>url.includes('/glossary/generated/glossary.en.js')),`Core Reader popup requested legacy Glossary facts: ${requests.find(url=>url.includes('/glossary/generated/glossary.en.js'))}`);
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 
-console.log('Core Reader popup effective-Core QA passed: generated definition wins over poisoned Glossary/legacy fields at 390px and 1440px.');
+console.log('Core Reader popup Glossary V2 QA passed: the V2 Core entry wins over poisoned generated DOM fields at 390px and 1440px.');

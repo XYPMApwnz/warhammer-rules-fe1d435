@@ -112,6 +112,26 @@ for(const id of ['recon-augury','data-psalm','halo-override']){
   assert.equal(entry.canonicalReferences[0].canonicalId,source.sectionId,`${id}: stable owning-rule identity`);
 }
 
+const dgModel=inputs.armyModels.find(model=>model.book.id==='death-guard');
+const dgOwner=index.entries.find(entry=>entry.id==='army::death-guard::army_rule::army-rule-nurgles-gift');
+const dgComponents=['contagion-range','afflicted','skullsquirm-blight','rattlejoint-ague','scabrous-soulrot'];
+for(const id of dgComponents){
+  const entry=index.entries.find(record=>record.id===`army::death-guard::army_rule_component::army-rule-nurgles-gift::${id}`);
+  assert(entry,`${id}: accepted Nurgle's Gift component must be projected into V2`);
+  assert.equal(entry.parent.canonicalId,'army-rule-nurgles-gift');
+  assert.equal(entry.canonicalReferences[0].id,dgOwner.id);
+  assert.equal(entry.sourceOwner.interface,'buildCanonicalBook(...,{projectionOnly:true})');
+  if(id==='contagion-range'){
+    const sourceRule=(dgModel.rules.armyRules||[]).find(record=>record.id==='army-rule-nurgles-gift')||dgModel.rules.armyRule;
+    assert.deepEqual(entry.facts.blocks,[sourceRule.blocks.find(block=>block.type==='table'&&block.columns?.includes('Contagion Range')),sourceRule.blocks.find(block=>block.id==='contagion-range-cap')]);
+  }else{
+    const sourceRule=(dgModel.rules.armyRules||[]).find(record=>record.id==='army-rule-nurgles-gift')||dgModel.rules.armyRule;
+    assert.deepEqual(entry.facts,sourceRule.subsections.find(record=>record.id===id),`${id}: child semantics must come from the accepted Army rule`);
+  }
+}
+assert.equal(index.counts.standalone,1741,'Death Guard components must not change standalone browse');
+assert.equal(index.counts.scopedChildren,2892,'only the five Death Guard components may extend scoped children');
+
 const missingAmFactInputs={...inputs,armyModels:structuredClone(inputs.armyModels)};
 const missingAmModel=missingAmFactInputs.armyModels.find(model=>model.book.id==='adeptus-mechanicus');
 missingAmModel.glossary=missingAmModel.glossary.filter(record=>record.id!=='recon-augury');

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "shared": {
-    "armyBook": 19,
+    "armyBook": 20,
     "offlineStatus": 4,
     "offlineStatusCss": 2,
     "glossaryReturn": 5,

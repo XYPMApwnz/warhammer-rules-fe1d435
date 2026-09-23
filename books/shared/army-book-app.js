@@ -9,8 +9,9 @@
     else document.documentElement.removeAttribute('data-view');
     const runtimeContext=Object.freeze({root,config,params,phoneMode});
 
-    const terms=root.WH40K_GLOSSARY?.forBook(config.bookId)||{};
     const documentRoot=document.querySelector('.document');
+    root.WH40K_GLOSSARY?.bindArmyRoot?.(documentRoot,config.bookId);
+    const terms=root.WH40K_GLOSSARY?.forBook(config.bookId)||{};
     const fullEntry=new root.DGFullEntry(root.WH40K_GLOSSARY);
     const popups=new root.DGPopups(terms,fullEntry);
     const relatedConfig=config.relatedRules===false?null:config.relatedRules||{};
@@ -54,11 +55,13 @@
     let app=null;
     const initializeRoot=(mountRoot,initializeOptions={})=>{
       if(!mountRoot)return mountRoot;
+      root.WH40K_GLOSSARY?.bindArmyRoot?.(mountRoot,config.bookId);
       root.WHArmyDatasheetLayout?.install(mountRoot);
       root.WHGlossaryAutolink?.apply(mountRoot,config.bookId);
       root.WHGlossaryAutolink?.validate(mountRoot,terms);
       root.WH_ARMY_ROSTER_DECORATOR?.decorate(mountRoot,initializeOptions);
       root.WHArmyRosterGamePresentation?.install(mountRoot,root.WH_ARMY_ROSTER_DECORATOR?.projection||root.WH_ARMY_ROSTER_PROJECTION);
+      root.WH40K_GLOSSARY?.bindArmyRoot?.(mountRoot,config.bookId);
       relatedRules?.enhance?.(mountRoot);
       tableAccessibility.apply(mountRoot);
       extensions.forEach(extension=>extension(Object.freeze({...runtimeContext,app,mountRoot})));

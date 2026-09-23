@@ -3363,20 +3363,6 @@ window.DG_TERMS={
     "datasheet": "unit-harridan",
     "statline": "harridan-profile"
   },
-  "tyranids-ability-deadly-demise-2d6": {
-    "id": "tyranids-ability-deadly-demise-2d6",
-    "title": "Deadly Demise 2D6",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tyranids-ability-deadly-demise-2d6",
-    "rule": "unit-harridan",
-    "units": [
-      "unit-harridan",
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-harridan",
-    "statline": "harridan-profile"
-  },
   "tyranids-weapon-dire-bio-cannon": {
     "id": "tyranids-weapon-dire-bio-cannon",
     "title": "Dire bio-cannon",

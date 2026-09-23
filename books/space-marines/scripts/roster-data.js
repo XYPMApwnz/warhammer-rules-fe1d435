@@ -3225,24 +3225,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-apothecary"
           },
           {
-            "id": "unit-apothecary-ability-f19ec59278",
-            "sectionId": "unit-apothecary-ability-f19ec59278",
+            "id": "space-marines-ability-support",
+            "sectionId": "space-marines-ability-support",
             "title": "Support",
             "text": "This model can be attached to the following units:\n\n■ ASSAULT INTERCESSOR SQUAD \n■ BLADEGUARD VETERAN SQUAD \n■ CRUSADER SQUAD \n■ DEATHWATCH VETERANS \n■ DECIMUS KILL TEAM \n■ DESOLATION SQUAD \n■ DEVASTATOR SQUAD \n■ FORTIS KILL TEAM\n■ HELLBLASTER SQUAD\n■ INFERNUS SQUAD\n■ INNER CIRCLE COMPANIONS\n■ INTERCESSOR SQUAD\n■ STERNGUARD VETERAN SQUAD\n■ SWORD BRETHREN SQUAD\n■ TACTICAL SQUAD\n\n\nYou can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
-            "sourceUnitId": "unit-apothecary",
-            "legacyIds": [
-              "core-support"
-            ]
+            "sourceUnitId": "unit-apothecary"
           },
           {
-            "id": "unit-apothecary-ability-9d2a48b50d",
-            "sectionId": "unit-apothecary-ability-9d2a48b50d",
+            "id": "core-support",
+            "sectionId": "core-support",
             "title": "Support",
             "text": "",
-            "sourceUnitId": "unit-apothecary",
-            "legacyIds": [
-              "core-support"
-            ]
+            "sourceUnitId": "unit-apothecary"
           },
           {
             "id": "space-marines-army-rule-oath-of-moment",
@@ -3849,8 +3843,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-captain"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader",
+            "sectionId": "space-marines-ability-leader",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VICTRIX HONOUR GUARD.",
             "sourceUnitId": "unit-captain"
@@ -4288,8 +4282,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-captain-in-gravis-armour"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-2",
+            "sectionId": "space-marines-ability-leader-2",
             "title": "Leader",
             "text": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD, INDOMITOR KILL TEAM.",
             "sourceUnitId": "unit-captain-in-gravis-armour"
@@ -4628,8 +4622,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-captain-in-phobos-armour"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-3",
+            "sectionId": "space-marines-ability-leader-3",
             "title": "Leader",
             "text": "This model can be attached to the following units: ELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SCOUT SQUAD, SPECTRUS KILL TEAM.",
             "sourceUnitId": "unit-captain-in-phobos-armour"
@@ -4844,8 +4838,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-captain-in-terminator-armour"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-4",
+            "sectionId": "space-marines-ability-leader-4",
             "title": "Leader",
             "text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
             "sourceUnitId": "unit-captain-in-terminator-armour"
@@ -5086,8 +5080,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-captain-with-jump-pack"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-5",
+            "sectionId": "space-marines-ability-leader-5",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, SANGUINARY GUARD, TALONSTRIKE KILL TEAM, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
             "sourceUnitId": "unit-captain-with-jump-pack"
@@ -5527,8 +5521,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaplain"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-6",
+            "sectionId": "space-marines-ability-leader-6",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATH COMPANY MARINES, DEATH COMPANY MARINES WITH BOLT RIFLES, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
             "sourceUnitId": "unit-chaplain"
@@ -5699,8 +5693,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaplain-in-terminator-armour"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-4",
+            "sectionId": "space-marines-ability-leader-4",
             "title": "Leader",
             "text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
             "sourceUnitId": "unit-chaplain-in-terminator-armour"
@@ -5882,8 +5876,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaplain-on-bike"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-7",
+            "sectionId": "space-marines-ability-leader-7",
             "title": "Leader",
             "text": "This model can be attached to the following units: OUTRIDER SQUAD, RAVENWING BLACK KNIGHTS.",
             "sourceUnitId": "unit-chaplain-on-bike"
@@ -6085,8 +6079,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chaplain-with-jump-pack"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-8",
+            "sectionId": "space-marines-ability-leader-8",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, DEATH COMPANY MARINES WITH JUMP PACKS, TALONSTRIKE KILL TEAM, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
             "sourceUnitId": "unit-chaplain-with-jump-pack"
@@ -6660,8 +6654,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-judiciar"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-9",
+            "sectionId": "space-marines-ability-leader-9",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
             "sourceUnitId": "unit-judiciar"
@@ -6875,8 +6869,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-librarian"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-10",
+            "sectionId": "space-marines-ability-leader-10",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
             "sourceUnitId": "unit-librarian"
@@ -7147,8 +7141,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-librarian-in-phobos-armour"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-11",
+            "sectionId": "space-marines-ability-leader-11",
             "title": "Leader",
             "text": "This model can be attached to the following units: ELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SPECTRUS KILL TEAM.",
             "sourceUnitId": "unit-librarian-in-phobos-armour"
@@ -7409,8 +7403,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-librarian-in-terminator-armour"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-4",
+            "sectionId": "space-marines-ability-leader-4",
             "title": "Leader",
             "text": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
             "sourceUnitId": "unit-librarian-in-terminator-armour"
@@ -8813,8 +8807,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-techmarine"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-12",
+            "sectionId": "space-marines-ability-leader-12",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, CRUSADER SQUAD, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, INTERCESSOR SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
             "sourceUnitId": "unit-techmarine"
@@ -10018,8 +10012,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-adrax-agatone"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-13",
+            "sectionId": "space-marines-ability-leader-13",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
             "sourceUnitId": "unit-adrax-agatone"
@@ -10191,8 +10185,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-aethon-shaan"
           },
           {
-            "id": "core-lone-operative",
-            "sectionId": "core-lone-operative",
+            "id": "space-marines-ability-lone-operative",
+            "sectionId": "space-marines-ability-lone-operative",
             "title": "Lone Operative",
             "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
             "sourceUnitId": "unit-aethon-shaan"
@@ -10352,8 +10346,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-caanok-var"
           },
           {
-            "id": "core-feel-no-pain",
-            "sectionId": "core-feel-no-pain",
+            "id": "space-marines-ability-feel-no-pain-5",
+            "sectionId": "space-marines-ability-feel-no-pain-5",
             "title": "Feel No Pain 5+",
             "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
             "sourceUnitId": "unit-caanok-var"
@@ -10366,8 +10360,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-caanok-var"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-14",
+            "sectionId": "space-marines-ability-leader-14",
             "title": "Leader",
             "text": "This model can be attached to the following units: TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
             "sourceUnitId": "unit-caanok-var"
@@ -10643,8 +10637,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-captain-titus"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-15",
+            "sectionId": "space-marines-ability-leader-15",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR.",
             "sourceUnitId": "unit-captain-titus"
@@ -10657,8 +10651,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-captain-titus"
           },
           {
-            "id": "core-feel-no-pain",
-            "sectionId": "core-feel-no-pain",
+            "id": "space-marines-ability-feel-no-pain-5",
+            "sectionId": "space-marines-ability-feel-no-pain-5",
             "title": "Feel No Pain 5+",
             "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
             "sourceUnitId": "unit-captain-titus"
@@ -10848,24 +10842,18 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-cato-sicarius"
           },
           {
-            "id": "unit-cato-sicarius-ability-8d34e2e140",
-            "sectionId": "unit-cato-sicarius-ability-8d34e2e140",
+            "id": "space-marines-ability-support-2",
+            "sectionId": "space-marines-ability-support-2",
             "title": "Support",
             "text": "This model can be attached to the following units: \n\n\n■ VICTRIX HONOUR GUARD\n\n\nYou can attach this model to the above unit even if a Marneus Calgar unit has already been attached\nto it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate\nunits, with their original Starting Strengths",
-            "sourceUnitId": "unit-cato-sicarius",
-            "legacyIds": [
-              "core-support"
-            ]
+            "sourceUnitId": "unit-cato-sicarius"
           },
           {
-            "id": "unit-cato-sicarius-ability-9d2a48b50d",
-            "sectionId": "unit-cato-sicarius-ability-9d2a48b50d",
+            "id": "space-marines-ability-support-3",
+            "sectionId": "space-marines-ability-support-3",
             "title": "Support",
             "text": "",
-            "sourceUnitId": "unit-cato-sicarius",
-            "legacyIds": [
-              "core-support"
-            ]
+            "sourceUnitId": "unit-cato-sicarius"
           },
           {
             "id": "space-marines-army-rule-oath-of-moment",
@@ -11160,8 +11148,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-chief-librarian-tigurius"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-16",
+            "sectionId": "space-marines-ability-leader-16",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, DESOLATION SQUAD, DEVASTATOR SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
             "sourceUnitId": "unit-chief-librarian-tigurius"
@@ -11424,8 +11412,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-darnath-lysander"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-14",
+            "sectionId": "space-marines-ability-leader-14",
             "title": "Leader",
             "text": "This model can be attached to the following units: TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
             "sourceUnitId": "unit-darnath-lysander"
@@ -11590,8 +11578,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-iron-father-feirros"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-17",
+            "sectionId": "space-marines-ability-leader-17",
             "title": "Leader",
             "text": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD.",
             "sourceUnitId": "unit-iron-father-feirros"
@@ -11827,8 +11815,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-18",
+            "sectionId": "space-marines-ability-leader-18",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
             "sourceUnitId": "unit-kayvaan-shrike"
@@ -11841,8 +11829,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "core-lone-operative",
-            "sectionId": "core-lone-operative",
+            "id": "space-marines-ability-lone-operative",
+            "sectionId": "space-marines-ability-lone-operative",
             "title": "Lone Operative",
             "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
             "sourceUnitId": "unit-kayvaan-shrike"
@@ -11855,8 +11843,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-kayvaan-shrike"
           },
           {
-            "id": "core-stealth",
-            "sectionId": "core-stealth",
+            "id": "space-marines-ability-stealth",
+            "sectionId": "space-marines-ability-stealth",
             "title": "Stealth",
             "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
             "sourceUnitId": "unit-kayvaan-shrike"
@@ -12062,8 +12050,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-korsarro-khan"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-19",
+            "sectionId": "space-marines-ability-leader-19",
             "title": "Leader",
             "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
             "sourceUnitId": "unit-korsarro-khan"
@@ -12325,8 +12313,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-marneus-calgar-in-armour-of-antilochus"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-20",
+            "sectionId": "space-marines-ability-leader-20",
             "title": "Leader",
             "text": "This model can be attached to the following units: AGGRESSOR SQUAD, ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD, STERNGUARD VETERAN SQUAD, HEAVY INTERCESSOR SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, TACTICAL SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, VICTRIX HONOUR GUARD.",
             "sourceUnitId": "unit-marneus-calgar-in-armour-of-antilochus"
@@ -12501,8 +12489,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-pedro-kantor"
           },
           {
-            "id": "core-feel-no-pain",
-            "sectionId": "core-feel-no-pain",
+            "id": "space-marines-ability-feel-no-pain-6",
+            "sectionId": "space-marines-ability-feel-no-pain-6",
             "title": "Feel No Pain 6+",
             "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
             "sourceUnitId": "unit-pedro-kantor"
@@ -12515,8 +12503,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-pedro-kantor"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-21",
+            "sectionId": "space-marines-ability-leader-21",
             "title": "Leader",
             "text": "This model can be attached to the following units: BLADEGUARD VETERAN SQUAD, COMPANY HEROES, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
             "sourceUnitId": "unit-pedro-kantor"
@@ -12851,8 +12839,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-suboden-khan"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-22",
+            "sectionId": "space-marines-ability-leader-22",
             "title": "Leader",
             "text": "This model can be attached to the following units: OUTRIDER SQUAD.",
             "sourceUnitId": "unit-suboden-khan"
@@ -13080,8 +13068,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-tor-garadon"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-17",
+            "sectionId": "space-marines-ability-leader-17",
             "title": "Leader",
             "text": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD.",
             "sourceUnitId": "unit-tor-garadon"
@@ -13288,8 +13276,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-uriel-ventris"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-23",
+            "sectionId": "space-marines-ability-leader-23",
             "title": "Leader",
             "text": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VICTRIX HONOUR GUARD.",
             "sourceUnitId": "unit-uriel-ventris"
@@ -13510,8 +13498,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-vulkan-hestan"
           },
           {
-            "id": "core-leader",
-            "sectionId": "core-leader",
+            "id": "space-marines-ability-leader-19",
+            "sectionId": "space-marines-ability-leader-19",
             "title": "Leader",
             "text": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
             "sourceUnitId": "unit-vulkan-hestan"
@@ -13524,8 +13512,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-vulkan-hestan"
           },
           {
-            "id": "core-feel-no-pain",
-            "sectionId": "core-feel-no-pain",
+            "id": "space-marines-ability-feel-no-pain-6",
+            "sectionId": "space-marines-ability-feel-no-pain-6",
             "title": "Feel No Pain 6+",
             "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
             "sourceUnitId": "unit-vulkan-hestan"
@@ -13737,8 +13725,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-wardens-of-ultramar"
           },
           {
-            "id": "core-support",
-            "sectionId": "core-support",
+            "id": "space-marines-ability-support-4",
+            "sectionId": "space-marines-ability-support-4",
             "title": "Support",
             "text": "",
             "sourceUnitId": "unit-wardens-of-ultramar"
@@ -17311,8 +17299,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-eliminator-squad"
           },
           {
-            "id": "core-stealth",
-            "sectionId": "core-stealth",
+            "id": "space-marines-ability-stealth",
+            "sectionId": "space-marines-ability-stealth",
             "title": "Stealth",
             "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
             "sourceUnitId": "unit-eliminator-squad"
@@ -19058,8 +19046,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-infiltrator-squad"
           },
           {
-            "id": "core-feel-no-pain",
-            "sectionId": "core-feel-no-pain",
+            "id": "space-marines-ability-feel-no-pain",
+            "sectionId": "space-marines-ability-feel-no-pain",
             "title": "Feel No Pain",
             "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
             "sourceUnitId": "unit-infiltrator-squad"
@@ -20959,8 +20947,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-terminator-squad"
           },
           {
-            "id": "core-deep-strike",
-            "sectionId": "core-deep-strike",
+            "id": "space-marines-ability-deep-strike",
+            "sectionId": "space-marines-ability-deep-strike",
             "title": "Deep Strike",
             "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
             "sourceUnitId": "unit-terminator-squad"
@@ -21343,8 +21331,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-vanguard-veteran-squad-with-jump-packs"
           },
           {
-            "id": "core-deep-strike",
-            "sectionId": "core-deep-strike",
+            "id": "space-marines-ability-deep-strike",
+            "sectionId": "space-marines-ability-deep-strike",
             "title": "Deep Strike",
             "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
             "sourceUnitId": "unit-vanguard-veteran-squad-with-jump-packs"
@@ -21792,8 +21780,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-victrix-honour-guard"
           },
           {
-            "id": "core-attached-unit",
-            "sectionId": "core-attached-unit",
+            "id": "space-marines-ability-attached-unit",
+            "sectionId": "space-marines-ability-attached-unit",
             "title": "Attached Unit",
             "text": "If a Captain or Chapter Master unit from your army can be attached to a Company Heroes unit, it can\nbe attached to this unit instead.",
             "sourceUnitId": "unit-victrix-honour-guard"
@@ -25570,8 +25558,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-land-speeder"
           },
           {
-            "id": "core-deep-strike",
-            "sectionId": "core-deep-strike",
+            "id": "space-marines-ability-deep-strike",
+            "sectionId": "space-marines-ability-deep-strike",
             "title": "Deep Strike",
             "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
             "sourceUnitId": "unit-land-speeder"
@@ -27440,8 +27428,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-storm-speeder-hailstrike"
           },
           {
-            "id": "core-deep-strike",
-            "sectionId": "core-deep-strike",
+            "id": "space-marines-ability-deep-strike",
+            "sectionId": "space-marines-ability-deep-strike",
             "title": "Deep Strike",
             "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
             "sourceUnitId": "unit-storm-speeder-hailstrike"
@@ -27647,8 +27635,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-storm-speeder-hammerstrike"
           },
           {
-            "id": "core-deep-strike",
-            "sectionId": "core-deep-strike",
+            "id": "space-marines-ability-deep-strike",
+            "sectionId": "space-marines-ability-deep-strike",
             "title": "Deep Strike",
             "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
             "sourceUnitId": "unit-storm-speeder-hammerstrike"
@@ -27861,8 +27849,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-storm-speeder-thunderstrike"
           },
           {
-            "id": "core-deep-strike",
-            "sectionId": "core-deep-strike",
+            "id": "space-marines-ability-deep-strike",
+            "sectionId": "space-marines-ability-deep-strike",
             "title": "Deep Strike",
             "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
             "sourceUnitId": "unit-storm-speeder-thunderstrike"
@@ -29643,8 +29631,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-astraeus"
           },
           {
-            "id": "space-marines-ability-deadly-demise-d6-2",
-            "sectionId": "space-marines-ability-deadly-demise-d6-2",
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
             "title": "Deadly Demise D6+2",
             "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
             "sourceUnitId": "unit-astraeus"
@@ -30037,8 +30025,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-thunderhawk-gunship"
           },
           {
-            "id": "space-marines-ability-deadly-demise-d6-2",
-            "sectionId": "space-marines-ability-deadly-demise-d6-2",
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
             "title": "Deadly Demise D6+2",
             "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
             "sourceUnitId": "unit-thunderhawk-gunship"

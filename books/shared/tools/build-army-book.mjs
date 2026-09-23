@@ -12,6 +12,7 @@ import {applyCanonicalChildIdentityContracts,effectiveEffectContracts,validateEf
 import {buildEffectiveBook} from './build-effective-book.mjs';
 import {createEffectiveBookModel,EFFECTIVE_BOOK_MODEL_SCHEMA} from './effective-book-model.mjs';
 import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
+import {createArmyCoreAbilityBindings} from './army-core-ability-binding.mjs';
 import {createEffectiveMfmArmyProjection} from './effective-mfm-army-projection.mjs';
 
 export async function buildCanonicalBook(context,{projectionOnly=false}={}){
@@ -22,6 +23,8 @@ if(config.effectiveModel){
   return finishCanonicalBuild(context,result.outputs,{normalizeLineEndings:result.normalizeLineEndings===true,summary:result.summary});
 }
 const coreFactProjection=createCoreFactProjection({repoRoot:repo});
+const coreAbilityBindings=createArmyCoreAbilityBindings({repoRoot:repo,coreFactProjection});
+const bindCodexCoreAbilities=layer=>({...layer,datasheets:coreAbilityBindings.bindUnits(layer.datasheets),imperialArmour:coreAbilityBindings.bindUnits(layer.imperialArmour),legends:coreAbilityBindings.bindUnits(layer.legends)});
 const bookMark=config.mark||config.title.split(/\s+/).map(word=>word[0]).join('').slice(0,4).toUpperCase();
 const validateCanonicalIds=(data,sourceConfig)=>{
   // Each canonical source owns unique definitions; dependency/local overlays remain separate.
@@ -32,7 +35,7 @@ const validateCanonicalIds=(data,sourceConfig)=>{
     seen.set(unit.id,location);
   }
 };
-const pack=readJson(config.sources.factionPack),codex=readJson(config.sources.codexDatasheets);
+const pack=readJson(config.sources.factionPack),codex=bindCodexCoreAbilities(readJson(config.sources.codexDatasheets));
 validateCanonicalIds(codex,config);
 const mfmProjection=createEffectiveMfmArmyProjection(config.id);
 const points=mfmProjection.pointsForArmyBook(config.id);
@@ -52,16 +55,16 @@ const unique=(items,keyOf)=>{const seen=new Set();return items.filter(item=>{con
 const titleKey=value=>clean(value).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const sourceUnitId=value=>{const raw=String(value?.unitId||value?.canonicalId||value?.id||'');return raw?raw.startsWith('unit-')?raw:`unit-${raw}`:null;};
 const coreBaseKey=value=>{const normalized=titleKey(value).replace(/\s+(?:d\d+|\d+)$/,'').trim();return normalized.startsWith('anti ')?'anti':normalized;};
-const canonicalCoreAbilityTerms=new Map();
+const corePresentationTermsByLabel=new Map();
 for(const term of coreFactProjection.abilityIdentityTerms){
   const key=coreBaseKey(String(term.title||'').replace(/^\[|\]$/g,''));
-  if(canonicalCoreAbilityTerms.has(key))throw new Error(`Ambiguous accepted Core ability label: ${term.title}`);
-  canonicalCoreAbilityTerms.set(key,term.id);
+  if(corePresentationTermsByLabel.has(key))throw new Error(`Ambiguous accepted Core ability label: ${term.title}`);
+  corePresentationTermsByLabel.set(key,term.id);
 }
 const unitInventory=layer=>[...(layer.datasheets||[]),...(layer.imperialArmour||[]),...(layer.legends||[])];
 const dependencyCodices=(config.dependencies||[]).map(id=>{
   const dependencyRoot=path.join(repo,'books',id),dependencyConfig=JSON.parse(fs.readFileSync(path.join(dependencyRoot,'book.config.json'),'utf8'));
-  const dependencyCodex=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexDatasheets),'utf8'));
+  const dependencyCodex=bindCodexCoreAbilities(JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexDatasheets),'utf8')));
   validateCanonicalIds(dependencyCodex,dependencyConfig);
   const dependencyPack=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.factionPack),'utf8'));
   const dependencyPoints=mfmProjection.pointsForArmyBook(id);
@@ -282,14 +285,14 @@ for(const det of detachments){
 const scopedAbilityTerms=new Map();
 for(const unit of units){
   const termScope=unit.dependencyBook||config.id;
-  for(const ability of unit.abilities||[]){const key=coreBaseKey(ability.title),canonical=canonicalCoreAbilityTerms.get(key),local=canonical||addTerm(ability.title,sourceAwareText(ability),unit.id,'ability',unit.id,termScope);ability.termId=canonical||config.armyRuleTermIds?.[ability.title]||local;if(!canonical)scopedAbilityTerms.set(`${termScope}\0${key}`,ability.termId);}
-  for(const ability of unit.wargearAbilities||[]){const key=coreBaseKey(ability.title),canonical=canonicalCoreAbilityTerms.get(key),local=canonical||addTerm(ability.title,sourceAwareText(ability),unit.id,'ability',unit.id,termScope);ability.termId=canonical||config.armyRuleTermIds?.[ability.title]||local;if(!canonical)scopedAbilityTerms.set(`${termScope}\0${key}`,ability.termId);}
+  for(const ability of unit.abilities||[]){Object.assign(ability,coreAbilityBindings.bindAbility(ability));const key=coreBaseKey(ability.title),canonical=ability.coreAbilityId||null,local=canonical||addTerm(ability.title,sourceAwareText(ability),unit.id,'ability',unit.id,termScope);ability.termId=canonical||config.armyRuleTermIds?.[ability.title]||local;if(!canonical)scopedAbilityTerms.set(`${termScope}\0${key}`,ability.termId);}
+  for(const ability of unit.wargearAbilities||[]){Object.assign(ability,coreAbilityBindings.bindAbility(ability));const key=coreBaseKey(ability.title),canonical=ability.coreAbilityId||null,local=canonical||addTerm(ability.title,sourceAwareText(ability),unit.id,'ability',unit.id,termScope);ability.termId=canonical||config.armyRuleTermIds?.[ability.title]||local;if(!canonical)scopedAbilityTerms.set(`${termScope}\0${key}`,ability.termId);}
   for(const weapon of unit.weapons||[])weapon.termId=addTerm(weapon.name,`${weapon.mode==='ranged'?'Ranged':'Melee'} · ${weapon.range} · A ${weapon.a} · ${weapon.mode==='ranged'?'BS':'WS'} ${weapon.skill} · S ${weapon.s} · AP ${weapon.ap} · D ${weapon.d}${weapon.abilities?` · ${weapon.abilities}`:''}`,unit.id,'weapon',unit.id,termScope);
 }
-const weaponAbilityTokens=(value,termScope=config.id)=>`<div class="weapon-tags">${String(value).split(',').map(rawLabel=>{const label=rawLabel.trim(),key=coreBaseKey(label),termId=canonicalCoreAbilityTerms.get(key)||scopedAbilityTerms.get(`${termScope}\0${key}`);return termId?`<button class="tag" data-term="${termId}">${esc(label.toUpperCase())}</button>`:`<span class="tag">${esc(label.toUpperCase())}</span>`;}).join('')}</div>`;
+const weaponAbilityTokens=(value,termScope=config.id)=>`<div class="weapon-tags">${String(value).split(',').map(rawLabel=>{const label=rawLabel.trim(),key=coreBaseKey(label),termId=corePresentationTermsByLabel.get(key)||scopedAbilityTerms.get(`${termScope}\0${key}`);return termId?`<button class="tag" data-term="${termId}">${esc(label.toUpperCase())}</button>`:`<span class="tag">${esc(label.toUpperCase())}</span>`;}).join('')}</div>`;
 const compileUnitRuleFacts=unit=>{
   const sourceAbilities=[...(unit.abilities||[])],relations=relationGraphs.get(unit.id),canAttach=Object.values(relations).some(items=>items.length);
-  return {id:unit.id,unitId:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:unit.keywords||[],intrinsicKeywords:unit.keywords||[],abilities:[...new Set(sourceAbilities.map(item=>/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title))],termIds:[...new Set([...sourceAbilities,...(unit.weapons||[])].map(item=>item.termId).filter(Boolean))],epic:(unit.keywords||[]).some(item=>titleKey(item)==='epic hero'),deadlyDemise:sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(item.text||'')),attached:canAttach?null:false,attachmentKnown:!canAttach,characterCount:(unit.keywords||[]).some(item=>titleKey(item)==='character')?1:0,twoCharacters:null,warlord:null,relations};
+  return {id:unit.id,unitId:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:unit.keywords||[],intrinsicKeywords:unit.keywords||[],abilities:[...new Set(sourceAbilities.map(item=>/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title))],termIds:[...new Set([...sourceAbilities,...(unit.weapons||[])].map(item=>item.termId).filter(Boolean))],epic:(unit.keywords||[]).some(item=>titleKey(item)==='epic hero'),deadlyDemise:sourceAbilities.some(item=>item.coreAbilityId==='core-deadly-demise'),attached:canAttach?null:false,attachmentKnown:!canAttach,characterCount:(unit.keywords||[]).some(item=>titleKey(item)==='character')?1:0,twoCharacters:null,warlord:null,relations};
 };
 let unitRuleFacts=new Map(units.map(unit=>[unit.id,compileUnitRuleFacts(unit)]));
 let unitRuleProfiles=new Map([...unitRuleFacts].map(([id,facts])=>[id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(facts))]));

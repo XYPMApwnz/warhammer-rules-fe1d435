@@ -4,6 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {verifyBsdataSource,verifyTrackedInputs} from './verify-bsdata-source.mjs';
+import {createArmyCoreAbilityBindings} from './army-core-ability-binding.mjs';
 
 const args=process.argv.slice(2);
 const check=args.includes('--check');
@@ -17,6 +18,7 @@ const configPath=path.resolve(configArg);
 const configDir=path.dirname(configPath);
 const config=JSON.parse(fs.readFileSync(configPath,'utf8'));
 const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
+const coreAbilityBindings=createArmyCoreAbilityBindings({repoRoot:repo});
 const resolvePath=value=>path.resolve(configDir,value);
 const pathKey=value=>process.platform==='win32'?value.toLowerCase():value;
 const resolvedPath=value=>{
@@ -169,10 +171,11 @@ function graph(entry){
       }
       else if(link.type==='rule'){
         const suffix=(link.modifiers||[]).filter(mod=>mod.type==='append'&&mod.field==='name').map(mod=>clean(mod.value)).join(' ');
-        const rule={
+        const rule=coreAbilityBindings.bindAbility({
           title:clean(`${link.name||target.name||''} ${suffix}`),
-          text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text)
-        };
+          text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text),
+          sourceAbilityId:target.id
+        });
         rules.push(rule);
         ruleRecords.push({...rule,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(target.id)||'',sourceKind:weaponBranch?'weapon':'unit',sourcePath});
       }else if(['selectionEntry','selectionEntryGroup'].includes(link.type))walk(target,sourcePath,weaponBranch);
@@ -370,7 +373,7 @@ function parseDatasheet(link){
   });
   const abilityRecords=resolved.profileRecords.filter(item=>item.profile.typeName==='Abilities').map(item=>{
     const rawText=(item.profile.characteristics||[]).find(characteristic=>characteristic.name==='Description')?.$text||'';
-    return{title:clean(item.profile.name),text:clean(rawText),rawText,ownerType:item.ownerType,ownerName:item.ownerName,sourceRole:item.sourceRole,sourceKind:item.sourceKind,sourcePath:item.sourcePath,...persistentChildIdentity(item.profile.id)};
+    return coreAbilityBindings.bindAbility({title:clean(item.profile.name),text:clean(rawText),sourceAbilityId:item.profile.id,rawText,ownerType:item.ownerType,ownerName:item.ownerName,sourceRole:item.sourceRole,sourceKind:item.sourceKind,sourcePath:item.sourcePath,...persistentChildIdentity(item.profile.id)});
   });
   const separateWargear=config.faction?.separateWargearAbilities===true;
   const classifyAbilities=config.faction?.classifyAbilities===true;

@@ -16,7 +16,6 @@ const abilityText=item=>[item.openingText,...(item.options||[]).flatMap(option=>
 const coreTermKeys=new Map();
 for(const term of rules.glossary.filter(term=>term.group==='Core abilities'))for(const label of [term.title,...(term.aliases||[])])coreTermKeys.set(titleKey(label.replace(/^core-|^datasheet-/i,'').replace(/^\[|\]$/g,'')),term);
 const coreBaseKey=value=>{const normalized=titleKey(value).replace(/\s+(?:d\d+|\d+|\d+\+|\d+ inches)$/,'').trim();return normalized.startsWith('anti ')?'anti':normalized;};
-const knownCoreTitles=new Set([...coreTermKeys.keys(),'deadly demise','deep strike','firing deck','hover','scouts']);
 const termIds=new Set(rules.glossary.map(term=>term.id));
 const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const cleanText=value=>String(value??'').replace(/[ \t]+\n/g,'\n').trim();
@@ -166,7 +165,7 @@ const abilityKind=item=>{
   if(/^(leader|support|attached unit)$/i.test(item.title))return 'relation';
   if(/^damaged:/i.test(item.title))return 'damaged';
   if(/^transport$/i.test(item.title))return 'transport';
-  if(/^core$/i.test(item.title)||knownCoreTitles.has(coreBaseKey(item.title)))return 'core';
+  if(/^core$/i.test(item.title)||item.coreAbilityId)return 'core';
   return 'datasheet';
 };
 const abilityCard=(item,unit,wargearAbilityId='')=>`<article class="ability"${wargearAbilityId?` data-roster-wargear-ability-id="${esc(wargearAbilityId)}"`:''} data-source-field="abilities.${esc(slugKey(item.title))}"><h5 data-source-field="title"><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.openingText?`<p data-source-field="openingText">${decorate(item.openingText,unit.id)}</p>`:''}${(item.options||[]).map(option=>`<div class="ability-option" data-source-field="options.${esc(option.id)}"><h6>${esc(option.title)}</h6><p data-source-field="text">${decorate(option.text,unit.id)}</p></div>`).join('')}${item.text?`<p data-source-field="text">${decorate(item.text,unit.id)}</p>`:''}</article>`;

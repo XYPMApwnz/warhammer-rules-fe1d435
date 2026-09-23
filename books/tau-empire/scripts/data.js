@@ -3108,19 +3108,6 @@ window.DG_TERMS={
     "datasheet": "unit-stormsurge",
     "statline": "stormsurge-profile"
   },
-  "tau-empire-ability-deadly-demise-d6-2": {
-    "id": "tau-empire-ability-deadly-demise-d6-2",
-    "title": "Deadly Demise D6+2",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tau-empire-ability-deadly-demise-d6-2",
-    "rule": "unit-stormsurge",
-    "units": [
-      "unit-stormsurge"
-    ],
-    "datasheet": "unit-stormsurge",
-    "statline": "stormsurge-profile"
-  },
   "tau-empire-weapon-cluster-rocket-system": {
     "id": "tau-empire-weapon-cluster-rocket-system",
     "title": "Cluster rocket system",

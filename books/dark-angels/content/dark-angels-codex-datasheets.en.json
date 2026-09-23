@@ -149,7 +149,9 @@
       "abilities": [
         {
           "title": "Support",
-          "text": "This unit can be attached to the following units:\n■ Outrider Squad\n■ Ravenwing Black Knights"
+          "text": "This unit can be attached to the following units:\n■ Outrider Squad\n■ Ravenwing Black Knights",
+          "sourceAbilityId": "d06d-eddc-33f1-f9cc",
+          "coreAbilityId": "core-support"
         },
         {
           "title": "Narthecium",
@@ -497,7 +499,9 @@
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [],
@@ -861,11 +865,15 @@
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         },
         {
           "title": "Fights First",
-          "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04)."
+          "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+          "sourceAbilityId": "24-c886-e8ba-5a89",
+          "coreAbilityId": "core-fights-first"
         },
         {
           "title": "Mist-wreathed Shadow Realms",
@@ -1129,7 +1137,9 @@
         },
         {
           "title": "Attached Unit",
-          "text": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead."
+          "text": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead.",
+          "sourceAbilityId": "2227-baf0-132f-549f",
+          "coreAbilityId": "core-attached-unit"
         },
         {
           "title": "Teleport Homer",
@@ -1137,7 +1147,9 @@
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [
@@ -1352,7 +1364,9 @@
         },
         {
           "title": "Attached Unit",
-          "text": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead."
+          "text": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead.",
+          "sourceAbilityId": "96ec-4242-df64-6aee",
+          "coreAbilityId": "core-attached-unit"
         },
         {
           "title": "Teleport Homer",
@@ -1360,7 +1374,9 @@
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [
@@ -1479,7 +1495,9 @@
       "abilities": [
         {
           "title": "Attached Unit",
-          "text": "If a Character unit from your army with the Leader ability can be attached to a Sternguard Veteran Squad, it can be attached to this unit instead."
+          "text": "If a Character unit from your army with the Leader ability can be attached to a Sternguard Veteran Squad, it can be attached to this unit instead.",
+          "sourceAbilityId": "8d97-2572-c781-4135",
+          "coreAbilityId": "core-attached-unit"
         },
         {
           "title": "Braziers of Judgement",
@@ -1620,7 +1638,9 @@
         },
         {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [],
@@ -1752,7 +1772,9 @@
         },
         {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [],
@@ -1915,7 +1937,9 @@
         },
         {
           "title": "Attached Unit",
-          "text": "If a Character unit from your army with the Leader ability can be attached to an Outrider Squad, it can be attached to this unit instead."
+          "text": "If a Character unit from your army with the Leader ability can be attached to an Outrider Squad, it can be attached to this unit instead.",
+          "sourceAbilityId": "d659-103f-7990-1d94",
+          "coreAbilityId": "core-attached-unit"
         }
       ],
       "wargearAbilities": [],
@@ -2022,7 +2046,9 @@
         },
         {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [],
@@ -2128,7 +2154,9 @@
         },
         {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [],
@@ -2415,7 +2443,9 @@
       "abilities": [
         {
           "title": "Attached Unit",
-          "text": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead."
+          "text": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead.",
+          "sourceAbilityId": "7c39-9f3d-53d1-4dfc",
+          "coreAbilityId": "core-attached-unit"
         },
         {
           "title": "Invulnerable Save",
@@ -2435,7 +2465,9 @@
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [
@@ -2605,7 +2637,9 @@
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [
@@ -2731,7 +2765,9 @@
         },
         {
           "title": "Deadly Demise 1",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [],

@@ -2708,6 +2708,19 @@ window.DG_TERMS={
     "datasheet": "unit-apothecary",
     "statline": "apothecary-profile"
   },
+  "space-marines-ability-support": {
+    "id": "space-marines-ability-support",
+    "title": "Support",
+    "summary": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ DESOLATION SQUAD ■ DEVASTATOR SQUAD ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+    "full": "This model can be attached to the following units: ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ CRUSADER SQUAD ■ DEATHWATCH VETERANS ■ DECIMUS KILL TEAM ■ DESOLATION SQUAD ■ DEVASTATOR SQUAD ■ FORTIS KILL TEAM ■ HELLBLASTER SQUAD ■ INFERNUS SQUAD ■ INNER CIRCLE COMPANIONS ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD ■ SWORD BRETHREN SQUAD ■ TACTICAL SQUAD You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+    "glossary": "glossary-space-marines-ability-support",
+    "rule": "unit-apothecary",
+    "units": [
+      "unit-apothecary"
+    ],
+    "datasheet": "unit-apothecary",
+    "statline": "apothecary-profile"
+  },
   "space-marines-weapon-reductor-pistol": {
     "id": "space-marines-weapon-reductor-pistol",
     "title": "Reductor Pistol",
@@ -2823,6 +2836,19 @@ window.DG_TERMS={
       "unit-captain-in-phobos-armour",
       "unit-captain-in-terminator-armour",
       "unit-captain-with-jump-pack"
+    ],
+    "datasheet": "unit-captain",
+    "statline": "captain-profile"
+  },
+  "space-marines-ability-leader": {
+    "id": "space-marines-ability-leader",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VICTRIX HONOUR GUARD.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD, VICTRIX HONOUR GUARD.",
+    "glossary": "glossary-space-marines-ability-leader",
+    "rule": "unit-captain",
+    "units": [
+      "unit-captain"
     ],
     "datasheet": "unit-captain",
     "statline": "captain-profile"
@@ -2963,6 +2989,19 @@ window.DG_TERMS={
     "datasheet": "unit-captain-in-gravis-armour",
     "statline": "captain-in-gravis-armour-profile"
   },
+  "space-marines-ability-leader-2": {
+    "id": "space-marines-ability-leader-2",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD, INDOMITOR KILL TEAM.",
+    "full": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD, INDOMITOR KILL TEAM.",
+    "glossary": "glossary-space-marines-ability-leader-2",
+    "rule": "unit-captain-in-gravis-armour",
+    "units": [
+      "unit-captain-in-gravis-armour"
+    ],
+    "datasheet": "unit-captain-in-gravis-armour",
+    "statline": "captain-in-gravis-armour-profile"
+  },
   "space-marines-weapon-master-crafted-heavy-bolt-rifle": {
     "id": "space-marines-weapon-master-crafted-heavy-bolt-rifle",
     "title": "Master-crafted Heavy Bolt Rifle",
@@ -3041,6 +3080,19 @@ window.DG_TERMS={
     "datasheet": "unit-captain-in-phobos-armour",
     "statline": "captain-in-phobos-armour-profile"
   },
+  "space-marines-ability-leader-3": {
+    "id": "space-marines-ability-leader-3",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SCOUT SQUAD, SPECTRUS KILL TEAM.",
+    "full": "This model can be attached to the following units: ELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SCOUT SQUAD, SPECTRUS KILL TEAM.",
+    "glossary": "glossary-space-marines-ability-leader-3",
+    "rule": "unit-captain-in-phobos-armour",
+    "units": [
+      "unit-captain-in-phobos-armour"
+    ],
+    "datasheet": "unit-captain-in-phobos-armour",
+    "statline": "captain-in-phobos-armour-profile"
+  },
   "space-marines-weapon-instigator-bolt-carbine": {
     "id": "space-marines-weapon-instigator-bolt-carbine",
     "title": "Instigator Bolt Carbine",
@@ -3093,6 +3145,21 @@ window.DG_TERMS={
     "datasheet": "unit-captain-in-terminator-armour",
     "statline": "captain-in-terminator-armour-profile"
   },
+  "space-marines-ability-leader-4": {
+    "id": "space-marines-ability-leader-4",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+    "full": "This model can be attached to the following units: DEATHWATCH TERMINATOR SQUAD, DEATHWING KNIGHTS, DEATHWING TERMINATOR SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-4",
+    "rule": "unit-captain-in-terminator-armour",
+    "units": [
+      "unit-captain-in-terminator-armour",
+      "unit-chaplain-in-terminator-armour",
+      "unit-librarian-in-terminator-armour"
+    ],
+    "datasheet": "unit-captain-in-terminator-armour",
+    "statline": "captain-in-terminator-armour-profile"
+  },
   "space-marines-weapon-relic-fist-2": {
     "id": "space-marines-weapon-relic-fist-2",
     "title": "Relic Fist",
@@ -3126,6 +3193,19 @@ window.DG_TERMS={
     "summary": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, add 1 to the Strength characteristic of melee weapons equipped by models in that unit.",
     "full": "While this model is leading a unit, each time that unit ends a Charge move, until the end of the turn, add 1 to the Strength characteristic of melee weapons equipped by models in that unit.",
     "glossary": "glossary-space-marines-ability-angels-wrath",
+    "rule": "unit-captain-with-jump-pack",
+    "units": [
+      "unit-captain-with-jump-pack"
+    ],
+    "datasheet": "unit-captain-with-jump-pack",
+    "statline": "captain-with-jump-pack-profile"
+  },
+  "space-marines-ability-leader-5": {
+    "id": "space-marines-ability-leader-5",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, SANGUINARY GUARD, TALONSTRIKE KILL TEAM, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, SANGUINARY GUARD, TALONSTRIKE KILL TEAM, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+    "glossary": "glossary-space-marines-ability-leader-5",
     "rule": "unit-captain-with-jump-pack",
     "units": [
       "unit-captain-with-jump-pack"
@@ -3188,6 +3268,19 @@ window.DG_TERMS={
     "datasheet": "unit-chaplain",
     "statline": "chaplain-profile"
   },
+  "space-marines-ability-leader-6": {
+    "id": "space-marines-ability-leader-6",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATH COMPANY MARINES, DEATH COMPANY MARINES WITH BOLT RIFLES, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATH COMPANY MARINES, DEATH COMPANY MARINES WITH BOLT RIFLES, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-6",
+    "rule": "unit-chaplain",
+    "units": [
+      "unit-chaplain"
+    ],
+    "datasheet": "unit-chaplain",
+    "statline": "chaplain-profile"
+  },
   "space-marines-weapon-crozius-arcanum": {
     "id": "space-marines-weapon-crozius-arcanum",
     "title": "Crozius arcanum",
@@ -3230,6 +3323,19 @@ window.DG_TERMS={
     "datasheet": "unit-chaplain-on-bike",
     "statline": "chaplain-on-bike-profile"
   },
+  "space-marines-ability-leader-7": {
+    "id": "space-marines-ability-leader-7",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: OUTRIDER SQUAD, RAVENWING BLACK KNIGHTS.",
+    "full": "This model can be attached to the following units: OUTRIDER SQUAD, RAVENWING BLACK KNIGHTS.",
+    "glossary": "glossary-space-marines-ability-leader-7",
+    "rule": "unit-chaplain-on-bike",
+    "units": [
+      "unit-chaplain-on-bike"
+    ],
+    "datasheet": "unit-chaplain-on-bike",
+    "statline": "chaplain-on-bike-profile"
+  },
   "space-marines-weapon-twin-bolt-rifle": {
     "id": "space-marines-weapon-twin-bolt-rifle",
     "title": "Twin bolt rifle",
@@ -3251,6 +3357,19 @@ window.DG_TERMS={
     "summary": "Each time this model’s unit is selected to fight, you can select one enemy unit within Engagement Range of this model’s unit and roll one D6: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
     "full": "Each time this model’s unit is selected to fight, you can select one enemy unit within Engagement Range of this model’s unit and roll one D6: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
     "glossary": "glossary-space-marines-ability-exhortation-of-rage",
+    "rule": "unit-chaplain-with-jump-pack",
+    "units": [
+      "unit-chaplain-with-jump-pack"
+    ],
+    "datasheet": "unit-chaplain-with-jump-pack",
+    "statline": "chaplain-with-jump-pack-profile"
+  },
+  "space-marines-ability-leader-8": {
+    "id": "space-marines-ability-leader-8",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, DEATH COMPANY MARINES WITH JUMP PACKS, TALONSTRIKE KILL TEAM, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, DEATH COMPANY MARINES WITH JUMP PACKS, TALONSTRIKE KILL TEAM, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+    "glossary": "glossary-space-marines-ability-leader-8",
     "rule": "unit-chaplain-with-jump-pack",
     "units": [
       "unit-chaplain-with-jump-pack"
@@ -3311,6 +3430,19 @@ window.DG_TERMS={
     "datasheet": "unit-judiciar",
     "statline": "judiciar-profile"
   },
+  "space-marines-ability-leader-9": {
+    "id": "space-marines-ability-leader-9",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, CRUSADER SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, FORTIS KILL TEAM, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-9",
+    "rule": "unit-judiciar",
+    "units": [
+      "unit-judiciar"
+    ],
+    "datasheet": "unit-judiciar",
+    "statline": "judiciar-profile"
+  },
   "space-marines-weapon-executioner-relic-blade": {
     "id": "space-marines-weapon-executioner-relic-blade",
     "title": "Executioner Relic Blade",
@@ -3348,6 +3480,19 @@ window.DG_TERMS={
       "unit-librarian",
       "unit-librarian-in-phobos-armour",
       "unit-librarian-in-terminator-armour"
+    ],
+    "datasheet": "unit-librarian",
+    "statline": "librarian-profile"
+  },
+  "space-marines-ability-leader-10": {
+    "id": "space-marines-ability-leader-10",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, DEATHWATCH VETERANS, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, HELLBLASTER SQUAD, INFERNUS SQUAD, INNER CIRCLE COMPANIONS, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-10",
+    "rule": "unit-librarian",
+    "units": [
+      "unit-librarian"
     ],
     "datasheet": "unit-librarian",
     "statline": "librarian-profile"
@@ -3403,6 +3548,19 @@ window.DG_TERMS={
     "summary": "While this model is leading a unit, models in that unit have the Stealth ability and that unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
     "full": "While this model is leading a unit, models in that unit have the Stealth ability and that unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
     "glossary": "glossary-space-marines-ability-shrouding-psychic",
+    "rule": "unit-librarian-in-phobos-armour",
+    "units": [
+      "unit-librarian-in-phobos-armour"
+    ],
+    "datasheet": "unit-librarian-in-phobos-armour",
+    "statline": "librarian-in-phobos-armour-profile"
+  },
+  "space-marines-ability-leader-11": {
+    "id": "space-marines-ability-leader-11",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SPECTRUS KILL TEAM.",
+    "full": "This model can be attached to the following units: ELIMINATOR SQUAD, INCURSOR SQUAD, INFILTRATOR SQUAD, REIVER SQUAD, SPECTRUS KILL TEAM.",
+    "glossary": "glossary-space-marines-ability-leader-11",
     "rule": "unit-librarian-in-phobos-armour",
     "units": [
       "unit-librarian-in-phobos-armour"
@@ -3642,6 +3800,19 @@ window.DG_TERMS={
     "summary": "If a friendly Adeptus Astartes Vehicle model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian power axe has an Attacks characteristic of 7.",
     "full": "If a friendly Adeptus Astartes Vehicle model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian power axe has an Attacks characteristic of 7.",
     "glossary": "glossary-space-marines-ability-vengeance-of-the-omnissiah",
+    "rule": "unit-techmarine",
+    "units": [
+      "unit-techmarine"
+    ],
+    "datasheet": "unit-techmarine",
+    "statline": "techmarine-profile"
+  },
+  "space-marines-ability-leader-12": {
+    "id": "space-marines-ability-leader-12",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, CRUSADER SQUAD, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, INTERCESSOR SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, CRUSADER SQUAD, DECIMUS KILL TEAM, DESOLATION SQUAD, DEVASTATOR SQUAD, FORTIS KILL TEAM, INTERCESSOR SQUAD, SWORD BRETHREN SQUAD, TACTICAL SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-12",
     "rule": "unit-techmarine",
     "units": [
       "unit-techmarine"
@@ -4069,6 +4240,19 @@ window.DG_TERMS={
     "datasheet": "unit-adrax-agatone",
     "statline": "adrax-agatone-profile"
   },
+  "space-marines-ability-leader-13": {
+    "id": "space-marines-ability-leader-13",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-13",
+    "rule": "unit-adrax-agatone",
+    "units": [
+      "unit-adrax-agatone"
+    ],
+    "datasheet": "unit-adrax-agatone",
+    "statline": "adrax-agatone-profile"
+  },
   "space-marines-weapon-drakkis": {
     "id": "space-marines-weapon-drakkis",
     "title": "Drakkis",
@@ -4134,6 +4318,20 @@ window.DG_TERMS={
     "datasheet": "unit-aethon-shaan",
     "statline": "aethon-shaan-profile"
   },
+  "space-marines-ability-lone-operative": {
+    "id": "space-marines-ability-lone-operative",
+    "title": "Lone Operative",
+    "summary": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+    "full": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+    "glossary": "glossary-space-marines-ability-lone-operative",
+    "rule": "unit-aethon-shaan",
+    "units": [
+      "unit-aethon-shaan",
+      "unit-kayvaan-shrike"
+    ],
+    "datasheet": "unit-aethon-shaan",
+    "statline": "aethon-shaan-profile"
+  },
   "space-marines-weapon-claws-of-severax": {
     "id": "space-marines-weapon-claws-of-severax",
     "title": "Claws of Severax",
@@ -4169,6 +4367,34 @@ window.DG_TERMS={
     "rule": "unit-caanok-var",
     "units": [
       "unit-caanok-var"
+    ],
+    "datasheet": "unit-caanok-var",
+    "statline": "caanok-var-profile"
+  },
+  "space-marines-ability-feel-no-pain-5": {
+    "id": "space-marines-ability-feel-no-pain-5",
+    "title": "Feel No Pain 5+",
+    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+    "glossary": "glossary-space-marines-ability-feel-no-pain-5",
+    "rule": "unit-caanok-var",
+    "units": [
+      "unit-caanok-var",
+      "unit-captain-titus"
+    ],
+    "datasheet": "unit-caanok-var",
+    "statline": "caanok-var-profile"
+  },
+  "space-marines-ability-leader-14": {
+    "id": "space-marines-ability-leader-14",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+    "full": "This model can be attached to the following units: TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-14",
+    "rule": "unit-caanok-var",
+    "units": [
+      "unit-caanok-var",
+      "unit-darnath-lysander"
     ],
     "datasheet": "unit-caanok-var",
     "statline": "caanok-var-profile"
@@ -4218,6 +4444,19 @@ window.DG_TERMS={
     "summary": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
     "full": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
     "glossary": "glossary-space-marines-ability-honour-of-ultramar",
+    "rule": "unit-captain-titus",
+    "units": [
+      "unit-captain-titus"
+    ],
+    "datasheet": "unit-captain-titus",
+    "statline": "captain-titus-profile"
+  },
+  "space-marines-ability-leader-15": {
+    "id": "space-marines-ability-leader-15",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, HELLBLASTER SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, VICTRIX HONOUR GUARD, WARDENS OF ULTRAMAR.",
+    "glossary": "glossary-space-marines-ability-leader-15",
     "rule": "unit-captain-titus",
     "units": [
       "unit-captain-titus"
@@ -4283,6 +4522,32 @@ window.DG_TERMS={
     "summary": "You can target this unit with the Heroic Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase.",
     "full": "You can target this unit with the Heroic Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase.",
     "glossary": "glossary-space-marines-ability-honour-or-death",
+    "rule": "unit-cato-sicarius",
+    "units": [
+      "unit-cato-sicarius"
+    ],
+    "datasheet": "unit-cato-sicarius",
+    "statline": "cato-sicarius-profile"
+  },
+  "space-marines-ability-support-2": {
+    "id": "space-marines-ability-support-2",
+    "title": "Support",
+    "summary": "This model can be attached to the following units: ■ VICTRIX HONOUR GUARD You can attach this model to the above unit even if a Marneus Calgar unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths",
+    "full": "This model can be attached to the following units: ■ VICTRIX HONOUR GUARD You can attach this model to the above unit even if a Marneus Calgar unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths",
+    "glossary": "glossary-space-marines-ability-support-2",
+    "rule": "unit-cato-sicarius",
+    "units": [
+      "unit-cato-sicarius"
+    ],
+    "datasheet": "unit-cato-sicarius",
+    "statline": "cato-sicarius-profile"
+  },
+  "space-marines-ability-support-3": {
+    "id": "space-marines-ability-support-3",
+    "title": "Support",
+    "summary": "Support appears in the Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-space-marines-ability-support-3",
     "rule": "unit-cato-sicarius",
     "units": [
       "unit-cato-sicarius"
@@ -4361,6 +4626,19 @@ window.DG_TERMS={
     "summary": "▪ This unit has Stealth. ▪ Melee attacks that target this unit have -1 to hit rolls. ▪ (Once per battle round, per army) When you target this unit with the Counteroffensive/Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.",
     "full": "▪ This unit has Stealth. ▪ Melee attacks that target this unit have -1 to hit rolls. ▪ (Once per battle round, per army) When you target this unit with the Counteroffensive/Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.",
     "glossary": "glossary-space-marines-ability-master-of-prescience-psychic",
+    "rule": "unit-chief-librarian-tigurius",
+    "units": [
+      "unit-chief-librarian-tigurius"
+    ],
+    "datasheet": "unit-chief-librarian-tigurius",
+    "statline": "chief-librarian-tigurius-profile"
+  },
+  "space-marines-ability-leader-16": {
+    "id": "space-marines-ability-leader-16",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, DESOLATION SQUAD, DEVASTATOR SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, DESOLATION SQUAD, DEVASTATOR SQUAD, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-16",
     "rule": "unit-chief-librarian-tigurius",
     "units": [
       "unit-chief-librarian-tigurius"
@@ -4511,6 +4789,20 @@ window.DG_TERMS={
     "datasheet": "unit-iron-father-feirros",
     "statline": "iron-father-feirros-profile"
   },
+  "space-marines-ability-leader-17": {
+    "id": "space-marines-ability-leader-17",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD.",
+    "full": "This model can be attached to the following units: AGGRESSOR SQUAD, ERADICATOR SQUAD, HEAVY INTERCESSOR SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-17",
+    "rule": "unit-iron-father-feirros",
+    "units": [
+      "unit-iron-father-feirros",
+      "unit-tor-garadon"
+    ],
+    "datasheet": "unit-iron-father-feirros",
+    "statline": "iron-father-feirros-profile"
+  },
   "space-marines-weapon-gorgons-wrath": {
     "id": "space-marines-weapon-gorgons-wrath",
     "title": "Gorgon's Wrath",
@@ -4589,6 +4881,33 @@ window.DG_TERMS={
     "datasheet": "unit-kayvaan-shrike",
     "statline": "kayvaan-shrike-profile"
   },
+  "space-marines-ability-leader-18": {
+    "id": "space-marines-ability-leader-18",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSORS WITH JUMP PACKS, VANGUARD VETERAN SQUAD WITH JUMP PACKS.",
+    "glossary": "glossary-space-marines-ability-leader-18",
+    "rule": "unit-kayvaan-shrike",
+    "units": [
+      "unit-kayvaan-shrike"
+    ],
+    "datasheet": "unit-kayvaan-shrike",
+    "statline": "kayvaan-shrike-profile"
+  },
+  "space-marines-ability-stealth": {
+    "id": "space-marines-ability-stealth",
+    "title": "Stealth",
+    "summary": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+    "full": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
+    "glossary": "glossary-space-marines-ability-stealth",
+    "rule": "unit-kayvaan-shrike",
+    "units": [
+      "unit-kayvaan-shrike",
+      "unit-eliminator-squad"
+    ],
+    "datasheet": "unit-kayvaan-shrike",
+    "statline": "kayvaan-shrike-profile"
+  },
   "space-marines-weapon-blackout": {
     "id": "space-marines-weapon-blackout",
     "title": "Blackout",
@@ -4654,6 +4973,20 @@ window.DG_TERMS={
     "datasheet": "unit-korsarro-khan",
     "statline": "korsarro-khan-profile"
   },
+  "space-marines-ability-leader-19": {
+    "id": "space-marines-ability-leader-19",
+    "title": "Leader",
+    "summary": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+    "full": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+    "glossary": "glossary-space-marines-ability-leader-19",
+    "rule": "unit-korsarro-khan",
+    "units": [
+      "unit-korsarro-khan",
+      "unit-vulkan-hestan"
+    ],
+    "datasheet": "unit-korsarro-khan",
+    "statline": "korsarro-khan-profile"
+  },
   "space-marines-weapon-moonfang": {
     "id": "space-marines-weapon-moonfang",
     "title": "Moonfang",
@@ -4686,6 +5019,19 @@ window.DG_TERMS={
     "summary": "At the start of your Command phase, if this unit’s Marneus Calgar model is your Warlord and is on the battlefield, you gain 1CP.",
     "full": "At the start of your Command phase, if this unit’s Marneus Calgar model is your Warlord and is on the battlefield, you gain 1CP.",
     "glossary": "glossary-space-marines-ability-master-tactician",
+    "rule": "unit-marneus-calgar-in-armour-of-antilochus",
+    "units": [
+      "unit-marneus-calgar-in-armour-of-antilochus"
+    ],
+    "datasheet": "unit-marneus-calgar-in-armour-of-antilochus",
+    "statline": "marneus-calgar-in-armour-of-antilochus-profile"
+  },
+  "space-marines-ability-leader-20": {
+    "id": "space-marines-ability-leader-20",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: AGGRESSOR SQUAD, ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD, STERNGUARD VETERAN SQUAD, HEAVY INTERCESSOR SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, TACTICAL SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, VICTRIX HONOUR GUARD.",
+    "full": "This model can be attached to the following units: AGGRESSOR SQUAD, ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, ERADICATOR SQUAD, STERNGUARD VETERAN SQUAD, HEAVY INTERCESSOR SQUAD, INFERNUS SQUAD, INTERCESSOR SQUAD, TACTICAL SQUAD, TERMINATOR ASSAULT SQUAD, TERMINATOR SQUAD, VICTRIX HONOUR GUARD.",
+    "glossary": "glossary-space-marines-ability-leader-20",
     "rule": "unit-marneus-calgar-in-armour-of-antilochus",
     "units": [
       "unit-marneus-calgar-in-armour-of-antilochus"
@@ -4751,6 +5097,33 @@ window.DG_TERMS={
     "summary": "If you include this model in your army, until the end of the battle, non-Character models in Sternguard Veteran Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
     "full": "If you include this model in your army, until the end of the battle, non-Character models in Sternguard Veteran Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
     "glossary": "glossary-space-marines-ability-inspiring-commander-5",
+    "rule": "unit-pedro-kantor",
+    "units": [
+      "unit-pedro-kantor"
+    ],
+    "datasheet": "unit-pedro-kantor",
+    "statline": "pedro-kantor-profile"
+  },
+  "space-marines-ability-feel-no-pain-6": {
+    "id": "space-marines-ability-feel-no-pain-6",
+    "title": "Feel No Pain 6+",
+    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+    "glossary": "glossary-space-marines-ability-feel-no-pain-6",
+    "rule": "unit-pedro-kantor",
+    "units": [
+      "unit-pedro-kantor",
+      "unit-vulkan-hestan"
+    ],
+    "datasheet": "unit-pedro-kantor",
+    "statline": "pedro-kantor-profile"
+  },
+  "space-marines-ability-leader-21": {
+    "id": "space-marines-ability-leader-21",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: BLADEGUARD VETERAN SQUAD, COMPANY HEROES, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+    "full": "This model can be attached to the following units: BLADEGUARD VETERAN SQUAD, COMPANY HEROES, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-21",
     "rule": "unit-pedro-kantor",
     "units": [
       "unit-pedro-kantor"
@@ -4901,6 +5274,19 @@ window.DG_TERMS={
     "datasheet": "unit-suboden-khan",
     "statline": "suboden-khan-profile"
   },
+  "space-marines-ability-leader-22": {
+    "id": "space-marines-ability-leader-22",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: OUTRIDER SQUAD.",
+    "full": "This model can be attached to the following units: OUTRIDER SQUAD.",
+    "glossary": "glossary-space-marines-ability-leader-22",
+    "rule": "unit-suboden-khan",
+    "units": [
+      "unit-suboden-khan"
+    ],
+    "datasheet": "unit-suboden-khan",
+    "statline": "suboden-khan-profile"
+  },
   "space-marines-weapon-onslaught-gatling-cannon": {
     "id": "space-marines-weapon-onslaught-gatling-cannon",
     "title": "Onslaught Gatling Cannon",
@@ -5018,6 +5404,19 @@ window.DG_TERMS={
     "datasheet": "unit-uriel-ventris",
     "statline": "uriel-ventris-profile"
   },
+  "space-marines-ability-leader-23": {
+    "id": "space-marines-ability-leader-23",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VICTRIX HONOUR GUARD.",
+    "full": "This model can be attached to the following units: ASSAULT INTERCESSOR SQUAD, BLADEGUARD VETERAN SQUAD, COMPANY HEROES, INTERCESSOR SQUAD, STERNGUARD VETERAN SQUAD, TACTICAL SQUAD, VICTRIX HONOUR GUARD.",
+    "glossary": "glossary-space-marines-ability-leader-23",
+    "rule": "unit-uriel-ventris",
+    "units": [
+      "unit-uriel-ventris"
+    ],
+    "datasheet": "unit-uriel-ventris",
+    "statline": "uriel-ventris-profile"
+  },
   "space-marines-weapon-invictus": {
     "id": "space-marines-weapon-invictus",
     "title": "Invictus",
@@ -5128,6 +5527,19 @@ window.DG_TERMS={
     "summary": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
     "full": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
     "glossary": "glossary-space-marines-ability-strategium-command",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-ability-support-4": {
+    "id": "space-marines-ability-support-4",
+    "title": "Support",
+    "summary": "Support appears in the Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-space-marines-ability-support-4",
     "rule": "unit-wardens-of-ultramar",
     "units": [
       "unit-wardens-of-ultramar"
@@ -6072,6 +6484,19 @@ window.DG_TERMS={
     "datasheet": "unit-infiltrator-squad",
     "statline": "infiltrator-squad-profile"
   },
+  "space-marines-ability-feel-no-pain": {
+    "id": "space-marines-ability-feel-no-pain",
+    "title": "Feel No Pain",
+    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+    "glossary": "glossary-space-marines-ability-feel-no-pain",
+    "rule": "unit-infiltrator-squad",
+    "units": [
+      "unit-infiltrator-squad"
+    ],
+    "datasheet": "unit-infiltrator-squad",
+    "statline": "infiltrator-squad-profile"
+  },
   "space-marines-ability-helix-gauntlet": {
     "id": "space-marines-ability-helix-gauntlet",
     "title": "Helix Gauntlet",
@@ -6463,6 +6888,24 @@ window.DG_TERMS={
     "datasheet": "unit-terminator-squad",
     "statline": "terminator-squad-profile"
   },
+  "space-marines-ability-deep-strike": {
+    "id": "space-marines-ability-deep-strike",
+    "title": "Deep Strike",
+    "summary": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+    "full": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+    "glossary": "glossary-space-marines-ability-deep-strike",
+    "rule": "unit-terminator-squad",
+    "units": [
+      "unit-terminator-squad",
+      "unit-vanguard-veteran-squad-with-jump-packs",
+      "unit-land-speeder",
+      "unit-storm-speeder-hailstrike",
+      "unit-storm-speeder-hammerstrike",
+      "unit-storm-speeder-thunderstrike"
+    ],
+    "datasheet": "unit-terminator-squad",
+    "statline": "terminator-squad-profile"
+  },
   "space-marines-weapon-chainfist-2": {
     "id": "space-marines-weapon-chainfist-2",
     "title": "Chainfist",
@@ -6589,6 +7032,19 @@ window.DG_TERMS={
     "summary": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Surge move. To do so, roll one D6: models in this unit move a number of inches up to the result, but this unit must end that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Surge move per phase.",
     "full": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Surge move. To do so, roll one D6: models in this unit move a number of inches up to the result, but this unit must end that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Surge move per phase.",
     "glossary": "glossary-space-marines-ability-glory-of-ultramar",
+    "rule": "unit-victrix-honour-guard",
+    "units": [
+      "unit-victrix-honour-guard"
+    ],
+    "datasheet": "unit-victrix-honour-guard",
+    "statline": "victrix-honour-guard-profile"
+  },
+  "space-marines-ability-attached-unit": {
+    "id": "space-marines-ability-attached-unit",
+    "title": "Attached Unit",
+    "summary": "If a Captain or Chapter Master unit from your army can be attached to a Company Heroes unit, it can be attached to this unit instead.",
+    "full": "If a Captain or Chapter Master unit from your army can be attached to a Company Heroes unit, it can be attached to this unit instead.",
+    "glossary": "glossary-space-marines-ability-attached-unit",
     "rule": "unit-victrix-honour-guard",
     "units": [
       "unit-victrix-honour-guard"
@@ -8020,20 +8476,6 @@ window.DG_TERMS={
     "rule": "unit-astraeus",
     "units": [
       "unit-astraeus"
-    ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
-  },
-  "space-marines-ability-deadly-demise-d6-2": {
-    "id": "space-marines-ability-deadly-demise-d6-2",
-    "title": "Deadly Demise D6+2",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-space-marines-ability-deadly-demise-d6-2",
-    "rule": "unit-astraeus",
-    "units": [
-      "unit-astraeus",
-      "unit-thunderhawk-gunship"
     ],
     "datasheet": "unit-astraeus",
     "statline": "astraeus-profile"

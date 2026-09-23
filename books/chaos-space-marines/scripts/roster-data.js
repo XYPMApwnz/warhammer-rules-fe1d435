@@ -6820,8 +6820,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-masters-of-the-maelstrom"
           },
           {
-            "id": "core-support",
-            "sectionId": "core-support",
+            "id": "chaos-space-marines-ability-support",
+            "sectionId": "chaos-space-marines-ability-support",
             "title": "Support",
             "text": "",
             "sourceUnitId": "unit-masters-of-the-maelstrom"
@@ -15657,8 +15657,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "sourceUnitId": "unit-khorne-lord-of-skulls"
           },
           {
-            "id": "chaos-space-marines-ability-deadly-demise-d6-2",
-            "sectionId": "chaos-space-marines-ability-deadly-demise-d6-2",
+            "id": "core-deadly-demise",
+            "sectionId": "core-deadly-demise",
             "title": "Deadly Demise D6+2",
             "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
             "sourceUnitId": "unit-khorne-lord-of-skulls"

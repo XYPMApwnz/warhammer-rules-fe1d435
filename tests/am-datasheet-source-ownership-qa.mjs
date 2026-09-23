@@ -15,11 +15,19 @@ const copy=relative=>{
   fs.mkdirSync(path.dirname(target),{recursive:true});
   fs.copyFileSync(source,target);
 };
+const copyRepoPath=relative=>{
+  const source=path.join(root,relative),target=path.join(fixture,relative);
+  fs.mkdirSync(path.dirname(target),{recursive:true});
+  fs.cpSync(source,target,{recursive:true});
+};
 const run=()=>spawnSync(process.execPath,[path.join(fixtureRoot,'tools','extract-datasheets.mjs')],{cwd:fixture,encoding:'utf8'});
 const output=path.join(fixtureRoot,'content','adeptus-mechanicus-codex-datasheets.en.json');
 
 try{
   for(const file of ['tools/extract-datasheets.mjs','tools/source-hash.mjs','sources/bsdata-adeptus-mechanicus-11e.json','content/adeptus-mechanicus-points.en.json'])copy(file);
+  copyRepoPath('books/shared/tools/army-core-ability-binding.mjs');
+  copyRepoPath('books/shared/content/army-ability-source-bindings.v1.json');
+  copyRepoPath('books/core-rules/content');
 
   const absent=run();
   assert.equal(absent.status,0,`${absent.stdout||''}${absent.stderr||''}`);

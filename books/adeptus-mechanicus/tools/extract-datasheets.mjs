@@ -2,8 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {normalizedFileSha256} from './source-hash.mjs';
+import {createArmyCoreAbilityBindings} from '../../shared/tools/army-core-ability-binding.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const repo=path.resolve(root,'../..');
+const coreAbilityBindings=createArmyCoreAbilityBindings({repoRoot:repo});
 const sourcePath=path.join(root,'sources','bsdata-adeptus-mechanicus-11e.json');
 const outputPath=path.join(root,'content','adeptus-mechanicus-codex-datasheets.en.json');
 const points=JSON.parse(fs.readFileSync(path.join(root,'content','adeptus-mechanicus-points.en.json'),'utf8'));
@@ -56,7 +59,7 @@ const unique=(items,marker)=>{
   return items.filter(item=>{const id=marker(item);if(seen.has(id))return false;seen.add(id);return true;});
 };
 const publicAbility=item=>{
-  if(item.title!=='Canticles of the Omnissiah')return {title:item.title,text:item.text};
+  if(item.title!=='Canticles of the Omnissiah')return {title:item.title,text:item.text,...(item.sourceAbilityId?{sourceAbilityId:item.sourceAbilityId}:{}),...(item.coreAbilityId?{coreAbilityId:item.coreAbilityId}:{})};
   const [openingText,...blocks]=item.text.split(/\n{2,}/);
   return {
     title:item.title,
@@ -106,7 +109,7 @@ const hunterCohortOnly=link=>(link.modifiers||[]).some(modifier=>modifier.type==
 const rulesFor=entry=>(entry.infoLinks||[]).filter(link=>link.type==='rule'&&link.hidden!==true&&!hunterCohortOnly(link)).map(link=>{
   const target=index.get(link.targetId)||{};
   const suffix=(link.modifiers||[]).filter(mod=>mod.type==='append'&&mod.field==='name').map(mod=>clean(mod.value)).join(' ');
-  return {title:clean(`${link.name||target.name||''} ${suffix}`),text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text),origin:'rule'};
+  return coreAbilityBindings.bindAbility({title:clean(`${link.name||target.name||''} ${suffix}`),text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text),origin:'rule',sourceAbilityId:link.targetId});
 });
 const categoryFor=(title,categoryLinks)=>{
   if(/\[Legends]/i.test(title))return 'Warhammer Legends';
@@ -219,7 +222,7 @@ const datasheets=points.units.map(pointUnit=>{
     const dissipated=weapons.find(weapon=>/eradication beamer - dissipated/i.test(weapon.name));
     if(dissipated)dissipated.s='9'; // Faction Pack v1.1, p. 18.
   }
-  const abilityRecords=profileRecords.filter(item=>item.profile.typeName==='Abilities').map(item=>({title:clean(item.profile.name),text:abilityText(pointUnit.title,item.profile.name,characteristics(item.profile,categoryIds).Description||''),origin:item.ownerType==='upgrade'?'wargear':'datasheet',ownerName:item.ownerName}));
+  const abilityRecords=profileRecords.filter(item=>item.profile.typeName==='Abilities').map(item=>coreAbilityBindings.bindAbility({title:clean(item.profile.name),text:abilityText(pointUnit.title,item.profile.name,characteristics(item.profile,categoryIds).Description||''),origin:item.ownerType==='upgrade'?'wargear':'datasheet',ownerName:item.ownerName,sourceAbilityId:item.profile.id}));
   const conditionalTitles=new Set(abilityRecords.filter(item=>item.origin==='wargear'&&key(item.ownerName)!==key(pointUnit.title)&&!alwaysDatasheetAbilities.has(key(item.title))).map(item=>key(item.title)));
   const abilities=abilityRecords.filter(item=>(item.origin!=='wargear'||alwaysDatasheetAbilities.has(key(item.title)))&&!conditionalTitles.has(key(item.title))).concat(rulesFor(entry));
   const wargearAbilities=abilityRecords.filter(item=>item.origin==='wargear'&&conditionalTitles.has(key(item.title))&&!abilities.some(ability=>key(ability.title)===key(item.title)));

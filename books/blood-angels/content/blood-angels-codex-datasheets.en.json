@@ -98,15 +98,19 @@
       "abilities": [
         {
           "title": "Rites of Battle",
-          "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+          "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+          "sourceAbilityId": "90c7-c55c-21e2-2232"
         },
         {
           "title": "Finest Hour",
-          "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability."
+          "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.",
+          "sourceAbilityId": "fdf1-64a5-906c-3474"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         }
       ],
       "wargearAbilities": [],
@@ -234,19 +238,24 @@
       "abilities": [
         {
           "title": "Forlorn Hero",
-          "text": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
+          "text": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability",
+          "sourceAbilityId": "064b-d740-a982-6678"
         },
         {
           "title": "Death Vision of Sanguinius",
-          "text": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
+          "text": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds.",
+          "sourceAbilityId": "b276-0bcd-8baf-3c14"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         }
       ],
       "wargearAbilities": [],
@@ -393,23 +402,30 @@
       "abilities": [
         {
           "title": "Death Vision of Sanguinius",
-          "text": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
+          "text": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds.",
+          "sourceAbilityId": "165c-259e-fbfe-4298"
         },
         {
           "title": "Lost to Fury",
-          "text": "When this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability"
+          "text": "When this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability",
+          "sourceAbilityId": "2569-0de4-1748-b6da"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [],
@@ -506,15 +522,19 @@
       "abilities": [
         {
           "title": "Sanguinary Priest",
-          "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+          "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability",
+          "sourceAbilityId": "bb06-73be-d05e-4541"
         },
         {
           "title": "Blood Chalice",
-          "text": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+          "text": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
+          "sourceAbilityId": "2271-e1ab-2fb9-93c5"
         },
         {
           "title": "Support",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. \nUnless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. \nUnless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "3342-2180-9c5d-925f",
+          "coreAbilityId": "core-support"
         }
       ],
       "wargearAbilities": [],
@@ -601,19 +621,25 @@
       "abilities": [
         {
           "title": "Redeemer of the Lost",
-          "text": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+          "text": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+          "sourceAbilityId": "c5e1-99a6-a51e-251e"
         },
         {
           "title": "Mass of Doom",
-          "text": "Each time this model’s unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+          "text": "Each time this model’s unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
+          "sourceAbilityId": "2cc0-3a51-cd4f-429e"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [],
@@ -740,23 +766,31 @@
       "abilities": [
         {
           "title": "The Quickening [Psychic]",
-          "text": "This model is eligible to declare a charge in a turn which it Advanced."
+          "text": "This model is eligible to declare a charge in a turn which it Advanced.",
+          "sourceAbilityId": "f775-5667-be0b-35bc"
         },
         {
           "title": "Transfixing Gaze [Aura, Psychic]",
-          "text": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+          "text": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.",
+          "sourceAbilityId": "b48f-aef0-7aa9-3500"
         },
         {
           "title": "Lone Operative",
-          "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+          "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+          "sourceAbilityId": "a8a0-8fe7-898-e0f3",
+          "coreAbilityId": "core-lone-operative"
         },
         {
           "title": "Fights First",
-          "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04)."
+          "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+          "sourceAbilityId": "24-c886-e8ba-5a89",
+          "coreAbilityId": "core-fights-first"
         },
         {
           "title": "Feel No Pain 4+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         }
       ],
       "wargearAbilities": [],
@@ -846,19 +880,25 @@
       "abilities": [
         {
           "title": "Death Mask of Sanguinius",
-          "text": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do"
+          "text": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do",
+          "sourceAbilityId": "edcb-c05a-9bcb-12c7"
         },
         {
           "title": "Lord Regent of the Imperium Nihilus",
-          "text": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and each time a model in that unit makes an attack, add 1 to the Hit roll."
+          "text": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and each time a model in that unit makes an attack, add 1 to the Hit roll.",
+          "sourceAbilityId": "56e5-d5ec-38c6-e113"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [],
@@ -954,23 +994,31 @@
       "abilities": [
         {
           "title": "Guardian of the Lost",
-          "text": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+          "text": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.",
+          "sourceAbilityId": "e07d-ca56-c77-2dce"
         },
         {
           "title": "Fury Unbound",
-          "text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          "text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+          "sourceAbilityId": "3863-f078-be63-9230"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         }
       ],
       "wargearAbilities": [],
@@ -1053,23 +1101,31 @@
       "abilities": [
         {
           "title": "Aura of Fervour (Aura)",
-          "text": "While a friendly Adeptus Astartes unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit"
+          "text": "While a friendly Adeptus Astartes unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit",
+          "sourceAbilityId": "a3b2-4a68-fe8f-f5fa"
         },
         {
           "title": "Miraculous Saviour",
-          "text": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. That move does not prevent this unit from being eligible to move."
+          "text": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. That move does not prevent this unit from being eligible to move.",
+          "sourceAbilityId": "9c8e-d8c0-5604-60f0"
         },
         {
           "title": "Lone Operative",
-          "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit."
+          "text": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. \nIf this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
+          "sourceAbilityId": "a8a0-8fe7-898-e0f3",
+          "coreAbilityId": "core-lone-operative"
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         },
         {
           "title": "Fights First",
-          "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04)."
+          "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04).",
+          "sourceAbilityId": "24-c886-e8ba-5a89",
+          "coreAbilityId": "core-fights-first"
         }
       ],
       "wargearAbilities": [],
@@ -1271,19 +1327,25 @@
       "abilities": [
         {
           "title": "An Honourable Death in Combat",
-          "text": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
+          "text": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength.",
+          "sourceAbilityId": "e4bd-d365-f2b5-26d1"
         },
         {
           "title": "Attached Unit",
-          "text": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessor Squad, it can be attached to this unit instead."
+          "text": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessor Squad, it can be attached to this unit instead.",
+          "sourceAbilityId": "2c20-3899-13f8-e9c5",
+          "coreAbilityId": "core-attached-unit"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         }
       ],
       "wargearAbilities": [],
@@ -1529,19 +1591,25 @@
       "abilities": [
         {
           "title": "Attached Unit",
-          "text": "If a Chaplain model from your army with the Leader ability can be attached to Intercessor Squad, it can be attached to this unit instead."
+          "text": "If a Chaplain model from your army with the Leader ability can be attached to Intercessor Squad, it can be attached to this unit instead.",
+          "sourceAbilityId": "8a7a-18df-3d39-6e3d",
+          "coreAbilityId": "core-attached-unit"
         },
         {
           "title": "Visions of Heresy",
-          "text": "This unit can re-roll Charge rolls. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is ‑1 CP."
+          "text": "This unit can re-roll Charge rolls. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is ‑1 CP.",
+          "sourceAbilityId": "b668-08f5-afe4-8611"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         }
       ],
       "wargearAbilities": [],
@@ -1732,23 +1800,31 @@
       "abilities": [
         {
           "title": "Savage Fury",
-          "text": "You can re-roll Charge rolls made for this unit."
+          "text": "You can re-roll Charge rolls made for this unit.",
+          "sourceAbilityId": "6353-b576-82ad-a3fb"
         },
         {
           "title": "Attached Unit",
-          "text": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead"
+          "text": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead",
+          "sourceAbilityId": "fa3d-61ea-538d-3a98",
+          "coreAbilityId": "core-attached-unit"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [],
@@ -1885,25 +1961,32 @@
       "abilities": [
         {
           "title": "Angelic Visage",
-          "text": "Each time a melee attack targets this unit, subtract 1 from the Hit roll"
+          "text": "Each time a melee attack targets this unit, subtract 1 from the Hit roll",
+          "sourceAbilityId": "5a4f-9341-88c9-9038"
         },
         {
           "title": "Heirs of Azkaellon",
-          "text": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll."
+          "text": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll.",
+          "sourceAbilityId": "48cf-9858-89c4-f598"
         },
         {
           "title": "Attached Unit",
-          "text": "If a Captain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead."
+          "text": "If a Captain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs, it can be attached to this unit instead.",
+          "sourceAbilityId": "62ff-e5e0-9783-7024",
+          "coreAbilityId": "core-attached-unit"
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [
         {
           "title": "Sanguinary Banner",
           "text": "Add 1 to the Objective Control characteristic of models in the bearer’s unit.",
+          "sourceAbilityId": "a344-31d1-3cec-1aa4",
           "sourceChildId": "a344-31d1-3cec-1aa4"
         }
       ],
@@ -2051,15 +2134,19 @@
       "abilities": [
         {
           "title": "Overcharged Engines",
-          "text": "You can re-roll Advance rolls made for this model."
+          "text": "You can re-roll Advance rolls made for this model.",
+          "sourceAbilityId": "acf-498-6031-bf2f"
         },
         {
           "title": "Damaged: 1-4 Wounds Remaining",
-          "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+          "sourceAbilityId": "ee64-aaaf-75df-8da9"
         },
         {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [],
@@ -2205,23 +2292,30 @@
       "abilities": [
         {
           "title": "Driven by Fury",
-          "text": "In your opponent's Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\"."
+          "text": "In your opponent's Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
+          "sourceAbilityId": "973b-a866-fedb-54d7"
         },
         {
           "title": "Damaged: 1-4 Wounds Remaining",
-          "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+          "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+          "sourceAbilityId": "ee64-aaaf-75df-8da9"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         }
       ],
       "wargearAbilities": [],
@@ -2311,15 +2405,19 @@
       "abilities": [
         {
           "title": "Sanguinary Priest",
-          "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+          "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
+          "sourceAbilityId": "997a-75ae-da4b-a534"
         },
         {
           "title": "The Red Grail",
-          "text": "While this model is leading a unit, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit."
+          "text": "While this model is leading a unit, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit.",
+          "sourceAbilityId": "ba5c-785b-b694-3943"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         }
       ],
       "wargearAbilities": [],
@@ -2425,23 +2523,29 @@
       "abilities": [
         {
           "title": "Gifted Commander",
-          "text": "While this model is leading a unit, each time that unit is selected to shoot, select one of the following abilities to apply to ranged weapons equipped by models in that unit until the end of the phase:\n\n\n■ [ASSAULT]\n■ [HEAVY]\n■ [RAPID FIRE 1]"
+          "text": "While this model is leading a unit, each time that unit is selected to shoot, select one of the following abilities to apply to ranged weapons equipped by models in that unit until the end of the phase:\n\n\n■ [ASSAULT]\n■ [HEAVY]\n■ [RAPID FIRE 1]",
+          "sourceAbilityId": "f81-2576-e3dd-1a7"
         },
         {
           "title": "Embittered",
-          "text": "The first time an attack is allocated to this model, after the attacking unit has finished making its attacks, until the end of the battle, change the Attacks characteristic of this model’s Dead Man’s Hand to 12"
+          "text": "The first time an attack is allocated to this model, after the attacking unit has finished making its attacks, until the end of the battle, change the Attacks characteristic of this model’s Dead Man’s Hand to 12",
+          "sourceAbilityId": "4941-ff7-a233-6730"
         },
         {
           "title": "Tycho",
-          "text": "Your army cannot contain both Captain Tycho and Tycho the Lost."
+          "text": "Your army cannot contain both Captain Tycho and Tycho the Lost.",
+          "sourceAbilityId": "a116-17c9-deb4-9f1d"
         },
         {
           "title": "Invulnerable Save",
-          "text": "4+"
+          "text": "4+",
+          "sourceAbilityId": "db19-dee7-9530-ef0e"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         }
       ],
       "wargearAbilities": [],
@@ -2570,23 +2674,30 @@
       "abilities": [
         {
           "title": "Frenzied Reprisal",
-          "text": "Each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot as if it were your Shooting phase or fight as if it were the Fight phase."
+          "text": "Each time an enemy unit targets this model, after that unit has finished making its attacks, this model can either shoot as if it were your Shooting phase or fight as if it were the Fight phase.",
+          "sourceAbilityId": "2933-487d-d513-21d9"
         },
         {
           "title": "Magna-grapple",
-          "text": "Add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a MOSNTER or VEHICLE unit."
+          "text": "Add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a MOSNTER or VEHICLE unit.",
+          "sourceAbilityId": "bdca-ea55-dd4a-8d3f"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         },
         {
           "title": "Deadly Demise 1",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [],
@@ -2778,19 +2889,24 @@
       "abilities": [
         {
           "title": "An Honourable Death in Combat",
-          "text": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
+          "text": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength.",
+          "sourceAbilityId": "5b90-43fc-7d4c-513e"
         },
         {
           "title": "Attached Leader",
-          "text": "If a Chaplain model from your army with the Leader ability can be attached to a Tactical Squad, it can be attached to this unit instead.\n\n\nIf a Character unit from your army with the Leader ability can be attached to a Death Company Marines unit, it can be attached to this unit instead."
+          "text": "If a Chaplain model from your army with the Leader ability can be attached to a Tactical Squad, it can be attached to this unit instead.\n\n\nIf a Character unit from your army with the Leader ability can be attached to a Death Company Marines unit, it can be attached to this unit instead.",
+          "sourceAbilityId": "40bf-8f05-f081-8fe0"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         }
       ],
       "wargearAbilities": [],
@@ -2981,23 +3097,30 @@
       "abilities": [
         {
           "title": "Beserk Fury",
-          "text": "You can re-roll Charge rolls made for this unit"
+          "text": "You can re-roll Charge rolls made for this unit",
+          "sourceAbilityId": "1d96-649b-fed0-e796"
         },
         {
           "title": "Attached Leader",
-          "text": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs or an Assault Squad with Jump Packs, it can be attached to this unit instead.\n\n\nIf a Character unit from your army with the Leader ability can be attached to a Death Company Marines with Jump Packs unit, it can be attached to this unit instead."
+          "text": "If a Chaplain model from your army with the Leader ability can be attached to Assault Intercessors with Jump Packs or an Assault Squad with Jump Packs, it can be attached to this unit instead.\n\n\nIf a Character unit from your army with the Leader ability can be attached to a Death Company Marines with Jump Packs unit, it can be attached to this unit instead.",
+          "sourceAbilityId": "8c1b-2833-573d-bae7"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Feel No Pain 6+",
-          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
+          "text": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+          "sourceAbilityId": "9bf4-280f-bbe2-6fbb",
+          "coreAbilityId": "core-feel-no-pain"
         },
         {
           "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
+          "sourceAbilityId": "7cb5-dd6b-dd87-ad3b",
+          "coreAbilityId": "core-deep-strike"
         }
       ],
       "wargearAbilities": [],
@@ -3127,17 +3250,21 @@
       "abilities": [
         {
           "title": "Wrathful Rampage",
-          "text": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds."
+          "text": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
+          "sourceAbilityId": "8cf6-e018-6131-88d1"
         },
         {
           "title": "Deadly Demise 1",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [
         {
           "title": "Magna-grapple",
-          "text": "The bearer loses the Smoke keyword, but add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a Monster or Vehicle unit"
+          "text": "The bearer loses the Smoke keyword, but add 2 to Charge rolls made for the bearer if one or more of the targets of that charge is a Monster or Vehicle unit",
+          "sourceAbilityId": "c5b0-88dc-12d1-c106"
         }
       ],
       "keywords": [
@@ -3223,19 +3350,24 @@
       "abilities": [
         {
           "title": "Lord of Slaughter",
-          "text": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced"
+          "text": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced",
+          "sourceAbilityId": "82e7-b329-1f35-91e7"
         },
         {
           "title": "Whirlwind of Rage",
-          "text": "Each time this model fights, until that fight is resolved, add 1 to the Attacks characteristic of this model’s Blood Reaver for every 5 enemy models within 6\" of this model."
+          "text": "Each time this model fights, until that fight is resolved, add 1 to the Attacks characteristic of this model’s Blood Reaver for every 5 enemy models within 6\" of this model.",
+          "sourceAbilityId": "6ff5-66f5-8a9f-2834"
         },
         {
           "title": "Invulnerable Save",
-          "text": "4+"
+          "text": "4+",
+          "sourceAbilityId": "db19-dee7-9530-ef0e"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         }
       ],
       "wargearAbilities": [],
@@ -3387,15 +3519,19 @@
       "abilities": [
         {
           "title": "Shield of Sanguinius (Aura, Psychic)",
-          "text": "While a friendly Adeptus Astartes unit is within 6\" of this model, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks."
+          "text": "While a friendly Adeptus Astartes unit is within 6\" of this model, models in that unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks.",
+          "sourceAbilityId": "701b-9655-4af1-e452"
         },
         {
           "title": "Wings of Sanguinius (Psychic)",
-          "text": "Once per turn, at the end of your Movement phase, one Psyker from your army with this ability can use it. If it does, roll one D6: on a 1, that Psyker suffers D3 mortal wounds; on a 2+, select one friendly Adeptus Astartes Infantry unit within 12\" of that Psyker and remove the selected unit from the battlefield, then set it up again anywhere on the battlefield that is more than 9\"\nhorizontally away from all enemy models."
+          "text": "Once per turn, at the end of your Movement phase, one Psyker from your army with this ability can use it. If it does, roll one D6: on a 1, that Psyker suffers D3 mortal wounds; on a 2+, select one friendly Adeptus Astartes Infantry unit within 12\" of that Psyker and remove the selected unit from the battlefield, then set it up again anywhere on the battlefield that is more than 9\"\nhorizontally away from all enemy models.",
+          "sourceAbilityId": "78af-53ce-b84c-2b1e"
         },
         {
           "title": "Deadly Demise 1",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
+          "sourceAbilityId": "b68a-5ded-65ac-98c",
+          "coreAbilityId": "core-deadly-demise"
         }
       ],
       "wargearAbilities": [],
@@ -3615,15 +3751,19 @@
       "abilities": [
         {
           "title": "Blood Chalice",
-          "text": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+          "text": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
+          "sourceAbilityId": "2445-e8cc-6cb1-80f4"
         },
         {
           "title": "Sanguinary Priest",
-          "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+          "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability",
+          "sourceAbilityId": "76a3-866c-256-fa24"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         }
       ],
       "wargearAbilities": [],
@@ -3712,15 +3852,19 @@
       "abilities": [
         {
           "title": "Sanguinary Priest",
-          "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+          "text": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability",
+          "sourceAbilityId": "a752-2aba-3ea3-4da8"
         },
         {
           "title": "Blood Chalice",
-          "text": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+          "text": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1.",
+          "sourceAbilityId": "4652-4462-711c-484c"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         }
       ],
       "wargearAbilities": [],
@@ -3828,31 +3972,40 @@
       "abilities": [
         {
           "title": "Forlorn Hero",
-          "text": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced"
+          "text": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Advanced",
+          "sourceAbilityId": "5fd1-7d5a-c19a-64db"
         },
         {
           "title": "Death Visions of Sanguinius",
-          "text": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord: on a 2-3, that enemy unit suffers 3 mortal wounds; on a 4-5, that enemy unit suffers D3+3 mortal wounds; on a 6+, that enemy unit suffers D6+3 mortal wounds."
+          "text": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord: on a 2-3, that enemy unit suffers 3 mortal wounds; on a 4-5, that enemy unit suffers D3+3 mortal wounds; on a 6+, that enemy unit suffers D6+3 mortal wounds.",
+          "sourceAbilityId": "6d90-b55-d2b0-6522"
         },
         {
           "title": "Tycho",
-          "text": "Your army cannot contain both Captain Tycho and Tycho the Lost."
+          "text": "Your army cannot contain both Captain Tycho and Tycho the Lost.",
+          "sourceAbilityId": "601e-dad9-348b-4ceb"
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following unit:\n\n■ Death Company Marines"
+          "text": "This model can be attached to the following unit:\n\n■ Death Company Marines",
+          "sourceAbilityId": "a92c-5b74-19ab-ab59",
+          "coreAbilityId": "core-leader"
         },
         {
           "title": "Invulnerable Save",
-          "text": "4+"
+          "text": "4+",
+          "sourceAbilityId": "db19-dee7-9530-ef0e"
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’",
+          "sourceAbilityId": "3e0a-31f-8be-e293"
         },
         {
           "title": "Leader",
-          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
+          "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
+          "sourceAbilityId": "b4dd-3e1f-41cb-218f",
+          "coreAbilityId": "core-leader"
         }
       ],
       "wargearAbilities": [],

@@ -3415,6 +3415,19 @@ window.DG_TERMS={
     "datasheet": "unit-masters-of-the-maelstrom",
     "statline": "masters-of-the-maelstrom-profile"
   },
+  "chaos-space-marines-ability-support": {
+    "id": "chaos-space-marines-ability-support",
+    "title": "Support",
+    "summary": "Support appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-ability-support",
+    "rule": "unit-masters-of-the-maelstrom",
+    "units": [
+      "unit-masters-of-the-maelstrom"
+    ],
+    "datasheet": "unit-masters-of-the-maelstrom",
+    "statline": "masters-of-the-maelstrom-profile"
+  },
   "chaos-space-marines-weapon-absolver-bolt-pistol": {
     "id": "chaos-space-marines-weapon-absolver-bolt-pistol",
     "title": "Absolver bolt pistol",
@@ -5116,19 +5129,6 @@ window.DG_TERMS={
     "summary": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
     "full": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
     "glossary": "glossary-chaos-space-marines-ability-damaged-1-8-wounds-remaining",
-    "rule": "unit-khorne-lord-of-skulls",
-    "units": [
-      "unit-khorne-lord-of-skulls"
-    ],
-    "datasheet": "unit-khorne-lord-of-skulls",
-    "statline": "khorne-lord-of-skulls-profile"
-  },
-  "chaos-space-marines-ability-deadly-demise-d6-2": {
-    "id": "chaos-space-marines-ability-deadly-demise-d6-2",
-    "title": "Deadly Demise D6+2",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-chaos-space-marines-ability-deadly-demise-d6-2",
     "rule": "unit-khorne-lord-of-skulls",
     "units": [
       "unit-khorne-lord-of-skulls"

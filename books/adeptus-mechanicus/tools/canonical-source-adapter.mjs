@@ -5,6 +5,7 @@ import {createEffectivePointsProjection} from '../../shared/tools/effective-poin
 import {persistCanonicalWeaponProfileIdentities} from '../../shared/tools/build-roster-catalog.mjs';
 import ruleFactsApi from '../../shared/rule-facts.js';
 import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
+import {createArmyCoreAbilityBindings} from '../../shared/tools/army-core-ability-binding.mjs';
 import {createEffectiveMfmArmyProjection} from '../../shared/tools/effective-mfm-army-projection.mjs';
 
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
@@ -18,13 +19,15 @@ export function createAdeptusMechanicusCanonicalModel(context){
   const source=readJson(sourcePaths.sourceTranscript);
   const codexSource=readJson(sourcePaths.codexDetachments);
   const codexParity=readJson(sourcePaths.codexParity);
-  const codexDatasheets=readJson(sourcePaths.codexDatasheets);
+  const rawCodexDatasheets=readJson(sourcePaths.codexDatasheets);
   const codexWargear=readJson(sourcePaths.codexWargear);
   const mfmProjection=createEffectiveMfmArmyProjection(config.id),mfmPoints=mfmProjection.pointsForArmyBook(config.id),compatibilityPoints=readJson(sourcePaths.points);
   const compatibilityEnhancements=new Map(compatibilityPoints.enhancements.map(item=>[`${item.canonicalDetachmentId}\0${item.canonicalEnhancementId||item.id}`,item]));
   const pointsCatalog={...mfmPoints,source:{...mfmPoints.source,officialVersion:mfmPoints.source.version,officialUrl:compatibilityPoints.source.officialUrl},units:mfmPoints.units.map(item=>({...item,wargear:item.paidWargear})),enhancements:mfmPoints.enhancements.map(item=>{const compatibility=compatibilityEnhancements.get(`${item.canonicalDetachmentId}\0${item.canonicalEnhancementId}`);return{...item,...(compatibility?.profile?{profile:compatibility.profile}:{}),...(compatibility?.effect?{effect:compatibility.effect}:{})};})};
   const unitImages=readJson(sourcePaths.unitImages).units;
   const coreFactProjection=createCoreFactProjection({repoRoot:context.repo});
+  const coreAbilityBindings=createArmyCoreAbilityBindings({repoRoot:context.repo,coreFactProjection});
+  const codexDatasheets={...rawCodexDatasheets,datasheets:coreAbilityBindings.bindUnits(rawCodexDatasheets.datasheets)};
   const manifest=readJson(sourcePaths.manifest);
 const boundParityDetachments=bindRowsToCanonicalIds(codexParity.detachments,codexSource.detachments,{label:'Adeptus Mechanicus Codex parity Detachment',rowId:item=>item.id||`detachment-${slugKey(item.title)}`});
 const parityByDetachmentId=new Map(boundParityDetachments.map(item=>[item.canonicalId,item]));
@@ -48,7 +51,7 @@ const enhancementsById=new Map(pointsCatalog.enhancements.map(item=>[item.canoni
 const factionDatasheets=new Map(factionRules.datasheets.filter(unit=>unit.status!=='Warhammer Legends').map(unit=>[unit.id,unit]));
 const boundCodexWargear=bindRowsToCanonicalIds(codexWargear.units,codexDatasheets.datasheets,{label:'Adeptus Mechanicus wargear owner',rowId:item=>item.unitId||item.id||null});
 const codexWargearByUnitId=new Map(boundCodexWargear.map(unit=>[unit.canonicalId,unit]));
-const mergedDatasheets=codexDatasheets.datasheets.map(unit=>{
+const mergedDatasheets=coreAbilityBindings.bindUnits(codexDatasheets.datasheets.map(unit=>{
   const official=factionDatasheets.get(unit.id);
   if(!official){
     const exact=codexWargearByUnitId.get(unit.id);
@@ -64,7 +67,7 @@ const mergedDatasheets=codexDatasheets.datasheets.map(unit=>{
     return {...canonical,requiredSelections:[...(canonical.requiredSelections||[]),{title:canonical.title,aliases:[canonical.title]}]};
   });
   return {...unit,...official,abilities,wargearAbilities,category:unit.category,profiles:official.profiles||[{name:official.title,stats:official.stats}]};
-}).concat([...factionDatasheets.values()]).map(withExactWargearSelections);
+}).concat([...factionDatasheets.values()]).map(withExactWargearSelections));
 const publishedUnitIds=new Set(mergedDatasheets.map(unit=>unit.id));
 const publishedGlossary=factionRules.glossary.filter(term=>term.id!=='warhammer-legends').map(term=>({...term,unitIds:(term.unitIds||[]).filter(unitId=>publishedUnitIds.has(unitId))}));
 const rules={...factionRules,datasheets:mergedDatasheets,glossary:publishedGlossary,audit:{...factionRules.audit,datasheets:mergedDatasheets.length,legendsDatasheets:0,glossaryTerms:publishedGlossary.length}};
@@ -116,21 +119,21 @@ const glossaryTerms=[
     return{id:item.id,title:item.title,summary:text,full:text,group:'Stratagems',rule:item.id,unitIds:[]};
   }))
 ];
-const termKeys=new Map(glossaryTerms.map(term=>[term.title.toLowerCase(),term]));
+const termKeys=new Map(glossaryTerms.filter(term=>term.group!=='Core abilities').map(term=>[term.title.toLowerCase(),term]));
+const coreTermsById=new Map(glossaryTerms.filter(term=>term.group==='Core abilities').map(term=>[term.id,term]));
 const coreTermKeys=new Map();
 for(const term of glossaryTerms.filter(term=>term.group==='Core abilities'))for(const label of [term.title,...(term.aliases||[])])coreTermKeys.set(titleKey(label.replace(/^core-|^datasheet-/i,'').replace(/^\[|\]$/g,'')),term);
 const coreBaseKey=value=>{
   const normalized=titleKey(value).replace(/\s+(?:d\d+|\d+|\d+\+|\d+ inches)$/,'').trim();
   return normalized.startsWith('anti ')?'anti':normalized;
 };
-const knownCoreTitles=new Set([...coreTermKeys.keys(),'deadly demise','deep strike','firing deck','hover','scouts']);
 const termIds=new Set(glossaryTerms.map(term=>term.id));
 const uniqueTermId=base=>{let id=base,index=2;while(termIds.has(id))id=`${base}-${index++}`;termIds.add(id);return id;};
 const attachUnit=(term,unitId)=>{if(!term.unitIds.includes(unitId))term.unitIds.push(unitId);};
 for(const unit of rules.datasheets){
   for(const ability of [...unit.abilities,...(unit.wargearAbilities||[])]){
     const key=ability.title.toLowerCase();
-    let term=termKeys.get(key)||coreTermKeys.get(coreBaseKey(ability.title));
+    let term=ability.coreAbilityId?coreTermsById.get(ability.coreAbilityId):termKeys.get(key);
     if(!term){
     const full=abilityText(ability)||`${ability.title} is listed on the ${unit.title} datasheet.`;
       term={id:uniqueTermId(`datasheet-${slugify(ability.title)}`),title:ability.title,group:'Datasheet abilities',summary:full.split(/(?<=[.!?])\s/)[0],full,sectionId:unit.id,unitIds:[]};
@@ -151,7 +154,7 @@ for(const unit of rules.datasheets){
 }
 rules.glossary=glossaryTerms;
 rules.audit.glossaryTerms=glossaryTerms.length;
-  return {factionRules,source,codex,codexDatasheets,pointsCatalog,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,knownCoreTitles,termIds,canonicalJoinContract:'v1'};
+  return {factionRules,source,codex,codexDatasheets,pointsCatalog,manifest,boundPointUnits,unitImages,pointsByUnitId,titleKey,slugKey,abilityText,enhancementsById,rules,relationGraphs,allDetachments,slugify,coreTermKeys,coreBaseKey,termIds,canonicalJoinContract:'v1'};
 }
 
 const escapeRegExp=value=>String(value).replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
@@ -193,7 +196,7 @@ const createTermResolver=glossary=>{
   };
 };
 
-const ruleFactsFor=(unit,{abilityText,knownCoreTitles,coreBaseKey,relationGraphs,termIdsInPresentationOrder})=>{
+const ruleFactsFor=(unit,{abilityText,relationGraphs,termIdsInPresentationOrder})=>{
   const sourceAbilities=[...(unit.abilities||[])];
   const abilityNames=sourceAbilities.flatMap(item=>/^core$/i.test(item.title)
     ?abilityText(item).split(',').map(value=>value.trim().replace(/\.$/,'')).filter(Boolean).map(value=>/^deadly demise\b/i.test(value)?'DEADLY DEMISE':value)
@@ -208,7 +211,7 @@ const ruleFactsFor=(unit,{abilityText,knownCoreTitles,coreBaseKey,relationGraphs
     abilities:[...new Set(abilityNames)],
     termIds:[...new Set(termIdsInPresentationOrder)],
     epic:unit.keywords.includes('Epic Hero'),
-    deadlyDemise:sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(abilityText(item))),
+    deadlyDemise:sourceAbilities.some(item=>item.coreAbilityId==='core-deadly-demise'),
     attached:mandatory?true:canAttach?null:false,
     attachmentKnown:mandatory||!canAttach,
     formationRequired:mandatory,
@@ -221,14 +224,14 @@ const ruleFactsFor=(unit,{abilityText,knownCoreTitles,coreBaseKey,relationGraphs
 
 export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel=createAdeptusMechanicusCanonicalModel(context)){
   const {config}=context;
-  const {factionRules,source,codex,codexDatasheets,pointsCatalog,manifest,boundPointUnits,unitImages,pointsByUnitId,slugKey,abilityText,rules,relationGraphs,allDetachments,coreBaseKey,knownCoreTitles}=canonicalModel;
+  const {factionRules,source,codex,codexDatasheets,pointsCatalog,manifest,boundPointUnits,unitImages,pointsByUnitId,slugKey,abilityText,rules,relationGraphs,allDetachments}=canonicalModel;
   const decoratedTermIds=createTermResolver(rules.glossary);
   const abilityKind=item=>{
     if(/^doctrina imperatives$/i.test(item.title))return 'faction';
     if(/^(leader|support|attached unit)$/i.test(item.title))return 'relation';
     if(/^damaged:/i.test(item.title))return 'damaged';
     if(/^transport$/i.test(item.title))return 'transport';
-    if(/^core$/i.test(item.title)||knownCoreTitles.has(coreBaseKey(item.title)))return 'core';
+    if(/^core$/i.test(item.title)||item.coreAbilityId)return 'core';
     return 'datasheet';
   };
   const visibleTermIds=unit=>{
@@ -247,7 +250,7 @@ export function buildAdeptusMechanicusEffectiveModelInput(context,canonicalModel
     for(const item of wargearAbilities)ids.push(...abilityTerms(item));
     return ids.filter(id=>id&&!gatedTermIds.has(id));
   };
-  const compiledRuleFacts=new Map(rules.datasheets.map(unit=>[unit.id,ruleFactsFor(unit,{abilityText,knownCoreTitles,coreBaseKey,relationGraphs,termIdsInPresentationOrder:visibleTermIds(unit)})]));
+  const compiledRuleFacts=new Map(rules.datasheets.map(unit=>[unit.id,ruleFactsFor(unit,{abilityText,relationGraphs,termIdsInPresentationOrder:visibleTermIds(unit)})]));
   const compiledRuleProfiles=new Map([...compiledRuleFacts].map(([id,facts])=>[id,ruleFactsApi.serializeRuleProfile(ruleFactsApi.profileFromRecord(facts))]));
   const pointsOrderedDatasheets=boundPointUnits.map(publication=>{
     const unit=rules.datasheets.find(candidate=>candidate.id===publication.canonicalId);

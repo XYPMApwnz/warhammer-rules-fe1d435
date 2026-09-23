@@ -34,8 +34,33 @@
       return[];
     }).filter(Boolean).join('\n');
   };
+  const detachmentDefinition=entry=>{
+    const facts=entry.facts||{},lines=[];
+    const forceDisposition=entry.canonicalReferences?.find(reference=>reference.relationType==='FORCE_DISPOSITION'),forceDispositionLabel=forceDisposition&&byId.get(forceDisposition.id)?.label;
+    const detachmentPoints=entry.mfm?.detachment?.detachmentPoints;
+    if(forceDispositionLabel||Number.isFinite(detachmentPoints))lines.push([forceDispositionLabel&&`Force Disposition: ${forceDispositionLabel}.`,Number.isFinite(detachmentPoints)&&`Detachment Points: ${detachmentPoints}DP.`].filter(Boolean).join(' '));
+    if(text(facts.tagline))lines.push(text(facts.tagline));
+    if(text(facts.restrictions))lines.push(`Restrictions: ${text(facts.restrictions)}`);
+    const tags=[...(facts.tags||[]),...(entry.mfm?.qualifiers||[]).map(record=>record.label)].filter(Boolean);
+    if(tags.length)lines.push(`Tags: ${[...new Set(tags)].join(', ')}.`);
+    for(const rule of facts.detachmentRules||[]){
+      const ruleLines=[];
+      const direct=['semanticContent','text','full','definition','ruleText','rulesText','description'].map(field=>text(rule[field])).find(Boolean);
+      if(direct)ruleLines.push(direct);
+      for(const block of rule.blocks||[]){
+        if(text(block.text))ruleLines.push(text(block.text));
+        else if(Array.isArray(block.rows)){
+          if(block.columns?.length)ruleLines.push(block.columns.join(' | '));
+          for(const row of block.rows)ruleLines.push((Array.isArray(row)?row:[row.label,...(row.cells||[])]).filter(value=>value!==null&&value!==undefined&&String(value).trim()).join(' | '));
+        }
+      }
+      if(ruleLines.length)lines.push([text(rule.title),...ruleLines].filter(Boolean).join('\n'));
+    }
+    return lines.join('\n');
+  };
   function definitionOf(entry){
     const facts=entry.facts||{};
+    if(entry.recordType==='DETACHMENT'){const definition=detachmentDefinition(entry);if(definition)return definition;}
     for(const field of ['semanticContent','text','full','definition','ruleText','rulesText','answer','description']){const value=text(facts[field]);if(value)return value;}
     const content=collectContent(facts.content);if(content)return content;
     const blocks=collectContent(facts.blocks);if(blocks)return blocks;

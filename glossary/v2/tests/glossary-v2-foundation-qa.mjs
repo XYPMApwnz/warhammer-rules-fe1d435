@@ -39,6 +39,20 @@ assert(index.entries.some(entry=>entry.recordType==='UNIT'&&entry.mfm?.pointReco
 assert(index.entries.some(entry=>entry.recordType==='DETACHMENT'&&entry.mfm?.detachment),'bound MFM DP/Force Disposition facts must augment Army Detachments');
 assert(index.entries.some(entry=>entry.recordType==='ENHANCEMENT'&&entry.mfm?.enhancementCost),'bound MFM cost must augment Army Enhancements');
 
+const detachmentEntries=index.entries.filter(entry=>entry.recordType==='DETACHMENT');
+assert.equal(detachmentEntries.length,102,'all standalone Detachment identities must remain present exactly once');
+assert.equal(new Set(detachmentEntries.map(entry=>entry.id)).size,102,'standalone Detachment identities must remain unique');
+for(const entry of detachmentEntries)assert(entry.facts.detachmentRules?.length,`${entry.id}: standalone Detachment must project its accepted gameplay rule facts`);
+for(const bookId of ['death-guard','adeptus-mechanicus','space-marines','dark-angels','blood-angels'])assert(detachmentEntries.some(entry=>entry.contexts.some(context=>context.effectiveBookId===bookId)&&entry.facts.detachmentRules.length),`${bookId}: representative Detachment gameplay projection`);
+const mortarionsHammer=detachmentEntries.find(entry=>entry.id==='army::death-guard::detachment::detachment-mortarions-hammer');
+assert(mortarionsHammer,'Mortarion’s Hammer standalone article');
+const miasmic=mortarionsHammer.facts.detachmentRules.find(rule=>rule.id==='detachment-rule-miasmic-bombardment');
+assert(miasmic,'Mortarion’s Hammer must project Miasmic Bombardment by stable rule identity');
+assert.match(miasmic.blocks.find(block=>block.type==='ability').text,/select a number of enemy units/i);
+assert.deepEqual(miasmic.blocks.find(block=>block.type==='table').rows,[['Incursion','1'],['Strike Force','2'],['Onslaught','3']]);
+const spearpoint=detachmentEntries.find(entry=>entry.id==='army::space-marines::detachment::spearpoint-task-force');
+assert.match(spearpoint.facts.restrictions,/cannot include any Adeptus Astartes units drawn from any other Chapter/,'Detachment-level accepted restrictions must remain in the standalone projection');
+
 assert(!FACTUAL_INPUTS.some(input=>/registry\.en\.json|aliases\.en\.json|scripts\/data\.js|\.html/i.test(input)),'generated and legacy glossary artifacts cannot be factual inputs');
 assert(!index.entries.some(entry=>entry.sourceOwner.domain==='GLOSSARY'),'legacy Glossary cannot own V2 gameplay facts');
 assert.equal(index.coverage.legacy.editorialMigrated,11,'only editorial contracts with one exact canonical target may migrate');

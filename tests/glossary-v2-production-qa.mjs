@@ -19,6 +19,22 @@ assert.equal(api.entries().length,4633);
 assert.equal(api.standaloneEntries().length,1741);
 assert.equal(api.counts.scopedChildren,2892);
 
+const detachments=api.standaloneEntries().filter(entry=>entry.recordType==='DETACHMENT');
+assert.equal(detachments.length,102,'standalone browse must retain exactly 102 Detachments');
+assert.equal(new Set(detachments.map(entry=>entry.id)).size,102,'standalone Detachment articles must not duplicate');
+for(const detachment of detachments){
+  assert(detachment.definition.en.trim(),`${detachment.id}: Detachment definition`);
+  assert.notEqual(detachment.definition.en.trim().toLocaleLowerCase(),detachment.label.trim().toLocaleLowerCase(),`${detachment.id}: Detachment definition must not echo its title`);
+}
+const mortarionsHammerId='army::death-guard::detachment::detachment-mortarions-hammer';
+const mortarionsHammer=api.get(mortarionsHammerId,{bookId:'death-guard'});
+assert.equal(mortarionsHammer.id,mortarionsHammerId);
+assert.match(mortarionsHammer.definition.en,/Force Disposition: Purge the Foe/);
+assert.match(mortarionsHammer.definition.en,/Detachment Points: 2DP/);
+assert.match(mortarionsHammer.definition.en,/Miasmic Bombardment/);
+assert.match(mortarionsHammer.definition.en,/Incursion \| 1[\s\S]*Strike Force \| 2[\s\S]*Onslaught \| 3/);
+assert.equal(api.forBook('death-guard')[mortarionsHammerId].id,mortarionsHammer.id,'Mortarion’s Hammer popup/viewer identity parity');
+
 const dgOwner='army-rule-nurgles-gift';
 for(const id of ['contagion-range','afflicted','skullsquirm-blight','rattlejoint-ague','scabrous-soulrot']){
   const term=api.get(id,{bookId:'death-guard'});

@@ -3562,7 +3562,7 @@
       "recordType": "DETACHMENT",
       "label": "Cohort Acquisitus",
       "aliases": [],
-      "searchableContent": "Cohort Acquisitus",
+      "searchableContent": "Adapted Skitarii hunters identify and eliminate targets in the Quest for Knowledge.\nCohort Acquisitus\nFriendly PTERAXII, INFILTRATORS, RANGERS, SERBERYS RAIDERS and SERBERYS SULPHURHOUNDS units have RECON AUGURY. Friendly RECON AUGURY units have Enhanced Augurs: in your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is analysed. While a unit is analysed, that unit has +3\" detection range.\nNoospheric Recon",
       "parent": null,
       "canonicalReferences": [
         {
@@ -3585,8 +3585,16 @@
       "facts": {
         "id": "detachment-cohort-acquisitus",
         "title": "Cohort Acquisitus",
+        "tagline": "Adapted Skitarii hunters identify and eliminate targets in the Quest for Knowledge.",
         "sourcePages": [
           2
+        ],
+        "detachmentRules": [
+          {
+            "id": "cohort-acquisitus-rule",
+            "title": "Noospheric Recon",
+            "text": "Friendly PTERAXII, INFILTRATORS, RANGERS, SERBERYS RAIDERS and SERBERYS SULPHURHOUNDS units have RECON AUGURY. Friendly RECON AUGURY units have Enhanced Augurs: in your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is analysed. While a unit is analysed, that unit has +3\" detection range."
+          }
         ]
       },
       "contexts": [
@@ -3642,7 +3650,7 @@
       "recordType": "DETACHMENT",
       "label": "Cohort Cybernetica",
       "aliases": [],
-      "searchableContent": "Cohort Cybernetica",
+      "searchableContent": "Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit.\nCohort Cybernetica\nCyber-psalm Programming\nLegio Cybernetica engines advance under updated battle-programming.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -3664,7 +3672,15 @@
       },
       "facts": {
         "id": "detachment-cohort-cybernetica",
-        "title": "Cohort Cybernetica"
+        "title": "Cohort Cybernetica",
+        "tagline": "Legio Cybernetica engines advance under updated battle-programming.",
+        "detachmentRules": [
+          {
+            "id": "cohort-cybernetica-rule",
+            "title": "Cyber-psalm Programming",
+            "text": "Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit."
+          }
+        ]
       },
       "contexts": [
         {
@@ -3723,7 +3739,7 @@
       "recordType": "DETACHMENT",
       "label": "Data-psalm Conclave",
       "aliases": [],
-      "searchableContent": "Data-psalm Conclave",
+      "searchableContent": "At the start of the first battle round, select one of the following Benedictions of the Omnissiah to be active for CULT MECHANICUS units from your army until the end of the battle:Panegyric ProcessionEach time a CULT MECHANICUS model from your army makes a ranged attack that targets a unit within half range, improve the Armour Penetration characteristic of that attack by 1.Citation in SavageryEach time a CULT MECHANICUS unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in that unit.\nBenedictions of the Omnissiah\nCult Mechanicus congregations chant a battle-long Benediction.\nData-psalm Conclave",
       "parent": null,
       "canonicalReferences": [
         {
@@ -3745,7 +3761,15 @@
       },
       "facts": {
         "id": "detachment-data-psalm-conclave",
-        "title": "Data-psalm Conclave"
+        "title": "Data-psalm Conclave",
+        "tagline": "Cult Mechanicus congregations chant a battle-long Benediction.",
+        "detachmentRules": [
+          {
+            "id": "data-psalm-conclave-rule",
+            "title": "Benedictions of the Omnissiah",
+            "text": "At the start of the first battle round, select one of the following Benedictions of the Omnissiah to be active for CULT MECHANICUS units from your army until the end of the battle:Panegyric ProcessionEach time a CULT MECHANICUS model from your army makes a ranged attack that targets a unit within half range, improve the Armour Penetration characteristic of that attack by 1.Citation in SavageryEach time a CULT MECHANICUS unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in that unit."
+          }
+        ]
       },
       "contexts": [
         {
@@ -3842,7 +3866,7 @@
       "recordType": "DETACHMENT",
       "label": "Eradication Cohort",
       "aliases": [],
-      "searchableContent": "Eradication Cohort",
+      "searchableContent": "Each time a model in a SKITARII unit from your army makes an attack: if the Protector Imperative is active for that unit, re-roll a Hit roll of 1; if the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.\nEradication Cohort\nMurderous Imperative\nPurely offensive Skitarii formations driven by the Omnissiah's murderous imperative.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -3865,9 +3889,17 @@
       "facts": {
         "id": "detachment-eradication-cohort",
         "title": "Eradication Cohort",
+        "tagline": "Purely offensive Skitarii formations driven by the Omnissiah's murderous imperative.",
         "sourcePages": [
           5,
           6
+        ],
+        "detachmentRules": [
+          {
+            "id": "eradication-cohort-rule",
+            "title": "Murderous Imperative",
+            "text": "Each time a model in a SKITARII unit from your army makes an attack: if the Protector Imperative is active for that unit, re-roll a Hit roll of 1; if the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1."
+          }
         ]
       },
       "contexts": [
@@ -3927,7 +3959,7 @@
       "recordType": "DETACHMENT",
       "label": "Explorator Maniple",
       "aliases": [],
-      "searchableContent": "Explorator Maniple",
+      "searchableContent": "Acquisition At Any Cost\nAt the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your Acquisition objective marker. Each time an ADEPTUS MECHANICUS model from your army makes an attack, if that model’s unit is within range of your Acquisition objective marker, or if the target of that attack is within range of your Acquisition objective marker, re-roll a Wound roll of 1.\nExplorator Maniple\nThe Quest for Knowledge focuses the army around a chosen objective.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -3949,7 +3981,15 @@
       },
       "facts": {
         "id": "detachment-explorator-maniple",
-        "title": "Explorator Maniple"
+        "title": "Explorator Maniple",
+        "tagline": "The Quest for Knowledge focuses the army around a chosen objective.",
+        "detachmentRules": [
+          {
+            "id": "explorator-maniple-rule",
+            "title": "Acquisition At Any Cost",
+            "text": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your Acquisition objective marker. Each time an ADEPTUS MECHANICUS model from your army makes an attack, if that model’s unit is within range of your Acquisition objective marker, or if the target of that attack is within range of your Acquisition objective marker, re-roll a Wound roll of 1."
+          }
+        ]
       },
       "contexts": [
         {
@@ -4008,7 +4048,7 @@
       "recordType": "DETACHMENT",
       "label": "Haloscreed Battle Clade",
       "aliases": [],
-      "searchableContent": "Haloscreed Battle Clade",
+      "searchableContent": "Haloscreed Battle Clade\nIn your Command phase, select one or more ADEPTUS MECHANICUS units, including embarked units: 1 at Incursion, 2 at Strike Force, or 3 at Onslaught. Until your next Command phase, they gain HALO OVERRIDE. Select one Override ability: Electromotive Energisation (+2\" Move), Microactuator Bracing (+1 Toughness), Predation Protocols (eligible to charge after Advancing), or Muted Servomotors (Stealth).\nNoospheric Transference\nTech-Priests project fragments of their consciousness through the noosphere to override their thralls.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -4031,9 +4071,17 @@
       "facts": {
         "id": "detachment-haloscreed-battle-clade",
         "title": "Haloscreed Battle Clade",
+        "tagline": "Tech-Priests project fragments of their consciousness through the noosphere to override their thralls.",
         "sourcePages": [
           7,
           8
+        ],
+        "detachmentRules": [
+          {
+            "id": "haloscreed-battle-clade-rule",
+            "title": "Noospheric Transference",
+            "text": "In your Command phase, select one or more ADEPTUS MECHANICUS units, including embarked units: 1 at Incursion, 2 at Strike Force, or 3 at Onslaught. Until your next Command phase, they gain HALO OVERRIDE. Select one Override ability: Electromotive Energisation (+2\" Move), Microactuator Bracing (+1 Toughness), Predation Protocols (eligible to charge after Advancing), or Muted Servomotors (Stealth)."
+          }
         ]
       },
       "contexts": [
@@ -4093,7 +4141,7 @@
       "recordType": "DETACHMENT",
       "label": "Lords of the Forge",
       "aliases": [],
-      "searchableContent": "Lords of the Forge",
+      "searchableContent": "Friendly TECH-PRIEST models have a 4+ invulnerable save and Feel No Pain 5+. They also have Baffling Data Screed: in your Shooting phase, when this unit is selected to shoot and is not Battle-shocked, roll one D6. On a 2+, select one enemy VEHICLE unit within 12\"; it makes a Battle-shock test with -1. A unit cannot be selected more than once per turn. Alternatively, on a 2+, those ranged attacks do not prevent this unit from being hidden.\nLords of the Forge\nSenior cyber-clergy and technohierarchs marshal the Machine God's devout.\nWar-form Mantles",
       "parent": null,
       "canonicalReferences": [
         {
@@ -4116,8 +4164,16 @@
       "facts": {
         "id": "detachment-lords-of-the-forge",
         "title": "Lords of the Forge",
+        "tagline": "Senior cyber-clergy and technohierarchs marshal the Machine God's devout.",
         "sourcePages": [
           3
+        ],
+        "detachmentRules": [
+          {
+            "id": "lords-of-the-forge-rule",
+            "title": "War-form Mantles",
+            "text": "Friendly TECH-PRIEST models have a 4+ invulnerable save and Feel No Pain 5+. They also have Baffling Data Screed: in your Shooting phase, when this unit is selected to shoot and is not Battle-shocked, roll one D6. On a 2+, select one enemy VEHICLE unit within 12\"; it makes a Battle-shock test with -1. A unit cannot be selected more than once per turn. Alternatively, on a 2+, those ranged attacks do not prevent this unit from being hidden."
+          }
         ]
       },
       "contexts": [
@@ -4173,7 +4229,7 @@
       "recordType": "DETACHMENT",
       "label": "Luminen Auto-choir",
       "aliases": [],
-      "searchableContent": "Luminen Auto-choir",
+      "searchableContent": "Cyber-static Canticles\nElectro-Priests harness the Motive Force with ecstatic empowering chants. Unique: Data-Psalm.\nFriendly CORPUSCARII units' ranged attacks have [LETHAL HITS]. When a friendly FULGURITE unit has fought, that unit heals D3 wounds. This Detachment has the DATA-PSALM tag and cannot be taken with another DATA-PSALM Detachment.\nLuminen Auto-choir",
       "parent": null,
       "canonicalReferences": [
         {
@@ -4196,8 +4252,16 @@
       "facts": {
         "id": "detachment-luminen-auto-choir",
         "title": "Luminen Auto-choir",
+        "tagline": "Electro-Priests harness the Motive Force with ecstatic empowering chants. Unique: Data-Psalm.",
         "sourcePages": [
           4
+        ],
+        "detachmentRules": [
+          {
+            "id": "luminen-auto-choir-rule",
+            "title": "Cyber-static Canticles",
+            "text": "Friendly CORPUSCARII units' ranged attacks have [LETHAL HITS]. When a friendly FULGURITE unit has fought, that unit heals D3 wounds. This Detachment has the DATA-PSALM tag and cannot be taken with another DATA-PSALM Detachment."
+          }
         ]
       },
       "contexts": [
@@ -4291,7 +4355,7 @@
       "recordType": "DETACHMENT",
       "label": "Rad-zone Corps",
       "aliases": [],
-      "searchableContent": "Rad-zone Corps",
+      "searchableContent": "BATTLE ROUND1BOMBARDMENTAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm. You then roll one D6 for each of those enemy units and apply the relevant result below:Unit Standing Firm: On a 3+, that unit suffers D3 mortal wounds.Unit Taking Cover: That unit is battle-shocked. On a 5+, that unit suffers D3 mortal woundsBATTLE ROUND2    ONWARDSFALLOUTAt the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test.\nRad-bombardment\nRad-zone Corps\nThe battlefield is saturated with lethal radiation before the assault.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -4313,7 +4377,15 @@
       },
       "facts": {
         "id": "detachment-rad-zone-corps",
-        "title": "Rad-zone Corps"
+        "title": "Rad-zone Corps",
+        "tagline": "The battlefield is saturated with lethal radiation before the assault.",
+        "detachmentRules": [
+          {
+            "id": "rad-zone-corps-rule",
+            "title": "Rad-bombardment",
+            "text": "BATTLE ROUND1BOMBARDMENTAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm. You then roll one D6 for each of those enemy units and apply the relevant result below:Unit Standing Firm: On a 3+, that unit suffers D3 mortal wounds.Unit Taking Cover: That unit is battle-shocked. On a 5+, that unit suffers D3 mortal woundsBATTLE ROUND2    ONWARDSFALLOUTAt the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test."
+          }
+        ]
       },
       "contexts": [
         {
@@ -4372,7 +4444,7 @@
       "recordType": "DETACHMENT",
       "label": "Skitarii Hunter Cohort",
       "aliases": [],
-      "searchableContent": "Skitarii Hunter Cohort",
+      "searchableContent": "Friendly SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units have Stealth.\nSkitarii Hunter Cohort\nStealth Optimisation\nStealth-screened Skitarii hunt designated prey through sensor shadow.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -4394,7 +4466,15 @@
       },
       "facts": {
         "id": "detachment-skitarii-hunter-cohort",
-        "title": "Skitarii Hunter Cohort"
+        "title": "Skitarii Hunter Cohort",
+        "tagline": "Stealth-screened Skitarii hunt designated prey through sensor shadow.",
+        "detachmentRules": [
+          {
+            "id": "skitarii-hunter-cohort-rule",
+            "title": "Stealth Optimisation",
+            "text": "Friendly SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units have Stealth."
+          }
+        ]
       },
       "contexts": [
         {
@@ -29455,7 +29535,7 @@
       "recordType": "DETACHMENT",
       "label": "ANGELIC INHERITORS",
       "aliases": [],
-      "searchableContent": "ANGELIC INHERITORS",
+      "searchableContent": "ANGELIC INHERITORS\nangelic-inheritors\nblood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel\nLegacy of the Angel\nNever do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -29494,7 +29574,18 @@
             5,
             6
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "blood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel",
+            "title": "Legacy of the Angel",
+            "text": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+            "sectionId": "blood-angels-detachment-rule-angelic-inheritors-legacy-of-the-angel",
+            "detachmentId": "angelic-inheritors",
+            "detachmentTitle": "ANGELIC INHERITORS",
+            "sourceBookId": "blood-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -29591,7 +29682,7 @@
       "recordType": "DETACHMENT",
       "label": "ENCARMINE SPEARTIP",
       "aliases": [],
-      "searchableContent": "ENCARMINE SPEARTIP",
+      "searchableContent": "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels\nENCARMINE SPEARTIP\nencarmine-speartip\nFew living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.\nWrath of Angels",
       "parent": null,
       "canonicalReferences": [
         {
@@ -29627,7 +29718,18 @@
           "sourcePages": [
             3
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels",
+            "title": "Wrath of Angels",
+            "text": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "blood-angels-detachment-rule-encarmine-speartip-wrath-of-angels",
+            "detachmentId": "encarmine-speartip",
+            "detachmentTitle": "ENCARMINE SPEARTIP",
+            "sourceBookId": "blood-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -29682,7 +29784,7 @@
       "recordType": "DETACHMENT",
       "label": "LEGACY OF GRACE",
       "aliases": [],
-      "searchableContent": "LEGACY OF GRACE",
+      "searchableContent": "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel\nLEGACY OF GRACE\nLegacy of the Angel\nlegacy-of-grace\nNever do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds and led by their champions of noble bearing. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Friendly BLOOD ANGELS INFANTRY CHARACTER units (excluding COMMANDER DANTE units) have +1 to advance rolls and charge rolls. This detachment has the GRACE tag and cannot be taken with another GRACE detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -29718,7 +29820,18 @@
           "sourcePages": [
             2
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel",
+            "title": "Legacy of the Angel",
+            "text": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds and led by their champions of noble bearing. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Friendly BLOOD ANGELS INFANTRY CHARACTER units (excluding COMMANDER DANTE units) have +1 to advance rolls and charge rolls. This detachment has the GRACE tag and cannot be taken with another GRACE detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "blood-angels-detachment-rule-legacy-of-grace-legacy-of-the-angel",
+            "detachmentId": "legacy-of-grace",
+            "detachmentTitle": "LEGACY OF GRACE",
+            "sourceBookId": "blood-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -29811,7 +29924,7 @@
       "recordType": "DETACHMENT",
       "label": "LIBERATOR ASSAULT GROUP",
       "aliases": [],
-      "searchableContent": "LIBERATOR ASSAULT GROUP",
+      "searchableContent": "blood-angels-detachment-rule-liberator-assault-group-red-thirst\nEach time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.\nLIBERATOR ASSAULT GROUP\nliberator-assault-group\nRed Thirst",
       "parent": null,
       "canonicalReferences": [
         {
@@ -29833,7 +29946,18 @@
       },
       "facts": {
         "id": "liberator-assault-group",
-        "title": "LIBERATOR ASSAULT GROUP"
+        "title": "LIBERATOR ASSAULT GROUP",
+        "detachmentRules": [
+          {
+            "id": "blood-angels-detachment-rule-liberator-assault-group-red-thirst",
+            "title": "Red Thirst",
+            "text": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "blood-angels-detachment-rule-liberator-assault-group-red-thirst",
+            "detachmentId": "liberator-assault-group",
+            "detachmentTitle": "LIBERATOR ASSAULT GROUP",
+            "sourceBookId": "blood-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -29892,7 +30016,7 @@
       "recordType": "DETACHMENT",
       "label": "RAGE-CURSED ONSLAUGHT",
       "aliases": [],
-      "searchableContent": "RAGE-CURSED ONSLAUGHT",
+      "searchableContent": "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity\nMaddened Ferocity\nRAGE-CURSED ONSLAUGHT\nrage-cursed-onslaught\nWith every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -29931,7 +30055,18 @@
             7,
             8
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity",
+            "title": "Maddened Ferocity",
+            "text": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+            "sectionId": "blood-angels-detachment-rule-rage-cursed-onslaught-maddened-ferocity",
+            "detachmentId": "rage-cursed-onslaught",
+            "detachmentTitle": "RAGE-CURSED ONSLAUGHT",
+            "sourceBookId": "blood-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -30028,7 +30163,7 @@
       "recordType": "DETACHMENT",
       "label": "THE ANGELIC HOST",
       "aliases": [],
-      "searchableContent": "THE ANGELIC HOST",
+      "searchableContent": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.\nblood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire\nTHE ANGELIC HOST\nthe-angelic-host\nUpon Wings of Fire",
       "parent": null,
       "canonicalReferences": [
         {
@@ -30050,7 +30185,18 @@
       },
       "facts": {
         "id": "the-angelic-host",
-        "title": "THE ANGELIC HOST"
+        "title": "THE ANGELIC HOST",
+        "detachmentRules": [
+          {
+            "id": "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire",
+            "title": "Upon Wings of Fire",
+            "text": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "blood-angels-detachment-rule-the-angelic-host-upon-wings-of-fire",
+            "detachmentId": "the-angelic-host",
+            "detachmentTitle": "THE ANGELIC HOST",
+            "sourceBookId": "blood-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -30109,7 +30255,7 @@
       "recordType": "DETACHMENT",
       "label": "THE LOST BRETHREN",
       "aliases": [],
-      "searchableContent": "THE LOST BRETHREN",
+      "searchableContent": "A Noble Death in Combat\nblood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat\nDOOMED\nEach time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead. If you select this Detachment, DEATH COMPANY MARINES and DEATH COMPANY MARINES WITH BOLT RIFLES units from your army have the BATTLELINE keyword. This Detachment has the DOOMED tag. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.\nTHE LOST BRETHREN\nthe-lost-brethren",
       "parent": null,
       "canonicalReferences": [
         {
@@ -30131,7 +30277,21 @@
       },
       "facts": {
         "id": "the-lost-brethren",
-        "title": "THE LOST BRETHREN"
+        "title": "THE LOST BRETHREN",
+        "tags": [
+          "DOOMED"
+        ],
+        "detachmentRules": [
+          {
+            "id": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat",
+            "title": "A Noble Death in Combat",
+            "text": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead. If you select this Detachment, DEATH COMPANY MARINES and DEATH COMPANY MARINES WITH BOLT RIFLES units from your army have the BATTLELINE keyword. This Detachment has the DOOMED tag. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "blood-angels-detachment-rule-the-lost-brethren-a-noble-death-in-combat",
+            "detachmentId": "the-lost-brethren",
+            "detachmentTitle": "THE LOST BRETHREN",
+            "sourceBookId": "blood-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -30228,7 +30388,7 @@
       "recordType": "DETACHMENT",
       "label": "WRATH OF THE DOOMED",
       "aliases": [],
-      "searchableContent": "WRATH OF THE DOOMED",
+      "searchableContent": "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity\nFanatical Celerity\nThe madness of the Black Rage burns through the mind of the Lost Brethren with a speed and ferocity matched by the warriors in battle. Swept up in visions of the Primarch’s darkest days of wing‑swift fury, they push their bodies past their limits in efforts to emulate his rapid wrath. When a friendly DEATH COMPANY unit is selected to make an advance move, you can use this ability. If you do: ▪ That unit suffers D3+1 mortal wounds. ▪ That move does not prevent that unit from being eligible to declare a charge. This detachment has the DOOMED tag and cannot be taken with another DOOMED detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.\nWRATH OF THE DOOMED\nwrath-of-the-doomed",
       "parent": null,
       "canonicalReferences": [
         {
@@ -30264,7 +30424,18 @@
           "sourcePages": [
             4
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity",
+            "title": "Fanatical Celerity",
+            "text": "The madness of the Black Rage burns through the mind of the Lost Brethren with a speed and ferocity matched by the warriors in battle. Swept up in visions of the Primarch’s darkest days of wing‑swift fury, they push their bodies past their limits in efforts to emulate his rapid wrath. When a friendly DEATH COMPANY unit is selected to make an advance move, you can use this ability. If you do: ▪ That unit suffers D3+1 mortal wounds. ▪ That move does not prevent that unit from being eligible to declare a charge. This detachment has the DOOMED tag and cannot be taken with another DOOMED detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "blood-angels-detachment-rule-wrath-of-the-doomed-fanatical-celerity",
+            "detachmentId": "wrath-of-the-doomed",
+            "detachmentTitle": "WRATH OF THE DOOMED",
+            "sourceBookId": "blood-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49233,7 +49404,7 @@
       "recordType": "DETACHMENT",
       "label": "CABAL OF CHAOS",
       "aliases": [],
-      "searchableContent": "CABAL OF CHAOS",
+      "searchableContent": "CABAL OF CHAOS\ncabal-of-chaos\ncabal-of-chaos-rule\nEmpyric Wellspring\nThe sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -49269,7 +49440,18 @@
           "sourcePages": [
             2
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-empyric-wellspring",
+            "title": "Empyric Wellspring",
+            "text": "The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
+            "sectionId": "cabal-of-chaos-rule",
+            "detachmentId": "cabal-of-chaos",
+            "detachmentTitle": "CABAL OF CHAOS",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49324,7 +49506,7 @@
       "recordType": "DETACHMENT",
       "label": "CHAOS CULT",
       "aliases": [],
-      "searchableContent": "2026-08-12\nCHAOS CULT\nsecondary",
+      "searchableContent": "2026-08-12\nCHAOS CULT\nchaos-cult\nDesperate Devotion\ndetachment-rule-chaos-cult-desperate-devotion\nEach time a DAMNED unit from your army makes a Dark Pact, if that unit was selected to make a Normal move, Advance or declare a charge, it can make a Desperate Pact. If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit.\n\nDesperate Pacts\n\nEach time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved.\n\nKEYWORDS\n\nTRAITOR GUARDSMEN SQUAD units from your army gain the BATTLELINE keyword.\nsecondary",
       "parent": null,
       "canonicalReferences": [
         {
@@ -49355,7 +49537,18 @@
           "authority": "secondary",
           "sourceId": "csm-codex-secondary-consensus",
           "checkedAt": "2026-08-12"
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-chaos-cult-desperate-devotion",
+            "title": "Desperate Devotion",
+            "text": "Each time a DAMNED unit from your army makes a Dark Pact, if that unit was selected to make a Normal move, Advance or declare a charge, it can make a Desperate Pact. If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit.\n\nDesperate Pacts\n\nEach time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved.\n\nKEYWORDS\n\nTRAITOR GUARDSMEN SQUAD units from your army gain the BATTLELINE keyword.",
+            "sectionId": "detachment-rule-chaos-cult-desperate-devotion",
+            "detachmentId": "chaos-cult",
+            "detachmentTitle": "CHAOS CULT",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49414,7 +49607,7 @@
       "recordType": "DETACHMENT",
       "label": "CREATIONS OF BILE",
       "aliases": [],
-      "searchableContent": "CREATIONS OF BILE",
+      "searchableContent": "Bile’s creations, the Terata, possess a variety of mutations, all of which increase their transhuman lethality – for now. At the start of the battle, select which augmentations are active for Heretic Astartes Infantry models (excluding Damned models) from your army until the end of the battle. To do so, either select one from the list below, or randomly determine two by rolling two D6. If Fabius Bile is your Warlord, when randomly determining your augmentations, you can re‑roll one or both of the dice. Duplicated augmentations have no additional effect. Cholinergic Accelerants: Add 1 to the Attacks characteristic of melee weapons equipped by this model. Hyperadrenal Infusion: Add 2\" to the Move characteristic of this model. Paraneural Reactions: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1. Supracutaneous Chitination: Improve the Toughness characteristic of this model by 1. Macrotensile Sinews: Add 1 to the Strength characteristic of melee weapons equipped by this model. Ophthalmic Enhancement: Improve the Ballistic Skill characteristic of ranged weapons equipped by this model by 1.\nCREATIONS OF BILE\ncreations-of-bile\ncreations-of-bile-rule\nExperimental Augmentations",
       "parent": null,
       "canonicalReferences": [
         {
@@ -49453,7 +49646,18 @@
             9,
             10
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-experimental-augmentations",
+            "title": "Experimental Augmentations",
+            "text": "Bile’s creations, the Terata, possess a variety of mutations, all of which increase their transhuman lethality – for now. At the start of the battle, select which augmentations are active for Heretic Astartes Infantry models (excluding Damned models) from your army until the end of the battle. To do so, either select one from the list below, or randomly determine two by rolling two D6. If Fabius Bile is your Warlord, when randomly determining your augmentations, you can re‑roll one or both of the dice. Duplicated augmentations have no additional effect. Cholinergic Accelerants: Add 1 to the Attacks characteristic of melee weapons equipped by this model. Hyperadrenal Infusion: Add 2\" to the Move characteristic of this model. Paraneural Reactions: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1. Supracutaneous Chitination: Improve the Toughness characteristic of this model by 1. Macrotensile Sinews: Add 1 to the Strength characteristic of melee weapons equipped by this model. Ophthalmic Enhancement: Improve the Ballistic Skill characteristic of ranged weapons equipped by this model by 1.",
+            "sectionId": "creations-of-bile-rule",
+            "detachmentId": "creations-of-bile",
+            "detachmentTitle": "CREATIONS OF BILE",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49512,7 +49716,7 @@
       "recordType": "DETACHMENT",
       "label": "CULT OF THE ARKIFANE",
       "aliases": [],
-      "searchableContent": "CULT OF THE ARKIFANE",
+      "searchableContent": "CULT OF THE ARKIFANE\ncult-of-the-arkifane\ncult-of-the-arkifane-rule\nSoul Forge Boons\nThe cybersorcerous power of Vashtorr’s boons is much in evidence amongst his worshippers. Nowhere is this more true than in the war engines that his cults take into battle, and which exhibit a nightmarish variety of biomechanoid mutations and daemon‑spawned powers. Whether wreathed in balefire, shimmeringly insubstantial or constantly regrowing battle‑damaged hull plating, these accursed war machines are incredibly hard to destroy. Heretic Astartes Vehicle units from your army gain the Daemon keyword. Heretic Astartes Vehicle, Lord Discordant and Vashtorr the Arkifane units from your army gain the Soul Forge keyword. Soul Forge units from your army have a 5+ invulnerable save.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -49551,7 +49755,18 @@
             7,
             8
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-soul-forge-boons",
+            "title": "Soul Forge Boons",
+            "text": "The cybersorcerous power of Vashtorr’s boons is much in evidence amongst his worshippers. Nowhere is this more true than in the war engines that his cults take into battle, and which exhibit a nightmarish variety of biomechanoid mutations and daemon‑spawned powers. Whether wreathed in balefire, shimmeringly insubstantial or constantly regrowing battle‑damaged hull plating, these accursed war machines are incredibly hard to destroy. Heretic Astartes Vehicle units from your army gain the Daemon keyword. Heretic Astartes Vehicle, Lord Discordant and Vashtorr the Arkifane units from your army gain the Soul Forge keyword. Soul Forge units from your army have a 5+ invulnerable save.",
+            "sectionId": "cult-of-the-arkifane-rule",
+            "detachmentId": "cult-of-the-arkifane",
+            "detachmentTitle": "CULT OF THE ARKIFANE",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49610,7 +49825,7 @@
       "recordType": "DETACHMENT",
       "label": "DECEPTORS",
       "aliases": [],
-      "searchableContent": "2026-08-12\nDECEPTORS\nsecondary",
+      "searchableContent": "2026-08-12\ndeceptors\nDECEPTORS\ndeceptors-rule\nMasters of Misdirection\nsecondary",
       "parent": null,
       "canonicalReferences": [
         {
@@ -49641,7 +49856,18 @@
           "authority": "secondary",
           "sourceId": "csm-codex-secondary-consensus",
           "checkedAt": "2026-08-12"
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-masters-of-misdirection",
+            "title": "Masters of Misdirection",
+            "text": "",
+            "sectionId": "deceptors-rule",
+            "detachmentId": "deceptors",
+            "detachmentTitle": "DECEPTORS",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49700,7 +49926,7 @@
       "recordType": "DETACHMENT",
       "label": "DEVOTEES OF DESTRUCTION",
       "aliases": [],
-      "searchableContent": "DEVOTEES OF DESTRUCTION",
+      "searchableContent": "DEVOTEES OF DESTRUCTION\ndevotees-of-destruction\ndevotees-of-destruction-rule\nIt is not enough for these heretical reavers merely to defeat their foes. Instead, they must pound all before them to smouldering oblivion with overwhelming salvoes of fire. Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].\nRain of Ruin",
       "parent": null,
       "canonicalReferences": [
         {
@@ -49736,7 +49962,18 @@
           "sourcePages": [
             3
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-rain-of-ruin",
+            "title": "Rain of Ruin",
+            "text": "It is not enough for these heretical reavers merely to defeat their foes. Instead, they must pound all before them to smouldering oblivion with overwhelming salvoes of fire. Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].",
+            "sectionId": "devotees-of-destruction-rule",
+            "detachmentId": "devotees-of-destruction",
+            "detachmentTitle": "DEVOTEES OF DESTRUCTION",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49791,7 +50028,7 @@
       "recordType": "DETACHMENT",
       "label": "DREAD TALONS",
       "aliases": [],
-      "searchableContent": "2026-08-12\nDREAD TALONS\nsecondary",
+      "searchableContent": "2026-08-12\nDREAD TALONS\ndread-talons\ndread-talons-rule\nIn the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test. Each time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.\nsecondary\nTerror Descends (Aura)",
       "parent": null,
       "canonicalReferences": [
         {
@@ -49822,7 +50059,18 @@
           "authority": "secondary",
           "sourceId": "csm-codex-secondary-consensus",
           "checkedAt": "2026-08-12"
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-terror-descends-aura",
+            "title": "Terror Descends (Aura)",
+            "text": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test. Each time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
+            "sectionId": "dread-talons-rule",
+            "detachmentId": "dread-talons",
+            "detachmentTitle": "DREAD TALONS",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49881,7 +50129,7 @@
       "recordType": "DETACHMENT",
       "label": "FELLHAMMER SIEGE-HOST",
       "aliases": [],
-      "searchableContent": "2026-08-12\nFELLHAMMER SIEGE-HOST\nsecondary",
+      "searchableContent": "2026-08-12\nEach time a ranged attack targets a HERETIC ASTARTES unit from your army (excluding DAMNED units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.\nFELLHAMMER SIEGE-HOST\nfellhammer-siege-host\nfellhammer-siege-host-rule\nIron Fortitude\nsecondary",
       "parent": null,
       "canonicalReferences": [
         {
@@ -49912,7 +50160,18 @@
           "authority": "secondary",
           "sourceId": "csm-codex-secondary-consensus",
           "checkedAt": "2026-08-12"
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-iron-fortitude",
+            "title": "Iron Fortitude",
+            "text": "Each time a ranged attack targets a HERETIC ASTARTES unit from your army (excluding DAMNED units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+            "sectionId": "fellhammer-siege-host-rule",
+            "detachmentId": "fellhammer-siege-host",
+            "detachmentTitle": "FELLHAMMER SIEGE-HOST",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -49971,7 +50230,7 @@
       "recordType": "DETACHMENT",
       "label": "HURON’S MARAUDERS",
       "aliases": [],
-      "searchableContent": "HURON’S MARAUDERS",
+      "searchableContent": "huron-s-marauders\nhuron-s-marauders-rule\nHURON’S MARAUDERS\nMurderers and renegades all, the Red Corsairs strive to meet their master’s standards, fighting hardest of all when his gaze is upon them. In your Command phase, select one of the following abilities. Until the start of your next Command phase, each Heretic Astartes Infantry unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly Huron Blackheart model, until the end of the phase, it has both of the following abilities. Huron’s Elite Hand‑picked by Huron Blackheart himself, these warriors strive to retain his favour with feats of arms. Each time a model in this unit makes an attack, add 1 to the Hit roll. Mobile Marauders The Red Corsairs utilise a highly mobile form of warfare and, under Huron’s watch, are relentless in their aggression. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Designer’s Note: If a unit is gaining eligibility to shoot and declare a charge in a turn in which it Fell Back as a result of being visible to Huron Blackheart, but after making a Fall Back move it is no longer visible to Huron Blackheart, that unit will not be eligible to shoot in your Shooting phase or to declare a charge in your Charge phase unless it is visible again at the start of the respective phase.\nTyrannical Motivation",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50010,7 +50269,18 @@
             13,
             14
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-tyrannical-motivation",
+            "title": "Tyrannical Motivation",
+            "text": "Murderers and renegades all, the Red Corsairs strive to meet their master’s standards, fighting hardest of all when his gaze is upon them. In your Command phase, select one of the following abilities. Until the start of your next Command phase, each Heretic Astartes Infantry unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly Huron Blackheart model, until the end of the phase, it has both of the following abilities. Huron’s Elite Hand‑picked by Huron Blackheart himself, these warriors strive to retain his favour with feats of arms. Each time a model in this unit makes an attack, add 1 to the Hit roll. Mobile Marauders The Red Corsairs utilise a highly mobile form of warfare and, under Huron’s watch, are relentless in their aggression. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Designer’s Note: If a unit is gaining eligibility to shoot and declare a charge in a turn in which it Fell Back as a result of being visible to Huron Blackheart, but after making a Fall Back move it is no longer visible to Huron Blackheart, that unit will not be eligible to shoot in your Shooting phase or to declare a charge in your Charge phase unless it is visible again at the start of the respective phase.",
+            "sectionId": "huron-s-marauders-rule",
+            "detachmentId": "huron-s-marauders",
+            "detachmentTitle": "HURON’S MARAUDERS",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -50069,7 +50339,7 @@
       "recordType": "DETACHMENT",
       "label": "MURDERTALON RAIDERS",
       "aliases": [],
-      "searchableContent": "MURDERTALON RAIDERS",
+      "searchableContent": "MURDERTALON RAIDERS\nmurdertalon-raiders\nmurdertalon-raiders-rule\nPrey on the Weak\nThe more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re‑roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have ‑1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50105,7 +50375,18 @@
           "sourcePages": [
             4
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-prey-on-the-weak",
+            "title": "Prey on the Weak",
+            "text": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re‑roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have ‑1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+            "sectionId": "murdertalon-raiders-rule",
+            "detachmentId": "murdertalon-raiders",
+            "detachmentTitle": "MURDERTALON RAIDERS",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -50198,7 +50479,7 @@
       "recordType": "DETACHMENT",
       "label": "NIGHTMARE HUNT",
       "aliases": [],
-      "searchableContent": "NIGHTMARE HUNT",
+      "searchableContent": "NIGHTMARE HUNT\nnightmare-hunt\nnightmare-hunt-rule\nTerror Made Manifest\nWith vox‑augmented screams or bedecked in grisly trophies, these nightmarish raiders possess a terrifying presence. Even the most stoic of opponents can be shaken by their sadistic cruelty. Once fear has its hooks into them, they become easier prey. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more Heretic Astartes units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase. Each time a Heretic astartes model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll. Each time an attack targets a Heretic astartes unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll. Each time a Heretic astartes model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50237,7 +50518,18 @@
             11,
             12
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-terror-made-manifest",
+            "title": "Terror Made Manifest",
+            "text": "With vox‑augmented screams or bedecked in grisly trophies, these nightmarish raiders possess a terrifying presence. Even the most stoic of opponents can be shaken by their sadistic cruelty. Once fear has its hooks into them, they become easier prey. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more Heretic Astartes units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase. Each time a Heretic astartes model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll. Each time an attack targets a Heretic astartes unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll. Each time a Heretic astartes model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
+            "sectionId": "nightmare-hunt-rule",
+            "detachmentId": "nightmare-hunt",
+            "detachmentTitle": "NIGHTMARE HUNT",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -50334,7 +50626,7 @@
       "recordType": "DETACHMENT",
       "label": "PACTBOUND ZEALOTS",
       "aliases": [],
-      "searchableContent": "2026-08-12\nPACTBOUND ZEALOTS\nsecondary",
+      "searchableContent": "2026-08-12\nMarks of Chaos\nPACTBOUND ZEALOTS\npactbound-zealots\npactbound-zealots-rule\nsecondary\nWhen mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: KHORNE, TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below. UNITS THAT GAINED [LETHAL HITS]: KHORNE: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. TZEENTCH: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. UNITS THAT GAINED [SUSTAINED HITS 1]: NURGLE: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. SLAANESH: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. You cannot select the KHORNE keyword for a PSYKER unit. A CHARACTER unit can only be attached to a unit if both units share the same keyword from the list above. A unit can only embark within (or start the battle embarked within) a TRANSPORT if both of those units share the same keyword from the list above.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50365,7 +50657,18 @@
           "authority": "secondary",
           "sourceId": "csm-codex-secondary-consensus",
           "checkedAt": "2026-08-12"
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-marks-of-chaos",
+            "title": "Marks of Chaos",
+            "text": "When mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: KHORNE, TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below. UNITS THAT GAINED [LETHAL HITS]: KHORNE: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. TZEENTCH: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. UNITS THAT GAINED [SUSTAINED HITS 1]: NURGLE: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. SLAANESH: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. You cannot select the KHORNE keyword for a PSYKER unit. A CHARACTER unit can only be attached to a unit if both units share the same keyword from the list above. A unit can only embark within (or start the battle embarked within) a TRANSPORT if both of those units share the same keyword from the list above.",
+            "sectionId": "pactbound-zealots-rule",
+            "detachmentId": "pactbound-zealots",
+            "detachmentTitle": "PACTBOUND ZEALOTS",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -50424,7 +50727,7 @@
       "recordType": "DETACHMENT",
       "label": "RENEGADE RAIDERS",
       "aliases": [],
-      "searchableContent": "2026-08-12\nRENEGADE RAIDERS\nsecondary",
+      "searchableContent": "2026-08-12\nRaiders and Reavers\nRanged weapons equipped by HERETIC ASTARTES models from your army have the [ASSAULT] ability, and each time a HERETIC ASTARTES model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.\nRENEGADE RAIDERS\nrenegade-raiders\nrenegade-raiders-rule\nsecondary",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50455,7 +50758,18 @@
           "authority": "secondary",
           "sourceId": "csm-codex-secondary-consensus",
           "checkedAt": "2026-08-12"
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-raiders-and-reavers",
+            "title": "Raiders and Reavers",
+            "text": "Ranged weapons equipped by HERETIC ASTARTES models from your army have the [ASSAULT] ability, and each time a HERETIC ASTARTES model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.",
+            "sectionId": "renegade-raiders-rule",
+            "detachmentId": "renegade-raiders",
+            "detachmentTitle": "RENEGADE RAIDERS",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -50514,7 +50828,7 @@
       "recordType": "DETACHMENT",
       "label": "RENEGADE WARBAND",
       "aliases": [],
-      "searchableContent": "RENEGADE WARBAND",
+      "searchableContent": "Many Renegades eschew the gifts of Dark Gods, relying only upon their own prowess. Heretic Astartes models from your army lose the Dark Pacts ability. Ranged weapons equipped by Heretic Astartes models from your army have the [ASSAULT] ability. When mustering your army, you cannot use the Cults of the Dark Gods rule. VENDETTA Bitter minds hold on to lasting grudges. At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Vendetta target. Each time a Heretic Astartes model from your army (excluding Damned models) makes an attack that targets your Vendetta target, you can re‑roll the Hit roll. TWISTED DOCTRINE These Renegades ally their knowledge of the Codex Astartes with their own unrestrained savagery to horrific effect. In your Movement phase, each time you set up or select a Heretic Astartes unit (excluding Battle‑shocked units) from your army to move, it can choose to Default to Doctrine. If it does, it must first take a Battle‑shock test. Then, select one of the following: ■ Until the end of the turn, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back. ■ Until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.\nRENEGADE WARBAND\nrenegade-warband\nrenegade-warband-rule\nSlaves to None",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50553,7 +50867,18 @@
             15,
             16
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-slaves-to-none",
+            "title": "Slaves to None",
+            "text": "Many Renegades eschew the gifts of Dark Gods, relying only upon their own prowess. Heretic Astartes models from your army lose the Dark Pacts ability. Ranged weapons equipped by Heretic Astartes models from your army have the [ASSAULT] ability. When mustering your army, you cannot use the Cults of the Dark Gods rule. VENDETTA Bitter minds hold on to lasting grudges. At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Vendetta target. Each time a Heretic Astartes model from your army (excluding Damned models) makes an attack that targets your Vendetta target, you can re‑roll the Hit roll. TWISTED DOCTRINE These Renegades ally their knowledge of the Codex Astartes with their own unrestrained savagery to horrific effect. In your Movement phase, each time you set up or select a Heretic Astartes unit (excluding Battle‑shocked units) from your army to move, it can choose to Default to Doctrine. If it does, it must first take a Battle‑shock test. Then, select one of the following: ■ Until the end of the turn, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back. ■ Until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.",
+            "sectionId": "renegade-warband-rule",
+            "detachmentId": "renegade-warband",
+            "detachmentTitle": "RENEGADE WARBAND",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -50612,7 +50937,7 @@
       "recordType": "DETACHMENT",
       "label": "SOULFORGED WARPACK",
       "aliases": [],
-      "searchableContent": "2026-08-12\nsecondary\nSOULFORGED WARPACK",
+      "searchableContent": "2026-08-12\nDebt to the Soul Forge\ndetachment-rule-soulforged-warpack-debt-to-the-soul-forge\nEach time a HERETIC ASTARTES DAEMON VEHICLE unit from your army makes a Dark Pact, it can invoke its contract. If it does, subtract 1 from the resulting Leadership test when making that Dark Pact, and until the end of the phase:\n\nEach time a model in that unit makes a ranged attack, add 1 to the Wound roll.\nAdd 2 to the Attacks characteristic of melee weapons equipped by models in that unit.\nsecondary\nSOULFORGED WARPACK\nsoulforged-warpack",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50643,7 +50968,18 @@
           "authority": "secondary",
           "sourceId": "csm-codex-secondary-consensus",
           "checkedAt": "2026-08-12"
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
+            "title": "Debt to the Soul Forge",
+            "text": "Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army makes a Dark Pact, it can invoke its contract. If it does, subtract 1 from the resulting Leadership test when making that Dark Pact, and until the end of the phase:\n\nEach time a model in that unit makes a ranged attack, add 1 to the Wound roll.\nAdd 2 to the Attacks characteristic of melee weapons equipped by models in that unit.",
+            "sectionId": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
+            "detachmentId": "soulforged-warpack",
+            "detachmentTitle": "SOULFORGED WARPACK",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -50702,7 +51038,7 @@
       "recordType": "DETACHMENT",
       "label": "VETERANS OF THE LONG WAR",
       "aliases": [],
-      "searchableContent": "2026-08-12\nsecondary\nVETERANS OF THE LONG WAR",
+      "searchableContent": "2026-08-12\nAt the start of your Command phase, select one unit from your opponent's army to be your focus of hatred. Until the start of your next Command phase, each time a HERETIC ASTARTES model from your army (excluding DAMNED models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll.\nFocus of Hatred\nsecondary\nVETERANS OF THE LONG WAR\nveterans-of-the-long-war\nveterans-of-the-long-war-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50733,7 +51069,18 @@
           "authority": "secondary",
           "sourceId": "csm-codex-secondary-consensus",
           "checkedAt": "2026-08-12"
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-focus-of-hatred",
+            "title": "Focus of Hatred",
+            "text": "At the start of your Command phase, select one unit from your opponent's army to be your focus of hatred. Until the start of your next Command phase, each time a HERETIC ASTARTES model from your army (excluding DAMNED models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll.",
+            "sectionId": "veterans-of-the-long-war-rule",
+            "detachmentId": "veterans-of-the-long-war",
+            "detachmentTitle": "VETERANS OF THE LONG WAR",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -50792,7 +51139,7 @@
       "recordType": "DETACHMENT",
       "label": "WARPSTRIKE CHAMPIONS",
       "aliases": [],
-      "searchableContent": "WARPSTRIKE CHAMPIONS",
+      "searchableContent": "Conjured warp portals flicker across the battlefield, tearing through the fabric of reality according to arcane designs. They are a means, however perilous and unnatural, for the warband’s most elite warriors to traverse the battlefield in a matter of strides and strike again at new locations. At the end of your opponent’s turn, you can select a number of Heretic Astartes Terminator, Obliterators and Mutilators units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE NUMBER OF UNITS Incursion Up to 1 unit Strike Force Up to 2 units Onslaught Up to 3 units Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.\nWarp Portals\nWARPSTRIKE CHAMPIONS\nwarpstrike-champions\nwarpstrike-champions-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -50831,7 +51178,18 @@
             5,
             6
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "chaos-space-marines-detachment-rule-warp-portals",
+            "title": "Warp Portals",
+            "text": "Conjured warp portals flicker across the battlefield, tearing through the fabric of reality according to arcane designs. They are a means, however perilous and unnatural, for the warband’s most elite warriors to traverse the battlefield in a matter of strides and strike again at new locations. At the end of your opponent’s turn, you can select a number of Heretic Astartes Terminator, Obliterators and Mutilators units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE NUMBER OF UNITS Incursion Up to 1 unit Strike Force Up to 2 units Onslaught Up to 3 units Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+            "sectionId": "warpstrike-champions-rule",
+            "detachmentId": "warpstrike-champions",
+            "detachmentTitle": "WARPSTRIKE CHAMPIONS",
+            "sourceBookId": "chaos-space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -97675,7 +98033,7 @@
       "recordType": "DETACHMENT",
       "label": "COMPANY OF HUNTERS",
       "aliases": [],
-      "searchableContent": "COMPANY OF HUNTERS",
+      "searchableContent": "COMPANY OF HUNTERS\ncompany-of-hunters\ndark-angels-detachment-rule-masters-of-manoeuvre\nFriendly ADEPTUS ASTARTES have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot.\nFriendly ADEPTUS ASTARTES MOUNTED have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.\nKeywords: OUTRIDER SQUAD units from your army gain the BATTLELINE keyword.\nMasters of Manoeuvre",
       "parent": null,
       "canonicalReferences": [
         {
@@ -97697,7 +98055,18 @@
       },
       "facts": {
         "id": "company-of-hunters",
-        "title": "COMPANY OF HUNTERS"
+        "title": "COMPANY OF HUNTERS",
+        "detachmentRules": [
+          {
+            "id": "dark-angels-detachment-rule-masters-of-manoeuvre",
+            "title": "Masters of Manoeuvre",
+            "text": "Friendly ADEPTUS ASTARTES have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot.\nFriendly ADEPTUS ASTARTES MOUNTED have:\n▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.\n▪ When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot and eligible to declare a charge.\nKeywords: OUTRIDER SQUAD units from your army gain the BATTLELINE keyword.",
+            "sectionId": "dark-angels-detachment-rule-masters-of-manoeuvre",
+            "detachmentId": "company-of-hunters",
+            "detachmentTitle": "COMPANY OF HUNTERS",
+            "sourceBookId": "dark-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -97756,7 +98125,7 @@
       "recordType": "DETACHMENT",
       "label": "DARK AGE ARSENAL",
       "aliases": [],
-      "searchableContent": "DARK AGE ARSENAL",
+      "searchableContent": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.\nDARK AGE ARSENAL\ndark-age-arsenal\ndark-age-arsenal-rule\nInvocations of Ancient Fury",
       "parent": null,
       "canonicalReferences": [
         {
@@ -97792,7 +98161,18 @@
           "sourcePages": [
             2
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "dark-angels-detachment-rule-invocations-of-ancient-fury",
+            "title": "Invocations of Ancient Fury",
+            "text": "Amongst the ancient mysteries that the Dark Angels keep is knowledge of potent invocations to the most esoteric and mercurial of weapon spirits. With these, their battle‑brothers are able to rouse their plasma weaponry to a destructive power that burns like the fiery hearts of stars. ▪ Friendly ADEPTUS ASTARTES units’ weapon profiles with ‘Plasma’ in their names are plasma weapon profiles. ▪ Plasma weapon profiles have +1 S. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "dark-age-arsenal-rule",
+            "detachmentId": "dark-age-arsenal",
+            "detachmentTitle": "DARK AGE ARSENAL",
+            "sourceBookId": "dark-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -97847,7 +98227,7 @@
       "recordType": "DETACHMENT",
       "label": "DARKFLIGHT PURSUIT",
       "aliases": [],
-      "searchableContent": "DARKFLIGHT PURSUIT",
+      "searchableContent": "Black-winged Vigilance\nDARKFLIGHT PURSUIT\ndarkflight-pursuit\ndarkflight-pursuit-rule\nThe anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -97883,7 +98263,18 @@
           "sourcePages": [
             3
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "dark-angels-detachment-rule-black-winged-vigilance",
+            "title": "Black-winged Vigilance",
+            "text": "The anti‑grav skimmers and combat aircraft of the Ravenwing bristle not only with potent weapons but also with powerful augurs and trackers, whose sleepless machine spirits are as vigilant as the black‑armoured battle‑brothers. Friendly RAVENWING FLY units’ ranged attacks have [IGNORES COVER]. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "darkflight-pursuit-rule",
+            "detachmentId": "darkflight-pursuit",
+            "detachmentTitle": "DARKFLIGHT PURSUIT",
+            "sourceBookId": "dark-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -97938,7 +98329,7 @@
       "recordType": "DETACHMENT",
       "label": "INNER CIRCLE TASK FORCE",
       "aliases": [],
-      "searchableContent": "INNER CIRCLE TASK FORCE",
+      "searchableContent": "At the start of your Movement phase, select one of the following:\n▪ Defensive Footing: Select one objective you control. Until the start of your next Movement phase, that objective is your Vowed objective.\n▪ Aggressive Push: Select one or more objective you do not control. Until the start of your next Movement phase, each of those objectives is one of your Vowed objectives. If a rule refers to a unit or model being within range of your Vowed objective, that rule takes effect if that unit or model is within range of one or more of your Vowed objectives. Each time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objectives, add 1 to the Wound roll.\ndark-angels-detachment-rule-vowed-target\nINNER CIRCLE TASK FORCE\ninner-circle-task-force\nVowed Target",
       "parent": null,
       "canonicalReferences": [
         {
@@ -97960,7 +98351,18 @@
       },
       "facts": {
         "id": "inner-circle-task-force",
-        "title": "INNER CIRCLE TASK FORCE"
+        "title": "INNER CIRCLE TASK FORCE",
+        "detachmentRules": [
+          {
+            "id": "dark-angels-detachment-rule-vowed-target",
+            "title": "Vowed Target",
+            "text": "At the start of your Movement phase, select one of the following:\n▪ Defensive Footing: Select one objective you control. Until the start of your next Movement phase, that objective is your Vowed objective.\n▪ Aggressive Push: Select one or more objective you do not control. Until the start of your next Movement phase, each of those objectives is one of your Vowed objectives. If a rule refers to a unit or model being within range of your Vowed objective, that rule takes effect if that unit or model is within range of one or more of your Vowed objectives. Each time a DEATHWING INFANTRY unit from your army makes an attack that targets a unit within range of one or more of your Vowed objectives, add 1 to the Wound roll.",
+            "sectionId": "dark-angels-detachment-rule-vowed-target",
+            "detachmentId": "inner-circle-task-force",
+            "detachmentTitle": "INNER CIRCLE TASK FORCE",
+            "sourceBookId": "dark-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -98019,7 +98421,7 @@
       "recordType": "DETACHMENT",
       "label": "INTERROGATION CONCLAVE",
       "aliases": [],
-      "searchableContent": "INTERROGATION CONCLAVE",
+      "searchableContent": "Dread Catechism\nINTERROGATION CONCLAVE\ninterrogation-conclave\ninterrogation-conclave-rule\nWhen the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -98055,7 +98457,18 @@
           "sourcePages": [
             4
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "dark-angels-detachment-rule-dread-catechism",
+            "title": "Dread Catechism",
+            "text": "When the Chapter’s pitiless and dedicated Interrogator Chaplains mark a foe, they are the target for a torturous and precise excruciation. Matters of truth are kept to the hidden cells of the Rock; these instead are matters of painful battlefield castigation to sow dread and fear in the enemies of the Dark Angels. ▪ In the Fight phase, when a friendly CHAPLAIN unit destroys an enemy unit, enemy units within 6\" of that CHAPLAIN unit make a battle-shock roll. ▪ Friendly CHAPLAIN units have the following ability: Sower of Dread (Aura): While an enemy unit is within 6\" of this unit, that enemy unit has ‑1 Ld. Restrictions: Your army can include DARK ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+            "sectionId": "interrogation-conclave-rule",
+            "detachmentId": "interrogation-conclave",
+            "detachmentTitle": "INTERROGATION CONCLAVE",
+            "sourceBookId": "dark-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -98110,7 +98523,7 @@
       "recordType": "DETACHMENT",
       "label": "LION’S BLADE TASK FORCE",
       "aliases": [],
-      "searchableContent": "LION’S BLADE TASK FORCE",
+      "searchableContent": "In the Lion’s Claws\nlion-s-blade-task-force\nlion-s-blade-task-force-rule\nLION’S BLADE TASK FORCE\nThose unfortunate enough to be caught between the devastating speed of the Ravenwing and the adamantine might of the Deathwing are pinned in place and torn to shreds by their combined fury. ■ Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more Ravenwing units from your army Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of those tests. ■ Each time a Deathwing unit from your army declares a charge, if one or more targets of that charge are within Engagement Range of one or more Ravenwing units from your army, add 2 to the Charge roll. RESTRICTIONS Your army can include Dark Angels units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -98149,7 +98562,18 @@
             5,
             6
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "dark-angels-detachment-rule-in-the-lions-claws",
+            "title": "In the Lion’s Claws",
+            "text": "Those unfortunate enough to be caught between the devastating speed of the Ravenwing and the adamantine might of the Deathwing are pinned in place and torn to shreds by their combined fury. ■ Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more Ravenwing units from your army Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of those tests. ■ Each time a Deathwing unit from your army declares a charge, if one or more targets of that charge are within Engagement Range of one or more Ravenwing units from your army, add 2 to the Charge roll. RESTRICTIONS Your army can include Dark Angels units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
+            "sectionId": "lion-s-blade-task-force-rule",
+            "detachmentId": "lion-s-blade-task-force",
+            "detachmentTitle": "LION’S BLADE TASK FORCE",
+            "sourceBookId": "dark-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -98208,7 +98632,7 @@
       "recordType": "DETACHMENT",
       "label": "UNFORGIVEN TASK FORCE",
       "aliases": [],
-      "searchableContent": "UNFORGIVEN TASK FORCE",
+      "searchableContent": "dark-angels-detachment-rule-grim-resolve\nGrim Resolve\nUNFORGIVEN TASK FORCE\nunforgiven-task-force\nWhile an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -98230,7 +98654,18 @@
       },
       "facts": {
         "id": "unforgiven-task-force",
-        "title": "UNFORGIVEN TASK FORCE"
+        "title": "UNFORGIVEN TASK FORCE",
+        "detachmentRules": [
+          {
+            "id": "dark-angels-detachment-rule-grim-resolve",
+            "title": "Grim Resolve",
+            "text": "While an ADEPTUS ASTARTES unit from your army is Battle-shocked, change the Objective Control characteristic of models in that unit to 1 instead of '-'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit from your army. Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in that unit.",
+            "sectionId": "dark-angels-detachment-rule-grim-resolve",
+            "detachmentId": "unforgiven-task-force",
+            "detachmentTitle": "UNFORGIVEN TASK FORCE",
+            "sourceBookId": "dark-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -98289,7 +98724,7 @@
       "recordType": "DETACHMENT",
       "label": "WRATH OF THE ROCK",
       "aliases": [],
-      "searchableContent": "WRATH OF THE ROCK",
+      "searchableContent": "Dutiful Tenacity\nEven amongst the Adeptus Astartes, the battle‑brothers of the Dark Angels are renowned for their tenacity and resilience on the battlefield. When ordered to war, they are utterly relentless in pursuing their objectives, wading into fields of withering fire and shrugging off blows that would slay mortal warriors outright. Each time an attack targets an Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.\nWRATH OF THE ROCK\nwrath-of-the-rock\nwrath-of-the-rock-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -98328,7 +98763,18 @@
             7,
             8
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "dark-angels-detachment-rule-dutiful-tenacity",
+            "title": "Dutiful Tenacity",
+            "text": "Even amongst the Adeptus Astartes, the battle‑brothers of the Dark Angels are renowned for their tenacity and resilience on the battlefield. When ordered to war, they are utterly relentless in pursuing their objectives, wading into fields of withering fire and shrugging off blows that would slay mortal warriors outright. Each time an attack targets an Adeptus Astartes Infantry or Adeptus Astartes Mounted unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+            "sectionId": "wrath-of-the-rock-rule",
+            "detachmentId": "wrath-of-the-rock",
+            "detachmentTitle": "WRATH OF THE ROCK",
+            "sourceBookId": "dark-angels"
+          }
+        ]
       },
       "contexts": [
         {
@@ -118230,7 +118676,7 @@
       "recordType": "DETACHMENT",
       "label": "Champions of Contagion",
       "aliases": [],
-      "searchableContent": "Champions of Contagion",
+      "searchableContent": "ability\nAt the start of the battle round, you can select one of the Plagues listed in Nurgle’s Gift. Until the end of the battle, that is your chosen Plague instead of any previously chosen Plague.\nChampions of Contagion\ndetachment-rule-manifold-maladies\nManifold Maladies",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118252,7 +118698,22 @@
       },
       "facts": {
         "id": "detachment-champions-of-contagion",
-        "title": "Champions of Contagion"
+        "title": "Champions of Contagion",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-manifold-maladies",
+            "title": "Manifold Maladies",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-manifold-maladies",
+                "termId": "detachment-rule-manifold-maladies",
+                "title": "Manifold Maladies",
+                "text": "At the start of the battle round, you can select one of the Plagues listed in Nurgle’s Gift. Until the end of the battle, that is your chosen Plague instead of any previously chosen Plague."
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -118311,7 +118772,7 @@
       "recordType": "DETACHMENT",
       "label": "Contagion Engines",
       "aliases": [],
-      "searchableContent": "Contagion Engines",
+      "searchableContent": "ability\nContagion Engines\ndetachment-rule-warped-and-rusted-animus\nFriendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT].\nWarped and Rusted Animus",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118333,7 +118794,22 @@
       },
       "facts": {
         "id": "detachment-contagion-engines",
-        "title": "Contagion Engines"
+        "title": "Contagion Engines",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-warped-and-rusted-animus",
+            "title": "Warped and Rusted Animus",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-warped-and-rusted-animus",
+                "termId": "detachment-rule-warped-and-rusted-animus",
+                "title": "Warped and Rusted Animus",
+                "text": "Friendly FOETID BLOAT-DRONE/FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER/HELBRUTE/MYPHITIC BLIGHT-HAULER units have CONTAGION ENGINE. Friendly CONTAGION ENGINE units’ ranged attacks have [ASSAULT]. "
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -118388,7 +118864,7 @@
       "recordType": "DETACHMENT",
       "label": "Death Lord’s Chosen",
       "aliases": [],
-      "searchableContent": "Death Lord’s Chosen",
+      "searchableContent": "ability\nDeadly Vectors\nDeath Lord’s Chosen\ndetachment-rule-deadly-vectors\nIn your opponent’s Command phase, roll 2D6 for each Afflicted enemy unit, subtracting 1 from the result if that unit is Below Half-strength. If the result is 6 or less, that enemy unit suffers D3 mortal wounds.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118410,7 +118886,22 @@
       },
       "facts": {
         "id": "detachment-death-lords-chosen",
-        "title": "Death Lord’s Chosen"
+        "title": "Death Lord’s Chosen",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-deadly-vectors",
+            "title": "Deadly Vectors",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-deadly-vectors",
+                "termId": "detachment-rule-deadly-vectors",
+                "title": "Deadly Vectors",
+                "text": "In your opponent’s Command phase, roll 2D6 for each Afflicted enemy unit, subtracting 1 from the result if that unit is Below Half-strength. If the result is 6 or less, that enemy unit suffers D3 mortal wounds."
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -118469,7 +118960,7 @@
       "recordType": "DETACHMENT",
       "label": "Flyblown Host",
       "aliases": [],
-      "searchableContent": "Flyblown Host",
+      "searchableContent": "ability\ndetachment-rule-verminous-haze\nFlyblown Host\nIn the Declare Battle Formations step, you can select up to two friendly PLAGUE MARINES units. Those units have Infiltrators. This detachment has the FLYBLOWN tag and cannot be taken with another FLYBLOWN detachment.\nVerminous Haze",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118491,7 +118982,22 @@
       },
       "facts": {
         "id": "detachment-flyblown-host",
-        "title": "Flyblown Host"
+        "title": "Flyblown Host",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-verminous-haze",
+            "title": "Verminous Haze",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-verminous-haze",
+                "termId": "detachment-rule-verminous-haze",
+                "title": "Verminous Haze",
+                "text": "In the Declare Battle Formations step, you can select up to two friendly PLAGUE MARINES units. Those units have Infiltrators. This detachment has the FLYBLOWN tag and cannot be taken with another FLYBLOWN detachment."
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -118546,7 +119052,7 @@
       "recordType": "DETACHMENT",
       "label": "Mortarion’s Hammer",
       "aliases": [],
-      "searchableContent": "Mortarion’s Hammer",
+      "searchableContent": "1\n2\n3\nability\nAt the start of the battle round, select a number of enemy units more than 12\" away from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are Afflicted. The maximum number of units you can select in this way depends on the battle size, as shown below.\nBattle Size\ndetachment-rule-miasmic-bombardment\nIncursion\nMiasmic Bombardment\nMortarion’s Hammer\nOnslaught\nStrike Force\ntable\nUnits",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118568,7 +119074,43 @@
       },
       "facts": {
         "id": "detachment-mortarions-hammer",
-        "title": "Mortarion’s Hammer"
+        "title": "Mortarion’s Hammer",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-miasmic-bombardment",
+            "title": "Miasmic Bombardment",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-miasmic-bombardment",
+                "termId": "detachment-rule-miasmic-bombardment",
+                "title": "Miasmic Bombardment",
+                "text": "At the start of the battle round, select a number of enemy units more than 12\" away from every model from your army that is on the battlefield. Until the end of the battle round, those enemy units are Afflicted. The maximum number of units you can select in this way depends on the battle size, as shown below."
+              },
+              {
+                "type": "table",
+                "columns": [
+                  "Battle Size",
+                  "Units"
+                ],
+                "rows": [
+                  [
+                    "Incursion",
+                    "1"
+                  ],
+                  [
+                    "Strike Force",
+                    "2"
+                  ],
+                  [
+                    "Onslaught",
+                    "3"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -118627,7 +119169,7 @@
       "recordType": "DETACHMENT",
       "label": "Paragons of Putrescence",
       "aliases": [],
-      "searchableContent": "Paragons of Putrescence",
+      "searchableContent": "ability\ndetachment-rule-hypervirulent-strains\nFriendly DEATH GUARD CHARACTER units have +3\" to their Contagion Range (to a maximum of 12\").\nHypervirulent Strains\nParagons of Putrescence",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118649,7 +119191,22 @@
       },
       "facts": {
         "id": "detachment-paragons-of-putrescence",
-        "title": "Paragons of Putrescence"
+        "title": "Paragons of Putrescence",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-hypervirulent-strains",
+            "title": "Hypervirulent Strains",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-hypervirulent-strains",
+                "termId": "detachment-rule-hypervirulent-strains",
+                "title": "Hypervirulent Strains",
+                "text": "Friendly DEATH GUARD CHARACTER units have +3\" to their Contagion Range (to a maximum of 12\")."
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -118704,7 +119261,7 @@
       "recordType": "DETACHMENT",
       "label": "Shamblerot Vectorium",
       "aliases": [],
-      "searchableContent": "Shamblerot Vectorium",
+      "searchableContent": "2, 3\n2, 3, 4\n2, 3, 4, 5\nability\nBattle Rounds\nBattle Size\ndetachment-rule-numberless-horde\nIn your Command phase in each of the following battle rounds, depending on your chosen battle size, add a new POXWALKERS unit with a Starting Strength of 10 to your army, in Strategic Reserves.\nIncursion\nNumberless Horde\nOnslaught\nShamblerot Vectorium\nStrike Force\ntable",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118726,7 +119283,43 @@
       },
       "facts": {
         "id": "detachment-shamblerot-vectorium",
-        "title": "Shamblerot Vectorium"
+        "title": "Shamblerot Vectorium",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-numberless-horde",
+            "title": "Numberless Horde",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-numberless-horde",
+                "termId": "detachment-rule-numberless-horde",
+                "title": "Numberless Horde",
+                "text": "In your Command phase in each of the following battle rounds, depending on your chosen battle size, add a new POXWALKERS unit with a Starting Strength of 10 to your army, in Strategic Reserves."
+              },
+              {
+                "type": "table",
+                "columns": [
+                  "Battle Size",
+                  "Battle Rounds"
+                ],
+                "rows": [
+                  [
+                    "Incursion",
+                    "2, 3"
+                  ],
+                  [
+                    "Strike Force",
+                    "2, 3, 4"
+                  ],
+                  [
+                    "Onslaught",
+                    "2, 3, 4, 5"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -118785,7 +119378,7 @@
       "recordType": "DETACHMENT",
       "label": "Tallyband Summoners",
       "aliases": [],
-      "searchableContent": "Tallyband Summoners",
+      "searchableContent": "1000 pts\n1500 pts\n500 pts\nability\nBattle Size\ndetachment-rule-reverberant-rancidity\nIncursion\nMaximum points\nOnslaught\nReverberant Rancidity\nStrike Force\ntable\nTallyband Summoners\nWhile a PLAGUE LEGIONS unit from your army is within 7\" of one or more DEATH GUARD units from your army, it has the Nurgle’s Gift ability. While a DEATH GUARD unit from your army is within 7\" of one or more PLAGUE LEGIONS units from your army, add 3\" to that DEATH GUARD unit’s Contagion Range.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118807,7 +119400,43 @@
       },
       "facts": {
         "id": "detachment-tallyband-summoners",
-        "title": "Tallyband Summoners"
+        "title": "Tallyband Summoners",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-reverberant-rancidity",
+            "title": "Reverberant Rancidity",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-reverberant-rancidity",
+                "termId": "detachment-rule-reverberant-rancidity",
+                "title": "Reverberant Rancidity",
+                "text": "While a PLAGUE LEGIONS unit from your army is within 7\" of one or more DEATH GUARD units from your army, it has the Nurgle’s Gift ability. While a DEATH GUARD unit from your army is within 7\" of one or more PLAGUE LEGIONS units from your army, add 3\" to that DEATH GUARD unit’s Contagion Range."
+              },
+              {
+                "type": "table",
+                "columns": [
+                  "Battle Size",
+                  "Maximum points"
+                ],
+                "rows": [
+                  [
+                    "Incursion",
+                    "500 pts"
+                  ],
+                  [
+                    "Strike Force",
+                    "1000 pts"
+                  ],
+                  [
+                    "Onslaught",
+                    "1500 pts"
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -118866,7 +119495,7 @@
       "recordType": "DETACHMENT",
       "label": "Virulent Vectorium",
       "aliases": [],
-      "searchableContent": "Virulent Vectorium",
+      "searchableContent": "ability\nAt the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71).\ndetachment-rule-worldblight\nVirulent Vectorium\nWorldblight",
       "parent": null,
       "canonicalReferences": [
         {
@@ -118888,7 +119517,22 @@
       },
       "facts": {
         "id": "detachment-virulent-vectorium",
-        "title": "Virulent Vectorium"
+        "title": "Virulent Vectorium",
+        "detachmentRules": [
+          {
+            "id": "detachment-rule-worldblight",
+            "title": "Worldblight",
+            "blocks": [
+              {
+                "type": "ability",
+                "id": "rule-worldblight",
+                "termId": "detachment-rule-worldblight",
+                "title": "Worldblight",
+                "text": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71)."
+              }
+            ]
+          }
+        ]
       },
       "contexts": [
         {
@@ -141428,7 +142072,7 @@
       "recordType": "DETACHMENT",
       "label": "CARNIVAL OF EXCESS",
       "aliases": [],
-      "searchableContent": "CARNIVAL OF EXCESS",
+      "searchableContent": "CARNIVAL OF EXCESS\ncarnival-of-excess\ncarnival-of-excess-rule\nDaemonic Empowerment\nWhile an EMPEROR’S CHILDREN unit from your army is within 6\" of one or more friendly LEGIONS OF EXCESS units, it is Empowered.While a LEGIONS OF EXCESS unit from your army is within 6\" of one or more friendly EMPEROR’S CHILDREN units, it is Empowered.While a unit from your army is Empowered, weapons equipped by models in that unit have the [sustained hits 1] ability. If such a weapon already has that ability, each time an attack is made with that weapon, an unmodified Hit roll of 5+ scores a Critical Hit.LEGIONS OF EXCESSYou can include LEGIONS OF EXCESS units in your army, even though they do not have the EMPEROR’S CHILDREN Faction keyword. The combined points cost of such units you can include in your army is:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo LEGIONS OF EXCESS models from your army can be your WARLORD.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -141450,7 +142094,18 @@
       },
       "facts": {
         "id": "carnival-of-excess",
-        "title": "CARNIVAL OF EXCESS"
+        "title": "CARNIVAL OF EXCESS",
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-daemonic-empowerment",
+            "title": "Daemonic Empowerment",
+            "text": "While an EMPEROR’S CHILDREN unit from your army is within 6\" of one or more friendly LEGIONS OF EXCESS units, it is Empowered.While a LEGIONS OF EXCESS unit from your army is within 6\" of one or more friendly EMPEROR’S CHILDREN units, it is Empowered.While a unit from your army is Empowered, weapons equipped by models in that unit have the [sustained hits 1] ability. If such a weapon already has that ability, each time an attack is made with that weapon, an unmodified Hit roll of 5+ scores a Critical Hit.LEGIONS OF EXCESSYou can include LEGIONS OF EXCESS units in your army, even though they do not have the EMPEROR’S CHILDREN Faction keyword. The combined points cost of such units you can include in your army is:Incursion: Up to 500 ptsStrike Force: Up to 1000 ptsOnslaught: Up to 1500 ptsNo LEGIONS OF EXCESS models from your army can be your WARLORD.",
+            "sectionId": "carnival-of-excess-rule",
+            "detachmentId": "carnival-of-excess",
+            "detachmentTitle": "CARNIVAL OF EXCESS",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -141509,7 +142164,7 @@
       "recordType": "DETACHMENT",
       "label": "COTERIE OF THE CONCEITED",
       "aliases": [],
-      "searchableContent": "COTERIE OF THE CONCEITED",
+      "searchableContent": "At the start of the battle round, if your WARLORD is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your WARLORD model suffers D3 mortal wounds.EMPEROR’S CHILDREN units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).PACT POINTSBONUS1+Each time a model in this unit makes an attack, re-roll a Hit roll of 1.3+Each time a model in this unit makes an attack, re-roll a Wound roll of 1.5+Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAINED HITS 1] abilities.7+Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.\nCOTERIE OF THE CONCEITED\ncoterie-of-the-conceited\ncoterie-of-the-conceited-rule\nPledges to the Dark Prince",
       "parent": null,
       "canonicalReferences": [
         {
@@ -141531,7 +142186,18 @@
       },
       "facts": {
         "id": "coterie-of-the-conceited",
-        "title": "COTERIE OF THE CONCEITED"
+        "title": "COTERIE OF THE CONCEITED",
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-pledges-to-the-dark-prince",
+            "title": "Pledges to the Dark Prince",
+            "text": "At the start of the battle round, if your WARLORD is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your WARLORD model suffers D3 mortal wounds.EMPEROR’S CHILDREN units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).PACT POINTSBONUS1+Each time a model in this unit makes an attack, re-roll a Hit roll of 1.3+Each time a model in this unit makes an attack, re-roll a Wound roll of 1.5+Melee weapons equipped by models in this unit have the [LETHAL HITS] and [SUSTAINED HITS 1] abilities.7+Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.",
+            "sectionId": "coterie-of-the-conceited-rule",
+            "detachmentId": "coterie-of-the-conceited",
+            "detachmentTitle": "COTERIE OF THE CONCEITED",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -141590,7 +142256,7 @@
       "recordType": "DETACHMENT",
       "label": "COURT OF THE PHOENICIAN",
       "aliases": [],
-      "searchableContent": "COURT OF THE PHOENICIAN",
+      "searchableContent": "COURT OF THE PHOENICIAN\ncourt-of-the-phoenician\ncourt-of-the-phoenician-rule\nEMPEROR’S CHILDREN units from your army have the following ability: Sensational Performance: Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase: This unit cannot target a unit it was within Engagement Range of at the start of the turn. This unit cannot target a unit that was the target of another unit’s attack this phase. Improve the Strength and Armour Penetration characteristics of this unit’s melee weapons by 1.\nMaster of the Pageant\nOnce per battle round, when you target a FULGRIM unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.\nSensational Performance",
       "parent": null,
       "canonicalReferences": [
         {
@@ -141629,7 +142295,27 @@
             5,
             6
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-sensational-performance",
+            "title": "Sensational Performance",
+            "text": "EMPEROR’S CHILDREN units from your army have the following ability: Sensational Performance: Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase: This unit cannot target a unit it was within Engagement Range of at the start of the turn. This unit cannot target a unit that was the target of another unit’s attack this phase. Improve the Strength and Armour Penetration characteristics of this unit’s melee weapons by 1.",
+            "sectionId": "court-of-the-phoenician-rule",
+            "detachmentId": "court-of-the-phoenician",
+            "detachmentTitle": "COURT OF THE PHOENICIAN",
+            "sourceBookId": "emperors-children"
+          },
+          {
+            "id": "emperors-children-detachment-rule-master-of-the-pageant",
+            "title": "Master of the Pageant",
+            "text": "Once per battle round, when you target a FULGRIM unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.",
+            "sectionId": "court-of-the-phoenician-rule",
+            "detachmentId": "court-of-the-phoenician",
+            "detachmentTitle": "COURT OF THE PHOENICIAN",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -141688,7 +142374,7 @@
       "recordType": "DETACHMENT",
       "label": "ELEGANT BRUTES",
       "aliases": [],
-      "searchableContent": "ELEGANT BRUTES",
+      "searchableContent": "Eager to Kill\nELEGANT BRUTES\nelegant-brutes\nelegant-brutes-rule\nWhen a friendly EMPEROR’S CHILDREN TERMINATOR unit is set up, that unit has +1 to charge rolls until the end of the turn.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -141724,7 +142410,18 @@
           "sourcePages": [
             2
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-eager-to-kill",
+            "title": "Eager to Kill",
+            "text": "When a friendly EMPEROR’S CHILDREN TERMINATOR unit is set up, that unit has +1 to charge rolls until the end of the turn.",
+            "sectionId": "elegant-brutes-rule",
+            "detachmentId": "elegant-brutes",
+            "detachmentTitle": "ELEGANT BRUTES",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -141779,7 +142476,7 @@
       "recordType": "DETACHMENT",
       "label": "FRENZIED HOST",
       "aliases": [],
-      "searchableContent": "FRENZIED HOST",
+      "searchableContent": "Frantic Focus\nFRENZIED HOST\nfrenzied-host\nfrenzied-host-rule\nWhen a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -141807,6 +142504,7 @@
       "facts": {
         "id": "frenzied-host",
         "title": "FRENZIED HOST",
+        "tags": [],
         "sourcePages": [
           3
         ],
@@ -141815,7 +142513,18 @@
           "sourcePages": [
             3
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-frantic-focus",
+            "title": "Frantic Focus",
+            "text": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn.",
+            "sectionId": "frenzied-host-rule",
+            "detachmentId": "frenzied-host",
+            "detachmentTitle": "FRENZIED HOST",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -141870,7 +142579,7 @@
       "recordType": "DETACHMENT",
       "label": "MERCURIAL HOST",
       "aliases": [],
-      "searchableContent": "MERCURIAL HOST",
+      "searchableContent": "MERCURIAL HOST\nmercurial-host\nmercurial-host-rule\nQuicksilver Grace\nYou can re-roll Advance rolls made for EMPEROR’S CHILDREN units from your army.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -141892,7 +142601,18 @@
       },
       "facts": {
         "id": "mercurial-host",
-        "title": "MERCURIAL HOST"
+        "title": "MERCURIAL HOST",
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-quicksilver-grace",
+            "title": "Quicksilver Grace",
+            "text": "You can re-roll Advance rolls made for EMPEROR’S CHILDREN units from your army.",
+            "sectionId": "mercurial-host-rule",
+            "detachmentId": "mercurial-host",
+            "detachmentTitle": "MERCURIAL HOST",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -141951,7 +142671,7 @@
       "recordType": "DETACHMENT",
       "label": "PEERLESS BLADESMEN",
       "aliases": [],
-      "searchableContent": "PEERLESS BLADESMEN",
+      "searchableContent": "Each time an EMPEROR’S CHILDREN unit from your army is selected to fight, if it made a Charge move this turn, select one of the abilities below. While resolving those attacks, melee weapons equipped by models in that unit have that ability:[LETHAL HITS][SUSTAINED HITS 1]\nExquisite Swordsmanship\nPEERLESS BLADESMEN\npeerless-bladesmen\npeerless-bladesmen-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -141973,7 +142693,18 @@
       },
       "facts": {
         "id": "peerless-bladesmen",
-        "title": "PEERLESS BLADESMEN"
+        "title": "PEERLESS BLADESMEN",
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-exquisite-swordsmanship",
+            "title": "Exquisite Swordsmanship",
+            "text": "Each time an EMPEROR’S CHILDREN unit from your army is selected to fight, if it made a Charge move this turn, select one of the abilities below. While resolving those attacks, melee weapons equipped by models in that unit have that ability:[LETHAL HITS][SUSTAINED HITS 1]",
+            "sectionId": "peerless-bladesmen-rule",
+            "detachmentId": "peerless-bladesmen",
+            "detachmentTitle": "PEERLESS BLADESMEN",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -142032,7 +142763,7 @@
       "recordType": "DETACHMENT",
       "label": "RAPID EVISCERATION",
       "aliases": [],
-      "searchableContent": "RAPID EVISCERATION",
+      "searchableContent": "Each time an EMPEROR’S CHILDREN model from your army makes an attack, if it is a TRANSPORT model or disembarked from a TRANSPORT this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.\nMechanised Murder\nRAPID EVISCERATION\nrapid-evisceration\nrapid-evisceration-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -142054,7 +142785,18 @@
       },
       "facts": {
         "id": "rapid-evisceration",
-        "title": "RAPID EVISCERATION"
+        "title": "RAPID EVISCERATION",
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-mechanised-murder",
+            "title": "Mechanised Murder",
+            "text": "Each time an EMPEROR’S CHILDREN model from your army makes an attack, if it is a TRANSPORT model or disembarked from a TRANSPORT this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+            "sectionId": "rapid-evisceration-rule",
+            "detachmentId": "rapid-evisceration",
+            "detachmentTitle": "RAPID EVISCERATION",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -142113,7 +142855,7 @@
       "recordType": "DETACHMENT",
       "label": "SLAANESH’S CHOSEN",
       "aliases": [],
-      "searchableContent": "SLAANESH’S CHOSEN",
+      "searchableContent": "EMPEROR’S CHILDREN CHARACTER units from your army can ignore any or all modifiers to their Move characteristic and any or all modifiers to Advance and Charge rolls made for them.At the start of the battle, your WARLORD’s unit is your army’s Favoured Champions. The first time in each player’s turn that an EMPEROR’S CHILDREN CHARACTER unit from your army destroys an enemy unit, after resolving all of its attacks, that CHARACTER unit becomes your army’s new Favoured Champions, replacing the old one.Each time a model in your army’s Favoured Champions unit makes an attack, you can re-roll the Wound roll.\nInternal Rivalries\nSLAANESH’S CHOSEN\nslaaneshs-chosen\nslaaneshs-chosen-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -142135,7 +142877,18 @@
       },
       "facts": {
         "id": "slaaneshs-chosen",
-        "title": "SLAANESH’S CHOSEN"
+        "title": "SLAANESH’S CHOSEN",
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-internal-rivalries",
+            "title": "Internal Rivalries",
+            "text": "EMPEROR’S CHILDREN CHARACTER units from your army can ignore any or all modifiers to their Move characteristic and any or all modifiers to Advance and Charge rolls made for them.At the start of the battle, your WARLORD’s unit is your army’s Favoured Champions. The first time in each player’s turn that an EMPEROR’S CHILDREN CHARACTER unit from your army destroys an enemy unit, after resolving all of its attacks, that CHARACTER unit becomes your army’s new Favoured Champions, replacing the old one.Each time a model in your army’s Favoured Champions unit makes an attack, you can re-roll the Wound roll.",
+            "sectionId": "slaaneshs-chosen-rule",
+            "detachmentId": "slaaneshs-chosen",
+            "detachmentTitle": "SLAANESH’S CHOSEN",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -142194,7 +142947,7 @@
       "recordType": "DETACHMENT",
       "label": "SPECTACLE OF SLAUGHTER",
       "aliases": [],
-      "searchableContent": "SPECTACLE OF SLAUGHTER",
+      "searchableContent": "Entitled to Victory\nFriendly FLAWLESS BLADES units have Fights First.\nSPECTACLE OF SLAUGHTER\nspectacle-of-slaughter\nspectacle-of-slaughter-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -142230,7 +142983,18 @@
           "sourcePages": [
             4
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "emperors-children-detachment-rule-entitled-to-victory",
+            "title": "Entitled to Victory",
+            "text": "Friendly FLAWLESS BLADES units have Fights First.",
+            "sectionId": "spectacle-of-slaughter-rule",
+            "detachmentId": "spectacle-of-slaughter",
+            "detachmentTitle": "SPECTACLE OF SLAUGHTER",
+            "sourceBookId": "emperors-children"
+          }
+        ]
       },
       "contexts": [
         {
@@ -173885,7 +174649,7 @@
       "recordType": "DETACHMENT",
       "label": "1ST COMPANY TASK FORCE",
       "aliases": [],
-      "searchableContent": "1ST COMPANY TASK FORCE",
+      "searchableContent": "1ST COMPANY TASK FORCE\n1st-company-task-force\n1st-company-task-force-extremis-level-threat\nEXTREMIS-LEVEL THREAT\nOnce per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -173919,7 +174683,18 @@
       },
       "facts": {
         "id": "1st-company-task-force",
-        "title": "1ST COMPANY TASK FORCE"
+        "title": "1ST COMPANY TASK FORCE",
+        "detachmentRules": [
+          {
+            "id": "1st-company-task-force-extremis-level-threat",
+            "title": "EXTREMIS-LEVEL THREAT",
+            "text": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
+            "sectionId": "1st-company-task-force-extremis-level-threat",
+            "detachmentId": "1st-company-task-force",
+            "detachmentTitle": "1ST COMPANY TASK FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -173986,7 +174761,7 @@
       "recordType": "DETACHMENT",
       "label": "ANVIL SIEGE FORCE",
       "aliases": [],
-      "searchableContent": "ANVIL SIEGE FORCE",
+      "searchableContent": "ANVIL SIEGE FORCE\nanvil-siege-force\nanvil-siege-force-shield-of-the-imperium\nRanged weapons equipped by ADEPTUS ASTARTES models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.\nSHIELD OF THE IMPERIUM",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174020,7 +174795,18 @@
       },
       "facts": {
         "id": "anvil-siege-force",
-        "title": "ANVIL SIEGE FORCE"
+        "title": "ANVIL SIEGE FORCE",
+        "detachmentRules": [
+          {
+            "id": "anvil-siege-force-shield-of-the-imperium",
+            "title": "SHIELD OF THE IMPERIUM",
+            "text": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.",
+            "sectionId": "anvil-siege-force-shield-of-the-imperium",
+            "detachmentId": "anvil-siege-force",
+            "detachmentTitle": "ANVIL SIEGE FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174087,7 +174873,7 @@
       "recordType": "DETACHMENT",
       "label": "ARMOURED SPEARTIP",
       "aliases": [],
-      "searchableContent": "ARMOURED SPEARTIP",
+      "searchableContent": "ARMOURED SPEARTIP\narmoured-speartip\narmoured-speartip-rapid-deployment\nEach time an Adeptus Astartes unit from your army disembarks from a Transport (excluding Fly) that made a Normal or Advance move this phase (excluding those that arrived from Strategic Reserves), that disembarked unit can make a Normal move of up to D6\", or a Normal move of up to D3+3\" instead if that Transport is a Heavy Transport (see below). KEYWORDS Adeptus Astartes Transport units from your army (excluding Fly) that have a Wounds characteristic of 14+ have the Heavy Transport keyword.\nRapid Deployment",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174138,7 +174924,18 @@
             6,
             7
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "armoured-speartip-rapid-deployment",
+            "title": "Rapid Deployment",
+            "text": "Each time an Adeptus Astartes unit from your army disembarks from a Transport (excluding Fly) that made a Normal or Advance move this phase (excluding those that arrived from Strategic Reserves), that disembarked unit can make a Normal move of up to D6\", or a Normal move of up to D3+3\" instead if that Transport is a Heavy Transport (see below). KEYWORDS Adeptus Astartes Transport units from your army (excluding Fly) that have a Wounds characteristic of 14+ have the Heavy Transport keyword.",
+            "sectionId": "armoured-speartip-rapid-deployment",
+            "detachmentId": "armoured-speartip",
+            "detachmentTitle": "ARMOURED SPEARTIP",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174205,7 +175002,7 @@
       "recordType": "DETACHMENT",
       "label": "BASTION TASK FORCE",
       "aliases": [],
-      "searchableContent": "BASTION TASK FORCE",
+      "searchableContent": "Adeptus Astartes Battleline units from your army: ■ Are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back. ■ Are eligible to start to perform an Action in a turn in which they Advanced or Fell Back. Each time an Adeptus Astartes Battleline unit from your army is selected to attack, after resolving those attacks, select one enemy unit hit by one or more of those attacks. Until the end of the turn, that enemy unit is auspex scanned. Each time an Adeptus Astartes model from your army makes an attack that targets an auspex scanned unit, re‑roll a Hit roll of 1.\nBASTION TASK FORCE\nbastion-task-force\nbastion-task-force-interlocking-tactics\nInterlocking Tactics",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174256,7 +175053,18 @@
             24,
             25
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "bastion-task-force-interlocking-tactics",
+            "title": "Interlocking Tactics",
+            "text": "Adeptus Astartes Battleline units from your army: ■ Are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back. ■ Are eligible to start to perform an Action in a turn in which they Advanced or Fell Back. Each time an Adeptus Astartes Battleline unit from your army is selected to attack, after resolving those attacks, select one enemy unit hit by one or more of those attacks. Until the end of the turn, that enemy unit is auspex scanned. Each time an Adeptus Astartes model from your army makes an attack that targets an auspex scanned unit, re‑roll a Hit roll of 1.",
+            "sectionId": "bastion-task-force-interlocking-tactics",
+            "detachmentId": "bastion-task-force",
+            "detachmentTitle": "BASTION TASK FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174323,7 +175131,7 @@
       "recordType": "DETACHMENT",
       "label": "BLADE OF ULTRAMAR",
       "aliases": [],
-      "searchableContent": "BLADE OF ULTRAMAR",
+      "searchableContent": "At the start of up to three of your Command phases, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all Adeptus Astartes units from your army. You cannot select a Combat Doctrine you have already selected this battle, unless a friendly Marneus Calgar model is on the battlefield. Devastator Doctrine The Codex Astartes details the strategic value of overwhelming firepower. This unit is eligible to shoot in a turn in which it Advanced. Tactical Doctrine The Codex lays out strategies for seizing the initiative. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Assault Doctrine The Codex Astartes leaves no doubt that the killing blow must be delivered with a decisive close‑quarters strike. This unit is eligible to declare a charge in a turn in which it Advanced.\nBLADE OF ULTRAMAR\nblade-of-ultramar\nblade-of-ultramar-mastered-doctrines\nMastered Doctrines\nYour army can include Ultramarines units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174352,6 +175160,7 @@
       "facts": {
         "id": "blade-of-ultramar",
         "title": "BLADE OF ULTRAMAR",
+        "restrictions": "Your army can include Ultramarines units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
         "sourcePages": [
           12,
           13
@@ -174362,7 +175171,18 @@
             12,
             13
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "blade-of-ultramar-mastered-doctrines",
+            "title": "Mastered Doctrines",
+            "text": "At the start of up to three of your Command phases, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all Adeptus Astartes units from your army. You cannot select a Combat Doctrine you have already selected this battle, unless a friendly Marneus Calgar model is on the battlefield. Devastator Doctrine The Codex Astartes details the strategic value of overwhelming firepower. This unit is eligible to shoot in a turn in which it Advanced. Tactical Doctrine The Codex lays out strategies for seizing the initiative. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Assault Doctrine The Codex Astartes leaves no doubt that the killing blow must be delivered with a decisive close‑quarters strike. This unit is eligible to declare a charge in a turn in which it Advanced.",
+            "sectionId": "blade-of-ultramar-mastered-doctrines",
+            "detachmentId": "blade-of-ultramar",
+            "detachmentTitle": "BLADE OF ULTRAMAR",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174421,7 +175241,7 @@
       "recordType": "DETACHMENT",
       "label": "CERAMITE SENTINELS",
       "aliases": [],
-      "searchableContent": "CERAMITE SENTINELS",
+      "searchableContent": "Adaptive Defence\nCERAMITE SENTINELS\nceramite-sentinels\nceramite-sentinels-adaptive-defence\nEach time an Adeptus Astartes model from your army makes an attack, if that model’s unit is within a terrain feature, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Adeptus Astartes units from your army gain the Entrenched keyword while all of the following are true: ■ That unit is within a terrain feature. ■ That unit was not set up on the battlefield this turn. ■ No model in that unit has moved more than 3” this turn.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174472,7 +175292,18 @@
             10,
             11
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "ceramite-sentinels-adaptive-defence",
+            "title": "Adaptive Defence",
+            "text": "Each time an Adeptus Astartes model from your army makes an attack, if that model’s unit is within a terrain feature, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Adeptus Astartes units from your army gain the Entrenched keyword while all of the following are true: ■ That unit is within a terrain feature. ■ That unit was not set up on the battlefield this turn. ■ No model in that unit has moved more than 3” this turn.",
+            "sectionId": "ceramite-sentinels-adaptive-defence",
+            "detachmentId": "ceramite-sentinels",
+            "detachmentTitle": "CERAMITE SENTINELS",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174539,7 +175370,7 @@
       "recordType": "DETACHMENT",
       "label": "EMPEROR’S SHIELD",
       "aliases": [],
-      "searchableContent": "EMPEROR’S SHIELD",
+      "searchableContent": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re‑roll a Wound roll of 1. Each time a model in a Darnath Lysander unit from your army makes an attack that targets your Oath of Moment target, you can re‑roll the Wound roll.\nemperor-s-shield\nemperor-s-shield-wrath-of-dorn\nEMPEROR’S SHIELD\nWrath of Dorn\nYour army can include Imperial Fists units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174568,6 +175399,7 @@
       "facts": {
         "id": "emperor-s-shield",
         "title": "EMPEROR’S SHIELD",
+        "restrictions": "Your army can include Imperial Fists units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
         "sourcePages": [
           20,
           21
@@ -174578,7 +175410,18 @@
             20,
             21
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "emperor-s-shield-wrath-of-dorn",
+            "title": "Wrath of Dorn",
+            "text": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re‑roll a Wound roll of 1. Each time a model in a Darnath Lysander unit from your army makes an attack that targets your Oath of Moment target, you can re‑roll the Wound roll.",
+            "sectionId": "emperor-s-shield-wrath-of-dorn",
+            "detachmentId": "emperor-s-shield",
+            "detachmentTitle": "EMPEROR’S SHIELD",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174637,7 +175480,7 @@
       "recordType": "DETACHMENT",
       "label": "FIRESTORM ASSAULT FORCE",
       "aliases": [],
-      "searchableContent": "FIRESTORM ASSAULT FORCE",
+      "searchableContent": "CLOSE-RANGE ERADICATION\nFIRESTORM ASSAULT FORCE\nfirestorm-assault-force\nfirestorm-assault-force-close-range-eradication\nRanged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174671,7 +175514,18 @@
       },
       "facts": {
         "id": "firestorm-assault-force",
-        "title": "FIRESTORM ASSAULT FORCE"
+        "title": "FIRESTORM ASSAULT FORCE",
+        "detachmentRules": [
+          {
+            "id": "firestorm-assault-force-close-range-eradication",
+            "title": "CLOSE-RANGE ERADICATION",
+            "text": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
+            "sectionId": "firestorm-assault-force-close-range-eradication",
+            "detachmentId": "firestorm-assault-force",
+            "detachmentTitle": "FIRESTORM ASSAULT FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174738,7 +175592,7 @@
       "recordType": "DETACHMENT",
       "label": "FORGEFATHER’S SEEKERS",
       "aliases": [],
-      "searchableContent": "FORGEFATHER’S SEEKERS",
+      "searchableContent": "forgefather-s-seekers\nforgefather-s-seekers-vulkan-s-quest\nFORGEFATHER’S SEEKERS\nRanged weapons equipped by Adeptus Astartes models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack. SEEKER’S COMPANIONS If your army includes Vulkan He’stan , during your turn, each Infernus Squad unit from your army is eligible to do one of the following: ■ Start to perform an Action in a turn in which it Advanced. ■ Shoot in a turn in which it started to perform an Action.\nVulkan's Quest\nYour army can include Salamanders units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174767,6 +175621,7 @@
       "facts": {
         "id": "forgefather-s-seekers",
         "title": "FORGEFATHER’S SEEKERS",
+        "restrictions": "Your army can include Salamanders units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
         "sourcePages": [
           18,
           19
@@ -174777,7 +175632,18 @@
             18,
             19
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "forgefather-s-seekers-vulkan-s-quest",
+            "title": "Vulkan's Quest",
+            "text": "Ranged weapons equipped by Adeptus Astartes models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack. SEEKER’S COMPANIONS If your army includes Vulkan He’stan , during your turn, each Infernus Squad unit from your army is eligible to do one of the following: ■ Start to perform an Action in a turn in which it Advanced. ■ Shoot in a turn in which it started to perform an Action.",
+            "sectionId": "forgefather-s-seekers-vulkan-s-quest",
+            "detachmentId": "forgefather-s-seekers",
+            "detachmentTitle": "FORGEFATHER’S SEEKERS",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174836,7 +175702,7 @@
       "recordType": "DETACHMENT",
       "label": "FULGURIS TASK FORCE",
       "aliases": [],
-      "searchableContent": "FULGURIS TASK FORCE",
+      "searchableContent": "▪ Friendly LAND SPEEDER/STORM SPEEDER HAILSTRIKE/STORM SPEEDER HAMMERSTRIKE/STORM SPEEDER THUNDERSTRIKE units have SPEEDER. ▪ In your first Movement phase, friendly SPEEDER units can make an ingress move.\nFULGURIS TASK FORCE\nfulguris-task-force\nfulguris-task-force-skystrike\nSkystrike",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174884,7 +175750,18 @@
           "sourcePages": [
             3
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "fulguris-task-force-skystrike",
+            "title": "Skystrike",
+            "text": "▪ Friendly LAND SPEEDER/STORM SPEEDER HAILSTRIKE/STORM SPEEDER HAMMERSTRIKE/STORM SPEEDER THUNDERSTRIKE units have SPEEDER. ▪ In your first Movement phase, friendly SPEEDER units can make an ingress move.",
+            "sectionId": "fulguris-task-force-skystrike",
+            "detachmentId": "fulguris-task-force",
+            "detachmentTitle": "FULGURIS TASK FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -174947,7 +175824,7 @@
       "recordType": "DETACHMENT",
       "label": "GLADIUS TASK FORCE",
       "aliases": [],
-      "searchableContent": "GLADIUS TASK FORCE",
+      "searchableContent": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Combat Doctrine once per battle.\nCOMBAT DOCTRINES\nGLADIUS TASK FORCE\ngladius-task-force\ngladius-task-force-combat-doctrines",
       "parent": null,
       "canonicalReferences": [
         {
@@ -174981,7 +175858,18 @@
       },
       "facts": {
         "id": "gladius-task-force",
-        "title": "GLADIUS TASK FORCE"
+        "title": "GLADIUS TASK FORCE",
+        "detachmentRules": [
+          {
+            "id": "gladius-task-force-combat-doctrines",
+            "title": "COMBAT DOCTRINES",
+            "text": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Combat Doctrine once per battle.",
+            "sectionId": "gladius-task-force-combat-doctrines",
+            "detachmentId": "gladius-task-force",
+            "detachmentTitle": "GLADIUS TASK FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175048,7 +175936,7 @@
       "recordType": "DETACHMENT",
       "label": "HAMMER OF AVERNII",
       "aliases": [],
-      "searchableContent": "HAMMER OF AVERNII",
+      "searchableContent": "Calculated Annihilation\nEach time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re‑roll a Wound roll of 1. RECALCULATING Caanok Var ensures every bolt shell is directed where it serves the greatest purpose. Once per battle round, after your Oath of Moment target is destroyed, if a Caanok Var model from your army is on the battlefield, select one enemy unit visible to that model. That enemy unit becomes your Oath of Moment target until you select a new one.\nHAMMER OF AVERNII\nhammer-of-avernii\nhammer-of-avernii-calculated-annihilation\nYour army can include Iron Hands units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175077,6 +175965,7 @@
       "facts": {
         "id": "hammer-of-avernii",
         "title": "HAMMER OF AVERNII",
+        "restrictions": "Your army can include Iron Hands units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
         "sourcePages": [
           14,
           15
@@ -175087,7 +175976,18 @@
             14,
             15
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "hammer-of-avernii-calculated-annihilation",
+            "title": "Calculated Annihilation",
+            "text": "Each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re‑roll a Wound roll of 1. RECALCULATING Caanok Var ensures every bolt shell is directed where it serves the greatest purpose. Once per battle round, after your Oath of Moment target is destroyed, if a Caanok Var model from your army is on the battlefield, select one enemy unit visible to that model. That enemy unit becomes your Oath of Moment target until you select a new one.",
+            "sectionId": "hammer-of-avernii-calculated-annihilation",
+            "detachmentId": "hammer-of-avernii",
+            "detachmentTitle": "HAMMER OF AVERNII",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175146,7 +176046,7 @@
       "recordType": "DETACHMENT",
       "label": "HEADHUNTER TASK FORCE",
       "aliases": [],
-      "searchableContent": "HEADHUNTER TASK FORCE",
+      "searchableContent": "Each time a Tank Ace unit from your army (see below) Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a Tank Ace unit from your army shoots in your Shooting phase, if that unit did not Advance this turn, you can re‑roll the Damage roll. KEYWORDS Adeptus Astartes Vehicle units from your army (excluding Fortifications , Drop Pods, Walkers and units that can Fly) have the Tank Ace keyword. In the Muster Armies step, you can select up to three Tank Ace units from your army to gain the Character keyword. Designer’s Note: This means that the selected units can be given Enhancements, and one of them can be selected as your Warlord .\nHEADHUNTER TASK FORCE\nheadhunter-task-force\nheadhunter-task-force-target-sighted\nTarget Sighted",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175197,7 +176097,18 @@
             8,
             9
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "headhunter-task-force-target-sighted",
+            "title": "Target Sighted",
+            "text": "Each time a Tank Ace unit from your army (see below) Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit. Each time a Tank Ace unit from your army shoots in your Shooting phase, if that unit did not Advance this turn, you can re‑roll the Damage roll. KEYWORDS Adeptus Astartes Vehicle units from your army (excluding Fortifications , Drop Pods, Walkers and units that can Fly) have the Tank Ace keyword. In the Muster Armies step, you can select up to three Tank Ace units from your army to gain the Character keyword. Designer’s Note: This means that the selected units can be given Enhancements, and one of them can be selected as your Warlord .",
+            "sectionId": "headhunter-task-force-target-sighted",
+            "detachmentId": "headhunter-task-force",
+            "detachmentTitle": "HEADHUNTER TASK FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175264,7 +176175,7 @@
       "recordType": "DETACHMENT",
       "label": "IRONSTORM SPEARHEAD",
       "aliases": [],
-      "searchableContent": "IRONSTORM SPEARHEAD",
+      "searchableContent": "ARMOURED WRATH\nIRONSTORM SPEARHEAD\nironstorm-spearhead\nironstorm-spearhead-armoured-wrath\nOnce per phase for each ADEPTUS ASTARTES unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175298,7 +176209,18 @@
       },
       "facts": {
         "id": "ironstorm-spearhead",
-        "title": "IRONSTORM SPEARHEAD"
+        "title": "IRONSTORM SPEARHEAD",
+        "detachmentRules": [
+          {
+            "id": "ironstorm-spearhead-armoured-wrath",
+            "title": "ARMOURED WRATH",
+            "text": "Once per phase for each ADEPTUS ASTARTES unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
+            "sectionId": "ironstorm-spearhead-armoured-wrath",
+            "detachmentId": "ironstorm-spearhead",
+            "detachmentTitle": "IRONSTORM SPEARHEAD",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175365,7 +176287,7 @@
       "recordType": "DETACHMENT",
       "label": "LIBRARIUS CONCLAVE",
       "aliases": [],
-      "searchableContent": "LIBRARIUS CONCLAVE",
+      "searchableContent": "At the start of the battle round, select one of the following Psychic Disciplines abilities. Friendly ADEPTUS ASTARTES PSYKER units have that ability until the end of the battle round. ▪ Biomancy Discipline: This unit has +2\" M. ▪ Divination Discipline: This unit’s attacks can: ▫ Re-roll hit rolls of 1. ▫ Re-roll wound rolls of 1. ▪ Pyromancy Discipline: This unit’s ranged attacks that target an enemy unit within 12\" of this unit have +1 AP. ▪ Telekinesis Discipline: Ranged attacks that target this unit have -1 S. ▪ Telepathy Discipline: This unit’s attacks can ignore modifiers to BS, WS and hit rolls.\nLIBRARIUS CONCLAVE\nlibrarius-conclave\nlibrarius-conclave-psychic-disciplines\nPsychic Disciplines",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175413,7 +176335,18 @@
           "sourcePages": [
             4
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "librarius-conclave-psychic-disciplines",
+            "title": "Psychic Disciplines",
+            "text": "At the start of the battle round, select one of the following Psychic Disciplines abilities. Friendly ADEPTUS ASTARTES PSYKER units have that ability until the end of the battle round. ▪ Biomancy Discipline: This unit has +2\" M. ▪ Divination Discipline: This unit’s attacks can: ▫ Re-roll hit rolls of 1. ▫ Re-roll wound rolls of 1. ▪ Pyromancy Discipline: This unit’s ranged attacks that target an enemy unit within 12\" of this unit have +1 AP. ▪ Telekinesis Discipline: Ranged attacks that target this unit have -1 S. ▪ Telepathy Discipline: This unit’s attacks can ignore modifiers to BS, WS and hit rolls.",
+            "sectionId": "librarius-conclave-psychic-disciplines",
+            "detachmentId": "librarius-conclave",
+            "detachmentTitle": "LIBRARIUS CONCLAVE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175482,7 +176415,7 @@
       "recordType": "DETACHMENT",
       "label": "ORBITAL ASSAULT FORCE",
       "aliases": [],
-      "searchableContent": "ORBITAL ASSAULT FORCE",
+      "searchableContent": "At the start of the Declare Battle Formations step, select a number of Adeptus Astartes units (excluding Titanic units) from your army based on the battle size, as shown below. Models in those units have the Deep Strike ability. BATTLE SIZE NUMBER OF UNITS Incursion 2 Strike Force 3 Onslaught 4 Each time an Adeptus Astartes model from your army makes an attack, if it was set up on the battlefield this turn, re‑roll a Wound roll of 1. If it disembarked from a Drop Pod this turn, re‑roll a Hit roll of 1 as well.\nORBITAL ASSAULT FORCE\norbital-assault-force\norbital-assault-force-rapid-drop-deployment\nRapid-drop Deployment",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175533,7 +176466,18 @@
             26,
             27
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "orbital-assault-force-rapid-drop-deployment",
+            "title": "Rapid-drop Deployment",
+            "text": "At the start of the Declare Battle Formations step, select a number of Adeptus Astartes units (excluding Titanic units) from your army based on the battle size, as shown below. Models in those units have the Deep Strike ability. BATTLE SIZE NUMBER OF UNITS Incursion 2 Strike Force 3 Onslaught 4 Each time an Adeptus Astartes model from your army makes an attack, if it was set up on the battlefield this turn, re‑roll a Wound roll of 1. If it disembarked from a Drop Pod this turn, re‑roll a Hit roll of 1 as well.",
+            "sectionId": "orbital-assault-force-rapid-drop-deployment",
+            "detachmentId": "orbital-assault-force",
+            "detachmentTitle": "ORBITAL ASSAULT FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175600,7 +176544,7 @@
       "recordType": "DETACHMENT",
       "label": "RECLAMATION FORCE",
       "aliases": [],
-      "searchableContent": "RECLAMATION FORCE",
+      "searchableContent": "■ Each time an Adeptus Astartes model from your army makes a melee attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1. ■ Each time an attack targets an Adeptus Astartes unit from your army, if your unit is within range of an objective marker that you controlled at the start of the phase and if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit or your unit has the Titus keyword, subtract 1 from the Wound roll.\nOath of Reclamation\nRECLAMATION FORCE\nreclamation-force\nreclamation-force-oath-of-reclamation\nYour army can include Ultramarines units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175629,6 +176573,7 @@
       "facts": {
         "id": "reclamation-force",
         "title": "RECLAMATION FORCE",
+        "restrictions": "Your army can include Ultramarines units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
         "sourcePages": [
           28,
           29
@@ -175639,7 +176584,18 @@
             28,
             29
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "reclamation-force-oath-of-reclamation",
+            "title": "Oath of Reclamation",
+            "text": "■ Each time an Adeptus Astartes model from your army makes a melee attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1. ■ Each time an attack targets an Adeptus Astartes unit from your army, if your unit is within range of an objective marker that you controlled at the start of the phase and if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit or your unit has the Titus keyword, subtract 1 from the Wound roll.",
+            "sectionId": "reclamation-force-oath-of-reclamation",
+            "detachmentId": "reclamation-force",
+            "detachmentTitle": "RECLAMATION FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175698,7 +176654,7 @@
       "recordType": "DETACHMENT",
       "label": "SHADOWMARK TALON",
       "aliases": [],
-      "searchableContent": "SHADOWMARK TALON",
+      "searchableContent": "Each time a ranged attack targets an Adeptus Astartes unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack. UNPARALLELED TACTICIAN A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle‑brothers to pull the enemy out of formation. Once per battle round, if an Aethon Shaan model from your army is on the battlefield, you can use the Into Darkness Stratagem for 0CP .\nMasters of Shadow\nSHADOWMARK TALON\nshadowmark-talon\nshadowmark-talon-masters-of-shadow\nYour army can include Raven Guard units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175727,6 +176683,7 @@
       "facts": {
         "id": "shadowmark-talon",
         "title": "SHADOWMARK TALON",
+        "restrictions": "Your army can include Raven Guard units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
         "sourcePages": [
           22,
           23
@@ -175737,7 +176694,18 @@
             22,
             23
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "shadowmark-talon-masters-of-shadow",
+            "title": "Masters of Shadow",
+            "text": "Each time a ranged attack targets an Adeptus Astartes unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack. UNPARALLELED TACTICIAN A master of manoeuvre warfare, Aethon Shaan orchestrates battles with absolute precision, deploying, withdrawing and redeploying his battle‑brothers to pull the enemy out of formation. Once per battle round, if an Aethon Shaan model from your army is on the battlefield, you can use the Into Darkness Stratagem for 0CP .",
+            "sectionId": "shadowmark-talon-masters-of-shadow",
+            "detachmentId": "shadowmark-talon",
+            "detachmentTitle": "SHADOWMARK TALON",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175796,7 +176764,7 @@
       "recordType": "DETACHMENT",
       "label": "SPEARPOINT TASK FORCE",
       "aliases": [],
-      "searchableContent": "SPEARPOINT TASK FORCE",
+      "searchableContent": "Adeptus Astartes units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back. WRATH OF THE FIRST KHAN As swift and violent as a raging tempest, Suboden Khan drives into and through the heart of the enemy like a thrust lance. At the end of the Fight phase, if a Suboden Khan unit from your army destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\".\nSPEARPOINT TASK FORCE\nspearpoint-task-force\nspearpoint-task-force-storm-swift-onslaught\nStorm-Swift Onslaught\nYour army can include White Scars units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175825,6 +176793,7 @@
       "facts": {
         "id": "spearpoint-task-force",
         "title": "SPEARPOINT TASK FORCE",
+        "restrictions": "Your army can include White Scars units, but it cannot include any Adeptus Astartes units drawn from any other Chapter.",
         "sourcePages": [
           16,
           17
@@ -175835,7 +176804,18 @@
             16,
             17
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "spearpoint-task-force-storm-swift-onslaught",
+            "title": "Storm-Swift Onslaught",
+            "text": "Adeptus Astartes units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back. WRATH OF THE FIRST KHAN As swift and violent as a raging tempest, Suboden Khan drives into and through the heart of the enemy like a thrust lance. At the end of the Fight phase, if a Suboden Khan unit from your army destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\".",
+            "sectionId": "spearpoint-task-force-storm-swift-onslaught",
+            "detachmentId": "spearpoint-task-force",
+            "detachmentTitle": "SPEARPOINT TASK FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175894,7 +176874,7 @@
       "recordType": "DETACHMENT",
       "label": "STORMLANCE TASK FORCE",
       "aliases": [],
-      "searchableContent": "STORMLANCE TASK FORCE",
+      "searchableContent": "ADEPTUS ASTARTES units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.\nLIGHTNING ASSAULT\nSTORMLANCE TASK FORCE\nstormlance-task-force\nstormlance-task-force-lightning-assault",
       "parent": null,
       "canonicalReferences": [
         {
@@ -175928,7 +176908,18 @@
       },
       "facts": {
         "id": "stormlance-task-force",
-        "title": "STORMLANCE TASK FORCE"
+        "title": "STORMLANCE TASK FORCE",
+        "detachmentRules": [
+          {
+            "id": "stormlance-task-force-lightning-assault",
+            "title": "LIGHTNING ASSAULT",
+            "text": "ADEPTUS ASTARTES units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+            "sectionId": "stormlance-task-force-lightning-assault",
+            "detachmentId": "stormlance-task-force",
+            "detachmentTitle": "STORMLANCE TASK FORCE",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -175995,7 +176986,7 @@
       "recordType": "DETACHMENT",
       "label": "SUBVERSION ASSETS",
       "aliases": [],
-      "searchableContent": "SUBVERSION ASSETS",
+      "searchableContent": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: ▪ While a unit is detected, that unit has +3\" detection range.\nNowhere to Hide\nSUBVERSION ASSETS\nsubversion-assets\nsubversion-assets-nowhere-to-hide",
       "parent": null,
       "canonicalReferences": [
         {
@@ -176043,7 +177034,18 @@
           "sourcePages": [
             5
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "subversion-assets-nowhere-to-hide",
+            "title": "Nowhere to Hide",
+            "text": "Friendly PHOBOS/SCOUT SQUAD units have the following ability: Transhuman Perception: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is detected: ▪ While a unit is detected, that unit has +3\" detection range.",
+            "sectionId": "subversion-assets-nowhere-to-hide",
+            "detachmentId": "subversion-assets",
+            "detachmentTitle": "SUBVERSION ASSETS",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -176106,7 +177108,7 @@
       "recordType": "DETACHMENT",
       "label": "VANGUARD SPEARHEAD",
       "aliases": [],
-      "searchableContent": "VANGUARD SPEARHEAD",
+      "searchableContent": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.\nSHADOW MASTERS\nVANGUARD SPEARHEAD\nvanguard-spearhead\nvanguard-spearhead-shadow-masters",
       "parent": null,
       "canonicalReferences": [
         {
@@ -176140,7 +177142,18 @@
       },
       "facts": {
         "id": "vanguard-spearhead",
-        "title": "VANGUARD SPEARHEAD"
+        "title": "VANGUARD SPEARHEAD",
+        "detachmentRules": [
+          {
+            "id": "vanguard-spearhead-shadow-masters",
+            "title": "SHADOW MASTERS",
+            "text": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
+            "sectionId": "vanguard-spearhead-shadow-masters",
+            "detachmentId": "vanguard-spearhead",
+            "detachmentTitle": "VANGUARD SPEARHEAD",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -176207,7 +177220,7 @@
       "recordType": "DETACHMENT",
       "label": "VENGEFUL HOSTS",
       "aliases": [],
-      "searchableContent": "VENGEFUL HOSTS",
+      "searchableContent": "Imperator Unleashed\nIn a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.\nVENGEFUL HOSTS\nvengeful-hosts\nvengeful-hosts-imperator-unleashed",
       "parent": null,
       "canonicalReferences": [
         {
@@ -176255,7 +177268,18 @@
           "sourcePages": [
             2
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "vengeful-hosts-imperator-unleashed",
+            "title": "Imperator Unleashed",
+            "text": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.",
+            "sectionId": "vengeful-hosts-imperator-unleashed",
+            "detachmentId": "vengeful-hosts",
+            "detachmentTitle": "VENGEFUL HOSTS",
+            "sourceBookId": "space-marines"
+          }
+        ]
       },
       "contexts": [
         {
@@ -274243,7 +275267,7 @@
       "recordType": "DETACHMENT",
       "label": "ADVANCED ACQUISITION CADRE",
       "aliases": [],
-      "searchableContent": "ADVANCED ACQUISITION CADRE",
+      "searchableContent": "ADVANCED ACQUISITION CADRE\nadvanced-acquisition-cadre\nadvanced-acquisition-cadre-rule\nExpert Fieldcraft\nIn your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -274279,7 +275303,18 @@
           "sourcePages": [
             2
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "tau-empire-detachment-rule-expert-fieldcraft",
+            "title": "Expert Fieldcraft",
+            "text": "In your Shooting phase, when a friendly PATHFINDER TEAM/STEALTH BATTLESUITS unit is selected to shoot, those ranged attacks do not prevent your unit from being hidden.",
+            "sectionId": "advanced-acquisition-cadre-rule",
+            "detachmentId": "advanced-acquisition-cadre",
+            "detachmentTitle": "ADVANCED ACQUISITION CADRE",
+            "sourceBookId": "tau-empire"
+          }
+        ]
       },
       "contexts": [
         {
@@ -274334,7 +275369,7 @@
       "recordType": "DETACHMENT",
       "label": "AUXILIARY CADRE",
       "aliases": [],
-      "searchableContent": "AUXILIARY CADRE",
+      "searchableContent": "AUXILIARY CADRE\nauxiliary-cadre\nauxiliary-cadre-rule\nFriendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.\nIntegrated Command Structure\nUnique: Auxiliaries",
       "parent": null,
       "canonicalReferences": [
         {
@@ -274362,6 +275397,9 @@
       "facts": {
         "id": "auxiliary-cadre",
         "title": "AUXILIARY CADRE",
+        "tags": [
+          "Unique: Auxiliaries"
+        ],
         "sourcePages": [
           3
         ],
@@ -274370,7 +275408,18 @@
           "sourcePages": [
             3
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "tau-empire-detachment-rule-integrated-command-structure",
+            "title": "Integrated Command Structure",
+            "text": "Friendly KROOT/VESPID STINGWINGS units have the following ability: Harnessed Alien Instincts: In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked. While a unit is prey-marked, that unit has +3\" detection range. Friendly GHOSTKEEL BATTLESUIT/STEALTH BATTLESUITS units have the following ability: Localised Stealth Projectors (Aura): When a friendly KROOT/VESPID STINGWINGS unit within 6\" of this unit has shot, those attacks do not prevent that unit from being hidden. This detachment has the AUXILIARIES tag and cannot be taken with another AUXILIARIES detachment.",
+            "sectionId": "auxiliary-cadre-rule",
+            "detachmentId": "auxiliary-cadre",
+            "detachmentTitle": "AUXILIARY CADRE",
+            "sourceBookId": "tau-empire"
+          }
+        ]
       },
       "contexts": [
         {
@@ -274463,7 +275512,7 @@
       "recordType": "DETACHMENT",
       "label": "EXPERIMENTAL PROTOTYPE CADRE",
       "aliases": [],
-      "searchableContent": "EXPERIMENTAL PROTOTYPE CADRE",
+      "searchableContent": "EXPERIMENTAL PROTOTYPE CADRE\nexperimental-prototype-cadre\nexperimental-prototype-cadre-rule\nFriendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R. This detachment has the RETALIATION tag and cannot be taken with another RETALIATION detachment.\nSuperior Craftsmanship\nUnique: Retaliation",
       "parent": null,
       "canonicalReferences": [
         {
@@ -274491,6 +275540,9 @@
       "facts": {
         "id": "experimental-prototype-cadre",
         "title": "EXPERIMENTAL PROTOTYPE CADRE",
+        "tags": [
+          "Unique: Retaliation"
+        ],
         "sourcePages": [
           4
         ],
@@ -274499,7 +275551,18 @@
           "sourcePages": [
             4
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "tau-empire-detachment-rule-superior-craftsmanship",
+            "title": "Superior Craftsmanship",
+            "text": "Friendly BATTLESUIT CHARACTER units’ ranged attacks have +6\" R. This detachment has the RETALIATION tag and cannot be taken with another RETALIATION detachment.",
+            "sectionId": "experimental-prototype-cadre-rule",
+            "detachmentId": "experimental-prototype-cadre",
+            "detachmentTitle": "EXPERIMENTAL PROTOTYPE CADRE",
+            "sourceBookId": "tau-empire"
+          }
+        ]
       },
       "contexts": [
         {
@@ -274594,7 +275657,7 @@
       "recordType": "DETACHMENT",
       "label": "KAUYON",
       "aliases": [],
-      "searchableContent": "KAUYON",
+      "searchableContent": "During the third, fourth and fifth battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack’s Ballistic skill characteristics and/or all modifiers to the Hit roll.\nkauyon\nKAUYON\nkauyon-rule\nPatient Hunter",
       "parent": null,
       "canonicalReferences": [
         {
@@ -274616,7 +275679,18 @@
       },
       "facts": {
         "id": "kauyon",
-        "title": "KAUYON"
+        "title": "KAUYON",
+        "detachmentRules": [
+          {
+            "id": "tau-empire-detachment-rule-patient-hunter",
+            "title": "Patient Hunter",
+            "text": "During the third, fourth and fifth battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [SUSTAINED HITS 1] ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack’s Ballistic skill characteristics and/or all modifiers to the Hit roll.",
+            "sectionId": "kauyon-rule",
+            "detachmentId": "kauyon",
+            "detachmentTitle": "KAUYON",
+            "sourceBookId": "tau-empire"
+          }
+        ]
       },
       "contexts": [
         {
@@ -274675,7 +275749,7 @@
       "recordType": "DETACHMENT",
       "label": "KROOT HUNTING PACK",
       "aliases": [],
-      "searchableContent": "KROOT HUNTING PACK",
+      "searchableContent": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.\n\nKROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.\nHunter's Instincts & Skirmish Fighters\nKROOT HUNTING PACK\nkroot-hunting-pack\nkroot-hunting-pack-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -274697,7 +275771,18 @@
       },
       "facts": {
         "id": "kroot-hunting-pack",
-        "title": "KROOT HUNTING PACK"
+        "title": "KROOT HUNTING PACK",
+        "detachmentRules": [
+          {
+            "id": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+            "title": "Hunter's Instincts & Skirmish Fighters",
+            "text": "Each time a KROOT model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.\n\nKROOT models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
+            "sectionId": "kroot-hunting-pack-rule",
+            "detachmentId": "kroot-hunting-pack",
+            "detachmentTitle": "KROOT HUNTING PACK",
+            "sourceBookId": "tau-empire"
+          }
+        ]
       },
       "contexts": [
         {
@@ -274794,7 +275879,7 @@
       "recordType": "DETACHMENT",
       "label": "MONT’KA",
       "aliases": [],
-      "searchableContent": "MONT’KA",
+      "searchableContent": "During the first, second and third battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [ASSAULT] ability. During the first, second and third battle rounds, while a unit is a Guided unit (see For the Greater Good), its ranged weapons have the [LETHAL HITS] ability.\nKilling Blow\nMONT’KA\nmontka\nmontka-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -274816,7 +275901,18 @@
       },
       "facts": {
         "id": "montka",
-        "title": "MONT’KA"
+        "title": "MONT’KA",
+        "detachmentRules": [
+          {
+            "id": "tau-empire-detachment-rule-killing-blow",
+            "title": "Killing Blow",
+            "text": "During the first, second and third battle rounds, ranged weapons equipped by T’AU EMPIRE models from your army have the [ASSAULT] ability. During the first, second and third battle rounds, while a unit is a Guided unit (see For the Greater Good), its ranged weapons have the [LETHAL HITS] ability.",
+            "sectionId": "montka-rule",
+            "detachmentId": "montka",
+            "detachmentTitle": "MONT’KA",
+            "sourceBookId": "tau-empire"
+          }
+        ]
       },
       "contexts": [
         {
@@ -274875,7 +275971,7 @@
       "recordType": "DETACHMENT",
       "label": "RETALIATION CADRE",
       "aliases": [],
-      "searchableContent": "RETALIATION CADRE",
+      "searchableContent": "Bonded Heroes\nEach time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.\nRETALIATION CADRE\nretaliation-cadre\nretaliation-cadre-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -274897,7 +275993,18 @@
       },
       "facts": {
         "id": "retaliation-cadre",
-        "title": "RETALIATION CADRE"
+        "title": "RETALIATION CADRE",
+        "detachmentRules": [
+          {
+            "id": "tau-empire-detachment-rule-bonded-heroes",
+            "title": "Bonded Heroes",
+            "text": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+            "sectionId": "retaliation-cadre-rule",
+            "detachmentId": "retaliation-cadre",
+            "detachmentTitle": "RETALIATION CADRE",
+            "sourceBookId": "tau-empire"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307134,7 +308241,7 @@
       "recordType": "DETACHMENT",
       "label": "AMBUSH PREDATORS",
       "aliases": [],
-      "searchableContent": "AMBUSH PREDATORS",
+      "searchableContent": "AMBUSH PREDATORS\nambush-predators\nambush-predators-rule\nFriendly DEATHLEAPER/LICTOR/NEUROLICTOR units have Deep Strike. Friendly LICTOR/NEUROLICTOR units’ attacks that target a CHARACTER unit can re-roll hit rolls of 1.\nMindhunger",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307170,7 +308277,18 @@
           "sourcePages": [
             2
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-mindhunger",
+            "title": "Mindhunger",
+            "text": "Friendly DEATHLEAPER/LICTOR/NEUROLICTOR units have Deep Strike. Friendly LICTOR/NEUROLICTOR units’ attacks that target a CHARACTER unit can re-roll hit rolls of 1.",
+            "sectionId": "ambush-predators-rule",
+            "detachmentId": "ambush-predators",
+            "detachmentTitle": "AMBUSH PREDATORS",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307225,7 +308343,7 @@
       "recordType": "DETACHMENT",
       "label": "ASSIMILATION SWARM",
       "aliases": [],
-      "searchableContent": "ASSIMILATION SWARM",
+      "searchableContent": "ASSIMILATION SWARM\nassimilation-swarm\nassimilation-swarm-rule\nFeed the Swarm\nIn your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\nOne model in that unit regains up to D3+1 lost wounds.\n\nOne destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307247,7 +308365,18 @@
       },
       "facts": {
         "id": "assimilation-swarm",
-        "title": "ASSIMILATION SWARM"
+        "title": "ASSIMILATION SWARM",
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-feed-the-swarm",
+            "title": "Feed the Swarm",
+            "text": "In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\nOne model in that unit regains up to D3+1 lost wounds.\n\nOne destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
+            "sectionId": "assimilation-swarm-rule",
+            "detachmentId": "assimilation-swarm",
+            "detachmentTitle": "ASSIMILATION SWARM",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307306,7 +308435,7 @@
       "recordType": "DETACHMENT",
       "label": "CRUSHER STAMPEDE",
       "aliases": [],
-      "searchableContent": "CRUSHER STAMPEDE",
+      "searchableContent": "CRUSHER STAMPEDE\ncrusher-stampede\ncrusher-stampede-rule\nEach time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.\nEnraged Behemoths",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307328,7 +308457,18 @@
       },
       "facts": {
         "id": "crusher-stampede",
-        "title": "CRUSHER STAMPEDE"
+        "title": "CRUSHER STAMPEDE",
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-enraged-behemoths",
+            "title": "Enraged Behemoths",
+            "text": "Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.",
+            "sectionId": "crusher-stampede-rule",
+            "detachmentId": "crusher-stampede",
+            "detachmentTitle": "CRUSHER STAMPEDE",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307387,7 +308527,7 @@
       "recordType": "DETACHMENT",
       "label": "INVASION FLEET",
       "aliases": [],
-      "searchableContent": "INVASION FLEET",
+      "searchableContent": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for TYRANIDS units from your army until the end of the battle:\n\nSwarming Instincts\nEach time a TYRANIDS model with this Hyper-adaptation makes an attack that targets an INFANTRY or SWARM unit, that attack has the [SUSTAINED HITS 1] ability.\n\nHyper-aggression\nEach time a TYRANIDS model with this Hyper-adaptation makes an attack that targets a MONSTER or VEHICLE unit, that attack has the [LETHAL HITS] ability.\n\nHive Predators\nEach time a TYRANIDS model with this Hyper-adaptation makes an attack that targets a CHARACTER unit, on a Critical Hit, that attack has the [PRECISION] ability.\nHyper-adaptations\nINVASION FLEET\ninvasion-fleet\ninvasion-fleet-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307409,7 +308549,18 @@
       },
       "facts": {
         "id": "invasion-fleet",
-        "title": "INVASION FLEET"
+        "title": "INVASION FLEET",
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-hyper-adaptations",
+            "title": "Hyper-adaptations",
+            "text": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for TYRANIDS units from your army until the end of the battle:\n\nSwarming Instincts\nEach time a TYRANIDS model with this Hyper-adaptation makes an attack that targets an INFANTRY or SWARM unit, that attack has the [SUSTAINED HITS 1] ability.\n\nHyper-aggression\nEach time a TYRANIDS model with this Hyper-adaptation makes an attack that targets a MONSTER or VEHICLE unit, that attack has the [LETHAL HITS] ability.\n\nHive Predators\nEach time a TYRANIDS model with this Hyper-adaptation makes an attack that targets a CHARACTER unit, on a Critical Hit, that attack has the [PRECISION] ability.",
+            "sectionId": "invasion-fleet-rule",
+            "detachmentId": "invasion-fleet",
+            "detachmentTitle": "INVASION FLEET",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307468,7 +308619,7 @@
       "recordType": "DETACHMENT",
       "label": "SUBTERRANEAN ASSAULT",
       "aliases": [],
-      "searchableContent": "SUBTERRANEAN ASSAULT",
+      "searchableContent": "Each time a Tyranids model from your army makes an attack, re-roll a Hit roll of 1. Each time a Burrower unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units. In the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units. If an enemy model (excluding Aircraft) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.\nSUBTERRANEAN ASSAULT\nsubterranean-assault\nsubterranean-assault-rule\nSurprise Assault",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307507,7 +308658,18 @@
             5,
             6
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-surprise-assault",
+            "title": "Surprise Assault",
+            "text": "Each time a Tyranids model from your army makes an attack, re-roll a Hit roll of 1. Each time a Burrower unit from your army is set up on the battlefield from Reserves, place a circular 40mm Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units. In the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units. If an enemy model (excluding Aircraft) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.",
+            "sectionId": "subterranean-assault-rule",
+            "detachmentId": "subterranean-assault",
+            "detachmentTitle": "SUBTERRANEAN ASSAULT",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307566,7 +308728,7 @@
       "recordType": "DETACHMENT",
       "label": "SYNAPTIC NEXUS",
       "aliases": [],
-      "searchableContent": "SYNAPTIC NEXUS",
+      "searchableContent": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a TYRANIDS unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n\nSynaptic Augmentation:\n While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n\nSurging Vitality:\n While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.\n\nGoaded to Slaughter:\n While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.\nSynaptic Imperatives\nSYNAPTIC NEXUS\nsynaptic-nexus\nsynaptic-nexus-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307588,7 +308750,18 @@
       },
       "facts": {
         "id": "synaptic-nexus",
-        "title": "SYNAPTIC NEXUS"
+        "title": "SYNAPTIC NEXUS",
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-synaptic-imperatives",
+            "title": "Synaptic Imperatives",
+            "text": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a TYRANIDS unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n\nSynaptic Augmentation:\n While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n\nSurging Vitality:\n While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.\n\nGoaded to Slaughter:\n While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.",
+            "sectionId": "synaptic-nexus-rule",
+            "detachmentId": "synaptic-nexus",
+            "detachmentTitle": "SYNAPTIC NEXUS",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307647,7 +308820,7 @@
       "recordType": "DETACHMENT",
       "label": "TALONS OF THE NORN QUEEN",
       "aliases": [],
-      "searchableContent": "TALONS OF THE NORN QUEEN",
+      "searchableContent": "Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).\nHigher Imperatives\nTALONS OF THE NORN QUEEN\ntalons-of-the-norn-queen\ntalons-of-the-norn-queen-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307683,7 +308856,18 @@
           "sourcePages": [
             3
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-higher-imperatives",
+            "title": "Higher Imperatives",
+            "text": "Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability: Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).",
+            "sectionId": "talons-of-the-norn-queen-rule",
+            "detachmentId": "talons-of-the-norn-queen",
+            "detachmentTitle": "TALONS OF THE NORN QUEEN",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307738,7 +308922,7 @@
       "recordType": "DETACHMENT",
       "label": "UNENDING SWARM",
       "aliases": [],
-      "searchableContent": "UNENDING SWARM",
+      "searchableContent": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model from a friendly ENDLESS MULTITUDE unit was destroyed as a result of those attacks, that friendly unit can make a surge move of up to D6\".\nInsurmountable Odds\nUNENDING SWARM\nunending-swarm\nunending-swarm-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307760,7 +308944,18 @@
       },
       "facts": {
         "id": "unending-swarm",
-        "title": "UNENDING SWARM"
+        "title": "UNENDING SWARM",
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-insurmountable-odds",
+            "title": "Insurmountable Odds",
+            "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model from a friendly ENDLESS MULTITUDE unit was destroyed as a result of those attacks, that friendly unit can make a surge move of up to D6\".",
+            "sectionId": "unending-swarm-rule",
+            "detachmentId": "unending-swarm",
+            "detachmentTitle": "UNENDING SWARM",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307819,7 +309014,7 @@
       "recordType": "DETACHMENT",
       "label": "VANGUARD ONSLAUGHT",
       "aliases": [],
-      "searchableContent": "VANGUARD ONSLAUGHT",
+      "searchableContent": "Questing Tendrils\nTYRANIDS units with this ability are eligible to charge in a turn in which they Fell Back. VANGUARD INVADER units with this ability are eligible to charge in a turn in which they Advanced.\nVANGUARD ONSLAUGHT\nvanguard-onslaught\nvanguard-onslaught-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307841,7 +309036,18 @@
       },
       "facts": {
         "id": "vanguard-onslaught",
-        "title": "VANGUARD ONSLAUGHT"
+        "title": "VANGUARD ONSLAUGHT",
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-questing-tendrils",
+            "title": "Questing Tendrils",
+            "text": "TYRANIDS units with this ability are eligible to charge in a turn in which they Fell Back. VANGUARD INVADER units with this ability are eligible to charge in a turn in which they Advanced.",
+            "sectionId": "vanguard-onslaught-rule",
+            "detachmentId": "vanguard-onslaught",
+            "detachmentTitle": "VANGUARD ONSLAUGHT",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {
@@ -307900,7 +309106,7 @@
       "recordType": "DETACHMENT",
       "label": "WARRIOR BIOFORM ONSLAUGHT",
       "aliases": [],
-      "searchableContent": "WARRIOR BIOFORM ONSLAUGHT",
+      "searchableContent": "Friendly TYRANID WARRIORS WITH RANGED BIO-WEAPONS/TYRANID WARRIORS WITH MELEE BIO-WEAPONS units have TYRANID WARRIORS and BATTLELINE. TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME models from your army have 5+ InSv.\nLeader-beasts\nWARRIOR BIOFORM ONSLAUGHT\nwarrior-bioform-onslaught\nwarrior-bioform-onslaught-rule",
       "parent": null,
       "canonicalReferences": [
         {
@@ -307936,7 +309142,18 @@
           "sourcePages": [
             4
           ]
-        }
+        },
+        "detachmentRules": [
+          {
+            "id": "tyranids-detachment-rule-leader-beasts",
+            "title": "Leader-beasts",
+            "text": "Friendly TYRANID WARRIORS WITH RANGED BIO-WEAPONS/TYRANID WARRIORS WITH MELEE BIO-WEAPONS units have TYRANID WARRIORS and BATTLELINE. TYRANID WARRIORS/TYRANID PRIME WITH LASH WHIP/WINGED TYRANID PRIME models from your army have 5+ InSv.",
+            "sectionId": "warrior-bioform-onslaught-rule",
+            "detachmentId": "warrior-bioform-onslaught",
+            "detachmentTitle": "WARRIOR BIOFORM ONSLAUGHT",
+            "sourceBookId": "tyranids"
+          }
+        ]
       },
       "contexts": [
         {

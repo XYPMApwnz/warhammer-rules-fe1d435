@@ -13,6 +13,7 @@ const stratagem='army::space-marines::stratagem::1st-company-task-force::1st-com
 const scopedWeapon='army::adeptus-mechanicus::weapon_profile::unit-cybernetica-datasmith::unit-cybernetica-datasmith-profile-9c2ab1e5d9';
 const oathCompatibilityId='space-marines-army-rule-oath-of-moment';
 const oathId='army::space-marines::army_rule::army-rule-oath-of-moment';
+const mortarionsHammerId='army::death-guard::detachment::detachment-mortarions-hammer';
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
   if(request.url==='/favicon.ico'){response.writeHead(204).end();return;}
@@ -50,6 +51,10 @@ try{
       await page.goto(`${base}/glossary/index.html#${encodeURIComponent(id)}`);await page.locator('body.article-open').waitFor();
       assert.equal(await page.locator('#termDetail h2').innerText(),byId.get(id).label,`${viewport.name}: direct V2 article ${id}`);
     }
+    await page.goto(`${base}/glossary/index.html#${encodeURIComponent(mortarionsHammerId)}`);await page.locator('body.article-open').waitFor();
+    const mortarionsHammerArticle=await page.locator('#termDetail').innerText();
+    assert.match(mortarionsHammerArticle,/Miasmic Bombardment/i,`${viewport.name}: Mortarion’s Hammer rule projection`);
+    assert.match(mortarionsHammerArticle,/Incursion \| 1[\s\S]*Strike Force \| 2[\s\S]*Onslaught \| 3/,`${viewport.name}: Mortarion’s Hammer battle-size table`);
 
     await page.goto(`${base}/books/core-rules/reader/monsters-vehicles.html`);
     const coreTrigger=page.locator('[data-term="core-blast"]').first();await coreTrigger.click();await page.locator('#termDialog[open]').waitFor();

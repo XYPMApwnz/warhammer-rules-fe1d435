@@ -171,6 +171,21 @@ function addDeathGuardArmyRuleComponents(entries,model,lookups){
   });
 }
 
+function detachmentArticleFacts(model,detachment){
+  const article={id:detachment.id,title:detachment.title,tagline:detachment.tagline,restrictions:detachment.restrictions,tags:detachment.tags,sourcePages:detachment.sourcePages,provenance:detachment.provenance};
+  const canonicalRules=(model.detachmentRules||[]).filter(rule=>rule.detachmentId===detachment.id).map(factsWithoutPresentation);
+  if(canonicalRules.length)return {...article,detachmentRules:canonicalRules};
+  const structuredRules=(detachment.subsections||[]).flatMap(section=>{
+    const blocks=(section.blocks||[]).filter(block=>block.type==='ability'||block.type==='table');
+    const owner=blocks.find(block=>block.type==='ability');
+    if(!owner)return[];
+    return [{id:owner.termId||owner.id,title:owner.title||section.title,blocks:clone(blocks)}];
+  });
+  const detachmentRules=structuredRules.length?structuredRules:detachment.rule?[factsWithoutPresentation(detachment.rule)]:[];
+  if(!detachmentRules.length)throw new Error(`${model.book.id}/${detachment.id}: Detachment has no accepted gameplay rule projection`);
+  return {...article,detachmentRules};
+}
+
 function addArmyEntries(entries,models){
   const lookups={unit:new Map(),detachment:new Map(),enhancement:new Map(),armyRule:new Map()};
   for(const model of models){
@@ -179,7 +194,7 @@ function addArmyEntries(entries,models){
       lookups.unit.set(`${model.book.id}::${unit.id}`,entry);
     }
     for(const detachment of model.detachments){
-      const entry=addArmyEntry(entries,model,'DETACHMENT',detachment,{facts:{id:detachment.id,title:detachment.title,sourcePages:detachment.sourcePages,provenance:detachment.provenance}});
+      const entry=addArmyEntry(entries,model,'DETACHMENT',detachment,{facts:detachmentArticleFacts(model,detachment)});
       lookups.detachment.set(`${model.book.id}::${detachment.id}`,entry);
     }
     for(const enhancement of model.enhancements){

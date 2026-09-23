@@ -11,6 +11,8 @@ const byId=new Map(index.entries.map(entry=>[entry.id,entry]));
 const enhancement='army::space-marines::enhancement::1st-company-task-force::1st-company-task-force-iron-resolve';
 const stratagem='army::space-marines::stratagem::1st-company-task-force::1st-company-task-force-armour-of-contempt';
 const scopedWeapon='army::adeptus-mechanicus::weapon_profile::unit-cybernetica-datasmith::unit-cybernetica-datasmith-profile-9c2ab1e5d9';
+const oathCompatibilityId='space-marines-army-rule-oath-of-moment';
+const oathId='army::space-marines::army_rule::army-rule-oath-of-moment';
 const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.webp':'image/webp'};
 const server=createServer((request,response)=>{try{
   if(request.url==='/favicon.ico'){response.writeHead(204).end();return;}
@@ -39,6 +41,10 @@ try{
     await page.goto(`${base}/glossary/index.html`);await page.locator('#search').fill('Power fist');await page.waitForTimeout(180);
     assert((await page.locator('.term-qualifier').count())>1,`${viewport.name}: duplicate weapon labels need visible context`);
     assert.equal(new URL(page.url()).hash,'',`${viewport.name}: ambiguous label must not auto-open an arbitrary profile`);
+
+    await page.goto(`${base}/glossary/index.html`);await page.locator('#search').fill('Oath of Moment');await page.waitForTimeout(180);
+    const oathSearch=page.locator('.term-button').filter({hasText:'Oath of Moment'}).first();await oathSearch.waitFor();await oathSearch.click();await page.locator('body.article-open').waitFor();
+    assert.equal(decodeURIComponent(new URL(page.url()).hash.slice(1)),oathId,`${viewport.name}: Oath search identity`);
 
     for(const id of [scopedWeapon,enhancement,stratagem]){
       await page.goto(`${base}/glossary/index.html#${encodeURIComponent(id)}`);await page.locator('body.article-open').waitFor();
@@ -73,6 +79,18 @@ try{
     const localAbility=page.locator('#unit-captain-in-terminator-armour [data-term="army::space-marines::ability::space-marines-ability-unstoppable-valour"]').first();await localAbility.waitFor();await localAbility.click();
     await page.locator('.term-popup[data-popup-term="army::space-marines::ability::space-marines-ability-unstoppable-valour"]').waitFor();
     assert.match(await page.locator('.term-popup').last().innerText(),/Unstoppable Valour/i,`${viewport.name}: local Army popup`);
+    await page.keyboard.press('Escape');
+
+    for(const book of ['space-marines','dark-angels','blood-angels']){
+      await page.goto(`${base}/books/${book}/reader.html?view=${viewport.name==='phone'?'mobile':'full'}#army-rule-oath-of-moment`);
+      await page.waitForFunction(()=>Boolean(window.DG_APP?.popups));
+      const oathTrigger=page.locator(`[data-glossary-v2-source="${oathCompatibilityId}"]`).first();await oathTrigger.waitFor();
+      assert.equal(await oathTrigger.getAttribute('data-term'),oathId,`${viewport.name}/${book}: Oath trigger identity`);
+      await oathTrigger.click();const oathPopup=page.locator(`.term-popup[data-popup-term="${oathId}"]`);await oathPopup.waitFor();
+      const fullEntry=oathPopup.getByRole('link',{name:'Glossary entry'});const href=await fullEntry.getAttribute('href');
+      assert.equal(decodeURIComponent(new URL(href,base).hash.slice(1)),oathId,`${viewport.name}/${book}: popup/viewer identity`);
+      await page.keyboard.press('Escape');
+    }
     observations.push({viewport:viewport.name,corePopup:true,armyPopup:true,standalone:1741,scoped:index.counts.scopedChildren});
     assert.deepEqual(errors,[],`${viewport.name}: browser errors`);await context.close();
   }

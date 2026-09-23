@@ -10,6 +10,18 @@
   const normalize=value=>String(value||'').replace(/[\u2018\u2019]/g,"'").replace(/[\u2013\u2014]/g,'-').replace(/\s+/g,' ').trim().toLocaleLowerCase();
   const addKey=(key,entry)=>{if(!key)return;const values=byKey.get(key)||[];if(!values.includes(entry))values.push(entry);byKey.set(key,values);};
   for(const entry of entries){addKey(entry.sourceOwner?.canonicalId,entry);for(const alias of entry.aliases||[])addKey(alias,entry);}
+  const standaloneCompatibilityKeys=new Map();
+  for(const entry of entries){
+    const key=entry.parent?null:entry.facts?.termId;
+    if(!key)continue;
+    const values=standaloneCompatibilityKeys.get(key)||[];values.push(entry);standaloneCompatibilityKeys.set(key,values);
+  }
+  for(const [key,values] of standaloneCompatibilityKeys){
+    if(values.length!==1)continue;
+    const entry=values[0],existing=byKey.get(key)||[];
+    if(existing.some(candidate=>candidate!==entry))continue;
+    addKey(key,entry);
+  }
 
   const text=value=>typeof value==='string'?value.trim():'';
   const collectContent=value=>{

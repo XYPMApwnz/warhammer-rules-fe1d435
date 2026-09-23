@@ -42,6 +42,20 @@ const smTerms=api.forBook('space-marines');
 assert.equal(smTerms[deepStrike.id].id,deepStrike.id);
 assert.equal(smTerms[local.id].id,local.id);
 
+const oathCompatibilityId='space-marines-army-rule-oath-of-moment';
+const oathId='army::space-marines::army_rule::army-rule-oath-of-moment';
+for(const bookId of ['space-marines','dark-angels','blood-angels']){
+  const oath=api.get(oathCompatibilityId,{bookId});
+  assert.equal(oath?.id,oathId,`${bookId}: the accepted Oath compatibility identity must resolve to its single V2 owner`);
+  assert.equal(api.forBook(bookId)[oathId]?.id,oathId,`${bookId}: Oath must expose the same popup/viewer identity`);
+}
+assert.equal(index.entries.filter(entry=>entry.sourceOwner?.canonicalId==='army-rule-oath-of-moment').length,1,'Oath must remain one factual V2 article');
+for(const [termId,bookId] of [
+  ['datasheet-broad-spectrum-data-tether','adeptus-mechanicus'],
+  ['tau-empire-ability-battlesuit-support-system','tau-empire'],
+  ['tau-empire-ability-weapon-support-system','tau-empire']
+])assert.equal(api.get(termId,{bookId}),null,`${termId}: ambiguous standalone/scoped compatibility identity must remain fail-closed`);
+
 const supported=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','dark-angels','blood-angels'];
 for(const book of supported){
   const html=read(`books/${book}/reader.html`);

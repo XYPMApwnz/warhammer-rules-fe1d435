@@ -86,6 +86,36 @@ assert.deepEqual(new Set(oath[0].contexts.map(context=>context.effectiveBookId))
 const oathSourceTexts=inputs.armyModels.flatMap(model=>[...(model.rules?.armyRules||[]),...(model.rules?.armyRule?[model.rules.armyRule]:[])]).filter(rule=>rule.id==='army-rule-oath-of-moment').map(rule=>rule.text);
 assert.equal(new Set(oathSourceTexts).size,1,'all inherited Oath of Moment contexts must carry identical accepted semantics');
 assert.equal(oath[0].facts.text,oathSourceTexts[0],'folding inherited contexts must not change Oath of Moment gameplay text');
+assert.equal(index.entries.filter(entry=>entry.label==='Oath of Moment').length,1,'Oath of Moment occurrences must not become a second standalone factual article');
+assert(!index.entries.some(entry=>entry.id==='army::space-marines::ability::space-marines-army-rule-oath-of-moment'),'the derived Oath datasheet occurrence must resolve to its Army-rule owner');
+
+const staleOathOccurrenceInputs={...inputs,armyModels:structuredClone(inputs.armyModels)};
+const staleOathOccurrence=staleOathOccurrenceInputs.armyModels.flatMap(model=>model.units).flatMap(unit=>unit.abilities||[]).find(ability=>ability.termId==='space-marines-army-rule-oath-of-moment');
+assert(staleOathOccurrence,'an Oath of Moment datasheet occurrence is required for the ownership control');
+staleOathOccurrence.text='STALE DERIVED OCCURRENCE POISON';
+const staleOathOccurrenceIndex=createGlossaryV2Index(staleOathOccurrenceInputs);
+const staleOathOwner=staleOathOccurrenceIndex.entries.filter(entry=>entry.sourceOwner.canonicalId==='army-rule-oath-of-moment');
+assert.equal(staleOathOwner.length,1,'a stale Oath occurrence must not recreate the duplicate factual article');
+assert.equal(staleOathOwner[0].facts.text,oath[0].facts.text,'a stale Oath occurrence must have zero factual influence on its Army-rule owner');
+
+const amModel=inputs.armyModels.find(model=>model.book.id==='adeptus-mechanicus');
+for(const id of ['recon-augury','data-psalm','halo-override']){
+  const source=amModel.glossary.find(record=>record.id===id),entry=index.entries.find(record=>record.id===`army::adeptus-mechanicus::faction_term::${id}`);
+  assert(source,`${id}: accepted effective Army fact must exist`);
+  assert(entry,`${id}: accepted effective Army fact must be projected into V2`);
+  assert.equal(entry.recordType,'FACTION_TERM',`${id}: record class`);
+  assert.equal(entry.sourceOwner.canonicalId,id,`${id}: factual owner identity`);
+  assert.equal(entry.facts.text,source.full,`${id}: production definition parity`);
+  assert.equal(entry.facts.summary,source.summary,`${id}: production summary parity`);
+  assert.deepEqual(entry.contexts.map(context=>context.effectiveBookId),['adeptus-mechanicus'],`${id}: effective context`);
+  assert.equal(entry.canonicalReferences.length,1,`${id}: exact owning-rule reference`);
+  assert.equal(entry.canonicalReferences[0].canonicalId,source.sectionId,`${id}: stable owning-rule identity`);
+}
+
+const missingAmFactInputs={...inputs,armyModels:structuredClone(inputs.armyModels)};
+const missingAmModel=missingAmFactInputs.armyModels.find(model=>model.book.id==='adeptus-mechanicus');
+missingAmModel.glossary=missingAmModel.glossary.filter(record=>record.id!=='recon-augury');
+assert.throws(()=>createGlossaryV2Index(missingAmFactInputs),/required effective Army glossary fact recon-augury is incomplete/,'a missing accepted AM glossary fact must fail closed');
 
 const weapons=index.entries.filter(entry=>entry.recordType==='WEAPON_PROFILE');
 const duplicateByLabel=new Map();for(const entry of weapons){const key=entry.label.toLocaleLowerCase('en');if(!duplicateByLabel.has(key))duplicateByLabel.set(key,[]);duplicateByLabel.get(key).push(entry);}

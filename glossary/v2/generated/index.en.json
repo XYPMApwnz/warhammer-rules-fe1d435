@@ -26,20 +26,21 @@
     "blood-angels"
   ],
   "counts": {
-    "total": 4626,
-    "standalone": 1739,
+    "total": 4628,
+    "standalone": 1741,
     "scopedChildren": 2887,
     "byDomain": {
-      "ARMY": 4177,
+      "ARMY": 4179,
       "CORE": 293,
       "MISSIONS": 156
     },
     "byType": {
-      "ARMY:ABILITY": 746,
+      "ARMY:ABILITY": 745,
       "ARMY:ARMY_RULE": 12,
       "ARMY:DETACHMENT_RULE": 103,
       "ARMY:DETACHMENT": 102,
       "ARMY:ENHANCEMENT": 356,
+      "ARMY:FACTION_TERM": 3,
       "ARMY:STRATAGEM": 515,
       "ARMY:UNIT": 372,
       "ARMY:UPDATE": 137,
@@ -8685,6 +8686,129 @@
           "qualifierIds": []
         }
       }
+    },
+    {
+      "id": "army::adeptus-mechanicus::faction_term::data-psalm",
+      "domain": "ARMY",
+      "recordType": "FACTION_TERM",
+      "label": "Data-Psalm",
+      "aliases": [],
+      "searchableContent": "A DATA-PSALM Detachment cannot be taken with another DATA-PSALM Detachment.\nData-Psalm\nluminen-auto-choir-rule\nUnique Detachment tag used by Luminen Auto-choir.",
+      "parent": null,
+      "canonicalReferences": [
+        {
+          "domain": "ARMY",
+          "id": "army::adeptus-mechanicus::detachment_rule::detachment-luminen-auto-choir::luminen-auto-choir-rule",
+          "canonicalId": "luminen-auto-choir-rule",
+          "relationType": "DEFINED_BY_RULE"
+        }
+      ],
+      "currentness": {
+        "publicationState": "CURRENT"
+      },
+      "provenance": null,
+      "sourceOwner": {
+        "domain": "ARMY",
+        "bookId": "adeptus-mechanicus",
+        "canonicalId": "data-psalm",
+        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
+      },
+      "facts": {
+        "id": "data-psalm",
+        "title": "Data-Psalm",
+        "summary": "Unique Detachment tag used by Luminen Auto-choir.",
+        "text": "A DATA-PSALM Detachment cannot be taken with another DATA-PSALM Detachment.",
+        "sectionId": "luminen-auto-choir-rule"
+      },
+      "contexts": [
+        {
+          "effectiveBookId": "adeptus-mechanicus",
+          "sourceBookId": "adeptus-mechanicus"
+        }
+      ],
+      "presentation": {}
+    },
+    {
+      "id": "army::adeptus-mechanicus::faction_term::halo-override",
+      "domain": "ARMY",
+      "recordType": "FACTION_TERM",
+      "label": "Halo Override",
+      "aliases": [],
+      "searchableContent": "Halo Override\nHALO OVERRIDE units gain the selected Override ability and improve several Haloscreed Stratagems.\nhaloscreed-battle-clade-rule\nTemporary keyword granted by Noospheric Transference.",
+      "parent": null,
+      "canonicalReferences": [
+        {
+          "domain": "ARMY",
+          "id": "army::adeptus-mechanicus::detachment_rule::detachment-haloscreed-battle-clade::haloscreed-battle-clade-rule",
+          "canonicalId": "haloscreed-battle-clade-rule",
+          "relationType": "DEFINED_BY_RULE"
+        }
+      ],
+      "currentness": {
+        "publicationState": "CURRENT"
+      },
+      "provenance": null,
+      "sourceOwner": {
+        "domain": "ARMY",
+        "bookId": "adeptus-mechanicus",
+        "canonicalId": "halo-override",
+        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
+      },
+      "facts": {
+        "id": "halo-override",
+        "title": "Halo Override",
+        "summary": "Temporary keyword granted by Noospheric Transference.",
+        "text": "HALO OVERRIDE units gain the selected Override ability and improve several Haloscreed Stratagems.",
+        "sectionId": "haloscreed-battle-clade-rule"
+      },
+      "contexts": [
+        {
+          "effectiveBookId": "adeptus-mechanicus",
+          "sourceBookId": "adeptus-mechanicus"
+        }
+      ],
+      "presentation": {}
+    },
+    {
+      "id": "army::adeptus-mechanicus::faction_term::recon-augury",
+      "domain": "ARMY",
+      "recordType": "FACTION_TERM",
+      "label": "Recon Augury",
+      "aliases": [],
+      "searchableContent": "A RECON AUGURY unit can analyse a visible enemy within 12 inches in its Shooting phase.\nCohort Acquisitus keyword and Enhanced Augurs carrier.\ncohort-acquisitus-rule\nRecon Augury",
+      "parent": null,
+      "canonicalReferences": [
+        {
+          "domain": "ARMY",
+          "id": "army::adeptus-mechanicus::detachment_rule::detachment-cohort-acquisitus::cohort-acquisitus-rule",
+          "canonicalId": "cohort-acquisitus-rule",
+          "relationType": "DEFINED_BY_RULE"
+        }
+      ],
+      "currentness": {
+        "publicationState": "CURRENT"
+      },
+      "provenance": null,
+      "sourceOwner": {
+        "domain": "ARMY",
+        "bookId": "adeptus-mechanicus",
+        "canonicalId": "recon-augury",
+        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
+      },
+      "facts": {
+        "id": "recon-augury",
+        "title": "Recon Augury",
+        "summary": "Cohort Acquisitus keyword and Enhanced Augurs carrier.",
+        "text": "A RECON AUGURY unit can analyse a visible enemy within 12 inches in its Shooting phase.",
+        "sectionId": "cohort-acquisitus-rule"
+      },
+      "contexts": [
+        {
+          "effectiveBookId": "adeptus-mechanicus",
+          "sourceBookId": "adeptus-mechanicus"
+        }
+      ],
+      "presentation": {}
     },
     {
       "id": "army::adeptus-mechanicus::stratagem::detachment-cohort-acquisitus::stratagem-clandestine-reposition",
@@ -170364,2008 +170488,6 @@
       "presentation": {}
     },
     {
-      "id": "army::space-marines::ability::space-marines-army-rule-oath-of-moment",
-      "domain": "ARMY",
-      "recordType": "ABILITY",
-      "label": "Oath of Moment",
-      "aliases": [],
-      "searchableContent": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’\nOath of Moment\nspace-marines-army-rule-oath-of-moment",
-      "parent": null,
-      "canonicalReferences": [
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-adrax-agatone",
-          "canonicalId": "unit-adrax-agatone",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-aethon-shaan",
-          "canonicalId": "unit-aethon-shaan",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-aggressor-squad",
-          "canonicalId": "unit-aggressor-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-ancient",
-          "canonicalId": "unit-ancient",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-ancient-in-terminator-armor",
-          "canonicalId": "unit-ancient-in-terminator-armor",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-apothecary",
-          "canonicalId": "unit-apothecary",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-apothecary-biologis",
-          "canonicalId": "unit-apothecary-biologis",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-assault-intercessor-squad",
-          "canonicalId": "unit-assault-intercessor-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-assault-intercessors-with-jump-packs",
-          "canonicalId": "unit-assault-intercessors-with-jump-packs",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-astraeus",
-          "canonicalId": "unit-astraeus",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-ballistus-dreadnought",
-          "canonicalId": "unit-ballistus-dreadnought",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-bladeguard-ancient",
-          "canonicalId": "unit-bladeguard-ancient",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-bladeguard-veteran-squad",
-          "canonicalId": "unit-bladeguard-veteran-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-brutalis-dreadnought",
-          "canonicalId": "unit-brutalis-dreadnought",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-caanok-var",
-          "canonicalId": "unit-caanok-var",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-captain",
-          "canonicalId": "unit-captain",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-captain-in-gravis-armour",
-          "canonicalId": "unit-captain-in-gravis-armour",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-captain-in-phobos-armour",
-          "canonicalId": "unit-captain-in-phobos-armour",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-captain-in-terminator-armour",
-          "canonicalId": "unit-captain-in-terminator-armour",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-captain-titus",
-          "canonicalId": "unit-captain-titus",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-captain-with-jump-pack",
-          "canonicalId": "unit-captain-with-jump-pack",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-cato-sicarius",
-          "canonicalId": "unit-cato-sicarius",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-centurion-assault-squad",
-          "canonicalId": "unit-centurion-assault-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-centurion-devastator-squad",
-          "canonicalId": "unit-centurion-devastator-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-chaplain",
-          "canonicalId": "unit-chaplain",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-chaplain-in-terminator-armour",
-          "canonicalId": "unit-chaplain-in-terminator-armour",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-chaplain-on-bike",
-          "canonicalId": "unit-chaplain-on-bike",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-chaplain-with-jump-pack",
-          "canonicalId": "unit-chaplain-with-jump-pack",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-chief-librarian-tigurius",
-          "canonicalId": "unit-chief-librarian-tigurius",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-company-heroes",
-          "canonicalId": "unit-company-heroes",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-darnath-lysander",
-          "canonicalId": "unit-darnath-lysander",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-desolation-squad",
-          "canonicalId": "unit-desolation-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-devastator-squad",
-          "canonicalId": "unit-devastator-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-dreadnought",
-          "canonicalId": "unit-dreadnought",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-drop-pod",
-          "canonicalId": "unit-drop-pod",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-eliminator-squad",
-          "canonicalId": "unit-eliminator-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-eradicator-squad",
-          "canonicalId": "unit-eradicator-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-eradicator-squad-with-heavy-bolters",
-          "canonicalId": "unit-eradicator-squad-with-heavy-bolters",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-firestrike-servo-turrets",
-          "canonicalId": "unit-firestrike-servo-turrets",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-gladiator-lancer",
-          "canonicalId": "unit-gladiator-lancer",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-gladiator-reaper",
-          "canonicalId": "unit-gladiator-reaper",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-gladiator-valiant",
-          "canonicalId": "unit-gladiator-valiant",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-hammerfall-bunker",
-          "canonicalId": "unit-hammerfall-bunker",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-heavy-intercessor-squad",
-          "canonicalId": "unit-heavy-intercessor-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-hellblaster-squad",
-          "canonicalId": "unit-hellblaster-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-impulsor",
-          "canonicalId": "unit-impulsor",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-inceptor-squad",
-          "canonicalId": "unit-inceptor-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-incursor-squad",
-          "canonicalId": "unit-incursor-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-infernus-squad",
-          "canonicalId": "unit-infernus-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-infiltrator-squad",
-          "canonicalId": "unit-infiltrator-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-intercessor-squad",
-          "canonicalId": "unit-intercessor-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-invader-atv",
-          "canonicalId": "unit-invader-atv",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-invictor-tactical-warsuit",
-          "canonicalId": "unit-invictor-tactical-warsuit",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-iron-father-feirros",
-          "canonicalId": "unit-iron-father-feirros",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-judiciar",
-          "canonicalId": "unit-judiciar",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-kayvaan-shrike",
-          "canonicalId": "unit-kayvaan-shrike",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-korsarro-khan",
-          "canonicalId": "unit-korsarro-khan",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-land-raider",
-          "canonicalId": "unit-land-raider",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-land-raider-crusader",
-          "canonicalId": "unit-land-raider-crusader",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-land-raider-redeemer",
-          "canonicalId": "unit-land-raider-redeemer",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-land-speeder",
-          "canonicalId": "unit-land-speeder",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-librarian",
-          "canonicalId": "unit-librarian",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-librarian-in-phobos-armour",
-          "canonicalId": "unit-librarian-in-phobos-armour",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-librarian-in-terminator-armour",
-          "canonicalId": "unit-librarian-in-terminator-armour",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-lieutenant",
-          "canonicalId": "unit-lieutenant",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-lieutenant-in-phobos-armour",
-          "canonicalId": "unit-lieutenant-in-phobos-armour",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-lieutenant-in-reiver-armour",
-          "canonicalId": "unit-lieutenant-in-reiver-armour",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-lieutenant-with-combi-weapon",
-          "canonicalId": "unit-lieutenant-with-combi-weapon",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-marneus-calgar-in-armour-of-antilochus",
-          "canonicalId": "unit-marneus-calgar-in-armour-of-antilochus",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-outrider-squad",
-          "canonicalId": "unit-outrider-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-pedro-kantor",
-          "canonicalId": "unit-pedro-kantor",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-predator-annihilator",
-          "canonicalId": "unit-predator-annihilator",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-predator-destructor",
-          "canonicalId": "unit-predator-destructor",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-razorback",
-          "canonicalId": "unit-razorback",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-redemptor-dreadnought",
-          "canonicalId": "unit-redemptor-dreadnought",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-reiver-squad",
-          "canonicalId": "unit-reiver-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-repulsor",
-          "canonicalId": "unit-repulsor",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-repulsor-executioner",
-          "canonicalId": "unit-repulsor-executioner",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-rhino",
-          "canonicalId": "unit-rhino",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-roboute-guilliman",
-          "canonicalId": "unit-roboute-guilliman",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-scout-squad",
-          "canonicalId": "unit-scout-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-sternguard-veteran-squad",
-          "canonicalId": "unit-sternguard-veteran-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-storm-speeder-hailstrike",
-          "canonicalId": "unit-storm-speeder-hailstrike",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-storm-speeder-hammerstrike",
-          "canonicalId": "unit-storm-speeder-hammerstrike",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-storm-speeder-thunderstrike",
-          "canonicalId": "unit-storm-speeder-thunderstrike",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-stormhawk-interceptor",
-          "canonicalId": "unit-stormhawk-interceptor",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-stormraven-gunship",
-          "canonicalId": "unit-stormraven-gunship",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-stormtalon-gunship",
-          "canonicalId": "unit-stormtalon-gunship",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-suboden-khan",
-          "canonicalId": "unit-suboden-khan",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-suppressor-squad",
-          "canonicalId": "unit-suppressor-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-tactical-squad",
-          "canonicalId": "unit-tactical-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-techmarine",
-          "canonicalId": "unit-techmarine",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-terminator-assault-squad",
-          "canonicalId": "unit-terminator-assault-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-terminator-squad",
-          "canonicalId": "unit-terminator-squad",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-thunderhawk-gunship",
-          "canonicalId": "unit-thunderhawk-gunship",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-tor-garadon",
-          "canonicalId": "unit-tor-garadon",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-uriel-ventris",
-          "canonicalId": "unit-uriel-ventris",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-vanguard-veteran-squad-with-jump-packs",
-          "canonicalId": "unit-vanguard-veteran-squad-with-jump-packs",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-victrix-honour-guard",
-          "canonicalId": "unit-victrix-honour-guard",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-vindicator",
-          "canonicalId": "unit-vindicator",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-vulkan-hestan",
-          "canonicalId": "unit-vulkan-hestan",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-wardens-of-ultramar",
-          "canonicalId": "unit-wardens-of-ultramar",
-          "relationType": "PARENT_UNIT"
-        },
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-whirlwind",
-          "canonicalId": "unit-whirlwind",
-          "relationType": "PARENT_UNIT"
-        }
-      ],
-      "currentness": {
-        "publicationState": "CURRENT"
-      },
-      "provenance": null,
-      "sourceOwner": {
-        "domain": "ARMY",
-        "bookId": "space-marines",
-        "canonicalId": "space-marines-army-rule-oath-of-moment",
-        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
-      },
-      "facts": {
-        "title": "Oath of Moment",
-        "text": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’",
-        "termId": "space-marines-army-rule-oath-of-moment"
-      },
-      "contexts": [
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-aggressor-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ancient-in-terminator-armor"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ancient"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-apothecary-biologis"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-apothecary"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-assault-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-assault-intercessors-with-jump-packs"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-astraeus"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ballistus-dreadnought"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-bladeguard-ancient"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-bladeguard-veteran-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-brutalis-dreadnought"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-gravis-armour"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-with-jump-pack"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-centurion-assault-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-centurion-devastator-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-on-bike"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-with-jump-pack"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-company-heroes"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-desolation-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-devastator-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-dreadnought"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-drop-pod"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eliminator-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eradicator-squad-with-heavy-bolters"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eradicator-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-firestrike-servo-turrets"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-lancer"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-reaper"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-valiant"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-hammerfall-bunker"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-heavy-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-hellblaster-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-impulsor"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-inceptor-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-incursor-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-infernus-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-infiltrator-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-invader-atv"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-invictor-tactical-warsuit"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-judiciar"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider-crusader"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider-redeemer"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-speeder"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-in-reiver-armour"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-with-combi-weapon"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-outrider-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-predator-annihilator"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-predator-destructor"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-razorback"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-redemptor-dreadnought"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-reiver-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-repulsor-executioner"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-repulsor"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-rhino"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-scout-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-sternguard-veteran-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-hailstrike"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-hammerstrike"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-thunderstrike"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormhawk-interceptor"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormraven-gunship"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormtalon-gunship"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-suppressor-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-tactical-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-techmarine"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-terminator-assault-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-terminator-squad"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-thunderhawk-gunship"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-vanguard-veteran-squad-with-jump-packs"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-vindicator"
-        },
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-whirlwind"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-aggressor-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ancient-in-terminator-armor"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ancient"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-apothecary-biologis"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-apothecary"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-assault-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-assault-intercessors-with-jump-packs"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-astraeus"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ballistus-dreadnought"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-bladeguard-ancient"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-bladeguard-veteran-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-brutalis-dreadnought"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-gravis-armour"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-with-jump-pack"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-centurion-assault-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-centurion-devastator-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-on-bike"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-with-jump-pack"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-company-heroes"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-desolation-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-devastator-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-dreadnought"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-drop-pod"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eliminator-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eradicator-squad-with-heavy-bolters"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eradicator-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-firestrike-servo-turrets"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-lancer"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-reaper"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-valiant"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-hammerfall-bunker"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-heavy-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-hellblaster-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-impulsor"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-inceptor-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-incursor-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-infernus-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-infiltrator-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-invader-atv"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-invictor-tactical-warsuit"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-judiciar"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider-crusader"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider-redeemer"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-speeder"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-in-reiver-armour"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-with-combi-weapon"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-outrider-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-predator-annihilator"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-predator-destructor"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-razorback"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-redemptor-dreadnought"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-reiver-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-repulsor-executioner"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-repulsor"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-rhino"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-scout-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-sternguard-veteran-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-hailstrike"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-hammerstrike"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-thunderstrike"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormhawk-interceptor"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormraven-gunship"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormtalon-gunship"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-suppressor-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-tactical-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-techmarine"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-terminator-assault-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-terminator-squad"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-thunderhawk-gunship"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-vanguard-veteran-squad-with-jump-packs"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-vindicator"
-        },
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-whirlwind"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-adrax-agatone"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-aethon-shaan"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-aggressor-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ancient-in-terminator-armor"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ancient"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-apothecary-biologis"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-apothecary"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-assault-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-assault-intercessors-with-jump-packs"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-astraeus"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-ballistus-dreadnought"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-bladeguard-ancient"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-bladeguard-veteran-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-brutalis-dreadnought"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-caanok-var"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-gravis-armour"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-titus"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain-with-jump-pack"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-captain"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-cato-sicarius"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-centurion-assault-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-centurion-devastator-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-on-bike"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain-with-jump-pack"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chaplain"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-chief-librarian-tigurius"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-company-heroes"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-darnath-lysander"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-desolation-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-devastator-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-dreadnought"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-drop-pod"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eliminator-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eradicator-squad-with-heavy-bolters"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-eradicator-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-firestrike-servo-turrets"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-lancer"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-reaper"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-gladiator-valiant"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-hammerfall-bunker"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-heavy-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-hellblaster-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-impulsor"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-inceptor-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-incursor-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-infernus-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-infiltrator-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-intercessor-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-invader-atv"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-invictor-tactical-warsuit"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-iron-father-feirros"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-judiciar"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-kayvaan-shrike"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-korsarro-khan"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider-crusader"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider-redeemer"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-raider"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-land-speeder"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian-in-terminator-armour"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-librarian"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-in-phobos-armour"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-in-reiver-armour"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant-with-combi-weapon"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-lieutenant"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-marneus-calgar-in-armour-of-antilochus"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-outrider-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-pedro-kantor"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-predator-annihilator"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-predator-destructor"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-razorback"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-redemptor-dreadnought"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-reiver-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-repulsor-executioner"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-repulsor"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-rhino"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-roboute-guilliman"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-scout-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-sternguard-veteran-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-hailstrike"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-hammerstrike"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-storm-speeder-thunderstrike"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormhawk-interceptor"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormraven-gunship"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-stormtalon-gunship"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-suboden-khan"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-suppressor-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-tactical-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-techmarine"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-terminator-assault-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-terminator-squad"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-thunderhawk-gunship"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-tor-garadon"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-uriel-ventris"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-vanguard-veteran-squad-with-jump-packs"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-victrix-honour-guard"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-vindicator"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-vulkan-hestan"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-wardens-of-ultramar"
-        },
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-whirlwind"
-        }
-      ],
-      "presentation": {}
-    },
-    {
       "id": "army::space-marines::army_rule::army-rule-oath-of-moment",
       "domain": "ARMY",
       "recordType": "ARMY_RULE",
@@ -172397,11 +170519,1908 @@
       "contexts": [
         {
           "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-aggressor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ancient-in-terminator-armor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ancient",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-apothecary-biologis",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-apothecary",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-assault-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-assault-intercessors-with-jump-packs",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-astraeus",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ballistus-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-bladeguard-ancient",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-bladeguard-veteran-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-brutalis-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-gravis-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-with-jump-pack",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-centurion-assault-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-centurion-devastator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-on-bike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-with-jump-pack",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-company-heroes",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-desolation-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-devastator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-drop-pod",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eliminator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eradicator-squad-with-heavy-bolters",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eradicator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-firestrike-servo-turrets",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-lancer",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-reaper",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-valiant",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-hammerfall-bunker",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-heavy-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-hellblaster-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-impulsor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-inceptor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-incursor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-infernus-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-infiltrator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-invader-atv",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-invictor-tactical-warsuit",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-judiciar",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider-crusader",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider-redeemer",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-speeder",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-in-reiver-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-with-combi-weapon",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-outrider-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-predator-annihilator",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-predator-destructor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-razorback",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-redemptor-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-reiver-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-repulsor-executioner",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-repulsor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-rhino",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-scout-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-sternguard-veteran-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-hailstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-hammerstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-thunderstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormhawk-interceptor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormraven-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormtalon-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-suppressor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-tactical-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-techmarine",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-terminator-assault-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-terminator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-thunderhawk-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-vanguard-veteran-squad-with-jump-packs",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-vindicator",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-whirlwind",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "blood-angels",
           "sourceBookId": "space-marines"
         },
         {
           "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-aggressor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ancient-in-terminator-armor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ancient",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-apothecary-biologis",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-apothecary",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-assault-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-assault-intercessors-with-jump-packs",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-astraeus",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ballistus-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-bladeguard-ancient",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-bladeguard-veteran-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-brutalis-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-gravis-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-with-jump-pack",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-centurion-assault-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-centurion-devastator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-on-bike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-with-jump-pack",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-company-heroes",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-desolation-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-devastator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-drop-pod",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eliminator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eradicator-squad-with-heavy-bolters",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eradicator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-firestrike-servo-turrets",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-lancer",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-reaper",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-valiant",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-hammerfall-bunker",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-heavy-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-hellblaster-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-impulsor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-inceptor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-incursor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-infernus-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-infiltrator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-invader-atv",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-invictor-tactical-warsuit",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-judiciar",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider-crusader",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider-redeemer",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-speeder",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-in-reiver-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-with-combi-weapon",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-outrider-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-predator-annihilator",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-predator-destructor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-razorback",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-redemptor-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-reiver-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-repulsor-executioner",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-repulsor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-rhino",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-scout-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-sternguard-veteran-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-hailstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-hammerstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-thunderstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormhawk-interceptor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormraven-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormtalon-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-suppressor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-tactical-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-techmarine",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-terminator-assault-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-terminator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-thunderhawk-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-vanguard-veteran-squad-with-jump-packs",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-vindicator",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-whirlwind",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "dark-angels",
           "sourceBookId": "space-marines"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-adrax-agatone",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-aethon-shaan",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-aggressor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ancient-in-terminator-armor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ancient",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-apothecary-biologis",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-apothecary",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-assault-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-assault-intercessors-with-jump-packs",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-astraeus",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-ballistus-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-bladeguard-ancient",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-bladeguard-veteran-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-brutalis-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-caanok-var",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-gravis-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-titus",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain-with-jump-pack",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-captain",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-cato-sicarius",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-centurion-assault-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-centurion-devastator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-on-bike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain-with-jump-pack",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chaplain",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-chief-librarian-tigurius",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-company-heroes",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-darnath-lysander",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-desolation-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-devastator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-drop-pod",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eliminator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eradicator-squad-with-heavy-bolters",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-eradicator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-firestrike-servo-turrets",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-lancer",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-reaper",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-gladiator-valiant",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-hammerfall-bunker",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-heavy-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-hellblaster-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-impulsor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-inceptor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-incursor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-infernus-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-infiltrator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-intercessor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-invader-atv",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-invictor-tactical-warsuit",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-iron-father-feirros",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-judiciar",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-kayvaan-shrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-korsarro-khan",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider-crusader",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider-redeemer",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-raider",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-land-speeder",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian-in-terminator-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-librarian",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-in-phobos-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-in-reiver-armour",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant-with-combi-weapon",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-lieutenant",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-marneus-calgar-in-armour-of-antilochus",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-outrider-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-pedro-kantor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-predator-annihilator",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-predator-destructor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-razorback",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-redemptor-dreadnought",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-reiver-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-repulsor-executioner",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-repulsor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-rhino",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-roboute-guilliman",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-scout-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-sternguard-veteran-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-hailstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-hammerstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-storm-speeder-thunderstrike",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormhawk-interceptor",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormraven-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-stormtalon-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-suboden-khan",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-suppressor-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-tactical-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-techmarine",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-terminator-assault-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-terminator-squad",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-thunderhawk-gunship",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-tor-garadon",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-uriel-ventris",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-vanguard-veteran-squad-with-jump-packs",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-victrix-honour-guard",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-vindicator",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-vulkan-hestan",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-wardens-of-ultramar",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-whirlwind",
+          "sourceAbilityId": null,
+          "termId": "space-marines-army-rule-oath-of-moment"
         },
         {
           "effectiveBookId": "space-marines",

@@ -18,6 +18,9 @@ const FACTUAL_INPUTS=Object.freeze([
 const PRESENTATION_INPUTS=Object.freeze(['glossary/editorial-contracts.v1.json','glossary/resolutions.en.json','glossary/supplemental-terms.en.json']);
 const MISSION_PARTITIONS=Object.freeze(['forceDispositions','primaryMissions','secondaryMissions','deployments','twists','missionSequenceRules','missionReferenceRules','forceDispositionMatchups','terrainLayouts']);
 const CORE_ALIAS_ONLY_ERRATA=new Set(['core-errata-15-05','core-errata-15-06']);
+const REQUIRED_EFFECTIVE_ARMY_GLOSSARY_FACTS=Object.freeze({
+  'adeptus-mechanicus':Object.freeze(['recon-augury','data-psalm','halo-override'])
+});
 
 const clone=value=>structuredClone(value);
 const readJson=relative=>JSON.parse(fs.readFileSync(path.join(repo,relative),'utf8'));
@@ -96,6 +99,12 @@ function addGenericUnitChildren(entries,lookups,model,unit){
     if(ability.coreAbilityId){const coreId=entryId('core',ability.coreAbilityId),core=entries.get(coreId);if(!core)throw new Error(`${model.book.id}/${unit.id}: unknown Core ability ${ability.coreAbilityId}`);core.contexts.push({effectiveBookId:model.book.id,sourceBookId:ownerBook,parentUnitId:unit.id,sourceAbilityId:ability.sourceAbilityId||null,termId:ability.termId||null});continue;}
     const stableId=ability.termId||ability.id||ability.sourceAbilityId;
     if(!stableId)throw new Error(`${model.book.id}/${unit.id}: local ability ${ability.title} has no stable identity`);
+    const armyRule=lookups.armyRule.get(`${model.book.id}::${stableId}`);
+    if(armyRule){
+      const context={effectiveBookId:model.book.id,sourceBookId:ownerBook,parentUnitId:unit.id,sourceAbilityId:ability.sourceAbilityId||null,termId:stableId};
+      if(!armyRule.contexts.some(item=>JSON.stringify(item)===JSON.stringify(context)))armyRule.contexts.push(context);
+      continue;
+    }
     const wargear=unit.wargearAbilities?.includes(ability);
     addArmyEntry(entries,model,wargear?'WARGEAR_ABILITY':'ABILITY',ability,{parentId:wargear?unit.id:null,canonicalId:stableId,ownerBookId:ownerBook,contextData:{parentUnitId:unit.id},references:[{domain:'ARMY',id:unitEntry.id,canonicalId:unit.id,relationType:'PARENT_UNIT'}]});
   }
@@ -123,8 +132,26 @@ function addStructuredUnitChildren(entries,lookups,model,unit){
   }
 }
 
+function addRequiredEffectiveArmyGlossaryFacts(entries,model){
+  const required=REQUIRED_EFFECTIVE_ARMY_GLOSSARY_FACTS[model.book.id]||[];
+  if(!required.length)return;
+  const byId=new Map((model.glossary||[]).map(record=>[record.id,record]));
+  for(const id of required){
+    const record=byId.get(id);
+    if(!record?.title||!record?.full||!record?.sectionId)throw new Error(`${model.book.id}: required effective Army glossary fact ${id} is incomplete`);
+    const owner=[...entries.values()].find(entry=>entry.domain==='ARMY'&&entry.sourceOwner.bookId===model.book.id&&entry.sourceOwner.canonicalId===record.sectionId);
+    if(!owner)throw new Error(`${model.book.id}: ${id} references missing canonical Army rule ${record.sectionId}`);
+    addArmyEntry(entries,model,'FACTION_TERM',record,{
+      canonicalId:record.id,
+      aliases:record.aliases||[],
+      facts:{id:record.id,title:record.title,summary:record.summary,text:record.full,sectionId:record.sectionId},
+      references:[{domain:'ARMY',id:owner.id,canonicalId:record.sectionId,relationType:'DEFINED_BY_RULE'}]
+    });
+  }
+}
+
 function addArmyEntries(entries,models){
-  const lookups={unit:new Map(),detachment:new Map(),enhancement:new Map()};
+  const lookups={unit:new Map(),detachment:new Map(),enhancement:new Map(),armyRule:new Map()};
   for(const model of models){
     for(const unit of model.units){
       const entry=addArmyEntry(entries,model,'UNIT',unit,{facts:{id:unit.id,title:unit.title,publicationState:unit.publicationState,category:unit.category,profiles:unit.profiles||unit.stats||[],composition:unit.composition||unit.compositionText||null,keywords:unit.keywords||unit.intrinsicKeywords||[],ruleFacts:unit.ruleFacts||null}});
@@ -148,8 +175,9 @@ function addArmyEntries(entries,models){
       }
       if(!model.detachmentRules&&detachment.rule?.id)addArmyEntry(entries,model,'DETACHMENT_RULE',detachment.rule,{parentId:detachment.id,ownerBookId:sourceBook(detachment,model.book.id),references:[{domain:'ARMY',id:lookups.detachment.get(`${model.book.id}::${detachment.id}`)?.id||null,canonicalId:detachment.id,relationType:'DETACHMENT'}]});
     }
-    for(const rule of model.rules?.armyRules||[])addArmyEntry(entries,model,'ARMY_RULE',rule,{ownerBookId:rule.source==='dependency'&&rule.sourceBook?rule.sourceBook:null});
-    if(model.rules?.armyRule?.id){const rule=model.rules.armyRule;addArmyEntry(entries,model,'ARMY_RULE',rule,{ownerBookId:rule.source==='dependency'&&rule.sourceBook?rule.sourceBook:null});}
+    for(const rule of model.rules?.armyRules||[]){const entry=addArmyEntry(entries,model,'ARMY_RULE',rule,{ownerBookId:rule.source==='dependency'&&rule.sourceBook?rule.sourceBook:null});for(const id of [rule.id,rule.termId].filter(Boolean))lookups.armyRule.set(`${model.book.id}::${id}`,entry);}
+    if(model.rules?.armyRule?.id){const rule=model.rules.armyRule,entry=addArmyEntry(entries,model,'ARMY_RULE',rule,{ownerBookId:rule.source==='dependency'&&rule.sourceBook?rule.sourceBook:null});for(const id of [rule.id,rule.termId].filter(Boolean))lookups.armyRule.set(`${model.book.id}::${id}`,entry);}
+    addRequiredEffectiveArmyGlossaryFacts(entries,model);
     const updates=Array.isArray(model.rules?.updates)?model.rules.updates:model.rules?.updates?[model.rules.updates]:[];
     for(const update of updates)if(update.id)addArmyEntry(entries,model,'UPDATE',update);
     for(const unit of model.units){if(unit.subsections||unit.blocks)addStructuredUnitChildren(entries,lookups,model,unit);else addGenericUnitChildren(entries,lookups,model,unit);}

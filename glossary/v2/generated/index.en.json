@@ -26,17 +26,17 @@
     "blood-angels"
   ],
   "counts": {
-    "total": 4628,
-    "standalone": 1741,
+    "total": 4626,
+    "standalone": 1739,
     "scopedChildren": 2887,
     "byDomain": {
-      "ARMY": 4179,
+      "ARMY": 4177,
       "CORE": 293,
       "MISSIONS": 156
     },
     "byType": {
       "ARMY:ABILITY": 746,
-      "ARMY:ARMY_RULE": 14,
+      "ARMY:ARMY_RULE": 12,
       "ARMY:DETACHMENT_RULE": 103,
       "ARMY:DETACHMENT": 102,
       "ARMY:ENHANCEMENT": 356,
@@ -128,14 +128,10 @@
         "death-guard-plagues-skullsquirm-blight"
       ],
       "resolutionAliasesMigrated": 10,
-      "supplementalAliasesMigrated": 38,
-      "preferredMatchesMigrated": 4,
-      "preferredMatchesUnresolved": [
-        {
-          "label": "transport",
-          "targetId": "keyword-transport"
-        }
-      ],
+      "supplementalAliasesMigrated": 55,
+      "supplementalTargetBindings": 7,
+      "preferredMatchesMigrated": 5,
+      "preferredMatchesUnresolved": [],
       "legacyGameplayRejected": [
         {
           "id": "core-characteristic-move",
@@ -170,12 +166,12 @@
         {
           "id": "core-characteristic-range",
           "label": "Range characteristic",
-          "reason": "NO_EFFECTIVE_FACTUAL_OWNER"
+          "reason": "EFFECTIVE_OWNER_SUPERSEDES_LEGACY_BODY"
         },
         {
           "id": "core-characteristic-attacks",
           "label": "Attacks characteristic",
-          "reason": "NO_EFFECTIVE_FACTUAL_OWNER"
+          "reason": "EFFECTIVE_OWNER_SUPERSEDES_LEGACY_BODY"
         },
         {
           "id": "core-characteristic-ballistic-skill",
@@ -200,7 +196,7 @@
         {
           "id": "core-characteristic-damage",
           "label": "Damage characteristic",
-          "reason": "NO_EFFECTIVE_FACTUAL_OWNER"
+          "reason": "EFFECTIVE_OWNER_SUPERSEDES_LEGACY_BODY"
         },
         {
           "id": "core-battle-round",
@@ -315,12 +311,12 @@
         {
           "id": "core-battle-shocked",
           "label": "Battle-shocked",
-          "reason": "NO_EFFECTIVE_FACTUAL_OWNER"
+          "reason": "EFFECTIVE_OWNER_SUPERSEDES_LEGACY_BODY"
         },
         {
           "id": "death-guard-plague",
           "label": "Plague",
-          "reason": "NO_EFFECTIVE_FACTUAL_OWNER"
+          "reason": "EFFECTIVE_OWNER_SUPERSEDES_LEGACY_BODY"
         },
         {
           "id": "keyword-aircraft",
@@ -430,7 +426,7 @@
         {
           "id": "core-damage-roll",
           "label": "Damage roll",
-          "reason": "NO_EFFECTIVE_FACTUAL_OWNER"
+          "reason": "EFFECTIVE_OWNER_SUPERSEDES_LEGACY_BODY"
         },
         {
           "id": "keyword-chaos",
@@ -28923,46 +28919,6 @@
           "effectiveBookId": "blood-angels",
           "sourceBookId": "blood-angels",
           "parentUnitId": "unit-death-company-marines-with-bolt-rifles"
-        }
-      ],
-      "presentation": {}
-    },
-    {
-      "id": "army::blood-angels::army_rule::army-rule-oath-of-moment",
-      "domain": "ARMY",
-      "recordType": "ARMY_RULE",
-      "label": "Oath of Moment",
-      "aliases": [],
-      "searchableContent": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’\n1.2\ndependency\nOath of Moment\nsources/space-marines-faction-pack-v1.2.pdf\nspace-marines\nspace-marines-army-rule-oath-of-moment",
-      "parent": null,
-      "canonicalReferences": [],
-      "currentness": {
-        "publicationState": "CURRENT"
-      },
-      "provenance": "dependency",
-      "sourceOwner": {
-        "domain": "ARMY",
-        "bookId": "blood-angels",
-        "canonicalId": "army-rule-oath-of-moment",
-        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
-      },
-      "facts": {
-        "id": "army-rule-oath-of-moment",
-        "termId": "space-marines-army-rule-oath-of-moment",
-        "title": "Oath of Moment",
-        "text": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’",
-        "sourcePages": [
-          60
-        ],
-        "source": "dependency",
-        "sourceBook": "space-marines",
-        "sourceFile": "sources/space-marines-faction-pack-v1.2.pdf",
-        "sourceVersion": "1.2"
-      },
-      "contexts": [
-        {
-          "effectiveBookId": "blood-angels",
-          "sourceBookId": "blood-angels"
         }
       ],
       "presentation": {}
@@ -97188,46 +97144,6 @@
       "presentation": {}
     },
     {
-      "id": "army::dark-angels::army_rule::army-rule-oath-of-moment",
-      "domain": "ARMY",
-      "recordType": "ARMY_RULE",
-      "label": "Oath of Moment",
-      "aliases": [],
-      "searchableContent": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’\n1.2\ndependency\nOath of Moment\nsources/space-marines-faction-pack-v1.2.pdf\nspace-marines\nspace-marines-army-rule-oath-of-moment",
-      "parent": null,
-      "canonicalReferences": [],
-      "currentness": {
-        "publicationState": "CURRENT"
-      },
-      "provenance": "dependency",
-      "sourceOwner": {
-        "domain": "ARMY",
-        "bookId": "dark-angels",
-        "canonicalId": "army-rule-oath-of-moment",
-        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
-      },
-      "facts": {
-        "id": "army-rule-oath-of-moment",
-        "termId": "space-marines-army-rule-oath-of-moment",
-        "title": "Oath of Moment",
-        "text": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’",
-        "sourcePages": [
-          60
-        ],
-        "source": "dependency",
-        "sourceBook": "space-marines",
-        "sourceFile": "sources/space-marines-faction-pack-v1.2.pdf",
-        "sourceVersion": "1.2"
-      },
-      "contexts": [
-        {
-          "effectiveBookId": "dark-angels",
-          "sourceBookId": "dark-angels"
-        }
-      ],
-      "presentation": {}
-    },
-    {
       "id": "army::dark-angels::army_rule::army-rule-the-unforgiven",
       "domain": "ARMY",
       "recordType": "ARMY_RULE",
@@ -117402,7 +117318,11 @@
       "domain": "ARMY",
       "recordType": "ARMY_RULE",
       "label": "Army Rule - Nurgle’s Gift",
-      "aliases": [],
+      "aliases": [
+        "Plague",
+        "plagues",
+        "Plagues"
+      ],
       "searchableContent": "1\n1.1\n1.1.1\n1.1.2\n1.1.3\n1.1.4\n1.1.5\n2\n3\"\n3+\n6\"\n9\"\nAfflicted\nArmy Rule - Nurgle’s Gift\nBattle Round\ncodex\nContagion Range\nContagion Range cannot be greater than 12\" after modifiers.\nDuring the Declare Battle Formations step, select one of the Plagues below. Until the end of the battle, while an enemy unit is Afflicted, subtract 1 from the Toughness characteristic of models in that unit, and that unit has the effect of your chosen Plague.\nEach time a model in this unit makes a ranged attack, enemy units have the Benefit of Cover against that attack.\nEach time a model in this unit makes a melee attack, subtract 1 from the Hit roll.\nIf your Army Faction is DEATH GUARD, while an enemy unit is within Contagion Range of one or more DEATH GUARD models from your army, it is Afflicted.\np\nPact of Decay\nRattlejoint Ague\nScabrous Soulrot\nSkullsquirm Blight\ntable\nWhen mustering your army, unless specifically stated otherwise, you cannot select PLAGUE LEGIONS as your Army Faction.\nWorsen the Move, Leadership and Objective Control characteristics of models in this unit by 1. This rule can only worsen a model’s Objective Control characteristic to a minimum of 1.\nWorsen the Save characteristic of models in this unit by 1.",
       "parent": null,
       "canonicalReferences": [],
@@ -172475,6 +172395,14 @@
         "source": "faction-pack"
       },
       "contexts": [
+        {
+          "effectiveBookId": "blood-angels",
+          "sourceBookId": "space-marines"
+        },
+        {
+          "effectiveBookId": "dark-angels",
+          "sourceBookId": "space-marines"
+        },
         {
           "effectiveBookId": "space-marines",
           "sourceBookId": "space-marines"
@@ -340782,7 +340710,9 @@
         "Battle-shock rolls",
         "Battle-shock tests",
         "battle-shock-roll",
-        "battle-shock-tests"
+        "battle-shock-tests",
+        "battle-shocked",
+        "Battle-shocked"
       ],
       "searchableContent": "01.07\n2026-09-19\nBattle-shock Rolls\nFULL_CONTENT\nrule\nSECONDARY\nSECONDARY_CORE_SNAPSHOT\nTo make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).\n• If that roll succeeds, that unit does not become battle-shocked.\n• If that roll fails, that unit, and each model in it, is battle-shocked.\nWhile a unit is battle-shocked:\n• The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).\n• Its controlling player cannot target that unit with stratagems (15).\n• It is not eligible to start an action (16), and any action it has started cannot be completed.\nSEE ALSO\n• Battlefield Morale 01.07.01\n• Battle-shock Test 01.07.02\nWAHA_SECONDARY",
       "parent": null,
@@ -341077,7 +341007,11 @@
       "domain": "CORE",
       "recordType": "MAIN_RULE",
       "label": "Random Characteristics",
-      "aliases": [],
+      "aliases": [
+        "Damage roll",
+        "Damage rolls",
+        "damage-roll"
+      ],
       "searchableContent": "02.02.03\n2026-09-19\ncore-rule-02-02-profiles\ndigital-clarification\nFULL_CONTENT\nRandom Characteristics\nRandom Movement: When a unit with a random M characteristic is selected to move, determine the entire unit’s move distance by rolling the indicated number of dice.\nRandom Attacks: If a weapon has a random A characteristic, that characteristic is determined when generating attacks for that weapon at the Resolve Attacks step (04.03). If several weapons with random A characteristics are making identical attacks, generate the attacks for each of those weapons individually, and group them all together.\nRandom Damage: If a weapon has a random D characteristic, then each time an attack made with it inflicts damage, the controlling player determines that weapon’s characteristic when the opposing player has selected a model in the target unit to allocate that attack to.\nWhen determining a random D characteristic, the dice roll made is called a damage roll.\nWhere a D characteristic includes an operator (for example a ‘+’, as in D6+1), the value after the operator is part of that D characteristic – it is not a modifier.\nOther Random Characteristics: For all other characteristics, roll to determine the value on an individual, per-model or per-weapon basis each time that characteristic is required.\nSECONDARY\nSECONDARY_CORE_SNAPSHOT\nWAHA_SECONDARY",
       "parent": null,
       "canonicalReferences": [
@@ -341561,7 +341495,17 @@
       "domain": "CORE",
       "recordType": "MAIN_RULE",
       "label": "4. Weapons",
-      "aliases": [],
+      "aliases": [
+        "attacks",
+        "Attacks characteristic",
+        "Attacks characteristics",
+        "Damage characteristic",
+        "Damage characteristics",
+        "damage-characteristic",
+        "Range characteristic",
+        "Range characteristics",
+        "range-characteristics"
+      ],
       "searchableContent": "02.04\n2026-09-19\n4. Weapons\nFULL_CONTENT\nrule\nSECONDARY\nSECONDARY_CORE_SNAPSHOT\nWAHA_SECONDARY\nWeapons have the following characteristics:\nRange (R): How far ranged weapons can shoot. Weapons with an R characteristic of ‘Melee’ are melee weapons.\nAttacks (A): How many attack dice are used each time that weapon is used.\nBallistic Skill (BS): Presented as a dice result (for example 4+), this shows how accurate the bearer is when shooting with the relevant ranged weapon.\nWeapon Skill (WS): Presented as a dice result (for example 4+), this reflects the bearer’s skill in wielding the relevant melee weapon.\nStrength (S): The higher a weapon’s S characteristic, the more likely it is to wound a foe.\nArmour Penetration (AP): Presented as a modifier to a dice roll (for example -1). The larger the modifier, the better the weapon is at cutting through the target’s defences.\nDamage (D): The amount of damage inflicted by an attack.\nSEE ALSO\n• Weapons With No Strength 02.04.01",
       "parent": null,
       "canonicalReferences": [],
@@ -350535,7 +350479,11 @@
         "state": "FULL_CONTENT"
       },
       "contexts": [],
-      "presentation": {}
+      "presentation": {
+        "preferredMatchLabels": [
+          "transport"
+        ]
+      }
     },
     {
       "id": "core::core-rule-18-02-01-able-to-embark",

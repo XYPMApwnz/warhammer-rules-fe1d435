@@ -44,10 +44,48 @@ assert(!index.entries.some(entry=>entry.sourceOwner.domain==='GLOSSARY'),'legacy
 assert.equal(index.coverage.legacy.editorialMigrated,11,'only editorial contracts with one exact canonical target may migrate');
 assert.equal(index.coverage.legacy.editorialUnresolved.length,13,'unbound legacy editorial identities must remain explicit');
 assert.equal(index.coverage.legacy.resolutionAliasesMigrated,10);
-assert.equal(index.coverage.legacy.preferredMatchesMigrated,4);
-assert.equal(index.coverage.legacy.preferredMatchesUnresolved.length,1);
+assert.equal(index.coverage.legacy.supplementalAliasesMigrated,55,'all accepted supplemental aliases and match labels must resolve');
+assert.equal(index.coverage.legacy.supplementalTargetBindings,7,'legacy presentation IDs must bind explicitly to existing V2 owners');
+assert.equal(index.coverage.legacy.preferredMatchesMigrated,5);
+assert.equal(index.coverage.legacy.preferredMatchesUnresolved.length,0);
 assert.equal(index.coverage.legacy.legacyGameplayRejected.length,65,'legacy supplemental gameplay bodies are rejected as factual input');
 assert.equal(index.coverage.legacy.quickReferenceGameplayRejected,14,'legacy quick-reference gameplay bodies are rejected as factual input');
+
+const migratedLegacyLabels=new Map([
+  ['damage-roll','core::core-rule-02-02-03-random-characteristics'],
+  ['Damage roll','core::core-rule-02-02-03-random-characteristics'],
+  ['Damage rolls','core::core-rule-02-02-03-random-characteristics'],
+  ['battle-shocked','core::core-rule-01-07-battle-shock-rolls'],
+  ['Battle-shocked','core::core-rule-01-07-battle-shock-rolls'],
+  ['plagues','army::death-guard::army_rule::army-rule-nurgles-gift'],
+  ['Plague','army::death-guard::army_rule::army-rule-nurgles-gift'],
+  ['Plagues','army::death-guard::army_rule::army-rule-nurgles-gift'],
+  ['range-characteristics','core::core-rule-02-04-weapons'],
+  ['Range characteristic','core::core-rule-02-04-weapons'],
+  ['Range characteristics','core::core-rule-02-04-weapons'],
+  ['attacks','core::core-rule-02-04-weapons'],
+  ['Attacks characteristic','core::core-rule-02-04-weapons'],
+  ['Attacks characteristics','core::core-rule-02-04-weapons'],
+  ['damage-characteristic','core::core-rule-02-04-weapons'],
+  ['Damage characteristic','core::core-rule-02-04-weapons'],
+  ['Damage characteristics','core::core-rule-02-04-weapons']
+]);
+for(const [label,targetId] of migratedLegacyLabels){
+  const matches=index.entries.filter(entry=>entry.aliases.includes(label));
+  assert.equal(matches.length,1,`${label}: supplemental label must resolve without dangling or ambiguous bindings`);
+  assert.equal(matches[0].id,targetId,`${label}: supplemental label must resolve to its explicit factual owner`);
+}
+const transportPreferred=index.entries.filter(entry=>entry.presentation.preferredMatchLabels?.includes('transport'));
+assert.deepEqual(transportPreferred.map(entry=>entry.id),['core::core-rule-18-01-transport-capacity'],'transport preferred match must resolve through the accepted keyword-transport migration binding');
+
+const oath=index.entries.filter(entry=>entry.sourceOwner.canonicalId==='army-rule-oath-of-moment');
+assert.equal(oath.length,1,'inherited Oath of Moment must remain one Space Marines-owned factual article');
+assert.equal(oath[0].id,'army::space-marines::army_rule::army-rule-oath-of-moment');
+assert.equal(oath[0].sourceOwner.bookId,'space-marines');
+assert.deepEqual(new Set(oath[0].contexts.map(context=>context.effectiveBookId)),new Set(['space-marines','dark-angels','blood-angels']),'Oath of Moment must retain all three effective-book contexts');
+const oathSourceTexts=inputs.armyModels.flatMap(model=>[...(model.rules?.armyRules||[]),...(model.rules?.armyRule?[model.rules.armyRule]:[])]).filter(rule=>rule.id==='army-rule-oath-of-moment').map(rule=>rule.text);
+assert.equal(new Set(oathSourceTexts).size,1,'all inherited Oath of Moment contexts must carry identical accepted semantics');
+assert.equal(oath[0].facts.text,oathSourceTexts[0],'folding inherited contexts must not change Oath of Moment gameplay text');
 
 const weapons=index.entries.filter(entry=>entry.recordType==='WEAPON_PROFILE');
 const duplicateByLabel=new Map();for(const entry of weapons){const key=entry.label.toLocaleLowerCase('en');if(!duplicateByLabel.has(key))duplicateByLabel.set(key,[]);duplicateByLabel.get(key).push(entry);}
@@ -58,8 +96,14 @@ assert.equal(new Set(scopedDuplicate.map(entry=>entry.id)).size,scopedDuplicate.
 const renamedInputs={...inputs,armyModels:structuredClone(inputs.armyModels)};
 renamedInputs.armyModels[0].units[0].title='DISPLAY TITLE MUTATION';
 const firstWeapon=renamedInputs.armyModels.flatMap(model=>model.units).flatMap(unit=>unit.weapons||[])[0];if(firstWeapon)firstWeapon.name='DISPLAY WEAPON MUTATION';
+const inheritedOath=renamedInputs.armyModels.find(model=>model.book.id==='dark-angels').rules.armyRules.find(rule=>rule.id==='army-rule-oath-of-moment');inheritedOath.title='DISPLAY OATH MUTATION';
 const renamed=createGlossaryV2Index(renamedInputs);
 assert.deepEqual(renamed.entries.map(entry=>entry.id),index.entries.map(entry=>entry.id),'display title changes must have zero identity influence');
+assert.equal(renamed.entries.filter(entry=>entry.sourceOwner.canonicalId==='army-rule-oath-of-moment').length,1,'inherited source ownership must not depend on the Oath display title');
+
+const danglingTargetInputs={...inputs,supplemental:structuredClone(inputs.supplemental)};
+danglingTargetInputs.supplemental.v2Targets['keyword-transport']='core::missing-transport-owner';
+assert.throws(()=>createGlossaryV2Index(danglingTargetInputs),/resolves to absent V2 entry/,'dangling legacy presentation bindings must fail closed');
 
 for(const entry of index.entries){
   assert(entry.sourceOwner?.canonicalId,`${entry.id}: source owner is required`);

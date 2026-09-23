@@ -148,8 +148,8 @@ function addArmyEntries(entries,models){
       }
       if(!model.detachmentRules&&detachment.rule?.id)addArmyEntry(entries,model,'DETACHMENT_RULE',detachment.rule,{parentId:detachment.id,ownerBookId:sourceBook(detachment,model.book.id),references:[{domain:'ARMY',id:lookups.detachment.get(`${model.book.id}::${detachment.id}`)?.id||null,canonicalId:detachment.id,relationType:'DETACHMENT'}]});
     }
-    for(const rule of model.rules?.armyRules||[])addArmyEntry(entries,model,'ARMY_RULE',rule);
-    if(model.rules?.armyRule?.id)addArmyEntry(entries,model,'ARMY_RULE',model.rules.armyRule);
+    for(const rule of model.rules?.armyRules||[])addArmyEntry(entries,model,'ARMY_RULE',rule,{ownerBookId:rule.source==='dependency'&&rule.sourceBook?rule.sourceBook:null});
+    if(model.rules?.armyRule?.id){const rule=model.rules.armyRule;addArmyEntry(entries,model,'ARMY_RULE',rule,{ownerBookId:rule.source==='dependency'&&rule.sourceBook?rule.sourceBook:null});}
     const updates=Array.isArray(model.rules?.updates)?model.rules.updates:model.rules?.updates?[model.rules.updates]:[];
     for(const update of updates)if(update.id)addArmyEntry(entries,model,'UPDATE',update);
     for(const unit of model.units){if(unit.subsections||unit.blocks)addStructuredUnitChildren(entries,lookups,model,unit);else addGenericUnitChildren(entries,lookups,model,unit);}
@@ -189,13 +189,15 @@ function applyLegacyPresentation(entries,coreCatalog,editorial,resolutions,suppl
   let editorialMigrated=0,resolutionAliasesMigrated=0,supplementalAliasesMigrated=0,preferredMatchesMigrated=0;const editorialUnresolved=[],preferredMatchesUnresolved=[];
   for(const summary of editorial.summaries||[]){const matches=byCanonical.get(summary.termId)||[];if(matches.length!==1){editorialUnresolved.push(summary.termId);continue;}matches[0].presentation.editorialSummary={text:summary.summary,revision:summary.editorialRevision,contentHash:summary.contentHash};editorialMigrated++;}
   for(const [alias,decision] of Object.entries(resolutions.aliases||{})){const canonical=coreCatalog.resolveId(decision.target),target=entries.get(entryId('core',canonical));if(!target)throw new Error(`Legacy resolution target ${decision.target} is absent from V2`);target.aliases=sortStrings([...target.aliases,alias]);target.presentation.aliasMetadata??=[];target.presentation.aliasMetadata.push({alias,parameters:decision.parameters||null,reason:decision.reason,source:'glossary/resolutions.en.json'});resolutionAliasesMigrated++;}
-  const resolveSupplementalTarget=value=>entries.get(entryId('core',coreCatalog.resolveId(value)))||byCanonical.get(value)?.[0]||null;
+  const explicitTargets=supplemental.v2Targets||{};
+  for(const [legacyId,targetId] of Object.entries(explicitTargets))if(!entries.has(targetId))throw new Error(`Legacy presentation target ${legacyId} resolves to absent V2 entry ${targetId}`);
+  const resolveSupplementalTarget=value=>entries.get(explicitTargets[value])||entries.get(entryId('core',coreCatalog.resolveId(value)))||byCanonical.get(value)?.[0]||null;
   for(const [alias,targetId] of Object.entries(supplemental.aliases||{})){const target=resolveSupplementalTarget(targetId);if(!target)continue;target.aliases=sortStrings([...target.aliases,alias]);supplementalAliasesMigrated++;}
   for(const [targetId,labels] of Object.entries(supplemental.matchLabels||{})){const target=resolveSupplementalTarget(targetId);if(!target)continue;target.aliases=sortStrings([...target.aliases,...labels]);supplementalAliasesMigrated+=labels.length;}
   for(const [label,targetId] of Object.entries(supplemental.preferredMatches||{})){const target=resolveSupplementalTarget(targetId);if(!target){preferredMatchesUnresolved.push({label,targetId});continue;}target.presentation.preferredMatchLabels??=[];target.presentation.preferredMatchLabels=sortStrings([...target.presentation.preferredMatchLabels,label]);preferredMatchesMigrated++;}
   const unresolvedGameplay=(supplemental.terms||[]).map(term=>({id:term.id,label:term.title,reason:resolveSupplementalTarget(term.id)?'EFFECTIVE_OWNER_SUPERSEDES_LEGACY_BODY':'NO_EFFECTIVE_FACTUAL_OWNER'}));
   const quick=readJson('glossary/core-quick-reference.en.json');
-  return {editorialMigrated,editorialUnresolved:editorialUnresolved.sort(),resolutionAliasesMigrated,supplementalAliasesMigrated,preferredMatchesMigrated,preferredMatchesUnresolved,legacyGameplayRejected:unresolvedGameplay,quickReferenceGameplayRejected:Array.isArray(quick.terms)?quick.terms.length:Array.isArray(quick.entries)?quick.entries.length:Object.keys(quick).length};
+  return {editorialMigrated,editorialUnresolved:editorialUnresolved.sort(),resolutionAliasesMigrated,supplementalAliasesMigrated,supplementalTargetBindings:Object.keys(explicitTargets).length,preferredMatchesMigrated,preferredMatchesUnresolved,legacyGameplayRejected:unresolvedGameplay,quickReferenceGameplayRejected:Array.isArray(quick.terms)?quick.terms.length:Array.isArray(quick.entries)?quick.entries.length:Object.keys(quick).length};
 }
 
 export async function loadGlossaryV2Inputs(){

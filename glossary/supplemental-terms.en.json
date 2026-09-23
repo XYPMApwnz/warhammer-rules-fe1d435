@@ -511,6 +511,15 @@
     "deep strike": "core-deep-strike",
     "transport": "keyword-transport"
   },
+  "v2Targets": {
+    "core-damage-roll": "core::core-rule-02-02-03-random-characteristics",
+    "core-battle-shocked": "core::core-rule-01-07-battle-shock-rolls",
+    "death-guard-plague": "army::death-guard::army_rule::army-rule-nurgles-gift",
+    "core-characteristic-range": "core::core-rule-02-04-weapons",
+    "core-characteristic-attacks": "core::core-rule-02-04-weapons",
+    "core-characteristic-damage": "core::core-rule-02-04-weapons",
+    "keyword-transport": "core::core-rule-18-01-transport-capacity"
+  },
   "aliases": {
     "advance-roll": "core-rule-09-06-advance-move",
     "charge-roll": "core-rule-11-02-charge",

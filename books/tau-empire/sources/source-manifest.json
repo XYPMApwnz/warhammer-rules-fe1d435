@@ -316,6 +316,16 @@
       ]
     },
     {
+      "id": "tau-empire-attachment-group-constraints",
+      "sourceId": "tau-empire-attachment-group-constraints",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": ["attachment-group-constraints"],
+      "consumers": ["EFFECTIVE_MODEL", "RUNTIME_PUBLICATION"],
+      "paths": ["books/tau-empire/sources/tau-empire-attachment-group-constraints.v1.json"]
+    },
+    {
       "id": "tau-empire-mfm-v1.4",
       "sourceId": "tau-empire-mfm-v1.4",
       "active": true,

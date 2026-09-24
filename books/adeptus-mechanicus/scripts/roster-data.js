@@ -888,7 +888,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "mandatory": true,
             "removeKeywords": [
               "INFANTRY"
-            ]
+            ],
+            "attachmentGroupConstraint": {
+              "id": "attachment-group-cybernetica-datasmith-kastelan-robots",
+              "targetUnitId": "unit-kastelan-robots",
+              "sourceUnitIds": [
+                "unit-cybernetica-datasmith"
+              ],
+              "role": "support",
+              "totalCapacity": "UNBOUNDED",
+              "perRoleCapacity": "UNBOUNDED",
+              "sameCanonicalLimit": "UNBOUNDED",
+              "mandatoryParticipant": true,
+              "noValidTargetConsequence": {
+                "deployment": "CANNOT_DEPLOY",
+                "destroyedTiming": "FIRST_BATTLE_ROUND"
+              },
+              "source": {
+                "kind": "accepted-army-ability",
+                "sourceId": "adeptus-mechanicus-bsdata-codex",
+                "sourceUnitId": "unit-cybernetica-datasmith",
+                "sourceAbilityId": "dba5-946a-cd1c-0845"
+              },
+              "provenance": {
+                "sourceId": "adeptus-mechanicus-bsdata-codex",
+                "sourceRevision": "7",
+                "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                "currentness": "CURRENT",
+                "verifiedAt": "2026-09-22"
+              }
+            }
           }
         ],
         "canBeLedBy": [],
@@ -904,7 +933,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "mandatory": true,
               "removeKeywords": [
                 "INFANTRY"
-              ]
+              ],
+              "attachmentGroupConstraint": {
+                "id": "attachment-group-cybernetica-datasmith-kastelan-robots",
+                "targetUnitId": "unit-kastelan-robots",
+                "sourceUnitIds": [
+                  "unit-cybernetica-datasmith"
+                ],
+                "role": "support",
+                "totalCapacity": "UNBOUNDED",
+                "perRoleCapacity": "UNBOUNDED",
+                "sameCanonicalLimit": "UNBOUNDED",
+                "mandatoryParticipant": true,
+                "noValidTargetConsequence": {
+                  "deployment": "CANNOT_DEPLOY",
+                  "destroyedTiming": "FIRST_BATTLE_ROUND"
+                },
+                "source": {
+                  "kind": "accepted-army-ability",
+                  "sourceId": "adeptus-mechanicus-bsdata-codex",
+                  "sourceUnitId": "unit-cybernetica-datasmith",
+                  "sourceAbilityId": "dba5-946a-cd1c-0845"
+                },
+                "provenance": {
+                  "sourceId": "adeptus-mechanicus-bsdata-codex",
+                  "sourceRevision": "7",
+                  "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                  "currentness": "CURRENT",
+                  "verifiedAt": "2026-09-22"
+                }
+              }
             }
           ],
           "canBeLedBy": [],
@@ -6791,7 +6849,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "maxCharacters": 1,
             "removeKeywords": [
               "INFANTRY"
-            ]
+            ],
+            "attachmentGroupConstraint": {
+              "id": "attachment-group-cybernetica-datasmith-kastelan-robots",
+              "targetUnitId": "unit-kastelan-robots",
+              "sourceUnitIds": [
+                "unit-cybernetica-datasmith"
+              ],
+              "role": "support",
+              "totalCapacity": "UNBOUNDED",
+              "perRoleCapacity": "UNBOUNDED",
+              "sameCanonicalLimit": "UNBOUNDED",
+              "mandatoryParticipant": true,
+              "noValidTargetConsequence": {
+                "deployment": "CANNOT_DEPLOY",
+                "destroyedTiming": "FIRST_BATTLE_ROUND"
+              },
+              "source": {
+                "kind": "accepted-army-ability",
+                "sourceId": "adeptus-mechanicus-bsdata-codex",
+                "sourceUnitId": "unit-cybernetica-datasmith",
+                "sourceAbilityId": "dba5-946a-cd1c-0845"
+              },
+              "provenance": {
+                "sourceId": "adeptus-mechanicus-bsdata-codex",
+                "sourceRevision": "7",
+                "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                "currentness": "CURRENT",
+                "verifiedAt": "2026-09-22"
+              }
+            }
           }
         ]
       },
@@ -6806,7 +6893,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "maxCharacters": 1,
               "removeKeywords": [
                 "INFANTRY"
-              ]
+              ],
+              "attachmentGroupConstraint": {
+                "id": "attachment-group-cybernetica-datasmith-kastelan-robots",
+                "targetUnitId": "unit-kastelan-robots",
+                "sourceUnitIds": [
+                  "unit-cybernetica-datasmith"
+                ],
+                "role": "support",
+                "totalCapacity": "UNBOUNDED",
+                "perRoleCapacity": "UNBOUNDED",
+                "sameCanonicalLimit": "UNBOUNDED",
+                "mandatoryParticipant": true,
+                "noValidTargetConsequence": {
+                  "deployment": "CANNOT_DEPLOY",
+                  "destroyedTiming": "FIRST_BATTLE_ROUND"
+                },
+                "source": {
+                  "kind": "accepted-army-ability",
+                  "sourceId": "adeptus-mechanicus-bsdata-codex",
+                  "sourceUnitId": "unit-cybernetica-datasmith",
+                  "sourceAbilityId": "dba5-946a-cd1c-0845"
+                },
+                "provenance": {
+                  "sourceId": "adeptus-mechanicus-bsdata-codex",
+                  "sourceRevision": "7",
+                  "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                  "currentness": "CURRENT",
+                  "verifiedAt": "2026-09-22"
+                }
+              }
             }
           ]
         }

@@ -14,6 +14,7 @@ import {createEffectiveBookModel,EFFECTIVE_BOOK_MODEL_SCHEMA} from './effective-
 import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
 import {createArmyCoreAbilityBindings} from './army-core-ability-binding.mjs';
 import {createEffectiveMfmArmyProjection} from './effective-mfm-army-projection.mjs';
+import {validateAttachmentGroupConstraintSet} from './attachment-group-constraint.mjs';
 
 export async function buildCanonicalBook(context,{projectionOnly=false}={}){
 const {args,check,configPath,root,repo,readJson,config,runtimeVersions}=context;
@@ -237,11 +238,13 @@ const stratagemEligibility=item=>{
 
 const relationEdges=mfmProjection.relationEdges({effectiveUnitIds:relationUnits.map(unit=>unit.id)});
 const mfmRelationKeys=new Set(relationEdges.map(edge=>`${edge.role}\0${edge.sourceId}\0${edge.targetId}`));
+const attachmentGroupConstraintSet=validateAttachmentGroupConstraintSet(config.sources.attachmentGroupConstraints?context.readJson(config.sources.attachmentGroupConstraints):{schema:'wh40k-attachment-group-constraints/v1',bookId:config.id,constraints:[]},{bookId:config.id,units:relationUnits});
 let relationGraphs=buildRelationGraphs(relationUnits,relationEdges,{
   bookId:config.id,
   inheritedUnits:dependencyUnits,
   effectiveUnits:units,
-  adds:(dependencyScope.relationAdds||[]).filter(edge=>!mfmRelationKeys.has(`${edge.role}\0${edge.sourceId}\0${edge.targetId}`))
+  adds:(dependencyScope.relationAdds||[]).filter(edge=>!mfmRelationKeys.has(`${edge.role}\0${edge.sourceId}\0${edge.targetId}`)),
+  attachmentGroupConstraints:attachmentGroupConstraintSet.constraints
 });
 
 const terms=new Map();

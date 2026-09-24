@@ -31,11 +31,17 @@ export function applyDependencyRelationAdds({bookId='book',inheritedUnits=[],eff
   return result;
 }
 
-export function buildRelationGraphs(units,edges,dependencyRelationAdds=null){
-  const graphEdges=dependencyRelationAdds?applyDependencyRelationAdds({...dependencyRelationAdds,edges}):edges;
+export function buildRelationGraphs(units,edges,options=null){
+  const graphEdges=options?.adds?.length?applyDependencyRelationAdds({...options,edges}):edges;
+  const constraintByEdge=new Map();
+  for(const constraint of options?.attachmentGroupConstraints||[])for(const sourceId of constraint.sourceUnitIds||[]){
+    const key=edgeKey({role:constraint.role,sourceId,targetId:constraint.targetUnitId});
+    if(constraintByEdge.has(key))throw new Error(`Duplicate attachment-group constraint for ${constraint.role} ${sourceId} -> ${constraint.targetUnitId}`);
+    constraintByEdge.set(key,constraint);
+  }
   const byId=new Map(units.map(unit=>[unit.id,unit]));
   const graphs=new Map(units.map(unit=>[unit.id,Object.fromEntries(keys.map(key=>[key,[]]))]));
-  const seen=new Set();
+  const seen=new Set(),usedConstraints=new Set();
   for(const edge of graphEdges){
     const pair=inverse[edge.role];
     if(!pair)throw new Error(`Unsupported relation role: ${edge.role}`);
@@ -43,10 +49,13 @@ export function buildRelationGraphs(units,edges,dependencyRelationAdds=null){
     if(!source||!target)throw new Error(`Unknown relation: ${edge.sourceId} -> ${edge.targetId}`);
     const id=`${edge.role}\0${source.id}\0${target.id}`;
     if(seen.has(id))continue;seen.add(id);
-    const fact=(unit,mandatory)=>({unitId:unit.id,keywords:unit.keywords||[],characterCount:(unit.keywords||[]).some(value=>String(value).toUpperCase()==='CHARACTER')?1:0,...(edge.removeKeywords?.length?{removeKeywords:edge.removeKeywords}: {}),...(mandatory?{mandatory:true}: {})});
+    const constraint=constraintByEdge.get(id);
+    if(constraint)usedConstraints.add(id);
+    const fact=(unit,mandatory)=>({unitId:unit.id,keywords:unit.keywords||[],characterCount:(unit.keywords||[]).some(value=>String(value).toUpperCase()==='CHARACTER')?1:0,...(edge.removeKeywords?.length?{removeKeywords:edge.removeKeywords}: {}),...(mandatory?{mandatory:true}: {}),...(constraint?{attachmentGroupConstraint:structuredClone(constraint)}:{})});
     graphs.get(source.id)[pair[0]].push(fact(target,edge.mandatory===true));
     graphs.get(target.id)[pair[1]].push(fact(source,false));
   }
+  for(const key of constraintByEdge.keys())if(!usedConstraints.has(key))throw new Error(`Attachment-group constraint has no canonical relation edge: ${key.replaceAll('\0',' -> ')}`);
   const maxCharacters=unitId=>{
     const graph=graphs.get(unitId),unit=byId.get(unitId);
     return ((unit.keywords||[]).some(value=>String(value).toUpperCase()==='CHARACTER')?1:0)

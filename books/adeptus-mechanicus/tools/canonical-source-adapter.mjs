@@ -7,6 +7,7 @@ import ruleFactsApi from '../../shared/rule-facts.js';
 import {createCoreFactProjection} from '../../core-rules/content/core-fact-projection.mjs';
 import {createArmyCoreAbilityBindings} from '../../shared/tools/army-core-ability-binding.mjs';
 import {createEffectiveMfmArmyProjection} from '../../shared/tools/effective-mfm-army-projection.mjs';
+import {validateAttachmentGroupConstraintSet} from '../../shared/tools/attachment-group-constraint.mjs';
 
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const slugKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -91,7 +92,8 @@ for(const id of Object.keys(unitImages))if(!unitById.has(id))throw new Error(`Un
 for(const edge of attachments)if(edge.sourceId==='unit-cybernetica-datasmith'&&edge.targetId==='unit-kastelan-robots')Object.assign(edge,{mandatory:true,removeKeywords:['INFANTRY']});
 const attachmentById=new Map(attachments.map(edge=>[[edge.role,edge.sourceId,edge.targetId].join('\0'),edge]));
 const mfmRelationEdges=mfmProjection.relationEdges({effectiveUnitIds:rules.datasheets.map(unit=>unit.id),armyEdges:attachments});
-const relationGraphs=buildRelationGraphs(rules.datasheets,mfmRelationEdges.map(edge=>({...edge,...attachmentById.get([edge.role,edge.sourceId,edge.targetId].join('\0'))})));
+const attachmentGroupConstraintSet=validateAttachmentGroupConstraintSet(config.sources.attachmentGroupConstraints?context.readJson(config.sources.attachmentGroupConstraints):{schema:'wh40k-attachment-group-constraints/v1',bookId:config.id,constraints:[]},{bookId:config.id,units:rules.datasheets});
+const relationGraphs=buildRelationGraphs(rules.datasheets,mfmRelationEdges.map(edge=>({...edge,...attachmentById.get([edge.role,edge.sourceId,edge.targetId].join('\0'))})),{attachmentGroupConstraints:attachmentGroupConstraintSet.constraints});
 const officialOrder=config.detachmentOrder;
 const detachmentOwners=[...rules.detachments,...codex.detachments];
 const mfmDetachments=new Map(pointsCatalog.detachments.map(item=>[item.id,item]));

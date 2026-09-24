@@ -2839,7 +2839,38 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [
           {
             "unitId": "unit-kroot-carnivores",
-            "maxCharacters": 1
+            "maxCharacters": 1,
+            "attachmentGroupConstraint": {
+              "id": "attachment-group-kroot-carnivores-bodyguard",
+              "targetUnitId": "unit-kroot-carnivores",
+              "sourceUnitIds": [
+                "unit-kroot-flesh-shaper",
+                "unit-kroot-trail-shaper",
+                "unit-kroot-war-shaper"
+              ],
+              "role": "leader",
+              "totalCapacity": 2,
+              "perRoleCapacity": 2,
+              "sameCanonicalLimit": 1,
+              "bodyguardPredicate": {
+                "kind": "STARTING_STRENGTH_EQUALS",
+                "value": 20
+              },
+              "mandatoryParticipant": false,
+              "source": {
+                "kind": "accepted-army-ability",
+                "sourceId": "tau-codex-transcription",
+                "sourceUnitId": "unit-kroot-carnivores",
+                "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+              },
+              "provenance": {
+                "sourceId": "tau-codex-transcription",
+                "sourceRevision": "2",
+                "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                "currentness": "CURRENT",
+                "verifiedAt": "2026-09-22"
+              }
+            }
           },
           {
             "unitId": "unit-kroot-farstalkers",
@@ -2855,7 +2886,38 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [
             {
               "unitId": "unit-kroot-carnivores",
-              "maxCharacters": 1
+              "maxCharacters": 1,
+              "attachmentGroupConstraint": {
+                "id": "attachment-group-kroot-carnivores-bodyguard",
+                "targetUnitId": "unit-kroot-carnivores",
+                "sourceUnitIds": [
+                  "unit-kroot-flesh-shaper",
+                  "unit-kroot-trail-shaper",
+                  "unit-kroot-war-shaper"
+                ],
+                "role": "leader",
+                "totalCapacity": 2,
+                "perRoleCapacity": 2,
+                "sameCanonicalLimit": 1,
+                "bodyguardPredicate": {
+                  "kind": "STARTING_STRENGTH_EQUALS",
+                  "value": 20
+                },
+                "mandatoryParticipant": false,
+                "source": {
+                  "kind": "accepted-army-ability",
+                  "sourceId": "tau-codex-transcription",
+                  "sourceUnitId": "unit-kroot-carnivores",
+                  "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+                },
+                "provenance": {
+                  "sourceId": "tau-codex-transcription",
+                  "sourceRevision": "2",
+                  "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                  "currentness": "CURRENT",
+                  "verifiedAt": "2026-09-22"
+                }
+              }
             },
             {
               "unitId": "unit-kroot-farstalkers",
@@ -3289,7 +3351,38 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [
           {
             "unitId": "unit-kroot-carnivores",
-            "maxCharacters": 1
+            "maxCharacters": 1,
+            "attachmentGroupConstraint": {
+              "id": "attachment-group-kroot-carnivores-bodyguard",
+              "targetUnitId": "unit-kroot-carnivores",
+              "sourceUnitIds": [
+                "unit-kroot-flesh-shaper",
+                "unit-kroot-trail-shaper",
+                "unit-kroot-war-shaper"
+              ],
+              "role": "leader",
+              "totalCapacity": 2,
+              "perRoleCapacity": 2,
+              "sameCanonicalLimit": 1,
+              "bodyguardPredicate": {
+                "kind": "STARTING_STRENGTH_EQUALS",
+                "value": 20
+              },
+              "mandatoryParticipant": false,
+              "source": {
+                "kind": "accepted-army-ability",
+                "sourceId": "tau-codex-transcription",
+                "sourceUnitId": "unit-kroot-carnivores",
+                "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+              },
+              "provenance": {
+                "sourceId": "tau-codex-transcription",
+                "sourceRevision": "2",
+                "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                "currentness": "CURRENT",
+                "verifiedAt": "2026-09-22"
+              }
+            }
           },
           {
             "unitId": "unit-kroot-farstalkers",
@@ -3305,7 +3398,38 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [
             {
               "unitId": "unit-kroot-carnivores",
-              "maxCharacters": 1
+              "maxCharacters": 1,
+              "attachmentGroupConstraint": {
+                "id": "attachment-group-kroot-carnivores-bodyguard",
+                "targetUnitId": "unit-kroot-carnivores",
+                "sourceUnitIds": [
+                  "unit-kroot-flesh-shaper",
+                  "unit-kroot-trail-shaper",
+                  "unit-kroot-war-shaper"
+                ],
+                "role": "leader",
+                "totalCapacity": 2,
+                "perRoleCapacity": 2,
+                "sameCanonicalLimit": 1,
+                "bodyguardPredicate": {
+                  "kind": "STARTING_STRENGTH_EQUALS",
+                  "value": 20
+                },
+                "mandatoryParticipant": false,
+                "source": {
+                  "kind": "accepted-army-ability",
+                  "sourceId": "tau-codex-transcription",
+                  "sourceUnitId": "unit-kroot-carnivores",
+                  "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+                },
+                "provenance": {
+                  "sourceId": "tau-codex-transcription",
+                  "sourceRevision": "2",
+                  "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                  "currentness": "CURRENT",
+                  "verifiedAt": "2026-09-22"
+                }
+              }
             },
             {
               "unitId": "unit-kroot-farstalkers",
@@ -3475,7 +3599,38 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [
           {
             "unitId": "unit-kroot-carnivores",
-            "maxCharacters": 1
+            "maxCharacters": 1,
+            "attachmentGroupConstraint": {
+              "id": "attachment-group-kroot-carnivores-bodyguard",
+              "targetUnitId": "unit-kroot-carnivores",
+              "sourceUnitIds": [
+                "unit-kroot-flesh-shaper",
+                "unit-kroot-trail-shaper",
+                "unit-kroot-war-shaper"
+              ],
+              "role": "leader",
+              "totalCapacity": 2,
+              "perRoleCapacity": 2,
+              "sameCanonicalLimit": 1,
+              "bodyguardPredicate": {
+                "kind": "STARTING_STRENGTH_EQUALS",
+                "value": 20
+              },
+              "mandatoryParticipant": false,
+              "source": {
+                "kind": "accepted-army-ability",
+                "sourceId": "tau-codex-transcription",
+                "sourceUnitId": "unit-kroot-carnivores",
+                "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+              },
+              "provenance": {
+                "sourceId": "tau-codex-transcription",
+                "sourceRevision": "2",
+                "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                "currentness": "CURRENT",
+                "verifiedAt": "2026-09-22"
+              }
+            }
           },
           {
             "unitId": "unit-kroot-farstalkers",
@@ -3491,7 +3646,38 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [
             {
               "unitId": "unit-kroot-carnivores",
-              "maxCharacters": 1
+              "maxCharacters": 1,
+              "attachmentGroupConstraint": {
+                "id": "attachment-group-kroot-carnivores-bodyguard",
+                "targetUnitId": "unit-kroot-carnivores",
+                "sourceUnitIds": [
+                  "unit-kroot-flesh-shaper",
+                  "unit-kroot-trail-shaper",
+                  "unit-kroot-war-shaper"
+                ],
+                "role": "leader",
+                "totalCapacity": 2,
+                "perRoleCapacity": 2,
+                "sameCanonicalLimit": 1,
+                "bodyguardPredicate": {
+                  "kind": "STARTING_STRENGTH_EQUALS",
+                  "value": 20
+                },
+                "mandatoryParticipant": false,
+                "source": {
+                  "kind": "accepted-army-ability",
+                  "sourceId": "tau-codex-transcription",
+                  "sourceUnitId": "unit-kroot-carnivores",
+                  "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+                },
+                "provenance": {
+                  "sourceId": "tau-codex-transcription",
+                  "sourceRevision": "2",
+                  "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                  "currentness": "CURRENT",
+                  "verifiedAt": "2026-09-22"
+                }
+              }
             },
             {
               "unitId": "unit-kroot-farstalkers",
@@ -5073,15 +5259,108 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canBeLedBy": [
           {
             "unitId": "unit-kroot-flesh-shaper",
-            "maxCharacters": 1
+            "maxCharacters": 1,
+            "attachmentGroupConstraint": {
+              "id": "attachment-group-kroot-carnivores-bodyguard",
+              "targetUnitId": "unit-kroot-carnivores",
+              "sourceUnitIds": [
+                "unit-kroot-flesh-shaper",
+                "unit-kroot-trail-shaper",
+                "unit-kroot-war-shaper"
+              ],
+              "role": "leader",
+              "totalCapacity": 2,
+              "perRoleCapacity": 2,
+              "sameCanonicalLimit": 1,
+              "bodyguardPredicate": {
+                "kind": "STARTING_STRENGTH_EQUALS",
+                "value": 20
+              },
+              "mandatoryParticipant": false,
+              "source": {
+                "kind": "accepted-army-ability",
+                "sourceId": "tau-codex-transcription",
+                "sourceUnitId": "unit-kroot-carnivores",
+                "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+              },
+              "provenance": {
+                "sourceId": "tau-codex-transcription",
+                "sourceRevision": "2",
+                "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                "currentness": "CURRENT",
+                "verifiedAt": "2026-09-22"
+              }
+            }
           },
           {
             "unitId": "unit-kroot-trail-shaper",
-            "maxCharacters": 1
+            "maxCharacters": 1,
+            "attachmentGroupConstraint": {
+              "id": "attachment-group-kroot-carnivores-bodyguard",
+              "targetUnitId": "unit-kroot-carnivores",
+              "sourceUnitIds": [
+                "unit-kroot-flesh-shaper",
+                "unit-kroot-trail-shaper",
+                "unit-kroot-war-shaper"
+              ],
+              "role": "leader",
+              "totalCapacity": 2,
+              "perRoleCapacity": 2,
+              "sameCanonicalLimit": 1,
+              "bodyguardPredicate": {
+                "kind": "STARTING_STRENGTH_EQUALS",
+                "value": 20
+              },
+              "mandatoryParticipant": false,
+              "source": {
+                "kind": "accepted-army-ability",
+                "sourceId": "tau-codex-transcription",
+                "sourceUnitId": "unit-kroot-carnivores",
+                "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+              },
+              "provenance": {
+                "sourceId": "tau-codex-transcription",
+                "sourceRevision": "2",
+                "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                "currentness": "CURRENT",
+                "verifiedAt": "2026-09-22"
+              }
+            }
           },
           {
             "unitId": "unit-kroot-war-shaper",
-            "maxCharacters": 1
+            "maxCharacters": 1,
+            "attachmentGroupConstraint": {
+              "id": "attachment-group-kroot-carnivores-bodyguard",
+              "targetUnitId": "unit-kroot-carnivores",
+              "sourceUnitIds": [
+                "unit-kroot-flesh-shaper",
+                "unit-kroot-trail-shaper",
+                "unit-kroot-war-shaper"
+              ],
+              "role": "leader",
+              "totalCapacity": 2,
+              "perRoleCapacity": 2,
+              "sameCanonicalLimit": 1,
+              "bodyguardPredicate": {
+                "kind": "STARTING_STRENGTH_EQUALS",
+                "value": 20
+              },
+              "mandatoryParticipant": false,
+              "source": {
+                "kind": "accepted-army-ability",
+                "sourceId": "tau-codex-transcription",
+                "sourceUnitId": "unit-kroot-carnivores",
+                "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+              },
+              "provenance": {
+                "sourceId": "tau-codex-transcription",
+                "sourceRevision": "2",
+                "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                "currentness": "CURRENT",
+                "verifiedAt": "2026-09-22"
+              }
+            }
           }
         ],
         "canBeSupportedBy": []
@@ -5093,15 +5372,108 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [
             {
               "unitId": "unit-kroot-flesh-shaper",
-              "maxCharacters": 1
+              "maxCharacters": 1,
+              "attachmentGroupConstraint": {
+                "id": "attachment-group-kroot-carnivores-bodyguard",
+                "targetUnitId": "unit-kroot-carnivores",
+                "sourceUnitIds": [
+                  "unit-kroot-flesh-shaper",
+                  "unit-kroot-trail-shaper",
+                  "unit-kroot-war-shaper"
+                ],
+                "role": "leader",
+                "totalCapacity": 2,
+                "perRoleCapacity": 2,
+                "sameCanonicalLimit": 1,
+                "bodyguardPredicate": {
+                  "kind": "STARTING_STRENGTH_EQUALS",
+                  "value": 20
+                },
+                "mandatoryParticipant": false,
+                "source": {
+                  "kind": "accepted-army-ability",
+                  "sourceId": "tau-codex-transcription",
+                  "sourceUnitId": "unit-kroot-carnivores",
+                  "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+                },
+                "provenance": {
+                  "sourceId": "tau-codex-transcription",
+                  "sourceRevision": "2",
+                  "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                  "currentness": "CURRENT",
+                  "verifiedAt": "2026-09-22"
+                }
+              }
             },
             {
               "unitId": "unit-kroot-trail-shaper",
-              "maxCharacters": 1
+              "maxCharacters": 1,
+              "attachmentGroupConstraint": {
+                "id": "attachment-group-kroot-carnivores-bodyguard",
+                "targetUnitId": "unit-kroot-carnivores",
+                "sourceUnitIds": [
+                  "unit-kroot-flesh-shaper",
+                  "unit-kroot-trail-shaper",
+                  "unit-kroot-war-shaper"
+                ],
+                "role": "leader",
+                "totalCapacity": 2,
+                "perRoleCapacity": 2,
+                "sameCanonicalLimit": 1,
+                "bodyguardPredicate": {
+                  "kind": "STARTING_STRENGTH_EQUALS",
+                  "value": 20
+                },
+                "mandatoryParticipant": false,
+                "source": {
+                  "kind": "accepted-army-ability",
+                  "sourceId": "tau-codex-transcription",
+                  "sourceUnitId": "unit-kroot-carnivores",
+                  "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+                },
+                "provenance": {
+                  "sourceId": "tau-codex-transcription",
+                  "sourceRevision": "2",
+                  "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                  "currentness": "CURRENT",
+                  "verifiedAt": "2026-09-22"
+                }
+              }
             },
             {
               "unitId": "unit-kroot-war-shaper",
-              "maxCharacters": 1
+              "maxCharacters": 1,
+              "attachmentGroupConstraint": {
+                "id": "attachment-group-kroot-carnivores-bodyguard",
+                "targetUnitId": "unit-kroot-carnivores",
+                "sourceUnitIds": [
+                  "unit-kroot-flesh-shaper",
+                  "unit-kroot-trail-shaper",
+                  "unit-kroot-war-shaper"
+                ],
+                "role": "leader",
+                "totalCapacity": 2,
+                "perRoleCapacity": 2,
+                "sameCanonicalLimit": 1,
+                "bodyguardPredicate": {
+                  "kind": "STARTING_STRENGTH_EQUALS",
+                  "value": 20
+                },
+                "mandatoryParticipant": false,
+                "source": {
+                  "kind": "accepted-army-ability",
+                  "sourceId": "tau-codex-transcription",
+                  "sourceUnitId": "unit-kroot-carnivores",
+                  "sourceAbilityId": "d0e7-bbff-a4f8-1b2d"
+                },
+                "provenance": {
+                  "sourceId": "tau-codex-transcription",
+                  "sourceRevision": "2",
+                  "sourceCommit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                  "currentness": "CURRENT",
+                  "verifiedAt": "2026-09-22"
+                }
+              }
             }
           ],
           "canBeSupportedBy": []

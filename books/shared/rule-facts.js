@@ -127,7 +127,7 @@
     abilities:sorted(candidate.abilities),termIds:sorted(candidate.termIds),attached:candidate.attached??null,
     attachmentKnown:candidate.attachmentKnown??null,characterCount:candidate.characterCount??null,warlord:candidate.warlord??null
   });
-  const serializeRelation=relation=>({unitId:relation.unitId,keywords:sorted(relation.keywords),removeKeywords:sorted(relation.removeKeywords),characterCount:relation.characterCount??null,maxCharacters:relation.maxCharacters??null,mandatory:Boolean(relation.mandatory)});
+  const serializeRelation=relation=>({unitId:relation.unitId,keywords:sorted(relation.keywords),removeKeywords:sorted(relation.removeKeywords),characterCount:relation.characterCount??null,maxCharacters:relation.maxCharacters??null,mandatory:Boolean(relation.mandatory),...(relation.attachmentGroupConstraint?{attachmentGroupConstraint:structuredClone(relation.attachmentGroupConstraint)}:{})});
   function serializeRuleProfile(profile){
     return {
       id:profile.id||'',unitId:profile.unitId||'',slug:profile.slug||'',keywords:sorted(profile.keywords),intrinsicKeywords:sorted(profile.intrinsicKeywords),

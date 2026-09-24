@@ -148,6 +148,28 @@
     },
     {
       "book": "adeptus-mechanicus",
+      "sourceId": "adeptus-mechanicus-attachment-group-constraints",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "attachment-group-constraints-v1-2026-09-24",
+      "acceptedHash": "d50e4eb0fdba9b7002c0fe9a2b89ecef7d961aa3410b84d0296e9ed6082883f8",
+      "lastChecked": "2026-09-24",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/adeptus-mechanicus/sources/adeptus-mechanicus-attachment-group-constraints.v1.json",
+          "normalization": "lf",
+          "sha256": "d50e4eb0fdba9b7002c0fe9a2b89ecef7d961aa3410b84d0296e9ed6082883f8"
+        }
+      ],
+      "notes": "Accepted structured attachment-group constraints derived from the enrolled Adeptus Mechanicus datasheet source."
+    },
+    {
+      "book": "adeptus-mechanicus",
       "sourceId": "adeptus-mechanicus-effect-contracts",
       "authority": "structured-contract",
       "sourceType": "structured-contract",
@@ -1513,6 +1535,28 @@
         }
       ],
       "notes": "Enrolled factual owner for compatible-rule-associations."
+    },
+    {
+      "book": "tau-empire",
+      "sourceId": "tau-empire-attachment-group-constraints",
+      "authority": "structured-contract",
+      "sourceType": "structured-contract",
+      "acceptedRevision": "attachment-group-constraints-v1-2026-09-24",
+      "acceptedHash": "aade65b547f2d647b5e5dd6f4862b7a7e2d70051c57a9894845dee8047a9e038",
+      "lastChecked": "2026-09-24",
+      "upstreamUpdateKnown": false,
+      "upstreamCurrentness": "N/A",
+      "status": "SOURCE_LIMITED",
+      "rawOrigin": "REPOSITORY_ARTIFACT",
+      "reproducible": "repository-artifact",
+      "artifacts": [
+        {
+          "path": "books/tau-empire/sources/tau-empire-attachment-group-constraints.v1.json",
+          "normalization": "lf",
+          "sha256": "aade65b547f2d647b5e5dd6f4862b7a7e2d70051c57a9894845dee8047a9e038"
+        }
+      ],
+      "notes": "Accepted structured attachment-group constraints derived from the enrolled T'au Empire datasheet source."
     },
     {
       "book": "tau-empire",

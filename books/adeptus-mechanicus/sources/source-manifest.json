@@ -185,6 +185,16 @@
       ]
     },
     {
+      "id": "adeptus-mechanicus-attachment-group-constraints",
+      "sourceId": "adeptus-mechanicus-attachment-group-constraints",
+      "active": true,
+      "sourceType": "structured-contract",
+      "lifecycle": "ACCEPTED_SOURCE",
+      "factsOwned": ["attachment-group-constraints"],
+      "consumers": ["EFFECTIVE_MODEL", "RUNTIME_PUBLICATION"],
+      "paths": ["books/adeptus-mechanicus/sources/adeptus-mechanicus-attachment-group-constraints.v1.json"]
+    },
+    {
       "id": "adeptus-mechanicus-mfm-v1.4",
       "sourceId": "adeptus-mechanicus-mfm-v1.4",
       "active": true,

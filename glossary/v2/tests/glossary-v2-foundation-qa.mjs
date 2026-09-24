@@ -103,6 +103,40 @@ assert.equal(oath[0].facts.text,oathSourceTexts[0],'folding inherited contexts m
 assert.equal(index.entries.filter(entry=>entry.label==='Oath of Moment').length,1,'Oath of Moment occurrences must not become a second standalone factual article');
 assert(!index.entries.some(entry=>entry.id==='army::space-marines::ability::space-marines-army-rule-oath-of-moment'),'the derived Oath datasheet occurrence must resolve to its Army-rule owner');
 
+const coreSupportId='core::core-rule-19-01-forming-attached-units',coreSupport=index.entries.find(entry=>entry.id===coreSupportId);
+const falseSupportArticles=[
+  {entryId:'army::chaos-space-marines::ability::chaos-space-marines-ability-support',termId:'chaos-space-marines-ability-support',bookId:'chaos-space-marines',unitId:'unit-masters-of-the-maelstrom',mfmId:'mfm-support-eligibility-d50c824cb1d8dabe'},
+  {entryId:'army::space-marines::ability::space-marines-ability-support-3',termId:'space-marines-ability-support-3',bookId:'space-marines',unitId:'unit-cato-sicarius',mfmId:'mfm-support-eligibility-384607b24098f07e'},
+  {entryId:'army::space-marines::ability::space-marines-ability-support-4',termId:'space-marines-ability-support-4',bookId:'space-marines',unitId:'unit-wardens-of-ultramar',mfmId:'mfm-support-eligibility-80d2e325d305c2b3'}
+];
+assert(coreSupport,'canonical Core Support mechanic must be indexed');
+for(const control of falseSupportArticles){
+  assert(!index.entries.some(entry=>entry.id===control.entryId),`${control.termId}: empty Support occurrence must not become an Army article`);
+  assert(coreSupport.aliases.includes(control.termId),`${control.termId}: compatibility identity must resolve to Core Support`);
+  assert(coreSupport.contexts.some(context=>context.effectiveBookId===control.bookId&&context.parentUnitId===control.unitId&&context.termId===control.termId),`${control.termId}: exact Army occurrence context`);
+  const parent=index.entries.find(entry=>entry.id===`army::${control.bookId}::unit::${control.unitId}`);
+  assert(parent?.mfm?.supportRelations?.some(record=>record.id===control.mfmId),`${control.termId}: MFM Support relation must remain on its canonical parent`);
+}
+const catoSupport=index.entries.find(entry=>entry.id==='army::space-marines::ability::space-marines-ability-support-2');
+assert.match(catoSupport?.facts?.text||'',/VICTRIX HONOUR GUARD/,'Cato Sicarius substantive Army-owned Support rule must remain distinct');
+
+const renamedSupportInputs={...inputs,armyModels:structuredClone(inputs.armyModels)};
+for(const control of falseSupportArticles){
+  const model=renamedSupportInputs.armyModels.find(item=>item.book.id===control.bookId),unit=model.units.find(item=>item.id===control.unitId),ability=[...(unit.abilities||[]),...(unit.wargearAbilities||[])].find(item=>(item.termId||item.id||item.sourceAbilityId)===control.termId);
+  ability.title='DISPLAY SUPPORT MUTATION';
+}
+const renamedSupportIndex=createGlossaryV2Index(renamedSupportInputs),renamedCoreSupport=renamedSupportIndex.entries.find(entry=>entry.id===coreSupportId);
+for(const control of falseSupportArticles){
+  assert(!renamedSupportIndex.entries.some(entry=>entry.id===control.entryId),`${control.termId}: display rename must not restore a false article`);
+  assert(renamedCoreSupport.aliases.includes(control.termId),`${control.termId}: display rename must not change Core binding`);
+}
+const poisonedSupportInputs={...inputs,armyModels:structuredClone(inputs.armyModels)},poisonedMasters=poisonedSupportInputs.armyModels.find(item=>item.book.id==='chaos-space-marines').units.find(item=>item.id==='unit-masters-of-the-maelstrom').abilities.find(item=>item.termId==='chaos-space-marines-ability-support');
+poisonedMasters.text='INDEPENDENT SUPPORT GAMEPLAY POISON';
+assert.throws(()=>createGlossaryV2Index(poisonedSupportInputs),/unexpectedly owns gameplay text/,'an empty Support compatibility occurrence cannot become an independent factual owner');
+const conflictingSupportInputs={...inputs,armyModels:structuredClone(inputs.armyModels)},conflictingSm=conflictingSupportInputs.armyModels.find(item=>item.book.id==='space-marines');
+conflictingSm.units.find(item=>item.id==='unit-intercessor-squad').abilities.push({title:'Support',text:'',termId:'space-marines-ability-support-4'});
+assert.throws(()=>createGlossaryV2Index(conflictingSupportInputs),/conflicting Support occurrence/,'a Support compatibility identity cannot bind from the wrong parent unit');
+
 const staleOathOccurrenceInputs={...inputs,armyModels:structuredClone(inputs.armyModels)};
 const staleOathOccurrence=staleOathOccurrenceInputs.armyModels.flatMap(model=>model.units).flatMap(unit=>unit.abilities||[]).find(ability=>ability.termId==='space-marines-army-rule-oath-of-moment');
 assert(staleOathOccurrence,'an Oath of Moment datasheet occurrence is required for the ownership control');
@@ -143,7 +177,7 @@ for(const id of dgComponents){
     assert.deepEqual(entry.facts,sourceRule.subsections.find(record=>record.id===id),`${id}: child semantics must come from the accepted Army rule`);
   }
 }
-assert.equal(index.counts.standalone,1741,'Death Guard components must not change standalone browse');
+assert.equal(index.counts.standalone,1738,'false Support occurrences must not enter standalone browse');
 assert.equal(index.counts.scopedChildren,2892,'only the five Death Guard components may extend scoped children');
 
 const missingAmFactInputs={...inputs,armyModels:structuredClone(inputs.armyModels)};

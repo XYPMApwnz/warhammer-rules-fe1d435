@@ -12,11 +12,11 @@ vm.runInNewContext(read('glossary/v2/generated/index.en.js'),scope);
 vm.runInNewContext(read('glossary/v2/runtime/glossary-v2-runtime.js'),scope);
 const api=scope.window.WH40K_GLOSSARY;
 
-assert.equal(index.counts.total,4633);
-assert.equal(index.counts.standalone,1741);
+assert.equal(index.counts.total,4630);
+assert.equal(index.counts.standalone,1738);
 assert.equal(index.counts.scopedChildren,2892);
-assert.equal(api.entries().length,4633);
-assert.equal(api.standaloneEntries().length,1741);
+assert.equal(api.entries().length,4630);
+assert.equal(api.standaloneEntries().length,1738);
 assert.equal(api.counts.scopedChildren,2892);
 
 const detachments=api.standaloneEntries().filter(entry=>entry.recordType==='DETACHMENT');
@@ -66,6 +66,21 @@ for(const bookId of ['space-marines','dark-angels','blood-angels']){
   assert.equal(api.forBook(bookId)[oathId]?.id,oathId,`${bookId}: Oath must expose the same popup/viewer identity`);
 }
 assert.equal(index.entries.filter(entry=>entry.sourceOwner?.canonicalId==='army-rule-oath-of-moment').length,1,'Oath must remain one factual V2 article');
+
+const coreSupportId='core::core-rule-19-01-forming-attached-units';
+for(const [termId,bookId,mfmId,unitId] of [
+  ['chaos-space-marines-ability-support','chaos-space-marines','mfm-support-eligibility-d50c824cb1d8dabe','unit-masters-of-the-maelstrom'],
+  ['space-marines-ability-support-3','space-marines','mfm-support-eligibility-384607b24098f07e','unit-cato-sicarius'],
+  ['space-marines-ability-support-4','space-marines','mfm-support-eligibility-80d2e325d305c2b3','unit-wardens-of-ultramar']
+]){
+  const support=api.get(termId,{bookId});
+  assert.equal(support?.id,coreSupportId,`${termId}: compatibility marker must resolve to canonical Core Support`);
+  assert.equal(api.forBook(bookId)[termId]?.id,coreSupportId,`${termId}: popup/viewer identity parity`);
+  assert(!index.entries.some(entry=>entry.sourceOwner?.canonicalId===termId),`${termId}: false standalone Army article removed`);
+  const parent=index.entries.find(entry=>entry.id===`army::${bookId}::unit::${unitId}`);
+  assert(parent?.mfm?.supportRelations?.some(record=>record.id===mfmId),`${termId}: MFM eligibility relation unchanged`);
+}
+assert.match(api.get('space-marines-ability-support-2',{bookId:'space-marines'})?.definition.en||'',/VICTRIX HONOUR GUARD/,'Cato substantive Support rule remains Army-owned');
 
 const structuredAmControls=[
   {
@@ -126,4 +141,8 @@ const factualConsumers=[
 assert.doesNotMatch(factualConsumers,/WH40K_GLOSSARY_REGISTRY|glossary\/generated\/glossary\.en\.js/);
 assert.doesNotMatch(read('books/core-rules/reader/app.js'),/dataset\.term(?:Definition|Summary)/);
 
-console.log('Glossary V2 production contract QA passed: 1741 standalone browse entries, 2892 scoped searchable children, explicit/context-safe identity resolution.');
+const popupRuleTypes=new Set(['ABILITY','ARMY_RULE','DETACHMENT_RULE','FACTION_TERM','ARMY_RULE_COMPONENT','WARGEAR_ABILITY']);
+const noDefinition=api.entries().filter(entry=>popupRuleTypes.has(entry.recordType)&&!entry.definition.en.trim());
+assert.equal([...noDefinition].map(entry=>entry.id).join(','),'army::chaos-space-marines::detachment_rule::deceptors::chaos-space-marines-detachment-rule-masters-of-misdirection','only the accepted Masters of Misdirection evidence gap may remain without a definition');
+
+console.log('Glossary V2 production contract QA passed: 1738 standalone browse entries, 2892 scoped searchable children, explicit/context-safe identity resolution; no-definition entries 1.');

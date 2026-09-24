@@ -26,16 +26,16 @@
     "blood-angels"
   ],
   "counts": {
-    "total": 4633,
-    "standalone": 1741,
+    "total": 4630,
+    "standalone": 1738,
     "scopedChildren": 2892,
     "byDomain": {
-      "ARMY": 4184,
+      "ARMY": 4181,
       "CORE": 293,
       "MISSIONS": 156
     },
     "byType": {
-      "ARMY:ABILITY": 745,
+      "ARMY:ABILITY": 742,
       "ARMY:ARMY_RULE": 12,
       "ARMY:DETACHMENT_RULE": 103,
       "ARMY:DETACHMENT": 102,
@@ -47831,46 +47831,6 @@
           "effectiveBookId": "chaos-space-marines",
           "sourceBookId": "chaos-space-marines",
           "parentUnitId": "unit-havocs"
-        }
-      ],
-      "presentation": {}
-    },
-    {
-      "id": "army::chaos-space-marines::ability::chaos-space-marines-ability-support",
-      "domain": "ARMY",
-      "recordType": "ABILITY",
-      "label": "Support",
-      "aliases": [],
-      "searchableContent": "chaos-space-marines-ability-support\nSupport",
-      "parent": null,
-      "canonicalReferences": [
-        {
-          "domain": "ARMY",
-          "id": "army::chaos-space-marines::unit::unit-masters-of-the-maelstrom",
-          "canonicalId": "unit-masters-of-the-maelstrom",
-          "relationType": "PARENT_UNIT"
-        }
-      ],
-      "currentness": {
-        "publicationState": "CURRENT"
-      },
-      "provenance": null,
-      "sourceOwner": {
-        "domain": "ARMY",
-        "bookId": "chaos-space-marines",
-        "canonicalId": "chaos-space-marines-ability-support",
-        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
-      },
-      "facts": {
-        "title": "Support",
-        "text": "",
-        "termId": "chaos-space-marines-ability-support"
-      },
-      "contexts": [
-        {
-          "effectiveBookId": "chaos-space-marines",
-          "sourceBookId": "chaos-space-marines",
-          "parentUnitId": "unit-masters-of-the-maelstrom"
         }
       ],
       "presentation": {}
@@ -169377,86 +169337,6 @@
           "effectiveBookId": "space-marines",
           "sourceBookId": "space-marines",
           "parentUnitId": "unit-cato-sicarius"
-        }
-      ],
-      "presentation": {}
-    },
-    {
-      "id": "army::space-marines::ability::space-marines-ability-support-3",
-      "domain": "ARMY",
-      "recordType": "ABILITY",
-      "label": "Support",
-      "aliases": [],
-      "searchableContent": "space-marines-ability-support-3\nSupport",
-      "parent": null,
-      "canonicalReferences": [
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-cato-sicarius",
-          "canonicalId": "unit-cato-sicarius",
-          "relationType": "PARENT_UNIT"
-        }
-      ],
-      "currentness": {
-        "publicationState": "CURRENT"
-      },
-      "provenance": null,
-      "sourceOwner": {
-        "domain": "ARMY",
-        "bookId": "space-marines",
-        "canonicalId": "space-marines-ability-support-3",
-        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
-      },
-      "facts": {
-        "title": "Support",
-        "text": "",
-        "termId": "space-marines-ability-support-3"
-      },
-      "contexts": [
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-cato-sicarius"
-        }
-      ],
-      "presentation": {}
-    },
-    {
-      "id": "army::space-marines::ability::space-marines-ability-support-4",
-      "domain": "ARMY",
-      "recordType": "ABILITY",
-      "label": "Support",
-      "aliases": [],
-      "searchableContent": "space-marines-ability-support-4\nSupport",
-      "parent": null,
-      "canonicalReferences": [
-        {
-          "domain": "ARMY",
-          "id": "army::space-marines::unit::unit-wardens-of-ultramar",
-          "canonicalId": "unit-wardens-of-ultramar",
-          "relationType": "PARENT_UNIT"
-        }
-      ],
-      "currentness": {
-        "publicationState": "CURRENT"
-      },
-      "provenance": null,
-      "sourceOwner": {
-        "domain": "ARMY",
-        "bookId": "space-marines",
-        "canonicalId": "space-marines-ability-support-4",
-        "interface": "buildCanonicalBook(...,{projectionOnly:true})"
-      },
-      "facts": {
-        "title": "Support",
-        "text": "",
-        "termId": "space-marines-ability-support-4"
-      },
-      "contexts": [
-        {
-          "effectiveBookId": "space-marines",
-          "sourceBookId": "space-marines",
-          "parentUnitId": "unit-wardens-of-ultramar"
         }
       ],
       "presentation": {}
@@ -352425,7 +352305,11 @@
       "domain": "CORE",
       "recordType": "MAIN_RULE",
       "label": "Forming Attached Units",
-      "aliases": [],
+      "aliases": [
+        "chaos-space-marines-ability-support",
+        "space-marines-ability-support-3",
+        "space-marines-ability-support-4"
+      ],
       "searchableContent": "19.01\n2026-09-19\nForming Attached Units\nFULL_CONTENT\nrule\nSECONDARY\nSECONDARY_CORE_SNAPSHOT\nSome units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the datasheet.\nSEE ALSO\n• Attached Units After Their Bodyguard Unit is Destroyed 19.01.01\nWAHA_SECONDARY",
       "parent": null,
       "canonicalReferences": [],
@@ -352471,7 +352355,29 @@
         },
         "state": "FULL_CONTENT"
       },
-      "contexts": [],
+      "contexts": [
+        {
+          "effectiveBookId": "chaos-space-marines",
+          "sourceBookId": "chaos-space-marines",
+          "parentUnitId": "unit-masters-of-the-maelstrom",
+          "sourceAbilityId": null,
+          "termId": "chaos-space-marines-ability-support"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-cato-sicarius",
+          "sourceAbilityId": null,
+          "termId": "space-marines-ability-support-3"
+        },
+        {
+          "effectiveBookId": "space-marines",
+          "sourceBookId": "space-marines",
+          "parentUnitId": "unit-wardens-of-ultramar",
+          "sourceAbilityId": null,
+          "termId": "space-marines-ability-support-4"
+        }
+      ],
       "presentation": {}
     },
     {

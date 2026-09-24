@@ -32,8 +32,8 @@ try{
     page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
 
     await page.goto(`${base}/glossary/index.html`);
-    await page.waitForFunction(()=>window.WH40K_GLOSSARY?.counts?.standalone===1741);
-    assert.equal(await page.locator('#termCount').innerText(),'1741',`${viewport.name}: standalone browse count`);
+    await page.waitForFunction(()=>window.WH40K_GLOSSARY?.counts?.standalone===1738);
+    assert.equal(await page.locator('#termCount').innerText(),'1738',`${viewport.name}: standalone browse count`);
     assert.equal(await page.locator('.term-button').count(),121,`${viewport.name}: bounded initial browse plus load-more`);
     await page.locator('#search').fill('transport');await page.waitForTimeout(180);
     const preferred=page.locator('.term-button').first();assert.match(await preferred.innerText(),/Transport Capacity/i,`${viewport.name}: preferred alias result`);
@@ -114,7 +114,22 @@ try{
       assert.equal(decodeURIComponent(new URL(href,base).hash.slice(1)),oathId,`${viewport.name}/${book}: popup/viewer identity`);
       await page.keyboard.press('Escape');
     }
-    observations.push({viewport:viewport.name,corePopup:true,armyPopup:true,standalone:1741,scoped:index.counts.scopedChildren});
+    for(const control of [
+      {book:'chaos-space-marines',unit:'unit-masters-of-the-maelstrom',term:'chaos-space-marines-ability-support'},
+      {book:'space-marines',unit:'unit-cato-sicarius',term:'space-marines-ability-support-3'},
+      {book:'space-marines',unit:'unit-wardens-of-ultramar',term:'space-marines-ability-support-4'}
+    ]){
+      await page.goto(`${base}/books/${control.book}/reader.html?view=${viewport.name==='phone'?'mobile':'full'}#${control.unit}`);
+      await page.waitForFunction(()=>Boolean(window.DG_APP?.popups));
+      const trigger=page.locator(`[data-glossary-v2-source="${control.term}"]`).first();await trigger.waitFor();
+      assert.equal(await trigger.getAttribute('data-term'),'core::core-rule-19-01-forming-attached-units',`${viewport.name}/${control.term}: Core Support identity`);
+      await trigger.click();const popup=page.locator('.term-popup[data-popup-term="core::core-rule-19-01-forming-attached-units"]');await popup.waitFor();
+      assert.match(await popup.innerText(),/Forming Attached Units/i,`${viewport.name}/${control.term}: Core Support popup`);
+      const href=await popup.getByRole('link',{name:'Glossary entry'}).getAttribute('href');
+      assert.equal(decodeURIComponent(new URL(href,base).hash.slice(1)),'core::core-rule-19-01-forming-attached-units',`${viewport.name}/${control.term}: popup/viewer identity`);
+      await page.keyboard.press('Escape');
+    }
+    observations.push({viewport:viewport.name,corePopup:true,armyPopup:true,standalone:1738,scoped:index.counts.scopedChildren});
     assert.deepEqual(errors,[],`${viewport.name}: browser errors`);await context.close();
   }
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

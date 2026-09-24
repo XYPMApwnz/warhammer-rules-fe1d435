@@ -21,6 +21,11 @@ const CORE_ALIAS_ONLY_ERRATA=new Set(['core-errata-15-05','core-errata-15-06']);
 const REQUIRED_EFFECTIVE_ARMY_GLOSSARY_FACTS=Object.freeze({
   'adeptus-mechanicus':Object.freeze(['recon-augury','data-psalm','halo-override'])
 });
+const CORE_SUPPORT_OCCURRENCES=Object.freeze(new Map([
+  ['chaos-space-marines-ability-support',Object.freeze({bookId:'chaos-space-marines',unitId:'unit-masters-of-the-maelstrom',coreId:'core-rule-19-01-forming-attached-units'})],
+  ['space-marines-ability-support-3',Object.freeze({bookId:'space-marines',unitId:'unit-cato-sicarius',coreId:'core-rule-19-01-forming-attached-units'})],
+  ['space-marines-ability-support-4',Object.freeze({bookId:'space-marines',unitId:'unit-wardens-of-ultramar',coreId:'core-rule-19-01-forming-attached-units'})]
+]));
 
 const clone=value=>structuredClone(value);
 const readJson=relative=>JSON.parse(fs.readFileSync(path.join(repo,relative),'utf8'));
@@ -96,8 +101,18 @@ function addArmyEntry(entries,model,recordType,record,{parentId=null,canonicalId
 function addGenericUnitChildren(entries,lookups,model,unit){
   const ownerBook=sourceBook(unit,model.book.id),unitEntry=lookups.unit.get(`${model.book.id}::${unit.id}`);
   for(const ability of [...(unit.abilities||[]),...(unit.wargearAbilities||[])]){
+    const stableId=ability.termId||ability.id||ability.sourceAbilityId,supportOccurrence=CORE_SUPPORT_OCCURRENCES.get(stableId);
+    if(supportOccurrence){
+      if(model.book.id!==supportOccurrence.bookId||unit.id!==supportOccurrence.unitId)throw new Error(`${model.book.id}/${unit.id}: conflicting Support occurrence ${stableId}`);
+      if(String(ability.text||'').trim())throw new Error(`${model.book.id}/${unit.id}: Support occurrence ${stableId} unexpectedly owns gameplay text`);
+      const core=entries.get(entryId('core',supportOccurrence.coreId));
+      if(!core)throw new Error(`${model.book.id}/${unit.id}: unknown Core Support owner ${supportOccurrence.coreId}`);
+      core.aliases=sortStrings([...core.aliases,stableId]);
+      const context={effectiveBookId:model.book.id,sourceBookId:ownerBook,parentUnitId:unit.id,sourceAbilityId:ability.sourceAbilityId||null,termId:stableId};
+      if(!core.contexts.some(item=>JSON.stringify(item)===JSON.stringify(context)))core.contexts.push(context);
+      continue;
+    }
     if(ability.coreAbilityId){const coreId=entryId('core',ability.coreAbilityId),core=entries.get(coreId);if(!core)throw new Error(`${model.book.id}/${unit.id}: unknown Core ability ${ability.coreAbilityId}`);core.contexts.push({effectiveBookId:model.book.id,sourceBookId:ownerBook,parentUnitId:unit.id,sourceAbilityId:ability.sourceAbilityId||null,termId:ability.termId||null});continue;}
-    const stableId=ability.termId||ability.id||ability.sourceAbilityId;
     if(!stableId)throw new Error(`${model.book.id}/${unit.id}: local ability ${ability.title} has no stable identity`);
     const armyRule=lookups.armyRule.get(`${model.book.id}::${stableId}`);
     if(armyRule){
